@@ -31,6 +31,7 @@ class IconApplet : public Plasma::Applet
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
     Q_PROPERTY(QString genericName READ genericName NOTIFY genericNameChanged)
     Q_PROPERTY(bool valid READ isValid NOTIFY isValidChanged)
+    Q_PROPERTY(QList<QAction *> extraActions READ extraActions CONSTANT)
 
 public:
     explicit IconApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
@@ -47,7 +48,7 @@ public:
     QString genericName() const;
     bool isValid() const;
 
-    QList<QAction *> contextualActions() override;
+    QList<QAction *> extraActions();
 
     Q_INVOKABLE void run();
     Q_INVOKABLE void processDrop(QObject *dropEvent);

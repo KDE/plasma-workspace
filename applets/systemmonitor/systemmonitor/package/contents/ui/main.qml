@@ -42,14 +42,14 @@ PlasmoidItem {
     MouseArea {
         anchors.fill: parent
         acceptedButtons: Qt.MiddleButton
-        onClicked: action_openSystemMonitor()
+        onClicked: Plasmoid.openSystemMonitor()
     }
 
-    function action_openSystemMonitor() {
-        Plasmoid.openSystemMonitor()
-    }
-
-    Component.onCompleted: {
-        Plasmoid.setAction("openSystemMonitor", i18nc("@action", "Open System Monitor…"), "utilities-system-monitor")
-    }
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18nc("@action", "Open System Monitor…")
+            icon.name: "utilities-system-monitor"
+            onTriggered: Plasmoid.openSystemMonitor()
+        }
+    ]
 }

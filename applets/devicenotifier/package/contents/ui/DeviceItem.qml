@@ -68,8 +68,8 @@ PlasmaExtras.ExpandableListItem {
     }
 
     Connections {
-         target: Plasmoid.action("unmountAllDevices")
-         function onTriggered() {
+         target: devicenotifier
+         function onUnmountAllRequested() {
              removableActionTriggered();
          }
      }

@@ -21,10 +21,6 @@ PlasmoidItem {
 
     preferredRepresentation: fullRepresentation
 
-    function action_activitieskcm() {
-        KCMLauncher.openSystemSettings("kcm_activities");
-    }
-
     PlasmaComponents.TabBar {
         id: tabBar
 
@@ -92,11 +88,15 @@ PlasmoidItem {
         }
     }
 
-    Component.onCompleted: {
-        Plasmoid.removeAction("configure");
+    PlasmaCore.Action {
+        id: configureAction
+        text: i18nc("@action:inmenu", "&Configure Activities…")
+        icon.name: "configure"
+        visible: KAuthorized.authorizeControlModule("kcm_activities")
+        onTriggered: KCMLauncher.openSystemSettings("kcm_activities")
+    }
 
-        if (KAuthorized.authorizeControlModule("kcm_activities")) {
-            Plasmoid.setAction("activitieskcm", i18nc("@action:inmenu", "&Configure Activities…"), "configure");
-        }
+    Component.onCompleted: {
+        Plasmoid.setInternalAction("configure", configureAction);
     }
 }

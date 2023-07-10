@@ -19,7 +19,7 @@ PlasmoidItem {
 
     Plasmoid.onActivated: {
         if (!Keyboards.KWinVirtualKeyboard.available) {
-            root.action_settings()
+            settingsAction.trigger()
         } else if (unsupportedState.when) {
             Keyboards.KWinVirtualKeyboard.forceActivate()
         } else if (Keyboards.KWinVirtualKeyboard.visible) {
@@ -57,13 +57,14 @@ PlasmoidItem {
         }
     }
 
-    Component.onCompleted: {
-        Plasmoid.setAction("settings", i18ndc("plasma_applet_org.kde.plasma.manageinputmethod", "Opens the system settings module", "Configure Virtual Keyboards..."),
-                               "settings-configure")
+    PlasmaCore.Action {
+        id: settingsAction
+        text: i18ndc("plasma_applet_org.kde.plasma.manageinputmethod", "Opens the system settings module", "Configure Virtual Keyboards...")
+        icon.name: "settings-configure"
+        onTriggered: KCMLauncher.openSystemSettings("kcm_virtualkeyboard")
     }
-
-    function action_settings() {
-        KCMLauncher.openSystemSettings("kcm_virtualkeyboard");
+    Component.onCompleted: {
+        Plasmoid.setInternalAction("configure", settingsAction)
     }
 
     states: [

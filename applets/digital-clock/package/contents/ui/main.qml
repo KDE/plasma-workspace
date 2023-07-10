@@ -142,24 +142,29 @@ PlasmoidItem {
         return format;
     }
 
-    function action_clockkcm() {
-        KCMLauncher.openSystemSettings("kcm_clock");
-    }
-
-    function action_formatskcm() {
-        KCMLauncher.openSystemSettings("kcm_regionandlang");
-    }
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            id: clipboardAction
+            text: i18n("Copy to Clipboard")
+            icon.name: "edit-copy"
+        },
+        PlasmaCore.Action {
+            text: i18n("Adjust Date and Time…")
+            icon.name: "clock"
+            visible: KAuthorized.authorize("kcm_clock")
+            onTriggered: KCMLauncher.openSystemSettings("kcm_clock")
+        },
+        PlasmaCore.Action {
+            text: i18n("Set Time Format…")
+            icon.name: "gnumeric-format-thousand-separator"
+            visible: KAuthorized.authorizeControlModule("kcm_regionandlang")
+            onTriggered: KCMLauncher.openSystemSettings("kcm_regionandlang")
+        }
+    ]
 
     Component.onCompleted: {
-        Plasmoid.setAction("clipboard", i18n("Copy to Clipboard"), "edit-copy");
-        ClipboardMenu.setupMenu(Plasmoid.action("clipboard"));
+        ClipboardMenu.setupMenu(clipboardAction);
 
         root.initTimezones();
-        if (KAuthorized.authorize("kcm_clock")) {
-            Plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
-        }
-        if (KAuthorized.authorizeControlModule("kcm_regionandlang")) {
-            Plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
-        }
     }
 }

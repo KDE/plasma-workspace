@@ -317,7 +317,7 @@ bool IconApplet::isValid() const
     return !m_localPath.isEmpty();
 }
 
-QList<QAction *> IconApplet::contextualActions()
+QList<QAction *> IconApplet::extraActions()
 {
     QList<QAction *> actions = Applet::contextualActions();
     if (m_localPath.isEmpty()) {

@@ -28,10 +28,6 @@ PlasmoidItem {
 
     preferredRepresentation: fullRepresentation
 
-    function action_expanding() {
-        Plasmoid.configuration.expanding = Plasmoid.action("expanding").checked;
-    }
-
     // Search the actual gridLayout of the panel
     property GridLayout panelLayout: {
         let candidate = root.parent;
@@ -44,13 +40,19 @@ PlasmoidItem {
         return null;
     }
 
-    Component.onCompleted: {
-        Plasmoid.setAction("expanding", i18n("Set flexible size"));
-        const action = Plasmoid.action("expanding");
-        action.checkable = true;
-        action.checked = Qt.binding(function() {return Plasmoid.configuration.expanding});
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("Set flexible size")
+            checkable: true
+            checked: Plasmoid.configuration.expanding
+            onTriggered: checked => {
+                Plasmoid.configuration.expanding = Plasmoid.action("expanding").checked;
+            }
+        }
+    ]
 
-        Plasmoid.removeAction("configure");
+    Component.onCompleted: {
+        Plasmoid.removeInternalAction("configure");
     }
 
     property real optimalSize: {

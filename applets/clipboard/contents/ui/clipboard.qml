@@ -51,15 +51,30 @@ PlasmoidItem {
         }
     }
 
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("Clear History")
+            icon.name: "edit-clear-history"
+            visible: !main.isClipboardEmpty && !main.editing
+            onTriggered: {
+                clipboardSource.service("", "clearHistory")
+                clearSearchField()
+            }
+        }
+    ]
+
+    PlasmaCore.Action {
+        id: configureAction
+        text: i18n("Configure Clipboard…")
+        icon.name: "configure"
+        shortcut: "alt+d, s"
+        onTriggered: {
+            clipboardSource.service("", "configureKlipper")
+        }
+    }
 
     Component.onCompleted: {
-        Plasmoid.removeAction("configure");
-        Plasmoid.setAction("configure", i18n("Configure Clipboard…"), "configure", "alt+d, s");
-
-        Plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
-        Plasmoid.action("clearHistory").visible = Qt.binding(() => {
-            return !main.isClipboardEmpty && !main.editing;
-        });
+        Plasmoid.setInternalAction("configure", configureAction);
     }
 
     P5Support.DataSource {

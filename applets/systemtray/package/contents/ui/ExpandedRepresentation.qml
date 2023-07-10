@@ -83,7 +83,7 @@ Item {
                     }
                     const primaryActions = [];
                     actionsButton.applet.plasmoid.contextualActions.forEach(action => {
-                        if (action.priority == Plasmoid.HighPriorityAction) {
+                        if (action.priority == PlasmaCore.Action.HighPriority) {
                             primaryActions.push(action);
                         }
                     })
@@ -151,7 +151,7 @@ Item {
                     active: actionsButton.hovered
                     implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
                     implicitHeight: implicitWidth
-                    source: actionsButton.singleAction !== null ? actionsButton.singleAction.icon : ""
+                    source: actionsButton.singleAction !== null ? actionsButton.singleAction.icon.name : ""
                     visible: actionsButton.singleAction
                 }
                 onToggled: {
@@ -188,7 +188,7 @@ Item {
                         for (let i in actionsButton.applet.plasmoid.contextualActions) {
                             const action = actionsButton.applet.plasmoid.contextualActions[i];
                             if (action.visible
-                                    && action.priority > Plasmoid.LowPriorityAction
+                                    && action.priority > PlasmaCore.Action.LowPriority
                                     && !primaryActionButtons.model.includes(action)
                                     && action !== actionsButton.applet.plasmoid.action("configure")) {
                                 actions.push(action);

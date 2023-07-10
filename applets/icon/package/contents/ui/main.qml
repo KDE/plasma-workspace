@@ -42,17 +42,17 @@ PlasmoidItem {
     Plasmoid.onActivated: Plasmoid.run()
 
     Plasmoid.onContextualActionsAboutToShow: updateActions()
+    Plasmoid.contextualActions: Plasmoid.extraActions
 
-    function updateActions() {
-        Plasmoid.removeAction("configure");
-
-        if (Plasmoid.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
-            Plasmoid.setAction("configure", i18n("Properties"), "document-properties");
-        }
+    PlasmaCore.Action {
+        id: configureAction
+        text: i18n("Properties")
+        icon.name: "document-properties"
+        visible: Plasmoid.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+        onTriggered: Plasmoid.configure()
     }
-
-    function action_configure() {
-        Plasmoid.configure();
+    Component.onCompleted: {
+        Plasmoid.setInternalAction("configure", configureAction);
     }
 
     onExternalData: (mimetype, data) => {

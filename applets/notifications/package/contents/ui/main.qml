@@ -177,33 +177,38 @@ PlasmoidItem {
         }
     }
 
-    function action_clearHistory() {
-        historyModel.clear(NotificationManager.Notifications.ClearExpired);
-        if (historyModel.count === 0) {
-            closePlasmoid();
-        }
-    }
-
     function action_configure() {
         KCMUtils.KCMLauncher.openSystemSettings("kcm_notifications");
     }
 
-    Component.onCompleted: {
-        // Use Plasmoid because Plasmoid will become an object in QML after it's deleted, while
-        // Plasmoid will become null.
-        Globals.adopt(root);
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("Clear All Notifications")
+            icon.name: "edit-clear-history"
+            visible: historyModel.expiredNotificationsCount > 0
+            onTriggered: {
+                historyModel.clear(NotificationManager.Notifications.ClearExpired);
+                if (historyModel.count === 0) {
+                    closePlasmoid();
+                }
+            }
+        }
+    ]
 
-        Plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
-        var clearAction = Plasmoid.action("clearHistory");
-        clearAction.visible = Qt.binding(function() {
-            return historyModel.expiredNotificationsCount > 0;
-        });
+    PlasmaCore.Action {
+        id: configureAction
+        text: i18n("&Configure Event Notifications and Actions…")
+        icon.name: "configure"
+        visible: KConfig.KAuthorized.authorizeControlModules("kcm_notifications");
+        onTriggered: KCMUtils.KCMLauncher.openSystemSettings("kcm_notifications");
+    }
+
+    Component.onCompleted: {
+        Globals.adopt(root);
 
         // The applet's config window has nothing in it, so let's make the header's
         // "Configure" button open the KCM instead, like we do in the Bluetooth
         // and Networks applets
-        Plasmoid.removeAction("configure");
-        Plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "configure");
-        Plasmoid.action("configure").visible = KConfig.KAuthorized.authorizeControlModules("kcm_notifications");
+        Plasmoid.setInternalAction("configure", configureAction)
     }
 }

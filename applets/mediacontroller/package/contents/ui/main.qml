@@ -84,47 +84,69 @@ PlasmoidItem {
     toolTipTextFormat: Text.PlainText
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18nc("Open player window or bring it to the front if already open", "Open")
+            icon.name: "go-up-symbolic"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canRaise
+            onTriggered: serviceOp(mpris2Source.current, "Raise");
+        },
+        PlasmaCore.Action {
+            text: i18nc("Play previous track", "Previous Track")
+            icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canControl
+            enabled: root.canGoPrevious
+            onTriggered: serviceOp(mpris2Source.current, "Previous")
+        },
+        PlasmaCore.Action {
+            text: i18nc("Pause playback", "Pause")
+            icon.name: "media-playback-pause"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canControl && root.state === "playing" && root.canPause
+            enabled: root.canControl && root.state === "playing" && root.canPause
+            onTriggered: serviceOp(mpris2Source.current, "Pause")
+        },
+        PlasmaCore.Action {
+            text: i18nc("Start playback", "Play")
+            icon.name: "media-playback-start"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canControl && root.state !== "playing"
+            enabled: root.state !== "playing" && root.canPlay
+            onTriggered: serviceOp(mpris2Source.current, "Play")
+        },
+        PlasmaCore.Action {
+            text: i18nc("Play next track", "Next Track")
+            icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canControl
+            enabled: root.canGoNext
+            onTriggered: serviceOp(mpris2Source.current, "Next")
+        },
+        PlasmaCore.Action {
+            text: i18nc("Stop playback", "Stop")
+            icon.name: "media-playback-stop"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canControl
+            enabled: root.state === "playing" || root.state === "paused"
+            onTriggered: serviceOp(mpris2Source.current, "Stop")
+        },
+        PlasmaCore.Action {
+            isSeparator: true
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canQuit
+        },
+        PlasmaCore.Action {
+            text: i18nc("Quit player", "Quit")
+            icon.name: "application-exit"
+            priority: PlasmaCore.Action.LowPriority
+            visible: root.canQuit
+            onTriggered: serviceOp(mpris2Source.current, "Quit")
+        }
+    ]
     function populateContextualActions() {
-        Plasmoid.clearActions()
 
-        Plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"),  "go-up-symbolic")
-        Plasmoid.action("open").visible = Qt.binding(() => root.canRaise)
-        Plasmoid.action("open").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
-                           Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
-        Plasmoid.action("previous").enabled = Qt.binding(() => root.canGoPrevious)
-        Plasmoid.action("previous").visible = Qt.binding(() => root.canControl)
-        Plasmoid.action("previous").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
-        Plasmoid.action("pause").enabled = Qt.binding(() => root.state === "playing" && root.canPause)
-        Plasmoid.action("pause").visible = Qt.binding(() => root.canControl && root.state === "playing" && root.canPause)
-        Plasmoid.action("pause").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
-        Plasmoid.action("play").enabled = Qt.binding(() => root.state !== "playing" && root.canPlay)
-        Plasmoid.action("play").visible = Qt.binding(() => root.canControl && root.state !== "playing")
-        Plasmoid.action("play").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
-                               Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward")
-        Plasmoid.action("next").enabled = Qt.binding(() => root.canGoNext)
-        Plasmoid.action("next").visible = Qt.binding(() => root.canControl)
-        Plasmoid.action("next").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
-        Plasmoid.action("stop").enabled = Qt.binding(() => root.state === "playing" || root.state === "paused")
-        Plasmoid.action("stop").visible = Qt.binding(() => root.canControl)
-        Plasmoid.action("stop").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setActionSeparator("quitseparator");
-        Plasmoid.action("quitseparator").visible = Qt.binding(() => root.canQuit)
-        Plasmoid.action("quitseparator").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
-        Plasmoid.action("quit").visible = Qt.binding(() => root.canQuit)
-        Plasmoid.action("quit").priority = Plasmoid.LowPriorityAction
     }
 
     // HACK Some players like Amarok take quite a while to load the next track
@@ -177,54 +199,23 @@ PlasmoidItem {
     }
 
     Component.onCompleted: {
-        plasmoid.removeAction("configure");
+        Plasmoid.removeInternalAction("configure");
         mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts()
         updateMprisSourcesModel()
-        populateContextualActions()
     }
 
     function togglePlaying() {
         if (root.isPlaying) {
             if (root.canPause) {
-                root.action_pause();
+                serviceOp(mpris2Source.current, "Pause");
             }
         } else {
             if (root.canPlay) {
-                root.action_play();
+                serviceOp(mpris2Source.current, "Play");
             }
         }
     }
 
-    function action_open() {
-        serviceOp(mpris2Source.current, "Raise");
-    }
-    function action_quit() {
-        serviceOp(mpris2Source.current, "Quit");
-    }
-
-    function action_play() {
-        serviceOp(mpris2Source.current, "Play");
-    }
-
-    function action_pause() {
-        serviceOp(mpris2Source.current, "Pause");
-    }
-
-    function action_playPause() {
-        serviceOp(mpris2Source.current, "PlayPause");
-    }
-
-    function action_previous() {
-        serviceOp(mpris2Source.current, "Previous");
-    }
-
-    function action_next() {
-        serviceOp(mpris2Source.current, "Next");
-    }
-
-    function action_stop() {
-        serviceOp(mpris2Source.current, "Stop");
-    }
 
     function serviceOp(src, op) {
         var service = mpris2Source.serviceForSource(src);

@@ -36,6 +36,7 @@ PlasmoidItem {
     property int currentIndex: -1
     property var connectedRemovables: []
     property int mountedRemovables: 0
+    signal unmountAllRequested
 
     // QTBUG-50380: As soon as the item gets removed from the model, all of ListView's
     // properties (count, contentHeight) pretend the delegate doesn't exist anymore
@@ -226,81 +227,93 @@ PlasmoidItem {
         }
     }
 
-    property var showRemovableDevicesAction
-    property var showNonRemovableDevicesAction
-    property var showAllDevicesAction
-    property var openAutomaticallyAction
+    PlasmaCore.Action {
+        id: configureAction
+        icon.name: "configure"
+        text: i18nc("Open auto mounter kcm", "Configure Removable Devices…")
+        visible: devicenotifier.openAutomounterKcmAuthorized
+        shortcut: "Alt+D, S"
+        onTriggered: KCMLauncher.openSystemSettings("kcm_device_automounter")
+    }
 
     Component.onCompleted: {
         if (sdSource.connectedSources.count === 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
+        Plasmoid.setInternalAction("configure", configureAction);
+    }
 
-        Plasmoid.setAction("unmountAllDevices", i18n("Remove All"), "media-eject");
-        Plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
-            return devicenotifier.mountedRemovables > 0;
-        });
-
-        Plasmoid.setActionSeparator("sep0");
-
-        Plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
-        devicenotifier.showRemovableDevicesAction = Plasmoid.action("showRemovableDevices");
-        devicenotifier.showRemovableDevicesAction.checkable = true;
-        devicenotifier.showRemovableDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.removableDevices;});
-        Plasmoid.setActionGroup("showRemovableDevices", "devicesShown");
-
-        Plasmoid.setAction("showNonRemovableDevices", i18n("Non Removable Devices"), "drive-harddisk");
-        devicenotifier.showNonRemovableDevicesAction = Plasmoid.action("showNonRemovableDevices");
-        devicenotifier.showNonRemovableDevicesAction.checkable = true;
-        devicenotifier.showNonRemovableDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.nonRemovableDevices;});
-        Plasmoid.setActionGroup("showNonRemovableDevices", "devicesShown");
-
-        Plasmoid.setAction("showAllDevices", i18n("All Devices"));
-        devicenotifier.showAllDevicesAction = Plasmoid.action("showAllDevices");
-        devicenotifier.showAllDevicesAction.checkable = true;
-        devicenotifier.showAllDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.allDevices;});
-        Plasmoid.setActionGroup("showAllDevices", "devicesShown");
-
-        Plasmoid.setActionSeparator("sep");
-
-        Plasmoid.setAction("openAutomatically", i18n("Show popup when new device is plugged in"));
-        devicenotifier.openAutomaticallyAction = Plasmoid.action("openAutomatically");
-        devicenotifier.openAutomaticallyAction.checkable = true;
-        devicenotifier.openAutomaticallyAction.checked = Qt.binding(() => {return Plasmoid.configuration.popupOnNewDevice;});
-
-        Plasmoid.setActionSeparator("sep2");
-
-        if (devicenotifier.openAutomounterKcmAuthorized) {
-            Plasmoid.removeAction("configure");
-            Plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices…"), "configure")
+    PlasmaCore.ActionGroup {
+        id: devicesGroup
+    }
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("Remove All")
+            visible: devicenotifier.mountedRemovables > 0
+            onTriggered: devicenotifier.unmountAllRequested()
+        },
+        PlasmaCore.Action {
+            isSeparator: true
+        },
+        PlasmaCore.Action {
+            text: i18n("Removable Devices")
+            icon.name: "drive-removable-media"
+            checkable: true
+            checked: Plasmoid.configuration.removableDevices
+            actionGroup: devicesGroup
+            onTriggered: checked => {
+                if (!checked) {
+                    return;
+                }
+                Plasmoid.configuration.removableDevices = true;
+                Plasmoid.configuration.nonRemovableDevices = false;
+                Plasmoid.configuration.allDevices = false;
+            }
+        },
+        PlasmaCore.Action {
+            text: i18n("Non Removable Devices")
+            icon.name: "drive-harddisk"
+            checkable: true
+            checked: Plasmoid.configuration.nonRemovableDevices
+            actionGroup: devicesGroup
+            onTriggered: checked => {
+                if (!checked) {
+                    return;
+                }
+                Plasmoid.configuration.removableDevices = false;
+                Plasmoid.configuration.nonRemovableDevices = true;
+                Plasmoid.configuration.allDevices = false;
+            }
+        },
+        PlasmaCore.Action {
+            text: i18n("All Devices")
+            checkable: true
+            checked: Plasmoid.configuration.allDevices
+            actionGroup: devicesGroup
+            onTriggered: checked => {
+                if (!checked) {
+                    return;
+                }
+                Plasmoid.configuration.removableDevices = false;
+                Plasmoid.configuration.nonRemovableDevices = false;
+                Plasmoid.configuration.allDevices = true;
+            }
+        },
+        PlasmaCore.Action {
+            isSeparator: true
+        },
+        PlasmaCore.Action {
+            text: i18n("Show popup when new device is plugged in")
+            checkable: true
+            checked: Plasmoid.configuration.popupOnNewDevice
+            onTriggered: checked => {
+                Plasmoid.configuration.popupOnNewDevice = checked;
+            }
+        },
+        PlasmaCore.Action {
+            isSeparator: true
         }
-    }
-
-    function action_configure() {
-        KCMLauncher.openSystemSettings("kcm_device_automounter")
-    }
-
-    function action_showRemovableDevices() {
-        Plasmoid.configuration.removableDevices = true;
-        Plasmoid.configuration.nonRemovableDevices = false;
-        Plasmoid.configuration.allDevices = false;
-    }
-
-    function action_showNonRemovableDevices() {
-        Plasmoid.configuration.removableDevices = false;
-        Plasmoid.configuration.nonRemovableDevices = true;
-        Plasmoid.configuration.allDevices = false;
-    }
-
-    function action_showAllDevices() {
-        Plasmoid.configuration.removableDevices = false;
-        Plasmoid.configuration.nonRemovableDevices = false;
-        Plasmoid.configuration.allDevices = true;
-    }
-
-    function action_openAutomatically() {
-        Plasmoid.configuration.popupOnNewDevice = !Plasmoid.configuration.popupOnNewDevice;
-    }
+    ]
 
     onExpandedChanged: {
         popupEventSlot(devicenotifier.expanded);

@@ -100,22 +100,6 @@ PlasmoidItem {
     readonly property var activeProfileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
     readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
 
-    function action_configure() {
-        KCMLauncher.openSystemSettings("kcm_powerdevilprofilesconfig");
-    }
-
-    function action_energyinformationkcm() {
-        KCMLauncher.openInfoCenter("kcm_energyinfo");
-    }
-
-    function action_showPercentage() {
-        if (!Plasmoid.configuration.showPercentage) {
-            Plasmoid.configuration.showPercentage = true;
-        } else {
-            Plasmoid.configuration.showPercentage = false;
-        }
-    }
-
     switchWidth: PlasmaCore.Units.gridUnit * 10
     switchHeight: PlasmaCore.Units.gridUnit * 10
     Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
@@ -371,20 +355,38 @@ PlasmoidItem {
         }
     }
 
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("&Show Energy Information…")
+            icon.name: "documentinfo"
+            visible: batterymonitor.kcmEnergyInformationAuthorized
+            onTriggered: KCMLauncher.openInfoCenter("kcm_energyinfo")
+        },
+        PlasmaCore.Action {
+            text: i18n("Show Battery Percentage on Icon When Not Fully Charged")
+            icon.name: "format-number-percent"
+            checkable: true
+            checked: Plasmoid.configuration.showPercentage
+            onTriggered: checked => {
+                Plasmoid.configuration.showPercentage = checked
+            }
+        }
+    ]
+
+    PlasmaCore.Action {
+        id: configureAction
+        text: i18n("&Configure Energy Saving…")
+        icon.name: "configure"
+        shortcut: "alt+d, s"
+        onTriggered: {
+            KCMLauncher.openSystemSettings("kcm_powerdevilprofilesconfig");
+        }
+    }
+
     Component.onCompleted: {
         Logic.updateBrightness(batterymonitor, pmSource);
         Logic.updateInhibitions(batterymonitor, pmSource)
 
-        if (batterymonitor.kcmEnergyInformationAuthorized) {
-            Plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information…"), "documentinfo");
-        }
-        Plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon When Not Fully Charged"), "format-number-percent");
-        Plasmoid.action("showPercentage").checkable = true;
-        Plasmoid.action("showPercentage").checked = Qt.binding(() => Plasmoid.configuration.showPercentage);
-
-        Plasmoid.removeAction("configure");
-        if (batterymonitor.kcmAuthorized) {
-            Plasmoid.setAction("configure", i18n("&Configure Energy Saving…"), "configure", "alt+d, s");
-        }
+        Plasmoid.setInternalAction("configure", configureAction);
     }
 }
