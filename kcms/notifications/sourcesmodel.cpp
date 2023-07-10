@@ -21,6 +21,7 @@
 #include <KApplicationTrader>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KFileUtils>
 #include <KLocalizedString>
 #include <KService>
 #include <KSharedConfig>
@@ -295,73 +296,67 @@ void SourcesModel::load()
     QList<SourceData> appsData;
     QList<SourceData> servicesData;
 
-    QStringList notifyRcFiles;
     QStringList desktopEntries;
 
     // Search for notifyrc files in `/knotifications6` folders first, but also in `/knotifications5` for compatibility with KF5 applications
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6"), QStandardPaths::LocateDirectory)
         + QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
-    for (const QString &dir : dirs) {
-        const QDir dirInfo(dir);
-        const QStringList fileNames = dirInfo.entryList(QStringList() << QStringLiteral("*.notifyrc"));
-        for (const QString &file : fileNames) {
-            if (notifyRcFiles.contains(file)) {
+    const QStringList files = KFileUtils::findAllUniqueFiles(dirs, {QStringLiteral("*.notifyrc")});
+
+    for (const QString &file : files) {
+        const QFileInfo fileInfo(file);
+        const QString fileName = fileInfo.fileName();
+        const QString dirName = fileInfo.dir().dirName(); // "knotifications6" or "knotifications5"
+
+        KSharedConfig::Ptr config = KSharedConfig::openConfig(file, KConfig::NoGlobals);
+        // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
+        // (more priority goest first), but for `addConfigSources() it is the opposite
+        QStringList configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("%2/%1").arg(fileName).arg(dirName));
+        std::reverse(configSources.begin(), configSources.end());
+        config->addConfigSources(configSources);
+
+        KConfigGroup globalGroup(config, QLatin1String("Global"));
+
+        const QString desktopEntry = globalGroup.readEntry(QStringLiteral("DesktopEntry"));
+        if (!desktopEntry.isEmpty()) {
+            if (desktopEntries.contains(desktopEntry)) {
                 continue;
             }
-            notifyRcFiles.append(file);
+            desktopEntries.append(desktopEntry);
+        }
 
-            KSharedConfig::Ptr config = KSharedConfig::openConfig(file, KConfig::NoGlobals);
-            QStringList configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, //
-                                                                  QStringLiteral("%2/%1").arg(file).arg(dirInfo.dirName()));
-            // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
-            // (more priority goest first), but for `addConfigSources() it is the opposite
-            std::reverse(configSources.begin(), configSources.end());
-            config->addConfigSources(configSources);
+        SourceData source{
+            // The old KCM read the Name and Comment from global settings disregarding
+            // any user settings and just used user-specific files for actions config
+            // I'm pretty sure there's a readEntry equivalent that does that without
+            // reading the config stuff twice, assuming we care about this to begin with
+            .name = globalGroup.readEntry(QStringLiteral("Name")),
+            .comment = globalGroup.readEntry(QStringLiteral("Comment")),
+            .iconName = globalGroup.readEntry(QStringLiteral("IconName")),
+            .isDefault = true,
+            .notifyRcName = fileName.section(QLatin1Char('.'), 0, -2),
+            .desktopEntry = desktopEntry,
+            .events = {},
+        };
 
-            KConfigGroup globalGroup(config, QLatin1String("Global"));
+        // Add events
+        const QStringList groups = config->groupList().filter(s_eventGroupRegExp);
 
-            const QString notifyRcName = file.section(QLatin1Char('.'), 0, -2);
-            const QString desktopEntry = globalGroup.readEntry(QStringLiteral("DesktopEntry"));
-            if (!desktopEntry.isEmpty()) {
-                if (desktopEntries.contains(desktopEntry)) {
-                    continue;
-                }
-                desktopEntries.append(desktopEntry);
-            }
+        QList<NotificationManager::EventSettings *> events;
+        events.reserve(groups.size());
+        for (const QString &group : groups) {
+            const QString eventId = s_eventGroupRegExp.match(group).captured(1);
+            events.append(new NotificationManager::EventSettings(config, eventId, this));
+        }
+        std::sort(events.begin(), events.end(), [&collator](NotificationManager::EventSettings *a, NotificationManager::EventSettings *b) {
+            return collator.compare(a->name(), b->name()) < 0;
+        });
+        source.events = events;
 
-            SourceData source{
-                // The old KCM read the Name and Comment from global settings disregarding
-                // any user settings and just used user-specific files for actions config
-                // I'm pretty sure there's a readEntry equivalent that does that without
-                // reading the config stuff twice, assuming we care about this to begin with
-                .name = globalGroup.readEntry(QStringLiteral("Name")),
-                .comment = globalGroup.readEntry(QStringLiteral("Comment")),
-                .iconName = globalGroup.readEntry(QStringLiteral("IconName")),
-                .isDefault = true,
-                .notifyRcName = notifyRcName,
-                .desktopEntry = desktopEntry,
-                .events = {},
-            };
-
-            // Add events
-            const QStringList groups = config->groupList().filter(s_eventGroupRegExp);
-
-            QList<NotificationManager::EventSettings *> events;
-            events.reserve(groups.size());
-            for (const QString &group : groups) {
-                const QString eventId = s_eventGroupRegExp.match(group).captured(1);
-                events.append(new NotificationManager::EventSettings(config, eventId, this));
-            }
-            std::sort(events.begin(), events.end(), [&collator](NotificationManager::EventSettings *a, NotificationManager::EventSettings *b) {
-                return collator.compare(a->name(), b->name()) < 0;
-            });
-            source.events = events;
-
-            if (!source.desktopEntry.isEmpty()) {
-                appsData.append(source);
-            } else {
-                servicesData.append(source);
-            }
+        if (!source.desktopEntry.isEmpty()) {
+            appsData.append(source);
+        } else {
+            servicesData.append(source);
         }
     }
 
