@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2010-03-18 03:37+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -97,23 +97,23 @@ msgstr ""
 "Lists screen brightness options or sets it to the brightness defined by :q:; "
 "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
 
-#: PowerDevilRunner.cpp:92
+#: PowerDevilRunner.cpp:88
 #, fuzzy, kde-format
 #| msgid "Set Brightness to %1"
 msgid "Set Brightness to %1%"
 msgstr "Vendos ndriçimin në %1"
 
-#: PowerDevilRunner.cpp:101
+#: PowerDevilRunner.cpp:97
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Ul ndriçimin e ekranit tërësisht"
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:105
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Ul ndriçimin përgjysëm"
 
-#: PowerDevilRunner.cpp:139
+#: PowerDevilRunner.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "sleep"
@@ -121,12 +121,12 @@ msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "gjumë"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Pezullo në RAM"
 
-#: PowerDevilRunner.cpp:145
+#: PowerDevilRunner.cpp:141
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "hibernate"
@@ -134,13 +134,13 @@ msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "hiberno"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:142
 #, fuzzy, kde-format
 #| msgid "Suspend to Disk"
 msgid "Suspend to disk"
 msgstr "Pezullo në Disk"
 
-#: PowerDevilRunner.cpp:214
+#: PowerDevilRunner.cpp:210
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -148,7 +148,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "ndriçimi i ekranit"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:212
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"

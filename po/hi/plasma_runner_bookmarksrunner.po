@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-07-01 19:02+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -37,7 +37,7 @@ msgstr "पुस्तचिह्न"
 msgid "List all web browser bookmarks"
 msgstr "सभी वेव ब्रॉउजर पुस्तचिह्न सूचीबद्ध करें"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:56
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

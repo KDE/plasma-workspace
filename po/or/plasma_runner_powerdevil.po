@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-01-02 11:48+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -88,50 +88,50 @@ msgid ""
 "brightness"
 msgstr ""
 
-#: PowerDevilRunner.cpp:92
+#: PowerDevilRunner.cpp:88
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr ""
 
-#: PowerDevilRunner.cpp:101
+#: PowerDevilRunner.cpp:97
 #, kde-format
 msgid "Dim screen totally"
 msgstr ""
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:105
 #, kde-format
 msgid "Dim screen by half"
 msgstr ""
 
-#: PowerDevilRunner.cpp:139
+#: PowerDevilRunner.cpp:135
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to RAM"
 msgstr ""
 
-#: PowerDevilRunner.cpp:145
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr ""
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:142
 #, kde-format
 msgid "Suspend to disk"
 msgstr ""
 
-#: PowerDevilRunner.cpp:214
+#: PowerDevilRunner.cpp:210
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr ""
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:212
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

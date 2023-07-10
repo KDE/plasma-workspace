@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-01-25 16:10+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -120,41 +120,41 @@ msgstr ""
 "Il commuta al session active pro le usator :q:, o il lista omne active "
 "sessiones si :q: non es fornite"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Claude session"
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Arresto (shut down)"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Re-Initia"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Bloca"
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, kde-format
 msgid "Save Session"
 msgstr "Salveguarda session"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, kde-format
 msgid "Switch User"
 msgstr "Commuta usator"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -169,7 +169,7 @@ msgstr ""
 "+F{numero de session}</li><li>Cerca de Plasma (type '%1')</li><li>Widgets de "
 "Plasma (tal como le lanceator de application)</li></ul>"
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Nove session de scriptorio"

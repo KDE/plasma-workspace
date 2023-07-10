@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-08-24 21:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "நினைவுக்குறிகள்"
 msgid "List all web browser bookmarks"
 msgstr "இணைய உலாவியின் அனைத்து நினைவுக்குறிகளையும் பட்டியலிடு"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:56
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-10-23 23:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,22 +30,22 @@ msgstr ""
 "Cerca directoris i fitxers locals, ubicacions de xarxa i llocs d'Internet on "
 "el seu camí coincideixin amb :q:."
 
-#: locationrunner.cpp:56
+#: locationrunner.cpp:52
 #, kde-format
 msgid "Open %1"
 msgstr "Obre %1"
 
-#: locationrunner.cpp:75 locationrunner.cpp:79
+#: locationrunner.cpp:71 locationrunner.cpp:75
 #, kde-format
 msgid "Launch with %1"
 msgstr "Llança amb %1"
 
-#: locationrunner.cpp:85
+#: locationrunner.cpp:81
 #, kde-format
 msgid "Go to %1"
 msgstr "Ves a %1"
 
-#: locationrunner.cpp:93
+#: locationrunner.cpp:89
 #, kde-format
 msgid "Send email to %1"
 msgstr "Envia un correu a %1"

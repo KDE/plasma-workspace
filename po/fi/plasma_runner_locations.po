@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2013-02-08 16:12+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -33,22 +33,22 @@ msgstr ""
 "Etsii paikallisia kansioita ja tiedostoja, verkkosijainteja ja "
 "internetsivustoja, joiden polku vastaa kuviota :q:."
 
-#: locationrunner.cpp:56
+#: locationrunner.cpp:52
 #, kde-format
 msgid "Open %1"
 msgstr "Avaa %1"
 
-#: locationrunner.cpp:75 locationrunner.cpp:79
+#: locationrunner.cpp:71 locationrunner.cpp:75
 #, kde-format
 msgid "Launch with %1"
 msgstr "Avaa ohjelmalla %1"
 
-#: locationrunner.cpp:85
+#: locationrunner.cpp:81
 #, kde-format
 msgid "Go to %1"
 msgstr "Siirry kohteeseen %1"
 
-#: locationrunner.cpp:93
+#: locationrunner.cpp:89
 #, kde-format
 msgid "Send email to %1"
 msgstr "Lähetä sähköpostia osoitteeseen %1"

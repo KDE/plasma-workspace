@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-08 02:34+0000\n"
-"PO-Revision-Date: 2023-02-01 22:28+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2023-07-09 01:04+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -276,18 +276,13 @@ msgid "Available Plugins:"
 msgstr "Verfügbare Module:"
 
 #: package/contents/ui/configTimeZones.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Tipp: Fügen Sie dieser Liste einen zusätzlichen Eintrag für Ihre Heimat-"
-"Zeitzone hinzu. Dieser wird nur angezeigt, wenn Sie die Zeitzone des Systems "
-"auf eine andere ändern."
+"Tipp: Fügen Sie dieser Liste Ihre Heimat-Zeitzone hinzu. Diese wird nur "
+"angezeigt, wenn Sie die Zeitzone des Systems auf eine andere ändern."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format

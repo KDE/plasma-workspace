@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-12-18 13:10+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -121,41 +121,41 @@ msgstr ""
 "მომხმარებელ :q:ის აქტიურ სესიაზე გადართვა ან, თუ :q: მითითებული არაა, "
 "აქტიური სესიების სია"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "გასვლა"
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "გამორთვა"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "გადატვირთვა"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "დაბლოკვა"
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, kde-format
 msgid "Save Session"
 msgstr "სესიის შენახვა"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, kde-format
 msgid "Switch User"
 msgstr "მომხმარებლის გადართვა"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -170,7 +170,7 @@ msgstr ""
 "ძებნა (აკრიფეთ '%1')</li><li>Plasma-ის ვიჯეტები (მაგალითად, აპლიკაციის "
 "გამშვები)</li></ul>"
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, kde-format
 msgid "New Desktop Session"
 msgstr "სამუშაო მაგიდის ახალი სესია"

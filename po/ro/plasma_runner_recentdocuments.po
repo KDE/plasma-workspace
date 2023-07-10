@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2020-08-31 23:55+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: recentdocuments.cpp:34
-#, kde-format
-msgid "Looks for documents recently used with names matching :q:."
-msgstr "Caută după documente utilizate recent cu denumirea potrivită cu :q:."
-
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
+
+#: recentdocuments.cpp:35
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
+msgstr "Caută după documente utilizate recent cu denumirea potrivită cu :q:."
 
 #~ msgid "Recent Document"
 #~ msgstr "Document recent"

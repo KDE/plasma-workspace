@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2019-06-08 19:19+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "žymelės"
 msgid "List all web browser bookmarks"
 msgstr "Išvardyti visas saityno naršyklės žymeles"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:56
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

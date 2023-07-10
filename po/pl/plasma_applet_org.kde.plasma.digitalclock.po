@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-08 02:34+0000\n"
-"PO-Revision-Date: 2023-02-04 08:34+0100\n"
+"PO-Revision-Date: 2023-07-08 07:38+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -277,18 +277,14 @@ msgid "Available Plugins:"
 msgstr "Dostępne wtyczki:"
 
 #: package/contents/ui/configTimeZones.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
 "Wskazówka: jeśli często podróżujesz, dodaj dodatkowy wpis dla strefy "
-"czasowej twojego domu do listy. Zmieni się ona tylko gdy zmienisz strefę "
-"czasową w całym systemie na inną."
+"czasowej twojego domu do listy. Pojawi się ona tylko wtedy, gdy zmienisz "
+"strefę czasową na inną."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format

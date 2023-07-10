@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-runner-kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-12-29 22:11+0100\n"
 "Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -24,27 +24,27 @@ msgstr ""
 msgid "Send SIGTERM"
 msgstr "Pošalji SIGTERM"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:29
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Pošalji SIGKILL"
 
-#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "ukini"
 
-#: killrunner.cpp:55
+#: killrunner.cpp:48
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr "Obustavite programe u pogonu čija imena poklopi upit."
 
-#: killrunner.cpp:118
+#: killrunner.cpp:85
 #, kde-format
 msgid "Terminate %1"
 msgstr "Obustavi %1"
 
-#: killrunner.cpp:119
+#: killrunner.cpp:86
 #, kde-format
 msgid "Process ID: %1"
 msgstr ""

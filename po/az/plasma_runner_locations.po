@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-07-20 19:26+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -26,22 +26,22 @@ msgstr ""
 ":q: ilə eyni olan yerli qovluqları, faylları, şəbəkə məkanlarını və internet "
 "səhifələrini tapır."
 
-#: locationrunner.cpp:56
+#: locationrunner.cpp:52
 #, kde-format
 msgid "Open %1"
 msgstr "%1 açmaq"
 
-#: locationrunner.cpp:75 locationrunner.cpp:79
+#: locationrunner.cpp:71 locationrunner.cpp:75
 #, kde-format
 msgid "Launch with %1"
 msgstr "%1 ilə başlamaq"
 
-#: locationrunner.cpp:85
+#: locationrunner.cpp:81
 #, kde-format
 msgid "Go to %1"
 msgstr "%1-ə(a) keçmək"
 
-#: locationrunner.cpp:93
+#: locationrunner.cpp:89
 #, kde-format
 msgid "Send email to %1"
 msgstr "%1 e-poçtuna məktub göndərin"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-02-09 19:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
@@ -18,57 +18,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: baloosearchrunner.cpp:65
+#: baloosearchrunner.cpp:60
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "İçeren Klasörü Aç"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:82
 #, kde-format
 msgid "Audios"
 msgstr "Sesler"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:83
 #, kde-format
 msgid "Images"
 msgstr "Görseller"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:84
 #, kde-format
 msgid "Videos"
 msgstr "Videolar"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:85
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Hesap Tabloları"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Presentations"
 msgstr "Sunumlar"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:87
 #, kde-format
 msgid "Folders"
 msgstr "Klasörler"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:88
 #, kde-format
 msgid "Documents"
 msgstr "Belgeler"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Archives"
 msgstr "Arşivler"
 
-#: baloosearchrunner.cpp:95
+#: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Texts"
 msgstr "Metinler"
 
-#: baloosearchrunner.cpp:96
+#: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
 msgstr "Dosyalar"

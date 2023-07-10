@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-12-29 17:51+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:143 webshortcutrunner.cpp:160
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "%2 keresése itt: %1"
 
-#: webshortcutrunner.cpp:71
+#: webshortcutrunner.cpp:67
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "„%1” megnyitása böngészőben a(z) :q: kereséssel"
 
-#: webshortcutrunner.cpp:76
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Keresés a DuckDuckGo szintaxisával"
 
-#: webshortcutrunner.cpp:111
+#: webshortcutrunner.cpp:107
 #, kde-format
 msgid "Search in private window"
 msgstr "Keresés privát ablakban"
 
-#: webshortcutrunner.cpp:111
+#: webshortcutrunner.cpp:107
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Keresés inkognitó ablakban"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-07-10 17:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -89,50 +89,50 @@ msgstr ""
 "列出螢幕亮度選項，或設定為搜尋關鍵字所定義的亮度，例如螢幕亮度 50 會將螢幕變"
 "暗至最高亮度的 50%"
 
-#: PowerDevilRunner.cpp:92
+#: PowerDevilRunner.cpp:88
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "設定亮度為 %1%"
 
-#: PowerDevilRunner.cpp:101
+#: PowerDevilRunner.cpp:97
 #, kde-format
 msgid "Dim screen totally"
 msgstr "將螢幕整個變暗"
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:105
 #, kde-format
 msgid "Dim screen by half"
 msgstr "將螢幕變暗一半"
 
-#: PowerDevilRunner.cpp:139
+#: PowerDevilRunner.cpp:135
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "睡眠"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "暫停並儲存到記憶體"
 
-#: PowerDevilRunner.cpp:145
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "休眠"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:142
 #, kde-format
 msgid "Suspend to disk"
 msgstr "暫停並儲存到磁碟"
 
-#: PowerDevilRunner.cpp:214
+#: PowerDevilRunner.cpp:210
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "螢幕亮度 "
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:212
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

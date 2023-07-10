@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2016-05-13 20:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: shellrunner.cpp:32
+#: shellrunner.cpp:27
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Запустити у вікні термінала"
+
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 "Знаходить команду, що відповідає :q:, з використанням звичайного синтаксису "
 "оболонки"
 
-#: shellrunner.cpp:33
-#, kde-format
-msgid "Run in Terminal Window"
-msgstr "Запустити у вікні термінала"
-
-#: shellrunner.cpp:51
+#: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
 msgstr "Виконати %1"

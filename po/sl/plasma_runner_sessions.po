@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-12-18 08:49+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -124,41 +124,41 @@ msgstr ""
 "Preklopi na dejavno sejo uporabnika :q:, ali pa izpiše seznam vseh dejavnih "
 "sej, če :q: ni podan"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Odjavi se"
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Izklopi"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Znova zaženi"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Zakleni"
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, kde-format
 msgid "Save Session"
 msgstr "Shrani sejo"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, kde-format
 msgid "Switch User"
 msgstr "Preklopi uporabnika"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -173,7 +173,7 @@ msgstr ""
 "(vnesite '%1')</li><li>Gradniki Plasme (kot je zaganjalnik aplikacije)</li></"
 "ul>"
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Nova seja namizja"

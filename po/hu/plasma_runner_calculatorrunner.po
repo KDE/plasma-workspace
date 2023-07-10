@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2020-12-13 20:05+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -19,7 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.03.70\n"
 
-#: calculatorrunner.cpp:31
+#: calculatorrunner.cpp:26
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Másolás a vágólapra"
+
+#: calculatorrunner.cpp:29
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -28,17 +33,12 @@ msgstr ""
 "Kiszámolja :q: értékét, ha :q: számokból és matematikai műveletekből (+, -, "
 "*, /, !, ^) álló kifejezés."
 
-#: calculatorrunner.cpp:36
+#: calculatorrunner.cpp:34
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:38
-#, kde-format
-msgid "Copy to Clipboard"
-msgstr "Másolás a vágólapra"
-
-#: calculatorrunner.cpp:145
+#: calculatorrunner.cpp:137
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

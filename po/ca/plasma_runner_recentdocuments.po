@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2020-07-30 22:15+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: recentdocuments.cpp:34
-#, kde-format
-msgid "Looks for documents recently used with names matching :q:."
-msgstr "Cerca documents usats recentment amb noms que coincideixin amb :q:."
-
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Obre la carpeta contenidora"
+
+#: recentdocuments.cpp:35
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
+msgstr "Cerca documents usats recentment amb noms que coincideixin amb :q:."

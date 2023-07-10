@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-10-23 20:04+0300\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: ESPERANTO <kde-i18n-eo@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: placesrunner.cpp:28 placesrunner.cpp:81
+#: placesrunner.cpp:27 placesrunner.cpp:47
 #, kde-format
 msgid "places"
 msgstr "lokoj"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Listas ĉiujn dosiermastrumilajn lokojn"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Trovas dosiermastrumilajn lokojn kongruantajn kun :q:"

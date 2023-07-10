@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-12-28 09:13+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:143 webshortcutrunner.cpp:160
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Na %1 poišči %2"
 
-#: webshortcutrunner.cpp:71
+#: webshortcutrunner.cpp:67
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Odpre \"%1\" v spletnem brskalniku s poizvedbo :q:."
 
-#: webshortcutrunner.cpp:76
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Iskanje z uporabo skladnje DuckDuckGo bang"
 
-#: webshortcutrunner.cpp:111
+#: webshortcutrunner.cpp:107
 #, kde-format
 msgid "Search in private window"
 msgstr "Išči v zasebnem oknu"
 
-#: webshortcutrunner.cpp:111
+#: webshortcutrunner.cpp:107
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Išči v inkognito oknu"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2010-06-17 14:21+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -88,24 +88,24 @@ msgid ""
 "brightness"
 msgstr ""
 
-#: PowerDevilRunner.cpp:92
+#: PowerDevilRunner.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword; %1 is a parameter"
 #| msgid "screen brightness %1"
 msgid "Set Brightness to %1%"
 msgstr "સ્ક્રીન પ્રકાશતા %1"
 
-#: PowerDevilRunner.cpp:101
+#: PowerDevilRunner.cpp:97
 #, kde-format
 msgid "Dim screen totally"
 msgstr "સંપૂર્ણપણે ઝાંખી સ્ક્રીન"
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:105
 #, kde-format
 msgid "Dim screen by half"
 msgstr ""
 
-#: PowerDevilRunner.cpp:139
+#: PowerDevilRunner.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "sleep"
@@ -113,12 +113,12 @@ msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "સ્લીપ"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to RAM"
 msgstr ""
 
-#: PowerDevilRunner.cpp:145
+#: PowerDevilRunner.cpp:141
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "hibernate"
@@ -126,14 +126,14 @@ msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "હાઇબરનેટ"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:142
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "to disk"
 msgid "Suspend to disk"
 msgstr "ડિસ્ક માટે"
 
-#: PowerDevilRunner.cpp:214
+#: PowerDevilRunner.cpp:210
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -141,7 +141,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "સ્ક્રીન પ્રકાશતા"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:212
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"

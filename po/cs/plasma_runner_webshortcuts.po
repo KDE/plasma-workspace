@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-06-29 14:21+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:143 webshortcutrunner.cpp:160
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Hledat %2 v %1"
 
-#: webshortcutrunner.cpp:71
+#: webshortcutrunner.cpp:67
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Otevře \"%1\" ve webovém prohlížeči s dotazem :q:."
 
-#: webshortcutrunner.cpp:76
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Hledat pomocí DuckDuckGo syntaxe bang "
 
-#: webshortcutrunner.cpp:111
+#: webshortcutrunner.cpp:107
 #, kde-format
 msgid "Search in private window"
 msgstr "Otevřít v soukromém okně"
 
-#: webshortcutrunner.cpp:111
+#: webshortcutrunner.cpp:107
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Hledat v okně inkognito"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2010-07-14 10:39+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: placesrunner.cpp:28 placesrunner.cpp:81
+#: placesrunner.cpp:27 placesrunner.cpp:47
 #, kde-format
 msgid "places"
 msgstr "places"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Opsomje fan alle triembehearder lokaasjes"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Syket om triembehearder lokaasjes dy't oerienkomme mei :q:"

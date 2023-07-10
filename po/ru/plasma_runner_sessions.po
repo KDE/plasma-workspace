@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-01-26 12:23+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -128,41 +128,41 @@ msgstr ""
 "Переключить на сеанс пользователя :q: или показать все активные сеансы, "
 "если :q: не указано"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Завершить сеанс"
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Выключить"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Перезагрузить"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Заблокировать"
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, kde-format
 msgid "Save Session"
 msgstr "Сохранить сеанс"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, kde-format
 msgid "Switch User"
 msgstr "Переключить пользователя"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -177,7 +177,7 @@ msgstr ""
 "</li> <li>Поиск Plasma (введите «%1»)</li> <li>Виджеты Plasma (например, "
 "меню запуска приложений)</li></ul>"
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Новый графический сеанс"

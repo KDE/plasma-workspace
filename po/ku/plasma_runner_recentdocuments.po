@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2008-11-15 03:41+0100\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -17,14 +17,14 @@ msgstr ""
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: recentdocuments.cpp:34
-#, kde-format
-msgid "Looks for documents recently used with names matching :q:."
-msgstr ""
-
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:33
 #, kde-format
 msgid "Open Containing Folder"
+msgstr ""
+
+#: recentdocuments.cpp:35
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
 msgstr ""
 
 #~ msgid "Recent Document"

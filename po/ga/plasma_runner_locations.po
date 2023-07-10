@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/krunner_locationsrunner.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2008-01-02 22:29-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -26,22 +26,22 @@ msgstr ""
 "Aimsigh comhaid agus comhadlanna logánta, súimh líonra agus suímh Idirlín le "
 "conairí comhoiriúnach do :q:."
 
-#: locationrunner.cpp:56
+#: locationrunner.cpp:52
 #, kde-format
 msgid "Open %1"
 msgstr "Oscail %1"
 
-#: locationrunner.cpp:75 locationrunner.cpp:79
+#: locationrunner.cpp:71 locationrunner.cpp:75
 #, kde-format
 msgid "Launch with %1"
 msgstr "Tosaigh le %1"
 
-#: locationrunner.cpp:85
+#: locationrunner.cpp:81
 #, kde-format
 msgid "Go to %1"
 msgstr "Téigh go %1"
 
-#: locationrunner.cpp:93
+#: locationrunner.cpp:89
 #, kde-format
 msgid "Send email to %1"
 msgstr ""

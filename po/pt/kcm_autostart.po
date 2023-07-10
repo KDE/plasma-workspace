@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-07-04 13:17+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -16,22 +16,22 @@ msgstr ""
 "X-POFile-IgnoreConsistency: Status\n"
 "X-POFile-IgnoreConsistency: Name\n"
 
-#: autostartmodel.cpp:320
+#: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "O \"%1\" não é um URL absoluto."
 
-#: autostartmodel.cpp:323
+#: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "O \"%1\" não existe."
 
-#: autostartmodel.cpp:326
+#: autostartmodel.cpp:334
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "O \"%1\" não é um ficheiro."
 
-#: autostartmodel.cpp:329
+#: autostartmodel.cpp:337
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "O \"%1\" não é legível."

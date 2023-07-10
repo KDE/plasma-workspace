@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2011-09-10 17:27+0200\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -23,29 +23,29 @@ msgstr ""
 msgid "Send SIGTERM"
 msgstr "Αποστολή SIGTERM"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:29
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Αποστολή SIGKILL"
 
-#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "τερματισμός"
 
-#: killrunner.cpp:55
+#: killrunner.cpp:48
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr ""
 "Τερματισμός εκτελούμενων εφαρμογών των οποίων τα ονόματα ταιριάζουν με το "
 "ερώτημα."
 
-#: killrunner.cpp:118
+#: killrunner.cpp:85
 #, kde-format
 msgid "Terminate %1"
 msgstr "Τερματισμός %1"
 
-#: killrunner.cpp:119
+#: killrunner.cpp:86
 #, kde-format
 msgid "Process ID: %1"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-07-30 22:17+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -28,22 +28,22 @@ msgstr ""
 "Gjej direktoritë dhe skedarët lokalë, vendet e rrjetit dhe faqet e "
 "internetit me shtigje që përputhen me :q:."
 
-#: locationrunner.cpp:56
+#: locationrunner.cpp:52
 #, kde-format
 msgid "Open %1"
 msgstr "Hapni %1"
 
-#: locationrunner.cpp:75 locationrunner.cpp:79
+#: locationrunner.cpp:71 locationrunner.cpp:75
 #, kde-format
 msgid "Launch with %1"
 msgstr "Niseni me %1"
 
-#: locationrunner.cpp:85
+#: locationrunner.cpp:81
 #, kde-format
 msgid "Go to %1"
 msgstr "Shkoni tek %1"
 
-#: locationrunner.cpp:93
+#: locationrunner.cpp:89
 #, kde-format
 msgid "Send email to %1"
 msgstr ""

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-10-27 20:35+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: placesrunner.cpp:28 placesrunner.cpp:81
+#: placesrunner.cpp:27 placesrunner.cpp:47
 #, kde-format
 msgid "places"
 msgstr "mjesta"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Izlistava sve lokacije upravitelja datoteka"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Pronalazi lokacije upravitelja datoteka koje se podudaraju s :q:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,57 +17,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: baloosearchrunner.cpp:65
+#: baloosearchrunner.cpp:60
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:82
 #, kde-format
 msgid "Audios"
 msgstr "오디오"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:83
 #, kde-format
 msgid "Images"
 msgstr "그림"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:84
 #, kde-format
 msgid "Videos"
 msgstr "비디오"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:85
 #, kde-format
 msgid "Spreadsheets"
 msgstr "스프레드시트"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Presentations"
 msgstr "프레젠테이션"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:87
 #, kde-format
 msgid "Folders"
 msgstr "폴더"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:88
 #, kde-format
 msgid "Documents"
 msgstr "문서"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Archives"
 msgstr "압축 파일"
 
-#: baloosearchrunner.cpp:95
+#: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Texts"
 msgstr "텍스트"
 
-#: baloosearchrunner.cpp:96
+#: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
 msgstr "파일"

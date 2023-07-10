@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_runner_powerdevil.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-01-20 10:11-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -96,23 +96,23 @@ msgstr ""
 "m.sh. má roghnaíonn tú gile 50, socrófar gile an scáileáin go dtí 50% den "
 "ghile is mó"
 
-#: PowerDevilRunner.cpp:92
+#: PowerDevilRunner.cpp:88
 #, fuzzy, kde-format
 #| msgid "Set Brightness to %1"
 msgid "Set Brightness to %1%"
 msgstr "Socraigh '%1' mar Ghile an Scáileáin"
 
-#: PowerDevilRunner.cpp:101
+#: PowerDevilRunner.cpp:97
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Doiléirigh an scáileán go hiomlán"
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:105
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Déan an scáileán leath chomh geal"
 
-#: PowerDevilRunner.cpp:139
+#: PowerDevilRunner.cpp:135
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "sleep"
@@ -120,12 +120,12 @@ msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "codail"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Cuir ar fionraí i RAM"
 
-#: PowerDevilRunner.cpp:145
+#: PowerDevilRunner.cpp:141
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "hibernate"
@@ -133,13 +133,13 @@ msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "geimhrigh"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:142
 #, fuzzy, kde-format
 #| msgid "Suspend to Disk"
 msgid "Suspend to disk"
 msgstr "Cuir ar fionraí ar an Diosca"
 
-#: PowerDevilRunner.cpp:214
+#: PowerDevilRunner.cpp:210
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -147,7 +147,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "gile"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:212
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"

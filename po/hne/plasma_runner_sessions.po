@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-01-29 17:43+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -132,13 +132,13 @@ msgid ""
 "sessions if :q: is not provided"
 msgstr ""
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -146,7 +146,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "बन्द करव"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -154,25 +154,25 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "फिर से  चालू करव"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "नवा सत्र"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "कमइया स्विच करव"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -182,7 +182,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

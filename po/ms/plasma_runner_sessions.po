@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2011-06-23 22:51+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -134,13 +134,13 @@ msgstr ""
 "Menukar ke sesi aktif untuk pengguna :q:, atau senaraikan semua sesi aktif "
 "jika :q: tidak diberikan"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -148,7 +148,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "matikan"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -156,25 +156,25 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "ulangmula"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "sesi baru"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "tukar pengguna"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -184,7 +184,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

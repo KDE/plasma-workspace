@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-02-09 13:26+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,57 +21,57 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: baloosearchrunner.cpp:65
+#: baloosearchrunner.cpp:60
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Obri la carpeta contenidora"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:82
 #, kde-format
 msgid "Audios"
 msgstr "Àudios"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:83
 #, kde-format
 msgid "Images"
 msgstr "Imatges"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:84
 #, kde-format
 msgid "Videos"
 msgstr "Vídeos"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:85
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Fulls de càlcul"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Presentations"
 msgstr "Presentacions"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:87
 #, kde-format
 msgid "Folders"
 msgstr "Carpetes"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:88
 #, kde-format
 msgid "Documents"
 msgstr "Documents"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Archives"
 msgstr "Arxius"
 
-#: baloosearchrunner.cpp:95
+#: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Texts"
 msgstr "Textos"
 
-#: baloosearchrunner.cpp:96
+#: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
 msgstr "Fitxers"

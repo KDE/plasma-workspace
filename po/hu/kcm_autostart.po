@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-07-01 22:53+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: autostartmodel.cpp:320
+#: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "„%1” nem abszolút URL."
 
-#: autostartmodel.cpp:323
+#: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "„%1” nem létezik."
 
-#: autostartmodel.cpp:326
+#: autostartmodel.cpp:334
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "„%1” nem fájl."
 
-#: autostartmodel.cpp:329
+#: autostartmodel.cpp:337
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "„%1” nem olvasható."

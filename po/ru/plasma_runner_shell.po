@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2016-09-04 12:10+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -25,17 +25,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: shellrunner.cpp:32
-#, kde-format
-msgid "Finds commands that match :q:, using common shell syntax"
-msgstr "Искать команды оболочки, соответствующие :q:"
-
-#: shellrunner.cpp:33
+#: shellrunner.cpp:27
 #, kde-format
 msgid "Run in Terminal Window"
 msgstr "Запустить в окне терминала"
 
-#: shellrunner.cpp:51
+#: shellrunner.cpp:33
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Искать команды оболочки, соответствующие :q:"
+
+#: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
 msgstr "Запустить %1"

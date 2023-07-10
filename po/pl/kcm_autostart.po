@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-07-30 19:34+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: autostartmodel.cpp:320
+#: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" nie jest bezwzględnym adresem url."
 
-#: autostartmodel.cpp:323
+#: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" nie istnieje."
 
-#: autostartmodel.cpp:326
+#: autostartmodel.cpp:334
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" nie jest plikiem."
 
-#: autostartmodel.cpp:329
+#: autostartmodel.cpp:337
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" nie jest do odczytu."

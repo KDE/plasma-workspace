@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2015-02-15 13:01+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: none\n"
@@ -21,62 +21,62 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: baloosearchrunner.cpp:65
+#: baloosearchrunner.cpp:60
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:82
 #, fuzzy, kde-format
 #| msgid "Audio"
 msgid "Audios"
 msgstr "Zvuk"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:83
 #, fuzzy, kde-format
 #| msgid "Image"
 msgid "Images"
 msgstr "Slika"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:84
 #, fuzzy, kde-format
 #| msgid "Video"
 msgid "Videos"
 msgstr "Video"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:85
 #, kde-format
 msgid "Spreadsheets"
 msgstr ""
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Presentations"
 msgstr ""
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:87
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "Direktorij"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:88
 #, fuzzy, kde-format
 #| msgid "Document"
 msgid "Documents"
 msgstr "Dokument"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Archives"
 msgstr ""
 
-#: baloosearchrunner.cpp:95
+#: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Texts"
 msgstr ""
 
-#: baloosearchrunner.cpp:96
+#: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
 msgstr ""

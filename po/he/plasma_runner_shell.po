@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2017-05-16 06:57-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: shellrunner.cpp:32
+#: shellrunner.cpp:27
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "הפעל בחלון &מסוף"
+
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 "פעולה זו מוצאת את הפקודות המתאימות לתבנית :q:, באמצעות שימוש בתחביר המעטפת "
 "הנפוץ."
 
-#: shellrunner.cpp:33
-#, kde-format
-msgid "Run in Terminal Window"
-msgstr "הפעל בחלון &מסוף"
-
-#: shellrunner.cpp:51
+#: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
 msgstr "&הפעל %1"

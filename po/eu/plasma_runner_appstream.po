@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-07-19 21:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Looks for non-installed components according to :q:"
 msgstr ":q:(r)en arabera instalatu gabe dauden osagaiak bilatzen ditu"
 
-#: appstreamrunner.cpp:129
+#: appstreamrunner.cpp:123
 #, kde-format
 msgid "Get %1…"
 msgstr "Lortu %1..."

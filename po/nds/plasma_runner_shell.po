@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2009-03-25 23:29+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,18 +19,18 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: shellrunner.cpp:32
-#, kde-format
-msgid "Finds commands that match :q:, using common shell syntax"
-msgstr "Söcht mit allmeen Konsool-Schriefwies na Befehlen, op de :q: passt"
-
-#: shellrunner.cpp:33
+#: shellrunner.cpp:27
 #, fuzzy, kde-format
 #| msgid "Run in &terminal window"
 msgid "Run in Terminal Window"
 msgstr "In Konsoolfinster u&tföhren"
 
-#: shellrunner.cpp:51
+#: shellrunner.cpp:33
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Söcht mit allmeen Konsool-Schriefwies na Befehlen, op de :q: passt"
+
+#: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
 msgstr "\"%1\" utföhren"

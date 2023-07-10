@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-05-28 11:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: ESPERANTO <kde-i18n-eo@kde.org>\n"
@@ -18,7 +18,12 @@ msgstr ""
 "X-Poedit-Language: Esperanto\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: calculatorrunner.cpp:31
+#: calculatorrunner.cpp:26
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Kopii al Tondujo"
+
+#: calculatorrunner.cpp:29
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -27,17 +32,12 @@ msgstr ""
 "Kalkulas la valoron de :q: kiam :q: enhavas nombrojn kaj matematikajn "
 "simbolojn kiel +, -, /, *, ! kaj ^."
 
-#: calculatorrunner.cpp:36
+#: calculatorrunner.cpp:34
 #, kde-format
 msgid "Enter a common math function"
 msgstr "Enigu oftan matematikan funkcion"
 
-#: calculatorrunner.cpp:38
-#, kde-format
-msgid "Copy to Clipboard"
-msgstr "Kopii al Tondujo"
-
-#: calculatorrunner.cpp:145
+#: calculatorrunner.cpp:137
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

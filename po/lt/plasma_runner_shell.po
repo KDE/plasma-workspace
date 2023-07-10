@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2016-08-30 17:29+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,18 +21,18 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: shellrunner.cpp:32
+#: shellrunner.cpp:27
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Paleisti terminalo lange"
+
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 "Randa komandas, atitinkančias :q:, naudojant komandinio apvalkalo sintaksę"
 
-#: shellrunner.cpp:33
-#, kde-format
-msgid "Run in Terminal Window"
-msgstr "Paleisti terminalo lange"
-
-#: shellrunner.cpp:51
+#: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
 msgstr "Vykdyti %1"

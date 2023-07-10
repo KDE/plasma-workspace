@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2010-05-10 19:38+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -18,7 +18,12 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=1;\n"
 
-#: calculatorrunner.cpp:31
+#: calculatorrunner.cpp:26
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: calculatorrunner.cpp:29
 #, fuzzy, kde-format
 #| msgid ""
 #| "Calculates the value of :q: when :q: is made up of numbers and "
@@ -30,17 +35,12 @@ msgstr ""
 "Mengira nilai :q: apabila :q: terdiri dari nombor dan simbol matematik "
 "seperti +, -, /, * dan ^."
 
-#: calculatorrunner.cpp:36
+#: calculatorrunner.cpp:34
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:38
-#, kde-format
-msgid "Copy to Clipboard"
-msgstr ""
-
-#: calculatorrunner.cpp:145
+#: calculatorrunner.cpp:137
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

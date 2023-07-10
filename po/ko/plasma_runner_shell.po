@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2021-05-29 00:23+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,18 +18,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.3\n"
 
-#: shellrunner.cpp:32
+#: shellrunner.cpp:27
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "터미널 창에서 실행"
+
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 "표준 셸 명령 문법을 사용하여, 명령 중 :q:이(가) 들어가는 명령을 찾습니다"
 
-#: shellrunner.cpp:33
-#, kde-format
-msgid "Run in Terminal Window"
-msgstr "터미널 창에서 실행"
-
-#: shellrunner.cpp:51
+#: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
 msgstr "%1 실행"

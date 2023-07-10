@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-05-02 15:10+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.0\n"
 
-#: calculatorrunner.cpp:31
+#: calculatorrunner.cpp:26
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Zkopírovat do schránky"
+
+#: calculatorrunner.cpp:29
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -28,17 +33,12 @@ msgstr ""
 "Vypočítá hodnotu :q: když :q: sestává z čísel a matematických symbolů jako "
 "+, -, /, * a ^."
 
-#: calculatorrunner.cpp:36
+#: calculatorrunner.cpp:34
 #, kde-format
 msgid "Enter a common math function"
 msgstr "Zadejte běžnou matematickou funkci"
 
-#: calculatorrunner.cpp:38
-#, kde-format
-msgid "Copy to Clipboard"
-msgstr "Zkopírovat do schránky"
-
-#: calculatorrunner.cpp:145
+#: calculatorrunner.cpp:137
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

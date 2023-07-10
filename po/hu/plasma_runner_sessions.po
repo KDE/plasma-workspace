@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-02-01 10:46+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -134,13 +134,13 @@ msgstr ""
 "Átvált a(z) :q: felhasználó aktív munkamenetére, vagy kilistázza az összes "
 "aktív munkamenetet, ha a kifejezés üres"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:79
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:89
 #, fuzzy, kde-format
 #| msgctxt "shut down computer command"
 #| msgid "shut down"
@@ -148,7 +148,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "shut down"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -156,24 +156,24 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "restart"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:123
+#: sessionrunner.cpp:119
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "új munkamenet"
 
-#: sessionrunner.cpp:166
+#: sessionrunner.cpp:162
 #, kde-format
 msgid "Switch User"
 msgstr "Felhasználóváltás"
 
-#: sessionrunner.cpp:249
+#: sessionrunner.cpp:245
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -183,7 +183,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:258
+#: sessionrunner.cpp:254
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

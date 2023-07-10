@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2017-06-12 16:30+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -22,23 +22,23 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: autostartmodel.cpp:320
+#: autostartmodel.cpp:328
 #, fuzzy, kde-format
 #| msgid "\"%1\" is not an absolute path."
 msgid "\"%1\" is not an absolute url."
 msgstr "Το \"%1\" δεν είναι η πλήρης διαδρομή."
 
-#: autostartmodel.cpp:323
+#: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "Το \"%1\" δεν υπάρχει."
 
-#: autostartmodel.cpp:326
+#: autostartmodel.cpp:334
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "Το \"%1\" δεν είναι αρχείο."
 
-#: autostartmodel.cpp:329
+#: autostartmodel.cpp:337
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "Το \"%1\" δεν είναι αναγνώσιμο."

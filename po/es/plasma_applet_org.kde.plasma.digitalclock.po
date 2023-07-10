@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-08 02:34+0000\n"
-"PO-Revision-Date: 2023-01-26 11:46+0100\n"
+"PO-Revision-Date: 2023-07-07 21:21+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -278,18 +278,14 @@ msgid "Available Plugins:"
 msgstr "Complementos disponibles:"
 
 #: package/contents/ui/configTimeZones.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Consejo: Si viaja con frecuencia, añada otra entrada para su zona horaria "
-"inicial a esta lista. Solo aparecerá cuando cambie la zona horaria del "
-"sistema a otra distinta."
+"Consejo: Si viaja con frecuencia, añada su zona horaria inicial a esta "
+"lista. Solo aparecerá cuando cambie la zona horaria del sistema a otra "
+"distinta."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
