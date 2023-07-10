@@ -13,6 +13,7 @@ import org.kde.kwindowsystem 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
     id: root
@@ -78,7 +79,7 @@ ColumnLayout {
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
             visible: root.inhibitions.length > 1 && !root.disabled
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallestFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3

@@ -18,11 +18,11 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     id: popup
 
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 24
-    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+    Layout.minimumWidth: Kirigami.Units.gridUnit * 24
+    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
 
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 24
-    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 24
+    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
     property alias hiddenLayout: hiddenItemsView.layout
     property alias plasmoidContainer: container
@@ -37,7 +37,7 @@ Item {
         }
         height: trayHeading.height + bottomPadding + container.headingHeight
         Behavior on height {
-            NumberAnimation { duration: PlasmaCore.Units.shortDuration/2; easing.type: Easing.InOutQuad }
+            NumberAnimation { duration: Kirigami.Units.shortDuration / 2; easing.type: Easing.InOutQuad }
         }
     }
 
@@ -68,7 +68,7 @@ Item {
 
             Kirigami.Heading {
                 Layout.fillWidth: true
-                leftPadding: systemTrayState.activeApplet ? 0 : PlasmaCore.Units.smallSpacing * 2
+                leftPadding: systemTrayState.activeApplet ? 0 : Kirigami.Units.largeSpacing
 
                 level: 1
                 text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
@@ -100,7 +100,7 @@ Item {
                     contentItem: PlasmaCore.IconItem {
                         anchors.centerIn: parent
                         active: parent.hovered
-                        implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
+                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
                         implicitHeight: implicitWidth
                         source: parent.qAction ? parent.qAction.icon : ""
                     }
@@ -149,7 +149,7 @@ Item {
                     parent: actionsButton
                     anchors.centerIn: parent
                     active: actionsButton.hovered
-                    implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
+                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
                     implicitHeight: implicitWidth
                     source: actionsButton.singleAction !== null ? actionsButton.singleAction.icon.name : ""
                     visible: actionsButton.singleAction
@@ -247,7 +247,7 @@ Item {
             id: hiddenItemsView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.topMargin: Kirigami.Units.smallSpacing
             visible: !systemTrayState.activeApplet
 
             KeyNavigation.up: pinButton

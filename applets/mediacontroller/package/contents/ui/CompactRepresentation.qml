@@ -11,6 +11,7 @@ import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 /**
  * [Album Art][Now Playing]
@@ -178,7 +179,7 @@ MouseArea {
             id: grid
             readonly property real labelHeight: songTitle.contentHeight
 
-            rowSpacing: PlasmaCore.Units.smallSpacing
+            rowSpacing: Kirigami.Units.smallSpacing
             columnSpacing: rowSpacing
             flow: {
                 switch (compactRepresentation.layoutForm) {
@@ -221,7 +222,7 @@ MouseArea {
                 visible: (compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.VerticalPanel
                     && compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.IconOnly)
                     || (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel
-                    && compactRepresentation.parent.width >= PlasmaCore.Units.gridUnit * 5)
+                    && compactRepresentation.parent.width >= Kirigami.Units.gridUnit * 5)
 
                 spacing: 0
 
@@ -230,7 +231,7 @@ MouseArea {
                     id: songTitle
 
                     Layout.fillWidth: true
-                    Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? PlasmaCore.Units.gridUnit * 10 : -1
+                    Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? Kirigami.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
                     horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignJustify
@@ -239,7 +240,7 @@ MouseArea {
                     opacity: root.isPlaying ? 1 : 0.6
                     Behavior on opacity {
                         NumberAnimation {
-                            duration: PlasmaCore.Units.shortDuration
+                            duration: Kirigami.Units.shortDuration
                             easing.type: Easing.InOutQuad
                         }
                     }
@@ -258,7 +259,7 @@ MouseArea {
                     visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
 
                     elide: Text.ElideRight
-                    font.pointSize: PlasmaCore.Theme.smallestFont.pointSize
+                    font.pointSize: Kirigami.Theme.smallFont.pointSize
                     horizontalAlignment: songTitle.horizontalAlignment
                     maximumLineCount: 1
                     opacity: 0.6

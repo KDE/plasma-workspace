@@ -10,6 +10,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 QQC2.StackView {
     id: view
@@ -120,7 +121,7 @@ QQC2.StackView {
             to: 1
             // The value is to keep compatible with the old feeling defined by "TransitionAnimationDuration" (default: 1000)
             // 1 is HACK for https://bugreports.qt.io/browse/QTBUG-106797 to avoid flickering
-            duration: view.doesSkipAnimation ? 1 : Math.round(PlasmaCore.Units.veryLongDuration * 2.5)
+            duration: view.doesSkipAnimation ? 1 : Math.round(Kirigami.Units.veryLongDuration * 2.5)
         }
     }
     // Keep the old image around till the new one is fully faded in

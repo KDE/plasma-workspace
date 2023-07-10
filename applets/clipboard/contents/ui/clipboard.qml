@@ -13,6 +13,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: main
@@ -22,8 +23,8 @@ PlasmoidItem {
 
     signal clearSearchField
 
-    switchWidth: PlasmaCore.Units.gridUnit * 5
-    switchHeight: PlasmaCore.Units.gridUnit * 5
+    switchWidth: Kirigami.Units.gridUnit * 5
+    switchHeight: Kirigami.Units.gridUnit * 5
     Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     toolTipMainText: i18n("Clipboard Contents")
     toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
@@ -101,10 +102,10 @@ PlasmoidItem {
 
     fullRepresentation: PlasmaExtras.Representation {
         id: dialogItem
-        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 24
-        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 24
-        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
-        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+        Layout.minimumWidth: Kirigami.Units.gridUnit * 24
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 24
+        Layout.maximumWidth: Kirigami.Units.gridUnit * 80
+        Layout.maximumHeight: Kirigami.Units.gridUnit * 40
         collapseMarginsHint: true
 
         focus: true

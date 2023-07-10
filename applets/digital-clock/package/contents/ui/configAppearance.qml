@@ -230,7 +230,7 @@ ColumnLayout {
             text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
             Layout.fillWidth: true
             wrapMode: Text.Wrap
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
         }
 
         RowLayout {
@@ -240,7 +240,7 @@ ColumnLayout {
                 checked: !cfg_autoFontAndSize
                 onClicked: {
                     if (cfg_fontFamily === "") {
-                        fontDialog.fontChosen = PlasmaCore.Theme.defaultFont
+                        fontDialog.fontChosen = Kirigami.Theme.defaultFont
                     }
                 }
             }

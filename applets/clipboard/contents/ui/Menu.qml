@@ -9,7 +9,7 @@ import QtQml 2.15
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaComponents3.ScrollView {
     id: menu
@@ -78,11 +78,11 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        topMargin: PlasmaCore.Units.smallSpacing * 2
-        bottomMargin: PlasmaCore.Units.smallSpacing * 2
-        leftMargin: PlasmaCore.Units.smallSpacing * 2
-        rightMargin: PlasmaCore.Units.smallSpacing * 2
-        spacing: PlasmaCore.Units.smallSpacing
+        topMargin: Kirigami.Units.largeSpacing
+        bottomMargin: Kirigami.Units.largeSpacing
+        leftMargin: Kirigami.Units.largeSpacing
+        rightMargin: Kirigami.Units.largeSpacing
+        spacing: Kirigami.Units.smallSpacing
 
         reuseItems: true
 
@@ -109,7 +109,7 @@ PlasmaComponents3.ScrollView {
             id: emptyHint
 
             anchors.centerIn: parent
-            width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+            width: parent.width - (Kirigami.Units.gridUnit * 4)
 
             active: menuListView.count === 0
             visible: active

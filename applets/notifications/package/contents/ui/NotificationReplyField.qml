@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 
 RowLayout {
     id: replyRow
@@ -23,7 +24,7 @@ RowLayout {
     property string buttonIconName
     property string buttonText
 
-    spacing: PlasmaCore.Units.smallSpacing
+    spacing: Kirigami.Units.smallSpacing
 
     function activate() {
         replyTextField.forceActiveFocus();

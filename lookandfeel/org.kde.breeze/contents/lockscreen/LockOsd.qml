@@ -7,6 +7,7 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 import "../osd"
 
 KSvg.FrameSvgItem {
@@ -30,11 +31,12 @@ KSvg.FrameSvgItem {
     }
 
     // avoid leaking ColorScope of lock screen theme into the OSD "popup"
-    PlasmaCore.ColorScope {
+    Item {
         width: osdItem.width
         height: osdItem.height
         anchors.centerIn: parent
-        colorGroup: PlasmaCore.Theme.NormalColorGroup
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
         OsdItem {
             id: osdItem
@@ -44,7 +46,7 @@ KSvg.FrameSvgItem {
     SequentialAnimation {
         id: hideAnimation
         // prevent press and hold from flickering
-        PauseAnimation { duration: PlasmaCore.Units.shortDuration }
+        PauseAnimation { duration: Kirigami.Units.shortDuration }
         NumberAnimation {
             target: osd
             property: "opacity"

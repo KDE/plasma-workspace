@@ -17,6 +17,7 @@ import org.kde.notification 1.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import "logic.js" as Logic
 
@@ -102,6 +103,7 @@ PlasmoidItem {
 
     switchWidth: PlasmaCore.Units.gridUnit * 10
     switchHeight: PlasmaCore.Units.gridUnit * 10
+
     Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
                                      hasBrightness ? i18n("Brightness") :
                                      hasBatteries ? i18n("Battery") : i18n("Power Management"))
@@ -268,12 +270,12 @@ PlasmoidItem {
 
         readonly property var appletInterface: batterymonitor
 
-        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 10
-        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
-        Layout.preferredWidth: PlasmaCore.Units.gridUnit * 20
+        Layout.minimumWidth: Kirigami.Units.gridUnit * 10
+        Layout.maximumWidth: Kirigami.Units.gridUnit * 80
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 20
 
-        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 10
-        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 10
+        Layout.maximumHeight: Kirigami.Units.gridUnit * 40
         Layout.preferredHeight: implicitHeight
 
         model: batteries

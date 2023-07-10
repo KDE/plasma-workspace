@@ -30,7 +30,7 @@
       <default>false</default>
     </entry>
     <entry name="iconSpacing" type="int">
-      <label>spacing between icons, determined by this number multiplied by PlasmaCore.Units.smallSpacing</label>
+      <label>spacing between icons, determined by this number multiplied by Kirigami.Units.smallSpacing</label>
       <default>2</default>
     </entry>
     <entry name="pin" type="Bool">

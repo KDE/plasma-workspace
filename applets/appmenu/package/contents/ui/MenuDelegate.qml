@@ -75,6 +75,6 @@ AbstractButton {
     contentItem: PC3.Label {
         text: controlRoot.Kirigami.MnemonicData.richTextLabel
         textFormat: Text.StyledText
-        color: controlRoot.menuState === MenuDelegate.State.Rest ? PlasmaCore.Theme.textColor : PlasmaCore.Theme.highlightedTextColor
+        color: controlRoot.menuState === MenuDelegate.State.Rest ? Kirigami.Theme.textColor : Kirigami.Theme.highlightedTextColor
     }
 }

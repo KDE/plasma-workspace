@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.15
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.sessions 2.0
 import "../components"
 
@@ -21,7 +21,7 @@ Item {
     property alias source: wallpaperBlur.source
     state: lockScreenRoot.uiVisible ? "on" : "off"
     property real factor: 0
-    readonly property bool lightColorScheme: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
+    readonly property bool lightColorScheme: Math.max(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b) > 0.5
 
     property bool alwaysShowClock: typeof config === "undefined" || typeof config.alwaysShowClock === "undefined" || config.alwaysShowClock === true
 
@@ -29,7 +29,7 @@ Item {
         NumberAnimation {
             target: wallpaperFader
             property: "factor"
-            duration: PlasmaCore.Units.veryLongDuration * 2
+            duration: Kirigami.Units.veryLongDuration * 2
             easing.type: Easing.InOutQuad
         }
     }
@@ -143,7 +143,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: PlasmaCore.Units.veryLongDuration
+                duration: Kirigami.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         },
@@ -153,7 +153,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: PlasmaCore.Units.veryLongDuration
+                duration: Kirigami.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         }

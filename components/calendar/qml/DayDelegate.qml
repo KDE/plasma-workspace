@@ -123,7 +123,7 @@ PlasmaComponents3.AbstractButton {
         anchors.bottomMargin: subDayLabel.item?.implicitHeight ?? Kirigami.Units.smallSpacing
         anchors.horizontalCenter: parent.horizontalCenter
         sourceComponent: Row {
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: Kirigami.Units.smallSpacing
 
             property bool hasSubDayLabel: false
 
@@ -131,10 +131,10 @@ PlasmaComponents3.AbstractButton {
                 model: DelegateModel {
                     model: dayStyle.dayModel
                     delegate: Rectangle {
-                        width: PlasmaCore.Units.smallSpacing * (hasSubDayLabel ? 1 : 1.5)
+                        width: hasSubDayLabel ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
                         height: width
                         radius: width / 2
-                        color: model.eventColor ? Kirigami.ColorUtils.linearInterpolation(model.eventColor, PlasmaCore.Theme.textColor, 0.2) : PlasmaCore.Theme.highlightColor
+                        color: model.eventColor ? Kirigami.ColorUtils.linearInterpolation(model.eventColor, Kirigami.Theme.textColor, 0.2) : Kirigami.Theme.highlightColor
                     }
 
                     Component.onCompleted: rootIndex = modelIndex(index)
@@ -161,7 +161,7 @@ PlasmaComponents3.AbstractButton {
                 bottom: subDayLabel.top
             }
             font.pixelSize: Math.max(
-                PlasmaCore.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
+                Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
                 daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
             font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
@@ -185,7 +185,7 @@ PlasmaComponents3.AbstractButton {
             sourceComponent: PlasmaComponents3.Label {
                 elide: Text.ElideRight
                 font.pixelSize: Math.max(
-                    PlasmaCore.Theme.smallestFont.pixelSize,
+                    Kirigami.Theme.smallFont.pixelSize,
                     daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 6 : 12))
                 font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter

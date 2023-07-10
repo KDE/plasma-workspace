@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.ToolTipArea {
     id: abstractItem
@@ -65,7 +66,7 @@ PlasmaCore.ToolTipArea {
         targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus
                 || abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus)
-            && PlasmaCore.Units.longDuration > 0
+            && Kirigami.Units.longDuration > 0
     }
 
     MouseArea {
@@ -124,7 +125,7 @@ PlasmaCore.ToolTipArea {
 
             Behavior on scale {
                 ScaleAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: (effectivePressed || mouseArea.containsPress) ? Easing.OutCubic : Easing.InCubic
                 }
             }
@@ -146,13 +147,13 @@ PlasmaCore.ToolTipArea {
 
             property alias container: abstractItem
             property alias inVisibleLayout: abstractItem.inVisibleLayout
-            readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : PlasmaCore.Units.iconSizes.medium
+            readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : Kirigami.Units.iconSizes.medium
 
             Layout.alignment: Qt.Bottom | Qt.AlignHCenter
             Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
             implicitWidth: root.vertical && abstractItem.inVisibleLayout ? abstractItem.width : size
             implicitHeight: !root.vertical && abstractItem.inVisibleLayout ? abstractItem.height : size
-            Layout.topMargin: abstractItem.inHiddenLayout ? Math.round(PlasmaCore.Units.smallSpacing * 1.5): 0
+            Layout.topMargin: abstractItem.inHiddenLayout ? Kirigami.Units.mediumSpacing : 0
         }
         PlasmaComponents3.Label {
             id: label
@@ -164,9 +165,9 @@ PlasmaCore.ToolTipArea {
             //! enforce labels with 3 lines at all cases so translations that require only one or two
             //! lines will always look consistent with no too much padding
             Layout.minimumHeight: abstractItem.inHiddenLayout ? abstractItem.minLabelHeight : 0
-            Layout.leftMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
-            Layout.rightMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
-            Layout.bottomMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
+            Layout.leftMargin: abstractItem.inHiddenLayout ? Kirigami.Units.smallSpacing : 0
+            Layout.rightMargin: abstractItem.inHiddenLayout ? Kirigami.Units.smallSpacing : 0
+            Layout.bottomMargin: abstractItem.inHiddenLayout ? Kirigami.Units.smallSpacing : 0
 
             visible: abstractItem.inHiddenLayout
 
@@ -179,7 +180,7 @@ PlasmaCore.ToolTipArea {
             opacity: visible ? 1 : 0
             Behavior on opacity {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }

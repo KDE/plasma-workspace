@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -141,17 +142,17 @@ PlasmaCore.Dialog {
                 top: parent.top
                 // Subtract bottom margin that header sets which is not a part of
                 // its height, and also the PlasmoidHeading's bottom line
-                topMargin: notificationItem.headerHeight - notificationItem.spacing - PlasmaCore.Units.devicePixelRatio
+                topMargin: notificationItem.headerHeight - notificationItem.spacing - 1
                 bottom: parent.bottom
                 bottomMargin: -notificationPopup.margins.bottom
                 left: parent.left
                 leftMargin: -notificationPopup.margins.left
             }
-            implicitWidth: Math.round(4 * PlasmaCore.Units.devicePixelRatio)
+            implicitWidth: 4
 
             visible: notificationPopup.urgency === NotificationManager.Notifications.CriticalUrgency
 
-            color: PlasmaCore.Theme.neutralTextColor
+            color: Kirigami.Theme.neutralTextColor
         }
 
         DraggableDelegate {
@@ -223,7 +224,7 @@ PlasmaCore.Dialog {
                 from: timer.interval
                 to: 0
                 duration: timer.interval
-                running: timer.running && PlasmaCore.Units.longDuration > 1
+                running: timer.running && Kirigami.Units.longDuration > 1
             }
 
             NotificationItem {

@@ -8,6 +8,7 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: root
@@ -17,8 +18,8 @@ PlasmoidItem {
     Layout.fillWidth: Plasmoid.configuration.expanding
     Layout.fillHeight: Plasmoid.configuration.expanding
 
-    Layout.minimumWidth: Plasmoid.containment.corona?.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
-    Layout.minimumHeight: Plasmoid.containment.corona?.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumWidth: Plasmoid.containment.corona?.editMode ? Kirigami.Units.gridUnit * 2 : 1
+    Layout.minimumHeight: Plasmoid.containment.corona?.editMode ? Kirigami.Units.gridUnit * 2 : 1
     Layout.preferredWidth: horizontal
         ? (Plasmoid.configuration.expanding ? optimalSize : Plasmoid.configuration.length)
         : 0
@@ -85,14 +86,14 @@ PlasmoidItem {
 
     Rectangle {
         anchors.fill: parent
-        color: PlasmaCore.Theme.highlightColor
+        color: Kirigami.Theme.highlightColor
         opacity: Plasmoid.containment.corona?.editMode ? 1 : 0
         visible: Plasmoid.containment.corona?.editMode || animator.running
 
         Behavior on opacity {
             NumberAnimation {
                 id: animator
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 // easing.type is updated after animation starts
                 easing.type: Plasmoid.containment.corona?.editMode ? Easing.InCubic : Easing.OutCubic
             }

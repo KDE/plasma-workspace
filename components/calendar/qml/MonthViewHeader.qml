@@ -58,7 +58,7 @@ Item {
 
         RowLayout {
             spacing: 0
-            Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
+            Layout.leftMargin: Kirigami.Units.largeSpacing
 
             Kirigami.Heading {
                 id: heading
@@ -101,7 +101,7 @@ Item {
 
                 currentIndex: root.swipeView.currentIndex
                 Layout.fillWidth: true
-                Layout.bottomMargin: root.isDigitalClock ? 0 : PlasmaCore.Units.smallSpacing
+                Layout.bottomMargin: root.isDigitalClock ? 0 : Kirigami.Units.smallSpacing
 
                 KeyNavigation.up: root.isDigitalClock ? root.configureButton : root.previousButton
                 KeyNavigation.right: dateManipulationButtonsForDigitalClock.previousButton

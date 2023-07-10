@@ -12,31 +12,31 @@ import org.kde.kirigami 2.14 as Kirigami
 
 ContainmentLayoutManager.ResizeHandle {
     id: handle
-    width: overlay.touchInteraction ? PlasmaCore.Units.gridUnit * 2 : PlasmaCore.Units.gridUnit
+    width: overlay.touchInteraction ? Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit
     height: width
     z: 999
 
     Kirigami.ShadowedRectangle {
         anchors.fill: parent
-        color: resizeBlocked ? PlasmaCore.Theme.negativeTextColor : PlasmaCore.Theme.backgroundColor
+        color: resizeBlocked ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.backgroundColor
 
         radius: width
 
-        shadow.size: PlasmaCore.Units.smallSpacing
+        shadow.size: Kirigami.Units.smallSpacing
         shadow.color: Qt.rgba(0.0, 0.0, 0.0, 0.2)
-        shadow.yOffset: PlasmaCore.Units.devicePixelRatio * 2
+        shadow.yOffset: 2
 
-        border.width: PlasmaCore.Units.devicePixelRatio
+        border.width: 1
         border.color: Qt.tint(Kirigami.Theme.textColor,
                             Qt.rgba(color.r, color.g, color.b, 0.3))
     }
     Rectangle {
         anchors {
             fill: parent
-            margins: PlasmaCore.Units.devicePixelRatio / 2
+            margins: 0.5
         }
         border {
-            width: PlasmaCore.Units.devicePixelRatio / 2
+            width: 0.5
             color: Qt.rgba(1, 1, 1, 0.2)
         }
         gradient: Gradient {
@@ -49,7 +49,7 @@ ContainmentLayoutManager.ResizeHandle {
     scale: overlay.open ? 1 : 0
     Behavior on scale {
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutQuad
         }
     }

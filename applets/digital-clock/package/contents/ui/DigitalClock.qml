@@ -14,6 +14,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as Components
 import org.kde.plasma.private.digitalclock 1.0
+import org.kde.kirigami 2.20 as Kirigami
 
 MouseArea {
     id: main
@@ -57,7 +58,7 @@ MouseArea {
         } else {
             // Adaptive
             return Plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
-                main.height <= 2 * PlasmaCore.Theme.smallestFont.pixelSize &&
+                main.height <= 2 * Kirigami.Theme.smallestFont.pixelSize &&
                 (main.showDate || timezoneLabel.visible);
         }
     }
@@ -133,7 +134,7 @@ MouseArea {
 
                 height: timeLabel.height + (main.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
                 width: Math.max(timeLabel.width + (main.showDate ? timezoneLabel.paintedWidth : 0),
-                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + PlasmaCore.Units.smallSpacing * 2
+                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + Kirigami.Units.largeSpacing
             }
 
             PropertyChanges {
@@ -231,7 +232,7 @@ MouseArea {
                 target: dateLabel
 
                 height: timeLabel.height
-                width: dateLabel.paintedWidth + PlasmaCore.Units.smallSpacing
+                width: dateLabel.paintedWidth + Kirigami.Units.smallSpacing
 
                 font.pixelSize: 1024
                 verticalAlignment: Text.AlignVCenter
@@ -327,13 +328,13 @@ MouseArea {
 
                 width: main.width
                 //NOTE: in order for Text.Fit to work as intended, the actual height needs to be quite big, in order for the font to enlarge as much it needs for the available width, and then request a sensible height, for which contentHeight will need to be considered as opposed to height
-                height: PlasmaCore.Units.gridUnit * 10
+                height: Kirigami.Units.gridUnit * 10
 
                 fontSizeMode: Text.Fit
                 verticalAlignment: Text.AlignTop
                 // Those magic numbers are purely what looks nice as maximum size, here we have it the smallest
                 // between slightly bigger than the default font (1.4 times) and a bit smaller than the time font
-                font.pixelSize: Math.min(0.7 * timeLabel.height, PlasmaCore.Theme.defaultFont.pixelSize * 1.4)
+                font.pixelSize: Math.min(0.7 * timeLabel.height, Kirigami.Theme.defaultFont.pixelSize * 1.4)
                 elide: Text.ElideRight
                 wrapMode: Text.WordWrap
             }
@@ -363,8 +364,8 @@ MouseArea {
                 target: main
                 Layout.fillHeight: false
                 Layout.fillWidth: false
-                Layout.minimumWidth: PlasmaCore.Units.gridUnit * 3
-                Layout.minimumHeight: PlasmaCore.Units.gridUnit * 3
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 3
+                Layout.minimumHeight: Kirigami.Units.gridUnit * 3
             }
 
             PropertyChanges {
@@ -404,7 +405,7 @@ MouseArea {
 
                 height: 0.7 * timeLabel.height
                 font.pixelSize: 1024
-                width: Math.max(timeLabel.contentWidth, PlasmaCore.Units.gridUnit * 3)
+                width: Math.max(timeLabel.contentWidth, Kirigami.Units.gridUnit * 3)
                 verticalAlignment: Text.AlignVCenter
 
                 fontSizeMode: Text.Fit
@@ -493,7 +494,7 @@ MouseArea {
             verticalItemAlignment: Grid.AlignVCenter
 
             flow: Grid.TopToBottom
-            columnSpacing: PlasmaCore.Units.smallSpacing
+            columnSpacing: Kirigami.Units.smallSpacing
 
             Components.Label  {
                 id: timeLabel
@@ -569,10 +570,10 @@ MouseArea {
 
         height: 1024
 
-        font.family: (Plasmoid.configuration.autoFontAndSize || Plasmoid.configuration.fontFamily.length === 0) ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
-        font.weight: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.weight : Plasmoid.configuration.fontWeight
-        font.italic: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.italic : Plasmoid.configuration.italicText
-        font.pixelSize: Plasmoid.configuration.autoFontAndSize ? 3 * PlasmaCore.Theme.defaultFont.pixelSize : pointToPixel(Plasmoid.configuration.fontSize)
+        font.family: (Plasmoid.configuration.autoFontAndSize || Plasmoid.configuration.fontFamily.length === 0) ? Kirigami.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
+        font.weight: Plasmoid.configuration.autoFontAndSize ? Kirigami.Theme.defaultFont.weight : Plasmoid.configuration.fontWeight
+        font.italic: Plasmoid.configuration.autoFontAndSize ? Kirigami.Theme.defaultFont.italic : Plasmoid.configuration.italicText
+        font.pixelSize: Plasmoid.configuration.autoFontAndSize ? 3 * Kirigami.Theme.defaultFont.pixelSize : pointToPixel(Plasmoid.configuration.fontSize)
         font.pointSize: -1
         fontSizeMode: Text.VerticalFit
 

@@ -24,10 +24,10 @@ PlasmaExtras.Representation {
     readonly property var appletInterface: devicenotifier
     property bool spontaneousOpen: false
 
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 18
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 18
-    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
-    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.minimumWidth: Kirigami.Units.gridUnit * 18
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 18
+    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
+    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
     focus: true
     collapseMarginsHint: true
@@ -86,7 +86,7 @@ PlasmaExtras.Representation {
             target: messageHighlight
             from: 1
             to: 0
-            duration: PlasmaCore.Units.veryLongDuration * 8
+            duration: Kirigami.Units.veryLongDuration * 8
             easing.type: Easing.InOutQuad
             Component.onCompleted: devicenotifier.isMessageHighlightAnimatorRunning = Qt.binding(() => running);
         }
@@ -141,11 +141,11 @@ PlasmaExtras.Representation {
             highlightMoveDuration: 0
             highlightResizeDuration: 0
 
-            topMargin: PlasmaCore.Units.smallSpacing * 2
-            bottomMargin: PlasmaCore.Units.smallSpacing * 2
-            leftMargin: PlasmaCore.Units.smallSpacing * 2
-            rightMargin: PlasmaCore.Units.smallSpacing * 2
-            spacing: PlasmaCore.Units.smallSpacing
+            topMargin: Kirigami.Units.largeSpacing
+            bottomMargin: Kirigami.Units.largeSpacing
+            leftMargin: Kirigami.Units.largeSpacing
+            rightMargin: Kirigami.Units.largeSpacing
+            spacing: Kirigami.Units.smallSpacing
 
             currentIndex: devicenotifier.currentIndex
 
@@ -162,7 +162,7 @@ PlasmaExtras.Representation {
                 property: "Type Description"
                 delegate: Item {
                     height: Math.floor(childrenRect.height)
-                    width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+                    width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.largeSpacing * 2 : 0)
                     Kirigami.Heading {
                         level: 3
                         opacity: 0.6
@@ -173,7 +173,7 @@ PlasmaExtras.Representation {
 
             Loader {
                 anchors.centerIn: parent
-                width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                width: parent.width - (Kirigami.Units.gridUnit * 4)
 
                 active: notifierDialog.count === 0 && !messageHighlightAnimator.running
                 visible: active

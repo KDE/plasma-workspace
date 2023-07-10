@@ -21,8 +21,8 @@ ContainmentItem {
 
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : mainLayout.implicitWidth + PlasmaCore.Units.smallSpacing
-    Layout.minimumHeight: vertical ? mainLayout.implicitHeight + PlasmaCore.Units.smallSpacing : PlasmaCore.Units.iconSizes.small
+    Layout.minimumWidth: vertical ? Kirigami.Units.iconSizes.small : mainLayout.implicitWidth + Kirigami.Units.smallSpacing
+    Layout.minimumHeight: vertical ? mainLayout.implicitHeight + Kirigami.Units.smallSpacing : Kirigami.Units.iconSizes.small
 
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -116,7 +116,7 @@ ContainmentItem {
                 flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
 
                 // The icon size to display when not using the auto-scaling setting
-                readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
+                readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
 
                 // Automatically use autoSize setting when in tablet mode, if it's
                 // not already being used
@@ -124,10 +124,10 @@ ContainmentItem {
 
                 readonly property int gridThickness: root.vertical ? root.width : root.height
                 // Should change to 2 rows/columns on a 56px panel (in standard DPI)
-                readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
+                readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + Kirigami.Units.smallSpacing))))
 
                 // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
-                readonly property int cellSpacing: PlasmaCore.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
+                readonly property int cellSpacing: Kirigami.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
                 readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + cellSpacing
 
                 cellHeight: {
@@ -151,7 +151,7 @@ ContainmentItem {
 
                 readonly property int itemSize: {
                     if (autoSize) {
-                        return PlasmaCore.Units.roundToIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, PlasmaCore.Units.iconSizes.enormous))
+                        return Kirigami.Units.roundToIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, Kirigami.Units.iconSizes.enormous))
                     } else {
                         return smallIconSize
                     }
@@ -194,7 +194,7 @@ ContainmentItem {
                         from: 0
                         to: 1
                         easing.type: Easing.InOutQuad
-                        duration: PlasmaCore.Units.longDuration
+                        duration: Kirigami.Units.longDuration
                     }
                 }
 
@@ -205,7 +205,7 @@ ContainmentItem {
                         property: "scale"
                         to: 1
                         easing.type: Easing.InOutQuad
-                        duration: PlasmaCore.Units.longDuration
+                        duration: Kirigami.Units.longDuration
                     }
                 }
 
@@ -213,7 +213,7 @@ ContainmentItem {
                     NumberAnimation {
                         properties: "x,y"
                         easing.type: Easing.InOutQuad
-                        duration: PlasmaCore.Units.longDuration
+                        duration: Kirigami.Units.longDuration
                     }
                 }
             }
@@ -281,8 +281,8 @@ ContainmentItem {
                         rightMargin: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -dialog.margins.right
                         bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -dialog.margins.bottom
                     }
-                    height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? PlasmaCore.Units.devicePixelRatio : undefined
-                    width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? PlasmaCore.Units.devicePixelRatio : undefined
+                    height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? 1 : undefined
+                    width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                     z: 999 /* Draw the line on top of the applet */
                     elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                     svg: KSvg.Svg {

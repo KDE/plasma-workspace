@@ -37,6 +37,6 @@ MouseArea {
         target: delegate
         property:"x"
         to: 0
-        duration: PlasmaCore.Units.longDuration
+        duration: Kirigami.Units.longDuration
     }
 }

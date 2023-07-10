@@ -11,11 +11,12 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
 import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.kirigami 2.20 as Kirigami
 
 RowLayout {
     id: root
 
-    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize
+    property int fontSize: Kirigami.Theme.defaultFont.pointSize
 
     function getOrDefault(source /*object?*/, prop /*string*/, fallback /*T*/) /*-> T*/ {
         return (source !== null && source !== undefined && source.hasOwnProperty(prop))
@@ -29,7 +30,7 @@ RowLayout {
     readonly property bool hasBattery: getOrDefault(battery, "Has Battery", false)
     readonly property int percent: getOrDefault(battery, "Percent", 0)
 
-    spacing: PlasmaCore.Units.smallSpacing
+    spacing: Kirigami.Units.smallSpacing
     visible: getOrDefault(battery, "Has Cumulative", false)
 
     P5Support.DataSource {
@@ -43,7 +44,7 @@ RowLayout {
         hasBattery: root.hasBattery
         percent: root.percent
 
-        Layout.preferredHeight: Math.max(PlasmaCore.Units.iconSizes.medium, batteryLabel.implicitHeight)
+        Layout.preferredHeight: Math.max(Kirigami.Units.iconSizes.medium, batteryLabel.implicitHeight)
         Layout.preferredWidth: Layout.preferredHeight
         Layout.alignment: Qt.AlignVCenter
     }

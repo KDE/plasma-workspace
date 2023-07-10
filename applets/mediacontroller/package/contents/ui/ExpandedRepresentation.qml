@@ -23,14 +23,14 @@ PlasmaExtras.Representation {
 
     Layout.minimumWidth: switchWidth
     Layout.minimumHeight: switchHeight
-    Layout.preferredWidth: PlasmaCore.Units.gridUnit * 20
-    Layout.preferredHeight: PlasmaCore.Units.gridUnit * 20
-    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 40
-    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+    Layout.preferredHeight: Kirigami.Units.gridUnit * 20
+    Layout.maximumWidth: Kirigami.Units.gridUnit * 40
+    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
     collapseMarginsHint: true
 
-    readonly property int controlSize: PlasmaCore.Units.iconSizes.medium
+    readonly property int controlSize: Kirigami.Units.iconSizes.medium
 
     property double position: (mpris2Source.currentData && mpris2Source.currentData.Position) || 0
     readonly property real rate: (mpris2Source.currentData && mpris2Source.currentData.Rate) || 1
@@ -256,11 +256,11 @@ PlasmaExtras.Representation {
 
             anchors {
                 fill: parent
-                leftMargin: PlasmaCore.Units.largeSpacing
-                rightMargin: PlasmaCore.Units.largeSpacing
+                leftMargin: Kirigami.Units.gridUnit
+                rightMargin: Kirigami.Units.gridUnit
             }
 
-            spacing: PlasmaCore.Units.largeSpacing
+            spacing: Kirigami.Units.gridUnit
 
             AlbumArtStackView {
                 id: albumArt
@@ -303,7 +303,7 @@ PlasmaExtras.Representation {
                     id: songTitle
                     level: 1
 
-                    color: (softwareRendering || !albumArt.hasImage) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -313,14 +313,14 @@ PlasmaExtras.Representation {
                     text: root.track
 
                     Layout.fillWidth: true
-                    Layout.maximumHeight: PlasmaCore.Units.gridUnit*5
+                    Layout.maximumHeight: Kirigami.Units.gridUnit * 5
                 }
                 Kirigami.Heading { // Song Artist
                     id: songArtist
                     visible: root.artist
                     level: 2
 
-                    color: (softwareRendering || !albumArt.hasImage) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -329,10 +329,10 @@ PlasmaExtras.Representation {
 
                     text: root.artist
                     Layout.fillWidth: true
-                    Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
+                    Layout.maximumHeight: Kirigami.Units.gridUnit * 2
                 }
                 Kirigami.Heading { // Song Album
-                    color: (softwareRendering || !albumArt.hasImage) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     level: 3
                     opacity: 0.6
@@ -376,7 +376,7 @@ PlasmaExtras.Representation {
                         return ""
                     }
                     Layout.fillWidth: true
-                    Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
+                    Layout.maximumHeight: Kirigami.Units.gridUnit * 2
                 }
             }
         }
@@ -388,25 +388,25 @@ PlasmaExtras.Representation {
         ColumnLayout { // Main Column Layout
             anchors.fill: parent
             RowLayout { // Seek Bar
-                spacing: PlasmaCore.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
                 enabled: !root.noPlayer && root.track && expandedRepresentation.length > 0 ? true : false
                 opacity: enabled ? 1 : 0
                 Behavior on opacity {
-                    NumberAnimation { duration: PlasmaCore.Units.longDuration }
+                    NumberAnimation { duration: Kirigami.Units.longDuration }
                 }
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
-                Layout.maximumWidth: Math.min(PlasmaCore.Units.gridUnit*45, Math.round(expandedRepresentation.width*(7/10)))
+                Layout.maximumWidth: Math.min(Kirigami.Units.gridUnit * 45, Math.round(expandedRepresentation.width * (7 / 10)))
 
                 // ensure the layout doesn't shift as the numbers change and measure roughly the longest text that could occur with the current song
                 TextMetrics {
                     id: timeMetrics
                     text: i18nc("Remaining time for song e.g -5:42", "-%1",
                                 KCoreAddons.Format.formatDuration(seekSlider.to / 1000, expandedRepresentation.durationFormattingOptions))
-                    font: PlasmaCore.Theme.smallestFont
+                    font: Kirigami.Theme.smallFont
                 }
 
                 PlasmaComponents3.Label { // Time Elapsed
@@ -415,8 +415,8 @@ PlasmaExtras.Representation {
                     horizontalAlignment: Text.AlignRight
                     text: KCoreAddons.Format.formatDuration(seekSlider.value / 1000, expandedRepresentation.durationFormattingOptions)
                     opacity: 0.9
-                    font: PlasmaCore.Theme.smallestFont
-                    color: PlasmaCore.ColorScope.textColor
+                    font: Kirigami.Theme.smallFont
+                    color: Kirigami.Theme.textColor
                 }
 
                 PlasmaComponents3.Slider { // Slider
@@ -528,8 +528,8 @@ PlasmaExtras.Representation {
                     text: i18nc("Remaining time for song e.g -5:42", "-%1",
                                 KCoreAddons.Format.formatDuration((seekSlider.to - seekSlider.value) / 1000, expandedRepresentation.durationFormattingOptions))
                     opacity: 0.9
-                    font: PlasmaCore.Theme.smallestFont
-                    color: PlasmaCore.ColorScope.textColor
+                    font: Kirigami.Theme.smallFont
+                    color: Kirigami.Theme.textColor
                 }
             }
 
@@ -537,16 +537,16 @@ PlasmaExtras.Representation {
                 id: playerControls
 
                 property bool enabled: root.canControl
-                property int controlsSize: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 3
+                property int controlsSize: Kirigami.Units.gridUnit * 3
 
                 Layout.alignment: Qt.AlignHCenter
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                spacing: PlasmaCore.Units.smallSpacing
+                Layout.bottomMargin: Kirigami.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 PlasmaComponents3.ToolButton {
                     id: shuffleButton
-                    Layout.rightMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
-                    Layout.leftMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
+                    Layout.rightMargin: LayoutMirroring.enabled ? 0 : Kirigami.Units.gridUnit - playerControls.spacing
+                    Layout.leftMargin: LayoutMirroring.enabled ? Kirigami.Units.gridUnit - playerControls.spacing : 0
                     icon.name: "media-playlist-shuffle"
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
@@ -634,8 +634,8 @@ PlasmaExtras.Representation {
 
                 PlasmaComponents3.ToolButton {
                     id: repeatButton
-                    Layout.leftMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
-                    Layout.rightMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
+                    Layout.leftMargin: LayoutMirroring.enabled ? 0 : Kirigami.Units.gridUnit - playerControls.spacing
+                    Layout.rightMargin: LayoutMirroring.enabled ? Kirigami.Units.gridUnit - playerControls.spacing : 0
                     icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
@@ -679,7 +679,7 @@ PlasmaExtras.Representation {
         //this removes top padding to allow tabbar to touch the edge
         topPadding: topInset
         bottomPadding: -bottomInset
-        implicitHeight: PlasmaCore.Units.gridUnit * 2
+        implicitHeight: Kirigami.Units.gridUnit * 2
         PlasmaComponents3.TabBar {
             id: playerSelector
             position: PlasmaComponents3.TabBar.Header
@@ -702,7 +702,7 @@ PlasmaExtras.Representation {
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
                     icon.name: modelData["icon"]
-                    icon.height: PlasmaCore.Units.iconSizes.smallMedium
+                    icon.height: Kirigami.Units.iconSizes.smallMedium
                     Accessible.name: modelData["text"]
                     PlasmaComponents3.ToolTip {
                         text: modelData["text"]

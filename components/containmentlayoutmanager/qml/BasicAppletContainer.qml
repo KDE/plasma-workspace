@@ -31,11 +31,6 @@ ContainmentLayoutManager.AppletContainer {
             ? Kirigami.Theme.Complementary
             : Kirigami.Theme.Window
 
-    PlasmaCore.ColorScope.inherit: false
-    PlasmaCore.ColorScope.colorGroup: Kirigami.Theme.colorSet === Kirigami.Theme.Complementary
-        ? PlasmaCore.Theme.ComplementaryColorGroup
-        : PlasmaCore.Theme.NormalColorGroup
-
     onFocusChanged: {
         if (!focus && !dragActive) {
             editMode = false;

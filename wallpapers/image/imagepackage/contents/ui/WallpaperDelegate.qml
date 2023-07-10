@@ -10,6 +10,7 @@ import QtQuick.Controls 2.3 as QtControls2
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
@@ -62,7 +63,7 @@ KCM.GridDelegate {
 
         Kirigami.Icon {
             anchors.centerIn: parent
-            width: PlasmaCore.Units.iconSizes.large
+            width: Kirigami.Units.iconSizes.large
             height: width
             source: "view-preview"
             visible: !walliePreview.visible
@@ -125,7 +126,7 @@ KCM.GridDelegate {
 
     Behavior on opacity {
         OpacityAnimator {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutQuad
         }
     }

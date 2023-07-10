@@ -9,6 +9,7 @@ import QtQuick.Controls 2.15 as QQC2 // For StackView
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0
 
 ColumnLayout {
@@ -54,9 +55,9 @@ ColumnLayout {
     PlasmaComponents3.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
-        Layout.rightMargin: PlasmaComponents3.ScrollBar.vertical.visible ? 0 : PlasmaCore.Units.smallSpacing * 2
-        Layout.topMargin: PlasmaCore.Units.smallSpacing * 2
+        Layout.leftMargin: Kirigami.Units.smallSpacing * 2
+        Layout.rightMargin: PlasmaComponents3.ScrollBar.vertical.visible ? 0 : Kirigami.Units.smallSpacing * 2
+        Layout.topMargin: Kirigami.Units.smallSpacing * 2
 
         PlasmaComponents3.TextArea {
             id: textArea
@@ -77,7 +78,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.alignment: Qt.AlignRight
-        Layout.margins: PlasmaCore.Units.smallSpacing * 2
+        Layout.margins: Kirigami.Units.smallSpacing * 2
         PlasmaComponents3.Button {
             text: i18nc("@action:button", "Save")
             icon.name: "document-save"

@@ -12,6 +12,7 @@ import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.workspace.components 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import "logic.js" as Logic
 
@@ -61,14 +62,14 @@ PlasmaComponents3.ItemDelegate {
     Accessible.description: `${isPowerSupplyLabel.text} ${percentLabel.text}; ${details.Accessible.description}`
 
     contentItem: RowLayout {
-        spacing: PlasmaCore.Units.gridUnit
+        spacing: Kirigami.Units.gridUnit
 
         BatteryIcon {
             id: batteryIcon
 
             Layout.alignment: Qt.AlignTop
-            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
             batteryType: root.battery.Type
             percent: root.battery.Percent
@@ -82,7 +83,7 @@ PlasmaComponents3.ItemDelegate {
             spacing: 0
 
             RowLayout {
-                spacing: PlasmaCore.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 PlasmaComponents3.Label {
                     Layout.fillWidth: true
@@ -126,10 +127,10 @@ PlasmaComponents3.ItemDelegate {
                 id: details
 
                 Layout.fillWidth: true
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
+                Layout.topMargin: Kirigami.Units.smallSpacing
 
                 columns: 2
-                columnSpacing: PlasmaCore.Units.smallSpacing
+                columnSpacing: Kirigami.Units.smallSpacing
                 rowSpacing: 0
 
                 Accessible.description: {
@@ -146,7 +147,7 @@ PlasmaComponents3.ItemDelegate {
                     // fillWidth is true, so using internal alignment
                     horizontalAlignment: Text.AlignLeft
                     Layout.fillWidth: true
-                    font: PlasmaCore.Theme.smallestFont
+                    font: Kirigami.Theme.smallestFont
                     wrapMode: Text.WordWrap
                     enabled: false
                 }
@@ -154,7 +155,7 @@ PlasmaComponents3.ItemDelegate {
                     // fillWidth is false, so using external (grid-cell-internal) alignment
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: false
-                    font: PlasmaCore.Theme.smallestFont
+                    font: Kirigami.Theme.smallestFont
                     enabled: false
                 }
 
@@ -165,8 +166,8 @@ PlasmaComponents3.ItemDelegate {
                     text: root.isBroken && typeof root.battery.Capacity !== "undefined"
                         ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
                         : ""
-                    font: PlasmaCore.Theme.smallestFont
-                    color: PlasmaCore.Theme.neutralTextColor
+                    font: Kirigami.Theme.smallestFont
+                    color: Kirigami.Theme.neutralTextColor
                     visible: root.isBroken
                     wrapMode: Text.WordWrap
                 }
@@ -214,7 +215,7 @@ PlasmaComponents3.ItemDelegate {
 
             InhibitionHint {
                 Layout.fillWidth: true
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
+                Layout.topMargin: Kirigami.Units.smallSpacing
 
                 readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
                 readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]

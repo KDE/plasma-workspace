@@ -7,6 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 /*
  * A model with a list of users to show in the view.
@@ -29,10 +30,10 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 ListView {
     id: view
     readonly property string selectedUser: currentItem ? currentItem.userName : ""
-    readonly property int userItemWidth: PlasmaCore.Units.gridUnit * 8
-    readonly property int userItemHeight: PlasmaCore.Units.gridUnit * 9
+    readonly property int userItemWidth: Kirigami.Units.gridUnit * 8
+    readonly property int userItemHeight: Kirigami.Units.gridUnit * 9
     readonly property bool constrainText: count > 1
-    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
+    property int fontSize: Kirigami.Theme.defaultFont.pointSize + 2
 
     implicitHeight: userItemHeight
 

@@ -10,6 +10,7 @@ import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kcmutils as KCMUtils
@@ -99,11 +100,11 @@ PlasmoidItem {
         return lines.join("\n");
     }
 
-    switchWidth: PlasmaCore.Units.gridUnit * 14
+    switchWidth: Kirigami.Units.gridUnit * 14
     // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
     // The CompactRepresentation size is limited to not have the notification icon grow gigantic
     // but it should still switch over to full rep once there's enough width (disregarding the limited height)
-    switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
+    switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : Kirigami.Units.gridUnit * 10
 
     onExpandedChanged: expanded => {
         if (!expanded) {

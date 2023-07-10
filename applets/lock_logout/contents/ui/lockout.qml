@@ -11,11 +11,12 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import "data.js" as Data
 import org.kde.plasma.private.sessions 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: root
 
-    readonly property int minButtonSize: PlasmaCore.Units.iconSizes.small
+    readonly property int minButtonSize: Kirigami.Units.iconSizes.small
 
     preferredRepresentation: fullRepresentation
     fullRepresentation: Flow {

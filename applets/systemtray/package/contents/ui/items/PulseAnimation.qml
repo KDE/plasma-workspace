@@ -7,13 +7,14 @@
 
 import QtQuick 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 SequentialAnimation {
     id: pulseAnimation
     objectName: "pulseAnimation"
 
     property Item targetItem
-    readonly property int duration: PlasmaCore.Units.veryLongDuration * 5
+    readonly property int duration: Kirigami.Units.veryLongDuration * 5
 
     loops: Animation.Infinite
     alwaysRunToEnd: true

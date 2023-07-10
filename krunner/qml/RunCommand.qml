@@ -17,6 +17,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou 0.1 as Milou
 import org.kde.krunner.private.view
+import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
     id: root
@@ -101,8 +102,8 @@ ColumnLayout {
             id: queryField
             property bool allowCompletion: false
 
-            Layout.minimumWidth: PlasmaCore.Units.gridUnit * 25
-            Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 25
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 25
 
             activeFocusOnPress: true
             placeholderText: results.singleRunnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
@@ -132,7 +133,7 @@ ColumnLayout {
                     right: parent.right
                     top: parent.top
                     bottom: parent.bottom
-                    margins: PlasmaCore.Units.smallSpacing
+                    margins: Kirigami.Units.smallSpacing
                     rightMargin: height
                 }
 
@@ -252,11 +253,10 @@ ColumnLayout {
                     verticalCenter: parent.verticalCenter
                 }
                 // match clear button
-                width: Math.max(parent.height * 0.8, PlasmaCore.Units.iconSizes.small)
+                width: Math.max(parent.height * 0.8, Kirigami.Units.iconSizes.small)
                 height: width
                 svg: KSvg.Svg {
                     imagePath: "widgets/arrows"
-                    colorGroup: PlasmaCore.Theme.ButtonColorGroup
                 }
                 elementId: "down-arrow"
                 visible: queryField.length === 0 && runnerManager.historyEnabled

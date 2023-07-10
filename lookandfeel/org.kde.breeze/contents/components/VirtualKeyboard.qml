@@ -8,6 +8,7 @@ import QtQuick 2.15
 import QtQuick.VirtualKeyboard 2.4
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 InputPanel {
     id: inputPanel
@@ -45,11 +46,11 @@ InputPanel {
                 YAnimator {
                     // NOTE this is necessary as otherwise the keyboard always starts the transition with Y as 0, due to the internal reparenting happening when becomes active
                     from: inputPanel.parent.height
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.OutQuad
                 }
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.OutQuad
                 }
             }
@@ -58,11 +59,11 @@ InputPanel {
             to: "hidden"
             ParallelAnimation {
                 YAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InQuad
                 }
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InQuad
                 }
             }
