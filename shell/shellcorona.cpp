@@ -1345,7 +1345,7 @@ void ShellCorona::addOutput(QScreen *screen)
     Plasma::Containment *containment = createContainmentForActivity(m_activityController->currentActivity(), insertPosition);
     Q_ASSERT(containment);
 
-    QAction *removeAction = containment->actions()->action(QStringLiteral("remove"));
+    QAction *removeAction = containment->internalAction(QStringLiteral("remove"));
     if (removeAction) {
         removeAction->deleteLater();
     }
@@ -1724,7 +1724,7 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
         Plasma::Containment *c = createContainmentForActivity(newActivity, it.key());
 
-        QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
+        QAction *removeAction = c->internalAction(QStringLiteral("remove"));
         if (removeAction) {
             removeAction->deleteLater();
         }
@@ -1854,7 +1854,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
 
     // remove the "remove" action
-    QAction *removeAction = newContainment->actions()->action(QStringLiteral("remove"));
+    QAction *removeAction = newContainment->internalAction(QStringLiteral("remove"));
     if (removeAction) {
         removeAction->deleteLater();
     }

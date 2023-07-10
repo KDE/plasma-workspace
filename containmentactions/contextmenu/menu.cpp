@@ -218,7 +218,7 @@ QAction *ContextMenu::action(const QString &name)
         }
     } else {
         // FIXME: remove action: make removal of current activity possible
-        return c->actions()->action(name);
+        return c->internalAction(name);
     }
     return nullptr;
 }

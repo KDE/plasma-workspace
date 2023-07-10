@@ -187,7 +187,7 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
     }
 
     if (!m_applet->failedToLaunch()) {
-        QAction *configureApplet = m_applet->actions()->action(QStringLiteral("configure"));
+        QAction *configureApplet = m_applet->internalAction(QStringLiteral("configure"));
         if (configureApplet && configureApplet->isEnabled()) {
             menu.addAction(configureApplet);
         }
