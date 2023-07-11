@@ -402,7 +402,7 @@ QtObject {
     }
 
     property QtObject popupNotificationsModel: NotificationManager.Notifications {
-        limit: plasmoid ? (Math.ceil(globals.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))) : 0
+        limit: plasmoid ? (Math.ceil(globals.screenRect.height / (Kirigami.Units.gridUnit * 4))) : 0
         showExpired: false
         showDismissed: false
         blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications

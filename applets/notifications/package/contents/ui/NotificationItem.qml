@@ -224,7 +224,7 @@ ColumnLayout {
         SelectableLabel {
             id: bodyLabel
 
-            readonly property real maximumHeight: theme.mSize(theme.defaultFont).height * notificationItem.maximumLineCount
+            readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
             readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
 
             height: truncated ? maximumHeight : implicitHeight
