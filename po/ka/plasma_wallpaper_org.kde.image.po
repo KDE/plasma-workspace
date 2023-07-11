@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-02-19 07:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -99,17 +99,17 @@ msgstr "ფონის გამოსახულების გახსნ�
 msgid "Next Wallpaper Image"
 msgstr "ფონის შემდეგი გამოსახულება"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "შემცველი საქაღალდის გახსნა"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "ფონის სურათის აღდგენა"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "ფონის სურათის წაშლა"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-11-18 00:42+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -104,17 +104,17 @@ msgstr "Atverti darbalaukio fono paveikslą"
 msgid "Next Wallpaper Image"
 msgstr "Kitas darbalaukio fono paveikslas"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Atkurti darbalaukio foną"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Šalinti darbalaukio foną"

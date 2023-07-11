@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-09-15 10:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -63,28 +63,28 @@ msgid "The query to run, only used if -c is not provided"
 msgstr ""
 "La consulta que s'executarà, només s'utilitza si no es proporciona «-c»"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Configura el comportament de KRunner"
 
-#: qml/RunCommand.qml:97
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Configura KRunner…"
 
-#: qml/RunCommand.qml:109
+#: qml/RunCommand.qml:110
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Busca «%1»…"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"

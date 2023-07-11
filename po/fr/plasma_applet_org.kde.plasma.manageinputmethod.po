@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-09-11 08:32+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -14,33 +14,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.08.1\n"
 
-#: contents/ui/manage-inputmethod.qml:61
+#: contents/ui/manage-inputmethod.qml:62
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Configurer les claviers virtuels…"
 
-#: contents/ui/manage-inputmethod.qml:80
+#: contents/ui/manage-inputmethod.qml:81
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Clavier virtuel : indisponible"
 
-#: contents/ui/manage-inputmethod.qml:94
+#: contents/ui/manage-inputmethod.qml:95
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Clavier virtuel : désactivé"
 
-#: contents/ui/manage-inputmethod.qml:111
+#: contents/ui/manage-inputmethod.qml:112
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Afficher le clavier virtuel…"
 
-#: contents/ui/manage-inputmethod.qml:127
+#: contents/ui/manage-inputmethod.qml:128
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Clavier virtuel : visible"
 
-#: contents/ui/manage-inputmethod.qml:142
+#: contents/ui/manage-inputmethod.qml:143
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Clavier virtuel : activé"

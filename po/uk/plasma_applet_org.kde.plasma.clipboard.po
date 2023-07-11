@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-05-26 09:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,78 +20,78 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Повернути до буфера обміну"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "Код QR"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr "Матриця даних"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Ацтек"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr "Код 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr "Код 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 128"
 msgstr "Код 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Змінити тип QR-коду"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не вдалося створити QR-код"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "Недостатньо місця для показу QR-коду. Спробуйте змінити розміри цього аплету."
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Вміст буфера даних"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер даних порожній"
 
 #: contents/ui/clipboard.qml:57
 #, kde-format
-msgid "Configure Clipboard…"
-msgstr "Налаштувати буфер обміну…"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
 msgid "Clear History"
 msgstr "Спорожнити журнал"
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Налаштувати буфер обміну…"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -113,13 +113,13 @@ msgstr "Редагувати вміст"
 msgid "Remove from history"
 msgstr "Вилучити із журналу"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Зберегти"
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -130,7 +130,7 @@ msgstr "Скасувати"
 msgid "No matches"
 msgstr "Немає відповідників"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -374,18 +374,18 @@ msgstr ""
 msgid "%1, %2"
 msgstr ""
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Adjust Date and Time..."
 msgid "Adjust Date and Time…"
 msgstr "הגדר שעה ותאריך..."
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Set Time Format..."
 msgid "Set Time Format…"

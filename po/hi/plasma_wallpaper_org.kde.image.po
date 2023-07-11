@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -102,17 +102,17 @@ msgstr "वालपेपर छवि खोलें"
 msgid "Next Wallpaper Image"
 msgstr "अगला वालपेपर छवि"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "युक्त फोल्डर खोलें"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "वॉलपेपर पुनर्स्थापित करें"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "वालपेपर हटाएँ"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-01-15 12:52+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -63,28 +63,28 @@ msgstr ""
 "Spørjing som skal køyrast. Vert berre brukt om «-c»-argumentet ikkje er "
 "oppgjeve."
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure"
 msgstr "Set opp"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Set opp KRunner-åtferd"
 
-#: qml/RunCommand.qml:97
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Set opp KRunner …"
 
-#: qml/RunCommand.qml:109
+#: qml/RunCommand.qml:110
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Søk etter «%1» …"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"

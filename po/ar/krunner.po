@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-09-19 18:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -59,28 +59,28 @@ msgstr "استبدل نسخة موجودة"
 msgid "The query to run, only used if -c is not provided"
 msgstr "الاستعلام المراد تشغيله ، يُستخدم فقط إذا لم يتم توفير -c "
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure"
 msgstr "اضبط"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "اضبط سلوك مشغل.ك ..."
 
-#: qml/RunCommand.qml:97
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "اضبط مشغل.ك ..."
 
-#: qml/RunCommand.qml:109
+#: qml/RunCommand.qml:110
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "ابحث '%1'..."
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"

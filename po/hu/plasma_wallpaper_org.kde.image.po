@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -101,17 +101,17 @@ msgstr "Háttérkép megnyitása"
 msgid "Next Wallpaper Image"
 msgstr "Következő háttérkép"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Háttérkép visszaállítása"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Háttérkép eltávolítása"

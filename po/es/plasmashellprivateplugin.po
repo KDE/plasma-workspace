@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-05-28 18:10+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -132,7 +132,7 @@ msgstr "Década siguiente"
 msgid "Keep Open"
 msgstr "Mantener abierto"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
 msgstr "Configurar..."

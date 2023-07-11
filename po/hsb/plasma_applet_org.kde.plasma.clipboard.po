@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-11-18 21:06+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -17,77 +17,77 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Wróćo do zapisnika"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "QR Code"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 128"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, kde-format
 msgid "Change the QR code type"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Wobsah zapisnika"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Zapisnik je prózdny"
 
 #: contents/ui/clipboard.qml:57
 #, kde-format
-msgid "Configure Clipboard…"
-msgstr "Zapisnik připrawić"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
 msgid "Clear History"
 msgstr "Předchadne wobsahi zabyć"
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Zapisnik připrawić"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -109,13 +109,13 @@ msgstr "Wobsah wobdźěłać"
 msgid "Remove from history"
 msgstr "Zabyć"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -126,7 +126,7 @@ msgstr ""
 msgid "No matches"
 msgstr "Ničo njenamakał"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

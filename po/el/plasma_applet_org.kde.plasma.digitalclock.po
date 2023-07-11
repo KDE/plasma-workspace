@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2016-08-04 13:04+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -379,18 +379,18 @@ msgstr ""
 msgid "%1, %2"
 msgstr ""
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Adjust Date and Time..."
 msgid "Adjust Date and Time…"
 msgstr "Ρύθμιση ημερομηνίας και ώρας..."
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Set Time Format..."
 msgid "Set Time Format…"

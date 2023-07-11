@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-05-28 09:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -134,7 +134,7 @@ msgstr "Dècada següent"
 msgid "Keep Open"
 msgstr "Mantín obert"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
 msgstr "Configura…"

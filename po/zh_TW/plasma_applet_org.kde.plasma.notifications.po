@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-04-28 15:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -32,7 +32,7 @@ msgstr "以 %1 開啟"
 msgid "Open with…"
 msgstr "以其他程式開啟…"
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:269
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:270
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
@@ -85,242 +85,242 @@ msgstr "複製"
 msgid "Select All"
 msgstr "全部選擇"
 
-#: package/contents/ui/FullRepresentation.qml:72
+#: package/contents/ui/FullRepresentation.qml:73
 #, kde-format
 msgid "Do not disturb"
 msgstr "請勿打擾"
 
-#: package/contents/ui/FullRepresentation.qml:114
+#: package/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "For 1 hour"
 msgstr "1 小時"
 
-#: package/contents/ui/FullRepresentation.qml:119
+#: package/contents/ui/FullRepresentation.qml:120
 #, kde-format
 msgid "For 4 hours"
 msgstr "4 小時"
 
-#: package/contents/ui/FullRepresentation.qml:128
+#: package/contents/ui/FullRepresentation.qml:129
 #, kde-format
 msgid "Until this evening"
 msgstr "直到傍晚"
 
-#: package/contents/ui/FullRepresentation.qml:138
+#: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "直到隔天早晨"
 
-#: package/contents/ui/FullRepresentation.qml:150
+#: package/contents/ui/FullRepresentation.qml:151
 #, kde-format
 msgid "Until Monday"
 msgstr "直到週一"
 
-#: package/contents/ui/FullRepresentation.qml:157
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "Until manually disabled"
 msgstr "直到手動停用"
 
-#: package/contents/ui/FullRepresentation.qml:207
+#: package/contents/ui/FullRepresentation.qml:208
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "自動結束：%1"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "當 %1 使用中時（%2）"
 
-#: package/contents/ui/FullRepresentation.qml:221
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "當 %1 使用中時"
 
-#: package/contents/ui/FullRepresentation.qml:227
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "已經鏡像螢幕"
 
-#: package/contents/ui/FullRepresentation.qml:433
+#: package/contents/ui/FullRepresentation.qml:434
 #, kde-format
 msgid "Close Group"
 msgstr "關閉群組"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgid "Show Fewer"
 msgstr "顯示較少通知"
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:581
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "顯示更多 %1 則訊息"
 
-#: package/contents/ui/FullRepresentation.qml:621
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "No unread notifications"
 msgstr "沒有未讀通知"
 
-#: package/contents/ui/FullRepresentation.qml:636
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Notification service not available"
 msgstr "無法使用通知服務"
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:639
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "目前通知由「%1 %2」提供"
 
-#: package/contents/ui/JobDetails.qml:34
+#: package/contents/ui/JobDetails.qml:35
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1："
 
-#: package/contents/ui/JobDetails.qml:105
+#: package/contents/ui/JobDetails.qml:106
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2，共 %1"
 
-#: package/contents/ui/JobDetails.qml:109
+#: package/contents/ui/JobDetails.qml:110
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "第 %2 個，共 %1 個檔案"
 
-#: package/contents/ui/JobDetails.qml:112
+#: package/contents/ui/JobDetails.qml:113
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
 msgstr[0] "第 %2 個，共 %1 個資料夾"
 
-#: package/contents/ui/JobDetails.qml:115
+#: package/contents/ui/JobDetails.qml:116
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "第 %2 個，共 %1 個檔案"
 
-#: package/contents/ui/JobDetails.qml:123
+#: package/contents/ui/JobDetails.qml:124
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 個檔案"
 
-#: package/contents/ui/JobDetails.qml:125
+#: package/contents/ui/JobDetails.qml:126
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 個資料夾"
 
-#: package/contents/ui/JobDetails.qml:127
+#: package/contents/ui/JobDetails.qml:128
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 個項目"
 
-#: package/contents/ui/JobDetails.qml:144
+#: package/contents/ui/JobDetails.qml:145
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1 / 秒"
 
-#: package/contents/ui/JobItem.qml:165
+#: package/contents/ui/JobItem.qml:166
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:179
+#: package/contents/ui/JobItem.qml:180
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "暫停"
 
-#: package/contents/ui/JobItem.qml:189
+#: package/contents/ui/JobItem.qml:190
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "取消"
 
-#: package/contents/ui/JobItem.qml:200
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "隱藏詳情"
 
-#: package/contents/ui/JobItem.qml:201
+#: package/contents/ui/JobItem.qml:202
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "顯示詳情"
 
-#: package/contents/ui/JobItem.qml:233
-#: package/contents/ui/ThumbnailStrip.qml:170
+#: package/contents/ui/JobItem.qml:234
+#: package/contents/ui/ThumbnailStrip.qml:171
 #, kde-format
 msgid "More Options…"
 msgstr "更多選項…"
 
-#: package/contents/ui/JobItem.qml:261
+#: package/contents/ui/JobItem.qml:262
 #, kde-format
 msgid "Open"
 msgstr "開啟"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:52
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 個執行中的工作"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:60
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 個執行中的工作 (%2%)"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 則未讀通知"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "請勿打擾，直到 %1；按中鍵來馬上結束"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "請勿打擾模式已啟用；按中鍵來結束"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "按中鍵來進入請勿打擾模式"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "清除所有通知"
 
-#: package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:201
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "設定事件通知與動作(&C)..."
@@ -380,47 +380,47 @@ msgstr "最小化"
 msgid "Close"
 msgstr "關閉"
 
-#: package/contents/ui/NotificationItem.qml:190
+#: package/contents/ui/NotificationItem.qml:187
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 （已暫停）"
 
-#: package/contents/ui/NotificationItem.qml:195
+#: package/contents/ui/NotificationItem.qml:192
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 （失敗）"
 
-#: package/contents/ui/NotificationItem.qml:197
+#: package/contents/ui/NotificationItem.qml:194
 #, kde-format
 msgid "Job Failed"
 msgstr "工作已失敗"
 
-#: package/contents/ui/NotificationItem.qml:201
+#: package/contents/ui/NotificationItem.qml:198
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 （完成）"
 
-#: package/contents/ui/NotificationItem.qml:203
+#: package/contents/ui/NotificationItem.qml:200
 #, kde-format
 msgid "Job Finished"
 msgstr "工作已完成"
 
-#: package/contents/ui/NotificationItem.qml:351
+#: package/contents/ui/NotificationItem.qml:348
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
 msgstr "回覆"
 
-#: package/contents/ui/NotificationReplyField.qml:36
+#: package/contents/ui/NotificationReplyField.qml:37
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "輸入回覆…"
 
-#: package/contents/ui/NotificationReplyField.qml:56
+#: package/contents/ui/NotificationReplyField.qml:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

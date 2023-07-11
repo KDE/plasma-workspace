@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-06-08 22:51-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -98,17 +98,17 @@ msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
 msgid "Next Wallpaper Image"
 msgstr "ਅਗਲਾ ਵਾਲਪੇਪਰ ਚਿੱਤਰ"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "ਵਾਲਪੇਪਰ ਬਹਾਲ ਕਰੋ"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "ਵਾਲਪੇਪਰ ਹਟਾਓ"

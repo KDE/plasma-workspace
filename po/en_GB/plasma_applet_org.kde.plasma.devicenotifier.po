@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-02-19 12:43+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.1\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 free of %2"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -34,7 +34,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Accessing…"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -42,38 +42,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Removing…"
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr "Do not unplug yet! Files are still being transferred..."
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Open in File Manager"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr "Mount and Open"
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr "Eject"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr "Safely remove"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, kde-format
 msgid "Mount"
 msgstr "Mount"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Remove All"
@@ -93,41 +93,41 @@ msgstr "No removable devices attached"
 msgid "No disks available"
 msgstr "No disks available"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Most Recent Device"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr "No Devices Available"
 
-#: package/contents/ui/main.qml:246
-#, kde-format
-msgid "Removable Devices"
-msgstr "Removable Devices"
-
-#: package/contents/ui/main.qml:252
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "Non Removable Devices"
-
-#: package/contents/ui/main.qml:258
-#, kde-format
-msgid "All Devices"
-msgstr "All Devices"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "Show popup when new device is plugged in"
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configure Removable Devices…"
+
+#: package/contents/ui/main.qml:260
+#, kde-format
+msgid "Removable Devices"
+msgstr "Removable Devices"
+
+#: package/contents/ui/main.qml:275
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Non Removable Devices"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "All Devices"
+msgstr "All Devices"
+
+#: package/contents/ui/main.qml:307
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Show popup when new device is plugged in"
 
 #~ msgid "Show:"
 #~ msgstr "Show:"

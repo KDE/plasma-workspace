@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-09-12 07:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: contents/ui/manage-inputmethod.qml:61
+#: contents/ui/manage-inputmethod.qml:62
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "ვირტუალური კლავიატურების კონფიგურაცია..."
 
-#: contents/ui/manage-inputmethod.qml:80
+#: contents/ui/manage-inputmethod.qml:81
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "ვირტუალური კლავიატურა: მიუწვდომელია"
 
-#: contents/ui/manage-inputmethod.qml:94
+#: contents/ui/manage-inputmethod.qml:95
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "ვირტუალური კლავიატურა: გამორთულია"
 
-#: contents/ui/manage-inputmethod.qml:111
+#: contents/ui/manage-inputmethod.qml:112
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "ვირტუალური კლავიატურის ჩვენება"
 
-#: contents/ui/manage-inputmethod.qml:127
+#: contents/ui/manage-inputmethod.qml:128
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "ვირტუალური კლავიატურა: ჩანს"
 
-#: contents/ui/manage-inputmethod.qml:142
+#: contents/ui/manage-inputmethod.qml:143
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "ვირტუალური კლავიატურა: ჩართული"

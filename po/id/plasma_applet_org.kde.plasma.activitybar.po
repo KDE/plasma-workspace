@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-03-13 21:37+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/main.qml:70
+#: contents/ui/main.qml:66
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "Beralih ke aktivitas %1"
 
-#: contents/ui/main.qml:99
+#: contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"

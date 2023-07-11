@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-09-15 19:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -57,28 +57,28 @@ msgstr "ஏற்கனவே உள்ளதற்கு பதிலாக இ
 msgid "The query to run, only used if -c is not provided"
 msgstr "இயக்க வேண்டிய வினா, -c வழங்கப்படவில்லையெனில் மட்டும் பயன்படுத்தப்படும்"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure"
 msgstr "அமை"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "கேரன்னரின் நடத்தையை மாற்றியமையுங்கள்"
 
-#: qml/RunCommand.qml:97
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "கேரன்னரை அமை…"
 
-#: qml/RunCommand.qml:109
+#: qml/RunCommand.qml:110
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' தனில் தேடு…"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"

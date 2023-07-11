@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-05-26 21:53+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,53 +17,53 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Retorna a area de transferentia"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "QR Code (Codice QR)"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr "Data Matrix"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr "Codice 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr "Codice 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 128"
 msgstr "Codice 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Cambia le typo de codice QR "
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Il falleva a crear codice QR"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -71,25 +71,25 @@ msgstr ""
 "Il non ha assatis spatio per monstrar le codice QR. Tu essaya redimensionar "
 "iste applet."
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Contentos de Area de Transferentia"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Area de transferentia  es vacue"
 
 #: contents/ui/clipboard.qml:57
 #, kde-format
-msgid "Configure Clipboard…"
-msgstr "Configura area de Trasferentia…"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
 msgid "Clear History"
 msgstr "Netta Chronologia"
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Configura area de Trasferentia…"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -111,13 +111,13 @@ msgstr "Edita contentos"
 msgid "Remove from history"
 msgstr "Remove ex chronologia"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Salveguarda"
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -128,7 +128,7 @@ msgstr "Cancella"
 msgid "No matches"
 msgstr "Nulle correspondentias"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -1122,17 +1122,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de Transferência"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Acertar a Data e Hora…"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Mudar o Formato da Hora…"

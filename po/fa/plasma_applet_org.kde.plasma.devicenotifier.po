@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -14,13 +14,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -28,7 +28,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -36,38 +36,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, kde-format
 msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -90,45 +90,45 @@ msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
 msgid "No disks available"
 msgstr ""
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgid "Most Recent Device"
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Configure New Device Notifier"
-msgid "Removable Devices"
-msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
-
-#: package/contents/ui/main.qml:252
-#, fuzzy, kde-format
-#| msgid "Configure New Device Notifier"
-msgid "Non Removable Devices"
-msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
-
-#: package/contents/ui/main.qml:258
-#, kde-format
-msgid "All Devices"
-msgstr ""
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr ""
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: package/contents/ui/main.qml:260
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Removable Devices"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: package/contents/ui/main.qml:275
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Non Removable Devices"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "All Devices"
+msgstr ""
+
+#: package/contents/ui/main.qml:307
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr ""
 
 #, fuzzy
 #~| msgid "1 action for this device"

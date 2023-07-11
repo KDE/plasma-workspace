@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-10-14 18:32+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,73 +17,73 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: ../sddm-theme/KeyboardButton.qml:19
+#: ../sddm-theme/KeyboardButton.qml:20
 #, kde-format
 msgid "Keyboard Layout: %1"
 msgstr "Bố cục bàn phím: %1"
 
-#: ../sddm-theme/Login.qml:85
+#: ../sddm-theme/Login.qml:86
 #, kde-format
 msgid "Username"
 msgstr "Tên người dùng"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:103 contents/lockscreen/MainBlock.qml:62
 #, kde-format
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
+#: ../sddm-theme/Login.qml:145 ../sddm-theme/Login.qml:151
 #, kde-format
 msgid "Log In"
 msgstr "Đăng nhập"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:203 contents/lockscreen/LockScreenUi.qml:305
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock đang bật"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
-#: contents/logout/Logout.qml:163
+#: ../sddm-theme/Main.qml:215 ../sddm-theme/Main.qml:464
+#: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ngủ"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
-#: contents/logout/Logout.qml:181
+#: ../sddm-theme/Main.qml:222 ../sddm-theme/Main.qml:471
+#: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Khởi động lại"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
-#: contents/logout/Logout.qml:191
+#: ../sddm-theme/Main.qml:229 ../sddm-theme/Main.qml:478
+#: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
 msgstr "Tắt"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:236
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Khác…"
 
-#: ../sddm-theme/Main.qml:449
+#: ../sddm-theme/Main.qml:451
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Gõ vào tên người dùng và mật khẩu"
 
-#: ../sddm-theme/Main.qml:483
+#: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
 msgstr "Liệt kê người dùng"
 
-#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:580
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Bàn phím ảo"
 
-#: ../sddm-theme/Main.qml:596
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "Đăng nhập thất bại"
@@ -93,35 +93,35 @@ msgstr "Đăng nhập thất bại"
 msgid "Desktop Session: %1"
 msgstr "Phiên bàn làm việc: %1"
 
-#: contents/components/Battery.qml:54
+#: contents/components/Battery.qml:55
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:55
+#: contents/components/Battery.qml:56
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Pin ở mức %1%"
 
-#: contents/components/UserList.qml:71
+#: contents/components/UserList.qml:72
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "Không dùng đến"
 
-#: contents/components/UserList.qml:77
+#: contents/components/UserList.qml:78
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
-#: contents/components/UserList.qml:79
+#: contents/components/UserList.qml:80
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "ở TTY %1 (bộ hiển thị %2)"
 
-#: contents/components/UserList.qml:83
+#: contents/components/UserList.qml:84
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
@@ -151,79 +151,79 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Hiện ở dưới lời nhắc mở khoá"
 
-#: contents/lockscreen/LockScreenUi.qml:38
+#: contents/lockscreen/LockScreenUi.qml:40
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Mở khoá thất bại"
 
-#: contents/lockscreen/LockScreenUi.qml:317
+#: contents/lockscreen/LockScreenUi.qml:319
 #, kde-format
 msgid "Sleep"
 msgstr "Ngủ"
 
-#: contents/lockscreen/LockScreenUi.qml:323 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:325 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "Ngủ đông"
 
-#: contents/lockscreen/LockScreenUi.qml:329
+#: contents/lockscreen/LockScreenUi.qml:331
 #, kde-format
 msgid "Switch User"
 msgstr "Chuyển người dùng"
 
-#: contents/lockscreen/LockScreenUi.qml:525
+#: contents/lockscreen/LockScreenUi.qml:527
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Chuyển sang phiên này"
 
-#: contents/lockscreen/LockScreenUi.qml:533
+#: contents/lockscreen/LockScreenUi.qml:535
 #, kde-format
 msgid "Start New Session"
 msgstr "Bắt đầu phiên mới"
 
-#: contents/lockscreen/LockScreenUi.qml:546
+#: contents/lockscreen/LockScreenUi.qml:548
 #, kde-format
 msgid "Back"
 msgstr "Lùi"
 
-#: contents/lockscreen/LockScreenUi.qml:592
+#: contents/lockscreen/LockScreenUi.qml:594
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Chuyển bố cục"
 
-#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/MainBlock.qml:102
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "Mở khoá"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:112
 #, kde-format
 msgid "No title"
 msgstr "Không tên"
 
-#: contents/lockscreen/MediaControls.qml:112
+#: contents/lockscreen/MediaControls.qml:113
 #, kde-format
 msgid "No media playing"
 msgstr "Không phát phương tiện nào"
 
-#: contents/lockscreen/MediaControls.qml:141
+#: contents/lockscreen/MediaControls.qml:142
 #, kde-format
 msgid "Previous track"
 msgstr "Bài trước"
 
-#: contents/lockscreen/MediaControls.qml:153
+#: contents/lockscreen/MediaControls.qml:154
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Phát hoặc tạm dừng phương tiện"
 
-#: contents/lockscreen/MediaControls.qml:167
+#: contents/lockscreen/MediaControls.qml:168
 #, kde-format
 msgid "Next track"
 msgstr "Bài sau"
 
-#: contents/logout/Logout.qml:139
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -235,56 +235,56 @@ msgstr[0] ""
 "%1 người dùng khác hiện đang đăng nhập. Nếu máy tính bị tắt hoặc khởi động "
 "lại, những người dùng đó có thể bị mất công việc đang làm."
 
-#: contents/logout/Logout.qml:153
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Khi khởi động lại, máy tính sẽ đi vào màn hình cài đặt phần sụn."
 
-#: contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:203
 #, kde-format
 msgid "Log Out"
 msgstr "Đăng xuất"
 
-#: contents/logout/Logout.qml:224
+#: contents/logout/Logout.qml:226
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Khởi động lại trong %1 giây"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Tắt trong %1 giây"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:230
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Đăng xuất trong %1 giây"
 
-#: contents/logout/Logout.qml:239
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: contents/osd/OsdItem.qml:68
+#: contents/osd/OsdItem.qml:69
 #, kde-format
 msgid "100%"
 msgstr "100%"
 
-#: contents/osd/OsdItem.qml:82
+#: contents/osd/OsdItem.qml:83
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/splash/Splash.qml:81
+#: contents/splash/Splash.qml:82
 #, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2019-11-26 22:58+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -384,18 +384,18 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Copiar no portapapeis"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Adjust Date and Time..."
 msgid "Adjust Date and Time…"
 msgstr "Axustar a data e hora…"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Set Time Format..."
 msgid "Set Time Format…"

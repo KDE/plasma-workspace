@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-12-12 14:49+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -20,77 +20,77 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Grįžti į iškarpinę"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "QR kodas"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr "Duomenų matrica"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Actekų"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr "Kodas 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr "Kodas 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 128"
 msgstr "Kodas 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Keisti QR kodo tipą"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Nepavyko sukurti QR kodo"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Iškarpinės turinys"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
 
 #: contents/ui/clipboard.qml:57
 #, kde-format
-msgid "Configure Clipboard…"
-msgstr "Konfigūruoti iškarpinę…"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
 msgid "Clear History"
 msgstr "Išvalyti istoriją"
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Konfigūruoti iškarpinę…"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -112,13 +112,13 @@ msgstr "Redaguoti turinį"
 msgid "Remove from history"
 msgstr "Pašalinti iš istorijos"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Įrašyti"
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -129,7 +129,7 @@ msgstr "Atsisakyti"
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

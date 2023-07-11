@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-04-07 23:52-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -129,7 +129,7 @@ msgstr "次の十年"
 msgid "Keep Open"
 msgstr "開けたままにする"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
 msgstr "設定..."

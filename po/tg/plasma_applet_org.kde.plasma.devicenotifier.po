@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2020-09-03 15:56+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 озод аз %2"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -35,7 +35,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Дар ҳоли пайдокунии дастрасӣ..."
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -47,38 +47,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Дар ҳоли ҷудокунӣ..."
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Кушодан дар Мудири файлҳо"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr "Ҷудо кардан"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr "Ба таври бехатар ҷудо кардан"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, kde-format
 msgid "Mount"
 msgstr "Васл кардан"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Ҳамаро ҷудо кардан"
@@ -100,46 +100,46 @@ msgstr "Дастгоҳҳои доимӣ"
 msgid "No disks available"
 msgstr "Ягон дастгоҳ васл нашудааст"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Дастгоҳи васлшудаи охирин"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr "Ягон дастгоҳ васл нашудааст"
 
-#: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Removable devices"
-msgid "Removable Devices"
-msgstr "Дастгоҳҳои ҷудошаванда"
-
-#: package/contents/ui/main.qml:252
-#, fuzzy, kde-format
-#| msgid "Non-removable devices"
-msgid "Non Removable Devices"
-msgstr "Дастгоҳҳои доимӣ"
-
-#: package/contents/ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "All devices"
-msgid "All Devices"
-msgstr "Ҳамаи дастгоҳҳо"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr ""
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Open auto mounter kcm"
 #| msgid "Configure Removable Devices"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Танзимоти дастгоҳҳои ҷудошаванда"
+
+#: package/contents/ui/main.qml:260
+#, fuzzy, kde-format
+#| msgid "Removable devices"
+msgid "Removable Devices"
+msgstr "Дастгоҳҳои ҷудошаванда"
+
+#: package/contents/ui/main.qml:275
+#, fuzzy, kde-format
+#| msgid "Non-removable devices"
+msgid "Non Removable Devices"
+msgstr "Дастгоҳҳои доимӣ"
+
+#: package/contents/ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "Ҳамаи дастгоҳҳо"
+
+#: package/contents/ui/main.qml:307
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr ""
 
 #~ msgid "Show:"
 #~ msgstr "Нишон додани:"

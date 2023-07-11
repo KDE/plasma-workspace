@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-02-09 01:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -35,12 +35,12 @@ msgstr "%1 詳細資料"
 msgid "Sensors Details"
 msgstr "感測器詳細資料"
 
-#: package/contents/ui/main.qml:32
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgid "System Monitor"
 msgstr "系統監控"
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

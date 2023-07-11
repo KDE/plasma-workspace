@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-05-03 22:35+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Appearance"
 msgstr "Aspeutu"
 
-#: contents/ui/analogclock.qml:79
+#: contents/ui/analogclock.qml:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

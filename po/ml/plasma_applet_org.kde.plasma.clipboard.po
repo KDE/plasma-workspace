@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,79 +19,79 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "ഓർമ്മച്ചെപ്പിലേക്ക് മടങ്ങുക"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "ക്യൂആർ കോഡ്"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr "ഡാറ്റ മെട്രിക്സ്"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "അസ്ടെക്"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr "കോഡ് 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr "കോ‍ഡ് 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 128"
 msgstr "കോ‍ഡ് 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, fuzzy, kde-format
 #| msgid "Change the barcode type"
 msgid "Change the QR code type"
 msgstr "ബാർകോഡ് തരം മാറ്റുക"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "ബാർകോഡ് സൃഷ്ടിക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ഓർമ്മച്ചെപ്പ് ഉള്ളടക്കങ്ങൾ"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ഓർമ്മച്ചെപ്പ് ശൂന്യമാണ്"
 
 #: contents/ui/clipboard.qml:57
 #, kde-format
-msgid "Configure Clipboard…"
-msgstr "ഓർമ്മച്ചെപ്പ് ക്രമീകരിക്കുക…"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
 msgid "Clear History"
 msgstr "ചരിത്രം മായ്ക്കുക"
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "ഓർമ്മച്ചെപ്പ് ക്രമീകരിക്കുക…"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -114,13 +114,13 @@ msgstr "ഉള്ളടക്കങ്ങൾ എഡിറ്റുചെയ്�
 msgid "Remove from history"
 msgstr "ചരിത്രത്തിൽ നിന്ന് നീക്കംചെയ്യുക"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -131,7 +131,7 @@ msgstr ""
 msgid "No matches"
 msgstr "പൊരുത്തങ്ങളൊന്നുമില്ല"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

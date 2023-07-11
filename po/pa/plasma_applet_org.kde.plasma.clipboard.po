@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-06-14 20:57-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,77 +17,77 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਵਾਪਸ ਜਾਓ"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "QR ਕੋਡ"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr "ਡਾਟਾ ਮੈਟਰਿਕਸ"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "ਅਜ਼ਟੇਕ"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr "ਕੋਡ 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr "ਕੋਡ 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 128"
 msgstr "ਕੋਡ 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, kde-format
 msgid "Change the QR code type"
 msgstr "QR ਕੋਡ ਕਿਸਮ ਬਦਲੋ"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR ਕੋਡ ਬਣਾਉਣ ਲਈ ਅਸਫ਼ਲ"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
 #: contents/ui/clipboard.qml:57
 #, kde-format
-msgid "Configure Clipboard…"
-msgstr "…ਕਲਿੱਪਬੋਰਡ ਦੀ ਸੰਰਚਨਾ"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
 msgid "Clear History"
 msgstr "ਅਤੀਤ ਸਾਫ਼ ਕਰੋ"
+
+#: contents/ui/clipboard.qml:69
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "…ਕਲਿੱਪਬੋਰਡ ਦੀ ਸੰਰਚਨਾ"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -109,13 +109,13 @@ msgstr "ਸਮੱਗਰੀ ਸੋਧ"
 msgid "Remove from history"
 msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "ਸੰਭਾਲੋ"
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -126,7 +126,7 @@ msgstr "ਰੱਦ ਕਰੋ"
 msgid "No matches"
 msgstr "ਕੋਈ ਮੇਲ ਨਹੀਂ"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

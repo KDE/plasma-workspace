@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-02-19 14:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -375,17 +375,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Mübadilə buferinə kopyalamaq"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Tarix və Saatı tənzimləyin..."
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Tarix formatını təyin edin..."

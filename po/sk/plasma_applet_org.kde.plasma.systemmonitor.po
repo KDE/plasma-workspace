@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemmonitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-09-15 18:43+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,12 +31,12 @@ msgstr "Podrobnosti %1"
 msgid "Sensors Details"
 msgstr "Podrobnosti senzora"
 
-#: package/contents/ui/main.qml:32
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgid "System Monitor"
 msgstr "Monitor systému"
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

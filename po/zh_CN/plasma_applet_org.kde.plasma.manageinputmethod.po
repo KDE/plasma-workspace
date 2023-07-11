@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,33 +18,33 @@ msgstr ""
 "plasma.manageinputmethod.pot\n"
 "X-Crowdin-File-ID: 42597\n"
 
-#: contents/ui/manage-inputmethod.qml:61
+#: contents/ui/manage-inputmethod.qml:62
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "配置虚拟键盘..."
 
-#: contents/ui/manage-inputmethod.qml:80
+#: contents/ui/manage-inputmethod.qml:81
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "虚拟键盘：不可用"
 
-#: contents/ui/manage-inputmethod.qml:94
+#: contents/ui/manage-inputmethod.qml:95
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "虚拟键盘：已启用"
 
-#: contents/ui/manage-inputmethod.qml:111
+#: contents/ui/manage-inputmethod.qml:112
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "显示虚拟键盘"
 
-#: contents/ui/manage-inputmethod.qml:127
+#: contents/ui/manage-inputmethod.qml:128
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "虚拟键盘：可见"
 
-#: contents/ui/manage-inputmethod.qml:142
+#: contents/ui/manage-inputmethod.qml:143
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "虚拟键盘：已启用"

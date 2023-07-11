@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-08-20 23:20-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,73 +19,73 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: ../sddm-theme/KeyboardButton.qml:19
+#: ../sddm-theme/KeyboardButton.qml:20
 #, kde-format
 msgid "Keyboard Layout: %1"
 msgstr "キーボード配列: %1"
 
-#: ../sddm-theme/Login.qml:85
+#: ../sddm-theme/Login.qml:86
 #, kde-format
 msgid "Username"
 msgstr "ユーザ名"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:103 contents/lockscreen/MainBlock.qml:62
 #, kde-format
 msgid "Password"
 msgstr "パスワード"
 
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
+#: ../sddm-theme/Login.qml:145 ../sddm-theme/Login.qml:151
 #, kde-format
 msgid "Log In"
 msgstr "ログイン"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:203 contents/lockscreen/LockScreenUi.qml:305
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock が有効です"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
-#: contents/logout/Logout.qml:163
+#: ../sddm-theme/Main.qml:215 ../sddm-theme/Main.qml:464
+#: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "スリープ"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
-#: contents/logout/Logout.qml:181
+#: ../sddm-theme/Main.qml:222 ../sddm-theme/Main.qml:471
+#: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "再起動"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
-#: contents/logout/Logout.qml:191
+#: ../sddm-theme/Main.qml:229 ../sddm-theme/Main.qml:478
+#: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
 msgstr "シャットダウン"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:236
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "その他..."
 
-#: ../sddm-theme/Main.qml:449
+#: ../sddm-theme/Main.qml:451
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "ユーザ名とパスワードを入力"
 
-#: ../sddm-theme/Main.qml:483
+#: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
 msgstr "ユーザをリスト表示"
 
-#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:580
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "仮想キーボード"
 
-#: ../sddm-theme/Main.qml:596
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "ログイン失敗"
@@ -95,35 +95,35 @@ msgstr "ログイン失敗"
 msgid "Desktop Session: %1"
 msgstr "デスクトップセッション: %1"
 
-#: contents/components/Battery.qml:54
+#: contents/components/Battery.qml:55
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:55
+#: contents/components/Battery.qml:56
 #, kde-format
 msgid "Battery at %1%"
 msgstr "バッテリー %1%"
 
-#: contents/components/UserList.qml:71
+#: contents/components/UserList.qml:72
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "使用者なし"
 
-#: contents/components/UserList.qml:77
+#: contents/components/UserList.qml:78
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
-#: contents/components/UserList.qml:79
+#: contents/components/UserList.qml:80
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "on TTY %1 (ディスプレイ %2)"
 
-#: contents/components/UserList.qml:83
+#: contents/components/UserList.qml:84
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
@@ -153,79 +153,79 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "アンロック画面で表示する"
 
-#: contents/lockscreen/LockScreenUi.qml:38
+#: contents/lockscreen/LockScreenUi.qml:40
 #, kde-format
 msgid "Unlocking failed"
 msgstr "ロック解除に失敗"
 
-#: contents/lockscreen/LockScreenUi.qml:317
+#: contents/lockscreen/LockScreenUi.qml:319
 #, kde-format
 msgid "Sleep"
 msgstr "スリープ"
 
-#: contents/lockscreen/LockScreenUi.qml:323 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:325 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "ハイバネート"
 
-#: contents/lockscreen/LockScreenUi.qml:329
+#: contents/lockscreen/LockScreenUi.qml:331
 #, kde-format
 msgid "Switch User"
 msgstr "ユーザを切り替え"
 
-#: contents/lockscreen/LockScreenUi.qml:525
+#: contents/lockscreen/LockScreenUi.qml:527
 #, kde-format
 msgid "Switch to This Session"
 msgstr "このセッションに切り替え"
 
-#: contents/lockscreen/LockScreenUi.qml:533
+#: contents/lockscreen/LockScreenUi.qml:535
 #, kde-format
 msgid "Start New Session"
 msgstr "新しいセッションを開始"
 
-#: contents/lockscreen/LockScreenUi.qml:546
+#: contents/lockscreen/LockScreenUi.qml:548
 #, kde-format
 msgid "Back"
 msgstr "戻る"
 
-#: contents/lockscreen/LockScreenUi.qml:592
+#: contents/lockscreen/LockScreenUi.qml:594
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "配列を切り替え"
 
-#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/MainBlock.qml:102
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "ロック解除"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:112
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:112
+#: contents/lockscreen/MediaControls.qml:113
 #, kde-format
 msgid "No media playing"
 msgstr "再生中のメディアはありません"
 
-#: contents/lockscreen/MediaControls.qml:141
+#: contents/lockscreen/MediaControls.qml:142
 #, kde-format
 msgid "Previous track"
 msgstr "前のトラック"
 
-#: contents/lockscreen/MediaControls.qml:153
+#: contents/lockscreen/MediaControls.qml:154
 #, kde-format
 msgid "Play or Pause media"
 msgstr "メディアを再生/一時停止"
 
-#: contents/lockscreen/MediaControls.qml:167
+#: contents/lockscreen/MediaControls.qml:168
 #, kde-format
 msgid "Next track"
 msgstr "次のトラック"
 
-#: contents/logout/Logout.qml:139
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -237,56 +237,56 @@ msgstr[0] ""
 "現在、他に%1人のユーザがログインしています。もしコンピュータがシャットダウン"
 "もしくは再起動された場合、そのユーザは作業中のデータを失う可能性があります。"
 
-#: contents/logout/Logout.qml:153
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "再起動すると、コンピュータはファームウェア設定画面に入ります。"
 
-#: contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:203
 #, kde-format
 msgid "Log Out"
 msgstr "ログアウト"
 
-#: contents/logout/Logout.qml:224
+#: contents/logout/Logout.qml:226
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "%1秒後に再起動"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "%1秒後にシャットダウン"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:230
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "%1秒後にログアウト"
 
-#: contents/logout/Logout.qml:239
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: contents/osd/OsdItem.qml:68
+#: contents/osd/OsdItem.qml:69
 #, kde-format
 msgid "100%"
 msgstr "100%"
 
-#: contents/osd/OsdItem.qml:82
+#: contents/osd/OsdItem.qml:83
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/splash/Splash.qml:81
+#: contents/splash/Splash.qml:82
 #, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -18,82 +18,82 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: contents/ui/BarcodePage.qml:35
+#: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "חזור ללוח העתקה"
 
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "QR Code"
 msgstr "קוד QR"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgid "Data Matrix"
 msgstr "מטריקס נתונים"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 39"
 msgstr "קוד 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 93"
 msgstr "'וד 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:59
 #, fuzzy, kde-format
 #| msgid "Code 39"
 msgid "Code 128"
 msgstr "קוד 39"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:83
 #, fuzzy, kde-format
 #| msgid "Change the barcode type"
 msgid "Change the QR code type"
 msgstr "שנה סוג ברקוד"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:138
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "יצירת הברקוד נכשלה"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:149
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "תוכן לוח העתקה"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "לוח העתקה ריק"
 
 #: contents/ui/clipboard.qml:57
 #, fuzzy, kde-format
-#| msgid "Configure Clipboard..."
-msgid "Configure Clipboard…"
-msgstr "הגדר לוח העתקה..."
-
-#: contents/ui/clipboard.qml:59
-#, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "נקה היסטוריה"
+
+#: contents/ui/clipboard.qml:69
+#, fuzzy, kde-format
+#| msgid "Configure Clipboard..."
+msgid "Configure Clipboard…"
+msgstr "הגדר לוח העתקה..."
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -116,13 +116,13 @@ msgstr "ערוך תוכן"
 msgid "Remove from history"
 msgstr "הסר מההיסטוריה"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -133,7 +133,7 @@ msgstr ""
 msgid "No matches"
 msgstr ""
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

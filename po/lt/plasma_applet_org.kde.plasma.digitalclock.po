@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-02-04 18:54+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -380,17 +380,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopijuoti į iškarpinę"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Reguliuoti datą ir laiką…"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Nustatyti laiko formatą…"

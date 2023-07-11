@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2008-11-13 00:55+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 swobodne z %2"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -31,7 +31,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Wočinjam..."
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -39,38 +39,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Wotwjazuju..."
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Z datajowym rjadowakom wočinić"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr "Zapójsnyć a wočinić"
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr "Wućisnyć"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr "Kedźbliwje wotpójsnyć"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, kde-format
 msgid "Mount"
 msgstr "Zapójsnyć"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Wšě zwotpójšować"
@@ -90,41 +90,41 @@ msgstr "Žane wotwjazujomne graty přizamknjene"
 msgid "No disks available"
 msgstr "Žane tačele přistupne"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Posledni přizamknjeny grat"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr "Žane graty přistupne"
 
-#: package/contents/ui/main.qml:246
-#, kde-format
-msgid "Removable Devices"
-msgstr "Wotwjazujomne graty (USB)"
-
-#: package/contents/ui/main.qml:252
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "Njewotwjazujomne graty"
-
-#: package/contents/ui/main.qml:258
-#, kde-format
-msgid "All Devices"
-msgstr "Wšitke graty"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "Pokaž wuskakotawku (popup), hdyž so nowy grat přityknje"
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Wotwjazujomne graty připrawić..."
+
+#: package/contents/ui/main.qml:260
+#, kde-format
+msgid "Removable Devices"
+msgstr "Wotwjazujomne graty (USB)"
+
+#: package/contents/ui/main.qml:275
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Njewotwjazujomne graty"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "All Devices"
+msgstr "Wšitke graty"
+
+#: package/contents/ui/main.qml:307
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Pokaž wuskakotawku (popup), hdyž so nowy grat přityknje"
 
 #, fuzzy
 #~| msgid "1 action for this device"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-08-12 13:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -174,22 +174,22 @@ msgstr "Ekintza gehiago"
 msgid "Keep Open"
 msgstr "Eduki irekita"
 
-#: package/contents/ui/ExpanderArrow.qml:24
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Zabaldu sistemako erretilua"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Erakutsi sistema-erretiluko elementu guztiak gainerakor batean"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "Itxi gainerakorra"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Erakutsi ezkutuko ikonoak"

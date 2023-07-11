@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-05-28 15:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -130,7 +130,7 @@ msgstr "Volgende decade"
 msgid "Keep Open"
 msgstr "Open houden"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
 msgstr "Configureren…"

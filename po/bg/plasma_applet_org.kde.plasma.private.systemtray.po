@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-07-28 21:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -170,22 +170,22 @@ msgstr "Повече действия"
 msgid "Keep Open"
 msgstr "Задържане отворен"
 
-#: package/contents/ui/ExpanderArrow.qml:24
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Разширяване на системния панел"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Показване на всички елементи в изскачащия прозорец на системния панел"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "Затваряне на изскачащ прозорец"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Показване на скрити икони"

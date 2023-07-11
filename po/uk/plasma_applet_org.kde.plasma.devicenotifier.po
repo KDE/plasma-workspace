@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-01-19 08:40+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "Вільно %1 з %2"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -34,7 +34,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Монтування…"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -42,38 +42,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Видаляємо…"
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr "Не від'єднуйте! Триває перенесення файлів…"
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Відкрити у програмі для керування файлами"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr "Змонтувати і відкрити"
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr "Виштовхнути"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr "Безпечно вилучити"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, kde-format
 msgid "Mount"
 msgstr "Змонтувати"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Від'єднати усі"
@@ -93,41 +93,41 @@ msgstr "З комп'ютером не з'єднано портативних п�
 msgid "No disks available"
 msgstr "Немає доступних дисків"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Останній з’єднаний пристрій"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr "Не виявлено жодного пристрою"
 
-#: package/contents/ui/main.qml:246
-#, kde-format
-msgid "Removable Devices"
-msgstr "Портативні пристрої"
-
-#: package/contents/ui/main.qml:252
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "Стаціонарні пристрої"
-
-#: package/contents/ui/main.qml:258
-#, kde-format
-msgid "All Devices"
-msgstr "Усі пристрої"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "Показувати контекстне меню після з’єднання нового пристрою"
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Налаштовування портативних пристроїв…"
+
+#: package/contents/ui/main.qml:260
+#, kde-format
+msgid "Removable Devices"
+msgstr "Портативні пристрої"
+
+#: package/contents/ui/main.qml:275
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Стаціонарні пристрої"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "All Devices"
+msgstr "Усі пристрої"
+
+#: package/contents/ui/main.qml:307
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Показувати контекстне меню після з’єднання нового пристрою"
 
 #~ msgid "Show:"
 #~ msgstr "Показати:"

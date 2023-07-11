@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2010-12-17 16:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.1\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -28,7 +28,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "เนื้อที่ว่าง %1"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -40,7 +40,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "กำลังเข้าใช้งาน..."
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -52,39 +52,39 @@ msgctxt ""
 msgid "Removing…"
 msgstr "กำลังถอดออก..."
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, fuzzy, kde-format
 #| msgid "Mounting..."
 msgid "Mount"
 msgstr "ทำการเมานท์..."
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -107,47 +107,47 @@ msgstr "อุปกรณ์ที่ไม่สามารถถอด/เ�
 msgid "No disks available"
 msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "อุปกรณ์ที่เสียบเข้ามาล่าสุด"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
 
-#: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Removable devices only"
-msgid "Removable Devices"
-msgstr "อุปกรณ์ที่สามารถถอด/เสียบได้เท่านั้น"
-
-#: package/contents/ui/main.qml:252
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
-msgid "Non Removable Devices"
-msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
-
-#: package/contents/ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "All devices"
-msgid "All Devices"
-msgstr "อุปกรณ์ทั้งหมด"
-
-#: package/contents/ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "No devices plugged in"
-msgid "Show popup when new device is plugged in"
-msgstr "ยังไม่มีการเสียบอุปกรณ์ใด ๆ"
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/main.qml:260
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "อุปกรณ์ที่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/main.qml:275
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "อุปกรณ์ทั้งหมด"
+
+#: package/contents/ui/main.qml:307
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "ยังไม่มีการเสียบอุปกรณ์ใด ๆ"
 
 #, fuzzy
 #~| msgctxt "General options page"

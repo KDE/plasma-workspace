@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -130,7 +130,7 @@ msgstr "下一个十年"
 msgid "Keep Open"
 msgstr "保持打开"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
 msgstr "配置…"

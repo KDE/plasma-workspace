@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2022-07-26 19:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -170,22 +170,22 @@ msgstr "மேலும் செயல்கள்"
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: package/contents/ui/ExpanderArrow.qml:24
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Expand System Tray"
 msgstr "கணினித் தட்டை பெரிதாக்கு"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "கணினித் தட்டிலுள்ள அனைத்தையும் மேல்தோன்றும் பட்டியில் காட்டும்"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "தெரித்தெழும் பட்டியை மூடு"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "மறைந்துள்ள சின்னங்களை காட்டு"

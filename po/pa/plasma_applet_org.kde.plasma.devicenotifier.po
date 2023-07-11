@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2021-06-08 22:43-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "X-Generator: Lokalize 20.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:186
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%2 ਚੋਂ %1 ਖਾਲੀ"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:190
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -33,7 +33,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "…ਮਾਊੰਟ ਕਰਨਾ"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -41,38 +41,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "…ਹਟਾਉਣਾ"
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:227
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Mount and Open"
 msgstr "ਮਾਊਂਟ ਕਰੋ ਤੇ ਖੋਲ੍ਹੋ"
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Eject"
 msgstr "ਕੱਢੋ"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Safely remove"
 msgstr "ਸਹੀ ਸਲਾਮਤੀ ਹਟਾਓ"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:276
 #, kde-format
 msgid "Mount"
 msgstr "ਮਾਊਂਟ ਕਰੋ"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "ਸਭ ਹਟਾਓ"
@@ -92,41 +92,41 @@ msgstr "ਕੋਈ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ ਅਟੈਚ ਨ�
 msgid "No disks available"
 msgstr "ਕੋਈ ਡਿਸਕ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Most Recent Device"
 msgstr "ਸਭ ਤੋਂ ਤਾਜ਼ਾ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "No Devices Available"
 msgstr "ਕੋਈ ਡਿਵਾਈਸ ਉਪਲੱਬਧ ਨਹੀਂ"
 
-#: package/contents/ui/main.qml:246
-#, kde-format
-msgid "Removable Devices"
-msgstr "ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
-
-#: package/contents/ui/main.qml:252
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "ਨਾ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
-
-#: package/contents/ui/main.qml:258
-#, kde-format
-msgid "All Devices"
-msgstr "ਸਭ ਡਿਵਾਈਸ"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ ਜਾਵੇ ਤਾਂ ਪੋਪਅੱਪ ਵੇਖਾਓ"
-
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "…ਨਾ-ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸਾਂ ਦੀ ਸੰਰਚਨਾ"
+
+#: package/contents/ui/main.qml:260
+#, kde-format
+msgid "Removable Devices"
+msgstr "ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:275
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "ਨਾ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:290
+#, kde-format
+msgid "All Devices"
+msgstr "ਸਭ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:307
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ ਜਾਵੇ ਤਾਂ ਪੋਪਅੱਪ ਵੇਖਾਓ"
 
 #~ msgid "Show:"
 #~ msgstr "ਵੇਖਾਓ:"
