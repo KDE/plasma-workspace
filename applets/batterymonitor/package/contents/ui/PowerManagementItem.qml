@@ -79,7 +79,7 @@ ColumnLayout {
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
             visible: root.inhibitions.length > 1 && !root.disabled
-            font: Kirigami.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3

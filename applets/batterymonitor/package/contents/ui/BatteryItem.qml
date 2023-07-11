@@ -147,7 +147,7 @@ PlasmaComponents3.ItemDelegate {
                     // fillWidth is true, so using internal alignment
                     horizontalAlignment: Text.AlignLeft
                     Layout.fillWidth: true
-                    font: Kirigami.Theme.smallestFont
+                    font: Kirigami.Theme.smallFont
                     wrapMode: Text.WordWrap
                     enabled: false
                 }
@@ -155,7 +155,7 @@ PlasmaComponents3.ItemDelegate {
                     // fillWidth is false, so using external (grid-cell-internal) alignment
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: false
-                    font: Kirigami.Theme.smallestFont
+                    font: Kirigami.Theme.smallFont
                     enabled: false
                 }
 
@@ -166,7 +166,7 @@ PlasmaComponents3.ItemDelegate {
                     text: root.isBroken && typeof root.battery.Capacity !== "undefined"
                         ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
                         : ""
-                    font: Kirigami.Theme.smallestFont
+                    font: Kirigami.Theme.smallFont
                     color: Kirigami.Theme.neutralTextColor
                     visible: root.isBroken
                     wrapMode: Text.WordWrap

@@ -81,7 +81,7 @@ Item {
                 }
             }
             PlasmaComponents3.Label {
-                font: Kirigami.Theme.smallestFont
+                font: Kirigami.Theme.smallFont
                 color: Kirigami.Theme.backgroundColor
                 maximumLineCount: 1
                 anchors {

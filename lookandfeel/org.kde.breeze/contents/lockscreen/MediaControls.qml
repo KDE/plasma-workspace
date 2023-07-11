@@ -123,7 +123,7 @@ Item {
                 // if no artist is given, show player name instead
                 text: mpris2Source.artists.length > 0 ? mpris2Source.artists.join(", ") : (mpris2Source.albumArtists.length > 0 ? mpris2Source.albumArtists.join(", ") : mpris2Source.identity)
                 textFormat: Text.PlainText
-                font.pointSize: Kirigami.Theme.smallestFont.pointSize + 1
+                font.pointSize: Kirigami.Theme.smallFont.pointSize + 1
                 maximumLineCount: 1
             }
         }
