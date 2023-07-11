@@ -146,9 +146,6 @@ PlasmoidItem {
             onTriggered: serviceOp(mpris2Source.current, "Quit")
         }
     ]
-    function populateContextualActions() {
-
-    }
 
     // HACK Some players like Amarok take quite a while to load the next track
     // this avoids having the plasmoid jump between popup and panel
