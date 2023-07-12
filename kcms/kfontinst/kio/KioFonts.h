@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include <KIO/SlaveBase>
+#include <KIO/WorkerBase>
 #include <sys/types.h>
 
 class QTemporaryDir;
@@ -17,7 +17,7 @@ class Family;
 class Style;
 class FontInstInterface;
 
-class CKioFonts : public KIO::SlaveBase
+class CKioFonts : public KIO::WorkerBase
 {
 public:
     enum EFolder {
@@ -30,14 +30,14 @@ public:
     CKioFonts(const QByteArray &pool, const QByteArray &app);
     ~CKioFonts() override;
 
-    void listDir(const QUrl &url) override;
-    void put(const QUrl &url, int permissions, KIO::JobFlags flags) override;
-    void get(const QUrl &url) override;
-    void del(const QUrl &url, bool isFile) override;
-    void copy(const QUrl &src, const QUrl &dest, int mode, KIO::JobFlags flags) override;
-    void rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags) override;
-    void stat(const QUrl &url) override;
-    void special(const QByteArray &a) override;
+    KIO::WorkerResult listDir(const QUrl &url) override;
+    KIO::WorkerResult put(const QUrl &url, int permissions, KIO::JobFlags flags) override;
+    KIO::WorkerResult get(const QUrl &url) override;
+    KIO::WorkerResult del(const QUrl &url, bool isFile) override;
+    KIO::WorkerResult copy(const QUrl &src, const QUrl &dest, int mode, KIO::JobFlags flags) override;
+    KIO::WorkerResult rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags) override;
+    KIO::WorkerResult stat(const QUrl &url) override;
+    KIO::WorkerResult special(const QByteArray &a) override;
 
 private:
     int listFolder(KIO::UDSEntry &entry, EFolder folder);
@@ -47,7 +47,7 @@ private:
     void createUDSEntry(KIO::UDSEntry &entry, EFolder folder);
     bool createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Family &family, const Style &style);
     Family getFont(const QUrl &url, EFolder folder);
-    void handleResp(int resp, const QString &file, const QString &tempFile = QString(), bool destIsSystem = false);
+    KIO::WorkerResult handleResp(int resp, const QString &file, const QString &tempFile = QString(), bool destIsSystem = false);
 
 private:
     FontInstInterface *m_interface;
