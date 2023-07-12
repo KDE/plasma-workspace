@@ -141,5 +141,5 @@
         "Name[zh_CN]": "网络搜索关键词",
         "Name[zh_TW]": "網路搜尋關鍵字"
     },
-    "X-KDE-ConfigModule": "kcm_webshortcuts"
+    "X-KDE-ConfigModule": "plasma/kcms/systemsettings_qwidgets/kcm_webshortcuts"
 }
