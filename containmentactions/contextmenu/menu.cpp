@@ -21,6 +21,7 @@
 #include <KTerminalLauncherJob>
 #include <QDebug>
 #include <QIcon>
+#include <QQmlListProperty>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
@@ -152,7 +153,11 @@ QList<QAction *> ContextMenu::contextualActions()
             if (!c->wallpaper().isEmpty()) {
                 QObject *wallpaperGraphicsObject = c->property("wallpaperGraphicsObject").value<QObject *>();
                 if (wallpaperGraphicsObject) {
-                    actions << wallpaperGraphicsObject->property("contextualActions").value<QList<QAction *>>();
+                    QQmlListProperty<QAction> l = wallpaperGraphicsObject->property("contextualActions").value<QQmlListProperty<QAction>>();
+                    int nActions = l.count(&l);
+                    for (int i = 0; i < nActions; ++i) {
+                        actions << l.at(&l, i);
+                    }
                 }
             }
         } else if (QAction *a = action(name)) {
