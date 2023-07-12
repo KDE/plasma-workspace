@@ -36,6 +36,7 @@ PlasmoidItem {
     compactRepresentation: CompactRepresentation {
     }
     fullRepresentation: FullRepresentation {
+        readonly property QtObject appletInterface: root
     }
 
     Plasmoid.configurationRequired: Plasmoid.faceController.highPrioritySensorIds.length == 0 && Plasmoid.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.faceController.totalSensors.length == 0
