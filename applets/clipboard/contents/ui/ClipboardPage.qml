@@ -115,12 +115,12 @@ Menu {
                 }
             }
             PlasmaComponents3.ToolButton {
-                visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && Plasmoid.action("clearHistory").visible
+                visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && main.clearHistoryAction.visible
 
                 icon.name: "edit-clear-history"
 
                 display: PlasmaComponents3.AbstractButton.IconOnly
-                text: Plasmoid.action("clearHistory").text
+                text: main.clearHistoryAction.text
 
                 onClicked: {
                     clipboardSource.service("", "clearHistory")

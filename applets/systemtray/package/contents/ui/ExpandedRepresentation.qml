@@ -190,7 +190,7 @@ Item {
                             if (action.visible
                                     && action.priority > PlasmaCore.Action.LowPriority
                                     && !primaryActionButtons.model.includes(action)
-                                    && action !== actionsButton.applet.plasmoid.action("configure")) {
+                                    && action !== actionsButton.applet.plasmoid.internalAction("configure")) {
                                 actions.push(action);
                             }
                         }
@@ -208,10 +208,10 @@ Item {
             PlasmaComponents.ToolButton {
                 id: configureButton
                 icon.name: "configure"
-                visible: actionsButton.applet && actionsButton.applet.plasmoid.action("configure")
+                visible: actionsButton.applet && actionsButton.applet.plasmoid.internalAction("configure")
 
                 display: PlasmaComponents.AbstractButton.IconOnly
-                text: actionsButton.applet.plasmoid.action("configure") ? actionsButton.applet.plasmoid.action("configure").text : ""
+                text: actionsButton.applet.plasmoid.internalAction("configure") ? actionsButton.applet.plasmoid.internalAction("configure").text : ""
 
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.left: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.left
@@ -220,7 +220,7 @@ Item {
                 PlasmaComponents.ToolTip {
                     text: parent.visible ? parent.text : ""
                 }
-                onClicked: actionsButton.applet.plasmoid.action("configure").trigger();
+                onClicked: actionsButton.applet.plasmoid.internalAction("configure").trigger();
             }
 
             PlasmaComponents.ToolButton {

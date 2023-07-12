@@ -25,6 +25,7 @@ import "global"
 PlasmoidItem {
     id: root
 
+    property alias clearHistoryAction: clearHistory
     readonly property int effectiveStatus: historyModel.activeJobsCount > 0
                      || historyModel.unreadNotificationsCount > 0
                      || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
@@ -184,6 +185,7 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
+            id: clearHistory
             text: i18n("Clear All Notifications")
             icon.name: "edit-clear-history"
             visible: historyModel.expiredNotificationsCount > 0

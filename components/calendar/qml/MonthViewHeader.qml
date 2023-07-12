@@ -229,17 +229,17 @@ Item {
             PlasmaComponents3.ToolButton {
                 id: configureButton
 
-                visible: root.monthViewRoot.digitalClock.action("configure").enabled
+                visible: root.monthViewRoot.digitalClock.internalAction("configure").enabled
 
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 icon.name: "configure"
-                text: root.monthViewRoot.digitalClock.action("configure").text
+                text: root.monthViewRoot.digitalClock.internalAction("configure").text
 
                 KeyNavigation.left: tabBar.KeyNavigation.left
                 KeyNavigation.right: pinButton
                 KeyNavigation.down: root.todayButton
 
-                onClicked: root.monthViewRoot.digitalClock.action("configure").trigger()
+                onClicked: root.monthViewRoot.digitalClock.internalAction("configure").trigger()
                 PlasmaComponents3.ToolTip {
                     text: parent.text
                 }

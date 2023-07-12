@@ -47,7 +47,7 @@ PlasmoidItem {
             checkable: true
             checked: Plasmoid.configuration.expanding
             onTriggered: checked => {
-                Plasmoid.configuration.expanding = Plasmoid.action("expanding").checked;
+                Plasmoid.configuration.expanding = checked;
             }
         }
     ]

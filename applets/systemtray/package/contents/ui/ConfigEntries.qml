@@ -283,7 +283,7 @@ ColumnLayout {
                         }
 
                         QQC2.Button {
-                            readonly property QtObject configureAction: (model.applet && model.applet.action("configure")) || null
+                            readonly property QtObject configureAction: (model.applet && model.applet.internalAction("configure")) || null
 
                             Accessible.name: configureAction ? configureAction.text : ""
                             icon.name: "configure"

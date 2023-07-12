@@ -270,6 +270,6 @@ ContainmentLayoutManager.AppletContainer {
         text: i18n("Configure…")
         icon.name: "configure"
         visible: applet.plasmoid.configurationRequired
-        onClicked: applet.plasmoid.action("configure").trigger();
+        onClicked: applet.plasmoid.internalAction("configure").trigger();
     }
 }

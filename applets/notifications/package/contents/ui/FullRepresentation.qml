@@ -169,9 +169,9 @@ PlasmaExtras.Representation {
                 PlasmaComponents3.ToolButton {
                     visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
 
-                    Accessible.name: Plasmoid.action("clearHistory").text
+                    Accessible.name: root.clearHistoryAction.text
                     icon.name: "edit-clear-history"
-                    enabled: Plasmoid.action("clearHistory").visible
+                    enabled: root.clearHistoryAction.visible
                     onClicked: action_clearHistory()
 
                     PlasmaComponents3.ToolTip {

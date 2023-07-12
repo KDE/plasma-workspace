@@ -20,6 +20,7 @@ PlasmoidItem {
 
     property bool isClipboardEmpty: clipboardSource.data["clipboard"]["empty"]
     property bool editing: false
+    property alias clearHistoryAction: clearAction
 
     signal clearSearchField
 
@@ -54,6 +55,7 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
+            id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
             visible: !main.isClipboardEmpty && !main.editing
