@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2014-06-29 22:54+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,24 +18,24 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: menu.cpp:98
+#: menu.cpp:99
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr ""
 
-#: menu.cpp:103
+#: menu.cpp:104
 #, kde-format
 msgid "Open Terminal"
 msgstr ""
 
-#: menu.cpp:107
+#: menu.cpp:108
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Закључај екран"
 
-#: menu.cpp:116
+#: menu.cpp:117
 #, fuzzy, kde-format
 #| msgctxt "plasma_containmentactions_contextmenu"
 #| msgid "Leave..."
@@ -43,32 +43,32 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Напусти..."
 
-#: menu.cpp:125
+#: menu.cpp:126
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
 # >> @title:window
-#: menu.cpp:277
+#: menu.cpp:282
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Подешавање прикључка контекстног менија"
 
-#: menu.cpp:287
+#: menu.cpp:292
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[друге радње]"
 
-#: menu.cpp:290
+#: menu.cpp:295
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "радње с тапетом"
 
-#: menu.cpp:294
+#: menu.cpp:299
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

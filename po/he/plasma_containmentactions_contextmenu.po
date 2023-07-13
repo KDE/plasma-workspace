@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2017-05-16 06:56-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -19,24 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: menu.cpp:98
+#: menu.cpp:99
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr ""
 
-#: menu.cpp:103
+#: menu.cpp:104
 #, kde-format
 msgid "Open Terminal"
 msgstr ""
 
-#: menu.cpp:107
+#: menu.cpp:108
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "נעל את המסך"
 
-#: menu.cpp:116
+#: menu.cpp:117
 #, fuzzy, kde-format
 #| msgctxt "plasma_containmentactions_contextmenu"
 #| msgid "Leave..."
@@ -44,31 +44,31 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "עזוב..."
 
-#: menu.cpp:125
+#: menu.cpp:126
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: menu.cpp:277
+#: menu.cpp:282
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "הגדרות תוסף של תפריט ההקשר"
 
-#: menu.cpp:287
+#: menu.cpp:292
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[פעולות אחרות]"
 
-#: menu.cpp:290
+#: menu.cpp:295
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "פעילות של תמונת רקע"
 
-#: menu.cpp:294
+#: menu.cpp:299
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

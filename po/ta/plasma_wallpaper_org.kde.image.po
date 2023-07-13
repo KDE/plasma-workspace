@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-05-24 21:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -88,12 +88,12 @@ msgstr "படத்தை சேர்…"
 msgid "Get New Wallpapers…"
 msgstr "புதிய பின்புல படங்களை பெறு…"
 
-#: imagepackage/contents/ui/main.qml:66
+#: imagepackage/contents/ui/main.qml:35
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "பின்புல படத்தை திற"
 
-#: imagepackage/contents/ui/main.qml:67
+#: imagepackage/contents/ui/main.qml:41
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "அடுத்த பின்புல படம்"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2021-11-09 18:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -65,22 +65,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:30
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Conteúdo da Área de Transferência"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar o Histórico"
 
-#: contents/ui/clipboard.qml:69
+#: contents/ui/clipboard.qml:71
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a Área de Transferência…"

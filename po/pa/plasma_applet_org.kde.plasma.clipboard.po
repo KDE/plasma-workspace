@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-06-14 20:57-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -69,22 +69,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:30
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "ਅਤੀਤ ਸਾਫ਼ ਕਰੋ"
 
-#: contents/ui/clipboard.qml:69
+#: contents/ui/clipboard.qml:71
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "…ਕਲਿੱਪਬੋਰਡ ਦੀ ਸੰਰਚਨਾ"

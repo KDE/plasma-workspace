@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2009-12-13 00:11+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -94,13 +94,13 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr "Dobëcé nowé tapétë..."
 
-#: imagepackage/contents/ui/main.qml:66
+#: imagepackage/contents/ui/main.qml:35
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgid "Open Wallpaper Image"
 msgstr "Nôslédny òbrôzk tapétë"
 
-#: imagepackage/contents/ui/main.qml:67
+#: imagepackage/contents/ui/main.qml:41
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Nôslédny òbrôzk tapétë"

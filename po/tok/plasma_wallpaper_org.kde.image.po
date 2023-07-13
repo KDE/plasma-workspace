@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -92,12 +92,12 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr ""
 
-#: imagepackage/contents/ui/main.qml:66
+#: imagepackage/contents/ui/main.qml:35
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr ""
 
-#: imagepackage/contents/ui/main.qml:67
+#: imagepackage/contents/ui/main.qml:41
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr ""

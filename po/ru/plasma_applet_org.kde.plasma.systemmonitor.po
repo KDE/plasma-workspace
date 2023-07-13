@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2021-05-29 14:38+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -40,7 +40,13 @@ msgstr "Подробные сведения о датчике"
 msgid "System Monitor"
 msgstr "Системный монитор"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgctxt "Sensor name: value"
+msgid "%1: %2"
+msgstr ""
+
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

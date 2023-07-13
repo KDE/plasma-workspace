@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-05-31 11:46+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -71,22 +71,22 @@ msgid ""
 msgstr ""
 "Pro zobrazení QR kódu není k dispozici dostatek místa. Zkuste applet zvětšit."
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:30
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Obsah schránky"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Vyprázdnit historii"
 
-#: contents/ui/clipboard.qml:69
+#: contents/ui/clipboard.qml:71
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Nastavit schránku…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2020-10-08 10:18+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -158,13 +158,13 @@ msgid "Show %1 More"
 msgstr "Näita veel %1"
 
 #: package/contents/ui/FullRepresentation.qml:622
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "No unread notifications"
 msgstr "Lugemata märguandeid pole"
 
 #: package/contents/ui/FullRepresentation.qml:637
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Notification service not available"
 msgstr "Märguandeteenus pole saadaval"
@@ -282,20 +282,20 @@ msgstr "Rohkem valikuid ..."
 msgid "Open"
 msgstr "Ava"
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 käimas töö"
 msgstr[1] "%1 käimas tööd"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr ""
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:62
 #, fuzzy, kde-format
 #| msgctxt "Number of jobs and the speed at which they are downloading"
 #| msgid "%1 running job (%2/s)"
@@ -305,37 +305,37 @@ msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 käimas töö (%2/s)"
 msgstr[1] "%1 käimas tööd (%2/s)"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 lugemata märguanne"
 msgstr[1] "%1 lugemata märguannet"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid "Do not disturb until %1"
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Ei häirita kuni %1"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:189
 #, fuzzy, kde-format
 #| msgctxt "OSD popup, keep short"
 #| msgid "Notifications On"
 msgid "Clear All Notifications"
 msgstr "Märguanded lubatud"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "&Configure Event Notifications and Actions..."
 msgid "&Configure Event Notifications and Actions…"

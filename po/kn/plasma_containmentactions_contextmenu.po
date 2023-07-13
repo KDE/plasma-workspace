@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2010-01-13 13:07+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -18,59 +18,59 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: menu.cpp:98
+#: menu.cpp:99
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr ""
 
-#: menu.cpp:103
+#: menu.cpp:104
 #, kde-format
 msgid "Open Terminal"
 msgstr ""
 
-#: menu.cpp:107
+#: menu.cpp:108
 #, fuzzy, kde-format
 #| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "ತೆರೆಯನ್ನು ಲಾಕ್‌ ಮಾಡು"
 
-#: menu.cpp:116
+#: menu.cpp:117
 #, fuzzy, kde-format
 #| msgid "Leave..."
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "ಬಿಟ್ಟುಬಿಡು..."
 
-#: menu.cpp:125
+#: menu.cpp:126
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: menu.cpp:277
+#: menu.cpp:282
 #, fuzzy, kde-format
 #| msgid "Configure Contextual Menu Plugin"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "ಸಾಂದರ್ಭಿಕ ಆಯ್ಕೆಯ ಪ್ಲಗಿನ್ ಅನ್ನು ಸಂರಚಿಸು"
 
-#: menu.cpp:287
+#: menu.cpp:292
 #, fuzzy, kde-format
 #| msgid "[Other Actions]"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[ಇನ್ನಷ್ಟು ಕ್ರಿಯೆಗಳು]"
 
-#: menu.cpp:290
+#: menu.cpp:295
 #, fuzzy, kde-format
 #| msgid "Wallpaper Actions"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "ಗಣಕತೆರೆ ಹಿನ್ನಲೆ ಚಿತ್ರಗಳ ಕ್ರಿಯೆಗಳು"
 
-#: menu.cpp:294
+#: menu.cpp:299
 #, fuzzy, kde-format
 #| msgid "[Separator]"
 msgctxt "plasma_containmentactions_contextmenu"

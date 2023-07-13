@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2021-06-16 00:31+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -163,13 +163,13 @@ msgid "Show %1 More"
 msgstr "Rodyti dar %1"
 
 #: package/contents/ui/FullRepresentation.qml:622
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "No unread notifications"
 msgstr "Neskaitytų pranešimų nėra"
 
 #: package/contents/ui/FullRepresentation.qml:637
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Notification service not available"
 msgstr "Pranešimų tarnyba yra neprieinama"
@@ -298,7 +298,7 @@ msgstr "Daugiau parinkčių…"
 msgid "Open"
 msgstr "Atverti"
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -307,13 +307,13 @@ msgstr[1] "%1 vykdomos užduotys"
 msgstr[2] "%1 vykdomų užduočių"
 msgstr[3] "%1 vykdoma užduotis"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr ""
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "%1 running job"
 #| msgid_plural "%1 running jobs"
@@ -324,7 +324,7 @@ msgstr[1] "%1 vykdomos užduotys"
 msgstr[2] "%1 vykdomų užduočių"
 msgstr[3] "%1 vykdoma užduotis"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
@@ -333,28 +333,28 @@ msgstr[1] "%1 neskaityti pranešimai"
 msgstr[2] "%1 neskaitytų pranešimų"
 msgstr[3] "%1 neskaitytas pranešimas"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid "Do not disturb until %1"
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Netrukdyti iki %1"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Išvalyti visus pranešimus"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfigūruoti pranešimus apie įvykius ir veiksmus…"

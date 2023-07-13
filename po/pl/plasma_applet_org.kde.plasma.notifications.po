@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-12-10 11:36+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -158,13 +158,13 @@ msgid "Show %1 More"
 msgstr "Wyświetl %1 więcej"
 
 #: package/contents/ui/FullRepresentation.qml:622
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "No unread notifications"
 msgstr "Brak nieprzeczytanych powiadomień"
 
 #: package/contents/ui/FullRepresentation.qml:637
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Notification service not available"
 msgstr "Usługa powiadomień jest niedostępna"
@@ -285,7 +285,7 @@ msgstr "Więcej ustawień..."
 msgid "Open"
 msgstr "Otwórz"
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -293,13 +293,13 @@ msgstr[0] "%1 wykonywane zadanie"
 msgstr[1] "%1 wykonywane zadania"
 msgstr[2] "%1 wykonywanych zadań"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
@@ -307,7 +307,7 @@ msgstr[0] "%1 wykonuje zadanie (%2%)"
 msgstr[1] "%1 wykonuje zadania (%2%)"
 msgstr[2] "%1 wykonuje zadania (%2%)"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
@@ -315,28 +315,28 @@ msgstr[0] "%1 nieprzeczytane powiadomienie"
 msgstr[1] "%1 nieprzeczytane powiadomienia"
 msgstr[2] "%1 nieprzeczytanych powiadomień"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr ""
 "W trybie nieprzeszkadzania do %1; naciśnij środkowy, aby wyjść z niego teraz"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "W trybie nieprzeszkadzania; naciśnij środkowy, aby wyjść z niego"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Środkowy przechodzi w tryb nieprzeszkadzania"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Wyczyść wszystkie powiadomienia"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "U&stawienia powiadomień i działań wydarzeń..."

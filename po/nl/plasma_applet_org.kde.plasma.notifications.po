@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-10-16 22:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -156,13 +156,13 @@ msgid "Show %1 More"
 msgstr "%1 meer tonen"
 
 #: package/contents/ui/FullRepresentation.qml:622
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "No unread notifications"
 msgstr "Geen ongelezen meldingen"
 
 #: package/contents/ui/FullRepresentation.qml:637
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Notification service not available"
 msgstr "Meldingenservice niet beschikbaar"
@@ -277,54 +277,54 @@ msgstr "Meer opties…"
 msgid "Open"
 msgstr "Openen"
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 draaiende taak"
 msgstr[1] "%1 draaiende taken"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 draaiende taak (%2%)"
 msgstr[1] "%1 draaiende taken (%2%)"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 ongelezen melding"
 msgstr[1] "%1 ongelezen meldingen"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Niet storen tot %1; midden-klik om er nu uit te gaan"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Modus niet storen actief; midden-klik om er uit te gaan"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Midden-klik om in modus niet storen te gaan"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Alle meldingen wissen"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Meldingen van gebeurtenissen en acties &configureren…"

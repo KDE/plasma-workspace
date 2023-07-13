@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-02-19 19:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -88,12 +88,12 @@ msgstr "Şəkil əlavə etmək..."
 msgid "Get New Wallpapers…"
 msgstr "Yeni divar kağızları almaq..."
 
-#: imagepackage/contents/ui/main.qml:66
+#: imagepackage/contents/ui/main.qml:35
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Divar kağızı şəklini açın"
 
-#: imagepackage/contents/ui/main.qml:67
+#: imagepackage/contents/ui/main.qml:41
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Növbəti divar kağızı"

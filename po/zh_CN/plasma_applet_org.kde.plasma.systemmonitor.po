@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,7 +38,13 @@ msgstr "传感器详情"
 msgid "System Monitor"
 msgstr "系统监视器"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgctxt "Sensor name: value"
+msgid "%1: %2"
+msgstr ""
+
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

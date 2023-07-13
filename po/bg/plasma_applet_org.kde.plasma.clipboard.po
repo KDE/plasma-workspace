@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-05-30 21:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -71,22 +71,22 @@ msgstr ""
 "Няма достатъчно място за показване на QR кода. Опитайте да промените размера "
 "на този аплет."
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:30
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Съдържание на клипборда"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буферът е празен"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Изчистване на история"
 
-#: contents/ui/clipboard.qml:69
+#: contents/ui/clipboard.qml:71
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Конфигуриране на клипборда…"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -157,13 +157,13 @@ msgid "Show %1 More"
 msgstr "显示其他 %1 条"
 
 #: package/contents/ui/FullRepresentation.qml:622
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "No unread notifications"
 msgstr "没有未读通知"
 
 #: package/contents/ui/FullRepresentation.qml:637
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Notification service not available"
 msgstr "通知服务不可用"
@@ -272,51 +272,51 @@ msgstr "更多选项…"
 msgid "Open"
 msgstr "打开"
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 个正在运行的任务"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 个正在运行的任务 (%2%)"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 条未读通知"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "直到 %1 保持勿扰；中键单击以立即退出勿扰模式"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "勿扰模式已激活；中键单击以退出"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "中键单击以进入勿扰模式"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "清除所有通知"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "配置事件通知和操作(&C)…"
