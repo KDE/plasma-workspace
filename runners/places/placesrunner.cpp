@@ -29,6 +29,10 @@ PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData)
 
     setMinLetterCount(3);
 
+    connect(&m_places, &KFilePlacesModel::reloaded, this, [this]() {
+        m_places.moveToThread(thread());
+        m_places.setParent(this);
+    });
     connect(&m_places, &KFilePlacesModel::setupDone, this, [this](const QModelIndex &index, bool success) {
         if (success && m_pendingUdi == m_places.deviceForIndex(index).udi()) {
             auto *job = new KIO::OpenUrlJob(m_places.url(index));
