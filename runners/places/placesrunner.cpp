@@ -60,7 +60,7 @@ void PlacesRunner::match(KRunner::RunnerContext &context)
         }
 
         if (type != KRunner::QueryMatch::NoMatch) {
-            KRunner::QueryMatch match(static_cast<PlacesRunner *>(parent()));
+            KRunner::QueryMatch match(this);
             match.setType(type);
             match.setRelevance(relevance);
             match.setIcon(m_places.icon(current_index));
