@@ -160,11 +160,19 @@ MouseArea {
     transitions: [
         Transition {
             to: "*" // any state
-            NumberAnimation {
-                targets: [notificationIcon, dndIcon]
-                properties: "opacity,scale"
-                duration: PlasmaCore.Units.longDuration
-                easing.type: Easing.InOutQuad
+            ParallelAnimation {
+                NumberAnimation {
+                    target: dndIcon // QTBUG-100392: Target can already be destroyed, so don't put it in a list
+                    properties: "opacity,scale"
+                    duration: PlasmaCore.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+                NumberAnimation {
+                    target: notificationIcon // QTBUG-100392: Target can already be destroyed, so don't put it in a list
+                    properties: "opacity,scale"
+                    duration: PlasmaCore.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
             }
         },
         Transition {
