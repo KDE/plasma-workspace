@@ -91,7 +91,7 @@ PlasmoidItem {
             icon.name: "go-up-symbolic"
             priority: PlasmaCore.Action.LowPriority
             visible: root.canRaise
-            onTriggered: serviceOp(mpris2Source.current, "Raise");
+            onTriggered: raise()
         },
         PlasmaCore.Action {
             text: i18nc("Play previous track", "Previous Track")
@@ -99,7 +99,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl
             enabled: root.canGoPrevious
-            onTriggered: serviceOp(mpris2Source.current, "Previous")
+            onTriggered: previous()
         },
         PlasmaCore.Action {
             text: i18nc("Pause playback", "Pause")
@@ -107,7 +107,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl && root.state === "playing" && root.canPause
             enabled: root.canControl && root.state === "playing" && root.canPause
-            onTriggered: serviceOp(mpris2Source.current, "Pause")
+            onTriggered: pause()
         },
         PlasmaCore.Action {
             text: i18nc("Start playback", "Play")
@@ -115,7 +115,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl && root.state !== "playing"
             enabled: root.state !== "playing" && root.canPlay
-            onTriggered: serviceOp(mpris2Source.current, "Play")
+            onTriggered: play()
         },
         PlasmaCore.Action {
             text: i18nc("Play next track", "Next Track")
@@ -123,7 +123,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl
             enabled: root.canGoNext
-            onTriggered: serviceOp(mpris2Source.current, "Next")
+            onTriggered: next()
         },
         PlasmaCore.Action {
             text: i18nc("Stop playback", "Stop")
@@ -131,7 +131,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl
             enabled: root.state === "playing" || root.state === "paused"
-            onTriggered: serviceOp(mpris2Source.current, "Stop")
+            onTriggered: stop()
         },
         PlasmaCore.Action {
             isSeparator: true
@@ -143,7 +143,7 @@ PlasmoidItem {
             icon.name: "application-exit"
             priority: PlasmaCore.Action.LowPriority
             visible: root.canQuit
-            onTriggered: serviceOp(mpris2Source.current, "Quit")
+            onTriggered: quit()
         }
     ]
     function populateContextualActions() {
@@ -205,20 +205,40 @@ PlasmoidItem {
         updateMprisSourcesModel()
     }
 
+    function previous() {
+        __serviceOp(mpris2Source.current, "Previous");
+    }
+    function next() {
+        __serviceOp(mpris2Source.current, "Next");
+    }
+    function play() {
+        __serviceOp(mpris2Source.current, "Play");
+    }
+    function pause() {
+        __serviceOp(mpris2Source.current, "Pause");
+    }
     function togglePlaying() {
         if (root.isPlaying) {
             if (root.canPause) {
-                serviceOp(mpris2Source.current, "Pause");
+                pause();
             }
         } else {
             if (root.canPlay) {
-                serviceOp(mpris2Source.current, "Play");
+                play();
             }
         }
     }
+    function stop() {
+        __serviceOp(mpris2Source.current, "Stop");
+    }
+    function quit() {
+        __serviceOp(mpris2Source.current, "Quit");
+    }
+    function raise() {
+        __serviceOp(mpris2Source.current, "Raise");
+    }
 
-
-    function serviceOp(src, op) {
+    function __serviceOp(src, op) {
         var service = mpris2Source.serviceForSource(src);
         var operation = service.operationDescription(op);
         return service.startOperationCall(operation);

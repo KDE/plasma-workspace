@@ -119,11 +119,11 @@ PlasmaExtras.Representation {
                 // K is YouTube's key for "play/pause" :)
                 root.togglePlaying()
             } else if (event.key === Qt.Key_P) {
-                root.action_previous()
+                root.previous()
             } else if (event.key === Qt.Key_N) {
-                root.action_next()
+                root.next()
             } else if (event.key === Qt.Key_S) {
-                root.action_stop()
+                root.stop()
             } else if (event.key === Qt.Key_J) { // TODO ltr languages
                 // seek back 5s
                 seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
@@ -588,7 +588,7 @@ PlasmaExtras.Representation {
 
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
-                        root.action_previous()
+                        root.previous()
                     }
                 }
 
@@ -628,7 +628,7 @@ PlasmaExtras.Representation {
 
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
-                        root.action_next()
+                        root.next()
                     }
                 }
 
