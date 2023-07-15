@@ -199,12 +199,12 @@ bool DesktopView::showPreviewBanner() const
 
 QString DesktopView::previewBannerTitle() const
 {
-    if constexpr (PROJECT_VERSION_PATCH == 80) {
-        return i18nc("@label %1 version string", "Plasma %1 Development Build", WORKSPACE_VERSION_STRING);
-    } else if constexpr (PROJECT_VERSION_PATCH == 90) {
-        return i18nc("@label %1 version string", "Plasma %1 Beta Build", WORKSPACE_VERSION_STRING);
+    static const QString platformInfo = KWindowSystem::isPlatformWayland() ? QStringLiteral("Wayland") : QStringLiteral("X11");
+
+    if constexpr (PROJECT_VERSION_PATCH == 90) {
+        return i18nc("@label %1 version string %2 X11/Wayland", "Plasma %1 %2 Beta", WORKSPACE_VERSION_STRING, platformInfo);
     } else {
-        return i18nc("@label %1 version string", "Plasma %1", WORKSPACE_VERSION_STRING);
+        return i18nc("@label %1 version string %2 X11/Wayland", "Plasma %1 %2", WORKSPACE_VERSION_STRING, platformInfo);
     }
 }
 
