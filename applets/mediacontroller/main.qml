@@ -104,9 +104,8 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18nc("Open player window or bring it to the front if already open", "Open")
+            text: i18n("Bring player window to the front")
             icon.name: "go-up-symbolic"
-            priority: PlasmaCore.Action.LowPriority
             visible: root.canRaise
             onTriggered: raise()
         },
