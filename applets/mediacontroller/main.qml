@@ -105,7 +105,7 @@ PlasmoidItem {
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18n("Bring player window to the front")
-            icon.name: "go-up-symbolic"
+            icon.name: mpris2Source.currentData["Desktop Icon Name"] || mpris2Source.currentData["DesktopEntry"] || "go-up-symbolic"
             visible: root.canRaise
             onTriggered: raise()
         },
