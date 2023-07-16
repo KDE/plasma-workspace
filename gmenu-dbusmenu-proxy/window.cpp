@@ -640,10 +640,10 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
             const auto &actionState = actionStates.first();
             // assume this is a checkbox
             if (!isMenu) {
-                if (actionState.type() == QVariant::Bool) {
+                if (actionState.typeId() == QMetaType::Bool) {
                     result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
                     result.insert(QStringLiteral("toggle-state"), actionState.toBool() ? 1 : 0);
-                } else if (actionState.type() == QVariant::String) {
+                } else if (actionState.typeId() == QMetaType::QString) {
                     result.insert(QStringLiteral("toggle-type"), QStringLiteral("radio"));
                     result.insert(QStringLiteral("toggle-state"), actionState == target ? 1 : 0);
                 }

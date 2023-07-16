@@ -20,55 +20,55 @@
 
 #include "debug.h"
 
-static QVariant::Type expPropType(const QString &propName)
+static QMetaType::Type expPropType(const QString &propName)
 {
     if (propName == QLatin1String("Identity"))
-        return QVariant::String;
+        return QMetaType::QString;
     else if (propName == QLatin1String("DesktopEntry"))
-        return QVariant::String;
+        return QMetaType::QString;
     else if (propName == QLatin1String("SupportedUriSchemes"))
-        return QVariant::StringList;
+        return QMetaType::QStringList;
     else if (propName == QLatin1String("SupportedMimeTypes"))
-        return QVariant::StringList;
+        return QMetaType::QStringList;
     else if (propName == QLatin1String("Fullscreen"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("PlaybackStatus"))
-        return QVariant::String;
+        return QMetaType::QString;
     else if (propName == QLatin1String("LoopStatus"))
-        return QVariant::String;
+        return QMetaType::QString;
     else if (propName == QLatin1String("Shuffle"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("Rate"))
-        return QVariant::Double;
+        return QMetaType::Double;
     else if (propName == QLatin1String("MinimumRate"))
-        return QVariant::Double;
+        return QMetaType::Double;
     else if (propName == QLatin1String("MaximumRate"))
-        return QVariant::Double;
+        return QMetaType::Double;
     else if (propName == QLatin1String("Volume"))
-        return QVariant::Double;
+        return QMetaType::Double;
     else if (propName == QLatin1String("Position"))
-        return QVariant::LongLong;
+        return QMetaType::LongLong;
     else if (propName == QLatin1String("Metadata"))
-        return QVariant::Map;
+        return QMetaType::QVariantMap;
     // we give out CanControl, as this may completely
     // change the UI of the widget
     else if (propName == QLatin1String("CanControl"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanSeek"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanGoNext"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanGoPrevious"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanRaise"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanQuit"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanPlay"))
-        return QVariant::Bool;
+        return QMetaType::Bool;
     else if (propName == QLatin1String("CanPause"))
-        return QVariant::Bool;
-    return QVariant::Invalid;
+        return QMetaType::Bool;
+    return QMetaType::UnknownType;
 }
 
 static PlayerContainer::Cap capFromName(const QString &capName)
@@ -164,12 +164,12 @@ static bool decodeUri(QVariantMap &map, const QString &entry)
     return true;
 }
 
-void PlayerContainer::copyProperty(const QString &propName, const QVariant &_value, QVariant::Type expType, UpdateType updType)
+void PlayerContainer::copyProperty(const QString &propName, const QVariant &_value, QMetaType::Type expType, UpdateType updType)
 {
     QVariant value = _value;
     // we protect our users from bogus values
     if (value.userType() == qMetaTypeId<QDBusArgument>()) {
-        if (expType == QVariant::Map) {
+        if (expType == QMetaType::QVariantMap) {
             QDBusArgument arg = value.value<QDBusArgument>();
             // Bug 374531: MapType fits all kinds of maps but we crash when we try to stream the arg into a
             // QVariantMap below but get a wrong signature, e.g. a{ss} instead of the expected a{sv}
@@ -191,7 +191,7 @@ void PlayerContainer::copyProperty(const QString &propName, const QVariant &_val
             value = QVariant(map);
         }
     }
-    if (value.type() != expType) {
+    if (value.typeId() != expType) {
         const char *gotTypeCh = QDBusMetaType::typeToSignature(value.metaType());
         QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
         const char *expTypeCh = QDBusMetaType::typeToSignature(QMetaType(expType));
@@ -199,7 +199,7 @@ void PlayerContainer::copyProperty(const QString &propName, const QVariant &_val
 
         qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName << "as D-Bus type" << gotType << "but it should be D-Bus type" << expType;
     }
-    if (value.convert(expType)) {
+    if (value.convert(QMetaType(expType))) {
         if (propName == QLatin1String("Position")) {
             setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
 
@@ -258,14 +258,14 @@ void PlayerContainer::updateFromMap(const QVariantMap &map, UpdateType updType)
 {
     QMap<QString, QVariant>::const_iterator i = map.constBegin();
     while (i != map.constEnd()) {
-        QVariant::Type type = expPropType(i.key());
-        if (type != QVariant::Invalid) {
+        QMetaType::Type type = expPropType(i.key());
+        if (type != QMetaType::UnknownType) {
             copyProperty(i.key(), i.value(), type, updType);
         }
 
         Cap cap = capFromName(i.key());
         if (cap != NoCaps) {
-            if (i.value().type() == QVariant::Bool) {
+            if (i.value().typeId() == QMetaType::Bool) {
                 if (i.value().toBool()) {
                     m_caps |= cap;
                 } else {

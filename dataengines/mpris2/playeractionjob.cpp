@@ -73,7 +73,7 @@ void PlayerActionJob::start()
             emitResult();
         }
     } else if (operation == QLatin1String("SetLoopStatus")) {
-        if (parameters().value(QStringLiteral("status")).type() == QVariant::String) {
+        if (parameters().value(QStringLiteral("status")).typeId() == QMetaType::QString) {
             setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("LoopStatus"), QDBusVariant(parameters()[QStringLiteral("status")]));
         } else {
             setErrorText(QStringLiteral("status"));
@@ -81,7 +81,7 @@ void PlayerActionJob::start()
             emitResult();
         }
     } else if (operation == QLatin1String("SetShuffle")) {
-        if (parameters().value(QStringLiteral("on")).type() == QVariant::Bool) {
+        if (parameters().value(QStringLiteral("on")).typeId() == QMetaType::Bool) {
             setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("Shuffle"), QDBusVariant(parameters()[QStringLiteral("on")]));
         } else {
             setErrorText(QStringLiteral("on"));
@@ -89,7 +89,7 @@ void PlayerActionJob::start()
             emitResult();
         }
     } else if (operation == QLatin1String("SetRate")) {
-        if (parameters().value(QStringLiteral("rate")).type() == QVariant::Double) {
+        if (parameters().value(QStringLiteral("rate")).typeId() == QMetaType::Double) {
             setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("Rate"), QDBusVariant(parameters()[QStringLiteral("rate")]));
         } else {
             setErrorText(QStringLiteral("rate"));
@@ -97,7 +97,7 @@ void PlayerActionJob::start()
             emitResult();
         }
     } else if (operation == QLatin1String("SetVolume")) {
-        if (parameters().value(QStringLiteral("level")).type() == QVariant::Double) {
+        if (parameters().value(QStringLiteral("level")).typeId() == QMetaType::Double) {
             setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("Volume"), QDBusVariant(parameters()[QStringLiteral("level")]));
         } else {
             setErrorText(QStringLiteral("level"));
@@ -105,13 +105,13 @@ void PlayerActionJob::start()
             emitResult();
         }
     } else if (operation == QLatin1String("ChangeVolume")) {
-        if (parameters().value(QStringLiteral("delta")).type() != QVariant::Double) {
+        if (parameters().value(QStringLiteral("delta")).typeId() != QMetaType::Double) {
             setErrorText(QStringLiteral("delta"));
             setError(MissingArgument);
             emitResult();
             return;
         }
-        if (parameters().value(QStringLiteral("showOSD")).type() != QVariant::Bool) {
+        if (parameters().value(QStringLiteral("showOSD")).typeId() != QMetaType::Bool) {
             setErrorText(QStringLiteral("showOSD"));
             setError(MissingArgument);
             emitResult();

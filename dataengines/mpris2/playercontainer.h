@@ -79,7 +79,7 @@ private Q_SLOTS:
     void seeked(qlonglong position);
 
 private:
-    void copyProperty(const QString &propName, const QVariant &value, QVariant::Type expType, UpdateType updType);
+    void copyProperty(const QString &propName, const QVariant &value, QMetaType::Type expType, UpdateType updType);
     void updateFromMap(const QVariantMap &map, UpdateType updType);
     void recalculatePosition();
 

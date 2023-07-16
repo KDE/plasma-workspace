@@ -208,7 +208,7 @@ void SessionRunner::match(KRunner::RunnerContext &context)
 
 void SessionRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    if (match.data().type() == QVariant::Int) {
+    if (match.data().typeId() == QMetaType::Int) {
         switch (match.data().toInt()) {
         case LogoutAction:
             m_session.requestLogout();

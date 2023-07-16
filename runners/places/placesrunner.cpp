@@ -114,7 +114,7 @@ void PlacesRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner
 {
     // I don't just pass the model index because the list could change before the user clicks on it, which would make everything go wrong. Ideally we don't want
     // things to go wrong.
-    if (action.data().type() == QVariant::Url) {
+    if (action.data().typeId() == QMetaType::QUrl) {
         auto *job = new KIO::OpenUrlJob(action.data().toUrl());
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
         job->setRunExecutables(false);

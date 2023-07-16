@@ -227,7 +227,7 @@ std::optional<QProcessEnvironment> getSystemdEnvironment()
         return std::nullopt;
     }
     auto variant = qdbus_cast<QVariant>(arguments[0]);
-    if (variant.type() != QVariant::StringList) {
+    if (variant.typeId() != QMetaType::QStringList) {
         return std::nullopt;
     }
 
