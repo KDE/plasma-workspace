@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2010-02-12 02:46+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Launchpad (build 12959)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: placesrunner.cpp:27 placesrunner.cpp:47
+#: placesrunner.cpp:27 placesrunner.cpp:51
 #, kde-format
 msgid "places"
 msgstr "vendet"

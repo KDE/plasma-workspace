@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2017-05-22 05:26-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -99,12 +99,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "יציאה"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr "בחר נגן אוטומטית"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -115,7 +115,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "על ידי %1 (מושהה)"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -124,7 +124,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -135,7 +135,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "על ידי %1 (מושהה)"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"

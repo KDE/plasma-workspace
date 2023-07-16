@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2022-10-17 18:40+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "\n"
 "\n"
 
-#: placesrunner.cpp:27 placesrunner.cpp:47
+#: placesrunner.cpp:27 placesrunner.cpp:51
 #, kde-format
 msgid "places"
 msgstr "staðir"

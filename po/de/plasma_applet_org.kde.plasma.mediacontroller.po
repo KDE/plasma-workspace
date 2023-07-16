@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2023-02-01 23:34+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -95,12 +95,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "Beenden"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Medienspieler automatisch auswählen"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 "Mittelklick zum Anhalten\n"
 "Mausrad zum Anpassen der Lautstärke"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -124,7 +124,7 @@ msgstr ""
 "Mittelklick zum Anhalten\n"
 "Mausrad zum Anpassen der Lautstärke"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -136,7 +136,7 @@ msgstr ""
 "Mittelklick zur Wiedergabe\n"
 "Mausrad zum Anpassen der Lautstärke"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

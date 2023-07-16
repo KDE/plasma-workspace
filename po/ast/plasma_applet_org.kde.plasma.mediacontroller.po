@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2023-05-03 22:36+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -96,12 +96,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr ""
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr ""
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -110,7 +110,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -119,7 +119,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -128,7 +128,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

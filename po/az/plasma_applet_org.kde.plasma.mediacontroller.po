@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2023-02-19 15:02+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -96,12 +96,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "Çıxış"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Pleyeri avtomatik seçmək"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 "Fasilə üçün orta düyməyə vur\n"
 "Səsi tənizmləmək üçün sürüşdür"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 "Fasilə üçün orta düyməyə vur\n"
 "SƏsi tənzimləmək üçün sürüşdür"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -136,7 +136,7 @@ msgstr ""
 "%1 (fasilədə, %2)\n"
 "Oynatmaq üçün orta düyməyə vur Səsi tənzimləmək üçün sürüşdr"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2023-02-28 23:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -96,12 +96,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "끝내기"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr "자동으로 재생기 선택"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 "일시 정지: 가운데 단추 클릭\n"
 "음량 조절: 스크롤"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 "일시 정지: 가운데 단추 클릭\n"
 "음량 조절: 스크롤"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 "재생: 가운데 단추 클릭\n"
 "음량 조절: 스크롤"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

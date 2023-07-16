@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2014-09-18 16:10+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -99,12 +99,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr ""
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr ""
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -115,7 +115,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "vun %1 (anhollen)"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -124,7 +124,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -135,7 +135,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "vun %1 (anhollen)"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"

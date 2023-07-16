@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2021-02-18 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -98,12 +98,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "പുറത്തുകടക്കുക"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr "പ്ലയർ സ്വയമേവ തിരഞ്ഞെടുക്കുക"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -114,7 +114,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 ന്റെ (താത്കാലികമായി നിർത്തി, %2)"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -123,7 +123,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -134,7 +134,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 ന്റെ (താത്കാലികമായി നിർത്തി, %2)"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"

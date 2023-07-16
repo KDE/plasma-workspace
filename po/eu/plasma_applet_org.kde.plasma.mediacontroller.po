@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2022-12-08 22:18+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque\n"
@@ -99,12 +99,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "Irten"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Hautatu jotzailea automatikoki"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "Erdiko klik etenaldirako\n"
 "Kiribildu bolumena doitzeko"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 "Erdiko klik etenaldirako\n"
 "Kiribildu bolumena doitzeko"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -140,7 +140,7 @@ msgstr ""
 "Erdiko klik jotzeko\n"
 "Kiribildu bolumena doitzeko"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

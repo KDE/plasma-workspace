@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-16 02:12+0000\n"
 "PO-Revision-Date: 2021-05-03 20:28-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -96,12 +96,12 @@ msgctxt "Quit player"
 msgid "Quit"
 msgstr "ਬਾਹਰ"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Choose player automatically"
 msgstr ""
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -112,7 +112,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -121,7 +121,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -132,7 +132,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"

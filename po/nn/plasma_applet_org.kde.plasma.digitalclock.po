@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 02:03+0000\n"
-"PO-Revision-Date: 2023-02-22 21:33+0100\n"
+"PO-Revision-Date: 2023-07-15 13:45+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -279,16 +279,12 @@ msgid "Available Plugins:"
 msgstr "Tilgjengelege programtillegg:"
 
 #: package/contents/ui/configTimeZones.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Tips: Viss ofte er på reisefot, legg til ei oppføring for tidssona til "
+"Tips: Viss du ofte er på reisefot, legg til ei oppføring for tidssona til "
 "heimstaden din her. Denne vert då berre vist når du byter tidssona for heile "
 "systemet til ei anna tidssone."
 
