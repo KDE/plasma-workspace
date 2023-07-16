@@ -6,11 +6,32 @@
 
 #pragma once
 
+#include <optional>
+
 #include <QGuiApplication>
 #include <QQuickItem>
 #include <QTimer>
 
-#include <optional>
+struct InterceptedQuickItemData {
+    QPointer<QQuickItem> item;
+    std::optional<QPointF> interceptedHoverEnterPosition; // position of intercepted enter events
+
+    bool operator==(QQuickItem *otherItem) const
+    {
+        return otherItem == item;
+    }
+
+    void operator=(QQuickItem *otherItem)
+    {
+        item = otherItem;
+        interceptedHoverEnterPosition.reset();
+    }
+
+    explicit operator bool() const
+    {
+        return item != nullptr;
+    }
+};
 
 /**
  * This class filters child mouse events that move from a current location towards a given edge.
@@ -91,14 +112,15 @@ private:
     static constexpr int JITTER_THRESHOLD = 1;
 
     bool filterContains(const QPointF &p) const;
-    void resendHoverEvents(QPointF cursorPosition);
+    void resendHoverEvents(const QPointF &cursorPosition);
 
     QTimer m_resetTimer;
-    std::optional<QPointF> m_interceptionPos; // point where we started intercepting
+
+    InterceptedQuickItemData m_interceptedHoverItem; // item newly entered but the enter event was intercepted
+
     std::optional<QPointF> m_lastCursorPosition;
-    std::optional<ulong> m_lastTimestamp;
-    QPointer<QQuickItem> m_interceptedHoverItem; // item newly entered but the enter event was intercepted
-    std::optional<QPointF> m_interceptedHoverEnterPosition; // position of intercepted enter events
+    std::optional<decltype(std::declval<QHoverEvent>().timestamp())> m_lastTimestamp;
+    std::optional<QPointF> m_interceptionPos; // point where we started intercepting
     bool m_firstEntered = false;
     Qt::Edge m_edge = Qt::RightEdge;
     QVector<int> m_edgeLine;

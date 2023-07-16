@@ -35,9 +35,8 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
         if (!m_interceptedHoverItem) {
             return;
         }
-        if (m_interceptedHoverEnterPosition) {
-            resendHoverEvents(m_interceptedHoverEnterPosition.value());
-            m_interceptedHoverEnterPosition.reset();
+        if (m_interceptedHoverItem.interceptedHoverEnterPosition.has_value()) {
+            resendHoverEvents(m_interceptedHoverItem.interceptedHoverEnterPosition.value());
         }
     });
 };
@@ -46,16 +45,27 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
     update();
     if (!m_active) {
+        // Even if inactive, we still need to record the current item so when active becomes true after the child item is hovered, the filter can still work
+        // correctly
+        switch (event->type()) {
+        case QEvent::HoverEnter:
+            m_interceptedHoverItem = item;
+            break;
+        case QEvent::HoverLeave:
+            m_interceptedHoverItem = nullptr;
+            break;
+        default:
+            break;
+        }
         return false;
     }
 
     switch (event->type()) {
     case QEvent::HoverLeave:
-        if (!m_interceptedHoverItem) {
+        if (!m_interceptedHoverItem /* reset in resendHoverEvent */) {
             return false;
-        }
-        if (item == m_interceptedHoverItem.data()) {
-            m_interceptedHoverItem.clear();
+        } else if (m_interceptedHoverItem == item || m_resetTimer.isActive() /* The previous item hasn't received a HoverLeave event */) {
+            m_interceptedHoverItem = nullptr;
             return false;
         }
         return true;
@@ -69,16 +79,16 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
         // in the case of kickoff it's so that we can move the mouse from the bottom tabbar to the side view
         bool firstEnter = m_blockFirstEnter && event->type() == QEvent::HoverEnter && !m_interceptionPos;
 
-        if (m_lastCursorPosition && m_lastTimestamp && !firstEnter) {
-            const QPointF deltaPosition = position - m_lastCursorPosition.value();
-            const ulong deltaTime = he.timestamp() - m_lastTimestamp.value();
-
+        if (event->type() == QEvent::HoverMove && m_interceptedHoverItem == item && m_lastCursorPosition.has_value() && m_lastTimestamp.has_value()
+            && !firstEnter) {
             // If no movement was registered, filter event in any case
-            if (position == m_lastCursorPosition.value()) {
+            if (position == m_lastCursorPosition) {
                 return true;
             }
 
+            const QPointF deltaPosition = position - m_lastCursorPosition.value();
             m_lastCursorPosition = position;
+            const auto deltaTime = he.timestamp() - m_lastTimestamp.value();
             m_lastTimestamp = he.timestamp();
 
             // As a first metric, we check the direction in which the cursor has been moved
@@ -98,9 +108,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
                 break;
             }
             if (directionMetric) {
-                if (he.type() == QEvent::HoverMove && m_interceptedHoverItem) {
-                    resendHoverEvents(position);
-                }
+                resendHoverEvents(position);
                 return false;
             }
 
@@ -108,16 +116,11 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
             if (deltaTime != 0 && he.timestamp() != 0) {
                 const double velocity = std::pow(deltaPosition.x(), 2) + std::pow(deltaPosition.y(), 2) / deltaTime;
                 if (velocity < VELOCITY_THRESHOLD) {
-                    if (he.type() == QEvent::HoverMove && m_interceptedHoverItem) {
-                        resendHoverEvents(position);
-                    }
+                    resendHoverEvents(position);
                     return false;
                 }
             }
         }
-
-        m_lastCursorPosition = position;
-        m_lastTimestamp = he.timestamp();
 
         // Finally, we check if the cursor movement was inside the filtered region
         if (firstEnter || filterContains(position)) {
@@ -129,19 +132,21 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
                 m_firstEntered = true;
             } else if (event->type() == QEvent::HoverEnter) {
                 m_interceptedHoverItem = item;
-                m_interceptedHoverEnterPosition = position;
+                m_interceptedHoverItem.interceptedHoverEnterPosition = position;
             }
+
+            m_lastCursorPosition = position;
+            m_lastTimestamp = he.timestamp();
 
             if (m_filterTimeout > 0) {
                 m_resetTimer.start(m_filterTimeout);
             }
-
-            m_lastCursorPosition = position;
             return true;
         } else {
             // Pass event through
             m_interceptionPos = position;
-            if (he.type() == QEvent::HoverMove && m_interceptedHoverItem) {
+
+            if (he.type() == QEvent::HoverMove && m_interceptedHoverItem == item) {
                 resendHoverEvents(position);
             }
             return false;
@@ -152,15 +157,15 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
     }
 }
 
-void TriangleMouseFilter::resendHoverEvents(QPointF cursorPosition)
+void TriangleMouseFilter::resendHoverEvents(const QPointF &cursorPosition)
 {
     // If we are no longer inhibiting events and have previously intercepted a hover enter
     // we manually send the hover enter to that item
-    const auto targetPosition = mapToItem(m_interceptedHoverItem, cursorPosition);
+    const auto targetPosition = mapToItem(m_interceptedHoverItem.item, cursorPosition);
     QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
-    qApp->sendEvent(m_interceptedHoverItem, &e);
+    qApp->sendEvent(m_interceptedHoverItem.item, &e);
 
-    m_interceptedHoverItem.clear();
+    m_interceptedHoverItem = nullptr;
 }
 
 bool TriangleMouseFilter::filterContains(const QPointF &p) const
