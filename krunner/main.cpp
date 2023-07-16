@@ -41,7 +41,6 @@ int main(int argc, char **argv)
     }
 #endif
 
-
     // this is needed to fake window position so Plasma Dialog sets correct borders
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
     // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
@@ -82,10 +81,12 @@ int main(int argc, char **argv)
     QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")}, i18n("Use the clipboard contents as query for KRunner"));
     QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")}, i18n("Start KRunner in the background, don't show it."));
     QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
+    QCommandLineOption runnerId({QStringLiteral("runner")}, i18n("Only query this specific runner"), QStringLiteral("runner"));
 
     parser.addOption(clipboardOption);
     parser.addOption(daemonOption);
     parser.addOption(replaceOption);
+    parser.addOption(runnerId);
     parser.addPositionalArgument(QStringLiteral("query"), i18n("The query to run, only used if -c is not provided"));
 
     aboutData.setupCommandLine(&parser);
@@ -109,13 +110,20 @@ int main(int argc, char **argv)
 
     auto updateVisibility = [&]() {
         const QString query = parser.positionalArguments().value(0);
+        const bool hasSingleRunnerModeId = parser.isSet(runnerId);
 
         if (parser.isSet(daemonOption)) {
             view.setVisible(false);
         } else if (parser.isSet(clipboardOption)) {
             view.displayWithClipboardContents();
         } else if (!query.isEmpty()) {
-            view.query(query);
+            if (hasSingleRunnerModeId) {
+                view.querySingleRunner(parser.value(runnerId), query);
+            } else {
+                view.query(query);
+            }
+        } else if (hasSingleRunnerModeId) {
+            view.displaySingleRunner(parser.value(runnerId));
         } else {
             view.toggleDisplay();
         }
