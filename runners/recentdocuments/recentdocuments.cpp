@@ -39,10 +39,6 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
-    if (!context.isValid()) {
-        return;
-    }
-
     // clang-format off
     const QString term = context.query();
     auto query = UsedResources
