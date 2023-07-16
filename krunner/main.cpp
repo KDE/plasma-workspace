@@ -147,8 +147,7 @@ int main(int argc, char **argv)
 
     updateVisibility();
 
-    QObject::connect(&service, &KDBusService::activateRequested, &view, [&](const QStringList &arguments, const QString &workingDirectory) {
-        Q_UNUSED(workingDirectory)
+    QObject::connect(&service, &KDBusService::activateRequested, &view, [&](const QStringList &arguments) {
         parser.parse(arguments);
         updateVisibility();
     });
