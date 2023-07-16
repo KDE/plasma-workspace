@@ -113,7 +113,7 @@ private:
 
     bool disqualify(const KService::Ptr &service)
     {
-        auto ret = hasSeen(service) || service->noDisplay();
+        auto ret = hasSeen(service);
         qCDebug(RUNNER_SERVICES) << service->name() << "disqualified?" << ret;
         seen(service);
         return ret;
@@ -350,7 +350,7 @@ private:
             return !service->actions().isEmpty();
         };
         for (const KService::Ptr &service : m_services) {
-            if (!hasActionsFilter(service) || service->noDisplay()) {
+            if (!hasActionsFilter(service)) {
                 continue;
             }
 
@@ -437,9 +437,10 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     processActivitiesResults(ResultSet(m_kactivitiesQuery));
 
     // Load services once per match session. Reloading them for every character is not worth it
+    // Also filter out hidden ones since those are not relevant for matching
     connect(this, &KRunner::AbstractRunner::prepare, this, [this]() {
-        m_services = KApplicationTrader::query([](const KService::Ptr &) {
-            return true;
+        m_services = KApplicationTrader::query([](const KService::Ptr &service) {
+            return !service->noDisplay();
         });
     });
     connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
