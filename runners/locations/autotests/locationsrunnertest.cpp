@@ -100,11 +100,11 @@ void LocationsRunnerTest::shouldProduceResult_data()
         QTest::newRow("vnc URL") << "vnc:foo" << QVariant("vnc:foo");
     }
     if (KApplicationTrader::preferredService("x-scheme-handler/rtmp")) {
-        QTest::newRow("rtmp URL") << "rtmp:foo" << QVariant("rtmp:foo");
+        QTest::newRow("rtmp URL") << "rtmp:foo" << QVariant(QUrl("rtmp:foo"));
     }
     if (KApplicationTrader::preferredService("x-scheme-handler/mailto")) {
         // The mailto protocol is not provided by KIO, but by installed apps. BUG: 416257
-        QTest::newRow("mailto URL") << "mailto:user.user@user.com" << QVariant("mailto:user.user@user.com");
+        QTest::newRow("mailto URL") << "mailto:user.user@user.com" << QVariant(QUrl("mailto:user.user@user.com"));
     }
 
     if (KProtocolInfo::isKnownProtocol(QStringLiteral("smb"))) {
