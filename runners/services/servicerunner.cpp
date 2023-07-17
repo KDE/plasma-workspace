@@ -301,12 +301,8 @@ private:
         if (weightedTermLength < 5) {
             return;
         }
-        const auto categoriesFilter = [this](const KService::Ptr &service) {
-            return contains(service->categories(), queryList);
-        };
-
         for (const KService::Ptr &service : m_services) {
-            if (!categoriesFilter(service) || disqualify(service)) {
+            if (disqualify(service) || !contains(service->categories(), queryList)) {
                 continue;
             }
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
