@@ -244,9 +244,7 @@ private:
             const QString name = service->name();
             const QString exec = service->exec();
 
-            KRunner::QueryMatch match(m_runner);
-            match.setType(KRunner::QueryMatch::PossibleMatch);
-            setupMatch(service, match);
+            KRunner::QueryMatch::Type type = KRunner::QueryMatch::PossibleMatch;
             qreal relevance(0.6);
 
             // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
@@ -259,7 +257,7 @@ private:
                 }
             } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
                 relevance = 1;
-                match.setType(KRunner::QueryMatch::ExactMatch);
+                type = KRunner::QueryMatch::ExactMatch;
             } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
                 relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
@@ -283,6 +281,9 @@ private:
                 }
             }
 
+            KRunner::QueryMatch match(m_runner);
+            match.setType(type);
+            setupMatch(service, match);
             if (service->categories().contains(QLatin1String("KDE"))) {
                 qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
                 relevance += .09;
