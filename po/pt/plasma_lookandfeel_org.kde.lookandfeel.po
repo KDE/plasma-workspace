@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-12 02:02+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2022-10-11 17:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -84,7 +84,7 @@ msgstr "Teclado Virtual"
 msgid "Login Failed"
 msgstr "Autenticação sem Sucesso"
 
-#: ../sddm-theme/SessionButton.qml:18
+#: ../sddm-theme/SessionButton.qml:19
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sessão do Ecrã: %1"

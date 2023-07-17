@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-12 02:02+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2022-08-03 09:25+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -88,7 +88,7 @@ msgstr "Virtuellt tangentbord"
 msgid "Login Failed"
 msgstr "Inloggning misslyckades"
 
-#: ../sddm-theme/SessionButton.qml:18
+#: ../sddm-theme/SessionButton.qml:19
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Skrivbordssession: %1"

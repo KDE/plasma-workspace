@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-12 02:02+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2022-12-16 22:37+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -88,7 +88,7 @@ msgstr "Claviero virtual"
 msgid "Login Failed"
 msgstr "Accesso falleva"
 
-#: ../sddm-theme/SessionButton.qml:18
+#: ../sddm-theme/SessionButton.qml:19
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Session de scriptorio: %1"

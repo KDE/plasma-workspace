@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-12 02:02+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2020-10-04 17:18+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -91,7 +91,7 @@ msgstr "Virtuelt tastatur"
 msgid "Login Failed"
 msgstr "Indlogning mislykkedes"
 
-#: ../sddm-theme/SessionButton.qml:18
+#: ../sddm-theme/SessionButton.qml:19
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Skrivebordssession: %1"

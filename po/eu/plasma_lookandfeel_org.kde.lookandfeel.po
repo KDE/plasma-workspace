@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-12 02:02+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2022-10-09 08:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -92,7 +92,7 @@ msgstr "Alegiazko teklatua"
 msgid "Login Failed"
 msgstr "Saio-hastea huts egin du"
 
-#: ../sddm-theme/SessionButton.qml:18
+#: ../sddm-theme/SessionButton.qml:19
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Mahaigain saioa: %1"
