@@ -302,7 +302,8 @@ private:
             return;
         }
         for (const KService::Ptr &service : m_services) {
-            if (disqualify(service) || !contains(service->categories(), queryList)) {
+            const QStringList categories = service->categories();
+            if (disqualify(service) || !contains(categories, queryList)) {
                 continue;
             }
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
@@ -312,7 +313,6 @@ private:
             setupMatch(service, match);
 
             qreal relevance = 0.4;
-            const QStringList categories = service->categories();
             if (std::any_of(categories.begin(), categories.end(), [this](const QString &category) {
                     return category.compare(query, Qt::CaseInsensitive) == 0;
                 })) {
