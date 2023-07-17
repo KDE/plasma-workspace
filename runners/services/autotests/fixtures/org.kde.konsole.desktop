@@ -18,7 +18,7 @@ Comment=Command line access ServiceRunnerTest
 
 [Desktop Action NewWindow]
 Name=Open a New Window
-Exec=konsole
+Exec=konsole --new-window
 
 [Desktop Action NewTab]
 Name=Open a New Tab
