@@ -37,8 +37,6 @@
 
 #include "debug.h"
 
-namespace
-{
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
@@ -59,8 +57,6 @@ inline bool contains(const QStringList &results, const QStringList &queryList)
         });
     });
 }
-
-} // namespace
 
 /**
  * @brief Finds all KServices for a given runner query
@@ -90,23 +86,22 @@ public:
     }
 
 private:
-    void seen(const KService::Ptr &service)
+    inline void seen(const KService::Ptr &service)
     {
-        m_seen.insert(service->storageId());
         m_seen.insert(service->exec());
     }
 
-    void seen(const KServiceAction &action)
+    inline void seen(const KServiceAction &action)
     {
         m_seen.insert(action.exec());
     }
 
-    bool hasSeen(const KService::Ptr &service)
+    inline bool hasSeen(const KService::Ptr &service)
     {
-        return m_seen.contains(service->storageId()) && m_seen.contains(service->exec());
+        return m_seen.contains(service->exec());
     }
 
-    bool hasSeen(const KServiceAction &action)
+    inline bool hasSeen(const KServiceAction &action)
     {
         return m_seen.contains(action.exec());
     }
@@ -151,16 +146,14 @@ private:
     void setupMatch(const KService::Ptr &service, KRunner::QueryMatch &match)
     {
         const QString name = service->name();
+        const QString exec = service->exec();
 
         match.setText(name);
 
         QUrl url(service->storageId());
         url.setScheme(QStringLiteral("applications"));
         match.setData(url);
-
         match.setUrls({QUrl::fromLocalFile(service->entryPath())});
-
-        QString exec = service->exec();
 
         const KService syntheticService(QString(), exec, QString());
         KIO::DesktopExecParser parser(syntheticService, {});
