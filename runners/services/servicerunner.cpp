@@ -317,8 +317,6 @@ private:
                     return category.compare(query, Qt::CaseInsensitive) == 0;
                 })) {
                 relevance = 0.6;
-            } else if (service->categories().contains(QLatin1String("X-KDE-More")) || !service->showInCurrentDesktop()) {
-                relevance = 0.5;
             }
 
             if (service->isApplication()) {
