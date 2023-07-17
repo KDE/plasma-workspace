@@ -215,7 +215,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
     // Action to show items popup on mouse position
     m_showOnMousePos = m_collection->addAction(QStringLiteral("show-on-mouse-pos"));
-    m_showOnMousePos->setText(i18nc("@action:inmenu", "Show Items at Mouse Position"));
+    m_showOnMousePos->setText(i18nc("@action:inmenu", "Show Clipboard Items at Mouse Position"));
     m_showOnMousePos->setIcon(QIcon::fromTheme(QStringLiteral("view-list-text")));
     KGlobalAccel::setGlobalShortcut(m_showOnMousePos, QKeySequence(Qt::META | Qt::Key_V));
     connect(m_showOnMousePos, &QAction::triggered, this, &Klipper::slotPopupMenu);
