@@ -333,21 +333,13 @@ private:
         if (weightedTermLength < 3) {
             return;
         }
-
-        const auto hasActionsFilter = [](const KService::Ptr &service) {
-            return !service->actions().isEmpty();
-        };
         for (const KService::Ptr &service : m_services) {
-            if (!hasActionsFilter(service)) {
-                continue;
-            }
-
-            // Skip SystemSettings as we find KCMs already
-            if (service->storageId() == QLatin1String("systemsettings.desktop")) {
-                continue;
-            }
-
             const auto actions = service->actions();
+            // Skip SystemSettings as we find KCMs already
+            if (actions.isEmpty() || service->storageId() == QLatin1String("systemsettings.desktop")) {
+                continue;
+            }
+
             for (const KServiceAction &action : actions) {
                 if (action.text().isEmpty() || action.exec().isEmpty() || hasSeen(action)) {
                     continue;
