@@ -55,10 +55,10 @@ void LocationsRunnerTest::shouldNotProduceResult()
 void LocationsRunnerTest::shouldProduceResult()
 {
     QFETCH(QString, query);
-    QFETCH(QVariant, data);
+    QFETCH(QUrl, data);
     const auto matches = launchQuery(query);
     QCOMPARE(matches.size(), 1);
-    QCOMPARE(matches.first().data(), data);
+    QCOMPARE(matches.first().data().toUrl(), data);
 }
 
 void LocationsRunnerTest::shouldNotProduceResult_data()
@@ -83,35 +83,34 @@ void LocationsRunnerTest::shouldNotProduceResult_data()
 void LocationsRunnerTest::shouldProduceResult_data()
 {
     QTest::addColumn<QString>("query");
-    QTest::addColumn<QVariant>("data");
+    QTest::addColumn<QUrl>("data");
 
     const QUrl homeURL = QUrl::fromLocalFile(QDir::homePath());
-    QTest::newRow("folder") << QDir::homePath() << QVariant(homeURL);
-    QTest::newRow("folder tilde") << KShell::tildeCollapse(QDir::homePath()) << QVariant(homeURL);
-    QTest::newRow("folder URL") << homeURL.toString() << QVariant(homeURL);
+    QTest::newRow("folder") << QDir::homePath() << homeURL;
+    QTest::newRow("folder tilde") << KShell::tildeCollapse(QDir::homePath()) << homeURL;
+    QTest::newRow("folder URL") << homeURL.toString() << homeURL;
 
-    QTest::newRow("file") << normalHomeFile << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    QTest::newRow("file tilde") << KShell::tildeCollapse(normalHomeFile) << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME")
-                                                     << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    QTest::newRow("file URL") << QUrl::fromLocalFile(normalHomeFile).toString() << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QVariant(QUrl::fromLocalFile(executableHomeFile));
+    QTest::newRow("file") << normalHomeFile << QUrl::fromLocalFile(normalHomeFile);
+    QTest::newRow("file tilde") << KShell::tildeCollapse(normalHomeFile) << QUrl::fromLocalFile(normalHomeFile);
+    QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME") << QUrl::fromLocalFile(normalHomeFile);
+    QTest::newRow("file URL") << QUrl::fromLocalFile(normalHomeFile).toString() << QUrl::fromLocalFile(normalHomeFile);
+    QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QUrl::fromLocalFile(executableHomeFile);
     if (KProtocolInfo::isHelperProtocol("vnc")) {
-        QTest::newRow("vnc URL") << "vnc:foo" << QVariant("vnc:foo");
+        QTest::newRow("vnc URL") << "vnc:foo" << QUrl("vnc:foo");
     }
     if (KApplicationTrader::preferredService("x-scheme-handler/rtmp")) {
-        QTest::newRow("rtmp URL") << "rtmp:foo" << QVariant(QUrl("rtmp:foo"));
+        QTest::newRow("rtmp URL") << "rtmp:foo" << QUrl("rtmp:foo");
     }
     if (KApplicationTrader::preferredService("x-scheme-handler/mailto")) {
         // The mailto protocol is not provided by KIO, but by installed apps. BUG: 416257
-        QTest::newRow("mailto URL") << "mailto:user.user@user.com" << QVariant(QUrl("mailto:user.user@user.com"));
+        QTest::newRow("mailto URL") << "mailto:user.user@user.com" << QUrl("mailto:user.user@user.com");
     }
 
     if (KProtocolInfo::isKnownProtocol(QStringLiteral("smb"))) {
-        QTest::newRow("ssh URL") << "ssh:localhost" << QVariant("ssh:localhost");
-        QTest::newRow("help URL") << "help:krunner" << QVariant("help:krunner");
-        QTest::newRow("smb URL") << "smb:server/path" << QVariant("smb:server/path");
-        QTest::newRow("smb URL shorthand syntax") << R"(\\server\path)" << QVariant("smb://server/path");
+        QTest::newRow("ssh URL") << "ssh:localhost" << QUrl("ssh:localhost");
+        QTest::newRow("help URL") << "help:krunner" << QUrl("help:krunner");
+        QTest::newRow("smb URL") << "smb:server/path" << QUrl("smb:server/path");
+        QTest::newRow("smb URL shorthand syntax") << R"(\\server\path)" << QUrl("smb://server/path");
     }
 }
 
