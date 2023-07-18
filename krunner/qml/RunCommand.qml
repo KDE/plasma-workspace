@@ -98,6 +98,21 @@ ColumnLayout {
                 text: i18n("Configure KRunner…")
             }
         }
+        PlasmaComponents3.ToolButton {
+            visible: !!root.singleRunner
+            icon.name: results.singleRunnerMetaData.iconName
+            onClicked: () => {
+                root.singleRunner = ""
+                root.query = ""
+                fadedTextCompletion.text = ""
+                queryField.forceActiveFocus();
+            }
+            checked: true
+            Accessible.description: i18n("Querying runner %1 in single runner mode", results.singleRunnerMetaData.name)
+            PlasmaComponents3.ToolTip {
+                text: parent.Accessible.description
+            }
+        }
         PlasmaExtras.SearchField {
             id: queryField
             property bool allowCompletion: false
@@ -106,8 +121,8 @@ ColumnLayout {
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
 
             activeFocusOnPress: true
-            placeholderText: results.singleRunnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
-                                                         "Search '%1'…", results.singleRunnerName)
+            placeholderText: results.singleRunner ? i18nc("Textfield placeholder text, query specific KRunner plugin",
+                                                    "Search '%1'…", results.singleRunnerMetaData.name)
                                                 : i18nc("Textfield placeholder text", "Search…")
             rightPadding: 0
             background.z: -2 // The fadedTextCompletion has -1, so it appears over the background
