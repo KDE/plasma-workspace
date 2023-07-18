@@ -1,0 +1,11 @@
+{
+    "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_soundtheme",
+        "Name": "System sounds",
+        "Description": "Select a Sound Theme for Notifications",
+        "Icon": "emblem-music-symbolic"
+    },
+    "X-KDE_Keywords": "system sounds,sound theme,sound,sounds,alert,notification,bell",
+    "X-KDE-System-Settings-Parent-Category": "appearance",
+    "X-KDE-Weight": 70
+}

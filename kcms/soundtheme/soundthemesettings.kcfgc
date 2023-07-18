@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
+File=soundthemesettings.kcfg
+ClassName=SoundThemeSettings
+Mutators=true
+DefaultValueGetters=true
+Notifiers=true
+GenerateProperties=true
+ParentInConstructor=true
