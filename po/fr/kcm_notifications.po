@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-18 02:10+0000\n"
 "PO-Revision-Date: 2022-12-27 17:52+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -30,7 +30,7 @@ msgstr "Basculer « Ne pas déranger »"
 msgid "Configure Notifications"
 msgstr "Configurer les notifications"
 
-#: sourcesmodel.cpp:363
+#: sourcesmodel.cpp:364
 #, kde-format
 msgid "Other Applications"
 msgstr "Autres applications"

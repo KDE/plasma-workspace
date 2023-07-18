@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-18 02:10+0000\n"
 "PO-Revision-Date: 2022-02-04 16:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -28,7 +28,7 @@ msgstr "Comută „nu deranja”"
 msgid "Configure Notifications"
 msgstr "Configurează notificările"
 
-#: sourcesmodel.cpp:363
+#: sourcesmodel.cpp:364
 #, kde-format
 msgid "Other Applications"
 msgstr "Alte aplicații"

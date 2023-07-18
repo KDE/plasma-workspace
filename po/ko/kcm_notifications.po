@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-18 02:10+0000\n"
 "PO-Revision-Date: 2023-02-28 23:33+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "방해 금지 모드 전환"
 msgid "Configure Notifications"
 msgstr "알림 설정"
 
-#: sourcesmodel.cpp:363
+#: sourcesmodel.cpp:364
 #, kde-format
 msgid "Other Applications"
 msgstr "다른 프로그램"
