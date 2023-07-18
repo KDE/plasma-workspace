@@ -40,7 +40,6 @@ class View : public PlasmaQuick::PlasmaWindow
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
     Q_PROPERTY(HistoryBehavior historyBehavior READ historyBehavior NOTIFY historyBehaviorChanged)
-    Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
