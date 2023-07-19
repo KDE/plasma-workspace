@@ -81,7 +81,7 @@ int main(int argc, char **argv)
     QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")}, i18n("Use the clipboard contents as query for KRunner"));
     QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")}, i18n("Start KRunner in the background, don't show it."));
     QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
-    QCommandLineOption runnerId({QStringLiteral("runner")}, i18n("Only query this specific runner"), QStringLiteral("runner"));
+    QCommandLineOption runnerId({QStringLiteral("runner")}, i18n("Show only results from the given plugin"), QStringLiteral("runner"));
 
     parser.addOption(clipboardOption);
     parser.addOption(daemonOption);

@@ -108,7 +108,7 @@ ColumnLayout {
                 queryField.forceActiveFocus();
             }
             checked: true
-            Accessible.description: i18n("Querying runner %1 in single runner mode", results.singleRunnerMetaData.name)
+            Accessible.description: i18n("Showing only results from %1", results.singleRunnerMetaData.name)
             PlasmaComponents3.ToolTip {
                 text: parent.Accessible.description
             }
