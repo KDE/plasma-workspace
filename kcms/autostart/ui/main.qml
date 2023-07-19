@@ -99,7 +99,7 @@ KCM.ScrollViewKCM {
                 },
                 Kirigami.Action {
                     text: i18n("Remove")
-                    icon.name: "list-remove"
+                    icon.name: "edit-delete-remove"
                     onTriggered: kcm.model.removeEntry(model.index)
                 }
             ]
