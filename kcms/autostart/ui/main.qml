@@ -92,13 +92,13 @@ KCM.ScrollViewKCM {
 
             actions: [
                 Kirigami.Action {
-                    text: i18n("Properties")
+                    text: i18nc("@action:button", "See properties")
                     icon.name: "document-properties"
                     onTriggered: kcm.model.editApplication(model.index, root)
                     visible: model.source === AutostartModel.XdgAutoStart || model.source === AutostartModel.XdgScripts
                 },
                 Kirigami.Action {
-                    text: i18n("Remove")
+                    text: i18nc("@action:button", "Remove entry")
                     icon.name: "edit-delete-remove"
                     onTriggered: kcm.model.removeEntry(model.index)
                 }
