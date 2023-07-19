@@ -1,6 +1,15 @@
 {
     "KPlugin": {
         "Description": "Play audible feedback when devices are inserted or removed",
+        "Description[ca@valencia]": "Reproduïx una reacció audible quan s'inserisquen o s'extraguen dispositius",
+        "Description[ca]": "Reprodueix una reacció audible quan s'insereixin o s'extreguin dispositius",
+        "Description[es]": "Reproducir un sonido cuando se insertan o extraen dispositivos",
+        "Description[ia]": "Executa resposta audibile quando dispositivos es insertate o removite",
+        "Description[nl]": "Hoorbare terugkoppeling afspelen wanneer apparaten ingeplugd of verwijderd worden",
+        "Description[sl]": "Predvajaj zvočno povratno informacijo, kadar so naprave vstavljene ali odstranjene",
+        "Description[tr]": "Aygıtlar takıldığında veya çıkarıldığında sesle geri bildirim ver",
+        "Description[uk]": "Відтворювати звуковий сигнал при з'єднанні або від'єднанні пристроїв",
+        "Description[x-test]": "xxPlay audible feedback when devices are inserted or removedxx",
         "Name": "Device Notifications",
         "Name[ar]": "إخطارات الأجهزة",
         "Name[az]": "Qurğular haqqında məlumatlar",
