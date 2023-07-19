@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:04+0000\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
 "PO-Revision-Date: 2007-09-02 15:24+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -536,7 +536,7 @@ msgstr "اندازه تاریخچه &تخته یادداشت:‌"
 #, fuzzy, kde-format
 #| msgid "&Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
-msgid "Show Items at Mouse Position"
+msgid "Show Clipboard Items at Mouse Position"
 msgstr "گزینگان &بالاپر در موقعیت مکان‌نمای موشی‌"
 
 #: klipper.cpp:229

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:04+0000\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -542,7 +542,7 @@ msgstr "ಚರಿತ್ರೆಯ ಹಿಂದಿನ ಅಂಶ"
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
-msgid "Show Items at Mouse Position"
+msgid "Show Clipboard Items at Mouse Position"
 msgstr "ಮೌಸ್ ಸೂಚಕನ ಸ್ಥಾನದಲ್ಲಿ ಪುಟಿಕೆ ಮೂಡಿಸು"
 
 #: klipper.cpp:229

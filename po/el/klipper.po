@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:04+0000\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
 "PO-Revision-Date: 2014-10-28 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -535,7 +535,7 @@ msgstr "Προηγούμενο αντικείμενο ιστορικού"
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
-msgid "Show Items at Mouse Position"
+msgid "Show Clipboard Items at Mouse Position"
 msgstr "Άνοιγμα του Klipper στη θέση του ποντικιού"
 
 #: klipper.cpp:229

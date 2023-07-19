@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:04+0000\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
 "PO-Revision-Date: 2014-08-11 19:22+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -496,7 +496,7 @@ msgstr ""
 #: klipper.cpp:218
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Show Items at Mouse Position"
+msgid "Show Clipboard Items at Mouse Position"
 msgstr ""
 
 #: klipper.cpp:229

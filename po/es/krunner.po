@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Automatically generated, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2016, 2017, 2019, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2016, 2017, 2019, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
-"PO-Revision-Date: 2022-09-15 18:02+0200\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"PO-Revision-Date: 2023-07-18 11:24+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -57,7 +57,7 @@ msgstr "Sustituir una instancia existente"
 #: main.cpp:84
 #, kde-format
 msgid "Only query this specific runner"
-msgstr ""
+msgstr "Consultar solo este lanzador"
 
 #: main.cpp:90
 #, kde-format
@@ -79,44 +79,49 @@ msgstr "Configurar el comportamiento de KRunner"
 msgid "Configure KRunner…"
 msgstr "Configurar KRunner..."
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
+#, kde-format
+msgid "Querying runner %1 in single runner mode"
+msgstr ""
+
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Buscar «%1»..."
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:126
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Buscar..."
 
-#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Mostrar ayuda sobre el uso"
 
-#: qml/RunCommand.qml:296
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "Fijar"
 
-#: qml/RunCommand.qml:297
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "Fijar la búsqueda"
 
-#: qml/RunCommand.qml:299
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "Mantener abierta"
 
-#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
+#: qml/RunCommand.qml:386 qml/RunCommand.qml:391
 #, kde-format
 msgid "Recent Queries"
 msgstr "Consultas recientes"
 
-#: qml/RunCommand.qml:374
+#: qml/RunCommand.qml:389
 #, kde-format
 msgid "Remove"
 msgstr "Eliminar"

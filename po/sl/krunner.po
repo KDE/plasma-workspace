@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
-"PO-Revision-Date: 2022-09-16 06:30+0200\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"PO-Revision-Date: 2023-07-18 10:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -60,7 +60,7 @@ msgstr "Zamenjaj obstoječi pojavek"
 #: main.cpp:84
 #, kde-format
 msgid "Only query this specific runner"
-msgstr ""
+msgstr "Poizveduj samo pri tem določenem zagonskem programu"
 
 #: main.cpp:90
 #, kde-format
@@ -82,44 +82,49 @@ msgstr "Konfiguriraj obnašanje KRunnerja"
 msgid "Configure KRunner…"
 msgstr "Konfiguriraj KRunner…"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
+#, kde-format
+msgid "Querying runner %1 in single runner mode"
+msgstr ""
+
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Išči '%1'…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:126
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Išči…"
 
-#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Prikaži uporabo pomoči"
 
-#: qml/RunCommand.qml:296
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "Pritrdi"
 
-#: qml/RunCommand.qml:297
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "Pritrdi iskanje"
 
-#: qml/RunCommand.qml:299
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "Ohranjaj odprto"
 
-#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
+#: qml/RunCommand.qml:386 qml/RunCommand.qml:391
 #, kde-format
 msgid "Recent Queries"
 msgstr "Nedavne poizvedbe"
 
-#: qml/RunCommand.qml:374
+#: qml/RunCommand.qml:389
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"

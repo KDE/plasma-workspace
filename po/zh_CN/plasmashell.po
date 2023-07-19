@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 02:52+0000\n"
-"PO-Revision-Date: 2023-07-03 11:36\n"
+"PO-Revision-Date: 2023-07-18 11:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -38,26 +38,25 @@ msgstr "配置鼠标操作插件"
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Development Build"
-msgstr ""
+msgstr "Plasma %1 开发版本"
 
 #: desktopview.cpp:205
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Beta Build"
-msgstr ""
+msgstr "Plasma %1 测试版本"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1"
-msgstr "Plasma 外壳"
+msgstr "Plasma %1"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "要报告程序缺陷，请访问 bugs.kde.org 网站"
 
 #: main.cpp:98
 #, kde-format

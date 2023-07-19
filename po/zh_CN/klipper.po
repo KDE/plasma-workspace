@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:04+0000\n"
-"PO-Revision-Date: 2023-07-03 11:36\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"PO-Revision-Date: 2023-07-18 11:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -518,9 +518,11 @@ msgid "Previous History Item"
 msgstr "上一条历史记录"
 
 #: klipper.cpp:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Show Items at Mouse Position"
 msgctxt "@action:inmenu"
-msgid "Show Items at Mouse Position"
+msgid "Show Clipboard Items at Mouse Position"
 msgstr "在鼠标位置显示项目"
 
 #: klipper.cpp:229

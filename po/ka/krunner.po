@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
 "PO-Revision-Date: 2022-09-17 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -79,44 +79,49 @@ msgstr "KRunner-ის ქცევის მორგება"
 msgid "Configure KRunner…"
 msgstr "KRunner-ის მორგება…"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
+#, kde-format
+msgid "Querying runner %1 in single runner mode"
+msgstr ""
+
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "\"%1\"-ის მოძებნა…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:126
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "ძებნა…"
 
-#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "გამოყენების დახმარების ჩვენება"
 
-#: qml/RunCommand.qml:296
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "მიმაგრება"
 
-#: qml/RunCommand.qml:297
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "ძებნის მიმაგრება"
 
-#: qml/RunCommand.qml:299
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
-#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
+#: qml/RunCommand.qml:386 qml/RunCommand.qml:391
 #, kde-format
 msgid "Recent Queries"
 msgstr "ახლახანს გაგზავნილი მოთხოვნები"
 
-#: qml/RunCommand.qml:374
+#: qml/RunCommand.qml:389
 #, kde-format
 msgid "Remove"
 msgstr "ზონის ამოღება"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-19 03:24+0000\n"
 "PO-Revision-Date: 2022-09-15 18:09+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -73,44 +73,49 @@ msgstr "Configurar o Comportamento do KRunner"
 msgid "Configure KRunner…"
 msgstr "Configurar o KRunner…"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:111
+#, kde-format
+msgid "Querying runner %1 in single runner mode"
+msgstr ""
+
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Procurar por '%1'…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:126
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Procurar…"
 
-#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Mostrar a Ajuda do Utilizador"
 
-#: qml/RunCommand.qml:296
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "Fixar"
 
-#: qml/RunCommand.qml:297
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "Fixar a Pesquisa"
 
-#: qml/RunCommand.qml:299
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "Manter Aberto"
 
-#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
+#: qml/RunCommand.qml:386 qml/RunCommand.qml:391
 #, kde-format
 msgid "Recent Queries"
 msgstr "Pesquisas Recentes"
 
-#: qml/RunCommand.qml:374
+#: qml/RunCommand.qml:389
 #, kde-format
 msgid "Remove"
 msgstr "Remover"
