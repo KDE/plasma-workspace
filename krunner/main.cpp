@@ -20,7 +20,9 @@
 #include <KAboutData>
 #include <KAuthorized>
 #include <KDBusService>
+#include <KRunner/RunnerManager>
 
+#include <iostream>
 #include <kworkspace.h>
 
 #include "view.h"
@@ -82,17 +84,31 @@ int main(int argc, char **argv)
     QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")}, i18n("Start KRunner in the background, don't show it."));
     QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
     QCommandLineOption runnerId({QStringLiteral("runner")}, i18n("Show only results from the given plugin"), QStringLiteral("runner"));
+    QCommandLineOption listOption({QStringLiteral("list")}, i18n("List available plugins"));
 
     parser.addOption(clipboardOption);
     parser.addOption(daemonOption);
     parser.addOption(replaceOption);
     parser.addOption(runnerId);
+    parser.addOption(listOption);
     parser.addPositionalArgument(QStringLiteral("query"), i18n("The query to run, only used if -c is not provided"));
 
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
+
+    if (parser.isSet(listOption)) {
+        const auto runners = KRunner::RunnerManager::runnerMetaDataList();
+        const QString headline = i18nc("Header for command line output", "Available KRunner plugins, pluginId");
+        QString separator;
+        separator.fill(u'-', headline.length());
+        std::cout << qPrintable(headline) << std::endl << qPrintable(separator) << std::endl;
+        for (const auto &data : runners) {
+            std::cout << qPrintable(data.name()) << ": " << qPrintable(data.pluginId()) << std::endl;
+        }
+        return 0;
+    }
 
     if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
         return -1;
