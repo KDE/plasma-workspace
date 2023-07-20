@@ -1,5 +1,14 @@
 [Desktop Entry]
 Name=File Search
+Name[ca]=Cerca de fitxers
+Name[es]=Búsqueda de archivos
+Name[eu]=Fitxategiak bilatzea
+Name[ia]=Cerca de file
+Name[nl]=Bestanden zoeken
+Name[sl]=Iskanje datoteke
+Name[tr]=Dosya Arama
+Name[uk]=Пошук файлів
+Name[x-test]=xxFile Searchxx
 Comment=Searches for files by name and content
 Comment[ar]=يبحث عن الملفات بالاسم والمحتوى
 Comment[bg]=Търсене на файлове по име и съдържание
