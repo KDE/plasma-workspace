@@ -15,14 +15,14 @@ ColumnLayout {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     PlasmaComponents3.Label {
-        text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+        text: Qt.formatTime(timeSource.data["Local"]["DateTime"], Qt.locale(), Locale.ShortFormat)
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 48
         Layout.alignment: Qt.AlignHCenter
     }
     PlasmaComponents3.Label {
-        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Locale.LongFormat)
+        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.locale(), Locale.LongFormat)
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 24
