@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2022-07-13 11:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -54,13 +54,17 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "파일 '%1'이(가) 로그인할 때 실행되려면 실행 파일이어야 합니다."
 
 #: ui/main.qml:95
-#, kde-format
-msgid "Properties"
+#, fuzzy, kde-format
+#| msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "속성"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "Remove"
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "삭제"
 
 #: ui/main.qml:112

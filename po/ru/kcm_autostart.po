@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2022-08-11 14:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -65,13 +65,17 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "Файл «%1» должен быть исполняемым для его запуска при входе в систему."
 
 #: ui/main.qml:95
-#, kde-format
-msgid "Properties"
+#, fuzzy, kde-format
+#| msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "Свойства"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "Remove"
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "Удалить"
 
 #: ui/main.qml:112

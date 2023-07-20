@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2022-11-18 20:58+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -60,13 +60,17 @@ msgstr ""
 "vykdomasis."
 
 #: ui/main.qml:95
-#, kde-format
-msgid "Properties"
+#, fuzzy, kde-format
+#| msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "Savybės"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "Remove"
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "Šalinti"
 
 #: ui/main.qml:112

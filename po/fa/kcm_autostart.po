@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: ۲۰۱۶-۰۸-۲۰ ۱۶:۵۴+0330\n"
 "Last-Translator: Mohi Mirdamadi <mohi@ubuntu.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -58,13 +58,15 @@ msgstr ""
 #: ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "&Properties..."
-msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "&ویژگی‌ها..."
 
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "&Remove"
-msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "&حذف"
 
 #: ui/main.qml:112

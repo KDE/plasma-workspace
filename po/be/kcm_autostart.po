@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -61,13 +61,17 @@ msgstr ""
 "выканальным."
 
 #: ui/main.qml:95
-#, kde-format
-msgid "Properties"
+#, fuzzy, kde-format
+#| msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "Уласцівасці"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "Remove"
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "Выдаліць"
 
 #: ui/main.qml:112

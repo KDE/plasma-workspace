@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2023-07-18 09:37+0200\n"
+"PO-Revision-Date: 2023-07-19 10:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -80,7 +80,7 @@ msgstr "KRunner configureren…"
 #: qml/RunCommand.qml:111
 #, kde-format
 msgid "Querying runner %1 in single runner mode"
-msgstr ""
+msgstr "Runner %1 afvragen in modus enkele runner"
 
 #: qml/RunCommand.qml:125
 #, kde-format

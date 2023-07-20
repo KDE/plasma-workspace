@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdereview/kcm_autostart.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2008-03-22 08:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -55,13 +55,15 @@ msgstr ""
 #: ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "&Properties..."
-msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "&Airíonna..."
 
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "&Remove"
-msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "&Bain"
 
 #: ui/main.qml:112

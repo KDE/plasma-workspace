@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2009-09-22 06:24+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -55,13 +55,15 @@ msgstr ""
 #: ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "&Properties"
-msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "වත්කම් (&P)"
 
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "&Remove"
-msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "ඉවත් කරන්න (&R)"
 
 #: ui/main.qml:112

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2023-02-23 15:14+0100\n"
+"PO-Revision-Date: 2023-07-19 16:47+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -544,12 +544,10 @@ msgid "Previous History Item"
 msgstr "Precedente elemento de chronologia"
 
 #: klipper.cpp:218
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Show Items at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr "Monstra elementos al position de mus"
+msgstr "Monstra elementos de aread de transferentia al position de mus"
 
 #: klipper.cpp:229
 #, kde-format

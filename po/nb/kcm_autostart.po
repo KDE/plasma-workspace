@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2012-11-22 19:48+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -56,12 +56,14 @@ msgstr ""
 
 #: ui/main.qml:95
 #, kde-format
-msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr ""
 
 #: ui/main.qml:101
 #, kde-format
-msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr ""
 
 #: ui/main.qml:112

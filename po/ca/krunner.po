@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2023-07-18 15:29+0300\n"
+"PO-Revision-Date: 2023-07-19 20:07+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -85,7 +85,7 @@ msgstr "Configura el KRunner…"
 #: qml/RunCommand.qml:111
 #, kde-format
 msgid "Querying runner %1 in single runner mode"
-msgstr ""
+msgstr "S'està consulta l'executor %1 en mode d'executor únic"
 
 #: qml/RunCommand.qml:125
 #, kde-format

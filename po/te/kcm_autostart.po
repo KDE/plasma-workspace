@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -56,13 +56,15 @@ msgstr ""
 #: ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "&Properties"
-msgid "Properties"
+msgctxt "@action:button"
+msgid "See properties"
 msgstr "(&P) గుణములు"
 
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "&Remove"
-msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove entry"
 msgstr "(&R) తీసివేయి"
 
 #: ui/main.qml:112
