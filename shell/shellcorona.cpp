@@ -725,10 +725,10 @@ void ShellCorona::load()
     auto activityStatus = m_activityController->serviceStatus();
     if (activityStatus != KActivities::Controller::Running && !qApp->property("org.kde.KActivities.core.disableAutostart").toBool()) {
         if (activityStatus == KActivities::Controller::NotRunning) {
-            qWarning("Aborting shell load: The activity manager daemon (kactivitymanagerd) is not running.");
-            qWarning(
-                "If this Plasma has been installed into a custom prefix, verify that its D-Bus services dir is known to the system for the daemon to be "
-                "activatable.");
+            qCWarning(PLASMASHELL) << "Aborting shell load: The activity manager daemon (kactivitymanagerd) is not running.";
+            qCWarning(PLASMASHELL)
+                << "If this Plasma has been installed into a custom prefix, verify that its D-Bus services dir is known to the system for the daemon to be "
+                   "activatable.";
         }
         return;
     }
@@ -845,7 +845,7 @@ void ShellCorona::screenInvariants() const
     }
 
     if (m_desktopViewForScreen.isEmpty()) {
-        qWarning() << "no screens!!";
+        qCWarning(PLASMASHELL) << "no screens!!";
     }
 }
 #endif
@@ -1080,7 +1080,7 @@ QRect ShellCorona::screenGeometry(int id) const
 {
     QScreen *screen = m_screenPool->screenForId(id);
     if (!screen) {
-        qWarning() << "requesting unexisting screen geometry" << id;
+        qCWarning(PLASMASHELL) << "requesting unexisting screen geometry" << id;
         screen = m_screenPool->primaryScreen();
         return screen ? screen->geometry() : QRect();
     }
@@ -1097,7 +1097,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     QScreen *screen = m_screenPool->screenForId(id);
     if (!screen) {
         // each screen should have a view
-        qWarning() << "requesting unexisting screen region" << id;
+        qCWarning(PLASMASHELL) << "requesting unexisting screen region" << id;
         screen = m_screenPool->primaryScreen();
         return screen ? screen->availableGeometry() : QRegion();
     }
@@ -1121,7 +1121,7 @@ QRect ShellCorona::_availableScreenRect(int id) const
     QScreen *screen = m_screenPool->screenForId(id);
     if (!screen) {
         // each screen should have a view
-        qWarning() << "requesting unexisting screen available rect" << id;
+        qCWarning(PLASMASHELL) << "requesting unexisting screen available rect" << id;
         screen = m_screenPool->primaryScreen();
         return screen ? screen->availableGeometry() : QRect();
     }
