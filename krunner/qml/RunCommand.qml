@@ -237,7 +237,7 @@ ColumnLayout {
             }
             Keys.onTabPressed: event => {
                 if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
-                    if (queryField.text !== fadedTextCompletion.text) {
+                    if (fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
                         queryField.text = fadedTextCompletion.text
                     } else {
                         event.accepted = false
