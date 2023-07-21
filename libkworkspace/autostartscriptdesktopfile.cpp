@@ -23,7 +23,6 @@ AutostartScriptDesktopFile::AutostartScriptDesktopFile(const QString &name, cons
     kcg.writeEntry("Exec", execPath);
     kcg.writeEntry("Icon", iconName);
     kcg.writeEntry(autostartScriptKey, "true");
-    kcg.writeEntry("Path", "");
 }
 
 bool AutostartScriptDesktopFile::isAutostartScript(const KDesktopFile &file)
