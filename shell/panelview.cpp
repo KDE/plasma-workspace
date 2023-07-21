@@ -1415,6 +1415,15 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
         if (m_shellSurface) {
             m_shellSurface->setPanelTakesFocus(true);
         }
+
+        m_corona->savePreviousWindow();
+
+        const auto nextItem = rootObject()->nextItemInFocusChain();
+        if (nextItem) {
+            nextItem->forceActiveFocus(Qt::TabFocusReason);
+        } else {
+            containment()->setStatus(Plasma::Types::PassiveStatus);
+        }
     } else {
         if (status == Plasma::Types::PassiveStatus) {
             m_corona->restorePreviousWindow();
