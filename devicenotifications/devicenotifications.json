@@ -6,6 +6,7 @@
         "Description[es]": "Reproducir un sonido cuando se insertan o extraen dispositivos",
         "Description[eu]": "Jo erreakzio entzungarria, gailuak txertatzen edo kentzen direnean",
         "Description[ia]": "Executa resposta audibile quando dispositivos es insertate o removite",
+        "Description[ka]": "მოწყობილობების შეერთება/გამოერთებისას უკუკავშირის გასაგები ხმის დაკვრა",
         "Description[nl]": "Hoorbare terugkoppeling afspelen wanneer apparaten ingeplugd of verwijderd worden",
         "Description[sl]": "Predvajaj zvočno povratno informacijo, kadar so naprave vstavljene ali odstranjene",
         "Description[tr]": "Aygıtlar takıldığında veya çıkarıldığında sesle geri bildirim ver",
