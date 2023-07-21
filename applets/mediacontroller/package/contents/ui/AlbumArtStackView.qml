@@ -199,6 +199,20 @@ Item {
                 PC3.BusyIndicator {
                     id: busyIndicator
                     anchors.centerIn: parent
+                    running: false
+                }
+
+                SequentialAnimation {
+                    running: true
+
+                    PauseAnimation {
+                        duration: Kirigami.Units.longDuration
+                    }
+                    PropertyAction {
+                        property: "running"
+                        target: busyIndicator
+                        value: true
+                    }
                 }
             }
 
