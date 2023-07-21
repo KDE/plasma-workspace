@@ -200,16 +200,6 @@ Item {
                 PC3.BusyIndicator {
                     id: busyIndicator
                     anchors.centerIn: parent
-                    opacity: 0
-                }
-
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.OutCubic
-                    property: "opacity"
-                    running: true
-                    target: busyIndicator
-                    to: 1
                 }
             }
 
