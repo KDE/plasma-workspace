@@ -13,8 +13,6 @@
 #include <libqalculate/Unit.h>
 #include <libqalculate/Variable.h>
 
-#include <QApplication>
-#include <QClipboard>
 #include <QDebug>
 #include <QFile>
 #include <QMutex>
@@ -207,11 +205,6 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     }
 
     return m_lastResult;
-}
-
-void QalculateEngine::copyToClipboard()
-{
-    QApplication::clipboard()->setText(m_lastResult);
 }
 
 static const QMap<QString, int> s_commonBaseMappings = {

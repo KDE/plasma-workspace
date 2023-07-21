@@ -12,6 +12,8 @@
 
 #include "qalculate_engine.h"
 
+#include <QApplication>
+#include <QClipboard>
 #include <QDebug>
 #include <QIcon>
 #include <QRegularExpression>
@@ -164,7 +166,7 @@ QString CalculatorRunner::calculate(const QString &term, bool *isApproximate, in
 void CalculatorRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     if (match.selectedAction()) {
-        m_engine->copyToClipboard();
+        QApplication::clipboard()->setText(match.text());
     } else {
         context.requestQueryStringUpdate(match.text(), match.text().length());
     }
