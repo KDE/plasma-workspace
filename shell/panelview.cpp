@@ -1389,6 +1389,15 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
             requestUpdate();
         }
+
+        m_corona->savePreviousWindow();
+
+        const auto nextItem = rootObject()->nextItemInFocusChain();
+        if (nextItem) {
+            nextItem->forceActiveFocus(Qt::TabFocusReason);
+        } else {
+            containment()->setStatus(Plasma::Types::PassiveStatus);
+        }
     } else {
         if (status == Plasma::Types::PassiveStatus) {
             m_corona->restorePreviousWindow();

@@ -91,6 +91,7 @@ public:
     Q_INVOKABLE QStringList availableActivities() const;
 
     PanelView *panelView(Plasma::Containment *containment) const;
+    void savePreviousWindow();
     void restorePreviousWindow();
 
     // This one is a bit of an hack but are just for desktop scripting

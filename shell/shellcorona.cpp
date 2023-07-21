@@ -923,30 +923,10 @@ void ShellCorona::slotCyclePanelFocus()
     if (!activePanel) {
         // Activate the first panel and save the previous window
         activePanel = m_panelViews.begin().value();
-
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            m_previousWId = KX11Extras::activeWindow();
-        }
-#endif
-        if (m_waylandWindowManagement) {
-            m_previousPlasmaWindow = m_waylandWindowManagement->activeWindow();
-        }
     }
 
-    auto setFocus = [](PanelView *view) {
-        view->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
-
-        auto nextItem = view->rootObject()->nextItemInFocusChain();
-        if (nextItem) {
-            nextItem->forceActiveFocus();
-        } else {
-            view->containment()->setStatus(Plasma::Types::PassiveStatus);
-        }
-    };
-
     if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
-        setFocus(activePanel);
+        activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
     } else {
         // Cancel focus on the current panel
         // Block focus on the panel if it's not the last panel
@@ -978,7 +958,7 @@ void ShellCorona::slotCyclePanelFocus()
             }
 
             if (viewIt != m_panelViews.cend()) {
-                setFocus(viewIt.value());
+                viewIt.value()->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
             } else {
                 restorePreviousWindow();
             }
@@ -1208,6 +1188,18 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 {
     return m_panelViews.value(containment);
+}
+
+void ShellCorona::savePreviousWindow()
+{
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11() && m_previousWId == 0) {
+        m_previousWId = KX11Extras::activeWindow();
+    }
+#endif
+    if (m_waylandWindowManagement && !m_previousPlasmaWindow) {
+        m_previousPlasmaWindow = m_waylandWindowManagement->activeWindow();
+    }
 }
 
 void ShellCorona::restorePreviousWindow()
