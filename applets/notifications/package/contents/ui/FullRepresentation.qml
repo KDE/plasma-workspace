@@ -67,7 +67,7 @@ PlasmaExtras.Representation {
                 Layout.fillWidth: true
                 spacing: 0
 
-                PlasmaComponents3.CheckBox {
+                PlasmaComponents3.Switch {
                     id: dndCheck
                     enabled: NotificationManager.Server.valid
                     text: i18n("Do not disturb")

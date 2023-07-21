@@ -34,7 +34,7 @@ ColumnLayout {
     property bool inhibitsLidAction
 
     // UI to manually inhibit sleep and screen locking
-    PlasmaComponents3.CheckBox {
+    PlasmaComponents3.Switch {
         id: pmCheckBox
         Layout.fillWidth: true
         text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
