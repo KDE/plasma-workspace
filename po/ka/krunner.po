@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2022-09-17 05:39+0200\n"
+"PO-Revision-Date: 2023-07-20 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -56,7 +56,7 @@ msgstr "გაშვებული ასლის ჩანაცვლებ�
 #: main.cpp:84
 #, kde-format
 msgid "Only query this specific runner"
-msgstr ""
+msgstr "მხოლოდ ამ კონკრეტული გამშვების გამოთხოვა"
 
 #: main.cpp:90
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "KRunner-ის მორგება…"
 #: qml/RunCommand.qml:111
 #, kde-format
 msgid "Querying runner %1 in single runner mode"
-msgstr ""
+msgstr "გამშვები %1-ის ერთი მომხმარებლის რეჟიმში გამოთხოვა"
 
 #: qml/RunCommand.qml:125
 #, kde-format

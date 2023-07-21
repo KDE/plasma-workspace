@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2022-07-03 09:47+0200\n"
+"PO-Revision-Date: 2023-07-20 06:16+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.04.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: autostartmodel.cpp:328
 #, kde-format
@@ -57,18 +57,16 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "Datoteka '%1' mora biti izvedljiva za zagon ob prijavi."
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "Lastnosti"
+msgstr "Glej lastnosti"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "Odstrani"
+msgstr "Odstrani vnos"
 
 #: ui/main.qml:112
 #, kde-format

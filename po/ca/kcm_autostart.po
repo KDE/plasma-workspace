@@ -1,9 +1,9 @@
 # Translation of kcm_autostart.po to Catalan
-# Copyright (C) 2008-2022 This_file_is_part_of_KDE
+# Copyright (C) 2008-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2010, 2012, 2015, 2016, 2017, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2010, 2012, 2015, 2016, 2017, 2020, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2016, 2017, 2020.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2022-07-02 10:55+0200\n"
+"PO-Revision-Date: 2023-07-20 10:56+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -58,18 +58,16 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "El fitxer «%1» ha de ser executable per executar-se en entrar."
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "Propietats"
+msgstr "Veure les propietats"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "Elimina"
+msgstr "Elimina l'entrada"
 
 #: ui/main.qml:112
 #, kde-format

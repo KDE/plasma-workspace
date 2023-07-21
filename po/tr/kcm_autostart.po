@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2023-02-08 21:24+0300\n"
+"PO-Revision-Date: 2023-07-20 12:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: autostartmodel.cpp:328
 #, kde-format
@@ -61,18 +61,16 @@ msgstr ""
 "olmalıdır."
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "Özellikler"
+msgstr "Özellikleri Gör"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "Kaldır"
+msgstr "Girdiyi Kaldır"
 
 #: ui/main.qml:112
 #, kde-format
