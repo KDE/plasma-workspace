@@ -17,6 +17,7 @@ set(image_SRCS
     provider/packageimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
+    utils/dpmsmonitor.cpp
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
 )
@@ -45,6 +46,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF6::KIOGui
     KF6::Notifications
     KF6::Package
+    KF6::ScreenDpms
     PW::LibTaskManager
     )
 
