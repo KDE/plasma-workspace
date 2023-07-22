@@ -21,23 +21,16 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
 
     m_resetTimer.setSingleShot(true);
     connect(&m_resetTimer, &QTimer::timeout, this, [this]() {
-        if (!m_firstEntered) {
-            m_interceptionPos.reset();
-        } else {
-            m_firstEntered = false;
-        }
-
         m_lastCursorPosition.reset();
         m_lastTimestamp.reset();
 
         update();
 
-        if (!m_interceptedHoverItem) {
-            return;
-        }
         if (m_interceptedHoverItem.interceptedHoverEnterPosition.has_value()) {
             resendHoverEvents(m_interceptedHoverItem.interceptedHoverEnterPosition.value());
         }
+
+        m_interceptionPos.reset();
     });
 };
 
@@ -109,7 +102,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
             }
             if (directionMetric) {
                 resendHoverEvents(position);
-                return false;
+                return true;
             }
 
             // As a second metric, we use the velocity of the cursor to disable the filter
@@ -117,7 +110,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
                 const double velocity = std::pow(deltaPosition.x(), 2) + std::pow(deltaPosition.y(), 2) / deltaTime;
                 if (velocity < VELOCITY_THRESHOLD) {
                     resendHoverEvents(position);
-                    return false;
+                    return true;
                 }
             }
         }
@@ -129,7 +122,6 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
                 // so that the timer does not reselect the intercepted item
                 m_interceptedHoverItem = item;
                 m_interceptionPos = position;
-                m_firstEntered = true;
             } else if (event->type() == QEvent::HoverEnter) {
                 m_interceptedHoverItem = item;
                 m_interceptedHoverItem.interceptedHoverEnterPosition = position;
@@ -148,6 +140,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
             if (he.type() == QEvent::HoverMove && m_interceptedHoverItem == item) {
                 resendHoverEvents(position);
+                return false;
             }
             return false;
         }
@@ -161,9 +154,17 @@ void TriangleMouseFilter::resendHoverEvents(const QPointF &cursorPosition)
 {
     // If we are no longer inhibiting events and have previously intercepted a hover enter
     // we manually send the hover enter to that item
-    const auto targetPosition = mapToItem(m_interceptedHoverItem.item, cursorPosition);
-    QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
-    qApp->sendEvent(m_interceptedHoverItem.item, &e);
+    if (m_interceptionPos) {
+        const auto targetPosition = mapToItem(m_interceptedHoverItem.item, m_interceptionPos.value());
+        QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+        qApp->sendEvent(m_interceptedHoverItem.item, &e);
+    }
+
+    if (m_interceptionPos != cursorPosition) {
+        const auto targetPosition = mapToItem(m_interceptedHoverItem.item, cursorPosition);
+        QHoverEvent e(QEvent::HoverMove, targetPosition, targetPosition);
+        qApp->sendEvent(m_interceptedHoverItem.item, &e);
+    }
 
     m_interceptedHoverItem = nullptr;
 }

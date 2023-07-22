@@ -121,7 +121,6 @@ private:
     std::optional<QPointF> m_lastCursorPosition;
     std::optional<decltype(std::declval<QHoverEvent>().timestamp())> m_lastTimestamp;
     std::optional<QPointF> m_interceptionPos; // point where we started intercepting
-    bool m_firstEntered = false;
     Qt::Edge m_edge = Qt::RightEdge;
     QVector<int> m_edgeLine;
     int m_filterTimeout = 300;
