@@ -561,12 +561,12 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
         QHash<QString, QRect> appletGeometries;
         for (const QString &encoded : appletsGeomStrings) {
-            const QStringList keyValue = encoded.split(QChar(':'));
+            const QStringList keyValue = encoded.split(QLatin1Char(':'));
             if (keyValue.length() != 2) {
                 continue;
             }
 
-            const QStringList rectPieces = keyValue.last().split(QChar(','));
+            const QStringList rectPieces = keyValue.last().split(QLatin1Char(','));
             if (rectPieces.length() != 5) {
                 continue;
             }
