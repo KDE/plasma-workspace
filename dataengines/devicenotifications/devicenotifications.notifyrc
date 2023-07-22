@@ -126,5 +126,5 @@ Name[vi]=Trạng thái thiết bị
 Name[x-test]=xxDevice Statusxx
 Name[zh_CN]=设备状态
 Name[zh_TW]=裝置狀態
-Sound=Oxygen-Sys-App-Message.ogg
+Sound=dialog-information
 Action=Sound
