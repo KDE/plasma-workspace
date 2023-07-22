@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2023-04-29 06:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: calculatorrunner.cpp:26
+#: calculatorrunner.cpp:28
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopiraj v odložišče"
 
-#: calculatorrunner.cpp:29
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -35,12 +35,12 @@ msgstr ""
 "Izračuna vrednost :q:, ko :q: vsebuje številke in matematične simbole, kot "
 "so +, -, /, *, ! in ^."
 
-#: calculatorrunner.cpp:34
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr "Vnesite vsem znano matematično funkcijo"
 
-#: calculatorrunner.cpp:137
+#: calculatorrunner.cpp:139
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

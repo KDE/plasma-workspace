@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 02:52+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2023-07-06 14:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -268,12 +268,12 @@ msgstr "Gestisci desktop e pannelli..."
 msgid "Move keyboard focus between panels"
 msgstr "Sposta il fuoco della tastiera tra i pannelli"
 
-#: shellcorona.cpp:1907
+#: shellcorona.cpp:1899
 #, kde-format
 msgid "Add Panel"
 msgstr "Aggiungi pannello"
 
-#: shellcorona.cpp:1943
+#: shellcorona.cpp:1935
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

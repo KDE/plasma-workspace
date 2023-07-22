@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2020-12-16 08:48+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: calculatorrunner.cpp:26
+#: calculatorrunner.cpp:28
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Chép vào bảng nháp"
 
-#: calculatorrunner.cpp:29
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -31,12 +31,12 @@ msgstr ""
 "Tính giá trị của :q: khi :q: được tạo bởi các số và kí hiệu toán học như +, "
 "-, /, *, ! và ^."
 
-#: calculatorrunner.cpp:34
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:137
+#: calculatorrunner.cpp:139
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

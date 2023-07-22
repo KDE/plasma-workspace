@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2023-04-30 21:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.0\n"
 
-#: calculatorrunner.cpp:26
+#: calculatorrunner.cpp:28
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
-#: calculatorrunner.cpp:29
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -31,12 +31,12 @@ msgstr ""
 ":q: என்ற சரத்தில் எண்கள் மற்றும் +, -, /, *, ! and ^ போன்ற கணித செயல்பாடுகள் இருந்தால், "
 "அதன் மதிப்பை கணிக்கும்."
 
-#: calculatorrunner.cpp:34
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr "வழக்கமான கணித சார்பை உள்ளிடு"
 
-#: calculatorrunner.cpp:137
+#: calculatorrunner.cpp:139
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2010-05-08 19:56-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: calculatorrunner.cpp:26
+#: calculatorrunner.cpp:28
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: calculatorrunner.cpp:29
+#: calculatorrunner.cpp:31
 #, fuzzy, kde-format
 #| msgid ""
 #| "Calculates the value of :q: when :q: is made up of numbers and "
@@ -34,12 +34,12 @@ msgstr ""
 ":q: が数字と数学記号 (+, -, /, *, ^ など) から成る場合に、その値を計算しま"
 "す。"
 
-#: calculatorrunner.cpp:34
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:137
+#: calculatorrunner.cpp:139
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

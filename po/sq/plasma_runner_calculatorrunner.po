@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2009-08-05 16:14+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "X-Generator: Launchpad (build 12959)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: calculatorrunner.cpp:26
+#: calculatorrunner.cpp:28
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: calculatorrunner.cpp:29
+#: calculatorrunner.cpp:31
 #, fuzzy, kde-format
 #| msgid ""
 #| "Calculates the value of :q: when :q: is made up of numbers and "
@@ -36,12 +36,12 @@ msgstr ""
 "Llogarit vlerën e :q: kur :q: përbëhet nga numra dhe nga simbole matematike "
 "siç janë +, -, /, * dhe ^."
 
-#: calculatorrunner.cpp:34
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:137
+#: calculatorrunner.cpp:139
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

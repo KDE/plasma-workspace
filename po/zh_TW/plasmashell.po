@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 02:52+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2023-03-06 21:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -267,12 +267,12 @@ msgstr "管理桌面與面板…"
 msgid "Move keyboard focus between panels"
 msgstr "在面板間移動鍵盤焦點"
 
-#: shellcorona.cpp:1907
+#: shellcorona.cpp:1899
 #, kde-format
 msgid "Add Panel"
 msgstr "新增面板"
 
-#: shellcorona.cpp:1943
+#: shellcorona.cpp:1935
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

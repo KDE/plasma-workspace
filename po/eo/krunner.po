@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"PO-Revision-Date: 2023-07-21 18:55+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -53,12 +53,12 @@ msgstr "Komenci KRunner en la fono, ne montri ĝin."
 #: main.cpp:83
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "Anstataŭigi ekzistantan petskribon"
+msgstr "Anstataŭigi ekzistantan instancon"
 
 #: main.cpp:84
 #, kde-format
 msgid "Only query this specific runner"
-msgstr ""
+msgstr "Pridemandi nur ĉi tiun specifan rulilon"
 
 #: main.cpp:90
 #, kde-format
@@ -78,18 +78,18 @@ msgstr "Agordi KRunner-Konduton"
 #: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner…"
-msgstr "Agordi KRunner..."
+msgstr "Agordi KRunner…"
 
 #: qml/RunCommand.qml:111
 #, kde-format
 msgid "Querying runner %1 in single runner mode"
-msgstr ""
+msgstr "Pridemandante rulilon %1 en sol-rulanta reĝimo"
 
 #: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr "Serĉi '%1'..."
+msgstr "Serĉi '%1'…"
 
 #: qml/RunCommand.qml:126
 #, kde-format
