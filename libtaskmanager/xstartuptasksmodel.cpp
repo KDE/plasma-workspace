@@ -145,7 +145,7 @@ QUrl XStartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
 
     // Try to match via desktop filename ...
     if (!appId.isEmpty() && appId.endsWith(QLatin1String(".desktop"))) {
-        if (appId.startsWith(QLatin1String("/"))) {
+        if (appId.startsWith(QLatin1Char('/'))) {
             // Even if we have an absolute path, try resolving to a service first (Bug 385594)
             KService::Ptr service = KService::serviceByDesktopPath(appId);
             if (!service) { // No luck, just return it verbatim
