@@ -46,13 +46,13 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
     }
 
     auto *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(m_path));
-    connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
+    connect(job, &KJob::result, this, [this, job]() {
         if (job->error()) {
             return;
         }
 
         const int limit = FreeSpaceNotifierSettings::minimumSpace(); // MiB
-        const qint64 avail = available / (1024 * 1024); // to MiB
+        const qint64 avail = job->availableSize() / (1024 * 1024); // to MiB
 
         if (avail >= limit) {
             if (m_notification) {
@@ -61,7 +61,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             return;
         }
 
-        const int availPercent = int(100 * available / size);
+        const int availPercent = int(100 * job->availableSize() / job->size());
         const QString text = m_notificationText.subs(avail).subs(availPercent).toString();
 
         // Make sure the notification text is always up to date whenever we checked free space
