@@ -57,8 +57,6 @@ private:
     static QString localeFileDirPath();
     static QString toUTF8Locale(const QString &locale);
 
-    QHash<QString, QString> m_cachedFlags;
-
     RegionAndLangSettings *m_settings;
     OptionsModel *m_optionsModel;
     LocaleGeneratorBase *m_generator = nullptr;
