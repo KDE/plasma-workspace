@@ -140,7 +140,6 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
             if (he.type() == QEvent::HoverMove && m_interceptedHoverItem == item) {
                 resendHoverEvents(position);
-                return false;
             }
             return false;
         }
