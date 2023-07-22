@@ -28,6 +28,11 @@ BaseMediaComponent {
         targetRect: animatedImageComponent.desktopRect
     }
 
+    PlasmaWallpaper.DPMSMonitor {
+        id: dpmsMonitor
+        window: animatedImageComponent.Window.window
+    }
+
     AnimatedImage {
         id: mainImage
         anchors.fill: parent
@@ -40,7 +45,7 @@ BaseMediaComponent {
         // sourceSize is read-only
         // https://github.com/qt/qtdeclarative/blob/23b4ab24007f489ac7c2b9ceabe72fa625a51f3d/src/quick/items/qquickanimatedimage_p.h#L39
 
-        paused: activeWindowMonitor.count > 0 && !kwindowsystem.showingDesktop
+        paused: (activeWindowMonitor.count > 0 && !kwindowsystem.showingDesktop) || !dpmsMonitor.monitorOn
     }
 
     Loader {

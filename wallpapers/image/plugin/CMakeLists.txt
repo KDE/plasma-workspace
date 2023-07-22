@@ -17,6 +17,7 @@ set(image_SRCS
     provider/packageimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
+    utils/dpmsmonitor.cpp
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
 )
@@ -43,6 +44,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF5::NewStuff
     KF5::Notifications
     KF5::Package
+    KF5::ScreenDpms
     PW::LibTaskManager
     )
 

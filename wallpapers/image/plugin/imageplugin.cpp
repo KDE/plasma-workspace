@@ -13,6 +13,7 @@
 #include "imagebackend.h"
 #include "provider/packageimageprovider.h"
 #include "sortingmode.h"
+#include "utils/dpmsmonitor.h"
 #include "utils/maximizedwindowmonitor.h"
 #include "utils/mediaproxy.h"
 
@@ -36,6 +37,7 @@ void ImagePlugin::registerTypes(const char *uri)
     qmlRegisterType<MediaProxy>(uri, 2, 0, "MediaProxy");
 
     qmlRegisterType<MaximizedWindowMonitor>(uri, 2, 0, "MaximizedWindowMonitor");
+    qmlRegisterType<DPMSMonitor>(uri, 2, 0, "DPMSMonitor");
 
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
 
