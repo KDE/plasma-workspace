@@ -199,12 +199,40 @@ bool DesktopView::showPreviewBanner() const
 
 QString DesktopView::previewBannerTitle() const
 {
+    /*
+     * Versions are reported as follows:
+     *  Development, 5.27.80 -> KDE Plasma 5.27.80
+     *  Beta,        5.27.90 -> KDE Plasma 6.0 Beta
+     *  Development, 6.0.80  -> KDE Plasma 6.0.80
+     *  Beta,        6.0.90  -> KDE Plasma 6.1 Beta
+     *  Beta,        6.0.91  -> KDE Plasma 6.1 Beta 2
+     */
+
     if constexpr (PROJECT_VERSION_PATCH == 80) {
-        return i18nc("@label %1 version string", "Plasma %1 Development Build", WORKSPACE_VERSION_STRING);
-    } else if constexpr (PROJECT_VERSION_PATCH == 90) {
-        return i18nc("@label %1 version string", "Plasma %1 Beta Build", WORKSPACE_VERSION_STRING);
+        // Developer version, show full version string
+        return i18nc("@label %1 is the Plasma version", "KDE Plasma %1", WORKSPACE_VERSION_STRING);
+    } else if constexpr (PROJECT_VERSION_PATCH >= 90) {
+        // Beta version, show as a beta for the next release
+
+        // finalMajor, finalMinor is the final version in the line
+        // and should be updated after the final Plasma 6 release
+        constexpr int finalMajor = 5;
+        constexpr int finalMinor = 27;
+
+        // Increment minor, wrapping up when we reach the final version in the major release line
+        constexpr int major = (PROJECT_VERSION_MAJOR == finalMajor && PROJECT_VERSION_MINOR == finalMinor) ? PROJECT_VERSION_MAJOR + 1 : PROJECT_VERSION_MAJOR;
+        constexpr int minor = (PROJECT_VERSION_MAJOR == finalMajor && PROJECT_VERSION_MINOR == finalMinor) ? 0 : PROJECT_VERSION_MINOR + 1;
+        const QString version = QStringLiteral("%1.%2").arg(major, minor);
+
+        if constexpr (PROJECT_VERSION_PATCH == 90) {
+            return i18nc("@label %1 is the Plasma version", "KDE Plasma %1 Beta", version);
+        } else {
+            constexpr int betaNumber = PROJECT_VERSION_PATCH - 89;
+            return i18nc("@label %1 is the Plasma version, %2 is the beta release number", "KDE Plasma %1 Beta %2", version, betaNumber);
+        }
     } else {
-        return i18nc("@label %1 version string", "Plasma %1", WORKSPACE_VERSION_STRING);
+        // Unrecognised version
+        return i18nc("@label %1 is the Plasma version", "KDE Plasma %1", WORKSPACE_VERSION_STRING);
     }
 }
 
