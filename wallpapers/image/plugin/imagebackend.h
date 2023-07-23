@@ -10,6 +10,8 @@
 
 #pragma once
 
+#include <optional>
+
 #include <QAbstractItemModel>
 #include <QBindable>
 #include <QPointer>
@@ -72,6 +74,11 @@ class ImageBackend : public QObject, public QQmlParserStatus
     Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
 
     /**
+     * Pauses slideshow when certain conditions are met
+     */
+    Q_PROPERTY(bool pauseSlideshow READ pauseSlideshow WRITE setPauseSlideshow NOTIFY pauseSlideshowChanged)
+
+    /**
      * @return @c true if the image list is loaded, @c false otherwise
      */
     Q_PROPERTY(bool loading READ loading NOTIFY loadingChanged)
@@ -127,6 +134,9 @@ public:
     QStringList uncheckedSlides() const;
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
+    bool pauseSlideshow() const;
+    void setPauseSlideshow(bool pauseSlideshow);
+
     bool loading() const;
 
 public Q_SLOTS:
@@ -145,6 +155,7 @@ Q_SIGNALS:
     void slideTimerChanged();
     void slidePathsChanged();
     void uncheckedSlidesChanged();
+    void pauseSlideshowChanged();
     void configMapChanged();
     void loadingChanged(bool loading);
 
@@ -171,9 +182,12 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, SortingMode::Mode, m_slideshowMode, SortingMode::Random, &ImageBackend::slideshowModeChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_slideshowFoldersFirst, false, &ImageBackend::slideshowFoldersFirstChanged)
 
+    QTimer m_timer;
+    bool m_pauseSlideshow = false;
+    std::optional<decltype(std::declval<QTimer>().remainingTimeAsDuration())> m_remainingTime;
+
     QStringList m_slidePaths;
     QStringList m_uncheckedSlides;
-    QTimer m_timer;
     int m_currentSlide = -1;
     ImageProxyModel *m_model = nullptr;
     SlideModel *m_slideshowModel = nullptr;

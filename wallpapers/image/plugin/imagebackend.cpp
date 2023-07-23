@@ -290,7 +290,7 @@ void ImageBackend::removeSlidePath(const QString &path)
 
 void ImageBackend::startSlideshow()
 {
-    if (!m_ready || m_usedInConfig || m_mode != SlideShow) {
+    if (!m_ready || m_usedInConfig || m_mode != SlideShow || m_pauseSlideshow) {
         return;
     }
     // populate background list
@@ -460,6 +460,40 @@ void ImageBackend::setUncheckedSlides(const QStringList &uncheckedSlides)
 
     Q_EMIT uncheckedSlidesChanged();
     startSlideshow();
+}
+
+bool ImageBackend::pauseSlideshow() const
+{
+    return m_pauseSlideshow;
+}
+
+void ImageBackend::setPauseSlideshow(bool pauseSlideshow)
+{
+    if (m_pauseSlideshow == pauseSlideshow) {
+        return;
+    }
+
+    m_pauseSlideshow = pauseSlideshow;
+    Q_EMIT pauseSlideshowChanged();
+
+    if (!m_ready) {
+        return;
+    }
+
+    if (pauseSlideshow && m_timer.isActive()) {
+        // Pause timer and store the remaining time
+        m_remainingTime = m_timer.remainingTimeAsDuration();
+        m_timer.stop();
+    } else if (!pauseSlideshow && !m_timer.isActive()) {
+        if (m_slideFilterModel->rowCount() > 0) {
+            // Resume from the last point
+            m_timer.start(m_remainingTime.value_or(std::chrono::seconds(m_delay)));
+            m_remainingTime.reset();
+        } else {
+            // Start a new slideshow
+            startSlideshow();
+        }
+    }
 }
 
 bool ImageBackend::loading() const
