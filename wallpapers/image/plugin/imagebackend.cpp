@@ -49,9 +49,7 @@ void ImageBackend::componentComplete()
     m_ready = true;
 
     // MediaProxy will handle SingleImage case
-    if (m_mode == SlideShow) {
-        startSlideshow();
-    }
+    startSlideshow();
 }
 
 QString ImageBackend::image() const
@@ -83,9 +81,7 @@ void ImageBackend::setRenderingMode(RenderingMode mode)
     m_mode = mode;
     renderingModeChanged();
 
-    if (m_mode == SlideShow) {
-        startSlideshow();
-    }
+    startSlideshow();
 }
 
 SortingMode::Mode ImageBackend::slideshowMode() const
@@ -98,13 +94,13 @@ void ImageBackend::setSlideshowMode(SortingMode::Mode slideshowMode)
     if (slideshowMode == m_slideshowMode) {
         return;
     }
+
     m_slideshowMode = slideshowMode;
     m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
     m_slideFilterModel->sort(0);
-    if (m_mode == SlideShow) {
-        startSlideshow();
-    }
     Q_EMIT slideshowModeChanged();
+
+    startSlideshow();
 }
 
 bool ImageBackend::slideshowFoldersFirst() const
@@ -117,13 +113,13 @@ void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
     if (slideshowFoldersFirst == m_slideshowFoldersFirst) {
         return;
     }
+
     m_slideshowFoldersFirst = slideshowFoldersFirst;
     m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
     m_slideFilterModel->sort(0);
-    if (m_mode == SlideShow) {
-        startSlideshow();
-    }
     Q_EMIT slideshowFoldersFirstChanged();
+
+    startSlideshow();
 }
 
 QSize ImageBackend::targetSize() const
