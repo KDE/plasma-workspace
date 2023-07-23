@@ -192,15 +192,14 @@ int ImageBackend::slideTimer() const
 
 void ImageBackend::setSlideTimer(int time)
 {
-    if (time == m_delay || m_mode != SlideShow) {
+    if (time == m_delay) {
         return;
     }
 
     m_delay = time;
+    Q_EMIT slideTimerChanged();
 
     startSlideshow();
-
-    Q_EMIT slideTimerChanged();
 }
 
 QStringList ImageBackend::slidePaths() const
