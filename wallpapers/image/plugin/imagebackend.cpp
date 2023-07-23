@@ -81,6 +81,7 @@ void ImageBackend::setRenderingMode(RenderingMode mode)
     }
 
     m_mode = mode;
+    renderingModeChanged();
 
     if (m_mode == SlideShow) {
         startSlideshow();
