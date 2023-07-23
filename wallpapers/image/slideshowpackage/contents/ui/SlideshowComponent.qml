@@ -191,8 +191,8 @@ ColumnLayout {
                         // Don't want a background highlight effect, but we can't just
                         // set hoverEnabled to false, since then the tooltip will
                         // never appear!
-                        activeBackgroundColor: "transparent"
                         activeTextColor: Kirigami.Theme.textColor
+                        background: null
                         separatorVisible: false
 
                         // Header: the folder
