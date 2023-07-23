@@ -23,8 +23,6 @@
 
 #include <KLocalizedString>
 
-#include "debug.h"
-#include "finder/packagefinder.h"
 #include "model/imageproxymodel.h"
 #include "slidefiltermodel.h"
 #include "slidemodel.h"
