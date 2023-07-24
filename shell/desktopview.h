@@ -40,7 +40,7 @@ class DesktopView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor RESET resetAccentColor NOTIFY accentColorChanged)
 
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
-    Q_PROPERTY(bool showPreviewBanner READ showPreviewBanner CONSTANT)
+    Q_PROPERTY(bool showPreviewBanner READ showPreviewBanner NOTIFY showPreviewBannerChanged)
     Q_PROPERTY(QString previewBannerTitle READ previewBannerTitle CONSTANT)
     Q_PROPERTY(QString previewBannerText READ previewBannerText CONSTANT)
 #endif
@@ -73,6 +73,7 @@ public:
     bool showPreviewBanner() const;
     QString previewBannerTitle() const;
     QString previewBannerText() const;
+    Q_INVOKABLE void showPreviewBannerMenu(const QPoint &pos);
 #endif
 
     QVariantMap candidateContainmentsGraphicItems() const;
@@ -101,6 +102,9 @@ Q_SIGNALS:
     void usedInAccentColorChanged();
     void accentColorChanged(const QColor &accentColor);
     void screenToFollowChanged(QScreen *screen);
+#if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
+    void showPreviewBannerChanged();
+#endif
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);
@@ -120,4 +124,8 @@ private:
     // Accent color config
     Plasma::Containment *m_containment = nullptr;
     int m_containmentScreenId = -1;
+
+#if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
+    bool m_showPreviewBanner;
+#endif
 };

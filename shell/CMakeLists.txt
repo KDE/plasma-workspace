@@ -120,6 +120,10 @@ if(HAVE_X11)
   target_link_libraries(plasmashell XCB::XCB XCB::RANDR)
 endif()
 
+if(PROJECT_VERSION_PATCH GREATER_EQUAL 80 OR PROJECT_VERSION_MINOR GREATER_EQUAL 80)
+    target_link_libraries(plasmashell KF6::KIOGui)
+endif()
+
 configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)
 
 install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

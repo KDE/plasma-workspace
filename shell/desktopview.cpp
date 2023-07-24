@@ -92,6 +92,11 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         }
     });
     connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
+
+#if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
+    m_showPreviewBanner = KConfigGroup(KSharedConfig::openConfig(u"kdeglobals"_s), u"General"_s).readEntry("ShowDesktopPreviewBanner", true);
+    Q_EMIT showPreviewBannerChanged();
+#endif
 }
 
 DesktopView::~DesktopView()
@@ -195,11 +200,16 @@ void DesktopView::resetAccentColor()
 }
 
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
+#include <KIO/JobUiDelegateFactory>
+#include <KIO/OpenUrlJob>
+#include <KMessageBox>
+#include <QClipboard>
+#include <QGuiApplication>
+#include <QMenu>
+
 bool DesktopView::showPreviewBanner() const
 {
-    static const bool shouldShowPreviewBanner =
-        !KConfigGroup(KSharedConfig::openConfig(u"kdeglobals"_s), u"General"_s).readEntry("HideDesktopPreviewBanner", false);
-    return shouldShowPreviewBanner;
+    return m_showPreviewBanner;
 }
 
 QString DesktopView::previewBannerTitle() const
@@ -267,6 +277,60 @@ QString DesktopView::previewBannerTitle() const
 QString DesktopView::previewBannerText() const
 {
     return i18nc("@info:usagetip", "Visit bugs.kde.org to report issues");
+}
+
+void DesktopView::showPreviewBannerMenu(const QPoint &pos)
+{
+    auto menu = new QMenu();
+    menu->setAttribute(Qt::WA_DeleteOnClose);
+
+    QAction *copyVersionAction = new QAction(QIcon::fromTheme(u"edit-copy-symbolic"_s), i18nc("@action:button", "Copy Plasma Version"));
+    connect(copyVersionAction, &QAction::triggered, [] {
+        QGuiApplication::clipboard()->setText(QStringLiteral(WORKSPACE_VERSION_STRING));
+    });
+    menu->addAction(copyVersionAction);
+
+    QAction *reportBugAction = new QAction(QIcon::fromTheme(u"tools-report-bug-symbolic"_s), i18nc("@action:button", "Report a Bug…"));
+    connect(reportBugAction, &QAction::triggered, [] {
+        auto job = new KIO::OpenUrlJob(QUrl(u"https://bugs.kde.org/"_s));
+        job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+        job->start();
+    });
+    menu->addAction(reportBugAction);
+
+    menu->addSeparator();
+
+    auto hideMenu = menu->addMenu(QIcon::fromTheme(u"view-hidden-symbolic"_s), i18nc("@title:menu", "Hide Preview Banner"));
+
+    QAction *hidePreviewBannerTemporarilyAction =
+        new QAction(i18nc("@action:button Hide the preview banner until the system is restarted", "Hide Until Restart"));
+    connect(hidePreviewBannerTemporarilyAction, &QAction::triggered, [&]() {
+        m_showPreviewBanner = false;
+        Q_EMIT showPreviewBannerChanged();
+    });
+    hideMenu->addAction(hidePreviewBannerTemporarilyAction);
+
+    QAction *hidePreviewBannerPermenanentlyAction = new QAction(i18nc("@action:button Hide the preview banner permanently", "Hide Permanently…"));
+    connect(hidePreviewBannerPermenanentlyAction, &QAction::triggered, [&]() {
+        if (KMessageBox::warningContinueCancel(
+                nullptr,
+                xi18nc(
+                    "@info",
+                    "Are you sure you want to permanently hide the preview banner?<nl/><nl/>This action can only be undone by removing the line beginning with "
+                    "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</filename> config file."),
+                i18nc("@title:window", "Hide Preview Banner?"))
+            == KMessageBox::Continue) {
+            KConfigGroup config(KSharedConfig::openConfig(u"kdeglobals"_s), u"General"_s);
+            config.writeEntry("ShowDesktopPreviewBanner", false);
+            config.sync();
+
+            m_showPreviewBanner = false;
+            Q_EMIT showPreviewBannerChanged();
+        }
+    });
+    hideMenu->addAction(hidePreviewBannerPermenanentlyAction);
+
+    menu->popup(pos);
 }
 #endif
 
