@@ -69,7 +69,7 @@ find_package(KPipeWire CONFIG)
 find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
 set_package_properties(KF6NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
                        TYPE OPTIONAL
-                       PURPOSE "Needed by geolocation data engine."
+                       PURPOSE "Needed by geolocation data engine and location-based time zone changes."
                       )
 
 find_package(KF6Kirigami ${KF6_MIN_VERSION} CONFIG)
@@ -434,6 +434,9 @@ add_subdirectory(wallpapers)
 
 add_subdirectory(kioworkers)
 add_subdirectory(ktimezoned)
+if(TARGET KF6::NetworkManagerQt)
+    add_subdirectory(geotimezoned)
+endif()
 add_subdirectory(menu)
 add_subdirectory(phonon)
 add_subdirectory(donationmessage)
