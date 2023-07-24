@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Marisa.
+Comment=Ths is a test file
+Exec=steam steam://rungameid/1079160
+Icon=applications-network
+Terminal=false
+Type=Application
+Categories=Game;
