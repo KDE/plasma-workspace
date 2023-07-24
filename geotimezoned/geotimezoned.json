@@ -1,0 +1,6 @@
+{
+    "KPlugin": {
+        "Description": "Automatically change the system time zone based on the current location",
+        "Name": "Location-based System Time Zone"
+    }
+}

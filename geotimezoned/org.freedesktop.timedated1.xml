@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+ SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+    "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+
+<node>
+
+<interface name="org.freedesktop.timedate1">
+  <property name="Timezone" type="s" access="read"/>
+  <method name="SetTimezone">
+    <arg type="s" name="timezone" direction="in"/>
+    <arg type="b" name="interactive" direction="in"/>
+  </method>
+  <!-- Omitted the rest we don't use -->
+</interface>
+
+</node>
