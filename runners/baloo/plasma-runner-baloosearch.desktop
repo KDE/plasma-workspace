@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=File Search
 Name[ca]=Cerca de fitxers
+Name[ca@valencia]=Busca de fitxers
 Name[eo]=Dosierserĉo
 Name[es]=Búsqueda de archivos
 Name[eu]=Fitxategiak bilatzea
@@ -11,6 +12,7 @@ Name[sl]=Iskanje datoteke
 Name[tr]=Dosya Arama
 Name[uk]=Пошук файлів
 Name[x-test]=xxFile Searchxx
+Name[zh_CN]=文件搜索
 Comment=Searches for files by name and content
 Comment[ar]=يبحث عن الملفات بالاسم والمحتوى
 Comment[bg]=Търсене на файлове по име и съдържание

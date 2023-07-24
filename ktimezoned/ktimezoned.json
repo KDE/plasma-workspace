@@ -25,7 +25,7 @@
         "Description[it]": "Fornisce il fuso orario di sistema alle applicazioni",
         "Description[ja]": "アプリケーションにシステムのタイムゾーンを提供します",
         "Description[ka]": "აპლიკაციებისათვის სისტემური დროის სარტყლის გადაცემა",
-        "Description[ko]": "프로그램에 시스템 시간대 정보 제공",
+        "Description[ko]": "앱에 시스템 시간대 정보 제공",
         "Description[lt]": "Pateikia programoms sistemos laiko juostą",
         "Description[nl]": "Levert de tijdzone van het systeem aan applicaties",
         "Description[nn]": "Gjev programma tilgang til systemtidssone",
