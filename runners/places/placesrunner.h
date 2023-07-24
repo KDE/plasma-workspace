@@ -18,9 +18,10 @@ public:
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
+    void init() override;
 
 private:
     void openDevice(const QString &udi);
-    KFilePlacesModel m_places;
+    std::unique_ptr<KFilePlacesModel> m_places;
     QString m_pendingUdi;
 };
