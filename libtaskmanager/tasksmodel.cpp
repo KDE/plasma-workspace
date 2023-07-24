@@ -1653,7 +1653,7 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
     if (d->separateLaunchers && !parent.isValid() /* Exclude tasks in a group */) {
         int firstTask = 0;
         if (d->launcherTasksModel) {
-            if (d->launchInPlace) {
+            if (d->launchInPlace && d->activityInfo != nullptr) {
                 firstTask = d->launcherTasksModel->rowCountForActivity(d->activityInfo->currentActivity());
             } else {
                 firstTask = launcherCount();

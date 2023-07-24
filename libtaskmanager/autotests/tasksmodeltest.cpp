@@ -20,6 +20,13 @@ private Q_SLOTS:
     void initTestCase();
 
     /**
+     * Test moving a launcher in the 'Task Manager' with "Keep launchers separate",
+     * "Group by program name", "Launch in place"  and Manual sorting
+     * @see https://bugs.kde.org/472524
+     */
+    void test_moveLauncherBug472524();
+
+    /**
      * Task manager open entries jump around when pinned apps are moved
      * in the 'Task Manager' with "Keep launchers separate" option
      * unchecked
@@ -38,6 +45,42 @@ private Q_SLOTS:
 void TasksModelTest::initTestCase()
 {
     QGuiApplication::setQuitOnLastWindowClosed(false);
+}
+
+void TasksModelTest::test_moveLauncherBug472524()
+{
+    // Prepare two launchers and swap them
+    TasksModel model;
+
+    // Follow required settings in BUG 472524
+    model.setSeparateLaunchers(true);
+    model.setGroupMode(TasksModel::GroupApplications);
+    model.setLaunchInPlace(true);
+    model.setSortMode(TasksModel::SortManual);
+
+    QSignalSpy rowInsertedSpy(&model, &TasksModel::rowsInserted);
+
+    int rowCount = model.rowCount();
+    QVERIFY(model.launcherList().empty());
+    const QUrl launcherUrl = QUrl::fromLocalFile(QFINDTESTDATA("data/applications/GammaRay.desktop"));
+    const QUrl launcherUrl2 = QUrl::fromLocalFile(QFINDTESTDATA("data/applications/org.kde.gwenview_importer.desktop"));
+    model.setLauncherList(QStringList{launcherUrl.toString(), launcherUrl2.toString()});
+
+    // Both launchers are added as expected
+    QCOMPARE(model.launcherList().size(), 2);
+    QCOMPARE(model.rowCount(), rowCount + 2);
+
+    // The launchers are in the expected positions
+    QCOMPARE(model.index(0, 0).data(Qt::DisplayRole).toString(), QStringLiteral("GammaRay"));
+    QCOMPARE(model.index(1, 0).data(Qt::DisplayRole).toString(), QStringLiteral("Gwenview Importer"));
+
+    // Swap the first and second launcher
+    QVERIFY(model.move(0, 1));
+    QCoreApplication::processEvents();
+
+    // The launchers are swapped
+    QCOMPARE(model.index(0, 0).data(Qt::DisplayRole).toString(), QStringLiteral("Gwenview Importer"));
+    QCOMPARE(model.index(1, 0).data(Qt::DisplayRole).toString(), QStringLiteral("GammaRay"));
 }
 
 void TasksModelTest::test_moveBug444816()
