@@ -63,6 +63,7 @@ void TaskToolsTest::initTestCase()
     QFile::copy(QFINDTESTDATA("data/applications/brave-browser.desktop"), dataDir + QLatin1String("/applications/brave-browser.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"),
                 dataDir + QLatin1String("/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/marisa..desktop"), dataDir + QLatin1String("/applications/marisa..desktop"));
 
     QFile::copy(QFINDTESTDATA("data/applications/kcm_kdeconnect.desktop"), dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
 
@@ -179,6 +180,8 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices6/kcm_kdeconnect") << QString()
                                     << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
+
+    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QUrl();
 
     // TODO test mapping rules
 }

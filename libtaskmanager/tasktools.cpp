@@ -418,7 +418,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
     // - appId cannot directly match the desktop file because of RDN
     // - appId also cannot match the binary because of name mismatch
     // - in the following code *.appId can match org.kde.dragonplayer though
-    if (services.isEmpty() || services.at(0)->desktopEntryName().isEmpty()) {
+    if (!appId.isEmpty() /* BUG 472576 */ && (services.isEmpty() || services.at(0)->desktopEntryName().isEmpty())) {
         auto matchingServices = KApplicationTrader::query([&appId](const KService::Ptr &service) {
             return !service->noDisplay() && service->desktopEntryName().contains(appId, Qt::CaseInsensitive);
         });
