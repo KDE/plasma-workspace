@@ -311,8 +311,12 @@ void WidgetExplorerPrivate::screenRemoved(int screen)
 
 void WidgetExplorerPrivate::addContainment(Containment *containment)
 {
-    QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet *)), q, SLOT(appletAdded(Plasma::Applet *)));
-    QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet *)), q, SLOT(appletRemoved(Plasma::Applet *)));
+    QObject::connect(containment, &Plasma::Containment::appletAdded, q, [this](Plasma::Applet *a, const QRectF &) {
+        appletAdded(a);
+    });
+    QObject::connect(containment, &Plasma::Containment::appletRemoved, q, [this](Plasma::Applet *a) {
+        appletRemoved(a);
+    });
 
     const QList<Applet *> applets = containment->applets();
     for (auto applet : applets) {
