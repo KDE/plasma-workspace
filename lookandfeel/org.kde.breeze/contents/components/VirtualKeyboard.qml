@@ -7,7 +7,6 @@
 import QtQuick 2.15
 import QtQuick.VirtualKeyboard 2.4
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
 InputPanel {

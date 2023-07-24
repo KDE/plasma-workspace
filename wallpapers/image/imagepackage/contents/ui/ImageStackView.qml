@@ -9,7 +9,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
 QQC2.StackView {
