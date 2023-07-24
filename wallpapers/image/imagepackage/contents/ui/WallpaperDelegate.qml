@@ -11,9 +11,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
-
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcmutils as KCM
 
 KCM.GridDelegate {
