@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -170,19 +170,19 @@ msgid ""
 msgstr ""
 
 # rewrite-msgid: /slides//
-#: plugin/imagebackend.cpp:243
+#: plugin/imagebackend.cpp:237
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Фасцикла из које се повлаче тапети."
 
 # >> @title:window
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:347
 #, kde-format
 msgid "Open Image"
 msgstr "Отварање слике"
 
 # >> @item:intext
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:347
 #, kde-format
 msgid "Image Files"
 msgstr "фајлови слика"

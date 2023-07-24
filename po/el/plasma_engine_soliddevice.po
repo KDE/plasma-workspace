@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2016-01-13 23:57+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Περιγραφή"
 msgid "Icon"
 msgstr "Εικονίδιο"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "Εμβλήματα"
 
@@ -96,7 +96,7 @@ msgid "Storage Access"
 msgstr "Πρόσβαση σε χώρο αποθήκευσης"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "Προσβάσιμο"
 
@@ -571,7 +571,7 @@ msgstr "Περιγραφή τύπου"
 msgid "Device Types"
 msgstr "Τύποι συσκευών"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "Μέγεθος"
 
@@ -585,29 +585,29 @@ msgstr ""
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr ""
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "Ελεύθερος χώρος"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "Κείμενο σε ελεύθερο χώρο"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 #, fuzzy
 #| msgid "Size"
 msgid "Size Text"
 msgstr "Μέγεθος"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "Θερμοκρασία"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "Μονάδα θερμοκρασίας"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "Σε χρήση"
 

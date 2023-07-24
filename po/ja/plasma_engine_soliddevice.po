@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2019-06-28 07:25+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "説明"
 msgid "Icon"
 msgstr "アイコン"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "エンブレム"
 
@@ -94,7 +94,7 @@ msgid "Storage Access"
 msgstr "ストレージアクセス"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "アクセス可能"
 
@@ -575,7 +575,7 @@ msgstr ""
 msgid "Device Types"
 msgstr "デバイスタイプ"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "サイズ"
 
@@ -589,30 +589,30 @@ msgstr "ファイルシステムの応答がありません"
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "'%1' にマウントされたファイルシステムの応答がありません"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "空き容量"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 #, fuzzy
 #| msgid "Free Space"
 msgid "Free Space Text"
 msgstr "空き容量"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 #, fuzzy
 #| msgid "Size"
 msgid "Size Text"
 msgstr "サイズ"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "温度"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "温度単位"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "使用中"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2021-09-01 02:30+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr "描述"
 msgid "Icon"
 msgstr "圖示"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "符號"
 
@@ -97,7 +97,7 @@ msgid "Storage Access"
 msgstr "儲存裝置存取"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "可存取"
 
@@ -570,7 +570,7 @@ msgstr "型態描述"
 msgid "Device Types"
 msgstr "裝置型態"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "大小"
 
@@ -584,26 +584,26 @@ msgstr "檔案系統無回應"
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "掛載於「%1」的檔案系統沒有回應"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "剩餘空間"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "剩餘空間文字"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 msgid "Size Text"
 msgstr "放大文字"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "溫度"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "溫度單位"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "使用中"

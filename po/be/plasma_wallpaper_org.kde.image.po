@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -167,17 +167,17 @@ msgstr ""
 "Пададзены для шпалеры файл не існуе, або яго немагчыма распазнаць як "
 "шпалеры: %1"
 
-#: plugin/imagebackend.cpp:243
+#: plugin/imagebackend.cpp:237
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог са шпалерамі для паказу слайдаў"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:347
 #, kde-format
 msgid "Open Image"
 msgstr "Адкрыць выяву"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:347
 #, kde-format
 msgid "Image Files"
 msgstr "Файлы выяў"

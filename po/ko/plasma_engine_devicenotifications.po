@@ -57,15 +57,14 @@ msgstr "장치가 사용 중이므로 마운트할 수 없습니다."
 #: ksolidnotify.cpp:200
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "이 장치에 있는 하나 이상의 파일이 다른 프로그램에서 열려 있습니다."
+msgstr "이 장치에 있는 하나 이상의 파일이 다른 앱에서 열려 있습니다."
 
 #: ksolidnotify.cpp:202
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-"이 장치에 있는 하나 이상의 파일이 다음 프로그램에서 열려 있습니다: %2."
+msgstr[0] "이 장치에 있는 하나 이상의 파일이 다음 앱에서 열려 있습니다: %2."
 
 #: ksolidnotify.cpp:205
 #, kde-format

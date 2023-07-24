@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2010-12-24 14:15+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Icon"
 msgstr "Imådjete"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr ""
 
@@ -95,7 +95,7 @@ msgid "Storage Access"
 msgstr "Accès å stocaedje"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "Arinnåve"
 
@@ -576,7 +576,7 @@ msgstr ""
 msgid "Device Types"
 msgstr "Sôres d' éndjin"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "Grandeu"
 
@@ -590,31 +590,31 @@ msgstr ""
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr ""
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "Espåce di libe"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 #, fuzzy
 #| msgid "Free Space"
 msgid "Free Space Text"
 msgstr "Espåce di libe"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 #, fuzzy
 #| msgid "Size"
 msgid "Size Text"
 msgstr "Grandeu"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "Tchåleur"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "Unité di tchåleur"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr ""
 

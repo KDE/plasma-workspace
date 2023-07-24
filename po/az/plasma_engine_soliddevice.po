@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2021-11-20 15:41+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Təsviri"
 msgid "Icon"
 msgstr "Nişan"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "Emblemlər"
 
@@ -93,7 +93,7 @@ msgid "Storage Access"
 msgstr "Verilənlərə Giriş"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "Əlçatandır"
 
@@ -566,7 +566,7 @@ msgstr "Növün açıqlaması"
 msgid "Device Types"
 msgstr "Cihazın növləri"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "Ölçü"
 
@@ -580,26 +580,26 @@ msgstr "Fayl Sistemi cavab vermir"
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "\"%1\"-də(a) qoşulan fayl sistemi cavab vermir"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "Boş disk sahəsi"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "Boş disk sahəsi (mətn)"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 msgid "Size Text"
 msgstr "Mətn ölçüsü"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "Temperatur"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "Temperatur vahidi"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "İstifadə olunur"

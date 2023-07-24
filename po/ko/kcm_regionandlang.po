@@ -412,8 +412,8 @@ msgid ""
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"미국 영어 아래에 다른 언어를 두면 일부 프로그램에서 의도하지 않은 행동을 할 "
-"수 있습니다. 미국 영어로 시스템을 사용하려면 다른 모든 언어를 삭제하십시오."
+"미국 영어 아래에 다른 언어를 두면 일부 앱에서 의도하지 않은 행동을 할 수 있습"
+"니다. 미국 영어로 시스템을 사용하려면 다른 모든 언어를 삭제하십시오."
 
 #: ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -424,7 +424,7 @@ msgstr "\"%1\" 언어는 지원하지 않음"
 #: ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr "프로그램에서 사용할 순서대로 언어를 추가하십시오."
+msgstr "앱에서 사용할 순서대로 언어를 추가하십시오."
 
 #: ui/AdvancedLanguageSelectPage.qml:83
 #, kde-format

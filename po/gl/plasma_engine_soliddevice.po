@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2023-04-06 21:02+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -40,7 +40,7 @@ msgstr "Descrición"
 msgid "Icon"
 msgstr "Icona"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "Emblemas"
 
@@ -96,7 +96,7 @@ msgid "Storage Access"
 msgstr "Acceso ao almacenamento"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "Accesíbel"
 
@@ -569,7 +569,7 @@ msgstr "Descrición do tipo"
 msgid "Device Types"
 msgstr "Tipos de dispositivo"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "Tamaño"
 
@@ -583,27 +583,27 @@ msgstr "O sistema de ficheiros non responde"
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "O sistema de ficheiros montado en «%1» non responde"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "Espazo libre"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "Texto do espazo libre"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 msgid "Size Text"
 msgstr "Texto do tamaño"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "Unidade de temperatura"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "En uso"
 

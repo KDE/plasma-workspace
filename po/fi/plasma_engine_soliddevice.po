@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2021-08-28 11:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "Kuvaus"
 msgid "Icon"
 msgstr "Kuvake"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "Tunnuskuvat"
 
@@ -98,7 +98,7 @@ msgid "Storage Access"
 msgstr "Tallennushaku"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "Helppopääsyinen"
 
@@ -572,7 +572,7 @@ msgstr "Tyypin kuvaus"
 msgid "Device Types"
 msgstr "Laitetyypit"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "Koko"
 
@@ -586,29 +586,29 @@ msgstr "Tiedostojärjestelmä ei vastaa"
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "Kohtaan ”%1” liitetty tiedostojärjestelmä ei vastaa"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "Vapaa tila"
 
 # Vapaa tila -arvo tekstiksi muotoiltuna. Konteksti tarkistettu lähdekoodista
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "Vapaa tila tekstinä"
 
 # *** TARKISTA: id epäselvä
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 msgid "Size Text"
 msgstr "Tekstin koko"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "Lämpötila"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "Lämpötilayksikkö"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "Käytössä"
 

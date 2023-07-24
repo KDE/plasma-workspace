@@ -206,7 +206,7 @@ msgstr "색상"
 #: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
-msgstr "프로그램 스타일"
+msgstr "앱 스타일"
 
 #: ui/MoreOptions.qml:60
 #, fuzzy, kde-format

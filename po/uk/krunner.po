@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2023-07-19 08:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,40 +30,51 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: main.cpp:75 view.cpp:47
+#: main.cpp:77 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Run Command interface"
 msgstr "Інтерфейс запуску команд"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Використати вміст буфера обміну як запит до KRunner"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Запустити KRunner у фоновому режимі, не показувати вікно."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Замінити наявний екземпляр"
 
-#: main.cpp:84
+#: main.cpp:86
 #, kde-format
-msgid "Only query this specific runner"
-msgstr "Опитати лише цей засіб запуску"
+msgid "Show only results from the given plugin"
+msgstr ""
 
-#: main.cpp:90
+#: main.cpp:87
+#, kde-format
+msgid "List available plugins"
+msgstr ""
+
+#: main.cpp:94
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Запит для виконання, використовується, лише якщо не вказано -c"
+
+#: main.cpp:103
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr ""
 
 #: qml/RunCommand.qml:94
 #, kde-format
@@ -82,8 +93,8 @@ msgstr "Налаштувати KRunner…"
 
 #: qml/RunCommand.qml:111
 #, kde-format
-msgid "Querying runner %1 in single runner mode"
-msgstr "Опитування засобу запуску %1 у режимі одного засобу запуску"
+msgid "Showing only results from %1"
+msgstr ""
 
 #: qml/RunCommand.qml:125
 #, kde-format
@@ -126,6 +137,12 @@ msgstr "Нещодавні запити"
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"
+
+#~ msgid "Only query this specific runner"
+#~ msgstr "Опитати лише цей засіб запуску"
+
+#~ msgid "Querying runner %1 in single runner mode"
+#~ msgstr "Опитування засобу запуску %1 у режимі одного засобу запуску"
 
 #~ msgid "in category recent queries"
 #~ msgstr "у категорії нещодавніх запитів"

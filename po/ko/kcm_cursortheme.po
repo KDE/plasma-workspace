@@ -173,7 +173,7 @@ msgstr "실행 피드백"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr "프로그램이 실행되는 중에 표시할 애니메이션을 설정합니다."
+msgstr "앱이 실행되는 중에 표시할 애니메이션을 설정합니다."
 
 #: ui/LaunchFeedbackDialog.qml:48
 #, kde-format

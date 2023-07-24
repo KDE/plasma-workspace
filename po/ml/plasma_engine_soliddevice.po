@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2021-03-08 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -38,7 +38,7 @@ msgstr "വിവരണം"
 msgid "Icon"
 msgstr "ചിഹ്നം"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "മുദ്രകള്‍"
 
@@ -94,7 +94,7 @@ msgid "Storage Access"
 msgstr "സൂക്ഷിപ്പിന്റെ അനുമതികള്‍"
 
 #: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "സാമീപിയ്ക്കാവുന്നതു്"
 
@@ -567,7 +567,7 @@ msgstr "വിവരണം ടൈപ്പുചെയ്യുക"
 msgid "Device Types"
 msgstr "ഉപകരണതരങ്ങള്‍"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "വലിപ്പം"
 
@@ -581,27 +581,27 @@ msgstr "ഫയൽസംവിധാനം പ്രതികരിക്കു�
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "'%1' ൽ ഘടിപ്പിച്ചിരിക്കുന്ന ഫയൽ സംവിധാനം പ്രതികരിക്കുന്നില്ല"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "സ്വതന്ത്രമായ സ്ഥലം"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "സ്വതന്ത്രസ്ഥല വാചകം"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 msgid "Size Text"
 msgstr "വലിപ്പ വാചകം"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "താപനില"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "താപനിലയുടേ യൂണിറ്റ്"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "ഉപയോഗത്തിലാണ്"
 

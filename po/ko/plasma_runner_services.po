@@ -28,7 +28,7 @@ msgstr "%1 - %2"
 #: servicerunner.cpp:422
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
-msgstr "이름이나 설명이 :q:와(과) 일치하는 프로그램을 찾습니다."
+msgstr "이름이나 설명이 :q:와(과) 일치하는 앱을 찾습니다."
 
 #~ msgid "System Information"
 #~ msgstr "시스템 정보"

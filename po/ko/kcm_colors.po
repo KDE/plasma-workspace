@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-01 02:07+0000\n"
-"PO-Revision-Date: 2023-02-28 23:29+0100\n"
+"PO-Revision-Date: 2023-07-23 21:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -141,7 +141,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
-msgstr "대화 상자를 지정한 창 핸들을 사용하는 프로그램에 연결하기"
+msgstr "대화 상자를 지정한 창 핸들을 사용하는 앱에 연결하기"
 
 #: editor/kcolorschemeeditor.cpp:53
 #, kde-format
@@ -424,7 +424,7 @@ msgstr "활성 제목 텍스트"
 #: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
-msgstr "초점 장식"
+msgstr "포커스 장식"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
@@ -1127,7 +1127,7 @@ msgstr ""
 #: editor/setpreview.ui:333
 #, kde-format
 msgid "Focus on Normal Background"
-msgstr "일반 배경에 맞은 초점"
+msgstr "일반 배경에 맞은 포커스"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)
@@ -1135,7 +1135,7 @@ msgstr "일반 배경에 맞은 초점"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "focus"
-msgstr "초점"
+msgstr "포커스"
 
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format

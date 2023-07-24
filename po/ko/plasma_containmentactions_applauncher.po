@@ -21,10 +21,10 @@ msgstr ""
 #: config.ui:17
 #, kde-format
 msgid "Show applications by name"
-msgstr "프로그램 이름순 정렬"
+msgstr "앱 이름순 정렬"
 
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
-msgstr "프로그램 실행기 플러그인 설정"
+msgstr "앱 실행기 플러그인 설정"

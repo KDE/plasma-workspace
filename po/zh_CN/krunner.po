@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2023-07-18 11:08\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
+"PO-Revision-Date: 2023-07-23 12:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -29,40 +29,51 @@ msgstr ""
 "kde-china@kde.org, EasternLi@kde.org, fusionfuture@kde.org, i@guoyunhe.me, "
 "tysontan@tysontan.com"
 
-#: main.cpp:75 view.cpp:47
+#: main.cpp:77 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Run Command interface"
 msgstr "运行命令界面"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "使用剪贴板内容作为 KRunner 查询条件"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "启动 KRunner 到后台，不显示界面。"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "替换已有实例"
 
-#: main.cpp:84
+#: main.cpp:86
 #, kde-format
-msgid "Only query this specific runner"
+msgid "Show only results from the given plugin"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:87
+#, kde-format
+msgid "List available plugins"
+msgstr ""
+
+#: main.cpp:94
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "要运行的查询，只在未提供 -c 参数时使用"
+
+#: main.cpp:103
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr ""
 
 #: qml/RunCommand.qml:94
 #, kde-format
@@ -81,7 +92,7 @@ msgstr "配置 KRunner…"
 
 #: qml/RunCommand.qml:111
 #, kde-format
-msgid "Querying runner %1 in single runner mode"
+msgid "Showing only results from %1"
 msgstr ""
 
 #: qml/RunCommand.qml:125
@@ -125,3 +136,9 @@ msgstr "最近查询"
 #, kde-format
 msgid "Remove"
 msgstr "移除"
+
+#~ msgid "Only query this specific runner"
+#~ msgstr "只查询这个运行程序"
+
+#~ msgid "Querying runner %1 in single runner mode"
+#~ msgstr "正在单运行程序模式下查询运行程序 %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2023-07-19 10:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,40 +27,51 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: main.cpp:75 view.cpp:47
+#: main.cpp:77 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Run Command interface"
 msgstr "Commando-interface uitvoeren"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "De inhoud van het klembord gebruiken als zoektekst voor KRunner"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "KRunner in de achtergrond starten, het niet tonen."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Een bestaand exemplaar vervangen"
 
-#: main.cpp:84
+#: main.cpp:86
 #, kde-format
-msgid "Only query this specific runner"
-msgstr "Alleen deze specifieke \"runner\" afvragen"
+msgid "Show only results from the given plugin"
+msgstr ""
 
-#: main.cpp:90
+#: main.cpp:87
+#, kde-format
+msgid "List available plugins"
+msgstr ""
+
+#: main.cpp:94
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "De uit te voeren zoektekst, alleen gebruikt als -c niet is geleverd"
+
+#: main.cpp:103
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr ""
 
 #: qml/RunCommand.qml:94
 #, kde-format
@@ -79,8 +90,8 @@ msgstr "KRunner configureren…"
 
 #: qml/RunCommand.qml:111
 #, kde-format
-msgid "Querying runner %1 in single runner mode"
-msgstr "Runner %1 afvragen in modus enkele runner"
+msgid "Showing only results from %1"
+msgstr ""
 
 #: qml/RunCommand.qml:125
 #, kde-format
@@ -123,6 +134,12 @@ msgstr "Recente queries"
 #, kde-format
 msgid "Remove"
 msgstr "Verwijderen"
+
+#~ msgid "Only query this specific runner"
+#~ msgstr "Alleen deze specifieke \"runner\" afvragen"
+
+#~ msgid "Querying runner %1 in single runner mode"
+#~ msgstr "Runner %1 afvragen in modus enkele runner"
 
 #~ msgid "in category recent queries"
 #~ msgstr "Recente queries in categorie"

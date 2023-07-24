@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2022-09-24 15:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,40 +27,51 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: main.cpp:75 view.cpp:47
+#: main.cpp:77 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "Kör program"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Run Command interface"
 msgstr "Gränssnitt för att köra kommandon"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Använd klippbordets innehåll som fråga till Kör program"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Starta Kör program i bakgrunden, visa det inte."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Ersätt en befintlig instans"
 
-#: main.cpp:84
+#: main.cpp:86
 #, kde-format
-msgid "Only query this specific runner"
+msgid "Show only results from the given plugin"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:87
+#, kde-format
+msgid "List available plugins"
+msgstr ""
+
+#: main.cpp:94
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Frågan att besvara, bara använd om -c inte anges"
+
+#: main.cpp:103
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr ""
 
 #: qml/RunCommand.qml:94
 #, kde-format
@@ -79,7 +90,7 @@ msgstr "Anpassa Kör program..."
 
 #: qml/RunCommand.qml:111
 #, kde-format
-msgid "Querying runner %1 in single runner mode"
+msgid "Showing only results from %1"
 msgstr ""
 
 #: qml/RunCommand.qml:125

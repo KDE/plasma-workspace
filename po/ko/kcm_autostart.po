@@ -70,7 +70,7 @@ msgstr "삭제"
 #: ui/main.qml:112
 #, kde-format
 msgid "Applications"
-msgstr "프로그램"
+msgstr "앱"
 
 #: ui/main.qml:115
 #, kde-format
@@ -116,7 +116,7 @@ msgstr "추가…"
 #: ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
-msgstr "프로그램 추가…"
+msgstr "앱 추가…"
 
 #: ui/main.qml:203
 #, kde-format

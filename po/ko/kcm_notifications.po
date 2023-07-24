@@ -30,7 +30,7 @@ msgstr "알림 설정"
 #: sourcesmodel.cpp:364
 #, kde-format
 msgid "Other Applications"
-msgstr "다른 프로그램"
+msgstr "다른 앱"
 
 #: ui/ApplicationConfiguration.qml:62
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "이벤트 설정…"
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
-msgstr "이 프로그램은 이벤트별 알림 설정을 지원하지 않습니다."
+msgstr "이 앱은 이벤트별 알림 설정을 지원하지 않습니다."
 
 #: ui/main.qml:41
 #, kde-format
@@ -195,7 +195,7 @@ msgstr "추가 피드백"
 #: ui/main.qml:250
 #, kde-format
 msgid "Application progress:"
-msgstr "프로그램 진행 상황:"
+msgstr "앱 진행 상황:"
 
 #: ui/main.qml:251 ui/main.qml:291
 #, kde-format
@@ -223,7 +223,7 @@ msgstr "알림 배지:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "프로그램별 설정"
+msgstr "앱별 설정"
 
 #: ui/main.qml:307
 #, kde-format
@@ -238,12 +238,12 @@ msgstr "팝업 위치"
 #: ui/SourcesPage.qml:18
 #, kde-format
 msgid "Application Settings"
-msgstr "프로그램 설정"
+msgstr "앱 설정"
 
 #: ui/SourcesPage.qml:92
 #, kde-format
 msgid "Applications"
-msgstr "프로그램"
+msgstr "앱"
 
 #: ui/SourcesPage.qml:93
 #, kde-format
@@ -253,14 +253,14 @@ msgstr "시스템 서비스"
 #: ui/SourcesPage.qml:131
 #, kde-format
 msgid "No application or event matches your search term."
-msgstr "검색어와 일치하는 프로그램이나 이벤트가 없습니다."
+msgstr "검색어와 일치하는 앱이나 이벤트가 없습니다."
 
 #: ui/SourcesPage.qml:151
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
-msgstr "알림 설정과 행동을 설정할 프로그램을 선택하십시오."
+msgstr "알림 설정과 행동을 설정할 앱을 선택하십시오."
 
 #~ msgid "This module lets you manage application and system notifications."
 #~ msgstr "이 모듈에서 프로그램 및 시스템 알림을 설정할 수 있습니다."

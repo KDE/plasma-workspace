@@ -140,8 +140,7 @@ msgstr "전역 크기 조정…"
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
-msgstr ""
-"앤티에일리어싱 및 DPI 같은 일부 설정은 새로 시작한 프로그램에만 적용됩니다."
+msgstr "앤티에일리어싱 및 DPI 같은 일부 설정은 새로 시작한 앱에만 적용됩니다."
 
 #: ui/main.qml:48
 #, kde-format
@@ -158,8 +157,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
-"소수점 단위 글꼴 크기는 일부 프로그램에서 레이아웃 문제를 발생시킬 수 있습니"
-"다. 정수 크기만을 사용하기를 권장합니다."
+"소수점 단위 글꼴 크기는 일부 앱에서 레이아웃 문제를 발생시킬 수 있습니다. 정"
+"수 크기만을 사용하기를 권장합니다."
 
 #: ui/main.qml:91
 #, kde-format

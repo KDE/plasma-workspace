@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-24 09:34+0000\n"
 "PO-Revision-Date: 2023-02-19 18:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -177,17 +177,17 @@ msgstr ""
 "Файл, который был указан в качестве фона рабочего стола, не существует или "
 "не не может быть использован в качестве обоев рабочего стола: %1"
 
-#: plugin/imagebackend.cpp:243
+#: plugin/imagebackend.cpp:237
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог с изображениями для слайд-шоу в качестве обоев"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:347
 #, kde-format
 msgid "Open Image"
 msgstr "Открытие изображения"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:347
 #, kde-format
 msgid "Image Files"
 msgstr "Файлы изображений"
