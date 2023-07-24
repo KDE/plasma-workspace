@@ -180,7 +180,7 @@ msgstr "자동 절전 모드 진입과 화면 잠금이 비활성화됨"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "프로그램 %1개에서 성능 모드를 활성화하기를 요청함"
+msgstr[0] "앱 %1개에서 성능 모드를 활성화하기를 요청함"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "시스템이 성능 모드 사용 중"
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "프로그램 %1개에서 절전 모드를 활성화하기를 요청함"
+msgstr[0] "앱 %1개에서 절전 모드를 활성화하기를 요청함"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
@@ -258,7 +258,7 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "프로그램 %1개에서 절전 모드 진입과 화면 잠금을 차단함:"
+msgstr[0] "앱 %1개에서 절전 모드 진입과 화면 잠금을 차단함:"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
@@ -345,7 +345,7 @@ msgstr "성능이 저하될 수 있습니다."
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
-msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
+msgstr[0] "앱 %1개에서 %2을(를) 활성화하기를 요청함:"
 
 #: package/contents/ui/PowerProfileItem.qml:241
 #, kde-format

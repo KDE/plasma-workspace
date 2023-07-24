@@ -93,4 +93,4 @@ msgstr "%2: %1"
 #: jobsmodel_p.cpp:477
 #, kde-format
 msgid "Application closed unexpectedly."
-msgstr "프로그램이 예상하지 못하게 종료되었습니다."
+msgstr "앱이 예상하지 못하게 종료되었습니다."

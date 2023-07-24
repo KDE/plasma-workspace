@@ -31,7 +31,7 @@ msgstr "항목"
 #: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
-msgstr "프로그램 상태"
+msgstr "앱 상태"
 
 #: package/contents/ui/ConfigEntries.qml:36
 #, kde-format

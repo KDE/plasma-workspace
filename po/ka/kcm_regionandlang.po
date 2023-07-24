@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 04:26+0000\n"
+"POT-Creation-Date: 2023-07-24 10:11+0000\n"
 "PO-Revision-Date: 2023-01-31 06:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -319,14 +319,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:163
+#: localelistmodel.cpp:164
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "სისტემის ნაგულიხმები C"
 
-#: localelistmodel.cpp:166
+#: localelistmodel.cpp:167
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
@@ -387,13 +387,13 @@ msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "ტელეფონის ნომრები"
 
-#: optionsmodel.cpp:114 optionsmodel.cpp:295
+#: optionsmodel.cpp:114 optionsmodel.cpp:304
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "სისტემის ნაგულისხმები"
 
-#: optionsmodel.cpp:297
+#: optionsmodel.cpp:306
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"

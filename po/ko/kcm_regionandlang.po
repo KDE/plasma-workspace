@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 04:26+0000\n"
+"POT-Creation-Date: 2023-07-24 10:11+0000\n"
 "PO-Revision-Date: 2023-02-28 23:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -318,14 +318,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1(%2)"
 
-#: localelistmodel.cpp:163
+#: localelistmodel.cpp:164
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "시스템 기본값 C"
 
-#: localelistmodel.cpp:166
+#: localelistmodel.cpp:167
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
@@ -386,13 +386,13 @@ msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "전화번호"
 
-#: optionsmodel.cpp:114 optionsmodel.cpp:295
+#: optionsmodel.cpp:114 optionsmodel.cpp:304
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "시스템 기본값"
 
-#: optionsmodel.cpp:297
+#: optionsmodel.cpp:306
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
@@ -411,8 +411,8 @@ msgid ""
 "in some applications. If you would like your system to use American English, "
 "remove all other languages."
 msgstr ""
-"다른 언어 위에 미국 영어를 두면 일부 프로그램에서 의도하지 않은 행동을 할 수 "
-"있습니다. 미국 영어로 시스템을 사용하려면 다른 모든 언어를 삭제하십시오."
+"다른 언어 위에 미국 영어를 두면 일부 앱에서 의도하지 않은 행동을 할 수 있습니"
+"다. 미국 영어로 시스템을 사용하려면 다른 모든 언어를 삭제하십시오."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -423,7 +423,7 @@ msgstr "\"%1\" 언어는 지원하지 않음"
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr "프로그램에서 사용할 순서대로 언어를 추가하십시오."
+msgstr "앱에서 사용할 순서대로 언어를 추가하십시오."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:83
 #, kde-format

@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-18 10:25+0300\n"
+"PO-Revision-Date: 2023-07-22 13:30+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -119,7 +119,7 @@ msgstr "Восстановить набор курсоров мыши"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr "Включить отклик запуска приложений"
+msgstr "Отклик запуска приложений"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format

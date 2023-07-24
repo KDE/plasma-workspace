@@ -55,7 +55,7 @@ msgstr "최근 파일 비우기"
 #: plugin/actionlist.cpp:395
 #, kde-format
 msgid "Edit Application…"
-msgstr "프로그램 편집…"
+msgstr "앱 편집…"
 
 #: plugin/actionlist.cpp:429
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "추가 기능 삭제 및 관리…"
 #: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
-msgstr "프로그램 숨기기"
+msgstr "앱 숨기기"
 
 #: plugin/appentry.cpp:367
 #, kde-format
@@ -85,17 +85,17 @@ msgstr "%1 (%2)"
 #: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
-msgstr "프로그램"
+msgstr "앱"
 
 #: plugin/appsmodel.cpp:151
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "이 하위 메뉴의 프로그램 숨김 해제"
+msgstr "이 하위 메뉴의 앱 숨김 해제"
 
 #: plugin/appsmodel.cpp:160
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "'%1'의 프로그램 숨김 해제"
+msgstr "'%1'의 앱 숨김 해제"
 
 #: plugin/computermodel.cpp:92
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "파일"
 #: plugin/recentusagemodel.cpp:238
 #, kde-format
 msgid "Forget Application"
-msgstr "프로그램 잊기"
+msgstr "앱 잊기"
 
 #: plugin/recentusagemodel.cpp:332
 #, kde-format
@@ -172,7 +172,7 @@ msgstr "모두 잊기"
 #: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
-msgstr "모든 프로그램 잊기"
+msgstr "모든 앱 잊기"
 
 #: plugin/recentusagemodel.cpp:477
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "%1 숨기기"
 #: plugin/rootmodel.cpp:398
 #, kde-format
 msgid "All Applications"
-msgstr "모든 프로그램"
+msgstr "모든 앱"
 
 #: plugin/rootmodel.cpp:410
 #, kde-format
@@ -207,12 +207,12 @@ msgstr "자주 사용한 파일"
 #: plugin/rootmodel.cpp:438
 #, kde-format
 msgid "Recent Applications"
-msgstr "최근 프로그램"
+msgstr "최근 앱"
 
 #: plugin/rootmodel.cpp:438
 #, kde-format
 msgid "Often Used Applications"
-msgstr "자주 사용한 프로그램"
+msgstr "자주 사용한 앱"
 
 #: plugin/rootmodel.cpp:453
 #, kde-format

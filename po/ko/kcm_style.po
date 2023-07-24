@@ -81,7 +81,7 @@ msgstr "보조 도구 모음 텍스트:"
 #: package/contents/ui/GtkStylePage.qml:18
 #, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "그놈/GTK 프로그램 스타일"
+msgstr "그놈/GTK 앱 스타일"
 
 #: package/contents/ui/GtkStylePage.qml:44
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "파일에서 설치…"
 #: package/contents/ui/GtkStylePage.qml:93
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "새 그놈/GTK 프로그램 스타일 가져오기…"
+msgstr "새 그놈/GTK 앱 스타일 가져오기…"
 
 #: package/contents/ui/GtkStylePage.qml:109
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "아이콘과 도구 모음 설정"
 #: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "그놈/GTK 프로그램 스타일 설정…"
+msgstr "그놈/GTK 앱 스타일 설정…"
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "탭 2"
 #: stylesettings.kcfg:9
 #, kde-format
 msgid "Application style"
-msgstr "프로그램 스타일"
+msgstr "앱 스타일"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13

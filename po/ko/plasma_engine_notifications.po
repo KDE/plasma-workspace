@@ -29,4 +29,4 @@ msgstr "잘못된 대상: %1"
 #: notificationsengine.cpp:88
 #, kde-format
 msgid "Unknown Application"
-msgstr "알 수 없는 프로그램"
+msgstr "알 수 없는 앱"

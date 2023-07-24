@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-22 02:41+0000\n"
-"PO-Revision-Date: 2023-02-28 23:56+0100\n"
+"PO-Revision-Date: 2023-07-23 21:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -62,8 +62,7 @@ msgstr "지정한 셸 플러그인 강제로 불러오기"
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
 "to be specified"
-msgstr ""
-"plasmashell을 단독 프로그램으로 불러오며, shell-plugin 옵션을 지정해야 함"
+msgstr "plasmashell을 단독 앱으로 불러오며, shell-plugin 옵션을 지정해야 함"
 
 #: main.cpp:113
 #, kde-format
@@ -245,7 +244,7 @@ msgstr "바탕 화면과 패널 관리..."
 #: shellcorona.cpp:279
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "패널간 키보드 초점 이동"
+msgstr "패널간 키보드 포커스 이동"
 
 #: shellcorona.cpp:1911
 #, kde-format

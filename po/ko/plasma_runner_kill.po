@@ -35,7 +35,7 @@ msgstr "죽이기"
 #: killrunner.cpp:57
 #, kde-format
 msgid "Terminate running applications whose names match the query."
-msgstr "이름이 질의와 일치하는 프로그램을 죽입니다."
+msgstr "이름이 질의와 일치하는 앱을 죽입니다."
 
 #: killrunner.cpp:120
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "없음"
 #: killrunner_config.ui:30
 #, kde-format
 msgid "Kill Applications Config"
-msgstr "프로그램 죽이기 설정"
+msgstr "앱 죽이기 설정"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
 #: killrunner_config.ui:39

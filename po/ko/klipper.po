@@ -266,9 +266,9 @@ msgid ""
 msgstr ""
 "동작 팝업이 활성화되었다고 해도 다음 창에서는 표시하지 않습니다. 예를 들어 "
 "웹 브라우저에서 주소 표시줄에 URL을 입력하는 동안 URL을 강조할 수 있으며, 매"
-"번 키를 입력할 때마다 팝업이 표시될 수도 있습니다.<nl/><nl/>특정 프로그램을 "
-"사용하는 중에 동작 메뉴가 의도하지 않게 표시되었다면 이 목록에 추가하십시오. "
-"<link>입력할 이름을 찾는 방법</link>."
+"번 키를 입력할 때마다 팝업이 표시될 수도 있습니다.<nl/><nl/>특정 앱을 사용하"
+"는 중에 동작 메뉴가 의도하지 않게 표시되었다면 이 목록에 추가하십시오. <link>"
+"입력할 이름을 찾는 방법</link>."
 
 #: configdialog.cpp:703
 #, kde-kuit-format
@@ -646,7 +646,7 @@ msgstr "클립보드가 비는 것 방지"
 msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
-msgstr "프로그램이 끝날 때에도 클립보드가 비는 것을 방지합니다."
+msgstr "앱이 끝날 때에도 클립보드가 비는 것을 방지합니다."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
@@ -814,7 +814,7 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 "파일 이름이나 URL을 선택했을 때 동작 팝업에 해당 MIME 형식을 처리할 수 있는 "
-"프로그램을 표시합니다."
+"앱을 표시합니다."
 
 #: klipperpopup.cpp:105
 #, kde-format

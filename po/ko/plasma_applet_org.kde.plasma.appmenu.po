@@ -25,12 +25,12 @@ msgstr "모양"
 #: package/contents/ui/configGeneral.qml:22
 #, kde-format
 msgid "Use single button for application menu"
-msgstr "프로그램 메뉴에 단추 한 개만 사용"
+msgstr "앱 메뉴에 단추 한 개만 사용"
 
 #: package/contents/ui/configGeneral.qml:28
 #, kde-format
 msgid "Show full application menu"
-msgstr "전체 프로그램 메뉴 표시"
+msgstr "전체 앱 메뉴 표시"
 
 #: package/contents/ui/MenuDelegate.qml:62
 #, kde-format

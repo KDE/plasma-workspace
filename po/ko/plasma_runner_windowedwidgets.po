@@ -25,9 +25,9 @@ msgstr "이름이나 설명이 :q:인 Plasma 위젯을 찾습니다"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "mobile applications"
-msgstr "모바일 프로그램"
+msgstr "모바일 앱"
 
 #: windowedwidgetsrunner.cpp:32
 #, kde-format
 msgid "list all Plasma widgets that can run as standalone applications"
-msgstr "프로그램으로 실행될 수 있는 Plasma 위젯을 찾습니다"
+msgstr "앱으로 실행될 수 있는 Plasma 위젯을 찾습니다"
