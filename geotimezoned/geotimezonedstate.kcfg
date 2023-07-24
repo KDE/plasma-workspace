@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2024 Kai Uwe Broulik <kde@broulik.de>
+SPDX-FileCopyrightText: CC0-1.0
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="geotimezonedstaterc" stateConfig="true"/>
+  <group name="Network">
+    <entry name="lastConnectionUuid" key="LastConnectionUuid" type="String">
+      <label>UUID of last used network connection</label>
+      <default></default>
+    </entry>
+  </group>
+</kcfg>
