@@ -95,7 +95,9 @@ void MediaProxy::setSource(const QString &url)
         m_dirWatch->removeFile(m_source.toLocalFile());
     }
     m_source = sanitizedUrl;
-    m_dirWatch->addFile(m_source.toLocalFile());
+    if (QFileInfo(m_source.toLocalFile()).isFile()) {
+        m_dirWatch->addFile(m_source.toLocalFile());
+    }
     Q_EMIT sourceChanged();
 
     determineProviderType();
