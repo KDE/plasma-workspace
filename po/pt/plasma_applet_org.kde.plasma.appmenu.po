@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2022-07-26 09:27+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Usar um único botão para o menu da aplicação"
 msgid "Show full application menu"
 msgstr "Mostrar o menu da aplicação completo"
 
-#: package/contents/ui/MenuDelegate.qml:63
+#: package/contents/ui/MenuDelegate.qml:62
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2021-06-16 00:31+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -180,19 +180,19 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Šiuo metu pranešimus teikia \"%1 %2\""
 
-#: package/contents/ui/JobDetails.qml:35
+#: package/contents/ui/JobDetails.qml:34
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/JobDetails.qml:106
+#: package/contents/ui/JobDetails.qml:105
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 iš %1"
 
-#: package/contents/ui/JobDetails.qml:110
+#: package/contents/ui/JobDetails.qml:109
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -202,7 +202,7 @@ msgstr[1] "%2 iš %1 failų"
 msgstr[2] "%2 iš %1 failų"
 msgstr[3] "%2 iš %1 failo"
 
-#: package/contents/ui/JobDetails.qml:113
+#: package/contents/ui/JobDetails.qml:112
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -212,7 +212,7 @@ msgstr[1] "%2 iš %1 aplankų"
 msgstr[2] "%2 iš %1 aplankų"
 msgstr[3] "%2 iš %1 aplanko"
 
-#: package/contents/ui/JobDetails.qml:116
+#: package/contents/ui/JobDetails.qml:115
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -222,7 +222,7 @@ msgstr[1] "%2 iš %1 elementų"
 msgstr[2] "%2 iš %1 elementų"
 msgstr[3] "%2 iš %1 elemento"
 
-#: package/contents/ui/JobDetails.qml:124
+#: package/contents/ui/JobDetails.qml:123
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -231,7 +231,7 @@ msgstr[1] "%1 failai"
 msgstr[2] "%1 failų"
 msgstr[3] "%1 failas"
 
-#: package/contents/ui/JobDetails.qml:126
+#: package/contents/ui/JobDetails.qml:125
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -240,7 +240,7 @@ msgstr[1] "%1 aplankai"
 msgstr[2] "%1 aplankų"
 msgstr[3] "%1 aplankas"
 
-#: package/contents/ui/JobDetails.qml:128
+#: package/contents/ui/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -249,7 +249,7 @@ msgstr[1] "%1 elementai"
 msgstr[2] "%1 elementų"
 msgstr[3] "%1 elementas"
 
-#: package/contents/ui/JobDetails.qml:145
+#: package/contents/ui/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -462,13 +462,13 @@ msgctxt "Reply to message"
 msgid "Reply"
 msgstr "Atsakyti"
 
-#: package/contents/ui/NotificationReplyField.qml:37
+#: package/contents/ui/NotificationReplyField.qml:36
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Rašykite atsakymą…"
 
-#: package/contents/ui/NotificationReplyField.qml:57
+#: package/contents/ui/NotificationReplyField.qml:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

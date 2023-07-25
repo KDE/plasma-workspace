@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2019-01-04 11:09+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Izmantot vienu pogu programmu izvēlnei"
 msgid "Show full application menu"
 msgstr "Rādīt visu programmu izvēlni"
 
-#: package/contents/ui/MenuDelegate.qml:63
+#: package/contents/ui/MenuDelegate.qml:62
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"

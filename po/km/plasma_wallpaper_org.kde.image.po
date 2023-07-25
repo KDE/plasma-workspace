@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 09:34+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2010-11-17 10:34+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -103,18 +103,18 @@ msgstr "បើក​រូបភាព​ផ្ទាំង​រូបភាព
 msgid "Next Wallpaper Image"
 msgstr "ផ្ទាំង​រូបភាព​បន្ទាប់​"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:37
 #, fuzzy, kde-format
 #| msgid "&System wallpapers:"
 msgid "Restore wallpaper"
 msgstr "ផ្ទាំង​រូបភាព​ប្រព័ន្ធ ៖"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:42
 #, fuzzy, kde-format
 #| msgid "&System wallpapers:"
 msgid "Remove Wallpaper"

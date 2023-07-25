@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2022-09-24 15:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -175,19 +175,19 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Underrättelser tillhandahålls för närvarande av '%1 %2'"
 
-#: package/contents/ui/JobDetails.qml:35
+#: package/contents/ui/JobDetails.qml:34
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/JobDetails.qml:106
+#: package/contents/ui/JobDetails.qml:105
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 av %1"
 
-#: package/contents/ui/JobDetails.qml:110
+#: package/contents/ui/JobDetails.qml:109
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -195,7 +195,7 @@ msgid_plural "%2 of %1 files"
 msgstr[0] "%2 av %1 fil"
 msgstr[1] "%2 av %1 filer"
 
-#: package/contents/ui/JobDetails.qml:113
+#: package/contents/ui/JobDetails.qml:112
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -203,7 +203,7 @@ msgid_plural "%2 of %1 folders"
 msgstr[0] "%1 av %1 katalog"
 msgstr[1] "%2 av %1 kataloger"
 
-#: package/contents/ui/JobDetails.qml:116
+#: package/contents/ui/JobDetails.qml:115
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -211,28 +211,28 @@ msgid_plural "%2 of %1 items"
 msgstr[0] "%2 av %1 objekt"
 msgstr[1] "%2 av %1 objekt"
 
-#: package/contents/ui/JobDetails.qml:124
+#: package/contents/ui/JobDetails.qml:123
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 fil"
 msgstr[1] "%1 filer"
 
-#: package/contents/ui/JobDetails.qml:126
+#: package/contents/ui/JobDetails.qml:125
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 katalog"
 msgstr[1] "%1 kataloger"
 
-#: package/contents/ui/JobDetails.qml:128
+#: package/contents/ui/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 objekt"
 msgstr[1] "%1 objekt"
 
-#: package/contents/ui/JobDetails.qml:145
+#: package/contents/ui/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -425,13 +425,13 @@ msgctxt "Reply to message"
 msgid "Reply"
 msgstr "Svara"
 
-#: package/contents/ui/NotificationReplyField.qml:37
+#: package/contents/ui/NotificationReplyField.qml:36
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Skriv ett svar…"
 
-#: package/contents/ui/NotificationReplyField.qml:57
+#: package/contents/ui/NotificationReplyField.qml:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

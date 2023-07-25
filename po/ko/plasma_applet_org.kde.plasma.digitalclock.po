@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2023-02-28 23:48+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,45 +28,45 @@ msgid "Calendar"
 msgstr "달력"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:426
+#: package/contents/ui/CalendarView.qml:425
 #, kde-format
 msgid "Time Zones"
 msgstr "시간대"
 
-#: package/contents/ui/CalendarView.qml:141
+#: package/contents/ui/CalendarView.qml:140
 #, kde-format
 msgid "Events"
 msgstr "이벤트"
 
-#: package/contents/ui/CalendarView.qml:149
+#: package/contents/ui/CalendarView.qml:148
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "추가…"
 
-#: package/contents/ui/CalendarView.qml:153
+#: package/contents/ui/CalendarView.qml:152
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "새 행사 추가"
 
-#: package/contents/ui/CalendarView.qml:385
+#: package/contents/ui/CalendarView.qml:384
 #, kde-format
 msgid "No events for today"
 msgstr "오늘 이벤트 없음"
 
-#: package/contents/ui/CalendarView.qml:386
+#: package/contents/ui/CalendarView.qml:385
 #, kde-format
 msgid "No events for this day"
 msgstr "해당하는 날짜의 이벤트 없음"
 
-#: package/contents/ui/CalendarView.qml:435
+#: package/contents/ui/CalendarView.qml:434
 #, kde-format
 msgid "Switch…"
 msgstr "바꾸기…"
 
-#: package/contents/ui/CalendarView.qml:436
-#: package/contents/ui/CalendarView.qml:439
+#: package/contents/ui/CalendarView.qml:435
+#: package/contents/ui/CalendarView.qml:438
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "다른 시간대로 전환"
@@ -387,13 +387,13 @@ msgstr "날짜와 시간 조정…"
 msgid "Set Time Format…"
 msgstr "시간 형식 설정…"
 
-#: package/contents/ui/Tooltip.qml:32
+#: package/contents/ui/Tooltip.qml:31
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "오늘: %1"
 
-#: package/contents/ui/Tooltip.qml:134
+#: package/contents/ui/Tooltip.qml:133
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

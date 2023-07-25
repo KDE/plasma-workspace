@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2023-06-27 15:58+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -53,81 +53,81 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Muut"
 
-#: calendar/qml/DayDelegate.qml:44
+#: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 tapahtuma"
 msgstr[1] "%1 tapahtumaa"
 
-#: calendar/qml/DayDelegate.qml:44
+#: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "No events"
 msgstr "Ei tapahtumia"
 
-#: calendar/qml/MonthViewHeader.qml:68
+#: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
 msgstr "Päivät"
 
-#: calendar/qml/MonthViewHeader.qml:120
+#: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
 msgstr "Kuukaudet"
 
-#: calendar/qml/MonthViewHeader.qml:126
+#: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
 msgstr "Vuodet"
 
-#: calendar/qml/MonthViewHeader.qml:164
+#: calendar/qml/MonthViewHeader.qml:163
 #, kde-format
 msgid "Previous Month"
 msgstr "Edellinen kuukausi"
 
-#: calendar/qml/MonthViewHeader.qml:166
+#: calendar/qml/MonthViewHeader.qml:165
 #, kde-format
 msgid "Previous Year"
 msgstr "Edellinen vuosi"
 
-#: calendar/qml/MonthViewHeader.qml:168
+#: calendar/qml/MonthViewHeader.qml:167
 #, kde-format
 msgid "Previous Decade"
 msgstr "Edellinen vuosikymmen"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Tänään"
 
-#: calendar/qml/MonthViewHeader.qml:186
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Palauta kalenteri tänäiseen"
 
-#: calendar/qml/MonthViewHeader.qml:197
+#: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
 msgstr "Seuraava kuukausi"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
 msgstr "Seuraava vuosi"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
 msgstr "Seuraava vuosikymmen"
 
-#: calendar/qml/MonthViewHeader.qml:257
+#: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
 msgstr "Pidä avoinna"

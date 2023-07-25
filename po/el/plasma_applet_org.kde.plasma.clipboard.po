@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2015-03-05 15:28+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -17,56 +17,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Επιστροφή στο πρόχειρο"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:53
 #, kde-format
 msgid "QR Code"
 msgstr "Κώδικας QR"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "Data Matrix"
 msgstr "Πίνακας δεδομένων"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "Code 39"
 msgstr "Κωδικοποίηση 39"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 93"
 msgstr "Κωδικοποίηση 93"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, fuzzy, kde-format
 #| msgid "Code 39"
 msgid "Code 128"
 msgstr "Κωδικοποίηση 39"
 
-#: contents/ui/BarcodePage.qml:83
+#: contents/ui/BarcodePage.qml:82
 #, fuzzy, kde-format
 #| msgid "Change the barcode type"
 msgid "Change the QR code type"
 msgstr "Αλλαγή τύπου γραμμωτού κώδικα"
 
-#: contents/ui/BarcodePage.qml:138
+#: contents/ui/BarcodePage.qml:137
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "Αποτυχία δημιουργίας γραμμωτού κώδικα"
 
-#: contents/ui/BarcodePage.qml:149
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Περιεχόμενα προχείρου"
 
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:121
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"
@@ -115,24 +115,24 @@ msgstr "Επεξεργασία περιεχομένων"
 msgid "Remove from history"
 msgstr "Αφαίρεση από το ιστορικό"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/Menu.qml:122
+#: contents/ui/Menu.qml:121
 #, kde-format
 msgid "No matches"
 msgstr ""
 
-#: contents/ui/UrlItemDelegate.qml:107
+#: contents/ui/UrlItemDelegate.qml:106
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

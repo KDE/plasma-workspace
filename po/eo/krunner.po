@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 09:34+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2023-07-21 18:55+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -76,64 +76,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr ""
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure"
 msgstr "Agordi"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Agordi KRunner-Konduton"
 
-#: qml/RunCommand.qml:98
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Agordi KRunner…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
 msgstr ""
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:124
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Serĉi '%1'…"
 
-#: qml/RunCommand.qml:126
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Serĉi…"
 
-#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
+#: qml/RunCommand.qml:299 qml/RunCommand.qml:300 qml/RunCommand.qml:302
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Montri Helpon pri Uzado"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:310
 #, kde-format
 msgid "Pin"
 msgstr "Pinglo"
 
-#: qml/RunCommand.qml:312
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin Search"
 msgstr "Pin Serĉo"
 
-#: qml/RunCommand.qml:314
+#: qml/RunCommand.qml:313
 #, kde-format
 msgid "Keep Open"
 msgstr "Teni Malfermita"
 
-#: qml/RunCommand.qml:386 qml/RunCommand.qml:391
+#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
 #, kde-format
 msgid "Recent Queries"
 msgstr "Lastatempaj Demandoj"
 
-#: qml/RunCommand.qml:389
+#: qml/RunCommand.qml:388
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"

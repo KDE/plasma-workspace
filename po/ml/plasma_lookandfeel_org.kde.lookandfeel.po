@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -13,111 +13,111 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: ../sddm-theme/KeyboardButton.qml:20
+#: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
 msgstr "കീബോർഡ് ലേ-ഔട്ട്:%1"
 
-#: ../sddm-theme/Login.qml:86
+#: ../sddm-theme/Login.qml:85
 #, kde-format
 msgid "Username"
 msgstr "ഉപയോക്തൃനാമം"
 
-#: ../sddm-theme/Login.qml:103 contents/lockscreen/MainBlock.qml:62
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
 #, kde-format
 msgid "Password"
 msgstr "രഹസ്യവാക്ക്"
 
-#: ../sddm-theme/Login.qml:145 ../sddm-theme/Login.qml:151
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
 #, kde-format
 msgid "Log In"
 msgstr "അകത്ത് കടക്കുക "
 
-#: ../sddm-theme/Main.qml:203 contents/lockscreen/LockScreenUi.qml:305
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:304
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "ക്യാപ്‌സ് ലോക്ക് ഓണാണ്"
 
-#: ../sddm-theme/Main.qml:215 ../sddm-theme/Main.qml:464
-#: contents/logout/Logout.qml:165
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: contents/logout/Logout.qml:164
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "സ്ലീപ്"
 
-#: ../sddm-theme/Main.qml:222 ../sddm-theme/Main.qml:471
-#: contents/logout/Logout.qml:183
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: contents/logout/Logout.qml:182
 #, kde-format
 msgid "Restart"
 msgstr "പുനരാരംഭിക്കുക"
 
-#: ../sddm-theme/Main.qml:229 ../sddm-theme/Main.qml:478
-#: contents/logout/Logout.qml:193
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: contents/logout/Logout.qml:192
 #, kde-format
 msgid "Shut Down"
 msgstr "ഷട്ട് ഡൌൺ"
 
-#: ../sddm-theme/Main.qml:236
+#: ../sddm-theme/Main.qml:235
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "മറ്റുള്ളവ…"
 
-#: ../sddm-theme/Main.qml:451
+#: ../sddm-theme/Main.qml:450
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "ഉപയോക്തൃനാമവും രഹസ്യവാക്കും ടൈപ്പുചെയ്യുക"
 
-#: ../sddm-theme/Main.qml:485
+#: ../sddm-theme/Main.qml:484
 #, kde-format
 msgid "List Users"
 msgstr "ഉപയോക്താക്കളെ പട്ടികപ്പെടുത്തുക"
 
-#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:580
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:579
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "വെർച്വൽ കീബോർഡ്"
 
-#: ../sddm-theme/Main.qml:598
+#: ../sddm-theme/Main.qml:597
 #, kde-format
 msgid "Login Failed"
 msgstr "അകത്ത്കടക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: ../sddm-theme/SessionButton.qml:19
+#: ../sddm-theme/SessionButton.qml:18
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "ഡെസ്ക്ടോപ്പ് സെഷൻ:%1"
 
-#: contents/components/Battery.qml:55
+#: contents/components/Battery.qml:54
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:56
+#: contents/components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
 msgstr "%1% ബാറ്ററി"
 
-#: contents/components/UserList.qml:72
+#: contents/components/UserList.qml:71
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "ഉപയോഗിക്കാത്ത"
 
-#: contents/components/UserList.qml:78
+#: contents/components/UserList.qml:77
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
-#: contents/components/UserList.qml:80
+#: contents/components/UserList.qml:79
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "TTY %1 ൽ (ഡിസ്പ്പ്ലെ  %2)"
 
-#: contents/components/UserList.qml:84
+#: contents/components/UserList.qml:83
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
@@ -149,81 +149,81 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:40
+#: contents/lockscreen/LockScreenUi.qml:39
 #, kde-format
 msgid "Unlocking failed"
 msgstr "പൂട്ടുതുറക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/lockscreen/LockScreenUi.qml:319
+#: contents/lockscreen/LockScreenUi.qml:318
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "സ്ലീപ്"
 
-#: contents/lockscreen/LockScreenUi.qml:325 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:173
 #, kde-format
 msgid "Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/lockscreen/LockScreenUi.qml:331
+#: contents/lockscreen/LockScreenUi.qml:330
 #, kde-format
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: contents/lockscreen/LockScreenUi.qml:527
+#: contents/lockscreen/LockScreenUi.qml:526
 #, kde-format
 msgid "Switch to This Session"
 msgstr "ഈ സെഷനിലേക്ക് സ്വിച്ചുചെയ്യുക"
 
-#: contents/lockscreen/LockScreenUi.qml:535
+#: contents/lockscreen/LockScreenUi.qml:534
 #, kde-format
 msgid "Start New Session"
 msgstr "പുതിയ സെഷൻ ആരംഭിക്കുക"
 
-#: contents/lockscreen/LockScreenUi.qml:548
+#: contents/lockscreen/LockScreenUi.qml:547
 #, kde-format
 msgid "Back"
 msgstr "തിരികെ"
 
-#: contents/lockscreen/LockScreenUi.qml:594
+#: contents/lockscreen/LockScreenUi.qml:593
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "ലേ-ഔട്ട് മാറ്റുക"
 
-#: contents/lockscreen/MainBlock.qml:102
+#: contents/lockscreen/MainBlock.qml:101
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "പൂട്ടുതുറക്കുക"
 
-#: contents/lockscreen/MediaControls.qml:112
+#: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:113
+#: contents/lockscreen/MediaControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "മീഡിയ പ്ലേ ചെയ്യുന്നില്ല"
 
-#: contents/lockscreen/MediaControls.qml:142
+#: contents/lockscreen/MediaControls.qml:141
 #, kde-format
 msgid "Previous track"
 msgstr "മുമ്പത്തെ ട്രാക്ക്"
 
-#: contents/lockscreen/MediaControls.qml:154
+#: contents/lockscreen/MediaControls.qml:153
 #, kde-format
 msgid "Play or Pause media"
 msgstr "മീഡിയ പ്ലേ ചെയ്യുക അല്ലെങ്കിൽ താൽക്കാലികമായി നിർത്തുക"
 
-#: contents/lockscreen/MediaControls.qml:168
+#: contents/lockscreen/MediaControls.qml:167
 #, kde-format
 msgid "Next track"
 msgstr "അടുത്ത ട്രാക്ക്"
 
-#: contents/logout/Logout.qml:141
+#: contents/logout/Logout.qml:140
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -238,43 +238,43 @@ msgstr[1] ""
 "%1 ഉപയോക്താക്കൾ  നിലവിൽ ലോഗിൻ ചെയ്തിട്ടുണ്ട്. കമ്പ്യൂട്ടർ ഷട്ട് ഡൗൺ ചെയ്യുകയോ പുനരാരംഭിക്കുകയോ "
 "ചെയ്താൽ, ആ ഉപയോക്താക്കൾ ചെയ്ത ജോലി നഷ്‌ടപ്പെടാം."
 
-#: contents/logout/Logout.qml:155
+#: contents/logout/Logout.qml:154
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
 
-#: contents/logout/Logout.qml:203
+#: contents/logout/Logout.qml:202
 #, kde-format
 msgid "Log Out"
 msgstr "പുറത്തുകടക്കുക"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:225
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
 msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:227
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
 msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:229
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
 msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:240
 #, kde-format
 msgid "OK"
 msgstr "ശരി"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:246
 #, kde-format
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"

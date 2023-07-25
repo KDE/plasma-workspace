@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 09:34+0000\n"
-"PO-Revision-Date: 2023-07-19 14:06+0300\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"PO-Revision-Date: 2023-07-24 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -56,12 +56,12 @@ msgstr "Var olan bir örneği değiştir"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Yalnızca verilen eklentiden olan sonuçları göster"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Kullanılabilir eklentileri listele"
 
 #: main.cpp:94
 #, kde-format
@@ -72,66 +72,66 @@ msgstr "Çalıştırılacak sorgu, yalnızca -c sağlanmadığında kullanılır
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Kullanılabilir K Çalıştır eklentileri, eklenti kimliği"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure"
 msgstr "Yapılandır"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "K Çalıştır Davranışını Yapılandır"
 
-#: qml/RunCommand.qml:98
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "K Çalıştır'ı Yapılandır…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Yalnızca %1 eklentisinden olan sonuçları göster"
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:124
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' Ara…"
 
-#: qml/RunCommand.qml:126
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Ara…"
 
-#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
+#: qml/RunCommand.qml:299 qml/RunCommand.qml:300 qml/RunCommand.qml:302
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Kullanım Yardımı Göster"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:310
 #, kde-format
 msgid "Pin"
-msgstr "İğnele"
+msgstr "Sabitle"
 
-#: qml/RunCommand.qml:312
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin Search"
-msgstr "Aramayı İğnele"
+msgstr "Aramayı Sabitle"
 
-#: qml/RunCommand.qml:314
+#: qml/RunCommand.qml:313
 #, kde-format
 msgid "Keep Open"
 msgstr "Açık Tut"
 
-#: qml/RunCommand.qml:386 qml/RunCommand.qml:391
+#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
 #, kde-format
 msgid "Recent Queries"
 msgstr "Son Sorgular"
 
-#: qml/RunCommand.qml:389
+#: qml/RunCommand.qml:388
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"

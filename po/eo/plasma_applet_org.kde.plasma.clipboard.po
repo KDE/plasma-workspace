@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2023-05-26 19:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,53 +20,53 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Reiri al Tondujo"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:53
 #, kde-format
 msgid "QR Code"
 msgstr "QR-kodo"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "Data Matrix"
 msgstr "Data Matrix"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "Code 39"
 msgstr "Kodo 39"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 93"
 msgstr "Kodo 93"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 128"
 msgstr "Kodo 128"
 
-#: contents/ui/BarcodePage.qml:83
+#: contents/ui/BarcodePage.qml:82
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Ŝanĝi la tipon de QR-kodo"
 
-#: contents/ui/BarcodePage.qml:138
+#: contents/ui/BarcodePage.qml:137
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Kreado de QR-kodo malsukcesis"
 
-#: contents/ui/BarcodePage.qml:149
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Tonduja Enhavo"
 
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:121
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tondujo estas malplena"
@@ -113,24 +113,24 @@ msgstr "Redakti enhavojn"
 msgid "Remove from history"
 msgstr "Forigi el historio"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Konservi"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: contents/ui/Menu.qml:122
+#: contents/ui/Menu.qml:121
 #, kde-format
 msgid "No matches"
 msgstr "Neniuj alumetoj"
 
-#: contents/ui/UrlItemDelegate.qml:107
+#: contents/ui/UrlItemDelegate.qml:106
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

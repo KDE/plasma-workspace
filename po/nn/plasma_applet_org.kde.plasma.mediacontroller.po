@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2023-02-23 19:21+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -31,52 +31,52 @@ msgstr "Utan tittel"
 msgid "No media playing"
 msgstr "Inkje medium vert spela av"
 
-#: package/contents/ui/ExpandedRepresentation.qml:407
-#: package/contents/ui/ExpandedRepresentation.qml:528
+#: package/contents/ui/ExpandedRepresentation.qml:406
+#: package/contents/ui/ExpandedRepresentation.qml:527
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "−%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:557
+#: package/contents/ui/ExpandedRepresentation.qml:556
 #, kde-format
 msgid "Shuffle"
 msgstr "Stokk om"
 
-#: package/contents/ui/ExpandedRepresentation.qml:583
+#: package/contents/ui/ExpandedRepresentation.qml:582
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Førre spor"
 
-#: package/contents/ui/ExpandedRepresentation.qml:605
+#: package/contents/ui/ExpandedRepresentation.qml:604
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pause"
 
-#: package/contents/ui/ExpandedRepresentation.qml:605
+#: package/contents/ui/ExpandedRepresentation.qml:604
 #: package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Spel"
 
-#: package/contents/ui/ExpandedRepresentation.qml:623
+#: package/contents/ui/ExpandedRepresentation.qml:622
 #: package/contents/ui/main.qml:121
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Neste spor"
 
-#: package/contents/ui/ExpandedRepresentation.qml:646
+#: package/contents/ui/ExpandedRepresentation.qml:645
 #, kde-format
 msgid "Repeat Track"
 msgstr "Gjenta sporet"
 
-#: package/contents/ui/ExpandedRepresentation.qml:646
+#: package/contents/ui/ExpandedRepresentation.qml:645
 #, kde-format
 msgid "Repeat"
 msgstr "Gjenta"

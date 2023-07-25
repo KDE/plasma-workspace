@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2022-12-12 20:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -32,52 +32,52 @@ msgstr "Nėra pavadinimo"
 msgid "No media playing"
 msgstr "Nieko neatkuriama"
 
-#: package/contents/ui/ExpandedRepresentation.qml:407
-#: package/contents/ui/ExpandedRepresentation.qml:528
+#: package/contents/ui/ExpandedRepresentation.qml:406
+#: package/contents/ui/ExpandedRepresentation.qml:527
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:557
+#: package/contents/ui/ExpandedRepresentation.qml:556
 #, kde-format
 msgid "Shuffle"
 msgstr "Maišyti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:583
+#: package/contents/ui/ExpandedRepresentation.qml:582
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Ankstesnis takelis"
 
-#: package/contents/ui/ExpandedRepresentation.qml:605
+#: package/contents/ui/ExpandedRepresentation.qml:604
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:605
+#: package/contents/ui/ExpandedRepresentation.qml:604
 #: package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Groti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:623
+#: package/contents/ui/ExpandedRepresentation.qml:622
 #: package/contents/ui/main.qml:121
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Kitas takelis"
 
-#: package/contents/ui/ExpandedRepresentation.qml:646
+#: package/contents/ui/ExpandedRepresentation.qml:645
 #, kde-format
 msgid "Repeat Track"
 msgstr "Kartoti takelį"
 
-#: package/contents/ui/ExpandedRepresentation.qml:646
+#: package/contents/ui/ExpandedRepresentation.qml:645
 #, kde-format
 msgid "Repeat"
 msgstr "Kartoti"

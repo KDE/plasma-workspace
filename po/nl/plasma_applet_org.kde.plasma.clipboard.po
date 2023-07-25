@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-07-25 02:00+0000\n"
 "PO-Revision-Date: 2023-05-26 11:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,53 +17,53 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Terug naar klembord"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:53
 #, kde-format
 msgid "QR Code"
 msgstr "QR-code"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "Data Matrix"
 msgstr "Gegevensmatrix"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "Code 39"
 msgstr "Code 39"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 93"
 msgstr "Code 93"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 128"
 msgstr "Code 128"
 
-#: contents/ui/BarcodePage.qml:83
+#: contents/ui/BarcodePage.qml:82
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Het type QR-code wijzigen"
 
-#: contents/ui/BarcodePage.qml:138
+#: contents/ui/BarcodePage.qml:137
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Aanmaken van QR-code is mislukt"
 
-#: contents/ui/BarcodePage.qml:149
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Klembordinhoud"
 
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:122
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:121
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"
@@ -111,24 +111,24 @@ msgstr "Inhoud bewerken"
 msgid "Remove from history"
 msgstr "Uit geschiedenis verwijderen"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Opslaan"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: contents/ui/Menu.qml:122
+#: contents/ui/Menu.qml:121
 #, kde-format
 msgid "No matches"
 msgstr "Geen overeenkomsten"
 
-#: contents/ui/UrlItemDelegate.qml:107
+#: contents/ui/UrlItemDelegate.qml:106
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
