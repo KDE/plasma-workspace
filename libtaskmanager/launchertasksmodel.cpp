@@ -254,9 +254,9 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
 
             if (remove) {
                 q->beginRemoveRows(QModelIndex(), row, row);
+                appDataCache.remove(launcher);
                 launchersOrder.removeAt(row);
                 activitiesForLauncher.remove(url);
-                appDataCache.remove(launcher);
                 q->endRemoveRows();
 
             } else if (update) {
