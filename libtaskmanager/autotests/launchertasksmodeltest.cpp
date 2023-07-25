@@ -28,6 +28,7 @@ private Q_SLOTS:
     void shouldAddRemoveLauncher();
     void shouldReturnValidLauncherPositions();
     void shouldReturnValidData();
+    void shouldNotCrashRemovingLauncherBug472378();
 
 private:
     QStringList m_urlStrings;
@@ -164,6 +165,34 @@ void LauncherTasksModelTest::shouldReturnValidLauncherPositions()
 void LauncherTasksModelTest::shouldReturnValidData()
 {
     // FIXME Reuse TaskToolsTest app link setup, then run URLs through model.
+}
+
+void LauncherTasksModelTest::shouldNotCrashRemovingLauncherBug472378()
+{
+    LauncherTasksModel m;
+
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
+    QVERIFY(launcherListChangedSpy.isValid());
+
+    // Add a launcher using an application url
+    QUrl url(QStringLiteral("applications:GammaRay.desktop"));
+    bool added = m.requestAddLauncher(url);
+    QVERIFY(added);
+    QCOMPARE(launcherListChangedSpy.count(), 1);
+    QVERIFY(launcherUrlsMatch(QUrl(m.launcherList().at(0)), url));
+
+    // Add a second launcher and ensure it is added to appDataCache
+    added = m.requestAddLauncher(QUrl(m_urlStrings.at(0)));
+    QVERIFY(added);
+    QCOMPARE(launcherListChangedSpy.count(), 2);
+    QVERIFY(launcherUrlsMatch(m.data(m.index(1, 0), AbstractTasksModel::LauncherUrl).toUrl(), QUrl(m_urlStrings.at(0))));
+
+    // Remove a launcher, and ensure it doesn't share a reference with the original url
+    // This hit a use after free, bug #472378
+    url.detach();
+    bool removed = m.requestRemoveLauncher(url);
+    QVERIFY(removed);
+    QCOMPARE(launcherListChangedSpy.count(), 3);
 }
 
 QTEST_MAIN(LauncherTasksModelTest)

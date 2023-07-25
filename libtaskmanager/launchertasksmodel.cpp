@@ -205,7 +205,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
 bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl &url, const QStringList &activities)
 {
     for (int row = 0; row < launchersOrder.count(); ++row) {
-        const QUrl &launcher = launchersOrder.at(row);
+        const QUrl launcher = launchersOrder.at(row);
 
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems) || launcherUrlsMatch(url, appData(launcher).url, IgnoreQueryItems)) {
             const auto currentActivities = activitiesForLauncher[url];
