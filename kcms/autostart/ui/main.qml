@@ -188,6 +188,7 @@ KCM.ScrollViewKCM {
 
         Menu {
             id: menu
+            x: menuButton.x
             y: -height
 
             modal: true
