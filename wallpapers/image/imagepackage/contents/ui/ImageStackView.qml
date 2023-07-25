@@ -18,7 +18,7 @@ QQC2.StackView {
     required property string configColor
     required property bool blur
     property alias source: mediaProxy.source
-    required property size sourceSize
+    property size sourceSize // For delay binding
     required property QtObject wallpaperInterface
 
     readonly property alias mediaProxy: mediaProxy

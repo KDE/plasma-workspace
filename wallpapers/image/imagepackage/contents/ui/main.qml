@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Window 2.2
+import QtQuick
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.plasmoid 2.0
@@ -67,7 +66,10 @@ WallpaperItem {
             }
             return root.configuration.Image;
         }
-        sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
+        Binding on sourceSize {
+            value: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
+            delayed: true
+        }
         wallpaperInterface: wallpaper
 
         Wallpaper.ImageBackend {
