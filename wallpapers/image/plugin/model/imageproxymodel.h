@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QConcatenateTablesProxyModel>
+#include <QProperty>
 #include <QSize>
 
 #include <KDirWatch>
@@ -27,7 +28,7 @@ class ImageProxyModel : public QConcatenateTablesProxyModel, public ImageRoles
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit ImageProxyModel(const QStringList &customPaths, const QSize &targetSize, QObject *parent);
+    explicit ImageProxyModel(const QStringList &customPaths, const QProperty<QSize> &bindableTargetSize, QObject *parent);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -48,7 +49,6 @@ public:
 Q_SIGNALS:
     void countChanged();
     void loadingChanged();
-    void targetSizeChanged(const QSize &size);
 
 private Q_SLOTS:
     void slotHandleLoaded(AbstractImageListModel *model);

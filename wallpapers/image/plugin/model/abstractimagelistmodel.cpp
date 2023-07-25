@@ -15,11 +15,19 @@
 #include "../finder/mediametadatafinder.h"
 #include "config-KF6KExiv2.h"
 
-AbstractImageListModel::AbstractImageListModel(const QSize &targetSize, QObject *parent)
+AbstractImageListModel::AbstractImageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent)
     : QAbstractListModel(parent)
-    , m_screenshotSize(targetSize / 8)
-    , m_targetSize(targetSize)
 {
+    m_targetSize.setBinding([&bindableTargetSize] {
+        return bindableTargetSize.value();
+    });
+    m_screenshotSize.setBinding([this] {
+        return m_targetSize.value() / 8;
+    });
+    m_targetSizeChangeNotifier = m_screenshotSize.addNotifier([this] {
+        reload();
+    });
+
     constexpr int maxCacheSize = 10;
     m_imageCache.setMaxCost(maxCacheSize);
     m_backgroundTitleCache.setMaxCost(maxCacheSize);
@@ -58,12 +66,6 @@ void AbstractImageListModel::reload()
     }
 
     load(m_customPaths);
-}
-
-void AbstractImageListModel::slotTargetSizeChanged(const QSize &size)
-{
-    m_targetSize = size;
-    reload();
 }
 
 void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPixmap &preview)

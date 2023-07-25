@@ -10,12 +10,11 @@
 
 #include "model/imageproxymodel.h"
 
-SlideModel::SlideModel(const QSize &targetSize, QObject *parent)
+SlideModel::SlideModel(const QProperty<QSize> &bindableTargetSize, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
-    , m_targetSize(targetSize)
 {
-    connect(this, &SlideModel::targetSizeChanged, [this](const QSize &s) {
-        m_targetSize = s;
+    m_targetSize.setBinding([&bindableTargetSize] {
+        return bindableTargetSize.value();
     });
 }
 
@@ -163,8 +162,6 @@ void SlideModel::slotSourceModelLoadingChanged()
     }
 
     disconnect(m, &ImageProxyModel::loadingChanged, this, nullptr);
-
-    connect(this, &SlideModel::targetSizeChanged, m, &ImageProxyModel::targetSizeChanged);
 
     addSourceModel(m);
 

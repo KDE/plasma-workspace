@@ -37,7 +37,7 @@ private:
     QString m_wallpaperPath;
     QString m_standardPath;
     QString m_pathA, m_pathB, m_pathC;
-    QSize m_targetSize;
+    QProperty<QSize> m_targetSize;
 };
 
 void SlideFilterModelTest::initTestCase()

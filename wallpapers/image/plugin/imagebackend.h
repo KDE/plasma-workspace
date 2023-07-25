@@ -12,6 +12,7 @@
 
 #include <QAbstractItemModel>
 #include <QPointer>
+#include <QProperty>
 #include <QQmlParserStatus>
 #include <QQmlPropertyMap>
 #include <QSize>
@@ -140,7 +141,7 @@ Q_SIGNALS:
     void renderingModeChanged();
     void slideshowModeChanged();
     void slideshowFoldersFirstChanged();
-    void targetSizeChanged(const QSize &size);
+    void targetSizeChanged();
     void slideTimerChanged();
     void slidePathsChanged();
     void uncheckedSlidesChanged();
@@ -167,7 +168,7 @@ private:
     bool m_ready = false;
     int m_delay = 10;
     QUrl m_image;
-    QSize m_targetSize;
+    QProperty<QSize> m_targetSize;
 
     bool m_usedInConfig = true;
     QPointer<QQmlPropertyMap> m_configMap;

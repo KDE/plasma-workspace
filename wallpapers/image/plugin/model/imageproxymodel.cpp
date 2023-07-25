@@ -16,10 +16,10 @@
 #include "imagelistmodel.h"
 #include "packagelistmodel.h"
 
-ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &targetSize, QObject *parent)
+ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QProperty<QSize> &bindableTargetSize, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
-    , m_imageModel(new ImageListModel(targetSize, this))
-    , m_packageModel(new PackageListModel(targetSize, this))
+    , m_imageModel(new ImageListModel(bindableTargetSize, this))
+    , m_packageModel(new PackageListModel(bindableTargetSize, this))
 {
     connect(this, &ImageProxyModel::rowsInserted, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);
@@ -249,9 +249,6 @@ void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
         // All models are loaded, now add them.
         addSourceModel(m_imageModel);
         addSourceModel(m_packageModel);
-
-        connect(this, &ImageProxyModel::targetSizeChanged, m_imageModel, &AbstractImageListModel::slotTargetSizeChanged);
-        connect(this, &ImageProxyModel::targetSizeChanged, m_packageModel, &AbstractImageListModel::slotTargetSizeChanged);
 
         Q_EMIT loadingChanged();
     }

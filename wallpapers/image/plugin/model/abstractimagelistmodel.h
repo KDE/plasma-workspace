@@ -9,6 +9,7 @@
 #include <QAbstractListModel>
 #include <QCache>
 #include <QPixmap>
+#include <QProperty>
 #include <QSize>
 
 #include "imageroles.h"
@@ -27,7 +28,7 @@ class AbstractImageListModel : public QAbstractListModel, public ImageRoles
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit AbstractImageListModel(const QSize &targetSize, QObject *parent = nullptr);
+    explicit AbstractImageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -46,8 +47,6 @@ public Q_SLOTS:
      * @return removed files that should be removed from \KDirWatch
      */
     virtual QStringList removeBackground(const QString &path) = 0;
-
-    void slotTargetSizeChanged(const QSize &size);
 
 Q_SIGNALS:
     void countChanged();
@@ -74,8 +73,9 @@ protected:
 
     bool m_loading = false;
 
-    QSize m_screenshotSize;
-    QSize m_targetSize;
+    QProperty<QSize> m_screenshotSize;
+    QProperty<QSize> m_targetSize;
+    QPropertyNotifier m_targetSizeChangeNotifier;
 
     QCache<QStringList, QPixmap> m_imageCache;
     // Store side-by-side images

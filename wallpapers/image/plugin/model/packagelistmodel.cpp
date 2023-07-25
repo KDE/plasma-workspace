@@ -20,8 +20,8 @@
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
 
-PackageListModel::PackageListModel(const QSize &targetSize, QObject *parent)
-    : AbstractImageListModel(targetSize, parent)
+PackageListModel::PackageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent)
+    : AbstractImageListModel(bindableTargetSize, parent)
 {
     qRegisterMetaType<QList<KPackage::Package>>();
 }

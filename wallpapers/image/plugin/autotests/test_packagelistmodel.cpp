@@ -42,7 +42,7 @@ private:
     QDir m_alternateDir;
     QStringList m_packagePaths;
     QString m_dummyPackagePath;
-    QSize m_targetSize;
+    QProperty<QSize> m_targetSize;
 };
 
 void PackageListModelTest::initTestCase()

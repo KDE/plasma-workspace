@@ -41,7 +41,7 @@ private:
     QString m_dummyWallpaperPath;
     QStringList m_packagePaths;
     QString m_dummyPackagePath;
-    QSize m_targetSize;
+    QProperty<QSize> m_targetSize;
 };
 
 void SlideModelTest::initTestCase()

@@ -124,26 +124,23 @@ void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
 
 QSize ImageBackend::targetSize() const
 {
-    return m_targetSize;
+    return m_targetSize.value();
 }
 
 void ImageBackend::setTargetSize(const QSize &size)
 {
-    if (m_targetSize == size) {
+    if (m_targetSize.value() == size) {
         return;
     }
 
     m_targetSize = size;
-
-    // Will relay to ImageProxyModel
-    Q_EMIT targetSizeChanged(m_targetSize);
+    Q_EMIT targetSizeChanged();
 }
 
 QAbstractItemModel *ImageBackend::wallpaperModel()
 {
     if (!m_model) {
         m_model = new ImageProxyModel({}, m_targetSize, this);
-        connect(this, &ImageBackend::targetSizeChanged, m_model, &ImageProxyModel::targetSizeChanged);
         connect(m_model, &ImageProxyModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }
 
@@ -156,7 +153,6 @@ SlideModel *ImageBackend::slideshowModel()
         m_slideshowModel = new SlideModel(m_targetSize, this);
         m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
         connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
-        connect(this, &ImageBackend::targetSizeChanged, m_slideshowModel, &SlideModel::targetSizeChanged);
         connect(m_slideshowModel, &SlideModel::dataChanged, this, &ImageBackend::slotSlideModelDataChanged);
         connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }

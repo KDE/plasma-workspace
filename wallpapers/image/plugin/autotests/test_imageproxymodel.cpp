@@ -44,7 +44,7 @@ private:
     QStringList m_packagePaths;
     QString m_dummyPackagePath;
     int m_modelNum = 0;
-    QSize m_targetSize;
+    QProperty<QSize> m_targetSize;
 };
 
 void ImageProxyModelTest::initTestCase()

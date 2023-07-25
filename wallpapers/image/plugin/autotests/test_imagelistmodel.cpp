@@ -41,7 +41,7 @@ private:
     QDir m_alternateDir;
     QStringList m_wallpaperPaths;
     QString m_dummyWallpaperPath;
-    QSize m_targetSize;
+    QProperty<QSize> m_targetSize;
 };
 
 void ImageListModelTest::initTestCase()

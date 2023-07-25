@@ -17,7 +17,7 @@ class ImageListModel : public AbstractImageListModel
     Q_OBJECT
 
 public:
-    explicit ImageListModel(const QSize &targetSize, QObject *parent = nullptr);
+    explicit ImageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role) const override;
