@@ -1,7 +1,8 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-#
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -15,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: package/contents/config/config.qml:10
 #, kde-format
