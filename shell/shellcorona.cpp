@@ -566,14 +566,12 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
                 continue;
             }
 
-            const QStringList rectPieces = keyValue.last().split(QLatin1Char(','));
+            const QStringList rectPieces = keyValue.crbegin()->split(QLatin1Char(','));
             if (rectPieces.length() != 5) {
                 continue;
             }
 
-            QRect rect(rectPieces[0].toInt(), rectPieces[1].toInt(), rectPieces[2].toInt(), rectPieces[3].toInt());
-
-            appletGeometries[keyValue.first()] = rect;
+            appletGeometries.emplace(*keyValue.cbegin(), rectPieces[0].toInt(), rectPieces[1].toInt(), rectPieces[2].toInt(), rectPieces[3].toInt());
         }
 
         QJsonArray appletsJsonArray;
