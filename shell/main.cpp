@@ -34,7 +34,6 @@
 #include "debug.h"
 #include "shellcorona.h"
 #include "softwarerendernotifier.h"
-#include "standaloneappcorona.h"
 
 #include <QDBusConnectionInterface>
 #include <QDir>
@@ -117,9 +116,6 @@ int main(int argc, char *argv[])
                                              QStringLiteral("plugin"),
                                              ShellCorona::defaultShell());
 
-        QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
-                                            i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
-
         QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
 
         QCommandLineOption testOption(QStringList() << QStringLiteral("test"),
@@ -133,7 +129,6 @@ int main(int argc, char *argv[])
         cliOptions.addOption(dbgOption);
         cliOptions.addOption(noRespawnOption);
         cliOptions.addOption(shellPluginOption);
-        cliOptions.addOption(standaloneOption);
         cliOptions.addOption(testOption);
         cliOptions.addOption(replaceOption);
 #ifdef WITH_KUSERFEEDBACKCORE
@@ -190,22 +185,8 @@ int main(int argc, char *argv[])
             new CoronaTestHelper(corona);
         }
 
-        if (cliOptions.isSet(standaloneOption)) {
-            if (cliOptions.isSet(shellPluginOption)) {
-                app.setApplicationName(QStringLiteral("plasmashell_") + cliOptions.value(shellPluginOption));
-                app.setQuitOnLastWindowClosed(true);
-
-                KDBusService service(KDBusService::Unique);
-                // This will not leak, because corona deletes itself on window close
-                new StandaloneAppCorona(cliOptions.value(shellPluginOption));
-                return app.exec();
-            } else {
-                cliOptions.showHelp(1);
-            }
-        } else {
-            // Tells libnotificationmanager that we're the only true application that may own notification and job progress services
-            qApp->setProperty("_plasma_dbus_master", true);
-        }
+        // Tells libnotificationmanager that we're the only true application that may own notification and job progress services
+        qApp->setProperty("_plasma_dbus_master", true);
 
         QObject::connect(corona, &ShellCorona::glInitializationFailed, &app, [&app]() {
             // scene graphs errors come from a thread

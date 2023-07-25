@@ -31,7 +31,6 @@
 #include <qstandardpaths.h>
 
 #include "../screenpool.h"
-#include "../standaloneappcorona.h"
 #include "appinterface.h"
 #include "configgroup.h"
 #include "containment.h"
@@ -230,20 +229,12 @@ QJSValue ScriptEngine::V1::createActivity(const QJSValue &nameParam, const QStri
 
     qDebug() << "Setting default Containment plugin:" << plugin;
 
-    ShellCorona *sc = qobject_cast<ShellCorona *>(m_engine->m_corona);
-    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_engine->m_corona);
-    if (sc) {
-        if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
-            plugin = sc->defaultContainmentPlugin();
-        }
-        sc->insertActivity(id, plugin);
-    } else if (ac) {
-        if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
-            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(m_engine->m_corona->kPackage().filePath("defaults")), "Desktop");
-            plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
-        }
-        ac->insertActivity(id, plugin);
+    ShellCorona *sc = static_cast<ShellCorona *>(m_engine->m_corona);
+
+    if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
+        plugin = sc->defaultContainmentPlugin();
     }
+    sc->insertActivity(id, plugin);
 
     return m_engine->toScriptValue<QString>(id);
 }

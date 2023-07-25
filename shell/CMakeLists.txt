@@ -46,7 +46,6 @@ set (plasma_shell_SRCS
     panelshadows.cpp
     outputorderwatcher.cpp
     shellcorona.cpp
-    standaloneappcorona.cpp
     osd.cpp
     coronatesthelper.cpp
     strutmanager.cpp

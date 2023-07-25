@@ -29,7 +29,6 @@
 #include <qstandardpaths.h>
 
 #include "../screenpool.h"
-#include "../standaloneappcorona.h"
 #include "appinterface.h"
 #include "configgroup.h"
 #include "containment.h"
@@ -309,15 +308,8 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 
 QStringList ScriptEngine::availableActivities() const
 {
-    ShellCorona *sc = qobject_cast<ShellCorona *>(m_corona);
-    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_corona);
-    if (sc) {
-        return sc->availableActivities();
-    } else if (ac) {
-        return ac->availableActivities();
-    }
-
-    return QStringList();
+    ShellCorona *sc = static_cast<ShellCorona *>(m_corona);
+    return sc->availableActivities();
 }
 
 QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
@@ -348,17 +340,9 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         // this can happen when the activity already exists but has never been activated
         // with the current shell package and layout.js is run to set up the shell for the
         // first time
-        ShellCorona *sc = qobject_cast<ShellCorona *>(m_corona);
-        StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_corona);
-        if (sc) {
-            foreach (int i, sc->screenIds()) {
-                result << new Containment(sc->createContainmentForActivity(id, i), this);
-            }
-        } else if (ac) {
-            const int numScreens = m_corona->numScreens();
-            for (int i = 0; i < numScreens; ++i) {
-                result << new Containment(ac->createContainmentForActivity(id, i), this);
-            }
+        ShellCorona *sc = static_cast<ShellCorona *>(m_corona);
+        foreach (int i, sc->screenIds()) {
+            result << new Containment(sc->createContainmentForActivity(id, i), this);
         }
     }
 
@@ -382,13 +366,8 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
 
     Plasma::Containment *c = nullptr;
     if (type == QLatin1String("Panel")) {
-        ShellCorona *sc = qobject_cast<ShellCorona *>(m_corona);
-        StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_corona);
-        if (sc) {
-            c = sc->addPanel(plugin);
-        } else if (ac) {
-            c = ac->addPanel(plugin);
-        }
+        ShellCorona *sc = static_cast<ShellCorona *>(m_corona);
+        c = sc->addPanel(plugin);
     } else {
         c = m_corona->createContainment(plugin);
     }
