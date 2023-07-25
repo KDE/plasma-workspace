@@ -72,7 +72,7 @@
         "Description[it]": "Motore per le informazioni di stato delle applicazioni, basato sul protocollo del notificatore di stato.",
         "Description[ja]": "ステータス通知プロトコルに基づくアプリケーションステータス情報エンジン。",
         "Description[ka]": "ძრავი აპლიკაციების სტატუსის ინფორმაციის მისაღებად, სტატუსის გაფრთხილების პროტოკოლით.",
-        "Description[ko]": "상태 알림 프로토콜을 사용하는 프로그램 상태 정보 엔진입니다.",
+        "Description[ko]": "상태 알림 프로토콜을 사용하는 앱 상태 정보 엔진입니다.",
         "Description[lt]": "Informacijos apie programų būseną variklis, pagrįstas būsenos pranešėjo protokolu.",
         "Description[nl]": "Engine voor statusinformatie van toepassingen gebaseerde op het statusnotificatieprotocol.",
         "Description[nn]": "Motor for programstatusinformasjon basert på Status Notifier-protokollen.",
