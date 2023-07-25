@@ -21,7 +21,7 @@ public:
     void init() override;
 
 private:
-    void openDevice(const QString &udi);
+    Q_INVOKABLE void openDevice(const QString &udi);
     std::unique_ptr<KFilePlacesModel> m_places;
     QString m_pendingUdi;
 };
