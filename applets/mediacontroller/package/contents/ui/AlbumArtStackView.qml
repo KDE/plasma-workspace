@@ -140,9 +140,9 @@ Item {
             id: albumArtComponent
 
             Image { // Album Art
-                horizontalAlignment: Image.AlignRight
+                horizontalAlignment: Image.AlignHCenter
                 verticalAlignment: Image.AlignVCenter
-                fillMode: Image.PreserveAspectFit
+                fillMode: container.inCompactRepresentation ? Image.PreserveAspectCrop : Image.PreserveAspectFit
 
                 asynchronous: true
                 cache: false
