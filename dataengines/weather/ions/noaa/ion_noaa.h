@@ -68,8 +68,8 @@ public:
     bool isSolarDataPending = false;
 };
 
-Q_DECLARE_TYPEINFO(WeatherData::Forecast, Q_MOVABLE_TYPE);
-Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData::Forecast, Q_RELOCATABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_RELOCATABLE_TYPE);
 
 class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma5Support::DataEngineConsumer
 {

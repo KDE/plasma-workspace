@@ -16,7 +16,7 @@ struct StylesModelData {
     QString description;
     QString configPage;
 };
-Q_DECLARE_TYPEINFO(StylesModelData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(StylesModelData, Q_RELOCATABLE_TYPE);
 
 class StylesModel : public QAbstractListModel
 {

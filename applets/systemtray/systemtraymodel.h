@@ -148,7 +148,7 @@ public:
     StatusNotifierItemHost *m_sniHost = nullptr;
     QVector<Item> m_items;
 };
-Q_DECLARE_TYPEINFO(StatusNotifierModel::Item, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(StatusNotifierModel::Item, Q_RELOCATABLE_TYPE);
 
 /**
  * @brief Cantenating model for system tray, that can expose multiple data models as one.

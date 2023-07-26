@@ -69,8 +69,8 @@ public:
     bool isForecastsDataPending = false;
 };
 
-Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
-Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_RELOCATABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_RELOCATABLE_TYPE);
 
 class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma5Support::DataEngineConsumer
 {

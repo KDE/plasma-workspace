@@ -124,9 +124,9 @@ public:
     bool isNight = false;
 };
 
-Q_DECLARE_TYPEINFO(WeatherData::WeatherEvent, Q_MOVABLE_TYPE);
-Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
-Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData::WeatherEvent, Q_RELOCATABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_RELOCATABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_RELOCATABLE_TYPE);
 
 /**
  * https://weather.gc.ca/mainmenu/disclaimer_e.html

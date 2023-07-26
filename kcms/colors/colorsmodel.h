@@ -26,7 +26,7 @@ struct ColorsModelData {
     bool tints;
     qreal tintFactor;
 };
-Q_DECLARE_TYPEINFO(ColorsModelData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(ColorsModelData, Q_RELOCATABLE_TYPE);
 
 class ColorsModel : public QAbstractListModel
 {

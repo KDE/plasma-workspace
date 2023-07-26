@@ -17,7 +17,7 @@ struct IconSizeCategoryModelData {
     int kIconloaderGroup;
 };
 
-Q_DECLARE_TYPEINFO(IconSizeCategoryModelData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(IconSizeCategoryModelData, Q_RELOCATABLE_TYPE);
 
 class IconSizeCategoryModel : public QAbstractListModel
 {

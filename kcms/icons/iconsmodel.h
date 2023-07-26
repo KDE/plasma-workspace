@@ -23,7 +23,7 @@ struct IconsModelData {
     bool removable;
     bool pendingDeletion;
 };
-Q_DECLARE_TYPEINFO(IconsModelData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(IconsModelData, Q_RELOCATABLE_TYPE);
 
 class IconsModel : public QAbstractListModel
 {

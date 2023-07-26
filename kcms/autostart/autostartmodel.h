@@ -83,4 +83,4 @@ struct AutostartEntry {
     bool onlyInPlasma;
     QString iconName;
 };
-Q_DECLARE_TYPEINFO(AutostartEntry, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(AutostartEntry, Q_RELOCATABLE_TYPE);
