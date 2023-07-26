@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2023-07-10 14:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -56,41 +56,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Посетете bugs.kde.org, за да докладвате за грешки"
 
-#: main.cpp:98
+#: main.cpp:97
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Обвивка на Plasma"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Активиране на QML Javascript откриване на грешки"
 
-#: main.cpp:113
+#: main.cpp:112
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Без автоматично рестартиране на Plasma обвивка след срив"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Принудително зареждане на дадената приставка на обвивката"
 
-#: main.cpp:121
-#, kde-format
-msgid ""
-"Load plasmashell as a standalone application, needs the shell-plugin option "
-"to be specified"
-msgstr ""
-"Зареждане на plasmashell като самостоятелно приложение, необходимо е "
-"задаване на опция за shell-plugin"
-
-#: main.cpp:123
+#: main.cpp:119
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменяне на съществуваща инстанция"
 
-#: main.cpp:126
+#: main.cpp:122
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -99,22 +90,22 @@ msgstr ""
 "Активира тестовия режим и определя файла с оформление на javascript, за да "
 "настрои среда за тестване"
 
-#: main.cpp:127
+#: main.cpp:123
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:131
+#: main.cpp:127
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Списък на наличните опции за обратна връзка от потребителите"
 
-#: main.cpp:228
+#: main.cpp:209
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma не успя да стартира"
 
-#: main.cpp:229
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -268,12 +259,12 @@ msgstr "Настройване на работния плот и панелит�
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:1899
+#: shellcorona.cpp:1897
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:1935
+#: shellcorona.cpp:1933
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -310,3 +301,10 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
+
+#~ msgid ""
+#~ "Load plasmashell as a standalone application, needs the shell-plugin "
+#~ "option to be specified"
+#~ msgstr ""
+#~ "Зареждане на plasmashell като самостоятелно приложение, необходимо е "
+#~ "задаване на опция за shell-plugin"

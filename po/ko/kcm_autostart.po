@@ -1,14 +1,14 @@
 # Translation of kcm_autostart to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2022-07-13 11:18+0200\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"PO-Revision-Date: 2023-07-25 23:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: autostartmodel.cpp:328
 #, kde-format
@@ -54,18 +54,16 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "파일 '%1'이(가) 로그인할 때 실행되려면 실행 파일이어야 합니다."
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "속성"
+msgstr "속성 보기"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "삭제"
+msgstr "항목 삭제"
 
 #: ui/main.qml:112
 #, kde-format
@@ -113,17 +111,17 @@ msgstr "로그아웃 스크립트 선택"
 msgid "Add…"
 msgstr "추가…"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "앱 추가…"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "로그인 스크립트 추가…"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "로그아웃 스크립트 추가…"

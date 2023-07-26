@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2019-09-16 17:55+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -115,18 +115,18 @@ msgstr ""
 msgid "Add…"
 msgstr ""
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr ""
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, fuzzy, kde-format
 #| msgid "Logout"
 msgid "Add Login Script…"
 msgstr "Баромад аз мизи корӣ"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, fuzzy, kde-format
 #| msgid "Logout"
 msgid "Add Logout Script…"

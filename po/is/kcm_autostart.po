@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2022-10-17 15:16+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -122,17 +122,17 @@ msgstr "Veldu útskráningarskriftu"
 msgid "Add…"
 msgstr "Bæta við…"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "Bæta við forriti…"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Bæta við innskráningarskriftu…"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Bæta við útskráningarskriftu…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2023-07-05 09:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -59,41 +59,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Obiščite bugs.kde.org za poročanje o težavah"
 
-#: main.cpp:98
+#: main.cpp:97
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Lupina za Plasmo"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Omogoči razhroščevalnik QML Javascript"
 
-#: main.cpp:113
+#: main.cpp:112
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Po sesutju plasma-shell ga ne zaženi znova samodejno"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Vsili nalaganje podanega vstavka lupine"
 
-#: main.cpp:121
-#, kde-format
-msgid ""
-"Load plasmashell as a standalone application, needs the shell-plugin option "
-"to be specified"
-msgstr ""
-"Naloži lupino Plasma kot samostojni program. Zahteva navedeno možnost shell-"
-"plugin"
-
-#: main.cpp:123
+#: main.cpp:119
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Zamenjaj obstoječi pojavek"
 
-#: main.cpp:126
+#: main.cpp:122
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -102,22 +93,22 @@ msgstr ""
 "Omogoči preizkusni način in določi datoteko z javascriptom za nastavitev "
 "preizkusnega okolja"
 
-#: main.cpp:127
+#: main.cpp:123
 #, kde-format
 msgid "file"
 msgstr "datoteka"
 
-#: main.cpp:131
+#: main.cpp:127
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Prikaže seznam možnosti za povratne informacije"
 
-#: main.cpp:228
+#: main.cpp:209
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasme ni bilo mogoče začeti"
 
-#: main.cpp:229
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -271,12 +262,12 @@ msgstr "Upravljaj namizja in plošče..."
 msgid "Move keyboard focus between panels"
 msgstr "Prenašaj osredotočenost tipkovnice med ploščami"
 
-#: shellcorona.cpp:1899
+#: shellcorona.cpp:1897
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj pult"
 
-#: shellcorona.cpp:1935
+#: shellcorona.cpp:1933
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -313,6 +304,13 @@ msgstr "Število pultov"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Poštej pulte"
+
+#~ msgid ""
+#~ "Load plasmashell as a standalone application, needs the shell-plugin "
+#~ "option to be specified"
+#~ msgstr ""
+#~ "Naloži lupino Plasma kot samostojni program. Zahteva navedeno možnost "
+#~ "shell-plugin"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Neznano %1"

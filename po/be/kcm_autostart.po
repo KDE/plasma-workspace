@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -120,17 +120,17 @@ msgstr "Абраць скрыпт пры выхадзе"
 msgid "Add…"
 msgstr "Дадаць…"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "Дадаць праграму…"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Дадаць скрыпт пры ўваходзе…"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Дадаць скрыпт пры выхадзе…"

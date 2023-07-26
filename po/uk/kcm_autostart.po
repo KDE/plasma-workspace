@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2023-07-20 17:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -115,17 +115,17 @@ msgstr "Виберіть скрипти виходу"
 msgid "Add…"
 msgstr "Додати…"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "Додати програму…"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Додати скрипт входу…"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Додати скрипт виходу…"

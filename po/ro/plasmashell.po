@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2022-02-17 23:04+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -58,41 +58,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:98
+#: main.cpp:97
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Învelișul Plasma"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activează depanatorul Javascript QML"
 
-#: main.cpp:113
+#: main.cpp:112
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Nu reporni învelișul Plasma automat după prăbușire"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forțează încărcarea extensiei de înveliș date"
 
-#: main.cpp:121
-#, kde-format
-msgid ""
-"Load plasmashell as a standalone application, needs the shell-plugin option "
-"to be specified"
-msgstr ""
-"Încarcă plasmashell ca aplicație de sine stătătoare, necesită specificarea "
-"opțiunii shell-plugin"
-
-#: main.cpp:123
+#: main.cpp:119
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Înlocuiește o instanță existentă"
 
-#: main.cpp:126
+#: main.cpp:122
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -101,22 +92,22 @@ msgstr ""
 "Activează regimul de testare și specifică fișierul Javascript de aranjament "
 "pentru configurat mediul de testare"
 
-#: main.cpp:127
+#: main.cpp:123
 #, kde-format
 msgid "file"
 msgstr "fișier"
 
-#: main.cpp:131
+#: main.cpp:127
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Enumeră opțiunile disponibile pentru reacții din partea utilizatorului"
 
-#: main.cpp:228
+#: main.cpp:209
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Pornirea Plasma a eșuat"
 
-#: main.cpp:229
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -270,12 +261,12 @@ msgstr "Gestionează birouri și panouri…"
 msgid "Move keyboard focus between panels"
 msgstr "Mută focalizarea tastaturii între panouri"
 
-#: shellcorona.cpp:1899
+#: shellcorona.cpp:1897
 #, kde-format
 msgid "Add Panel"
 msgstr "Adaugă panou"
 
-#: shellcorona.cpp:1935
+#: shellcorona.cpp:1933
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"
@@ -313,6 +304,13 @@ msgstr "Contor panouri"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Numără panourile"
+
+#~ msgid ""
+#~ "Load plasmashell as a standalone application, needs the shell-plugin "
+#~ "option to be specified"
+#~ msgstr ""
+#~ "Încarcă plasmashell ca aplicație de sine stătătoare, necesită "
+#~ "specificarea opțiunii shell-plugin"
 
 #~ msgid "Unknown %1"
 #~ msgstr "%1 necunoscut"

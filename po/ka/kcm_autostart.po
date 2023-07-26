@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2023-07-20 05:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -111,17 +111,17 @@ msgstr "აირჩიეთ გამოსვლის სკრიპტი"
 msgid "Add…"
 msgstr "დამატება…"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "აპლიკაციის დამატება…"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "შესვლის სკრიპტის დამატება…"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "გამოსვლის სკრიპტის დამატება…"

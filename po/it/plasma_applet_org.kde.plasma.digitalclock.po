@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-01-27 09:24+0100\n"
+"PO-Revision-Date: 2023-07-07 09:34+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -276,18 +276,14 @@ msgid "Available Plugins:"
 msgstr "Estensioni disponibili:"
 
 #: package/contents/ui/configTimeZones.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Suggerimento: se viaggi spesso, aggiungi un'altra voce per il fuso orario di "
-"casa a questo elenco. Apparirà solo quando cambi il fuso orario a livello di "
-"sistema con qualcos'altro."
+"Suggerimento: se viaggi spesso, aggiungi il fuso orario di casa a questo "
+"elenco. Apparirà solo quando cambi il fuso orario a livello di sistema con "
+"qualcos'altro."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format

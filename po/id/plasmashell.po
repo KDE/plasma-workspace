@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2023-01-02 07:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -58,41 +58,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:98
+#: main.cpp:97
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Fungsikan pendebug Javascript QML"
 
-#: main.cpp:113
+#: main.cpp:112
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Jangan me-restart plasma-shell secara otomatis setelah mogok"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Paksa pemuatan plugin shell yang diberikan"
 
-#: main.cpp:121
-#, kde-format
-msgid ""
-"Load plasmashell as a standalone application, needs the shell-plugin option "
-"to be specified"
-msgstr ""
-"Muat plasmashell sebagai aplikasi tersendiri, memerlukan opsi shell-plugin "
-"untuk ketentuan"
-
-#: main.cpp:123
+#: main.cpp:119
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Ganti sebuah instansi yang ada"
 
-#: main.cpp:126
+#: main.cpp:122
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -101,22 +92,22 @@ msgstr ""
 "Fungsikan mode uji dan ketentuan tataletak file javascript untuk "
 "mempersiapkan environment pengujian"
 
-#: main.cpp:127
+#: main.cpp:123
 #, kde-format
 msgid "file"
 msgstr "file"
 
-#: main.cpp:131
+#: main.cpp:127
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Daftar opsi yang tersedia untuk umpan balik pengguna"
 
-#: main.cpp:228
+#: main.cpp:209
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma Gagal Untuk Memulai"
 
-#: main.cpp:229
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -270,12 +261,12 @@ msgstr "Kelola Desktop Dan Panel..."
 msgid "Move keyboard focus between panels"
 msgstr "Pindah fokus keyboard antar panel"
 
-#: shellcorona.cpp:1899
+#: shellcorona.cpp:1897
 #, kde-format
 msgid "Add Panel"
 msgstr "Tambahkan Panel"
 
-#: shellcorona.cpp:1935
+#: shellcorona.cpp:1933
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"
@@ -313,6 +304,13 @@ msgstr "Cacah Panel"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cacahnya panel-panel"
+
+#~ msgid ""
+#~ "Load plasmashell as a standalone application, needs the shell-plugin "
+#~ "option to be specified"
+#~ msgstr ""
+#~ "Muat plasmashell sebagai aplikasi tersendiri, memerlukan opsi shell-"
+#~ "plugin untuk ketentuan"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Tak diketahui %1"

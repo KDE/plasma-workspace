@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2010-08-08 23:08+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -116,18 +116,18 @@ msgstr ""
 msgid "Add…"
 msgstr ""
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr ""
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Add Login Script…"
 msgstr "Tambah Skrip..."
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Add Logout Script…"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-19 15:15+0200\n"
+"PO-Revision-Date: 2023-07-25 16:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -57,12 +57,12 @@ msgstr "Sustituir una instancia existente"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Mostrar solo los resultados del complemento indicado"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Listar los complementos disponibles"
 
 #: main.cpp:94
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "La consulta a ejecutar; se usa solo si no se ha usado -c"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Complementos de KRunner disponibles, pluginId"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "Configurar KRunner..."
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Mostrando solo los resultados de %1"
 
 #: qml/RunCommand.qml:124
 #, kde-format

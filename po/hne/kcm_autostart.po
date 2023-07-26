@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-07-26 02:02+0000\n"
 "PO-Revision-Date: 2009-01-22 12:44+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -114,17 +114,17 @@ msgstr ""
 msgid "Add…"
 msgstr ""
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr ""
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, fuzzy, kde-format
 msgid "Add Login Script…"
 msgstr "स्क्रिप्ट जोड़व"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, fuzzy, kde-format
 msgid "Add Logout Script…"
 msgstr "स्क्रिप्ट जोड़व"

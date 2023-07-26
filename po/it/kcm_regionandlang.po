@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-18 03:27+0000\n"
-"PO-Revision-Date: 2023-02-15 15:05+0100\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2023-07-02 19:54+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -342,7 +342,7 @@ msgstr "Numeri"
 #, kde-format
 msgctxt "@info:title"
 msgid "Time"
-msgstr "Tempo"
+msgstr "Ora"
 
 #: optionsmodel.cpp:26
 #, kde-format

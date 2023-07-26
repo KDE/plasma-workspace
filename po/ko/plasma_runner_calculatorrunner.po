@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2009, 2010, 2016, 2017, 2021.
+# Shinjo Park <kde@peremen.name>, 2009, 2010, 2016, 2017, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-22 02:10+0000\n"
-"PO-Revision-Date: 2021-11-11 23:49+0100\n"
+"PO-Revision-Date: 2023-07-25 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: calculatorrunner.cpp:28
 #, kde-format
@@ -34,7 +34,7 @@ msgstr ""
 #: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "수학 함수 입력"
 
 #: calculatorrunner.cpp:139
 #, kde-format
