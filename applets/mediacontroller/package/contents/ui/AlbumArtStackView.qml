@@ -206,7 +206,7 @@ Item {
                     running: true
 
                     PauseAnimation {
-                        duration: Kirigami.Units.longDuration
+                        duration: PlasmaCore.Units.longDuration
                     }
                     PropertyAction {
                         property: "running"
