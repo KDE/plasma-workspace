@@ -240,7 +240,7 @@ MouseArea {
                     opacity: root.isPlaying ? 1 : 0.6
                     Behavior on opacity {
                         NumberAnimation {
-                            duration: Kirigami.Units.shortDuration
+                            duration: Kirigami.Units.longDuration
                             easing.type: Easing.InOutQuad
                         }
                     }
