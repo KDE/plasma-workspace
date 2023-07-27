@@ -25,7 +25,6 @@ target_link_libraries(plasma_containmentactions_contextmenu
                       KF6::I18n
                       KF6::GlobalAccel
                       KF6::Plasma
-                      KF6::XmlGui
                       KF6::KIOCore
                       KF6::KIOGui
                       PW::KWorkspace)

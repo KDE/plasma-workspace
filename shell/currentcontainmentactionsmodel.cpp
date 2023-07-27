@@ -16,7 +16,6 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
-#include <KAboutPluginDialog>
 #include <klocalizedstring.h>
 
 #include <Plasma/Containment>

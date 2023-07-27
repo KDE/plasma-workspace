@@ -95,6 +95,8 @@ target_link_libraries(plasmashell
  KF6::CoreAddons
  KF6::DBusAddons
  KF6::XmlGui
+ KF6::WidgetsAddons
+ KF6::ConfigGui
  KF6::Package
  KF6::WaylandClient
  KF6::Notifications

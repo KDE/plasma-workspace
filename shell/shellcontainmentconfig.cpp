@@ -6,7 +6,6 @@
 
 #include "shellcontainmentconfig.h"
 
-#include <KActionCollection>
 #include <KActivities/Consumer>
 #include <KActivities/Info>
 #include <KLocalizedContext>

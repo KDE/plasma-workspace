@@ -166,7 +166,8 @@ void ShellCorona::init()
 
     connect(this, &ShellCorona::containmentAdded, this, &ShellCorona::handleContainmentAdded);
 
-    QAction *dashboardAction = actions()->addAction(QStringLiteral("show dashboard"));
+    QAction *dashboardAction = new QAction(this);
+    setAction(QStringLiteral("show dashboard"), dashboardAction);
     QObject::connect(dashboardAction, &QAction::triggered, this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Desktop"));
     connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, dashboardAction, [dashboardAction](bool showing) {
@@ -183,7 +184,8 @@ void ShellCorona::init()
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ShellCorona::checkAddPanelAction);
 
     // Activity stuff
-    QAction *activityAction = actions()->addAction(QStringLiteral("manage activities"));
+    QAction *activityAction = new QAction(this);
+    setAction(QStringLiteral("manage activities"), activityAction);
     connect(activityAction, &QAction::triggered, this, &ShellCorona::toggleActivityManager);
     activityAction->setText(i18n("Show Activity Switcher"));
     activityAction->setIcon(QIcon::fromTheme(QStringLiteral("activities")));
@@ -192,7 +194,8 @@ void ShellCorona::init()
 
     KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META | Qt::Key_Q);
 
-    QAction *stopActivityAction = actions()->addAction(QStringLiteral("stop current activity"));
+    QAction *stopActivityAction = new QAction(this);
+    setAction(QStringLiteral("stop current activity"), stopActivityAction);
     QObject::connect(stopActivityAction, &QAction::triggered, this, &ShellCorona::stopCurrentActivity);
 
     stopActivityAction->setText(i18n("Stop Current Activity"));
@@ -200,14 +203,16 @@ void ShellCorona::init()
 
     KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META | Qt::Key_S);
 
-    QAction *previousActivityAction = actions()->addAction(QStringLiteral("switch to previous activity"));
+    QAction *previousActivityAction = new QAction(this);
+    setAction(QStringLiteral("switch to previous activity"), previousActivityAction);
     connect(previousActivityAction, &QAction::triggered, this, &ShellCorona::previousActivity);
     previousActivityAction->setText(i18n("Switch to Previous Activity"));
     previousActivityAction->setShortcutContext(Qt::ApplicationShortcut);
 
     KGlobalAccel::self()->setGlobalShortcut(previousActivityAction, QKeySequence());
 
-    QAction *nextActivityAction = actions()->addAction(QStringLiteral("switch to next activity"));
+    QAction *nextActivityAction = new QAction(this);
+    setAction(QStringLiteral("switch to next activity"), nextActivityAction);
     connect(nextActivityAction, &QAction::triggered, this, &ShellCorona::nextActivity);
     nextActivityAction->setText(i18n("Switch to Next Activity"));
     nextActivityAction->setShortcutContext(Qt::ApplicationShortcut);
@@ -248,7 +253,8 @@ void ShellCorona::init()
         setDashboardShown(edit);
     });
 
-    QAction *manageContainmentsAction = actions()->addAction(QStringLiteral("manage-containments"));
+    QAction *manageContainmentsAction = new QAction(this);
+    setAction(QStringLiteral("manage-containments"), manageContainmentsAction);
     manageContainmentsAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-windows-effect-fadedesktop")));
     manageContainmentsAction->setText(i18n("Manage Desktops And Panels..."));
     connect(manageContainmentsAction, &QAction::triggered, this, [this]() {
@@ -270,7 +276,8 @@ void ShellCorona::init()
     connect(this, &ShellCorona::screenRemoved, this, updateManageContainmentsVisiblility);
     updateManageContainmentsVisiblility();
 
-    QAction *cyclePanelFocusAction = actions()->addAction(QStringLiteral("cycle-panels"));
+    QAction *cyclePanelFocusAction = new QAction(this);
+    setAction(QStringLiteral("cycle-panels"), cyclePanelFocusAction);
     cyclePanelFocusAction->setText(i18n("Move keyboard focus between panels"));
     KGlobalAccel::self()->setGlobalShortcut(cyclePanelFocusAction, Qt::META | Qt::ALT | Qt::Key_P);
     connect(cyclePanelFocusAction, &QAction::triggered, this, &ShellCorona::slotCyclePanelFocus);
@@ -1896,7 +1903,7 @@ void ShellCorona::checkAddPanelAction()
     if (m_addPanelAction) {
         m_addPanelAction->setText(i18n("Add Panel"));
         m_addPanelAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-        actions()->addAction(QStringLiteral("add panel"), m_addPanelAction);
+        setAction(QStringLiteral("add panel"), m_addPanelAction);
     }
 }
 

@@ -24,7 +24,6 @@
 #include <QScreen>
 
 #include <KX11Extras>
-#include <kactioncollection.h>
 #include <kwindoweffects.h>
 #include <kwindowsystem.h>
 

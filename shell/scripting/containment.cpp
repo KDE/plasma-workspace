@@ -9,7 +9,6 @@
 #include <QAction>
 #include <QQuickItem>
 
-#include <kactioncollection.h>
 #include <klocalizedstring.h>
 
 #include <Plasma/Containment>

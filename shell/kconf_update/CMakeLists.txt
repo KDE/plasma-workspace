@@ -7,3 +7,10 @@ target_link_libraries(plasmashell-5.27-use-panel-thickness-in-default-group PRIV
 
 install(FILES plasmashell-5.27-use-panel-thickness-in-default-group.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasmashell-5.27-use-panel-thickness-in-default-group DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
+
+add_executable(plasma6.0-remove-old-shortcuts)
+target_sources(plasma6.0-remove-old-shortcuts PRIVATE plasma6.0-remove-old-shortcuts.cpp)
+target_link_libraries(plasma6.0-remove-old-shortcuts PRIVATE KF6::ConfigCore KF6::GlobalAccel)
+
+install(FILES plasma6.0-remove-old-shortcuts.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(TARGETS plasma6.0-remove-old-shortcuts DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)

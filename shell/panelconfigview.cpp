@@ -16,7 +16,6 @@
 #include <QQmlEngine>
 #include <QScreen>
 
-#include <KActionCollection>
 #include <KWindowSystem>
 #include <KX11Extras>
 #include <klocalizedstring.h>
