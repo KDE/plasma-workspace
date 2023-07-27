@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Stefan Asserhäll <stefan.asserhall@bredband.net>, 2008, 2009.
-# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2018, 2020, 2022.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2018, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-02-05 19:03+0100\n"
+"PO-Revision-Date: 2023-07-26 13:24+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,13 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "utloggning"
+msgstr "utloggning;logga ut"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -34,14 +33,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Loggar ut, och avslutar nuvarande skrivbordssession"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "avstängning"
+msgstr "avstängning;stäng av"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -49,14 +46,12 @@ msgid "Turns off the computer"
 msgstr "Stänger av datorn"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "starta om"
+msgstr "starta om;omstart"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -64,12 +59,11 @@ msgid "Reboots the computer"
 msgstr "Startar om datorn"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Lås skärmen"
+msgstr "lås;lås skärmen"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -77,27 +71,25 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Låser nuvarande session och startar skärmsläckaren"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "ny session"
+msgstr "spara;spara session"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Sparar den nuvarande sessionen för återställning"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "byt användare"
+msgstr "byt användare;ny session"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -105,9 +97,7 @@ msgid "Starts a new session as a different user"
 msgstr "Startar en ny session som en annan användare"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "sessioner"
@@ -118,9 +108,7 @@ msgid "Lists all sessions"
 msgstr "Lista alla sessioner"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "byt"
@@ -138,35 +126,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Logga ut"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "avstängning"
+msgstr "stäng av"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "starta om"
+msgstr "Starta om"
 
 #: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Lås"
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "ny session"
+msgstr "Spara session"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -182,12 +165,16 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>Du är på väg att byta till en ny skrivbordssession.</p><p>En "
+"inloggningsskärm visas och den nuvarande sessionen kommer att döljas.</"
+"p><p>Du kan byta mellan skrivbordssessioner genom att använda:</"
+"p><ul><li>Ctrl+Alt+F{sessionsnummer}</li><li>Plasmasökning (typ '%1')</"
+"li><li>Plasmakomponenter (såsom programstart)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Ny session"
+msgstr "Ny skrivbordssession"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

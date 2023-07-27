@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-10 02:54+0000\n"
-"PO-Revision-Date: 2022-08-03 09:28+0200\n"
+"PO-Revision-Date: 2023-07-26 12:20+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -18,13 +18,10 @@ msgstr ""
 "X-Generator: Lokalize 20.08.1\n"
 
 #: abstractnotificationsmodel.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 fil till %2"
+msgstr "%1 från %2"
 
 #: job_p.cpp:183
 #, kde-format
@@ -95,13 +92,10 @@ msgid "to %1"
 msgstr "till %1"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 fil till %2"
+msgstr "%1 från %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format

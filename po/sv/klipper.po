@@ -3,13 +3,13 @@
 # Copyright (C) 2000,2002,2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Mattias Newzella <newzella@linux.nu>, 2002, 2003.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2017, 2019, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2017, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2022-08-03 09:28+0200\n"
+"PO-Revision-Date: 2023-07-26 12:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -546,19 +546,16 @@ msgid "Previous History Item"
 msgstr "Föregående historikvärde"
 
 #: klipper.cpp:251
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Öppna Klipper vid muspekarens position"
+msgstr "Visa objekt vid muspekarens position"
 
 #: klipper.cpp:262
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Klippbordsverktyg"
+msgstr "%1 - Klippbordsverktyg"
 
 #: klipper.cpp:567
 #, kde-kuit-format
@@ -842,11 +839,10 @@ msgstr ""
 "hantera dess MIME-typ i åtgärdsrutan."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Klippbordets innehåll"
+msgstr "%1 - Klippbordets innehåll"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -874,10 +870,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Klipp- och klistraverktyg för KDE"
+msgstr "Plasma klipp- och klistraverktyg"
 
 #: main.cpp:31
 #, kde-format

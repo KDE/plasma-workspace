@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:34+0000\n"
-"PO-Revision-Date: 2022-08-03 09:27+0200\n"
+"PO-Revision-Date: 2023-07-26 12:31+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -269,6 +269,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Tips: Om du ofta reser, lägg till en annan post för din hemmatidszon i "
+"listan. Den visas bara när du ändrar den systemomfattande tidszonen till "
+"något annat."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -282,13 +285,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Dold eftersom detta är den lokala tidszonens stad"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Byt lokal tidszon…"
+msgstr "Byt till systemomfattande tidszon…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -296,10 +298,9 @@ msgid "Remove this time zone"
 msgstr "Ta bort tidszonen"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Systemets lokala tidszon"
+msgstr "Systemomfattande tidszon"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -326,18 +327,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Byt visad tidszon genom att rulla över miniprogrammet"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Observera att användning av en annan tidszon för klockan ändrar inte den "
-"systemomfattande lokala tidszonen. När du reser, ändra istället den lokala "
-"tidszonen."
+"Användning av funktionen ändrar inte den systemomfattande tidszonen. När du "
+"reser, ändra istället den systemomfattande tidszonen."
 
 #: package/contents/ui/configTimeZones.qml:198
 #, kde-format
@@ -388,7 +384,7 @@ msgstr "Dagens datum är %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

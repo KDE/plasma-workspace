@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2016, 2017, 2018, 2020, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2016, 2017, 2018, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-29 02:35+0000\n"
-"PO-Revision-Date: 2022-06-11 17:03+0200\n"
+"PO-Revision-Date: 2023-07-26 12:25+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Namnlös"
 
 #: package/contents/ui/AlbumArtStackView.qml:190
 #: package/contents/ui/main.qml:82
@@ -102,15 +102,16 @@ msgid "Choose player automatically"
 msgstr "Välj automatiskt spelare"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "av %1 (paus, %2)"
+msgstr ""
+"av %1 (%2)\n"
+"Mittenklick för paus\n"
+"Rulla för att justera volym"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -120,28 +121,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Mittenklick för paus\n"
+"Rulla för att justera volym"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "av %1 (paus, %2)"
+msgstr ""
+"av %1 (pausad, %2)\n"
+"Mittenklick för att spela\n"
+"Rulla för att justera volym"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "av %1 (paus, %2)"
+msgstr ""
+"Pausad (%1)\n"
+"Mittenklick för att spela\n"
+"Rulla för att justera volym"
 
 #~ msgid "General"
 #~ msgstr "Allmänt"
