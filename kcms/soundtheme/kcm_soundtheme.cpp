@@ -157,9 +157,12 @@ int KCMSoundTheme::playSound(const QString &themeId, const QStringList &soundLis
     int result = CA_SUCCESS;
     for (const QString &soundName : soundList) {
         ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
-        result = ca_context_play_full(canberraContext(), 0, props, nullptr, nullptr);
+        result = ca_context_play_full(canberraContext(), 0, props, &ca_finish_callback, this);
         qCDebug(KCM_SOUNDTHEME) << "Try playing sound" << soundName << "for theme" << themeId << ":" << ca_strerror(result);
         if (result == CA_SUCCESS) {
+            m_playingTheme = themeId;
+            m_playingSound = soundName;
+            Q_EMIT playingChanged();
             break;
         }
     }
@@ -169,20 +172,24 @@ int KCMSoundTheme::playSound(const QString &themeId, const QStringList &soundLis
     return result;
 }
 
-void KCMSoundTheme::playDemo(ThemeInfo *theme)
+void KCMSoundTheme::cancelSound()
 {
-    // We try to play the demo sound specified by the theme, either in `index.theme` or as a named sound ("theme-demo")
-    // If the theme does not provide a valid one, we fallback to other common descriptive sounds
-    QStringList demoSounds;
-    if (!theme->example.isEmpty()) {
-        demoSounds << theme->example;
-    }
-    demoSounds << QStringLiteral("theme-demo") << QStringLiteral("desktop-login") << QStringLiteral("dialog-information");
+    ca_context_cancel(canberraContext(), 0);
+}
 
-    int result = playSound(theme->id, demoSounds);
-    if (result != CA_SUCCESS) {
-        qCWarning(KCM_SOUNDTHEME) << "Failed to play demo sound for theme" << theme->id << ":" << ca_strerror(result);
-    }
+void KCMSoundTheme::ca_finish_callback(ca_context *c, uint32_t id, int error_code, void *userdata)
+{
+    Q_UNUSED(c);
+    Q_UNUSED(id);
+    Q_UNUSED(error_code);
+    QMetaObject::invokeMethod(static_cast<KCMSoundTheme *>(userdata), "onPlayingFinished");
+}
+
+void KCMSoundTheme::onPlayingFinished()
+{
+    m_playingTheme = QString();
+    m_playingSound = QString();
+    Q_EMIT playingChanged();
 }
 
 ThemeInfo::ThemeInfo(const QString &themeId, QObject *parent)

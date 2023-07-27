@@ -49,6 +49,8 @@ class KCMSoundTheme : public KQuickManagedConfigModule
     Q_PROPERTY(SoundThemeSettings *settings READ settings CONSTANT);
     Q_PROPERTY(QList<ThemeInfo *> themes MEMBER m_themes NOTIFY themesLoaded);
     Q_PROPERTY(int currentIndex READ currentIndex NOTIFY themeChanged);
+    Q_PROPERTY(QString playingTheme MEMBER m_playingTheme NOTIFY playingChanged);
+    Q_PROPERTY(QString playingSound MEMBER m_playingSound NOTIFY playingChanged);
 
 public:
     KCMSoundTheme(QObject *parent, const KPluginMetaData &data);
@@ -61,16 +63,20 @@ public:
     Q_INVOKABLE QString nameFor(const QString &themeId) const;
 
     Q_INVOKABLE int playSound(const QString &themeId, const QStringList &soundList);
-    Q_INVOKABLE void playDemo(ThemeInfo *theme);
+    Q_INVOKABLE void cancelSound();
 
     virtual void load() override;
 
 Q_SIGNALS:
     void themesLoaded();
     void themeChanged();
+    void playingChanged();
 
 private:
     ca_context *canberraContext();
+    static void ca_finish_callback(ca_context *c, uint32_t id, int error_code, void *userdata);
+    Q_SLOT void onPlayingFinished();
+
     void loadThemes();
 
 private:
@@ -78,4 +84,6 @@ private:
     SoundThemeData *m_data = nullptr;
 
     QList<ThemeInfo *> m_themes;
+    QString m_playingTheme;
+    QString m_playingSound;
 };

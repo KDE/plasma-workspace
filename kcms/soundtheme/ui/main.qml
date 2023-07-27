@@ -77,45 +77,66 @@ KCM.GridViewKCM {
                         {iconName: "battery-low", sounds: ["battery-caution", "battery-low"]},
                         {iconName: "device-notifier", sounds: ["device-added", "device-removed"]},
                     ]
-                    delegate: QQC2.ToolButton {
+                    delegate: SoundButton {
+                        themeId: theme.id
+                        sounds: modelData.sounds
                         icon.name: modelData.iconName
-                        text: i18nc("@info:tooltip", "Preview sound \"%1\"", modelData.sounds[0])
-                        display: QQC2.AbstractButton.IconOnly
-                        onClicked: kcm.playSound(theme.id, modelData.sounds)
-
-                        Layout.preferredWidth: Kirigami.Units.iconSizes.medium
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        QQC2.ToolTip.text: text
-                        QQC2.ToolTip.visible: hovered || activeFocus
+                        text: i18nc("@info:tooltip", "Preview sound \"%1\"", sounds[0])
                     }
                 }
                 Layout.row: 4
                 Layout.columnSpan: delegate.compactMode ? 2 : 1
             }
 
-            QQC2.ToolButton {
+            SoundButton {
                 id: demoButton
 
-                icon.name: "media-playback-start-symbolic"
+                themeId: theme.id
+                sounds: {
+                    // We try to play the demo sound specified by the theme, either in `index.theme`
+                    // or as a named sound ("theme-demo"), but if none is provided let's fallback
+                    // to other common descriptive sounds
+                    const demoSounds = ["theme-demo", "desktop-login", "service-login"];
+                    if (theme.example.lenght > 0) {
+                        demoSounds.unshift(theme.example);
+                    }
+                    return demoSounds;
+                }
+                icon.name: isPlaying ? "media-playback-stop-symbolic": "media-playback-start-symbolic"
                 text: i18nc("@info:tooltip", "Preview the demo sound for the theme \"%1\"", theme.name)
-                display: QQC2.AbstractButton.IconOnly
-                onClicked: kcm.playDemo(theme)
 
                 Layout.column: 1
                 Layout.rowSpan: delegate.compactMode ? 4 : 5
                 Layout.preferredWidth: Kirigami.Units.iconSizes.large
                 Layout.fillHeight: true
-
-                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: hovered || activeFocus
             }
         }
 
         TapHandler {
             onTapped: kcm.settings.theme = theme.id
         }
+    }
+
+    component SoundButton: QQC2.ToolButton {
+        property string themeId: ""
+        property var sounds: []
+        readonly property bool isPlaying: kcm.playingTheme === themeId && sounds.includes(kcm.playingSound)
+
+        display: QQC2.AbstractButton.IconOnly
+        down: isPlaying  // We just want the visual cue, not the checked state
+        onClicked: {
+            if (!isPlaying) {
+                kcm.playSound(themeId, sounds);
+            } else {
+                kcm.cancelSound();
+            }
+        }
+
+        Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+        Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+
+        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+        QQC2.ToolTip.text: text
+        QQC2.ToolTip.visible: hovered || activeFocus
     }
 }
