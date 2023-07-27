@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-21 18:55+0100\n"
+"PO-Revision-Date: 2023-07-26 21:03+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -58,12 +58,12 @@ msgstr "Anstataŭigi ekzistantan instancon"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Montri rezultojn nur de la donita kromprogramo"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Listigi haveblajn kromprogramojn"
 
 #: main.cpp:94
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "La rulota demando, uzata nur se -c ne estas provizita"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Haveblaj KRunner-kromprogramoj, pluginId"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "Agordi KRunner…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Montrante rezultojn nur de %1"
 
 #: qml/RunCommand.qml:124
 #, kde-format
@@ -137,9 +137,3 @@ msgstr "Lastatempaj Demandoj"
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"
-
-#~ msgid "Only query this specific runner"
-#~ msgstr "Pridemandi nur ĉi tiun specifan rulilon"
-
-#~ msgid "Querying runner %1 in single runner mode"
-#~ msgstr "Pridemandante rulilon %1 en sol-rulanta reĝimo"

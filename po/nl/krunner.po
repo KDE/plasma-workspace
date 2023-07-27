@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-19 10:09+0200\n"
+"PO-Revision-Date: 2023-07-26 18:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -55,12 +55,12 @@ msgstr "Een bestaand exemplaar vervangen"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Alleen resultaten tonen uit de gegeven plug-in"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Beschikbare plug-ins tonen"
 
 #: main.cpp:94
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "De uit te voeren zoektekst, alleen gebruikt als -c niet is geleverd"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Beschikbare plug-ins van KRunner, plug-in-Id"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "KRunner configureren…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Alleen resultaten uit %1 worden getoond"
 
 #: qml/RunCommand.qml:124
 #, kde-format

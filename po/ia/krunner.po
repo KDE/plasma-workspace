@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-19 16:48+0200\n"
+"PO-Revision-Date: 2023-07-26 12:42+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -55,12 +55,12 @@ msgstr "Reimplacia un instantia existente"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Monstra solmente exitos ab le date plugin"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Lista plugins disponibile"
 
 #: main.cpp:94
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Le requesta de executar, solmente usate si -c non es fornite"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Plugins de KRunner disponibile, pluginId"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Configura KRunner..."
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "MOnstrante solmente exitos ab %1"
 
 #: qml/RunCommand.qml:124
 #, kde-format

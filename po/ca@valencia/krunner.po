@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-23 20:34+0200\n"
+"PO-Revision-Date: 2023-07-26 15:40+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -60,12 +60,12 @@ msgstr "Substituïx una instància existent"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Mostra només els resultats de l'executor indicat"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Llista els connectors disponibles"
 
 #: main.cpp:94
 #, kde-format
@@ -77,7 +77,7 @@ msgstr ""
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Connectors disponibles de KRunner, «pluginId»"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Configura KRunner…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Mostra només els resultats des de %1"
 
 #: qml/RunCommand.qml:124
 #, kde-format
@@ -140,9 +140,3 @@ msgstr "Consultes recents"
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
-
-#~ msgid "Only query this specific runner"
-#~ msgstr "Consulta només este executor específic"
-
-#~ msgid "Querying runner %1 in single runner mode"
-#~ msgstr "S'està consultant l'executor %1 en mode d'executor únic"

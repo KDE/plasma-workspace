@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-20 05:58+0200\n"
+"PO-Revision-Date: 2023-07-26 06:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -56,12 +56,12 @@ msgstr "გაშვებული ასლის ჩანაცვლებ�
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "შედეგების ჩვენება მხოლოდ მითითებული დამატებიდან"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "ხელმისაწვდომი დამატებების ჩამონათვალი"
 
 #: main.cpp:94
 #, kde-format
@@ -73,7 +73,7 @@ msgstr ""
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "KRunner ხელმისაწვდომი დამატებები, pluginId"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "KRunner-ის მორგება…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "შედეგების მხოლოდ %1-დან ჩვენება"
 
 #: qml/RunCommand.qml:124
 #, kde-format

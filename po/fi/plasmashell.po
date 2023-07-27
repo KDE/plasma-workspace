@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-26 02:02+0000\n"
-"PO-Revision-Date: 2023-03-04 18:26+0200\n"
+"PO-Revision-Date: 2023-07-25 13:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -38,26 +38,25 @@ msgstr "Hiiritoimintojen asetukset"
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Development Build"
-msgstr ""
+msgstr "Plasma %1 kehityskooste"
 
 #: desktopview.cpp:205
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Beta Build"
-msgstr ""
+msgstr "Plasma %1 beetakooste"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1"
-msgstr "Plasma"
+msgstr "Plasma %1"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Ilmoita ongelmista sivulla bugs.kde.org"
 
 #: main.cpp:97
 #, kde-format
