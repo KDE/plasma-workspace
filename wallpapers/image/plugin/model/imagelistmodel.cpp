@@ -128,9 +128,7 @@ int ImageListModel::indexOf(const QString &_path) const
         path.remove(0, 7);
     }
 
-    const auto it = std::find_if(m_data.cbegin(), m_data.cend(), [&path](const QString &p) {
-        return path == p;
-    });
+    const auto it = std::find(m_data.cbegin(), m_data.cend(), path);
 
     if (it == m_data.cend()) {
         return -1;
