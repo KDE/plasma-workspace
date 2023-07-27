@@ -129,6 +129,7 @@ QSize ImageBackend::targetSize() const
 
 void ImageBackend::setTargetSize(const QSize &size)
 {
+    Q_ASSERT(size.isValid());
     if (m_targetSize.value() == size) {
         return;
     }
