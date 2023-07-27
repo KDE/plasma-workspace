@@ -6,10 +6,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
+import QtQuick
 import QtQuick.Controls 2.5 as QtControls2
 import QtQuick.Layouts 1.0
-import QtQuick.Window 2.0 // for Screen
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
@@ -53,7 +52,7 @@ ColumnLayout {
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
             if (typeof Plasmoid !== "undefined") {
-                return Qt.size(Plasmoid.width * Screen.devicePixelRatio, Plasmoid.height * Screen.devicePixelRatio)
+                return Qt.size(Plasmoid.screenGeometry.width * Screen.devicePixelRatio, Plasmoid.screenGeometry.height * Screen.devicePixelRatio);
             }
             // Lock screen configuration case
             return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
