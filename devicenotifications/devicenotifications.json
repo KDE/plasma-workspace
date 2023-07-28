@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Play audible feedback when devices are inserted or removed",
+        "Description[bg]": "Издаване на звуков сигнал за обратна връзка при добавяне или отделяне на устройства",
         "Description[ca@valencia]": "Reproduïx una reacció audible quan s'inserisquen o s'extraguen dispositius",
         "Description[ca]": "Reprodueix una reacció audible quan s'insereixin o s'extreguin dispositius",
         "Description[eo]": "Ludi aŭdeblan retroinformon kiam aparatoj estas enmetitaj aŭ malmetitaj",
@@ -11,6 +12,7 @@
         "Description[ka]": "მოწყობილობების შეერთება/გამოერთებისას უკუკავშირის გასაგები ხმის დაკვრა",
         "Description[ko]": "장치가 연결되거나 제거되었을 때 청각적 피드백 재생",
         "Description[nl]": "Hoorbare terugkoppeling afspelen wanneer apparaten ingeplugd of verwijderd worden",
+        "Description[nn]": "Spel av lyd når einingar vert kopla til eller frå",
         "Description[sl]": "Predvajaj zvočno povratno informacijo, kadar so naprave vstavljene ali odstranjene",
         "Description[tr]": "Aygıtlar takıldığında veya çıkarıldığında sesle geri bildirim ver",
         "Description[uk]": "Відтворювати звуковий сигнал при з'єднанні або від'єднанні пристроїв",
