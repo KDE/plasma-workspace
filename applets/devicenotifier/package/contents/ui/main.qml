@@ -31,7 +31,7 @@ PlasmoidItem {
             return "nonRemovable"
         }
     }
-    property string popupIcon: "device-notifier"
+    property string popupIcon: "device-notifier-symbolic"
 
     property bool itemClicked: false
     property int currentIndex: -1
@@ -64,7 +64,7 @@ PlasmoidItem {
                 return data.Icon
             }
         }
-        return "device-notifier"
+        return "device-notifier-symbolic"
     }
 
     Plasmoid.status: (filterModel.count > 0 || isMessageHighlightAnimatorRunning) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
@@ -85,7 +85,7 @@ PlasmoidItem {
         }
     }
 
-    compactRepresentation: PlasmaCore.IconItem {
+    compactRepresentation: Kirigami.Icon {
         source: devicenotifier.popupIcon
         width: Kirigami.Units.iconSizes.medium;
         height: Kirigami.Units.iconSizes.medium;

@@ -101,7 +101,7 @@ MouseArea {
         }
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: dndIcon
         anchors.fill: parent
         source: "notifications-disabled"

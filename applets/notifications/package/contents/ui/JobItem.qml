@@ -84,11 +84,10 @@ ColumnLayout {
             restoreMode: Binding.RestoreBinding
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: jobDragIcon
 
             anchors.fill: parent
-            usesPlasmaTheme: false
             active: jobDragArea.hovered
             opacity: busyIndicator.running ? 0.6 : 1
             source: !fileInfo.error ? fileInfo.iconName : ""

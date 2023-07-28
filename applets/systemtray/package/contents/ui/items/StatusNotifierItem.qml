@@ -7,6 +7,7 @@
 import QtQuick 2.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 AbstractItem {
     id: taskIcon
@@ -17,7 +18,7 @@ AbstractItem {
     subText: model.ToolTipSubTitle
     textFormat: Text.AutoText
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: iconItem
         parent: taskIcon.iconContainer
         anchors.fill: iconItem.parent
@@ -31,7 +32,7 @@ AbstractItem {
                     return model.AttentionIconName
                 }
             }
-            return model.Icon || model.IconName
+            return model.IconName.length > 0 ? model.IconName : model.Icon
         }
         active: taskIcon.containsMouse
     }

@@ -11,11 +11,10 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.keyboardlayout 1.0 as Keyboards
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.5 as Kirigami // For Settings.tabletMode
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: root
-    property var overlays: []
 
     Plasmoid.onActivated: {
         if (!Keyboards.KWinVirtualKeyboard.available) {
@@ -29,11 +28,10 @@ PlasmoidItem {
         }
     }
     preferredRepresentation: fullRepresentation
-    fullRepresentation: PlasmaCore.IconItem {
+    fullRepresentation: Kirigami.Icon {
         activeFocusOnTab: true
         source: Plasmoid.icon
         active: compactMouse.containsMouse
-        overlays: root.overlays
 
         Keys.onPressed: event => {
             switch (event.key) {
@@ -54,6 +52,16 @@ PlasmoidItem {
             anchors.fill: parent
             hoverEnabled: true
             onClicked: Plasmoid.activated()
+        }
+        Kirigami.Icon {
+            anchors {
+                right: parent.right
+                bottom: parent.bottom
+            }
+            width: Kirigami.Unit.small/2
+            height: width
+            visible: root.state === "unavailable"
+            source: visible ? "emblem-unavailable" : ""
         }
     }
 
@@ -80,7 +88,6 @@ PlasmoidItem {
                 target: root
                 toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: unavailable")
             }
-            PropertyChanges { target: root; overlays: [ "emblem-unavailable" ] }
         },
         State {
             name: "disabled"
@@ -94,7 +101,6 @@ PlasmoidItem {
                 target: root
                 toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: disabled")
             }
-            PropertyChanges { target: root; overlays: [] }
         },
         State {
             id: unsupportedState
@@ -111,7 +117,6 @@ PlasmoidItem {
                 target: root
                 toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Show Virtual Keyboard")
             }
-            PropertyChanges { target: root; overlays: [] }
         },
         State {
             name: "visible"
@@ -127,7 +132,6 @@ PlasmoidItem {
                 target: root
                 toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: visible")
             }
-            PropertyChanges { target: root; overlays: [] }
         },
         State {
             name: "idle"
@@ -142,7 +146,6 @@ PlasmoidItem {
                 target: root
                 toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: enabled")
             }
-            PropertyChanges { target: root; overlays: [] }
         }
     ]
 }

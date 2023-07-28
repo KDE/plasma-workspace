@@ -120,7 +120,7 @@ PlasmoidItem {
             }
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: icon
             anchors {
                 left: parent.left
@@ -131,7 +131,6 @@ PlasmoidItem {
             source: Plasmoid.icon
             enabled: mouseArea.enabled
             active: mouseArea.containsMouse || containsAcceptableDrag
-            usesPlasmaTheme: false
             opacity: Plasmoid.busy ? 0.6 : 1
             Behavior on opacity {
                 OpacityAnimator {

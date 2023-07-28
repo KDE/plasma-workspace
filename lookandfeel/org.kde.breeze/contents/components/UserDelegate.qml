@@ -76,12 +76,11 @@ Item {
             anchors.fill: parent
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: faceIcon
             source: iconSource
             visible: face.status === Image.Error || face.status === Image.Null
             anchors.fill: parent
-            colorGroup: Kirigami.Theme.colorGroup
         }
     }
 

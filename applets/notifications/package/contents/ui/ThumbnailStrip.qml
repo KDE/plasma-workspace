@@ -106,13 +106,12 @@ Item {
         smooth: true
         fillMode: Image.PreserveAspectFit
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: previewIcon
             anchors.centerIn: parent
             width: height
             height: Kirigami.Units.iconSizes.roundedIconSize(parent.height)
             active: dragArea.hovered
-            usesPlasmaTheme: false
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
 
             Drag.dragType: Drag.Automatic

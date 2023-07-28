@@ -96,7 +96,7 @@ Item {
         visible: pluggedIn && !otherBatteriesSvg.visible
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: otherBatteriesSvg
         anchors.fill: batterySvg
         source: elementForType(batteryType)

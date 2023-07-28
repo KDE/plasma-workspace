@@ -47,7 +47,7 @@ PlasmoidItem {
     compactRepresentation: MouseArea {
         onClicked: root.expanded = !root.expanded
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             anchors.fill: parent
 
             source: Qt.resolvedUrl("../images/mini-calendar.svgz")

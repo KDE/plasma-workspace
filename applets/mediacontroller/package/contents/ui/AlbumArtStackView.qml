@@ -157,7 +157,7 @@ Item {
         Component {
             id: fallbackIconItem
 
-            PlasmaCore.IconItem { // Fallback
+            Kirigami.Icon { // Fallback
                 id: fallbackIcon
 
                 anchors.margins: Kirigami.Units.gridUnit * 2

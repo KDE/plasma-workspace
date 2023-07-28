@@ -82,7 +82,7 @@ PlasmoidItem {
                 width: items.itemWidth
                 height: items.itemHeight
 
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     id: iconButton
                     width: items.iconSize
                     height: items.iconSize

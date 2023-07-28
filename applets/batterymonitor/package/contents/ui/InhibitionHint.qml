@@ -17,7 +17,7 @@ RowLayout {
 
     spacing: Kirigami.Units.smallSpacing
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: iconItem
         Layout.preferredWidth: Kirigami.Units.iconSizes.small
         Layout.preferredHeight: Kirigami.Units.iconSizes.small

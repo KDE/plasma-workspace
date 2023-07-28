@@ -120,7 +120,7 @@ MouseArea {
         visible: active
 
         active: inTray || !root.track
-        sourceComponent: PlasmaCore.IconItem {
+        sourceComponent: Kirigami.Icon {
             active: compactRepresentation.containsMouse
             source: {
                 if (root.isPlaying) {

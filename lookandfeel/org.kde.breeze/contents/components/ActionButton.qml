@@ -70,8 +70,7 @@ Item {
         }
     }
 
-    //TODO: port to Kirigami.Icon
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: icon
         anchors {
             top: parent.top
@@ -80,7 +79,6 @@ Item {
         width: iconSize
         height: iconSize
 
-        colorGroup: Kirigami.Theme.colorSet
         active: mouseArea.containsMouse || root.activeFocus
     }
 

@@ -12,6 +12,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
+import org.kde.kirigami 2.20 as Kirigami
 
 RowLayout {
     // OSD Timeout in msecs - how long it will stay on the screen
@@ -38,7 +39,7 @@ RowLayout {
     width: Layout.preferredWidth
     height: Layout.preferredHeight
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: iconItem
         Layout.leftMargin: Kirigami.Units.smallSpacing // Left end spacing
         Layout.preferredWidth: Kirigami.Units.iconSizes.medium

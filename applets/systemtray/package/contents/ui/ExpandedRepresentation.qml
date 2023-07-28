@@ -97,7 +97,7 @@ Item {
                     visible: qAction && qAction.visible
 
                     // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
-                    contentItem: PlasmaCore.IconItem {
+                    contentItem: Kirigami.Icon {
                         anchors.centerIn: parent
                         active: parent.hovered
                         implicitWidth: Kirigami.Units.iconSizes.smallMedium
@@ -144,8 +144,8 @@ Item {
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.right: configureButton.visible ? configureButton : configureButton.KeyNavigation.right
 
-                // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
-                PlasmaCore.IconItem {
+                // NOTE: it needs a Kirigami.Icon because QtQuickControls2 buttons cannot load QIcons as their icon
+                Kirigami.Icon {
                     parent: actionsButton
                     anchors.centerIn: parent
                     active: actionsButton.hovered

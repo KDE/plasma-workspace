@@ -70,12 +70,11 @@ RowLayout {
         }
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: applicationIconItem
         Layout.preferredWidth: Kirigami.Units.iconSizes.small
         Layout.preferredHeight: Kirigami.Units.iconSizes.small
         source: notificationHeading.applicationIconSource
-        usesPlasmaTheme: false
         visible: valid
     }
 

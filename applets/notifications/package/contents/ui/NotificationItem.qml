@@ -259,7 +259,7 @@ ColumnLayout {
             }
             visible: iconItem.active
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: iconItem
 
                 width: Kirigami.Units.iconSizes.large
@@ -269,7 +269,6 @@ ColumnLayout {
                 // don't show two identical icons
                 readonly property bool active: valid && source != notificationItem.applicationIconSource
 
-                usesPlasmaTheme: false
                 smooth: true
                 source: notificationItem.icon
             }

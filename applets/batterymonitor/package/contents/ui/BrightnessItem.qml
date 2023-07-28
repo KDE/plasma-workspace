@@ -36,7 +36,7 @@ PlasmaComponents3.ItemDelegate {
     contentItem: RowLayout {
         spacing: Kirigami.Units.gridUnit
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: image
             Layout.alignment: Qt.AlignTop
             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
