@@ -587,9 +587,11 @@ void WaylandTasksModel::requestToggleKeepBelow(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleFullScreen(const QModelIndex &index)
 {
-    Q_UNUSED(index)
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
+        return;
+    }
 
-    // FIXME Implement.
+    d->windows.at(index.row())->requestToggleFullscreen();
 }
 
 void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
