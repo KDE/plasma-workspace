@@ -52,13 +52,10 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
     switch (event->type()) {
     case QEvent::HoverLeave:
-        if (!m_interceptedHoverItem /* reset in resendHoverEvent */) {
-            return false;
-        } else if (m_interceptedHoverItem == item || m_resetTimer.isActive() /* The previous item hasn't received a HoverLeave event */) {
+        if (m_interceptedHoverItem == item) {
             m_interceptedHoverItem = nullptr;
-            return false;
         }
-        return true;
+        return false;
     case QEvent::HoverEnter:
     case QEvent::HoverMove: {
         QHoverEvent &he = *static_cast<QHoverEvent *>(event);
