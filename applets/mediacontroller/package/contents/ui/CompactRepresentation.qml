@@ -104,10 +104,14 @@ MouseArea {
             root.togglePlaying()
             break
         case Qt.BackButton:
-            root.action_previous()
+            if (root.canGoPrevious) {
+                root.previous();
+            }
             break
         case Qt.ForwardButton:
-            root.action_next()
+            if (root.canGoNext) {
+                root.next();
+            }
             break
         default:
             root.expanded = !root.expanded
