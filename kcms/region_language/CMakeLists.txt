@@ -47,7 +47,7 @@ ecm_qt_declare_logging_category(
 )
 
 ################ Build helper and add additional source files #############
-if(REGION_LANG_GENERATE_LOCALE)
+if(REGION_LANG_GENERATE_LOCALE_HELPER)
     add_subdirectory("localegenhelper")
     qt_generate_dbus_interface(
         ${CMAKE_CURRENT_SOURCE_DIR}/localegenhelper/localegenhelper.h

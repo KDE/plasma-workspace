@@ -253,19 +253,19 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         set(GLIBC_LOCALE TRUE)
     endif()
     if(UBUNTU_PACKAGEKIT OR GLIBC_LOCALE_GEN)
-        set(REGION_LANG_GENERATE_LOCALE TRUE)
+        set(REGION_LANG_GENERATE_LOCALE_HELPER TRUE)
     endif()
 
     option(GLIBC_LOCALE_GENERATED "Systems that don't require locale generation. Such as openSUSE or Fedora" OFF)
     if(GLIBC_LOCALE_GENERATED)
         set(LOCALE_GENERATED TRUE)
     endif()
-    if(REGION_LANG_GENERATE_LOCALE AND GLIBC_LOCALE_GENERATED)
+    if(REGION_LANG_GENERATE_LOCALE_HELPER AND GLIBC_LOCALE_GENERATED)
         message(FATAL_ERROR "(UBUNTU_PACKAGEKIT || GLIBC_LOCALE_GEN) and GLIBC_LOCALE_GENERATED both enabled")
     endif()
 
     ################## Find libraries ###################
-    if(REGION_LANG_GENERATE_LOCALE)
+    if(REGION_LANG_GENERATE_LOCALE_HELPER)
         find_package(PolkitQt${QT_MAJOR_VERSION}-1)
         set_package_properties(PolkitQt${QT_MAJOR_VERSION}-1
                 PROPERTIES DESCRIPTION "DBus interface wrapper for Polkit"
