@@ -155,6 +155,15 @@ MouseArea {
             }
         }
 
+        Behavior on width {
+            enabled: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ||
+                     compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel
+            NumberAnimation {
+                duration: Kirigami.Units.shortDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+
         height: {
             if (!active) {
                 return 0;
