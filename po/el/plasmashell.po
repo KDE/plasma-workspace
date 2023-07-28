@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-07-28 02:08+0000\n"
 "PO-Revision-Date: 2016-12-13 16:57+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
 
-#: currentcontainmentactionsmodel.cpp:205
+#: currentcontainmentactionsmodel.cpp:204
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Διαμόρφωση πρόσθετου ενεργειών ποντικιού"
@@ -204,75 +204,75 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Πληκτρολόγιο οθόνης ανενεργό"
 
-#: shellcontainmentconfig.cpp:106
+#: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:110
+#: shellcontainmentconfig.cpp:109
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:171 shellcorona.cpp:173
+#: shellcorona.cpp:172 shellcorona.cpp:174
 #, kde-format
 msgid "Show Desktop"
 msgstr "Εμφάνιση επιφάνειας εργασίας"
 
-#: shellcorona.cpp:173
+#: shellcorona.cpp:174
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Απόκρυψη επιφάνειας εργασίας"
 
-#: shellcorona.cpp:188
+#: shellcorona.cpp:190
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr ""
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Διακοπή της τρέχουσας δραστηριότητας"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:209
 #, fuzzy, kde-format
 #| msgid "Previous Activity"
 msgid "Switch to Previous Activity"
 msgstr "Προηγούμενη δραστηριότητα"
 
-#: shellcorona.cpp:212
+#: shellcorona.cpp:217
 #, fuzzy, kde-format
 #| msgid "Next Activity"
 msgid "Switch to Next Activity"
 msgstr "Επόμενη δραστηριότητα"
 
-#: shellcorona.cpp:227
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Ενεργοποίηση καταχώρησης διαχειριστή εργασιών %1"
 
-#: shellcorona.cpp:253
+#: shellcorona.cpp:259
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr ""
 
-#: shellcorona.cpp:274
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:1897
+#: shellcorona.cpp:1904
 #, kde-format
 msgid "Add Panel"
 msgstr "Προσθήκη πίνακα"
 
-#: shellcorona.cpp:1933
+#: shellcorona.cpp:1940
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

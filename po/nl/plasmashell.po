@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-07-28 02:08+0000\n"
 "PO-Revision-Date: 2023-07-05 22:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: currentcontainmentactionsmodel.cpp:205
+#: currentcontainmentactionsmodel.cpp:204
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Plug-in voor muisacties instellen"
@@ -200,73 +200,73 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Toetsenbord op het scherm gedeactiveerd"
 
-#: shellcontainmentconfig.cpp:106
+#: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "Intern scherm op %1"
 
-#: shellcontainmentconfig.cpp:110
+#: shellcontainmentconfig.cpp:109
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 op %3"
 
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Afgekoppeld scherm %1"
 
-#: shellcorona.cpp:171 shellcorona.cpp:173
+#: shellcorona.cpp:172 shellcorona.cpp:174
 #, kde-format
 msgid "Show Desktop"
 msgstr "Bureaublad tonen"
 
-#: shellcorona.cpp:173
+#: shellcorona.cpp:174
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Bureaublad verbergen"
 
-#: shellcorona.cpp:188
+#: shellcorona.cpp:190
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Omschakelaar van activiteiten tonen"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Huidige activiteit stoppen"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Naar vorige activiteit omschakelen"
 
-#: shellcorona.cpp:212
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Naar volgende activiteit omschakelen"
 
-#: shellcorona.cpp:227
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Item %1 in takenbeheer activeren"
 
-#: shellcorona.cpp:253
+#: shellcorona.cpp:259
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Bureaubladen en Panelen beheren..."
 
-#: shellcorona.cpp:274
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Toetsenbordfocus tussen panelen verplaatsen"
 
-#: shellcorona.cpp:1897
+#: shellcorona.cpp:1904
 #, kde-format
 msgid "Add Panel"
 msgstr "Paneel toevoegen"
 
-#: shellcorona.cpp:1933
+#: shellcorona.cpp:1940
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

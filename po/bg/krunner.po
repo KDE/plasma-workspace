@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2022-09-16 09:36+0200\n"
+"PO-Revision-Date: 2023-07-27 14:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,12 +55,12 @@ msgstr "Заменяне на съществуваща инстанция"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Показване на резултатите само за дадената приставка"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Показване на наличните приставки"
 
 #: main.cpp:94
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Заявката за изпълнение, използвана сам�
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Налични приставки на KRunner, pluginId"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Конфигуриране на KRunner…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Показват се резултати само от %1"
 
 #: qml/RunCommand.qml:124
 #, kde-format

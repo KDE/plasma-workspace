@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-07-28 02:08+0000\n"
 "PO-Revision-Date: 2023-03-06 21:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com, mail@kisaragi-hiu.com"
 
-#: currentcontainmentactionsmodel.cpp:205
+#: currentcontainmentactionsmodel.cpp:204
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "設定滑鼠動作外掛程式"
@@ -199,73 +199,73 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "螢幕上的虛擬鍵盤關閉"
 
-#: shellcontainmentconfig.cpp:106
+#: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "內部螢幕於 %1"
 
-#: shellcontainmentconfig.cpp:110
+#: shellcontainmentconfig.cpp:109
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 於 %3"
 
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "已拔出螢幕 %1"
 
-#: shellcorona.cpp:171 shellcorona.cpp:173
+#: shellcorona.cpp:172 shellcorona.cpp:174
 #, kde-format
 msgid "Show Desktop"
 msgstr "顯示桌面"
 
-#: shellcorona.cpp:173
+#: shellcorona.cpp:174
 #, kde-format
 msgid "Hide Desktop"
 msgstr "隱藏桌面"
 
-#: shellcorona.cpp:188
+#: shellcorona.cpp:190
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "顯示活動切換器"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "停止目前的活動"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "切至上個活動"
 
-#: shellcorona.cpp:212
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "切至下個活動"
 
-#: shellcorona.cpp:227
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "啟用工作管理員項目 %1"
 
-#: shellcorona.cpp:253
+#: shellcorona.cpp:259
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "管理桌面與面板…"
 
-#: shellcorona.cpp:274
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "在面板間移動鍵盤焦點"
 
-#: shellcorona.cpp:1897
+#: shellcorona.cpp:1904
 #, kde-format
 msgid "Add Panel"
 msgstr "新增面板"
 
-#: shellcorona.cpp:1933
+#: shellcorona.cpp:1940
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

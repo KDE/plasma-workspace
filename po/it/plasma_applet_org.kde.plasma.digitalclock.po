@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-28 02:08+0000\n"
 "PO-Revision-Date: 2023-07-07 09:34+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -275,7 +275,7 @@ msgstr "Primo giorno della settimana:"
 msgid "Available Plugins:"
 msgstr "Estensioni disponibili:"
 
-#: package/contents/ui/configTimeZones.qml:46
+#: package/contents/ui/configTimeZones.qml:42
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
@@ -285,12 +285,12 @@ msgstr ""
 "elenco. Apparirà solo quando cambi il fuso orario a livello di sistema con "
 "qualcos'altro."
 
-#: package/contents/ui/configTimeZones.qml:101
+#: package/contents/ui/configTimeZones.qml:97
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "L'orologio sta attualmente utilizzando questo fuso orario"
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:99
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -299,27 +299,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Nascosto se questa è la città del fuso orario locale"
 
-#: package/contents/ui/configTimeZones.qml:117
+#: package/contents/ui/configTimeZones.qml:113
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Passa al fuso orario di sistema..."
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:122
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Rimuovi questo fuso orario"
 
-#: package/contents/ui/configTimeZones.qml:135
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Fuso orario di sistema"
 
-#: package/contents/ui/configTimeZones.qml:135
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Fusi orari aggiuntivi"
 
-#: package/contents/ui/configTimeZones.qml:148
+#: package/contents/ui/configTimeZones.qml:144
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -328,17 +328,17 @@ msgstr ""
 "Aggiungi più fusi orari per visualizzarli tutti nella finestra a comparsa "
 "dell'applet o utilizzane uno per l'orologio stesso"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Aggiungi fusi orari..."
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:163
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Cambia il fuso orario visualizzato scorrendo sull'applet dell'orologio"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:170
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -347,12 +347,12 @@ msgstr ""
 "L'utilizzo di questa funzionalità non modifica il fuso orario a livello di "
 "sistema. Quando viaggi, cambia invece il fuso orario di sistema."
 
-#: package/contents/ui/configTimeZones.qml:198
+#: package/contents/ui/configTimeZones.qml:194
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Aggiungi altri fusi orari"
 
-#: package/contents/ui/configTimeZones.qml:209
+#: package/contents/ui/configTimeZones.qml:205
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -361,12 +361,12 @@ msgstr ""
 "Almeno un fuso orario deve essere abilitato. Il tuo fuso orario locale è "
 "stato abilitato automaticamente."
 
-#: package/contents/ui/configTimeZones.qml:244
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:242
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

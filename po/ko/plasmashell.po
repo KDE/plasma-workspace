@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-07-28 02:08+0000\n"
 "PO-Revision-Date: 2023-07-25 23:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: currentcontainmentactionsmodel.cpp:205
+#: currentcontainmentactionsmodel.cpp:204
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "마우스 동작 플러그인 설정"
@@ -197,73 +197,73 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "가상 키보드 꺼짐"
 
-#: shellcontainmentconfig.cpp:106
+#: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "%1의 내장 화면"
 
-#: shellcontainmentconfig.cpp:110
+#: shellcontainmentconfig.cpp:109
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%3(으)로 연결된 %1 %2"
 
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "연결 해제된 화면 %1"
 
-#: shellcorona.cpp:171 shellcorona.cpp:173
+#: shellcorona.cpp:172 shellcorona.cpp:174
 #, kde-format
 msgid "Show Desktop"
 msgstr "바탕 화면 표시"
 
-#: shellcorona.cpp:173
+#: shellcorona.cpp:174
 #, kde-format
 msgid "Hide Desktop"
 msgstr "바탕 화면 숨기기"
 
-#: shellcorona.cpp:188
+#: shellcorona.cpp:190
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "활동 전환기 표시"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "현재 활동 중단하기"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "이전 활동으로 전환"
 
-#: shellcorona.cpp:212
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "다음 활동으로 전환"
 
-#: shellcorona.cpp:227
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "활성 작업 관리자 항목 %1"
 
-#: shellcorona.cpp:253
+#: shellcorona.cpp:259
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "바탕 화면과 패널 관리..."
 
-#: shellcorona.cpp:274
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "패널간 키보드 포커스 이동"
 
-#: shellcorona.cpp:1897
+#: shellcorona.cpp:1904
 #, kde-format
 msgid "Add Panel"
 msgstr "패널 추가하기"
 
-#: shellcorona.cpp:1933
+#: shellcorona.cpp:1940
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

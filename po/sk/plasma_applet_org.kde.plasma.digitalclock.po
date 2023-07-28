@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-28 02:08+0000\n"
 "PO-Revision-Date: 2023-04-17 19:12+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -277,7 +277,7 @@ msgstr "Prvý deň v týždni:"
 msgid "Available Plugins:"
 msgstr "Dostupné doplnky:"
 
-#: package/contents/ui/configTimeZones.qml:46
+#: package/contents/ui/configTimeZones.qml:42
 #, fuzzy, kde-format
 #| msgid ""
 #| "Tip: if you travel frequently, add another entry for your home time zone "
@@ -291,12 +291,12 @@ msgstr ""
 "domáce časové pásmo. Zobrazí sa len vtedy, keď zmeníte systémové časové "
 "pásmo na iné."
 
-#: package/contents/ui/configTimeZones.qml:101
+#: package/contents/ui/configTimeZones.qml:97
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Hodiny momentálne používajú toto časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:99
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -305,27 +305,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Skryté, keď je toto mesto mestom miestneho časového pásma"
 
-#: package/contents/ui/configTimeZones.qml:117
+#: package/contents/ui/configTimeZones.qml:113
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Prepnúť systémové časové pásmo…"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:122
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Odstrániť toto časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:135
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Systémové časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:135
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Ďalšie časové pásma"
 
-#: package/contents/ui/configTimeZones.qml:148
+#: package/contents/ui/configTimeZones.qml:144
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -334,18 +334,18 @@ msgstr ""
 "Pridajte viac časových pásiem, aby ste ich všetky zobrazili v kontextovom "
 "okne appletu, alebo použite jedno z nich pre samotné hodiny"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Pridať časové pásma…"
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:163
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Prepínať zobrazené časové pásmo použitím kolieska myši nad appletom hodín"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:170
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -354,12 +354,12 @@ msgstr ""
 "Použitím tejto funkcie sa nezmení systémové časové pásmo. Keď cestujete, "
 "prepnite namiesto toho systémové časové pásmo."
 
-#: package/contents/ui/configTimeZones.qml:198
+#: package/contents/ui/configTimeZones.qml:194
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Pridať ďalšie časové pásma"
 
-#: package/contents/ui/configTimeZones.qml:209
+#: package/contents/ui/configTimeZones.qml:205
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -368,12 +368,12 @@ msgstr ""
 "Aspoň jedno časové pásmo musí byť povolené. Vaše miestne časové pásmo bolo "
 "povolené automaticky."
 
-#: package/contents/ui/configTimeZones.qml:244
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:242
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
