@@ -58,7 +58,7 @@ PlasmoidItem {
                 right: parent.right
                 bottom: parent.bottom
             }
-            width: Kirigami.Unit.small/2
+            width: Kirigami.Units.iconSizes.small / 2
             height: width
             visible: root.state === "unavailable"
             source: visible ? "emblem-unavailable" : ""
