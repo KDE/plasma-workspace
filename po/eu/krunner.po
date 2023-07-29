@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-19 18:38+0200\n"
+"PO-Revision-Date: 2023-07-28 10:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -58,12 +58,12 @@ msgstr "Ordezkatu aurrez dagoen instantzia bat"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Erakutsi emandako pluginaren emaitzak bakarrik"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Zerrendatu plugin erabilgarriak"
 
 #: main.cpp:94
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "Exekutatu beharreko itauna, -c  hornitzen ez bada soilik erabiltzen da"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "KRunner plugin erabilgarriak, pluginId"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "Konfiguratu KRunner…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "%1(e)ren emaitzak bakarrik erakusten"
 
 #: qml/RunCommand.qml:124
 #, kde-format

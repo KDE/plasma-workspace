@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-12-28 02:47+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -19,47 +19,37 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: kcm.cpp:64
+#: kcm.cpp:71
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Perjungti „Netrukdyti“ veikseną"
 
-#: kcm.cpp:192
-#, kde-format
-msgid "Configure Notifications"
-msgstr "Konfigūruoti pranešimus"
-
-#: sourcesmodel.cpp:364
+#: sourcesmodel.cpp:391
 #, kde-format
 msgid "Other Applications"
 msgstr "Kitos programos"
 
-#: ui/ApplicationConfiguration.qml:62
+#: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
 msgstr "Rodyti iškylančiuosius langus"
 
-#: ui/ApplicationConfiguration.qml:76
+#: ui/ApplicationConfiguration.qml:78
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Rodyti „Netrukdyti“ veiksenoje"
 
-#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Rodyti istorijoje"
 
-#: ui/ApplicationConfiguration.qml:100
+#: ui/ApplicationConfiguration.qml:102
 #, kde-format
 msgid "Show notification badges"
 msgstr "Rodyti pranešimų ženklelius"
 
-#: ui/ApplicationConfiguration.qml:118
-#, kde-format
-msgid "Configure Events…"
-msgstr "Konfigūruoti įvykius…"
-
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:123
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -67,6 +57,22 @@ msgid ""
 msgstr ""
 "Ši programa nepalaiko pranešimų konfigūravimo kiekvieno atskiro įvykio "
 "pagrindu."
+
+#: ui/ApplicationConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgid "Configure events:"
+msgstr "Konfigūruoti įvykius…"
+
+#: ui/ApplicationConfiguration.qml:227
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:236
+#, kde-format
+msgid "Play a sound"
+msgstr ""
 
 #: ui/main.qml:41
 #, kde-format
@@ -271,6 +277,9 @@ msgid ""
 msgstr ""
 "Pasirinkite programą iš sąrašo, norėdami konfigūruoti jos pranešimų "
 "nuostatas ir elgseną."
+
+#~ msgid "Configure Notifications"
+#~ msgstr "Konfigūruoti pranešimus"
 
 #~ msgid "This module lets you manage application and system notifications."
 #~ msgstr "Šis modulis leidžia jums tvarkyti programas ir sistemos pranešimus."

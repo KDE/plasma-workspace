@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-12-27 21:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,52 +17,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: kcm.cpp:64
+#: kcm.cpp:71
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "தொந்தரவு செய்யாமையை நிலைமாற்று"
 
-#: kcm.cpp:192
-#, kde-format
-msgid "Configure Notifications"
-msgstr "அறிவிப்புகளை அமை"
-
-#: sourcesmodel.cpp:364
+#: sourcesmodel.cpp:391
 #, kde-format
 msgid "Other Applications"
 msgstr "மற்ற செயலிகள்"
 
-#: ui/ApplicationConfiguration.qml:62
+#: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
 msgstr "தெரித்தெழும் அறிவிப்புகளை காட்டு"
 
-#: ui/ApplicationConfiguration.qml:76
+#: ui/ApplicationConfiguration.qml:78
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "தொந்தரவு செய்யாத பயன்முறையில் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "வரலாற்றில் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:100
+#: ui/ApplicationConfiguration.qml:102
 #, kde-format
 msgid "Show notification badges"
 msgstr "அறிவிப்பு அடையாளக்குறிகளைக் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:118
-#, kde-format
-msgid "Configure Events…"
-msgstr "நிகழ்வுகளை அமை…"
-
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:123
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
 msgstr "தனிப்பட்ட நிகழ்வுகளுக்கான அறிவிப்புகளை அமைத்தலை இந்த செயலி ஆதரிக்காது."
+
+#: ui/ApplicationConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgid "Configure events:"
+msgstr "நிகழ்வுகளை அமை…"
+
+#: ui/ApplicationConfiguration.qml:227
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:236
+#, kde-format
+msgid "Play a sound"
+msgstr ""
 
 #: ui/main.qml:41
 #, kde-format
@@ -264,6 +270,9 @@ msgid ""
 msgstr ""
 "ஒரு செயலியின் அறிவிப்பு அமைப்புகள் மற்றும் நடத்தையை மாற்ற, அதை பட்டியலிலிருந்து தேர்வு "
 "செய்யுங்கள்."
+
+#~ msgid "Configure Notifications"
+#~ msgstr "அறிவிப்புகளை அமை"
 
 #~ msgid "This module lets you manage application and system notifications."
 #~ msgstr "செயலி மற்றும் கணினி அறிவிப்புகளை நீங்கள் அமைக்க இந்த கூறு உதவும்."

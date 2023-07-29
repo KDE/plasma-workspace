@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-02-04 16:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -18,52 +18,58 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: kcm.cpp:64
+#: kcm.cpp:71
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Comută „nu deranja”"
 
-#: kcm.cpp:192
-#, kde-format
-msgid "Configure Notifications"
-msgstr "Configurează notificările"
-
-#: sourcesmodel.cpp:364
+#: sourcesmodel.cpp:391
 #, kde-format
 msgid "Other Applications"
 msgstr "Alte aplicații"
 
-#: ui/ApplicationConfiguration.qml:62
+#: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
 msgstr "Arată indicii contextuale"
 
-#: ui/ApplicationConfiguration.qml:76
+#: ui/ApplicationConfiguration.qml:78
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Arată în regimul „nu deranja”"
 
-#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Arată în istoric"
 
-#: ui/ApplicationConfiguration.qml:100
+#: ui/ApplicationConfiguration.qml:102
 #, kde-format
 msgid "Show notification badges"
 msgstr "Arată ecusoane de notificare"
 
-#: ui/ApplicationConfiguration.qml:118
-#, kde-format
-msgid "Configure Events…"
-msgstr "Configurează evenimente…"
-
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:123
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
 msgstr "Această aplicație nu susține configurarea notificărilor per eveniment."
+
+#: ui/ApplicationConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgid "Configure events:"
+msgstr "Configurează evenimente…"
+
+#: ui/ApplicationConfiguration.qml:227
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:236
+#, kde-format
+msgid "Play a sound"
+msgstr ""
 
 #: ui/main.qml:41
 #, kde-format
@@ -277,6 +283,9 @@ msgid ""
 msgstr ""
 "Alegeți o aplicație din listă pentru a-i configura parametrii și "
 "comportamentul de notificare."
+
+#~ msgid "Configure Notifications"
+#~ msgstr "Configurează notificările"
 
 #~ msgid "This module lets you manage application and system notifications."
 #~ msgstr ""

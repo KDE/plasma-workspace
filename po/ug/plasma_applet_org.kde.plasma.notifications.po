@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:270
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
@@ -251,46 +251,46 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:166
+#: package/contents/ui/JobItem.qml:164
 #, fuzzy, kde-format
 #| msgid "%1:"
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:180
+#: package/contents/ui/JobItem.qml:178
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "ۋاقىتلىق توختىدى"
 
-#: package/contents/ui/JobItem.qml:190
+#: package/contents/ui/JobItem.qml:188
 #, fuzzy, kde-format
 #| msgid "Cancel job"
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ۋەزىپىنى ئەمەلدىن قالدۇر"
 
-#: package/contents/ui/JobItem.qml:201
+#: package/contents/ui/JobItem.qml:199
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:202
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:234
-#: package/contents/ui/ThumbnailStrip.qml:171
+#: package/contents/ui/JobItem.qml:232
+#: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:262
+#: package/contents/ui/JobItem.qml:260
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open"
@@ -350,20 +350,20 @@ msgstr "ئۇقتۇرۇشلار"
 msgid "&Configure Event Notifications and Actions…"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:121
+#: package/contents/ui/NotificationHeader.qml:120
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:127
+#: package/contents/ui/NotificationHeader.qml:126
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
 msgstr[0] ""
 
-#: package/contents/ui/NotificationHeader.qml:161
+#: package/contents/ui/NotificationHeader.qml:160
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completition"
 #| msgid "%1 (%2 remaining)"
@@ -372,7 +372,7 @@ msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
 msgstr[0] "%1 (%2 قالدى)"
 
-#: package/contents/ui/NotificationHeader.qml:165
+#: package/contents/ui/NotificationHeader.qml:164
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completition"
 #| msgid "%1 (%2 remaining)"
@@ -381,7 +381,7 @@ msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
 msgstr[0] "%1 (%2 قالدى)"
 
-#: package/contents/ui/NotificationHeader.qml:170
+#: package/contents/ui/NotificationHeader.qml:169
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completition"
 #| msgid "%1 (%2 remaining)"
@@ -390,28 +390,28 @@ msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
 msgstr[0] "%1 (%2 قالدى)"
 
-#: package/contents/ui/NotificationHeader.qml:190
+#: package/contents/ui/NotificationHeader.qml:189
 #, kde-format
 msgid "Configure"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:207
+#: package/contents/ui/NotificationHeader.qml:206
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:208
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgid "Minimize"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:231
+#: package/contents/ui/NotificationHeader.qml:230
 #, kde-format
 msgid "Close"
 msgstr ""
 
-#: package/contents/ui/NotificationItem.qml:187
+#: package/contents/ui/NotificationItem.qml:186
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is the name of the job, can be things like Copying, deleting, moving"
@@ -420,33 +420,33 @@ msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 [ۋاقىتلىق توختىدى]"
 
-#: package/contents/ui/NotificationItem.qml:192
+#: package/contents/ui/NotificationItem.qml:191
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:193
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Failed"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:198
+#: package/contents/ui/NotificationItem.qml:197
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:199
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Finished"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:348
+#: package/contents/ui/NotificationItem.qml:346
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

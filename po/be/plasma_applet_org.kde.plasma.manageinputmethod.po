@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,33 +22,33 @@ msgstr ""
 "manageinputmethod.po\n"
 "X-Crowdin-File-ID: 8820\n"
 
-#: contents/ui/manage-inputmethod.qml:62
+#: contents/ui/manage-inputmethod.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Наладжванне віртуальных клавіятур..."
 
-#: contents/ui/manage-inputmethod.qml:81
+#: contents/ui/manage-inputmethod.qml:89
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Віртуальная клавіятура: недаступна"
 
-#: contents/ui/manage-inputmethod.qml:95
+#: contents/ui/manage-inputmethod.qml:102
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Віртуальная клавіятура: адключана"
 
-#: contents/ui/manage-inputmethod.qml:112
+#: contents/ui/manage-inputmethod.qml:118
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Паказваць віртуальную клавіятуру"
 
-#: contents/ui/manage-inputmethod.qml:128
+#: contents/ui/manage-inputmethod.qml:133
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Віртуальная клавіятура: бачна"
 
-#: contents/ui/manage-inputmethod.qml:143
+#: contents/ui/manage-inputmethod.qml:147
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Віртуальная клавіятура: уключана"

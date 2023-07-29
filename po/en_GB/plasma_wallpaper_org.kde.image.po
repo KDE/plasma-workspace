@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2023-02-27 21:39+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -27,62 +27,62 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "steve.allewell@gmail.com"
 
-#: imagepackage/contents/ui/config.qml:94
+#: imagepackage/contents/ui/config.qml:93
 #, kde-format
 msgid "Positioning:"
 msgstr "Positioning:"
 
-#: imagepackage/contents/ui/config.qml:97
+#: imagepackage/contents/ui/config.qml:96
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Scaled and Cropped"
 
-#: imagepackage/contents/ui/config.qml:101
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Scaled"
 msgstr "Scaled"
 
-#: imagepackage/contents/ui/config.qml:105
+#: imagepackage/contents/ui/config.qml:104
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Scaled, Keep Proportions"
 
-#: imagepackage/contents/ui/config.qml:109
+#: imagepackage/contents/ui/config.qml:108
 #, kde-format
 msgid "Centered"
 msgstr "Centred"
 
-#: imagepackage/contents/ui/config.qml:113
+#: imagepackage/contents/ui/config.qml:112
 #, kde-format
 msgid "Tiled"
 msgstr "Tiled"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:140
 #, kde-format
 msgid "Background:"
 msgstr "Background:"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Blur"
 msgstr "Blur"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Solid color"
 msgstr "Solid colour"
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Select Background Color"
 msgstr "Select Background Colour"
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
 msgid "Add Image…"
 msgstr "Add Image…"
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:212
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -166,17 +166,17 @@ msgstr ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 
-#: plugin/imagebackend.cpp:237
+#: plugin/imagebackend.cpp:234
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Directory with the wallpaper to show slides from"
 
-#: plugin/imagebackend.cpp:347
+#: plugin/imagebackend.cpp:344
 #, kde-format
 msgid "Open Image"
 msgstr "Open Image"
 
-#: plugin/imagebackend.cpp:347
+#: plugin/imagebackend.cpp:344
 #, kde-format
 msgid "Image Files"
 msgstr "Image Files"

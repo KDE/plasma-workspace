@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2023-04-07 23:43-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -35,64 +35,64 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ybando@k6.dion.ne.jp,ryuichi_ya220@outlook.jp"
 
-#: imagepackage/contents/ui/config.qml:94
+#: imagepackage/contents/ui/config.qml:93
 #, kde-format
 msgid "Positioning:"
 msgstr "配置:"
 
-#: imagepackage/contents/ui/config.qml:97
+#: imagepackage/contents/ui/config.qml:96
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "拡大/縮小と切り取り"
 
-#: imagepackage/contents/ui/config.qml:101
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Scaled"
 msgstr "拡大/縮小"
 
 # Maxpect
-#: imagepackage/contents/ui/config.qml:105
+#: imagepackage/contents/ui/config.qml:104
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "拡大/縮小 (アスペクト比を保つ)"
 
-#: imagepackage/contents/ui/config.qml:109
+#: imagepackage/contents/ui/config.qml:108
 #, kde-format
 msgid "Centered"
 msgstr "中央に表示"
 
-#: imagepackage/contents/ui/config.qml:113
+#: imagepackage/contents/ui/config.qml:112
 #, kde-format
 msgid "Tiled"
 msgstr "タイル状に表示"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:140
 #, kde-format
 msgid "Background:"
 msgstr "背景:"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Blur"
 msgstr "ぼかし"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Solid color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Select Background Color"
 msgstr "背景色を選択"
 
 # ACCELERATOR changed by translator
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
 msgid "Add Image…"
 msgstr "画像を追加..."
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:212
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -167,17 +167,17 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/imagebackend.cpp:237
+#: plugin/imagebackend.cpp:234
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: plugin/imagebackend.cpp:347
+#: plugin/imagebackend.cpp:344
 #, kde-format
 msgid "Open Image"
 msgstr "画像を開く"
 
-#: plugin/imagebackend.cpp:347
+#: plugin/imagebackend.cpp:344
 #, kde-format
 msgid "Image Files"
 msgstr "画像ファイル"

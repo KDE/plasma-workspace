@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-12-27 14:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,47 +22,37 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: kcm.cpp:64
+#: kcm.cpp:71
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Canvia a no destorbar"
 
-#: kcm.cpp:192
-#, kde-format
-msgid "Configure Notifications"
-msgstr "Configura les notificacions"
-
-#: sourcesmodel.cpp:364
+#: sourcesmodel.cpp:391
 #, kde-format
 msgid "Other Applications"
 msgstr "Altres aplicacions"
 
-#: ui/ApplicationConfiguration.qml:62
+#: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
 msgstr "Mostra els missatges emergents"
 
-#: ui/ApplicationConfiguration.qml:76
+#: ui/ApplicationConfiguration.qml:78
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Mostra en el mode no destorbar"
 
-#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Mostra en l'historial"
 
-#: ui/ApplicationConfiguration.qml:100
+#: ui/ApplicationConfiguration.qml:102
 #, kde-format
 msgid "Show notification badges"
 msgstr "Mostra els distintius de notificació"
 
-#: ui/ApplicationConfiguration.qml:118
-#, kde-format
-msgid "Configure Events…"
-msgstr "Configura els esdeveniments…"
-
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:123
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -70,6 +60,22 @@ msgid ""
 msgstr ""
 "Esta aplicació no permet la configuració de notificacions en una base per "
 "esdeveniment."
+
+#: ui/ApplicationConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgid "Configure events:"
+msgstr "Configura els esdeveniments…"
+
+#: ui/ApplicationConfiguration.qml:227
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:236
+#, kde-format
+msgid "Play a sound"
+msgstr ""
 
 #: ui/main.qml:41
 #, kde-format
@@ -274,3 +280,6 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu configuració "
 "de notificacions i el comportament."
+
+#~ msgid "Configure Notifications"
+#~ msgstr "Configura les notificacions"

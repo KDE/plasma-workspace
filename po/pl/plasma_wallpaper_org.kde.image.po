@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2023-04-10 11:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -28,62 +28,62 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
-#: imagepackage/contents/ui/config.qml:94
+#: imagepackage/contents/ui/config.qml:93
 #, kde-format
 msgid "Positioning:"
 msgstr "Umieszczenie:"
 
-#: imagepackage/contents/ui/config.qml:97
+#: imagepackage/contents/ui/config.qml:96
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Przeskalowana i przycięta"
 
-#: imagepackage/contents/ui/config.qml:101
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Scaled"
 msgstr "Przeskalowana"
 
-#: imagepackage/contents/ui/config.qml:105
+#: imagepackage/contents/ui/config.qml:104
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Przeskalowana z zachowaniem kształtu"
 
-#: imagepackage/contents/ui/config.qml:109
+#: imagepackage/contents/ui/config.qml:108
 #, kde-format
 msgid "Centered"
 msgstr "Wyśrodkowana"
 
-#: imagepackage/contents/ui/config.qml:113
+#: imagepackage/contents/ui/config.qml:112
 #, kde-format
 msgid "Tiled"
 msgstr "Kafelki"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:140
 #, kde-format
 msgid "Background:"
 msgstr "Tło:"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Blur"
 msgstr "Rozmycie"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Solid color"
 msgstr "Jednolita barwa"
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Select Background Color"
 msgstr "Wybierz kolor tła"
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
 msgid "Add Image…"
 msgstr "Dodaj obraz..."
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:212
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -166,17 +166,17 @@ msgstr ""
 "Plik, który ma być ustawiony jako tapeta, nie istnieje lub nie jest plikiem "
 "tapety: %1"
 
-#: plugin/imagebackend.cpp:237
+#: plugin/imagebackend.cpp:234
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalog z tapetami, z którego wyświetlać obrazy"
 
-#: plugin/imagebackend.cpp:347
+#: plugin/imagebackend.cpp:344
 #, kde-format
 msgid "Open Image"
 msgstr "Otwórz obraz"
 
-#: plugin/imagebackend.cpp:347
+#: plugin/imagebackend.cpp:344
 #, kde-format
 msgid "Image Files"
 msgstr "Pliki obrazów"

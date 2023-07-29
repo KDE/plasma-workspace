@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-12-29 17:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -68,13 +68,13 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Acumulatorul e configurat să se încarce până la aproximativ %1%."
 
-#: package/contents/ui/BrightnessItem.qml:65
+#: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:104
+#: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -323,27 +323,27 @@ msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "%1: motiv necunoscut"
 
-#: package/contents/ui/PowerProfileItem.qml:36
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "Economisirea energiei"
 
-#: package/contents/ui/PowerProfileItem.qml:40
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "Echilibrat"
 
-#: package/contents/ui/PowerProfileItem.qml:44
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "Performanță"
 
-#: package/contents/ui/PowerProfileItem.qml:61
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "Profil de alimentare"
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -353,7 +353,7 @@ msgstr ""
 "căldură deoarece calculatorul a depistat că s-ar putea afla în poala "
 "dumneavoastră."
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
@@ -361,12 +361,12 @@ msgstr ""
 "Regimul de performanță nu e disponibil deoarece calculatorul e prea "
 "fierbinte."
 
-#: package/contents/ui/PowerProfileItem.qml:197
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Regimul de performanță nu e disponibil."
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -375,17 +375,17 @@ msgstr ""
 "Performanța poate fi scăzută pentru a reduce generarea de căldură deoarece "
 "calculatorul a depistat că s-ar putea afla în poala dumneavoastră."
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Performanța poate fi redusă deoarece calculatorul e prea fierbinte."
 
-#: package/contents/ui/PowerProfileItem.qml:214
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Performanța poate fi redusă."
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -393,7 +393,7 @@ msgstr[0] "O aplicație a cerut activarea %2:"
 msgstr[1] "%1 aplicații au cerut activarea %2:"
 msgstr[2] "%1 de aplicații au cerut activarea %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:243
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

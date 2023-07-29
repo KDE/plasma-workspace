@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2023-02-22 21:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -68,13 +68,13 @@ msgstr "%1 %"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batteriet er sett opp til berre å ladast opp til %1 %."
 
-#: package/contents/ui/BrightnessItem.qml:65
+#: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/CompactRepresentation.qml:104
+#: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -313,27 +313,27 @@ msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "Ukjent program: ukjend grunn"
 
-#: package/contents/ui/PowerProfileItem.qml:36
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "Straumsparing"
 
-#: package/contents/ui/PowerProfileItem.qml:40
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "Balansert"
 
-#: package/contents/ui/PowerProfileItem.qml:44
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "Yting"
 
-#: package/contents/ui/PowerProfileItem.qml:61
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "Straumprofil"
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -342,18 +342,18 @@ msgstr ""
 "Ytingsmodusen vart slått av for å redusera varme­utviklinga, då maskina har "
 "funne ut at du truleg har ho plassert i fanget."
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "Utyingsmodusen er utilgjengeleg grunna overoppheting av datamaskina."
 
-#: package/contents/ui/PowerProfileItem.qml:197
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Utyingsmodusen er utilgjengeleg."
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -362,24 +362,24 @@ msgstr ""
 "Ytinga kan verta redusert for å redusera varme­utviklinga, då maskina har "
 "funne ut at du truleg har ho plassert i fanget."
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Ytinga kan verta redusert grunna overoppheting av datamaskina."
 
-#: package/contents/ui/PowerProfileItem.qml:214
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Ytinga kan verta redusert."
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "Eitt program har bedt om aktivering av %2:"
 msgstr[1] "%1 program har bedt om aktivering av %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:243
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

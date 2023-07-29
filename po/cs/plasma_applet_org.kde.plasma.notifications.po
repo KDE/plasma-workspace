@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2023-01-30 14:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Otevřít pomocí %1"
 msgid "Open with…"
 msgstr "Otevřít pomocí..."
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:270
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otevřít odpovídající složku"
@@ -242,43 +242,43 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:166
+#: package/contents/ui/JobItem.qml:164
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:180
+#: package/contents/ui/JobItem.qml:178
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pozastavit"
 
-#: package/contents/ui/JobItem.qml:190
+#: package/contents/ui/JobItem.qml:188
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: package/contents/ui/JobItem.qml:201
+#: package/contents/ui/JobItem.qml:199
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "Skrýt podrobnosti"
 
-#: package/contents/ui/JobItem.qml:202
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Zobrazit podrobnosti"
 
-#: package/contents/ui/JobItem.qml:234
-#: package/contents/ui/ThumbnailStrip.qml:171
+#: package/contents/ui/JobItem.qml:232
+#: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "Více možností…"
 
-#: package/contents/ui/JobItem.qml:262
+#: package/contents/ui/JobItem.qml:260
 #, kde-format
 msgid "Open"
 msgstr "Otevřít"
@@ -338,13 +338,13 @@ msgstr "Vymazat všechna oznámení"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Nastavit upozornění na události a činnosti…"
 
-#: package/contents/ui/NotificationHeader.qml:121
+#: package/contents/ui/NotificationHeader.qml:120
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Právě teď"
 
-#: package/contents/ui/NotificationHeader.qml:127
+#: package/contents/ui/NotificationHeader.qml:126
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -353,7 +353,7 @@ msgstr[0] "Před %1 min"
 msgstr[1] "Před %1 min"
 msgstr[2] "Před %1 min"
 
-#: package/contents/ui/NotificationHeader.qml:161
+#: package/contents/ui/NotificationHeader.qml:160
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -362,7 +362,7 @@ msgstr[0] "zbývá %1 s"
 msgstr[1] "zbývají %1 s"
 msgstr[2] "zbývá %1 s"
 
-#: package/contents/ui/NotificationHeader.qml:165
+#: package/contents/ui/NotificationHeader.qml:164
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -371,7 +371,7 @@ msgstr[0] "Zbývá %1 m"
 msgstr[1] "Zbývají %1 m"
 msgstr[2] "Zbývá %1 m"
 
-#: package/contents/ui/NotificationHeader.qml:170
+#: package/contents/ui/NotificationHeader.qml:169
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -380,56 +380,56 @@ msgstr[0] "Zbývá %1 h"
 msgstr[1] "Zbývají %1 h"
 msgstr[2] "Zbývá %1 h"
 
-#: package/contents/ui/NotificationHeader.qml:190
+#: package/contents/ui/NotificationHeader.qml:189
 #, kde-format
 msgid "Configure"
 msgstr "Nastavit"
 
-#: package/contents/ui/NotificationHeader.qml:207
+#: package/contents/ui/NotificationHeader.qml:206
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Obnovit"
 
-#: package/contents/ui/NotificationHeader.qml:208
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgid "Minimize"
 msgstr "Minimalizovat"
 
-#: package/contents/ui/NotificationHeader.qml:231
+#: package/contents/ui/NotificationHeader.qml:230
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"
 
-#: package/contents/ui/NotificationItem.qml:187
+#: package/contents/ui/NotificationItem.qml:186
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (Pozastaveno)"
 
-#: package/contents/ui/NotificationItem.qml:192
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Selhalo)"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:193
 #, kde-format
 msgid "Job Failed"
 msgstr "Úloha selhala"
 
-#: package/contents/ui/NotificationItem.qml:198
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1: (Dokončeno)"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Finished"
 msgstr "Úloha byla dokončena"
 
-#: package/contents/ui/NotificationItem.qml:348
+#: package/contents/ui/NotificationItem.qml:346
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

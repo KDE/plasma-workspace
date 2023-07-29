@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2021-06-08 22:29-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,51 +17,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: kcm.cpp:64
+#: kcm.cpp:71
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਨੂੰ ਬਦਲੋ"
 
-#: kcm.cpp:192
-#, kde-format
-msgid "Configure Notifications"
-msgstr "ਸੂਚਨਾਵਾਂ ਲਈ ਸੰਰਚਨਾ"
-
-#: sourcesmodel.cpp:364
+#: sourcesmodel.cpp:391
 #, kde-format
 msgid "Other Applications"
 msgstr "ਹੋਰ ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ui/ApplicationConfiguration.qml:62
+#: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
 msgstr "ਪੋਪਅੱਪ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:76
+#: ui/ApplicationConfiguration.qml:78
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਢੰਗ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:100
+#: ui/ApplicationConfiguration.qml:102
 #, kde-format
 msgid "Show notification badges"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬਿੱਲੇ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:118
-#, kde-format
-msgid "Configure Events…"
-msgstr "…ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
-
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:123
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgid "Configure events:"
+msgstr "…ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
+
+#: ui/ApplicationConfiguration.qml:227
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:236
+#, kde-format
+msgid "Play a sound"
 msgstr ""
 
 #: ui/main.qml:41
@@ -270,6 +276,9 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
 msgstr ""
+
+#~ msgid "Configure Notifications"
+#~ msgstr "ਸੂਚਨਾਵਾਂ ਲਈ ਸੰਰਚਨਾ"
 
 #~ msgid "This module lets you manage application and system notifications."
 #~ msgstr "ਇਹ ਮੋਡੀਊਲ ਤੁਹਾਨੂੰ ਐਪਲੀਕੇਸ਼ਨ ਅਤੇ ਸਿਸਟਮ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ ਦੇ ਇੰਤਜ਼ਾਮ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ।"

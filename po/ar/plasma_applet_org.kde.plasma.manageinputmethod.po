@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-09-10 09:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -18,33 +18,33 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/manage-inputmethod.qml:62
+#: contents/ui/manage-inputmethod.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "اضبط لوحات المفاتيح الوهمية..."
 
-#: contents/ui/manage-inputmethod.qml:81
+#: contents/ui/manage-inputmethod.qml:89
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "لوحة المفاتيح الوهميّة: غير متوفرة"
 
-#: contents/ui/manage-inputmethod.qml:95
+#: contents/ui/manage-inputmethod.qml:102
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "لوحة المفاتيح الوهميّة: معطلة"
 
-#: contents/ui/manage-inputmethod.qml:112
+#: contents/ui/manage-inputmethod.qml:118
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "أظهر لوحة المفاتيح الوهمية"
 
-#: contents/ui/manage-inputmethod.qml:128
+#: contents/ui/manage-inputmethod.qml:133
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "لوحة المفاتيح الوهميّة: مرئية"
 
-#: contents/ui/manage-inputmethod.qml:143
+#: contents/ui/manage-inputmethod.qml:147
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "لوحة المفاتيح الوهميّة: مفعلة"

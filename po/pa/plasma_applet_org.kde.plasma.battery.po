@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-06-14 21:00-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -71,13 +71,13 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "ਤੁਹਾਡੀ ਬੈਟਰੀ ਸਿਰਫ਼ %1 ਤੱਕ ਹੀ ਚਾਰਜ ਹੋਣ ਲਈ ਸੰਰਚਿਤ ਕੀਤੀ ਹੈ।"
 
-#: package/contents/ui/BrightnessItem.qml:65
+#: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:104
+#: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -323,27 +323,27 @@ msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "%1: ਅਣਪਛਾਤਾ ਕਾਰਨ"
 
-#: package/contents/ui/PowerProfileItem.qml:36
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "ਪਾਵਰ ਬੱਚਤ"
 
-#: package/contents/ui/PowerProfileItem.qml:40
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "ਸੰਤੁਲਿਤ"
 
-#: package/contents/ui/PowerProfileItem.qml:44
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "ਕਾਰਗੁਜ਼ਾਰੀ"
 
-#: package/contents/ui/PowerProfileItem.qml:61
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "ਪਾਵਰ ਪਰੋਫਾਈਲ"
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -352,18 +352,18 @@ msgstr ""
 "ਤਾਪਮਾਨ ਘਟਾਉਣ ਲਈ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾ ਚੁੱਕਾ ਹੈ, ਕਿਉਂਕਿ ਕੰਪਿਊਟਰ ਨੇ ਅੰਦਾਜ਼ਾ ਲਾਇਆ "
 "ਹੈ ਕਿ ਇਹ ਤੁਹਾਡੀ ਗੋਦੀ ਵਿੱਚ ਰੱਖਿਆ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "ਕੰਪਿਊਟਰ ਬਹੁਤ ਗਰਮ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:197
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -372,24 +372,24 @@ msgstr ""
 "ਤਾਪਮਾਨ ਘਟਾਉਣ ਲਈ ਕਾਰਗੁਜ਼ਾਰੀ ਘਟਾਈ ਜਾ ਸਕਦੀ ਹੈ, ਕਿਉਂਕਿ ਕੰਪਿਊਟਰ ਨੇ ਅੰਦਾਜ਼ਾ ਲਾਇਆ ਹੈ ਕਿ ਇਹ "
 "ਤੁਹਾਡੀ ਗੋਦੀ ਵਿੱਚ ਰੱਖਿਆ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "ਕੰਪਿਊਟਰ ਦੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਗਰਮ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਸਕਦੀ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:214
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਸਕਦੀ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/PowerProfileItem.qml:243
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2019-10-10 07:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: kcm.cpp:64
+#: kcm.cpp:71
 #, fuzzy, kde-format
 #| msgid "Do not disturb:"
 msgid "Toggle do not disturb"
 msgstr "Ба ман халал нарасонед:"
 
-#: kcm.cpp:192
-#, kde-format
-msgid "Configure Notifications"
-msgstr "Танзимоти огоҳиҳо"
-
-#: sourcesmodel.cpp:364
+#: sourcesmodel.cpp:391
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Other Applications"
 msgstr "Барномаҳо"
 
-#: ui/ApplicationConfiguration.qml:62
+#: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
 msgstr "Намоиш додани равзанаҳои пайдошаванда"
 
-#: ui/ApplicationConfiguration.qml:76
+#: ui/ApplicationConfiguration.qml:78
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Намоиш додан дар реҷаи \"Ба ман халал нарасонед\""
 
-#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Намоиш додан дар таърих"
 
-#: ui/ApplicationConfiguration.qml:100
+#: ui/ApplicationConfiguration.qml:102
 #, kde-format
 msgid "Show notification badges"
 msgstr "Намоиш додани нишонаҳои огоҳӣ"
 
-#: ui/ApplicationConfiguration.qml:118
-#, fuzzy, kde-format
-#| msgid "Configure Events..."
-msgid "Configure Events…"
-msgstr "Танзимоти рӯйдодҳо..."
-
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:123
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Configure Events..."
+msgid "Configure events:"
+msgstr "Танзимоти рӯйдодҳо..."
+
+#: ui/ApplicationConfiguration.qml:227
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:236
+#, kde-format
+msgid "Play a sound"
 msgstr ""
 
 #: ui/main.qml:41
@@ -274,6 +279,9 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
 msgstr ""
+
+#~ msgid "Configure Notifications"
+#~ msgstr "Танзимоти огоҳиҳо"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

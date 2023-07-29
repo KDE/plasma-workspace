@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
 "PO-Revision-Date: 2022-10-16 22:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgstr "Openen met %1"
 msgid "Open with…"
 msgstr "Openen met…"
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:270
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Map openen waarin het zich bevindt"
@@ -236,43 +236,43 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:166
+#: package/contents/ui/JobItem.qml:164
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:180
+#: package/contents/ui/JobItem.qml:178
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pauzeren"
 
-#: package/contents/ui/JobItem.qml:190
+#: package/contents/ui/JobItem.qml:188
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: package/contents/ui/JobItem.qml:201
+#: package/contents/ui/JobItem.qml:199
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "Details verbergen"
 
-#: package/contents/ui/JobItem.qml:202
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Details tonen"
 
-#: package/contents/ui/JobItem.qml:234
-#: package/contents/ui/ThumbnailStrip.qml:171
+#: package/contents/ui/JobItem.qml:232
+#: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "Meer opties…"
 
-#: package/contents/ui/JobItem.qml:262
+#: package/contents/ui/JobItem.qml:260
 #, kde-format
 msgid "Open"
 msgstr "Openen"
@@ -329,13 +329,13 @@ msgstr "Alle meldingen wissen"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Meldingen van gebeurtenissen en acties &configureren…"
 
-#: package/contents/ui/NotificationHeader.qml:121
+#: package/contents/ui/NotificationHeader.qml:120
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Op dit moment"
 
-#: package/contents/ui/NotificationHeader.qml:127
+#: package/contents/ui/NotificationHeader.qml:126
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -343,7 +343,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "%1 minuut geleden"
 msgstr[1] "%1 minuten geleden"
 
-#: package/contents/ui/NotificationHeader.qml:161
+#: package/contents/ui/NotificationHeader.qml:160
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -351,7 +351,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 s resterend"
 msgstr[1] "%1 s resterend"
 
-#: package/contents/ui/NotificationHeader.qml:165
+#: package/contents/ui/NotificationHeader.qml:164
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -359,7 +359,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 minuut resterend"
 msgstr[1] "%1 minuten resterend"
 
-#: package/contents/ui/NotificationHeader.qml:170
+#: package/contents/ui/NotificationHeader.qml:169
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -367,56 +367,56 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 uur resterend"
 msgstr[1] "%1 uur resterend"
 
-#: package/contents/ui/NotificationHeader.qml:190
+#: package/contents/ui/NotificationHeader.qml:189
 #, kde-format
 msgid "Configure"
 msgstr "Configureren"
 
-#: package/contents/ui/NotificationHeader.qml:207
+#: package/contents/ui/NotificationHeader.qml:206
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Herstellen"
 
-#: package/contents/ui/NotificationHeader.qml:208
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgid "Minimize"
 msgstr "Minimaliseren"
 
-#: package/contents/ui/NotificationHeader.qml:231
+#: package/contents/ui/NotificationHeader.qml:230
 #, kde-format
 msgid "Close"
 msgstr "Sluiten"
 
-#: package/contents/ui/NotificationItem.qml:187
+#: package/contents/ui/NotificationItem.qml:186
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 [gepauzeerd]"
 
-#: package/contents/ui/NotificationItem.qml:192
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (mislukt)"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:193
 #, kde-format
 msgid "Job Failed"
 msgstr "Taak mislukt"
 
-#: package/contents/ui/NotificationItem.qml:198
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (beëindigd)"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Finished"
 msgstr "Job voltooid"
 
-#: package/contents/ui/NotificationItem.qml:348
+#: package/contents/ui/NotificationItem.qml:346
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
