@@ -423,22 +423,23 @@ void Klipper::saveHistory(bool empty)
 {
     QMutexLocker lock(m_history->model()->mutex());
     static const char failed_save_warning[] = "Failed to save history. Clipboard history cannot be saved.";
+    static const QString history_file_path_relative = QStringLiteral("klipper/history2.lst");
     // don't use "appdata", klipper is also a kicker applet
-    QString history_file_name(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst")));
-    if (history_file_name.isEmpty()) {
+    QString history_file_path(QStandardPaths::locate(QStandardPaths::GenericDataLocation, history_file_path_relative));
+    if (history_file_path.isEmpty()) {
         // try creating the file
         QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
         if (!dir.mkpath(QStringLiteral("klipper"))) {
             qCWarning(KLIPPER_LOG) << failed_save_warning;
             return;
         }
-        history_file_name = dir.absoluteFilePath(QStringLiteral("klipper/history2.lst"));
+        history_file_path = dir.absoluteFilePath(history_file_path_relative);
     }
-    if (history_file_name.isEmpty()) {
+    if (history_file_path.isEmpty()) {
         qCWarning(KLIPPER_LOG) << failed_save_warning;
         return;
     }
-    QSaveFile history_file(history_file_name);
+    QSaveFile history_file(history_file_path);
     if (!history_file.open(QIODevice::WriteOnly)) {
         qCWarning(KLIPPER_LOG) << failed_save_warning;
         return;
