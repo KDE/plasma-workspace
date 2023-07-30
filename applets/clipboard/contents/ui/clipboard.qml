@@ -30,7 +30,7 @@ PlasmoidItem {
     toolTipMainText: i18n("Clipboard Contents")
     toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     toolTipTextFormat: Text.PlainText
-    Plasmoid.icon: "klipper"
+    Plasmoid.icon: "klipper-symbolic"
 
     function action_configure() {
         clipboardSource.service("", "configureKlipper");
