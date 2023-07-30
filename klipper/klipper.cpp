@@ -155,7 +155,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     m_saveFileTimer->setSingleShot(true);
     m_saveFileTimer->setInterval(5s);
     connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
-        const QFuture<void> future = QtConcurrent::run(&Klipper::saveHistory, this, false);
+        const QFuture<bool> future = QtConcurrent::run(&Klipper::saveHistory, this, false);
         // Destroying the future neither waits nor cancels the asynchronous computation
     });
     connect(m_history, &History::changed, this, [this] {
@@ -419,7 +419,7 @@ bool Klipper::loadHistory()
     return true;
 }
 
-void Klipper::saveHistory(bool empty)
+bool Klipper::saveHistory(bool empty)
 {
     QMutexLocker lock(m_history->model()->mutex());
     static const char failed_save_warning[] = "Failed to save history. Clipboard history cannot be saved. Reason:";
@@ -432,25 +432,25 @@ void Klipper::saveHistory(bool empty)
         QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
         if (path.isEmpty()) {
             qCWarning(KLIPPER_LOG) << failed_save_warning << "cannot locate a standard data location to save the clipboard history.";
-            return;
+            return false;
         }
 
         QDir dir(path);
         if (!dir.mkpath(QStringLiteral("klipper"))) {
             qCWarning(KLIPPER_LOG) << failed_save_warning << "Klipper save directory" << path + QStringLiteral("/klipper")
                                    << "does not exist and cannot be created.";
-            return;
+            return false;
         }
         history_file_path = dir.absoluteFilePath(history_file_path_relative);
     }
     if (history_file_path.isEmpty()) {
         qCWarning(KLIPPER_LOG) << failed_save_warning << "could not construct path to save clipboard history to.";
-        return;
+        return false;
     }
     QSaveFile history_file(history_file_path);
     if (!history_file.open(QIODevice::WriteOnly)) {
         qCWarning(KLIPPER_LOG) << failed_save_warning << "unable to open save file" << history_file_path << ":" << history_file.errorString();
-        return;
+        return false;
     }
     QByteArray data;
     QDataStream history_stream(&data, QIODevice::WriteOnly);
@@ -471,7 +471,10 @@ void Klipper::saveHistory(bool empty)
     ds << crc << data;
     if (!history_file.commit()) {
         qCWarning(KLIPPER_LOG) << failed_save_warning << "failed to commit updated save file to disk.";
+        return false;
     }
+
+    return true;
 }
 
 // save session on shutdown. Don't simply use the c'tor, as that may not be called.

@@ -119,8 +119,9 @@ protected:
     /**
      * Save history to disk
      * @param empty save empty history instead of actual history
+     * @return whether saving was successful
      */
-    void saveHistory(bool empty = false);
+    bool saveHistory(bool empty = false);
 
     /**
      * Check data in clipboard, and if it passes these checks,
