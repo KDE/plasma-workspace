@@ -422,7 +422,7 @@ bool Klipper::loadHistory()
 void Klipper::saveHistory(bool empty)
 {
     QMutexLocker lock(m_history->model()->mutex());
-    static const char failed_save_warning[] = "Failed to save history. Clipboard history cannot be saved.";
+    static const char failed_save_warning[] = "Failed to save history. Clipboard history cannot be saved. Reason:";
     static const QString history_file_path_relative = QStringLiteral("klipper/history2.lst");
     // don't use "appdata", klipper is also a kicker applet
     QString history_file_path(QStandardPaths::locate(QStandardPaths::GenericDataLocation, history_file_path_relative));
@@ -430,18 +430,18 @@ void Klipper::saveHistory(bool empty)
         // try creating the file
         QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
         if (!dir.mkpath(QStringLiteral("klipper"))) {
-            qCWarning(KLIPPER_LOG) << failed_save_warning;
-            return;
+            qCWarning(KLIPPER_LOG) << failed_save_warning << "Klipper save directory" << dir.absolutePath() + QStringLiteral("/klipper")
+                                   << "does not exist and cannot be created.";
         }
         history_file_path = dir.absoluteFilePath(history_file_path_relative);
     }
     if (history_file_path.isEmpty()) {
-        qCWarning(KLIPPER_LOG) << failed_save_warning;
+        qCWarning(KLIPPER_LOG) << failed_save_warning << "could not construct path to save clipboard history to.";
         return;
     }
     QSaveFile history_file(history_file_path);
     if (!history_file.open(QIODevice::WriteOnly)) {
-        qCWarning(KLIPPER_LOG) << failed_save_warning;
+        qCWarning(KLIPPER_LOG) << failed_save_warning << "unable to open save file" << history_file_path << ":" << history_file.errorString();
         return;
     }
     QByteArray data;
@@ -462,7 +462,7 @@ void Klipper::saveHistory(bool empty)
     QDataStream ds(&history_file);
     ds << crc << data;
     if (!history_file.commit()) {
-        qCWarning(KLIPPER_LOG) << failed_save_warning;
+        qCWarning(KLIPPER_LOG) << failed_save_warning << "failed to commit updated save file to disk.";
     }
 }
 
