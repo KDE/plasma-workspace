@@ -59,7 +59,7 @@ QString Notification::Private::sanitize(const QString &text)
     QString result;
     QXmlStreamWriter out(&result);
 
-    const QVector<QString> allowedTags = {"b", "i", "u", "img", "a", "html", "br", "table", "tr", "td"};
+    static const QStringList allowedTags{"b", "i", "u", "img", "a", "html", "br", "table", "tr", "td"};
 
     out.writeStartDocument();
     while (!r.atEnd()) {
