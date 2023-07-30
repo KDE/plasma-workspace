@@ -35,6 +35,7 @@ QString Notification::Private::sanitize(const QString &text)
     // replace all \ns with <br/>
     QString t = text;
 
+    t.replace(QLatin1Char('<'), QLatin1String("&lt;")); // '>' will be ignored if there is no matching '<'
     t.replace(QLatin1String("\n"), QStringLiteral("<br/>"));
     // Now remove all inner whitespace (\ns are already <br/>s)
     t = t.simplified();
