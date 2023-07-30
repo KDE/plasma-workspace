@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2023-01-15 12:52+0100\n"
+"PO-Revision-Date: 2023-07-29 12:08+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -41,10 +41,11 @@ msgstr "KRunner"
 msgid "Run Command interface"
 msgstr "Grensesnitt for køyring av kommandoar"
 
+# Dette og neste er kommandolinjeargument, og bør derfor slutta med punktum.
 #: main.cpp:62
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr "Bruk innhald på utklippstavle til KRunner-spørjing"
+msgstr "Bruk innhald på utklippstavle til KRunner-spørjing."
 
 #: main.cpp:63
 #, kde-format
@@ -54,7 +55,7 @@ msgstr "Start KRunner i bakgrunnen (ikkje vis noko)."
 #: main.cpp:64
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "Erstatt ein instans som finst frå før"
+msgstr "Erstatt ein instans som finst frå før."
 
 #: main.cpp:69
 #, kde-format

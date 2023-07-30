@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2023-06-17 09:14+0200\n"
+"PO-Revision-Date: 2023-07-29 10:00+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -133,7 +133,7 @@ msgstr ""
 "Cando texto que cadra cun padrón de acción se selecciona ou se escolle do "
 "historial do portapapeis, amosar automaticamente o menú emerxente coas "
 "accións correspondentes. Se desactiva o menú automático aquí, ou non se "
-"mostra para unha xanela excluída, pode amosarse usando o atallo de teclado "
+"amosa para unha xanela excluída, pode amosarse usando o atallo de teclado "
 "<shortcut>%1</shortcut>."
 
 #: configdialog.cpp:278
@@ -568,7 +568,7 @@ msgstr "Amosar os elementos na posición do rato"
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "%1 - Utilidade de portapapeis"
+msgstr "%1 — Utilidade de portapapeis"
 
 #: klipper.cpp:567
 #, kde-kuit-format
@@ -578,7 +578,7 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 "Pode activar as accións de URL máis adiante na páxina de <interface>Accións</"
-"interface> da xanela de configuración do miniaplicativo de portapapeis"
+"interface> da xanela de configuración da miniaplicación de portapapeis."
 
 #: klipper.cpp:606
 #, kde-format
@@ -588,7 +588,7 @@ msgstr "Debería iniciarse automaticamente Klipper ao acceder?"
 #: klipper.cpp:607
 #, kde-format
 msgid "Automatically Start Klipper?"
-msgstr "Desexa iniciar Klipper automaticamente?"
+msgstr "Quere iniciar Klipper automaticamente?"
 
 #: klipper.cpp:608
 #, kde-format
@@ -859,7 +859,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "%1 - Elementos do portapapeis"
+msgstr "%1 — Elementos do portapapeis"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -910,7 +910,7 @@ msgstr "Carsten Pfeiffer"
 #: main.cpp:34
 #, kde-format
 msgid "Author"
-msgstr "Autor"
+msgstr "Autoría"
 
 #: main.cpp:36
 #, kde-format
@@ -920,7 +920,7 @@ msgstr "Andrew Stanley-Jones"
 #: main.cpp:36
 #, kde-format
 msgid "Original Author"
-msgstr "Autor orixinal"
+msgstr "Autoría orixinal."
 
 #: main.cpp:38
 #, kde-format
@@ -950,7 +950,7 @@ msgstr "Esben Mose Hansen"
 #: main.cpp:42
 #, kde-format
 msgid "Previous Maintainer"
-msgstr "Anterior mantenedor."
+msgstr "Mantemento anterior."
 
 #: main.cpp:44
 #, kde-format
@@ -960,7 +960,7 @@ msgstr "Martin Gräßlin"
 #: main.cpp:44
 #, kde-format
 msgid "Maintainer"
-msgstr "Mantenedor"
+msgstr "Mantemento."
 
 #: main.cpp:46
 #, kde-format
