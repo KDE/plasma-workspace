@@ -428,9 +428,16 @@ void Klipper::saveHistory(bool empty)
     QString history_file_path(QStandardPaths::locate(QStandardPaths::GenericDataLocation, history_file_path_relative));
     if (history_file_path.isEmpty()) {
         // try creating the file
-        QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
+
+        QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        if (path.isEmpty()) {
+            qCWarning(KLIPPER_LOG) << failed_save_warning << "cannot locate a standard data location to save the clipboard history.";
+            return;
+        }
+
+        QDir dir(path);
         if (!dir.mkpath(QStringLiteral("klipper"))) {
-            qCWarning(KLIPPER_LOG) << failed_save_warning << "Klipper save directory" << dir.absolutePath() + QStringLiteral("/klipper")
+            qCWarning(KLIPPER_LOG) << failed_save_warning << "Klipper save directory" << path + QStringLiteral("/klipper")
                                    << "does not exist and cannot be created.";
             return;
         }
