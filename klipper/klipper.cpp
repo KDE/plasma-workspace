@@ -432,6 +432,7 @@ void Klipper::saveHistory(bool empty)
         if (!dir.mkpath(QStringLiteral("klipper"))) {
             qCWarning(KLIPPER_LOG) << failed_save_warning << "Klipper save directory" << dir.absolutePath() + QStringLiteral("/klipper")
                                    << "does not exist and cannot be created.";
+            return;
         }
         history_file_path = dir.absoluteFilePath(history_file_path_relative);
     }
