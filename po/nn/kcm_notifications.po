@@ -273,6 +273,3 @@ msgid ""
 msgstr ""
 "Vel eit program frå lista for å setja opp innstillingar og åtferd for "
 "varsling."
-
-#~ msgid "Configure Notifications"
-#~ msgstr "Set opp varslingar"

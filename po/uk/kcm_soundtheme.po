@@ -1,0 +1,50 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"PO-Revision-Date: 2023-07-29 08:42+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt ""
+"%2 is a theme name or a list of theme names that the current theme inherits "
+"from"
+msgid "Based on: %2"
+msgid_plural "Based on: %2"
+msgstr[0] "Засновано на: %2"
+msgstr[1] "Засновано на: %2"
+msgstr[2] "Засновано на: %2"
+
+#: ui/main.qml:70
+#, kde-format
+msgctxt ""
+"@label Precedes a list of buttons which can be clicked to preview the "
+"theme's sounds. Keep it short"
+msgid "Preview sounds:"
+msgstr "Прослухати звуки:"
+
+#: ui/main.qml:82
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound \"%1\""
+msgstr "Прослухати звук «%1»"
+
+#: ui/main.qml:102
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview the demo sound for the theme \"%1\""
+msgstr "Прослухати демонстраційний звук для теми «%1»"

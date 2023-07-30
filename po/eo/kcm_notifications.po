@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 01:59+0000\n"
-"PO-Revision-Date: 2023-05-28 11:26+0100\n"
+"PO-Revision-Date: 2023-07-29 07:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -58,15 +58,14 @@ msgid ""
 msgstr "Ĉi tiu aplikaĵo ne subtenas agordon de sciigoj laŭ-okazaĵo."
 
 #: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgid "Configure events:"
-msgstr "Agordi Eventojn…"
+msgstr "Agordi eventojn:"
 
 #: ui/ApplicationConfiguration.qml:227
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Montri mesaĝon en ŝprucfenestro"
 
 #: ui/ApplicationConfiguration.qml:236
 #, kde-format

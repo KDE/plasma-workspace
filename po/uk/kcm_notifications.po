@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 01:59+0000\n"
-"PO-Revision-Date: 2022-12-27 08:41+0200\n"
+"PO-Revision-Date: 2023-07-29 08:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -60,20 +60,19 @@ msgstr ""
 "основі даних щодо подій."
 
 #: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgid "Configure events:"
-msgstr "Налаштувати події…"
+msgstr "Налаштувати події:"
 
 #: ui/ApplicationConfiguration.qml:227
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Показати повідомлення у вигульку"
 
 #: ui/ApplicationConfiguration.qml:236
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Відтворити звук"
 
 #: ui/main.qml:41
 #, kde-format

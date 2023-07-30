@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 01:59+0000\n"
-"PO-Revision-Date: 2022-12-27 10:26+0100\n"
+"PO-Revision-Date: 2023-07-29 12:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -57,20 +57,19 @@ msgstr ""
 "per gebeurtenis."
 
 #: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgid "Configure events:"
-msgstr "Gebeurtenissen configureren…"
+msgstr "Gebeurtenissen configureren:"
 
 #: ui/ApplicationConfiguration.qml:227
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Een bericht in een dialoogvenster tonen"
 
 #: ui/ApplicationConfiguration.qml:236
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Een geluidje laten horen"
 
 #: ui/main.qml:41
 #, kde-format

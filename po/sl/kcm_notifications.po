@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 01:59+0000\n"
-"PO-Revision-Date: 2023-03-11 09:04+0100\n"
+"PO-Revision-Date: 2023-07-29 07:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -56,20 +56,19 @@ msgid ""
 msgstr "Ta aplikacija ne podpira nastavitev obvestila na osnovi dogodka."
 
 #: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgid "Configure events:"
-msgstr "Nastavi dogodke…"
+msgstr "Nastavi dogodke:"
 
 #: ui/ApplicationConfiguration.qml:227
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Pokaži sporočilo v pojavnem oknu"
 
 #: ui/ApplicationConfiguration.qml:236
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Predvajaj zvok"
 
 #: ui/main.qml:41
 #, kde-format

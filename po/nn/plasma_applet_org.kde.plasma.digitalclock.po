@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-28 02:08+0000\n"
-"PO-Revision-Date: 2023-07-15 13:45+0200\n"
+"PO-Revision-Date: 2023-07-29 09:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -130,7 +130,7 @@ msgstr "Vis tidssone:"
 #: package/contents/ui/configAppearance.qml:91
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Berre når han er ulik den lokal tidssona"
+msgstr "Berre når ho er ulik den lokale tidssona"
 
 #: package/contents/ui/configAppearance.qml:105
 #, kde-format
