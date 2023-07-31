@@ -84,4 +84,4 @@ RuntimeDependencies:
     'plasma/milou' : '@same'
 
 Options:
-  require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
+  require-passing-tests-on: [ '@all' ]

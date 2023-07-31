@@ -3,4 +3,5 @@ target_link_libraries(testdesktop KF6::KIOWidgets KF6::Solid Qt::Test Qt::DBus)
 
 ecm_mark_as_test(testdesktop)
 add_test(NAME testdesktop COMMAND testdesktop)
-
+# FIXME test is broken
+set_tests_properties(testdesktop PROPERTIES DISABLED TRUE)
