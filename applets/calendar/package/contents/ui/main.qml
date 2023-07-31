@@ -43,6 +43,9 @@ PlasmoidItem {
         intervalAlignment: P5Support.Types.AlignToMinute
     }
 
+    // Only exists because the default CompactRepresentation doesn't expose a
+    // generic way to overlay something on top of the icon.
+    // TODO remove once it gains that feature.
     compactRepresentation: MouseArea {
         onClicked: root.expanded = !root.expanded
 

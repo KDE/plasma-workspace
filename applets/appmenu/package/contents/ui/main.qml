@@ -32,6 +32,9 @@ PlasmoidItem {
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
     preferredRepresentation: Plasmoid.configuration.compactView ? compactRepresentation : fullRepresentation
 
+    // Only exists because the default CompactRepresentation doesn't expose a
+    // way to mark its icon as disabled.
+    // TODO remove once it gains that feature.
     compactRepresentation: PlasmaComponents3.ToolButton {
         readonly property int fakeIndex: 0
         Layout.fillWidth: false
