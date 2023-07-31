@@ -14,6 +14,7 @@
         "Description[nl]": "Hoorbare terugkoppeling afspelen wanneer apparaten ingeplugd of verwijderd worden",
         "Description[nn]": "Spel av lyd når einingar vert kopla til eller frå",
         "Description[sl]": "Predvajaj zvočno povratno informacijo, kadar so naprave vstavljene ali odstranjene",
+        "Description[ta]": "சாதனங்கள் செருகப்படும்போதும் கழற்றப்படும்போதும் ஒலியெழுப்பு",
         "Description[tr]": "Aygıtlar takıldığında veya çıkarıldığında sesle geri bildirim ver",
         "Description[uk]": "Відтворювати звуковий сигнал при з'єднанні або від'єднанні пристроїв",
         "Description[x-test]": "xxPlay audible feedback when devices are inserted or removedxx",
