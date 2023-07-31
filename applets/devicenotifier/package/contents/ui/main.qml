@@ -85,22 +85,6 @@ PlasmoidItem {
         }
     }
 
-    compactRepresentation: Kirigami.Icon {
-        source: devicenotifier.popupIcon
-        width: Kirigami.Units.iconSizes.medium;
-        height: Kirigami.Units.iconSizes.medium;
-        active: compactMouse.containsMouse
-        MouseArea {
-            id: compactMouse
-            anchors.fill: parent
-            activeFocusOnTab: true
-            hoverEnabled: true
-            Accessible.name: Plasmoid.title
-            Accessible.description: `${toolTipMainText}: ${toolTipSubText}`
-            Accessible.role: Accessible.Button
-            onClicked: devicenotifier.expanded = !devicenotifier.expanded
-        }
-    }
     fullRepresentation: FullRepresentation {}
 
     P5Support.DataSource {
