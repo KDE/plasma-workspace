@@ -22,6 +22,6 @@ public:
 
 private:
     Q_INVOKABLE void openDevice(const QString &udi);
-    std::unique_ptr<KFilePlacesModel> m_places;
+    KFilePlacesModel *m_places = nullptr;
     QString m_pendingUdi;
 };
