@@ -47,17 +47,12 @@ MouseArea {
         }
     }
 
-    KSvg.Svg {
-        id: notificationSvg
-        imagePath: "icons/notification"
-    }
-
     KSvg.SvgItem {
         id: notificationIcon
         anchors.centerIn: parent
         width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
-        svg: notificationSvg
+        imagePath: "icons/notification"
         visible: opacity > 0
 
         elementId: "notification-inactive"
