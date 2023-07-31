@@ -66,6 +66,7 @@ View::View(QWindow *)
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
 
     m_engine = new PlasmaQuick::SharedQmlEngine(this);
+    m_engine->engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
     m_engine->setInitializationDelayed(true);
     connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
 
