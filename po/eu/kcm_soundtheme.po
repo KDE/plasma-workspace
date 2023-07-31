@@ -1,33 +1,34 @@
-# Copyright (C) YEAR This file is copyright:
+# Translation for kcm_soundtheme.po to Euskara/Basque (eu).
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2023.
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 01:59+0000\n"
-"PO-Revision-Date: 2023-07-29 08:42+0300\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
-"Language: uk\n"
+"PO-Revision-Date: 2023-07-29 14:03+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] "Засновано на: %2"
-msgstr[1] "Засновано на: %2"
-msgstr[2] "Засновано на: %2"
+msgstr[0] "Honetan oinarritua: %2"
+msgstr[1] "Hauetan oinarritua: %2"
 
 #: ui/main.qml:70
 #, kde-format
@@ -35,16 +36,16 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr "Прослухати звуки:"
+msgstr "Soinuak aurrez ikusi:"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr "Прослухати звук «%1»"
+msgstr "Aurrez ikusi \"%1\" soinua"
 
 #: ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr "Прослухати демонстраційний звук для теми «%1»"
+msgstr "Aurrez ikusi \"%1\" gaiaren demo-soinua"

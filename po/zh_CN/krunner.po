@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-07-23 12:26\n"
+"PO-Revision-Date: 2023-07-30 07:07\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -57,12 +57,12 @@ msgstr "替换已有实例"
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "只显示指定插件的结果"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "列出可用插件"
 
 #: main.cpp:94
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "要运行的查询，只在未提供 -c 参数时使用"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "可用的 KRunner 插件，插件 ID"
 
 #: qml/RunCommand.qml:93
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "配置 KRunner…"
 #: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "只显示来自 %1 的结果"
 
 #: qml/RunCommand.qml:124
 #, kde-format
@@ -136,9 +136,3 @@ msgstr "最近查询"
 #, kde-format
 msgid "Remove"
 msgstr "移除"
-
-#~ msgid "Only query this specific runner"
-#~ msgstr "只查询这个运行程序"
-
-#~ msgid "Querying runner %1 in single runner mode"
-#~ msgstr "正在单运行程序模式下查询运行程序 %1"
