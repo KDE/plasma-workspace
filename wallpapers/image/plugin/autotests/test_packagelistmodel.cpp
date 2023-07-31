@@ -263,7 +263,7 @@ void PackageListModelTest::testPackageListModelRemoveLocalBackground()
     m_countSpy->clear();
 
     // The local package should be deleted.
-    QVERIFY(!QFileInfo(standardPath + QStringLiteral("dummy")).exists());
+    QVERIFY(!QFileInfo::exists(standardPath + QStringLiteral("dummy")));
     QVERIFY(QDir(standardPath).rmdir(standardPath));
 }
 

@@ -229,7 +229,7 @@ void ImageProxyModel::commitDeletion()
             p.remove(0, 7);
         }
 
-        return !pendingList.contains(p) && QFileInfo(p).exists();
+        return !pendingList.contains(p) && QFileInfo::exists(p);
     });
 
     cfg.writeEntry("usersWallpapers", updatedList);
