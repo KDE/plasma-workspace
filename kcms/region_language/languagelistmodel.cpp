@@ -13,6 +13,7 @@
 #include "kcmregionandlang.h"
 #include "regionandlangsettings.h"
 
+using namespace Qt::StringLiterals;
 using namespace KCM_RegionAndLang;
 
 LanguageListModel::LanguageListModel(QObject *parent)
@@ -61,7 +62,7 @@ QVariant LanguageListModel::data(const QModelIndex &index, int role) const
         if (split.size() > 1) {
             flagCode = split[1].toLower();
         }
-        return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf6/locale/countries/%1/flag.png").arg(flagCode));
+        return "image://flags/%1"_L1.arg(flagCode);
     }
     }
     Q_UNREACHABLE();

@@ -15,7 +15,9 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QQuickImageProvider>
 
+#include <KCountryFlagEmojiIconEngine>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
@@ -30,6 +32,28 @@
 using namespace KCM_RegionAndLang;
 
 K_PLUGIN_CLASS_WITH_JSON(KCMRegionAndLang, "kcm_regionandlang.json")
+
+class FlagImageProvider : public QQuickImageProvider
+{
+public:
+    FlagImageProvider()
+        : QQuickImageProvider(QQuickImageProvider::Pixmap)
+    {
+    }
+
+    QPixmap requestPixmap(const QString &id, QSize *, const QSize &requestedSize) override
+    {
+        CacheContext cacheContext(id, requestedSize);
+        if (const auto it = m_pixmapCache.find(cacheContext); it != m_pixmapCache.end()) {
+            return it.value();
+        }
+        return m_pixmapCache[cacheContext] = QIcon(new KCountryFlagEmojiIconEngine(id)).pixmap(requestedSize);
+    }
+
+private:
+    using CacheContext = std::pair<QString, QSize>;
+    QHash<CacheContext, QPixmap> m_pixmapCache;
+};
 
 KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
@@ -337,6 +361,11 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     return localeMap;
 }
 #endif
+
+void KCMRegionAndLang::load()
+{
+    engine()->addImageProvider("flags", new FlagImageProvider);
+}
 
 #include "kcmregionandlang.moc"
 #include "moc_kcmregionandlang.cpp"

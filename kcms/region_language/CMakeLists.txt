@@ -72,7 +72,9 @@ target_link_libraries(kcm_regionandlang
     KF6::KCMUtils
     KF6::KCMUtilsQuick
     KF6::ItemModels
+    KF6::GuiAddons
     Qt::Core5Compat
+    Qt::Quick
 )
 if(UBUNTU_LOCALE)
     target_link_libraries(kcm_regionandlang PK::packagekitqt6)

@@ -23,6 +23,7 @@
 
 #include <QTextCodec>
 
+using namespace Qt::StringLiterals;
 using namespace KCM_RegionAndLang;
 
 LocaleListModel::LocaleListModel(QObject *parent)
@@ -59,8 +60,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         if (split.size() > 1) {
             countryCode = split[1].toLower();
         }
-        auto flagIconPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf6/locale/countries/%1/flag.png").arg(countryCode));
-        return flagIconPath;
+        return "image://flags/%1"_L1.arg(countryCode);
     }
     case DisplayName: {
         // 0 is unset option, 1 is locale C
