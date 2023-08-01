@@ -142,6 +142,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
 
     // engine stuff
     engine()->rootContext()->setContextObject(new KLocalizedContext(engine().get()));
+    engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
 }
 
 void KSMShutdownDlg::init(const KPackage::Package &package)
