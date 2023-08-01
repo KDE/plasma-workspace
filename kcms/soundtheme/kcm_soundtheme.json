@@ -18,7 +18,16 @@
         "Description[x-test]": "xxSelect a Sound Theme for Notificationsxx",
         "Description[zh_CN]": "选择通知的声音主题",
         "Icon": "emblem-music-symbolic",
-        "Name": "System Sounds"
+        "Name": "System Sounds",
+        "Name[ca@valencia]": "Sons del sistema",
+        "Name[ca]": "Sons del sistema",
+        "Name[eu]": "Sistemaren soinuak",
+        "Name[ia]": "Sonos de systema",
+        "Name[nl]": "Systeemgeluiden",
+        "Name[sl]": "Sistemski zvoki",
+        "Name[tr]": "Sistem Sesleri",
+        "Name[uk]": "Системні звуки",
+        "Name[x-test]": "xxSystem Soundsxx"
     },
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 70,
