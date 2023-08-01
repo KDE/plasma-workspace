@@ -130,7 +130,7 @@ Item {
 
         PlasmaComponents.Label {
             font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 16
+            Layout.maximumWidth: Math.max(Kirigami.Units.gridUnit * 16, logoutButtonsRow.implicitWidth)
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
@@ -145,7 +145,7 @@ Item {
 
         PlasmaComponents.Label {
             font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 16
+            Layout.maximumWidth: Math.max(Kirigami.Units.gridUnit * 16, logoutButtonsRow.implicitWidth)
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
@@ -156,6 +156,7 @@ Item {
         }
 
         RowLayout {
+            id: logoutButtonsRow
             spacing: Kirigami.Units.gridUnit * 2
             Layout.alignment: Qt.AlignHCenter
             LogoutButton {
