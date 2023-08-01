@@ -78,7 +78,7 @@ MouseArea {
                     width: height
 
                     visible: batteryContainer.pluggedIn && (root.isHeldOnPowerSaveMode || root.isHeldOnPerformanceMode)
-                    svg: KSvg.Svg { imagePath: "icons/battery" }
+                    imagePath: "icons/battery"
                     elementId: root.isHeldOnPerformanceMode ? "profile-performance" : "profile-powersave"
                 }
 

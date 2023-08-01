@@ -52,10 +52,8 @@ ColumnLayout {
 
         visible: inhibitionReasonsLayout.visible
 
+        imagePath: "widgets/line"
         elementId: "horizontal-line"
-        svg: KSvg.Svg {
-            imagePath: "widgets/line"
-        }
     }
 
     // list of automatic inhibitions

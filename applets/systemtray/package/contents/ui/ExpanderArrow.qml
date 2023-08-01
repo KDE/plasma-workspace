@@ -52,11 +52,6 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    KSvg.Svg {
-        id: arrowSvg
-        imagePath: "widgets/arrows"
-    }
-
     KSvg.SvgItem {
         id: arrow
 
@@ -77,7 +72,7 @@ PlasmaCore.ToolTipArea {
             }
         }
 
-        svg: arrowSvg
+        imagePath: "widgets/arrows"
         elementId: {
             if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
                 return "down-arrow";
@@ -109,7 +104,7 @@ PlasmaCore.ToolTipArea {
             }
         }
 
-        svg: arrowSvg
+        imagePath: "widgets/arrows"
         elementId: {
             if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
                 return "up-arrow";

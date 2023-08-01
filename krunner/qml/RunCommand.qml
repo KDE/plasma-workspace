@@ -269,9 +269,7 @@ ColumnLayout {
                 // match clear button
                 width: Math.max(parent.height * 0.8, Kirigami.Units.iconSizes.small)
                 height: width
-                svg: KSvg.Svg {
-                    imagePath: "widgets/arrows"
-                }
+                imagePath: "widgets/arrows"
                 elementId: "down-arrow"
                 visible: queryField.length === 0 && runnerManager.historyEnabled
 

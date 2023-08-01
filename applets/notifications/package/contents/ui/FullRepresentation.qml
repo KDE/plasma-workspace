@@ -49,11 +49,6 @@ PlasmaExtras.Representation {
         }
     }
 
-    KSvg.Svg {
-        id: lineSvg
-        imagePath: "widgets/line"
-    }
-
     header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
             anchors {
@@ -587,8 +582,8 @@ PlasmaExtras.Representation {
                             KSvg.SvgItem {
                                 Layout.fillWidth: true
                                 Layout.bottomMargin: Kirigami.Units.smallSpacing
+                                imagePath: "widgets/line"
                                 elementId: "horizontal-line"
-                                svg: lineSvg
 
                                 // property is only atached to the delegate itself (the Loader in our case)
                                 visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)

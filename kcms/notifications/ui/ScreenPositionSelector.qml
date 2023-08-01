@@ -36,18 +36,13 @@ Item {
         }
     }
 
-    KSvg.Svg {
-        id: monitorSvg
-        imagePath: "widgets/monitor"
-    }
-
     KSvg.SvgItem {
         id: topleftPart
         anchors {
             left: parent.left
             top: parent.top
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "topleft"
         width: baseUnit
         height: baseUnit
@@ -60,7 +55,7 @@ Item {
             left: topleftPart.right
             right: toprightPart.left
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "top"
         height: baseUnit
     }
@@ -71,7 +66,7 @@ Item {
             right: parent.right
             top: parent.top
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "topright"
         width: baseUnit
         height: baseUnit
@@ -84,7 +79,7 @@ Item {
             top: topleftPart.bottom
             bottom: bottomleftPart.top
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "left"
         width: baseUnit
     }
@@ -96,7 +91,7 @@ Item {
             top: toprightPart.bottom
             bottom: bottomrightPart.top
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "right"
         width: baseUnit
     }
@@ -107,7 +102,7 @@ Item {
             left: parent.left
             bottom: basePart.top
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "bottomleft"
         width: baseUnit
         height: baseUnit
@@ -120,7 +115,7 @@ Item {
             left: bottomleftPart.right
             right: bottomrightPart.left
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "bottom"
         height: baseUnit
     }
@@ -131,7 +126,7 @@ Item {
             right: parent.right
             bottom: basePart.top
         }
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "bottomright"
         width: baseUnit
         height: baseUnit
@@ -145,7 +140,7 @@ Item {
         }
         width: 120
         height: 60
-        svg: monitorSvg
+        imagePath: "widgets/monitor"
         elementId: "base"
     }
 

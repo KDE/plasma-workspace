@@ -393,10 +393,8 @@ PlasmaExtras.Representation {
             Layout.fillWidth: true
             Layout.preferredHeight: naturalSize.height
 
+            imagePath: "widgets/line"
             elementId: "horizontal-line"
-            svg: KSvg.Svg {
-                imagePath: "widgets/line"
-            }
         }
 
         // Clocks stuff
@@ -553,10 +551,8 @@ PlasmaExtras.Representation {
         width: naturalSize.width
         visible: calendar.showAgenda || calendar.showClocks
 
+        imagePath: "widgets/line"
         elementId: "vertical-line"
-        svg: KSvg.Svg {
-            imagePath: "widgets/line"
-        }
     }
 
     // Trailing column containing calendar
