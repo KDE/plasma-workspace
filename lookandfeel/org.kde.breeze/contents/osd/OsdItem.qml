@@ -27,6 +27,10 @@ RowLayout {
     // false for displaying the value as normal text
     property bool showingProgress: false
 
+    function formatPercent(number) {
+        return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Percentage value", "%1%", number);
+    }
+
     spacing: Kirigami.Units.largeSpacing
 
     Layout.preferredWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), Kirigami.Units.gridUnit * 15)
@@ -66,7 +70,7 @@ RowLayout {
     // to the maximum width to avoid the progress bad resizing itself
     TextMetrics {
         id: widestLabelSize
-        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "100%")
+        text: formatPercent(100)
         font: percentageLabel.font
     }
 
@@ -75,12 +79,13 @@ RowLayout {
         id: percentageLabel
         Layout.rightMargin: Kirigami.Units.smallSpacing // Right end spacing
         Layout.fillHeight: true
-        Layout.preferredWidth: widestLabelSize.width
+        Layout.preferredWidth: Math.ceil(widestLabelSize.advanceWidth)
         Layout.alignment: Qt.AlignVCenter
         level: 3
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Percentage value", "%1%", progressBar.value)
+        text: formatPercent(progressBar.value)
+        wrapMode: Text.NoWrap
         visible: showingProgress
         // Display a subtle visual indication that the volume might be
         // dangerously high
