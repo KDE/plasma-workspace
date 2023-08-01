@@ -9,7 +9,6 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.ksvg 1.0 as KSvg
 import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaComponents3.ItemDelegate {
@@ -136,11 +135,10 @@ PlasmaComponents3.ItemDelegate {
                 Layout.bottomMargin: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
 
-                KSvg.SvgItem {
+                Kirigami.Icon {
                     Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                    imagePath: "icons/battery"
-                    elementId: "profile-powersave"
+                    source: "battery-profile-powersave-symbolic"
 
                     HoverHandler {
                         id: powersaveIconHover
@@ -156,11 +154,10 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: true
                 }
 
-                KSvg.SvgItem {
+                Kirigami.Icon {
                     Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                    imagePath: "icons/battery"
-                    elementId: "profile-performance"
+                    source: "battery-profile-performance-symbolic"
 
                     HoverHandler {
                         id: performanceIconHover

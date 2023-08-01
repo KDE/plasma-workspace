@@ -52,12 +52,8 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    KSvg.SvgItem {
-        id: arrow
-
-        anchors.centerIn: parent
-        width: Math.min(parent.width, parent.height)
-        height: width
+    Kirigami.Icon {
+        anchors.fill: parent
 
         rotation: systemTrayState.expanded ? 180 : 0
         Behavior on rotation {
@@ -72,24 +68,21 @@ PlasmaCore.ToolTipArea {
             }
         }
 
-        imagePath: "widgets/arrows"
-        elementId: {
+        source: {
             if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
-                return "down-arrow";
+                return "arrow-down";
             } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
-                return "right-arrow";
+                return "arrow-right";
             } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
-                return "left-arrow";
+                return "arrow-left";
             } else {
-                return "up-arrow";
+                return "arrow-up";
             }
         }
     }
 
-    KSvg.SvgItem {
-        anchors.centerIn: parent
-        width: arrow.width
-        height: arrow.height
+    Kirigami.Icon {
+        anchors.fill: parent
 
         rotation: systemTrayState.expanded ? 0 : -180
         Behavior on rotation {
@@ -104,16 +97,15 @@ PlasmaCore.ToolTipArea {
             }
         }
 
-        imagePath: "widgets/arrows"
-        elementId: {
+        source: {
             if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
-                return "up-arrow";
+                return "arrow-up";
             } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
-                return "left-arrow";
+                return "arrow-left";
             } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
-                return "right-arrow";
+                return "arrow-right";
             } else {
-                return "down-arrow";
+                return "arrow-down";
             }
         }
     }

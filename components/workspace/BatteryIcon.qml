@@ -16,89 +16,49 @@ Item {
     property bool pluggedIn
     property string batteryType
 
-    KSvg.Svg {
-        id: svg
-        imagePath: "icons/battery"
-        onRepaintNeeded: { // needed to detect the hint item go away when theme changes
-            batterySvg.visible = Qt.binding(() => !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery))
-        }
-    }
-
-    KSvg.SvgItem {
-        id: batterySvg
-        anchors.centerIn: parent
-        width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
-        height: width
-        svg: svg
-        elementId: "Battery"
-        visible: !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery)
-    }
-
-    KSvg.SvgItem {
-        id: fillSvg
-        anchors.fill: batterySvg
-        svg: svg
-        elementId: hasBattery ? fillElement(percent) : "Unavailable"
-        visible: !otherBatteriesSvg.visible
+    // Icon for current charge level and charging status for batteries that support it
+    Kirigami.Icon {
+        anchors.fill: parent
+        source: hasBattery ? fillElement(percent) : "battery-missing"
+        visible: !otherBatteriesIcon.visible
     }
 
     function fillElement(p) {
-        // We switched from having steps of 20 for the battery percentage to a more accurate
-        // step of 10. This means we break other and older themes.
-        // If the Fill10 element is not found, it is likely that the theme doesn't support
-        // that and we use the older method of obtaining the fill element.
-        if (!svg.hasElement("Fill10")) {
-            print("No Fill10 element found in your theme's battery.svg - Using legacy 20% steps for battery icon");
-            if (p >= 90) {
-                return "Fill100";
-            } else if (p >= 70) {
-                return "Fill80";
-            } else if (p >= 50) {
-                return "Fill60";
-            } else if (p > 20) {
-                return "Fill40";
-            } else if (p >= 10) {
-                return "Fill20";
-            } else {
-                return "Fill0";
-            }
+        let name
+        if (p >= 95) {
+            name = "battery-100";
+        } else if (p >= 85) {
+            name = "battery-090";
+        } else if (p >= 75) {
+            name = "battery-080";
+        } else if (p >= 65) {
+            name = "battery-070";
+        } else if (p >= 55) {
+            name = "battery-060";
+        } else if (p >= 45) {
+            name = "battery-050";
+        } else if (p >= 35) {
+            name = "battery-040";
+        } else if (p >= 25) {
+            name = "battery-030";
+        } else if (p >= 15) {
+            name = "battery-020";
+        } else if (p > 5) {
+            name = "battery-010";
         } else {
-            if (p >= 95) {
-                return "Fill100";
-            } else if (p >= 85) {
-                return "Fill90";
-            } else if (p >= 75) {
-                return "Fill80";
-            } else if (p >= 65) {
-                return "Fill70";
-            } else if (p >= 55) {
-                return "Fill60";
-            } else if (p >= 45) {
-                return "Fill50";
-            } else if (p >= 35) {
-                return "Fill40";
-            } else if (p >= 25) {
-                return "Fill30";
-            } else if (p >= 15) {
-                return "Fill20";
-            } else if (p > 5) {
-                return "Fill10";
-            } else {
-                return "Fill0";
-            }
+            name = "battery-000";
         }
+
+        if (pluggedIn) {
+            name += "-charging";
+        }
+        return name;
     }
 
-    KSvg.SvgItem {
-        anchors.fill: batterySvg
-        svg: svg
-        elementId: "AcAdapter"
-        visible: pluggedIn && !otherBatteriesSvg.visible
-    }
-
+    // Generic icon for other types of batteries
     Kirigami.Icon {
-        id: otherBatteriesSvg
-        anchors.fill: batterySvg
+        id: otherBatteriesIcon
+        anchors.fill: parent
         source: elementForType(batteryType)
         visible: source !== ""
     }

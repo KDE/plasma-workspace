@@ -11,7 +11,6 @@ import QtQuick.Window 2.1
 
 import org.kde.config // KAuthorized
 import org.kde.kcmutils // KCMLauncher
-import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou 0.1 as Milou
@@ -260,7 +259,7 @@ ColumnLayout {
                 runnerWindow.visible = false
             }
 
-            KSvg.SvgItem {
+            Kirigami.Icon {
                 anchors {
                     right: parent.right
                     rightMargin: 6 // from PlasmaStyle TextFieldStyle
@@ -269,8 +268,7 @@ ColumnLayout {
                 // match clear button
                 width: Math.max(parent.height * 0.8, Kirigami.Units.iconSizes.small)
                 height: width
-                imagePath: "widgets/arrows"
-                elementId: "down-arrow"
+                source: "expand"
                 visible: queryField.length === 0 && runnerManager.historyEnabled
 
                 MouseArea {

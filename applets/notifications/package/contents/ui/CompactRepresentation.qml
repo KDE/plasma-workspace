@@ -8,7 +8,6 @@ import QtQuick 2.8
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -47,15 +46,16 @@ MouseArea {
         }
     }
 
-    KSvg.SvgItem {
+    Kirigami.Icon {
         id: notificationIcon
         anchors.centerIn: parent
+        // Deliberately rounding the size here rather than letting Kirigami.Icon
+        // do it itself so that children can derive sane sizes from it.
         width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
-        imagePath: "icons/notification"
         visible: opacity > 0
 
-        elementId: "notification-inactive"
+        source: "notification-inactive"
 
         Charts.PieChart {
             id: chart
@@ -110,7 +110,7 @@ MouseArea {
             when: compactRoot.jobsCount > 0
             PropertyChanges {
                 target: notificationIcon
-                elementId: "notification-progress-inactive"
+                source: "notification-progress-inactive"
             }
             PropertyChanges {
                 target: countLabel
@@ -144,7 +144,7 @@ MouseArea {
             when: compactRoot.unreadCount > 0
             PropertyChanges {
                 target: notificationIcon
-                elementId: "notification-active"
+                source: "notification-active"
             }
         }
     ]
