@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-19 03:24+0000\n"
-"PO-Revision-Date: 2023-07-19 20:07+0300\n"
+"PO-Revision-Date: 2023-07-31 13:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -488,7 +488,7 @@ msgstr "Què passa a l'eixida estàndard de l'ordre executada."
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr "Reinicia la icona al valor predeterminat per a l'ordre."
+msgstr "Reinicia la icona al valor predeterminat per a l'ordre"
 
 #: editcommanddialog.cpp:121
 #, kde-format

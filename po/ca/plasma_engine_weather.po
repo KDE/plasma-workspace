@@ -1,7 +1,7 @@
 # Translation of plasma_engine_weather.po to Catalan
-# Copyright (C) 2009-2021 This_file_is_part_of_KDE
+# Copyright (C) 2009-2023 This_file_is_part_of_KDE
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2011, 2016, 2017, 2018, 2019, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2011, 2016, 2017, 2018, 2019, 2021, 2023.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009.
 # Orestes Mas <orestes@tsc.upc.edu>, 2009.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019.
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2021-12-09 13:09+0100\n"
+"PO-Revision-Date: 2023-07-31 13:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -2721,6 +2721,7 @@ msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "Aquesta nit"
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:646
 #: ions/envcan/ion_envcan.cpp:1551
 #, kde-format
@@ -2728,6 +2729,7 @@ msgctxt "Short for Saturday"
 msgid "Sat"
 msgstr "Ds."
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:647
 #: ions/envcan/ion_envcan.cpp:1552
 #, kde-format
@@ -2735,6 +2737,7 @@ msgctxt "Short for Sunday"
 msgid "Sun"
 msgstr "Dg."
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:648
 #: ions/envcan/ion_envcan.cpp:1553
 #, kde-format
@@ -2742,6 +2745,7 @@ msgctxt "Short for Monday"
 msgid "Mon"
 msgstr "Dl."
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:649
 #: ions/envcan/ion_envcan.cpp:1554
 #, kde-format
@@ -2749,6 +2753,7 @@ msgctxt "Short for Tuesday"
 msgid "Tue"
 msgstr "Dt."
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:650
 #: ions/envcan/ion_envcan.cpp:1555
 #, kde-format
@@ -2756,6 +2761,7 @@ msgctxt "Short for Wednesday"
 msgid "Wed"
 msgstr "Dc."
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:651
 #: ions/envcan/ion_envcan.cpp:1556
 #, kde-format
@@ -2763,6 +2769,7 @@ msgctxt "Short for Thursday"
 msgid "Thu"
 msgstr "Dj."
 
+# skip-rule: punctuation-period-no
 #: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:652
 #: ions/envcan/ion_envcan.cpp:1557
 #, kde-format
