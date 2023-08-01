@@ -136,15 +136,10 @@ PlasmaComponents3.ItemDelegate {
                 Layout.bottomMargin: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
 
-                KSvg.Svg {
-                    id: svg
-                    imagePath: "icons/battery"
-                }
-
                 KSvg.SvgItem {
                     Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                    svg: svg
+                    imagePath: "icons/battery"
                     elementId: "profile-powersave"
 
                     HoverHandler {
@@ -164,7 +159,7 @@ PlasmaComponents3.ItemDelegate {
                 KSvg.SvgItem {
                     Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                    svg: svg
+                    imagePath: "icons/battery"
                     elementId: "profile-performance"
 
                     HoverHandler {
