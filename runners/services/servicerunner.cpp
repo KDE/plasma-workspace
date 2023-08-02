@@ -330,6 +330,7 @@ private:
                 relevance += .04;
             }
 
+            qCDebug(RUNNER_SERVICES) << service->name() << "relevance" << relevance;
             match.setRelevance(relevance);
             matches << match;
         }
