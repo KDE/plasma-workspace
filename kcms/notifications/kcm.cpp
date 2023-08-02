@@ -22,6 +22,7 @@
 #include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KShell>
 
 #include <algorithm>
 
@@ -76,7 +77,7 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     // need to add a fake argv[0] for QCommandLineParser
     stringArgs.append(QStringLiteral("kcm_notifications"));
     for (const QVariant &arg : args) {
-        stringArgs.append(arg.toString());
+        stringArgs << KShell::splitArgs(arg.toString());
     }
 
     QCommandLineParser parser;
