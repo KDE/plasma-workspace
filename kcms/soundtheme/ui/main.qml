@@ -20,7 +20,7 @@ KCM.GridViewKCM {
         settingName: "theme"
     }
 
-    view.implicitCellWidth: Kirigami.Units.gridUnit * 22
+    view.implicitCellWidth: Kirigami.Units.gridUnit * 23
     view.implicitCellHeight: Kirigami.Units.gridUnit * 11
 
     view.model: kcm.themes
@@ -29,7 +29,7 @@ KCM.GridViewKCM {
         id: delegate
 
         readonly property var theme : modelData
-        readonly property bool compactMode: width < (preview.implicitWidth + demoButton.implicitWidth + 3 * Kirigami.Units.gridUnit)
+        readonly property bool compactMode: width < (preview.implicitWidth + demoButton.width + 3 * Kirigami.Units.gridUnit)
 
         text: theme.name
 
