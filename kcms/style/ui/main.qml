@@ -58,7 +58,7 @@ KCM.GridViewKCM {
             text: i18n("Configure Icons and Toolbars")
             icon.name: "configure-toolbars" // proper icon?
             checkable: true
-            checked: effectSettingsPopupLoader.item && effectSettingsPopupLoader.item.opened
+            checked: Boolean(effectSettingsPopupLoader.item?.opened)
             onTriggered: {
                 effectSettingsPopupLoader.active = true;
                 effectSettingsPopupLoader.item.open();
@@ -117,8 +117,7 @@ KCM.GridViewKCM {
         id: effectSettingsPopupLoader
         active: false
         sourceComponent: EffectSettingsPopup {
-            parent: effectSettingsButton
-            y: -height
+            parent: root
         }
     }
 }

@@ -11,11 +11,13 @@ import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.style 1.0 as Private
 
-QtControls.Popup {
+Kirigami.OverlaySheet {
     id: effectSettingsPopup
 
-    modal: true
-    implicitWidth: formLayout.implicitWidth + 40 // Leave some room for SettingState buttons
+    title: i18nc("@title:window", "Configure Icon and Toolbars")
+
+    implicitWidth: Kirigami.Units.gridUnit * 20
+    implicitHeight: Kirigami.Units.gridUnit * 11
 
     onOpened: {
         // can we do this automatically with "focus: true" somewhere?
