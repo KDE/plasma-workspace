@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2014-08-11 12:31+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -82,7 +82,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -116,32 +116,32 @@ msgstr "Tolest bruukt Reedschap"
 msgid "No Devices Available"
 msgstr "Keen Reedschap to finnen"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Keen Wesselreedschappen"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Bloots Wesselreedschappen"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Keen Wesselreedschappen"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "All Reedschappen"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

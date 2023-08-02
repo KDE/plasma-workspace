@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2021-06-08 22:43-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -72,7 +72,7 @@ msgid "Mount"
 msgstr "ਮਾਊਂਟ ਕਰੋ"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr "ਸਭ ਹਟਾਓ"
@@ -102,28 +102,28 @@ msgstr "ਸਭ ਤੋਂ ਤਾਜ਼ਾ ਡਿਵਾਈਸ"
 msgid "No Devices Available"
 msgstr "ਕੋਈ ਡਿਵਾਈਸ ਉਪਲੱਬਧ ਨਹੀਂ"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "…ਨਾ-ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸਾਂ ਦੀ ਸੰਰਚਨਾ"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Removable Devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "ਨਾ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "All Devices"
 msgstr "ਸਭ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ ਜਾਵੇ ਤਾਂ ਪੋਪਅੱਪ ਵੇਖਾਓ"

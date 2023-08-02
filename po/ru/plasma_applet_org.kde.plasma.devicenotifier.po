@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2022-01-20 10:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -80,7 +80,7 @@ msgid "Mount"
 msgstr "Подключить"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr "Извлечь все"
@@ -110,28 +110,28 @@ msgstr "Последнее подключённое устройство"
 msgid "No Devices Available"
 msgstr "Нет доступных устройств"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Настроить внешние устройства..."
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Removable Devices"
 msgstr "Подключаемые устройства"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Несъёмные устройства"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "All Devices"
 msgstr "Все устройства"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Открывать всплывающее окно при подключении устройств"

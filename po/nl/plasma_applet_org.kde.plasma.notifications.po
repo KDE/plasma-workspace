@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2022-10-16 22:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -80,94 +80,94 @@ msgstr "Kopiëren"
 msgid "Select All"
 msgstr "Alles selecteren"
 
-#: package/contents/ui/FullRepresentation.qml:73
+#: package/contents/ui/FullRepresentation.qml:68
 #, kde-format
 msgid "Do not disturb"
 msgstr "Niet storen"
 
-#: package/contents/ui/FullRepresentation.qml:115
+#: package/contents/ui/FullRepresentation.qml:110
 #, kde-format
 msgid "For 1 hour"
 msgstr "Gedurende 1 uur"
 
-#: package/contents/ui/FullRepresentation.qml:120
+#: package/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "For 4 hours"
 msgstr "Gedurende 4 uur"
 
-#: package/contents/ui/FullRepresentation.qml:129
+#: package/contents/ui/FullRepresentation.qml:124
 #, kde-format
 msgid "Until this evening"
 msgstr "Tot deze avond"
 
-#: package/contents/ui/FullRepresentation.qml:139
+#: package/contents/ui/FullRepresentation.qml:134
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "Tot morgenochtend"
 
-#: package/contents/ui/FullRepresentation.qml:151
+#: package/contents/ui/FullRepresentation.qml:146
 #, kde-format
 msgid "Until Monday"
 msgstr "Tot maandag"
 
-#: package/contents/ui/FullRepresentation.qml:158
+#: package/contents/ui/FullRepresentation.qml:153
 #, kde-format
 msgid "Until manually disabled"
 msgstr "Tot handmatig uitgeschakeld"
 
-#: package/contents/ui/FullRepresentation.qml:208
+#: package/contents/ui/FullRepresentation.qml:203
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Eindigt automatisch: %1"
 
-#: package/contents/ui/FullRepresentation.qml:220
+#: package/contents/ui/FullRepresentation.qml:215
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Terwijl %1 actief is (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:222
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Terwijl %1 actief is"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:223
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Schermen zijn gespiegeld"
 
-#: package/contents/ui/FullRepresentation.qml:434
+#: package/contents/ui/FullRepresentation.qml:429
 #, kde-format
 msgid "Close Group"
 msgstr "Groep sluiten"
 
-#: package/contents/ui/FullRepresentation.qml:579
+#: package/contents/ui/FullRepresentation.qml:574
 #, kde-format
 msgid "Show Fewer"
 msgstr "Minder tonen"
 
-#: package/contents/ui/FullRepresentation.qml:581
+#: package/contents/ui/FullRepresentation.qml:576
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "%1 meer tonen"
 
-#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/FullRepresentation.qml:617
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgid "No unread notifications"
 msgstr "Geen ongelezen meldingen"
 
-#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/FullRepresentation.qml:632
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Notification service not available"
 msgstr "Meldingenservice niet beschikbaar"
 
-#: package/contents/ui/FullRepresentation.qml:639
+#: package/contents/ui/FullRepresentation.qml:634
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

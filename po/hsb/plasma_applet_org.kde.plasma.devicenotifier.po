@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2008-11-13 00:55+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -70,7 +70,7 @@ msgid "Mount"
 msgstr "Zapójsnyć"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr "Wšě zwotpójšować"
@@ -100,28 +100,28 @@ msgstr "Posledni přizamknjeny grat"
 msgid "No Devices Available"
 msgstr "Žane graty přistupne"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Wotwjazujomne graty připrawić..."
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Removable Devices"
 msgstr "Wotwjazujomne graty (USB)"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Njewotwjazujomne graty"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "All Devices"
 msgstr "Wšitke graty"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Pokaž wuskakotawku (popup), hdyž so nowy grat přityknje"

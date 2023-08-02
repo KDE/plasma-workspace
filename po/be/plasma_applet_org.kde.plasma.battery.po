@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -75,7 +75,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:105
+#: package/contents/ui/CompactRepresentation.qml:103
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -255,7 +255,7 @@ msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Уласнаручнае блакаванне пераходу ў рэжым сну і блакавання экрана"
 
-#: package/contents/ui/PowerManagementItem.qml:72
+#: package/contents/ui/PowerManagementItem.qml:70
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -265,7 +265,7 @@ msgstr ""
 "Ваш ноўтбук наладжаны так, каб не пераходзіць у рэжым сну пры закрыцці "
 "вечка, калі падлучаны вонкавы манітор."
 
-#: package/contents/ui/PowerManagementItem.qml:85
+#: package/contents/ui/PowerManagementItem.qml:83
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -274,17 +274,17 @@ msgstr[1] "%1 праграмы блакуюць пераход у рэжым с�
 msgstr[2] "%1 праграм блакуюць пераход у рэжым сну і блакаванне экрана:"
 msgstr[3] "%1 праграмы блакуюць пераход у рэжым сну і блакаванне экрана:"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:105
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 блакуе пераход у рэжым сну і блакаванне экрана (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:109
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 блакуе пераход у рэжым сну і блакаванне экрана (невядомая прычына)"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:109
 #, fuzzy, kde-format
 #| msgid "%1 application is currently blocking sleep and screen locking:"
 #| msgid_plural ""
@@ -292,7 +292,7 @@ msgstr "%1 блакуе пераход у рэжым сну і блакаван�
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "%1 праграма блакуе пераход у рэжым сну і блакаванне экрана:"
 
-#: package/contents/ui/PowerManagementItem.qml:113
+#: package/contents/ui/PowerManagementItem.qml:111
 #, fuzzy, kde-format
 #| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgid ""
@@ -300,25 +300,25 @@ msgid ""
 "reason)"
 msgstr "%1 блакуе пераход у рэжым сну і блакаванне экрана (невядомая прычына)"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:115
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:119
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: невядомая прычына"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr ""
 
-#: package/contents/ui/PowerManagementItem.qml:123
+#: package/contents/ui/PowerManagementItem.qml:121
 #, fuzzy, kde-format
 #| msgctxt "Application name: reason for preventing sleep and screen locking"
 #| msgid "%1: unknown reason"
@@ -326,27 +326,27 @@ msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "%1: невядомая прычына"
 
-#: package/contents/ui/PowerProfileItem.qml:35
+#: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
 msgid "Power Save"
 msgstr "Энергазберагальны"
 
-#: package/contents/ui/PowerProfileItem.qml:39
+#: package/contents/ui/PowerProfileItem.qml:38
 #, kde-format
 msgid "Balanced"
 msgstr "Збалансаваны"
 
-#: package/contents/ui/PowerProfileItem.qml:43
+#: package/contents/ui/PowerProfileItem.qml:42
 #, kde-format
 msgid "Performance"
 msgstr "Прадукцыйны"
 
-#: package/contents/ui/PowerProfileItem.qml:60
+#: package/contents/ui/PowerProfileItem.qml:59
 #, kde-format
 msgid "Power Profile"
 msgstr "Профіль сілкавання"
 
-#: package/contents/ui/PowerProfileItem.qml:192
+#: package/contents/ui/PowerProfileItem.qml:184
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -355,18 +355,18 @@ msgstr ""
 "Прадукцыйны рэжым быў адключаны, каб паменшыць выпрацоўванне цяпла, бо "
 "камп'ютар выявіў, што ён можа знаходзіцца ў вас на каленях."
 
-#: package/contents/ui/PowerProfileItem.qml:194
+#: package/contents/ui/PowerProfileItem.qml:186
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "Прадукцыйны рэжым недаступны, бо камп'ютар занадта гарачы."
 
-#: package/contents/ui/PowerProfileItem.qml:196
+#: package/contents/ui/PowerProfileItem.qml:188
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Прадукцыйны рэжым недаступны."
 
-#: package/contents/ui/PowerProfileItem.qml:209
+#: package/contents/ui/PowerProfileItem.qml:201
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -375,17 +375,17 @@ msgstr ""
 "Прадукцыйнасць можа быць паніжаная, каб паменшыць выпрацоўванне цяпла, бо "
 "камп'ютар выявіў, што ён можа знаходзіцца ў вас на каленях."
 
-#: package/contents/ui/PowerProfileItem.qml:211
+#: package/contents/ui/PowerProfileItem.qml:203
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Прадукцыйнасць можа быць паніжаная, бо камп'ютар занадта гарачы."
 
-#: package/contents/ui/PowerProfileItem.qml:213
+#: package/contents/ui/PowerProfileItem.qml:205
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Прадукцыйнасць можа быць паніжаная."
 
-#: package/contents/ui/PowerProfileItem.qml:224
+#: package/contents/ui/PowerProfileItem.qml:216
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -394,7 +394,7 @@ msgstr[1] "%1 праграмы запытваюць актывацыю %2:"
 msgstr[2] "%1 праграм запытваюць актывацыю %2:"
 msgstr[3] "%1 праграмы запытваюць актывацыю %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:234
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

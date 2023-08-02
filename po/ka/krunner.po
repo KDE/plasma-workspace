@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-07-26 06:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -75,64 +75,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "KRunner ხელმისაწვდომი დამატებები, pluginId"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:92
 #, kde-format
 msgid "Configure"
 msgstr "მორგება"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "KRunner-ის ქცევის მორგება"
 
-#: qml/RunCommand.qml:97
+#: qml/RunCommand.qml:96
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner-ის მორგება…"
 
-#: qml/RunCommand.qml:110
+#: qml/RunCommand.qml:109
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "შედეგების მხოლოდ %1-დან ჩვენება"
 
-#: qml/RunCommand.qml:124
+#: qml/RunCommand.qml:123
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "\"%1\"-ის მოძებნა…"
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:124
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "ძებნა…"
 
-#: qml/RunCommand.qml:299 qml/RunCommand.qml:300 qml/RunCommand.qml:302
+#: qml/RunCommand.qml:295 qml/RunCommand.qml:296 qml/RunCommand.qml:298
 #, kde-format
 msgid "Show Usage Help"
 msgstr "გამოყენების დახმარების ჩვენება"
 
-#: qml/RunCommand.qml:310
+#: qml/RunCommand.qml:306
 #, kde-format
 msgid "Pin"
 msgstr "მიმაგრება"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:307
 #, kde-format
 msgid "Pin Search"
 msgstr "ძებნის მიმაგრება"
 
-#: qml/RunCommand.qml:313
+#: qml/RunCommand.qml:309
 #, kde-format
 msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
-#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
+#: qml/RunCommand.qml:381 qml/RunCommand.qml:386
 #, kde-format
 msgid "Recent Queries"
 msgstr "ახლახანს გაგზავნილი მოთხოვნები"
 
-#: qml/RunCommand.qml:388
+#: qml/RunCommand.qml:384
 #, kde-format
 msgid "Remove"
 msgstr "ზონის ამოღება"

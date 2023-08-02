@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-04-10 11:14+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -74,7 +74,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:105
+#: package/contents/ui/CompactRepresentation.qml:103
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -251,7 +251,7 @@ msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Ręcznie zablokuj usypianie blokowanie ekranu"
 
-#: package/contents/ui/PowerManagementItem.qml:72
+#: package/contents/ui/PowerManagementItem.qml:70
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -261,7 +261,7 @@ msgstr ""
 "Twój laptop jest ustawiony tak, że nie przejdzie w stan uśpienia po "
 "zamknięciu pokrywy, gdy podłączony jest monitor zewnętrzny."
 
-#: package/contents/ui/PowerManagementItem.qml:85
+#: package/contents/ui/PowerManagementItem.qml:83
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -269,22 +269,22 @@ msgstr[0] "Obecnie %1 program zapobiega uśpieniu i blokadzie ekranu:"
 msgstr[1] "Obecnie %1 programy zapobiegają uśpieniu i blokadzie ekranu:"
 msgstr[2] "Obecnie %1 programów zapobiega uśpieniu i blokadzie ekranu:"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:105
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "Obecnie %1 zapobiega uśpieniu i blokadzie ekranu (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:109
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "Obecnie %1 zapobiega (z nieznanego powodu) uśpieniu i blokadzie ekranu"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "Obecnie %1 program zapobiega uśpieniu i blokadzie ekranu"
 
-#: package/contents/ui/PowerManagementItem.qml:113
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -292,51 +292,51 @@ msgid ""
 msgstr ""
 "Obecnie aplikacja zapobiega (z nieznanego powodu) uśpieniu i blokadzie ekranu"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:115
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:119
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: nieznana przyczyna"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Nieznana aplikacja: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:123
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "Nieznana aplikacja: nieznany powód"
 
-#: package/contents/ui/PowerProfileItem.qml:35
+#: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
 msgid "Power Save"
 msgstr "Oszczędzanie energii"
 
-#: package/contents/ui/PowerProfileItem.qml:39
+#: package/contents/ui/PowerProfileItem.qml:38
 #, kde-format
 msgid "Balanced"
 msgstr "Zrównoważony"
 
-#: package/contents/ui/PowerProfileItem.qml:43
+#: package/contents/ui/PowerProfileItem.qml:42
 #, kde-format
 msgid "Performance"
 msgstr "Wydajność"
 
-#: package/contents/ui/PowerProfileItem.qml:60
+#: package/contents/ui/PowerProfileItem.qml:59
 #, kde-format
 msgid "Power Profile"
 msgstr "Tryb zasilania"
 
-#: package/contents/ui/PowerProfileItem.qml:192
+#: package/contents/ui/PowerProfileItem.qml:184
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -345,18 +345,18 @@ msgstr ""
 "Tryb wydajności został wyłączony, aby ograniczyć wydzielanie ciepła, bo "
 "komputer wykrył, że może znajdować się na twoich kolanach."
 
-#: package/contents/ui/PowerProfileItem.qml:194
+#: package/contents/ui/PowerProfileItem.qml:186
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "Tryb wydajności jest niedostępny, bo komputer się przegrzewa."
 
-#: package/contents/ui/PowerProfileItem.qml:196
+#: package/contents/ui/PowerProfileItem.qml:188
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Tryb wydajności jest niedostępny."
 
-#: package/contents/ui/PowerProfileItem.qml:209
+#: package/contents/ui/PowerProfileItem.qml:201
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -365,17 +365,17 @@ msgstr ""
 "Tryb wydajności może zostać obniżony, aby ograniczyć wydzielanie ciepła, bo "
 "komputer wykrył, że może znajdować się na twoich kolanach."
 
-#: package/contents/ui/PowerProfileItem.qml:211
+#: package/contents/ui/PowerProfileItem.qml:203
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Wydajność może być ograniczona, bo komputer się przegrzewa."
 
-#: package/contents/ui/PowerProfileItem.qml:213
+#: package/contents/ui/PowerProfileItem.qml:205
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Wydajność może być ograniczona."
 
-#: package/contents/ui/PowerProfileItem.qml:224
+#: package/contents/ui/PowerProfileItem.qml:216
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -383,7 +383,7 @@ msgstr[0] "Jedna aplikacja zażądała włączenia %2:"
 msgstr[1] "%1 aplikacje zażądały włączenia %2:"
 msgstr[2] "%1 aplikacji zażądały włączenia %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:234
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

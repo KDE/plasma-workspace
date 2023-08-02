@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -72,7 +72,7 @@ msgid "Mount"
 msgstr "ഘടിപ്പിയ്ക്കുക"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr "എല്ലാം നീക്കം ചെയ്യുക"
@@ -102,28 +102,28 @@ msgstr "ഏറ്റവും പുതിയ ഉപകരണം"
 msgid "No Devices Available"
 msgstr "ഉപകരണങ്ങളൊന്നും ലഭ്യമല്ല"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "നീക്കംചെയ്യാവുന്ന ഉപകരണങ്ങൾ ക്രമീകരിക്കുക…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Removable Devices"
 msgstr "നീക്കംചെയ്യാവുന്ന ഉപകരണങ്ങൾ"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "നീക്കംചെയ്യാനാകാത്ത ഉപകരണങ്ങൾ"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "All Devices"
 msgstr "എല്ലാ ഉപകരണങ്ങളും"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "പുതിയ ഉപകരണം ബന്ധിപ്പിക്കുമ്പോൾ പോപ്പ്അപ്പ് കാണിക്കുക"

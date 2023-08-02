@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2009-01-28 14:51+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -72,7 +72,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -107,31 +107,31 @@ msgstr "पिछला प्लग करे उपकरन: %1"
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "नवा उपकरन सूचक ल कान्फिगर करव"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "Removable Devices"
 msgstr "नवा उपकरन सूचक ल कान्फिगर करव"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "Non Removable Devices"
 msgstr "नवा उपकरन सूचक ल कान्फिगर करव"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

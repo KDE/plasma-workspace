@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 02:08+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-07-10 14:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Calendar"
 msgstr "Календар"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:425
+#: package/contents/ui/CalendarView.qml:423
 #, kde-format
 msgid "Time Zones"
 msgstr "Времеви зони"
@@ -60,13 +60,13 @@ msgstr "Няма събития за днес"
 msgid "No events for this day"
 msgstr "Няма събития за този ден"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:432
 #, kde-format
 msgid "Switch…"
 msgstr "Превключване…"
 
-#: package/contents/ui/CalendarView.qml:435
-#: package/contents/ui/CalendarView.qml:438
+#: package/contents/ui/CalendarView.qml:433
+#: package/contents/ui/CalendarView.qml:436
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Превключване към друга часова зона"

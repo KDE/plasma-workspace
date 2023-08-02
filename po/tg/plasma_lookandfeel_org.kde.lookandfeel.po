@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2021-09-07 22:06-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -43,20 +43,20 @@ msgid "Caps Lock is on"
 msgstr "Тугмаи Caps Lock фаъол аст"
 
 #: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
-#: contents/logout/Logout.qml:164
+#: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ба хоб равондан"
 
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:182
+#: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Аз нав оғоз кардани низом"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:192
+#: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
 msgstr "Хомӯш кардани низом"
@@ -165,7 +165,7 @@ msgstr "Кушодани қулф қатъ шуд"
 msgid "Sleep"
 msgstr "Ба хоб равондан"
 
-#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:173
+#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "Дар ҳолати ҷорӣ нигоҳ доштан"
@@ -251,48 +251,43 @@ msgstr ""
 "Вақте ки низом аз нав оғоз карда мешавад, компютер ба экрани танзимоти "
 "миёнафзор ворид карда мешавад."
 
-#: contents/logout/Logout.qml:202
+#: contents/logout/Logout.qml:203
 #, kde-format
 msgid "Log Out"
 msgstr "Баромадан аз низом"
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:226
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Баъд аз 1 сония низом аз нав оғоз карда мешавад"
 msgstr[1] "Баъд аз %1 сония низом аз нав оғоз карда мешавад"
 
-#: contents/logout/Logout.qml:227
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Баъд аз 1 сония низом хомӯш карда мешавад"
 msgstr[1] "Баъд аз %1 сония низом хомӯш карда мешавад"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:230
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Баъд аз 1 сония низом хориҷ карда мешавад"
 msgstr[1] "Баъд аз %1 сония низом хориҷ карда мешавад"
 
-#: contents/logout/Logout.qml:240
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgid "OK"
 msgstr "ХУБ"
 
-#: contents/logout/Logout.qml:246
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Cancel"
 msgstr "Бекор кардан"
 
-#: contents/osd/OsdItem.qml:69
-#, kde-format
-msgid "100%"
-msgstr "100%"
-
-#: contents/osd/OsdItem.qml:83
+#: contents/osd/OsdItem.qml:31
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
@@ -306,6 +301,9 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma аз ҷониби KDE"
+
+#~ msgid "100%"
+#~ msgstr "100%"
 
 #~ msgid "Configure"
 #~ msgstr "Танзимот"

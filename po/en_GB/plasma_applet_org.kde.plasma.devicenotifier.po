@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2022-02-19 12:43+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -73,7 +73,7 @@ msgid "Mount"
 msgstr "Mount"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr "Remove All"
@@ -103,28 +103,28 @@ msgstr "Most Recent Device"
 msgid "No Devices Available"
 msgstr "No Devices Available"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configure Removable Devices…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Removable Devices"
 msgstr "Removable Devices"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Non Removable Devices"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "All Devices"
 msgstr "All Devices"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Show popup when new device is plugged in"

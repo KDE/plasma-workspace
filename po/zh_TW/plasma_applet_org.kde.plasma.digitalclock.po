@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 02:08+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-02-09 01:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -31,7 +31,7 @@ msgid "Calendar"
 msgstr "行事曆"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:425
+#: package/contents/ui/CalendarView.qml:423
 #, kde-format
 msgid "Time Zones"
 msgstr "時區"
@@ -63,13 +63,13 @@ msgstr "今日無事件"
 msgid "No events for this day"
 msgstr "這天沒有事件"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:432
 #, kde-format
 msgid "Switch…"
 msgstr "切換…"
 
-#: package/contents/ui/CalendarView.qml:435
-#: package/contents/ui/CalendarView.qml:438
+#: package/contents/ui/CalendarView.qml:433
+#: package/contents/ui/CalendarView.qml:436
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "切換至另一個時區"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 02:08+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-02-23 12:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Calendar"
 msgstr "カレンダー"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:425
+#: package/contents/ui/CalendarView.qml:423
 #, kde-format
 msgid "Time Zones"
 msgstr "タイムゾーン"
@@ -61,13 +61,13 @@ msgstr "今日のイベントはありません"
 msgid "No events for this day"
 msgstr "この日のイベントはありません"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:432
 #, kde-format
 msgid "Switch…"
 msgstr "切り替え…"
 
-#: package/contents/ui/CalendarView.qml:435
-#: package/contents/ui/CalendarView.qml:438
+#: package/contents/ui/CalendarView.qml:433
+#: package/contents/ui/CalendarView.qml:436
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "他のタイムゾーンに切り替え"

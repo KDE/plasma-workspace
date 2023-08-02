@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-02-17 06:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -76,7 +76,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%%1"
 
-#: package/contents/ui/CompactRepresentation.qml:105
+#: package/contents/ui/CompactRepresentation.qml:103
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -251,7 +251,7 @@ msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Eskuz oztopatu lokartzea eta pantaila giltzatzea"
 
-#: package/contents/ui/PowerManagementItem.qml:72
+#: package/contents/ui/PowerManagementItem.qml:70
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -261,7 +261,7 @@ msgstr ""
 "Zure magalekoa tapa ixtean ez lokartzeko konfiguratuta dago, kanpoko "
 "monitore bat konektatuta dagoenean."
 
-#: package/contents/ui/PowerManagementItem.qml:85
+#: package/contents/ui/PowerManagementItem.qml:83
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -271,27 +271,27 @@ msgstr[1] ""
 "%1 aplikazio une honetan lokartzea eta pantaila giltzatzea oztopatzen ari "
 "dira:"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:105
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr ""
 "%1 une honetan lokartzea eta pantaila giltzatzea oztopatzen ari da (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:109
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr ""
 "%1 une honetan lokartzea eta pantaila giltzatzea oztopatzen ari da (arrazoia "
 "ezezaguna)"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
 "Aplikazio bat lokartzea eta pantaila giltzatzea oztopatzen ari da une "
 "honetan (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:113
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -300,51 +300,51 @@ msgstr ""
 "Aplikazio bat lokartzea eta pantaila giltzatzea oztopatzen ari da une "
 "honetan (arrazoia ezezaguna)"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:115
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:119
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: arrazoi ezezaguna"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Aplikazio ezezaguna: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:123
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "Aplikazio ezezaguna: arrazoi ezezaguna"
 
-#: package/contents/ui/PowerProfileItem.qml:35
+#: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
 msgid "Power Save"
 msgstr "Energia aurrezpena"
 
-#: package/contents/ui/PowerProfileItem.qml:39
+#: package/contents/ui/PowerProfileItem.qml:38
 #, kde-format
 msgid "Balanced"
 msgstr "Orekatua"
 
-#: package/contents/ui/PowerProfileItem.qml:43
+#: package/contents/ui/PowerProfileItem.qml:42
 #, kde-format
 msgid "Performance"
 msgstr "Errendimendua"
 
-#: package/contents/ui/PowerProfileItem.qml:60
+#: package/contents/ui/PowerProfileItem.qml:59
 #, kde-format
 msgid "Power Profile"
 msgstr "Energia profila"
 
-#: package/contents/ui/PowerProfileItem.qml:192
+#: package/contents/ui/PowerProfileItem.qml:184
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -353,7 +353,7 @@ msgstr ""
 "Errendimendu modua ezgaitu da bero sorrera murrizteko ordenagailuak zure "
 "magalean egon daitekeela antzeman duelako."
 
-#: package/contents/ui/PowerProfileItem.qml:194
+#: package/contents/ui/PowerProfileItem.qml:186
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
@@ -361,12 +361,12 @@ msgstr ""
 "Errendimendu modua ez dago erabilgarri ordenagailua gehiegi berotzen ari "
 "delako."
 
-#: package/contents/ui/PowerProfileItem.qml:196
+#: package/contents/ui/PowerProfileItem.qml:188
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Errendimendu modua ez dago erabilgarri."
 
-#: package/contents/ui/PowerProfileItem.qml:209
+#: package/contents/ui/PowerProfileItem.qml:201
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -375,25 +375,25 @@ msgstr ""
 "Errendimendua apaldu liteke bero sorrera murrizteko ordenagailuak zure "
 "magalean egon daitekeela antzeman duelako."
 
-#: package/contents/ui/PowerProfileItem.qml:211
+#: package/contents/ui/PowerProfileItem.qml:203
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr ""
 "Errendimendu modua murriztu daiteke ordenagailua gehiegi berotzen ari delako."
 
-#: package/contents/ui/PowerProfileItem.qml:213
+#: package/contents/ui/PowerProfileItem.qml:205
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Errendimendua murriztu egin liteke."
 
-#: package/contents/ui/PowerProfileItem.qml:224
+#: package/contents/ui/PowerProfileItem.qml:216
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "Aplikazio batek %2 aktibatzea eskatu du:"
 msgstr[1] "%1 aplikaziok %2 aktibatzea eskatu dute:"
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:234
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

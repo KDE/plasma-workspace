@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2020-09-03 15:56+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -78,7 +78,7 @@ msgid "Mount"
 msgstr "Васл кардан"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr "Ҳамаро ҷудо кардан"
@@ -110,7 +110,7 @@ msgstr "Дастгоҳи васлшудаи охирин"
 msgid "No Devices Available"
 msgstr "Ягон дастгоҳ васл нашудааст"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, fuzzy, kde-format
 #| msgctxt "Open auto mounter kcm"
 #| msgid "Configure Removable Devices"
@@ -118,25 +118,25 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Танзимоти дастгоҳҳои ҷудошаванда"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Removable devices"
 msgid "Removable Devices"
 msgstr "Дастгоҳҳои ҷудошаванда"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Non-removable devices"
 msgid "Non Removable Devices"
 msgstr "Дастгоҳҳои доимӣ"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Ҳамаи дастгоҳҳо"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""

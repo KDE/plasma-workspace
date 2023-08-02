@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2008-10-23 08:59+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -80,7 +80,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -114,32 +114,32 @@ msgstr "તાજેતરનાં ઉપકરણ: %1"
 msgid "No Devices Available"
 msgstr "કોઈ ઉપકરણો પ્રાપ્ત નથી"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "માત્ર દૂર ન કરી શકાય તેવા ઉપકરણો"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "માત્ર દૂર કરી શકાય તેવા ઉપકરણો"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "માત્ર દૂર ન કરી શકાય તેવા ઉપકરણો"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:274
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "બધાં ઉપકરણો"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

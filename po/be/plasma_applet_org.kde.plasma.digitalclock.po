@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 02:08+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -33,7 +33,7 @@ msgid "Calendar"
 msgstr "Каляндар"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:425
+#: package/contents/ui/CalendarView.qml:423
 #, kde-format
 msgid "Time Zones"
 msgstr "Часавыя паясы"
@@ -65,13 +65,13 @@ msgstr "Няма падзей на сёння"
 msgid "No events for this day"
 msgstr "Няма падзей на гэты дзень"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:432
 #, kde-format
 msgid "Switch…"
 msgstr "Пераключыцца…"
 
-#: package/contents/ui/CalendarView.qml:435
-#: package/contents/ui/CalendarView.qml:438
+#: package/contents/ui/CalendarView.qml:433
+#: package/contents/ui/CalendarView.qml:436
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Пераключыцца на іншы часавы пояс"

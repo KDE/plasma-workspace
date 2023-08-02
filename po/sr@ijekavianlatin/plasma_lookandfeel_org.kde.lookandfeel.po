@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-02 02:09+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,7 +44,7 @@ msgid "Caps Lock is on"
 msgstr "CapsLock uključen"
 
 #: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
-#: contents/logout/Logout.qml:164
+#: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -52,13 +52,13 @@ msgstr ""
 
 # rewrite-msgid: /Restart/Reset/
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:182
+#: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Resetuj"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:192
+#: contents/logout/Logout.qml:193
 #, fuzzy, kde-format
 #| msgid "Shutdown"
 msgid "Shut Down"
@@ -166,7 +166,7 @@ msgstr "Otključavanje propalo"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:173
+#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr ""
@@ -247,13 +247,13 @@ msgstr[3] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
-#: contents/logout/Logout.qml:202
+#: contents/logout/Logout.qml:203
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
 # rewrite-msgid: /Reboot/Reset/
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:226
 #, fuzzy, kde-format
 #| msgid "Reboot in 1 second"
 #| msgid_plural "Reboot in %1 seconds"
@@ -264,7 +264,7 @@ msgstr[1] "Resetovanje za %1 sekunde"
 msgstr[2] "Resetovanje za %1 sekundi"
 msgstr[3] "Resetovanje za 1 sekundu"
 
-#: contents/logout/Logout.qml:227
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -273,7 +273,7 @@ msgstr[1] "Gašenje za %1 sekunde"
 msgstr[2] "Gašenje za %1 sekundi"
 msgstr[3] "Gašenje za 1 sekundu"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:230
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -282,22 +282,17 @@ msgstr[1] "Odjavljivanje za %1 sekunde"
 msgstr[2] "Odjavljivanje za %1 sekundi"
 msgstr[3] "Odjavljivanje za 1 sekundu"
 
-#: contents/logout/Logout.qml:240
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgid "OK"
 msgstr "U redu"
 
-#: contents/logout/Logout.qml:246
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Cancel"
 msgstr "Odustani"
 
-#: contents/osd/OsdItem.qml:69
-#, kde-format
-msgid "100%"
-msgstr ""
-
-#: contents/osd/OsdItem.qml:83
+#: contents/osd/OsdItem.qml:31
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "Percentage value"
