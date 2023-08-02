@@ -162,7 +162,12 @@ private:
 
         QString exec = service->exec();
 
-        QStringList resultingArgs = KIO::DesktopExecParser(KService(QString(), exec, QString()), {}).resultingArguments();
+        const KService syntheticService(QString(), exec, QString());
+        KIO::DesktopExecParser parser(syntheticService, {});
+        QStringList resultingArgs = parser.resultingArguments();
+        if (const auto error = parser.errorMessage(); resultingArgs.isEmpty() && !error.isEmpty()) {
+            qCWarning(RUNNER_SERVICES) << "Failed to resolve executable from service. Error:" << error;
+        }
 
         // Remove any environment variables.
         if (KIO::DesktopExecParser::executableName(exec) == QLatin1String("env")) {
