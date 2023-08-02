@@ -367,7 +367,7 @@ KCM.GridViewKCM {
             Component.onCompleted: open()
             onAccepted: {
                 infoLabel.visible = false;
-                kcm.installSchemeFromFile(fileUrls[0])
+                kcm.installSchemeFromFile(selectedFile)
                 fileDialogLoader.active = false
             }
             onRejected: {

@@ -195,7 +195,7 @@ KCM.GridViewKCM {
             nameFilters: [ i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.installThemeFromFile(fileUrls[0])
+                kcm.installThemeFromFile(selectedFile)
                 fileDialogLoader.active = false
             }
             onRejected: {

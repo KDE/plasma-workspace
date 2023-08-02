@@ -110,7 +110,7 @@ Kirigami.Page {
             nameFilters: [ i18n("GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.gtkPage.installGtkThemeFromFile(fileUrls[0])
+                kcm.gtkPage.installGtkThemeFromFile(selectedFile)
                 fileDialogLoader.active = false
             }
             onRejected: {
