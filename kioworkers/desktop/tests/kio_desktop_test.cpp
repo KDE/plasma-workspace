@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <chrono>
+
 #include <KDirNotify>
 #include <KIO/FileUndoManager>
 #include <QDesktopServices>
@@ -15,6 +17,9 @@
 #include <kdirlister.h>
 #include <kio/copyjob.h>
 #include <kio/job.h>
+
+using namespace Qt::StringLiterals;
+using namespace std::chrono_literals;
 
 static void doUndo() // see FileUndoManagerTest::doUndo()
 {
@@ -44,7 +49,11 @@ private Q_SLOTS:
         m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
         m_testFileName = QLatin1String("kio_desktop_test_file");
         qWarning() << "We will write in the desktop folder" << m_desktopPath;
-        qWarning() << "Starting kded" << QProcess::startDetached(QStringLiteral("kded6"), {});
+        // NOTE: we must shut down kded if we started it in the CI! Do not detach!
+        m_kded.setProgram("kded6"_L1);
+        m_kded.start();
+        const auto started = m_kded.waitForStarted((1000ms).count());
+        qWarning() << "Starting kded" << started;
         cleanupTestCase();
     }
     void cleanupTestCase()
@@ -52,6 +61,7 @@ private Q_SLOTS:
         QFile::remove(m_desktopPath + '/' + m_testFileName);
         QFile::remove(m_desktopPath + '/' + m_testFileName + ".part");
         QFile::remove(m_desktopPath + '/' + m_testFileName + "_link");
+        m_kded.kill();
     }
 
     void testCopyToDesktop()
@@ -188,6 +198,7 @@ private Q_SLOTS:
 private:
     QString m_desktopPath;
     QString m_testFileName;
+    QProcess m_kded;
 };
 
 QTEST_GUILESS_MAIN(TestDesktop)
