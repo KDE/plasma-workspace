@@ -32,7 +32,6 @@ class RunnerModel : public QAbstractListModel
     Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged)
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged)
     Q_PROPERTY(bool mergeResults READ mergeResults WRITE setMergeResults NOTIFY mergeResultsChanged)
-    Q_PROPERTY(bool deleteWhenEmpty READ deleteWhenEmpty WRITE setDeleteWhenEmpty NOTIFY deleteWhenEmptyChanged)
 
 public:
     explicit RunnerModel(QObject *parent = nullptr);
@@ -44,7 +43,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int count() const;
 
-    Q_INVOKABLE QObject *modelForRow(int row);
+    Q_INVOKABLE RunnerMatchesModel *modelForRow(int row);
 
     QStringList runners() const;
     void setRunners(const QStringList &runners);
@@ -61,9 +60,6 @@ public:
     bool mergeResults() const;
     void setMergeResults(bool merge);
 
-    bool deleteWhenEmpty() const;
-    void setDeleteWhenEmpty(bool deleteWhenEmpty);
-
 Q_SIGNALS:
     void countChanged() const;
     void favoritesModelChanged() const;
@@ -72,7 +68,6 @@ Q_SIGNALS:
     void queryChanged() const;
     void queryFinished();
     void mergeResultsChanged() const;
-    void deleteWhenEmptyChanged();
     void requestUpdateQuery(const QString &query);
 
 private Q_SLOTS:
@@ -90,5 +85,5 @@ private:
     QString m_query;
     QTimer m_queryTimer;
     bool m_mergeResults;
-    bool m_deleteWhenEmpty;
+    int m_queryingModels = 0;
 };

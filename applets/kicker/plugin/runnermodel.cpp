@@ -23,7 +23,6 @@ RunnerModel::RunnerModel(QObject *parent)
     , m_favoritesModel(nullptr)
     , m_appletInterface(nullptr)
     , m_mergeResults(false)
-    , m_deleteWhenEmpty(false)
 {
     m_queryTimer.setSingleShot(true);
     m_queryTimer.setInterval(10ms);
@@ -79,26 +78,6 @@ void RunnerModel::setAppletInterface(QObject *appletInterface)
     }
 }
 
-bool RunnerModel::deleteWhenEmpty() const
-{
-    return m_deleteWhenEmpty;
-}
-
-void RunnerModel::setDeleteWhenEmpty(bool deleteWhenEmpty)
-{
-    if (m_deleteWhenEmpty != deleteWhenEmpty) {
-        m_deleteWhenEmpty = deleteWhenEmpty;
-
-        clear();
-
-        if (!m_query.isEmpty()) {
-            m_queryTimer.start();
-        }
-
-        Q_EMIT deleteWhenEmptyChanged();
-    }
-}
-
 bool RunnerModel::mergeResults() const
 {
     return m_mergeResults;
@@ -143,7 +122,7 @@ int RunnerModel::count() const
     return rowCount();
 }
 
-QObject *RunnerModel::modelForRow(int row)
+RunnerMatchesModel *RunnerModel::modelForRow(int row)
 {
     if (row < 0 || row >= m_models.count()) {
         return nullptr;
@@ -201,7 +180,9 @@ void RunnerModel::startQuery()
 {
     if (m_query.isEmpty()) {
         clear();
+        QTimer::singleShot(0, this, &RunnerModel::queryFinished);
     } else {
+        m_queryingModels = m_models.size();
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }
@@ -227,5 +208,13 @@ void RunnerModel::initializeModels()
             m_models.append(new RunnerMatchesModel(runnerId, std::nullopt, this));
         }
     }
+    for (auto model : std::as_const(m_models)) {
+        connect(model->runnerManager(), &KRunner::RunnerManager::queryFinished, this, [this]() {
+            if (--m_queryingModels == 0) {
+                Q_EMIT queryFinished();
+            }
+        });
+    }
     endResetModel();
+    Q_EMIT countChanged();
 }
