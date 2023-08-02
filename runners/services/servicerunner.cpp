@@ -86,6 +86,7 @@ public:
         matchCategories();
         matchJumpListActions();
 
+        qDebug() << matches;
         context.addMatches(matches);
     }
 

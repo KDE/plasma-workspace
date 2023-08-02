@@ -152,7 +152,9 @@ void ServiceRunnerTest::testSystemSettings2()
 void ServiceRunnerTest::testCategories()
 {
     auto matches = launchQuery(QStringLiteral("System"));
+    qDebug() << matches;
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
+        qDebug() << match.text() << match.relevance();
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
     }));
 
