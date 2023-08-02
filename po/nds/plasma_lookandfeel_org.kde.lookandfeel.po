@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2023-08-02 02:37+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -292,12 +292,7 @@ msgstr ""
 msgid "Cancel"
 msgstr "Afbreken"
 
-#: contents/osd/OsdItem.qml:66
-#, kde-format
-msgid "100%"
-msgstr ""
-
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:30
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

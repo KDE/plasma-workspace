@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2023-08-02 02:37+0000\n"
 "PO-Revision-Date: 2022-08-20 23:20-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -275,12 +275,7 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: contents/osd/OsdItem.qml:66
-#, kde-format
-msgid "100%"
-msgstr "100%"
-
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:30
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
@@ -294,3 +289,6 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma made by KDE"
+
+#~ msgid "100%"
+#~ msgstr "100%"

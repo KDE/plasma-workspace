@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2023-08-02 02:37+0000\n"
 "PO-Revision-Date: 2022-10-22 16:30+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -282,12 +282,7 @@ msgstr "Í lagi"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: contents/osd/OsdItem.qml:66
-#, kde-format
-msgid "100%"
-msgstr "100%"
-
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:30
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
@@ -301,6 +296,9 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma gert af KDE"
+
+#~ msgid "100%"
+#~ msgstr "100%"
 
 #~ msgid "Configure"
 #~ msgstr "Stilla"

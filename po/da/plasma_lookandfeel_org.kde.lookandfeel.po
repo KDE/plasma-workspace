@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2023-08-02 02:37+0000\n"
 "PO-Revision-Date: 2020-10-04 17:18+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -287,12 +287,7 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Annullér"
 
-#: contents/osd/OsdItem.qml:66
-#, kde-format
-msgid "100%"
-msgstr "100%"
-
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:30
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
@@ -306,6 +301,9 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma skabt af KDE"
+
+#~ msgid "100%"
+#~ msgstr "100%"
 
 #~ msgid "Configure"
 #~ msgstr "Indstil"
