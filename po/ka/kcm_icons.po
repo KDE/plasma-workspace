@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-12-15 07:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -142,43 +142,44 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "ზომა:"
 
-#: ui/main.qml:146
-#, kde-format
-msgid "Remove Icon Theme"
-msgstr "ხატულების თემის წაშლა"
-
-#: ui/main.qml:153
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "ხატულების თემის აღდგენა"
-
-#: ui/main.qml:227
+#: ui/main.qml:45
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "ხატულების ზომის მორგება"
 
-#: ui/main.qml:244
+#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "ფაილიდან დაყენება…"
 
-#: ui/main.qml:249
-#, kde-format
-msgid "Get New Icons…"
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Get New Icons…"
+msgid "Get New…"
 msgstr "ახალი ხატულების მიღება…"
 
-#: ui/main.qml:271
+#: ui/main.qml:174
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "ხატულების თემის წაშლა"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "ხატულების თემის აღდგენა"
+
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "ხატულების ზომის მორგება"
 
-#: ui/main.qml:283
+#: ui/main.qml:268
 #, kde-format
 msgid "Open Theme"
 msgstr "თემის გახსნა"
 
-#: ui/main.qml:285
+#: ui/main.qml:270
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "თემის ფაილები (*.tar.gz *.tar.bz2)"

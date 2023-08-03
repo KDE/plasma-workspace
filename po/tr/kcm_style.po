@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-04-23 11:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -113,47 +113,54 @@ msgstr "Ana araç çubuğu etiketi"
 msgid "Secondary toolbar label"
 msgstr "İkincil araç çubuğu etiketi"
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr "Simgeleri ve Araç Çubuklarını Yapılandır"
+
+#: ui/EffectSettingsPopup.qml:34
 #, kde-format
 msgid "Show icons:"
 msgstr "Simgeleri göster:"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, kde-format
 msgid "On buttons"
 msgstr "Düğmelerde"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr "Menülerde"
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "Ana araç çubuğu etiketi:"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr "Yok"
 
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, kde-format
 msgid "Text only"
 msgstr "Yalnızca metin"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "Beside icons"
 msgstr "Simgenin yanında"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Below icon"
 msgstr "Simgelerin altında"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "İkincil araç çubuğu etiketi:"
@@ -193,20 +200,20 @@ msgstr "GTK Tema Arşivi Seç"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK Tema Arşivi (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "Biçemi Yapılandır…"
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Simgeleri ve Araç Çubuklarını Yapılandır"
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "GNOME/GTK Uygulama Biçemini Yapılandır…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Style…"
+msgstr "Biçemi Yapılandır…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

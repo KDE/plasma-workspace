@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kcm_desktopthemedetails.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2009-01-20 10:11-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -118,51 +118,55 @@ msgstr ""
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:97
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "Scéim Dathanna"
 
-#: ui/main.qml:118
+#: ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
 msgstr "Téama"
 
-#: ui/main.qml:125
+#: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
 msgstr "Bain Téama"
 
-#: ui/main.qml:132
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "Bain Téama"
 
-#: ui/main.qml:174
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
-msgid "Get New Plasma Styles…"
-msgstr "Faigh Téamaí Nua..."
-
-#: ui/main.qml:193
+#: ui/main.qml:189
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Open Theme"
 msgstr "Téama"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Faigh Téamaí Nua..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

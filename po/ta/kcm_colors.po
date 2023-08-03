@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-02 19:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -1285,82 +1285,85 @@ msgstr "வெளிர்ந்த திட்டங்கள்"
 msgid "Dark Schemes"
 msgstr "கருமையான திட்டங்கள்"
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr "கோப்பிலிருந்து நிறுவு…"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, kde-format
 msgid "Window Title"
 msgstr "சாளர தலைப்பு"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, kde-format
 msgid "Window text"
 msgstr "சாளர உரை"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "பட்டன்"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "இணைப்பு"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "அணுகப்பட்டது"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, kde-format
 msgid "Normal text"
 msgstr "இயல்பான உரை"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, kde-format
 msgid "Highlighted text"
 msgstr "தேர்ந்தெடுக்கப்பட்டுள்ள உரை"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgid "Disabled text"
 msgstr "முடக்கப்பட்டதன் உரை"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "நிறத்திட்டத்தை திருத்து…"
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "நிறத்திட்டத்தை நீக்கு"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "நிறத்திட்டத்தை மீட்டெடு"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "கோப்பிலிருந்து நிறுவு…"
-
-#: ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "புதிய நிறத்திட்டங்களை பெறு…"
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "நிறத்திட்டத்தை திற"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "நிறத்திட்ட கோப்புகள் (*.colors)"
+
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "புதிய நிறத்திட்டங்களை பெறு…"
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "நிறத்திட்டத்தை அமைக்க இந்த கூறு உதவும்."

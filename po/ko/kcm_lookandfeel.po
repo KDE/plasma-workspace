@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-07-25 23:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -120,23 +120,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "바탕 화면 레이아웃 포함"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "테마 미리 보기"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "테마 삭제"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -144,30 +149,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 테마를 적용하시겠습니까?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "적용할 항목 선택…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "옵션 덜 보기…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "적용"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "새 전역 테마 가져오기…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -288,6 +288,9 @@ msgid ""
 msgstr ""
 "이 전역 테마에 변경할 수 있는 설정이 없습니다. 전역 테마에 문제가 있는 것일 "
 "수도 있으므로 테마 관리자에게 연락하십시오."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "새 전역 테마 가져오기…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "이 모듈에서 전역 모습과 느낌 테마를 선택할 수 있습니다."

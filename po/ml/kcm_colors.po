@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -1283,82 +1283,85 @@ msgstr "ലൈറ്റ് സ്കീമുകൾ"
 msgid "Dark Schemes"
 msgstr "ഇരുണ്ട സ്കീമുകൾ"
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, kde-format
 msgid "Window Title"
 msgstr "വിൻഡോ ശീർഷകം"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, kde-format
 msgid "Window text"
 msgstr "ജാലകത്തിനുള്ള പദാവലി"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "ബട്ടണ്‍"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "കണ്ണി"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "സന്ദര്‍ശിച്ചതു്"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, kde-format
 msgid "Normal text"
 msgstr "സാധാരണ പദാവലി"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, kde-format
 msgid "Highlighted text"
 msgstr "സന്ദര്‍ശിച്ച പദാവലി"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgid "Disabled text"
 msgstr "അപ്രാപ്തമാക്കിയ പദാവലി"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "നിറക്കൂട്ടു് ചിട്ടപെടുത്തുക…"
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "നിറക്കൂട്ടു് നീക്കം ചെയ്യുക"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
-
-#: ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "പുതിയ നിറക്കൂട്ടുകള്‍ ലഭ്യമാക്കുക…"
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "നിറക്കൂട്ടു് തുറക്കുക"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "നിറക്കൂട്ടു് ഫയലുകൾ (*.colors)"
+
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "പുതിയ നിറക്കൂട്ടുകള്‍ ലഭ്യമാക്കുക…"
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "നിറക്കൂട്ടു് തിരഞ്ഞെടുക്കാൻ ഈ മൊഡ്യൂൾ നിങ്ങളെ അനുവദിക്കുന്നു."

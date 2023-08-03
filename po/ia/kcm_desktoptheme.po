@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-12-20 22:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -125,45 +125,48 @@ msgstr "Themas obscur"
 msgid "Color scheme compatible"
 msgstr "Schema de color compatibile"
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Seque schema de color"
-
-#: ui/main.qml:118
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Edita Thema..."
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "Remove thema"
-
-#: ui/main.qml:132
-#, kde-format
-msgid "Restore Theme"
-msgstr "Restabili Thema"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
 msgstr "Installa ex file ..."
 
-#: ui/main.qml:179
+#: ui/main.qml:102
 #, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Obtene Nove Stilos de Plasma..."
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Seque schema de color"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Edita Thema..."
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "Remove thema"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Restore Theme"
+msgstr "Restabili Thema"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Aperi thema"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Files de Thema (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Obtene Nove Stilos de Plasma..."
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Iste modulo te permitte seliger le stilo de Plasma. "

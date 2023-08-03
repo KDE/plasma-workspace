@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-07 23:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -230,33 +230,35 @@ msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 秒"
 
-#: ui/main.qml:84
-#, kde-format
-msgid "Size:"
+#: ui/main.qml:58 ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgid "Size: %1"
 msgstr "大小："
 
-#: ui/main.qml:134
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "設定啟動回饋(&C)…"
 
-#: ui/main.qml:145
+#: ui/main.qml:111
 #, kde-format
 msgid "&Install from File…"
 msgstr "從檔案安裝(&I)…"
 
-#: ui/main.qml:151
-#, kde-format
-msgid "&Get New Cursors…"
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "&Get New Cursors…"
+msgid "&Get New…"
 msgstr "取得新游標(&G)…"
 
-#: ui/main.qml:168
+#: ui/main.qml:161
 #, kde-format
 msgid "Open Theme"
 msgstr "開啟主題"
 
-#: ui/main.qml:170
+#: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "游標主題檔案 (*.tar.gz *.tar.bz2)"

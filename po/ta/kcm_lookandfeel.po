@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-06-11 17:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -122,23 +122,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "பணிமேடைத் தளவமைப்பைக் கொண்டுள்ளது"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "தோற்றத்திட்டத்தின் முன்னோட்டம்"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "தோற்றத்திட்டத்தை நீக்கு"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -146,30 +151,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 என்பதை செயல்படுத்தலாமா?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "செயல்படுத்தவேண்டியவை…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "குறைவான விருப்பங்களையே காட்டு…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "ரத்து செய்"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "புதிய பொது தோற்றத்திட்டங்களை பெறு…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -290,6 +290,9 @@ msgid ""
 msgstr ""
 "உரிய அமைப்புகளை இப்பொது தோற்றத்திட்டம் வழங்கவில்லை. இத்திட்டம் முறையற்றதாக இருக்கலாம்; இதன் "
 "பராமரிப்பாளரைத் தொடர்புகொள்ளுங்கள்."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "புதிய பொது தோற்றத்திட்டங்களை பெறு…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "பொதுவான தோற்றத்தை நீங்கள் தேர்ந்தெடுக்க இந்த கூறு உதவும்."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-07-20 21:57+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -53,79 +53,81 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr "Le file '%1' debe esser executabile pro executar al accesso (login)."
 
-#: ui/main.qml:95
+#: ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "Adde…"
+
+#: ui/main.qml:78
+#, kde-format
+msgid "Add Application…"
+msgstr "Adde Application..."
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Adde Script de accesso de identification…"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Adde script de clausura de session..."
+
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Vide Proprietates"
 
-#: ui/main.qml:101
+#: ui/main.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Remove entrata"
 
-#: ui/main.qml:112
+#: ui/main.qml:143
 #, kde-format
 msgid "Applications"
 msgstr "Applicationes"
 
-#: ui/main.qml:115
+#: ui/main.qml:146
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts de accessos (login)"
 
-#: ui/main.qml:118
+#: ui/main.qml:149
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts de pre-initio"
 
-#: ui/main.qml:121
+#: ui/main.qml:152
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Script de Clausura de session"
 
-#: ui/main.qml:130
+#: ui/main.qml:161
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Nulle elementos de autoinitio specificate per usator"
 
-#: ui/main.qml:131
+#: ui/main.qml:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 "Clicca le button <interface>Adde...</interface> a basso per adder alcun"
 
-#: ui/main.qml:145
+#: ui/main.qml:176
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Selige script de session de accesso (login)"
 
-#: ui/main.qml:165
+#: ui/main.qml:196
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Selige script de clausura de session (logout)"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Add…"
-msgstr "Adde…"
-
-#: ui/main.qml:198
-#, kde-format
-msgid "Add Application…"
-msgstr "Adde Application..."
-
-#: ui/main.qml:204
-#, kde-format
-msgid "Add Login Script…"
-msgstr "Adde Script de accesso de identification…"
-
-#: ui/main.qml:210
-#, kde-format
-msgid "Add Logout Script…"
-msgstr "Adde script de clausura de session..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

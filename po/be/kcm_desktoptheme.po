@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -123,45 +123,48 @@ msgstr "Цёмныя тэмы"
 msgid "Color scheme compatible"
 msgstr "Колеравая схема сумяшчальная"
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Пільнуецца колеравай схемы"
-
-#: ui/main.qml:118
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Рэдагаваць тэму…"
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "Выдаліць тэму"
-
-#: ui/main.qml:132
-#, kde-format
-msgid "Restore Theme"
-msgstr "Аднавіць тэму"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
 msgstr "Усталяваць з файла…"
 
-#: ui/main.qml:179
+#: ui/main.qml:102
 #, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Атрымаць новыя стылі Plasma…"
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Пільнуецца колеравай схемы"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Рэдагаваць тэму…"
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "Выдаліць тэму"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Restore Theme"
+msgstr "Аднавіць тэму"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Адкрыць тэму"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Файлы тэмаў (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Атрымаць новыя стылі Plasma…"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Гэты модуль дазваляе абраць стыль Plasma."

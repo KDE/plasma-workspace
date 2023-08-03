@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-04-23 10:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -119,47 +119,54 @@ msgstr "Etiqueta de la barra d'eines principal"
 msgid "Secondary toolbar label"
 msgstr "Etiqueta de la barra d'eines secundària"
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr "Configura les icones i les barres d'eines"
+
+#: ui/EffectSettingsPopup.qml:34
 #, kde-format
 msgid "Show icons:"
 msgstr "Mostra les icones:"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, kde-format
 msgid "On buttons"
 msgstr "Als botons"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr "Als menús"
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "Etiqueta de la barra d'eines principal:"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr "Sense"
 
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, kde-format
 msgid "Text only"
 msgstr "Només el text"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "Beside icons"
 msgstr "Vora les icones"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Below icon"
 msgstr "Sota la icona"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "Etiqueta de la barra d'eines secundària:"
@@ -199,17 +206,17 @@ msgstr "Selecció d'arxiu de tema GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arxiu de tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "Configura l'estil…"
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configura les icones i les barres d'eines"
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configura l'estil de l'aplicació GNOME/GTK…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Style…"
+msgstr "Configura l'estil…"

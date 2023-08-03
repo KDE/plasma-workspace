@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2013-10-18 20:14+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -124,56 +124,62 @@ msgstr "Tekst glavne trake:"
 msgid "Secondary toolbar label"
 msgstr "Tekst drugih traka:"
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:34
 #, fuzzy, kde-format
 #| msgid "Show icons in menus:"
 msgid "Show icons:"
 msgstr "Prikaz ikona u menijima:"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, fuzzy, kde-format
 #| msgid "Radio button"
 msgid "On buttons"
 msgstr "Radio dugme"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, fuzzy, kde-format
 #| msgid "Main toolbar text:"
 msgid "Main toolbar label:"
 msgstr "Tekst glavne trake:"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr ""
 
 # @item:inlistbox Text position
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgid "Text only"
 msgstr "Samo tekst"
 
 # @item:inlistbox Text position
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, fuzzy, kde-format
 #| msgid "Text Beside Icons"
 msgid "Beside icons"
 msgstr "Tekst pored ikona"
 
 # @item:inlistbox Text position
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, fuzzy, kde-format
 #| msgid "Text Below Icons"
 msgid "Below icon"
 msgstr "Tekst ispod ikona"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, fuzzy, kde-format
 #| msgid "Secondary toolbar text:"
 msgid "Secondary toolbar label:"
@@ -219,21 +225,21 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
-msgid "Configure Style…"
-msgstr "&Podesi..."
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
+msgstr "&Podesi..."
+
+#: ui/main.qml:102
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
 msgstr "&Podesi..."
 
 #, fuzzy

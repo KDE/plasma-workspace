@@ -1,7 +1,7 @@
 # translation of kcmicons.po to Slovenian
 # Translation of kcmicons.po to Slovenian
 # Copyright (C) 2001, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: kcm_icons.po 1654331 2023-06-22 02:25:48Z scripty $
+# $Id: kcm_icons.po 1657379 2023-08-03 02:50:36Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-10-24 08:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -153,43 +153,44 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Velikost:"
 
-#: ui/main.qml:146
-#, kde-format
-msgid "Remove Icon Theme"
-msgstr "Odstrani temo ikon"
-
-#: ui/main.qml:153
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "Obnovi temo ikon"
-
-#: ui/main.qml:227
+#: ui/main.qml:45
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Nastavi velikost ikon"
 
-#: ui/main.qml:244
+#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Namesti iz datoteke…"
 
-#: ui/main.qml:249
-#, kde-format
-msgid "Get New Icons…"
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Get New Icons…"
+msgid "Get New…"
 msgstr "Dobi nove ikone…"
 
-#: ui/main.qml:271
+#: ui/main.qml:174
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Odstrani temo ikon"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Obnovi temo ikon"
+
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Konfiguriraj velikost ikon"
 
-#: ui/main.qml:283
+#: ui/main.qml:268
 #, kde-format
 msgid "Open Theme"
 msgstr "Odpri temo"
 
-#: ui/main.qml:285
+#: ui/main.qml:270
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Datoteke tem (*.tar.gz *.tar.bz2)"

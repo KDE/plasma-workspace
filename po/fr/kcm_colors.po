@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-02 20:37+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -1325,82 +1325,85 @@ msgstr "Modèles clairs"
 msgid "Dark Schemes"
 msgstr "Modèles sombres"
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr "Installer à partir d'un fichier..."
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, kde-format
 msgid "Window Title"
 msgstr "Titre de la fenêtre"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, kde-format
 msgid "Window text"
 msgstr "Texte de fenêtre"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "Bouton"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "lien"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visité"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, kde-format
 msgid "Normal text"
 msgstr "Texte standard"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texte en surbrillance"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgid "Disabled text"
 msgstr "Texte désactivé"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Modifier le thème de couleurs..."
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Supprimer le modèle de couleurs"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restaurer le modèle de couleurs"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "Installer à partir d'un fichier..."
-
-#: ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "Obtenir de nouveaux thèmes de couleurs..."
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Ouvrir un modèle de couleurs"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fichiers de modèle de couleurs (*.colors)"
+
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "Obtenir de nouveaux thèmes de couleurs..."
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "Ce module vous permet de choisir le modèle de couleurs."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2010-06-03 16:28+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -117,51 +117,55 @@ msgstr ""
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:97
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "គ្រោងការណ៍​ពណ៌"
 
-#: ui/main.qml:118
+#: ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
 msgstr "​ស្បែក"
 
-#: ui/main.qml:125
+#: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
 msgstr "យក​ស្បែក​ចេញ"
 
-#: ui/main.qml:132
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "យក​ស្បែក​ចេញ"
 
-#: ui/main.qml:174
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
-msgid "Get New Plasma Styles…"
-msgstr "យក​ស្បែក​ថ្មី..."
-
-#: ui/main.qml:193
+#: ui/main.qml:189
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Open Theme"
 msgstr "​ស្បែក"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "យក​ស្បែក​ថ្មី..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-02-16 11:07+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -124,45 +124,48 @@ msgstr "Tematici întunecate"
 msgid "Color scheme compatible"
 msgstr "Compatibil cu schema de culori"
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Urmează schema de culori"
-
-#: ui/main.qml:118
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Modifică tematica…"
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "Elimină tematica"
-
-#: ui/main.qml:132
-#, kde-format
-msgid "Restore Theme"
-msgstr "Restabilește tematica"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalează din fișier…"
 
-#: ui/main.qml:179
+#: ui/main.qml:102
 #, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Obține stiluri Plasma noi…"
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Urmează schema de culori"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Modifică tematica…"
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "Elimină tematica"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Restore Theme"
+msgstr "Restabilește tematica"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Deschide tematica"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Obține stiluri Plasma noi…"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Acest modul vă permite să alegeți stilul Plasma."

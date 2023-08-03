@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-12-07 16:49+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -639,7 +639,7 @@ msgstr "Ei voitu poistaa kaikkia kohteeseen <i>%1</i> kytkettyjä tiedostoja."
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Järjestelmän taustaprosessin käynnistys epäonnistui.<br /><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> on jo olemassa."
@@ -1138,69 +1138,69 @@ msgstr ""
 "Et voi asentaa fonttipakkausta suoraan.\n"
 "Pura %1 ja asenna sen osat yksittäin."
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Ei voi kopioida fontteja"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Ei voi siirtää fontteja"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Vain fontteja voi poistaa."
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Fontit voi poistaa vain joko kohteesta ”%1” tai ”%2”."
 
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Valitse ”%1” tai ”%2”."
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr "Erikoismenetelmiä ei tueta."
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Fontit"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Järjestelmätaustaprosessin käynnistys ei onnistunut."
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "Taustaohjelma pysähtyi"
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "%1 on bittikarttafontti, ja nämä ovat poissa käytöstä järjestelmässäsi."
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1 sisältää fontin <b>%2</b>, joka on jo asennettu järjestelmääsi."
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 ei ole fontti."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Ei voitu poistaa kaikkia kohteeseen %1 kytkettyjä tiedostoja."

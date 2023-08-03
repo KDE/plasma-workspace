@@ -301,10 +301,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgid ""
-#~ "Load plasmashell as a standalone application, needs the shell-plugin "
-#~ "option to be specified"
-#~ msgstr ""
-#~ "Зареждане на plasmashell като самостоятелно приложение, необходимо е "
-#~ "задаване на опция за shell-plugin"

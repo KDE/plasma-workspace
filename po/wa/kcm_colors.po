@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2009-12-26 15:18+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -1303,27 +1303,37 @@ msgstr "&Djeu d' coleurs"
 msgid "Dark Schemes"
 msgstr "Schaper djeu..."
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Tecse d' on purnea"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Scrijhaedje do purnea"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Boton"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1331,7 +1341,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "hårdêye"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1339,64 +1349,58 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "vizité"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Scrijhaedje normå"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Tecse di loyén vizité"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Essocté"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Abaguer djeu..."
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Schaper djeu d' coleurs"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Abaguer djeu d' coleurs"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get &New Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "&Noveas arindjmints..."
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Schaper djeu d' coleurs"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Get &New Schemes..."
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "&Noveas arindjmints..."
 
 #, fuzzy
 #~| msgid "Save the current color scheme"

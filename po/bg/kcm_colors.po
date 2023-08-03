@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-02 16:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1289,79 +1289,82 @@ msgstr "Светли схеми"
 msgid "Dark Schemes"
 msgstr "Тъмни схеми"
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr "Инсталиране от файл…"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, kde-format
 msgid "Window Title"
 msgstr "Заглавие на прозорец"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, kde-format
 msgid "Window text"
 msgstr "Текст на прозорец"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "Бутон"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "връзка"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посетен"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, kde-format
 msgid "Normal text"
 msgstr "Нормален текст"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, kde-format
 msgid "Highlighted text"
 msgstr "Маркиран текст"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgid "Disabled text"
 msgstr "Деактивиран текст"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Редактиране на цветова схема…"
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Премахване на цветова схема"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Възстановяване на цветова схема"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "Инсталиране от файл…"
-
-#: ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "Изтегляне на нови цветови схеми…"
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Отваряне на цветова схема"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлове с цветна схема (*.colors)"
+
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "Изтегляне на нови цветови схеми…"

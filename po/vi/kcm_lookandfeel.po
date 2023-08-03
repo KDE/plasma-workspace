@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-08-09 21:46+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -124,24 +124,29 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Bao gồm bố cục bàn làm việc"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Xem thử chủ đề"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Preview Theme"
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Xem thử chủ đề"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -149,30 +154,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Áp dụng %1?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Chọn thứ để áp dụng…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Hiện bớt lựa chọn…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Áp dụng"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Huỷ"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Lấy các chủ đề toàn cục mới…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -295,6 +295,9 @@ msgid ""
 msgstr ""
 "Không có thiết lập nào dùng được trong chủ đề toàn cục này. Vui lòng liên hệ "
 "bảo trì viên của chủ đề toàn cục này, có thể nó đã bị hỏng."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Lấy các chủ đề toàn cục mới…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "Khối này cho phép bạn chọn cách nhìn và cảm toàn cục."

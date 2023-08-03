@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2016-06-04 15:12+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -123,51 +123,55 @@ msgstr ""
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:97
+#, fuzzy, kde-format
+#| msgid "Install from File"
+msgid "Install from File…"
+msgstr "Εγκατάσταση από αρχείο"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "Θέμα χρωμάτων"
 
-#: ui/main.qml:118
+#: ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
 msgstr "Θέμα"
 
-#: ui/main.qml:125
+#: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
 msgstr "Αφαίρεση θέματος"
 
-#: ui/main.qml:132
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "Αφαίρεση θέματος"
 
-#: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Install from File"
-msgid "Install from File…"
-msgstr "Εγκατάσταση από αρχείο"
-
-#: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
-msgid "Get New Plasma Styles…"
-msgstr "Λήψη νέου θέματος"
-
-#: ui/main.qml:193
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Άνοιγμα θέματος"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Αρχεία θεμάτων (*.zip *.tar.gz *.tar.bz2)"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Λήψη νέου θέματος"
 
 #, fuzzy
 #~| msgid "This module lets you configure the desktop theme."

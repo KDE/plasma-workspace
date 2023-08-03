@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2020-09-26 10:16+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -1275,85 +1275,89 @@ msgstr "Heledad skeemid"
 msgid "Dark Schemes"
 msgstr "Tumedad skeemid"
 
-#: ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr "Akna tiitel"
-
-#: ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr "Akna tekst"
-
-#: ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr "Nupp"
-
-#: ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "link"
-
-#: ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "külastatud"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr "Tavaline tekst"
-
-#: ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr "Esiletõstetud tekst"
-
-#: ui/main.qml:266
-#, kde-format
-msgid "Disabled text"
-msgstr "Keelatud tekst"
-
-#: ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "Edit Color Scheme..."
-msgid "Edit Color Scheme…"
-msgstr "Muuda värviskeemi ..."
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Remove Color Scheme"
-msgstr "Eemalda värviskeem"
-
-#: ui/main.qml:297
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "Taasta värviskeem"
-
-#: ui/main.qml:341
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Paigalda failist ..."
 
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get New Color Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "Hangi uusi värviskeeme ..."
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:364
+#: ui/main.qml:194
+#, kde-format
+msgid "Window Title"
+msgstr "Akna tiitel"
+
+#: ui/main.qml:216
+#, kde-format
+msgid "Window text"
+msgstr "Akna tekst"
+
+#: ui/main.qml:223
+#, kde-format
+msgid "Button"
+msgstr "Nupp"
+
+#: ui/main.qml:261
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "link"
+
+#: ui/main.qml:263
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "külastatud"
+
+#: ui/main.qml:270
+#, kde-format
+msgid "Normal text"
+msgstr "Tavaline tekst"
+
+#: ui/main.qml:278
+#, kde-format
+msgid "Highlighted text"
+msgstr "Esiletõstetud tekst"
+
+#: ui/main.qml:285
+#, kde-format
+msgid "Disabled text"
+msgstr "Keelatud tekst"
+
+#: ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Edit Color Scheme..."
+msgid "Edit Color Scheme…"
+msgstr "Muuda värviskeemi ..."
+
+#: ui/main.qml:309
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "Eemalda värviskeem"
+
+#: ui/main.qml:316
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "Taasta värviskeem"
+
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Värviskeemi avamine"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Värviskeemifailid (*.colors)"
+
+#, fuzzy
+#~| msgid "Get New Color Schemes..."
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "Hangi uusi värviskeeme ..."
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "See moodul võimaldab valida värviskeemi."

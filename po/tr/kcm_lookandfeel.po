@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-06-03 12:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -126,23 +126,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Masaüstü yerleşimi içerir"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Temayı Önizle"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Temayı Kaldır"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -150,30 +155,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 uygulansın mı?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Neyin uygulanacağını seçin…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Daha az seçenek göster…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Uygula"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "İptal"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Yeni Global Temalar Al…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -294,6 +294,9 @@ msgid ""
 msgstr ""
 "Bu Global Tema, uygulanabilir bir ayar sunmuyor. Bozulmuş olabileceğinden, "
 "lütfen geliştiricisini durumdan haberdar edin."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Yeni Global Temalar Al…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "Bu modül, genel görünümü ve hissi seçmenize olanak tanır."

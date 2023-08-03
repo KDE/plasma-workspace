@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -223,33 +223,33 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:84
+#: ui/main.qml:58 ui/main.qml:92
 #, kde-format
-msgid "Size:"
+msgid "Size: %1"
 msgstr ""
 
-#: ui/main.qml:134
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:111
 #, kde-format
 msgid "&Install from File…"
 msgstr ""
 
-#: ui/main.qml:151
+#: ui/main.qml:117
 #, kde-format
-msgid "&Get New Cursors…"
+msgid "&Get New…"
 msgstr ""
 
-#: ui/main.qml:168
+#: ui/main.qml:161
 #, kde-format
 msgid "Open Theme"
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-06-21 17:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -128,23 +128,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Mahaigaineko antolaera du"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Aurreikusi gaia"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Kendu gaia"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -152,30 +157,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 ezarri?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Aukeratu zer ezarri..."
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Erakutsi aukera gutxiago..."
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Ezarri"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Lortu gai orokor berriak..."
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -297,6 +297,9 @@ msgstr ""
 "Gai orokor honek ez du hornitzen ezar daitekeen ezarpenik. Mesedez, jar "
 "zaitez gai orokor honen mantentzailearekin harremanean hondatua egon bai "
 "daiteke."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Lortu gai orokor berriak..."
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "Modulu honek Itxura eta izaera orokorra aukeratzen uzten dizu."

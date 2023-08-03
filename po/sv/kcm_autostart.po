@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-08-03 09:30+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -53,46 +53,68 @@ msgstr "Filen '%1' måste vara körbar för att köra vid utloggning."
 msgid "The file '%1' must be executable to run at login."
 msgstr "Filen '%1' måste vara körbar för att köra vid inloggning."
 
-#: ui/main.qml:95
+#: ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "Lägg till…"
+
+#: ui/main.qml:78
+#, kde-format
+msgid "Add Application…"
+msgstr "Lägg till program…"
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Lägg till inloggningsskript…"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Lägg till utloggningsskript…"
+
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid "Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Egenskaper"
 
-#: ui/main.qml:101
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Ta bort"
 
-#: ui/main.qml:112
+#: ui/main.qml:143
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: ui/main.qml:115
+#: ui/main.qml:146
 #, kde-format
 msgid "Login Scripts"
 msgstr "Inloggningsskript"
 
-#: ui/main.qml:118
+#: ui/main.qml:149
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skript innan start"
 
-#: ui/main.qml:121
+#: ui/main.qml:152
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Utloggningsskript"
 
-#: ui/main.qml:130
+#: ui/main.qml:161
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Inget användarspecificerade objekt för automatisk start"
 
-#: ui/main.qml:131
+#: ui/main.qml:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
@@ -100,35 +122,15 @@ msgstr ""
 "Klicka på knappen <interface>Lägg till…</interface> nedan för att lägga till "
 "några"
 
-#: ui/main.qml:145
+#: ui/main.qml:176
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Välj inloggningsskript"
 
-#: ui/main.qml:165
+#: ui/main.qml:196
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Välj utloggningsskript"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Add…"
-msgstr "Lägg till…"
-
-#: ui/main.qml:198
-#, kde-format
-msgid "Add Application…"
-msgstr "Lägg till program…"
-
-#: ui/main.qml:204
-#, kde-format
-msgid "Add Login Script…"
-msgstr "Lägg till inloggningsskript…"
-
-#: ui/main.qml:210
-#, kde-format
-msgid "Add Logout Script…"
-msgstr "Lägg till utloggningsskript…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

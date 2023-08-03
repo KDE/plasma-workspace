@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2015-01-07 16:08+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -123,51 +123,55 @@ msgstr ""
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:97
+#, fuzzy, kde-format
+#| msgid "Insta&ll from File"
+msgid "Install from File…"
+msgstr "Insta&liraj iz datoteke"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "Šema boja"
 
-#: ui/main.qml:118
+#: ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
 msgstr "Tema"
 
-#: ui/main.qml:125
+#: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
 msgstr "Ukloni temu"
 
-#: ui/main.qml:132
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "Ukloni temu"
 
-#: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Insta&ll from File"
-msgid "Install from File…"
-msgstr "Insta&liraj iz datoteke"
-
-#: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
-msgid "Get New Plasma Styles…"
-msgstr "Dobavi nove teme..."
-
-#: ui/main.qml:193
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Otvori temu"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Tematske datoteke (*.zip *.tar.gz *.tar.bz2)"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Dobavi nove teme..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

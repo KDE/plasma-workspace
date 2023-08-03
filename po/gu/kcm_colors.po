@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2010-06-24 14:20+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -1303,27 +1303,37 @@ msgstr "પધ્ધતિ (&S)"
 msgid "Dark Schemes"
 msgstr "પધ્ધતિ સંગ્રહ કરો..."
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "વિન્ડો લખાણ"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "વિન્ડો લખાણ"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "બટન"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1331,7 +1341,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "કડી"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1339,65 +1349,59 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "મુલાકાત લીધેલ"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "સામાન્ય લખાણ"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "મુલાકાત લીધેલ લખાણ"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "અસક્રિય"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "યોજનાને અપલોડ કરો (&U)..."
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "રંગ પધ્ધતિ સંગ્રહ કરો"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "રંગ પધ્ધતિ આયાત કરો"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get &New Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "નવાં પધ્ધતિઓ મેળવો (&N)..."
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "રંગ પધ્ધતિ સંગ્રહ કરો"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Get &New Schemes..."
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "નવાં પધ્ધતિઓ મેળવો (&N)..."
 
 #, fuzzy
 #~| msgid "Save the current color scheme"

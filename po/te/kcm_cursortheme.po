@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -232,36 +232,36 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:84
+#: ui/main.qml:58 ui/main.qml:92
 #, kde-format
-msgid "Size:"
+msgid "Size: %1"
 msgstr ""
 
-#: ui/main.qml:134
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Install from File…"
 msgstr "కొత్త థీమ్‌ను సంస్థాపించుము..."
 
-#: ui/main.qml:151
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
-msgid "&Get New Cursors…"
+msgid "&Get New…"
 msgstr "కొత్త థీమ్‌ను సంస్థాపించుము..."
 
-#: ui/main.qml:168
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "థీమ్‌ను తీసివేయి"
 
-#: ui/main.qml:170
+#: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

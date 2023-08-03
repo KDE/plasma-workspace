@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2007-07-31 19:19+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -649,7 +649,7 @@ msgstr "جستجو برای پرونده‌های مرتبط با %1"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, fuzzy, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<qt>گروهی با نام <b>»%1«</b> از قبل وجود دارد!</qt>"
@@ -1151,57 +1151,57 @@ msgstr ""
 "نمی‌توانید بسته قلمها را مستقیماً نصب کنید.\n"
 "لطفاً، %1 را استخراج کرده، و مولفه‌ها را جداگانه نصب کنید."
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, fuzzy, kde-format
 #| msgid "Copy Fonts"
 msgid "Cannot copy fonts"
 msgstr "رونوشت قلمها"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, fuzzy, kde-format
 #| msgid "Cannot Print"
 msgid "Cannot move fonts"
 msgstr "نمی‌توان چاپ کرد"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr ""
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, fuzzy, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr ""
 "متأسفم، نمی‌توانید »%1« یا »%2« را تغییر نام داده، حرکت دهید، رونوشت یا حذف "
 "کنید."
 
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "لطفاً، »%1« یا »%2« را مشخص کنید."
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr ""
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "قلمها"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, fuzzy, kde-format
 #| msgid "Failed to start font printer."
 msgid "Failed to start the system daemon"
 msgstr "خرابی در آغاز چاپگر قلم."
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr ""
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, fuzzy, kde-format
 #| msgid ""
 #| "You cannot install bitmap fonts, as these have been disabled on your "
@@ -1210,7 +1210,7 @@ msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "نمی‌توانید قلمهای نگاشت بیت را نصب کنید، چون اینها روی سیستم شما غیرفعالند."
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, fuzzy, kde-format
 #| msgid ""
 #| "File %1 contains the font:\n"
@@ -1224,13 +1224,13 @@ msgstr ""
 "قلمی با این نام از قبل وجود دارد.\n"
 "قلمی با این نام هم اکنون نصب است.\n"
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, fuzzy, kde-format
 #| msgid "Could not read font."
 msgid "%1 is not a font."
 msgstr "نتوانست قلم را بخواند."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, fuzzy, kde-format
 #| msgid "Looking for files associated with %1"
 msgid "Could not remove all files associated with %1"

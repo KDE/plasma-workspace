@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2010-01-21 19:03+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -619,7 +619,7 @@ msgstr "Dji n' a savou oister tos les fitchîs assoçnés avou <i>%1</i>"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "L' enondaedje do démon sistinme a fwait berwete.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> egzistêye dedja."
@@ -1139,70 +1139,70 @@ msgstr ""
 "Vos n' savoz nén astaler on pacaedje di fontes directumint.\n"
 "Saetchî foû %1 s' i vs plait eyet astaler les componints onk après l' ôte."
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Dji n' sai copyî les fontes"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Dji n' sai bodjî les fontes"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "I gn a k' des fontes k' on sait disfacer."
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr ""
 "Dji n' sai oister des fontes ki di soeye-t i « %1 » ou soeye-t i « %2 »."
 
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Sipecifyîz s' i vs plait « %1 » ou « %2 »."
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr "Nole metode sipeciåle di sopoirtêye."
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Fontes"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "L' enondaedje do démon sistinme a fwait berwete"
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "Li bouye di fond a morou"
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 est ene fonte bitmap eyet elle a stî essoctêye so vosse sistinme."
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 "I gn a dins %1 li fonte <b>%2</b> k' est ddja astalêye so vosse sistinme."
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 n' est nén ene fonte."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Dji n' a savou oister tos les fitchîs assoçnés avou %1"

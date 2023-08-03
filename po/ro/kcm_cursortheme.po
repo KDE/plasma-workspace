@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-04-04 10:11+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -244,33 +244,35 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: ui/main.qml:84
-#, kde-format
-msgid "Size:"
+#: ui/main.qml:58 ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgid "Size: %1"
 msgstr "Dimensiune:"
 
-#: ui/main.qml:134
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:111
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalează din fișier…"
 
-#: ui/main.qml:151
-#, kde-format
-msgid "&Get New Cursors…"
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "&Get New Cursors…"
+msgid "&Get New…"
 msgstr "&Obține cursori noi…"
 
-#: ui/main.qml:168
+#: ui/main.qml:161
 #, kde-format
 msgid "Open Theme"
 msgstr "Deschide tematica"
 
-#: ui/main.qml:170
+#: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici de cursori (*.tar.gz *.tar.bz2)"

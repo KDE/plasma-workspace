@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-10-17 15:15+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -127,45 +127,48 @@ msgstr "Dökk þemu"
 msgid "Color scheme compatible"
 msgstr "Samhæfð við litastef"
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Fylgir litastefi"
-
-#: ui/main.qml:118
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Breyta þema…"
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "Fjarlægja þema"
-
-#: ui/main.qml:132
-#, kde-format
-msgid "Restore Theme"
-msgstr "Endurheimta þema"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
 msgstr "Setja upp úr skrá…"
 
-#: ui/main.qml:179
+#: ui/main.qml:102
 #, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Sækja nýja Plasma-stíla..."
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Fylgir litastefi"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Breyta þema…"
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "Fjarlægja þema"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Restore Theme"
+msgstr "Endurheimta þema"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Opna þema"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Þemuskrár (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Sækja nýja Plasma-stíla..."
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Þessi eining gerir þér kleift að velja stíl Plasma."

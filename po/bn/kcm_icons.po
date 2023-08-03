@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2006-01-04 13:30-0600\n"
 "Last-Translator: KUSHAL DAS <programmerkd@yahoo.co.in>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -143,46 +143,46 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "মাপ:"
 
-#: ui/main.qml:146
+#: ui/main.qml:45
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: ui/main.qml:53
+#, fuzzy, kde-format
+msgid "Install from File…"
+msgstr "নতুন থীম ইনস্টল করো..."
+
+#: ui/main.qml:58
+#, fuzzy, kde-format
+msgid "Get New…"
+msgstr "নতুন থীম ইনস্টল করো..."
+
+#: ui/main.qml:174
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "থীম সরিয়ে ফেলো"
 
-#: ui/main.qml:153
+#: ui/main.qml:181
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "থীম সরিয়ে ফেলো"
 
-#: ui/main.qml:227
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:244
-#, fuzzy, kde-format
-msgid "Install from File…"
-msgstr "নতুন থীম ইনস্টল করো..."
-
-#: ui/main.qml:249
-#, fuzzy, kde-format
-msgid "Get New Icons…"
-msgstr "নতুন থীম ইনস্টল করো..."
-
-#: ui/main.qml:271
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: ui/main.qml:283
+#: ui/main.qml:268
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "থীম সরিয়ে ফেলো"
 
-#: ui/main.qml:285
+#: ui/main.qml:270
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-07-28 13:31+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -144,44 +144,45 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "आकारः"
 
-#: ui/main.qml:146
-#, kde-format
-msgid "Remove Icon Theme"
-msgstr "प्रतीक प्रसंग हटाएँ"
-
-#: ui/main.qml:153
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "प्रतीक प्रसंग बहाल करें"
-
-#: ui/main.qml:227
+#: ui/main.qml:45
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "प्रतीक आकार विन्यस्त करें"
 
-#: ui/main.qml:244
+#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "फाइल से संस्थापित करें..."
 
-#: ui/main.qml:249
-#, kde-format
-msgid "Get New Icons…"
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Get New Icons…"
+msgid "Get New…"
 msgstr "नए प्रतीक प्राप्त करें..."
 
-#: ui/main.qml:271
+#: ui/main.qml:174
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "प्रतीक प्रसंग हटाएँ"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "प्रतीक प्रसंग बहाल करें"
+
+#: ui/main.qml:256
 #, fuzzy, kde-format
 #| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "प्रतीक आकार विन्यस्त करें"
 
-#: ui/main.qml:283
+#: ui/main.qml:268
 #, kde-format
 msgid "Open Theme"
 msgstr "प्रसंग खोलें"
 
-#: ui/main.qml:285
+#: ui/main.qml:270
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"

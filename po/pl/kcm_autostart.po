@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-07-30 19:34+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -57,82 +57,84 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr "Plik '%1' musi być wykonywalnym, aby móc go uruchomi przy logowaniu."
 
-#: ui/main.qml:95
+#: ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "Dodaj..."
+
+#: ui/main.qml:78
+#, kde-format
+msgid "Add Application…"
+msgstr "Dodaj program..."
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Dodaj skrypt wykonywany na wejściu..."
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Dodaj skrypt wykonywany na wyjściu..."
+
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid "Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Właściwości"
 
-#: ui/main.qml:101
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Usuń"
 
-#: ui/main.qml:112
+#: ui/main.qml:143
 #, kde-format
 msgid "Applications"
 msgstr "Programy"
 
-#: ui/main.qml:115
+#: ui/main.qml:146
 #, kde-format
 msgid "Login Scripts"
 msgstr "Skrypty wykonywane na wejściu"
 
-#: ui/main.qml:118
+#: ui/main.qml:149
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skrypty wykonywane przed uruchomieniem"
 
-#: ui/main.qml:121
+#: ui/main.qml:152
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Skrypty wykonywane na wyjściu"
 
-#: ui/main.qml:130
+#: ui/main.qml:161
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 "Nie ma żadnych rzeczy określonych przez użytkownika do samo-uruchomienia"
 
-#: ui/main.qml:131
+#: ui/main.qml:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 "Naciśnij przycisk <interface>Dodaj...</interface>, aby dodać jakąś rzecz"
 
-#: ui/main.qml:145
+#: ui/main.qml:176
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Wybierz skrypty wykonywany na wejściu"
 
-#: ui/main.qml:165
+#: ui/main.qml:196
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Wybierz skrypty wykonywany na wyjściu"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Add…"
-msgstr "Dodaj..."
-
-#: ui/main.qml:198
-#, kde-format
-msgid "Add Application…"
-msgstr "Dodaj program..."
-
-#: ui/main.qml:204
-#, kde-format
-msgid "Add Login Script…"
-msgstr "Dodaj skrypt wykonywany na wejściu..."
-
-#: ui/main.qml:210
-#, kde-format
-msgid "Add Logout Script…"
-msgstr "Dodaj skrypt wykonywany na wyjściu..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

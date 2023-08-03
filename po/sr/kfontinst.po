@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -677,7 +677,7 @@ msgstr "Не могу да уклоним све фајлове везане з�
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "<html>Не могу да покренем системски демон.<br/><tt>%1</tt></html>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<tt>%1</tt> већ постоји."
@@ -1251,22 +1251,22 @@ msgstr ""
 "Не можете директно инсталирати пакет фонтова.\n"
 "Прво распакујте ‘%1’, па ручно инсталирајте компоненте."
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Не могу да копирам фонтове"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Не могу да преместим фонтове"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Само се фонтови могу брисати."
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr ""
@@ -1274,37 +1274,37 @@ msgstr ""
 "само из „$[ген %1]“ или „$[ген %2]“."
 
 # >> @info %1 and %2 are group names ("All fonts", etc.)
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Задајте „%1“ или „%2“.|/|Задајте „$[аку %1]“ или „$[аку %2]“."
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr "Посебни методи нису подржани."
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Фонтови"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Не могу да покренем системски демон."
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "Позадина се срушила"
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "‘%1’ је битмапски фонт, а они су искључени на систему."
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1313,12 +1313,12 @@ msgstr ""
 "%1</tt> садржи фонт <b>$[главорепи ном %2]</b>, који је већ инсталиран на "
 "систему."
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, kde-format
 msgid "%1 is not a font."
 msgstr "‘%1’ није фонт."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Не могу да уклоним све фајлове везане за ‘%1’."

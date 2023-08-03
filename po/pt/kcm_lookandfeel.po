@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-01-22 22:38+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -119,23 +119,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Contém a disposição da área de trabalho"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Antevisão do Tema"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Remover o Tema"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -143,30 +148,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Deseja aplicar o %1?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Escolher o que aplicar…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opções…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Aplicar"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Obter Temas Globais Novos…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -290,6 +290,9 @@ msgstr ""
 "Este tema global não oferece nenhumas definições que se possam aplicar. Por "
 "favor contacte o responsável por este tema global, porque poderá estar com "
 "problemas."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Obter Temas Globais Novos…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr ""

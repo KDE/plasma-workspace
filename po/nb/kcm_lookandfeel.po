@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2015-04-30 21:55+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -120,23 +120,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:88
 #, kde-format
-msgid "Contains Desktop layout"
+msgid "Get New…"
 msgstr ""
 
 #: ui/main.qml:103
 #, kde-format
+msgid "Contains Desktop layout"
+msgstr ""
+
+#: ui/main.qml:117
+#, kde-format
 msgid "Preview Theme"
 msgstr ""
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr ""
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -144,29 +149,24 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr ""
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
-msgstr ""
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
 msgstr ""
 
 #: ui/MoreOptions.qml:23

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-03-16 20:36+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -124,23 +124,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Felur í sér framsetningu skjáborðs"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Forskoða þema"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Fjarlægja þema"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -148,30 +153,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Virkja %1?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Veldu það sem á að virkja..."
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Birta færri valkosti..."
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Virkja"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Hætta við"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Sækja ný almenn þemu…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -294,6 +294,9 @@ msgid ""
 msgstr ""
 "Þetta almenna þema er ekki með neinar nothæfar stillingar. Hafðu samband við "
 "umsjónaraðila þemans þar sem það er mögulega bilað."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Sækja ný almenn þemu…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr ""

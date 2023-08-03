@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-07-27 21:16+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -56,76 +56,78 @@ msgstr "Fila «%1» må vera køyrbar for å kunna køyrast ved utlogging."
 msgid "The file '%1' must be executable to run at login."
 msgstr "Fila «%1» må vera køyrbar for å kunna køyrast ved innlogging."
 
-#: ui/main.qml:95
+#: ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "Legg til …"
+
+#: ui/main.qml:78
+#, kde-format
+msgid "Add Application…"
+msgstr "Legg til program …"
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Legg til skript for innlogging …"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Legg til skript for utlogging …"
+
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Sjå eigenskapar"
 
-#: ui/main.qml:101
+#: ui/main.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Fjern oppføring"
 
-#: ui/main.qml:112
+#: ui/main.qml:143
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: ui/main.qml:115
+#: ui/main.qml:146
 #, kde-format
 msgid "Login Scripts"
 msgstr "Skript ved innlogging"
 
-#: ui/main.qml:118
+#: ui/main.qml:149
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skript før oppstart"
 
-#: ui/main.qml:121
+#: ui/main.qml:152
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Skript ved utlogging"
 
-#: ui/main.qml:130
+#: ui/main.qml:161
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Ingen brukardefinerte autostart-oppføringar"
 
-#: ui/main.qml:131
+#: ui/main.qml:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 "Trykk <interface>Legg til …</interface> for å leggja til ei ny oppføring"
 
-#: ui/main.qml:145
+#: ui/main.qml:176
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Vel innloggings­skript"
 
-#: ui/main.qml:165
+#: ui/main.qml:196
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Vel skript for utlogging"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Add…"
-msgstr "Legg til …"
-
-#: ui/main.qml:198
-#, kde-format
-msgid "Add Application…"
-msgstr "Legg til program …"
-
-#: ui/main.qml:204
-#, kde-format
-msgid "Add Login Script…"
-msgstr "Legg til skript for innlogging …"
-
-#: ui/main.qml:210
-#, kde-format
-msgid "Add Logout Script…"
-msgstr "Legg til skript for utlogging …"

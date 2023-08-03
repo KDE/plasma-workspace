@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -122,25 +122,30 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Reset the Plasma Desktop layout"
 msgid "Contains Desktop layout"
 msgstr "प्लाज्मा डेस्कटॉप अभिन्यास रीसेट करें"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "प्रसंग पूर्वावलोकन करें"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Preview Theme"
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "प्रसंग पूर्वावलोकन करें"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -148,30 +153,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr ""
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr ""
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "नई वैश्विक प्रसंग प्राप्त करें…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -291,6 +291,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "नई वैश्विक प्रसंग प्राप्त करें…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "यह मॉड्यूल आपको वैश्विक रंगरूप और अनुभव चुनने देता है।"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2009-01-13 15:46+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -53,84 +53,85 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: ui/main.qml:95
+#: ui/main.qml:67
+#, kde-format
+msgctxt "@action:button"
+msgid "Add…"
+msgstr ""
+
+#: ui/main.qml:78
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: ui/main.qml:83
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "স্ক্রিপ্ট যোগ করুন..."
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "স্ক্রিপ্ট যোগ করুন..."
+
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid "&Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "বিবিধ বৈশিষ্ট্য (&P)"
 
-#: ui/main.qml:101
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "মুছে ফেলুন (&R)"
 
-#: ui/main.qml:112
+#: ui/main.qml:143
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:146
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: ui/main.qml:118
+#: ui/main.qml:149
 #, fuzzy, kde-format
 #| msgid "Pre-KDE startup"
 msgid "Pre-startup Scripts"
 msgstr "KDE প্রারম্ভের পূর্বে"
 
-#: ui/main.qml:121
+#: ui/main.qml:152
 #, kde-format
 msgid "Logout Scripts"
 msgstr ""
 
-#: ui/main.qml:130
+#: ui/main.qml:161
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: ui/main.qml:131
+#: ui/main.qml:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Choose Login Script"
 msgstr "স্ক্রিপ্ট যোগ করুন..."
 
-#: ui/main.qml:165
+#: ui/main.qml:196
 #, kde-format
 msgid "Choose Logout Script"
 msgstr ""
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Add…"
-msgstr ""
-
-#: ui/main.qml:198
-#, kde-format
-msgid "Add Application…"
-msgstr ""
-
-#: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Add Script..."
-msgid "Add Login Script…"
-msgstr "স্ক্রিপ্ট যোগ করুন..."
-
-#: ui/main.qml:210
-#, fuzzy, kde-format
-#| msgid "Add Script..."
-msgid "Add Logout Script…"
-msgstr "স্ক্রিপ্ট যোগ করুন..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

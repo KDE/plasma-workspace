@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -125,23 +125,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасаваць"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Змяшчае макет працоўнага стала"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Папярэдні прагляд тэмы"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Выдаліць тэму"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -149,30 +154,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Ужыць %1?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Абраць, што ўжываць…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Паказаць менш параметраў…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Ужыць"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Скасаваць"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Атрымаць новыя глабальныя тэмы…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -295,6 +295,9 @@ msgid ""
 msgstr ""
 "У гэтай глабальнай тэмы няма прыдатных налад. Калі ласка, звяжыцеся з "
 "распрацоўнікам гэтай глабальнай тэмы, бо яна можа быць пашкоджанай."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Атрымаць новыя глабальныя тэмы…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "Гэты модуль дазваляе абраць глабальны выгляд."

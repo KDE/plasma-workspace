@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-06-08 22:35-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -141,43 +141,44 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "ਸਾਇਜ਼:"
 
-#: ui/main.qml:146
-#, kde-format
-msgid "Remove Icon Theme"
-msgstr "ਆਈਕਾਨ ਥੀਮ ਨੂੰ ਹਟਾਓ"
-
-#: ui/main.qml:153
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "ਆਈਕਾਨ ਥੀਮ ਬਹਾਲ ਕਰੋ"
-
-#: ui/main.qml:227
+#: ui/main.qml:45
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: ui/main.qml:244
+#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
 
-#: ui/main.qml:249
-#, kde-format
-msgid "Get New Icons…"
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Get New Icons…"
+msgid "Get New…"
 msgstr "…ਨਵੇਂ ਆਈਕਾਨ ਲਵੋ"
 
-#: ui/main.qml:271
+#: ui/main.qml:174
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "ਆਈਕਾਨ ਥੀਮ ਨੂੰ ਹਟਾਓ"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "ਆਈਕਾਨ ਥੀਮ ਬਹਾਲ ਕਰੋ"
+
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: ui/main.qml:283
+#: ui/main.qml:268
 #, kde-format
 msgid "Open Theme"
 msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:285
+#: ui/main.qml:270
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.tar.gz *.tar.bz2)"

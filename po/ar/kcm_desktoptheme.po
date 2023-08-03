@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-06-23 14:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -120,45 +120,48 @@ msgstr "سمات مظلمة"
 msgid "Color scheme compatible"
 msgstr "متوافق مع تشكيلة الألوان"
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr "تتبع تشكيلة الألوان"
-
-#: ui/main.qml:118
-#, kde-format
-msgid "Edit Theme…"
-msgstr "حرر السمة..."
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "أزل السمة"
-
-#: ui/main.qml:132
-#, kde-format
-msgid "Restore Theme"
-msgstr "استعد السمة"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
 msgstr "ثبت من ملف..."
 
-#: ui/main.qml:179
+#: ui/main.qml:102
 #, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "احصل على أنماط بلازما جديدة..."
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr "تتبع تشكيلة الألوان"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Edit Theme…"
+msgstr "حرر السمة..."
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "أزل السمة"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Restore Theme"
+msgstr "استعد السمة"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "افتح سمة"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "ملفات السمة (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "احصل على أنماط بلازما جديدة..."
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "هذه الوحدة تجعلك تختار نمط بلازما"

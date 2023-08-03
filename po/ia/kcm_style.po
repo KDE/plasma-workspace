@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-04-23 18:58+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -112,47 +112,54 @@ msgstr "Etiquetta de barra de instrumentos principal"
 msgid "Secondary toolbar label"
 msgstr "Etiquetta de barra de instrumentos secundari"
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr "Configura icones e le barras de instrumentos"
+
+#: ui/EffectSettingsPopup.qml:34
 #, kde-format
 msgid "Show icons:"
 msgstr "Monstra icones:"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, kde-format
 msgid "On buttons"
 msgstr "Sur buttones"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr "In menus"
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "Etiquetta de barra de instrumentos principal:"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr "Necun"
 
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, kde-format
 msgid "Text only"
 msgstr "Solmente texto"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "Beside icons"
 msgstr "Supra icones"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Below icon"
 msgstr "Infra icones"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "Etiquetta de barra de instrumento secundari:"
@@ -192,20 +199,20 @@ msgstr "Selige archivo de thema GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Archivo de Thema GTK  (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "Configura stilo..."
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configura icones e le barras de instrumentos"
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configura stilo de application GNOME/GTK ..."
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Style…"
+msgstr "Configura stilo..."
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

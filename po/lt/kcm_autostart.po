@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-26 02:02+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-11-18 20:58+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -59,81 +59,83 @@ msgstr ""
 "Tam, kad būtų vykdomas prisijungimo metu, failas „%1“ privalo būti "
 "vykdomasis."
 
-#: ui/main.qml:95
+#: ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
+msgid "Add…"
+msgstr "Pridėti…"
+
+#: ui/main.qml:78
+#, kde-format
+msgid "Add Application…"
+msgstr "Pridėti programą…"
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Pridėti prisijungimo scenarijų…"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Pridėti atsijungimo scenarijų…"
+
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid "Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Savybės"
 
-#: ui/main.qml:101
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Šalinti"
 
-#: ui/main.qml:112
+#: ui/main.qml:143
 #, kde-format
 msgid "Applications"
 msgstr "Programos"
 
-#: ui/main.qml:115
+#: ui/main.qml:146
 #, kde-format
 msgid "Login Scripts"
 msgstr "Prisijungimo scenarijai"
 
-#: ui/main.qml:118
+#: ui/main.qml:149
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Prieš paleidimo scenarijai"
 
-#: ui/main.qml:121
+#: ui/main.qml:152
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Atsijungimo scenarijai"
 
-#: ui/main.qml:130
+#: ui/main.qml:161
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Nėra jokių naudotojo apibrėžtų automatinio paleidimo elementų"
 
-#: ui/main.qml:131
+#: ui/main.qml:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 "Norėdami pridėti, žemiau spustelėkite mygtuką <interface>Pridėti…</interface>"
 
-#: ui/main.qml:145
+#: ui/main.qml:176
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Pasirinkti prisijungimo scenarijų"
 
-#: ui/main.qml:165
+#: ui/main.qml:196
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Pasirinkti atsijungimo scenarijų"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Add…"
-msgstr "Pridėti…"
-
-#: ui/main.qml:198
-#, kde-format
-msgid "Add Application…"
-msgstr "Pridėti programą…"
-
-#: ui/main.qml:204
-#, kde-format
-msgid "Add Login Script…"
-msgstr "Pridėti prisijungimo scenarijų…"
-
-#: ui/main.qml:210
-#, kde-format
-msgid "Add Logout Script…"
-msgstr "Pridėti atsijungimo scenarijų…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

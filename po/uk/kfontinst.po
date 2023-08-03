@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-10-13 08:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -637,7 +637,7 @@ msgstr "Не вдалося вилучити всі файли, пов’яза�
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Не вдалося запустити системну фонову службу.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> вже існує."
@@ -1154,71 +1154,71 @@ msgstr ""
 "Ви не можете встановлювати пакунок з шрифтами напряму.\n"
 "Будь ласка, розпакуйте %1, а потім встановіть його компоненти окремо."
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Не вдалося скопіювати шрифти"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Не вдалося пересунути шрифти"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Вилучати можна лише шрифти."
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Вилучати шрифти можна лише з «%1» або з «%2»."
 
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Будь ласка, вкажіть «%1» або «%2»."
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr "Спеціальні методи не підтримуються."
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Шрифти"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Не вдалося запустити системну фонову службу."
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "Сервер неочікувано завершив роботу"
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "Файл %1 містить растровий шрифт, підтримку таких шрифтів у вашій системі "
 "вимкнено."
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 "У файлі %1 міститься шрифт <b>%2</b>. Шрифт з цією назвою вже встановлено."
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 не є шрифтом."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Не вдалося вилучити всі файли, пов’язані з %1"

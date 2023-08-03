@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2019-08-19 20:45+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -123,50 +123,54 @@ msgstr ""
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:97
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Instalar desde un ficheiro…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "Esquemas das cores"
 
-#: ui/main.qml:118
+#: ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Edit Theme..."
 msgid "Edit Theme…"
 msgstr "Editar o tema…"
 
-#: ui/main.qml:125
+#: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
 msgstr "Retirar o tema"
 
-#: ui/main.qml:132
+#: ui/main.qml:147
 #, kde-format
 msgid "Restore Theme"
 msgstr "Restaurar o tema"
 
-#: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Install from File..."
-msgid "Install from File…"
-msgstr "Instalar desde un ficheiro…"
-
-#: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Plasma Styles..."
-msgid "Get New Plasma Styles…"
-msgstr "Obter novos estilos de Plasma…"
-
-#: ui/main.qml:193
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir un tema"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Ficheiros de tema (*.zip *.tar.gz *.tar.bz2)"
+
+#, fuzzy
+#~| msgid "Get New Plasma Styles..."
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "Obter novos estilos de Plasma…"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Este módulo permítelle escoller o estilo de Plasma."

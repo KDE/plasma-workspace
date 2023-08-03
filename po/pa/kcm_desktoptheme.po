@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-01-03 11:19-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -116,45 +116,48 @@ msgstr "ਗੂੜ੍ਹੇ ਥੀਮ"
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr "ਰੰਗ ਸਕੀਮ ਮੁਤਾਬਕ"
-
-#: ui/main.qml:118
-#, kde-format
-msgid "Edit Theme…"
-msgstr "…ਥੀਮ ਸੋਧੋ"
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "ਥੀਮ ਹਟਾਓ"
-
-#: ui/main.qml:132
-#, kde-format
-msgid "Restore Theme"
-msgstr "ਥੀਮ ਬਹਾਲ ਕਰੋ"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
 
-#: ui/main.qml:179
+#: ui/main.qml:102
 #, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "…ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ ਲਵੋ"
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr "ਰੰਗ ਸਕੀਮ ਮੁਤਾਬਕ"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Edit Theme…"
+msgstr "…ਥੀਮ ਸੋਧੋ"
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "ਥੀਮ ਹਟਾਓ"
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Restore Theme"
+msgstr "ਥੀਮ ਬਹਾਲ ਕਰੋ"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "…ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ ਲਵੋ"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

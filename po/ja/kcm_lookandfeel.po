@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-02-22 17:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -124,23 +124,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "デスクトップレイアウトを含む"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "テーマをプレビュー"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "テーマを削除"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -148,30 +153,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 を適用しますか？"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "適用するものを選んでください..."
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "表示するオプションを減らす..."
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "適用"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "新しいグローバルテーマを取得..."
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -294,6 +294,9 @@ msgid ""
 msgstr ""
 "このグローバルテーマは適切な設定を提供していません。壊れている可能性があるた"
 "め、このグローバルテーマのメンテナに連絡してください。"
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "新しいグローバルテーマを取得..."
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "このモジュールでグローバル ルックアンドフィールを選択できます。"

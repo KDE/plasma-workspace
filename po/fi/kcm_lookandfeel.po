@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-06-27 15:56+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -126,23 +126,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Peru"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Sisältää työpöytäasettelun"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Esikatsele teemaa"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Poista teema"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -150,30 +155,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Otetaanko %1 käyttöön?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Valitse, mitä otetaan käyttöön…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Näytä vähemmän valintoja…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Käytä"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Peru"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Hae uusia yleisteemoja…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -294,6 +294,9 @@ msgid ""
 msgstr ""
 "Tämä yleisteema ei tarjoa käyttöön otettavia asetuksia. Ota yhteyttä sen "
 "ylläpitäjään, koska se on todennäköisesti rikki."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Hae uusia yleisteemoja…"
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "Tässä osiossa voit asettaa työpöydän yleisen ulkoasun."

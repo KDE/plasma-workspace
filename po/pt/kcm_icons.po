@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-10-22 12:43+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -143,43 +143,44 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Tamanho:"
 
-#: ui/main.qml:146
-#, kde-format
-msgid "Remove Icon Theme"
-msgstr "Remover o Tema de Ícones"
-
-#: ui/main.qml:153
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "Repor o Tema de Ícones"
-
-#: ui/main.qml:227
+#: ui/main.qml:45
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Configurar os Tamanhos dos Ícones"
 
-#: ui/main.qml:244
+#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalar de um Ficheiro…"
 
-#: ui/main.qml:249
-#, kde-format
-msgid "Get New Icons…"
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Get New Icons…"
+msgid "Get New…"
 msgstr "Obter Novos Ícones…"
 
-#: ui/main.qml:271
+#: ui/main.qml:174
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Remover o Tema de Ícones"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Repor o Tema de Ícones"
+
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configurar os Tamanhos dos Ícones"
 
-#: ui/main.qml:283
+#: ui/main.qml:268
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir um Tema"
 
-#: ui/main.qml:285
+#: ui/main.qml:270
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Ficheiros de Temas (*.tar.gz *.tar.bz2)"

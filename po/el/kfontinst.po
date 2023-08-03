@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2016-09-16 14:37+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -652,7 +652,7 @@ msgstr ""
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Αδυναμία εκκίνησης του δαίμονα συστήματος.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "Το <i>%1</i> υπάρχει ήδη."
@@ -1167,59 +1167,59 @@ msgstr ""
 "Δεν μπορείτε να εγκαταστήσετε ένα πακέτο γραμματοσειρών απευθείας.\n"
 "Παρακαλώ αποσυμπιέστε το %1 και εγκαταστήστε τα περιεχόμενα ανεξάρτητα."
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Αδυναμία αντιγραφής γραμματοσειρών"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Αδυναμία μετακίνησης γραμματοσειρών"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Μπορούν να διαγραφούν μόνο γραμματοσειρές."
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Είναι δυνατή η μετακίνηση γραμματοσειρών μόνο από \"%1\" ή \"%2\"."
 
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Παρακαλώ ορίστε \"%1\" ή \"%2\"."
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr "Δεν υποστηρίζονται ειδικές μέθοδοι."
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Γραμματοσειρές"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Αποτυχία εκκίνησης του δαίμονα συστήματος"
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "Το σύστημα υποστήριξης τερματίστηκε"
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "Το %1 είναι γραμματοσειρά bitmap, οι οποίες δεν υποστηρίζονται στο σύστημά "
 "σας."
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1227,12 +1227,12 @@ msgstr ""
 "Το %1 περιέχει τη γραμματοσειρά <b>%2</b>, Η οποία είναι ήδη εγκατεστημένη "
 "στο σύστημά σας."
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, kde-format
 msgid "%1 is not a font."
 msgstr "Το %1 δεν είναι γραμματοσειρά."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Δεν ήταν δυνατή η αφαίρεση όλων των αρχείων που σχετίζονται με το %1"

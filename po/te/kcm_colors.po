@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -1337,95 +1337,99 @@ msgstr "(&S) స్కీమా"
 msgid "Dark Schemes"
 msgstr "స్కీమాను దాయుము..."
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "విండో వచనము"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgid "Window text"
 msgid "Window text"
 msgstr "విండో వచనము"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgid "Button"
 msgid "Button"
 msgstr "బటన్"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "లింకు"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "visited"
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "వీక్షించిన"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, fuzzy, kde-format
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "సాదారణ వచనము"
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "వీక్షించిన వచనము"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "అచేతనమైన"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "స్కీమాను దిగుమతి చేయుము..."
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "రంగు స్కీమాను దాయుము"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "రంగు స్కీమాను దిగుమతిచేయుము"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get &New Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "(&N) కొత్త స్కీమాలను పొందుము..."
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "రంగు స్కీమాను దాయుము"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Get &New Schemes..."
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "(&N) కొత్త స్కీమాలను పొందుము..."
 
 #, fuzzy
 #~| msgid "Save the current color scheme"

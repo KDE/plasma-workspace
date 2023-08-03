@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2009-01-06 05:17+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: ku <kde-i18n-doc@lists.kde.org>\n"
@@ -611,7 +611,7 @@ msgstr "Pelên bi %1 re girêdayî dinihêre"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
 #, fuzzy, kde-format
 #| msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgid "<i>%1</i> already exists."
@@ -1113,24 +1113,24 @@ msgid ""
 "Please extract %1, and install the components individually."
 msgstr ""
 
-#: kio/KioFonts.cpp:439
+#: kio/KioFonts.cpp:433
 #, fuzzy, kde-format
 #| msgid "Copy Fonts"
 msgid "Cannot copy fonts"
 msgstr "Curenivîsan Ji Ber Bigire"
 
-#: kio/KioFonts.cpp:444
+#: kio/KioFonts.cpp:438
 #, fuzzy, kde-format
 #| msgid "Cannot Print"
 msgid "Cannot move fonts"
 msgstr "Çapkirin Çênabe"
 
-#: kio/KioFonts.cpp:455
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr ""
 
-#: kio/KioFonts.cpp:458
+#: kio/KioFonts.cpp:452
 #, fuzzy, kde-format
 #| msgid "You cannot rename, move, copy, or delete either \"%1\" or \"%2\"."
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
@@ -1138,50 +1138,50 @@ msgstr ""
 "Tu nikarî navê him \"%1\" him jî \"%2\" biguherînî, wan biguhezînî, ji ber "
 "bigirî an jî jê bibî."
 
-#: kio/KioFonts.cpp:485
+#: kio/KioFonts.cpp:480
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Jê kerema xwe \"%1\" an jî  \"%2\" dîyar bike"
 
-#: kio/KioFonts.cpp:505
+#: kio/KioFonts.cpp:498
 #, kde-format
 msgid "No special methods supported."
 msgstr ""
 
-#: kio/KioFonts.cpp:579
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Curenivîs"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:702
 #, fuzzy, kde-format
 #| msgid "Failed to start font printer."
 msgid "Failed to start the system daemon"
 msgstr "Destpêkirina çapkerê cure-nivîsê têk çû."
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr ""
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 
-#: kio/KioFonts.cpp:717
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 
-#: kio/KioFonts.cpp:720
+#: kio/KioFonts.cpp:710
 #, fuzzy, kde-format
 #| msgid "Could not read font."
 msgid "%1 is not a font."
 msgstr "Nikare cure-nivîsê bixwîne."
 
-#: kio/KioFonts.cpp:723
+#: kio/KioFonts.cpp:712
 #, fuzzy, kde-format
 #| msgid "Looking for files associated with %1"
 msgid "Could not remove all files associated with %1"

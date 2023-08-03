@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2011-12-09 02:19+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -235,38 +235,38 @@ msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] ""
 
-#: ui/main.qml:84
+#: ui/main.qml:58 ui/main.qml:92
 #, fuzzy, kde-format
 #| msgctxt "@label:listbox cursor size"
 #| msgid "Size:"
-msgid "Size:"
+msgid "Size: %1"
 msgstr "Өлшемі:"
 
-#: ui/main.qml:134
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid "Install From File..."
 msgid "&Install from File…"
 msgstr "Файлдан орнату..."
 
-#: ui/main.qml:151
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Get New Theme..."
-msgid "&Get New Cursors…"
+msgid "&Get New…"
 msgstr "Жаңа нақышты табу..."
 
-#: ui/main.qml:168
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Нақышты кетіру"
 
-#: ui/main.qml:170
+#: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

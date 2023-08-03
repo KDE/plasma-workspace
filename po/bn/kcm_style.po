@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2006-01-04 12:57-0600\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -111,51 +111,57 @@ msgstr ""
 msgid "Secondary toolbar label"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:34
 #, fuzzy, kde-format
 msgid "Show icons:"
 msgstr "বাটনের &উপর আইকন দেখাও"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, fuzzy, kde-format
 #| msgid "Radio button"
 msgid "On buttons"
 msgstr "রেডিও বাটন"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "Main toolbar label:"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgid "Text only"
 msgstr "শুধু লেখা"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, fuzzy, kde-format
 #| msgid "Text Alongside Icons"
 msgid "Beside icons"
 msgstr "আইকনের পাশে লেখা"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, fuzzy, kde-format
 #| msgid "Text Under Icons"
 msgid "Below icon"
 msgstr "আইকনের তলায় লেখা"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr ""
@@ -198,21 +204,21 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
-msgid "Configure Style…"
-msgstr "ক&নফিগার করো..."
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
+msgstr "ক&নফিগার করো..."
+
+#: ui/main.qml:102
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
 msgstr "ক&নফিগার করো..."
 
 #, fuzzy

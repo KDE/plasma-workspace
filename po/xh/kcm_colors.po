@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-01 02:07+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2002-11-04 09:21SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -1310,91 +1310,95 @@ msgstr "&Susa Udweliso"
 msgid "Dark Schemes"
 msgstr "Gcina Umbala Wodweliso"
 
-#: ui/main.qml:175
+#: ui/main.qml:142
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:147
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:194
 #, fuzzy, kde-format
 msgid "Window Title"
 msgstr "Umbhalo we Window"
 
-#: ui/main.qml:197
+#: ui/main.qml:216
 #, fuzzy, kde-format
 msgid "Window text"
 msgstr "Umbhalo we Window"
 
-#: ui/main.qml:204
+#: ui/main.qml:223
 #, fuzzy, kde-format
 msgid "Button"
 msgstr "Umbhalo Weqosha"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ikhonkco"
 
-#: ui/main.qml:244
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "Okubhaliweyo Kwewonga Okusebenzayo"
 
-#: ui/main.qml:251
+#: ui/main.qml:270
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: ui/main.qml:259
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Highlighted text"
 msgstr "Okubhaliweyo Kwewonga Okusebenzayo"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Inactive Title Button"
 msgid "Disabled text"
 msgstr "Iqhosha Lewonga Elingasebenziyo"
 
-#: ui/main.qml:284
+#: ui/main.qml:303
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Udweliso Lombala"
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Gcina Umbala Wodweliso"
 
-#: ui/main.qml:297
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Udweliso Lombala"
 
-#: ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Get New Color Schemes…"
-msgstr "Gcina Umbala Wodweliso"
-
-#: ui/main.qml:364
+#: ui/main.qml:360
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Gcina Umbala Wodweliso"
 
-#: ui/main.qml:366
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Save Color Scheme"
+#~ msgid "Get New Color Schemes…"
+#~ msgstr "Gcina Umbala Wodweliso"
 
 #, fuzzy
 #~| msgid "Save Color Scheme"

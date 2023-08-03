@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2017-05-16 06:52-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -118,49 +118,53 @@ msgstr ""
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:100
-#, kde-format
-msgid "Follows color scheme"
-msgstr ""
-
-#: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Open Theme"
-msgid "Edit Theme…"
-msgstr "פתח ערכת נושא"
-
-#: ui/main.qml:125
-#, kde-format
-msgid "Remove Theme"
-msgstr "הסר ערכה"
-
-#: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "הסר ערכה"
-
-#: ui/main.qml:174
+#: ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Install from File"
 msgid "Install from File…"
 msgstr "התקן מקובץ"
 
-#: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
-msgid "Get New Plasma Styles…"
-msgstr "קבל ערכות חדשות..."
+#: ui/main.qml:102
+#, kde-format
+msgid "Get New…"
+msgstr ""
 
-#: ui/main.qml:193
+#: ui/main.qml:115
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: ui/main.qml:133
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Edit Theme…"
+msgstr "פתח ערכת נושא"
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Remove Theme"
+msgstr "הסר ערכה"
+
+#: ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "הסר ערכה"
+
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "פתח ערכת נושא"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "קובצי ערכת נושא (*.zip *.tar.gz *.tar.bz2)"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Get New Plasma Styles…"
+#~ msgstr "קבל ערכות חדשות..."
 
 #, fuzzy
 #~| msgid "This module lets you configure the desktop theme."

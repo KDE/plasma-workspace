@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-07-30 07:07\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -120,23 +120,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "包含桌面布局"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "预览主题"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "移除主题"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -144,30 +149,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "应用 %1 吗？"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "选择要应用的内容…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "显示更少选项…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "应用"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "获取新的全局主题…"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -286,3 +286,6 @@ msgid ""
 msgstr ""
 "此全局主题并未提供任何可用设置。请联系此全局主题的维护人员，因为它的代码可能"
 "存在问题。"
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "获取新的全局主题…"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-04-23 22:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -116,47 +116,54 @@ msgstr "Мітка головної панелі інструментів"
 msgid "Secondary toolbar label"
 msgstr "Мітка додаткової панелі інструментів"
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr "Налаштування піктограм та панелей інструментів"
+
+#: ui/EffectSettingsPopup.qml:34
 #, kde-format
 msgid "Show icons:"
 msgstr "Показ піктограм:"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, kde-format
 msgid "On buttons"
 msgstr "На кнопках"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr "У меню"
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "Мітка головної панелі інструментів:"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, kde-format
 msgid "Text only"
 msgstr "Лише текст"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "Beside icons"
 msgstr "Збоку від піктограм"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Below icon"
 msgstr "Під піктограмою"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "Мітка додаткової панелі інструментів:"
@@ -196,20 +203,20 @@ msgstr "Виберіть архів теми GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "архів теми GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "Налаштувати стиль…"
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Налаштування піктограм та панелей інструментів"
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Налаштувати стиль програм GNOME/GTK…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Style…"
+msgstr "Налаштувати стиль…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

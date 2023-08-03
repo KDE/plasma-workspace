@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-06-08 22:25-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -229,33 +229,35 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:84
-#, kde-format
-msgid "Size:"
+#: ui/main.qml:58 ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgid "Size: %1"
 msgstr "ਆਕਾਰ:"
 
-#: ui/main.qml:134
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:111
 #, kde-format
 msgid "&Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ(&I)"
 
-#: ui/main.qml:151
-#, kde-format
-msgid "&Get New Cursors…"
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "&Get New Cursors…"
+msgid "&Get New…"
 msgstr "…ਨਵਾਂ ਥੀਮ ਲਵੋ"
 
-#: ui/main.qml:168
+#: ui/main.qml:161
 #, kde-format
 msgid "Open Theme"
 msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:170
+#: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

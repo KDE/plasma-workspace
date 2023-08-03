@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -112,47 +112,54 @@ msgstr "പ്രധാന ഉപകരണപ്പട്ട ലേബൽ"
 msgid "Secondary toolbar label"
 msgstr "ദ്വിതീയ ഉപകരണപ്പട്ട ലേബൽ"
 
-#: ui/EffectSettingsPopup.qml:32
+#: ui/EffectSettingsPopup.qml:17
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgctxt "@title:window"
+msgid "Configure Icon and Toolbars"
+msgstr "ചിഹ്നങ്ങളും ഉപകരണപ്പട്ടകളും ക്രമീകരിക്കുക"
+
+#: ui/EffectSettingsPopup.qml:34
 #, kde-format
 msgid "Show icons:"
 msgstr "ചിഹ്നങ്ങൾ കാണിക്കുക:"
 
-#: ui/EffectSettingsPopup.qml:33
+#: ui/EffectSettingsPopup.qml:35
 #, kde-format
 msgid "On buttons"
 msgstr "ബട്ടണുകളിൽ"
 
-#: ui/EffectSettingsPopup.qml:44
+#: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
 msgstr "മെനുകളിൽ"
 
-#: ui/EffectSettingsPopup.qml:56
+#: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "പ്രധാന ഉപകരണപ്പട്ട ലേബൽ:"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
 msgstr "ഒന്നുമില്ല"
 
-#: ui/EffectSettingsPopup.qml:59
+#: ui/EffectSettingsPopup.qml:61
 #, kde-format
 msgid "Text only"
 msgstr "വാചകം മാത്രം"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "Beside icons"
 msgstr "ചിഹ്നങ്ങൾക്ക് സമീപം"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Below icon"
 msgstr "ചിഹ്നങ്ങൾക്ക് താഴെ"
 
-#: ui/EffectSettingsPopup.qml:76
+#: ui/EffectSettingsPopup.qml:78
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "ദ്വിതീയ ഉപകരണപ്പട്ട ലേബൽ:"
@@ -192,20 +199,20 @@ msgstr "GTK പ്രമേയ ശേഖരം തിരഞ്ഞെടുക്
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK പ്രമേയ ശേഖരം (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "രൂപഭംഗി ക്രമീകരിക്കുക…"
-
-#: ui/main.qml:102
+#: ui/main.qml:58
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "ചിഹ്നങ്ങളും ഉപകരണപ്പട്ടകളും ക്രമീകരിക്കുക"
 
-#: ui/main.qml:118
+#: ui/main.qml:69
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി ക്രമീകരിക്കുക…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Style…"
+msgstr "രൂപഭംഗി ക്രമീകരിക്കുക…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2022-08-19 15:34-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -129,24 +129,29 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Contém layout da área de trabalho"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Visualização do tema"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Preview Theme"
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Visualização do tema"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -154,30 +159,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Aplicar %1?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Escolha o que aplicar..."
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opções…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Aplicar"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Baixar novos temas globais..."
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -303,6 +303,9 @@ msgid ""
 msgstr ""
 "Este tema global não fornece qualquer configuração aplicável. Contate o "
 "mantenedor deste tema global pois ele pode estar quebrado."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Baixar novos temas globais..."
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr ""

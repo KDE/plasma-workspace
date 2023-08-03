@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-08-03 02:38+0000\n"
 "PO-Revision-Date: 2023-06-05 08:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -125,23 +125,28 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ui/main.qml:89
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr ""
+
+#: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Contiene la disposizione del desktop"
 
-#: ui/main.qml:103
+#: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
 msgstr "Anteprima del tema"
 
-#: ui/main.qml:111
+#: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Rimuovi tema"
 
-#: ui/main.qml:127
+#: ui/main.qml:141
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -149,30 +154,25 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Vuoi applicare %1?"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Scegli cosa applicare…"
 
-#: ui/main.qml:145
+#: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostra meno opzioni…"
 
-#: ui/main.qml:162
+#: ui/main.qml:176
 #, kde-format
 msgid "Apply"
 msgstr "Applica"
 
-#: ui/main.qml:174
+#: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
 msgstr "Annulla"
-
-#: ui/main.qml:191
-#, kde-format
-msgid "Get New Global Themes…"
-msgstr "Scarica nuovi temi globali..."
 
 #: ui/MoreOptions.qml:23
 #, kde-format
@@ -294,6 +294,9 @@ msgstr ""
 "Questo tema globale non fornisce impostazioni applicabili. Contatta il "
 "responsabile di questo tema globale poiché potrebbe non funzionare "
 "correttamente."
+
+#~ msgid "Get New Global Themes…"
+#~ msgstr "Scarica nuovi temi globali..."
 
 #~ msgid "This module lets you choose the global look and feel."
 #~ msgstr "Questo modulo ti consente di scegliere l'aspetto globale."
