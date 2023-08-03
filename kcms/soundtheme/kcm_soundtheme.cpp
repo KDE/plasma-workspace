@@ -20,6 +20,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSoundThemeFactory, "kcm_soundtheme.json", registerPlugin<KCMSoundTheme>(); registerPlugin<SoundThemeData>();)
 
+constexpr QLatin1String FALLBACK_THEME = QLatin1String("freedesktop");
+
 KCMSoundTheme::KCMSoundTheme(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new SoundThemeData(this))
@@ -99,6 +101,12 @@ void KCMSoundTheme::loadThemes()
                 delete theme;
                 continue;
             }
+            // The fallback "freedesktop" theme identifies itself as "Default" with no comment nor translations
+            // which can get confused with the system's default theme
+            if (theme->id == FALLBACK_THEME) {
+                theme->name = i18nc("Name of the fallback \"freedesktop\" sound theme", "FreeDesktop");
+                theme->comment = i18n("Fallback sound theme from freedesktop.org");
+            }
             m_themes << theme;
         }
     }
@@ -106,10 +114,10 @@ void KCMSoundTheme::loadThemes()
     QCollator collator;
     // Sort by theme name, but leave "freedesktop" default at the last position
     std::sort(m_themes.begin(), m_themes.end(), [&collator](auto *a, auto *b) {
-        if (a->id == QLatin1String("freedesktop")) {
+        if (a->id == FALLBACK_THEME) {
             return false;
         }
-        if (b->id == QLatin1String("freedesktop")) {
+        if (b->id == FALLBACK_THEME) {
             return true;
         }
         return collator.compare(a->name, b->name) < 0;
