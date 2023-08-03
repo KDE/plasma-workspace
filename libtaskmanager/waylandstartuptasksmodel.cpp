@@ -197,6 +197,8 @@ QVariant WaylandStartupTasksModel::data(const QModelIndex &index, int role) cons
         return true;
     } else if (role == CanLaunchNewInstance) {
         return false;
+    } else if (role == IsOnAllVirtualDesktops) {
+        return true;
     }
 
     return AbstractTasksModel::data(index, role);
