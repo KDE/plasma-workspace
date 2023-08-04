@@ -93,6 +93,7 @@ public:
     PanelView *panelView(Plasma::Containment *containment) const;
     void savePreviousWindow();
     void restorePreviousWindow();
+    void clearPreviousWindow();
 
     // This one is a bit of an hack but are just for desktop scripting
     void insertActivity(const QString &id, const QString &plugin);

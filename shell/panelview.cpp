@@ -1425,8 +1425,10 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
             containment()->setStatus(Plasma::Types::PassiveStatus);
         }
     } else {
-        if (status == Plasma::Types::PassiveStatus || status == Plasma::Types::ActiveStatus) {
+        if (status == Plasma::Types::PassiveStatus) {
             m_corona->restorePreviousWindow();
+        } else if (status == Plasma::Types::ActiveStatus) {
+            m_corona->clearPreviousWindow();
         }
 
         restoreAutoHide();
