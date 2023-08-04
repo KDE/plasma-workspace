@@ -14,6 +14,7 @@
 
 #include <QDBusContext>
 #include <QDBusVariant>
+#include <QPointer>
 #include <QSet>
 #include <QTimer>
 
@@ -301,7 +302,7 @@ private:
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     // For getting the active window on Wayland
     KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
-    KWayland::Client::PlasmaWindow *m_previousPlasmaWindow = nullptr;
+    QPointer<KWayland::Client::PlasmaWindow> m_previousPlasmaWindow;
     bool m_closingDown : 1;
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
