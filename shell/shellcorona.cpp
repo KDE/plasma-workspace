@@ -1222,6 +1222,11 @@ void ShellCorona::restorePreviousWindow()
         m_previousPlasmaWindow->requestActivate();
     }
 
+    clearPreviousWindow();
+}
+
+void ShellCorona::clearPreviousWindow()
+{
     m_previousWId = 0;
     m_previousPlasmaWindow = nullptr;
 }
