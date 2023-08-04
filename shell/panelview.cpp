@@ -1398,7 +1398,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
             containment()->setStatus(Plasma::Types::PassiveStatus);
         }
     } else {
-        if (status == Plasma::Types::PassiveStatus) {
+        if (status == Plasma::Types::PassiveStatus || status == Plasma::Types::ActiveStatus) {
             m_corona->restorePreviousWindow();
         }
 
