@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-07-20 06:16+0200\n"
+"PO-Revision-Date: 2023-08-03 07:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -57,8 +57,7 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "Datoteka '%1' mora biti izvedljiva za zagon ob prijavi."
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Dodaj…"

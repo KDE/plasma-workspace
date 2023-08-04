@@ -163,6 +163,3 @@ msgstr "Opna tema"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Get New Plasma Styles…"
-#~ msgstr "Hent nye Plasma-stilar …"

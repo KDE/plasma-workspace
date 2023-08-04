@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-04 02:00+0000\n"
 "PO-Revision-Date: 2023-07-31 05:32+0200\n"
 "Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
 "Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
@@ -11,6 +11,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: kcm_soundtheme.cpp:107
+#, kde-format
+msgctxt "Name of the fallback \"freedesktop\" sound theme"
+msgid "FreeDesktop"
+msgstr ""
+
+#: kcm_soundtheme.cpp:108
+#, kde-format
+msgid "Fallback sound theme from freedesktop.org"
+msgstr ""
 
 #: ui/main.qml:59
 #, kde-format
@@ -30,13 +41,13 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr ""
 
-#: ui/main.qml:82
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr ""
 
-#: ui/main.qml:102
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""

@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-04-23 07:47+0200\n"
+"PO-Revision-Date: 2023-08-03 11:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gtkpage.cpp:58
@@ -121,11 +121,10 @@ msgid "Secondary toolbar label"
 msgstr "Bigarren mailako tresna-barrako etiketa"
 
 #: ui/EffectSettingsPopup.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
-msgstr "Konfiguratu ikonoak eta tresna-barrak"
+msgstr "Konfiguratu ikono eta tresna-barrak"
 
 #: ui/EffectSettingsPopup.qml:34
 #, kde-format

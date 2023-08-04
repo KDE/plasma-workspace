@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-08-04 02:00+0000\n"
 "PO-Revision-Date: 2010-06-24 11:38+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: servicerunner.cpp:377
+#: servicerunner.cpp:382
 #, kde-format
 msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
@@ -26,7 +26,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr ""
 
-#: servicerunner.cpp:422
+#: servicerunner.cpp:427
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "કાર્યક્રમોને શોધે છે જેનું નામ અથવા વર્ણન એ :q: સાથે બંધબેસે છે"

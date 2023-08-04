@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-04 02:00+0000\n"
 "PO-Revision-Date: 2023-07-30 05:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
+
+#: kcm_soundtheme.cpp:107
+#, kde-format
+msgctxt "Name of the fallback \"freedesktop\" sound theme"
+msgid "FreeDesktop"
+msgstr ""
+
+#: kcm_soundtheme.cpp:108
+#, kde-format
+msgid "Fallback sound theme from freedesktop.org"
+msgstr ""
 
 #: ui/main.qml:59
 #, kde-format
@@ -36,13 +47,13 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "მინიატურის ხმები:"
 
-#: ui/main.qml:82
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "მინიატურის ხმა \"%1\""
 
-#: ui/main.qml:102
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""

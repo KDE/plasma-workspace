@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-06-03 14:21+0100\n"
+"PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -80,7 +80,7 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
-"Apliki ĉiean tempakaĵon. Ĉi tio povas esti la nomo de pakaĵo, aŭ plena vojo "
+"Apliki ĉiean etosopakon. Ĉi tio povas esti la nomo de pakaĵo, aŭ plena vojo "
 "al instalita pako, tiam ĉi tiu ilo certigos, ke ĝi estas ĉiea tempakaĵo kaj "
 "poste provos apliki ĝin."
 
@@ -127,7 +127,7 @@ msgstr "Nuligi"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Ricevi Novon…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -292,6 +292,3 @@ msgid ""
 msgstr ""
 "Ĉi tiu Ĉiea Etoso ne provizas ajnajn aplikeblajn agordojn. Bonvolu kontakti "
 "la prizorganton de ĉi tiu Ĉiea Etoso ĉar ĝi povus esti rompita."
-
-#~ msgid "Get New Global Themes…"
-#~ msgstr "Akiri Novajn Ĉieajn Etosojn…"

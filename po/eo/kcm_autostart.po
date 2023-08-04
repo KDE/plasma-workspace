@@ -1,6 +1,6 @@
 # translation of kcm_autostart.pot to esperanto
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 # Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-07-21 18:55+0100\n"
+"PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -55,8 +55,7 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "La dosiero '%1' devas esti lanĉebla por rulo dum ensaluto."
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Aldoni…"

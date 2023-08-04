@@ -1366,6 +1366,3 @@ msgstr "Opna fargeoppsett"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fargeoppsett-filer (*.colors)"
-
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "Hent nye fargeoppsett …"

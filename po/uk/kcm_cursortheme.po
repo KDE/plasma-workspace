@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-01-03 15:53+0200\n"
+"PO-Revision-Date: 2023-08-03 23:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -242,10 +242,9 @@ msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунду"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Розмір:"
+msgstr "Розмір: %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -259,10 +258,9 @@ msgid "&Install from File…"
 msgstr "Вс&тановити з файла…"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "&Отримати нові вказівники…"
+msgstr "&Отримати нове…"
 
 #: ui/main.qml:161
 #, kde-format
