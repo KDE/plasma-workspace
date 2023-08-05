@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"POT-Creation-Date: 2023-08-05 02:00+0000\n"
 "PO-Revision-Date: 2020-09-21 13:33+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -197,7 +197,7 @@ msgstr "Барномаҳои бисёр маротиба истифодашуд�
 msgid "Power / Session"
 msgstr "Барқ / Ҷаласа"
 
-#: plugin/runnermodel.cpp:222
+#: plugin/runnermodel.cpp:203
 #, kde-format
 msgid "Search results"
 msgstr "Натиҷаҳои ҷустуҷӯ"

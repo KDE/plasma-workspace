@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"POT-Creation-Date: 2023-08-05 02:00+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -195,7 +195,7 @@ msgstr "Tolest bruukt Programmen"
 msgid "Power / Session"
 msgstr "Stroom un Törn"
 
-#: plugin/runnermodel.cpp:222
+#: plugin/runnermodel.cpp:203
 #, fuzzy, kde-format
 msgid "Search results"
 msgstr "Söken"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"POT-Creation-Date: 2023-08-05 02:00+0000\n"
 "PO-Revision-Date: 2021-05-28 09:23+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -194,7 +194,7 @@ msgstr "Applicazioni utilizzate spesso"
 msgid "Power / Session"
 msgstr "Alimentazione / Sessione"
 
-#: plugin/runnermodel.cpp:222
+#: plugin/runnermodel.cpp:203
 #, kde-format
 msgid "Search results"
 msgstr "Risultati di ricerca"

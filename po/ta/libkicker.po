@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"POT-Creation-Date: 2023-08-05 02:00+0000\n"
 "PO-Revision-Date: 2022-02-24 21:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -194,7 +194,7 @@ msgstr "அடிக்கடி பயன்படுத்தப்படு�
 msgid "Power / Session"
 msgstr "ஆற்றல் / அமர்வு"
 
-#: plugin/runnermodel.cpp:222
+#: plugin/runnermodel.cpp:203
 #, kde-format
 msgid "Search results"
 msgstr "தேடலின் முடிவுகள்"

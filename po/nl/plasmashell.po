@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 02:08+0000\n"
+"POT-Creation-Date: 2023-08-05 02:00+0000\n"
 "PO-Revision-Date: 2023-07-05 22:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -261,12 +261,12 @@ msgstr "Bureaubladen en Panelen beheren..."
 msgid "Move keyboard focus between panels"
 msgstr "Toetsenbordfocus tussen panelen verplaatsen"
 
-#: shellcorona.cpp:1904
+#: shellcorona.cpp:1909
 #, kde-format
 msgid "Add Panel"
 msgstr "Paneel toevoegen"
 
-#: shellcorona.cpp:1940
+#: shellcorona.cpp:1945
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

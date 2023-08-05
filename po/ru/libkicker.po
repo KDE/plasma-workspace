@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"POT-Creation-Date: 2023-08-05 02:00+0000\n"
 "PO-Revision-Date: 2021-10-10 11:52+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -198,7 +198,7 @@ msgstr "Часто используемые приложения"
 msgid "Power / Session"
 msgstr "Завершение работы"
 
-#: plugin/runnermodel.cpp:222
+#: plugin/runnermodel.cpp:203
 #, kde-format
 msgid "Search results"
 msgstr "Результаты поиска"

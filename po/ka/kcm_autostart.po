@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-07-20 05:57+0200\n"
+"PO-Revision-Date: 2023-08-04 07:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -54,8 +54,7 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "შესვლისას შესასრულებლად ფაილი %1 გაშვებადი უნდა იყოს."
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "დამატება…"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-01-03 06:39+0100\n"
+"PO-Revision-Date: 2023-08-04 07:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -237,10 +237,9 @@ msgstr[0] "%1 წამი"
 msgstr[1] "%1 წამი"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "ზომა:"
+msgstr "ზომა: %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -254,10 +253,9 @@ msgid "&Install from File…"
 msgstr "&ფაილიდან დაყენება…"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "&ახალი კურსორების დაყენება…"
+msgstr "&ახლის მიღება…"
 
 #: ui/main.qml:161
 #, kde-format
