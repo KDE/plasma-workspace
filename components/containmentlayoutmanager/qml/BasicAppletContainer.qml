@@ -262,7 +262,7 @@ ContainmentLayoutManager.AppletContainer {
 
     busyIndicatorComponent: PlasmaComponents.BusyIndicator {
         anchors.centerIn: parent
-        visible: applet.busy
+        visible: applet.plasmoid.busy
         running: visible
     }
     configurationRequiredComponent: PlasmaComponents.Button {
