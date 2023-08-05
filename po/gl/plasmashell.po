@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:41+0000\n"
+"POT-Creation-Date: 2023-08-05 02:27+0000\n"
 "PO-Revision-Date: 2023-07-29 09:29+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -250,12 +250,12 @@ msgstr "Xestionar os escritorios e os paneis…"
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre paneis"
 
-#: shellcorona.cpp:1911
+#: shellcorona.cpp:1916
 #, kde-format
 msgid "Add Panel"
 msgstr "Engadir un panel"
 
-#: shellcorona.cpp:1947
+#: shellcorona.cpp:1952
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
