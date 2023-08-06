@@ -49,11 +49,9 @@ KCM.GridViewKCM {
         highlight: !Qt.colorEqual(kcm.accentColor, "transparent")
     }
 
-    Component.onCompleted: {
-        // The thumbnails are a bit more elaborate and need more room, especially when translated
-        view.implicitCellWidth = Kirigami.Units.gridUnit * 13;
-        view.implicitCellHeight = Kirigami.Units.gridUnit * 12;
-    }
+    // The thumbnails are a bit more elaborate and need more room, especially when translated
+    view.implicitCellWidth: Kirigami.Units.gridUnit * 15
+    view.implicitCellHeight: Kirigami.Units.gridUnit * 13
 
     // we have a duplicate property here as "var" instead of "color", so that we
     // can set it to "undefined", which lets us use the "a || b" shorthand for
