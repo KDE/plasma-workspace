@@ -41,14 +41,6 @@ KCM.GridViewKCM {
 
     actions: [
         Kirigami.Action {
-            id: iconSizesButton
-            text: i18n("Configure Icon Sizes")
-            icon.name: "transform-scale" // proper icon?
-            checkable: true
-            checked: iconSizeSheet.visible
-            onTriggered: iconSizeSheet.visible = true;
-        },
-        Kirigami.Action {
             enabled: root.view.enabled
             text: i18n("Install from File…")
             icon.name: "document-import"
@@ -243,21 +235,6 @@ KCM.GridViewKCM {
                     progressRow.visible = false;
                 }
             }
-        }
-    }
-
-    Kirigami.OverlaySheet {
-        id: iconSizeSheet
-        parent: root.parent
-
-        onOpened: content.opened();
-
-        header: Kirigami.Heading {
-            text: i18nc("@title:window", "Configure Icon Sizes")
-        }
-
-        IconSizePopup {
-            id: content
         }
     }
 

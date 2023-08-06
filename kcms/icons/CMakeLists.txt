@@ -2,7 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_icons\")
 
 kcmutils_add_qml_kcm(kcm_icons)
 
-target_sources(kcm_icons PRIVATE main.cpp iconsmodel.cpp iconsizecategorymodel.cpp iconssettings.cpp ../kcms-common.cpp)
+target_sources(kcm_icons PRIVATE main.cpp iconsmodel.cpp iconssettings.cpp ../kcms-common.cpp)
 kcmutils_generate_module_data(kcm_icons
     MODULE_DATA_HEADER iconsdata.h
     MODULE_DATA_CLASS_NAME IconsData

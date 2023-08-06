@@ -30,14 +30,12 @@ class FileCopyJob;
 }
 
 class IconsModel;
-class IconSizeCategoryModel;
 
 class IconModule : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(IconsSettings *iconsSettings READ iconsSettings CONSTANT)
     Q_PROPERTY(IconsModel *iconsModel READ iconsModel CONSTANT)
-    Q_PROPERTY(IconSizeCategoryModel *iconSizeCategoryModel READ iconSizeCategoryModel CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
@@ -53,7 +51,6 @@ public:
 
     IconsSettings *iconsSettings() const;
     IconsModel *iconsModel() const;
-    IconSizeCategoryModel *iconSizeCategoryModel() const;
 
     bool downloadingFile() const;
 
@@ -68,8 +65,6 @@ public:
 
     Q_INVOKABLE void ghnsEntriesChanged();
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
-
-    Q_INVOKABLE QList<int> availableIconSizes(int group) const;
 
     Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
 
@@ -98,7 +93,6 @@ private:
 
     IconsData *m_data;
     IconsModel *m_model;
-    IconSizeCategoryModel *m_iconSizeCategoryModel;
 
     mutable QCache<QString, KIconTheme> m_kiconThemeCache;
 

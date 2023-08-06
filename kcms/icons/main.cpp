@@ -43,7 +43,6 @@
 #include <unistd.h> // for unlink
 
 #include "iconsdata.h"
-#include "iconsizecategorymodel.h"
 #include "iconsmodel.h"
 #include "iconssettings.h"
 
@@ -55,12 +54,10 @@ IconModule::IconModule(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new IconsData(this))
     , m_model(new IconsModel(m_data->settings(), this))
-    , m_iconSizeCategoryModel(new IconSizeCategoryModel(this))
 {
     auto uri = "org.kde.private.kcms.icons";
     qmlRegisterAnonymousType<IconsSettings>(uri, 1);
     qmlRegisterAnonymousType<IconsModel>(uri, 1);
-    qmlRegisterAnonymousType<IconSizeCategoryModel>(uri, 1);
 
     // to be able to access its enums
     qmlRegisterUncreatableType<KIconLoader>(uri, 1, 0, "KIconLoader", QString());
@@ -87,23 +84,9 @@ IconsModel *IconModule::iconsModel() const
     return m_model;
 }
 
-IconSizeCategoryModel *IconModule::iconSizeCategoryModel() const
-{
-    return m_iconSizeCategoryModel;
-}
-
 bool IconModule::downloadingFile() const
 {
     return m_tempCopyJob;
-}
-
-QList<int> IconModule::availableIconSizes(int group) const
-{
-    const auto themeName = iconsSettings()->theme();
-    if (!m_kiconThemeCache.contains(iconsSettings()->theme())) {
-        m_kiconThemeCache.insert(themeName, new KIconTheme(themeName));
-    }
-    return m_kiconThemeCache[themeName]->querySizes(static_cast<KIconLoader::Group>(group));
 }
 
 void IconModule::load()
@@ -116,24 +99,9 @@ void IconModule::load()
 
 void IconModule::save()
 {
-    // keep track of Group of icons size that has changed
-    QList<int> notifyList;
-    for (int i = 0; i < m_iconSizeCategoryModel->rowCount(); ++i) {
-        const QModelIndex index = m_iconSizeCategoryModel->index(i, 0);
-        const QString key = index.data(IconSizeCategoryModel::ConfigKeyRole).toString();
-        if (iconsSettings()->findItem(key)->isSaveNeeded()) {
-            notifyList << index.data(IconSizeCategoryModel::KIconLoaderGroupRole).toInt();
-        }
-    }
-
     KQuickManagedConfigModule::save();
 
     processPendingDeletions();
-
-    // Notify the group(s) where icon sizes have changed
-    for (auto group : qAsConst(notifyList)) {
-        KIconLoader::emitChange(KIconLoader::Group(group));
-    }
 }
 
 bool IconModule::isSaveNeeded() const
