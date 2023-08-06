@@ -32,6 +32,7 @@ KCMSoundTheme::KCMSoundTheme(QObject *parent, const KPluginMetaData &data)
     qmlRegisterUncreatableType<SoundThemeSettings *>("org.kde.private.kcms.soundtheme", 1, 0, "Settings", QStringLiteral("SoundTheme settings"));
 
     connect(m_data->settings(), &SoundThemeSettings::themeChanged, this, &KCMSoundTheme::themeChanged);
+    connect(m_data->settings(), &SoundThemeSettings::soundsEnabledChanged, this, &KCMSoundTheme::cancelSound);
 }
 
 KCMSoundTheme::~KCMSoundTheme()

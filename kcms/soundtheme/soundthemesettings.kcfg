@@ -12,5 +12,8 @@ SPDX-License-Identifier: BSD-2-Clause -->
         <entry name="theme" key="Theme" type="String">
             <default>ocean</default>
         </entry>
+        <entry name="soundsEnabled" key="Enable" type="Bool">
+            <default>true</default>
+        </entry>
     </group>
 </kcfg>

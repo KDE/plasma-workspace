@@ -23,6 +23,29 @@ KCM.GridViewKCM {
     view.implicitCellWidth: Kirigami.Units.gridUnit * 23
     view.implicitCellHeight: Kirigami.Units.gridUnit * 11
 
+    actions: Kirigami.Action {
+        id: enabledAction
+        icon.name: "notification-active-symbolic"
+        text: i18nc("@option:check", "Enable notification sounds")
+        checkable: true
+        checked: kcm.settings.soundsEnabled
+
+        displayComponent: QQC2.CheckBox {
+            text: enabledAction.text
+            checked: enabledAction.checked
+            onToggled: kcm.settings.soundsEnabled = checked
+
+            // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
+            rightPadding: Kirigami.Units.smallSpacing
+
+            KCM.SettingStateBinding {
+                configObject: kcm.settings
+                settingName: "soundsEnabled"
+            }
+        }
+    }
+
+    view.enabled: kcm.settings.soundsEnabled
     view.model: kcm.themes
     view.currentIndex: kcm.currentIndex
 
@@ -151,6 +174,6 @@ KCM.GridViewKCM {
 
         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
         QQC2.ToolTip.text: text
-        QQC2.ToolTip.visible: hovered || activeFocus
+        QQC2.ToolTip.visible: (hovered || activeFocus) && enabled
     }
 }
