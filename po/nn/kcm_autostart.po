@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-07-27 21:16+0200\n"
+"PO-Revision-Date: 2023-08-05 23:03+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -57,8 +57,7 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "Fila «%1» må vera køyrbar for å kunna køyrast ved innlogging."
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Legg til …"

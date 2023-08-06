@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2012-09-03 13:49+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: placesrunner.cpp:27 placesrunner.cpp:51
+#: placesrunner.cpp:26 placesrunner.cpp:50
 #, kde-format
 msgid "places"
 msgstr "mjesta"
 
-#: placesrunner.cpp:27
+#: placesrunner.cpp:26
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Nabraja sve lokacije menadžera datoteka"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Nalazi lokacije menadžera datoteka usaglašene s :q:"

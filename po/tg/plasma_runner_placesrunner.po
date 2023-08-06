@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2019-09-26 13:35+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: placesrunner.cpp:27 placesrunner.cpp:51
+#: placesrunner.cpp:26 placesrunner.cpp:50
 #, kde-format
 msgid "places"
 msgstr "ҷойҳо"
 
-#: placesrunner.cpp:27
+#: placesrunner.cpp:26
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Рӯйхати ҳамаи ҷойгиршавиҳои мудири файл"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Ҷойгиршавиҳои мудири файлро мувофиқи :q: ҷустуҷӯ мекунад"

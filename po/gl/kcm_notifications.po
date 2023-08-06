@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 01:59+0000\n"
-"PO-Revision-Date: 2023-06-17 09:14+0200\n"
+"PO-Revision-Date: 2023-08-05 10:15+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "Outras aplicacións"
 #: ui/ApplicationConfiguration.qml:64
 #, kde-format
 msgid "Show popups"
-msgstr "Amosar as mensaxes emerxentes"
+msgstr "Amosar as xanelas emerxentes"
 
 #: ui/ApplicationConfiguration.qml:78
 #, kde-format
@@ -55,20 +55,19 @@ msgid ""
 msgstr "Esta aplicación non permite configurar as notificacións por eventos."
 
 #: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgid "Configure events:"
-msgstr "Configurar os eventos…"
+msgstr "Configurar os eventos:"
 
 #: ui/ApplicationConfiguration.qml:227
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Amosar unha mensaxe emerxente"
 
 #: ui/ApplicationConfiguration.qml:236
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Reproducir un son"
 
 #: ui/main.qml:41
 #, kde-format
@@ -78,8 +77,8 @@ msgid ""
 "a standalone widget."
 msgstr ""
 "Non se puido atopar un trebello de «Notificacións», necesario para amosar "
-"notificacións. Asegúrese de que está activado ben na área de notificacións "
-"ou nun trebello independente."
+"notificacións. Asegúrese de que está activado ben na área de notificación ou "
+"nun trebello independente."
 
 #: ui/main.qml:52
 #, kde-format
@@ -156,13 +155,13 @@ msgstr "Notificacións de prioridade baixa:"
 #: ui/main.qml:135
 #, kde-format
 msgid "Show popup"
-msgstr "Amosar a mensaxe emerxente"
+msgstr "Amosar a xanela emerxente"
 
 #: ui/main.qml:164
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Diálogos emerxentes"
+msgstr "Xanelas emerxentes"
 
 #: ui/main.qml:170
 #, kde-format
@@ -220,7 +219,7 @@ msgstr "Amosar nas notificacións"
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
-msgstr "Manter a mensaxe emerxente aberta durante o progreso"
+msgstr "Manter a xanela emerxente aberta durante o progreso"
 
 #: ui/main.qml:290
 #, kde-format
@@ -241,7 +240,7 @@ msgstr "Configurar…"
 #: ui/PopupPositionPage.qml:14
 #, kde-format
 msgid "Popup Position"
-msgstr "Posición da mensaxe emerxente"
+msgstr "Posición da xanela emerxente"
 
 #: ui/SourcesPage.qml:18
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2010-03-10 14:29+0200\n"
 "Last-Translator: Petros Vidalis <p_vidalis@hotmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: placesrunner.cpp:27 placesrunner.cpp:51
+#: placesrunner.cpp:26 placesrunner.cpp:50
 #, kde-format
 msgid "places"
 msgstr "τοποθεσίες"
 
-#: placesrunner.cpp:27
+#: placesrunner.cpp:26
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Λίστα με τις τοποθεσίες όλων των διαχειριστών αρχείων"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Εύρεση τοποθεσιών της διαχείρισης αρχείων που ταιριάζουν με το :q:"

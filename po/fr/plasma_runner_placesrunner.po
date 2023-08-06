@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2013-04-25 16:04+0200\n"
 "Last-Translator: xavier <ktranslator31@yahoo.fr>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -23,17 +23,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: placesrunner.cpp:27 placesrunner.cpp:51
+#: placesrunner.cpp:26 placesrunner.cpp:50
 #, kde-format
 msgid "places"
 msgstr "emplacements"
 
-#: placesrunner.cpp:27
+#: placesrunner.cpp:26
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Liste tous les emplacements du gestionnaire de fichiers"
 
-#: placesrunner.cpp:28
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr ""

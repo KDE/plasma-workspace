@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-04 02:00+0000\n"
-"PO-Revision-Date: 2023-07-29 07:22+0100\n"
+"PO-Revision-Date: 2023-08-05 10:11+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
-msgstr ""
+msgstr "FreeDesktop"
 
 #: kcm_soundtheme.cpp:108
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr ""
+msgstr "Retrodefaŭlta sonetoso el freedesktop.org"
 
 #: ui/main.qml:59
 #, kde-format
