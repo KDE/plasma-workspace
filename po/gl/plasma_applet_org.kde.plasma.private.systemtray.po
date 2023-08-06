@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-19 00:59+0000\n"
-"PO-Revision-Date: 2020-01-05 18:35+0100\n"
+"PO-Revision-Date: 2023-08-05 09:58+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -73,24 +73,22 @@ msgstr "Atallo de teclado"
 #: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Shown when relevant"
-msgstr ""
+msgstr "Amosar se é relevante"
 
 #: package/contents/ui/ConfigEntries.qml:247
-#, fuzzy, kde-format
-#| msgid "Always show all entries"
+#, kde-format
 msgid "Always shown"
-msgstr "Mostrar sempre todas as entradas."
+msgstr "Amosar sempre"
 
 #: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Always hidden"
-msgstr ""
+msgstr "Sempre agochado"
 
 #: package/contents/ui/ConfigEntries.qml:249
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgid "Disabled"
-msgstr "Activado"
+msgstr "Desactivado"
 
 #: package/contents/ui/ConfigEntries.qml:314
 #, kde-format
@@ -98,68 +96,66 @@ msgid "Always show all entries"
 msgstr "Amosar sempre todas as entradas."
 
 #: package/contents/ui/ConfigGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "Tamaño da icona:"
+msgstr "Tamaño das iconas do panel:"
 
 #: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "Pequeno"
 
 #: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "Axustar á altura do panel"
 
 #: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "Axustar á anchura do panel"
 
 #: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr ""
+msgstr "Actívase automaticamente no modo táctil"
 
 #: package/contents/ui/ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr "Tamaño da icona:"
+msgstr "Espazamento das iconas do panel:"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Pequeno"
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: package/contents/ui/ConfigGeneral.qml:59
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Faise grande automaticamente no modo táctil."
 
 #: package/contents/ui/ExpandedRepresentation.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Ir cara atrás"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format
@@ -169,7 +165,7 @@ msgstr "Estado e notificacións"
 #: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
-msgstr ""
+msgstr "Máis accións"
 
 #: package/contents/ui/ExpandedRepresentation.qml:230
 #, kde-format
@@ -179,12 +175,13 @@ msgstr "Manter aberto"
 #: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Expand System Tray"
-msgstr ""
+msgstr "Expandir a área de notificación"
 
 #: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
+"Amosar todos os elementos na área de notificación, nunha xanela emerxente."
 
 #: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
