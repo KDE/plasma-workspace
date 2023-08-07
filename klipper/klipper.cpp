@@ -49,7 +49,7 @@
 #include "klipperpopup.h"
 #include "klippersettings.h"
 
-#include <Prison/Prison>
+#include <Prison/Barcode>
 
 #include <config-X11.h>
 #if HAVE_X11
@@ -912,28 +912,27 @@ void Klipper::updateTimestamp()
 class BarcodeLabel : public QLabel
 {
 public:
-    BarcodeLabel(Prison::AbstractBarcode *barcode, QWidget *parent = nullptr)
+    BarcodeLabel(Prison::Barcode &&barcode, QWidget *parent = nullptr)
         : QLabel(parent)
-        , m_barcode(barcode)
+        , m_barcode(std::move(barcode))
     {
         setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
-        setPixmap(QPixmap::fromImage(m_barcode->toImage(size())));
+        setPixmap(QPixmap::fromImage(m_barcode.toImage(size())));
     }
 
 protected:
     void resizeEvent(QResizeEvent *event) override
     {
         QLabel::resizeEvent(event);
-        setPixmap(QPixmap::fromImage(m_barcode->toImage(event->size())));
+        setPixmap(QPixmap::fromImage(m_barcode.toImage(event->size())));
     }
 
 private:
-    std::unique_ptr<Prison::AbstractBarcode> m_barcode;
+    Prison::Barcode m_barcode;
 };
 
 void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
 {
-    using namespace Prison;
     QPointer<QDialog> dlg(new QDialog());
     dlg->setWindowTitle(i18n("Mobile Barcode"));
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
@@ -945,22 +944,22 @@ void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
     QHBoxLayout *layout = new QHBoxLayout(mw);
 
     {
-        AbstractBarcode *qrCode = createBarcode(QRCode);
+        auto qrCode = Prison::Barcode::create(Prison::QRCode);
         if (qrCode) {
             if (item) {
                 qrCode->setData(item->text());
             }
-            BarcodeLabel *qrCodeLabel = new BarcodeLabel(qrCode, mw);
+            BarcodeLabel *qrCodeLabel = new BarcodeLabel(std::move(*qrCode), mw);
             layout->addWidget(qrCodeLabel);
         }
     }
     {
-        AbstractBarcode *dataMatrix = createBarcode(DataMatrix);
+        auto dataMatrix = Prison::Barcode::create(Prison::DataMatrix);
         if (dataMatrix) {
             if (item) {
                 dataMatrix->setData(item->text());
             }
-            BarcodeLabel *dataMatrixLabel = new BarcodeLabel(dataMatrix, mw);
+            BarcodeLabel *dataMatrixLabel = new BarcodeLabel(std::move(*dataMatrix), mw);
             layout->addWidget(dataMatrixLabel);
         }
     }

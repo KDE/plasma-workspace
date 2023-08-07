@@ -12,11 +12,9 @@
 
 #include "klipper_debug.h"
 #include <KIO/PreviewJob>
-#include <QFutureWatcher>
 #include <QIcon>
-#include <QtConcurrent>
 
-#include <Prison/Prison>
+#include <Prison/Barcode>
 
 const static QString s_iconKey = QStringLiteral("icon");
 const static QString s_previewKey = QStringLiteral("preview");
@@ -71,30 +69,30 @@ void ClipboardJob::start()
     } else if (operation == QLatin1String("barcode")) {
         int pixelWidth = parameters().value(QStringLiteral("width")).toInt();
         int pixelHeight = parameters().value(QStringLiteral("height")).toInt();
-        Prison::AbstractBarcode *code = nullptr;
+        std::optional<Prison::Barcode> code;
         switch (parameters().value(QStringLiteral("barcodeType")).toInt()) {
         case 1: {
-            code = Prison::createBarcode(Prison::DataMatrix);
+            code = Prison::Barcode::create(Prison::DataMatrix);
             const int size = qMin(pixelWidth, pixelHeight);
             pixelWidth = size;
             pixelHeight = size;
             break;
         }
         case 2: {
-            code = Prison::createBarcode(Prison::Code39);
+            code = Prison::Barcode::create(Prison::Code39);
             break;
         }
         case 3: {
-            code = Prison::createBarcode(Prison::Code93);
+            code = Prison::Barcode::create(Prison::Code93);
             break;
         }
         case 4: {
-            code = Prison::createBarcode(Prison::Aztec);
+            code = Prison::Barcode::create(Prison::Aztec);
             break;
         }
         case 0:
         default: {
-            code = Prison::createBarcode(Prison::QRCode);
+            code = Prison::Barcode::create(Prison::QRCode);
             const int size = qMin(pixelWidth, pixelHeight);
             pixelWidth = size;
             pixelHeight = size;
@@ -103,14 +101,7 @@ void ClipboardJob::start()
         }
         if (code) {
             code->setData(item->text());
-            QFutureWatcher<QImage> *watcher = new QFutureWatcher<QImage>(this);
-            connect(watcher, &QFutureWatcher<QImage>::finished, this, [this, watcher, code] {
-                setResult(watcher->result());
-                watcher->deleteLater();
-                delete code;
-            });
-            auto future = QtConcurrent::run(&Prison::AbstractBarcode::toImage, code, QSizeF(pixelWidth, pixelHeight));
-            watcher->setFuture(future);
+            setResult(code->toImage(QSizeF(pixelWidth, pixelHeight)));
             return;
         } else {
             setResult(false);
