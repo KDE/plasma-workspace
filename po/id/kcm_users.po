@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-22 02:08+0000\n"
-"PO-Revision-Date: 2022-08-26 23:44+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2023-07-28 16:14+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "Sandi"
 #: src/ui/ChangePassword.qml:70
 #, kde-format
 msgid "Confirm password"
-msgstr "Komfirmasi sandi"
+msgstr "Konfirmasi sandi"
 
 #: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
 #, kde-format

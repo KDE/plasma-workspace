@@ -1173,7 +1173,7 @@ msgid "ERROR: Could not determine font's name."
 msgstr ""
 
 #: lib/FcEngine.cpp:1472
-#, kde-format
+#, fuzzy, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
 msgstr[0] "%2 [1 píxel]"

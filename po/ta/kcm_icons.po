@@ -4,13 +4,13 @@
 #
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # Ambalam <tamilpc@ambalam.com>, 2004.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2022-10-25 19:44+0530\n"
+"PO-Revision-Date: 2023-08-06 15:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -156,10 +156,9 @@ msgid "Install from File…"
 msgstr "கோப்பிலிருந்து நிறுவு…"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Get New Icons…"
+#, kde-format
 msgid "Get New…"
-msgstr "புதிய சின்னங்களை பெறு…"
+msgstr "புதியவற்றை பெறு…"
 
 #: ui/main.qml:174
 #, kde-format

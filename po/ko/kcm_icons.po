@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-02-28 23:32+0100\n"
+"PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -154,10 +154,9 @@ msgid "Install from File…"
 msgstr "파일에서 설치…"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Get New Icons…"
+#, kde-format
 msgid "Get New…"
-msgstr "새 아이콘 가져오기…"
+msgstr "새 항목 가져오기…"
 
 #: ui/main.qml:174
 #, kde-format

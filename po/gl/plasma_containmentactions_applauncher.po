@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2023-06-18 13:20+0200\n"
+"PO-Revision-Date: 2023-08-06 05:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
 #: config.ui:17
 #, kde-format
 msgid "Show applications by name"
-msgstr "Amosar o nome das aplicacións"
+msgstr "Amosar o nome das aplicacións."
 
 #: launch.cpp:89
 #, kde-format

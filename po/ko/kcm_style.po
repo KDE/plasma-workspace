@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-07-25 23:30+0200\n"
+"PO-Revision-Date: 2023-08-06 22:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -112,8 +112,7 @@ msgid "Secondary toolbar label"
 msgstr "보조 도구 모음 텍스트"
 
 #: ui/EffectSettingsPopup.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr "아이콘과 도구 모음 설정"

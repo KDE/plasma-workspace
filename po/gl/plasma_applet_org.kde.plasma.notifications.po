@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-02 02:09+0000\n"
-"PO-Revision-Date: 2023-04-06 21:05+0200\n"
+"PO-Revision-Date: 2023-08-06 05:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -261,13 +261,13 @@ msgstr "Cancelar"
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
-msgstr "Agochar os detalles"
+msgstr "Agochar os detalles."
 
 #: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
-msgstr "Amosar os detalles"
+msgstr "Amosar os detalles."
 
 #: package/contents/ui/JobItem.qml:232
 #: package/contents/ui/ThumbnailStrip.qml:169

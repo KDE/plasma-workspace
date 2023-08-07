@@ -1,7 +1,6 @@
 # translation of kcmcolors.po to galician
 # Galician translation of kcmcolors.
 # Copyright (C) 2002, 2003, 2004, 2006, 2007, 2008 This file is distributed under the same license as the kcmcolors package
-#
 # Xabi García <xabigf@gmx.net>, 2002, 2003.
 # Xabier García Feal <xabigf@gmx.net>, 2004.
 # Xabi G. Feal <xabigf@gmx.net>, 2006, 2007.
@@ -11,13 +10,14 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2019-10-19 22:08+0200\n"
+"PO-Revision-Date: 2023-08-06 05:24+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -163,7 +163,7 @@ msgstr "Non se atopou o esquema, volvendo ao actual.\n"
 #: editor/preview.ui:29
 #, kde-format
 msgid "Window text on Window Background"
-msgstr "Texto da xanela no fondo da xanela"
+msgstr "Texto da xanela no fondo da xanela."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -177,7 +177,7 @@ msgstr "Texto da xanela"
 #: editor/preview.ui:39
 #, kde-format
 msgid "Button text on Button Background"
-msgstr "Texto do botón sobre fondo de botón"
+msgstr "Texto do botón sobre fondo de botón."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
@@ -191,7 +191,7 @@ msgstr "Botón"
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Vista de escolla normal contra fondo de escolla normal"
+msgstr "Vista de escolla normal contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -205,7 +205,7 @@ msgstr "Texto escollido"
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "Texto de ligazón escollida conta fondo de escolla normal"
+msgstr "Texto de ligazón escollida conta fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -221,7 +221,7 @@ msgstr "ligazón"
 #: editor/preview.ui:153
 #, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "Texto de escolla visitada contra fondo de escolla normal"
+msgstr "Texto de escolla visitada contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -237,7 +237,7 @@ msgstr "visitada"
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "Texto de escolla activa contra fondo de escolla normal"
+msgstr "Texto de escolla activa contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -253,7 +253,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Texto de escolla inactiva contra fondo de escolla normal"
+msgstr "Texto de escolla inactiva contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -269,7 +269,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "Texto negativo de escolla contra fondo de escolla normal"
+msgstr "Texto negativo de escolla contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -285,7 +285,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "Texto neutro de escolla contra fondo de escolla normal"
+msgstr "Texto neutro de escolla contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -301,7 +301,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "Texto positivo de escolla contra fondo de escolla normal"
+msgstr "Texto positivo de escolla contra fondo de escolla normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -317,7 +317,7 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "Vista do texto normal contra o fondo normal"
+msgstr "Vista do texto normal contra o fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
@@ -331,43 +331,43 @@ msgstr "Texto normal"
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "Vista do texto de ligazón fondo normal"
+msgstr "Vista do texto de ligazón fondo normal."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "Vista de texto visitado contra fondo normal"
+msgstr "Vista de texto visitado contra fondo normal."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "Vista do texto activo contra fondo normal"
+msgstr "Vista do texto activo contra fondo normal."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "Vista de texto inactivo contra texto normal"
+msgstr "Vista de texto inactivo contra texto normal."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "Vista de texto negativo contra fondo normal"
+msgstr "Vista de texto negativo contra fondo normal."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "Vista de texto neutro contra fondo normal"
+msgstr "Vista de texto neutro contra fondo normal."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "Vista de texto positivo contra fondo normal"
+msgstr "Vista de texto positivo contra fondo normal."
 
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
@@ -453,7 +453,7 @@ msgstr "Conxunto de cores:"
 #: editor/scmeditorcolors.ui:36
 #, kde-format
 msgid "Colorset to view/modify"
-msgstr "O conxunto de cores a ver/modificar"
+msgstr "O conxunto de cores a ver/modificar."
 
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -726,7 +726,7 @@ msgstr "Intensidade:"
 #: editor/scmeditoreffects.ui:37
 #, kde-format
 msgid "Disabled color effect type"
-msgstr "O tipo de efecto da cor de desactivada"
+msgstr "O tipo de efecto da cor de desactivada."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:41
@@ -760,7 +760,7 @@ msgstr "Tinxir"
 #: editor/scmeditoreffects.ui:64
 #, kde-format
 msgid "Disabled intensity effect type"
-msgstr "A intensidade do tipo de efecto para desactivada"
+msgstr "A intensidade do tipo de efecto para desactivada."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:68
@@ -800,25 +800,25 @@ msgstr "Contraste:"
 #: editor/scmeditoreffects.ui:120
 #, kde-format
 msgid "Disabled color effect amount"
-msgstr "A cantidade de efecto de cor desactivado"
+msgstr "A cantidade de efecto de cor desactivado."
 
 #. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
 #: editor/scmeditoreffects.ui:139
 #, kde-format
 msgid "Disabled intensity effect amount"
-msgstr "A cantidade do tipo de efecto para desactivada"
+msgstr "A cantidade do tipo de efecto para desactivada."
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
 #, kde-format
 msgid "Disabled color"
-msgstr "A cor de desactivado"
+msgstr "A cor de desactivado."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
 #, kde-format
 msgid "Disabled contrast type"
-msgstr "O tipo de contraste de desactivada"
+msgstr "O tipo de contraste de desactivada."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -845,13 +845,13 @@ msgstr "Tinxir"
 #: editor/scmeditoreffects.ui:222
 #, kde-format
 msgid "Disabled contrast amount"
-msgstr "A cantidade de contraste de desactivada"
+msgstr "A cantidade de contraste de desactivada."
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
 #, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "Aplicar os &efectos ás xanelas inactivas"
+msgstr "Aplicar os &efectos ás xanelas inactivas."
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
@@ -863,7 +863,7 @@ msgstr "Usar cores distintas para as seleccións in&activas."
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "&Sombrear a columna ordenada nas listas"
+msgstr "&Sombrear a columna ordenada nas listas."
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:38
@@ -888,7 +888,7 @@ msgstr ""
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Sombreado de marcos e efectos de iluminación («3D»)"
+msgstr "Sombreado de marcos e efectos de iluminación («3D»)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
@@ -919,7 +919,7 @@ msgstr "Contraste"
 #: editor/setpreview.ui:35 editor/setpreview.ui:189
 #, kde-format
 msgid "Normal Text on Normal Background"
-msgstr "Texto normal sobre fondo normal"
+msgstr "Texto normal sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -935,7 +935,7 @@ msgstr "normal"
 #: editor/setpreview.ui:56
 #, kde-format
 msgid "Link Text on Normal Background"
-msgstr "Texto de ligazón sobre fondo normal"
+msgstr "Texto de ligazón sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -951,7 +951,7 @@ msgstr "ligazón"
 #: editor/setpreview.ui:77
 #, kde-format
 msgid "Visited Text on Normal Background"
-msgstr "Texto visitado sobre fondo normal"
+msgstr "Texto visitado sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -967,7 +967,7 @@ msgstr "visitada"
 #: editor/setpreview.ui:90
 #, kde-format
 msgid "Active Text on Normal Background"
-msgstr "Texto activo sobre fondo normal"
+msgstr "Texto activo sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -983,7 +983,7 @@ msgstr "activa"
 #: editor/setpreview.ui:109
 #, kde-format
 msgid "Inactive Text on Normal Background"
-msgstr "Texto inactivo sobre fondo normal"
+msgstr "Texto inactivo sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore1)
@@ -997,7 +997,7 @@ msgstr "inactiva"
 #: editor/setpreview.ui:125
 #, kde-format
 msgid "Negative Text on Normal Background"
-msgstr "Texto negativo sobre fondo normal"
+msgstr "Texto negativo sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1013,7 +1013,7 @@ msgstr "negativo"
 #: editor/setpreview.ui:141
 #, kde-format
 msgid "Neutral Text on Normal Background"
-msgstr "Texto neutro sobre fondo normal"
+msgstr "Texto neutro sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1029,7 +1029,7 @@ msgstr "neutro"
 #: editor/setpreview.ui:157
 #, kde-format
 msgid "Positive Text on Normal Background"
-msgstr "Texto positivo sobre fondo normal"
+msgstr "Texto positivo sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1045,7 +1045,7 @@ msgstr "positivo"
 #: editor/setpreview.ui:170
 #, kde-format
 msgid "Hover on Normal Background"
-msgstr "Ao pasar por riba do fondo normal"
+msgstr "Ao pasar por riba do fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore8)
@@ -1065,7 +1065,7 @@ msgid ""
 msgstr ""
 "Texto de ligazón sobre fondo de ligazón\n"
 "(Nota: O fondo da ligazón derívase do texto da ligazón e non se pode "
-"configurar por separado desta vez)"
+"configurar por separado desta vez)."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
 #: editor/setpreview.ui:233
@@ -1077,7 +1077,7 @@ msgid ""
 msgstr ""
 "Texto visitado sobre fondo de visitado\n"
 "(Nota: O fondo de visitado derívase do texto visitado e non se pode "
-"configurar por separado desta vez)"
+"configurar por separado desta vez)."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
 #: editor/setpreview.ui:250
@@ -1089,13 +1089,13 @@ msgid ""
 msgstr ""
 "Texto activo sobre fondo activo\n"
 "(Nota: O fondo activo derívase do texto activo e non se pode configurar por "
-"separado desta vez)"
+"separado desta vez)."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
 #, kde-format
 msgid "Inactive Text on Alternate Background"
-msgstr "Texto inactivo sobre fondo alternativo"
+msgstr "Texto inactivo sobre fondo alternativo."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelBack1)
@@ -1115,7 +1115,7 @@ msgid ""
 msgstr ""
 "Texto negativo sobre fondo negativo\n"
 "(Nota: O fondo negativo derívase do texto negativo e non se pode configurar "
-"por separado desta vez)"
+"por separado desta vez)."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
 #: editor/setpreview.ui:300
@@ -1127,7 +1127,7 @@ msgid ""
 msgstr ""
 "Texto neutro sobre fondo neutro\n"
 "(Nota: O fondo neutro derívase do texto neutro e non se pode configurar por "
-"separado desta vez)"
+"separado desta vez)."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317
@@ -1139,13 +1139,13 @@ msgid ""
 msgstr ""
 "Texto positivo sobre fondo positivo\n"
 "(Nota: O fondo positivo derívase do texto positivo e non se pode configurar "
-"por separado desta vez)"
+"por separado desta vez)."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
 #, kde-format
 msgid "Focus on Normal Background"
-msgstr "Foco sobre fondo normal"
+msgstr "Foco sobre fondo normal."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)
