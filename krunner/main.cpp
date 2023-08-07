@@ -44,9 +44,6 @@ int main(int argc, char **argv)
 
     // this is needed to fake window position so Plasma Dialog sets correct borders
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
-    // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
-    // bespoke wayland code disable for now. Consider re-enabling when layer-shell support lands
-    qunsetenv("QT_WAYLAND_RECONNECT");
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
@@ -56,7 +53,6 @@ int main(int argc, char **argv)
         qunsetenv("QT_QPA_PLATFORM");
     }
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
-    qputenv("QT_WAYLAND_RECONNECT", "1");
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 6, 0)
     if (usingPlasmaShellIntegration) {
