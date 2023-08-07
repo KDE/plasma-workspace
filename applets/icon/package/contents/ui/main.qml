@@ -7,11 +7,9 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Layouts 1.15
 import Qt5Compat.GraphicalEffects
 
 import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
@@ -20,18 +18,11 @@ import org.kde.kirigami 2.20 as Kirigami
 PlasmoidItem {
     id: root
 
-    readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
-        .includes(Plasmoid.location)
     readonly property bool constrained: [PlasmaCore.Types.Vertical, PlasmaCore.Types.Horizontal]
         .includes(Plasmoid.formFactor)
     property bool containsAcceptableDrag: false
 
     preferredRepresentation: fullRepresentation
-    height: Math.round(Kirigami.Units.iconSizes.desktop + 2 * Kirigami.Units.gridUnit)
-    width: Math.round(Kirigami.Units.iconSizes.desktop * 1.5)
-
-    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.iconSizes.desktop + 2 * Kirigami.Units.gridUnit)
 
     enabled: Plasmoid.valid
 
@@ -42,7 +33,6 @@ PlasmoidItem {
 
     Plasmoid.onActivated: Plasmoid.run()
 
-    Plasmoid.onContextualActionsAboutToShow: updateActions()
     Plasmoid.contextualActions: Plasmoid.extraActions
 
     PlasmaCore.Action {
@@ -52,6 +42,7 @@ PlasmoidItem {
         visible: Plasmoid.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
         onTriggered: Plasmoid.configure()
     }
+    
     Component.onCompleted: {
         Plasmoid.setInternalAction("configure", configureAction);
     }
@@ -65,7 +56,7 @@ PlasmoidItem {
         anchors.fill: parent
         activeFocusOnTab: true
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             switch (event.key) {
             case Qt.Key_Space:
             case Qt.Key_Enter:
@@ -75,32 +66,21 @@ PlasmoidItem {
                 break;
             }
         }
+        
         Accessible.name: Plasmoid.title
         Accessible.description: toolTip.subText
         Accessible.role: Accessible.Button
-
-        Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.gridUnit
 
         hoverEnabled: true
         enabled: Plasmoid.valid
 
         onClicked: Plasmoid.run()
 
-        Component.onCompleted: updateActions()
-
-        Connections {
-            target: Plasmoid
-            function onValidChanged() {
-                updateActions();
-            }
-        }
-
         DragDrop.DropArea {
-            id: dropArea
             anchors.fill: parent
             preventStealing: true
-            onDragEnter: {
+            
+            onDragEnter: event => {
                 const acceptable = Plasmoid.isAcceptableDrag(event);
                 containsAcceptableDrag = acceptable;
 
@@ -108,8 +88,10 @@ PlasmoidItem {
                     event.ignore();
                 }
             }
+            
             onDragLeave: containsAcceptableDrag = false
-            onDrop: {
+            
+            onDrop: event => {
                 if (containsAcceptableDrag) {
                     Plasmoid.processDrop(event);
                 } else {
@@ -126,12 +108,13 @@ PlasmoidItem {
                 left: parent.left
                 right: parent.right
                 top: parent.top
-                bottom: constrained ? parent.bottom : text.top
+                bottom: constrained ? parent.bottom : iconLabel.top
             }
             source: Plasmoid.icon
             enabled: mouseArea.enabled
             active: mouseArea.containsMouse || containsAcceptableDrag
             opacity: Plasmoid.busy ? 0.6 : 1
+            
             Behavior on opacity {
                 OpacityAnimator {
                     duration: Kirigami.Units.shortDuration
@@ -140,33 +123,17 @@ PlasmoidItem {
             }
         }
 
-        DropShadow {
-            id: textShadow
-
-            anchors.fill: text
-
-            visible: !constrained
-
-            horizontalOffset: 1
-            verticalOffset: 1
-
-            radius: 4
-            samples: 9
-            spread: 0.35
-
-            color: "black"
-
-            source: constrained ? null : text
-        }
-
+        
         PlasmaComponents3.Label {
-            id: text
+            id: iconLabel
             text: Plasmoid.title
+            
             anchors {
                 left: parent.left
                 bottom: parent.bottom
                 right: parent.right
             }
+            
             horizontalAlignment: Text.AlignHCenter
             visible: false // rendered by DropShadow
             maximumLineCount: 2
@@ -174,6 +141,18 @@ PlasmoidItem {
             elide: Text.ElideRight
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             textFormat: Text.PlainText
+            
+            layer.enabled: true
+            layer.effect: DropShadow {
+                visible: !constrained
+                horizontalOffset: 1
+                verticalOffset: 1
+                radius: 4
+                samples: 9
+                spread: 0.35
+                color: "black"
+            }
+
         }
 
         PlasmaCore.ToolTipArea {
