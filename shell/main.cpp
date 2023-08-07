@@ -2,9 +2,12 @@
     SPDX-FileCopyrightText: 2012 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2015 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+#include <csignal>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -20,6 +23,7 @@
 #include <QSurfaceFormat>
 
 #include <KAboutData>
+#include <KSignalHandler>
 
 #ifdef WITH_KUSERFEEDBACKCORE
 #include "userfeedback.h"
@@ -77,6 +81,15 @@ int main(int argc, char *argv[])
     }
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     qputenv("QT_WAYLAND_RECONNECT", "1");
+
+    // Quit on SIGTERM to properly save state. See systemd.kill(5).
+    // https://bugs.kde.org/show_bug.cgi?id=470604
+    KSignalHandler::self()->watchSignal(SIGTERM);
+    QObject::connect(KSignalHandler::self(), &KSignalHandler::signalReceived, &app, [&app](int signal) {
+        if (signal == SIGTERM) {
+            app.quit();
+        }
+    });
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 6, 0)
     if (usingPlasmaShellIntegration) {
