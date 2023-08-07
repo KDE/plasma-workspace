@@ -201,29 +201,29 @@ QString DesktopView::previewBannerTitle() const
 {
     /*
      * Versions are reported as follows:
-     *  Development, 5.27.80 -> KDE Plasma 5.27.80
+     *  Development, 5.27.80 -> KDE Plasma 6.0 Dev
      *  Beta,        5.27.90 -> KDE Plasma 6.0 Beta
-     *  Development, 6.0.80  -> KDE Plasma 6.0.80
+     *  Development, 6.0.80  -> KDE Plasma 6.1 Dev
      *  Beta,        6.0.90  -> KDE Plasma 6.1 Beta
      *  Beta,        6.0.91  -> KDE Plasma 6.1 Beta 2
      */
 
+    // finalMajor, finalMinor is the final version in the line and
+    // should be updated after the final Plasma 6 release
+    constexpr int finalMajor = 5;
+    constexpr int finalMinor = 27;
+
+    // Incremented minor, which is zeroed and major incremented when
+    // we reach the final version in the major release line
+    constexpr int major = (PROJECT_VERSION_MAJOR == finalMajor && PROJECT_VERSION_MINOR == finalMinor) ? PROJECT_VERSION_MAJOR + 1 : PROJECT_VERSION_MAJOR;
+    constexpr int minor = (PROJECT_VERSION_MAJOR == finalMajor && PROJECT_VERSION_MINOR == finalMinor) ? 0 : PROJECT_VERSION_MINOR + 1;
+    const QString version = QStringLiteral("%1.%2").arg(QString::number(major), QString::number(minor));
+
     if constexpr (PROJECT_VERSION_PATCH == 80) {
-        // Developer version, show full version string
-        return i18nc("@label %1 is the Plasma version", "KDE Plasma %1", WORKSPACE_VERSION_STRING);
+        // Development version
+        return i18nc("@label %1 is the Plasma version", "KDE Plasma %1 Dev", version);
     } else if constexpr (PROJECT_VERSION_PATCH >= 90) {
-        // Beta version, show as a beta for the next release
-
-        // finalMajor, finalMinor is the final version in the line
-        // and should be updated after the final Plasma 6 release
-        constexpr int finalMajor = 5;
-        constexpr int finalMinor = 27;
-
-        // Increment minor, wrapping up when we reach the final version in the major release line
-        constexpr int major = (PROJECT_VERSION_MAJOR == finalMajor && PROJECT_VERSION_MINOR == finalMinor) ? PROJECT_VERSION_MAJOR + 1 : PROJECT_VERSION_MAJOR;
-        constexpr int minor = (PROJECT_VERSION_MAJOR == finalMajor && PROJECT_VERSION_MINOR == finalMinor) ? 0 : PROJECT_VERSION_MINOR + 1;
-        const QString version = QStringLiteral("%1.%2").arg(major, minor);
-
+        // Beta version
         if constexpr (PROJECT_VERSION_PATCH == 90) {
             return i18nc("@label %1 is the Plasma version", "KDE Plasma %1 Beta", version);
         } else {
