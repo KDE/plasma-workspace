@@ -2,11 +2,12 @@
     SPDX-FileCopyrightText: 2013 Bhushan Shah <bhush94@gmail.com>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
+    SPDX-FileCopyrightText: 2023 Mike Noe <noeerover@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.15
+import QtQuick
 import Qt5Compat.GraphicalEffects
 
 import org.kde.draganddrop 2.0 as DragDrop
@@ -55,7 +56,7 @@ PlasmoidItem {
         id: mouseArea
         anchors.fill: parent
         activeFocusOnTab: true
-
+        
         Keys.onPressed: event => {
             switch (event.key) {
             case Qt.Key_Space:
@@ -103,7 +104,6 @@ PlasmoidItem {
         }
 
         Kirigami.Icon {
-            id: icon
             anchors {
                 left: parent.left
                 right: parent.right
@@ -123,7 +123,19 @@ PlasmoidItem {
             }
         }
 
-        
+        Rectangle {
+            id: fallbackRectangleBackground
+            visible: GraphicsInfo.api === GraphicsInfo.Software && !constrained
+            anchors {
+                fill: iconLabel
+                margins: -Kirigami.Units.smallSpacing
+            }
+
+            color: "black"
+            radius: Kirigami.Units.smallSpacing
+            opacity: 0.45
+        }
+
         PlasmaComponents3.Label {
             id: iconLabel
             text: Plasmoid.title
@@ -135,24 +147,27 @@ PlasmoidItem {
             }
             
             horizontalAlignment: Text.AlignHCenter
-            visible: false // rendered by DropShadow
+            visible: GraphicsInfo.api === GraphicsInfo.Software && !constrained
             maximumLineCount: 2
-            color: "white"
             elide: Text.ElideRight
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             textFormat: Text.PlainText
             
-            layer.enabled: true
+            color: "white"
+            
+            layer.enabled: GraphicsInfo.api === GraphicsInfo.OpenGL && !constrained
             layer.effect: DropShadow {
-                visible: !constrained
                 horizontalOffset: 1
                 verticalOffset: 1
-                radius: 4
-                samples: 9
+
+                radius: 4.0
+                samples: radius * 2 + 1
                 spread: 0.35
                 color: "black"
-            }
 
+                visible: GraphicsInfo.api === GraphicsInfo.OpenGL && !constrained
+            }
+            
         }
 
         PlasmaCore.ToolTipArea {
