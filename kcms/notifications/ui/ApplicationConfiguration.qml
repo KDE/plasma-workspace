@@ -14,7 +14,6 @@ import QtQuick.Dialogs
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
-
 import org.kde.private.kcms.notifications 1.0 as Private
 
 ColumnLayout {
@@ -28,119 +27,184 @@ ColumnLayout {
     readonly property string appDisplayName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DisplayRole) || "" : ""
     readonly property string appIconName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DecorationRole) || "" : ""
     readonly property string desktopEntry: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || "" : ""
-    readonly property string notifyRcName: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.NotifyRcNameRole) || "" : ""
-
-    readonly property bool isOtherApp: configColumn.desktopEntry === configColumn.otherAppsId
 
     onRootIndexChanged: {
         kcm.eventsModel.rootIndex = rootIndex
     }
 
-    spacing: Kirigami.Units.smallSpacing
+    spacing: 0
 
-    RowLayout {
-        Kirigami.FormData.isSection: true
-        spacing: Kirigami.Units.smallSpacing
+    // Top content
+    Rectangle {
+        Layout.fillWidth: true
+        implicitHeight: childrenRect.height
 
-        Kirigami.Icon {
-            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-            Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
-            source: configColumn.appIconName
-        }
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        Kirigami.Theme.inherit: false
+        color: Kirigami.Theme.backgroundColor
 
-        Kirigami.Heading {
-            level: 2
-            text: configColumn.appDisplayName
-            elide: Text.ElideRight
-            textFormat: Text.PlainText
-        }
-    }
-
-    Kirigami.FormLayout {
-        id: form
-
-        QQC2.CheckBox {
-            id: showPopupsCheck
-            text: i18n("Show popups")
-            checked: !!behaviorSettings && behaviorSettings.showPopups
-            onClicked: behaviorSettings.showPopups = checked
-
-            KCM.SettingStateBinding {
-                configObject: behaviorSettings
-                settingName: "ShowPopups"
+        ColumnLayout {
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
             }
-        }
 
-        RowLayout { // just for indentation
-            QQC2.CheckBox {
-                Layout.leftMargin: mirrored ? 0 : indicator.width
-                Layout.rightMargin: mirrored ? indicator.width : 0
-                text: i18n("Show in do not disturb mode")
-                checked: !!behaviorSettings && behaviorSettings.showPopupsInDndMode
-                onClicked: behaviorSettings.showPopupsInDndMode = checked
+            spacing: 0
 
-                KCM.SettingStateBinding {
-                    configObject: behaviorSettings
-                    settingName: "ShowPopupsInDndMode"
-                    extraEnabledConditions: showPopupsCheck.checked
+            // App name and controls
+            ColumnLayout {
+                readonly property int marginsAndSpacings: Kirigami.Units.largeSpacing
+
+                Layout.fillWidth: true
+                Layout.margins: marginsAndSpacings
+
+                spacing: marginsAndSpacings
+
+                // App icon/name header
+                RowLayout {
+                    Layout.alignment: Qt.AlignHCenter
+
+                    spacing: Kirigami.Units.smallSpacing
+
+                    Kirigami.Icon {
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+                        source: configColumn.appIconName
+                    }
+
+                    Kirigami.Heading {
+                        level: 2
+                        horizontalAlignment: Text.AlignLeft
+                        text: configColumn.appDisplayName
+                        elide: Text.ElideRight
+                        textFormat: Text.PlainText
+                    }
+                }
+
+                // Controls
+                Kirigami.FormLayout {
+                    Layout.fillWidth: true
+
+                    QQC2.CheckBox {
+                        id: showPopupsCheck
+                        text: i18n("Show popups")
+                        checked: !!behaviorSettings && behaviorSettings.showPopups
+                        onClicked: behaviorSettings.showPopups = checked
+
+                        KCM.SettingStateBinding {
+                            configObject: behaviorSettings
+                            settingName: "ShowPopups"
+                        }
+                    }
+
+                    RowLayout { // just for indentation
+                        QQC2.CheckBox {
+                            Layout.leftMargin: mirrored ? 0 : indicator.width
+                            Layout.rightMargin: mirrored ? indicator.width : 0
+                            text: i18n("Show in do not disturb mode")
+                            checked: !!behaviorSettings && behaviorSettings.showPopupsInDndMode
+                            onClicked: behaviorSettings.showPopupsInDndMode = checked
+
+                            KCM.SettingStateBinding {
+                                configObject: behaviorSettings
+                                settingName: "ShowPopupsInDndMode"
+                                extraEnabledConditions: showPopupsCheck.checked
+                            }
+                        }
+                    }
+
+                    QQC2.CheckBox {
+                        text: i18n("Show in history")
+                        checked: !!behaviorSettings && behaviorSettings.showInHistory
+                        onClicked: behaviorSettings.showInHistory = checked
+
+                        KCM.SettingStateBinding {
+                            configObject: behaviorSettings
+                            settingName: "ShowInHistory"
+                        }
+                    }
+
+                    QQC2.CheckBox {
+                        text: i18n("Show notification badges")
+                        checked: !!behaviorSettings && behaviorSettings.showBadges
+                        onClicked: behaviorSettings.showBadges = checked
+
+                        KCM.SettingStateBinding {
+                            configObject: behaviorSettings
+                            settingName: "ShowBadges"
+                            extraEnabledConditions: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
+                        }
+                    }
                 }
             }
         }
+    }
 
-        QQC2.CheckBox {
-            text: i18n("Show in history")
-            checked: !!behaviorSettings && behaviorSettings.showInHistory
-            onClicked: behaviorSettings.showInHistory = checked
+    Kirigami.Separator {
+        Layout.fillWidth: true
+    }
 
-            KCM.SettingStateBinding {
-                configObject: behaviorSettings
-                settingName: "ShowInHistory"
+    // Per-events view header
+    Rectangle {
+        Layout.fillWidth: true
+        implicitHeight: tableHeaderText.implicitHeight + (2 * tableHeaderText.anchors.topMargin)
+
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        Kirigami.Theme.inherit: false
+        // We want a color that's basically halfway between the view background
+        // color and the window background color. But due to the use of color
+        // scopes, only one will be available at a time. So to get basically the
+        // same thing, we blend the view background color with a smidgen of the
+        // text color.
+        color: Qt.tint(Kirigami.Theme.backgroundColor,
+                    Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.03))
+
+        visible: eventsList.count > 0
+
+        Kirigami.Heading {
+            id: tableHeaderText
+
+            anchors {
+                left: parent.left
+                leftMargin: Kirigami.Units.largeSpacing
+                right: parent.right
+                rightMargin: Kirigami.Units.smallSpacing
+                top: parent.top
+                topMargin: Kirigami.Units.smallSpacing
             }
-        }
 
-        QQC2.CheckBox {
-            text: i18n("Show notification badges")
-            checked: !!behaviorSettings && behaviorSettings.showBadges
-            onClicked: behaviorSettings.showBadges = checked
-
-            KCM.SettingStateBinding {
-                configObject: behaviorSettings
-                settingName: "ShowBadges"
-                extraEnabledConditions: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
-            }
+            level: 2
+            text: i18nc("@title:table Configure individual notification events in an app", "Configure Events")
         }
     }
 
-    Item {
+    Kirigami.Separator {
+        Layout.fillWidth: true
+        visible: eventsList.count > 0
+    }
+
+    // Per-events view
+    QQC2.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        visible: !eventsView.visible
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        Kirigami.Theme.inherit: false
 
-        Kirigami.PlaceholderMessage {
-            anchors.centerIn: parent
-            width: parent.width - Kirigami.Units.largeSpacing * 4
-            text: i18n("This application does not support configuring notifications on a per-event basis.");
-        }
-    }
+        contentItem: ListView {
+            id: eventsList
 
-    Kirigami.Heading {
-        Layout.topMargin: Kirigami.Units.smallSpacing
-        visible: eventsView.visible
-        level: 3
-        text: i18n("Configure events:")
-    }
+            headerPositioning: ListView.OverlayHeader
 
-    KCM.ScrollView {
-        id: eventsView
+            Kirigami.PlaceholderMessage {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: eventsList.headerItem.height/2
+                width: parent.width - Kirigami.Units.largeSpacing * 4
+                text: i18n("This application does not support configuring notifications on a per-event basis");
+                visible: eventsList.count === 0
+            }
 
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-
-        visible: !!configColumn.notifyRcName
-
-        view: ListView {
-            clip: true  // Otherwise the delegate bleeds on the view's frame borders
             model: kcm.eventsModel
             delegate: Kirigami.AbstractListItem {
                 id: eventDelegate
