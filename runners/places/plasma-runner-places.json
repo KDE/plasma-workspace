@@ -45,7 +45,8 @@
                 "Name[uk]": "David Edmundson",
                 "Name[vi]": "David Edmundson",
                 "Name[x-test]": "xxDavid Edmundsonxx",
-                "Name[zh_CN]": "David Edmundson"
+                "Name[zh_CN]": "David Edmundson",
+                "Name[zh_TW]": "David Edmundson"
             }
         ],
         "Description": "Open devices and folder bookmarks",

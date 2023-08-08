@@ -45,7 +45,8 @@
                 "Name[uk]": "Teemu Rytilahti",
                 "Name[vi]": "Teemu Rytilahti",
                 "Name[x-test]": "xxTeemu Rytilahtixx",
-                "Name[zh_CN]": "Teemu Rytilahti"
+                "Name[zh_CN]": "Teemu Rytilahti",
+                "Name[zh_TW]": "Teemu Rytilahti"
             }
         ],
         "Description": "Search the web using keywords",

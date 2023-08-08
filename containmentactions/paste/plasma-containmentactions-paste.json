@@ -45,7 +45,8 @@
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx",
-                "Name[zh_CN]": "Chani"
+                "Name[zh_CN]": "Chani",
+                "Name[zh_TW]": "Chani"
             }
         ],
         "Description": "Creates a widget from the contents of the clipboard",

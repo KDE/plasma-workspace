@@ -46,7 +46,8 @@
                 "Name[uk]": "Martin Klapetek",
                 "Name[vi]": "Martin Klapetek",
                 "Name[x-test]": "xxMartin Klapetekxx",
-                "Name[zh_CN]": "Martin Klapetek"
+                "Name[zh_CN]": "Martin Klapetek",
+                "Name[zh_TW]": "Martin Klapetek"
             }
         ],
         "Description": "Calendar plugin for displaying public holidays",

@@ -45,7 +45,8 @@
                 "Name[uk]": "Група з візуального дизайну KDE",
                 "Name[vi]": "Đội Thiết kế Trực quan KDE",
                 "Name[x-test]": "xxKDE Visual Design Groupxx",
-                "Name[zh_CN]": "KDE 视觉设计团队"
+                "Name[zh_CN]": "KDE 视觉设计团队",
+                "Name[zh_TW]": "KDE Visual Design Group"
             }
         ],
         "Category": "",
@@ -140,6 +141,7 @@
         "Name[vi]": "Breeze Chạng vạng",
         "Name[x-test]": "xxBreeze Twilightxx",
         "Name[zh_CN]": "Breeze 微风阴阳",
+        "Name[zh_TW]": "Breeze Twilight",
         "Version": "2.0",
         "Website": "https://www.kde.org"
     },

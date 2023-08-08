@@ -48,7 +48,8 @@
                 "Name[uk]": "Viranch Mehta",
                 "Name[vi]": "Viranch Mehta",
                 "Name[x-test]": "xxViranch Mehtaxx",
-                "Name[zh_CN]": "Viranch Mehta"
+                "Name[zh_CN]": "Viranch Mehta",
+                "Name[zh_TW]": "Viranch Mehta"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Lock/logout",

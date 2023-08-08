@@ -45,7 +45,8 @@
                 "Name[uk]": "Alexander Lohnau",
                 "Name[vi]": "Alexander Lohnau",
                 "Name[x-test]": "xxAlexander Lohnauxx",
-                "Name[zh_CN]": "Alexander Lohnau"
+                "Name[zh_CN]": "Alexander Lohnau",
+                "Name[zh_TW]": "Alexander Lohnau"
             }
         ],
         "Description": "Shows help information about runners when typing \"?\" or \"help\"",

@@ -49,7 +49,8 @@
                 "Name[uk]": "Aleix Pol Gonzalez",
                 "Name[vi]": "Aleix Pol Gonzalez",
                 "Name[x-test]": "xxAleix Pol Gonzalezxx",
-                "Name[zh_CN]": "Aleix Pol Gonzalez"
+                "Name[zh_CN]": "Aleix Pol Gonzalez",
+                "Name[zh_TW]": "Aleix Pol Gonzalez"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Input%20Method",

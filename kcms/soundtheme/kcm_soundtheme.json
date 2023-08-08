@@ -20,6 +20,7 @@
         "Description[uk]": "Вибір звукової теми для сповіщень",
         "Description[x-test]": "xxSelect a Sound Theme for Notificationsxx",
         "Description[zh_CN]": "选择通知的声音主题",
+        "Description[zh_TW]": "選擇通知用的音效主題",
         "Icon": "emblem-music-symbolic",
         "Name": "System Sounds",
         "Name[bg]": "Системни звуци",
@@ -39,7 +40,8 @@
         "Name[tr]": "Sistem Sesleri",
         "Name[uk]": "Системні звуки",
         "Name[x-test]": "xxSystem Soundsxx",
-        "Name[zh_CN]": "系统声音"
+        "Name[zh_CN]": "系统声音",
+        "Name[zh_TW]": "系統音效"
     },
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 70,

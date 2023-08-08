@@ -33,7 +33,8 @@
                 "Name[tr]": "Julius Zint",
                 "Name[uk]": "Julius Zint",
                 "Name[x-test]": "xxJulius Zintxx",
-                "Name[zh_CN]": "Julius Zint"
+                "Name[zh_CN]": "Julius Zint",
+                "Name[zh_TW]": "Julius Zint"
             }
         ],
         "Category": "Utilities",

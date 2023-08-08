@@ -45,7 +45,8 @@
                 "Name[uk]": "Alex Merry",
                 "Name[vi]": "Alex Merry",
                 "Name[x-test]": "xxAlex Merryxx",
-                "Name[zh_CN]": "Alex Merry"
+                "Name[zh_CN]": "Alex Merry",
+                "Name[zh_TW]": "Alex Merry"
             }
         ],
         "Category": "System",

@@ -20,6 +20,7 @@
         "Description[uk]": "Відтворювати звуковий сигнал при з'єднанні або від'єднанні пристроїв",
         "Description[x-test]": "xxPlay audible feedback when devices are inserted or removedxx",
         "Description[zh_CN]": "插入/移除设备时发出声音提示",
+        "Description[zh_TW]": "插入或移除裝置時播放音效回饋",
         "Name": "Device Notifications",
         "Name[ar]": "إخطارات الأجهزة",
         "Name[az]": "Qurğular haqqında məlumatlar",

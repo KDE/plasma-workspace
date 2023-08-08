@@ -47,7 +47,8 @@
                 "Name[uk]": "Viranch Mehta, Jacopo De Simoi",
                 "Name[vi]": "Viranch Mehta, Jacopo De Simoi",
                 "Name[x-test]": "xxViranch Mehta, Jacopo De Simoixx",
-                "Name[zh_CN]": "Viranch Mehta, Jacopo De Simoi"
+                "Name[zh_CN]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[zh_TW]": "Viranch Mehta, Jacopo De Simoi"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Disks %26 Devices",

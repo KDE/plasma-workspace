@@ -45,7 +45,8 @@
                 "Name[uk]": "Jan Gerrit Marker",
                 "Name[vi]": "Jan Gerrit Marker",
                 "Name[x-test]": "xxJan Gerrit Markerxx",
-                "Name[zh_CN]": "Jan Gerrit Marker"
+                "Name[zh_CN]": "Jan Gerrit Marker",
+                "Name[zh_TW]": "Jan Gerrit Marker"
             }
         ],
         "Description": "Stop applications that are currently running",

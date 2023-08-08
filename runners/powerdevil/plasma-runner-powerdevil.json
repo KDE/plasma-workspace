@@ -45,7 +45,8 @@
                 "Name[uk]": "Dario Freddi",
                 "Name[vi]": "Dario Freddi",
                 "Name[x-test]": "xxDario Freddixx",
-                "Name[zh_CN]": "Dario Freddi"
+                "Name[zh_CN]": "Dario Freddi",
+                "Name[zh_TW]": "Dario Freddi"
             }
         ],
         "Description": "Basic Power Management Operations",
