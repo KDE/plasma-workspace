@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2023-02-02 20:37+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -1302,7 +1302,7 @@ msgstr "Couleur personnalisée d'accentuation"
 msgid "Choose custom accent color"
 msgstr "Sélectionner une couleur personnalisée d'accentuation"
 
-#: ui/main.qml:89
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1310,94 +1310,94 @@ msgstr ""
 "Le modèle de couleurs « %1 » n'est pas installé. Le modèle par défaut a été "
 "sélectionné à la place."
 
-#: ui/main.qml:114
+#: ui/main.qml:112
 #, kde-format
 msgid "All Schemes"
 msgstr "Tous les modèles"
 
-#: ui/main.qml:115
+#: ui/main.qml:113
 #, kde-format
 msgid "Light Schemes"
 msgstr "Modèles clairs"
 
-#: ui/main.qml:116
+#: ui/main.qml:114
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Modèles sombres"
 
-#: ui/main.qml:142
+#: ui/main.qml:140
 #, kde-format
 msgid "Install from File…"
 msgstr "Installer à partir d'un fichier..."
 
-#: ui/main.qml:147
+#: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:194
+#: ui/main.qml:192
 #, kde-format
 msgid "Window Title"
 msgstr "Titre de la fenêtre"
 
-#: ui/main.qml:216
+#: ui/main.qml:214
 #, kde-format
 msgid "Window text"
 msgstr "Texte de fenêtre"
 
-#: ui/main.qml:223
+#: ui/main.qml:221
 #, kde-format
 msgid "Button"
 msgstr "Bouton"
 
-#: ui/main.qml:261
+#: ui/main.qml:259
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "lien"
 
-#: ui/main.qml:263
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visité"
 
-#: ui/main.qml:270
+#: ui/main.qml:268
 #, kde-format
 msgid "Normal text"
 msgstr "Texte standard"
 
-#: ui/main.qml:278
+#: ui/main.qml:276
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texte en surbrillance"
 
-#: ui/main.qml:285
+#: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
 msgstr "Texte désactivé"
 
-#: ui/main.qml:303
+#: ui/main.qml:301
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Modifier le thème de couleurs..."
 
-#: ui/main.qml:309
+#: ui/main.qml:307
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Supprimer le modèle de couleurs"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restaurer le modèle de couleurs"
 
-#: ui/main.qml:360
+#: ui/main.qml:358
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Ouvrir un modèle de couleurs"
 
-#: ui/main.qml:362
+#: ui/main.qml:360
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fichiers de modèle de couleurs (*.colors)"

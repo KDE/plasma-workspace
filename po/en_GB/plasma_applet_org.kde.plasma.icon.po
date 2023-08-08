@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2017-01-15 12:10+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Open Containing Folder"
 msgid "Properties for %1"
 msgstr "Properties for %1"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Properties"
 msgstr "Properties"

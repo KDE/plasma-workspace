@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -36,26 +36,27 @@ msgstr "nashtlumach@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Наладжванне ўбудовы дзеянняў мышы"
 
-#: desktopview.cpp:203
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1 Development Build"
-msgstr ""
-
-#: desktopview.cpp:205
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1 Beta Build"
-msgstr ""
-
-#: desktopview.cpp:207
+#: desktopview.cpp:213 desktopview.cpp:235
 #, fuzzy, kde-format
 #| msgid "Plasma"
-msgctxt "@label %1 version string"
-msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
 msgstr "Plasma"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:228
+#, fuzzy, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "Plasma"
+
+#: desktopview.cpp:231
+#, kde-format
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr ""
+
+#: desktopview.cpp:241
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"

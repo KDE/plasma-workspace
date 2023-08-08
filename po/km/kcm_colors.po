@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2010-03-16 08:58+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -1277,13 +1277,13 @@ msgstr "បង្អួច​អសកម្ម"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:114
+#: ui/main.qml:112
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "All Schemes"
@@ -1291,49 +1291,49 @@ msgstr "ផ្ទុក​គ្រោងការណ៍​ឡើង..."
 
 # (da's comment ):
 # scheme = color scheme
-#: ui/main.qml:115
+#: ui/main.qml:113
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "គ្រោងការណ៍"
 
-#: ui/main.qml:116
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "រក្សា​ទុក​ពណ៌​ចម្រុះ..."
 
-#: ui/main.qml:142
+#: ui/main.qml:140
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:147
+#: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:194
+#: ui/main.qml:192
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "អត្ថបទ​បង្អួច"
 
-#: ui/main.qml:216
+#: ui/main.qml:214
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "អត្ថបទ​បង្អួច"
 
-#: ui/main.qml:223
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "ប៊ូតុង​"
 
-#: ui/main.qml:261
+#: ui/main.qml:259
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1341,7 +1341,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "តំណ"
 
-#: ui/main.qml:263
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1349,51 +1349,51 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "បាន​ទស្សនា"
 
-#: ui/main.qml:270
+#: ui/main.qml:268
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "អត្ថបទ​ធម្មតា"
 
-#: ui/main.qml:278
+#: ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "អត្ថបទ​បាន​ទស្សនា"
 
-#: ui/main.qml:285
+#: ui/main.qml:283
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "បានបិទ"
 
-#: ui/main.qml:303
+#: ui/main.qml:301
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "ផ្ទុក​គ្រោងការណ៍​ឡើង..."
 
-#: ui/main.qml:309
+#: ui/main.qml:307
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "រក្សា​ទុក​ពណ៌​ចម្រុះ"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "នាំ​ចូល​ពណ៌​ចម្រុះ"
 
-#: ui/main.qml:360
+#: ui/main.qml:358
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "រក្សា​ទុក​ពណ៌​ចម្រុះ"
 
-#: ui/main.qml:362
+#: ui/main.qml:360
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

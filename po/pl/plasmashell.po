@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2023-07-08 07:39+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -33,25 +33,31 @@ msgstr "lukasz.wojnilowicz@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Ustawienia wtyczki działań myszy"
 
-#: desktopview.cpp:203
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1 Development Build"
-msgstr "Plazma %1 z wydania rozwojowego"
-
-#: desktopview.cpp:205
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1 Beta Build"
-msgstr "Plazma %1 w wydania beta"
-
-#: desktopview.cpp:207
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1"
+#: desktopview.cpp:213 desktopview.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
 msgstr "Plazma %1"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:228
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "Plazma %1 w wydania beta"
+
+#: desktopview.cpp:231
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr "Plazma %1 w wydania beta"
+
+#: desktopview.cpp:241
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -302,6 +308,10 @@ msgstr "Liczba paneli"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Liczy panele"
+
+#~ msgctxt "@label %1 version string"
+#~ msgid "Plasma %1 Development Build"
+#~ msgstr "Plazma %1 z wydania rozwojowego"
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "

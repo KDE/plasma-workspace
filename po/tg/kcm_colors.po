@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2019-10-09 17:40+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -1228,102 +1228,102 @@ msgstr "Цвет неактивных окон"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:114
+#: ui/main.qml:112
 #, kde-format
 msgid "All Schemes"
 msgstr "Ҳамаи нақшаҳо"
 
-#: ui/main.qml:115
+#: ui/main.qml:113
 #, kde-format
 msgid "Light Schemes"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:114
 #, kde-format
 msgid "Dark Schemes"
 msgstr ""
 
-#: ui/main.qml:142
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Аз файл насб кардан..."
 
-#: ui/main.qml:147
+#: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:194
+#: ui/main.qml:192
 #, kde-format
 msgid "Window Title"
 msgstr "Сарлавҳаи равзана"
 
-#: ui/main.qml:216
+#: ui/main.qml:214
 #, kde-format
 msgid "Window text"
 msgstr "Матни равзана"
 
-#: ui/main.qml:223
+#: ui/main.qml:221
 #, kde-format
 msgid "Button"
 msgstr "Тугма"
 
-#: ui/main.qml:261
+#: ui/main.qml:259
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "пайванд"
 
-#: ui/main.qml:263
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "кушода"
 
-#: ui/main.qml:270
+#: ui/main.qml:268
 #, kde-format
 msgid "Normal text"
 msgstr "Матни муқаррар"
 
-#: ui/main.qml:278
+#: ui/main.qml:276
 #, kde-format
 msgid "Highlighted text"
 msgstr ""
 
-#: ui/main.qml:285
+#: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
 msgstr ""
 
-#: ui/main.qml:303
+#: ui/main.qml:301
 #, fuzzy, kde-format
 #| msgid "Open Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Кушодани нақшаи ранг"
 
-#: ui/main.qml:309
+#: ui/main.qml:307
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Тоза кардани нақшаи ранг"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Барқарор кардани нақшаи ранг"
 
-#: ui/main.qml:360
+#: ui/main.qml:358
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Кушодани нақшаи ранг"
 
-#: ui/main.qml:362
+#: ui/main.qml:360
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

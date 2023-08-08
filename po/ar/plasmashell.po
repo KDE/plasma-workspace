@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-08 02:05+0000\n"
 "PO-Revision-Date: 2023-07-06 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,25 +34,31 @@ msgstr "safa1996alfulaij@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "اضبط ملحقة إجراءات الفأرة"
 
-#: desktopview.cpp:203
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1 Development Build"
-msgstr "بلازما %1 إصدارة تطويرية"
-
-#: desktopview.cpp:205
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1 Beta Build"
-msgstr "بلازما %1 بيتا"
-
-#: desktopview.cpp:207
-#, kde-format
-msgctxt "@label %1 version string"
-msgid "Plasma %1"
+#: desktopview.cpp:213 desktopview.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
 msgstr "بلازما %1"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:228
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "بلازما %1 بيتا"
+
+#: desktopview.cpp:231
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr "بلازما %1 بيتا"
+
+#: desktopview.cpp:241
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -301,6 +307,10 @@ msgstr "عدد اللوحات"
 #, kde-format
 msgid "Counts the panels"
 msgstr "يعد عدد اللوحات"
+
+#~ msgctxt "@label %1 version string"
+#~ msgid "Plasma %1 Development Build"
+#~ msgstr "بلازما %1 إصدارة تطويرية"
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "

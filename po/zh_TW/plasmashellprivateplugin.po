@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-02-19 06:54+0900\n"
+"PO-Revision-Date: 2023-08-07 23:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -189,115 +189,112 @@ msgstr "安裝失敗"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "無障礙"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "應用程式啟動器"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "天文學"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "日期與時間"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "開發工具"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "教育"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "環境與天氣"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "示例"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "檔案系統"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Kisaragi Hiu"
+msgstr "娛樂與遊戲"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "圖形"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "語言"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "地圖"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "其他"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "多媒體"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "線上服務"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "生產性"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "系統資訊"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "工具程式"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "視窗與工作"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "剪貼簿"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:133
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "工作"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:149
 #, kde-format
