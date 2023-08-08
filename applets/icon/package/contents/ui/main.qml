@@ -8,12 +8,11 @@
 */
 
 import QtQuick
-import Qt5Compat.GraphicalEffects
 
 import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
@@ -123,51 +122,20 @@ PlasmoidItem {
             }
         }
 
-        Rectangle {
-            id: fallbackRectangleBackground
-            visible: GraphicsInfo.api === GraphicsInfo.Software && !constrained
-            anchors {
-                fill: iconLabel
-                margins: -Kirigami.Units.smallSpacing
-            }
-
-            color: "black"
-            radius: Kirigami.Units.smallSpacing
-            opacity: 0.45
-        }
-
-        PlasmaComponents3.Label {
+        WorkspaceComponents.ShadowedLabel {
             id: iconLabel
-            text: Plasmoid.title
-            
+
             anchors {
                 left: parent.left
                 bottom: parent.bottom
                 right: parent.right
             }
-            
+
+            text: Plasmoid.title
             horizontalAlignment: Text.AlignHCenter
-            visible: GraphicsInfo.api === GraphicsInfo.Software && !constrained
             maximumLineCount: 2
-            elide: Text.ElideRight
-            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            textFormat: Text.PlainText
-            
-            color: "white"
-            
-            layer.enabled: GraphicsInfo.api === GraphicsInfo.OpenGL && !constrained
-            layer.effect: DropShadow {
-                horizontalOffset: 1
-                verticalOffset: 1
 
-                radius: 4.0
-                samples: radius * 2 + 1
-                spread: 0.35
-                color: "black"
-
-                visible: GraphicsInfo.api === GraphicsInfo.OpenGL && !constrained
-            }
-            
+            visible: !root.constrained
         }
 
         PlasmaCore.ToolTipArea {
