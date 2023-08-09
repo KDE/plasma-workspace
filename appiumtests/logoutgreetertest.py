@@ -30,7 +30,7 @@ class LogoutGreeterTests(unittest.TestCase):
         self.assertEqual(self.proc.returncode != None, True)
         try:
             self.proc.terminate(timeout=5)
-        except TimeoutExpired:
+        except subprocess.TimeoutExpired:
             self.proc.kill()
         if not self._outcome.result.wasSuccessful():
             self.driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.id()))
