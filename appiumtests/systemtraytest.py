@@ -4,7 +4,6 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
-import fcntl
 import os
 from subprocess import Popen, PIPE
 import unittest
@@ -120,9 +119,9 @@ class SystemTrayTests(unittest.TestCase):
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
         xembedsniproxy: Popen[bytes] = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
-        print(f"xembedsniproxy PID: {xembedsniproxy.pid}")
         if not xembedsniproxy.stderr or xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
+        print(f"xembedsniproxy PID: {xembedsniproxy.pid}")
 
         title: str = f"XEmbed Status Icon Test {date.today().strftime('%Y%m%d')}"
         xembed_tray_icon: XEmbedTrayIcon = XEmbedTrayIcon(title)
@@ -140,26 +139,21 @@ class SystemTrayTests(unittest.TestCase):
         # Now test clickable
         xembed_icon_item.click()
 
-        fd: int = xembedsniproxy.stderr.fileno()
-        fl: int = fcntl.fcntl(fd, fcntl.F_GETFL)
-        fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
-
-        count: int = 0
         success: bool = False
-        while count < 10:
-            line: bytes | None = xembedsniproxy.stderr.read()
-            if not line:
+        for _ in range(10):
+            if xembedsniproxy.stderr.readable():
+                stderr = xembedsniproxy.stderr.readline()
+                print(stderr)
+            else:
+                print("Retrying...")
                 xembed_icon_item.click()
                 sleep(1)
-                count += 1
                 continue
 
-            line_str: str = line.decode(encoding="utf-8").strip()
+            line_str: str = stderr.decode(encoding="utf-8").strip()
             if "Received click" in line_str:
                 success = True
                 break
-
-            count += 1
 
         xembedsniproxy.terminate()
         xembed_tray_icon.quit()
