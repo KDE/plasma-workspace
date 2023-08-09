@@ -9,19 +9,20 @@ from subprocess import Popen, PIPE
 import unittest
 from datetime import date
 from time import sleep
-from typing import Any
+from typing import Any, Final
 import threading
-import time
 
 import gi
 
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gtk
+from gi.repository import Gtk, GLib, Gio
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+KDE_VERSION: Final = 6
 
 
 class XEmbedTrayIcon(threading.Thread):
@@ -82,16 +83,26 @@ class SystemTrayTests(unittest.TestCase):
         cls.driver.implicitly_wait = 10
 
     def setUp(self) -> None:
-        self.kded = Popen(['kded6'])
+        self.kded = Popen([f"kded{KDE_VERSION}"])
+        # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        SERVICE_NAME: Final = "org.freedesktop.DBus"
+        OBJECT_PATH: Final = "/"
+        INTERFACE_NAME: Final = SERVICE_NAME
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(SERVICE_NAME, OBJECT_PATH, INTERFACE_NAME, "NameHasOwner")
+        message.set_body(GLib.Variant("(s)", [f"org.kde.kded{KDE_VERSION}"]))
         for _ in range(5):
-            proc = Popen(['dbus-send', '--print-reply=literal', '--dest=org.freedesktop.DBus',
-                          '/org/freedesktop/DBus', 'org.freedesktop.DBus.NameHasOwner', 'string:org.kde.kded6'], stdout=PIPE)
-            out, err = proc.communicate()
-            if 'boolean true' in str(out):
+            reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+
+            if reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean():
                 break
             print(f"waiting for kded to appear on the dbus session")
-            time.sleep(1)
-        Popen(['dbus-send', '--print-reply', '--dest=org.kde.kded6', '/kded', 'org.kde.kded6.loadModule', 'string:statusnotifierwatcher'])
+            sleep(1)
+
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule",
+                                                         GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"),
+                                                         Gio.DBusSendMessageFlags.NONE, 1000)
+        self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "Module is not loaded")
 
     def tearDown(self) -> None:
         """
