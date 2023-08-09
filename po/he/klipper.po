@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -576,39 +576,39 @@ msgstr "התחל"
 msgid "Do Not Start"
 msgstr "אל תתחיל"
 
-#: klipper.cpp:938
+#: klipper.cpp:937
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "בר קוד נייד"
 
-#: klipper.cpp:985
+#: klipper.cpp:984
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "האים באמת למחוק את כל היסטורית לוח העריכה?"
 
-#: klipper.cpp:986
+#: klipper.cpp:985
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&נקה את היסטוריית לוח העריכה"
 
-#: klipper.cpp:1002 klipper.cpp:1011
+#: klipper.cpp:1001 klipper.cpp:1010
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח העריכה"
 
-#: klipper.cpp:1028
+#: klipper.cpp:1027
 #, kde-format
 msgid "up"
 msgstr "למעלה"
 
-#: klipper.cpp:1035
+#: klipper.cpp:1034
 #, kde-format
 msgid "current"
 msgstr "נוכחי"
 
-#: klipper.cpp:1042
+#: klipper.cpp:1041
 #, kde-format
 msgid "down"
 msgstr "למטה"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2021-06-08 22:29-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -27,45 +27,46 @@ msgstr "ਤੰਗ ਨਾ ਕਰੋ ਨੂੰ ਬਦਲੋ"
 msgid "Other Applications"
 msgstr "ਹੋਰ ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ui/ApplicationConfiguration.qml:64
+#: ui/ApplicationConfiguration.qml:91
 #, kde-format
 msgid "Show popups"
 msgstr "ਪੋਪਅੱਪ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:78
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਢੰਗ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:102
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid "Show notification badges"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬਿੱਲੇ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:123
+#: ui/ApplicationConfiguration.qml:178
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
+msgstr "…ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
+
+#: ui/ApplicationConfiguration.qml:204
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
-"basis."
+"basis"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
-msgid "Configure events:"
-msgstr "…ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
-
-#: ui/ApplicationConfiguration.qml:227
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:236
+#: ui/ApplicationConfiguration.qml:300
 #, kde-format
 msgid "Play a sound"
 msgstr ""
@@ -250,31 +251,32 @@ msgstr "…ਸੰਰਚਨਾ"
 msgid "Popup Position"
 msgstr "ਪੌਪਅੱਪ ਸਥਿਤੀ"
 
-#: ui/SourcesPage.qml:18
+#: ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
 
-#: ui/SourcesPage.qml:92
+#: ui/SourcesPage.qml:99
 #, kde-format
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:100
 #, kde-format
 msgid "System Services"
 msgstr "ਸਿਸਟਮ ਸੇਵਾਵਾਂ"
 
-#: ui/SourcesPage.qml:131
-#, kde-format
-msgid "No application or event matches your search term."
+#: ui/SourcesPage.qml:138
+#, fuzzy, kde-format
+#| msgid "No application or event matches your search term."
+msgid "No application or event matches your search term"
 msgstr "ਤੁਹਾਡੇ ਖੋਜ ਸ਼ਬਦ ਨਾਲ ਮਿਲਦੀ ਕੋਈ ਐਪਲੀਕੇਸ਼ਨ ਜਾਂ ਈਵੈਂਟ ਹੈ"
 
-#: ui/SourcesPage.qml:151
+#: ui/SourcesPage.qml:161
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
-"and behavior."
+"and behavior"
 msgstr ""
 
 #~ msgid "Configure Notifications"

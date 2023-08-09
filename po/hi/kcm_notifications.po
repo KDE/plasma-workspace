@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2021-08-08 23:06+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -27,46 +27,50 @@ msgstr "\"परेशान न करें\" को टॉगल करें
 msgid "Other Applications"
 msgstr "अन्य अनुप्रयोग"
 
-#: ui/ApplicationConfiguration.qml:64
+#: ui/ApplicationConfiguration.qml:91
 #, kde-format
 msgid "Show popups"
 msgstr "पॉपअप दिखाएँ"
 
-#: ui/ApplicationConfiguration.qml:78
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "\"परेशान न करें को\" मोड में दिखाएँ"
 
-#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "इतिहास में दिखाएँ"
 
-#: ui/ApplicationConfiguration.qml:102
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid "Show notification badges"
 msgstr "सूचना के चिन्ह दिखाएं"
 
-#: ui/ApplicationConfiguration.qml:123
-#, kde-format
+#: ui/ApplicationConfiguration.qml:178
+#, fuzzy, kde-format
+#| msgid "Configure Events…"
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
+msgstr "कार्यक्रम विन्यस्त करें"
+
+#: ui/ApplicationConfiguration.qml:204
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not support configuring notifications on a per-"
+#| "event basis."
 msgid ""
 "This application does not support configuring notifications on a per-event "
-"basis."
+"basis"
 msgstr ""
 "यह अनुप्रयोग एक-एक घटना के आधार पर सूचनाओं को विन्यस्त करने का समर्थन नहीं करता है।"
 
-#: ui/ApplicationConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
-msgid "Configure events:"
-msgstr "कार्यक्रम विन्यस्त करें"
-
-#: ui/ApplicationConfiguration.qml:227
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:236
+#: ui/ApplicationConfiguration.qml:300
 #, kde-format
 msgid "Play a sound"
 msgstr ""
@@ -253,31 +257,35 @@ msgstr "विन्यस्त करें..."
 msgid "Popup Position"
 msgstr "पॉपअप स्थिति"
 
-#: ui/SourcesPage.qml:18
+#: ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
 msgstr "अनुप्रयोग सेट्टिंग"
 
-#: ui/SourcesPage.qml:92
+#: ui/SourcesPage.qml:99
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:100
 #, kde-format
 msgid "System Services"
 msgstr "तंत्र सेवाएँ"
 
-#: ui/SourcesPage.qml:131
-#, kde-format
-msgid "No application or event matches your search term."
+#: ui/SourcesPage.qml:138
+#, fuzzy, kde-format
+#| msgid "No application or event matches your search term."
+msgid "No application or event matches your search term"
 msgstr "कोई भी अनुप्रयोग या घटना आपके खोज शब्द से मेल नहीं खाता।"
 
-#: ui/SourcesPage.qml:151
-#, kde-format
+#: ui/SourcesPage.qml:161
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select an application from the list to configure its notification "
+#| "settings and behavior."
 msgid ""
 "Select an application from the list to configure its notification settings "
-"and behavior."
+"and behavior"
 msgstr ""
 "इसकी सूचना सेटिंग्स और व्यवहार को विन्यस्त करने के लिए सूची से किसी अनुप्रयोग का चयन करें।"
 

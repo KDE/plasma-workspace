@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-01-26 11:00+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -591,37 +591,37 @@ msgstr "Automatisch starten"
 msgid "Do Not Start"
 msgstr "Nicht automatisch starten"
 
-#: klipper.cpp:938
+#: klipper.cpp:937
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobiler Strichcode"
 
-#: klipper.cpp:985
+#: klipper.cpp:984
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Möchten Sie wirklich den gesamten Verlauf der Zwischenablage löschen?"
 
-#: klipper.cpp:986
+#: klipper.cpp:985
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bisherigen Inhalt der Zwischenablage löschen"
 
-#: klipper.cpp:1002 klipper.cpp:1011
+#: klipper.cpp:1001 klipper.cpp:1010
 #, kde-format
 msgid "Clipboard history"
 msgstr "Verlauf der Zwischenablage"
 
-#: klipper.cpp:1028
+#: klipper.cpp:1027
 #, kde-format
 msgid "up"
 msgstr "nach oben"
 
-#: klipper.cpp:1035
+#: klipper.cpp:1034
 #, kde-format
 msgid "current"
 msgstr "aktuelle"
 
-#: klipper.cpp:1042
+#: klipper.cpp:1041
 #, kde-format
 msgid "down"
 msgstr "nach unten"

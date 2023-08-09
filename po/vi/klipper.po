@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -583,37 +583,37 @@ msgstr "Chạy"
 msgid "Do Not Start"
 msgstr "Không chạy"
 
-#: klipper.cpp:938
+#: klipper.cpp:937
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mã vạch điện thoại"
 
-#: klipper.cpp:985
+#: klipper.cpp:984
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Bạn có thực sự muốn làm trống và xoá toàn bộ lịch sử bảng nháp?"
 
-#: klipper.cpp:986
+#: klipper.cpp:985
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Xoá lịch sử bảng nháp"
 
-#: klipper.cpp:1002 klipper.cpp:1011
+#: klipper.cpp:1001 klipper.cpp:1010
 #, kde-format
 msgid "Clipboard history"
 msgstr "Lịch sử bảng nháp"
 
-#: klipper.cpp:1028
+#: klipper.cpp:1027
 #, kde-format
 msgid "up"
 msgstr "lên"
 
-#: klipper.cpp:1035
+#: klipper.cpp:1034
 #, kde-format
 msgid "current"
 msgstr "hiện tại"
 
-#: klipper.cpp:1042
+#: klipper.cpp:1041
 #, kde-format
 msgid "down"
 msgstr "xuống"

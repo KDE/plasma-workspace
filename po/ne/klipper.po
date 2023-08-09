@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2007-11-01 18:39+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -577,40 +577,40 @@ msgstr "सुरु गर्नुहोस्"
 msgid "Do Not Start"
 msgstr "सुरु नगर्नुहोस्"
 
-#: klipper.cpp:938
+#: klipper.cpp:937
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:985
+#: klipper.cpp:984
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "क्लिपबोर्ड इतिहास खाली गर्नुहोस्"
 
-#: klipper.cpp:986
+#: klipper.cpp:985
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास खाली गर्नुहोस्"
 
-#: klipper.cpp:1002 klipper.cpp:1011
+#: klipper.cpp:1001 klipper.cpp:1010
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास साइज:"
 
-#: klipper.cpp:1028
+#: klipper.cpp:1027
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:1035
+#: klipper.cpp:1034
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:1042
+#: klipper.cpp:1041
 #, kde-format
 msgid "down"
 msgstr ""

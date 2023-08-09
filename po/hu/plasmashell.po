@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:05+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2022-02-14 09:24+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -60,32 +60,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:97
+#: main.cpp:110
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma felület"
 
-#: main.cpp:109
+#: main.cpp:122
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML Javascript hibakereső bekapcsolása"
 
-#: main.cpp:112
+#: main.cpp:125
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ne indítsa újra a plasma-shell folyamatot összeomlás után"
 
-#: main.cpp:115
+#: main.cpp:128
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "A megadott bővítmény betöltésének kényszerítése"
 
-#: main.cpp:119
+#: main.cpp:132
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Meglévő példány cseréje"
 
-#: main.cpp:122
+#: main.cpp:135
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -94,22 +94,22 @@ msgstr ""
 "Bekapcsolja a teszt módot, és megadja az elrendezést leíró JavaScript fájlt "
 "a tesztkörnyezet beállításához"
 
-#: main.cpp:123
+#: main.cpp:136
 #, kde-format
 msgid "file"
 msgstr "fájl"
 
-#: main.cpp:127
+#: main.cpp:140
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Felsorolja a felhasználói visszajelzés lehetőségeit"
 
-#: main.cpp:209
+#: main.cpp:222
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Nem sikerült elindítani a Plasmát"
 
-#: main.cpp:210
+#: main.cpp:223
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

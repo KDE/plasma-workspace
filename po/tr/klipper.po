@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-07-19 14:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -584,37 +584,37 @@ msgstr "Başlat"
 msgid "Do Not Start"
 msgstr "Başlatma"
 
-#: klipper.cpp:938
+#: klipper.cpp:937
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Taşınabilir Barkod"
 
-#: klipper.cpp:985
+#: klipper.cpp:984
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Tüm pano geçmişini temizleyip silmeyi gerçekten istiyor musunuz?"
 
-#: klipper.cpp:986
+#: klipper.cpp:985
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Pano Geçmişini Temizle"
 
-#: klipper.cpp:1002 klipper.cpp:1011
+#: klipper.cpp:1001 klipper.cpp:1010
 #, kde-format
 msgid "Clipboard history"
 msgstr "Pano geçmişi"
 
-#: klipper.cpp:1028
+#: klipper.cpp:1027
 #, kde-format
 msgid "up"
 msgstr "üstteki"
 
-#: klipper.cpp:1035
+#: klipper.cpp:1034
 #, kde-format
 msgid "current"
 msgstr "geçerli"
 
-#: klipper.cpp:1042
+#: klipper.cpp:1041
 #, kde-format
 msgid "down"
 msgstr "alttaki"

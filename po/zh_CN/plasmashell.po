@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:05+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-08-02 12:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -64,54 +64,54 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "要报告程序缺陷，请访问 bugs.kde.org 网站"
 
-#: main.cpp:97
+#: main.cpp:110
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma 外壳"
 
-#: main.cpp:109
+#: main.cpp:122
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "启用 QML Javascript 调试器"
 
-#: main.cpp:112
+#: main.cpp:125
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "plasma-shell 崩溃后不自动重启"
 
-#: main.cpp:115
+#: main.cpp:128
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "强制加载指定的外壳插件"
 
-#: main.cpp:119
+#: main.cpp:132
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "替换现有实例"
 
-#: main.cpp:122
+#: main.cpp:135
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr "启用测试模式并指定设置测试环境的布局 javascript 文件"
 
-#: main.cpp:123
+#: main.cpp:136
 #, kde-format
 msgid "file"
 msgstr "文件"
 
-#: main.cpp:127
+#: main.cpp:140
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "列出用户反馈的可用选项"
 
-#: main.cpp:209
+#: main.cpp:222
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma 启动失败"
 
-#: main.cpp:210
+#: main.cpp:223
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

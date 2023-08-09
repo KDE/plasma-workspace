@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:05+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-07-06 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -64,54 +64,54 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "رجاءً استخدم bugs.kde.org للإبلاغ عن العلل"
 
-#: main.cpp:97
+#: main.cpp:110
 #, kde-format
 msgid "Plasma Shell"
 msgstr "صدفة بلازما"
 
-#: main.cpp:109
+#: main.cpp:122
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "فعّل منقّح جافاسكربت QML"
 
-#: main.cpp:112
+#: main.cpp:125
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "لا تعيد تشغيل صدفة بلازما آليًّا بعد أن تنهار"
 
-#: main.cpp:115
+#: main.cpp:128
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "أجبِر تحميل ملحقة الصّدفة المعطاة"
 
-#: main.cpp:119
+#: main.cpp:132
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "استبدل نسخة موجودة"
 
-#: main.cpp:122
+#: main.cpp:135
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr "يفعّل وضع الاختبار ويحدّد ملفّ جافاسكربت المخطّطي لضبطه للبيئة الاختباريّة"
 
-#: main.cpp:123
+#: main.cpp:136
 #, kde-format
 msgid "file"
 msgstr "الملفّ"
 
-#: main.cpp:127
+#: main.cpp:140
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "يسرد الخيارات المتاحة لمشاركة بياناتك"
 
-#: main.cpp:209
+#: main.cpp:222
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "فشل بدء بلازما"
 
-#: main.cpp:210
+#: main.cpp:223
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

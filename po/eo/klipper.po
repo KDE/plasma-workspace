@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-19 03:24+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-07-21 18:55+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -580,37 +580,37 @@ msgstr "Lanĉi"
 msgid "Do Not Start"
 msgstr "Ne lanĉi"
 
-#: klipper.cpp:938
+#: klipper.cpp:937
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Poŝtelefono Strekokodo"
 
-#: klipper.cpp:985
+#: klipper.cpp:984
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ĉu vi vere volas viŝi kaj forigi la kompletan poŝohistorion?"
 
-#: klipper.cpp:986
+#: klipper.cpp:985
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Forviŝi Poŝohistorion"
 
-#: klipper.cpp:1002 klipper.cpp:1011
+#: klipper.cpp:1001 klipper.cpp:1010
 #, kde-format
 msgid "Clipboard history"
 msgstr "Poŝa historio"
 
-#: klipper.cpp:1028
+#: klipper.cpp:1027
 #, kde-format
 msgid "up"
 msgstr "supra"
 
-#: klipper.cpp:1035
+#: klipper.cpp:1034
 #, kde-format
 msgid "current"
 msgstr "aktuala"
 
-#: klipper.cpp:1042
+#: klipper.cpp:1041
 #, kde-format
 msgid "down"
 msgstr "malsupra"

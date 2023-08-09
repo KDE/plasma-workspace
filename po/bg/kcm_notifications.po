@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-08-02 21:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -27,45 +27,50 @@ msgstr "Превключване на \"Не безпокойте\""
 msgid "Other Applications"
 msgstr "Други програми"
 
-#: ui/ApplicationConfiguration.qml:64
+#: ui/ApplicationConfiguration.qml:91
 #, kde-format
 msgid "Show popups"
 msgstr "Показване на изскачащи прозорци"
 
-#: ui/ApplicationConfiguration.qml:78
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Показване в режим \"не безпокойте\""
 
-#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Показване в историята"
 
-#: ui/ApplicationConfiguration.qml:102
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid "Show notification badges"
 msgstr "Показване на значки на известия"
 
-#: ui/ApplicationConfiguration.qml:123
-#, kde-format
+#: ui/ApplicationConfiguration.qml:178
+#, fuzzy, kde-format
+#| msgid "Configure events:"
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
+msgstr "Конфигуриране на събития:"
+
+#: ui/ApplicationConfiguration.qml:204
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not support configuring notifications on a per-"
+#| "event basis."
 msgid ""
 "This application does not support configuring notifications on a per-event "
-"basis."
+"basis"
 msgstr ""
 "Това приложение не поддържа конфигуриране на известия въз основа на събитие."
 
-#: ui/ApplicationConfiguration.qml:131
-#, kde-format
-msgid "Configure events:"
-msgstr "Конфигуриране на събития:"
-
-#: ui/ApplicationConfiguration.qml:227
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Показване на съобщение в изскачащ прозорец"
 
-#: ui/ApplicationConfiguration.qml:236
+#: ui/ApplicationConfiguration.qml:300
 #, kde-format
 msgid "Play a sound"
 msgstr "Изпълнение на звук"
@@ -243,32 +248,36 @@ msgstr "Конфигуриране…"
 msgid "Popup Position"
 msgstr "Изскачаща позиция"
 
-#: ui/SourcesPage.qml:18
+#: ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
 msgstr "Настройки на приложението"
 
-#: ui/SourcesPage.qml:92
+#: ui/SourcesPage.qml:99
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:100
 #, kde-format
 msgid "System Services"
 msgstr "Системни услуги"
 
-#: ui/SourcesPage.qml:131
-#, kde-format
-msgid "No application or event matches your search term."
+#: ui/SourcesPage.qml:138
+#, fuzzy, kde-format
+#| msgid "No application or event matches your search term."
+msgid "No application or event matches your search term"
 msgstr ""
 "Нито едно приложение или събитие не съответства на думата ви за търсене."
 
-#: ui/SourcesPage.qml:151
-#, kde-format
+#: ui/SourcesPage.qml:161
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select an application from the list to configure its notification "
+#| "settings and behavior."
 msgid ""
 "Select an application from the list to configure its notification settings "
-"and behavior."
+"and behavior"
 msgstr ""
 "Изберете приложение от списъка, за да конфигурирате настройките му за "
 "известяване и поведение."

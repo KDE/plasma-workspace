@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
 "PO-Revision-Date: 2023-08-07 23:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -30,44 +30,49 @@ msgstr "切換請勿打擾"
 msgid "Other Applications"
 msgstr "其他應用程式"
 
-#: ui/ApplicationConfiguration.qml:64
+#: ui/ApplicationConfiguration.qml:91
 #, kde-format
 msgid "Show popups"
 msgstr "顯示彈出通知"
 
-#: ui/ApplicationConfiguration.qml:78
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "在「請勿打擾」模式中顯示"
 
-#: ui/ApplicationConfiguration.qml:91 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "在歷史記錄中顯示"
 
-#: ui/ApplicationConfiguration.qml:102
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid "Show notification badges"
 msgstr "顯示通知徽章"
 
-#: ui/ApplicationConfiguration.qml:123
-#, kde-format
-msgid ""
-"This application does not support configuring notifications on a per-event "
-"basis."
-msgstr "此應用程式不支援對每個事件個別設定通知"
-
-#: ui/ApplicationConfiguration.qml:131
-#, kde-format
-msgid "Configure events:"
+#: ui/ApplicationConfiguration.qml:178
+#, fuzzy, kde-format
+#| msgid "Configure events:"
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
 msgstr "設定事件："
 
-#: ui/ApplicationConfiguration.qml:227
+#: ui/ApplicationConfiguration.qml:204
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not support configuring notifications on a per-"
+#| "event basis."
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis"
+msgstr "此應用程式不支援對每個事件個別設定通知"
+
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "在彈出視窗裡顯示訊息"
 
-#: ui/ApplicationConfiguration.qml:236
+#: ui/ApplicationConfiguration.qml:300
 #, kde-format
 msgid "Play a sound"
 msgstr "播放音效"
@@ -243,31 +248,35 @@ msgstr "設定…"
 msgid "Popup Position"
 msgstr "彈出通知位置"
 
-#: ui/SourcesPage.qml:18
+#: ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
 msgstr "應用程式設定"
 
-#: ui/SourcesPage.qml:92
+#: ui/SourcesPage.qml:99
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:100
 #, kde-format
 msgid "System Services"
 msgstr "系統服務"
 
-#: ui/SourcesPage.qml:131
-#, kde-format
-msgid "No application or event matches your search term."
+#: ui/SourcesPage.qml:138
+#, fuzzy, kde-format
+#| msgid "No application or event matches your search term."
+msgid "No application or event matches your search term"
 msgstr "沒有應用程式或事件符合您的搜尋字詞。"
 
-#: ui/SourcesPage.qml:151
-#, kde-format
+#: ui/SourcesPage.qml:161
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select an application from the list to configure its notification "
+#| "settings and behavior."
 msgid ""
 "Select an application from the list to configure its notification settings "
-"and behavior."
+"and behavior"
 msgstr "從列表選取應用程式，設定其通知設定及行為。"
 
 #~ msgid "Configure Notifications"

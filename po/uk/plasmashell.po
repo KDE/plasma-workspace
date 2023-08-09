@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:05+0000\n"
-"PO-Revision-Date: 2023-07-05 21:06+0300\n"
+"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"PO-Revision-Date: 2023-08-08 09:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -36,28 +36,22 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Налаштувати додаток дій мишею"
 
 #: desktopview.cpp:213 desktopview.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Плазма %1"
+msgstr "Плазма KDE %1"
 
 #: desktopview.cpp:228
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1 Beta Build"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Збірка Плазми %1 Beta"
+msgstr "Плазма KDE %1 Beta"
 
 #: desktopview.cpp:231
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1 Beta Build"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr "Збірка Плазми %1 Beta"
+msgstr "Плазма KDE %1 Beta %2"
 
 #: desktopview.cpp:241
 #, kde-format
@@ -65,32 +59,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Відвідайте bugs.kde.org, щоб повідомити про вади"
 
-#: main.cpp:97
+#: main.cpp:110
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Оболонка Плазми"
 
-#: main.cpp:109
+#: main.cpp:122
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Увімкнути засіб діагностики Javascript QML"
 
-#: main.cpp:112
+#: main.cpp:125
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не перезапускати оболонку Плазми автоматично після аварії"
 
-#: main.cpp:115
+#: main.cpp:128
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Примусово завантажити вказаний додаток оболонки"
 
-#: main.cpp:119
+#: main.cpp:132
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Замінити наявний екземпляр"
 
-#: main.cpp:122
+#: main.cpp:135
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -99,22 +93,22 @@ msgstr ""
 "Вмикає режим тестування і вказує файл компонування у форматі javascript для "
 "налаштовування тестового середовища"
 
-#: main.cpp:123
+#: main.cpp:136
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:127
+#: main.cpp:140
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показати доступні варіанти для відгуків користувача"
 
-#: main.cpp:209
+#: main.cpp:222
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Не вдалося запустити Плазму"
 
-#: main.cpp:210
+#: main.cpp:223
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
