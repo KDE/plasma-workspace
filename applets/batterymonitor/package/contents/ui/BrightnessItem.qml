@@ -14,11 +14,17 @@ import org.kde.kirigami 2.20 as Kirigami
 PlasmaComponents3.ItemDelegate {
     id: root
 
+    enum Type {
+        Screen,
+        Keyboard
+    }
+
     property alias slider: control
     property alias value: control.value
     property alias maximumValue: control.to
     property alias stepSize: control.stepSize
     property alias showPercentage: percent.visible
+    required property /*BrightnessItem.Type*/ int type
 
     readonly property real percentage: Math.round(100 * value / maximumValue)
 
@@ -72,7 +78,7 @@ PlasmaComponents3.ItemDelegate {
                 activeFocusOnTab: false
                 // Don't allow the slider to turn off the screen
                 // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-                from: to > 100 ? 1 : 0
+                from: root.type == BrightnessItem.Type.Screen ? 1 : 0
                 stepSize: 1
 
                 Accessible.name: root.text

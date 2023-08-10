@@ -112,6 +112,7 @@ PlasmaExtras.Representation {
 
                 icon.name: "video-display-brightness"
                 text: i18n("Display Brightness")
+                type: BrightnessItem.Type.Screen
                 visible: dialog.isBrightnessAvailable
                 value: batterymonitor.screenBrightness
                 maximumValue: batterymonitor.maximumScreenBrightness
@@ -141,6 +142,7 @@ PlasmaExtras.Representation {
 
                 icon.name: "input-keyboard-brightness"
                 text: i18n("Keyboard Brightness")
+                type: BrightnessItem.Type.Keyboard
                 showPercentage: false
                 value: batterymonitor.keyboardBrightness
                 maximumValue: batterymonitor.maximumKeyboardBrightness
