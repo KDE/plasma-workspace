@@ -63,6 +63,8 @@ int main(int argc, char *argv[])
     if (qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET")) {
         qputenv("QT_WAYLAND_SHELL_INTEGRATION", "plasma-shell");
         usingPlasmaShellIntegration = true;
+    } else if (!qEnvironmentVariableIsSet("QT_XCB_GL_INTEGRATION")) {
+        qputenv("QT_XCB_GL_INTEGRATION", "xcb_egl");
     }
 #endif
 
