@@ -155,6 +155,25 @@ private:
         match.setData(url);
         match.setUrls({QUrl::fromLocalFile(service->entryPath())});
 
+        QString urlPath = resolvedArgs(exec);
+        if (urlPath.isEmpty()) {
+            // Otherwise we might filter out broken services. Rather than hiding them, it is better to show an error message on launch (as done by KIO's jobs)
+            urlPath = exec;
+        }
+        match.setId(QStringLiteral("exec://") + urlPath);
+        if (!service->genericName().isEmpty() && service->genericName() != name) {
+            match.setSubtext(service->genericName());
+        } else if (!service->comment().isEmpty()) {
+            match.setSubtext(service->comment());
+        }
+
+        if (!service->icon().isEmpty()) {
+            match.setIconName(service->icon());
+        }
+    }
+
+    QString resolvedArgs(const QString &exec)
+    {
         const KService syntheticService(QString(), exec, QString());
         KIO::DesktopExecParser parser(syntheticService, {});
         QStringList resultingArgs = parser.resultingArguments();
@@ -172,6 +191,7 @@ private:
 
             // Now parse it again to resolve the path.
             resultingArgs = KIO::DesktopExecParser(KService(QString(), KShell::joinArgs(resultingArgs), QString()), {}).resultingArguments();
+            return resultingArgs.join(QLatin1Char(' '));
         }
 
         // Remove special arguments that have no real impact on the application.
@@ -188,17 +208,7 @@ private:
                 }
             }
         }
-
-        match.setId(QStringLiteral("exec://") + resultingArgs.join(QLatin1Char(' ')));
-        if (!service->genericName().isEmpty() && service->genericName() != name) {
-            match.setSubtext(service->genericName());
-        } else if (!service->comment().isEmpty()) {
-            match.setSubtext(service->comment());
-        }
-
-        if (!service->icon().isEmpty()) {
-            match.setIconName(service->icon());
-        }
+        return resultingArgs.join(QLatin1Char(' '));
     }
 
     void matchNameKeywordAndGenericName()
