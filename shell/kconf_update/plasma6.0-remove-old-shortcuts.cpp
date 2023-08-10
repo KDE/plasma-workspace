@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+    SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
