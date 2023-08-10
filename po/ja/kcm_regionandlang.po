@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 10:11+0000\n"
+"POT-Creation-Date: 2023-08-10 02:27+0000\n"
 "PO-Revision-Date: 2023-04-07 23:31-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -217,14 +217,14 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "この言語の例が見つかりませんでした"
 
-#: kcmregionandlang.cpp:53
+#: kcmregionandlang.cpp:54
 #, kde-format
 msgid ""
 "You can configure the formats used for time, dates, money and other numbers "
 "here."
 msgstr "ここでは、時間、日付、通貨やその他の数値の形式を設定できます。"
 
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:93
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -235,13 +235,13 @@ msgstr ""
 "<command>localectl</command>で利用可能なロケールを見つけることができませんで"
 "した。<link>https://bugs.kde.org</link>でバグを報告してください。"
 
-#: languagelistmodel.cpp:84
+#: languagelistmodel.cpp:86
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:90
+#: languagelistmodel.cpp:92
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "

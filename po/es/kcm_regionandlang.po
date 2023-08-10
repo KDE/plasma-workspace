@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 10:11+0000\n"
+"POT-Creation-Date: 2023-08-10 02:27+0000\n"
 "PO-Revision-Date: 2022-12-27 11:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -219,7 +219,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "No se ha encontrado ningún ejemplo para esta configuración local"
 
-#: kcmregionandlang.cpp:53
+#: kcmregionandlang.cpp:54
 #, kde-format
 msgid ""
 "You can configure the formats used for time, dates, money and other numbers "
@@ -228,7 +228,7 @@ msgstr ""
 "Aquí puede configurar los formatos que se usan para la hora, las fechas, la "
 "moneda y otros números."
 
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:93
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -240,13 +240,13 @@ msgstr ""
 "usando la herramienta <command>localectl</command>. Considere informar de "
 "este fallo en <link>https://bugs.kde.org</link>."
 
-#: languagelistmodel.cpp:84
+#: languagelistmodel.cpp:86
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:90
+#: languagelistmodel.cpp:92
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "

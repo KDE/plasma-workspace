@@ -130,7 +130,7 @@
 ><para
 ><guilabel
 >Skugga sorterad kolumn i listor</guilabel
->: Om markerad, använder listor med flera kolumner en något annorlunda färg för att rita kolumnen vars information används för att sortera objekten i listan. </para
+>: Om aktiverat, använder listor med flera kolumner en något annorlunda färg för att rita kolumnen vars information används för att sortera objekten i listan. </para
 ></listitem>
     <listitem
 ><para

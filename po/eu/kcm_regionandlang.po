@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 10:11+0000\n"
+"POT-Creation-Date: 2023-08-10 02:27+0000\n"
 "PO-Revision-Date: 2022-12-31 23:29+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -222,7 +222,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Ezin izan du tokiko honen adibiderik aurkitu"
 
-#: kcmregionandlang.cpp:53
+#: kcmregionandlang.cpp:54
 #, kde-format
 msgid ""
 "You can configure the formats used for time, dates, money and other numbers "
@@ -231,7 +231,7 @@ msgstr ""
 "Ordu, data, moneta eta beste zenbakietarako formatuak hemen konfigura "
 "ditzakezu."
 
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:93
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -243,13 +243,13 @@ msgstr ""
 "command> tresna erabiliz aurkitu. Mesedez, bete honi buruzko akats txosten "
 "bat <link>https://bugs.kde.org</link> lekuan."
 
-#: languagelistmodel.cpp:84
+#: languagelistmodel.cpp:86
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:90
+#: languagelistmodel.cpp:92
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
