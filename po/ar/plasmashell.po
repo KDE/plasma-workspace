@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"POT-Creation-Date: 2023-08-10 01:59+0000\n"
 "PO-Revision-Date: 2023-07-06 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,12 +34,12 @@ msgstr "safa1996alfulaij@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "اضبط ملحقة إجراءات الفأرة"
 
-#: desktopview.cpp:213 desktopview.cpp:235
+#: desktopview.cpp:224
 #, fuzzy, kde-format
 #| msgctxt "@label %1 version string"
 #| msgid "Plasma %1"
 msgctxt "@label %1 is the Plasma version"
-msgid "KDE Plasma %1"
+msgid "KDE Plasma %1 Dev"
 msgstr "بلازما %1"
 
 #: desktopview.cpp:228
@@ -57,6 +57,14 @@ msgstr "بلازما %1 بيتا"
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "بلازما %1 بيتا"
+
+#: desktopview.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "بلازما %1"
 
 #: desktopview.cpp:241
 #, kde-format

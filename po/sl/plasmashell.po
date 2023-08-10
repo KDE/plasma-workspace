@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"POT-Creation-Date: 2023-08-10 01:59+0000\n"
 "PO-Revision-Date: 2023-07-05 09:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -35,12 +35,12 @@ msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Nastavi vstavek za dejanja miške"
 
-#: desktopview.cpp:213 desktopview.cpp:235
+#: desktopview.cpp:224
 #, fuzzy, kde-format
 #| msgctxt "@label %1 version string"
 #| msgid "Plasma %1"
 msgctxt "@label %1 is the Plasma version"
-msgid "KDE Plasma %1"
+msgid "KDE Plasma %1 Dev"
 msgstr "Plasma %1"
 
 #: desktopview.cpp:228
@@ -58,6 +58,14 @@ msgstr "Plasma %1 Beta Build"
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "Plasma %1 Beta Build"
+
+#: desktopview.cpp:235
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "Plasma %1"
 
 #: desktopview.cpp:241
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"POT-Creation-Date: 2023-08-10 01:59+0000\n"
 "PO-Revision-Date: 2022-12-20 11:31-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -35,11 +35,11 @@ msgstr "alvarenga@kde.org"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurar o plugin de ações do mouse"
 
-#: desktopview.cpp:213 desktopview.cpp:235
+#: desktopview.cpp:224
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
-msgid "KDE Plasma %1"
+msgid "KDE Plasma %1 Dev"
 msgstr "Plasma"
 
 #: desktopview.cpp:228
@@ -54,6 +54,13 @@ msgstr "Plasma"
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr ""
+
+#: desktopview.cpp:235
+#, fuzzy, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "Plasma"
 
 #: desktopview.cpp:241
 #, kde-format

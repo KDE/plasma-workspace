@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-07-29 08:40+0300\n"
+"PO-Revision-Date: 2023-08-09 08:16+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -51,23 +51,19 @@ msgid "Show notification badges"
 msgstr "Показувати пункти сповіщень"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure events:"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Налаштувати події:"
+msgstr "Налаштовування подій"
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
 "Для цієї програми не передбачено підтримки налаштовування сповіщень на "
-"основі даних щодо подій."
+"основі даних щодо подій"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -270,22 +266,18 @@ msgid "System Services"
 msgstr "Служби системи"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Вашому критерію пошуку не відповідає жодна програма або подія."
+msgstr "Вашому критерію пошуку не відповідає жодна програма або подія"
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Виберіть програму зі списку, щоб налаштувати параметри та поведінку для її "
-"сповіщень."
+"сповіщень"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Налаштувати сповіщення"

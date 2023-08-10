@@ -1,5 +1,5 @@
 # Translation for kcm_notifications.po to Euskara/Basque (eu).
-# Copyright (C) 2019-2022 This file is copyright:
+# Copyright (C) 2019-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-07-29 13:48+0200\n"
+"PO-Revision-Date: 2023-08-09 17:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -51,23 +51,19 @@ msgid "Show notification badges"
 msgstr "Erakutsi jakinarazpen txartelak"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure events:"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Konfiguratu gertaerak:"
+msgstr "Konfiguratu gertaerak"
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
 "Aplikazio honek ez du onartzen gertaera bakoitzeko jakinarazpenak "
-"konfiguratzea."
+"konfiguratzea"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -270,23 +266,19 @@ msgid "System Services"
 msgstr "Sistemaren zerbitzuak"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
 msgstr ""
-"Ez dago zuk bilatutako terminoarekin bat datorren aplikazio edo gertaerarik."
+"Ez dago zuk bilatutako terminoarekin bat datorren aplikazio edo gertaerarik"
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Hautatu aplikazio bat zerrendatik bere jakinarazpen ezarpenak eta jokabidea "
-"konfiguratzeko."
+"konfiguratzeko"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Konfiguratu jakinarazpenak"
