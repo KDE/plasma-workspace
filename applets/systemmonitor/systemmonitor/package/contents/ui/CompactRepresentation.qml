@@ -16,8 +16,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.ksysguard.faces 1.0 as Faces
 
-import org.kde.kirigami 2.8 as Kirigami
-
 Control {
     id: chartFace
     Layout.fillWidth: contentItem ? contentItem.Layout.fillWidth : false
