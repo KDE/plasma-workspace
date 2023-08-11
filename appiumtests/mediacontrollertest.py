@@ -7,7 +7,9 @@
 
 # pylint: disable=too-many-arguments
 
-import threading
+import ctypes
+import sys
+from time import sleep
 import unittest
 from os import getcwd, getpid, path
 from typing import Any, Final
@@ -17,6 +19,8 @@ from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+CMAKE_BINARY_DIR: str = ""
 
 
 class Mpris2:
@@ -62,10 +66,10 @@ class Mpris2:
             'Rate': GLib.Variant('d', 1.0),
             'Shuffle': GLib.Variant('b', False),
             'Metadata': GLib.Variant('a{sv}', self.metadata),
-            'Position': GLib.Variant('x', 0),
+            "Position": GLib.Variant('x', 0),
             'MinimumRate': GLib.Variant('d', 1.0),
             'MaximumRate': GLib.Variant('d', 1.0),
-            'Volume': GLib.Variant('d', 1.0),
+            "Volume": GLib.Variant('d', 1.0),
             'CanGoNext': GLib.Variant('b', True),
             'CanGoPrevious': GLib.Variant('b', True),
             'CanPlay': GLib.Variant('b', True),
@@ -74,13 +78,21 @@ class Mpris2:
             'CanControl': GLib.Variant('b', True),
         }
 
-        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SESSION, self.APP_INTERFACE, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired,
-                                                self.on_name_acquired, self.on_name_lost)
+        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SESSION, self.APP_INTERFACE, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired, None, None)
         assert self.__owner_id > 0
 
+        self.__prop_reg_id: int = 0
+        self.__player_reg_id: int = 0
+        self.__base_reg_id: int = 0
+
     def quit(self) -> None:
-        self.stop(self.__connection, self.OBJECT_PATH)
         Gio.bus_unown_name(self.__owner_id)
+        self.__connection.unregister_object(self.__prop_reg_id)
+        self.__prop_reg_id = 0
+        self.__connection.unregister_object(self.__player_reg_id)
+        self.__player_reg_id = 0
+        self.__connection.unregister_object(self.__base_reg_id)
+        self.__base_reg_id = 0
         print("Player exit")
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:
@@ -91,26 +103,21 @@ class Mpris2:
 
         properties_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.freedesktop.DBus.Properties.xml", encoding="utf-8").readlines())
         introspection_data = Gio.DBusNodeInfo.new_for_xml(properties_introspection_xml)
-        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.properties_handle_method_call, None, None)
+        self.__prop_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.properties_handle_method_call, None, None)
+        assert self.__prop_reg_id > 0
 
         player_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8").readlines())
 
         introspection_data = Gio.DBusNodeInfo.new_for_xml(player_introspection_xml)
-        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call, self.player_handle_get_property,
-                                            self.player_handle_set_property)
-        assert reg_id != 0
+        self.__player_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call,
+                                                          self.player_handle_get_property, self.player_handle_set_property)
+        assert self.__player_reg_id != 0
 
         interface_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.mpris.MediaPlayer2.xml", encoding="utf-8").readlines())
         introspection_data = Gio.DBusNodeInfo.new_for_xml(interface_introspection_xml)
-        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call,
-                                            self.interface_handle_get_property, self.interface_handle_set_property)
-        assert reg_id != 0
-
-    def on_name_acquired(self, connection, name, *args) -> None:
-        pass
-
-    def on_name_lost(self, connection, name, *args) -> None:
-        pass
+        self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call,
+                                                        self.interface_handle_get_property, self.interface_handle_set_property)
+        assert self.__base_reg_id != 0
 
     def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
                                       parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
@@ -132,7 +139,7 @@ class Mpris2:
 
             print(f"Get: {interface} {property_name} {ret}")
             # https://bugzilla.gnome.org/show_bug.cgi?id=765603
-            invocation.return_value(GLib.Variant('(v)', ret))
+            invocation.return_value(GLib.Variant('(v)', [ret]))
 
         elif method_name == "GetAll":
             interface: str = parameters[0]
@@ -300,7 +307,7 @@ class Mpris2:
             self.set_playing(False, connection, object_path)
 
         elif method_name == "PlayPause":
-            self.set_playing(self.player_properties["PlaybackStatus"] != "Playing", connection, object_path)
+            self.set_playing(self.player_properties["PlaybackStatus"].get_string() != "Playing", connection, object_path)
 
         elif method_name == "Stop":
             self.stop(connection, object_path)
@@ -311,7 +318,7 @@ class Mpris2:
         elif method_name == "Seek":
             offset: int = parameters[0]
             length: int = int(self.metadata["mpris:length"])
-            position: int = int(self.player_properties["Position"])
+            position: int = self.player_properties["Position"].get_int64()
             assert 0 <= position + offset <= length
             self.player_properties["Position"] = GLib.Variant('x', position + offset)
             changed_properties = GLib.Variant('a{sv}', {
@@ -406,31 +413,6 @@ class Mpris2:
         return True
 
 
-class GlibMainloopThread(threading.Thread):
-    """
-    Runs Glib main loop in another thread
-    """
-
-    def __init__(self) -> None:
-        # Set up DBus loop
-        self.loop = GLib.MainLoop()
-        self.timer = threading.Timer(30, self.loop.quit)
-
-        # Create the thread
-        super(GlibMainloopThread, self).__init__()
-
-    def run(self) -> None:
-        """
-        Method to run the DBus main loop (on a thread)
-        """
-        self.timer.start()
-        self.loop.run()
-
-    def quit(self) -> None:
-        self.timer.cancel()
-        self.loop.quit()
-
-
 class MediaControllerTests(unittest.TestCase):
     """
     Tests for the media controller widget
@@ -438,7 +420,7 @@ class MediaControllerTests(unittest.TestCase):
 
     driver: webdriver.Remote
     mpris_interface: Mpris2 | None
-    loopThread: GlibMainloopThread
+    touch_input_iface: ctypes.CDLL
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -451,12 +433,18 @@ class MediaControllerTests(unittest.TestCase):
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
         cls.driver.implicitly_wait = 10
 
-        cls.loopThread = GlibMainloopThread()
-        cls.loopThread.start()
+        if path.exists(path.join(CMAKE_BINARY_DIR, "libtouchinputhelper.so")):
+            cls.touch_input_iface = ctypes.cdll.LoadLibrary(path.join(CMAKE_BINARY_DIR, "libtouchinputhelper.so"))
+        else:
+            cls.touch_input_iface = ctypes.cdll.LoadLibrary("libtouchinputhelper.so")
+
+        # This also initializes GLib.MainLoop as Qt also uses it
+        # An instance can only have one GLib.MainLoop, so no need to add one manually
+        cls.touch_input_iface.init_application()
 
     @classmethod
     def tearDownClass(cls) -> None:
-        cls.loopThread.quit()
+        cls.touch_input_iface.unload_application()
 
     def setUp(self) -> None:
         self.mpris_interface = Mpris2()
@@ -529,6 +517,100 @@ class MediaControllerTests(unittest.TestCase):
         self.driver.find_element(by=AppiumBy.NAME, value="-15:00")
         self.driver.find_element(by=AppiumBy.NAME, value=', '.join(self.mpris_interface.metadata["xesam:artist"].unpack()))
 
+    def test_touch_gestures(self) -> None:
+        """
+        Tests touch gestures like swipe up/down/left/right to adjust volume/progress
+        @see https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/2438
+        """
+        assert self.mpris_interface
+        wait: WebDriverWait = WebDriverWait(self.driver, 5)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
+
+        # Initialize TasksModel and fake_input
+        self.touch_input_iface.init_task_manager()
+        self.touch_input_iface.init_fake_input()
+
+        self.assertGreater(self.touch_input_iface.get_task_count(), 0)
+
+        self.touch_input_iface.maximize_window(0)
+        sleep(1)  # Window animation
+
+        # Get the geometry of the widget window
+        self.touch_input_iface.get_window_rect.restype = ctypes.POINTER(ctypes.c_int * 4)
+        rect = self.touch_input_iface.get_window_rect(0).contents  # x,y,width,height
+        self.assertGreater(rect[2], 1, f"Invalid width {rect[2]}")
+        self.assertGreater(rect[3], 1, f"Invalid height {rect[3]}")
+
+        # Get the geometry of the virtual screen
+        self.touch_input_iface.get_screen_rect.restype = ctypes.POINTER(ctypes.c_int * 4)
+        screen_rect = self.touch_input_iface.get_screen_rect(0).contents  # x,y,width,height
+        self.assertEqual(screen_rect[0], 0)
+        self.assertEqual(screen_rect[1], 0)
+        self.assertGreater(screen_rect[2], 1, f"Invalid screen width {rect[2]}")
+        self.assertGreater(screen_rect[3], 1, f"Invalid screen height {rect[3]}")
+
+        # Get the center point
+        center_pos_x: int = rect[1] + int(rect[3] / 2)
+        center_pos_y: int = rect[0] + int(rect[2] / 2)
+        move_distance_x: int = screen_rect[2] - int(rect[2] / 2)
+        move_distance_y: int = screen_rect[3] - int(rect[3] / 2)
+
+        # Touch the window
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        self.touch_input_iface.touch_up()
+
+        # Swipe right -> Position++
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        [self.touch_input_iface.touch_move(int(center_pos_x + distance), center_pos_y) for distance in range(1, move_distance_x)]
+        self.touch_input_iface.touch_up()
+        wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > 0)
+
+        # Swipe left -> Position--
+        old_position: int = self.mpris_interface.player_properties["Position"].get_int64()
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        [self.touch_input_iface.touch_move(center_pos_x - distance, center_pos_y) for distance in range(1, move_distance_x)]
+        self.touch_input_iface.touch_up()
+        wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() < old_position)
+
+        # Swipe down: Volume--
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        [self.touch_input_iface.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, move_distance_y)]
+        self.touch_input_iface.touch_up()
+        wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < 1.0)
+
+        # Swipe up: Volume++
+        old_volume: float = self.mpris_interface.player_properties["Volume"].get_double()
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        [self.touch_input_iface.touch_move(center_pos_x, center_pos_y - distance) for distance in range(1, move_distance_y)]
+        self.touch_input_iface.touch_up()
+        wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() > old_volume)
+
+        # Swipe down and then swipe right, only volume should change
+        old_volume = self.mpris_interface.player_properties["Volume"].get_double()
+        old_position = self.mpris_interface.player_properties["Position"].get_int64()
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        [self.touch_input_iface.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, move_distance_y)]  # Swipe down
+        sleep(0.5)  # Qt may ignore some touch events if there are too many, so explicitly wait a moment
+        [self.touch_input_iface.touch_move(center_pos_x + distance, center_pos_y + move_distance_y - 1)
+         for distance in range(1, move_distance_x)]  # Swipe right
+        self.touch_input_iface.touch_up()
+        wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < old_volume)
+        self.assertEqual(old_position, self.mpris_interface.player_properties["Position"].get_int64())
+
+        # Swipe right and then swipe up, only position should change
+        old_volume = self.mpris_interface.player_properties["Volume"].get_double()
+        old_position = self.mpris_interface.player_properties["Position"].get_int64()
+        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
+        [self.touch_input_iface.touch_move(center_pos_x + distance, center_pos_y) for distance in range(1, move_distance_x)]  # Swipe right
+        sleep(0.5)
+        [self.touch_input_iface.touch_move(center_pos_x + move_distance_x - 1, center_pos_y - distance) for distance in range(1, move_distance_y)]  # Swipe up
+        self.touch_input_iface.touch_up()
+        wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
+        self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
+
 
 if __name__ == '__main__':
+    assert len(sys.argv) >= 2, f"Missing CMAKE_CURRENT_BINARY_DIR argument {len(sys.argv)}"
+    CMAKE_BINARY_DIR = sys.argv.pop()
     unittest.main()

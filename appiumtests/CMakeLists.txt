@@ -17,6 +17,8 @@ if(NOT SeleniumWebDriverATSPI_FOUND)
     return()
 endif()
 
+add_subdirectory(touchinputhelper)
+
 add_test(
     NAME digitalclocktest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/digitalclocktest.py
@@ -25,10 +27,11 @@ set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 300)
 
 add_test(
     NAME mediacontrollertest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py ${CMAKE_BINARY_DIR}
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LANG=en_US.UTF-8")
+execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
+set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH};LANG=en_US.UTF-8")
 
 add_test(
     NAME systemtraytest
