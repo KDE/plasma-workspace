@@ -28,6 +28,7 @@ qt6_generate_wayland_protocol_server_sources(SharedClientTest FILES
     ${WaylandProtocols_DATADIR}/stable/xdg-shell/xdg-shell.xml
     ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
     ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+    ${CMAKE_CURRENT_SOURCE_DIR}/wlr-layer-shell-unstable-v1.xml
 )
 
 
