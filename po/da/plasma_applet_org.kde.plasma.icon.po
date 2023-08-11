@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"POT-Creation-Date: 2023-08-11 01:58+0000\n"
 "PO-Revision-Date: 2017-02-12 10:17+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Åbn indeholdende mappe"
 msgid "Properties for %1"
 msgstr "Egenskaber for %1"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Properties"
 msgstr "Egenskaber"

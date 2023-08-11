@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-07-29 05:30+0300\n"
+"PO-Revision-Date: 2023-08-10 22:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -49,21 +49,18 @@ msgid "Show notification badges"
 msgstr "Bildirim rozetlerini göster"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure events:"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Olayları yapılandır:"
+msgstr "Olayları Yapılandır"
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Bu uygulama, olay başına bildirimleri yapılandırmayı desteklemiyor."
+msgstr ""
+"Bu uygulama, bildirimlerin olay bazında yapılandırılmasını desteklemiyor."
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -264,16 +261,12 @@ msgid "System Services"
 msgstr "Sistem Hizmetleri"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
 msgstr "Arama teriminizle hiçbir uygulama veya olay eşleşmiyor."
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
