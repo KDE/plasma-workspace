@@ -181,7 +181,7 @@ void ShellTest::cleanup()
             remove(output(i));
         }
     });
-    setScreenOrder({""}, true);
+    setScreenOrder({}, true);
 
     QTRY_COMPARE(coronaRemovedSpy.size(), oldCoronaNumScreens);
 
