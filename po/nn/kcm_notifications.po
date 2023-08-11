@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2023-01-15 12:48+0100\n"
+"PO-Revision-Date: 2023-08-10 18:11+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -258,16 +258,14 @@ msgstr "Systemtenester"
 #: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
-msgstr "Fann ikkje nokon program eller hendingar i samsvar med søkjeteksten."
+msgstr "Fann ikkje program eller hendingar i samsvar med søkjeteksten"
 
 #: package/contents/ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
-msgstr ""
-"Vel eit program frå lista for å setja opp innstillingar og åtferd for "
-"varsling."
+msgstr "Vel eit program frå lista for å velja varslingsinnstillingar"
 
 #: sourcesmodel.cpp:363
 #, kde-format
