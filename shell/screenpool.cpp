@@ -330,7 +330,7 @@ void ScreenPool::screenInvariants()
     // Do we actually track every screen?
     qWarning() << "Checking screens: available:" << m_availableScreens << "redundant:" << m_redundantScreens << "fake:" << m_fakeScreens
                << "all:" << allScreens;
-    Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count() + m_fakeScreens.count()) == m_outputOrderWatcher->outputOrder().count());
+    Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count()) == m_outputOrderWatcher->outputOrder().count());
     Q_ASSERT(allScreens.count() == m_sizeSortedScreens.count());
 
     // At most one fake output
