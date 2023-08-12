@@ -10,6 +10,7 @@ import ctypes
 import json
 import subprocess
 import sys
+from tempfile import NamedTemporaryFile
 import unittest
 from os import getcwd, path
 from time import sleep
@@ -18,6 +19,7 @@ from typing import Any
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from utils.mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
@@ -33,6 +35,8 @@ class MediaControllerTests(unittest.TestCase):
     driver: webdriver.Remote
     mpris_interface: Mpris2 | None
     player_b: subprocess.Popen | None = None
+    player_browser: subprocess.Popen | None = None
+    player_plasma_browser_integration: subprocess.Popen | None = None
     touch_input_iface: ctypes.CDLL
 
     @classmethod
@@ -329,6 +333,51 @@ class MediaControllerTests(unittest.TestCase):
         if self.player_b:
             self.player_b.kill()
             self.player_b = None
+
+    def test_filter_plasma_browser_integration(self) -> None:
+        """
+        When Plasma Browser Integration is installed, the widget should only show the player from p-b-i, and hide the player from the browser.
+        """
+        self.addCleanup(self._cleanup_filter_plasma_browser_integration)
+
+        player_browser_json_path: str = path.join(getcwd(), "resources/player_browser.json")
+        with open(player_browser_json_path, "r", encoding="utf-8") as f:
+            browser_json_data = json.load(f)
+        self.player_browser = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_browser_json_path))
+        wait: WebDriverWait = WebDriverWait(self.driver, 3)
+        wait.until(EC.visibility_of_element_located((AppiumBy.ACCESSIBILITY_ID, "playerSelector")))
+        browser_tab: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["base_properties"]["Identity"])))
+        browser_tab.click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["metadata"][0]["xesam:title"])))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["metadata"][0]["xesam:album"])))
+        self.assertFalse(self.driver.find_element(by=AppiumBy.NAME, value="Next Track").is_enabled())
+
+        with open(path.join(getcwd(), "resources/player_plasma_browser_integration.json"), "r", encoding="utf-8") as f:
+            pbi_json_data = json.load(f)
+        pbi_json_data["metadata"][0]["kde:pid"] = self.player_browser.pid  # Simulate Plasma Browser Integration
+        with NamedTemporaryFile("w", encoding="utf-8", suffix=".json", delete=False) as temp_file:
+            json.dump(pbi_json_data, temp_file)
+            temp_file.flush()
+
+            self.player_plasma_browser_integration = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), temp_file.name))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["base_properties"]["Identity"]))).click()
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["metadata"][0]["xesam:title"])))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["metadata"][0]["xesam:album"])))
+            wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+            self.assertFalse(browser_tab.is_displayed())
+
+        self._cleanup_filter_plasma_browser_integration()
+
+    def _cleanup_filter_plasma_browser_integration(self) -> None:
+        """
+        A cleanup function to be called after the test is completed
+        """
+        if self.player_browser:
+            self.player_browser.terminate()
+            self.player_browser = None
+        if self.player_plasma_browser_integration:
+            self.player_plasma_browser_integration.terminate()
+            self.player_plasma_browser_integration = None
 
 
 if __name__ == '__main__':

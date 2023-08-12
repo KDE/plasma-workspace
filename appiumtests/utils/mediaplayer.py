@@ -32,6 +32,8 @@ def read_player_metadata(json_dict: dict[str, Any]) -> list[dict[str, GLib.Varia
         }
         if "mpris:artUrl" in song.keys():
             song_dict["mpris:artUrl"] = GLib.Variant('s', "file://" + path.join(getcwd(), song["mpris:artUrl"]))
+        if "kde:pid" in song.keys():
+            song_dict["kde:pid"] = GLib.Variant('u', song["kde:pid"])
         _metadata.append(song_dict)
 
     return _metadata

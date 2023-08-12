@@ -1,0 +1,59 @@
+{
+    "base_properties": {
+        "CanQuit": true,
+        "Fullscreen": false,
+        "CanSetFullscreen": false,
+        "CanRaise": true,
+        "HasTrackList": true,
+        "Identity": "Mozilla Firefox",
+        "DesktopEntry": "chromium-browser",
+        "SupportedUriSchemes": [
+            "file"
+        ],
+        "SupportedMimeTypes": [
+            "application/ogg"
+        ]
+    },
+    "player_properties": {
+        "PlaybackStatus": "Stopped",
+        "LoopStatus": "None",
+        "Rate": 1.0,
+        "Shuffle": false,
+        "Metadata": {},
+        "Position": 0,
+        "MinimumRate": 1.0,
+        "MaximumRate": 1.0,
+        "Volume": 1.0,
+        "CanGoNext": true,
+        "CanGoPrevious": false,
+        "CanPlay": true,
+        "CanPause": true,
+        "CanSeek": true,
+        "CanControl": true
+    },
+    "metadata": [
+        {
+            "mpris:trackid": "/firefox/1",
+            "xesam:url": "resources/Clarinet Quintet.ogg",
+            "mpris:length": 900000000,
+            "xesam:title": "Browser with p-b-i",
+            "xesam:album": "浏览器",
+            "xesam:artist": [
+                "ABC",
+                "DEF"
+            ],
+            "mpris:artUrl": "resources/mediacontrollertests_art0.png",
+            "kde:pid": 0
+        },
+        {
+            "mpris:trackid": "/firefox/2",
+            "xesam:url": "resources/Clarinet Quintet.ogg",
+            "mpris:length": 900000000,
+            "xesam:title": "Browser with p-b-i 2",
+            "xesam:album": "浏览器",
+            "xesam:artist": [],
+            "mpris:artUrl": "resources/mediacontrollertests_art1.png",
+            "kde:pid": 0
+        }
+    ]
+}
