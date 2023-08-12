@@ -30,6 +30,7 @@ PlasmaExtras.Menu {
 
     PlasmaExtras.MenuItem {
         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Copy Link Address")
+        icon: "edit-copy"
         onClicked: __clipboard.content = contextMenu.link
         visible: contextMenu.link !== ""
     }
