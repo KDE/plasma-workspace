@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 01:59+0000\n"
-"PO-Revision-Date: 2023-08-09 06:24+0200\n"
+"PO-Revision-Date: 2023-08-11 06:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,12 +34,10 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "თაგუნას ქცევის დამატების მორგება"
 
 #: desktopview.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "KDE Plasma %1"
+msgstr "KDE Plasma %1 Dev"
 
 #: desktopview.cpp:228
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2022-02-18 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Az akkumulátor töltési korlátja %1%-ra van beállítva."
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -243,7 +243,7 @@ msgstr "&Energiatakarékossági beállítások…"
 msgid "Display Brightness"
 msgstr "Kijelző fényereje"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Billentyűzet fényereje"

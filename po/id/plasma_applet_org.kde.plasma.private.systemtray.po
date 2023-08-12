@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2022-10-23 16:30+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -172,22 +172,22 @@ msgstr "Aksi selebihnya"
 msgid "Keep Open"
 msgstr "Tetap Buka"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Luaskan System Tray"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Tampilkan semua item di system tray dalam sebuah sembulan"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Close popup"
 msgstr "Tutup sembulan"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Tampilkan ikon tersembunyi"

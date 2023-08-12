@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2023-08-03 09:55+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -204,17 +204,17 @@ msgstr "Seleccioneu un arxiu de tema GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arxiu de tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:58
+#: ui/main.qml:57
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configura les icones i les barres d'eines"
 
-#: ui/main.qml:69
+#: ui/main.qml:68
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configura l'estil de l'aplicació GNOME/GTK…"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgid "Configure Style…"
 msgstr "Configura l'estil…"

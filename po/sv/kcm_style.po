@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2021-08-15 08:25+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -199,17 +199,17 @@ msgstr "Välj GTK-temaarkiv"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK-temaarkiv (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:58
+#: ui/main.qml:57
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Anpassa ikoner och verktygsrader"
 
-#: ui/main.qml:69
+#: ui/main.qml:68
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Anpassa GNOME/GTK-programstil…"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgid "Configure Style…"
 msgstr "Anpassa stil…"

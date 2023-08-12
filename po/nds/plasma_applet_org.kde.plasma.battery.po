@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2014-09-18 16:09+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -256,7 +256,7 @@ msgstr "Stroomsporen &instellen..."
 msgid "Display Brightness"
 msgstr "Schirmhelligkeit"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Tastatuurhelligkeit"

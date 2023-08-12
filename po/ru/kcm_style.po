@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2022-02-22 10:24+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -215,17 +215,17 @@ msgstr "Выбор файла оформления программ GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Архивы стиля оформления программ GTX (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:58
+#: ui/main.qml:57
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Настроить значки и панель инструментов"
 
-#: ui/main.qml:69
+#: ui/main.qml:68
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Настроить оформление приложений GNOME/GTK..."
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgid "Configure Style…"
 msgstr "Настроить оформление…"

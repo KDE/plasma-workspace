@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -69,7 +69,7 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "നിങ്ങളുടെ ബാറ്ററി ക്രമീകരിച്ചിരിക്കുന്നത് %1% വരെ ചാർജ് ചെയ്യാൻ മാത്രമാണ്."
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -240,7 +240,7 @@ msgstr "ഊർജ്ജ സംരക്ഷണം ക്രമീകരിക്�
 msgid "Display Brightness"
 msgstr "തിരശ്ശീലയുടെ വെളിച്ചം"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "കീബോർഡ് തെളിച്ചം"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2020-10-08 10:11+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -71,7 +71,7 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Aku on seadistatud laadima kuni %1%-ni."
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -248,7 +248,7 @@ msgstr "S&eadista energia säästmist ..."
 msgid "Display Brightness"
 msgstr "Monitori heledus"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Klaviatuuri heledus"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2022-11-18 19:48+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -174,22 +174,22 @@ msgstr "Daugiau veiksmų"
 msgid "Keep Open"
 msgstr "Palikti atvertą"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Išskleisti sistemos dėklą"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Rodyti visus sistemos dėklo elementus iškylančiajame lange"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Close popup"
 msgstr "Užverti iškylantįjį langą"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Rodyti paslėptas piktogramas"

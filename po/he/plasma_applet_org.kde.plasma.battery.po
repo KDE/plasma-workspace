@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2017-05-22 05:35-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -72,7 +72,7 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is battery percentage"
 #| msgid "%1%"
@@ -255,7 +255,7 @@ msgstr "הגדר צריכת חשמל..."
 msgid "Display Brightness"
 msgstr "בהירות מסך"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "בהירות מקלדת"

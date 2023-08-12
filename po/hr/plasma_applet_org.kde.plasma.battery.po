@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2011-02-15 16:36+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -72,7 +72,7 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, fuzzy, kde-format
 #| msgctxt "overlay on the battery, needs to be really tiny"
 #| msgid "%1%"
@@ -276,7 +276,7 @@ msgstr "Podešavanje upravitelja potrošnje energije…"
 msgid "Display Brightness"
 msgstr "Osvjetljenje zaslona"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, fuzzy, kde-format
 #| msgid "Screen Brightness"
 msgid "Keyboard Brightness"

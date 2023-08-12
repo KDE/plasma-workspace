@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-07-29 08:07+0200\n"
+"PO-Revision-Date: 2023-08-09 09:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -53,23 +53,19 @@ msgid "Show notification badges"
 msgstr "Mostra els distintius de notificació"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure events:"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Configura els esdeveniments:"
+msgstr "Configureu esdeveniments"
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
 "Esta aplicació no permet la configuració de notificacions en una base per "
-"esdeveniment."
+"esdeveniment"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -272,19 +268,15 @@ msgid "System Services"
 msgstr "Serveis del sistema"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Cap aplicació ni esdeveniment coincidix amb el terme de busca."
+msgstr "Cap aplicació ni esdeveniment coincidix amb el terme de busca"
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu configuració "
-"de notificacions i el comportament."
+"de notificacions i el comportament"

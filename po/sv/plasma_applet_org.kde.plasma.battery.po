@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2022-02-19 10:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "%1 %"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batteriet är inställt att laddas upp till ungefär %1 %."
 
-#: package/contents/ui/BrightnessItem.qml:64
+#: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -239,7 +239,7 @@ msgstr "Anpassa strömspar&hantering…"
 msgid "Display Brightness"
 msgstr "Bildskärmens ljusstyrka"
 
-#: package/contents/ui/PopupDialog.qml:143
+#: package/contents/ui/PopupDialog.qml:144
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Tangentbordets ljusstyrka"

@@ -1,5 +1,5 @@
 # translation of kcmstyle.po to
-# Version: $Revision: 1657379 $
+# Version: $Revision: 1658014 $
 # translation of kcmstyle.po to Polish
 # translation of kcmstyle.po to
 # Norbert Popiołek <norbert@kde.com.pl>
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2023-04-23 11:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -204,17 +204,17 @@ msgstr "Wybierz archiwum wyglądu GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Archiwum wyglądu GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:58
+#: ui/main.qml:57
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Ustawienia ikon i pasków narzędzi"
 
-#: ui/main.qml:69
+#: ui/main.qml:68
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Ustawienia wyglądu aplikacji GNOME/GTK..."
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgid "Configure Style…"
 msgstr "Ustawienia wyglądu..."

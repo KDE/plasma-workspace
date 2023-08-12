@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2023-08-05 09:58+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -172,23 +172,23 @@ msgstr "Máis accións"
 msgid "Keep Open"
 msgstr "Manter aberto"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Expandir a área de notificación"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
 "Amosar todos os elementos na área de notificación, nunha xanela emerxente."
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Close popup"
 msgstr "Pechar a xanela emerxente"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Amosar as iconas agochadas"
