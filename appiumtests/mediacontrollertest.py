@@ -8,6 +8,7 @@
 
 import ctypes
 import json
+import subprocess
 import sys
 import unittest
 from os import getcwd, path
@@ -16,7 +17,7 @@ from typing import Any
 
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import GLib
+from gi.repository import Gio, GLib
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from utils.mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
@@ -31,6 +32,7 @@ class MediaControllerTests(unittest.TestCase):
 
     driver: webdriver.Remote
     mpris_interface: Mpris2 | None
+    player_b: subprocess.Popen | None = None
     touch_input_iface: ctypes.CDLL
 
     @classmethod
@@ -230,6 +232,103 @@ class MediaControllerTests(unittest.TestCase):
         self.touch_input_iface.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
         self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
+
+    def test_multiplexer(self) -> None:
+        """
+        The multiplexer should be hidden when there is only 1 player, and shows information from the active/playing player if there is one
+        """
+        self.addCleanup(self._cleanup_multiplexer)
+
+        # Wait until the first player is ready
+        wait: WebDriverWait = WebDriverWait(self.driver, 3)
+        wait.until(
+            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+
+        # Start Player B, Total 2 players
+        player_b_json_path: str = path.join(getcwd(), "resources/player_b.json")
+        self.player_b = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_b_json_path))
+        player_selector: WebElement = wait.until(EC.visibility_of_element_located((AppiumBy.ACCESSIBILITY_ID, "playerSelector")))
+
+        # Find player tabs based on "Identity"
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "AppiumTest")))
+
+        # Make sure the current index does not change after a new player appears
+        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())  # Title
+
+        # Switch to Player B
+        self.driver.find_element(by=AppiumBy.NAME, value="Audacious").click()
+        with open(player_b_json_path, "r", encoding="utf-8") as f:
+            player_b_metadata = read_player_metadata(json.load(f))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:album"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-15:00")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, ', '.join(player_b_metadata[0]["xesam:artist"].unpack()))))
+        wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+        wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
+
+        # Switch to Multiplexer
+        # A Paused, B Paused -> A (first added)
+        self.driver.find_element(by=AppiumBy.NAME, value="Choose player automatically").click()
+        wait.until(
+            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
+
+        # A Paused, B Playing -> B
+        # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play",
+                         None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
+        wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+        wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
+
+        # Pause B -> Still B
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause",
+                         None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
+
+        # A Playing, B Paused -> A
+        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None,
+                         Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(
+            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
+
+        # A Playing, B Playing -> Still A
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play",
+                         None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        sleep(1)
+        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())  # Title
+
+        # A Paused, B Playing -> B
+        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None,
+                         Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
+        wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+        wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
+
+        # Close B -> A
+        self.player_b.terminate()
+        self.player_b = None
+        wait.until(
+            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
+        self.assertFalse(player_selector.is_displayed())  # Tabbar is hidden again
+
+    def _cleanup_multiplexer(self) -> None:
+        if self.player_b:
+            self.player_b.kill()
+            self.player_b = None
 
 
 if __name__ == '__main__':

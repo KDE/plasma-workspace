@@ -681,6 +681,7 @@ PlasmaExtras.Representation {
         implicitHeight: Kirigami.Units.gridUnit * 2
         PlasmaComponents3.TabBar {
             id: playerSelector
+            objectName: "playerSelector"
             position: PlasmaComponents3.TabBar.Header
 
             anchors.fill: parent
@@ -703,6 +704,7 @@ PlasmaExtras.Representation {
                     icon.name: modelData["icon"]
                     icon.height: Kirigami.Units.iconSizes.smallMedium
                     Accessible.name: modelData["text"]
+                    Accessible.onPressAction: playerSelector.setCurrentIndex(index)
                     PlasmaComponents3.ToolTip {
                         text: modelData["text"]
                     }
