@@ -1,0 +1,71 @@
+{
+    "base_properties": {
+        "CanQuit": true,
+        "Fullscreen": false,
+        "CanSetFullscreen": false,
+        "CanRaise": true,
+        "HasTrackList": true,
+        "Identity": "AppiumTest",
+        "DesktopEntry": "appiumtest",
+        "SupportedUriSchemes": [
+            "file"
+        ],
+        "SupportedMimeTypes": [
+            "application/ogg"
+        ]
+    },
+    "player_properties": {
+        "PlaybackStatus": "Stopped",
+        "LoopStatus": "None",
+        "Rate": 1.0,
+        "Shuffle": false,
+        "Metadata": {},
+        "Position": 0,
+        "MinimumRate": 1.0,
+        "MaximumRate": 1.0,
+        "Volume": 1.0,
+        "CanGoNext": true,
+        "CanGoPrevious": true,
+        "CanPlay": true,
+        "CanPause": true,
+        "CanSeek": true,
+        "CanControl": true
+    },
+    "metadata": [
+        {
+            "mpris:trackid": "/appiumtest/2",
+            "xesam:url": "resources/media0.mp3",
+            "mpris:length": 600000000,
+            "xesam:title": "Katie's Favorite",
+            "xesam:album": "The Best of Konqi",
+            "xesam:artist": [
+                "KDE Community"
+            ],
+            "mpris:artUrl": "resources/mediacontrollertests_art0.png"
+        },
+        {
+            "mpris:trackid": "/appiumtest/1",
+            "xesam:url": "resources/media1.mp3",
+            "mpris:length": 300000000,
+            "xesam:title": "Konqi ❤️️ Katie",
+            "xesam:album": "The Best of Konqi",
+            "xesam:artist": [
+                "KDE Community",
+                "La communauté KDE"
+            ],
+            "mpris:artUrl": "resources/mediacontrollertests_art1.png"
+        },
+        {
+            "mpris:trackid": "/appiumtest/2",
+            "xesam:url": "resources/media2.mp3",
+            "mpris:length": 900000000,
+            "xesam:title": "Konqi's Favorite",
+            "xesam:album": "The Best of Konqi",
+            "xesam:artist": [
+                "KDE Community",
+                "KDE 社区"
+            ],
+            "mpris:artUrl": "resources/mediacontrollertests_art2.png"
+        }
+    ]
+}

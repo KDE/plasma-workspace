@@ -6,3 +6,7 @@ Source: https://invent.kde.org/plasma/plasma-workspace
 Files: wallpapers/image/plugin/autotests/testdata/*
 Copyright: None
 License: CC0-1.0
+
+Files: appiumtests/resources/*
+Copyright: None
+License: CC0-1.0
