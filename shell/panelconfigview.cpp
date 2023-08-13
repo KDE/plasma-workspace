@@ -5,6 +5,7 @@
 */
 
 #include "panelconfigview.h"
+#include "config-X11.h"
 #include "panelshadows_p.h"
 #include "shellcorona.h"
 
@@ -17,7 +18,9 @@
 #include <QScreen>
 
 #include <KWindowSystem>
+#if HAVE_X11
 #include <KX11Extras>
+#endif
 #include <klocalizedstring.h>
 #include <kwindoweffects.h>
 
@@ -47,15 +50,19 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_screenSyncTimer.setInterval(150ms);
     connect(&m_screenSyncTimer, &QTimer::timeout, [this, panelView]() {
         setScreen(panelView->screen());
+#if HAVE_X11
         KX11Extras::setType(winId(), NET::Dock);
+#endif
         KWindowSystem::setState(winId(), NET::KeepAbove);
         syncGeometry();
         syncLocation();
     });
 
+#if HAVE_X11
     KX11Extras::setType(winId(), NET::Dock);
-    KWindowSystem::setState(winId(), NET::KeepAbove);
     KX11Extras::forceActiveWindow(winId());
+#endif
+    KWindowSystem::setState(winId(), NET::KeepAbove);
 
     updateBlurBehindAndContrast();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateBlurBehindAndContrast);
@@ -190,11 +197,15 @@ void PanelConfigView::showEvent(QShowEvent *ev)
 {
     QQuickWindow::showEvent(ev);
 
+#if HAVE_X11
     KX11Extras::setType(winId(), NET::Dock);
+#endif
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)) | Qt::X11BypassWindowManagerHint
              | Qt::WindowStaysOnTopHint);
     KWindowSystem::setState(winId(), NET::KeepAbove);
+#if HAVE_X11
     KX11Extras::forceActiveWindow(winId());
+#endif
     updateBlurBehindAndContrast();
     syncGeometry();
     syncLocation();
