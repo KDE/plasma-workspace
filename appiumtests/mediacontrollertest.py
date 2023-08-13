@@ -91,15 +91,20 @@ class MediaControllerTests(unittest.TestCase):
         repeat_button = self.driver.find_element(by=AppiumBy.NAME, value="Repeat")
 
         # Match song title, artist and album
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())  # Title
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())  # Album
-        self.driver.find_element(by=AppiumBy.NAME, value="0:00")  # Current position
-        self.driver.find_element(by=AppiumBy.NAME, value="-5:00")  # Remaining time
-        self.driver.find_element(by=AppiumBy.NAME,
-                                 value=', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))  # Artists
+        wait: WebDriverWait = WebDriverWait(self.driver, 5)
+        wait.until(
+            EC.presence_of_element_located(
+                (AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
+        wait.until(
+            EC.presence_of_element_located(
+                (AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())))  # Album
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
+        wait.until(
+            EC.presence_of_element_located(
+                (AppiumBy.NAME, ', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))))  # Artists
 
         # Now click the play button
-        wait: WebDriverWait = WebDriverWait(self.driver, 5)
         play_button.click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
         play_button.click()
