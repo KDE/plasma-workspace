@@ -30,7 +30,7 @@ PlasmaExtras.Menu {
 
     PlasmaExtras.MenuItem {
         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:inmenu", "Copy Link Address")
-        icon: "edit-copy"
+        icon: "edit-copy-symbolic"
         onClicked: __clipboard.content = contextMenu.link
         visible: contextMenu.link !== ""
     }
@@ -42,7 +42,7 @@ PlasmaExtras.Menu {
 
     PlasmaExtras.MenuItem {
         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:inmenu", "Copy")
-        icon: "edit-copy"
+        icon: "edit-copy-symbolic"
         enabled: typeof target.selectionStart !== "undefined"
         ? target.selectionStart !== target.selectionEnd
         : (target.text || "").length > 0
@@ -57,7 +57,7 @@ PlasmaExtras.Menu {
 
     PlasmaExtras.MenuItem {
         id: selectAllAction
-        icon: "edit-select-all"
+        icon: "edit-select-all-symbolic"
         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:inmenu", "Select All")
         onClicked: target.selectAll()
         visible: typeof target.selectAll === "function"
