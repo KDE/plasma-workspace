@@ -97,7 +97,7 @@ KCM.GridViewKCM {
                     // or as a named sound ("theme-demo"), but if none is provided let's fallback
                     // to other common descriptive sounds
                     const demoSounds = ["theme-demo", "desktop-login", "service-login"];
-                    if (theme.example.lenght > 0) {
+                    if (theme.example.length > 0) {
                         demoSounds.unshift(theme.example);
                     }
                     return demoSounds;
