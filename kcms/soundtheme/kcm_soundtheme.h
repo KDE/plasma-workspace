@@ -65,6 +65,8 @@ public:
     Q_INVOKABLE int playSound(const QString &themeId, const QStringList &soundList);
     Q_INVOKABLE void cancelSound();
 
+    Q_INVOKABLE static QString errorString(int errorCode);
+
     virtual void load() override;
 
 Q_SIGNALS:

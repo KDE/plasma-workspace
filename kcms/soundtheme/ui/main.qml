@@ -25,6 +25,14 @@ KCM.GridViewKCM {
 
     view.model: kcm.themes
     view.currentIndex: kcm.currentIndex
+
+    header: Kirigami.InlineMessage {
+        id: errorMesage
+        Layout.fillWidth: true
+        type: Kirigami.MessageType.Error
+        showCloseButton: true
+    }
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -126,7 +134,13 @@ KCM.GridViewKCM {
         down: isPlaying  // We just want the visual cue, not the checked state
         onClicked: {
             if (!isPlaying) {
-                kcm.playSound(themeId, sounds);
+                const result = kcm.playSound(themeId, sounds);
+                if (result !== 0) {
+                    errorMesage.text = i18n("Failed to preview sound: %1", kcm.errorString(result));
+                    errorMesage.visible = true;
+                } else {
+                    errorMesage.visible = false;
+                }
             } else {
                 kcm.cancelSound();
             }

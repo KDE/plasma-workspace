@@ -186,6 +186,11 @@ void KCMSoundTheme::cancelSound()
     ca_context_cancel(canberraContext(), 0);
 }
 
+QString KCMSoundTheme::errorString(int errorCode)
+{
+    return QString::fromUtf8(ca_strerror(errorCode));
+}
+
 void KCMSoundTheme::ca_finish_callback(ca_context *c, uint32_t id, int error_code, void *userdata)
 {
     Q_UNUSED(c);
