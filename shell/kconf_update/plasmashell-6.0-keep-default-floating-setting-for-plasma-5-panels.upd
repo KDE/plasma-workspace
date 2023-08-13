@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+Version=6
+
+Id=plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
+Script=plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
+

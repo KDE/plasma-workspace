@@ -707,7 +707,7 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
-    setFloating((bool)config().parent().readEntry<int>("floating", configDefaults().parent().readEntry<int>("floating", false)));
+    setFloating((bool)config().parent().readEntry<int>("floating", configDefaults().parent().readEntry<int>("floating", true)));
     setThickness(configDefaults().readEntry("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
