@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-04 02:00+0000\n"
-"PO-Revision-Date: 2023-07-30 17:48+0200\n"
+"PO-Revision-Date: 2023-08-13 01:04+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,12 +23,12 @@ msgstr ""
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
-msgstr ""
+msgstr "FreeDesktop"
 
 #: kcm_soundtheme.cpp:108
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr ""
+msgstr "Recurrir al tema de sonido de freedesktop.org"
 
 #: ui/main.qml:59
 #, kde-format

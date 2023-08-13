@@ -7,7 +7,7 @@
 # Jaime Robles <jaime@kde.org>, 2003, 2005, 2007, 2008.
 # Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2004.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2012, 2014, 2016, 2017, 2018, 2020, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2012, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
 # Jaime Robles <jaime@robles.es>, 2009.
 # Javier Vinal <fjvinal@gmail.com>, 2011.
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2022-10-22 18:09+0200\n"
+"PO-Revision-Date: 2023-08-13 01:03+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: iconsizecategorymodel.cpp:14
@@ -164,10 +164,9 @@ msgid "Install from File…"
 msgstr "Instalar desde archivo..."
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Get New Icons…"
+#, kde-format
 msgid "Get New…"
-msgstr "Obtener nuevos iconos..."
+msgstr "Obtener novedades..."
 
 #: ui/main.qml:174
 #, kde-format
