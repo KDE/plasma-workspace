@@ -10,6 +10,7 @@
 
 #include <QIcon>
 #include <QStack>
+#include <QStandardPaths>
 #include <QUrl>
 
 #include <KBookmarkManager>
@@ -31,9 +32,10 @@ KDEFavicon::KDEFavicon(QObject *parent)
 
 Konqueror::Konqueror(QObject *parent)
     : QObject(parent)
-    , m_bookmarkManager(KBookmarkManager::userBookmarksManager())
     , m_favicon(new KDEFavicon(this))
 {
+    const QString bookmarksFile = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/konqueror/bookmarks.xml");
+    m_bookmarkManager = KBookmarkManager::managerForFile(bookmarksFile, QStringLiteral("konqueror"));
 }
 
 QList<BookmarkMatch> Konqueror::match(const QString &term, bool addEverything)

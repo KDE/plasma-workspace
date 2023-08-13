@@ -33,6 +33,6 @@ public Q_SLOTS:
     }
 
 private:
-    KBookmarkManager *const m_bookmarkManager;
+    KBookmarkManager *m_bookmarkManager;
     Favicon *const m_favicon;
 };
