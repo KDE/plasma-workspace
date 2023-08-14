@@ -35,7 +35,7 @@ Konqueror::Konqueror(QObject *parent)
     , m_favicon(new KDEFavicon(this))
 {
     const QString bookmarksFile = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/konqueror/bookmarks.xml");
-    m_bookmarkManager = KBookmarkManager::managerForFile(bookmarksFile, QStringLiteral("konqueror"));
+    m_bookmarkManager = KBookmarkManager::managerForFile(bookmarksFile);
 }
 
 QList<BookmarkMatch> Konqueror::match(const QString &term, bool addEverything)
