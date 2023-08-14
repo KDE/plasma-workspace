@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:58+0000\n"
+"POT-Creation-Date: 2023-08-14 02:27+0000\n"
 "PO-Revision-Date: 2022-10-16 11:56+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -74,12 +74,12 @@ msgstr "Notificaciones activadas"
 msgid "Copy Link Address"
 msgstr "Copiar dirección del enlace"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/EditContextMenu.qml:45
 #, kde-format
 msgid "Copy"
 msgstr "Copiar"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/EditContextMenu.qml:62
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"

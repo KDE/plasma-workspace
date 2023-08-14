@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:58+0000\n"
+"POT-Creation-Date: 2023-08-14 02:27+0000\n"
 "PO-Revision-Date: 2023-01-30 14:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -70,12 +70,12 @@ msgstr "Oznamování zapnuto"
 msgid "Copy Link Address"
 msgstr "Kopírovat adresu odkazu"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/EditContextMenu.qml:45
 #, kde-format
 msgid "Copy"
 msgstr "Kopírovat"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/EditContextMenu.qml:62
 #, kde-format
 msgid "Select All"
 msgstr "Vybrat vše"

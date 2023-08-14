@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:58+0000\n"
+"POT-Creation-Date: 2023-08-14 02:27+0000\n"
 "PO-Revision-Date: 2023-08-06 05:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -73,12 +73,12 @@ msgstr "Activáronse as notificacións"
 msgid "Copy Link Address"
 msgstr "Copiar o enderezo da ligazón"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/EditContextMenu.qml:45
 #, kde-format
 msgid "Copy"
 msgstr "Copiar"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/EditContextMenu.qml:62
 #, kde-format
 msgid "Select All"
 msgstr "Escoller todo"

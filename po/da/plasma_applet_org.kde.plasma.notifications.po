@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:58+0000\n"
+"POT-Creation-Date: 2023-08-14 02:27+0000\n"
 "PO-Revision-Date: 2021-09-27 20:47+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -70,12 +70,12 @@ msgstr "Bekendtgørelser til"
 msgid "Copy Link Address"
 msgstr "Kopiér linkadresse"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/EditContextMenu.qml:45
 #, kde-format
 msgid "Copy"
 msgstr "Kopiér"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/EditContextMenu.qml:62
 #, kde-format
 msgid "Select All"
 msgstr "Markér alt"

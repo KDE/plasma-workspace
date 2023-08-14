@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:58+0000\n"
+"POT-Creation-Date: 2023-08-14 02:27+0000\n"
 "PO-Revision-Date: 2019-09-30 16:21+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -73,12 +73,12 @@ msgstr "Ягон огоҳии хонданашуда нест"
 msgid "Copy Link Address"
 msgstr "Нусха бардоштани пайванди нишонӣ"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/EditContextMenu.qml:45
 #, kde-format
 msgid "Copy"
 msgstr "Нусха бардоштан"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/EditContextMenu.qml:62
 #, kde-format
 msgid "Select All"
 msgstr "Ҳамаро интихоб кардан"

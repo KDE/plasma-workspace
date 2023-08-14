@@ -3,25 +3,26 @@
 # Masaharu 'Max' Goto <magotou@fubyshare.gr.jp>, 2004.
 # Shinsaku Nakagawa <shinsaku@users.sourceforge.jp>, 2004.
 # Toyohiro Asukai <toyohiro@ksmplus.com>, 2004.
-# Fumiaki Okushi <fumiaki@okushi.com>, 2005.
 # Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008, 2010.
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2010-09-25 16:33-0700\n"
-"Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
+"PO-Revision-Date: 2023-08-13 17:52-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -29,12 +30,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Toyohiro Asukai,Shinichi Tsunoda,Jumpei Ogawa"
+msgstr "Toyohiro Asukai,Shinichi Tsunoda,Jumpei Ogawa,Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "toyohiro@ksmplus.com,tsuno@ngy.1st.ne.jp,phanective@gmail.com"
+msgstr ""
+"toyohiro@ksmplus.com,tsuno@ngy.1st.ne.jp,phanective@gmail.com,"
+"ryuichi_ya220@outlook.jp"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
@@ -42,8 +45,8 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
-"フォントを個人用にインストールしますか？ (あなたのみが使用可能)それともシステ"
-"ム全体にインストールしますか？ (すべてのユーザが使用可能)"
+"フォントを個人用にインストールしますか？ (あなたのみが使用可能) それともシス"
+"テム全体にインストールしますか？ (すべてのユーザが使用可能)"
 
 #: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
 #, kde-format
@@ -66,10 +69,13 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(c) Craig Drummond, 2007"
 
 # KCmdLineOptions: embed <winid>
+# 自信なし
 #: apps/Installer.cpp:120 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
+"winid によって指定された X アプリケーションのためにダイアログを一時的なものに"
+"する"
 
 #: apps/Installer.cpp:122
 #, kde-format
@@ -82,8 +88,7 @@ msgid "Print"
 msgstr "印刷"
 
 #: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
-#, fuzzy, kde-format
-#| msgid "Canceling..."
+#, kde-format
 msgid "Canceling…"
 msgstr "キャンセルします..."
 
@@ -101,7 +106,7 @@ msgstr "簡易フォントプリンタ"
 #: apps/Printer.cpp:337
 #, kde-format
 msgid "Size index to print fonts"
-msgstr ""
+msgstr "フォントを印刷する際のサイズ"
 
 # KCmdLineOptions: pfont <font>
 #: apps/Printer.cpp:341
@@ -126,16 +131,14 @@ msgid "Remove file containing list of fonts to print"
 msgstr "印刷するフォントのリストを含むファイルを削除"
 
 #: apps/Viewer.cpp:48
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "%1 個のフォントをすべてフォントビューアで開きますか？"
+msgstr "既存のフォントファイルを開く"
 
 #: apps/Viewer.cpp:49
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "フォントのサンプルを印刷"
+msgstr "フォントのプレビューを印刷"
 
 #: apps/Viewer.cpp:66
 #, kde-format
@@ -168,8 +171,7 @@ msgid "Duplicate Fonts"
 msgstr "重複フォント"
 
 #: kcmfontinst/DuplicatesDialog.cpp:77
-#, fuzzy, kde-format
-#| msgid "Scanning for duplicate fonts. Please wait..."
+#, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
 msgstr "重複フォントを探しています。お待ちください..."
 
@@ -249,8 +251,7 @@ msgid "Mark for Deletion"
 msgstr "削除マークを付ける"
 
 #: kcmfontinst/DuplicatesDialog.cpp:502
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "%1 個のフォントをすべてフォントビューアで開きますか？"
@@ -276,16 +277,14 @@ msgid "FontConfig Match"
 msgstr "FontConfig マッチ"
 
 #: kcmfontinst/FontFilter.cpp:111
-#, fuzzy, kde-format
-#| msgid "Preview Type"
+#, kde-format
 msgid "File Type"
-msgstr "プレビューのタイプ"
+msgstr "ファイルタイプ"
 
 #: kcmfontinst/FontFilter.cpp:113
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgid "File Name"
-msgstr "ファイル"
+msgstr "ファイル名"
 
 #: kcmfontinst/FontFilter.cpp:115
 #, kde-format
@@ -310,7 +309,7 @@ msgstr "記号/その他"
 #: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "%1 でフィルタ..."
 
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
@@ -320,7 +319,7 @@ msgstr "フォント"
 #: kcmfontinst/FontList.cpp:556
 #, kde-format
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 #: kcmfontinst/FontList.cpp:570
 #, kde-format
@@ -344,8 +343,7 @@ msgstr ""
 "ボールド</li><li>ボールド イタリック</li><li>イタリック</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
-#, fuzzy, kde-format
-#| msgid "...plus %1 more"
+#, kde-format
 msgid "…plus %1 more"
 msgstr "...他 %1 個"
 
@@ -372,10 +370,9 @@ msgid "Disable"
 msgstr "無効化"
 
 #: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
-#, fuzzy, kde-format
-#| msgid "Print"
+#, kde-format
 msgid "Print…"
-msgstr "印刷"
+msgstr "印刷..."
 
 #: kcmfontinst/FontList.cpp:1317
 #, kde-format
@@ -489,14 +486,12 @@ msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgstr "<qt>“%1” という名前のグループは既に存在します。</qt>"
 
 #: kcmfontinst/GroupList.cpp:792
-#, fuzzy, kde-format
-#| msgid "Rename..."
+#, kde-format
 msgid "Rename…"
 msgstr "名前変更..."
 
 #: kcmfontinst/GroupList.cpp:801
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
 msgstr "エクスポート..."
 
@@ -585,8 +580,7 @@ msgid "Disabling"
 msgstr "無効化"
 
 #: kcmfontinst/JobRunner.cpp:379
-#, fuzzy, kde-format
-#| msgid "Updating font configuration. Please wait..."
+#, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "フォントの設定を更新しています。お待ちください..."
 
@@ -676,16 +670,14 @@ msgid "Authentication failed.<br><i>%1</i>"
 msgstr "<html>認証に失敗しました。<br/>‘%1’</html>"
 
 #: kcmfontinst/JobRunner.cpp:723
-#, fuzzy, kde-format
-#| msgid "Unexpected error whilst processing: <i>%1</i>"
+#, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "処理中に予期しないエラーが発生しました: <filename>%1</filename>"
+msgstr "処理中に予期しないエラーが発生しました: %1"
 
 #: kcmfontinst/KCmFontInst.cpp:169
-#, fuzzy, kde-format
-#| msgid "KDE Font Installer"
+#, kde-format
 msgid "Font Management"
-msgstr "KDE フォントインストーラ"
+msgstr "フォント管理"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
@@ -703,28 +695,24 @@ msgid "Developer and maintainer"
 msgstr "開発者とメンテナ"
 
 #: kcmfontinst/KCmFontInst.cpp:202
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Create New Group…"
-msgstr "新しいグループを作成"
+msgstr "新しいグループを作成..."
 
 #: kcmfontinst/KCmFontInst.cpp:204
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgid "Remove Group…"
-msgstr "グループを削除"
+msgstr "グループを削除..."
 
 #: kcmfontinst/KCmFontInst.cpp:206
-#, fuzzy, kde-format
-#| msgid "Enable Fonts"
+#, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "フォントを有効化"
+msgstr "フォントをグループで有効化..."
 
 #: kcmfontinst/KCmFontInst.cpp:208
-#, fuzzy, kde-format
-#| msgid "Disable Fonts"
+#, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "フォントを無効化"
+msgstr "フォントをグループで無効化..."
 
 #: kcmfontinst/KCmFontInst.cpp:233
 #, kde-format
@@ -732,48 +720,42 @@ msgid "This displays a preview of the selected font."
 msgstr "選択されたフォントのプレビューです。"
 
 #: kcmfontinst/KCmFontInst.cpp:249
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Find Duplicates…"
-msgstr "重複フォントをスキャン..."
+msgstr "重複フォントを検索..."
 
 #: kcmfontinst/KCmFontInst.cpp:249
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Scan for Duplicate Fonts…"
 msgstr "重複フォントをスキャン..."
 
 #: kcmfontinst/KCmFontInst.cpp:251
-#, fuzzy, kde-format
-#| msgid "Install..."
+#, kde-format
 msgid "Install from File…"
-msgstr "インストール..."
+msgstr "ファイルからインストール..."
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "ローカルファイルからフォントをインストール"
 
 #: kcmfontinst/KCmFontInst.cpp:252
-#, fuzzy, kde-format
-#| msgid "Delete Fonts"
+#, kde-format
 msgid "Get New Fonts…"
-msgstr "フォントを削除"
+msgstr "新しいフォントを入手..."
 
 #: kcmfontinst/KCmFontInst.cpp:253
 #, kde-format
 msgid "Download new fonts"
-msgstr ""
+msgstr "新しいフォントをダウンロード"
 
 #: kcmfontinst/KCmFontInst.cpp:255
-#, fuzzy, kde-format
-#| msgid "Delete all selected fonts"
+#, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "選択したすべてのフォントを削除"
+msgstr "選択したフォントを削除..."
 
 #: kcmfontinst/KCmFontInst.cpp:313
-#, fuzzy, kde-format
-#| msgid "Change Preview Text..."
+#, kde-format
 msgid "Change Preview Text…"
 msgstr "プレビューのテキストを変更..."
 
@@ -869,8 +851,7 @@ msgid "Delete Fonts"
 msgstr "フォントを削除"
 
 #: kcmfontinst/KCmFontInst.cpp:639
-#, fuzzy, kde-format
-#| msgid "Deleting font(s)..."
+#, kde-format
 msgid "Deleting font(s)…"
 msgstr "フォントを削除しています..."
 
@@ -885,12 +866,11 @@ msgid "Nothing to Move"
 msgstr "移動するものがありません"
 
 #: kcmfontinst/KCmFontInst.cpp:664
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
-msgstr "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
+msgstr "<p>本当に</p><p>'<b>%1</b>'</p><p>を %2 から %3 に移動しますか？</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:669
 #, kde-format
@@ -903,13 +883,12 @@ msgid "Move"
 msgstr "移動"
 
 #: kcmfontinst/KCmFontInst.cpp:675
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
+msgstr[0] "<p>本当にこれら %1 個のフォントを %2 から %3 に移動しますか？</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
@@ -917,8 +896,7 @@ msgid "Move Fonts"
 msgstr "フォントを移動"
 
 #: kcmfontinst/KCmFontInst.cpp:686
-#, fuzzy, kde-format
-#| msgid "Moving font(s)..."
+#, kde-format
 msgid "Moving font(s)…"
 msgstr "フォントを移動しています..."
 
@@ -930,7 +908,7 @@ msgstr "グループをエクスポート"
 #: kcmfontinst/KCmFontInst.cpp:726
 #, kde-format
 msgid "No files?"
-msgstr "ファイルがありません？"
+msgstr "ファイルがありませんか？"
 
 #: kcmfontinst/KCmFontInst.cpp:729
 #, kde-format
@@ -943,10 +921,9 @@ msgid "Create New Group"
 msgstr "新しいグループを作成"
 
 #: kcmfontinst/KCmFontInst.cpp:749
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Name of new group:"
-msgstr "新しいグループを作成"
+msgstr "新しいグループの名前:"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
@@ -964,8 +941,7 @@ msgid "Please enter new text:"
 msgstr "新しいテキストを入力してください:"
 
 #: kcmfontinst/KCmFontInst.cpp:829
-#, fuzzy, kde-format
-#| msgid "Scanning font list..."
+#, kde-format
 msgid "Scanning font list…"
 msgstr "フォントリストをスキャン中..."
 
@@ -981,51 +957,40 @@ msgid_plural "%1 Fonts"
 msgstr[0] "%1 フォント"
 
 #: kcmfontinst/KCmFontInst.cpp:902
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
-#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
-#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table><tr><td>有効化されたフォント:</td><td>%1</td></tr><tr><td>無効化された"
-"フォント:</td><td>%2</td></tr><tr><td>一部有効化されたフォント:</td><td>%3</"
-"td></tr><tr><td>フォント総数:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">有効:</td><td>%1</td></tr><tr><td align="
+"\"right\">無効:</td><td>%2</td></tr><tr><td align=\"right\">一部有効:</"
+"td><td>%3</td></tr><tr><td align=\"right\">総数:</td><td>%4</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:912
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
-#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
-#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
-"<table><tr><td>有効化されたフォント:</td><td>%1</td></tr><tr><td>無効化された"
-"フォント:</td><td>%2</td></tr><tr><td>一部有効化されたフォント:</td><td>%3</"
-"td></tr><tr><td>フォント総数:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">有効:</td><td>%1</td></tr><tr><td align="
+"\"right\">無効:</td><td>%2</td></tr><tr><td align=\"right\">総数:</td><td>"
+"%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:989
-#, fuzzy, kde-format
-#| msgid "Looking for any associated files..."
+#, kde-format
 msgid "Looking for any associated files…"
 msgstr "関連ファイルを探しています..."
 
 #: kcmfontinst/KCmFontInst.cpp:993
-#, fuzzy, kde-format
-#| msgid "Scanning Files..."
+#, kde-format
 msgid "Scanning Files…"
 msgstr "ファイルをスキャン中..."
 
 #: kcmfontinst/KCmFontInst.cpp:994
-#, fuzzy, kde-format
-#| msgid "Looking for additional files to install..."
+#, kde-format
 msgid "Looking for additional files to install…"
 msgstr "インストールする追加ファイルを探しています..."
 
@@ -1035,8 +1000,7 @@ msgid "Looking for files associated with %1"
 msgstr "%1 に関連付けられたファイルを探しています"
 
 #: kcmfontinst/KCmFontInst.cpp:1037
-#, fuzzy, kde-format
-#| msgid "Installing font(s)..."
+#, kde-format
 msgid "Installing font(s)…"
 msgstr "フォントをインストールしています..."
 
@@ -1137,14 +1101,12 @@ msgid "Disable Fonts"
 msgstr "フォントを無効化"
 
 #: kcmfontinst/KCmFontInst.cpp:1164
-#, fuzzy, kde-format
-#| msgid "Enabling font(s)..."
+#, kde-format
 msgid "Enabling font(s)…"
 msgstr "フォントを有効化しています..."
 
 #: kcmfontinst/KCmFontInst.cpp:1166
-#, fuzzy, kde-format
-#| msgid "Disabling font(s)..."
+#, kde-format
 msgid "Disabling font(s)…"
 msgstr "フォントを無効化しています..."
 
@@ -1669,14 +1631,12 @@ msgid "Show Face:"
 msgstr "表示するフォントフェイス:"
 
 #: viewpart/FontViewPart.cpp:88
-#, fuzzy, kde-format
-#| msgid "Installing"
+#, kde-format
 msgid "Install…"
 msgstr "インストール"
 
 #: viewpart/FontViewPart.cpp:109
-#, fuzzy, kde-format
-#| msgid "Change Text..."
+#, kde-format
 msgid "Change Text…"
 msgstr "テキストを変更..."
 
