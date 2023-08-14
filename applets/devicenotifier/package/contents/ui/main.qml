@@ -61,7 +61,11 @@ PlasmoidItem {
         if (filterModel.count > 0) {
             var data = filterModel.get(0)
             if (data && data.Icon) {
-                return data.Icon
+                // We want to do this here rather than in the model because we
+                // don't always want symbolic icons everywhere in the applet,
+                // but we do know that we always want them for the
+                // CompactRepresentation icon, if they're available.
+                return data.Icon + "-symbolic"
             }
         }
         return "device-notifier-symbolic"
