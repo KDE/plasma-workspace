@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-10-31 12:01+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -20,84 +20,28 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.08.1\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Thanh công cụ chính"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Thanh công cụ phụ"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Biểu tượng nhỏ"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Hộp thoại"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Tên chủ đề hiện tại của biểu tượng"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Cỡ biểu tượng ở bàn làm việc"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Cỡ biểu tượng ở thanh công cụ"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Cỡ biểu tượng ở thanh công cụ chính"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Cỡ biểu tượng nhỏ"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Cỡ biểu tượng ở bảng"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Cỡ biểu tượng ở hộp thoại"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Không thể tạo một tệp tạm."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Không thể tải về kho trữ chủ đề của biểu tượng: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tệp này không phải là một kho trữ chủ đề của biểu tượng hợp lệ."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -106,88 +50,108 @@ msgstr ""
 "Có vấn đề xảy ra trong quá trình cài đặt; tuy nhiên, hầu hết các chủ đề "
 "trong kho trữ đã được cài đặt"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Cài đặt chủ đề thành công."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Đang cài đặt các chủ đề của biểu tượng…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Đang cài đặt chủ đề %1…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Tại đây bạn có thể cấu hình cỡ mặc định ở cấp độ toàn hệ thống của các kiểu "
-"biểu tượng khác nhau. Lưu ý rằng không phải tất cả các ứng dụng đều tuân "
-"theo các thiết lập này.<nl/><nl/>Nếu bạn thấy các đối tượng trên màn hình "
-"nhìn chung là quá nhỏ hoặc quá lớn, hãy cân nhắc việc điều chỉnh tỉ lệ toàn "
-"cục thì tốt hơn."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Chỉnh tỉ lệ toàn cục…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Cỡ:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Cấu hình cỡ biểu tượng"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Cài từ tệp…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Lấy biểu tượng mới…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Xoá chủ đề của biểu tượng"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Khôi phục chủ đề của biểu tượng"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Cấu hình cỡ biểu tượng"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Mở chủ đề"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tệp chủ đề (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Thanh công cụ chính"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Thanh công cụ phụ"
+
+#~ msgid "Small Icons"
+#~ msgstr "Biểu tượng nhỏ"
+
+#~ msgid "Dialogs"
+#~ msgstr "Hộp thoại"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Cỡ biểu tượng ở bàn làm việc"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Cỡ biểu tượng ở thanh công cụ"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Cỡ biểu tượng ở thanh công cụ chính"
+
+#~ msgid "Small icons size"
+#~ msgstr "Cỡ biểu tượng nhỏ"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Cỡ biểu tượng ở bảng"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Cỡ biểu tượng ở hộp thoại"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Tại đây bạn có thể cấu hình cỡ mặc định ở cấp độ toàn hệ thống của các "
+#~ "kiểu biểu tượng khác nhau. Lưu ý rằng không phải tất cả các ứng dụng đều "
+#~ "tuân theo các thiết lập này.<nl/><nl/>Nếu bạn thấy các đối tượng trên màn "
+#~ "hình nhìn chung là quá nhỏ hoặc quá lớn, hãy cân nhắc việc điều chỉnh tỉ "
+#~ "lệ toàn cục thì tốt hơn."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Chỉnh tỉ lệ toàn cục…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Cỡ:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Cấu hình cỡ biểu tượng"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Cấu hình cỡ biểu tượng"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Khối này cho phép bạn chọn các biểu tượng cho bàn làm việc."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-02 12:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,167 +17,131 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_icons.pot\n"
 "X-Crowdin-File-ID: 43309\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "主工具栏"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "副工具栏"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "小图标"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "对话框"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "当前图标主题名称"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "桌面图标大小"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "工具栏图标大小"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "主工具栏图标大小"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "小图标大小"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "面板图标大小"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "对话框图标大小"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "无法创建临时文件。"
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "无法下载图标主题包：%1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "该文件并非有效的图标主题包。"
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr "安装过程出现了问题，不过主题包中的大部分主题已安装完成。"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "主题安装成功。"
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "正在安装图标主题…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "正在安装 %1 主题…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"在此为各种图标类型配置系统级别的默认大小。请注意：并非所有应用程序都会遵守此"
-"处的设置。<nl/><nl/>如果您觉得屏幕显示的某些要素显得太大或者太小，可以尝试使"
-"用全局缩放。"
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "调整全局缩放…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "大小："
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "配置图标大小"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "从文件安装…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "获取新图标…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "移除图标主题"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "还原图标主题"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "配置图标大小"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "打开主题"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "主题文件 (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "主工具栏"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "副工具栏"
+
+#~ msgid "Small Icons"
+#~ msgstr "小图标"
+
+#~ msgid "Dialogs"
+#~ msgstr "对话框"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "桌面图标大小"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "工具栏图标大小"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "主工具栏图标大小"
+
+#~ msgid "Small icons size"
+#~ msgstr "小图标大小"
+
+#~ msgid "Panel icons size"
+#~ msgstr "面板图标大小"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "对话框图标大小"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "在此为各种图标类型配置系统级别的默认大小。请注意：并非所有应用程序都会遵守"
+#~ "此处的设置。<nl/><nl/>如果您觉得屏幕显示的某些要素显得太大或者太小，可以尝"
+#~ "试使用全局缩放。"
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "调整全局缩放…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "大小："
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "配置图标大小"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "配置图标大小"

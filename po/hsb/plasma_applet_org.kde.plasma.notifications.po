@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2021-11-22 18:59+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -66,17 +66,23 @@ msgid "Notifications On"
 msgstr "Zdźělenki zaswěćić"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy Link Address"
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Adresu wotkaza kopěrować"
 
-#: package/contents/ui/EditContextMenu.qml:43
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:44
+#, fuzzy, kde-format
+#| msgid "Copy"
+msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Kopěrować"
 
-#: package/contents/ui/EditContextMenu.qml:60
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:61
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Wšitko wubrać"
 

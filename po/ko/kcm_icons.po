@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,84 +18,28 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "주 도구 모음"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "보조 도구 모음"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "작은 아이콘"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "대화 상자"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "현재 아이콘 테마 이름"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "바탕 화면 아이콘 크기"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "도구 모음 아이콘 크기"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "주 도구 모음 아이콘 크기"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "작은 아이콘 크기"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "패널 아이콘 크기"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "대화 상자 아이콘 크기"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "임시 파일을 만들 수 없습니다."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "아이콘 테마 압축 파일을 다운로드할 수 없음: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "이 파일은 올바른 아이콘 테마 압축 파일이 아닙니다."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -104,85 +48,105 @@ msgstr ""
 "설치 과정에서 문제가 발생했습니다. 그러나 압축 파일에 있는 대부분의 아이콘은 "
 "설치되었습니다."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "테마를 설치했습니다."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "아이콘 테마 설치 중…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "%1 테마 설치 중…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"시스템 전역에 사용할 다양한 종류의 아이콘의 기본 크기를 설정할 수 있습니다. "
-"일부 앱에서는 이 설정이 적용되지 않을 수도 있습니다.<nl/><nl/>화면에 있는 요"
-"소의 크기가 너무 작거나 크다면 전역 크기를 변경해 보십시오."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "전역 크기 조정…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "크기:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "아이콘 크기 설정"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "파일에서 설치…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "새 항목 가져오기…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "아이콘 테마 삭제"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "아이콘 테마 복원"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "아이콘 크기 설정"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "테마 열기"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "테마 파일 (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "주 도구 모음"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "보조 도구 모음"
+
+#~ msgid "Small Icons"
+#~ msgstr "작은 아이콘"
+
+#~ msgid "Dialogs"
+#~ msgstr "대화 상자"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "바탕 화면 아이콘 크기"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "도구 모음 아이콘 크기"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "주 도구 모음 아이콘 크기"
+
+#~ msgid "Small icons size"
+#~ msgstr "작은 아이콘 크기"
+
+#~ msgid "Panel icons size"
+#~ msgstr "패널 아이콘 크기"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "대화 상자 아이콘 크기"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "시스템 전역에 사용할 다양한 종류의 아이콘의 기본 크기를 설정할 수 있습니"
+#~ "다. 일부 앱에서는 이 설정이 적용되지 않을 수도 있습니다.<nl/><nl/>화면에 "
+#~ "있는 요소의 크기가 너무 작거나 크다면 전역 크기를 변경해 보십시오."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "전역 크기 조정…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "크기:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "아이콘 크기 설정"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "아이콘 크기 설정"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "이 모듈에서 바탕 화면에 사용할 아이콘을 설정할 수 있습니다."

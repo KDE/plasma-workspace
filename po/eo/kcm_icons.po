@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -22,84 +22,28 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Ĉefa ilobreto"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Duarangaj Ilobretoj"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Malgrandaj piktogramoj"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialogoj"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Nomo de la aktuala piktogrametoso"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Labortabla piktogramgrandeco"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Ilobreta piktogramgrandeco"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Ĉef-ilobreta piktogramgrandeco"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Malgranda piktogramgrandeco"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Panela piktogramgrandeco"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Dialoga piktogramgrandeco"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne eblas krei provizoran dosieron."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ne eblas elŝuti la piktogrametosan arkivon: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "La dosiero ne estas valida piktogrametosa arkivo."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -108,83 +52,103 @@ msgstr ""
 "Problemo okazis dum la instalado. Sed la plejmulto de la etosoj en la arkivo "
 "estas instalitaj"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Etoso instalita sukcese."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Instalante piktogrametosojn…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Instalante etoson %1…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Ĉi tie vi povas agordi la defaŭltajn grandecojn de variaj piktogramtipoj je "
-"sistem-ampleksa nivelo. Rimarku ke ne ĉiuj aplikoj respektos tiujn metojn."
-"<nl/><nl/>Se vi trvoas ke objektoj surekrane estas ĝenerale tro malgrandaj "
-"aŭ tro grandaj, konsideru ĝustigi la ĉiean skalon anstataŭe."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Ĝustigi ĉiean skalon…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Grandeco:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Agordi Piktogrametoson"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Instali el dosiero…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Elŝuti Novon…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Forigi Piktogrametoson"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restarigi Piktogrametoson"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Agordi Piktogramgrandecojn"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Malfermi Etoson"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Etosaj Dosieroj (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Ĉefa ilobreto"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Duarangaj Ilobretoj"
+
+#~ msgid "Small Icons"
+#~ msgstr "Malgrandaj piktogramoj"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialogoj"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Labortabla piktogramgrandeco"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Ilobreta piktogramgrandeco"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Ĉef-ilobreta piktogramgrandeco"
+
+#~ msgid "Small icons size"
+#~ msgstr "Malgranda piktogramgrandeco"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Panela piktogramgrandeco"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Dialoga piktogramgrandeco"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Ĉi tie vi povas agordi la defaŭltajn grandecojn de variaj piktogramtipoj "
+#~ "je sistem-ampleksa nivelo. Rimarku ke ne ĉiuj aplikoj respektos tiujn "
+#~ "metojn.<nl/><nl/>Se vi trvoas ke objektoj surekrane estas ĝenerale tro "
+#~ "malgrandaj aŭ tro grandaj, konsideru ĝustigi la ĉiean skalon anstataŭe."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Ĝustigi ĉiean skalon…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Grandeco:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Agordi Piktogrametoson"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Agordi Piktogramgrandecojn"

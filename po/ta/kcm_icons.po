@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-06 15:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -20,84 +20,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "பிரதான கருவிப்பட்டை"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "இரண்டாம்பட்ச கருவிப்பட்டைகள்"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "சிறு சின்னங்கள்"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "சாளரங்கள்"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "தற்போதைய சின்னங்களுக்கான தோற்றத்திட்டத்தின் பெயர்"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "பணிமேடை சின்னங்களின் அளவு"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "கருவிப்பட்டை சின்னங்களின் அளவு"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "பிரதான கருவிப்பட்டை சின்னங்களின் அளவு"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "சிறு சின்னங்களின் அளவு"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "பலகை சின்னங்களின் அளவு"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "சாளரத்திளுள்ள சின்னங்களின் அளவு"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை.."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "சின்னங்களுக்கான தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "கோப்பு, செல்லுபடியாகாத சின்ன தோற்றத்திட்ட பெட்டகம்."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -106,85 +50,105 @@ msgstr ""
 "நிறுவும்போது சிக்கல் ஏற்பட்டது; இருந்தும், பெட்டகத்திலிருந்த பெரும்பாலுமான தோற்றத்திட்டங்கள் "
 "நிறுவப்பட்டன"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "தோற்றத்திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "சின்னங்களுக்கான திட்டங்கள் நிறுவப்படுகின்றன…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "%1 திட்டம் நிறுவப்படுகிறது…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"பல்வேறு வகையான சின்னங்களின் இயல்பிருப்பு அளவுகளை இங்கு நீங்கள் அமைக்கலாம். சில செயலிகள் "
-"இவ்வமைப்புகளை பொருட்படுத்தாமல் இருக்கலாம்.<nl/><nl/>திரையில் காட்டப்படுபவை அனைத்தின் "
-"அளவை மாற்ற, இத்தேர்வுக்கு பதிலாக முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்றுங்கள்."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்று…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "அளவு:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "சின்னங்களின் அளவுகளை அமை"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "கோப்பிலிருந்து நிறுவு…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "புதியவற்றை பெறு…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "சின்னங்களுக்கான திட்டத்தை நீக்கு"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "சின்னங்களுக்கான திட்டத்தை மீட்டெடு"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "சின்னங்களின் அளவுகளை அமைப்பது"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "திட்டத்தை திற"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "தோற்றத்திட்ட கோப்புகள் (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "பிரதான கருவிப்பட்டை"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "இரண்டாம்பட்ச கருவிப்பட்டைகள்"
+
+#~ msgid "Small Icons"
+#~ msgstr "சிறு சின்னங்கள்"
+
+#~ msgid "Dialogs"
+#~ msgstr "சாளரங்கள்"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "பணிமேடை சின்னங்களின் அளவு"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "கருவிப்பட்டை சின்னங்களின் அளவு"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "பிரதான கருவிப்பட்டை சின்னங்களின் அளவு"
+
+#~ msgid "Small icons size"
+#~ msgstr "சிறு சின்னங்களின் அளவு"
+
+#~ msgid "Panel icons size"
+#~ msgstr "பலகை சின்னங்களின் அளவு"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "சாளரத்திளுள்ள சின்னங்களின் அளவு"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "பல்வேறு வகையான சின்னங்களின் இயல்பிருப்பு அளவுகளை இங்கு நீங்கள் அமைக்கலாம். சில "
+#~ "செயலிகள் இவ்வமைப்புகளை பொருட்படுத்தாமல் இருக்கலாம்.<nl/><nl/>திரையில் காட்டப்படுபவை "
+#~ "அனைத்தின் அளவை மாற்ற, இத்தேர்வுக்கு பதிலாக முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்றுங்கள்."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்று…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "அளவு:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "சின்னங்களின் அளவுகளை அமை"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "சின்னங்களின் அளவுகளை அமைப்பது"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "உங்கள் பணிமேடையில் பயன்படுத்தப்படும் சின்னங்களை தேர்ந்தெடுக்க இந்த கூறு உதவும்."

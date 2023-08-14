@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-02-23 18:19+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -25,84 +25,28 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "メインツールバー"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "セカンダリツールバー"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "小さいアイコン"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "ダイアログ"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "現在のアイコンテーマの名前"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "デスクトップアイコンのサイズ"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "ツールバーアイコンのサイズ"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "メインツールバーアイコンのサイズ"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "小さいアイコンのサイズ"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "パネルアイコンのサイズ"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "ダイアログアイコンのサイズ"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "一時ファイルを作成できません。"
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "アイコンテーマアーカイブをダウンロードできません: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ファイルは有効なアイコンテーマアーカイブではありません。"
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -111,87 +55,107 @@ msgstr ""
 "インストール中に問題が発生しました。しかし、アーカイブ内のほとんどのテーマは"
 "インストールされました"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "テーマのインストールに成功しました。"
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "アイコンテーマをインストール中..."
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "テーマ %1 をインストール中..."
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"ここでシステム全体における様々なアイコンタイプのデフォルトのサイズを設定でき"
-"ます。すべてのアプリケーションがこれらの設定を尊重するとは限らないことに注意"
-"してください。<nl/><nl/>スクリーン上のオブジェクトが小さすぎるか大きすぎる場"
-"合は、代わりにグローバルスケールを調整してみてください。"
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "グローバルのスケールを調整..."
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "サイズ:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "アイコンサイズを設定"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "ファイルからインストール..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "新しいアイコンを取得..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "アイコンテーマを削除"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "アイコンテーマを復元"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "アイコンサイズを設定"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "テーマを開く"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "テーマファイル (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "メインツールバー"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "セカンダリツールバー"
+
+#~ msgid "Small Icons"
+#~ msgstr "小さいアイコン"
+
+#~ msgid "Dialogs"
+#~ msgstr "ダイアログ"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "デスクトップアイコンのサイズ"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "ツールバーアイコンのサイズ"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "メインツールバーアイコンのサイズ"
+
+#~ msgid "Small icons size"
+#~ msgstr "小さいアイコンのサイズ"
+
+#~ msgid "Panel icons size"
+#~ msgstr "パネルアイコンのサイズ"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "ダイアログアイコンのサイズ"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "ここでシステム全体における様々なアイコンタイプのデフォルトのサイズを設定で"
+#~ "きます。すべてのアプリケーションがこれらの設定を尊重するとは限らないことに"
+#~ "注意してください。<nl/><nl/>スクリーン上のオブジェクトが小さすぎるか大きす"
+#~ "ぎる場合は、代わりにグローバルスケールを調整してみてください。"
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "グローバルのスケールを調整..."
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "サイズ:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "アイコンサイズを設定"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "アイコンサイズを設定"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "このモジュールでデスクトップのアイコンを選択できます。"

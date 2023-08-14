@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -70,17 +70,22 @@ msgid "Notifications On"
 msgstr "kalama ilo li lon"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy Link Address"
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "o pana e nasin pi lipu ni tawa poki jo"
 
-#: package/contents/ui/EditContextMenu.qml:43
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:44
+#, fuzzy, kde-format
+#| msgid "&Copy"
+msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr ""
+msgstr "o tu e lipu tawa lipu jo"
 
-#: package/contents/ui/EditContextMenu.qml:60
+#: package/contents/ui/EditContextMenu.qml:61
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr ""
 

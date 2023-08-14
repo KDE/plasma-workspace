@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2009-10-20 18:05+0200\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -23,88 +23,29 @@ msgstr ""
 "n%100>=20) ? 1 : 2);\n"
 "n%100>=20) ? 1 : 2);\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Przidnô lestew nôrzãdzów"
-
-#: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
-msgid "Secondary Toolbars"
-msgstr "&Drëgô farwa:"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Môłé ikònë"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialodżi"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr ""
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
-msgid "Main toolbar icons size"
-msgstr "Przidnô lestew nôrzãdzów"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
-msgid "Small icons size"
-msgstr "Môłé ikònë"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr ""
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:193
+#: main.cpp:161
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nie mòże nalezc archiwùm témë ikònów %1."
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Nen lopk nie je prôwdzewim archiwòm témë ikònów."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -113,90 +54,87 @@ msgstr ""
 "Wëstãpiła problema òbczas procesu instalacëji; równak, wikszi dzél témów w "
 "archiwùm òstôł zainstalowóny"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:260
+#: main.cpp:228
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "Instalowanié témów ikònów"
 
-#: main.cpp:270
+#: main.cpp:238
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"
 msgstr "Instalowanié témów ikònów"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr ""
-
-#: ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Miara:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Install Theme File..."
 msgid "Install from File…"
 msgstr "Instalëjë lopk témë..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New…"
 msgstr "Zladëjë nową témã..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Rëmôj témã"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Rëmôj témã"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Rëmôj témã"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Przidnô lestew nôrzãdzów"
+
+#, fuzzy
+#~| msgid "&Second color:"
+#~ msgid "Secondary Toolbars"
+#~ msgstr "&Drëgô farwa:"
+
+#~ msgid "Small Icons"
+#~ msgstr "Môłé ikònë"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialodżi"
+
+#, fuzzy
+#~| msgid "Main Toolbar"
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Przidnô lestew nôrzãdzów"
+
+#, fuzzy
+#~| msgid "Small Icons"
+#~ msgid "Small icons size"
+#~ msgstr "Môłé ikònë"
+
+#, fuzzy
+#~| msgid "Size:"
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Miara:"
 
 #~ msgid "Toolbar"
 #~ msgstr "Lestew nôrzãdzów"

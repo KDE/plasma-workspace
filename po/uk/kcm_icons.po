@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-03 23:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -23,84 +23,28 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Головний пенал"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Вторинні панелі інструментів"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Малі піктограми"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Діалогові вікна"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Назва поточної теми піктограм"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Розмір піктограм на стільниці"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Розмір піктограм на панелі інструментів"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Розмір піктограм головної панелі інструментів"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Розмір малих піктограм"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Розмір піктограм на панелі"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Розмір піктограм у діалогових вікнах"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не вдалося створити тимчасовий файл."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не вдалося отримати архів теми курсорів %1."
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Цей файл не є архівом тем."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -109,87 +53,107 @@ msgstr ""
 "Під час спроби встановлення сталася помилка; однак, більшість тем з архіву "
 "було встановлено"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Тему успішно встановлено."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Встановлюємо теми піктограм…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Встановлюємо тему %1…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Тут ви можете налаштувати типові розміри різноманітних типів піктограм на "
-"загальносистемному рівні. Зауважте, що підтримку цих параметрів передбачено "
-"не в усіх програмах.<nl/><nl/>Якщо ви вважаєте, що об'єкти на екрані загалом "
-"надто малі або надто великі, вам варто скоригувати загальне масштабування "
-"зображення на екрані."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Скоригувати загальний масштаб…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Розмір:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Налаштувати розміри піктограм"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Встановити з файла…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Отримати ще…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Вилучення теми піктограм"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Відновити тему піктограм"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Налаштувати розміри піктограм"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Відкриття теми"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "файли тем (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Головний пенал"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Вторинні панелі інструментів"
+
+#~ msgid "Small Icons"
+#~ msgstr "Малі піктограми"
+
+#~ msgid "Dialogs"
+#~ msgstr "Діалогові вікна"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Розмір піктограм на стільниці"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Розмір піктограм на панелі інструментів"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Розмір піктограм головної панелі інструментів"
+
+#~ msgid "Small icons size"
+#~ msgstr "Розмір малих піктограм"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Розмір піктограм на панелі"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Розмір піктограм у діалогових вікнах"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Тут ви можете налаштувати типові розміри різноманітних типів піктограм на "
+#~ "загальносистемному рівні. Зауважте, що підтримку цих параметрів "
+#~ "передбачено не в усіх програмах.<nl/><nl/>Якщо ви вважаєте, що об'єкти на "
+#~ "екрані загалом надто малі або надто великі, вам варто скоригувати "
+#~ "загальне масштабування зображення на екрані."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Скоригувати загальний масштаб…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Розмір:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Налаштувати розміри піктограм"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Налаштувати розміри піктограм"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr ""

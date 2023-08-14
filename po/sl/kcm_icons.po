@@ -1,7 +1,7 @@
 # translation of kcmicons.po to Slovenian
 # Translation of kcmicons.po to Slovenian
 # Copyright (C) 2001, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: kcm_icons.po 1657452 2023-08-04 02:12:36Z scripty $
+# $Id: kcm_icons.po 1658132 2023-08-14 02:11:32Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-03 07:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,84 +27,28 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Glavna orodna vrstica"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Sekundarne orodne vrstice"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Majhne ikone"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Pogovorna okna"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Ime trenutne teme ikon"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Velikost ikon na namizju"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Velikost orodnih letvic"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Velikost glavne orodne letvice"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Velikost majhnih ikon"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Velikost ikon plošč"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Velikost ikon pogovorov"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ni bilo mogoče ustvariti začasne datoteke."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ni bilo mogoče najti arhiva s temami ikon %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Datoteka ni veljaven arhiv s temami ikon."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -113,86 +57,106 @@ msgstr ""
 "Med namestitvijo je prišlo do težave. Vseeno je bila večina tem v arhivu "
 "nameščena"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema uspešno nameščena."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Nameščanje tem ikon…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Nameščanje %1 teme…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Tu lahko konfigurirate privzete velikosti različnih vrst ikon na sistemski "
-"ravni. Upoštevajte, da ne bodo vse aplikacije spoštovale teh nastavitev.<nl/"
-"><nl/>Če se vam zdi, da so predmeti na zaslonu na splošno premajhni ali "
-"preveliki, razmislite o prilagoditvi globalne lestvice."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Prilagodi globalno lestvico…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Velikost:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Nastavi velikost ikon"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Namesti iz datoteke…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Odstrani temo ikon"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Obnovi temo ikon"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Konfiguriraj velikost ikon"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Odpri temo"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Datoteke tem (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Glavna orodna vrstica"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Sekundarne orodne vrstice"
+
+#~ msgid "Small Icons"
+#~ msgstr "Majhne ikone"
+
+#~ msgid "Dialogs"
+#~ msgstr "Pogovorna okna"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Velikost ikon na namizju"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Velikost orodnih letvic"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Velikost glavne orodne letvice"
+
+#~ msgid "Small icons size"
+#~ msgstr "Velikost majhnih ikon"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Velikost ikon plošč"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Velikost ikon pogovorov"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Tu lahko konfigurirate privzete velikosti različnih vrst ikon na "
+#~ "sistemski ravni. Upoštevajte, da ne bodo vse aplikacije spoštovale teh "
+#~ "nastavitev.<nl/><nl/>Če se vam zdi, da so predmeti na zaslonu na splošno "
+#~ "premajhni ali preveliki, razmislite o prilagoditvi globalne lestvice."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Prilagodi globalno lestvico…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Velikost:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Nastavi velikost ikon"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfiguriraj velikost ikon"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Ta modul omogoča izbiro ikon za vaše namizje."

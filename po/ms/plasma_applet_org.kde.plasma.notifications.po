@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2010-05-30 19:23+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -68,16 +68,19 @@ msgstr "Pemberitahuan"
 
 #: package/contents/ui/EditContextMenu.qml:32
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr ""
 
-#: package/contents/ui/EditContextMenu.qml:43
+#: package/contents/ui/EditContextMenu.qml:44
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr ""
 
-#: package/contents/ui/EditContextMenu.qml:60
+#: package/contents/ui/EditContextMenu.qml:61
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr ""
 

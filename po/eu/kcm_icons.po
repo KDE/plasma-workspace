@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-03 11:46+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -25,84 +25,28 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Tresna-barra nagusia"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Bigarren mailako tresna-barrak"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Ikono txikiak"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Elkarrizketa-koadroak"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Uneko ikono-gaiaren izena"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Mahaigaineko ikonoen neurria"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Tresna-barrako ikonoen neurria"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Tresna-barra nagusiko ikonoen neurria"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Ikono txikien neurria"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Paneleko ikonoen neurria"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Elkarrizketa-koadroko ikonoen neurria"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ezin da aldi baterako fitxategi bat sortu."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ezin da jaitsi ikono-gai artxiboa: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fitxategi hau ez da baliozko ikonoen gai-artxibo bat."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -111,87 +55,107 @@ msgstr ""
 "Arazo bat gertatu da instalatzean; hala ere, artxiboko gai gehienak "
 "instalatu dira."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Gai-instalatze arrakastatsua."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Ikono-gaiak instalatzen..."
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "%1 gaia instalatzen..."
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Hemen sistema osoko hainbat ikono-motaren neurri lehenetsiak konfigura "
-"ditzakezu. Kontuan izan aplikazio guztiek ez dituztela ezarpen hauek "
-"errespetatuko<nl/><nl/>Pantailako objektuak orokorrean txikiegiak edo "
-"handiegiak direla iruditzen bazaizu, horren ordez, kontuan hartu eskala "
-"orokorra doitzeko aukera."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Doitu eskala orokorra..."
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Tamaina:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Konfiguratu ikono-neurriak"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalatu fitxategitik..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Eskuratu ... berria"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Kendu ikono-gaia"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Lehengoratu ikono-gaia"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Konfiguratu ikonoen neurriak"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Ireki gaia"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Gai fitxategiak (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Tresna-barra nagusia"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Bigarren mailako tresna-barrak"
+
+#~ msgid "Small Icons"
+#~ msgstr "Ikono txikiak"
+
+#~ msgid "Dialogs"
+#~ msgstr "Elkarrizketa-koadroak"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Mahaigaineko ikonoen neurria"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Tresna-barrako ikonoen neurria"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Tresna-barra nagusiko ikonoen neurria"
+
+#~ msgid "Small icons size"
+#~ msgstr "Ikono txikien neurria"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Paneleko ikonoen neurria"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Elkarrizketa-koadroko ikonoen neurria"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Hemen sistema osoko hainbat ikono-motaren neurri lehenetsiak konfigura "
+#~ "ditzakezu. Kontuan izan aplikazio guztiek ez dituztela ezarpen hauek "
+#~ "errespetatuko<nl/><nl/>Pantailako objektuak orokorrean txikiegiak edo "
+#~ "handiegiak direla iruditzen bazaizu, horren ordez, kontuan hartu eskala "
+#~ "orokorra doitzeko aukera."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Doitu eskala orokorra..."
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Tamaina:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfiguratu ikono-neurriak"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfiguratu ikonoen neurriak"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Modulu honek zure mahaigainerako ikonoak aukeratzen uzten dizu."

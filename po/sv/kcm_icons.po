@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2021-05-27 18:43+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,85 +17,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Huvudverktygsrad"
-
-#: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
-msgid "Secondary Toolbars"
-msgstr "&Andra färg:"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Små ikoner"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialogrutor"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Namn på aktuellt ikontema"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Skrivbordsikonstorlek"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Verktygsradsikonstorlek"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Huvudverktygsradsikonstorlek"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Liten ikonstorlek"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Panelikonstorlek"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Dialogikonstorlek"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kan inte skapa tillfällig fil."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kan inte ladda ner arkivet för ikontemat: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Filen är inte ett giltigt arkiv för ikonteman."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -104,85 +47,98 @@ msgstr ""
 "Ett problem uppstod under installationen. De flesta teman i arkivet har ändå "
 "installerats."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema installerat med lyckat resultat."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Installerar ikonteman…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Installerar tema %1…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr ""
-
-#: ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Storlek:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Anpassa ikonstorlekar"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Installera från fil…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Hämta nya ikoner…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Ta bort ikontema"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Återställ ikontema"
 
-#: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Anpassa ikonstorlekar"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Öppna tema"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Huvudverktygsrad"
+
+#, fuzzy
+#~| msgid "&Second color:"
+#~ msgid "Secondary Toolbars"
+#~ msgstr "&Andra färg:"
+
+#~ msgid "Small Icons"
+#~ msgstr "Små ikoner"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialogrutor"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Skrivbordsikonstorlek"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Verktygsradsikonstorlek"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Huvudverktygsradsikonstorlek"
+
+#~ msgid "Small icons size"
+#~ msgstr "Liten ikonstorlek"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Panelikonstorlek"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Dialogikonstorlek"
+
+#, fuzzy
+#~| msgid "Size:"
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Storlek:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Anpassa ikonstorlekar"
+
+#, fuzzy
+#~| msgid "Configure Icon Sizes"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Anpassa ikonstorlekar"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Modulen gör det möjligt att välja ikoner för skrivbordet."

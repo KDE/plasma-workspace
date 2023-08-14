@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2017-05-23 09:03-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -73,16 +73,20 @@ msgstr "נקה התראות"
 #: package/contents/ui/EditContextMenu.qml:32
 #, fuzzy, kde-format
 #| msgid "Copy"
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "העתק"
 
-#: package/contents/ui/EditContextMenu.qml:43
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:44
+#, fuzzy, kde-format
+#| msgid "Copy"
+msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "העתק"
 
-#: package/contents/ui/EditContextMenu.qml:60
+#: package/contents/ui/EditContextMenu.qml:61
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr ""
 

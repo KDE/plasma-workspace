@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-11-18 02:13+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -19,84 +19,28 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.1\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Pagrindinė įrankių juosta"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Antrinės įrankių juostos"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Mažos piktogramos"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialogai"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Dabartinio piktogramų apipavidalinimo pavadinimas"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Darbalaukio piktogramų dydis"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Įrankių juostos piktogramų dydis"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Pagrindinės įrankių juostos piktogramų dydis"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Mažų piktogramų dydis"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Skydelio piktogramų dydis"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Dialogo piktogramų dydis"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nepavyko sukurti laikinojo failo."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nepavyko atsisiųsti piktogramų apipavidalinimo archyvo: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Failas nėra teisingas piktogramų apipavidalinimo archyvas."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -105,88 +49,108 @@ msgstr ""
 "Įdiegimo proceso metu iškilo problemų, tačiau dauguma apipavidalinimų iš "
 "archyvo buvo įdiegti"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Apipavidalinimas sėkmingai įdiegtas."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Įdiegiami piktogramų apipavidalinimai…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Įdiegiamas %1 apipavidalinimas…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Čia galite sistemos mastu konfigūruoti numatytuosius įvairių piktogramų "
-"dydžius. Turėkite omenyje, kad ne visos programos atsižvelgs į šias "
-"nuostatas.<nl/><nl/>Jei pastebėsite, kad įprastai objektai ekrane yra per "
-"maži arba per dideli, tuomet, vietoj to, pabandykite reguliuoti visuotinį "
-"mastelį."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Reguliuoti visuotinį mastelį…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Dydis:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Konfigūruoti piktogramų dydžius"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Įdiegti iš failo…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Gauti naujas piktogramas…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Šalinti piktogramų apipavidalinimą"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Atkurti piktogramų apipavidalinimą"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Konfigūruoti piktogramų dydžius"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Atverti apipavidalinimą"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Apipavidalinimo failai (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Pagrindinė įrankių juosta"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Antrinės įrankių juostos"
+
+#~ msgid "Small Icons"
+#~ msgstr "Mažos piktogramos"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialogai"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Darbalaukio piktogramų dydis"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Įrankių juostos piktogramų dydis"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Pagrindinės įrankių juostos piktogramų dydis"
+
+#~ msgid "Small icons size"
+#~ msgstr "Mažų piktogramų dydis"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Skydelio piktogramų dydis"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Dialogo piktogramų dydis"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Čia galite sistemos mastu konfigūruoti numatytuosius įvairių piktogramų "
+#~ "dydžius. Turėkite omenyje, kad ne visos programos atsižvelgs į šias "
+#~ "nuostatas.<nl/><nl/>Jei pastebėsite, kad įprastai objektai ekrane yra per "
+#~ "maži arba per dideli, tuomet, vietoj to, pabandykite reguliuoti visuotinį "
+#~ "mastelį."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Reguliuoti visuotinį mastelį…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Dydis:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfigūruoti piktogramų dydžius"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfigūruoti piktogramų dydžius"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Šis modulis leidžia jums pasirinkti piktogramas savo darbalaukiui."

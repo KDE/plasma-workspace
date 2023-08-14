@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 01:59+0000\n"
-"PO-Revision-Date: 2023-07-09 01:03+0200\n"
+"PO-Revision-Date: 2023-08-13 16:24+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,34 +32,28 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Modul zum Einrichten von Maus-Aktionen"
 
 #: desktopview.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Plasma %1"
+msgstr "KDE Plasma %1 Dev"
 
 #: desktopview.cpp:228
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Plasma %1"
+msgstr "KDE Plasma %1 Beta"
 
 #: desktopview.cpp:231
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Beta %2"
 
 #: desktopview.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Plasma %1"
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:241
 #, kde-format

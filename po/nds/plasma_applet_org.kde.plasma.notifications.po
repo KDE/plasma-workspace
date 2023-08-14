@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2014-09-18 16:11+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -73,16 +73,21 @@ msgstr "Bescheden"
 #: package/contents/ui/EditContextMenu.qml:32
 #, fuzzy, kde-format
 #| msgid "Copy"
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Koperen"
 
-#: package/contents/ui/EditContextMenu.qml:43
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:44
+#, fuzzy, kde-format
+#| msgid "Copy"
+msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Koperen"
 
-#: package/contents/ui/EditContextMenu.qml:60
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:61
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Allens utsöken"
 

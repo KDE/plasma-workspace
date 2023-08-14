@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-08-19 20:36+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -20,85 +20,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Bilah Alat utama"
-
-#: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
-msgid "Secondary Toolbars"
-msgstr "Warna kedua:"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Ikon Kecil"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialog"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Nama tema ikon saat ini"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Ukuran ikon desktop"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Ukuran ikon toolbar"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Ukuran ikon toolbar utama"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Ukuran ikon kecil"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Ukuran ikon panel"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Ukuran ikon dialog"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Tidak dapat menciptakan file temporer."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Tak dapat mengunduh arsip tema ikon: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "File bukan tema ikon yang valid. "
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -107,85 +50,98 @@ msgstr ""
 "Sebuah permasalahan terjadi dalam proses penginstalan; namun hampir semua "
 "tema dari arsip sudah terinstal"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema berhasil diinstal."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Menginstal tema ikon..."
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Menginstal tema %1..."
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr ""
-
-#: ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Ukuran:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Konfigurasikan Ukuran Ikon"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal dari File..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Dapatkan Ikon Baru..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Buang Tema Ikon"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Kembalikan Tema Ikon"
 
-#: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Konfigurasikan Ukuran Ikon"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Buka Tema"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "File-file Tema (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Bilah Alat utama"
+
+#, fuzzy
+#~| msgid "&Second color:"
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Warna kedua:"
+
+#~ msgid "Small Icons"
+#~ msgstr "Ikon Kecil"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialog"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Ukuran ikon desktop"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Ukuran ikon toolbar"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Ukuran ikon toolbar utama"
+
+#~ msgid "Small icons size"
+#~ msgstr "Ukuran ikon kecil"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Ukuran ikon panel"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Ukuran ikon dialog"
+
+#, fuzzy
+#~| msgid "Size:"
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Ukuran:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfigurasikan Ukuran Ikon"
+
+#, fuzzy
+#~| msgid "Configure Icon Sizes"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Konfigurasikan Ukuran Ikon"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Modul ini memungkinkanmu untuk memilih ikon-ikon untuk desktopmu."

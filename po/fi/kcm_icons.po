@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-11-11 22:18+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,84 +29,28 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Päätyökalurivi"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Toissijaiset työkalurivit"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Pienet kuvakkeet"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Valintaikkunat"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Nykyisen kuvaketeeman nimi"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Työpöytäkuvakkeiden koko"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Työkalurivikuvakkeiden koko"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Päätyökalurivikuvakkeiden koko"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Pienten kuvakkeiden koko"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Paneelikuvakkeiden koko"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Kyselyikkunakuvakkeiden koko"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Väliaikaistiedoston luonti epäonnistui."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kuvaketeema-arkiston %1 lataus epäonnistui"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tiedosto ei ole kelvollinen kuvaketeema-arkisto."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -115,88 +59,108 @@ msgstr ""
 "Asennuksessa tapahtui virhe. Siitä huolimatta suurin osa paketin teemoista "
 "on asennettu"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teeman asennus onnistui."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Asennetaan kuvaketeemoja…"
 
 # *** TARKISTA: Vai onko %1 lukumäärä?
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Asennetaan teemaa %1…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Tässä voi mukauttaa eri kuvaketyyppien oletuskokoja järjestelmänlaajuisesti. "
-"Huomaa, etteivät kaikki sovellukset kunnioita näitä arvoja.<nl/><nl/>Jos "
-"jotkin näyttöalkiot ovat yleisesti liian pieniä tai suuria, saattaa "
-"kannattaa säätää tämän sijaan yleismittakaavaa."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Säädä yleismittakaavaa…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Koko:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Aseta kuvakekoot"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Asenna tiedostosta…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Hae uusia kuvakkeita…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Poista kuvaketeema"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Palauta kuvaketeema"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Aseta kuvakekoot"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Avaa teema"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Teematiedostot (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Päätyökalurivi"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Toissijaiset työkalurivit"
+
+#~ msgid "Small Icons"
+#~ msgstr "Pienet kuvakkeet"
+
+#~ msgid "Dialogs"
+#~ msgstr "Valintaikkunat"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Työpöytäkuvakkeiden koko"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Työkalurivikuvakkeiden koko"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Päätyökalurivikuvakkeiden koko"
+
+#~ msgid "Small icons size"
+#~ msgstr "Pienten kuvakkeiden koko"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Paneelikuvakkeiden koko"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Kyselyikkunakuvakkeiden koko"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Tässä voi mukauttaa eri kuvaketyyppien oletuskokoja "
+#~ "järjestelmänlaajuisesti. Huomaa, etteivät kaikki sovellukset kunnioita "
+#~ "näitä arvoja.<nl/><nl/>Jos jotkin näyttöalkiot ovat yleisesti liian "
+#~ "pieniä tai suuria, saattaa kannattaa säätää tämän sijaan yleismittakaavaa."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Säädä yleismittakaavaa…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Koko:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Aseta kuvakekoot"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Aseta kuvakekoot"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Tällä moduulilla voit valita työpöytäsi kuvakkeet."

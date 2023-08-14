@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-11-11 11:32+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,84 +17,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Əsas alətlər paneli"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "İkinci alətlər paneli"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Kiçik nişanlar"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialoqlar"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Cari İkon mövzusununun adı"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "İş masası nişanlarının ölçüsü"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Alətlər paneli nişanlarının ölçüsü"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Əsas alətlər paneli nişanlarının ölçüsü"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Kiçik nişanların ölçüsü"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Panel nişanlarının ölçüsü"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Dialoq nişanlarının ölçüsü"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nümunə faylını yaratmaq alınmadı"
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nişan mövzusu arxivini yükləmək mümkün olmadı: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Bu fayl, düzgün nişan mövzusu arxivi deyil"
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -103,88 +47,108 @@ msgstr ""
 "Bu problem quraşdırılma prosesi zamanı baş verdi, bununla belə arxivdəki bir "
 "çox mövzular quraşdırıldı"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Mövzu uğurla quraşdırıldı"
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Nişan mövzuları quraşdırılır..."
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "%1 mövzu quraşdırılır..."
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Burada siz müxtəlif nişan növlərinin ölçüsünü bütöv sistem üçün tənzimləyə "
-"bilərsiniz. Nəzərə alın ki bu ayar heç də bütün tətbiqlər tərəfindən lazımi "
-"şəkildə qarşılanmır.<nl/><nl/>Əgər görsəniz ki, hər hansı bir nişan ekranda "
-"çox kiçik və ya çox böyük görünür, o zaman qlobal miqyas parametrini tətbiq "
-"etməyi nəzərdən keçirin."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Qlobal miqyas təyin edin..."
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Ölçüsü:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "İkon ölçülərini təyin etmək"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Fayldan quraşdırın..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Yeni nişanlar alın..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "İkon mövzusunu silmək"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "İkon mövzusunu bərpa etmək"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Nişanın ölçülərini dəyişin"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Mövzunu açmaq"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Mövzu faylları (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Əsas alətlər paneli"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "İkinci alətlər paneli"
+
+#~ msgid "Small Icons"
+#~ msgstr "Kiçik nişanlar"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialoqlar"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "İş masası nişanlarının ölçüsü"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Alətlər paneli nişanlarının ölçüsü"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Əsas alətlər paneli nişanlarının ölçüsü"
+
+#~ msgid "Small icons size"
+#~ msgstr "Kiçik nişanların ölçüsü"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Panel nişanlarının ölçüsü"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Dialoq nişanlarının ölçüsü"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Burada siz müxtəlif nişan növlərinin ölçüsünü bütöv sistem üçün "
+#~ "tənzimləyə bilərsiniz. Nəzərə alın ki bu ayar heç də bütün tətbiqlər "
+#~ "tərəfindən lazımi şəkildə qarşılanmır.<nl/><nl/>Əgər görsəniz ki, hər "
+#~ "hansı bir nişan ekranda çox kiçik və ya çox böyük görünür, o zaman qlobal "
+#~ "miqyas parametrini tətbiq etməyi nəzərdən keçirin."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Qlobal miqyas təyin edin..."
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Ölçüsü:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "İkon ölçülərini təyin etmək"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Nişanın ölçülərini dəyişin"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Bu modul, nişanları, sizin iş masanız üçün seçməyə imkan verir."

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-04-19 00:33+0200\n"
+"PO-Revision-Date: 2023-08-13 16:25+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -50,23 +50,19 @@ msgid "Show notification badges"
 msgstr "Benachrichtigungs-Symbole anzeigen"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Ereignisse einrichten ..."
+msgstr "Ereignisse einrichten"
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
 "Diese Anwendung unterstützt kein Einrichtung von Benachrichtigungen für "
-"einzelne Ereignisse."
+"einzelne Ereignisse"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -76,7 +72,7 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:300
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Klang abspielen"
 
 #: ui/main.qml:41
 #, kde-format
@@ -270,22 +266,18 @@ msgid "System Services"
 msgstr "Systemdienste"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Es passt keine Anwendung oder Ereignis zu Ihrem Suchbegriff."
+msgstr "Es passt keine Anwendung oder Ereignis zu Ihrem Suchbegriff"
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Wählen Sie eine Anwendung aus der Liste, um die Einstellungen und das "
-"Verhalten von Benachrichtigungen einzurichten."
+"Verhalten von Benachrichtigungen einzurichten"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Benachrichtigungen festlegen"

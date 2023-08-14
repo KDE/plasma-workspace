@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-11-24 17:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -71,17 +71,23 @@ msgid "Notifications On"
 msgstr "Bildirimler Açık"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy Link Address"
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Bağlantı Adresini Kopyala"
 
-#: package/contents/ui/EditContextMenu.qml:43
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:44
+#, fuzzy, kde-format
+#| msgid "Copy"
+msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Kopyala"
 
-#: package/contents/ui/EditContextMenu.qml:60
-#, kde-format
+#: package/contents/ui/EditContextMenu.qml:61
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Tümünü Seç"
 

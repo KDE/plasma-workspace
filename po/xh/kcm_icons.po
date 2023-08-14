@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2002-10-23 12:00SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -19,85 +19,28 @@ msgstr ""
 "X-Generator: KBabel 1.0beta2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: iconsizecategorymodel.cpp:14
-#, fuzzy, kde-format
-msgid "Main Toolbar"
-msgstr "Ibar yesixhobo"
-
-#: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-msgid "Secondary Toolbars"
-msgstr "Ibar yesixhobo"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Iimphawu zomfanekiso Omncinci"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr ""
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr ""
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-msgid "Main toolbar icons size"
-msgstr "Ibar yesixhobo"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
-msgid "Small icons size"
-msgstr "Iimphawu zomfanekiso Omncinci"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr ""
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:193
+#: main.cpp:161
 #, fuzzy, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ayikwazi ukufumana umxholo wendawo yokugcina %1!"
 
-#: main.cpp:207
+#: main.cpp:175
 #, fuzzy, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ifayile ayingomxholo osebenzayo wendawo yokugcina!"
 
-#: main.cpp:212
+#: main.cpp:180
 #, fuzzy, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -106,90 +49,83 @@ msgstr ""
 "Kwenzeke ingxaki ngexesha lenkqubo yofako. Kodwa, kufakwe imixholo emininzi "
 "kwindawo yogcino"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:260
+#: main.cpp:228
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "Ifaka imixholo yophawu lomfanekiso"
 
-#: main.cpp:270
+#: main.cpp:238
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"
 msgstr "Ifaka imixholo yophawu lomfanekiso"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr ""
-
-#: ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Ubungakanani:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Install from File…"
 msgstr "Faka Umxholo Omtsha..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Get New…"
 msgstr "Faka Umxholo Omtsha..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Susa Umxholo"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Susa Umxholo"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Susa Umxholo"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Main Toolbar"
+#~ msgstr "Ibar yesixhobo"
+
+#, fuzzy
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Ibar yesixhobo"
+
+#~ msgid "Small Icons"
+#~ msgstr "Iimphawu zomfanekiso Omncinci"
+
+#, fuzzy
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Ibar yesixhobo"
+
+#, fuzzy
+#~| msgid "Small Icons"
+#~ msgid "Small icons size"
+#~ msgstr "Iimphawu zomfanekiso Omncinci"
+
+#, fuzzy
+#~| msgid "Size:"
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Ubungakanani:"
 
 #~ msgid "Toolbar"
 #~ msgstr "Ibar yesixhobo"

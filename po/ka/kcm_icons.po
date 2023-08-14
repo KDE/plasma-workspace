@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-04 07:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,170 +18,134 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "ხელსაწყოების მთავარი ზოლი"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "ხელსაწყოების დამხმარე ზოლები"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "პატარა ხატულები"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "დიალოგები"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "ხატულების მიმდინარე თემის სახელი"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "სამუშაო მაგიდის ხატულების ზომა"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "ხელსაწყოების ზოლის ხატულების ზომა"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "ხელსაწყოების მთავარი ზოლის ხატულების ზომა"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "პატარა ხატულების ზომა"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "პანელის ხატულების ზომა"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "ფანჯრის ხატულების ზომა"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "დროებითი ფაილის შექმნის შეცდომა."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ხატულების თემის არქივის გადმოწერის შეცდომა: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ფაილი ხატულების თემის სწორ არქივს არ წარმოადგენს."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr "დაყენების პროცესის შეცდომა. მაგრამ არქივის ძირითადი თემები დაყენებულია"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "თემა წარმატებით დადგა."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "ხატულის თემების დაყენება…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "თემის დაყენება: %1 …"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"აქ სხვადასხვა ხატულის ტიპების და ზომების სისტემის დონეზე მორგება შეგიძლიათ. "
-"დაიმახსოვრეთ, რომ ამ პარამეტრებს ყველა პროგრამა არ აქცევს ყურადღებას.<nl/"
-"><nl/>თუ აღმოაჩინეთ, რომ ობიექტები ეკრანზე მეტისმეტად დიდი ან პატარაა, "
-"გთხოვთ გლობალური მასშტაბირება შეცვალოთ."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "გლობალურის მასშტაბის გასწორება…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "ზომა:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "ხატულების ზომის მორგება"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "ფაილიდან დაყენება…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "ახლის მიღება…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "ხატულების თემის წაშლა"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "ხატულების თემის აღდგენა"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "ხატულების ზომის მორგება"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "თემის გახსნა"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "თემის ფაილები (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "ხელსაწყოების მთავარი ზოლი"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "ხელსაწყოების დამხმარე ზოლები"
+
+#~ msgid "Small Icons"
+#~ msgstr "პატარა ხატულები"
+
+#~ msgid "Dialogs"
+#~ msgstr "დიალოგები"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "სამუშაო მაგიდის ხატულების ზომა"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "ხელსაწყოების ზოლის ხატულების ზომა"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "ხელსაწყოების მთავარი ზოლის ხატულების ზომა"
+
+#~ msgid "Small icons size"
+#~ msgstr "პატარა ხატულების ზომა"
+
+#~ msgid "Panel icons size"
+#~ msgstr "პანელის ხატულების ზომა"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "ფანჯრის ხატულების ზომა"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "აქ სხვადასხვა ხატულის ტიპების და ზომების სისტემის დონეზე მორგება "
+#~ "შეგიძლიათ. დაიმახსოვრეთ, რომ ამ პარამეტრებს ყველა პროგრამა არ აქცევს "
+#~ "ყურადღებას.<nl/><nl/>თუ აღმოაჩინეთ, რომ ობიექტები ეკრანზე მეტისმეტად დიდი "
+#~ "ან პატარაა, გთხოვთ გლობალური მასშტაბირება შეცვალოთ."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "გლობალურის მასშტაბის გასწორება…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "ზომა:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "ხატულების ზომის მორგება"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "ხატულების ზომის მორგება"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr ""

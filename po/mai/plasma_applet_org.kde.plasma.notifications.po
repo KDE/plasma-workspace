@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2010-09-24 16:02+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -71,16 +71,19 @@ msgstr "सूचनासभ"
 
 #: package/contents/ui/EditContextMenu.qml:32
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr ""
 
-#: package/contents/ui/EditContextMenu.qml:43
+#: package/contents/ui/EditContextMenu.qml:44
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr ""
 
-#: package/contents/ui/EditContextMenu.qml:60
+#: package/contents/ui/EditContextMenu.qml:61
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr ""
 

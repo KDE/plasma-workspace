@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-03 17:31+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,84 +17,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Barra de instrumento principal"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Barras de instrumentos secundari"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Icones parve"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialogos"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Nomine del thema de icone currente"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Grandr de icones de scriptorio"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Grandor de icones de barra de instrumento"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Grandor de icones de barra de instrumento principal"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Grandor de Icones parve"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Grandor de icones de pannello"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Grandor de icones de dialogo"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Incapace crear un file temporari."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Incapace a discargar le archivo de thema de icone: %1."
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Le file non es un valide archivo de thema de icone."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -103,86 +47,107 @@ msgstr ""
 "Un problema occurreva durante le processo de installation, totevia, le plure "
 "del themas in le archivo ha essite installate"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Thema installate con successo."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Installante themas de icone…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Installante thema %1 …"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Ci tu pote configurar le dimensiones predefinite de varietypos de icone sl "
-"nivello de toto le systema. Nota que non tote apps respectara iste "
-"preferentias.<nl/><nl/> Si tu trova que objectos sur schermo es generalmente "
-"troppo parve o troppo grande, in loco considera adjustar le scala global."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Adjusta Scala Global..."
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Dimension:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Configurar grandores de icone"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Installa ex file ..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Obtene Nove…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Remove thema de icone"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restabili Thema de icone"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Configurar grandores de icone"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Aperi thema"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Files de Thema (*zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Barra de instrumento principal"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Barras de instrumentos secundari"
+
+#~ msgid "Small Icons"
+#~ msgstr "Icones parve"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialogos"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Grandr de icones de scriptorio"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Grandor de icones de barra de instrumento"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Grandor de icones de barra de instrumento principal"
+
+#~ msgid "Small icons size"
+#~ msgstr "Grandor de Icones parve"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Grandor de icones de pannello"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Grandor de icones de dialogo"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Ci tu pote configurar le dimensiones predefinite de varietypos de icone "
+#~ "sl nivello de toto le systema. Nota que non tote apps respectara iste "
+#~ "preferentias.<nl/><nl/> Si tu trova que objectos sur schermo es "
+#~ "generalmente troppo parve o troppo grande, in loco considera adjustar le "
+#~ "scala global."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Adjusta Scala Global..."
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Dimension:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Configurar grandores de icone"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Configurar grandores de icone"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Iste modulo te permitte seliger le icones per tu scriptorio."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-03-16 20:35+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -25,84 +25,28 @@ msgstr ""
 "\n"
 "\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Aðalverkfærastika"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Auka-verkfærastikur"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Lítil tákn"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Svargluggar"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Heiti á núverandi táknaþema"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Stærð tákna á skjáborði"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Stærð tákna á verkfærastiku"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Stærð tákna á aðalverkfærastiku"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Stærð lítilla tákna"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Stærð tákna á skjáborðsstiku"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Stærð tákna í svargluggum"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Mistókst að búa til bráðabirgðaskrá."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Tókst ekki að sækja táknaþemusafnið: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Þessi skrá er ekki gilt táknaþemusafn."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -111,87 +55,107 @@ msgstr ""
 "Vandamál komu upp við uppsetningu. Hins vegar hafa flest þemu í safninu "
 "verið sett upp."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Uppsetningu þema er lokið."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Set upp táknmyndaþemu…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Set upp %1 þema"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Hér geturðu grunnstillt sjálfgefnar stærðir tákna fyrir allt kerfið. "
-"Athugaðu að það fara ekki öll forrit eftir þessum stillingum.<nl/><nl/> Ef "
-"hlutir á skjánum virðast almennt of litlir eða of stórir geturðu prófað að "
-"stilla altæka kvörðun skjásins í staðinn."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Stilla altæka kvörðun…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Stærð:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Stilla stærð tákna"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Setja inn úr skrá…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Sækja ný tákn..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Fjarlægja táknaþema"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Endurheimta táknaþema"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Stilla stærðir tákna"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Opna þema"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Þemaskrár (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Aðalverkfærastika"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Auka-verkfærastikur"
+
+#~ msgid "Small Icons"
+#~ msgstr "Lítil tákn"
+
+#~ msgid "Dialogs"
+#~ msgstr "Svargluggar"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Stærð tákna á skjáborði"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Stærð tákna á verkfærastiku"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Stærð tákna á aðalverkfærastiku"
+
+#~ msgid "Small icons size"
+#~ msgstr "Stærð lítilla tákna"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Stærð tákna á skjáborðsstiku"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Stærð tákna í svargluggum"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Hér geturðu grunnstillt sjálfgefnar stærðir tákna fyrir allt kerfið. "
+#~ "Athugaðu að það fara ekki öll forrit eftir þessum stillingum.<nl/><nl/> "
+#~ "Ef hlutir á skjánum virðast almennt of litlir eða of stórir geturðu "
+#~ "prófað að stilla altæka kvörðun skjásins í staðinn."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Stilla altæka kvörðun…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Stærð:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Stilla stærð tákna"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Stilla stærðir tákna"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Þessi eining gerir þér kleift að velja tákn fyrir skjáborðið þitt."

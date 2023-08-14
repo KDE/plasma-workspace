@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-05 23:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -23,84 +23,28 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Hovudverktøylinje"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Underverktøylinjer"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Små ikon"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialogvindauge"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Namn på gjeldande ikontema"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Storleik på ikon på skrivebordet"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Storleik på ikon på verktøylinjer"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Storleik på ikon på hovudverktøylinja"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Storleik på små ikon"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Storleik på panelikon"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Storleik på ikon i dialogvindauge"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Klarte ikkje laga mellombels fil."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Klarte ikkje lasta ned ikontema-arkivet: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fila er ikkje eit gyldig ikontemaarkiv."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -109,83 +53,103 @@ msgstr ""
 "Det oppstod eit problem ved installeringa, men dei fleste temaa i arkivet er "
 "likevel installerte."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Temaet er no installert."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Installerer ikontema …"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Installerer %1-temaet …"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Her du kan du velja standard­storleik for ulike typar ikon. Merk at ikkje "
-"alle program tek omsyn til innstillingane her.<nl/><nl/>Viss du synest at òg "
-"andre element på skjermen generelt er for store eller små, kan du vurdera å "
-"heller endra den globale skaleringsfaktoren."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Juster global skalering …"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Storleik:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Vel ikonstorleikar"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Installer frå fil …"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Hent nye …"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Fjern ikontema"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Gjenopprett ikontema"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Vel ikonstorleikar"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Opna tema"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Hovudverktøylinje"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Underverktøylinjer"
+
+#~ msgid "Small Icons"
+#~ msgstr "Små ikon"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialogvindauge"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Storleik på ikon på skrivebordet"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Storleik på ikon på verktøylinjer"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Storleik på ikon på hovudverktøylinja"
+
+#~ msgid "Small icons size"
+#~ msgstr "Storleik på små ikon"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Storleik på panelikon"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Storleik på ikon i dialogvindauge"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Her du kan du velja standard­storleik for ulike typar ikon. Merk at ikkje "
+#~ "alle program tek omsyn til innstillingane her.<nl/><nl/>Viss du synest at "
+#~ "òg andre element på skjermen generelt er for store eller små, kan du "
+#~ "vurdera å heller endra den globale skaleringsfaktoren."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Juster global skalering …"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Storleik:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Vel ikonstorleikar"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Vel ikonstorleikar"

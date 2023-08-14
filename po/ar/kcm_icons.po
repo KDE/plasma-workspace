@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-10-22 19:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -26,84 +26,28 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "شريط الأدوات الرئيسي"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "الأشرطة الثانوية"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "أيقونات صغيرة"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "مربعات الحوار"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "اسم سمة الأيقونات الحالية"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "حجم أيقونات سطح المكتب"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "حجم أيقونة شريط الأدوات"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "حجم أيقونة شريط الأدوات الرئيس"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "حجم الأيقونات صغير"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "حجم أيقونات اللوحة"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "حجم أيقونات الحوراي"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "لم يتمكن من إنشاء ملف مؤقت"
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "الملف ليس أرشيف سمة أيقونة صالحًا."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -112,87 +56,107 @@ msgstr ""
 "هناك مشكلة حدثت أثناء عملية التثبيت; على أية حال, معظم السِمات في الأرشيف قد "
 "تم تثبيتها"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ثبتت السمة بنجاح."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "يثبت سِمات الأيقونات..."
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "يثبت سمة %1 ..."
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"هنا يمكنك ضبط الأحجام المبدئية لأنواع الأيقونات المختلفة على مستوى النظام. "
-"لاحظ أنه لن تحترم جميع التطبيقات هذه الإعدادات. <nl/> <nl/> إذا وجدت أن "
-"الكائنات على الشاشة تكون صغيرة جدًا أو كبيرة جدًا  بشكل عام، ففكر في ضبط "
-"المقياس العام بدلاً من ذلك."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "عدّل المقياس العام…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "الحجم:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "اضبط حجم الأيقونات"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "ثبت من ملف..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "أحصل على أيقونات جديدة..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "أزل سِمة الأيقونات"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "استعد سمة الأيقونات"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "اضبط حجم الأيقونات"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "افتح سمة"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ملفات السمة (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "شريط الأدوات الرئيسي"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "الأشرطة الثانوية"
+
+#~ msgid "Small Icons"
+#~ msgstr "أيقونات صغيرة"
+
+#~ msgid "Dialogs"
+#~ msgstr "مربعات الحوار"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "حجم أيقونات سطح المكتب"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "حجم أيقونة شريط الأدوات"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "حجم أيقونة شريط الأدوات الرئيس"
+
+#~ msgid "Small icons size"
+#~ msgstr "حجم الأيقونات صغير"
+
+#~ msgid "Panel icons size"
+#~ msgstr "حجم أيقونات اللوحة"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "حجم أيقونات الحوراي"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "هنا يمكنك ضبط الأحجام المبدئية لأنواع الأيقونات المختلفة على مستوى "
+#~ "النظام. لاحظ أنه لن تحترم جميع التطبيقات هذه الإعدادات. <nl/> <nl/> إذا "
+#~ "وجدت أن الكائنات على الشاشة تكون صغيرة جدًا أو كبيرة جدًا  بشكل عام، ففكر "
+#~ "في ضبط المقياس العام بدلاً من ذلك."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "عدّل المقياس العام…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "الحجم:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "اضبط حجم الأيقونات"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "اضبط حجم الأيقونات"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "هذه الوحدة تجعلك تختار أيقونات لسطح مكتبك."

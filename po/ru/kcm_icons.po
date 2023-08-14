@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-12-23 11:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -33,84 +33,28 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Основная панель инструментов"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Дополнительная панель инструментов"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Маленькие значки"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Диалоговые окна"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Название текущего набора значков"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Размер значков рабочего стола"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Размер значков панели инструментов"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Размер значков основной панели инструментов"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Размер маленьких значков"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Размер значков панели"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Размер значков диалога"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не удалось создать временный файл."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не удалось загрузить с сервера архив с набором значков: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Выбранный файл не является архивом с набором значков."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -119,87 +63,108 @@ msgstr ""
 "Во время установки произошла ошибка; однако, некоторые файлы из архива были "
 "установлены."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Набор значков успешно установлен."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Установка наборов значков..."
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Установка набора значков %1..."
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Этот модуль позволяет настроить размеры по умолчанию для различных типов "
-"значков на уровне системы. Обратите внимание, что не все приложения будут "
-"учитывать эти размеры.<nl/><nl/> Если окажется,что объекты на экране слишком "
-"малы или слишком велики, используйте настройку глобального масштаба."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Настроить глобальный масштаб…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Размер:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Выбрать размеры значков"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Установить из файла..."
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Загрузить наборы значков..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Удалить набор значков"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Восстановить набор значков"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Настройка размера значков"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Открытие темы"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Наборы значков (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Основная панель инструментов"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Дополнительная панель инструментов"
+
+#~ msgid "Small Icons"
+#~ msgstr "Маленькие значки"
+
+#~ msgid "Dialogs"
+#~ msgstr "Диалоговые окна"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Размер значков рабочего стола"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Размер значков панели инструментов"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Размер значков основной панели инструментов"
+
+#~ msgid "Small icons size"
+#~ msgstr "Размер маленьких значков"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Размер значков панели"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Размер значков диалога"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Этот модуль позволяет настроить размеры по умолчанию для различных типов "
+#~ "значков на уровне системы. Обратите внимание, что не все приложения будут "
+#~ "учитывать эти размеры.<nl/><nl/> Если окажется,что объекты на экране "
+#~ "слишком малы или слишком велики, используйте настройку глобального "
+#~ "масштаба."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Настроить глобальный масштаб…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Размер:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Выбрать размеры значков"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Настройка размера значков"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Этот модуль настройки позволяет выбрать набор значков."

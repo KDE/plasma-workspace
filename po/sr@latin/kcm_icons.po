@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,94 +22,29 @@ msgstr ""
 "X-Associated-UI-Catalogs: knewstuff5 kwidgetsaddons5_qt\n"
 "X-Environment: kde\n"
 
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Glavna traka"
-
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
-msgid "Secondary Toolbars"
-msgstr "Glavna traka"
-
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "male ikonice"
-
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "dijalozi"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr ""
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr ""
-
-# >> @item:inlistbox
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
-msgid "Main toolbar icons size"
-msgstr "Glavna traka"
-
-# >> @item:inlistbox
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
-msgid "Small icons size"
-msgstr "male ikonice"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr ""
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne mogu da napravim privremeni fajl."
 
-#: main.cpp:193
+#: main.cpp:161
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ne mogu da pronađem arhivu teme ikonica %1."
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ovaj fajl nije ispravna arhiva teme ikonica."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -118,91 +53,89 @@ msgstr ""
 "Došlo je do problema u toku instalacije. Ipak, veći deo tema iz arhive je "
 "instaliran."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
 # >> @title:window
-#: main.cpp:260
+#: main.cpp:228
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "Instaliranje teme ikonica"
 
 # >> @title:window
-#: main.cpp:270
+#: main.cpp:238
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing %1 theme…"
 msgstr "Instaliranje teme ikonica"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr ""
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr ""
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Install from File"
 msgid "Install from File…"
 msgstr "Instaliraj iz fajla"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New…"
 msgstr "Dobavi nove teme..."
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Ukloni temu"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Ukloni temu"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr ""
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Ukloni temu"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+# >> @item:inlistbox
+#~ msgid "Main Toolbar"
+#~ msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#, fuzzy
+#~| msgid "Main Toolbar"
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#~ msgid "Small Icons"
+#~ msgstr "male ikonice"
+
+# >> @item:inlistbox
+#~ msgid "Dialogs"
+#~ msgstr "dijalozi"
+
+# >> @item:inlistbox
+#, fuzzy
+#~| msgid "Main Toolbar"
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#, fuzzy
+#~| msgid "Small Icons"
+#~ msgid "Small icons size"
+#~ msgstr "male ikonice"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

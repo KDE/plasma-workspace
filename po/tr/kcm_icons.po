@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2023-08-03 12:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,84 +27,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.11.70\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Ana Araç Çubuğu"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "İkincil Araç Çubukları"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Küçük Simgeler"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Pencereler"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Geçerli simge temasının adı"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Masaüstü simgeleri boyutu"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Araç çubuğu simgeleri boyutu"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Ana araç çubuğu simgeleri boyutu"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Küçük simge boyutu"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Panel simgeleri boyutu"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "İletişim simgeleri boyutu"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Geçici dosya oluşturulamadı."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Simge teması arşivi indirilemedi: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Bu geçerli bir simge teması arşivi değil."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -112,86 +56,106 @@ msgid ""
 msgstr ""
 "Kurulum sırasında bir hata oluştu; ancak arşivdeki temaların çoğu kuruldu"
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema başarıyla kuruldu."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Simge teması kuruluyor…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "%1 teması kuruluyor…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Buradan, sistem genelinde kullanılan simgelerin öntanımlı boyutlarını "
-"yapılandırabilirsiniz. Bu ayarlara her uygulamanın uymayabileceğini göz "
-"önünde bulundurun.<nl/><nl/>Ekrandaki nesneler gözünüze pek ufak veya büyük "
-"görünüyorsa global ayarları değiştirmeyi deneyin."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Global Ölçeği Ayarla…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Boyut:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Simge Boyutlarını Yapılandır"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Dosyadan Kur…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
 msgstr "Yeni Al…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Simge Temasını Kaldır"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Simge Temasını Geri Yükle"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Simge Boyutlarını Yapılandır"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Temayı Aç"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tema Dosyaları (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Ana Araç Çubuğu"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "İkincil Araç Çubukları"
+
+#~ msgid "Small Icons"
+#~ msgstr "Küçük Simgeler"
+
+#~ msgid "Dialogs"
+#~ msgstr "Pencereler"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Masaüstü simgeleri boyutu"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Araç çubuğu simgeleri boyutu"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Ana araç çubuğu simgeleri boyutu"
+
+#~ msgid "Small icons size"
+#~ msgstr "Küçük simge boyutu"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Panel simgeleri boyutu"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "İletişim simgeleri boyutu"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Buradan, sistem genelinde kullanılan simgelerin öntanımlı boyutlarını "
+#~ "yapılandırabilirsiniz. Bu ayarlara her uygulamanın uymayabileceğini göz "
+#~ "önünde bulundurun.<nl/><nl/>Ekrandaki nesneler gözünüze pek ufak veya "
+#~ "büyük görünüyorsa global ayarları değiştirmeyi deneyin."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Global Ölçeği Ayarla…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Boyut:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Simge Boyutlarını Yapılandır"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Simge Boyutlarını Yapılandır"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Bu modül, masaüstünüz için simgeleri seçmenizi sağlar."

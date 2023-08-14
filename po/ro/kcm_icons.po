@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-14 01:59+0000\n"
 "PO-Revision-Date: 2022-12-29 17:29+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,84 +18,28 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: iconsizecategorymodel.cpp:14
-#, kde-format
-msgid "Main Toolbar"
-msgstr "Bara de unelte principală"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Secondary Toolbars"
-msgstr "Bare de unelte secundare"
-
-#: iconsizecategorymodel.cpp:16
-#, kde-format
-msgid "Small Icons"
-msgstr "Pictograme mici"
-
-#: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Dialogs"
-msgstr "Dialoguri"
-
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
 msgstr "Denumirea tematicii de pictograme actuale"
 
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Dimensiune pictograme pe birou"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Dimensiune pictograme în bara de unelte"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Dimensiune pictograme în bara de unelte principală"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Dimensiune pictograme mici"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Dimensiune pictograme în panou"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Dimensiune pictograme în dialog"
-
-#: main.cpp:182
+#: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nu s-a putut crea un fișier temporar."
 
-#: main.cpp:193
+#: main.cpp:161
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nu s-a putut descărca arhiva cu tematici de pictograme: %1"
 
-#: main.cpp:207
+#: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fișierul nu este o arhivă validă cu tematici de pictograme."
 
-#: main.cpp:212
+#: main.cpp:180
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -104,88 +48,108 @@ msgstr ""
 "A apărut o problemă în timpul procesului de instalare. Totuși, majoritatea "
 "tematicilor din arhivă au fost instalate."
 
-#: main.cpp:216
+#: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tematica a fost instalată cu succes."
 
-#: main.cpp:260
+#: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Se instalează tematici de pictograme…"
 
-#: main.cpp:270
+#: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Se instalează tematica %1…"
 
-#: ui/IconSizePopup.qml:34
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Here you can configure the default sizes of various icon types at a system-"
-"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
-"you find that objects on screen are generally too small or too large, "
-"consider adjusting the global scale instead."
-msgstr ""
-"Aici puteți configura dimensiunile implicite ale diferitelor tipuri de "
-"pictograme la nivelul întregului sistem.Rețineți că nu toate aplicațiile vor "
-"respecta aceste configurări.<nl/><nl/>Dacă credeți că obiectele de pe ecran "
-"sunt în general prea mici sau prea mari, încercați să ajustați scalarea "
-"globală în schimb."
-
-#: ui/IconSizePopup.qml:41
-#, kde-format
-msgid "Adjust Global Scale…"
-msgstr "Ajustează scalarea globală…"
-
-#: ui/IconSizePopup.qml:117
-#, kde-format
-msgctxt "@label:slider"
-msgid "Size:"
-msgstr "Dimensiune:"
-
 #: ui/main.qml:45
-#, kde-format
-msgid "Configure Icon Sizes"
-msgstr "Configurează dimensiunea pictogramelor"
-
-#: ui/main.qml:53
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalează din fișier…"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Obține pictograme noi…"
 
-#: ui/main.qml:174
+#: ui/main.qml:166
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Elimină tematica de pictograme"
 
-#: ui/main.qml:181
+#: ui/main.qml:173
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restabilește tematica de pictograme"
 
-#: ui/main.qml:256
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Icon Sizes"
-msgstr "Configurează dimensiunile pictogramelor"
-
-#: ui/main.qml:268
+#: ui/main.qml:245
 #, kde-format
 msgid "Open Theme"
 msgstr "Deschide tematica"
 
-#: ui/main.qml:270
+#: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Bara de unelte principală"
+
+#~ msgid "Secondary Toolbars"
+#~ msgstr "Bare de unelte secundare"
+
+#~ msgid "Small Icons"
+#~ msgstr "Pictograme mici"
+
+#~ msgid "Dialogs"
+#~ msgstr "Dialoguri"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Dimensiune pictograme pe birou"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Dimensiune pictograme în bara de unelte"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Dimensiune pictograme în bara de unelte principală"
+
+#~ msgid "Small icons size"
+#~ msgstr "Dimensiune pictograme mici"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Dimensiune pictograme în panou"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Dimensiune pictograme în dialog"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Here you can configure the default sizes of various icon types at a "
+#~ "system-wide level. Note that not all apps will respect these settings.<nl/"
+#~ "><nl/>If you find that objects on screen are generally too small or too "
+#~ "large, consider adjusting the global scale instead."
+#~ msgstr ""
+#~ "Aici puteți configura dimensiunile implicite ale diferitelor tipuri de "
+#~ "pictograme la nivelul întregului sistem.Rețineți că nu toate aplicațiile "
+#~ "vor respecta aceste configurări.<nl/><nl/>Dacă credeți că obiectele de pe "
+#~ "ecran sunt în general prea mici sau prea mari, încercați să ajustați "
+#~ "scalarea globală în schimb."
+
+#~ msgid "Adjust Global Scale…"
+#~ msgstr "Ajustează scalarea globală…"
+
+#~ msgctxt "@label:slider"
+#~ msgid "Size:"
+#~ msgstr "Dimensiune:"
+
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Configurează dimensiunea pictogramelor"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Icon Sizes"
+#~ msgstr "Configurează dimensiunile pictogramelor"
 
 #~ msgid "This module allows you to choose the icons for your desktop."
 #~ msgstr "Acest modul vă permite să alegeți pictogramele pentru birou."
