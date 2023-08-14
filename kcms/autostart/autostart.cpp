@@ -6,7 +6,7 @@
 */
 
 #include "autostart.h"
-
+#include "unit.h"
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(Autostart, "kcm_autostart.json")
@@ -18,6 +18,7 @@ Autostart::Autostart(QObject *parent, const KPluginMetaData &data)
     setButtons(Help);
 
     qmlRegisterUncreatableType<AutostartModel>("org.kde.plasma.kcm.autostart", 1, 0, "AutostartModel", QStringLiteral("Only for enums"));
+    qmlRegisterUncreatableType<Unit>("org.kde.plasma.kcm.autostart", 1, 0, "Unit", QStringLiteral("Unit object is not creatable"));
 }
 
 Autostart::~Autostart()

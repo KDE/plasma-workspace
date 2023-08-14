@@ -9,6 +9,7 @@
 
 #include <KConfigGroup>
 #include <KDesktopFile>
+#include <KSharedConfig>
 #include <KShell>
 #include <QDebug>
 #include <QQuickItem>
@@ -16,6 +17,7 @@
 #include <QStandardPaths>
 #include <QWindow>
 
+#include <QDBusMessage>
 #include <QDirIterator>
 #include <QFileIconProvider>
 #include <QFileInfo>
@@ -85,7 +87,6 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
 
         return AutostartEntry{targetFileName, targetScriptDir, kind, enabled, fileName, onlyInPlasma, iconName};
     }
-
     return AutostartEntry{name, name, kind, enabled, fileName, onlyInPlasma, iconName};
 }
 
@@ -95,6 +96,12 @@ AutostartModel::AutostartModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_xdgConfigPath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation))
     , m_xdgAutoStartPath(m_xdgConfigPath.filePath(QStringLiteral("autostart")))
+{
+    auto message = QDBusMessage::createMethodCall("org.freedesktop.systemd1", "/org/freedesktop/systemd1", "org.freedesktop.systemd1.Manager", "Subscribe");
+    QDBusConnection::sessionBus().send(message);
+}
+
+AutostartModel::~AutostartModel()
 {
 }
 
@@ -134,7 +141,43 @@ void AutostartModel::load()
 
     loadScriptsFromDir(QStringLiteral("plasma-workspace/shutdown/"), AutostartModel::AutostartEntrySource::PlasmaShutdown);
 
+    // Add unit objects for entries and set id to them
+    for (AutostartEntry &entry : m_entries) {
+        if (entry.source == AutostartModel::AutostartEntrySource::PlasmaShutdown || entry.source == AutostartModel::AutostartEntrySource::PlasmaEnvScripts) {
+            continue;
+        }
+
+        const QUrl url{entry.fileName};
+        QString actualName = url.fileName();
+        // Remove .desktop part
+        actualName.chop(8);
+        const QString serviceName = QStringLiteral("app-") + systemdEscape(actualName) + QStringLiteral("@autostart.service");
+        auto unit = new Unit(this);
+        // To show errors that occur when loading unit data in main page
+        connect(unit, &Unit::error, this, &AutostartModel::error);
+        unit->setId(serviceName);
+        entry.systemdUnit = unit;
+    }
     endResetModel();
+}
+
+// Returns if systemd is available and systemdBoot is enabled. It used to determine if the autostart entries should be clickable in qml
+bool AutostartModel::usingSystemdBoot() const
+{
+    if (!haveSystemd) {
+        return false;
+    }
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("startkderc"));
+    const KConfigGroup generalGroup(config, "General");
+    return generalGroup.readEntry("systemdBoot", true);
+}
+
+QString AutostartModel::systemdEscape(const QString &name) const
+{
+    QString newName = name;
+    newName.replace(QLatin1Char('-'), QLatin1String("\\x2d"));
+    newName.replace(QLatin1Char('/'), QLatin1String("\\xe2\\x81\\x84"));
+    return newName;
 }
 
 void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::AutostartEntrySource kind)
@@ -214,6 +257,8 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
         return entry.iconName;
     case TargetFileDirPath:
         return entry.targetFileDirPath;
+    case SystemdUnit:
+        return QVariant::fromValue(entry.systemdUnit);
     }
 
     return QVariant();
@@ -263,14 +308,15 @@ void AutostartModel::addApplication(const KService::Ptr &service)
     }
 
     const QString iconName = !service->icon().isEmpty() ? service->icon() : FALLBACK_ICON;
-
+    Unit *unit = new Unit(this, true);
     const auto entry = AutostartEntry{service->name(),
                                       service->name(),
                                       AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
                                       true,
                                       desktopPath,
                                       false,
-                                      iconName};
+                                      iconName,
+                                      unit};
 
     int lastApplication = -1;
     for (const AutostartEntry &e : qAsConst(m_entries)) {
@@ -407,7 +453,16 @@ void AutostartModel::insertScriptEntry(int index, const QString &name, const QSt
     QFileInfo targetFile{QDir(targetFileDirPath).filePath(name)};
     const QIcon icon = m_iconProvider.icon(targetFile);
     const QString iconName = icon.name() == QString("text-plain") ? FALLBACK_ICON : icon.name();
-    AutostartEntry entry = AutostartEntry{name, targetFileDirPath, kind, true, path, false, iconName};
+
+    Unit *unit = new Unit(this, true);
+
+    // Plasma shutdown and Plasma env scripts don't have units
+    if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown || kind == AutostartModel::AutostartEntrySource::PlasmaEnvScripts) {
+        delete unit;
+        unit = nullptr;
+    }
+
+    AutostartEntry entry = AutostartEntry{name, targetFileDirPath, kind, true, path, false, iconName, unit};
 
     m_entries.insert(index, entry);
 
@@ -428,6 +483,7 @@ void AutostartModel::removeEntry(int row)
 
         beginRemoveRows(QModelIndex(), row, row);
         m_entries.remove(row);
+        delete entry.systemdUnit;
 
         endRemoveRows();
     });
@@ -446,6 +502,7 @@ QHash<int, QByteArray> AutostartModel::roleNames() const
     roleNames.insert(OnlyInPlasma, QByteArrayLiteral("onlyInPlasma"));
     roleNames.insert(IconName, QByteArrayLiteral("iconName"));
     roleNames.insert(TargetFileDirPath, QByteArrayLiteral("targetFileDirPath"));
+    roleNames.insert(SystemdUnit, QByteArrayLiteral("systemdUnit"));
 
     return roleNames;
 }

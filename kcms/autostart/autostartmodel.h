@@ -7,11 +7,16 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QDBusConnection>
+#include <QDBusObjectPath>
 #include <QDir>
 #include <QFileIconProvider>
 
 #include <KService>
+
 #include <optional>
+
+#include "unit.h"
 
 struct AutostartEntry;
 class QQuickItem;
@@ -19,9 +24,11 @@ class QQuickItem;
 class AutostartModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(bool usingSystemdBoot READ usingSystemdBoot CONSTANT);
 
 public:
     explicit AutostartModel(QObject *parent = nullptr);
+    ~AutostartModel() override;
 
     enum Roles {
         Name,
@@ -31,6 +38,7 @@ public:
         Source,
         FileName,
         OnlyInPlasma,
+        SystemdUnit,
     };
 
     enum AutostartEntrySource {
@@ -52,6 +60,7 @@ public:
     Q_INVOKABLE void addScript(const QUrl &url, AutostartEntrySource kind);
     Q_INVOKABLE void showApplicationDialog(QQuickItem *context);
     Q_INVOKABLE void makeFileExecutable(const QString &fileName);
+    bool usingSystemdBoot() const;
 
     void load();
 
@@ -66,6 +75,13 @@ private:
     QString makeSuggestedName(const QString &oldName);
     QString suggestName(const QUrl &baseUrl, const QString &oldName);
     static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
+    QString systemdEscape(const QString &name) const;
+
+#if HAVE_SYSTEMD
+    static constexpr bool haveSystemd = true;
+#else
+    static constexpr bool haveSystemd = false;
+#endif
 
     QDir m_xdgConfigPath;
     QDir m_xdgAutoStartPath;
@@ -82,5 +98,6 @@ struct AutostartEntry {
     QString fileName; // the file backing the entry
     bool onlyInPlasma;
     QString iconName;
+    Unit *systemdUnit = nullptr; // nullptr for PlasmaEnvScripts and PlamsaShutdown
 };
 Q_DECLARE_TYPEINFO(AutostartEntry, Q_RELOCATABLE_TYPE);

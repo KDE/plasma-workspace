@@ -41,7 +41,7 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime Svg
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
@@ -98,6 +98,8 @@ set_package_properties(KF6Holidays PROPERTIES DESCRIPTION "Holidays provider for
                        TYPE OPTIONAL
                        PURPOSE "Needed to for holidays plugin for Plasma Calendar."
                       )
+# Used in kcm_autostart
+pkg_check_modules(SYSTEMD "systemd")
 
 find_package(Phonon4Qt6 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt6 PROPERTIES
