@@ -64,6 +64,7 @@ ColumnLayout {
                 }
                 root.singleRunner = ""
                 root.query = ""
+                fadedTextCompletion.text = "";
                 root.showHistory = false
             }
         }
