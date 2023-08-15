@@ -18,8 +18,8 @@
 #include "../finder/imagefinder.h"
 #include "../finder/suffixcheck.h"
 
-ImageListModel::ImageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent)
-    : AbstractImageListModel(bindableTargetSize, parent)
+ImageListModel::ImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
+    : AbstractImageListModel(bindableTargetSize, bindableUsedInConfig, parent)
 {
 }
 
@@ -177,12 +177,23 @@ QStringList ImageListModel::addBackground(const QString &path)
         return {};
     }
 
-    beginInsertRows(QModelIndex(), 0, 0);
+    if (m_usedInConfig) {
+        beginInsertRows(QModelIndex(), 0, 0);
 
-    m_data.prepend(path);
-    m_removableWallpapers.prepend(path);
+        m_data.prepend(path);
+        m_removableWallpapers.prepend(path);
 
-    endInsertRows();
+        endInsertRows();
+    } else {
+        // In a slideshow, append to the last so the random order can be kept
+        const int count = rowCount();
+        beginInsertRows(QModelIndex(), count, count);
+
+        m_data.append(path);
+        m_removableWallpapers.append(path);
+
+        endInsertRows();
+    }
 
     return {path};
 }

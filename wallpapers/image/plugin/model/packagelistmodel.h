@@ -19,7 +19,7 @@ class PackageListModel : public AbstractImageListModel
     Q_OBJECT
 
 public:
-    explicit PackageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent = nullptr);
+    explicit PackageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role) const override;

@@ -77,7 +77,7 @@ void SlideFilterModelTest::initTestCase()
 
 void SlideFilterModelTest::init()
 {
-    m_model = new SlideModel(QBindable<QSize>(&m_targetSize), this);
+    m_model = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_filterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this);
 
     // Test loading data

@@ -16,10 +16,13 @@
 #include "imagelistmodel.h"
 #include "packagelistmodel.h"
 
-ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QBindable<QSize> &bindableTargetSize, QObject *parent)
+ImageProxyModel::ImageProxyModel(const QStringList &_customPaths,
+                                 const QBindable<QSize> &bindableTargetSize,
+                                 const QBindable<bool> &bindableUsedInConfig,
+                                 QObject *parent)
     : QConcatenateTablesProxyModel(parent)
-    , m_imageModel(new ImageListModel(bindableTargetSize, this))
-    , m_packageModel(new PackageListModel(bindableTargetSize, this))
+    , m_imageModel(new ImageListModel(bindableTargetSize, bindableUsedInConfig, this))
+    , m_packageModel(new PackageListModel(bindableTargetSize, bindableUsedInConfig, this))
 {
     connect(this, &ImageProxyModel::rowsInserted, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);

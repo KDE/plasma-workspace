@@ -20,8 +20,8 @@
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
 
-PackageListModel::PackageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent)
-    : AbstractImageListModel(bindableTargetSize, parent)
+PackageListModel::PackageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
+    : AbstractImageListModel(bindableTargetSize, bindableUsedInConfig, parent)
 {
     qRegisterMetaType<QList<KPackage::Package>>();
 }
@@ -192,12 +192,23 @@ QStringList PackageListModel::addBackground(const QString &path)
 
     PackageFinder::findPreferredImageInPackage(package, m_targetSize);
 
-    beginInsertRows(QModelIndex(), 0, 0);
+    if (m_usedInConfig) {
+        beginInsertRows(QModelIndex(), 0, 0);
 
-    m_removableWallpapers.prepend(package.path());
-    m_packages.prepend(package);
+        m_removableWallpapers.prepend(package.path());
+        m_packages.prepend(package);
 
-    endInsertRows();
+        endInsertRows();
+    } else {
+        // In a slideshow, append to last so the random order can be kept
+        const int count = rowCount();
+        beginInsertRows(QModelIndex(), count, count);
+
+        m_removableWallpapers.append(package.path());
+        m_packages.append(package);
+
+        endInsertRows();
+    }
 
     return {package.path()};
 }

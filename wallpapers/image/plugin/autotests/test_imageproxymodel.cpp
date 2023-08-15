@@ -45,6 +45,7 @@ private:
     QString m_dummyPackagePath;
     int m_modelNum = 0;
     QProperty<QSize> m_targetSize;
+    QProperty<bool> m_usedInConfig{false};
 };
 
 void ImageProxyModelTest::initTestCase()
@@ -74,7 +75,7 @@ void ImageProxyModelTest::initTestCase()
 
 void ImageProxyModelTest::init()
 {
-    m_model = new ImageProxyModel({m_dataDir.absolutePath()}, QBindable<QSize>(&m_targetSize), this);
+    m_model = new ImageProxyModel({m_dataDir.absolutePath()}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_countSpy = new QSignalSpy(m_model, &ImageProxyModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageProxyModel::dataChanged);
 
@@ -243,7 +244,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/");
     QVERIFY(QDir(standardPath).mkpath(standardPath));
 
-    m_model = new ImageProxyModel({standardPath}, QBindable<QSize>(&m_targetSize), this);
+    m_model = new ImageProxyModel({standardPath}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_countSpy = new QSignalSpy(m_model, &ImageProxyModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageProxyModel::dataChanged);
 

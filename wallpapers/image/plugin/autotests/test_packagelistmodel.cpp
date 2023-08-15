@@ -43,6 +43,7 @@ private:
     QStringList m_packagePaths;
     QString m_dummyPackagePath;
     QProperty<QSize> m_targetSize;
+    QProperty<bool> m_usedInConfig{true};
 };
 
 void PackageListModelTest::initTestCase()
@@ -65,7 +66,7 @@ void PackageListModelTest::initTestCase()
 
 void PackageListModelTest::init()
 {
-    m_model = new PackageListModel(QBindable<QSize>(&m_targetSize), this);
+    m_model = new PackageListModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_countSpy = new QSignalSpy(m_model, &PackageListModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &PackageListModel::dataChanged);
 
@@ -207,6 +208,22 @@ void PackageListModelTest::testPackageListModelAddBackground()
     QCOMPARE(m_dataSpy->size(), 1);
     QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::PendingDeletionRole);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), true);
+
+    // Case 7: Add a package when usedInConfig: false
+    results = m_model->removeBackground(m_dummyPackagePath);
+    QCOMPARE(m_countSpy->size(), 1);
+    m_countSpy->clear();
+    QCOMPARE(results.size(), 1);
+
+    m_usedInConfig = false;
+
+    results = m_model->addBackground(m_dummyPackagePath);
+    idx = m_model->index(m_model->rowCount() - 1, 0); // This is the newly added item.
+    QVERIFY(idx.isValid());
+    QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Dummy wallpaper (For test purpose, don't translate!)"));
+    QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), true);
+
+    m_usedInConfig = true;
 }
 
 void PackageListModelTest::testPackageListModelRemoveBackground()

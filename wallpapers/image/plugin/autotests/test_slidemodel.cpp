@@ -42,6 +42,7 @@ private:
     QStringList m_packagePaths;
     QString m_dummyPackagePath;
     QProperty<QSize> m_targetSize;
+    QProperty<bool> m_usedInConfig{false};
 };
 
 void SlideModelTest::initTestCase()
@@ -70,7 +71,7 @@ void SlideModelTest::initTestCase()
 
 void SlideModelTest::init()
 {
-    m_model = new SlideModel(QBindable<QSize>(&m_targetSize), this);
+    m_model = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_doneSpy = new QSignalSpy(m_model, &SlideModel::done);
     m_dataSpy = new QSignalSpy(m_model, &SlideModel::dataChanged);
 

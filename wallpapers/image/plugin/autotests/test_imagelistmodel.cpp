@@ -42,6 +42,7 @@ private:
     QStringList m_wallpaperPaths;
     QString m_dummyWallpaperPath;
     QProperty<QSize> m_targetSize;
+    QProperty<bool> m_usedInConfig{true};
 };
 
 void ImageListModelTest::initTestCase()
@@ -68,7 +69,7 @@ void ImageListModelTest::initTestCase()
 
 void ImageListModelTest::init()
 {
-    m_model = new ImageListModel(QBindable<QSize>(&m_targetSize), this);
+    m_model = new ImageListModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_countSpy = new QSignalSpy(m_model, &ImageListModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageListModel::dataChanged);
 
@@ -208,6 +209,22 @@ void ImageListModelTest::testImageListModelAddBackground()
     QCOMPARE(m_dataSpy->size(), 1);
     QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::PendingDeletionRole);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), true);
+
+    // Case 8: Add a package when usedInConfig: false
+    results = m_model->removeBackground(m_dummyWallpaperPath);
+    QCOMPARE(m_countSpy->size(), 1);
+    m_countSpy->clear();
+    QCOMPARE(results.size(), 1);
+
+    m_usedInConfig = false;
+
+    results = m_model->addBackground(m_dummyWallpaperPath);
+    idx = m_model->index(m_model->rowCount() - 1, 0); // This is the newly added item.
+    QVERIFY(idx.isValid());
+    QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("dummy"));
+    QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), true);
+
+    m_usedInConfig = true;
 }
 
 void ImageListModelTest::testImageListModelRemoveBackground()

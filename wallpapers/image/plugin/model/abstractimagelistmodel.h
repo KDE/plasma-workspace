@@ -28,7 +28,7 @@ class AbstractImageListModel : public QAbstractListModel, public ImageRoles
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent = nullptr);
+    explicit AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -90,6 +90,8 @@ protected:
     QHash<QString, bool> m_pendingDeletion;
     QStringList m_removableWallpapers;
     QStringList m_customPaths;
+
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractImageListModel, bool, m_usedInConfig, true)
 
     friend class ImageProxyModel; // For m_removableWallpapers
 

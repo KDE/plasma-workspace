@@ -10,10 +10,11 @@
 
 #include "model/imageproxymodel.h"
 
-SlideModel::SlideModel(const QBindable<QSize> &bindableTargetSize, QObject *parent)
+SlideModel::SlideModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
 {
     m_targetSize.setBinding(bindableTargetSize.makeBinding());
+    m_usedInConfig.setBinding(bindableUsedInConfig.makeBinding());
 }
 
 QHash<int, QByteArray> SlideModel::roleNames() const
@@ -83,7 +84,7 @@ QStringList SlideModel::addDirs(const QStringList &dirs)
         const QString d = _d.endsWith(QDir::separator()) ? _d : _d + QDir::separator();
 
         if (!m_models.contains(d)) {
-            auto m = new ImageProxyModel({d}, QBindable<QSize>(&m_targetSize), this);
+            auto m = new ImageProxyModel({d}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
 
             connect(m, &ImageProxyModel::loadingChanged, this, &SlideModel::slotSourceModelLoadingChanged);
 

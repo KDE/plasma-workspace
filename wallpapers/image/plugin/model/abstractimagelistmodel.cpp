@@ -15,7 +15,7 @@
 #include "../finder/mediametadatafinder.h"
 #include "config-KF6KExiv2.h"
 
-AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent)
+AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
     : QAbstractListModel(parent)
 {
     m_targetSize.setBinding(bindableTargetSize.makeBinding());
@@ -25,6 +25,7 @@ AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableT
     m_targetSizeChangeNotifier = m_screenshotSize.addNotifier([this] {
         reload();
     });
+    m_usedInConfig.setBinding(bindableUsedInConfig.makeBinding());
 
     constexpr int maxCacheSize = 10;
     m_imageCache.setMaxCost(maxCacheSize);
