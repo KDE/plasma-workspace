@@ -364,40 +364,38 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
     if (d->filterByRegion != RegionFilterMode::Mode::Disabled && d->regionGeometry.isValid()) {
         QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
 
-        if (windowGeometry.isValid()) {
 #if HAVE_X11
-            static const bool isX11 = KWindowSystem::isPlatformX11();
-            if (isX11) {
-                const double devicePixelRatio = qGuiApp->primaryScreen()->devicePixelRatio();
-                const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
-                const QPoint screenTopLeft = screenGeometry.topLeft();
-                const QPoint windowTopLeft =
-                    screenTopLeft + QPoint(windowGeometry.x() - screenTopLeft.x(), windowGeometry.y() - screenTopLeft.y()) / devicePixelRatio;
-                windowGeometry = QRect(windowTopLeft, windowGeometry.size() / devicePixelRatio);
-            }
+        static const bool isX11 = KWindowSystem::isPlatformX11();
+        if (isX11 && windowGeometry.isValid()) {
+            const double devicePixelRatio = qGuiApp->primaryScreen()->devicePixelRatio();
+            const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
+            const QPoint screenTopLeft = screenGeometry.topLeft();
+            const QPoint windowTopLeft =
+                screenTopLeft + QPoint(windowGeometry.x() - screenTopLeft.x(), windowGeometry.y() - screenTopLeft.y()) / devicePixelRatio;
+            windowGeometry = QRect(windowTopLeft, windowGeometry.size() / devicePixelRatio);
+        }
 #endif
-            switch (d->filterByRegion) {
-            case RegionFilterMode::Mode::Inside: {
-                if (!d->regionGeometry.contains(windowGeometry)) {
-                    return false;
-                }
-                break;
+        switch (d->filterByRegion) {
+        case RegionFilterMode::Mode::Inside: {
+            if (!d->regionGeometry.contains(windowGeometry)) {
+                return false;
             }
-            case RegionFilterMode::Mode::Intersect: {
-                if (!d->regionGeometry.intersects(windowGeometry)) {
-                    return false;
-                }
-                break;
+            break;
+        }
+        case RegionFilterMode::Mode::Intersect: {
+            if (!d->regionGeometry.intersects(windowGeometry)) {
+                return false;
             }
-            case RegionFilterMode::Mode::Outside: {
-                if (d->regionGeometry.contains(windowGeometry)) {
-                    return false;
-                }
-                break;
+            break;
+        }
+        case RegionFilterMode::Mode::Outside: {
+            if (d->regionGeometry.contains(windowGeometry)) {
+                return false;
             }
-            default:
-                break;
-            }
+            break;
+        }
+        default:
+            break;
         }
     }
 
