@@ -25,6 +25,12 @@ private Q_SLOTS:
     void testSlideFilterModelSortingOrder_data();
     void testSlideFilterModelSortingOrder();
     void testSlideFilterModelSortingRandomOrder();
+    /**
+     * When a wallpaper file is added/removed, the random order list (m_randomOrder) should be
+     * able to provide a correct updated list.
+     * @see https://bugs.kde.org/show_bug.cgi?id=473088
+     */
+    void testSlideFilterModelSortingRandomOrderWithFileAddedRemoved();
     void testSlideFilterModelUncheckedSlides();
 
 private:
@@ -156,6 +162,62 @@ void SlideFilterModelTest::testSlideFilterModelSortingRandomOrder()
     for (int c : std::as_const(counts)) {
         QVERIFY(std::clamp(c, 200, 400) == c);
     }
+}
+
+void SlideFilterModelTest::testSlideFilterModelSortingRandomOrderWithFileAddedRemoved()
+{
+    m_filterModel->setProperty("usedInConfig", false);
+
+    m_filterModel->setSortingMode(SortingMode::Random, false);
+    int oldRowCount = m_filterModel->rowCount();
+
+    qDebug() << "Before adding a new wallpaper";
+    QStringList oldPaths;
+    for (int i = 0, count = m_filterModel->rowCount(); i < count; ++i) {
+        oldPaths.append(m_filterModel->index(i, 0).data(ImageRoles::PackageNameRole).toString());
+        qDebug() << i << *oldPaths.crbegin();
+    }
+    qDebug() << "Before adding a new wallpaper";
+
+    QSignalSpy rowsInsertedSpy(m_filterModel, &QAbstractItemModel::rowsInserted);
+    QDir imageDir(m_standardPath);
+    const QString newImagePath = imageDir.absoluteFilePath(QStringLiteral("THIS_IS_THE_LAST_WALLPAPER_BUG473088.jpg"));
+    QVERIFY(QFile(m_wallpaperPath).copy(newImagePath));
+
+    if (m_filterModel->rowCount() == oldRowCount) {
+        QVERIFY(rowsInsertedSpy.wait());
+    } else {
+        QVERIFY(!rowsInsertedSpy.empty()); // Otherwise the random order is not updated
+    }
+    QCOMPARE(m_filterModel->rowCount(), oldRowCount + 1);
+
+    qDebug() << "After adding a new wallpaper";
+    for (int i = 0, count = oldPaths.size(); i < count; ++i) {
+        // Make sure the old order is not changed
+        qDebug() << i << m_filterModel->index(i, 0).data(ImageRoles::PackageNameRole).toString();
+        QCOMPARE(oldPaths[i], m_filterModel->index(i, 0).data(ImageRoles::PackageNameRole).toString());
+    }
+    qDebug() << "After adding a new wallpaper";
+
+    QCOMPARE(m_filterModel->index(m_filterModel->rowCount() - 1, 0).data(ImageRoles::PackageNameRole).toString(), newImagePath);
+
+    // Now remove the wallpaper
+    oldRowCount = m_filterModel->rowCount();
+    QSignalSpy rowsRemovedSpy(m_filterModel, &QAbstractItemModel::rowsRemoved);
+    QVERIFY(QFile::remove(newImagePath));
+    if (m_filterModel->rowCount() == oldRowCount) {
+        QVERIFY(rowsRemovedSpy.wait());
+    } else {
+        QVERIFY(!rowsRemovedSpy.empty()); // Otherwise the random order is not updated
+    }
+    QCOMPARE(m_filterModel->rowCount(), oldRowCount - 1);
+    qDebug() << "After deleting a wallpaper";
+    for (int i = 0, count = oldPaths.size(); i < count; ++i) {
+        // Make sure the old order is not changed
+        qDebug() << i << m_filterModel->index(i, 0).data(ImageRoles::PackageNameRole).toString();
+        QCOMPARE(oldPaths[i], m_filterModel->index(i, 0).data(ImageRoles::PackageNameRole).toString());
+    }
+    qDebug() << "After deleting a wallpaper";
 }
 
 void SlideFilterModelTest::testSlideFilterModelUncheckedSlides()
