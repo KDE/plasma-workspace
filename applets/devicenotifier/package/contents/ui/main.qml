@@ -22,6 +22,11 @@ PlasmoidItem {
 
     readonly property bool openAutomounterKcmAuthorized: KAuthorized.authorizeControlModule("device_automounter_kcm")
 
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+
     property string devicesType: {
         if (Plasmoid.configuration.allDevices) {
             return "all"
@@ -58,17 +63,24 @@ PlasmoidItem {
         return ""
     }
     Plasmoid.icon: {
+        let iconName;
         if (filterModel.count > 0) {
-            var data = filterModel.get(0)
+            var data = filterModel.get(0);
             if (data && data.Icon) {
-                // We want to do this here rather than in the model because we
-                // don't always want symbolic icons everywhere in the applet,
-                // but we do know that we always want them for the
-                // CompactRepresentation icon, if they're available.
-                return data.Icon + "-symbolic"
+                iconName = data.Icon;
             }
+        } else {
+            iconName = "device-notifier";
         }
-        return "device-notifier-symbolic"
+
+        // We want to do this here rather than in the model because we don't always
+        // want symbolic icons everywhere, but we do know that we always want them
+        // for the panel icon
+        if (inPanel) {
+            return symbolicizeIconName(iconName);
+        }
+
+        return iconName;
     }
 
     Plasmoid.status: (filterModel.count > 0 || isMessageHighlightAnimatorRunning) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
@@ -329,6 +341,16 @@ PlasmoidItem {
 
         return (types.indexOf("Storage Volume") >= 0 && types.indexOf("OpticalDisc") >= 0)
     }
+
+    function symbolicizeIconName(iconName) {
+        const symbolicSuffix = "-symbolic";
+        if (iconName.endsWith(symbolicSuffix)) {
+            return iconName;
+        }
+
+        return iconName + symbolicSuffix;
+    }
+
 
     Timer {
         id: popupIconTimer
