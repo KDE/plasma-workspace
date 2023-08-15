@@ -60,17 +60,18 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
             }
             const int old_count = m_randomOrder.size();
             m_randomOrder.resize(this->sourceModel()->rowCount());
-            std::iota(m_randomOrder.begin() + old_count, m_randomOrder.end(), old_count);
-            std::shuffle(m_randomOrder.begin() + old_count, m_randomOrder.end(), m_random);
+            std::iota(std::next(m_randomOrder.begin(), old_count), m_randomOrder.end(), old_count);
+            std::shuffle(std::next(m_randomOrder.begin(), old_count), m_randomOrder.end(), m_random);
         });
         connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this] {
             if (m_SortingMode != SortingMode::Random || m_usedInConfig) {
                 return;
             }
+            const int rowCount = this->sourceModel()->rowCount();
             m_randomOrder.erase(std::remove_if(m_randomOrder.begin(),
                                                m_randomOrder.end(),
-                                               [this](const int v) {
-                                                   return v >= this->sourceModel()->rowCount();
+                                               [rowCount](int v) {
+                                                   return v >= rowCount;
                                                }),
                                 m_randomOrder.end());
         });
