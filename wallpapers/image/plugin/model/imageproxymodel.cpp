@@ -114,8 +114,8 @@ QStringList ImageProxyModel::addBackground(const QString &_path)
 {
     QString path = _path;
 
-    if (path.startsWith(QLatin1String("file://"))) {
-        path.remove(0, 7);
+    if (constexpr QLatin1String prefix{"file://"}; path.startsWith(prefix)) {
+        path.remove(0, prefix.size());
     }
 
     const QFileInfo info(path);
