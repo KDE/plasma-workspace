@@ -80,7 +80,7 @@ void Unit::getAllCallback(QDBusPendingCallWatcher *call)
 {
     QDBusPendingReply<QVariantMap> reply = *call;
     if (reply.isError()) {
-        Q_EMIT error(i18n("Error occured when recieving reply of GetAll call %1", reply.error().message()));
+        Q_EMIT error(i18n("Error occurred when receiving reply of GetAll call %1", reply.error().message()));
         call->deleteLater();
         return;
     }
