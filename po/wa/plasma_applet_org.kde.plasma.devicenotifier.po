@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2010-05-11 19:09+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -75,7 +75,7 @@ msgid "Mount"
 msgstr "Dji monte..."
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:236
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -98,43 +98,43 @@ msgstr "Seulmint les éndjins nén bodjåves"
 msgid "No disks available"
 msgstr "I gn a pont d' éndjin."
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, fuzzy, kde-format
 #| msgid "Most recent device: %1"
 msgid "Most Recent Device"
 msgstr "Li tot dierin éndjin : %1"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "No Devices Available"
 msgstr "I gn a pont d' éndjin"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:234
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Seulmint les éndjins nén bodjåves"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Seulmint les éndjins bodjåves"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Seulmint les éndjins nén bodjåves"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:290
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Tos les éndjins"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2023-02-09 01:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -76,7 +76,7 @@ msgid "Mount"
 msgstr "掛載"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:236
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "全部移除"
@@ -96,38 +96,38 @@ msgstr "沒有插入可移除裝置"
 msgid "No disks available"
 msgstr "沒有可用硬碟"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Most Recent Device"
 msgstr "上次插入的裝置"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "No Devices Available"
 msgstr "沒有可用裝置"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "設定可移除裝置…"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Removable Devices"
 msgstr "可移除裝置"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "不可移除裝置"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr "所有裝置"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "當新裝置插入時顯示彈出式通知"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2023-05-04 23:07+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -17,25 +17,71 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.0\n"
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:374
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "«%1» nun ye una URL absoluta."
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:377
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "«%1» nun esiste."
 
-#: autostartmodel.cpp:334
+#: autostartmodel.cpp:380
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "«%1» nun ye un ficheru."
 
-#: autostartmodel.cpp:337
+#: autostartmodel.cpp:383
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "«%1» nun ye de llectura."
+
+#: ui/entry.qml:52
+#, kde-format
+msgctxt ""
+"@label The name of a Systemd unit for an app or script that will autostart"
+msgid "Name:"
+msgstr ""
+
+#: ui/entry.qml:57
+#, kde-format
+msgctxt ""
+"@label The current status (e.g. active or inactive) of a Systemd unit for an "
+"app or script that will autostart"
+msgid "Status:"
+msgstr ""
+
+#: ui/entry.qml:62
+#, kde-format
+msgctxt ""
+"@label A date and time follows this text, making a sentence like 'Last "
+"activated on: August 7th 11 PM 2023'"
+msgid "Last activated on:"
+msgstr ""
+
+#: ui/entry.qml:71
+#, kde-format
+msgctxt "@label Stop the Systemd unit for a running process"
+msgid "Stop"
+msgstr ""
+
+#: ui/entry.qml:71
+#, kde-format
+msgctxt "@label Start the Systemd unit for a currently inactive process"
+msgid "Start"
+msgstr ""
+
+#: ui/entry.qml:105
+#, kde-format
+msgid "Unable to load logs. Try refreshing."
+msgstr ""
+
+#: ui/entry.qml:109
+#, kde-format
+msgctxt "@action:button Refresh entry logs when it failed to load"
+msgid "Refresh"
+msgstr ""
 
 #: ui/main.qml:41
 #, kde-format
@@ -52,79 +98,133 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: ui/main.qml:67
+#: ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Add…"
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Amestar…"
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
 msgid "Add Application…"
 msgstr "Una aplicación…"
 
-#: ui/main.qml:83
+#: ui/main.qml:84
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Un script al aniciar la sesión…"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Un script al zarrar la sesión…"
 
-#: ui/main.qml:126
+#: ui/main.qml:129
+#, kde-format
+msgid ""
+"%1 has not been autostarted yet. Details will be available after the system "
+"is restarted."
+msgstr ""
+
+#: ui/main.qml:172
+#, kde-format
+msgctxt ""
+"@label Entry hasn't been autostarted because system hasn't been restarted"
+msgid "Not autostarted yet"
+msgstr ""
+
+#: ui/main.qml:177 unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr ""
+
+#: ui/main.qml:184
 #, fuzzy, kde-format
 #| msgid "Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Propiedaes"
 
-#: ui/main.qml:132
+#: ui/main.qml:190
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Quitar"
 
-#: ui/main.qml:143
+#: ui/main.qml:200
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: ui/main.qml:146
+#: ui/main.qml:203
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: ui/main.qml:149
+#: ui/main.qml:206
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr ""
 
-#: ui/main.qml:152
+#: ui/main.qml:209
 #, kde-format
 msgid "Logout Scripts"
 msgstr ""
 
-#: ui/main.qml:161
+#: ui/main.qml:217
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: ui/main.qml:162
+#: ui/main.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 
-#: ui/main.qml:176
+#: ui/main.qml:233
 #, kde-format
 msgid "Choose Login Script"
 msgstr ""
 
-#: ui/main.qml:196
+#: ui/main.qml:253
 #, kde-format
 msgid "Choose Logout Script"
+msgstr ""
+
+#: unit.cpp:26
+#, kde-format
+msgctxt "@label Entry is running right now"
+msgid "Running"
+msgstr ""
+
+#: unit.cpp:27
+#, kde-format
+msgctxt "@label Entry is not running right now (exited without error)"
+msgid "Not running"
+msgstr ""
+
+#: unit.cpp:28
+#, kde-format
+msgctxt "@label Entry is being started"
+msgid "Starting"
+msgstr ""
+
+#: unit.cpp:29
+#, kde-format
+msgctxt "@label Entry is being stopped"
+msgid "Stopping"
+msgstr ""
+
+#: unit.cpp:83
+#, kde-format
+msgid "Error occured when recieving reply of GetAll call %1"
+msgstr ""
+
+#: unit.cpp:153
+#, kde-format
+msgid "Failed to open journal"
 msgstr ""

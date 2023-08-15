@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -67,7 +67,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:236
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -90,42 +90,42 @@ msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
 msgid "No disks available"
 msgstr ""
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgid "Most Recent Device"
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:234
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "Removable Devices"
 msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "Non Removable Devices"
 msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2023-04-07 23:36-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -86,64 +86,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr ""
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "KRunner の挙動を設定"
 
-#: qml/RunCommand.qml:96
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner を設定..."
 
-#: qml/RunCommand.qml:109
+#: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
 msgstr ""
 
-#: qml/RunCommand.qml:123
+#: qml/RunCommand.qml:124
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' を検索中..."
 
-#: qml/RunCommand.qml:124
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "検索..."
 
-#: qml/RunCommand.qml:295 qml/RunCommand.qml:296 qml/RunCommand.qml:298
+#: qml/RunCommand.qml:296 qml/RunCommand.qml:297 qml/RunCommand.qml:299
 #, kde-format
 msgid "Show Usage Help"
 msgstr "使用方法のヘルプを表示"
 
-#: qml/RunCommand.qml:306
+#: qml/RunCommand.qml:307
 #, kde-format
 msgid "Pin"
 msgstr "ピン留め"
 
-#: qml/RunCommand.qml:307
+#: qml/RunCommand.qml:308
 #, kde-format
 msgid "Pin Search"
 msgstr "検索をピン留め"
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:310
 #, kde-format
 msgid "Keep Open"
 msgstr "開けたままにする"
 
-#: qml/RunCommand.qml:381 qml/RunCommand.qml:386
+#: qml/RunCommand.qml:382 qml/RunCommand.qml:387
 #, kde-format
 msgid "Recent Queries"
 msgstr "最近のクエリ"
 
-#: qml/RunCommand.qml:384
+#: qml/RunCommand.qml:385
 #, kde-format
 msgid "Remove"
 msgstr "削除"

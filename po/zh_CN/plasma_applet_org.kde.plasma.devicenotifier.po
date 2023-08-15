@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -71,7 +71,7 @@ msgid "Mount"
 msgstr "挂载"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:236
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "移除全部"
@@ -91,38 +91,38 @@ msgstr "未连接可移动设备"
 msgid "No disks available"
 msgstr "没有可用的数据盘"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Most Recent Device"
 msgstr "最近使用的设备"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "No Devices Available"
 msgstr "无可用设备"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "配置可移动设备…"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Removable Devices"
 msgstr "可移动设备"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "固定设备"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr "所有设备"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "插入新设备时弹窗提示"

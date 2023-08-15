@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-04 02:00+0000\n"
-"PO-Revision-Date: 2023-08-13 16:10+0200\n"
+"PO-Revision-Date: 2023-08-14 21:40+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -28,7 +28,7 @@ msgstr "FreeDesktop"
 #: kcm_soundtheme.cpp:108
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr ""
+msgstr "Standard-Klangdesign von freedesktop.org"
 
 #: ui/main.qml:59
 #, kde-format
@@ -46,13 +46,13 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr ""
+msgstr "Klangvorschau:"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr ""
+msgstr "Klang „%1“ probehören"
 
 #: ui/main.qml:106
 #, kde-format

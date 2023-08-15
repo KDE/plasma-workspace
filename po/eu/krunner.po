@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-15 02:00+0000\n"
 "PO-Revision-Date: 2023-07-28 10:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -76,64 +76,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "KRunner plugin erabilgarriak, pluginId"
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure"
 msgstr "Konfiguratu"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Konfiguratu KRunner-ren jokabidea"
 
-#: qml/RunCommand.qml:96
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Konfiguratu KRunner…"
 
-#: qml/RunCommand.qml:109
+#: qml/RunCommand.qml:110
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "%1(e)ren emaitzak bakarrik erakusten"
 
-#: qml/RunCommand.qml:123
+#: qml/RunCommand.qml:124
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Bilatu '%1'…"
 
-#: qml/RunCommand.qml:124
+#: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Bilatu…"
 
-#: qml/RunCommand.qml:295 qml/RunCommand.qml:296 qml/RunCommand.qml:298
+#: qml/RunCommand.qml:296 qml/RunCommand.qml:297 qml/RunCommand.qml:299
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Erakutsi erabileraren laguntza"
 
-#: qml/RunCommand.qml:306
+#: qml/RunCommand.qml:307
 #, kde-format
 msgid "Pin"
 msgstr "Iltzatu"
 
-#: qml/RunCommand.qml:307
+#: qml/RunCommand.qml:308
 #, kde-format
 msgid "Pin Search"
 msgstr "Iltzatu bilaketa"
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:310
 #, kde-format
 msgid "Keep Open"
 msgstr "Eduki irekita"
 
-#: qml/RunCommand.qml:381 qml/RunCommand.qml:386
+#: qml/RunCommand.qml:382 qml/RunCommand.qml:387
 #, kde-format
 msgid "Recent Queries"
 msgstr "Azken aldiko itaunak"
 
-#: qml/RunCommand.qml:384
+#: qml/RunCommand.qml:385
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"

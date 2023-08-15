@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 01:59+0000\n"
-"PO-Revision-Date: 2023-08-13 16:24+0200\n"
+"PO-Revision-Date: 2023-08-14 21:37+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -59,7 +59,7 @@ msgstr "KDE Plasma %1"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Besuchen Sie bugs.kde.org, um Probleme zu berichten"
 
 #: main.cpp:110
 #, kde-format
