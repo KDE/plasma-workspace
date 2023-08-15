@@ -434,7 +434,7 @@ void ImageBackend::nextSlide()
     if (previousSlide >= 0) {
         previousPath = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::PackageNameRole).toString();
     }
-    if (m_currentSlide == rowCount - 1 || m_currentSlide < 0) {
+    if (m_currentSlide >= rowCount - 1 /* ">" in case the last wallpaper is deleted before */ || m_currentSlide < 0) {
         m_currentSlide = 0;
     } else {
         m_currentSlide += 1;
