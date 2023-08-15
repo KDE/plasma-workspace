@@ -66,26 +66,45 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
     }
     if (sourceModel) {
         connect(sourceModel, &QAbstractItemModel::modelReset, this, &SlideFilterModel::buildRandomOrder);
-        connect(sourceModel, &QAbstractItemModel::rowsInserted, this, [this] {
+        connect(sourceModel, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &, int first, int last) {
             if (m_SortingMode != SortingMode::Random || m_usedInConfig) {
                 return;
             }
             const int old_count = m_randomOrder.size();
+            if (first < old_count /* Not appended to end */) {
+                // Increase the existing row numbers that >= first to make space for new items
+                for (auto &row : m_randomOrder) {
+                    if (row >= first) {
+                        row += last - first + 1;
+                    }
+                }
+            }
+            // Then append new row numbers
             m_randomOrder.resize(this->sourceModel()->rowCount());
-            std::iota(std::next(m_randomOrder.begin(), old_count), m_randomOrder.end(), old_count);
+            std::iota(std::next(m_randomOrder.begin(), old_count), m_randomOrder.end(), first); // first to last
             std::shuffle(std::next(m_randomOrder.begin(), old_count), m_randomOrder.end(), m_random);
         });
-        connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this] {
+        connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this](const QModelIndex &, int first, int last) {
             if (m_SortingMode != SortingMode::Random || m_usedInConfig) {
                 return;
             }
-            const int rowCount = this->sourceModel()->rowCount();
+
+            const int old_count = m_randomOrder.size();
             m_randomOrder.erase(std::remove_if(m_randomOrder.begin(),
                                                m_randomOrder.end(),
-                                               [rowCount](int v) {
-                                                   return v >= rowCount;
+                                               [first, last](int v) {
+                                                   return v >= first && v <= last;
                                                }),
                                 m_randomOrder.end());
+
+            if (last + 1 < old_count /* Not the last one */) {
+                // Decrease the remaining row numbers that > last
+                for (auto &row : m_randomOrder) {
+                    if (row > last) {
+                        row -= last - first + 1;
+                    }
+                }
+            }
         });
     }
     // Update random order before QSortFilterProxyModel sorts
