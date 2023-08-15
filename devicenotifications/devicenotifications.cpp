@@ -278,7 +278,6 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
                          i18nc("@title:notifications", "USB Device Detected"),
                          text,
                          QStringLiteral("drive-removable-media-usb"),
-                         nullptr,
                          KNotification::DefaultEvent);
 }
 
@@ -299,7 +298,6 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
                          i18nc("@title:notifications", "USB Device Removed"),
                          text,
                          QStringLiteral("drive-removable-media-usb"),
-                         nullptr,
                          KNotification::DefaultEvent);
 }
 

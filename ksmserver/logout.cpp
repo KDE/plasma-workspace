@@ -337,7 +337,7 @@ void KSMServer::cancelShutdown(KSMClient *c)
         Q_EMIT subSessionCloseCanceled();
     } else {
         qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
-        KNotification::event(QStringLiteral("cancellogout"), i18n("Logout canceled by '%1'", c->program()), QPixmap(), nullptr, KNotification::DefaultEvent);
+        KNotification::event(QStringLiteral("cancellogout"), i18n("Logout canceled by '%1'", c->program()), QPixmap(), KNotification::DefaultEvent);
         foreach (KSMClient *c, clients) {
             SmsShutdownCancelled(c->connection());
             if (c->saveYourselfDone) {
@@ -427,7 +427,7 @@ void KSMServer::completeShutdownOrCheckpoint()
 
     qCDebug(KSMSERVER) << "state is " << state;
     if (state == Shutdown) {
-        KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), nullptr, KNotification::DefaultEvent); // Plasma says good bye
+        KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), KNotification::DefaultEvent); // Plasma says good bye
         connect(n, &KNotification::closed, this, &KSMServer::startKilling);
         state = WaitingForKNotify;
         // https://bugs.kde.org/show_bug.cgi?id=228005
