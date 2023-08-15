@@ -157,8 +157,8 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
 {
     QString packagePath = _packagePath;
 
-    if (packagePath.startsWith(QLatin1String("file://"))) {
-        packagePath.remove(0, 7);
+    if (constexpr QLatin1String prefix{"file://"}; packagePath.startsWith(prefix)) {
+        packagePath.remove(0, prefix.size());
     }
 
     QStringList results;
