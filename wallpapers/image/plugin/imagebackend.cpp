@@ -79,7 +79,7 @@ void ImageBackend::setRenderingMode(RenderingMode mode)
     }
 
     m_mode = mode;
-    renderingModeChanged();
+    Q_EMIT renderingModeChanged();
 
     startSlideshow();
 }
