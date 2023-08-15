@@ -130,18 +130,13 @@ QSize ImageBackend::targetSize() const
 void ImageBackend::setTargetSize(const QSize &size)
 {
     Q_ASSERT(size.isValid());
-    if (m_targetSize.value() == size) {
-        return;
-    }
-
     m_targetSize = size;
-    Q_EMIT targetSizeChanged();
 }
 
 QAbstractItemModel *ImageBackend::wallpaperModel()
 {
     if (!m_model) {
-        m_model = new ImageProxyModel({}, m_targetSize, this);
+        m_model = new ImageProxyModel({}, QBindable<QSize>(&m_targetSize), this);
         connect(m_model, &ImageProxyModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }
 
@@ -151,7 +146,7 @@ QAbstractItemModel *ImageBackend::wallpaperModel()
 SlideModel *ImageBackend::slideshowModel()
 {
     if (!m_slideshowModel) {
-        m_slideshowModel = new SlideModel(m_targetSize, this);
+        m_slideshowModel = new SlideModel(QBindable<QSize>(&m_targetSize), this);
         m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
         connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
         connect(m_slideshowModel, &SlideModel::dataChanged, this, &ImageBackend::slotSlideModelDataChanged);

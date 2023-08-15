@@ -16,7 +16,7 @@
 #include "imagelistmodel.h"
 #include "packagelistmodel.h"
 
-ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QProperty<QSize> &bindableTargetSize, QObject *parent)
+ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QBindable<QSize> &bindableTargetSize, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
     , m_imageModel(new ImageListModel(bindableTargetSize, this))
     , m_packageModel(new PackageListModel(bindableTargetSize, this))

@@ -68,7 +68,7 @@ void ImageListModelTest::initTestCase()
 
 void ImageListModelTest::init()
 {
-    m_model = new ImageListModel(m_targetSize, this);
+    m_model = new ImageListModel(QBindable<QSize>(&m_targetSize), this);
     m_countSpy = new QSignalSpy(m_model, &ImageListModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageListModel::dataChanged);
 

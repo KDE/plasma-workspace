@@ -6,8 +6,8 @@
 
 #pragma once
 
+#include <QBindable>
 #include <QConcatenateTablesProxyModel>
-#include <QProperty>
 #include <QSet>
 #include <QSize>
 
@@ -20,7 +20,7 @@ class SlideModel : public QConcatenateTablesProxyModel, public ImageRoles
     Q_OBJECT
 
 public:
-    explicit SlideModel(const QProperty<QSize> &bindableTargetSize, QObject *parent = nullptr);
+    explicit SlideModel(const QBindable<QSize> &bindableTargetSize, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -47,7 +47,7 @@ private Q_SLOTS:
     void slotSourceModelLoadingChanged();
 
 private:
-    QProperty<QSize> m_targetSize;
+    Q_OBJECT_BINDABLE_PROPERTY(SlideModel, QSize, m_targetSize)
     bool m_loading = false;
 
     QHash<QString, ImageProxyModel *> m_models;

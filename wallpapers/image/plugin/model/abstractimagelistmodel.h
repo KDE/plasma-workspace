@@ -7,9 +7,9 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QBindable>
 #include <QCache>
 #include <QPixmap>
-#include <QProperty>
 #include <QSize>
 
 #include "imageroles.h"
@@ -28,7 +28,7 @@ class AbstractImageListModel : public QAbstractListModel, public ImageRoles
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit AbstractImageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent = nullptr);
+    explicit AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -73,8 +73,8 @@ protected:
 
     bool m_loading = false;
 
-    QProperty<QSize> m_screenshotSize;
-    QProperty<QSize> m_targetSize;
+    Q_OBJECT_BINDABLE_PROPERTY(AbstractImageListModel, QSize, m_screenshotSize)
+    Q_OBJECT_BINDABLE_PROPERTY(AbstractImageListModel, QSize, m_targetSize)
     QPropertyNotifier m_targetSizeChangeNotifier;
 
     QCache<QStringList, QPixmap> m_imageCache;

@@ -6,8 +6,8 @@
 
 #pragma once
 
+#include <QBindable>
 #include <QConcatenateTablesProxyModel>
-#include <QProperty>
 #include <QSize>
 
 #include <KDirWatch>
@@ -28,7 +28,7 @@ class ImageProxyModel : public QConcatenateTablesProxyModel, public ImageRoles
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit ImageProxyModel(const QStringList &customPaths, const QProperty<QSize> &bindableTargetSize, QObject *parent);
+    explicit ImageProxyModel(const QStringList &customPaths, const QBindable<QSize> &bindableTargetSize, QObject *parent);
 
     QHash<int, QByteArray> roleNames() const override;
 

@@ -15,12 +15,10 @@
 #include "../finder/mediametadatafinder.h"
 #include "config-KF6KExiv2.h"
 
-AbstractImageListModel::AbstractImageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent)
+AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_targetSize.setBinding([&bindableTargetSize] {
-        return bindableTargetSize.value();
-    });
+    m_targetSize.setBinding(bindableTargetSize.makeBinding());
     m_screenshotSize.setBinding([this] {
         return m_targetSize.value() / 8;
     });

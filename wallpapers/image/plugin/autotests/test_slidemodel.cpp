@@ -70,7 +70,7 @@ void SlideModelTest::initTestCase()
 
 void SlideModelTest::init()
 {
-    m_model = new SlideModel(m_targetSize, this);
+    m_model = new SlideModel(QBindable<QSize>(&m_targetSize), this);
     m_doneSpy = new QSignalSpy(m_model, &SlideModel::done);
     m_dataSpy = new QSignalSpy(m_model, &SlideModel::dataChanged);
 

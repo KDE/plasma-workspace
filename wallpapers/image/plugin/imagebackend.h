@@ -11,8 +11,8 @@
 #pragma once
 
 #include <QAbstractItemModel>
+#include <QBindable>
 #include <QPointer>
-#include <QProperty>
 #include <QQmlParserStatus>
 #include <QQmlPropertyMap>
 #include <QSize>
@@ -168,7 +168,7 @@ private:
     bool m_ready = false;
     int m_delay = 10;
     QUrl m_image;
-    QProperty<QSize> m_targetSize;
+    Q_OBJECT_BINDABLE_PROPERTY(ImageBackend, QSize, m_targetSize, &ImageBackend::targetSizeChanged)
 
     bool m_usedInConfig = true;
     QPointer<QQmlPropertyMap> m_configMap;

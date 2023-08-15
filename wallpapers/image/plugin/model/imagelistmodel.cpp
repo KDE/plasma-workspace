@@ -18,7 +18,7 @@
 #include "../finder/imagefinder.h"
 #include "../finder/suffixcheck.h"
 
-ImageListModel::ImageListModel(const QProperty<QSize> &bindableTargetSize, QObject *parent)
+ImageListModel::ImageListModel(const QBindable<QSize> &bindableTargetSize, QObject *parent)
     : AbstractImageListModel(bindableTargetSize, parent)
 {
 }

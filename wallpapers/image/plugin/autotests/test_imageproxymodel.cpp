@@ -74,7 +74,7 @@ void ImageProxyModelTest::initTestCase()
 
 void ImageProxyModelTest::init()
 {
-    m_model = new ImageProxyModel({m_dataDir.absolutePath()}, m_targetSize, this);
+    m_model = new ImageProxyModel({m_dataDir.absolutePath()}, QBindable<QSize>(&m_targetSize), this);
     m_countSpy = new QSignalSpy(m_model, &ImageProxyModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageProxyModel::dataChanged);
 
@@ -243,7 +243,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/");
     QVERIFY(QDir(standardPath).mkpath(standardPath));
 
-    m_model = new ImageProxyModel({standardPath}, m_targetSize, this);
+    m_model = new ImageProxyModel({standardPath}, QBindable<QSize>(&m_targetSize), this);
     m_countSpy = new QSignalSpy(m_model, &ImageProxyModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageProxyModel::dataChanged);
 
