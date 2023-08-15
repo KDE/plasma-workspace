@@ -1,6 +1,6 @@
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
 # Burkhard Lück <lueck@hube-lueck.de>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2013, 2016, 2018, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2013, 2016, 2018, 2022, 2023.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: fileinfo.cpp:170
 #, kde-format
