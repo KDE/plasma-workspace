@@ -100,7 +100,7 @@ void AppLauncher::configurationAccepted()
 
 void AppLauncher::restore(const KConfigGroup &config)
 {
-    m_showAppsByName = config.readEntry(QStringLiteral("showAppsByName"), false);
+    m_showAppsByName = config.readEntry(QStringLiteral("showAppsByName"), true);
 }
 
 void AppLauncher::save(KConfigGroup &config)

@@ -41,5 +41,5 @@ private:
     QList<QAction *> m_actions;
 
     Ui::Config m_ui;
-    bool m_showAppsByName = false;
+    bool m_showAppsByName = true;
 };
