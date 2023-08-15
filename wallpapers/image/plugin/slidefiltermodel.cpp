@@ -16,16 +16,18 @@
 
 #include <algorithm>
 
-SlideFilterModel::SlideFilterModel(QObject *parent)
+SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig, QObject *parent)
     : QSortFilterProxyModel{parent}
     , m_SortingMode{SortingMode::Random}
     , m_SortingFoldersFirst{false}
-    , m_usedInConfig{false}
     , m_random(m_randomDevice())
 {
+    m_usedInConfig.setBinding(usedInConfig.makeBinding());
     srand(time(nullptr));
     setSortCaseSensitivity(Qt::CaseSensitivity::CaseInsensitive);
-    connect(this, &SlideFilterModel::usedInConfigChanged, this, &SlideFilterModel::invalidateFilter);
+    m_usedInConfigNotifier = m_usedInConfig.addNotifier([this] {
+        invalidateRowsFilter();
+    });
 }
 
 QHash<int, QByteArray> SlideFilterModel::roleNames() const

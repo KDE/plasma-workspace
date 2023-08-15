@@ -30,7 +30,7 @@
 ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
-    , m_slideFilterModel(new SlideFilterModel(this))
+    , m_slideFilterModel(new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this))
 {
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
 }

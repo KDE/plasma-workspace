@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QBindable>
 #include <QFileInfo>
 #include <QSortFilterProxyModel>
 #include <QVector>
@@ -18,10 +19,8 @@ class SlideFilterModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig NOTIFY usedInConfigChanged)
-
 public:
-    explicit SlideFilterModel(QObject *parent);
+    explicit SlideFilterModel(const QBindable<bool> &usedInConfig, QObject *parent);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -35,9 +34,6 @@ public:
     Q_INVOKABLE int indexOf(const QString &path);
     Q_INVOKABLE void openContainingFolder(int rowIndex);
 
-Q_SIGNALS:
-    void usedInConfigChanged();
-
 private:
     void buildRandomOrder();
 
@@ -47,7 +43,8 @@ private:
     QVector<int> m_randomOrder;
     SortingMode::Mode m_SortingMode;
     bool m_SortingFoldersFirst;
-    bool m_usedInConfig;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, bool, m_usedInConfig, true)
+    QPropertyNotifier m_usedInConfigNotifier;
     std::random_device m_randomDevice;
     std::mt19937 m_random;
 };

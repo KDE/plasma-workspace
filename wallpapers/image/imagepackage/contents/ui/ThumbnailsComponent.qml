@@ -19,7 +19,7 @@ Item {
 
     property alias view: wallpapersGrid.view
 
-    readonly property var imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
+    readonly property QtObject imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
     Connections {
         target: imageWallpaper
@@ -54,9 +54,6 @@ Item {
 
         //kill the space for label under thumbnails
         view.model: thumbnailsComponent.imageModel
-        Component.onCompleted: {
-            thumbnailsComponent.imageModel.usedInConfig = true;
-        }
 
         //set the size of the cell, depending on Screen resolution to respect the aspect ratio
         view.implicitCellWidth: {

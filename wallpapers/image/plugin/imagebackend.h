@@ -170,7 +170,7 @@ private:
     QUrl m_image;
     Q_OBJECT_BINDABLE_PROPERTY(ImageBackend, QSize, m_targetSize, &ImageBackend::targetSizeChanged)
 
-    bool m_usedInConfig = true;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_usedInConfig, true)
     QPointer<QQmlPropertyMap> m_configMap;
 
     RenderingMode m_mode = SingleImage;

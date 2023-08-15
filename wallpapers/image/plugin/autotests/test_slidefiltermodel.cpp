@@ -38,6 +38,7 @@ private:
     QString m_standardPath;
     QString m_pathA, m_pathB, m_pathC;
     QProperty<QSize> m_targetSize;
+    QProperty<bool> m_usedInConfig{false};
 };
 
 void SlideFilterModelTest::initTestCase()
@@ -77,7 +78,7 @@ void SlideFilterModelTest::initTestCase()
 void SlideFilterModelTest::init()
 {
     m_model = new SlideModel(QBindable<QSize>(&m_targetSize), this);
-    m_filterModel = new SlideFilterModel(this);
+    m_filterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this);
 
     // Test loading data
     m_model->setSlidePaths({m_standardPath});
@@ -165,12 +166,11 @@ void SlideFilterModelTest::testSlideFilterModelUncheckedSlides()
 {
     m_model->setUncheckedSlides({m_pathA});
 
-    // usedInConfig false
-    m_filterModel->setProperty("usedInConfig", false);
-    QCOMPARE(m_filterModel->rowCount(), 2);
-
-    m_filterModel->setProperty("usedInConfig", true);
+    m_usedInConfig = true;
     QCOMPARE(m_filterModel->rowCount(), 3);
+
+    m_usedInConfig = false;
+    QCOMPARE(m_filterModel->rowCount(), 2);
 }
 
 QTEST_MAIN(SlideFilterModelTest)
