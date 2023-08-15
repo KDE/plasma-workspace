@@ -11,6 +11,7 @@ import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.plasma.kcm.users 1.0 as UsersKCM
 
 KCM.ScrollViewKCM {
@@ -83,6 +84,12 @@ KCM.ScrollViewKCM {
         delegate: Kirigami.BasicListItem {
             property UsersKCM.User user: model.userObject
 
+            leading: KirigamiComponents.Avatar {
+                source: model.decoration + '?' + avatarVersion // force reload after saving
+                cache: false // avoid caching
+                name: model.displayPrimaryName
+            }
+
             text: model.displayPrimaryName
             subtitle: model.displaySecondaryName
             reserveSpaceForSubtitle: true
@@ -93,27 +100,6 @@ KCM.ScrollViewKCM {
                 userList.currentIndex = index;
                 kcm.pop();
                 kcm.push("UserDetailsPage.qml", { user });
-            }
-
-            Kirigami.Theme.colorSet: highlighted ? Kirigami.Theme.Selection : Kirigami.Theme.View
-
-            leading: Rectangle {
-                width: height
-
-                color: "transparent"
-                border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, { alpha: 0.4 * 255 })
-                border.width: 1
-                radius: height / 2
-
-                Kirigami.Avatar {
-                    source: model.decoration + '?' + avatarVersion // force reload after saving
-                    cache: false // avoid caching
-                    name: model.displayPrimaryName
-                    anchors {
-                        fill: parent
-                        margins: 1
-                    }
-                }
             }
         }
     }

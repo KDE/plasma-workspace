@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.kcmutils as KCM
 import org.kde.plasma.kcm.users 1.0 as UsersKCM
 
@@ -90,8 +91,9 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
         }
 
-        Kirigami.Avatar {
+        KirigamiComponents.AvatarButton {
             readonly property int size: 6 * Kirigami.Units.gridUnit
+
             Layout.preferredWidth: size
             Layout.preferredHeight: size
             Layout.alignment: Qt.AlignHCenter
@@ -101,21 +103,18 @@ KCM.SimpleKCM {
             cache: false
             name: user.realName
 
-            actions {
-                main: Kirigami.Action {
-                    text: i18n("Change avatar")
-                    onTriggered: {
-                        const component = Qt.createComponent("PicturesSheet.qml")
-                        const obj = component.incubateObject(usersDetailPage, {
-                            parent: usersDetailPage,
-                            usersDetailPage: usersDetailPage
-                        })
-                        if (obj == null) {
-                            console.log(component.errorString())
-                        }
-                        component.destroy()
-                    }
+            text: i18n("Change avatar")
+
+            onClicked: {
+                const component = Qt.createComponent("PicturesSheet.qml")
+                const obj = component.incubateObject(usersDetailPage, {
+                    parent: usersDetailPage,
+                    usersDetailPage: usersDetailPage
+                })
+                if (obj == null) {
+                    console.log(component.errorString())
                 }
+                component.destroy()
             }
         }
 

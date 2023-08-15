@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.plasma.workspace.dialogs 1.0
 
 Kirigami.AbstractApplicationWindow {
@@ -200,7 +201,7 @@ Kirigami.AbstractApplicationWindow {
         ColumnLayout {
             width: Kirigami.Units.gridUnit * 20
 
-            Kirigami.Avatar {
+            KirigamiComponents.Avatar {
                 implicitHeight: Kirigami.Units.iconSizes.medium
                 implicitWidth: Kirigami.Units.iconSizes.medium
                 Layout.alignment: Qt.AlignHCenter
