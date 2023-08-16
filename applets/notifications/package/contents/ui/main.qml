@@ -26,6 +26,12 @@ PlasmoidItem {
     id: root
 
     property alias clearHistoryAction: clearHistory
+
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+
     readonly property int effectiveStatus: historyModel.activeJobsCount > 0
                      || historyModel.unreadNotificationsCount > 0
                      || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
@@ -99,6 +105,27 @@ PlasmoidItem {
         }
 
         return lines.join("\n");
+    }
+
+    // Even though the actual icon is drawn with custom code in CompactRepresentation,
+    // set the icon property here anyway because it's useful in other contexts
+    Plasmoid.icon: {
+        let iconName;
+        if (Globals.inhibited || !NotificationManager.Server.valid) {
+            iconName = "notifications-disabled";
+        } else if (Math.min(99, historyModel.unreadNotificationsCount)) {
+            iconName = "notification-active";
+        } else {
+            iconName = "notification-inactive"
+        }
+        // "active jobs" state not included here since that requires custom painting,
+        // and not just a simple icon
+
+        if (inPanel) {
+            return symbolicizeIconName(iconName);
+        }
+
+        return iconName;
     }
 
     switchWidth: Kirigami.Units.gridUnit * 14
@@ -181,6 +208,15 @@ PlasmoidItem {
 
     function action_configure() {
         KCMUtils.KCMLauncher.openSystemSettings("kcm_notifications");
+    }
+
+    function symbolicizeIconName(iconName) {
+        const symbolicSuffix = "-symbolic";
+        if (iconName.endsWith(symbolicSuffix)) {
+            return iconName;
+        }
+
+        return iconName + symbolicSuffix;
     }
 
     Plasmoid.contextualActions: [
