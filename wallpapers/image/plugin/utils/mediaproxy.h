@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <KDirWatch>
+#include <optional>
 
 #include <QObject>
 #include <QPalette>
@@ -21,6 +21,7 @@ namespace KPackage
 {
 class Package;
 }
+class KDirWatch;
 
 /**
  * A proxy class that converts a provider url to a real resource url.
@@ -137,6 +138,11 @@ private:
 
     void determineBackgroundType(KPackage::Package &package);
     void determineProviderType();
+    /**
+     * A unified wrapper to update the model image after the source is updated
+     * @since 6.0
+     */
+    void processSource(std::optional<std::reference_wrapper<KPackage::Package>> package = std::nullopt);
 
     QUrl findPreferredImageInPackage(KPackage::Package &package);
     void updateModelImage(KPackage::Package &package, bool doesBlockSignal = false);
@@ -154,7 +160,7 @@ private:
     QColor m_customColor = Qt::transparent;
 
     bool m_isDarkColorScheme;
-    KDirWatch *m_dirWatch;
+    KDirWatch *m_dirWatch = nullptr;
 
     friend class ImageFrontendTest;
 };

@@ -15,6 +15,7 @@
 #include <QUrlQuery>
 
 #include <KConfigGroup>
+#include <KDirWatch>
 #include <KIO/OpenUrlJob>
 #include <KNotificationJobUiDelegate>
 #include <KPackage/PackageLoader>
@@ -34,18 +35,7 @@ MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_isDarkColorScheme(isDarkColorScheme())
-    , m_dirWatch(new KDirWatch(this))
 {
-    connect(m_dirWatch, &KDirWatch::created, [&](const QString &file) {
-            if (file == m_source.toLocalFile()) {
-                if (m_providerType == Provider::Type::Unknown) {
-                    m_source.clear();
-                    setSource(file);
-                }
-                Q_EMIT modelImageChanged();
-                return;
-            }
-        });
 }
 
 void MediaProxy::classBegin()
@@ -75,6 +65,11 @@ QString MediaProxy::source() const
 
 void MediaProxy::setSource(const QString &url)
 {
+    if (m_dirWatch) {
+        delete m_dirWatch;
+        m_dirWatch = nullptr;
+    }
+
     // New desktop has empty url
     if (url.isEmpty()) {
         if (!m_isDefaultSource) {
@@ -91,25 +86,11 @@ void MediaProxy::setSource(const QString &url)
         return;
     }
 
-    if (!m_source.isEmpty()) {
-        m_dirWatch->removeFile(m_source.toLocalFile());
-    }
     m_source = sanitizedUrl;
-    if (QFileInfo(m_source.toLocalFile()).isFile()) {
-        m_dirWatch->addFile(m_source.toLocalFile());
-    }
+
     Q_EMIT sourceChanged();
 
-    determineProviderType();
-
-    KPackage::Package package;
-    if (m_providerType == Provider::Type::Package) {
-        package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
-        package.setPath(m_source.toLocalFile());
-    }
-
-    determineBackgroundType(package);
-    updateModelImage(package);
+    processSource();
 }
 
 QUrl MediaProxy::modelImage() const
@@ -235,9 +216,7 @@ void MediaProxy::useSingleImageDefaults()
 
     Q_EMIT sourceChanged();
 
-    determineProviderType();
-    determineBackgroundType(package);
-    updateModelImage(package);
+    processSource(package);
 }
 
 void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
@@ -362,10 +341,40 @@ void MediaProxy::determineProviderType()
         m_providerType = Provider::Type::Package;
     } else {
         m_providerType = Provider::Type::Unknown;
+
+        if (!info.exists()) {
+            m_dirWatch = new KDirWatch(this);
+            connect(m_dirWatch, &KDirWatch::created, this, [this] {
+                delete m_dirWatch;
+                m_dirWatch = nullptr;
+                // m_dirWatch is also deleted in setSource (next time a wallpaper url is set manually)
+                processSource();
+                // modelImageChanged will trigger a wallpaper update because m_modelImage is the default one before
+            });
+            m_dirWatch->addFile(m_source.toLocalFile());
+        }
     }
 
     if (oldType != m_providerType) {
         Q_EMIT providerTypeChanged();
+    }
+}
+
+void MediaProxy::processSource(std::optional<std::reference_wrapper<KPackage::Package>> _package)
+{
+    if (_package.has_value()) {
+        determineProviderType();
+        determineBackgroundType(_package.value().get());
+        updateModelImage(_package.value().get());
+    } else {
+        KPackage::Package package;
+        if (m_providerType == Provider::Type::Package) {
+            package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
+            package.setPath(m_source.toLocalFile());
+        }
+        determineProviderType();
+        determineBackgroundType(package);
+        updateModelImage(package);
     }
 }
 
