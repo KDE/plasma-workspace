@@ -119,7 +119,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
             return pluginMetaData.name();
         }
         case Qt::DecorationRole: {
-            QIcon icon = QIcon::fromTheme(pluginMetaData.iconName());
+            QIcon icon = QIcon::fromTheme(applet ? applet->icon() : "", QIcon::fromTheme(pluginMetaData.iconName()));
             return icon.isNull() ? QVariant() : icon;
         }
         default:
