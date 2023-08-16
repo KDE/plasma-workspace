@@ -46,7 +46,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime Svg
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons ActivitiesStats Activities KIO Prison PlasmaQuick Package
-                    GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor
+                    GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
                     OPTIONAL_COMPONENTS DocTools)
 
 if (BUILD_TESTING)

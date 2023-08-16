@@ -14,7 +14,7 @@ target_link_libraries(statusnotifiertest
     KF6::CoreAddons
     KF6::KIOCore
     KF6::Service
-    KF6::Notifications
+    KF6::StatusNotifierItem
     KF6::I18n
     KF6::ConfigCore
     Qt::DBus

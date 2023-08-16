@@ -24,6 +24,7 @@ target_link_libraries(
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package
+    KF6::StatusNotifierItem
 )
 
 install(TARGETS plasmawindowed ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -102,6 +102,7 @@ target_link_libraries(plasmashell
  KF6::Notifications
  KF6::GuiAddons
  KF6::Service
+ KF6::StatusNotifierItem
  PW::KWorkspace
  Wayland::Client
  LayerShellQt::Interface
