@@ -113,6 +113,11 @@ Q_SIGNALS:
      */
     void customColorChanged();
 
+    /**
+     * Emitted when the current source file has changed.
+     */
+    void sourceFileUpdated();
+
 private Q_SLOTS:
     /**
      * Switches to dark-colored wallpaper if available when system color

@@ -42,7 +42,7 @@ MediaProxy::MediaProxy(QObject *parent)
                     m_source.clear();
                     setSource(file);
                 }
-                Q_EMIT modelImageChanged();
+                Q_EMIT sourceFileUpdated();
                 return;
             }
         });
