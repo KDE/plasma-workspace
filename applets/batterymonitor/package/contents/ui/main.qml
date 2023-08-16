@@ -217,7 +217,7 @@ PlasmoidItem {
     Plasmoid.icon: {
         let iconName;
         if (hasBatteries) {
-            iconName = "batteries";
+            iconName = "battery-full";
         } else {
             iconName = "video-display-brightness";
         }
