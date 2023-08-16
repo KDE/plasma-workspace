@@ -18,11 +18,6 @@ import "global"
 MouseArea {
     id: compactRoot
 
-    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
-        || Plasmoid.location === PlasmaCore.Types.RightEdge
-        || Plasmoid.location === PlasmaCore.Types.BottomEdge
-        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
-
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
     Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.gridUnit
 
