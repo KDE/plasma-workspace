@@ -49,6 +49,8 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
     if (this->sourceModel()) {
         disconnect(this->sourceModel(), nullptr, this, nullptr);
+        // If the new model and the old model is the same model, QSortFilterProxyModel will not invalidate the filter
+        QSortFilterProxyModel::setSourceModel(nullptr);
     }
     if (sourceModel) {
         connect(sourceModel, &QAbstractItemModel::modelReset, this, &SlideFilterModel::buildRandomOrder);

@@ -288,8 +288,8 @@ void ImageBackend::startSlideshow()
     }
     // populate background list
     m_timer.stop();
+    connect(slideshowModel(), &SlideModel::done, this, &ImageBackend::backgroundsFound);
     slideshowModel()->setSlidePaths(m_slidePaths);
-    connect(m_slideshowModel, &SlideModel::done, this, &ImageBackend::backgroundsFound);
     // TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
     // about loading wallpaper slideshow while the thread runs
 }

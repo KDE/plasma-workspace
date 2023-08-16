@@ -85,17 +85,25 @@ QStringList SlideModel::addDirs(const QStringList &dirs)
 
         if (!m_models.contains(d)) {
             auto m = new ImageProxyModel({d}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
-
-            connect(m, &ImageProxyModel::loadingChanged, this, &SlideModel::slotSourceModelLoadingChanged);
-
             m_models.insert(d, m);
             added.append(d);
+
+            if (m->loading()) {
+                connect(m, &ImageProxyModel::loadingChanged, this, &SlideModel::slotSourceModelLoadingChanged);
+            } else {
+                // In case it loads immediately
+                ++m_loaded;
+                addSourceModel(m);
+            }
         }
     }
 
     if (!added.empty()) {
-        m_loading = true;
+        m_loading = m_loaded != m_models.size();
         Q_EMIT loadingChanged();
+        if (!m_loading) {
+            Q_EMIT done();
+        }
     }
 
     return added;
