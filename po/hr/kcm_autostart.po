@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 02:00+0000\n"
+"POT-Creation-Date: 2023-08-16 01:59+0000\n"
 "PO-Revision-Date: 2010-07-12 21:49+0200\n"
 "Last-Translator: Andrej Dundovic <andrej@dundovic.com.hr>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: unit.cpp:83
 #, kde-format
-msgid "Error occured when recieving reply of GetAll call %1"
+msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr ""
 
 #: unit.cpp:153

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-16 01:59+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Thiết bị đã bị ngắt kết nối."
 msgid "An unknown error has occurred."
 msgstr "Đã xảy ra một lỗi không rõ."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Change Password"
 msgstr "Đổi mật khẩu"
@@ -141,27 +141,27 @@ msgstr "Giữ nguyên"
 msgid "Create User"
 msgstr "Tạo người dùng"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
 #, kde-format
 msgid "Name:"
 msgstr "Tên:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Username:"
 msgstr "Tên người dùng:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Standard"
 msgstr "Thông thường"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Administrator"
 msgstr "Quản trị viên"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Account type:"
 msgstr "Kiểu danh khoản:"
@@ -413,12 +413,12 @@ msgstr "Xoá dấu vân tay"
 msgid "No fingerprints added"
 msgstr "Không thêm dấu vân tay nào"
 
-#: src/ui/main.qml:19
+#: src/ui/main.qml:20
 #, kde-format
 msgid "Manage Users"
 msgstr "Quản lí người dùng"
 
-#: src/ui/main.qml:125
+#: src/ui/main.qml:111
 #, kde-format
 msgid "Add New User"
 msgstr "Thêm người dùng mới"
@@ -548,32 +548,32 @@ msgstr "Chọn tệp…"
 msgid "Change avatar"
 msgstr "Đổi hiện thân ảo"
 
-#: src/ui/UserDetailsPage.qml:155
+#: src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Email address:"
 msgstr "Địa chỉ thư điện tử:"
 
-#: src/ui/UserDetailsPage.qml:179
+#: src/ui/UserDetailsPage.qml:178
 #, kde-format
 msgid "Delete files"
 msgstr "Xoá tệp"
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:185
 #, kde-format
 msgid "Keep files"
 msgstr "Giữ tệp"
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:192
 #, kde-format
 msgid "Delete User…"
 msgstr "Xoá người dùng…"
 
-#: src/ui/UserDetailsPage.qml:204
+#: src/ui/UserDetailsPage.qml:203
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Cấu hình xác thực bằng dấu vân tay..."
 
-#: src/ui/UserDetailsPage.qml:218
+#: src/ui/UserDetailsPage.qml:217
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

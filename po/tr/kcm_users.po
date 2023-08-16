@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-16 01:59+0000\n"
 "PO-Revision-Date: 2023-06-16 12:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -65,7 +65,7 @@ msgstr "Aygıtın bağlantısı kesildi."
 msgid "An unknown error has occurred."
 msgstr "Bilinmeyen bir hata oluştu."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Change Password"
 msgstr "Parolayı Değiştir"
@@ -140,27 +140,27 @@ msgstr "Aynı Bırak"
 msgid "Create User"
 msgstr "Kullanıcı Oluştur"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
 #, kde-format
 msgid "Name:"
 msgstr "Ad:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Standard"
 msgstr "Standart"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Administrator"
 msgstr "Yönetici"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Account type:"
 msgstr "Hesap türü:"
@@ -364,12 +364,12 @@ msgstr "Parmak izini temizle"
 msgid "No fingerprints added"
 msgstr "Parmak izi eklenmedi"
 
-#: src/ui/main.qml:19
+#: src/ui/main.qml:20
 #, kde-format
 msgid "Manage Users"
 msgstr "Kullanıcıları Yönet"
 
-#: src/ui/main.qml:125
+#: src/ui/main.qml:111
 #, kde-format
 msgid "Add New User"
 msgstr "Yeni Kullanıcı Ekle"
@@ -499,32 +499,32 @@ msgstr "Dosya Seç…"
 msgid "Change avatar"
 msgstr "Avatarı değiştir"
 
-#: src/ui/UserDetailsPage.qml:155
+#: src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Email address:"
 msgstr "E-posta adresi:"
 
-#: src/ui/UserDetailsPage.qml:179
+#: src/ui/UserDetailsPage.qml:178
 #, kde-format
 msgid "Delete files"
 msgstr "Dosyaları sil"
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:185
 #, kde-format
 msgid "Keep files"
 msgstr "Dosyaları tut"
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:192
 #, kde-format
 msgid "Delete User…"
 msgstr "Kullanıcıyı Sil…"
 
-#: src/ui/UserDetailsPage.qml:204
+#: src/ui/UserDetailsPage.qml:203
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Parmak İzi Kimlik Doğrulamasını Yapılandır…"
 
-#: src/ui/UserDetailsPage.qml:218
+#: src/ui/UserDetailsPage.qml:217
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

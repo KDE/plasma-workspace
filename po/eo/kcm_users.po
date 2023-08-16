@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-16 01:59+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "La aparato estis malkonektita."
 msgid "An unknown error has occurred."
 msgstr "Nekonata eraro okazis."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Change Password"
 msgstr "Ŝanĝi Pasvorton"
@@ -143,27 +143,27 @@ msgstr "Lasi Senŝanĝa"
 msgid "Create User"
 msgstr "Krei Uzanton"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
 #, kde-format
 msgid "Name:"
 msgstr "Nomo:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Username:"
 msgstr "Uzantnomo:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Standard"
 msgstr "Normo"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Administrator"
 msgstr "Administranto"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Account type:"
 msgstr "Tipo de konto:"
@@ -389,12 +389,12 @@ msgstr "Forigi fingrospuron"
 msgid "No fingerprints added"
 msgstr "Neniuj fingrospuroj aldonitaj"
 
-#: src/ui/main.qml:19
+#: src/ui/main.qml:20
 #, kde-format
 msgid "Manage Users"
 msgstr "Administri Uzantoj"
 
-#: src/ui/main.qml:125
+#: src/ui/main.qml:111
 #, kde-format
 msgid "Add New User"
 msgstr "Aldoni Novan Uzanton"
@@ -524,32 +524,32 @@ msgstr "Elekti dosieron…"
 msgid "Change avatar"
 msgstr "Ŝanĝi avataron"
 
-#: src/ui/UserDetailsPage.qml:155
+#: src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Email address:"
 msgstr "Retpoŝta adreso:"
 
-#: src/ui/UserDetailsPage.qml:179
+#: src/ui/UserDetailsPage.qml:178
 #, kde-format
 msgid "Delete files"
 msgstr "Forigi dosierojn"
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:185
 #, kde-format
 msgid "Keep files"
 msgstr "Konservi dosierojn"
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:192
 #, kde-format
 msgid "Delete User…"
 msgstr "Forigi Uzanton…"
 
-#: src/ui/UserDetailsPage.qml:204
+#: src/ui/UserDetailsPage.qml:203
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Agordi fingrospuran aŭtentikigon…"
 
-#: src/ui/UserDetailsPage.qml:218
+#: src/ui/UserDetailsPage.qml:217
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

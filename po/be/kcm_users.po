@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-16 01:59+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -70,7 +70,7 @@ msgstr "Прылада была адлучаная."
 msgid "An unknown error has occurred."
 msgstr "Адбылася невядомая памылка."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Change Password"
 msgstr "Змяніць пароль"
@@ -145,27 +145,27 @@ msgstr "Не змяняць"
 msgid "Create User"
 msgstr "Стварыць карыстальніка"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
 #, kde-format
 msgid "Name:"
 msgstr "Імя:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Username:"
 msgstr "Імя карыстальніка:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Standard"
 msgstr "Стандартны"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Administrator"
 msgstr "Адміністратар"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Account type:"
 msgstr "Тып акаўнта:"
@@ -381,12 +381,12 @@ msgstr "Выдаліць адбітак пальца"
 msgid "No fingerprints added"
 msgstr "Не дададзена адбіткаў пальцаў"
 
-#: src/ui/main.qml:19
+#: src/ui/main.qml:20
 #, kde-format
 msgid "Manage Users"
 msgstr "Кіраванне карыстальнікамі"
 
-#: src/ui/main.qml:125
+#: src/ui/main.qml:111
 #, kde-format
 msgid "Add New User"
 msgstr "Дадаць новага карыстальніка"
@@ -516,32 +516,32 @@ msgstr "Абраць файл…"
 msgid "Change avatar"
 msgstr "Змяніць аватар"
 
-#: src/ui/UserDetailsPage.qml:155
+#: src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Email address:"
 msgstr "Адрас электроннай пошты:"
 
-#: src/ui/UserDetailsPage.qml:179
+#: src/ui/UserDetailsPage.qml:178
 #, kde-format
 msgid "Delete files"
 msgstr "Выдаліць файлы"
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:185
 #, kde-format
 msgid "Keep files"
 msgstr "Пакінуць файлы"
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:192
 #, kde-format
 msgid "Delete User…"
 msgstr "Выдалiць карыстальніка…"
 
-#: src/ui/UserDetailsPage.qml:204
+#: src/ui/UserDetailsPage.qml:203
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Наладжванне аўтэнтыфікацыі з дапамогай адбітка пальца…"
 
-#: src/ui/UserDetailsPage.qml:218
+#: src/ui/UserDetailsPage.qml:217
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

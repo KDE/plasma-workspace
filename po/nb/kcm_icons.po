@@ -98,12 +98,3 @@ msgstr "Åpne tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Hovedverktøylinje"
-
-#~ msgid "Small Icons"
-#~ msgstr "Små ikoner"
-
-#~ msgid "Dialogs"
-#~ msgstr "Dialoger"

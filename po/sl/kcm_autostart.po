@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 02:00+0000\n"
-"PO-Revision-Date: 2023-08-03 07:56+0200\n"
+"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"PO-Revision-Date: 2023-08-15 09:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -42,21 +42,19 @@ msgid "\"%1\" is not readable."
 msgstr "\"%1\" ni berljiva."
 
 #: ui/entry.qml:52
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "Ime"
+msgstr "Ime:"
 
 #: ui/entry.qml:57
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "Stanje"
+msgstr "Stanje:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -64,31 +62,30 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "Zadnjič aktivirano ob:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "Ustavi"
 
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr "Zagon"
+msgstr "Zaženi"
 
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "Ni mogoče naložiti dnevnikov. Poskusite osvežiti."
 
 #: ui/entry.qml:109
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "Osveži"
 
 #: ui/main.qml:41
 #, kde-format
@@ -132,19 +129,20 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"%1 še ni bil samodejno zagnan. Podrobnosti bodo na voljo po ponovnem zagonu."
 
 #: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "Še ni samodejno zagnano"
 
 #: ui/main.qml:177 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "Neuspelo"
 
 #: ui/main.qml:184
 #, kde-format
@@ -204,36 +202,36 @@ msgstr "Izberi odjavni skript"
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "V teku"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "Ne teče"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "Zagon"
+msgstr "Zaganjanje"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "Ustavljanje"
 
 #: unit.cpp:83
-#, kde-format
-msgid "Error occured when recieving reply of GetAll call %1"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Error occured when recieving reply of GetAll call %1"
+msgid "Error occurred when receiving reply of GetAll call %1"
+msgstr "Napaka nastala ob sprejemanju odziva na klic GetAll %1"
 
 #: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "Neuspelo odpiranje dnevnika"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
