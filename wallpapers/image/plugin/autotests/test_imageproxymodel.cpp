@@ -264,7 +264,9 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QCOMPARE(m_model->count(), 1);
     QCOMPARE(m_model->m_imageModel->count(), 1);
     QCOMPARE(m_model->m_packageModel->count(), 0);
-    QVERIFY(m_model->m_dirWatch.contains(standardPath + QStringLiteral("image.jpg")));
+    QVERIFY(m_model->m_dirWatch.contains(standardPath));
+    // KDirWatch already monitors the parent folder
+    QVERIFY(!m_model->m_dirWatch.contains(standardPath + QStringLiteral("image.jpg")));
 
     // Copy a package to the folder
     auto job = KIO::copy(QUrl::fromLocalFile(m_dummyPackagePath),
@@ -279,6 +281,8 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QCOMPARE(m_model->count(), 2);
     QCOMPARE(m_model->m_imageModel->count(), 1);
     QCOMPARE(m_model->m_packageModel->count(), 1);
+    QVERIFY(m_model->m_dirWatch.contains(standardPath));
+    // WatchSubDirs
     QVERIFY(m_model->m_dirWatch.contains(standardPath + QStringLiteral("dummy")));
 
     // Test delete a file
@@ -291,6 +295,8 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QCOMPARE(m_model->count(), 1);
     QCOMPARE(m_model->m_imageModel->count(), 0);
     QCOMPARE(m_model->m_packageModel->count(), 1);
+    // Don't remove the file if its parent folder is in KDirWatch, otherwise KDirWatchPrivate::removeEntry will also remove the parent folder
+    QVERIFY(m_model->m_dirWatch.contains(standardPath));
     QVERIFY(!m_model->m_dirWatch.contains(standardPath + QStringLiteral("image.jpg")));
 
     // Test delete a folder
@@ -302,6 +308,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QCOMPARE(m_model->count(), 0);
     QCOMPARE(m_model->m_imageModel->count(), 0);
     QCOMPARE(m_model->m_packageModel->count(), 0);
+    QVERIFY(m_model->m_dirWatch.contains(standardPath));
     QVERIFY(!m_model->m_dirWatch.contains(standardPath + QStringLiteral("dummy")));
 }
 

@@ -138,19 +138,22 @@ QStringList ImageProxyModel::addBackground(const QString &_path)
     if (!results.empty()) {
         m_pendingAddition.append(results);
 
-        std::for_each(results.cbegin(), results.cend(), [this](const QString &path) {
+        for (const QString &path : std::as_const(results)) {
             if (m_dirWatch.contains(path)) {
-                return;
+                continue;
             }
 
             const QFileInfo info(path);
-
             if (info.isFile()) {
+                if (m_dirWatch.contains(info.absolutePath())) {
+                    // KDirWatch already monitors the parent folder
+                    continue;
+                }
                 m_dirWatch.addFile(path);
             } else if (info.isDir()) {
                 m_dirWatch.addDir(path);
             }
-        });
+        }
     }
 
     return results;
@@ -167,10 +170,11 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
     QStringList results;
 
     // The file may be already deleted, so isFile/isDir won't work.
-    if (isAcceptableSuffix(QFileInfo(packagePath).suffix())) {
+    if (const QFileInfo info(packagePath); isAcceptableSuffix(info.suffix())) {
         results = m_imageModel->removeBackground(packagePath);
 
-        if (!results.empty()) {
+        if (!results.empty() && !m_dirWatch.contains(info.absolutePath())) {
+            // Don't remove the file if its parent folder is in KDirWatch, otherwise KDirWatchPrivate::removeEntry will also remove the parent folder
             m_dirWatch.removeFile(results.at(0));
         }
     } else {
