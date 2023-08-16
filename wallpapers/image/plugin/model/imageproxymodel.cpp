@@ -180,7 +180,7 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
         results = m_packageModel->removeBackground(packagePath);
 
         if (!results.empty()) {
-            m_dirWatch.removeFile(results.at(0));
+            m_dirWatch.removeDir(results.at(0));
         }
     }
 
