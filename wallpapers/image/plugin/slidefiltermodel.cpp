@@ -50,10 +50,6 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
     if (this->sourceModel()) {
         disconnect(this->sourceModel(), nullptr, this, nullptr);
     }
-    QSortFilterProxyModel::setSourceModel(sourceModel);
-    if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
-        buildRandomOrder();
-    }
     if (sourceModel) {
         connect(sourceModel, &QAbstractItemModel::modelReset, this, &SlideFilterModel::buildRandomOrder);
         connect(sourceModel, &QAbstractItemModel::rowsInserted, this, [this] {
@@ -77,6 +73,11 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
                                                }),
                                 m_randomOrder.end());
         });
+    }
+    // Update random order before QSortFilterProxyModel sorts
+    QSortFilterProxyModel::setSourceModel(sourceModel);
+    if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
+        buildRandomOrder();
     }
 }
 

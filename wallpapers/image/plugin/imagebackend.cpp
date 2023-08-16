@@ -300,7 +300,6 @@ void ImageBackend::backgroundsFound()
 
     // setSourceModel must be called after the model is loaded
     m_slideFilterModel->setSourceModel(m_slideshowModel);
-    m_slideFilterModel->invalidate();
 
     if (m_slideFilterModel->rowCount() == 0 || m_usedInConfig) {
         return;
