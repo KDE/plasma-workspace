@@ -27,6 +27,10 @@ PlasmoidItem {
 
     property alias clearHistoryAction: clearHistory
 
+    readonly property int unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
+
+    readonly property bool inhibitedOrBroken: Globals.inhibited || !NotificationManager.Server.valid
+
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
         || Plasmoid.location === PlasmaCore.Types.RightEdge
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
@@ -111,9 +115,9 @@ PlasmoidItem {
     // set the icon property here anyway because it's useful in other contexts
     Plasmoid.icon: {
         let iconName;
-        if (Globals.inhibited || !NotificationManager.Server.valid) {
+        if (root.inhibitedOrBroken) {
             iconName = "notifications-disabled";
-        } else if (Math.min(99, historyModel.unreadNotificationsCount)) {
+        } else if (root.unreadCount > 0) {
             iconName = "notification-active";
         } else {
             iconName = "notification-inactive"
@@ -143,12 +147,12 @@ PlasmoidItem {
 
     compactRepresentation: CompactRepresentation {
         activeCount: Globals.popupNotificationsModel.activeNotificationsCount
-        unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
+        unreadCount: root.unreadCount
 
         jobsCount: historyModel.activeJobsCount
         jobsPercentage: historyModel.jobsPercentage
 
-        inhibited: Globals.inhibited || !NotificationManager.Server.valid
+        inhibited: root.inhibitedOrBroken
     }
 
     fullRepresentation: FullRepresentation {
