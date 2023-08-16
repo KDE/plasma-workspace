@@ -84,6 +84,11 @@ PlasmoidItem {
                                                    && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged"))
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Smoothed Remaining msec"])
 
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+
     property bool powermanagementDisabled: false
     property bool disableBrightnessUpdate: true
     property int screenBrightness
@@ -100,6 +105,15 @@ PlasmoidItem {
     property var inhibitions: []
     readonly property var activeProfileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
     readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
+
+    function symbolicizeIconName(iconName) {
+        const symbolicSuffix = "-symbolic";
+        if (iconName.endsWith(symbolicSuffix)) {
+            return iconName;
+        }
+
+        return iconName + symbolicSuffix;
+    }
 
     switchWidth: PlasmaCore.Units.gridUnit * 10
     switchHeight: PlasmaCore.Units.gridUnit * 10
@@ -200,7 +214,20 @@ PlasmoidItem {
         return parts.join("\n");
     }
 
-    Plasmoid.icon: !hasBatteries ? "video-display-brightness" : "battery"
+    Plasmoid.icon: {
+        let iconName;
+        if (hasBatteries) {
+            iconName = "batteries";
+        } else {
+            iconName = "video-display-brightness";
+        }
+
+        if (inPanel) {
+            return symbolicizeIconName(iconName);
+        }
+
+        return iconName;
+    }
 
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
