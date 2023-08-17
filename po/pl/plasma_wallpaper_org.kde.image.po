@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-17 01:59+0000\n"
 "PO-Revision-Date: 2023-04-10 11:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -166,17 +166,17 @@ msgstr ""
 "Plik, który ma być ustawiony jako tapeta, nie istnieje lub nie jest plikiem "
 "tapety: %1"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:229
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalog z tapetami, z którego wyświetlać obrazy"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Open Image"
 msgstr "Otwórz obraz"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Image Files"
 msgstr "Pliki obrazów"

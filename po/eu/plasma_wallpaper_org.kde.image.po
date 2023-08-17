@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-17 01:59+0000\n"
 "PO-Revision-Date: 2023-02-23 19:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -171,17 +171,17 @@ msgstr ""
 "Horma-paper gisa ezartzeko pasatutako fitxategia ez da existitzen, edo ezin "
 "dugu identifikatu horma-paper gisa: %1"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:229
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Diapositiba gisa erakutsi behar diren horma-paperak dituen direktorioa"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Open Image"
 msgstr "Ireki irudia"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Image Files"
 msgstr "Irudi-fitxategiak"

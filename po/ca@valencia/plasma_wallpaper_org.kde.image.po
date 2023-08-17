@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-17 01:59+0000\n"
 "PO-Revision-Date: 2023-02-19 11:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -176,17 +176,17 @@ msgstr ""
 "El fitxer passat per a definir com a fons de pantalla no existix, o no s'ha "
 "pogut identificar com a fons de pantalla: %1"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:229
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Directori amb el fons de pantalla mostrant les diapositives des de"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Open Image"
 msgstr "Obri una imatge"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Image Files"
 msgstr "Fitxers d'imatge"

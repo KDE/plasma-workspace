@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-08-17 01:59+0000\n"
 "PO-Revision-Date: 2023-04-04 19:49+0200\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -171,17 +171,17 @@ msgstr ""
 "Die zur Verwendung als Hintergrundbild übergebene Datei existiert nicht oder "
 "wird nicht als Hintergrundbild erkannt: %1"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:229
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Ordner mit dem Hintergrundbild, von aus eine Diaschau gezeigt wird"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Open Image"
 msgstr "Bild öffnen"
 
-#: plugin/imagebackend.cpp:344
+#: plugin/imagebackend.cpp:338
 #, kde-format
 msgid "Image Files"
 msgstr "Bilddateien"

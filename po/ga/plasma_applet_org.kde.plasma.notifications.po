@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2023-08-17 01:59+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -166,14 +166,14 @@ msgid "Show %1 More"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:617
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:105
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgid "No unread notifications"
 msgstr "Fógairt"
 
 #: package/contents/ui/FullRepresentation.qml:632
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:79
 #, fuzzy, kde-format
 #| msgid "Notifications and Jobs"
 msgid "Notification service not available"
@@ -326,7 +326,7 @@ msgstr ""
 msgid "Open"
 msgstr "Oscail"
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -336,13 +336,13 @@ msgstr[2] "%1 jab ar siúl"
 msgstr[3] "%1 jab ar siúl"
 msgstr[4] "%1 jab ar siúl"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr ""
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:72
 #, fuzzy, kde-format
 #| msgctxt "Number of jobs and the speed at which they are downloading"
 #| msgid "%1 running job (%2/s)"
@@ -355,7 +355,7 @@ msgstr[2] "%1 jab ar siúl (%2/s)"
 msgstr[3] "%1 jab ar siúl (%2/s)"
 msgstr[4] "%1 jab ar siúl (%2/s)"
 
-#: package/contents/ui/main.qml:75
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
@@ -367,28 +367,28 @@ msgstr[2] "%1 fhógra"
 msgstr[3] "%1 bhfógra"
 msgstr[4] "%1 fógra"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr ""
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:189
+#: package/contents/ui/main.qml:229
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgid "Clear All Notifications"
 msgstr "Fógairt"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr ""
