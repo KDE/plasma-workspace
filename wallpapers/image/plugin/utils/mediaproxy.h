@@ -159,7 +159,7 @@ private:
     QColor m_customColor = Qt::transparent;
 
     bool m_isDarkColorScheme;
-    KDirWatch *m_dirWatch;
+    KDirWatch m_dirWatch;
 
     friend class ImageFrontendTest;
 };

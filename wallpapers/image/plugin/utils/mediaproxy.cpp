@@ -34,18 +34,17 @@ MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_isDarkColorScheme(isDarkColorScheme())
-    , m_dirWatch(new KDirWatch(this))
 {
-    connect(m_dirWatch, &KDirWatch::created, [&](const QString &file) {
-            if (file == m_source.toLocalFile()) {
-                if (m_providerType == Provider::Type::Unknown) {
-                    m_source.clear();
-                    setSource(file);
-                }
-                Q_EMIT sourceFileUpdated();
-                return;
+    connect(&m_dirWatch, &KDirWatch::created, [&](const QString &file) {
+        if (file == m_source.toLocalFile()) {
+            if (m_providerType == Provider::Type::Unknown) {
+                m_source.clear();
+                setSource(file);
             }
-        });
+            Q_EMIT sourceFileUpdated();
+            return;
+        }
+    });
 }
 
 void MediaProxy::classBegin()
@@ -92,11 +91,11 @@ void MediaProxy::setSource(const QString &url)
     }
 
     if (!m_source.isEmpty()) {
-        m_dirWatch->removeFile(m_source.toLocalFile());
+        m_dirWatch.removeFile(m_source.toLocalFile());
     }
     m_source = sanitizedUrl;
     if (QFileInfo(m_source.toLocalFile()).isFile()) {
-        m_dirWatch->addFile(m_source.toLocalFile());
+        m_dirWatch.addFile(m_source.toLocalFile());
     }
     Q_EMIT sourceChanged();
 
