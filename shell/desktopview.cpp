@@ -352,7 +352,15 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
         // if we changed containment with the config open, relaunch the config dialog but for the new containment
         // third arg is used to disconnect when the config closes
         connect(this, &ContainmentView::containmentChanged, m_configView.data(), [this]() {
-            showConfigurationInterface(containment());
+            if (containment()->property("wallpaperGraphicsObject").value<QObject *>()) {
+                showConfigurationInterface(containment());
+            } else {
+                // BUG 407619: wallpaperConfiguration is invalid after changing layout
+                connect(containment(), &Plasma::Containment::wallpaperGraphicsObjectChanged, this, [this] {
+                    disconnect(static_cast<Plasma::Containment *>(sender()), &Plasma::Containment::wallpaperGraphicsObjectChanged, this, nullptr);
+                    showConfigurationInterface(static_cast<Plasma::Containment *>(sender()));
+                });
+            }
         });
     } else {
         m_configView = new PlasmaQuick::ConfigView(applet);
