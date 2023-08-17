@@ -476,9 +476,9 @@ bool EnvCanadaIon::updateIonSource(const QString &source)
     if (sourceAction[1] == QLatin1String("validate") && sourceAction.size() > 2) {
         const QStringList result = validate(sourceAction[2]);
 
-        const QString reply = (result.size() == 1        ? QStringLiteral("envcan|valid|single|") + result[0]
-                                   : (result.size() > 1) ? QStringLiteral("envcan|valid|multiple|") + result.join(QLatin1Char('|'))
-                                                         : QStringLiteral("envcan|invalid|single|") + sourceAction[2]);
+        const QString reply = (result.size() == 1        ? QString(QStringLiteral("envcan|valid|single|") + result[0])
+                                   : (result.size() > 1) ? QString(QStringLiteral("envcan|valid|multiple|") + result.join(QLatin1Char('|')))
+                                                         : QString(QStringLiteral("envcan|invalid|single|") + sourceAction[2]));
         setData(source, QStringLiteral("validate"), reply);
 
         return true;
