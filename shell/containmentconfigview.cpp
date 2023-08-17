@@ -184,11 +184,9 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
 
 void ContainmentConfigView::applyWallpaper()
 {
-    m_containment->setWallpaper(m_currentWallpaper);
-
-    syncWallpaperObjects();
-
     static_cast<KConfigPropertyMap *>(m_currentWallpaperConfig)->writeConfig();
+    m_containment->setWallpaper(m_currentWallpaper);
+    syncWallpaperObjects();
 
     Q_EMIT wallpaperConfigurationChanged();
 }
