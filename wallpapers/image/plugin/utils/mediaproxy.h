@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include <KDirWatch>
-
 #include <QObject>
 #include <QPalette>
 #include <QQmlParserStatus>
 #include <QSize>
 #include <QUrl>
+
+#include <KDirWatch>
 
 #include "../provider/providertype.h"
 #include "backgroundtype.h"
@@ -127,6 +127,13 @@ private Q_SLOTS:
      */
     void slotSystemPaletteChanged(const QPalette &palette);
 
+    /**
+     * Reloads the current wallpaper if the current source file has changed on disk.
+     *
+     * @since 6.0
+     */
+    void slotSourceFileUpdated(const QString &path);
+
 private:
     static inline bool isDarkColorScheme(const QPalette &palette = {});
 
@@ -140,12 +147,13 @@ private:
      */
     static QColor getAccentColorFromMetaData(const KPackage::Package &package);
 
-    void determineBackgroundType(KPackage::Package &package);
+    void determineBackgroundType(KPackage::Package *package);
     void determineProviderType();
+    void processSource(KPackage::Package *package = nullptr);
 
     QUrl findPreferredImageInPackage(KPackage::Package &package);
-    void updateModelImage(KPackage::Package &package, bool doesBlockSignal = false);
-    void updateModelImageWithoutSignal(KPackage::Package &package);
+    void updateModelImage(KPackage::Package *package, bool doesBlockSignal = false);
+    void updateModelImageWithoutSignal(KPackage::Package *package);
 
     bool m_ready = false;
 

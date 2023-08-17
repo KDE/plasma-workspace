@@ -35,16 +35,7 @@ MediaProxy::MediaProxy(QObject *parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_isDarkColorScheme(isDarkColorScheme())
 {
-    connect(&m_dirWatch, &KDirWatch::created, [&](const QString &file) {
-        if (file == m_source.toLocalFile()) {
-            if (m_providerType == Provider::Type::Unknown) {
-                m_source.clear();
-                setSource(file);
-            }
-            Q_EMIT sourceFileUpdated();
-            return;
-        }
-    });
+    connect(&m_dirWatch, &KDirWatch::created, this, &MediaProxy::slotSourceFileUpdated);
 }
 
 void MediaProxy::classBegin()
@@ -61,10 +52,7 @@ void MediaProxy::componentComplete()
     // Follow system color scheme
     connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
 
-    auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
-    package.setPath(m_source.toLocalFile());
-
-    updateModelImage(package);
+    processSource();
 }
 
 QString MediaProxy::source() const
@@ -99,16 +87,8 @@ void MediaProxy::setSource(const QString &url)
     }
     Q_EMIT sourceChanged();
 
-    determineProviderType();
-
-    KPackage::Package package;
-    if (m_providerType == Provider::Type::Package) {
-        package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
-        package.setPath(m_source.toLocalFile());
-    }
-
-    determineBackgroundType(package);
-    updateModelImage(package);
+    m_providerType = Provider::Type::Unknown;
+    processSource();
 }
 
 QUrl MediaProxy::modelImage() const
@@ -131,11 +111,8 @@ void MediaProxy::setTargetSize(const QSize &size)
     Q_EMIT targetSizeChanged(size);
 
     if (m_providerType == Provider::Type::Package) {
-        auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
-        package.setPath(m_source.toLocalFile());
-
-        determineBackgroundType(package); // In case file format changes after size changes
-        updateModelImage(package);
+        // In case file format changes after size changes
+        processSource();
     }
     if (m_providerType == Provider::Type::Image || m_backgroundType == BackgroundType::Type::AnimatedImage) {
         // When KPackage contains animated wallpapers, image provider is not used.
@@ -234,9 +211,8 @@ void MediaProxy::useSingleImageDefaults()
 
     Q_EMIT sourceChanged();
 
-    determineProviderType();
-    determineBackgroundType(package);
-    updateModelImage(package);
+    m_providerType = Provider::Type::Unknown;
+    processSource(&package);
 }
 
 void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
@@ -255,12 +231,20 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     m_isDarkColorScheme = dark;
 
     if (m_providerType == Provider::Type::Package) {
-        auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
-        package.setPath(m_source.toLocalFile());
-        updateModelImageWithoutSignal(package);
+        // In case light and dark variants have different formats
+        processSource();
     }
 
     Q_EMIT colorSchemeChanged();
+}
+
+void MediaProxy::slotSourceFileUpdated(const QString &path)
+{
+    Q_ASSERT(path == m_source.toLocalFile());
+    if (m_providerType == Provider::Type::Unknown) {
+        processSource();
+    }
+    Q_EMIT sourceFileUpdated();
 }
 
 bool MediaProxy::isDarkColorScheme(const QPalette &palette)
@@ -320,11 +304,11 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
     return QColor(colorString);
 }
 
-void MediaProxy::determineBackgroundType(KPackage::Package &package)
+void MediaProxy::determineBackgroundType(KPackage::Package *package)
 {
     QString filePath;
-    if (m_providerType == Provider::Type::Package) {
-        filePath = findPreferredImageInPackage(package).toLocalFile();
+    if (package) {
+        filePath = findPreferredImageInPackage(*package).toLocalFile();
     } else {
         filePath = m_source.toLocalFile();
     }
@@ -368,6 +352,27 @@ void MediaProxy::determineProviderType()
     }
 }
 
+void MediaProxy::processSource(KPackage::Package *package)
+{
+    if (!m_ready) {
+        return;
+    }
+
+    if (m_providerType == Provider::Type::Unknown) {
+        determineProviderType();
+    }
+
+    if (!package && m_providerType == Provider::Type::Package) {
+        KPackage::Package _package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
+        _package.setPath(m_source.toLocalFile());
+        determineBackgroundType(&_package);
+        updateModelImage(&_package);
+    } else {
+        determineBackgroundType(package);
+        updateModelImage(package);
+    }
+}
+
 QUrl MediaProxy::findPreferredImageInPackage(KPackage::Package &package)
 {
     QUrl url;
@@ -390,7 +395,7 @@ QUrl MediaProxy::findPreferredImageInPackage(KPackage::Package &package)
     return url;
 }
 
-void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSignal)
+void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSignal)
 {
     if (!m_ready) {
         return;
@@ -409,7 +414,7 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
     case Provider::Type::Package: {
         // Get custom accent color from
 
-        const QColor color(getAccentColorFromMetaData(package));
+        const QColor color(getAccentColorFromMetaData(*package));
         if (m_customColor != color && color.isValid() && color != Qt::transparent) {
             m_customColor = color;
             Q_EMIT customColorChanged();
@@ -417,7 +422,7 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
 
         if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
             // Is an animated image
-            newRealSource = findPreferredImageInPackage(package);
+            newRealSource = findPreferredImageInPackage(*package);
             break;
         }
 
@@ -451,7 +456,7 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
     }
 }
 
-void MediaProxy::updateModelImageWithoutSignal(KPackage::Package &package)
+void MediaProxy::updateModelImageWithoutSignal(KPackage::Package *package)
 {
     updateModelImage(package, true);
 }
