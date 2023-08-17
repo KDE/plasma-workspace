@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-17 02:26+0000\n"
 "PO-Revision-Date: 2022-05-23 13:27+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -175,12 +175,12 @@ msgstr "Tệp phông nền được giới thiệu"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Thư mục với phông nền để từ đó hiển thị các trang trình chiếu"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Open Image"
 msgstr "Mở ảnh"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Image Files"
 msgstr "Tệp ảnh"

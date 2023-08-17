@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-17 02:26+0000\n"
 "PO-Revision-Date: 2022-05-22 22:25+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -183,12 +183,12 @@ msgstr ""
 "Directorio que contiene el fondo de escritorio del que se van a mostrar "
 "diapositivas"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Open Image"
 msgstr "Abrir imagen"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Image Files"
 msgstr "Archivos de imagen"

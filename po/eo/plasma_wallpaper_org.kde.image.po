@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-17 02:26+0000\n"
 "PO-Revision-Date: 2023-01-03 05:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -174,12 +174,12 @@ msgstr "Rekomendita ekranfonbilda dosiero"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Dosierujo kun ekranfonbildo el kiu montri lumbildojn"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Open Image"
 msgstr "Malfermi Bildon"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Image Files"
 msgstr "Bilddosieroj"

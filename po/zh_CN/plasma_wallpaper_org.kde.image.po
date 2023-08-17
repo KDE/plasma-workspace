@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-17 02:26+0000\n"
 "PO-Revision-Date: 2023-08-02 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -170,12 +170,12 @@ msgstr "推荐的壁纸文件"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "选择幻灯片的壁纸目录"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Open Image"
 msgstr "打开图像"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Image Files"
 msgstr "图像文件"

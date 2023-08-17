@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-08-17 02:26+0000\n"
 "PO-Revision-Date: 2022-06-01 18:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -181,12 +181,12 @@ msgstr "Fișier cu tapet recomandat"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Dosar cu tapete din care să fie arătate diapozitive"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Open Image"
 msgstr "Deschide imagine"
 
-#: plugin/imagebackend.cpp:353
+#: plugin/imagebackend.cpp:352
 #, kde-format
 msgid "Image Files"
 msgstr "Fișiere imagine"
