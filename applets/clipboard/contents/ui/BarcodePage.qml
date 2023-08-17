@@ -79,7 +79,7 @@ ColumnLayout {
                 icon.name: "configure"
 
                 display: PlasmaComponents3.AbstractButton.IconOnly
-                text: i18n("Change the QR code type")
+                text: i18nc("@action:button", "Change the barcode type")
 
                 onClicked: menu.popup()
 
@@ -134,7 +134,7 @@ ColumnLayout {
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("Creating QR code failed")
+            text: i18nc("@info:status", "Creating barcode failed")
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth === 0 && barcodeItem.implicitHeight === 0
         }
@@ -145,7 +145,7 @@ ColumnLayout {
             rightPadding: Kirigami.Units.gridUnit * 2
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("There is not enough space to display the QR code. Try resizing this applet.")
+            text: i18nc("@info:usagetip", "There is not enough space to display the barcode. Try resizing this applet.")
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth > barcodeItem.width || barcodeItem.implicitHeight > barcodeItem.height
         }

@@ -35,7 +35,7 @@ RowLayout {
         visible: supportsBarcodes
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18n("Show QR code")
+        text: i18nc("@action:button", "Show barcode")
 
         onClicked: menuItem.barcode(DisplayRole)
 
