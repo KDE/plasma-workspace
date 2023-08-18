@@ -175,14 +175,16 @@ void PreviewItem::paint(QPainter *painter)
     }
 }
 
-void PreviewItem::hoverEnterEvent(QHoverEvent *)
+void PreviewItem::hoverEnterEvent(QHoverEvent *event)
 {
     m_containsMouse = true;
+    event->ignore(); // Propagate hover event to parent
 }
 
 void PreviewItem::hoverMoveEvent(QHoverEvent *event)
 {
     sendHoverEvent(event);
+    event->ignore(); // Propagate hover event to parent
 }
 
 void PreviewItem::hoverLeaveEvent(QHoverEvent *event)
@@ -193,6 +195,7 @@ void PreviewItem::hoverLeaveEvent(QHoverEvent *event)
         dispatchEnterLeave(nullptr, m_lastWidgetUnderMouse, mapToGlobal(event->pos()));
         m_lastWidgetUnderMouse = nullptr;
     }
+    event->ignore(); // Propagate hover event to parent
 }
 
 void PreviewItem::timerEvent(QTimerEvent *event)
