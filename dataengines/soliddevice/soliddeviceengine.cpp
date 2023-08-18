@@ -15,7 +15,6 @@
 
 #include <KFormat>
 #include <KNotification>
-#include <QApplication>
 #include <QDebug>
 
 #include <Plasma5Support/DataContainer>
