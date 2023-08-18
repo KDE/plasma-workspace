@@ -10,7 +10,7 @@ SPDX-License-Identifier: BSD-2-Clause -->
 
     <group name="Sounds">
         <entry name="theme" key="Theme" type="String">
-            <default>oxygen</default>
+            <default>ocean</default>
         </entry>
     </group>
 </kcfg>
