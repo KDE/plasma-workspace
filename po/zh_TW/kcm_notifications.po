@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-08-07 23:15+0900\n"
+"PO-Revision-Date: 2023-08-17 21:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,17 +51,13 @@ msgid "Show notification badges"
 msgstr "顯示通知徽章"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure events:"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "設定事件："
+msgstr "設定事件"
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
@@ -264,20 +260,16 @@ msgid "System Services"
 msgstr "系統服務"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "沒有應用程式或事件符合您的搜尋字詞。"
+msgstr "沒有應用程式或事件符合您的搜尋字詞"
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
-msgstr "從列表選取應用程式，設定其通知設定及行為。"
+msgstr "從列表選取應用程式以調整其通知設定及行為"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "設定通知"
