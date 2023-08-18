@@ -26,7 +26,7 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
 
         update();
 
-        if (m_interceptedHoverItem.interceptedHoverEnterPosition.has_value()) {
+        if (m_interceptedHoverItem) {
             resendHoverEvents(m_interceptedHoverItem.interceptedHoverEnterPosition.value());
         }
 
