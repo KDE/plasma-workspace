@@ -266,6 +266,8 @@ void PreviewWidget::paint(QPainter *painter)
 
 void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 {
+    e->ignore(); // Propagate hover event to parent
+
     if (needLayout)
         layoutItems();
 
@@ -296,9 +298,10 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 
 void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
 {
-    Q_UNUSED(e);
     m_animationTimer.stop();
     unsetCursor();
+
+    e->ignore(); // Propagate hover event to parent
 }
 
 void PreviewWidget::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
