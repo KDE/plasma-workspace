@@ -29,7 +29,7 @@ struct InterceptedQuickItemData {
 
     explicit operator bool() const
     {
-        return !item.isNull();
+        return !item.isNull() && interceptedHoverEnterPosition.has_value();
     }
 };
 
