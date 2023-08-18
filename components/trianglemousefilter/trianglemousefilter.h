@@ -29,7 +29,7 @@ struct InterceptedQuickItemData {
 
     explicit operator bool() const
     {
-        return item != nullptr;
+        return !item.isNull();
     }
 };
 
