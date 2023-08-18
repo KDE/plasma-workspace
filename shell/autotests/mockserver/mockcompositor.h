@@ -31,6 +31,7 @@
 #include "corecompositor.h"
 #include "coreprotocol.h"
 #include "datadevice.h"
+#include "layershell.h"
 #include "outputorder.h"
 #include "xdgoutputv1.h"
 #include "xdgshell.h"
@@ -100,6 +101,14 @@ public:
         Q_ASSERT(order);
         return order;
     }
+
+    LayerShell *layerShell()
+    {
+        auto *shell = get<LayerShell>();
+        Q_ASSERT(shell);
+        return shell;
+    }
+
     // Things that can be changed run-time without confusing the client (i.e. don't require separate tests)
     struct Config {
         bool autoEnter = true;

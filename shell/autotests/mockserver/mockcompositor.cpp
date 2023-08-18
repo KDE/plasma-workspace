@@ -44,6 +44,7 @@ DefaultCompositor::DefaultCompositor()
         add<Shm>();
         add<XdgWmBase>();
         outputOrder->setList({"WL-1"});
+        add<LayerShell>();
 
         QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
             QObject::connect(surface, &Surface::bufferCommitted, [=] {

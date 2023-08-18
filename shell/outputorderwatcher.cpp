@@ -51,6 +51,10 @@ protected:
 
     void kde_output_order_v1_done() override
     {
+        // If no output arrived it means we don't have *any* usable output
+        if (m_done) {
+            m_outputOrder.clear();
+        }
         m_done = true;
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
@@ -67,13 +71,7 @@ OutputOrderWatcher::OutputOrderWatcher(QObject *parent)
     : QObject(parent)
 {
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &OutputOrderWatcher::refresh);
-    connect(qGuiApp, &QGuiApplication::screenRemoved, this, [this](QScreen *screen) {
-        // Are we in the special fake single screen situation?
-        if (m_outputOrder.size() == 1 && m_outputOrder.contains(screen->name())) {
-            m_outputOrder.clear();
-        }
-        refresh();
-    });
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &OutputOrderWatcher::refresh);
 }
 
 void OutputOrderWatcher::useFallback(bool fallback)

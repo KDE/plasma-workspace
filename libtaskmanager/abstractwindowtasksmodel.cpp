@@ -25,6 +25,9 @@ AbstractWindowTasksModel::AbstractWindowTasksModel(QObject *parent)
 
     auto screenAdded = [this](const QScreen *screen) {
         connect(screen, &QScreen::geometryChanged, this, [this]() {
+            if (rowCount() == 0) {
+                return;
+            }
             Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), QVector<int>{ScreenGeometry});
         });
     };

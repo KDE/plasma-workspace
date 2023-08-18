@@ -1319,7 +1319,6 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
 void ShellCorona::addOutput(QScreen *screen)
 {
     Q_ASSERT(screen);
-
     if (desktopForScreen(screen)) {
         Q_EMIT screenAdded(m_screenPool->idForScreen(screen));
         return;

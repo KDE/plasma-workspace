@@ -83,7 +83,6 @@ QScreen *ShellTest::insertScreen(const QRect &geometry, const QString &name)
         //  coronaAddedSpy.wait();
         QTRY_COMPARE(appAddedSpy.size(), 1);
         //   QTRY_COMPARE(orderChangeSpy.size(), 1);
-
         QCOMPARE(m_corona->numScreens(), oldCoronaNumScreens); // Corona has *not* been notified yer as setScreenOrder has not been called
         QCOMPARE(m_corona->m_desktopViewForScreen.count(), oldCoronaNumScreens);
         QCOMPARE(qApp->screens().size(), oldAppNumScreens + 1);
@@ -110,11 +109,13 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
 
     if (expectOrderChanged) {
         coronaScreenOrderSpy.wait();
+        Q_ASSERT(coronaScreenOrderSpy.count() == 1);
         QCOMPARE(coronaScreenOrderSpy.count(), 1);
         auto order = coronaScreenOrderSpy.takeFirst().at(0).value<QList<QScreen *>>();
         QCOMPARE(m_corona->m_desktopViewForScreen.size(), order.size());
     } else {
         coronaScreenOrderSpy.wait(250);
+        Q_ASSERT(coronaScreenOrderSpy.count() == 0);
         QCOMPARE(coronaScreenOrderSpy.count(), 0);
     }
 
@@ -219,7 +220,7 @@ void ShellTest::testScreenInsertion()
 void ShellTest::testPanelInsertion()
 {
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.panel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     QVERIFY(m_corona->m_panelViews.contains(panelCont));

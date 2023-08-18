@@ -44,6 +44,16 @@ class ShmPool;
 class ShmBuffer;
 class DataDevice;
 
+template<typename T>
+T resource_cast(::wl_resource *resource)
+{
+    using ObjectType = std::remove_pointer_t<std::remove_cv_t<T>>;
+    if (auto resourceContainer = ObjectType::Resource::fromResource(resource)) {
+        return static_cast<T>(resourceContainer->object());
+    }
+    return T();
+}
+
 class Buffer : public QObject, public QtWaylandServer::wl_buffer
 {
     Q_OBJECT
