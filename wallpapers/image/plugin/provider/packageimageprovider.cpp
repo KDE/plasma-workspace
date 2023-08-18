@@ -12,7 +12,7 @@
 
 #include <KPackage/PackageLoader>
 
-#include <Plasma/Svg>
+#include <KSvg/Svg>
 
 #include "finder/packagefinder.h"
 
@@ -91,7 +91,7 @@ void AsyncPackageImageResponseRunnable::run()
     QImageReader imageReader(path);
     QImage image;
     if (imageReader.format() == "svg" || imageReader.format() == "svgz") {
-        Plasma::Svg svgRender;
+        KSvg::Svg svgRender;
         svgRender.setImagePath(path);
         image = svgRender.image(m_requestedSize.isValid() ? svgRender.size().scaled(m_requestedSize, Qt::KeepAspectRatioByExpanding) : svgRender.size());
     } else if (imageReader.read(&image)) {

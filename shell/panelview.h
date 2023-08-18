@@ -13,6 +13,8 @@
 #include <QWindow> // For WId
 #endif
 
+#include <KSvg/FrameSvg>
+
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
 
@@ -80,7 +82,7 @@ class PanelView : public PlasmaQuick::ContainmentView
      * The borders that should have a shadow
      * @since 5.7
      */
-    Q_PROPERTY(Plasma::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
+    Q_PROPERTY(KSvg::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
 
     /**
      * information about the screen in which the panel is in
@@ -170,7 +172,7 @@ public:
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
 
-    Plasma::FrameSvg::EnabledBorders enabledBorders() const;
+    KSvg::FrameSvg::EnabledBorders enabledBorders() const;
 
     VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
@@ -285,7 +287,7 @@ private:
     Plasma::Theme m_theme;
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;
-    Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
+    KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
     LayerShellQt::Window *m_layerWindow = nullptr;
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;

@@ -159,24 +159,24 @@ void PanelConfigView::syncLocation()
     }
 
     KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
-    Plasma::FrameSvg::EnabledBorders enabledBorders = Plasma::FrameSvg::AllBorders;
+    KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders;
 
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
         slideLocation = KWindowEffects::TopEdge;
-        enabledBorders = Plasma::FrameSvg::BottomBorder;
+        enabledBorders = KSvg::FrameSvg::BottomBorder;
         break;
     case Plasma::Types::RightEdge:
         slideLocation = KWindowEffects::RightEdge;
-        enabledBorders = Plasma::FrameSvg::LeftBorder;
+        enabledBorders = KSvg::FrameSvg::LeftBorder;
         break;
     case Plasma::Types::BottomEdge:
         slideLocation = KWindowEffects::BottomEdge;
-        enabledBorders = Plasma::FrameSvg::TopBorder;
+        enabledBorders = KSvg::FrameSvg::TopBorder;
         break;
     case Plasma::Types::LeftEdge:
         slideLocation = KWindowEffects::LeftEdge;
-        enabledBorders = Plasma::FrameSvg::RightBorder;
+        enabledBorders = KSvg::FrameSvg::RightBorder;
         break;
     default:
         break;
@@ -306,7 +306,7 @@ PanelView::OpacityMode PanelConfigView::opacityMode() const
     return m_panelView->opacityMode();
 }
 
-Plasma::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
+KSvg::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
 {
     return m_enabledBorders;
 }

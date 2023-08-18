@@ -38,7 +38,7 @@ class PanelConfigView : public PlasmaQuick::ConfigView
     Q_OBJECT
     Q_PROPERTY(PanelView::VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
     Q_PROPERTY(PanelView::OpacityMode opacityMode READ opacityMode WRITE setOpacityMode NOTIFY opacityModeChanged)
-    Q_PROPERTY(Plasma::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
+    Q_PROPERTY(KSvg::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
 
 public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = nullptr);
@@ -52,7 +52,7 @@ public:
     PanelView::OpacityMode opacityMode() const;
     void setOpacityMode(PanelView::OpacityMode mode);
 
-    Plasma::FrameSvg::EnabledBorders enabledBorders() const;
+    KSvg::FrameSvg::EnabledBorders enabledBorders() const;
 
 protected:
     void showEvent(QShowEvent *ev) override;
@@ -80,7 +80,7 @@ Q_SIGNALS:
 private:
     Plasma::Containment *m_containment;
     QPointer<PanelView> m_panelView;
-    Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
+    KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
     QTimer m_screenSyncTimer;
     QPointer<KWayland::Client::PlasmaShellSurface> m_shellSurface;

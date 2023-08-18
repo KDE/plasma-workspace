@@ -403,7 +403,7 @@ void PanelView::setBackgroundHints(Plasma::Types::BackgroundHints hint)
     Q_EMIT backgroundHintsChanged();
 }
 
-Plasma::FrameSvg::EnabledBorders PanelView::enabledBorders() const
+KSvg::FrameSvg::EnabledBorders PanelView::enabledBorders() const
 {
     return m_enabledBorders;
 }
@@ -1442,22 +1442,22 @@ bool PanelView::edgeActivated() const
 
 void PanelView::updateEnabledBorders()
 {
-    Plasma::FrameSvg::EnabledBorders borders = Plasma::FrameSvg::AllBorders;
+    KSvg::FrameSvg::EnabledBorders borders = KSvg::FrameSvg::AllBorders;
     if (m_backgroundHints == Plasma::Types::NoBackground) {
-        borders = Plasma::FrameSvg::NoBorder;
+        borders = KSvg::FrameSvg::NoBorder;
     } else {
         switch (location()) {
         case Plasma::Types::TopEdge:
-            borders &= ~Plasma::FrameSvg::TopBorder;
+            borders &= ~KSvg::FrameSvg::TopBorder;
             break;
         case Plasma::Types::LeftEdge:
-            borders &= ~Plasma::FrameSvg::LeftBorder;
+            borders &= ~KSvg::FrameSvg::LeftBorder;
             break;
         case Plasma::Types::RightEdge:
-            borders &= ~Plasma::FrameSvg::RightBorder;
+            borders &= ~KSvg::FrameSvg::RightBorder;
             break;
         case Plasma::Types::BottomEdge:
-            borders &= ~Plasma::FrameSvg::BottomBorder;
+            borders &= ~KSvg::FrameSvg::BottomBorder;
             break;
         default:
             break;
@@ -1465,16 +1465,16 @@ void PanelView::updateEnabledBorders()
 
         if (m_screenToFollow) {
             if (x() <= m_screenToFollow->geometry().x()) {
-                borders &= ~Plasma::FrameSvg::LeftBorder;
+                borders &= ~KSvg::FrameSvg::LeftBorder;
             }
             if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
-                borders &= ~Plasma::FrameSvg::RightBorder;
+                borders &= ~KSvg::FrameSvg::RightBorder;
             }
             if (y() <= m_screenToFollow->geometry().y()) {
-                borders &= ~Plasma::FrameSvg::TopBorder;
+                borders &= ~KSvg::FrameSvg::TopBorder;
             }
             if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
-                borders &= ~Plasma::FrameSvg::BottomBorder;
+                borders &= ~KSvg::FrameSvg::BottomBorder;
             }
         }
     }

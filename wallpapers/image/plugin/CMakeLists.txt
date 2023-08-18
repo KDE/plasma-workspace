@@ -45,6 +45,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF6::KIOGui
     KF6::Notifications
     KF6::Package
+    KF6::Svg
     PW::LibTaskManager
     )
 

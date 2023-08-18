@@ -89,6 +89,7 @@ target_link_libraries(plasmashell
  KF6::Plasma
  KF6::PlasmaQuick
  KF6::Solid
+ KF6::Svg
  KF6::I18n
  KF6::Activities
  KF6::GlobalAccel
