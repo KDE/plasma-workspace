@@ -1232,52 +1232,66 @@ void PanelView::updateExclusiveZone()
         }
         requestUpdate();
     } else {
-        NETExtendedStrut strut;
+#if HAVE_X11
+        qreal top_width = 0, top_start = 0, top_end = 0;
+        qreal bottom_width = 0, bottom_start = 0, bottom_end = 0;
+        qreal right_width = 0, right_start = 0, right_end = 0;
+        qreal left_width = 0, left_start = 0, left_end = 0;
 
         if (m_visibilityMode == NormalPanel) {
-            const QRect thisScreen = m_screenToFollow->geometry();
-            // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
-            const QRect wholeScreen = QRect(QPoint(0, 0), m_screenToFollow->virtualSize());
-
             if (!canSetStrut()) {
                 KX11Extras::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
                 return;
             }
+
+            // When setting struts, all arguments must belong to the logical coordinates.
+            const double devicePixelRatio = m_screenToFollow->devicePixelRatio();
+            const QRectF thisScreen{m_screenToFollow->geometry().topLeft().toPointF() / devicePixelRatio, m_screenToFollow->geometry().size()};
             // extended struts are to the combined screen geoms, not the single screen
-            int leftOffset = thisScreen.x();
-            int rightOffset = wholeScreen.right() - thisScreen.right();
-            int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
-            //         qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
-            int topOffset = thisScreen.top();
+            QRectF wholeScreen;
+            for (const auto screens = qGuiApp->screens(); auto screen : screens) {
+                const QRectF geometry = screen->geometry().toRectF();
+                wholeScreen |= QRectF(geometry.topLeft() / devicePixelRatio, geometry.size());
+            }
+
+            const qreal offset = 1 / devicePixelRatio; // To make sure strut is only in a screen
 
             switch (location()) {
-            case Plasma::Types::TopEdge:
-                strut.top_width = totalThickness() + topOffset;
-                strut.top_start = x();
-                strut.top_end = x() + width() - 1;
-                //                 qDebug() << "setting top edge to" << strut.top_width << strut.top_start << strut.top_end;
+            case Plasma::Types::TopEdge: {
+                const qreal topOffset = thisScreen.top();
+                top_width = totalThickness() + topOffset;
+                top_start = x() / devicePixelRatio;
+                top_end = top_start + width() - offset;
+                //                 qDebug() << "setting top edge to" << top_width << top_start << top_end;
                 break;
+            }
 
-            case Plasma::Types::BottomEdge:
-                strut.bottom_width = totalThickness() + bottomOffset;
-                strut.bottom_start = x();
-                strut.bottom_end = x() + width() - 1;
-                //                 qDebug() << "setting bottom edge to" << strut.bottom_width << strut.bottom_start << strut.bottom_end;
+            case Plasma::Types::BottomEdge: {
+                const qreal bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
+                bottom_width = totalThickness() + bottomOffset;
+                bottom_start = x() / devicePixelRatio;
+                bottom_end = bottom_start + width() - offset;
+                //                 qDebug() << "setting bottom edge to" << bottom_width << bottom_start << bottom_end;
                 break;
+            }
 
-            case Plasma::Types::RightEdge:
-                strut.right_width = totalThickness() + rightOffset;
-                strut.right_start = y();
-                strut.right_end = y() + height() - 1;
-                //                 qDebug() << "setting right edge to" << strut.right_width << strut.right_start << strut.right_end;
+            case Plasma::Types::RightEdge: {
+                const qreal rightOffset = wholeScreen.right() - thisScreen.right();
+                right_width = totalThickness() + rightOffset;
+                right_start = y() / devicePixelRatio;
+                right_end = right_start + height() - offset;
+                //                 qDebug() << "setting right edge to" << right_width << right_start << right_end;
                 break;
+            }
 
-            case Plasma::Types::LeftEdge:
-                strut.left_width = totalThickness() + leftOffset;
-                strut.left_start = y();
-                strut.left_end = y() + height() - 1;
-                //                 qDebug() << "setting left edge to" << strut.left_width << strut.left_start << strut.left_end;
+            case Plasma::Types::LeftEdge: {
+                const qreal leftOffset = thisScreen.x();
+                left_width = totalThickness() + leftOffset;
+                left_start = y() / devicePixelRatio;
+                left_end = left_start + height() - offset;
+                //                 qDebug() << "setting left edge to" << left_width << left_start << left_end;
                 break;
+            }
 
             default:
                 // qDebug() << "where are we?";
@@ -1286,18 +1300,19 @@ void PanelView::updateExclusiveZone()
         }
 
         KX11Extras::setExtendedStrut(winId(),
-                                     strut.left_width,
-                                     strut.left_start,
-                                     strut.left_end,
-                                     strut.right_width,
-                                     strut.right_start,
-                                     strut.right_end,
-                                     strut.top_width,
-                                     strut.top_start,
-                                     strut.top_end,
-                                     strut.bottom_width,
-                                     strut.bottom_start,
-                                     strut.bottom_end);
+                                     left_width,
+                                     left_start,
+                                     left_end,
+                                     right_width,
+                                     right_start,
+                                     right_end,
+                                     top_width,
+                                     top_start,
+                                     top_end,
+                                     bottom_width,
+                                     bottom_start,
+                                     bottom_end);
+#endif
     }
 }
 
