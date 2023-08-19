@@ -28,17 +28,18 @@ ColumnLayout {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    function historyBehaviorChanged() {
-        runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled
-    }
     Connections {
         target: runnerWindow
         function onHistoryBehaviorChanged() {
-            historyBehaviorChanged()
+            runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled
+        }
+        function onFavoriteIdsChanged() {
+            results.model.favoriteIds = runnerWindow.favoriteIds
         }
     }
     Component.onCompleted: {
-        historyBehaviorChanged() // Run this initially
+        runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled
+        results.model.favoriteIds = runnerWindow.favoriteIds
     }
 
     onQueryChanged: {

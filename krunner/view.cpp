@@ -53,10 +53,13 @@ View::View(QWindow *)
                       ->group("General");
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group) {
+        const QLatin1String pluginsGrp("Plugins");
         if (group.name() == QLatin1String("General")) {
             loadConfig();
-        } else if (group.name() == QLatin1String("Plugins")) {
+        } else if (group.name() == pluginsGrp) {
             Q_EMIT helpEnabledChanged();
+        } else if (group.name() == QLatin1String("Favorites") && group.parent().name() == pluginsGrp) {
+            assignFavoriteIds();
         }
     });
 
@@ -135,6 +138,7 @@ void View::loadConfig()
     setRetainPriorSearch(m_config.readEntry("RetainPriorSearch", true));
     setPinned(m_stateData.readEntry("Pinned", false));
     setHistoryBehavior(m_config.readEntry("historyBehavior", m_historyBehavior));
+    assignFavoriteIds();
 }
 
 void View::showEvent(QShowEvent *event)
