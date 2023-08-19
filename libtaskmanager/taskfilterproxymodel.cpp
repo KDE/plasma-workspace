@@ -365,9 +365,8 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
         QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
 
 #if HAVE_X11
-        static const bool isX11 = KWindowSystem::isPlatformX11();
-        if (isX11 && windowGeometry.isValid()) {
-            const double devicePixelRatio = qGuiApp->primaryScreen()->devicePixelRatio();
+        if (static const bool isX11 = KWindowSystem::isPlatformX11(); isX11 && windowGeometry.isValid()) {
+            const double devicePixelRatio = qGuiApp->devicePixelRatio();
             const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
             const QPoint screenTopLeft = screenGeometry.topLeft();
             const QPoint windowTopLeft =
