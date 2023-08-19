@@ -672,8 +672,11 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsOnAllVirtualDesktops) {
         return d->windowInfo(window)->onAllDesktops();
     } else if (role == Geometry) {
+        // Both the topLeft position and the size belong to the non-scaled coordinate system
         return d->windowInfo(window)->frameGeometry();
     } else if (role == ScreenGeometry) {
+        // The topLeft position belongs to the non-scaled coordinate system
+        // The size belongs to the scaled coordinate system, which means the size is already divided by DPR
         return screenGeometry(d->windowInfo(window)->frameGeometry().center());
     } else if (role == Activities) {
         return d->windowInfo(window)->activities();
