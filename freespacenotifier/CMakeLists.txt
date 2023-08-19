@@ -17,6 +17,7 @@ target_link_libraries(freespacenotifier
     KF6::KIOCore
     KF6::KIOGui
     KF6::Notifications
+    KF6::JobWidgets
     KF6::Service
 )
 

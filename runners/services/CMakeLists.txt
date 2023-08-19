@@ -15,7 +15,7 @@ target_link_libraries(krunner_services
     KF6::CoreAddons
     KF6::KIOGui
     KF6::I18n
-    KF6::Notifications
+    KF6::JobWidgets
     KF6::Runner
     KF6::Service
     KF6::Activities
