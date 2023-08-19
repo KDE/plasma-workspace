@@ -151,28 +151,29 @@ void View::showEvent(QShowEvent *event)
 
 void View::positionOnScreen()
 {
-    QScreen *shownOnScreen = QGuiApplication::primaryScreen();
-
-    auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
-    QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
-
     const auto screens = QGuiApplication::screens();
-    for (QScreen *screen : screens) {
+    auto screenIt = screens.cend();
+    if (KWindowSystem::isPlatformWayland()) {
+        auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
+        QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
         if (reply.isValid()) {
-            if (screen->name() == reply.value()) {
-                shownOnScreen = screen;
-                break;
-            }
-        } else if (screen->geometry().contains(QCursor::pos(screen))) {
-            shownOnScreen = screen;
-            break;
+            const QString activeOutputName = reply.value();
+            screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+                return screen->name() == activeOutputName;
+            });
         }
+    } else if (KWindowSystem::isPlatformX11()) {
+        screenIt = std::find_if(screens.cbegin(), screens.cend(), [](QScreen *screen) {
+            return screen->geometry().contains(QCursor::pos(screen));
+        });
     }
+
+    QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
     setScreen(shownOnScreen);
-    const QRect r = shownOnScreen->availableGeometry();
 
     QMargins margins;
     if (m_floating) {
+        const QRect r = shownOnScreen->availableGeometry();
         margins = QMargins({0, r.height() / 3, 0, 0});
     }
 
@@ -183,8 +184,7 @@ void View::positionOnScreen()
         layerWindow->setScope(QStringLiteral("krunner"));
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         layerWindow->setMargins(margins);
-    }
-    if (KWindowSystem::isPlatformX11()) {
+    } else if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner->setAnchors(Qt::TopEdge);
         m_x11Positioner->setMargins(margins);
         if (m_floating) {
