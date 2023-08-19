@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-18 02:10+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2023-07-18 09:35+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -33,17 +33,17 @@ msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-apparaat gedetecteerd"
 
-#: devicenotifications.cpp:296
+#: devicenotifications.cpp:295
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 is ontkoppeld."
 
-#: devicenotifications.cpp:296
+#: devicenotifications.cpp:295
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "Een USB-apparaat is ontkoppeld."
 
-#: devicenotifications.cpp:299
+#: devicenotifications.cpp:298
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

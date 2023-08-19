@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 01:59+0000\n"
-"PO-Revision-Date: 2023-08-15 18:29+0200\n"
+"PO-Revision-Date: 2023-08-18 17:04+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -228,8 +228,7 @@ msgid "Stopping"
 msgstr "Deteniéndose"
 
 #: unit.cpp:83
-#, fuzzy, kde-format
-#| msgid "Error occured when recieving reply of GetAll call %1"
+#, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "Ha ocurrido un error al recibir la respuesta de la llamada GetAll %1"
 

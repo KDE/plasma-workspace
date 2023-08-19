@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 01:59+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2023-08-14 21:37+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -264,12 +264,12 @@ msgstr "Arbeitsflächen und Kontrollleisten verwalten ..."
 msgid "Move keyboard focus between panels"
 msgstr "Tastaturfokus zwischen Kontrollleisten umschalten"
 
-#: shellcorona.cpp:1909
+#: shellcorona.cpp:1908
 #, kde-format
 msgid "Add Panel"
 msgstr "Kontrollleiste hinzufügen"
 
-#: shellcorona.cpp:1945
+#: shellcorona.cpp:1944
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

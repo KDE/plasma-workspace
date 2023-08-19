@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-24 09:34+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2015-02-04 14:10+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,599 +20,599 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: soliddeviceengine.cpp:114
+#: soliddeviceengine.cpp:113
 msgid "Parent UDI"
 msgstr "UDI roditelja"
 
-#: soliddeviceengine.cpp:115
+#: soliddeviceengine.cpp:114
 msgid "Vendor"
 msgstr "Proizvođač"
 
-#: soliddeviceengine.cpp:116
+#: soliddeviceengine.cpp:115
 msgid "Product"
 msgstr "Proizvod"
 
-#: soliddeviceengine.cpp:117
+#: soliddeviceengine.cpp:116
 msgid "Description"
 msgstr "Opis"
 
-#: soliddeviceengine.cpp:118
+#: soliddeviceengine.cpp:117
 msgid "Icon"
 msgstr "Ikona"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:594
+#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:593
 msgid "Emblems"
 msgstr "Amblemi"
 
-#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
-#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
+#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:494
 msgid "State"
 msgstr "Stanje"
 
-#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
-#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
-#: soliddeviceengine.cpp:493
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:490
+#: soliddeviceengine.cpp:492
 msgid "Operation result"
 msgstr "Rezultat operacije"
 
-#: soliddeviceengine.cpp:122
+#: soliddeviceengine.cpp:121
 msgid "Timestamp"
 msgstr "Vremenski pečat"
 
-#: soliddeviceengine.cpp:130
+#: soliddeviceengine.cpp:129
 msgid "Processor"
 msgstr "Procesor"
 
-#: soliddeviceengine.cpp:131
+#: soliddeviceengine.cpp:130
 msgid "Number"
 msgstr "Broj"
 
-#: soliddeviceengine.cpp:132
+#: soliddeviceengine.cpp:131
 msgid "Max Speed"
 msgstr "Najveća brzina"
 
-#: soliddeviceengine.cpp:133
+#: soliddeviceengine.cpp:132
 msgid "Can Change Frequency"
 msgstr "Može da mijenja takt"
 
-#: soliddeviceengine.cpp:141
+#: soliddeviceengine.cpp:140
 msgid "Block"
 msgstr "Blok"
 
-#: soliddeviceengine.cpp:142
+#: soliddeviceengine.cpp:141
 msgid "Major"
 msgstr "Glavni"
 
-#: soliddeviceengine.cpp:143
+#: soliddeviceengine.cpp:142
 msgid "Minor"
 msgstr "Sporedni"
 
-#: soliddeviceengine.cpp:144
+#: soliddeviceengine.cpp:143
 msgid "Device"
 msgstr "Uređaj"
 
-#: soliddeviceengine.cpp:152
+#: soliddeviceengine.cpp:151
 msgid "Storage Access"
 msgstr "Skladišni pristup"
 
-#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
-#: soliddeviceengine.cpp:608
+#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
+#: soliddeviceengine.cpp:607
 msgid "Accessible"
 msgstr "Pristupačan"
 
-#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
 msgid "File Path"
 msgstr "Putanja datoteke"
 
-#: soliddeviceengine.cpp:169
+#: soliddeviceengine.cpp:168
 msgid "Storage Drive"
 msgstr "Skladišna jedinica"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Ide"
 msgstr "IDE"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Usb"
 msgstr "USB"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Ieee1394"
 msgstr "IEEE-1394"
 
-#: soliddeviceengine.cpp:173
+#: soliddeviceengine.cpp:172
 msgid "Scsi"
 msgstr "SCSI"
 
-#: soliddeviceengine.cpp:173
+#: soliddeviceengine.cpp:172
 msgid "Sata"
 msgstr "S‑ATA"
 
-#: soliddeviceengine.cpp:173
+#: soliddeviceengine.cpp:172
 msgid "Platform"
 msgstr "Platforma"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Hard Disk"
 msgstr "Hard disk"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Cdrom Drive"
 msgstr "CD‑ROM jedinica"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Floppy"
 msgstr "Disketni"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Tape"
 msgstr "Traka"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Compact Flash"
 msgstr "Kompaktna fleš kartica"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Memory Stick"
 msgstr "Memorijski štapić"
 
-#: soliddeviceengine.cpp:177
+#: soliddeviceengine.cpp:176
 msgid "Smart Media"
 msgstr "Pametni medij"
 
-#: soliddeviceengine.cpp:177
+#: soliddeviceengine.cpp:176
 msgid "SdMmc"
 msgstr "SD/MMC"
 
-#: soliddeviceengine.cpp:177
+#: soliddeviceengine.cpp:176
 msgid "Xd"
 msgstr "Xd"
 
-#: soliddeviceengine.cpp:179
+#: soliddeviceengine.cpp:178
 msgid "Bus"
 msgstr "Sabirnica"
 
-#: soliddeviceengine.cpp:180
+#: soliddeviceengine.cpp:179
 msgid "Drive Type"
 msgstr "Tip uređaja"
 
-#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
-#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
+#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Removable"
 msgstr "Uklonjiv"
 
-#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
-#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
 msgid "Hotpluggable"
 msgstr "Vruće uključiv"
 
-#: soliddeviceengine.cpp:204
+#: soliddeviceengine.cpp:203
 msgid "Optical Drive"
 msgstr "Optička jedinica"
 
-#: soliddeviceengine.cpp:209
+#: soliddeviceengine.cpp:208
 msgid "CD-R"
 msgstr "CD-R:"
 
-#: soliddeviceengine.cpp:212
+#: soliddeviceengine.cpp:211
 msgid "CD-RW"
 msgstr "CD-RW"
 
-#: soliddeviceengine.cpp:215
+#: soliddeviceengine.cpp:214
 msgid "DVD"
 msgstr "DVD"
 
-#: soliddeviceengine.cpp:218
+#: soliddeviceengine.cpp:217
 msgid "DVD-R"
 msgstr "DVD-R"
 
-#: soliddeviceengine.cpp:221
+#: soliddeviceengine.cpp:220
 msgid "DVD-RW"
 msgstr "DVD-RW"
 
-#: soliddeviceengine.cpp:224
+#: soliddeviceengine.cpp:223
 msgid "DVD-RAM"
 msgstr "DVD-RAM"
 
-#: soliddeviceengine.cpp:227
+#: soliddeviceengine.cpp:226
 msgid "DVD+R"
 msgstr "DVD+R"
 
-#: soliddeviceengine.cpp:230
+#: soliddeviceengine.cpp:229
 msgid "DVD+RW"
 msgstr "DVD+RW"
 
-#: soliddeviceengine.cpp:233
+#: soliddeviceengine.cpp:232
 msgid "DVD+DL"
 msgstr "DVD+R DL"
 
-#: soliddeviceengine.cpp:236
+#: soliddeviceengine.cpp:235
 msgid "DVD+DLRW"
 msgstr "DVD+RW DL"
 
-#: soliddeviceengine.cpp:239
+#: soliddeviceengine.cpp:238
 msgid "BD"
 msgstr "BD"
 
-#: soliddeviceengine.cpp:242
+#: soliddeviceengine.cpp:241
 msgid "BD-R"
 msgstr "BD-R"
 
-#: soliddeviceengine.cpp:245
+#: soliddeviceengine.cpp:244
 msgid "BD-RE"
 msgstr "BD‑RE"
 
-#: soliddeviceengine.cpp:248
+#: soliddeviceengine.cpp:247
 msgid "HDDVD"
 msgstr "HD-DVD"
 
-#: soliddeviceengine.cpp:251
+#: soliddeviceengine.cpp:250
 msgid "HDDVD-R"
 msgstr "HD DVD‑R"
 
-#: soliddeviceengine.cpp:254
+#: soliddeviceengine.cpp:253
 msgid "HDDVD-RW"
 msgstr "HD DVD-RW"
 
-#: soliddeviceengine.cpp:256
+#: soliddeviceengine.cpp:255
 msgid "Supported Media"
 msgstr "Podržani medijumi"
 
-#: soliddeviceengine.cpp:258
+#: soliddeviceengine.cpp:257
 msgid "Read Speed"
 msgstr "Brzina čitanja"
 
-#: soliddeviceengine.cpp:259
+#: soliddeviceengine.cpp:258
 msgid "Write Speed"
 msgstr "Brzina pisanja"
 
-#: soliddeviceengine.cpp:267
+#: soliddeviceengine.cpp:266
 msgid "Write Speeds"
 msgstr "Brzine pisanja"
 
-#: soliddeviceengine.cpp:275
+#: soliddeviceengine.cpp:274
 msgid "Storage Volume"
 msgstr "Skladišni prostor"
 
-#: soliddeviceengine.cpp:278
+#: soliddeviceengine.cpp:277
 #, kde-format
 msgid "Other"
 msgstr "Ostali"
 
-#: soliddeviceengine.cpp:278
+#: soliddeviceengine.cpp:277
 #, kde-format
 msgid "Unused"
 msgstr "Nekorišteno"
 
-#: soliddeviceengine.cpp:278
+#: soliddeviceengine.cpp:277
 #, kde-format
 msgid "File System"
 msgstr "Datotečni sistem"
 
-#: soliddeviceengine.cpp:278
+#: soliddeviceengine.cpp:277
 #, kde-format
 msgid "Partition Table"
 msgstr "Tabela particija"
 
-#: soliddeviceengine.cpp:278
+#: soliddeviceengine.cpp:277
 #, kde-format
 msgid "Raid"
 msgstr "RAID"
 
-#: soliddeviceengine.cpp:278
+#: soliddeviceengine.cpp:277
 #, kde-format
 msgid "Encrypted"
 msgstr "Šifrovano"
 
-#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+#: soliddeviceengine.cpp:280 soliddeviceengine.cpp:282
 msgid "Usage"
 msgstr "Upotreba"
 
-#: soliddeviceengine.cpp:283
+#: soliddeviceengine.cpp:282
 #, kde-format
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: soliddeviceengine.cpp:286
+#: soliddeviceengine.cpp:285
 msgid "Ignored"
 msgstr "Ignorisano"
 
-#: soliddeviceengine.cpp:287
+#: soliddeviceengine.cpp:286
 msgid "File System Type"
 msgstr "Tip datotečnog sistema"
 
-#: soliddeviceengine.cpp:288
+#: soliddeviceengine.cpp:287
 msgid "Label"
 msgstr "Oznaka"
 
-#: soliddeviceengine.cpp:289
+#: soliddeviceengine.cpp:288
 msgid "UUID"
 msgstr "UUID"
 
-#: soliddeviceengine.cpp:298
+#: soliddeviceengine.cpp:297
 msgid "Encrypted Container"
 msgstr "Šifrovani sadržalac"
 
-#: soliddeviceengine.cpp:310
+#: soliddeviceengine.cpp:309
 msgid "OpticalDisc"
 msgstr "Optički disk"
 
-#: soliddeviceengine.cpp:316
+#: soliddeviceengine.cpp:315
 msgid "Audio"
 msgstr "Zvuk"
 
-#: soliddeviceengine.cpp:319
+#: soliddeviceengine.cpp:318
 msgid "Data"
 msgstr "Podaci"
 
-#: soliddeviceengine.cpp:322
+#: soliddeviceengine.cpp:321
 msgid "Video CD"
 msgstr "Video CD"
 
-#: soliddeviceengine.cpp:325
+#: soliddeviceengine.cpp:324
 msgid "Super Video CD"
 msgstr "Super Video CD"
 
-#: soliddeviceengine.cpp:328
+#: soliddeviceengine.cpp:327
 msgid "Video DVD"
 msgstr "Video DVD"
 
-#: soliddeviceengine.cpp:331
+#: soliddeviceengine.cpp:330
 msgid "Video Blu Ray"
 msgstr ""
 
-#: soliddeviceengine.cpp:333
+#: soliddeviceengine.cpp:332
 msgid "Available Content"
 msgstr "Dostupan sadržaj"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "Unknown Disc Type"
 msgstr "Nepoznat tip diska"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "CD Rom"
 msgstr "CD"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "CD Recordable"
 msgstr "Upisivi CD"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "CD Rewritable"
 msgstr "Prebrisivi CD"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Rom"
 msgstr "DVD"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Ram"
 msgstr "DVD‑RAM"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Recordable"
 msgstr "Upisivi DVD"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Rewritable"
 msgstr "Prebrisivi DVD"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Recordable"
 msgstr "Upisivi DVD (plus)"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Rewritable"
 msgstr "Prebrisivi DVD (plus)"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "DVD Plus Recordable Duallayer"
 msgstr "Upisivi dvoslojni DVD (plus)"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "DVD Plus Rewritable Duallayer"
 msgstr "Prebrisivi dvoslojni DVD (plus)"
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "Blu Ray Rom"
 msgstr "Blu‑ray"
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "Blu Ray Recordable"
 msgstr "Upisivi Blu‑ray"
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "Blu Ray Rewritable"
 msgstr "Prebrisivi Blu‑ray"
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Rom"
 msgstr "HD DVD"
 
-#: soliddeviceengine.cpp:343
+#: soliddeviceengine.cpp:342
 msgid "HD DVD Recordable"
 msgstr "Upisivi HD DVD"
 
-#: soliddeviceengine.cpp:343
+#: soliddeviceengine.cpp:342
 msgid "HD DVD Rewritable"
 msgstr "Prebrisivi HD DVD"
 
-#: soliddeviceengine.cpp:345
+#: soliddeviceengine.cpp:344
 msgid "Disc Type"
 msgstr "Tip diska"
 
-#: soliddeviceengine.cpp:346
+#: soliddeviceengine.cpp:345
 msgid "Appendable"
 msgstr "Dopisiv"
 
-#: soliddeviceengine.cpp:347
+#: soliddeviceengine.cpp:346
 msgid "Blank"
 msgstr "Prazno"
 
-#: soliddeviceengine.cpp:348
+#: soliddeviceengine.cpp:347
 msgid "Rewritable"
 msgstr "Prebrisiv"
 
-#: soliddeviceengine.cpp:349
+#: soliddeviceengine.cpp:348
 msgid "Capacity"
 msgstr "Kapacitet"
 
-#: soliddeviceengine.cpp:357
+#: soliddeviceengine.cpp:356
 msgid "Camera"
 msgstr "Kamera"
 
-#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
 msgid "Supported Protocols"
 msgstr "Podržani protokoli"
 
-#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
 msgid "Supported Drivers"
 msgstr "Podržani drajveri"
 
-#: soliddeviceengine.cpp:371
+#: soliddeviceengine.cpp:370
 msgid "Portable Media Player"
 msgstr "Prenosivi medija plejer"
 
-#: soliddeviceengine.cpp:385
+#: soliddeviceengine.cpp:384
 msgid "Battery"
 msgstr "Baterija"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Unknown Battery"
 msgstr "Nepoznata baterija"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "PDA Battery"
 msgstr "PDA baterija"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "UPS Battery"
 msgstr "UPS baterija"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Primary Battery"
 msgstr "Primarna baterija"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Mouse Battery"
 msgstr "Baterija miša"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Keyboard Battery"
 msgstr "Baterija tastature"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Keyboard Mouse Battery"
 msgstr "Baterija tastature i miša"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 msgid "Camera Battery"
 msgstr "Baterija fotoaparata"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 #, fuzzy
 #| msgid "Mouse Battery"
 msgid "Phone Battery"
 msgstr "Baterija miša"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 #, fuzzy
 #| msgid "Mouse Battery"
 msgid "Monitor Battery"
 msgstr "Baterija miša"
 
-#: soliddeviceengine.cpp:392
+#: soliddeviceengine.cpp:391
 msgid "Gaming Input Battery"
 msgstr ""
 
-#: soliddeviceengine.cpp:392
+#: soliddeviceengine.cpp:391
 #, fuzzy
 #| msgid "Mouse Battery"
 msgid "Bluetooth Battery"
 msgstr "Baterija miša"
 
-#: soliddeviceengine.cpp:395
+#: soliddeviceengine.cpp:394
 #, fuzzy
 #| msgid "Charging"
 msgid "Not Charging"
 msgstr "Puni se"
 
-#: soliddeviceengine.cpp:395
+#: soliddeviceengine.cpp:394
 msgid "Charging"
 msgstr "Puni se"
 
-#: soliddeviceengine.cpp:395
+#: soliddeviceengine.cpp:394
 msgid "Discharging"
 msgstr "Prazni se"
 
-#: soliddeviceengine.cpp:396
+#: soliddeviceengine.cpp:395
 msgid "Fully Charged"
 msgstr "Skroz puna"
 
-#: soliddeviceengine.cpp:398
+#: soliddeviceengine.cpp:397
 msgid "Plugged In"
 msgstr "Utaknut"
 
-#: soliddeviceengine.cpp:399
+#: soliddeviceengine.cpp:398
 msgid "Type"
 msgstr "Tip"
 
-#: soliddeviceengine.cpp:400
+#: soliddeviceengine.cpp:399
 msgid "Charge Percent"
 msgstr "Procenat napunjenosti"
 
-#: soliddeviceengine.cpp:401
+#: soliddeviceengine.cpp:400
 msgid "Rechargeable"
 msgstr "Punjivo"
 
-#: soliddeviceengine.cpp:402
+#: soliddeviceengine.cpp:401
 msgid "Charge State"
 msgstr "Stanje punjenja"
 
-#: soliddeviceengine.cpp:427
+#: soliddeviceengine.cpp:426
 msgid "Type Description"
 msgstr "Opis tipa"
 
-#: soliddeviceengine.cpp:432
+#: soliddeviceengine.cpp:431
 msgid "Device Types"
 msgstr "Tipovi uređaja"
 
-#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
+#: soliddeviceengine.cpp:455 soliddeviceengine.cpp:554
 msgid "Size"
 msgstr "Veličina"
 
-#: soliddeviceengine.cpp:535
+#: soliddeviceengine.cpp:534
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr ""
 
-#: soliddeviceengine.cpp:535
+#: soliddeviceengine.cpp:534
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr ""
 
-#: soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:552
 msgid "Free Space"
 msgstr "Slobodan prostor"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:553
 msgid "Free Space Text"
 msgstr "Tekst slobodnog prostora"
 
-#: soliddeviceengine.cpp:556
+#: soliddeviceengine.cpp:555
 #, fuzzy
 #| msgid "Size"
 msgid "Size Text"
 msgstr "Veličina"
 
-#: soliddeviceengine.cpp:582
+#: soliddeviceengine.cpp:581
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: soliddeviceengine.cpp:583
+#: soliddeviceengine.cpp:582
 msgid "Temperature Unit"
 msgstr "Jedinica temperature"
 
-#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
+#: soliddeviceengine.cpp:626 soliddeviceengine.cpp:630
 msgid "In Use"
 msgstr "Zauzeto"
