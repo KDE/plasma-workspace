@@ -152,7 +152,7 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
             return preferred;
         }
 
-        float best = std::numeric_limits<float>::max();
+        double best = std::numeric_limits<double>::max();
 
         for (const QString &entry : images) {
             QSize candidate = resSize(QFileInfo(entry).baseName());
