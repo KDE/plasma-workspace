@@ -2,11 +2,11 @@ add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
 set(kded_statusnotifierwatcher_SRCS statusnotifierwatcher.cpp )
 
-qt_add_dbus_adaptor(kded_statusnotifierwatcher_SRCS     ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierWatcher.xml
+qt_add_dbus_adaptor(kded_statusnotifierwatcher_SRCS     ${KSTATUSNOTIFIERITEM_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierWatcher.xml
                      statusnotifierwatcher.h StatusNotifierWatcher)
 
 
-set(statusnotifieritem_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierItem.xml)
+set(statusnotifieritem_xml ${KSTATUSNOTIFIERITEM_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierItem.xml)
 set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
    NO_NAMESPACE false
    INCLUDE "systemtraytypedefs.h"
