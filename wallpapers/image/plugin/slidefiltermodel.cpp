@@ -10,11 +10,25 @@
 
 #include <QDateTime>
 #include <QDir>
+#include <QFileInfo>
 #include <QRandomGenerator>
 
 #include <KIO/OpenFileManagerWindowJob>
 
 #include <algorithm>
+
+namespace
+{
+inline QString getLocalFilePath(const QModelIndex &modelIndex)
+{
+    return modelIndex.data(ImageRoles::PathRole).toUrl().toLocalFile();
+}
+
+inline QString getFilePathWithDir(const QFileInfo &fileInfo)
+{
+    return fileInfo.canonicalPath().append(QDir::separator());
+}
+}
 
 SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig, QObject *parent)
     : QSortFilterProxyModel{parent}
@@ -193,14 +207,4 @@ void SlideFilterModel::buildRandomOrder()
         std::iota(m_randomOrder.begin(), m_randomOrder.end(), 0);
         std::shuffle(m_randomOrder.begin(), m_randomOrder.end(), m_random);
     }
-}
-
-QString SlideFilterModel::getLocalFilePath(const QModelIndex &modelIndex) const
-{
-    return modelIndex.data(ImageRoles::PathRole).toUrl().toLocalFile();
-}
-
-QString SlideFilterModel::getFilePathWithDir(const QFileInfo &fileInfo) const
-{
-    return fileInfo.canonicalPath().append(QDir::separator());
 }
