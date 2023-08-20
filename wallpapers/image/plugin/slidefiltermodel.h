@@ -41,8 +41,8 @@ private:
     QString getFilePathWithDir(const QFileInfo &fileInfo) const;
 
     QVector<int> m_randomOrder;
-    SortingMode::Mode m_SortingMode;
-    bool m_SortingFoldersFirst;
+    SortingMode::Mode m_SortingMode = SortingMode::Random;
+    bool m_SortingFoldersFirst = false;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, bool, m_usedInConfig, true)
     QPropertyNotifier m_usedInConfigNotifier;
     std::random_device m_randomDevice;

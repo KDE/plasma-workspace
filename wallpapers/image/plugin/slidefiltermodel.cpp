@@ -18,8 +18,6 @@
 
 SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig, QObject *parent)
     : QSortFilterProxyModel{parent}
-    , m_SortingMode{SortingMode::Random}
-    , m_SortingFoldersFirst{false}
     , m_random(m_randomDevice())
 {
     m_usedInConfig.setBinding(usedInConfig.makeBinding());
