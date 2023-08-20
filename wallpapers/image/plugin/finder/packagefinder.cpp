@@ -9,7 +9,6 @@
 
 #include <QDir>
 
-#include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
 #include "distance.h"

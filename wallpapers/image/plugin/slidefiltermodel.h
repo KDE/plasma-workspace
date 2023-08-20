@@ -6,12 +6,12 @@
 
 #pragma once
 
+#include <random>
+
 #include <QBindable>
 #include <QFileInfo>
 #include <QSortFilterProxyModel>
 #include <QVector>
-
-#include <random>
 
 #include "sortingmode.h"
 

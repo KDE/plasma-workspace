@@ -9,7 +9,6 @@
 #include <memory>
 
 #include <QObject>
-#include <QRect>
 
 #include "tasksmodel.h"
 

@@ -8,7 +8,6 @@
 
 #include <QBindable>
 #include <QConcatenateTablesProxyModel>
-#include <QSet>
 #include <QSize>
 
 #include "model/imageroles.h"

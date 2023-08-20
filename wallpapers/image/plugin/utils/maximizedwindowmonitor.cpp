@@ -6,8 +6,6 @@
 
 #include "maximizedwindowmonitor.h"
 
-#include <QGuiApplication>
-
 #include "abstracttasksmodel.h" // For enums
 #include "activityinfo.h"
 #include "virtualdesktopinfo.h"
