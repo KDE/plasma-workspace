@@ -3,7 +3,6 @@ set(image_SRCS
     slidemodel.cpp
     slidefiltermodel.cpp
     sortingmode.h
-    finder/distance.cpp
     finder/findsymlinktarget.h
     finder/imagefinder.cpp
     finder/mediametadatafinder.cpp

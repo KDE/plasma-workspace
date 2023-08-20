@@ -7,13 +7,45 @@
 
 #include "packagefinder.h"
 
+#include <limits>
+
 #include <QDir>
 
 #include <KPackage/PackageLoader>
 
-#include "distance.h"
 #include "findsymlinktarget.h"
 #include "suffixcheck.h"
+
+namespace
+{
+/**
+ * Computes difference of two areas
+ */
+double distance(const QSize &size, const QSize &desired)
+{
+    const double desiredAspectRatio = (desired.height() > 0) ? desired.width() / static_cast<double>(desired.height()) : 0;
+    const double candidateAspectRatio = (size.height() > 0) ? size.width() / static_cast<double>(size.height()) : std::numeric_limits<double>::max();
+
+    double delta = size.width() - desired.width();
+    delta = delta >= 0.0 ? delta : -delta * 2; // Penalize for scaling up
+
+    return std::abs(candidateAspectRatio - desiredAspectRatio) * 25000 + delta;
+}
+
+/**
+ * @return size from the filename
+ */
+QSize resSize(QStringView str)
+{
+    const int index = str.indexOf(QLatin1Char('x'));
+
+    if (index != -1) {
+        return QSize(str.left(index).toInt(), str.mid(index + 1).toInt());
+    }
+
+    return QSize();
+}
+}
 
 PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, QObject *parent)
     : QObject(parent)
@@ -129,7 +161,7 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
                 continue;
             }
 
-            const float dist = distance(candidate, tSize);
+            const double dist = distance(candidate, tSize);
 
             if (preferred.isEmpty() || dist < best) {
                 preferred = entry;
