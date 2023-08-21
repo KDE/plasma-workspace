@@ -1,6 +1,7 @@
 # translation of kcminput.po to Français
 # translation of kcminput.po to
 # traduction de kcminput.po en Français
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Ludovic Grossard <grossard@kde.org>, 2002,2003.
 # Gilles CAULIER <caulier.gilles@free.fr>, 2003.
 # Robert Jacolin <rjacolin@ifrance.com>, 2003.
@@ -14,7 +15,6 @@
 # xavier <ktranslator31@yahoo.fr>, 2013.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015, 2016, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.07.90\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
