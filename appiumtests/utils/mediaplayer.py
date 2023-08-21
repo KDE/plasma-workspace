@@ -148,19 +148,19 @@ class Mpris2:
         """
         self.__connection = connection
 
-        properties_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.freedesktop.DBus.Properties.xml", encoding="utf-8").readlines())
+        properties_introspection_xml: str = '\n'.join(open("../libkmpris/dbus/org.freedesktop.DBus.Properties.xml", encoding="utf-8").readlines())
         introspection_data = Gio.DBusNodeInfo.new_for_xml(properties_introspection_xml)
         self.__prop_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.properties_handle_method_call, None, None)
         assert self.__prop_reg_id > 0
 
-        player_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8").readlines())
+        player_introspection_xml: str = '\n'.join(open("../libkmpris/dbus/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8").readlines())
 
         introspection_data = Gio.DBusNodeInfo.new_for_xml(player_introspection_xml)
         self.__player_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call,
                                                           self.player_handle_get_property, self.player_handle_set_property)
         assert self.__player_reg_id != 0
 
-        interface_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.mpris.MediaPlayer2.xml", encoding="utf-8").readlines())
+        interface_introspection_xml: str = '\n'.join(open("../libkmpris/dbus/org.mpris.MediaPlayer2.xml", encoding="utf-8").readlines())
         introspection_data = Gio.DBusNodeInfo.new_for_xml(interface_introspection_xml)
         self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call,
                                                         self.interface_handle_get_property, self.interface_handle_set_property)

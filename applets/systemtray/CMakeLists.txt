@@ -18,7 +18,7 @@ set(systemtray_SRCS
 )
 
 qt_add_dbus_interface(systemtray_SRCS ${KSTATUSNOTIFIERITEM_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierWatcher.xml statusnotifierwatcher_interface)
-qt_add_dbus_interface(systemtray_SRCS ${plasma-workspace_SOURCE_DIR}/dataengines/mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
+qt_add_dbus_interface(systemtray_SRCS ${plasma-workspace_SOURCE_DIR}/libkmpris/dbus/org.freedesktop.DBus.Properties.xml dbusproperties)
 
 set(statusnotifieritem_xml ${KSTATUSNOTIFIERITEM_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierItem.xml)
 set_source_files_properties(${statusnotifieritem_xml} PROPERTIES

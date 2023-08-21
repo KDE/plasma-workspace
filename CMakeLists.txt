@@ -377,6 +377,7 @@ add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
 
 add_subdirectory(libtaskmanager)
+add_subdirectory(libkmpris)
 add_subdirectory(libnotificationmanager)
 add_subdirectory(libcolorcorrect)
 add_subdirectory(components)

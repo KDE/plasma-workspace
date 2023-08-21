@@ -93,7 +93,7 @@ Item {
 
         anchors.fill: parent
 
-        readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
+        readonly property string icon: root.iconName || "media-album-cover"
 
         replaceEnter: Transition {
             OpacityAnimator {

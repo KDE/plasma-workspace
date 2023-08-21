@@ -4,14 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQml 2.15
+import QtQuick
+import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami 2 as Kirigami
 
 /**
  * [Album Art][Now Playing]
@@ -81,20 +80,14 @@ MouseArea {
     property int wheelDelta: 0
 
     onWheel: wheel => {
-        const service = mpris2Source.serviceForSource(mpris2Source.current)
-        const operation = service.operationDescription("ChangeVolume")
         wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y || wheel.angleDelta.x)
         while (wheelDelta >= 120) {
             wheelDelta -= 120;
-            operation.delta = volumePercentStep / 100;
-            operation.showOSD = true;
-            service.startOperationCall(operation);
+            mpris2Model.currentPlayer?.changeVolume(volumePercentStep / 100, true);
         }
         while (wheelDelta <= -120) {
             wheelDelta += 120;
-            operation.delta = -volumePercentStep / 100;
-            operation.showOSD = true;
-            service.startOperationCall(operation);
+            mpris2Model.currentPlayer?.changeVolume(-volumePercentStep / 100, true);
         }
     }
 
@@ -123,7 +116,7 @@ MouseArea {
         anchors.fill: parent
         visible: active
 
-        active: inTray || !root.track
+        active: inTray || root.track.length === 0
         sourceComponent: Kirigami.Icon {
             active: compactRepresentation.containsMouse
             source: {
@@ -260,7 +253,7 @@ MouseArea {
 
                     Layout.fillWidth: true
                     Layout.maximumWidth: songTitle.Layout.maximumWidth
-                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
+                    visible: root.artist.length > 0 && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
 
                     elide: Text.ElideRight
                     font.pointSize: Kirigami.Theme.smallFont.pointSize

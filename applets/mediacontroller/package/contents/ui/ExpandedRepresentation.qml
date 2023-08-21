@@ -7,15 +7,16 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.coreaddons 1.0 as KCoreAddons
-import org.kde.kirigami 2.20 as Kirigami
-import Qt5Compat.GraphicalEffects
+import org.kde.kirigami 2 as Kirigami
+import org.kde.plasma.private.mpris as Mpris
 
 PlasmaExtras.Representation {
     id: expandedRepresentation
@@ -29,14 +30,15 @@ PlasmaExtras.Representation {
 
     collapseMarginsHint: true
 
+    readonly property alias playerSelector: playerSelector
     readonly property int controlSize: Kirigami.Units.iconSizes.medium
 
-    property double position: (mpris2Source.currentData && mpris2Source.currentData.Position) || 0
-    readonly property real rate: (mpris2Source.currentData && mpris2Source.currentData.Rate) || 1
-    readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
-    readonly property bool canSeek: (mpris2Source.currentData && mpris2Source.currentData.CanSeek) || false
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     readonly property var appletInterface: root
+    property real rate: mpris2Model.currentPlayer?.rate ?? 1
+    property int length: mpris2Model.currentPlayer?.length ?? 0
+    property int position: mpris2Model.currentPlayer?.position ?? 0
+    property bool canSeek: mpris2Model.currentPlayer?.canSeek ?? false
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
     readonly property int durationFormattingOptions: length >= 60*60*1000*1000 ? 0 : KCoreAddons.FormatTypes.FoldHours
@@ -46,21 +48,6 @@ PlasmaExtras.Representation {
 
     KeyNavigation.down: playerSelector.count ? playerSelector.currentItem : (seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down)
     KeyNavigation.up: seekSlider.KeyNavigation.down
-
-    function retrievePosition() {
-        var service = mpris2Source.serviceForSource(mpris2Source.current);
-        var operation = service.operationDescription("GetPosition");
-        service.startOperationCall(operation);
-    }
-
-    Connections {
-        target: root
-        function onExpandedChanged() {
-            if (root.expanded) {
-                retrievePosition();
-            }
-        }
-    }
 
     onPositionChanged: {
         // we don't want to interrupt the user dragging the slider
@@ -82,7 +69,7 @@ PlasmaExtras.Representation {
         // to a new track, we'll reset the value to zero and ask for the position again
         seekSlider.value = 0
         seekSlider.to = length
-        retrievePosition()
+        mpris2Model.currentPlayer?.updatePosition();
         disablePositionUpdate = false
     }
 
@@ -93,21 +80,18 @@ PlasmaExtras.Representation {
 
         if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && event.modifiers & Qt.ControlModifier) {
             event.accepted = true;
-            if (root.mprisSourcesModel.length > 2) {
-                var nextIndex = playerSelector.currentIndex + 1;
+            if (playerList.count > 2) {
+                let nextIndex = mpris2Model.currentIndex + 1;
                 if (event.key == Qt.Key_Backtab || event.modifiers & Qt.ShiftModifier) {
                     nextIndex -= 2;
                 }
-                if (nextIndex == root.mprisSourcesModel.length) {
+                if (nextIndex == playerList.count) {
                     nextIndex = 0;
                 }
                 if (nextIndex < 0) {
-                    nextIndex = root.mprisSourcesModel.length - 1;
+                    nextIndex = playerList.count - 1;
                 }
-                playerSelector.currentIndex = nextIndex;
-                disablePositionUpdate = true;
-                mpris2Source.current = root.mprisSourcesModel[nextIndex]["source"];
-                disablePositionUpdate = false;
+                mpris2Model.currentIndex = nextIndex;
             }
         }
 
@@ -144,6 +128,17 @@ PlasmaExtras.Representation {
             } else {
                 event.accepted = false
             }
+        }
+    }
+
+    Timer {
+        id: queuedPositionUpdate
+        interval: 100
+        onTriggered: {
+            if (expandedRepresentation.position == seekSlider.value) {
+                return;
+            }
+            mpris2Model.currentPlayer.position = seekSlider.value;
         }
     }
 
@@ -196,10 +191,7 @@ PlasmaExtras.Representation {
                     return;
                 }
                 point1.adjustingVolume = true;
-                const service = mpris2Source.serviceForSource(mpris2Source.current);
-                const operation = service.operationDescription("ChangeVolume");
-                operation.delta = (point1.previousY - point1.y) / touchArea.height;
-                service.startOperationCall(operation);
+                mpris2Model.currentPlayer.changeVolume((point1.previousY - point1.y) / touchArea.height, false);
             }
         }
 
@@ -233,7 +225,7 @@ PlasmaExtras.Representation {
             // use State to avoid unnecessary reevaluation of width and height
             states: State {
                 name: "albumArtReady"
-                when: root.expanded && backgroundImage.visible && shaderEffectSource.sourceItem.currentItem.paintedWidth > 0
+                when: root.expanded && backgroundImage.visible && shaderEffectSource.sourceItem.currentItem?.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
                     scaleFactor: Math.max(parent.width / shaderEffectSource.sourceItem.currentItem.paintedWidth, parent.height / shaderEffectSource.sourceItem.currentItem.paintedHeight)
@@ -283,7 +275,7 @@ PlasmaExtras.Representation {
                     function onExpandedChanged() {
                         // NOTE: Don't use strict equality
                         if (!root.expanded
-                        || (albumArt.albumArt.currentItem instanceof Image && albumArt.albumArt.currentItem.source == root.albumArt)) {
+                        || (albumArt.albumArt.currentItem instanceof Image && albumArt.albumArt.currentItem.source == Qt.resolvedUrl(root.albumArt))) {
                             return;
                         }
 
@@ -341,39 +333,8 @@ PlasmaExtras.Representation {
                     fontSizeMode: Text.VerticalFit
                     elide: Text.ElideRight
 
-                    visible: text.length !== 0
-                    text: {
-                        var metadata = root.currentMetadata
-                        if (!metadata) {
-                            return ""
-                        }
-                        var xesamAlbum = metadata["xesam:album"]
-                        if (xesamAlbum) {
-                            return xesamAlbum
-                        }
-
-                        // if we play a local file without title and artist, show its containing folder instead
-                        if (metadata["xesam:title"] || root.artist) {
-                            return ""
-                        }
-
-                        var xesamUrl = (metadata["xesam:url"] || "").toString()
-                        if (xesamUrl.indexOf("file:///") !== 0) { // "!startsWith()"
-                            return ""
-                        }
-
-                        var urlParts = xesamUrl.split("/")
-                        if (urlParts.length < 3) {
-                            return ""
-                        }
-
-                        var lastFolderPath = urlParts[urlParts.length - 2] // last would be filename
-                        if (lastFolderPath) {
-                            return lastFolderPath
-                        }
-
-                        return ""
-                    }
+                    visible: text.length > 0
+                    text: root.album
                     Layout.fillWidth: true
                     Layout.maximumHeight: Kirigami.Units.gridUnit * 2
                 }
@@ -390,7 +351,7 @@ PlasmaExtras.Representation {
                 spacing: Kirigami.Units.smallSpacing
 
                 // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
-                enabled: !root.noPlayer && root.track && expandedRepresentation.length > 0 ? true : false
+                enabled: playerList.count > 0 && root.track.length > 0 && expandedRepresentation.length > 0 ? true : false
                 opacity: enabled ? 1 : 0
                 Behavior on opacity {
                     NumberAnimation { duration: Kirigami.Units.longDuration }
@@ -493,7 +454,7 @@ PlasmaExtras.Representation {
                             if (!seekSlider.pressed) {
                                 disablePositionUpdate = true
                                 if (seekSlider.value == seekSlider.to) {
-                                    retrievePosition();
+                                    mpris2Model.currentPlayer.updatePosition();
                                 } else {
                                     seekSlider.value += 1000000
                                 }
@@ -535,7 +496,6 @@ PlasmaExtras.Representation {
             RowLayout { // Player Controls
                 id: playerControls
 
-                property bool enabled: root.canControl
                 property int controlsSize: Kirigami.Units.gridUnit * 3
 
                 Layout.alignment: Qt.AlignHCenter
@@ -549,20 +509,18 @@ PlasmaExtras.Representation {
                     icon.name: "media-playlist-shuffle"
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
-                    checked: root.shuffle === true
-                    enabled: root.canControl && root.shuffle !== undefined
+                    checked: root.shuffle === Mpris.ShuffleStatus.On
+                    enabled: root.canControl && root.shuffle !== Mpris.ShuffleStatus.Unknown
 
                     display: PlasmaComponents3.AbstractButton.IconOnly
-                    text: i18n("Shuffle")
+                    text: i18nc("@action:button", "Shuffle")
 
                     KeyNavigation.right: previousButton.enabled ? previousButton : previousButton.KeyNavigation.right
                     KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                     onClicked: {
-                        const service = mpris2Source.serviceForSource(mpris2Source.current);
-                        let operation = service.operationDescription("SetShuffle");
-                        operation.on = !root.shuffle;
-                        service.startOperationCall(operation);
+                        mpris2Model.currentPlayer.shuffle =
+                            root.shuffle === Mpris.ShuffleStatus.On ? Mpris.ShuffleStatus.Off : Mpris.ShuffleStatus.On;
                     }
 
                     PlasmaComponents3.ToolTip {
@@ -575,7 +533,7 @@ PlasmaExtras.Representation {
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
                     Layout.alignment: Qt.AlignVCenter
-                    enabled: playerControls.enabled && root.canGoPrevious
+                    enabled: root.canGoPrevious
                     icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
 
                     display: PlasmaComponents3.AbstractButton.IconOnly
@@ -615,7 +573,7 @@ PlasmaExtras.Representation {
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
                     Layout.alignment: Qt.AlignVCenter
-                    enabled: playerControls.enabled && root.canGoNext
+                    enabled: root.canGoNext
                     icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
 
                     display: PlasmaComponents3.AbstractButton.IconOnly
@@ -635,32 +593,31 @@ PlasmaExtras.Representation {
                     id: repeatButton
                     Layout.leftMargin: LayoutMirroring.enabled ? 0 : Kirigami.Units.gridUnit - playerControls.spacing
                     Layout.rightMargin: LayoutMirroring.enabled ? Kirigami.Units.gridUnit - playerControls.spacing : 0
-                    icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
+                    icon.name: root.loopStatus === Mpris.LoopStatus.Track ? "media-playlist-repeat-song" : "media-playlist-repeat"
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
-                    checked: root.loopStatus !== undefined && root.loopStatus !== "None"
-                    enabled: root.canControl && root.loopStatus !== undefined
+                    checked: root.loopStatus !== Mpris.LoopStatus.Unknown && root.loopStatus !== Mpris.LoopStatus.None
+                    enabled: root.canControl && root.loopStatus !== Mpris.LoopStatus.Unknown
 
                     display: PlasmaComponents3.AbstractButton.IconOnly
-                    text: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+                    text: root.loopStatus === Mpris.LoopStatus.Track ? i18n("Repeat Track") : i18n("Repeat")
 
                     KeyNavigation.left: nextButton.enabled ? nextButton : nextButton.KeyNavigation.left
                     KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                     onClicked: {
-                        const service = mpris2Source.serviceForSource(mpris2Source.current);
-                        let operation = service.operationDescription("SetLoopStatus");
+                        let status;
                         switch (root.loopStatus) {
-                        case "Playlist":
-                            operation.status = "Track";
+                        case Mpris.LoopStatus.Playlist:
+                            status = Mpris.LoopStatus.Track;
                             break;
-                        case "Track":
-                            operation.status = "None";
+                        case Mpris.LoopStatus.Track:
+                            status = Mpris.LoopStatus.None;
                             break;
                         default:
-                            operation.status = "Playlist";
+                            status = Mpris.LoopStatus.Playlist;
                         }
-                        service.startOperationCall(operation);
+                        mpris2Model.currentPlayer.loopStatus = status;
                     }
 
                     PlasmaComponents3.ToolTip {
@@ -674,67 +631,48 @@ PlasmaExtras.Representation {
     header: PlasmaExtras.PlasmoidHeading {
         id: headerItem
         location: PlasmaExtras.PlasmoidHeading.Location.Header
-        visible: playerList.model.length > 2 // more than one player, @multiplex is always there
+        visible: playerList.count > 2
         //this removes top padding to allow tabbar to touch the edge
         topPadding: topInset
         bottomPadding: -bottomInset
         implicitHeight: Kirigami.Units.gridUnit * 2
+
         PlasmaComponents3.TabBar {
             id: playerSelector
             objectName: "playerSelector"
-            position: PlasmaComponents3.TabBar.Header
 
             anchors.fill: parent
-
             implicitHeight: contentHeight
-
-            onCurrentIndexChanged: {
-                disablePositionUpdate = true;
-                mpris2Source.current = playerList.model[currentIndex]["source"];
-                disablePositionUpdate = false;
-            }
+            currentIndex: playerSelector.count, mpris2Model.currentIndex
+            position: PlasmaComponents3.TabBar.Header
 
             Repeater {
                 id: playerList
-                model: root.mprisSourcesModel
-
+                model: mpris2Model
                 delegate: PlasmaComponents3.TabButton {
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
-                    icon.name: modelData["icon"]
+                    readonly property QtObject m: model
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    icon.name: model.iconName
                     icon.height: Kirigami.Units.iconSizes.smallMedium
-                    Accessible.name: modelData["text"]
-                    Accessible.onPressAction: playerSelector.setCurrentIndex(index)
-                    PlasmaComponents3.ToolTip {
-                        text: modelData["text"]
-                    }
+                    text: model.identity
                     // Keep the delegate centered by offsetting the padding removed in the parent
                     bottomPadding: verticalPadding + headerItem.bottomPadding
                     topPadding: verticalPadding - headerItem.bottomPadding
 
+                    Accessible.onPressAction: clicked()
                     KeyNavigation.down: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down
-                }
 
-                onModelChanged: {
-                    playerSelector.currentIndex = model.findIndex(
-                        (data) => { return data.source === mpris2Source.current }
-                    )
+                    onClicked: {
+                        mpris2Model.currentIndex = index;
+                    }
+
+                    PlasmaComponents3.ToolTip.text: text
+                    PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    PlasmaComponents3.ToolTip.visible: hovered || activeFocus
                 }
             }
-        }
-    }
-
-    Timer {
-        id: queuedPositionUpdate
-        interval: 100
-        onTriggered: {
-            if (position == seekSlider.value) {
-                return;
-            }
-            var service = mpris2Source.serviceForSource(mpris2Source.current)
-            var operation = service.operationDescription("SetPosition")
-            operation.microseconds = seekSlider.value
-            service.startOperationCall(operation)
         }
     }
 }

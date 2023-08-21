@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Description": "Controls media players using global keyboard shortcuts",
+        "Name": "Media Controller"
+    },
+    "X-KDE-Kded-autoload": true
+}
