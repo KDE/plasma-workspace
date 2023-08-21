@@ -109,7 +109,7 @@ void PumpJob::timeout()
     setPercent(d->counter);
     emitSpeed(1024 * 1024 * d->counter / 70); // just something randomly changing
     int seconds = (int)((d->interval * 100) - (d->interval * percent())) / 1000;
-    Q_EMIT infoMessage(this, i18n("Testing kuiserver (%1 seconds remaining)", seconds), i18n("Testing kuiserver (%1 seconds remaining)", seconds));
+    Q_EMIT infoMessage(this, i18n("Testing kuiserver (%1 seconds remaining)", seconds));
 
     qDebug() << "percent: " << percent() << "  Seconds: " << seconds;
     if (d->counter % 20 == 0) {
