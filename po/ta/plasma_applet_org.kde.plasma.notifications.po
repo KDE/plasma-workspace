@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-17 01:59+0000\n"
-"PO-Revision-Date: 2022-10-18 21:29+0530\n"
+"PO-Revision-Date: 2023-08-20 16:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -66,22 +66,19 @@ msgid "Notifications On"
 msgstr "அறிவிப்புகள் இயக்கப்பட்டன"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link Address"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "இணைப்பின் முகவரியை நகலெடு"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "நகலெடு"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "அனைத்தையும் தேர்ந்தெடு"

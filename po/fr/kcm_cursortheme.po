@@ -1,6 +1,7 @@
 # translation of kcminput.po to Français
 # translation of kcminput.po to
 # traduction de kcminput.po en Français
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Ludovic Grossard <grossard@kde.org>, 2002,2003.
 # Gilles CAULIER <caulier.gilles@free.fr>, 2003.
 # Robert Jacolin <rjacolin@ifrance.com>, 2003.
@@ -14,22 +15,21 @@
 # xavier <ktranslator31@yahoo.fr>, 2013.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015, 2016, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-01-04 13:04+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-08-19 22:59+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.07.90\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -265,10 +265,9 @@ msgstr[0] "%1 seconde"
 msgstr[1] "%1 secondes"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Taille : "
+msgstr "Taille : %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -282,10 +281,9 @@ msgid "&Install from File…"
 msgstr "&Installer à partir d'un fichier..."
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "&Obtenir de nouveaux pointeurs..."
+msgstr "&Obtenir des nouveautés…"
 
 #: ui/main.qml:161
 #, kde-format

@@ -1,26 +1,26 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2020.
+# A S Alam <aalam@users.sf.net>, 2014, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2020-10-10 23:11-0700\n"
-"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-08-20 06:12-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦-੨੦੨੩"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -31,109 +31,109 @@ msgstr "alam.yellow@gmail.com"
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "ਛੁੱਟੀਆਂ"
 
 #: calendar/eventdatadecorator.cpp:53
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr ""
+msgstr " ਘਟਨਾਵਾਂ"
 
 #: calendar/eventdatadecorator.cpp:55
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr ""
+msgstr "ਟੂ-ਡੂ"
 
 #: calendar/eventdatadecorator.cpp:57
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr ""
+msgstr "ਹੋਰ"
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ਘਟਨਾ"
+msgstr[1] "%1 ਘਟਨਾਵਾਂ"
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "No events"
-msgstr ""
+msgstr "ਕੋਈ ਘਟਨਾ ਨਹੀਂ"
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "ਦਿਨ"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "ਮਹੀਨੇ"
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "ਸਾਲ"
 
 #: calendar/qml/MonthViewHeader.qml:163
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "ਪਿਛਲਾ ਮਹੀਨਾ"
 
 #: calendar/qml/MonthViewHeader.qml:165
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "ਪਿਛਲਾ ਸਾਲ"
 
 #: calendar/qml/MonthViewHeader.qml:167
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "ਪਿਛਲਾ ਦਹਾਕਾ"
 
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "ਅੱਜ"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "ਕੈਲੰਡਰ ਨੂੰ ਅੱਜ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "ਅਗਲੇ ਮਹੀਨੇ"
 
 #: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "ਅਗਲਾ ਸਾਲ"
 
 #: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "ਅਗਲਾ ਦਹਾਕਾ"
 
 #: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "ਖੁੱਲਾ ਰੱਖੋ"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "…ਸੰਰਚਨਾ"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -145,7 +145,7 @@ msgstr "ਸਕਰੀਨ ਲਾਕ ਸਮਰੱਥ ਹੈ"
 #: sessionsprivate/kscreenlockersettings.kcfg:11
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
-msgstr ""
+msgstr "ਸੈੱਟ ਕਰਦਾ ਹੈ ਕਿ ਕੀ ਖਾਸ ਸਮੇਂ ਬਾਅਦ ਸਕਰੀਨ ਨੂੰ ਲਾਕ ਕੀਤਾ ਜਾਵੇਗਾ।"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:16
@@ -157,7 +157,7 @@ msgstr "ਸਕਰੀਨ ਸੇਵਰ ਟਾਈਮ-ਆਉਟ"
 #: sessionsprivate/kscreenlockersettings.kcfg:17
 #, kde-format
 msgid "Sets the minutes after which the screen is locked."
-msgstr ""
+msgstr "ਮਿੰਟ ਸੈੱਟ ਕਰੋ, ਜਿਸ ਦੇ ਬਾਅਦ ਸਕਰੀਨ ਨੂੰ ਲਾਕ ਕਰਨਾ ਹੈ।"
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -172,12 +172,12 @@ msgstr "ਫਿਲਟਰ"
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr ""
+msgstr "ਪਲਾਜ਼ਮੋਡ ਫ਼ਾਇਲ ਚੁਣੋ"
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
-msgstr ""
+msgstr "ਪੈਕੇਜ %1 ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਫ਼ੇਲ੍ਹ ਹੈ"
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
@@ -187,115 +187,112 @@ msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫ਼ਲ"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "ਸੁਲੱਭਤਾ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚਰ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "ਤਾਰਾ ਵਿਗਿਆਨ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "ਡਿਵੈਲਪਮੈਂਟ ਟੂਲ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "ਸਿੱਖਿਆ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "ਵਾਤਾਵਰਨ ਅਤੇ ਮੌਸਮ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "ਮਿਸਾਲਾਂ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "ਫਾਈਲ ਸਿਸਟਮ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
+msgstr "ਮੌਜਾਂ ਤੇ ਖੇਡਾਂ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "ਗਰਾਫਿਕਸ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "ਭਾਸ਼ਾ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "ਨਕਸ਼ੇ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "ਫੁਟਕਲ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "ਮਲਟੀਮੀਡਿਆ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "ਆਨਲਾਈਨ ਸਰਵਿਸਾਂ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "ਪਰੋਡਕਟਵਿਟੀ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "ਸਿਸਟਮ ਜਾਣਕਾਰੀ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "ਸਹੂਲਤਾਂ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "ਵਿੰਡੋਜ਼ ਅਤੇ ਟਾਸਕਾਂ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "ਕਲਿੱਪਬੋਰਡ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:133
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "ਟਾਸਕ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:149
 #, kde-format
@@ -314,12 +311,12 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr ""
+msgstr "ਹਟਾਉਣਯੋਗ"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:163
 #, kde-format
 msgid "Categories:"
-msgstr "ਕੈਟਾਗਰੀ:"
+msgstr "ਕੈਟਾਗਰੀਆਂ:"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
@@ -329,7 +326,7 @@ msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr ""
+msgstr "…ਲੋਕਲ ਫਾਇਲ ਤੋਂ ਵਿਜੈਟ ਇੰਸਟਾਲ ਕਰੋ"
 
 #~ msgid "&Execute"
 #~ msgstr "ਚਲਾਓ(&E)"

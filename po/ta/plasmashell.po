@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:58+0000\n"
-"PO-Revision-Date: 2023-07-16 12:22+0530\n"
+"PO-Revision-Date: 2023-08-20 15:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -33,36 +33,28 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "சுட்டி செயல்கள் செருகுநிரலை அமைத்தல்"
 
 #: desktopview.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "பிளாஸ்மா %1"
+msgstr "கே.டீ.யீ. பிளாஸ்மா %1 நிரலாளர் பதிப்பு"
 
 #: desktopview.cpp:228
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1 Beta Build"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "பிளாஸ்மா %1 சோதனை பதிப்பு"
+msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு"
 
 #: desktopview.cpp:231
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1 Beta Build"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr "பிளாஸ்மா %1 சோதனை பதிப்பு"
+msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு %2"
 
 #: desktopview.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "பிளாஸ்மா %1"
+msgstr "கே.டீ.யீ. பிளாஸ்மா %1"
 
 #: desktopview.cpp:241
 #, kde-format
@@ -282,19 +274,19 @@ msgstr "காலியான %1"
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "மென்பொருள் வரைநிரல் பயனிலுள்ளது"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "மென்பொருள் வரைநிரல் (software renderer) பயனிலுள்ளது"
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "வரைகலை தரமற்றதாக இருக்கலாம்"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format

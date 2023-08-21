@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022.
+# A S Alam <aalam@users.sf.net>, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:58+0000\n"
-"PO-Revision-Date: 2022-01-03 11:31-0800\n"
+"PO-Revision-Date: 2023-08-20 06:08-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,31 +33,28 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "ਮਾਊਸ ਕਾਰਵਾਈਆਂ ਦੀ ਸੰਰਚਨਾ ਲਈ ਪਲੱਗਇਨ"
 
 #: desktopview.cpp:224
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "ਪਲਾਜ਼ਮਾ"
+msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਡੇਵ"
 
 #: desktopview.cpp:228
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "ਪਲਾਜ਼ਮਾ"
+msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ"
 
 #: desktopview.cpp:231
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ %2"
 
 #: desktopview.cpp:235
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "ਪਲਾਜ਼ਮਾ"
+msgstr "KDE ਪਲਾਜ਼ਮਾ %1"
 
 #: desktopview.cpp:241
 #, kde-format
@@ -88,7 +85,7 @@ msgstr ""
 #: main.cpp:132
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਮੌਕੇ ਨੂੰ ਬਦਲੋ"
 
 #: main.cpp:135
 #, kde-format
@@ -124,13 +121,13 @@ msgstr ""
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr "ਆਡੀਓ ਚੁੱਪ  ਹੈ"
+msgstr "ਆਡੀਓ ਚੁੱਪ ਹੈ"
 
 #: osd.cpp:75
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr "ਮਾਈਕਰੋਫ਼ੋਨ ਮੌਨ ਹੈ"
+msgstr "ਮਾਈਕਰੋਫ਼ੋਨ ਚੁੱਪ ਹੈ"
 
 #: osd.cpp:91
 #, kde-format
@@ -142,49 +139,49 @@ msgstr "%1 ਚੁੱਪ ਹੈ"
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr "ਟੱਚਪੈਡ ਚਾਲੂ ਹੈ"
+msgstr "ਟੱਚਪੈਡ ਚਾਲੂ"
 
 #: osd.cpp:115
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr "ਟੱਚਪੈਡ ਬੰਦ ਹੈ"
+msgstr "ਟੱਚਪੈਡ ਬੰਦ"
 
 #: osd.cpp:122
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
-msgstr "ਵਾਈ-ਫਾਈ ਚਾਲੂ ਹੈ"
+msgstr "ਵਾਈ-ਫਾਈ ਚਾਲੂ"
 
 #: osd.cpp:124
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr "ਵਾਈ-ਫਾਈ ਬੰਦ ਹੈ"
+msgstr "ਵਾਈ-ਫਾਈ ਬੰਦ"
 
 #: osd.cpp:131
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
-msgstr "ਬਲੂਟੁੱਥ ਚਾਲੂ ਹੈ"
+msgstr "ਬਲੂਟੁੱਥ ਚਾਲੂ"
 
 #: osd.cpp:133
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr "ਬਲੂਟੁੱਥ ਬੰਦ ਹੈ"
+msgstr "ਬਲੂਟੁੱਥ ਬੰਦ"
 
 #: osd.cpp:140
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "ਮੋਬਾਈਲ ਇੰਟਰਨੈੱਟ ਚਾਲੂ ਹੈ"
+msgstr "ਮੋਬਾਈਲ ਇੰਟਰਨੈੱਟ ਚਾਲੂ"
 
 #: osd.cpp:142
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "ਮੋਬਾਈਲ ਇੰਟਰਨੈੱਟ ਬੰਦ ਹੈ"
+msgstr "ਮੋਬਾਈਲ ਇੰਟਰਨੈੱਟ ਬੰਦ"
 
 #: osd.cpp:150
 #, kde-format
@@ -205,18 +202,18 @@ msgstr "ਆਨ-ਸਕਰੀਨ ਕੀਬੋਰਡ ਨੂੰ ਨਾ-ਸਰਗਰ�
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "ਅੰਦਰਨੀ ਸਕਰੀਨ %1"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%3 ਉੱਤੇ %1 %2"
 
 #: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "ਸਕਰੀਨ %1 ਤੋਂ ਡਿਸਕਨੈਕਟ ਹੈ"
 
 #: shellcorona.cpp:172 shellcorona.cpp:174
 #, kde-format
@@ -251,29 +248,28 @@ msgstr "ਅਗਲੀ ਸਰਗਰਮੀ ਲਈ ਬਦਲੋ"
 #: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr ""
+msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਐਂਟਰੀ %1 ਸਰਗਰਮ ਕਰੋ"
 
 #: shellcorona.cpp:259
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr ""
+msgstr "...ਡੈਸਕਟਾਪ ਅਤੇ ਪੈਨਲਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
 
 #: shellcorona.cpp:281
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "ਪੈਨਲਾਂ ਵਿਚਾਲੇ ਕੀਬੋਰਡ ਫ਼ੋਕਸ ਨੂੰ ਬਦਲੋ"
 
 #: shellcorona.cpp:1908
 #, kde-format
 msgid "Add Panel"
-msgstr "ਪੈਨਲ ਸ਼ਾਮਲ"
+msgstr "ਪੈਨਲ ਜੋੜੋ"
 
 #: shellcorona.cpp:1944
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr "%1 ਖਾਲੀ"
+msgstr "ਖਾਲੀ %1"
 
 #: softwarerendernotifier.cpp:27
 #, kde-format
@@ -290,7 +286,7 @@ msgstr "ਸਾਫਟਵੇਅਰ ਰੈਂਡਰਰ ਵਰਤਿਆ ਜਾਂਦ
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr "ਰੈਂਡਰਿੰਗ ਦਾ ਪੱਧਰ ਨੀਵਾ ਹੋ ਸਕਦਾ ਹੈ"
+msgstr "ਰੈਂਡਰਿੰਗ ਦਾ ਪੱਧਰ ਨੀਵਾਂ ਹੋ ਸਕਦਾ ਹੈ"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format

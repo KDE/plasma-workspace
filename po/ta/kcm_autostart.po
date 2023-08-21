@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 01:59+0000\n"
-"PO-Revision-Date: 2023-08-06 15:04+0530\n"
+"PO-Revision-Date: 2023-08-20 15:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -42,7 +42,7 @@ msgstr "\"%1\"-ஐ படிக்க முடியவில்லை."
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #: ui/entry.qml:57
 #, kde-format
@@ -50,7 +50,7 @@ msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr ""
+msgstr "நிலை:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -58,30 +58,30 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "கடைசியாக இயக்கப்பட்டது:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "நிறுத்து"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr ""
+msgstr "துவக்கு"
 
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "பதிவுகளை ஏற்ற முடியவில்லை. புதுப்பித்து பார்க்கவும்."
 
 #: ui/entry.qml:109
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "புதுப்பி"
 
 #: ui/main.qml:41
 #, kde-format
@@ -124,20 +124,20 @@ msgstr "வெளியேற்ற சிறுநிரலை சேர்…"
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
-msgstr ""
+msgstr "%1 இன்னும் தானாக துவக்கப்படவில்லை. கணினியை மீள்துவக்கிய பின் விவரங்கள் காட்டப்படும்."
 
 #: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "இன்னும் தானாக துவக்கப்படவில்லை"
 
 #: ui/main.qml:177 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "தோல்வியடைந்தது"
 
 #: ui/main.qml:184
 #, kde-format
@@ -196,25 +196,25 @@ msgstr "வெளியேற்ற சிறுநிரலைத் தேர�
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "இயங்குகிறது"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "இயங்கவில்லை"
 
 #: unit.cpp:28
 #, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr ""
+msgstr "துவங்குகிறது"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "நிறுத்தப்படுகிறது"
 
 #: unit.cpp:83
 #, kde-format
@@ -224,7 +224,7 @@ msgstr ""
 #: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "பதிவுத்தொகுப்பை (journal தனை) திறக்க முடியவில்லை"
 
 #~ msgid "Autostart"
 #~ msgstr "சுயதுவக்கம்"
