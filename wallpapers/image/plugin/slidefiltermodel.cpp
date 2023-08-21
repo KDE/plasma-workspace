@@ -190,6 +190,7 @@ void SlideFilterModel::setSortingMode(SortingMode::Mode slideshowMode, bool slid
         buildRandomOrder();
     }
     QSortFilterProxyModel::invalidate();
+    sort(0);
 }
 
 void SlideFilterModel::invalidate()

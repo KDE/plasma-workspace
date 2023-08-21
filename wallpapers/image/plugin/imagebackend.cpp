@@ -97,7 +97,6 @@ void ImageBackend::setSlideshowMode(SortingMode::Mode slideshowMode)
 
     m_slideshowMode = slideshowMode;
     m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
-    m_slideFilterModel->sort(0);
     Q_EMIT slideshowModeChanged();
 
     startSlideshow();
@@ -116,7 +115,6 @@ void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
 
     m_slideshowFoldersFirst = slideshowFoldersFirst;
     m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
-    m_slideFilterModel->sort(0);
     Q_EMIT slideshowFoldersFirstChanged();
 
     startSlideshow();

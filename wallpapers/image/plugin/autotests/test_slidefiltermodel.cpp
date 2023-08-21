@@ -135,7 +135,6 @@ void SlideFilterModelTest::testSlideFilterModelSortingOrder()
     QFETCH(QStringList, expected);
 
     m_filterModel->setSortingMode(order, folderFirst);
-    m_filterModel->sort(0);
     QCOMPARE(m_filterModel->rowCount(), 3);
 
     for (int i = 0; i < expected.size(); i++) {
@@ -151,7 +150,6 @@ void SlideFilterModelTest::testSlideFilterModelSortingRandomOrder()
     // Monte Carlo
     for (int i = 0; i < 1000; i++) {
         m_filterModel->setSortingMode(SortingMode::Random, false);
-        m_filterModel->sort(0);
 
         const QString firstElement = m_filterModel->index(0, 0).data(ImageRoles::PackageNameRole).toString();
 
@@ -164,6 +162,7 @@ void SlideFilterModelTest::testSlideFilterModelSortingRandomOrder()
         }
     }
 
+    qDebug() << counts[0] << counts[1] << counts[2];
     for (int c : std::as_const(counts)) {
         QVERIFY(std::clamp(c, 200, 400) == c);
     }
