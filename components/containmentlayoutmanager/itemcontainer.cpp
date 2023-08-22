@@ -104,7 +104,7 @@ void ItemContainer::setEditMode(bool editMode)
 
     m_editMode = editMode;
 
-    if (m_editModeCondition != AfterMouseOver || (m_layout && m_layout->editMode())) {
+    if (m_contentItem && (m_editModeCondition != AfterMouseOver || (m_layout && m_layout->editMode()))) {
         m_contentItem->setEnabled(!editMode);
     }
 
