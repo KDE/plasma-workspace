@@ -88,25 +88,24 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             m_notification->setComponentName(QStringLiteral("freespacenotifier"));
             m_notification->setText(text);
 
-            QStringList actions = {i18n("Configure Warning…")};
-
             auto filelight = filelightService();
             if (filelight) {
-                actions.prepend(i18n("Open in Filelight"));
+                auto filelightAction = m_notification->addAction(i18n("Open in Filelight"));
+                connect(filelightAction, &KNotificationAction::activated, this, [this] {
+                    exploreDrive();
+                });
             } else {
                 // Do we really want the user opening Root in a file manager?
-                actions.prepend(i18n("Open in File Manager"));
+                auto fileManagerAction = m_notification->addAction(i18n("Open in File Manager"));
+                connect(fileManagerAction, &KNotificationAction::activated, this, [this] {
+                    exploreDrive();
+                });
             }
 
-            m_notification->setActions(actions);
-
-            connect(m_notification, &KNotification::activated, this, [this](uint actionId) {
-                if (actionId == 1) {
-                    exploreDrive();
-                    // TODO once we have "configure" action support in KNotification, wire it up instead of a button
-                } else if (actionId == 2) {
-                    Q_EMIT configureRequested();
-                }
+            // TODO once we have "configure" action support in KNotification, wire it up instead of a button
+            auto configureAction = m_notification->addAction(i18n("Configure Warning…"));
+            connect(configureAction, &KNotificationAction::activated, this, [this] {
+                Q_EMIT configureRequested();
             });
 
             connect(m_notification, &KNotification::closed, this, &FreeSpaceNotifier::onNotificationClosed);

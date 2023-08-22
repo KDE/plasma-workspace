@@ -51,8 +51,16 @@ void KdePlatformPlugin::notification(const char *notificationName,
     notification->setComponentName(QLatin1String("phonon"));
     notification->setText(text);
     if (!actions.isEmpty() && receiver && actionSlot) {
-        notification->setActions(actions);
-        QObject::connect(notification, SIGNAL(activated(unsigned int)), receiver, actionSlot);
+        int actionIndex = 1;
+        for (const QString &actionName : actions) {
+            KNotificationAction *action = notification->addAction(actionName);
+
+            connect(action, &KNotificationAction::activated, this, [receiver, actionSlot, actionIndex] {
+                QMetaObject::invokeMethod(receiver, actionSlot, actionIndex);
+            });
+
+            ++actionIndex;
+        }
     }
     notification->sendEvent();
 }
