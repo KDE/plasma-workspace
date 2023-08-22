@@ -140,35 +140,43 @@ QString KCMRegionAndLang::localeFileDirPath()
 void KCMRegionAndLang::save()
 {
     if (settings()->isSaveNeeded()) {
-        // assemble full locales in use
-        QStringList locales;
-        if (!settings()->isDefaultSetting(SettingType::Lang)) {
-            locales.append(settings()->lang());
-        }
-        if (!settings()->isDefaultSetting(SettingType::Numeric)) {
-            locales.append(settings()->numeric());
-        }
-        if (!settings()->isDefaultSetting(SettingType::Time)) {
-            locales.append(settings()->time());
-        }
-        if (!settings()->isDefaultSetting(SettingType::Measurement)) {
-            locales.append(settings()->measurement());
-        }
-        if (!settings()->isDefaultSetting(SettingType::Currency)) {
-            locales.append(settings()->monetary());
-        }
-        if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
-            locales.append(settings()->paperSize());
-        }
-        if (!settings()->isDefaultSetting(SettingType::Address)) {
-            locales.append(settings()->address());
-        }
-        if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
-            locales.append(settings()->nameStyle());
-        }
-        if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
-            locales.append(settings()->phoneNumbers());
-        }
+        applyToLocal();
+        applyToSystem();
+    }
+}
+
+void KCMRegionAndLang::applyToLocal()
+{
+    // assemble full locales in use
+    QStringList locales;
+    if (!settings()->isDefaultSetting(SettingType::Lang)) {
+        locales.append(settings()->lang());
+    }
+    if (!settings()->isDefaultSetting(SettingType::Numeric)) {
+        locales.append(settings()->numeric());
+    }
+    if (!settings()->isDefaultSetting(SettingType::Time)) {
+        locales.append(settings()->time());
+    }
+    if (!settings()->isDefaultSetting(SettingType::Measurement)) {
+        locales.append(settings()->measurement());
+    }
+    if (!settings()->isDefaultSetting(SettingType::Currency)) {
+        locales.append(settings()->monetary());
+    }
+    if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
+        locales.append(settings()->paperSize());
+    }
+    if (!settings()->isDefaultSetting(SettingType::Address)) {
+        locales.append(settings()->address());
+    }
+    if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
+        locales.append(settings()->nameStyle());
+    }
+    if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
+        locales.append(settings()->phoneNumbers());
+    }
+
 #ifdef GLIBC_LOCALE
         if (!settings()->language().isEmpty()) {
             QStringList languages = settings()->language().split(QLatin1Char(':'));
@@ -195,7 +203,6 @@ void KCMRegionAndLang::save()
             // after clicking "defaults" so all the settings are default
             saveToConfigFile();
         }
-    }
 
     KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
     KConfigGroup localeGroup(globalConfig, QStringLiteral("Locale"));

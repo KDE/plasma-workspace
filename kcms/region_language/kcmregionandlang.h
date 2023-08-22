@@ -47,7 +47,7 @@ public:
 #endif
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting) const;
     Q_INVOKABLE void reboot();
-    Q_INVOKABLE void applyToSystem();
+    Q_INVOKABLE void applyToLocal();
 
 Q_SIGNALS:
     void saveClicked();
@@ -71,6 +71,7 @@ private:
     static QString failedFindLocalesMessage();
     static QString localeFileDirPath();
     static QString toUTF8Locale(const QString &locale);
+    void applyToSystem();
 
     RegionAndLangSettings *m_settings;
     OptionsModel *m_optionsModel;

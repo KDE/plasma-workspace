@@ -88,25 +88,15 @@ KCM.ScrollViewKCM {
             type: Kirigami.MessageType.Error
             position: Kirigami.InlineMessage.Position.Header
         }
+    }
 
-        Kirigami.InlineMessage {
-            id: applyToSystemMsg
-            Layout.fillWidth: true
-
-            type: Kirigami.MessageType.Information
-
-            text: i18nc("@info", "Do you want to apply settings to system?")
-
-            actions: [
-                Kirigami.Action {
-                    icon.name: "dialog-ok-apply"
-                    text: i18nc("@button", "Apply")
-                    onTriggered: {
-                        kcm.applyToSystem();
-                        applyToSystemMsg.visible = false;
-                    }
-                }
-            ]
+    footer: ColumnLayout {
+        QQC2.Button {
+            text: i18nc("@action:button for apply the setting locally", "Apply locally")
+            icon.name: "checkbox"
+            onClicked: {
+                kcm.applyToLocal();
+            }
         }
     }
 
@@ -118,18 +108,15 @@ KCM.ScrollViewKCM {
         function onRequireInstallFont() {
             dontShutdownMsg.visible = false;
             installFontMsg.visible = true;
-            applyToSystemMsg.visible = true;
         }
         function onUserHasToGenerateManually(reason) {
             manualInstallMsg.text = reason;
             dontShutdownMsg.visible = false;
             manualInstallMsg.visible = true;
-            applyToSystemMsg.visible = true;
         }
         function onGenerateFinished() {
             dontShutdownMsg.visible = false;
             installSuccessMsg.visible = true;
-            applyToSystemMsg.visible = true;
         }
         function onSaveClicked() {
             // return to first page on save action since all messages are here
