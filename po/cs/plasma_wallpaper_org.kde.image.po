@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 02:26+0000\n"
+"POT-Creation-Date: 2023-08-22 02:28+0000\n"
 "PO-Revision-Date: 2022-06-29 14:21+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -167,17 +167,17 @@ msgstr ""
 msgid "Recommended wallpaper file"
 msgstr "Doporučovaný soubor s tapetou"
 
-#: plugin/imagebackend.cpp:243
+#: plugin/imagebackend.cpp:241
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Adresář s tapetami pro zobrazení promítání"
 
-#: plugin/imagebackend.cpp:352
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Open Image"
 msgstr "Otevřít obrázek"
 
-#: plugin/imagebackend.cpp:352
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Image Files"
 msgstr "Soubory obrázků"
