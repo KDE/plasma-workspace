@@ -115,8 +115,8 @@ PlasmoidItem {
         return iconName + symbolicSuffix;
     }
 
-    switchWidth: PlasmaCore.Units.gridUnit * 10
-    switchHeight: PlasmaCore.Units.gridUnit * 10
+    switchWidth: Kirigami.Units.gridUnit * 10
+    switchHeight: Kirigami.Units.gridUnit * 10
 
     Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
                                      hasBrightness ? i18n("Brightness") :
