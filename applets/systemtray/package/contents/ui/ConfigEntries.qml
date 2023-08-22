@@ -266,10 +266,10 @@ ColumnLayout {
 
                             visible: isPlasmoid
                             enabled: visibilityComboBox.currentValue !== "disabled"
-                            keySequence: model.applet ? model.applet.globalShortcut : ""
+                            keySequence: model.applet ? model.applet.plasmoid.globalShortcut : ""
                             onCaptureFinished: {
-                                if (model.applet && keySequence !== model.applet.globalShortcut) {
-                                    model.applet.globalShortcut = keySequence
+                                if (model.applet && keySequence !== model.applet.plasmoid.globalShortcut) {
+                                    model.applet.plasmoid.globalShortcut = keySequence
 
                                     itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
                                 }
@@ -283,7 +283,7 @@ ColumnLayout {
                         }
 
                         QQC2.Button {
-                            readonly property QtObject configureAction: (model.applet && model.applet.internalAction("configure")) || null
+                            readonly property QtObject configureAction: (model.applet && model.applet.plasmoid.internalAction("configure")) || null
 
                             Accessible.name: configureAction ? configureAction.text : ""
                             icon.name: "configure"
