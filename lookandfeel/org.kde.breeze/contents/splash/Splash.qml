@@ -4,9 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Window 2.2
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import org.kde.kirigami 2 as Kirigami
 
 Rectangle {
     id: root
@@ -33,10 +32,11 @@ Rectangle {
         Image {
             id: logo
             //match SDDM/lockscreen avatar positioning
-            property real size: Kirigami.Units.gridUnit * 8
+            readonly property real size: Kirigami.Units.gridUnit * 8
 
             anchors.centerIn: parent
 
+            asynchronous: true
             source: "images/plasma.svgz"
 
             sourceSize.width: size
@@ -49,6 +49,7 @@ Rectangle {
             //in the middle of the remaining space
             y: parent.height - (parent.height - logo.y) / 2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
+            asynchronous: true
             source: "images/busywidget.svgz"
             sourceSize.height: Kirigami.Units.gridUnit * 2
             sourceSize.width: Kirigami.Units.gridUnit * 2
@@ -74,13 +75,11 @@ Rectangle {
             }
             Text {
                 color: "#eff0f1"
-                // Work around Qt bug where NativeRendering breaks for non-integer scale factors
-                // https://bugreports.qt.io/browse/QTBUG-67007
-                renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
                 anchors.verticalCenter: parent.verticalCenter
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma made by KDE")
             }
             Image {
+                asynchronous: true
                 source: "images/kde.svgz"
                 sourceSize.height: Kirigami.Units.gridUnit * 2
                 sourceSize.width: Kirigami.Units.gridUnit * 2
