@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-08-22 02:00+0000\n"
 "PO-Revision-Date: 2023-05-06 22:00+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -157,17 +157,17 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/imagebackend.cpp:229
+#: plugin/imagebackend.cpp:227
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Open Image"
 msgstr ""
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr ""

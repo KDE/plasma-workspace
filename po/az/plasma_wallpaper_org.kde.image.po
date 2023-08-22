@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-08-22 02:00+0000\n"
 "PO-Revision-Date: 2023-02-19 19:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -167,17 +167,17 @@ msgstr ""
 "Divar kağızı kimi quraşdırılmağa ayrılan fayl mövcud deyil və ya biz onu "
 "divar kağızı faylı kimi tanıya bilmədik: %1"
 
-#: plugin/imagebackend.cpp:229
+#: plugin/imagebackend.cpp:227
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Slaydları göstərmək üçün divar kağızı qovluğu"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Open Image"
 msgstr "Şəkili açmaq"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Şəkil faylları"

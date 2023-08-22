@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-08-22 02:00+0000\n"
 "PO-Revision-Date: 2023-02-19 09:37+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -173,17 +173,17 @@ msgstr ""
 "Файла, вказаного як файл зображення тла, не існує або його не вдалося "
 "ідентифікувати як зображення тла: %1"
 
-#: plugin/imagebackend.cpp:229
+#: plugin/imagebackend.cpp:227
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог із зображеннями тла, з якого слід брати картинки"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Open Image"
 msgstr "Відкриття зображення"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Файли зображень"

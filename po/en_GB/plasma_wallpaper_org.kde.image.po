@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-08-22 02:00+0000\n"
 "PO-Revision-Date: 2023-02-27 21:39+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -166,17 +166,17 @@ msgstr ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 
-#: plugin/imagebackend.cpp:229
+#: plugin/imagebackend.cpp:227
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Directory with the wallpaper to show slides from"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Open Image"
 msgstr "Open Image"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Image Files"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-08-22 02:00+0000\n"
 "PO-Revision-Date: 2023-02-24 19:01+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -171,17 +171,17 @@ msgstr ""
 "Il file fornito per essere impostato come sfondo non esiste o non possiamo "
 "identificarlo come sfondo: %1"
 
-#: plugin/imagebackend.cpp:229
+#: plugin/imagebackend.cpp:227
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Cartella con gli sfondi da mostrare come diapositive"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Open Image"
 msgstr "Apri immagine"
 
-#: plugin/imagebackend.cpp:338
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "File di immagine"

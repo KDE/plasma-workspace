@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 01:59+0000\n"
-"PO-Revision-Date: 2023-08-05 23:03+0200\n"
+"PO-Revision-Date: 2023-08-21 19:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -46,7 +46,7 @@ msgstr "«%1» er ikkje lesbar."
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr ""
+msgstr "Namn:"
 
 #: ui/entry.qml:57
 #, kde-format
@@ -54,7 +54,7 @@ msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -68,13 +68,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "Stopp"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: ui/entry.qml:105
 #, kde-format
@@ -85,7 +85,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "Oppdater"
 
 #: ui/main.qml:41
 #, kde-format
@@ -201,25 +201,25 @@ msgstr "Vel skript for utlogging"
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "Køyrer"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "Køyrer ikkje"
 
 #: unit.cpp:28
 #, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr ""
+msgstr "Startar"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "Stoppar"
 
 #: unit.cpp:83
 #, kde-format

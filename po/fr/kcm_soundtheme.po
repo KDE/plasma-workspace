@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-04 02:00+0000\n"
-"PO-Revision-Date: 2023-08-19 23:12+0200\n"
+"PO-Revision-Date: 2023-08-20 09:29+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -47,10 +47,10 @@ msgstr "Afficher un aperçu de sons :"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr "Afficher un aperçu du son « %1 »"
+msgstr "Jouer un aperçu du son « %1 »"
 
 #: ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "Jouer un aperçu du son de démonstration pour le thème « %1 »"
