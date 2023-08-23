@@ -41,7 +41,7 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus ShaderTools)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime Svg
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland

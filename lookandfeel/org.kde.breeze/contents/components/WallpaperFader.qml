@@ -72,18 +72,7 @@ Item {
                     0,         0,         0,         1
                 ));
 
-        fragmentShader: `
-            uniform mediump mat4 colorMatrix;
-            uniform mediump sampler2D source;
-            varying mediump vec2 qt_TexCoord0;
-            uniform lowp float qt_Opacity;
-
-            void main(void)
-            {
-                mediump vec4 tex = texture2D(source, qt_TexCoord0);
-                gl_FragColor = tex * colorMatrix * qt_Opacity;
-            }
-        `
+        fragmentShader: "WallpaperFader.frag.qsb"
     }
 
     states: [
