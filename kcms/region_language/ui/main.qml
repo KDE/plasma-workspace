@@ -92,7 +92,8 @@ KCM.ScrollViewKCM {
 
     footer: ColumnLayout {
         QQC2.Button {
-            text: i18nc("@action:button for apply the setting locally", "Apply locally")
+            Layout.alignment: Qt.AlignRight
+            text: i18nc("@action:button for apply the setting locally", "Apply to local")
             icon.name: "checkbox"
             onClicked: {
                 kcm.applyToLocal();
