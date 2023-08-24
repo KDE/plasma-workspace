@@ -21,7 +21,7 @@ Item {
     // Icon for current charge level and charging status for batteries that support it
     Kirigami.Icon {
         anchors.fill: parent
-        source: hasBattery ? fillElement(percent) : "battery-missing"
+        source: root.hasBattery ? fillElement(root.percent) : "battery-missing"
         visible: !otherBatteriesIcon.visible
         active: root.active
     }
@@ -52,7 +52,7 @@ Item {
             name = "battery-000";
         }
 
-        if (pluggedIn) {
+        if (root.pluggedIn) {
             name += "-charging";
         }
         return name;
@@ -62,7 +62,7 @@ Item {
     Kirigami.Icon {
         id: otherBatteriesIcon
         anchors.fill: parent
-        source: elementForType(batteryType)
+        source: elementForType(root.batteryType)
         visible: source !== ""
         active: root.active
     }
