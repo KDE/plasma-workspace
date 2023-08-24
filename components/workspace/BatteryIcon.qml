@@ -10,16 +10,20 @@ import QtQuick 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
 Item {
+    id: root
+
     property bool hasBattery
     property int percent
     property bool pluggedIn
     property string batteryType
+    property bool active: false
 
     // Icon for current charge level and charging status for batteries that support it
     Kirigami.Icon {
         anchors.fill: parent
         source: hasBattery ? fillElement(percent) : "battery-missing"
         visible: !otherBatteriesIcon.visible
+        active: root.active
     }
 
     function fillElement(p) {
@@ -60,6 +64,7 @@ Item {
         anchors.fill: parent
         source: elementForType(batteryType)
         visible: source !== ""
+        active: root.active
     }
 
     function elementForType(t) {

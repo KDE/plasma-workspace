@@ -41,6 +41,8 @@ MouseArea {
         }
     }
 
+    hoverEnabled: true
+
     Kirigami.Icon {
         id: notificationIcon
         anchors.centerIn: parent
@@ -49,6 +51,7 @@ MouseArea {
         width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
         visible: opacity > 0
+        active: compactRoot.containsMouse
 
         source: "notification-inactive"
 
@@ -98,6 +101,7 @@ MouseArea {
         opacity: 0
         scale: 2
         visible: opacity > 0
+        active: compactRoot.containsMouse
     }
 
     states: [

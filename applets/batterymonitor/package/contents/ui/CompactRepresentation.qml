@@ -43,7 +43,7 @@ MouseArea {
         anchors.fill: parent
         visible: !root.hasBatteries
         source: Plasmoid.icon
-        active: parent.containsMouse
+        active: root.containsMouse
     }
 
     // We have any batteries; show their status
@@ -78,6 +78,7 @@ MouseArea {
                     source: root.isHeldOnPerformanceMode
                         ? "battery-profile-performance-symbolic"
                         : "battery-profile-powersave-symbolic"
+                    active: root.containsMouse
                 }
 
                 // Show normal battery icon
@@ -88,6 +89,7 @@ MouseArea {
                     height: batteryContainer.iconSize
                     width: height
 
+                    active: root.containsMouse
                     visible: !powerProfileModeIcon.visible
                     hasBattery: root.hasBatteries
                     percent: batteryContainer.percent
