@@ -232,8 +232,8 @@ void ImageProxyModel::commitDeletion()
     // Check if the file still exists
     std::copy_if(list.cbegin(), list.cend(), std::back_inserter(updatedList), [&pendingList](const QString &_p) {
         QString p = _p;
-        if (p.startsWith(QLatin1String("file://"))) {
-            p.remove(0, 7);
+        if (constexpr QLatin1String prefix{"file://"}; p.startsWith(prefix)) {
+            p.remove(0, prefix.size());
         }
 
         return !pendingList.contains(p) && QFileInfo::exists(p);
