@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:37+0000\n"
+"POT-Creation-Date: 2023-08-24 02:25+0000\n"
 "PO-Revision-Date: 2014-12-28 11:33+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -301,7 +301,7 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr ""
 
-#: contents/splash/Splash.qml:81
+#: contents/splash/Splash.qml:79
 #, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "

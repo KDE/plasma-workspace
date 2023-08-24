@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:37+0000\n"
+"POT-Creation-Date: 2023-08-24 02:25+0000\n"
 "PO-Revision-Date: 2022-12-31 16:56+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -285,7 +285,7 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/splash/Splash.qml:81
+#: contents/splash/Splash.qml:79
 #, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "
