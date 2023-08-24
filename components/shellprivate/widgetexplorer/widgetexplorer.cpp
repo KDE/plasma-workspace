@@ -175,6 +175,7 @@ void WidgetExplorerPrivate::initFilters()
             // we don't want to show the hidden category
             continue;
         }
+        const QString category = plugin.category().toLower();
         const QString translatedCategory = readTranslatedCategory(plugin);
         if (cats.contains(translatedCategory)) {
             continue;
@@ -182,11 +183,11 @@ void WidgetExplorerPrivate::initFilters()
         cats.insert(translatedCategory);
 
         const QString lowerCaseCat = translatedCategory.toLower();
-        if (!existingCategories.contains(lowerCaseCat)) {
+        if (!existingCategories.contains(category)) {
             continue;
         }
 
-        filterModel.addFilter(translatedCategory, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
+        filterModel.addFilter(translatedCategory, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category));
     }
 }
 
