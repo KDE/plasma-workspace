@@ -130,14 +130,14 @@ void SlideModel::setSlidePaths(const QStringList &slidePaths)
 {
     const auto models = sourceModels();
 
-    for (const auto &k : std::as_const(m_models)) {
+    for (const auto k : std::as_const(m_models)) {
         if (models.contains(k)) {
             removeSourceModel(k);
         } else {
             // Abort loading
             disconnect(k, nullptr, this, nullptr);
         }
-        k->deleteLater();
+        delete k;
     }
 
     m_models.clear();
