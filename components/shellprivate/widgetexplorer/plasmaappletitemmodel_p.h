@@ -73,7 +73,6 @@ public:
     explicit PlasmaAppletItemModel(QObject *parent = nullptr);
 
     QStringList mimeTypes() const override;
-    QSet<QString> categories() const;
 
     QMimeData *mimeData(const QModelIndexList &indexes) const override;
 

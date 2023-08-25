@@ -106,7 +106,7 @@ public:
 
 QPointer<KNSWidgets::Dialog> WidgetExplorerPrivate::newStuffDialog;
 
-QString readTranslatedCategory(const KPluginMetaData &data)
+QString readTranslatedCategory(const QString &category, const QString &plugin)
 {
     static const QList<KLazyLocalizedString> possibleTranslatslations{
         kli18nc("applet category", "Accessibility"),
@@ -132,12 +132,12 @@ QString readTranslatedCategory(const KPluginMetaData &data)
         kli18nc("applet category", "Clipboard"),
         kli18nc("applet category", "Tasks"),
     };
-    const auto it = std::find_if(possibleTranslatslations.begin(), possibleTranslatslations.end(), [&data](const KLazyLocalizedString &str) {
-        return data.category() == str.untranslatedText();
+    const auto it = std::find_if(possibleTranslatslations.begin(), possibleTranslatslations.end(), [&category](const KLazyLocalizedString &str) {
+        return category == str.untranslatedText();
     });
     if (it == possibleTranslatslations.cend()) {
-        qDebug() << data.category() << "from" << data.fileName() << "is not a known category that can be translated ";
-        return data.category();
+        qDebug() << category << "from" << plugin << "is not a known category that can be translated ";
+        return category;
     }
     return it->toString();
 }
@@ -163,32 +163,29 @@ void WidgetExplorerPrivate::initFilters()
         filterModel.addSeparator(i18n("Categories:"));
     }
 
-    const QSet<QString> existingCategories = itemModel.categories();
-    QSet<QString> cats;
-    const QList<KPluginMetaData> list = PluginLoader::self()->listAppletMetaData(QString());
-
-    for (const auto &plugin : list) {
-        if (!plugin.isValid()) {
-            continue;
+    struct CategoryInfo {
+        QString untranslated;
+        QString translated;
+    };
+    std::vector<CategoryInfo> categories;
+    categories.reserve(itemModel.rowCount());
+    for (int i = 0; i < itemModel.rowCount(); ++i) {
+        if (PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(itemModel.item(i))) {
+            const QString translated = readTranslatedCategory(p->category(), p->pluginName());
+            if (!translated.isEmpty()) {
+                categories.push_back({p->category(), translated});
+            }
         }
-        if (plugin.rawData().value(QStringLiteral("NoDisplay")).toBool() || plugin.category() == QLatin1String("Containments") || plugin.category().isEmpty()) {
-            // we don't want to show the hidden category
-            continue;
-        }
-        const QString category = plugin.category().toLower();
-        const QString translatedCategory = readTranslatedCategory(plugin);
-        if (cats.contains(translatedCategory)) {
-            continue;
-        }
-        cats.insert(translatedCategory);
-
-        const QString lowerCaseCat = translatedCategory.toLower();
-        if (!existingCategories.contains(category)) {
-            continue;
-        }
-
-        filterModel.addFilter(translatedCategory, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category));
     }
+    std::sort(categories.begin(), categories.end(), [](const CategoryInfo &left, const CategoryInfo &right) {
+        return left.translated < right.translated;
+    });
+    auto end = std::unique(categories.begin(), categories.end(), [](const CategoryInfo left, const CategoryInfo right) {
+        return left.translated == right.translated;
+    });
+    std::for_each(categories.begin(), end, [this](const CategoryInfo &category) {
+        filterModel.addFilter(category.translated, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category.untranslated.toLower()));
+    });
 }
 
 void WidgetExplorer::classBegin()

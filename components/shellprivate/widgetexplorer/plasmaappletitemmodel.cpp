@@ -351,20 +351,6 @@ QStringList PlasmaAppletItemModel::mimeTypes() const
     return types;
 }
 
-QSet<QString> PlasmaAppletItemModel::categories() const
-{
-    QSet<QString> cats;
-    for (int r = 0; r < rowCount(); ++r) {
-        QStandardItem *i = item(r);
-        PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
-        if (p) {
-            cats.insert(p->category().toLower());
-        }
-    }
-
-    return cats;
-}
-
 QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 {
     if (indexes.count() <= 0) {
