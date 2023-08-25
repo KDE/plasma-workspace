@@ -10,6 +10,7 @@
 
 #include <QSet>
 
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KRunner/AbstractRunner>
 #include <KRunner/RunnerManager>
@@ -23,10 +24,23 @@ RunnerModel::RunnerModel(QObject *parent)
     , m_favoritesModel(nullptr)
     , m_appletInterface(nullptr)
     , m_mergeResults(false)
+    , m_krunnerConfig(KSharedConfig::openConfig(QStringLiteral("krunnerrc")))
 {
     m_queryTimer.setSingleShot(true);
     m_queryTimer.setInterval(10ms);
     connect(&m_queryTimer, &QTimer::timeout, this, &RunnerModel::startQuery);
+    const auto readFavorites = [this]() {
+        m_favoritePluginIds = m_krunnerConfig
+                                  ->group("Plugins") //
+                                  .group("Favorites")
+                                  .readEntry("plugins", QStringList(QStringLiteral("krunner_services")));
+        if (m_mergeResults && !m_models.isEmpty()) {
+            m_models.constFirst()->setFavoriteIds(m_favoritePluginIds);
+        }
+    };
+    m_configWatcher = KConfigWatcher::create(m_krunnerConfig);
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, readFavorites);
+    readFavorites();
 }
 
 RunnerModel::~RunnerModel()
@@ -149,7 +163,7 @@ void RunnerModel::setRunners(const QStringList &runners)
     if (!m_models.isEmpty()) {
         if (m_mergeResults) {
             Q_ASSERT(m_models.length() == 1);
-            m_models.first()->runnerManager()->setAllowedRunners(runners);
+            m_models.constFirst()->runnerManager()->setAllowedRunners(runners);
         } else {
             // Just re-create all the models, it is an edge-case anyway
             qDeleteAll(m_models);
@@ -202,6 +216,7 @@ void RunnerModel::initializeModels()
     if (m_mergeResults) {
         auto model = new RunnerMatchesModel(QString(), i18n("Search results"), this);
         model->runnerManager()->setAllowedRunners(m_runners);
+        model->setFavoriteIds(m_favoritePluginIds);
         m_models.append(model);
     } else {
         for (const QString &runnerId : std::as_const(m_runners)) {

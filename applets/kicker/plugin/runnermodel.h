@@ -9,10 +9,11 @@
 
 #include "abstractmodel.h"
 
+#include <KConfigWatcher>
+#include <KRunner/QueryMatch>
+#include <KSharedConfig>
 #include <QAbstractListModel>
 #include <QTimer>
-
-#include <KRunner/QueryMatch>
 
 namespace KRunner
 {
@@ -86,4 +87,7 @@ private:
     QTimer m_queryTimer;
     bool m_mergeResults;
     int m_queryingModels = 0;
+    KSharedConfigPtr m_krunnerConfig;
+    KConfigWatcher::Ptr m_configWatcher;
+    QStringList m_favoritePluginIds;
 };
