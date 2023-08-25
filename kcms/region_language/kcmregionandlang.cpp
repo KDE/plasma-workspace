@@ -143,6 +143,7 @@ void KCMRegionAndLang::save()
         applyToLocal();
         applyToSystem();
     }
+    Q_EMIT saveClicked();
 }
 
 void KCMRegionAndLang::applyToLocal()
@@ -219,8 +220,6 @@ void KCMRegionAndLang::applyToLocal()
 
         Q_EMIT takeEffectNextTime();
     }
-
-    Q_EMIT saveClicked();
 }
 
 void KCMRegionAndLang::load()
@@ -275,6 +274,7 @@ void KCMRegionAndLang::applyToSystem()
                                                         QStringLiteral("/org/freedesktop/locale1"),
                                                         QStringLiteral("org.freedesktop.locale1"),
                                                         QStringLiteral("SetLocale"));
+    qDebug() << args;
     setLocaleCall.setArguments({args, true});
     QDBusConnection::systemBus().asyncCall(setLocaleCall);
 }

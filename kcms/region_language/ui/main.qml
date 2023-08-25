@@ -90,13 +90,54 @@ KCM.ScrollViewKCM {
         }
     }
 
-    footer: ColumnLayout {
-        QQC2.Button {
-            Layout.alignment: Qt.AlignRight
-            text: i18nc("@action:button for apply the setting locally", "Apply to local")
-            icon.name: "checkbox"
-            onClicked: {
-                kcm.applyToLocal();
+    Kirigami.OverlaySheet {
+        id: applyConfirmSheet
+        title: i18nc("Confirmation question about applying the locale settings",
+                     "Apply the locales setting?")
+        QQC2.StackView {
+            implicitHeight: checkboxLayout.implicitHeight
+            implicitWidth: Kirigami.Units.gridUnit * 30
+            Kirigami.FormLayout {
+                id: checkboxLayout
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.largeSpacing
+
+                QQC2.CheckBox {
+                    id: applyToLocalCheckbox
+                    text: i18nc("List checkbox", "Apply the settings to current user")
+                    checked: true
+                }
+                QQC2.CheckBox {
+                    id: applyToSystemCheckbox
+                    text: i18nc("List checkbox", "Apply the settings to system")
+                }
+            }
+        }
+        footer: RowLayout {
+            QQC2.Button {
+                id: proceedButton
+                text: i18n("Apply")
+                icon.name: "dialog-ok-apply"
+                onClicked: {
+                    if (applyToLocalCheckbox.checked) {
+                        kcm.applyToLocal();
+                    }
+                    if (applyToSystemCheckbox.checked) {
+                        kcm.applyToSystem();
+                    }
+
+                    applyConfirmSheet.close()
+                }
+                enabled: applyToLocalCheckbox.checked || applyToSystemCheckbox.checked
+            }
+            QQC2.Button {
+                text: i18n("Cancel")
+                icon.name: "dialog-cancel"
+                onClicked: {
+                    applyConfirmSheet.close()
+                }
             }
         }
     }
@@ -124,6 +165,7 @@ KCM.ScrollViewKCM {
             while (kcm.depth > 1) {
                 kcm.takeLast();
             }
+            applyConfirmSheet.open();
         }
         function onDefaultsClicked() {
             while (kcm.depth > 1) {
