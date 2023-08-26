@@ -18,9 +18,7 @@
 
 #include "kdisplaymanager.h"
 
-#include "consolekit_manager_interface.h"
 #include "login1_manager_interface.h"
-#include "upower_interface.h"
 
 static SessionBackend *s_backend = nullptr;
 
@@ -37,8 +35,6 @@ SessionBackend *SessionBackend::self()
         s_backend = new TestSessionBackend();
     } else if (LogindSessionBackend::exists()) {
         s_backend = new LogindSessionBackend();
-    } else if (ConsoleKitSessionBackend::exists()) {
-        s_backend = new ConsoleKitSessionBackend();
     } else {
         s_backend = new DummySessionBackend();
     }
@@ -216,86 +212,6 @@ bool LogindSessionBackend::canHybridSuspend() const
 }
 
 bool LogindSessionBackend::canHibernate() const
-{
-    return m_canHibernate;
-}
-
-/*********************************************************************************/
-
-bool ConsoleKitSessionBackend::exists()
-{
-    return QDBusConnection::systemBus().interface()->isServiceRegistered(QStringLiteral("org.freedesktop.login1"));
-}
-
-ConsoleKitSessionBackend::ConsoleKitSessionBackend()
-{
-    m_ck = new OrgFreedesktopConsoleKitManagerInterface(QStringLiteral("org.freedesktop.ConsoleKit"),
-                                                        QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
-                                                        QDBusConnection::systemBus(),
-                                                        this);
-    m_upower = new OrgFreedesktopUPowerInterface(QStringLiteral("org.freedesktop.UPower"),
-                                                 QStringLiteral("/org/freedesktop/UPower"),
-                                                 QDBusConnection::systemBus(),
-                                                 this);
-
-    auto canStop = m_ck->CanStop();
-    canStop.waitForFinished();
-    m_canShutdown = canStop.value();
-
-    auto canRestart = m_ck->CanRestart();
-    canRestart.waitForFinished();
-    m_canReboot = canRestart.value();
-
-    m_canSuspend = m_upower->canSuspend();
-    m_canHibernate = m_upower->canHibernate();
-
-    connect(m_upower, &OrgFreedesktopUPowerInterface::NotifySleep, this, &SessionBackend::aboutToSuspend);
-    connect(m_upower, &OrgFreedesktopUPowerInterface::Resuming, this, &SessionBackend::resumingFromSuspend);
-
-    m_state = SessionManagement::State::Ready;
-}
-
-SessionManagement::State ConsoleKitSessionBackend::state() const
-{
-    return m_state;
-}
-
-void ConsoleKitSessionBackend::shutdown()
-{
-    m_ck->Stop();
-}
-
-void ConsoleKitSessionBackend::reboot()
-{
-    m_ck->Restart();
-}
-
-void ConsoleKitSessionBackend::suspend()
-{
-    m_upower->Suspend();
-}
-
-void ConsoleKitSessionBackend::hibernate()
-{
-    m_upower->Hibernate();
-}
-
-bool ConsoleKitSessionBackend::canShutdown() const
-{
-    return m_canShutdown;
-}
-
-bool ConsoleKitSessionBackend::canReboot() const
-{
-    return m_canReboot;
-}
-
-bool ConsoleKitSessionBackend::canSuspend() const
-{
-    return m_canSuspend;
-}
-
-bool ConsoleKitSessionBackend::canHibernate() const
 {
     return m_canHibernate;
 }

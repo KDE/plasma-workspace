@@ -13,8 +13,6 @@
 #include "sessionmanagement.h"
 
 class OrgFreedesktopLogin1ManagerInterface;
-class OrgFreedesktopUPowerInterface;
-class OrgFreedesktopConsoleKitManagerInterface;
 
 /**
  * Performs direct system actions that could kill the session
@@ -96,45 +94,6 @@ private:
     bool m_canReboot = false;
     bool m_canSuspend = false;
     bool m_canHybridSuspend = false;
-    bool m_canHibernate = false;
-    uint m_pendingJobs = 0;
-};
-
-/* Maybe misleadingly named, consolekit doesn't support suspend directly so it's
- * suplemented with upower where available
- */
-class ConsoleKitSessionBackend : public SessionBackend
-{
-    Q_OBJECT
-public:
-    static bool exists();
-    ConsoleKitSessionBackend();
-
-    SessionManagement::State state() const override;
-    void shutdown() override;
-    void reboot() override;
-    void suspend() override;
-    void hybridSuspend() override
-    {
-    }
-    void hibernate() override;
-    bool canShutdown() const override;
-    bool canReboot() const override;
-    bool canSuspend() const override;
-    bool canHybridSuspend() const override
-    {
-        return false;
-    }
-    bool canHibernate() const override;
-
-private:
-    OrgFreedesktopUPowerInterface *m_upower;
-    OrgFreedesktopConsoleKitManagerInterface *m_ck;
-
-    SessionManagement::State m_state = SessionManagement::State::Loading;
-    bool m_canShutdown = false;
-    bool m_canReboot = false;
-    bool m_canSuspend = false;
     bool m_canHibernate = false;
     uint m_pendingJobs = 0;
 };

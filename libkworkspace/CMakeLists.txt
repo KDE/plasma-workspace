@@ -28,9 +28,6 @@ set_source_files_properties("${CMAKE_SOURCE_DIR}/data/interfaces/org.freedesktop
                             "${CMAKE_SOURCE_DIR}/data/interfaces/org.freedesktop.login1.Session.xml"
     PROPERTIES INCLUDE "loginddbustypes.h" )
 
-qt_add_dbus_interface(kworkspace_LIB_SRCS "org.freedesktop.UPower.xml" upower_interface)
-qt_add_dbus_interface(kworkspace_LIB_SRCS "org.freedesktop.ConsoleKit.Manager.xml" consolekit_manager_interface)
-
 set(ksmserver_xml ${plasma-workspace_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xml)
 qt_add_dbus_interface( kworkspace_LIB_SRCS ${ksmserver_xml} ksmserver_interface )
 
