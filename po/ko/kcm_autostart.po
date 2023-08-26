@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 01:59+0000\n"
-"PO-Revision-Date: 2023-08-06 22:35+0200\n"
+"PO-Revision-Date: 2023-08-25 23:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -39,21 +39,19 @@ msgid "\"%1\" is not readable."
 msgstr "\"%1\"에서 읽을 수 없습니다."
 
 #: ui/entry.qml:52
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "이름"
+msgstr "이름:"
 
 #: ui/entry.qml:57
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "상태"
+msgstr "상태:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -61,17 +59,16 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "마지막 활성화:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "정지"
 
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "시작"
@@ -79,13 +76,13 @@ msgstr "시작"
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "로그를 불러올 수 없습니다. 새로 고쳐 보십시오."
 
 #: ui/entry.qml:109
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "새로 고침"
 
 #: ui/main.qml:41
 #, kde-format
@@ -129,19 +126,21 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"%1이(가) 자동으로 시작되지 않았습니다. 시스템을 다시 시작한 후에 정보가 표시"
+"됩니다."
 
 #: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "아직 자동으로 시작되지 않았음"
 
 #: ui/main.qml:177 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "실패함"
 
 #: ui/main.qml:184
 #, kde-format
@@ -200,36 +199,35 @@ msgstr "로그아웃 스크립트 선택"
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "실행 중"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "정지됨"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "시작"
+msgstr "시작 중"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "정지 중"
 
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "GetAll 호출 %1의 응답을 수신하는 중 오류 발생"
 
 #: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "저널을 열 수 없음"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

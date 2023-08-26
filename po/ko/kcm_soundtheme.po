@@ -29,14 +29,13 @@ msgid "Fallback sound theme from freedesktop.org"
 msgstr "freedesktop.org의 폴백 소리 테마"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
 msgstr[0] "기반: %2"
-msgstr[1] ""
 
 #: ui/main.qml:70
 #, kde-format
