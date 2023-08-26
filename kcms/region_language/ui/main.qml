@@ -90,56 +90,28 @@ KCM.ScrollViewKCM {
         }
     }
 
-    Kirigami.OverlaySheet {
-        id: applyConfirmSheet
-        title: i18nc("Confirmation question about applying the locale settings",
-                     "Apply the locales setting?")
-        QQC2.StackView {
-            implicitHeight: checkboxLayout.implicitHeight
-            implicitWidth: Kirigami.Units.gridUnit * 30
-            Kirigami.FormLayout {
-                id: checkboxLayout
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.rightMargin: Kirigami.Units.largeSpacing
-
-                QQC2.CheckBox {
-                    id: applyToLocalCheckbox
-                    text: i18nc("List checkbox", "Apply the settings to current user")
-                    checked: true
-                }
-                QQC2.CheckBox {
-                    id: applyToSystemCheckbox
-                    text: i18nc("List checkbox", "Apply the settings to system")
-                }
-            }
-        }
-        footer: RowLayout {
-            QQC2.Button {
-                id: proceedButton
-                text: i18n("Apply")
-                icon.name: "dialog-ok-apply"
-                onClicked: {
-                    if (applyToLocalCheckbox.checked) {
-                        kcm.applyToLocal();
-                    }
-                    if (applyToSystemCheckbox.checked) {
-                        kcm.applyToSystem();
-                    }
-
-                    applyConfirmSheet.close()
-                }
-                enabled: applyToLocalCheckbox.checked || applyToSystemCheckbox.checked
-            }
-            QQC2.Button {
-                text: i18n("Cancel")
+    Kirigami.PromptDialog {
+        id: applyDialog
+        title: i18nc("@title:window", "Apply locale settings")
+        subtitle: i18nc("@label", "Do you wish to apply locale settings to system?")
+        standardButtons: Kirigami.Dialog.NoButton
+        customFooterActions: [
+            Kirigami.Action {
+                text: i18nc("@action:button", "Apply to system and current user")
+                icon.name: "delete"
+                onTriggered: dialog.accept();
+            },
+            Kirigami.Action {
+                text: i18nc("@action:button", "Only apply to current user")
                 icon.name: "dialog-cancel"
-                onClicked: {
-                    applyConfirmSheet.close()
-                }
+                onTriggered: dialog.reject();
+            },
+            Kirigami.Action {
+                text: i18nc("@action:button", "Cancel")
+                icon.name: "dialog-cancel"
+                onTriggered: dialog.reject();
             }
-        }
+        ]
     }
 
     Connections {
@@ -165,7 +137,7 @@ KCM.ScrollViewKCM {
             while (kcm.depth > 1) {
                 kcm.takeLast();
             }
-            applyConfirmSheet.open();
+            applyDialog.open();
         }
         function onDefaultsClicked() {
             while (kcm.depth > 1) {
