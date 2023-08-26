@@ -1,6 +1,6 @@
 import QtQuick 2.12
 import QtTest 1.0
-import org.kde.plasma.private.kicker 0.1
+import org.kde.plasma.workspace.trianglemousefilter
 
 Item {
     id: root
@@ -11,6 +11,7 @@ Item {
         // to simulate kicker's options at the bottom
         height: 300
         width: 300
+        blockFirstEnter: true
         Column {
             anchors.fill: parent
             MouseArea {

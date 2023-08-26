@@ -23,7 +23,6 @@ set(kickerplugin_SRCS
     plugin/forwardingmodel.cpp
     plugin/placeholdermodel.cpp
     plugin/funnelmodel.cpp
-    plugin/dashboardwindow.cpp
     plugin/kickerplugin.cpp
     plugin/menuentryeditor.cpp
     plugin/processrunner.cpp
@@ -36,11 +35,8 @@ set(kickerplugin_SRCS
     plugin/systemmodel.cpp
     plugin/systemsettings.cpp
     plugin/wheelinterceptor.cpp
-    plugin/windowsystem.cpp
     plugin/funnelmodel.cpp
     plugin/sectionsmodel.cpp
-    plugin/kickercompattrianglemousefilter.cpp
-    ../../components/trianglemousefilter/trianglemousefilter.cpp
 )
 
 ecm_qt_declare_logging_category(kickerplugin_SRCS

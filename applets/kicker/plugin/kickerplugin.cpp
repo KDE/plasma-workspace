@@ -9,11 +9,9 @@
 #include "appsmodel.h"
 #include "computermodel.h"
 #include "containmentinterface.h"
-#include "dashboardwindow.h"
 #include "draghelper.h"
 #include "funnelmodel.h"
 #include "kastatsfavoritesmodel.h"
-#include "kickercompattrianglemousefilter.h"
 #include "processrunner.h"
 #include "recentusagemodel.h"
 #include "rootmodel.h"
@@ -23,7 +21,6 @@
 #include "systemmodel.h"
 #include "systemsettings.h"
 #include "wheelinterceptor.h"
-#include "windowsystem.h"
 
 void KickerPlugin::registerTypes(const char *uri)
 {
@@ -37,7 +34,6 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
     qmlRegisterType<SimpleFavoritesModel>(uri, 0, 1, "FavoritesModel");
     qmlRegisterType<KAStatsFavoritesModel>(uri, 0, 1, "KAStatsFavoritesModel");
-    qmlRegisterType<DashboardWindow>(uri, 0, 1, "DashboardWindow");
     qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
     qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
     qmlRegisterType<RecentUsageModel>(uri, 0, 1, "RecentUsageModel");
@@ -47,6 +43,4 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<SystemModel>(uri, 0, 1, "SystemModel");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
-    qmlRegisterType<KickerCompatTriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
 }
