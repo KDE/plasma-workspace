@@ -40,6 +40,7 @@ public:
     virtual bool canSuspend() const = 0;
     virtual bool canHybridSuspend() const = 0;
     virtual bool canHibernate() const = 0;
+    virtual bool canSuspendThenHibernate() const = 0;
 
     virtual bool canSwitchUser() const;
 
@@ -52,6 +53,7 @@ Q_SIGNALS:
     void canSuspendChanged();
     void canHybridSuspendChanged();
     void canHibernateChanged();
+    void canSuspendThenHibernateChanged();
 
     void aboutToSuspend();
     void resumingFromSuspend();
@@ -86,6 +88,7 @@ public:
     bool canSuspend() const override;
     bool canHybridSuspend() const override;
     bool canHibernate() const override;
+    bool canSuspendThenHibernate() const override;
 
 private:
     OrgFreedesktopLogin1ManagerInterface *m_login1;
@@ -95,6 +98,7 @@ private:
     bool m_canSuspend = false;
     bool m_canHybridSuspend = false;
     bool m_canHibernate = false;
+    bool m_canSuspendThenHibernate = false;
     uint m_pendingJobs = 0;
 };
 
@@ -143,6 +147,10 @@ public:
     {
         return false;
     }
+    bool canSuspendThenHibernate() const override
+    {
+        return false;
+    }
 };
 
 class TestSessionBackend : public SessionBackend
@@ -178,6 +186,10 @@ public:
         return true;
     }
     bool canHibernate() const override
+    {
+        return true;
+    }
+    bool canSuspendThenHibernate() const override
     {
         return true;
     }

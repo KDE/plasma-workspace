@@ -123,6 +123,7 @@ LogindSessionBackend::LogindSessionBackend()
             Q_EMIT canRebootChanged();
             Q_EMIT canSuspendChanged();
             Q_EMIT canHibernateChanged();
+            Q_EMIT canSuspendThenHibernateChanged();
         }
     };
 
@@ -146,6 +147,10 @@ LogindSessionBackend::LogindSessionBackend()
     {
         auto watcher = new QDBusPendingCallWatcher(m_login1->CanHibernate(), this);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, std::bind(propLoaded, std::placeholders::_1, &m_canHibernate));
+    }
+    {
+        auto watcher = new QDBusPendingCallWatcher(m_login1->CanSuspendThenHibernate(), this);
+        connect(watcher, &QDBusPendingCallWatcher::finished, this, std::bind(propLoaded, std::placeholders::_1, &m_canSuspendThenHibernate));
     }
 
     connect(m_login1, &OrgFreedesktopLogin1ManagerInterface::PrepareForSleep, this, [this](bool sleeping) {
@@ -214,4 +219,9 @@ bool LogindSessionBackend::canHybridSuspend() const
 bool LogindSessionBackend::canHibernate() const
 {
     return m_canHibernate;
+}
+
+bool LogindSessionBackend::canSuspendThenHibernate() const
+{
+    return m_canSuspendThenHibernate;
 }

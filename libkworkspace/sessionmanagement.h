@@ -22,6 +22,7 @@ class KWORKSPACE_EXPORT SessionManagement : public QObject
     Q_PROPERTY(bool canLogout READ canLogout NOTIFY canLogoutChanged)
     Q_PROPERTY(bool canSuspend READ canSuspend NOTIFY canSuspendChanged)
     Q_PROPERTY(bool canHibernate READ canHibernate NOTIFY canHibernateChanged)
+    Q_PROPERTY(bool canSuspendThenHibernate READ canSuspendThenHibernate NOTIFY canSuspendThenHibernateChanged)
     Q_PROPERTY(bool canSwitchUser READ canSwitchUser NOTIFY canSwitchUserChanged)
     Q_PROPERTY(bool canLock READ canLock NOTIFY canLockChanged)
     Q_PROPERTY(bool canSaveSession READ canSaveSession NOTIFY canSaveSessionChanged)
@@ -70,6 +71,7 @@ public:
     bool canSuspend() const;
     bool canHybridSuspend() const;
     bool canHibernate() const;
+    bool canSuspendThenHibernate() const;
     bool canSwitchUser() const;
     bool canLock() const;
     bool canSaveSession() const;
@@ -100,6 +102,7 @@ Q_SIGNALS:
     void canSuspendChanged();
     void canHybridSuspendChanged();
     void canHibernateChanged();
+    void canSuspendThenHibernateChanged();
     void canSwitchUserChanged();
     void canLockChanged();
     void canSaveSessionChanged();

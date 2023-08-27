@@ -172,6 +172,12 @@ public Q_SLOTS: // METHODS
         return asyncCallWithArgumentList(QStringLiteral("CanHibernate"), argumentList);
     }
 
+    inline QDBusPendingReply<QString> CanSuspendThenHibernate()
+    {
+        QList<QVariant> argumentList;
+        return asyncCallWithArgumentList(QStringLiteral("CanSuspendThenHibernate"), argumentList);
+    }
+
     inline QDBusPendingReply<QString> CanHybridSleep()
     {
         QList<QVariant> argumentList;
