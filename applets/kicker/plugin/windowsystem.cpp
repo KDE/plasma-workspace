@@ -11,9 +11,12 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
+#include "debug.h"
+
 WindowSystem::WindowSystem(QObject *parent)
     : QObject(parent)
 {
+    qCWarning(KICKER_DEBUG) << "Kicker.WindowSystem is deprecated and will be removed in Plasma 6. Use KWindowSystem/KX11Extras instead.";
 }
 
 WindowSystem::~WindowSystem()
