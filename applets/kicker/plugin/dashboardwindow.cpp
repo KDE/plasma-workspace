@@ -14,6 +14,8 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
+#include "debug.h"
+
 DashboardWindow::DashboardWindow(QQuickItem *parent)
     : QQuickWindow(parent ? parent->window() : nullptr)
     , m_mainItem(nullptr)
@@ -25,6 +27,8 @@ DashboardWindow::DashboardWindow(QQuickItem *parent)
     setIcon(QIcon::fromTheme(QStringLiteral("plasma")));
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &DashboardWindow::updateTheme);
+
+    qCWarning(KICKER_DEBUG) << "DashboardWindow is deprecated and will be removed in Plasma 6. Use Qt Quick Window instead.";
 }
 
 DashboardWindow::~DashboardWindow()
