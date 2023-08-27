@@ -4,25 +4,25 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
-import fcntl
 import os
 from subprocess import Popen, PIPE
 import unittest
 from datetime import date
 from time import sleep
-from typing import Any
+from typing import Any, Final
 import threading
-import time
 
 import gi
 
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gtk
+from gi.repository import Gtk, GLib, Gio
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+KDE_VERSION: Final = 5
 
 
 class XEmbedTrayIcon(threading.Thread):
@@ -83,16 +83,26 @@ class SystemTrayTests(unittest.TestCase):
         cls.driver.implicitly_wait = 10
 
     def setUp(self) -> None:
-        self.kded = Popen(['kded5'])
+        self.kded = Popen([f"kded{KDE_VERSION}"])
+        # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        SERVICE_NAME: Final = "org.freedesktop.DBus"
+        OBJECT_PATH: Final = "/"
+        INTERFACE_NAME: Final = SERVICE_NAME
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(SERVICE_NAME, OBJECT_PATH, INTERFACE_NAME, "NameHasOwner")
+        message.set_body(GLib.Variant("(s)", [f"org.kde.kded{KDE_VERSION}"]))
         for _ in range(5):
-            proc = Popen(['dbus-send', '--print-reply=literal', '--dest=org.freedesktop.DBus',
-                          '/org/freedesktop/DBus', 'org.freedesktop.DBus.NameHasOwner', 'string:org.kde.kded5'], stdout=PIPE)
-            out, err = proc.communicate()
-            if 'boolean true' in str(out):
+            reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+
+            if reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean():
                 break
             print(f"waiting for kded to appear on the dbus session")
-            time.sleep(1)
-        Popen(['dbus-send', '--print-reply', '--dest=org.kde.kded5', '/kded', 'org.kde.kded5.loadModule', 'string:statusnotifierwatcher'])
+            sleep(1)
+
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule",
+                                                         GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"),
+                                                         Gio.DBusSendMessageFlags.NONE, 1000)
+        self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "Module is not loaded")
 
     def tearDown(self) -> None:
         """
@@ -120,9 +130,9 @@ class SystemTrayTests(unittest.TestCase):
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
         xembedsniproxy: Popen[bytes] = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
-        print(f"xembedsniproxy PID: {xembedsniproxy.pid}")
         if not xembedsniproxy.stderr or xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
+        print(f"xembedsniproxy PID: {xembedsniproxy.pid}")
 
         title: str = f"XEmbed Status Icon Test {date.today().strftime('%Y%m%d')}"
         xembed_tray_icon: XEmbedTrayIcon = XEmbedTrayIcon(title)
@@ -140,26 +150,21 @@ class SystemTrayTests(unittest.TestCase):
         # Now test clickable
         xembed_icon_item.click()
 
-        fd: int = xembedsniproxy.stderr.fileno()
-        fl: int = fcntl.fcntl(fd, fcntl.F_GETFL)
-        fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
-
-        count: int = 0
         success: bool = False
-        while count < 10:
-            line: bytes | None = xembedsniproxy.stderr.read()
-            if not line:
+        for _ in range(10):
+            if xembedsniproxy.stderr.readable():
+                stderr = xembedsniproxy.stderr.readline()
+                print(stderr)
+            else:
+                print("Retrying...")
                 xembed_icon_item.click()
                 sleep(1)
-                count += 1
                 continue
 
-            line_str: str = line.decode(encoding="utf-8").strip()
+            line_str: str = stderr.decode(encoding="utf-8").strip()
             if "Received click" in line_str:
                 success = True
                 break
-
-            count += 1
 
         xembedsniproxy.terminate()
         xembed_tray_icon.quit()
