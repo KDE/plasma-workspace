@@ -27,10 +27,9 @@
 #undef timezone
 #endif
 
-TimeEngine::TimeEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+TimeEngine::TimeEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
-    Q_UNUSED(args)
     setMinimumPollingInterval(333);
 
     // To have translated timezone names

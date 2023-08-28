@@ -12,14 +12,13 @@
 #include "cursornotificationhandler.h"
 #endif
 
-MouseEngine::MouseEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+MouseEngine::MouseEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , timerId(0)
 #ifdef HAVE_XFIXES
     , handler(nullptr)
 #endif
 {
-    Q_UNUSED(args)
     init();
 }
 

@@ -76,7 +76,7 @@ class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma5Support::DataEn
     Q_OBJECT
 
 public:
-    NOAAIon(QObject *parent, const QVariantList &args);
+    NOAAIon(QObject *parent);
     ~NOAAIon() override;
 
 public: // IonInterface API

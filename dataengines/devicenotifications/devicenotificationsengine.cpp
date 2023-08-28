@@ -9,8 +9,8 @@
 
 #include <Plasma5Support/DataContainer>
 
-DeviceNotificationsEngine::DeviceNotificationsEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+DeviceNotificationsEngine::DeviceNotificationsEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_solidNotify(new KSolidNotify(this))
 {
     connect(m_solidNotify, &KSolidNotify::notify, this, &DeviceNotificationsEngine::notify);

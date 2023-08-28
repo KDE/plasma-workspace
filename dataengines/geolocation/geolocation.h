@@ -19,7 +19,7 @@ class Geolocation : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    Geolocation(QObject *parent, const QVariantList &args);
+    Geolocation(QObject *parent);
     ~Geolocation() override;
     virtual void init();
     QStringList sources() const override;

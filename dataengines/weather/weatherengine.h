@@ -49,7 +49,7 @@ public:
      * @param parent The parent object.
      * @param args Argument list, unused.
      */
-    WeatherEngine(QObject *parent, const QVariantList &args);
+    WeatherEngine(QObject *parent);
 
     ~WeatherEngine() override;
 

@@ -21,7 +21,7 @@ class DictEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    DictEngine(QObject *parent, const QVariantList &args);
+    DictEngine(QObject *parent);
     ~DictEngine() override;
 
 protected:

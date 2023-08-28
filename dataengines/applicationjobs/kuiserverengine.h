@@ -28,7 +28,7 @@ class KuiserverEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    KuiserverEngine(QObject *parent, const QVariantList &args);
+    KuiserverEngine(QObject *parent);
     ~KuiserverEngine() override;
 
     void init();

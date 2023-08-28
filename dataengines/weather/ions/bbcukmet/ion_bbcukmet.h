@@ -77,7 +77,7 @@ class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma5Support::DataE
     Q_OBJECT
 
 public:
-    UKMETIon(QObject *parent, const QVariantList &args);
+    UKMETIon(QObject *parent);
     ~UKMETIon() override;
 
 public: // IonInterface API

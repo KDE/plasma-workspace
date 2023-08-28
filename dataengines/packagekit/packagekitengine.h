@@ -13,7 +13,7 @@ class PackagekitEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    PackagekitEngine(QObject *parent, const QVariantList &args);
+    PackagekitEngine(QObject *parent);
     void init();
 
 protected:

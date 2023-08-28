@@ -30,8 +30,8 @@
 
 // #define HOTPLUGENGINE_TIMING
 
-HotplugEngine::HotplugEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+HotplugEngine::HotplugEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_dirWatch(new KDirWatch(this))
 {
     const QStringList folders =

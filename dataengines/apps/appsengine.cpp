@@ -9,10 +9,9 @@
 
 #include <KSycoca>
 
-AppsEngine::AppsEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+AppsEngine::AppsEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
-    Q_UNUSED(args);
     init();
 }
 

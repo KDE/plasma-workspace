@@ -16,10 +16,9 @@
 #define ACTIVITYMANAGER_SERVICE "org.kde.kactivitymanagerd"
 #define ACTIVITYRANKING_OBJECT "/ActivityRanking"
 
-ActivityEngine::ActivityEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+ActivityEngine::ActivityEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
-    Q_UNUSED(args);
     init();
 }
 

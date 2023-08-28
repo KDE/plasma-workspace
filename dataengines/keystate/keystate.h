@@ -20,7 +20,7 @@ class KeyStatesEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    KeyStatesEngine(QObject *parent, const QVariantList &args);
+    KeyStatesEngine(QObject *parent);
     ~KeyStatesEngine() override;
 
     void init();

@@ -17,12 +17,10 @@
     for (DataEngine::SourceDict::iterator it = sources.begin(); it != sources.end(); ++it)                                                                     \
         if (dir == QDir(it.key()))
 
-FileBrowserEngine::FileBrowserEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+FileBrowserEngine::FileBrowserEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_dirWatch(new KDirWatch(this))
 {
-    Q_UNUSED(args)
-
     connect(m_dirWatch, &KDirWatch::created, this, &FileBrowserEngine::dirCreated);
     connect(m_dirWatch, &KDirWatch::deleted, this, &FileBrowserEngine::dirDeleted);
     connect(m_dirWatch, &KDirWatch::dirty, this, &FileBrowserEngine::dirDirty);

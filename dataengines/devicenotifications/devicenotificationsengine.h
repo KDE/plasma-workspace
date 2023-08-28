@@ -19,7 +19,7 @@ class DeviceNotificationsEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 public:
-    DeviceNotificationsEngine(QObject *parent, const QVariantList &args);
+    DeviceNotificationsEngine(QObject *parent);
     ~DeviceNotificationsEngine() override;
 
 private Q_SLOTS:

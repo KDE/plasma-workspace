@@ -22,7 +22,7 @@ class FaviconsEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    FaviconsEngine(QObject *parent, const QVariantList &args);
+    FaviconsEngine(QObject *parent);
     ~FaviconsEngine() override;
 
 protected:

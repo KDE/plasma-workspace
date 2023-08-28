@@ -88,7 +88,7 @@ class Q_DECL_EXPORT DWDIon : public IonInterface
     Q_OBJECT
 
 public:
-    DWDIon(QObject *parent, const QVariantList &args);
+    DWDIon(QObject *parent);
     ~DWDIon() override;
 
 public: // IonInterface API

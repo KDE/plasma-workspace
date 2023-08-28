@@ -17,7 +17,7 @@ class PlacesEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    PlacesEngine(QObject *parent, const QVariantList &args);
+    PlacesEngine(QObject *parent);
     ~PlacesEngine() override;
 
     Plasma5Support::Service *serviceForSource(const QString &source) override;

@@ -47,8 +47,8 @@ WeatherData::ForecastInfo::ForecastInfo()
 }
 
 // ctor, dtor
-EnvCanadaIon::EnvCanadaIon(QObject *parent, const QVariantList &args)
-    : IonInterface(parent, args)
+EnvCanadaIon::EnvCanadaIon(QObject *parent)
+    : IonInterface(parent)
 {
     // Get the real city XML URL so we can parse this
     getXMLSetup();

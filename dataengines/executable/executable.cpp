@@ -48,8 +48,8 @@ void ExecutableContainer::exec()
     }
 }
 
-ExecutableEngine::ExecutableEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+ExecutableEngine::ExecutableEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     setMinimumPollingInterval(1000);
 }

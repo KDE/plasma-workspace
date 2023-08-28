@@ -60,12 +60,11 @@ void createAsyncDBusMethodCallAndCallback(QObject *parent,
 
 }
 
-PowermanagementEngine::PowermanagementEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+PowermanagementEngine::PowermanagementEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_sources(basicSourceNames())
     , m_session(new SessionManagement(this))
 {
-    Q_UNUSED(args)
     qDBusRegisterMetaType<QList<InhibitionInfo>>();
     qDBusRegisterMetaType<InhibitionInfo>();
     qDBusRegisterMetaType<QList<QVariant>>();

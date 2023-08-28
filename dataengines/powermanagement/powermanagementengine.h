@@ -29,7 +29,7 @@ class PowermanagementEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    PowermanagementEngine(QObject *parent, const QVariantList &args);
+    PowermanagementEngine(QObject *parent);
     ~PowermanagementEngine() override;
     QStringList sources() const override;
     Plasma5Support::Service *serviceForSource(const QString &source) override;

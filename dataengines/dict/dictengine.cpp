@@ -16,11 +16,10 @@
 
 #include <Plasma5Support/DataContainer>
 
-DictEngine::DictEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+DictEngine::DictEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_tcpSocket(nullptr)
 {
-    Q_UNUSED(args)
     m_serverName = QLatin1String("dict.org"); // In case we need to switch it later
     m_dictName = QLatin1String("wn"); // Default, good dictionary
 }

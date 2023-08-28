@@ -136,7 +136,7 @@ class Q_DECL_EXPORT EnvCanadaIon : public IonInterface, public Plasma5Support::D
     Q_OBJECT
 
 public:
-    EnvCanadaIon(QObject *parent, const QVariantList &args);
+    EnvCanadaIon(QObject *parent);
     ~EnvCanadaIon() override;
 
 public: // IonInterface API

@@ -23,8 +23,8 @@ public:
     bool initialized;
 };
 
-IonInterface::IonInterface(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+IonInterface::IonInterface(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , d(new Private(this))
 {
 }

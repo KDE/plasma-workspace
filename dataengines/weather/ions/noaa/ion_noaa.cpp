@@ -70,8 +70,8 @@ QMap<QString, IonInterface::WindDirections> const &NOAAIon::windIcons() const
 }
 
 // ctor, dtor
-NOAAIon::NOAAIon(QObject *parent, const QVariantList &args)
-    : IonInterface(parent, args)
+NOAAIon::NOAAIon(QObject *parent)
+    : IonInterface(parent)
 {
     // Get the real city XML URL so we can parse this
     getXMLSetup();

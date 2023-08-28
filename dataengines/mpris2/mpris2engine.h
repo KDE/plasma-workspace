@@ -23,7 +23,7 @@ class Mpris2Engine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    Mpris2Engine(QObject *parent, const QVariantList &args);
+    Mpris2Engine(QObject *parent);
 
     Plasma5Support::Service *serviceForSource(const QString &source) override;
     QStringList sources() const override;

@@ -52,8 +52,8 @@ WeatherData::ForecastInfo::ForecastInfo()
 {
 }
 
-DWDIon::DWDIon(QObject *parent, const QVariantList &args)
-    : IonInterface(parent, args)
+DWDIon::DWDIon(QObject *parent)
+    : IonInterface(parent)
 
 {
     setInitialized(true);

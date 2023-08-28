@@ -29,7 +29,7 @@ class ActivityEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    ActivityEngine(QObject *parent, const QVariantList &args);
+    ActivityEngine(QObject *parent);
     Plasma5Support::Service *serviceForSource(const QString &source) override;
     void init();
 

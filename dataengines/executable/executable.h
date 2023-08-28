@@ -29,7 +29,7 @@ class ExecutableEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 public:
-    ExecutableEngine(QObject *parent, const QVariantList &args);
+    ExecutableEngine(QObject *parent);
 
 protected:
     bool sourceRequestEvent(const QString &source) override;

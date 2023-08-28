@@ -22,7 +22,7 @@ class MouseEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    MouseEngine(QObject *parent, const QVariantList &args);
+    MouseEngine(QObject *parent);
     ~MouseEngine() override;
 
     QStringList sources() const override;

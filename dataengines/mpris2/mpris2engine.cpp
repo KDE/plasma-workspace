@@ -19,8 +19,8 @@
 #include "playercontainer.h"
 #include "playercontrol.h"
 
-Mpris2Engine::Mpris2Engine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+Mpris2Engine::Mpris2Engine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     auto watcher =
         new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);

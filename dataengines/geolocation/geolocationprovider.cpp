@@ -6,7 +6,7 @@
 
 #include "geolocationprovider.h"
 
-GeolocationProvider::GeolocationProvider(QObject *parent, const QVariantList &args)
+GeolocationProvider::GeolocationProvider(QObject *parent)
     : QObject(parent)
     , m_sharedData(nullptr)
     , m_sharedAccuracies(nullptr)
@@ -15,7 +15,6 @@ GeolocationProvider::GeolocationProvider(QObject *parent, const QVariantList &ar
     , m_available(true)
     , m_updating(false)
 {
-    Q_UNUSED(args)
     m_updateTimer.setSingleShot(true);
     m_updateTimer.setInterval(0);
     qRegisterMetaType<Plasma5Support::DataEngine::Data>("Plasma5Support::DataEngine::Data");

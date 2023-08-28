@@ -19,8 +19,8 @@
 
 using namespace NotificationManager;
 
-KuiserverEngine::KuiserverEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+KuiserverEngine::KuiserverEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     init();
 }

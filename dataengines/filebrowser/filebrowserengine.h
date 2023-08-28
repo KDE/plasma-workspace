@@ -18,7 +18,7 @@ class FileBrowserEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    FileBrowserEngine(QObject *parent, const QVariantList &args);
+    FileBrowserEngine(QObject *parent);
     ~FileBrowserEngine() override;
 
 protected:

@@ -100,8 +100,8 @@ public:
     QNetworkAccessManager m_nam;
 };
 
-Ip::Ip(QObject *parent, const QVariantList &args)
-    : GeolocationProvider(parent, args)
+Ip::Ip(QObject *parent)
+    : GeolocationProvider(parent)
     , d(new Private(this))
 {
     setUpdateTriggers(SourceEvent | NetworkConnected);

@@ -28,7 +28,7 @@ public:
     };
     Q_DECLARE_FLAGS(UpdateTriggers, UpdateTrigger)
 
-    explicit GeolocationProvider(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit GeolocationProvider(QObject *parent);
     void init(Plasma5Support::DataEngine::Data *data, EntryAccuracy *accuracies);
 
     UpdateTriggers updateTriggers() const;

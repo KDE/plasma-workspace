@@ -16,8 +16,8 @@
 
 #include <ksgrd/SensorManager.h>
 
-SystemMonitorEngine::SystemMonitorEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+SystemMonitorEngine::SystemMonitorEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     KSGRD::SensorMgr = new KSGRD::SensorManager(this);
     KSGRD::SensorMgr->engage(QStringLiteral("localhost"), QLatin1String(""), QStringLiteral("ksysguardd"));

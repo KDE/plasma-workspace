@@ -16,11 +16,10 @@
 
 static const QString s_watcherServiceName(QStringLiteral("org.kde.StatusNotifierWatcher"));
 
-StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_statusNotifierWatcher(nullptr)
 {
-    Q_UNUSED(args);
     init();
 }
 

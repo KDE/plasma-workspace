@@ -166,7 +166,7 @@ public:
      * @param parent The parent object.
      * @Param args The argument list.
      */
-    explicit IonInterface(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit IonInterface(QObject *parent);
     /**
      * Destructor for the ion
      */

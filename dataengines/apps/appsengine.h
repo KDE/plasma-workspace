@@ -33,7 +33,7 @@ class AppsEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    AppsEngine(QObject *parent, const QVariantList &args);
+    AppsEngine(QObject *parent);
     ~AppsEngine() override;
     Plasma5Support::Service *serviceForSource(const QString &name) override;
 

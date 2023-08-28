@@ -90,7 +90,7 @@ class Q_DECL_EXPORT WetterComIon : public IonInterface
     Q_OBJECT
 
 public:
-    WetterComIon(QObject *parent, const QVariantList &args);
+    WetterComIon(QObject *parent);
     ~WetterComIon() override;
 
 public: // IonInterface API

@@ -9,8 +9,8 @@
 #include "keyservice.h"
 #include <klocalizedstring.h>
 
-KeyStatesEngine::KeyStatesEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+KeyStatesEngine::KeyStatesEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     m_mods.insert(Qt::Key_Shift, kli18n("Shift"));
     m_mods.insert(Qt::Key_Control, kli18n("Ctrl"));

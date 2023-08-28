@@ -16,8 +16,8 @@
 #include "weatherenginedebug.h"
 
 // Constructor
-WeatherEngine::WeatherEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+WeatherEngine::WeatherEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     m_reconnectTimer.setSingleShot(true);
     connect(&m_reconnectTimer, &QTimer::timeout, this, &WeatherEngine::startReconnect);
@@ -44,7 +44,7 @@ WeatherEngine::~WeatherEngine()
 void WeatherEngine::updateIonList()
 {
     removeAllData(QStringLiteral("ions"));
-    const auto infos = Plasma5Support::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
+    const auto infos = Plasma5Support::PluginLoader::listDataEngineMetaData(QStringLiteral("weatherengine"));
     for (const KPluginMetaData &info : infos) {
         // We want to provide the short ion name, but pluginId is the full plugin library name
         const QString ionName = info.pluginId().split(QLatin1Char('_')).last();

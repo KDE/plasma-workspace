@@ -13,8 +13,8 @@
 #include "placeservice.h"
 #include "placesproxymodel.h"
 
-PlacesEngine::PlacesEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+PlacesEngine::PlacesEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     m_placesModel = new KFilePlacesModel(this);
     m_proxyModel = new PlacesProxyModel(this, m_placesModel);

@@ -34,12 +34,11 @@ DevIface *getAncestorAs(const Solid::Device &device)
 }
 }
 
-SolidDeviceEngine::SolidDeviceEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+SolidDeviceEngine::SolidDeviceEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_temperature(nullptr)
     , m_notifier(nullptr)
 {
-    Q_UNUSED(args)
     m_signalmanager = new DeviceSignalMapManager(this);
 
     listenForNewDevices();

@@ -45,7 +45,7 @@ class SolidDeviceEngine : public Plasma5Support::DataEngine
     friend class SolidDeviceService;
 
 public:
-    SolidDeviceEngine(QObject *parent, const QVariantList &args);
+    SolidDeviceEngine(QObject *parent);
     ~SolidDeviceEngine() override;
     Plasma5Support::Service *serviceForSource(const QString &source) override;
 

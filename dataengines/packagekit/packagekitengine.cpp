@@ -10,8 +10,8 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 
-PackagekitEngine::PackagekitEngine(QObject *parent, const QVariantList &args)
-    : DataEngine(parent, args)
+PackagekitEngine::PackagekitEngine(QObject *parent)
+    : DataEngine(parent)
     , m_pk_available(false)
 {
 }

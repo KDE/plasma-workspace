@@ -72,8 +72,8 @@ void Gpsd::run()
     }
 }
 
-Gps::Gps(QObject *parent, const QVariantList &args)
-    : GeolocationProvider(parent, args)
+Gps::Gps(QObject *parent)
+    : GeolocationProvider(parent)
     , m_gpsd(nullptr)
 #if GPSD_API_MAJOR_VERSION >= 5
     , m_gpsdata(nullptr)

@@ -25,7 +25,7 @@ class SystemMonitorEngine : public Plasma5Support::DataEngine, public KSGRD::Sen
 public:
     /** Inherited from Plasma5Support::DataEngine.  Returns a list of all the sensors that ksysguardd knows about. */
     QStringList sources() const override;
-    SystemMonitorEngine(QObject *parent, const QVariantList &args);
+    SystemMonitorEngine(QObject *parent);
     ~SystemMonitorEngine() override;
 
 protected:

@@ -23,7 +23,7 @@ class TimeEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    TimeEngine(QObject *parent, const QVariantList &args);
+    TimeEngine(QObject *parent);
     ~TimeEngine() override;
 
     QStringList sources() const override;

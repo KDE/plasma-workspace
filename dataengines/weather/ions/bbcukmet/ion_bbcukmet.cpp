@@ -40,8 +40,8 @@ WeatherData::ForecastInfo::ForecastInfo()
 }
 
 // ctor, dtor
-UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
-    : IonInterface(parent, args)
+UKMETIon::UKMETIon(QObject *parent)
+    : IonInterface(parent)
 
 {
     setInitialized(true);

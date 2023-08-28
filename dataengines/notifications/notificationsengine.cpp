@@ -28,8 +28,8 @@
 
 using namespace NotificationManager;
 
-NotificationsEngine::NotificationsEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+NotificationsEngine::NotificationsEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
 {
     init();
 }

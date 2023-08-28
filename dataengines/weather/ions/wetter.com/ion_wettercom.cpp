@@ -29,8 +29,8 @@
  * Initialization
  */
 
-WetterComIon::WetterComIon(QObject *parent, const QVariantList &args)
-    : IonInterface(parent, args)
+WetterComIon::WetterComIon(QObject *parent)
+    : IonInterface(parent)
 
 {
 #if defined(MIN_POLL_INTERVAL)

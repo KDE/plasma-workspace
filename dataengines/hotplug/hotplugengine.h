@@ -23,7 +23,7 @@ class HotplugEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    HotplugEngine(QObject *parent, const QVariantList &args);
+    HotplugEngine(QObject *parent);
     ~HotplugEngine() override;
     void init();
     Plasma5Support::Service *serviceForSource(const QString &source) override;

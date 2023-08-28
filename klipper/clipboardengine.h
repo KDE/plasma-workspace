@@ -13,7 +13,7 @@ class ClipboardEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 public:
-    ClipboardEngine(QObject *parent, const QVariantList &args);
+    ClipboardEngine(QObject *parent);
     ~ClipboardEngine() override;
 
     Plasma5Support::Service *serviceForSource(const QString &source) override;
