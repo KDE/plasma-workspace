@@ -36,14 +36,12 @@ msgstr ""
 
 #: desktopview.cpp:224
 #, fuzzy, kde-format
-#| msgid "Plasma Shell"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "Plasma-skall"
 
 #: desktopview.cpp:228
 #, fuzzy, kde-format
-#| msgid "Plasma Shell"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "Plasma-skall"
@@ -56,7 +54,6 @@ msgstr ""
 
 #: desktopview.cpp:235
 #, fuzzy, kde-format
-#| msgid "Plasma Shell"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "Plasma-skall"

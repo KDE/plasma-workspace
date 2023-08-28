@@ -69,21 +69,18 @@ msgstr ""
 
 #: package/contents/ui/EditContextMenu.qml:32
 #, fuzzy, kde-format
-#| msgid "Copy Link Address"
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Kopier lenkeadresse"
 
 #: package/contents/ui/EditContextMenu.qml:44
 #, fuzzy, kde-format
-#| msgid "Copy"
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Kopier"
 
 #: package/contents/ui/EditContextMenu.qml:61
 #, fuzzy, kde-format
-#| msgid "Select All"
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Velg alle"

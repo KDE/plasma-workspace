@@ -93,9 +93,3 @@ msgstr ""
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Váldoreaidoholga"
-
-#~ msgid "Small Icons"
-#~ msgstr "Smávva govažat"

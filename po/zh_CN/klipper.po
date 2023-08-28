@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-09 02:03+0000\n"
-"PO-Revision-Date: 2023-08-02 12:37\n"
+"PO-Revision-Date: 2023-08-27 03:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -38,13 +38,13 @@ msgid ""
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
 "当您使用鼠标或者键盘将屏幕的某个部分的内容高亮显示时，它们将成为<emphasis>选"
-"中内容</emphasis>。您可以使用鼠标中间键粘贴选中的内容。<nl/><nl/>如果您通过软"
-"件界面对选中内容进行了<interface>复制</interface>或者<interface>剪切</"
+"中内容</emphasis>。您可以使用鼠标中键粘贴选中的内容。<nl/><nl/>如果您通过软件"
+"界面对选中内容进行了<interface>复制</interface>或者<interface>剪切</"
 "interface>操作，它们将被保存到<emphasis>剪贴板</emphasis>中。剪贴板中的内容可"
 "以通过<interface>粘贴</interface>操作进行粘贴。<nl/><nl/>启用此选项后，选中内"
 "容和剪贴板内容将被一视同仁，任何选中的内容都可以立即通过任意方式进行粘贴。禁"
 "用此选项后，选中内容可能还会被保存到剪贴板的历史记录中 (通过下面的选项控制)，"
-"但只能通过鼠标中间键进行粘贴。"
+"但只能通过鼠标中键进行粘贴。"
 
 #: configdialog.cpp:106
 #, kde-format
@@ -642,8 +642,8 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"通过光标选中的内容将被自动复制到剪贴板，以便在之后通过粘贴操作或者鼠标中间键"
-"进行粘贴。<br/><a href=\"1\">查看关于选中内容和剪贴板内容的更多信息</a>。"
+"通过光标选中的内容将被自动复制到剪贴板，以便在之后通过粘贴操作或者鼠标中键进"
+"行粘贴。<br/><a href=\"1\">查看关于选中内容和剪贴板内容的更多信息</a>。"
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -660,7 +660,7 @@ msgid ""
 "using a middle-click."
 msgstr ""
 "使用光标选中，但没有明确复制到剪贴板的内容不会自动保存到剪贴板历史记录中，而"
-"且只能通过点击鼠标中间键进行粘贴。"
+"且只能通过点击鼠标中键进行粘贴。"
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37

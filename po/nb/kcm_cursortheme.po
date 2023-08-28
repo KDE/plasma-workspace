@@ -236,7 +236,6 @@ msgstr[1] ""
 
 #: ui/main.qml:58 ui/main.qml:92
 #, fuzzy, kde-format
-#| msgid "Size:"
 msgid "Size: %1"
 msgstr "Størrelse:"
 
