@@ -177,6 +177,12 @@ Kirigami.OverlaySheet {
             Repeater {
                 model: kcm.avatarFiles
                 PictureButton {
+                    id: delegate
+
+                    required property string modelData
+
+                    readonly property url source: "file:" + modelData
+
                     hoverEnabled: true
 
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -184,30 +190,22 @@ Kirigami.OverlaySheet {
                     QQC2.ToolTip.visible: hovered || activeFocus
                     Accessible.name: modelData
 
-                    Image {
+                    Kirigami.ShadowedImage {
                         id: imgDelegate
-                        asynchronous: true
-                        smooth: true
-                        mipmap: true
-                        sourceSize.width: Kirigami.Units.gridUnit * 5
-                        sourceSize.height: Kirigami.Units.gridUnit * 5
-                        source: "file:" + modelData
-
-                        Accessible.ignored: true
-                    }
-
-                    Kirigami.ShadowedTexture {
-                        radius: width / 2
+                        radius: width
                         anchors.centerIn: parent
                         width: Kirigami.Units.gridUnit * 5
                         height: Kirigami.Units.gridUnit * 5
-
-                        source: imgDelegate
+                        sourceSize.width: width
+                        sourceSize.height: height
+                        asynchronous: true
+                        mipmap: true
+                        source: delegate.source
                     }
 
                     onClicked: {
                         usersDetailPage.oldImage = usersDetailPage.user.face
-                        usersDetailPage.user.face = imgDelegate.source
+                        usersDetailPage.user.face = delegate.source
                         usersDetailPage.overrideImage = true
                         picturesSheet.close()
                     }
