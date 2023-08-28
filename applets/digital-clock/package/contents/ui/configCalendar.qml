@@ -32,6 +32,7 @@ ColumnLayout {
     }
 
     Kirigami.FormLayout {
+        Layout.alignment: Qt.AlignTop
         Layout.fillWidth: true
 
         QQC2.CheckBox {
