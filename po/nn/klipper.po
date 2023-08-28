@@ -682,8 +682,8 @@ msgid ""
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "Viss det er kryssa av her, vert innhald merkt med muse­peikaren automatisk "
-"kopiert til utklipps­tavla, slik at du kan lima det inn både med ei «Lim "
-"inn»-handling og ved å midtklikka.<br/><a href=\"1\">Les meir om utvalet og "
+"kopiert til utklipps­tavla, slik at du kan lima det inn både med ei «Lim inn»-"
+"handling og ved å midtklikka.<br/><a href=\"1\">Les meir om utvalet og "
 "utklippstavla</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
