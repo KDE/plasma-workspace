@@ -78,7 +78,7 @@ void ScreenPoolTest::testScreenInsertion()
     QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
 
     // Add a new output
-    exec([=] {
+    exec([this] {
         OutputData data;
         data.mode.resolution = {1920, 1080};
         data.position = {1920, 0};
@@ -111,7 +111,7 @@ void ScreenPoolTest::testRedundantScreenInsertion()
     QSignalSpy addedFromAppSpy(qGuiApp, SIGNAL(screenAdded(QScreen *)));
 
     // Add a new output
-    exec([=] {
+    exec([this] {
         OutputData data;
         data.mode.resolution = {1280, 720};
         data.position = {1920, 0};
@@ -142,7 +142,7 @@ void ScreenPoolTest::testMoveOutOfRedundant()
 {
     QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
 
-    exec([=] {
+    exec([this] {
         auto *out = output(2);
         auto *xdgOut = xdgOutput(out);
         out->m_data.mode.resolution = {1280, 2048};
@@ -165,7 +165,7 @@ void ScreenPoolTest::testMoveInRedundant()
 {
     QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
 
-    exec([=] {
+    exec([this] {
         auto *out = output(2);
         auto *xdgOut = xdgOutput(out);
         out->m_data.mode.resolution = {1280, 720};
@@ -197,7 +197,7 @@ void ScreenPoolTest::testOrderSwap()
 
     // Set a primary screen
     // TODO: "WL-2", "WL-1", "WL-3" when tests are self contained
-    exec([=] {
+    exec([this] {
         outputOrder()->setList({"WL-2", "WL-1", "WL-3"});
     });
 
@@ -226,7 +226,7 @@ void ScreenPoolTest::testPrimarySwapToRedundant()
     QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
 
     // Set a primary screen
-    exec([=] {
+    exec([this] {
         outputOrder()->setList({"WL-3", "WL-2", "WL-1"});
     });
 
@@ -239,7 +239,7 @@ void ScreenPoolTest::testMoveRedundantToMakePrimary()
 {
     QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
 
-    exec([=] {
+    exec([this] {
         auto *out = output(2);
         auto *xdgOut = xdgOutput(out);
         out->m_data.mode.resolution = {1280, 2048};
@@ -277,7 +277,7 @@ void ScreenPoolTest::testMoveInRedundantToLosePrimary()
     QCOMPARE(m_screenPool->screenOrder().size(), 3);
     QScreen *oldScreen = m_screenPool->screenOrder()[0];
 
-    exec([=] {
+    exec([this] {
         auto *out = output(2);
         auto *xdgOut = xdgOutput(out);
         xdgOut->sendLogicalSize(QSize(1280, 720));
@@ -317,7 +317,7 @@ void ScreenPoolTest::testSecondScreenRemoval()
     QCOMPARE(m_screenPool->screenOrder()[1]->name(), QStringLiteral("WL-1"));
 
     // Remove an output
-    exec([=] {
+    exec([this] {
         remove(output(1));
         outputOrder()->setList({"WL-3", "WL-1"});
     });
@@ -339,7 +339,7 @@ void ScreenPoolTest::testThirdScreenRemoval()
     QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
 
     // Remove an output
-    exec([=] {
+    exec([this] {
         remove(output(1));
         outputOrder()->setList({"WL-1"});
     });
@@ -366,7 +366,7 @@ void ScreenPoolTest::testLastScreenRemoval()
     QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
 
     // Remove an output
-    exec([=] {
+    exec([this] {
         remove(output(0));
         outputOrder()->setList({});
     });
@@ -386,7 +386,7 @@ void ScreenPoolTest::testFakeToRealScreen()
     QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
 
     // Add a new output
-    exec([=] {
+    exec([this] {
         OutputData data;
         data.mode.resolution = {1920, 1080};
         data.position = {0, 0};
