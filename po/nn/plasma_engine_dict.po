@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2018-01-25 21:00+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: dictengine.cpp:67
+#: dictengine.cpp:66
 #, kde-format
 msgid "No match found for %1"
 msgstr "Fann ingen treff for %1"

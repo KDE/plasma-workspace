@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2019-01-04 21:47+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 18.12.0\n"
 
-#: dictengine.cpp:67
+#: dictengine.cpp:66
 #, kde-format
 msgid "No match found for %1"
 msgstr "找不到 %1 的符合項目"

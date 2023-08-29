@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,589 +21,589 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_engine_soliddevice.po\n"
 "X-Crowdin-File-ID: 8854\n"
 
-#: soliddeviceengine.cpp:113
+#: soliddeviceengine.cpp:112
 msgid "Parent UDI"
 msgstr "Бацькоўскі UDI"
 
-#: soliddeviceengine.cpp:114
+#: soliddeviceengine.cpp:113
 msgid "Vendor"
 msgstr "Вытворца"
 
-#: soliddeviceengine.cpp:115
+#: soliddeviceengine.cpp:114
 msgid "Product"
 msgstr "Прылада"
 
-#: soliddeviceengine.cpp:116
+#: soliddeviceengine.cpp:115
 msgid "Description"
 msgstr "Апісанне"
 
-#: soliddeviceengine.cpp:117
+#: soliddeviceengine.cpp:116
 msgid "Icon"
 msgstr "Значок"
 
-#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:593
+#: soliddeviceengine.cpp:117 soliddeviceengine.cpp:592
 msgid "Emblems"
 msgstr "Эмблемы"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
-#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:494
+#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:474
+#: soliddeviceengine.cpp:480 soliddeviceengine.cpp:493
 msgid "State"
 msgstr "Стан"
 
-#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
-#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:490
-#: soliddeviceengine.cpp:492
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
+#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:489
+#: soliddeviceengine.cpp:491
 msgid "Operation result"
 msgstr "Вынікі аперацыі"
 
-#: soliddeviceengine.cpp:121
+#: soliddeviceengine.cpp:120
 msgid "Timestamp"
 msgstr "Адзнака часу"
 
-#: soliddeviceengine.cpp:129
+#: soliddeviceengine.cpp:128
 msgid "Processor"
 msgstr "Працэсар"
 
-#: soliddeviceengine.cpp:130
+#: soliddeviceengine.cpp:129
 msgid "Number"
 msgstr "Нумар"
 
-#: soliddeviceengine.cpp:131
+#: soliddeviceengine.cpp:130
 msgid "Max Speed"
 msgstr "Максімальная хуткасць"
 
-#: soliddeviceengine.cpp:132
+#: soliddeviceengine.cpp:131
 msgid "Can Change Frequency"
 msgstr "Можна змяніць частату"
 
-#: soliddeviceengine.cpp:140
+#: soliddeviceengine.cpp:139
 msgid "Block"
 msgstr "Заблакаваць"
 
-#: soliddeviceengine.cpp:141
+#: soliddeviceengine.cpp:140
 msgid "Major"
 msgstr "Асноўная"
 
-#: soliddeviceengine.cpp:142
+#: soliddeviceengine.cpp:141
 msgid "Minor"
 msgstr "Дадатковая"
 
-#: soliddeviceengine.cpp:143
+#: soliddeviceengine.cpp:142
 msgid "Device"
 msgstr "Прылада"
 
-#: soliddeviceengine.cpp:151
+#: soliddeviceengine.cpp:150
 msgid "Storage Access"
 msgstr "Доступ да назапашвальніка"
 
-#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
-#: soliddeviceengine.cpp:607
+#: soliddeviceengine.cpp:151 soliddeviceengine.cpp:505
+#: soliddeviceengine.cpp:606
 msgid "Accessible"
 msgstr "Даступнасць"
 
-#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
 msgid "File Path"
 msgstr "Шлях да файла"
 
-#: soliddeviceengine.cpp:168
+#: soliddeviceengine.cpp:167
 msgid "Storage Drive"
 msgstr "Назапашвальнік"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Ide"
 msgstr "Ide"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Usb"
 msgstr "Usb"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Ieee1394"
 msgstr "Ieee1394"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Scsi"
 msgstr "Scsi"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Sata"
 msgstr "Sata"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Platform"
 msgstr "Платформа"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Hard Disk"
 msgstr "Цвёрды дыск"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"
 msgstr "Cdrom"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Floppy"
 msgstr "Дыскета"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Tape"
 msgstr "Стужка"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Compact Flash"
 msgstr "Compact Flash"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Memory Stick"
 msgstr "Memory Stick"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Smart Media"
 msgstr "Smart Media"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "SdMmc"
 msgstr "SdMmc"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Xd"
 msgstr "Xd"
 
-#: soliddeviceengine.cpp:178
+#: soliddeviceengine.cpp:177
 msgid "Bus"
 msgstr "Шына"
 
-#: soliddeviceengine.cpp:179
+#: soliddeviceengine.cpp:178
 msgid "Drive Type"
 msgstr "Тып дыска"
 
-#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
-#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
+#: soliddeviceengine.cpp:179 soliddeviceengine.cpp:192
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
 msgid "Removable"
 msgstr "Рухомы носьбіт"
 
-#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
-#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
+#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Hotpluggable"
 msgstr "Можна адлучаць падчас працы"
 
-#: soliddeviceengine.cpp:203
+#: soliddeviceengine.cpp:202
 msgid "Optical Drive"
 msgstr "Аптычны дыск"
 
-#: soliddeviceengine.cpp:208
+#: soliddeviceengine.cpp:207
 msgid "CD-R"
 msgstr "CD-R"
 
-#: soliddeviceengine.cpp:211
+#: soliddeviceengine.cpp:210
 msgid "CD-RW"
 msgstr "CD-RW"
 
-#: soliddeviceengine.cpp:214
+#: soliddeviceengine.cpp:213
 msgid "DVD"
 msgstr "DVD"
 
-#: soliddeviceengine.cpp:217
+#: soliddeviceengine.cpp:216
 msgid "DVD-R"
 msgstr "DVD-R"
 
-#: soliddeviceengine.cpp:220
+#: soliddeviceengine.cpp:219
 msgid "DVD-RW"
 msgstr "DVD-RW"
 
-#: soliddeviceengine.cpp:223
+#: soliddeviceengine.cpp:222
 msgid "DVD-RAM"
 msgstr "DVD-RAM"
 
-#: soliddeviceengine.cpp:226
+#: soliddeviceengine.cpp:225
 msgid "DVD+R"
 msgstr "DVD+R"
 
-#: soliddeviceengine.cpp:229
+#: soliddeviceengine.cpp:228
 msgid "DVD+RW"
 msgstr "DVD+RW"
 
-#: soliddeviceengine.cpp:232
+#: soliddeviceengine.cpp:231
 msgid "DVD+DL"
 msgstr "DVD+DL"
 
-#: soliddeviceengine.cpp:235
+#: soliddeviceengine.cpp:234
 msgid "DVD+DLRW"
 msgstr "DVD+DLRW"
 
-#: soliddeviceengine.cpp:238
+#: soliddeviceengine.cpp:237
 msgid "BD"
 msgstr "BD"
 
-#: soliddeviceengine.cpp:241
+#: soliddeviceengine.cpp:240
 msgid "BD-R"
 msgstr "BD-R"
 
-#: soliddeviceengine.cpp:244
+#: soliddeviceengine.cpp:243
 msgid "BD-RE"
 msgstr "BD-RE"
 
-#: soliddeviceengine.cpp:247
+#: soliddeviceengine.cpp:246
 msgid "HDDVD"
 msgstr "HDDVD"
 
-#: soliddeviceengine.cpp:250
+#: soliddeviceengine.cpp:249
 msgid "HDDVD-R"
 msgstr "HDDVD-R"
 
-#: soliddeviceengine.cpp:253
+#: soliddeviceengine.cpp:252
 msgid "HDDVD-RW"
 msgstr "HDDVD-RW"
 
-#: soliddeviceengine.cpp:255
+#: soliddeviceengine.cpp:254
 msgid "Supported Media"
 msgstr "Медыя, якія падтрымліваюцца"
 
-#: soliddeviceengine.cpp:257
+#: soliddeviceengine.cpp:256
 msgid "Read Speed"
 msgstr "Хуткасць чытання"
 
-#: soliddeviceengine.cpp:258
+#: soliddeviceengine.cpp:257
 msgid "Write Speed"
 msgstr "Хуткасць запісу"
 
-#: soliddeviceengine.cpp:266
+#: soliddeviceengine.cpp:265
 msgid "Write Speeds"
 msgstr "Хуткасці запісу"
 
-#: soliddeviceengine.cpp:274
+#: soliddeviceengine.cpp:273
 msgid "Storage Volume"
 msgstr "Том назапашвальніка"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Other"
 msgstr "Іншае"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Unused"
 msgstr "Не выкарыстоўваецца"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "File System"
 msgstr "Файлавая сістэма"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Partition Table"
 msgstr "Табліца раздзелаў"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Raid"
 msgstr "Raid"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Encrypted"
 msgstr "Зашыфравана"
 
-#: soliddeviceengine.cpp:280 soliddeviceengine.cpp:282
+#: soliddeviceengine.cpp:279 soliddeviceengine.cpp:281
 msgid "Usage"
 msgstr "Выкарыстанне"
 
-#: soliddeviceengine.cpp:282
+#: soliddeviceengine.cpp:281
 #, kde-format
 msgid "Unknown"
 msgstr "Невядома"
 
-#: soliddeviceengine.cpp:285
+#: soliddeviceengine.cpp:284
 msgid "Ignored"
 msgstr "Ігнаруецца"
 
-#: soliddeviceengine.cpp:286
+#: soliddeviceengine.cpp:285
 msgid "File System Type"
 msgstr "Тып файлавай сістэмы"
 
-#: soliddeviceengine.cpp:287
+#: soliddeviceengine.cpp:286
 msgid "Label"
 msgstr "Адмеціна"
 
-#: soliddeviceengine.cpp:288
+#: soliddeviceengine.cpp:287
 msgid "UUID"
 msgstr "UUID"
 
-#: soliddeviceengine.cpp:297
+#: soliddeviceengine.cpp:296
 msgid "Encrypted Container"
 msgstr "Зашыфраваны кантэйнер"
 
-#: soliddeviceengine.cpp:309
+#: soliddeviceengine.cpp:308
 msgid "OpticalDisc"
 msgstr "Аптычны дыск"
 
-#: soliddeviceengine.cpp:315
+#: soliddeviceengine.cpp:314
 msgid "Audio"
 msgstr "Аўдыё"
 
-#: soliddeviceengine.cpp:318
+#: soliddeviceengine.cpp:317
 msgid "Data"
 msgstr "Даныя"
 
-#: soliddeviceengine.cpp:321
+#: soliddeviceengine.cpp:320
 msgid "Video CD"
 msgstr "Відэа-CD"
 
-#: soliddeviceengine.cpp:324
+#: soliddeviceengine.cpp:323
 msgid "Super Video CD"
 msgstr "Супер Відэа-CD"
 
-#: soliddeviceengine.cpp:327
+#: soliddeviceengine.cpp:326
 msgid "Video DVD"
 msgstr "Відэа-DVD"
 
-#: soliddeviceengine.cpp:330
+#: soliddeviceengine.cpp:329
 msgid "Video Blu Ray"
 msgstr "Blu Ray відэа"
 
-#: soliddeviceengine.cpp:332
+#: soliddeviceengine.cpp:331
 msgid "Available Content"
 msgstr "Даступнае змесціва"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "Unknown Disc Type"
 msgstr "Невядомы тып дыска"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "CD Rom"
 msgstr "CD-дыскавод"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "CD Recordable"
 msgstr "CD для запісу"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "CD Rewritable"
 msgstr "Перазапісвальны CD"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "DVD Rom"
 msgstr "DVD-дыскавод"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "DVD Ram"
 msgstr "DVD Ram"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Recordable"
 msgstr "DVD для запісу"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Rewritable"
 msgstr "Перазапісвальны DVD"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Plus Recordable"
 msgstr "DVD Plus для запісу"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Plus Rewritable"
 msgstr "Перазапісвальны DVD Plus"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Recordable Duallayer"
 msgstr "Двухслаёвы DVD Plus для запісу"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Rewritable Duallayer"
 msgstr "Двухслаёвы перазапісвальны DVD Plus"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "Blu Ray Rom"
 msgstr "Дыскавод Blu Ray"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "Blu Ray Recordable"
 msgstr "Blu Ray для запісу"
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "Blu Ray Rewritable"
 msgstr "Перазапісвальны Blu Ray"
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "HD DVD Rom"
 msgstr "Дыскавод HD DVD"
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Recordable"
 msgstr "HD DVD для запісу"
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Rewritable"
 msgstr "Перазапісвальны HD DVD"
 
-#: soliddeviceengine.cpp:344
+#: soliddeviceengine.cpp:343
 msgid "Disc Type"
 msgstr "Тып дыска"
 
-#: soliddeviceengine.cpp:345
+#: soliddeviceengine.cpp:344
 msgid "Appendable"
 msgstr "Можна падлучыць"
 
-#: soliddeviceengine.cpp:346
+#: soliddeviceengine.cpp:345
 msgid "Blank"
 msgstr "Пуста"
 
-#: soliddeviceengine.cpp:347
+#: soliddeviceengine.cpp:346
 msgid "Rewritable"
 msgstr "Можна перазапісваць"
 
-#: soliddeviceengine.cpp:348
+#: soliddeviceengine.cpp:347
 msgid "Capacity"
 msgstr "Ёмістасць"
 
-#: soliddeviceengine.cpp:356
+#: soliddeviceengine.cpp:355
 msgid "Camera"
 msgstr "Камера"
 
-#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
+#: soliddeviceengine.cpp:357 soliddeviceengine.cpp:371
 msgid "Supported Protocols"
 msgstr "Пратаколы, якія падтрымліваюцца"
 
-#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
 msgid "Supported Drivers"
 msgstr "Драйверы, якія падтрымліваюцца"
 
-#: soliddeviceengine.cpp:370
+#: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
 msgstr "Партатыўны медыяпрайгравальнік"
 
-#: soliddeviceengine.cpp:384
+#: soliddeviceengine.cpp:383
 msgid "Battery"
 msgstr "Батарэя"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "Unknown Battery"
 msgstr "Невядомая батарэя"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "PDA Battery"
 msgstr "Батарэя кішэннага камп'ютара"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "UPS Battery"
 msgstr "Крыніца бесперабойнага сілкавання"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Primary Battery"
 msgstr "Асноўная батарэя"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Mouse Battery"
 msgstr "Батарэя мышы"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Keyboard Battery"
 msgstr "Батарэя клавіятуры"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Keyboard Mouse Battery"
 msgstr "Батарэя мышы і клавіятуры"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Camera Battery"
 msgstr "Батарэя камеры"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Phone Battery"
 msgstr "Батарэя тэлефона"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Monitor Battery"
 msgstr "Батарэя манітора"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
 msgstr "Батарэя гульнявой прылады ўводу"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 msgid "Bluetooth Battery"
 msgstr "Батарэя bluetooth-прылады"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Not Charging"
 msgstr "Не зараджаецца"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Charging"
 msgstr "Зараджаецца"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Discharging"
 msgstr "Разраджаецца"
 
-#: soliddeviceengine.cpp:395
+#: soliddeviceengine.cpp:394
 msgid "Fully Charged"
 msgstr "Поўнасцю зараджана"
 
-#: soliddeviceengine.cpp:397
+#: soliddeviceengine.cpp:396
 msgid "Plugged In"
 msgstr "Падлучана да крыніцы"
 
-#: soliddeviceengine.cpp:398
+#: soliddeviceengine.cpp:397
 msgid "Type"
 msgstr "Тып"
 
-#: soliddeviceengine.cpp:399
+#: soliddeviceengine.cpp:398
 msgid "Charge Percent"
 msgstr "Адсотак зараду"
 
-#: soliddeviceengine.cpp:400
+#: soliddeviceengine.cpp:399
 msgid "Rechargeable"
 msgstr "Ад акумулятара"
 
-#: soliddeviceengine.cpp:401
+#: soliddeviceengine.cpp:400
 msgid "Charge State"
 msgstr "Стан зараджэння"
 
-#: soliddeviceengine.cpp:426
+#: soliddeviceengine.cpp:425
 msgid "Type Description"
 msgstr "Апісанне тыпу"
 
-#: soliddeviceengine.cpp:431
+#: soliddeviceengine.cpp:430
 msgid "Device Types"
 msgstr "Тыпы прылад"
 
-#: soliddeviceengine.cpp:455 soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:454 soliddeviceengine.cpp:553
 msgid "Size"
 msgstr "Памер"
 
-#: soliddeviceengine.cpp:534
+#: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr "Файлавая сістэма не адказвае"
 
-#: soliddeviceengine.cpp:534
+#: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "Файлавая сістэма, прымантаваная ў \"%1\", не адказвае"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:551
 msgid "Free Space"
 msgstr "Вольная прастора"
 
-#: soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:552
 msgid "Free Space Text"
 msgstr "Тэкст вольнай прасторы"
 
-#: soliddeviceengine.cpp:555
+#: soliddeviceengine.cpp:554
 msgid "Size Text"
 msgstr "Памер тэксту"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:580
 msgid "Temperature"
 msgstr "Тэмпература"
 
-#: soliddeviceengine.cpp:582
+#: soliddeviceengine.cpp:581
 msgid "Temperature Unit"
 msgstr "Адзінкі вымярэння тэмпературы"
 
-#: soliddeviceengine.cpp:626 soliddeviceengine.cpp:630
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
 msgid "In Use"
 msgstr "Выкарыстоўваецца"

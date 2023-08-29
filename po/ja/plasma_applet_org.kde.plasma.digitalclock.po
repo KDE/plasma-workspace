@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2023-02-23 12:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -161,7 +161,7 @@ msgid "12-Hour"
 msgstr "12時間"
 
 #: package/contents/ui/configAppearance.qml:130
-#: package/contents/ui/configCalendar.qml:52
+#: package/contents/ui/configCalendar.qml:53
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "地域設定の標準を使用"
@@ -254,22 +254,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "フォントを選択"
 
-#: package/contents/ui/configCalendar.qml:39
+#: package/contents/ui/configCalendar.qml:40
 #, kde-format
 msgid "General:"
 msgstr "全般:"
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:41
 #, kde-format
 msgid "Show week numbers"
 msgstr "週番号を表示"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "First day of week:"
 msgstr "週の最初の日:"
 
-#: package/contents/ui/configCalendar.qml:66
+#: package/contents/ui/configCalendar.qml:67
 #, kde-format
 msgid "Available Plugins:"
 msgstr "利用可能なプラグイン:"

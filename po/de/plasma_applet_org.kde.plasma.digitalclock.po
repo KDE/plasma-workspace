@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2023-07-09 01:04+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -160,7 +160,7 @@ msgid "12-Hour"
 msgstr "12 Stunden"
 
 #: package/contents/ui/configAppearance.qml:130
-#: package/contents/ui/configCalendar.qml:52
+#: package/contents/ui/configCalendar.qml:53
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Regionaleinstellungen verwenden"
@@ -255,22 +255,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Eine Schriftart auswählen"
 
-#: package/contents/ui/configCalendar.qml:39
+#: package/contents/ui/configCalendar.qml:40
 #, kde-format
 msgid "General:"
 msgstr "Allgemein:"
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:41
 #, kde-format
 msgid "Show week numbers"
 msgstr "Kalenderwoche anzeigen"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "First day of week:"
 msgstr "Erster Tag der Woche:"
 
-#: package/contents/ui/configCalendar.qml:66
+#: package/contents/ui/configCalendar.qml:67
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Verfügbare Module:"

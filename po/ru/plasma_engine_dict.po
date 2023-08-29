@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2017-12-02 17:17+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: dictengine.cpp:67
+#: dictengine.cpp:66
 #, kde-format
 msgid "No match found for %1"
 msgstr "Ничего не найдено для %1"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_powermanagement\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2014-06-18 09:12+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: powermanagementengine.cpp:491
+#: powermanagementengine.cpp:490
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Batéria %1"
 
-#: powermanagementengine.cpp:493
+#: powermanagementengine.cpp:492
 #, kde-format
 msgid "Battery"
 msgstr "Batéria"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2017-05-16 06:56-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -19,597 +19,597 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: soliddeviceengine.cpp:113
+#: soliddeviceengine.cpp:112
 msgid "Parent UDI"
 msgstr "הורה UDI"
 
-#: soliddeviceengine.cpp:114
+#: soliddeviceengine.cpp:113
 msgid "Vendor"
 msgstr "ספק"
 
-#: soliddeviceengine.cpp:115
+#: soliddeviceengine.cpp:114
 msgid "Product"
 msgstr "מוצר"
 
-#: soliddeviceengine.cpp:116
+#: soliddeviceengine.cpp:115
 msgid "Description"
 msgstr "תאור"
 
-#: soliddeviceengine.cpp:117
+#: soliddeviceengine.cpp:116
 msgid "Icon"
 msgstr "סימלון"
 
-#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:593
+#: soliddeviceengine.cpp:117 soliddeviceengine.cpp:592
 msgid "Emblems"
 msgstr "אות"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
-#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:494
+#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:474
+#: soliddeviceengine.cpp:480 soliddeviceengine.cpp:493
 msgid "State"
 msgstr "מדינה"
 
-#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
-#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:490
-#: soliddeviceengine.cpp:492
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
+#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:489
+#: soliddeviceengine.cpp:491
 msgid "Operation result"
 msgstr "פעולה"
 
-#: soliddeviceengine.cpp:121
+#: soliddeviceengine.cpp:120
 msgid "Timestamp"
 msgstr "חותמת זמן"
 
-#: soliddeviceengine.cpp:129
+#: soliddeviceengine.cpp:128
 msgid "Processor"
 msgstr "מעבד"
 
-#: soliddeviceengine.cpp:130
+#: soliddeviceengine.cpp:129
 msgid "Number"
 msgstr "מספר"
 
-#: soliddeviceengine.cpp:131
+#: soliddeviceengine.cpp:130
 msgid "Max Speed"
 msgstr "מהירות מקסימלית:"
 
-#: soliddeviceengine.cpp:132
+#: soliddeviceengine.cpp:131
 msgid "Can Change Frequency"
 msgstr "תדירות"
 
-#: soliddeviceengine.cpp:140
+#: soliddeviceengine.cpp:139
 msgid "Block"
 msgstr "בלוק"
 
-#: soliddeviceengine.cpp:141
+#: soliddeviceengine.cpp:140
 msgid "Major"
 msgstr "ראשי"
 
-#: soliddeviceengine.cpp:142
+#: soliddeviceengine.cpp:141
 msgid "Minor"
 msgstr "משני"
 
-#: soliddeviceengine.cpp:143
+#: soliddeviceengine.cpp:142
 msgid "Device"
 msgstr "התקן"
 
-#: soliddeviceengine.cpp:151
+#: soliddeviceengine.cpp:150
 msgid "Storage Access"
 msgstr "אחסון"
 
-#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
-#: soliddeviceengine.cpp:607
+#: soliddeviceengine.cpp:151 soliddeviceengine.cpp:505
+#: soliddeviceengine.cpp:606
 msgid "Accessible"
 msgstr "לא זמין"
 
-#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
 msgid "File Path"
 msgstr "נתיב הקובץ"
 
-#: soliddeviceengine.cpp:168
+#: soliddeviceengine.cpp:167
 msgid "Storage Drive"
 msgstr "כונן אחסון"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Ide"
 msgstr "IDE"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Usb"
 msgstr "USB"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Ieee1394"
 msgstr "IEEE1394"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Scsi"
 msgstr "SCSI"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Sata"
 msgstr "SATA"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Platform"
 msgstr "פלטפורמה"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Hard Disk"
 msgstr "דיסק קשיח"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"
 msgstr "כונן תקליטור"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Floppy"
 msgstr "תקליטון"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Tape"
 msgstr "טייפ"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Compact Flash"
 msgstr "קורא Flash קומפקטי"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Memory Stick"
 msgstr "קורא כרטיסי זיכרון"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Smart Media"
 msgstr "מדיות חכמות"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "SdMmc"
 msgstr "SdMmc"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Xd"
 msgstr "Xd"
 
-#: soliddeviceengine.cpp:178
+#: soliddeviceengine.cpp:177
 msgid "Bus"
 msgstr "אפיק"
 
-#: soliddeviceengine.cpp:179
+#: soliddeviceengine.cpp:178
 msgid "Drive Type"
 msgstr "סוג כונן"
 
-#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
-#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
+#: soliddeviceengine.cpp:179 soliddeviceengine.cpp:192
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
 msgid "Removable"
 msgstr "נשלף"
 
-#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
-#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
+#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Hotpluggable"
 msgstr "החלפה חמה"
 
-#: soliddeviceengine.cpp:203
+#: soliddeviceengine.cpp:202
 msgid "Optical Drive"
 msgstr "כונן אופטי"
 
-#: soliddeviceengine.cpp:208
+#: soliddeviceengine.cpp:207
 msgid "CD-R"
 msgstr "CD-R"
 
-#: soliddeviceengine.cpp:211
+#: soliddeviceengine.cpp:210
 msgid "CD-RW"
 msgstr "CD-RW"
 
-#: soliddeviceengine.cpp:214
+#: soliddeviceengine.cpp:213
 msgid "DVD"
 msgstr "DVD"
 
-#: soliddeviceengine.cpp:217
+#: soliddeviceengine.cpp:216
 msgid "DVD-R"
 msgstr "DVD-R"
 
-#: soliddeviceengine.cpp:220
+#: soliddeviceengine.cpp:219
 msgid "DVD-RW"
 msgstr "DVD-RW"
 
-#: soliddeviceengine.cpp:223
+#: soliddeviceengine.cpp:222
 msgid "DVD-RAM"
 msgstr "DVD-RAM"
 
-#: soliddeviceengine.cpp:226
+#: soliddeviceengine.cpp:225
 msgid "DVD+R"
 msgstr "DVD+R"
 
-#: soliddeviceengine.cpp:229
+#: soliddeviceengine.cpp:228
 msgid "DVD+RW"
 msgstr "DVD+RW"
 
-#: soliddeviceengine.cpp:232
+#: soliddeviceengine.cpp:231
 msgid "DVD+DL"
 msgstr "DVD-R DL"
 
-#: soliddeviceengine.cpp:235
+#: soliddeviceengine.cpp:234
 msgid "DVD+DLRW"
 msgstr "DVD+DLRW"
 
-#: soliddeviceengine.cpp:238
+#: soliddeviceengine.cpp:237
 msgid "BD"
 msgstr "BD"
 
-#: soliddeviceengine.cpp:241
+#: soliddeviceengine.cpp:240
 msgid "BD-R"
 msgstr "BD-R"
 
-#: soliddeviceengine.cpp:244
+#: soliddeviceengine.cpp:243
 msgid "BD-RE"
 msgstr "BD-RE"
 
-#: soliddeviceengine.cpp:247
+#: soliddeviceengine.cpp:246
 msgid "HDDVD"
 msgstr "HDDVD"
 
-#: soliddeviceengine.cpp:250
+#: soliddeviceengine.cpp:249
 msgid "HDDVD-R"
 msgstr "HDDVD-R"
 
-#: soliddeviceengine.cpp:253
+#: soliddeviceengine.cpp:252
 msgid "HDDVD-RW"
 msgstr "HDDVD-RW"
 
-#: soliddeviceengine.cpp:255
+#: soliddeviceengine.cpp:254
 msgid "Supported Media"
 msgstr "מדיה נתמכת"
 
-#: soliddeviceengine.cpp:257
+#: soliddeviceengine.cpp:256
 msgid "Read Speed"
 msgstr "מהירות קריאה"
 
-#: soliddeviceengine.cpp:258
+#: soliddeviceengine.cpp:257
 msgid "Write Speed"
 msgstr "מהירות כתיבה"
 
-#: soliddeviceengine.cpp:266
+#: soliddeviceengine.cpp:265
 msgid "Write Speeds"
 msgstr "מהירויות כתיבה"
 
-#: soliddeviceengine.cpp:274
+#: soliddeviceengine.cpp:273
 msgid "Storage Volume"
 msgstr "אחסון"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Other"
 msgstr "אחר"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Unused"
 msgstr "לא בשימוש"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "File System"
 msgstr "מערכת־קבצים"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Partition Table"
 msgstr "טבלת מחיצות"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Raid"
 msgstr "Raid"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Encrypted"
 msgstr "מוצפן"
 
-#: soliddeviceengine.cpp:280 soliddeviceengine.cpp:282
+#: soliddeviceengine.cpp:279 soliddeviceengine.cpp:281
 msgid "Usage"
 msgstr "שימוש"
 
-#: soliddeviceengine.cpp:282
+#: soliddeviceengine.cpp:281
 #, kde-format
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: soliddeviceengine.cpp:285
+#: soliddeviceengine.cpp:284
 msgid "Ignored"
 msgstr "התעלם"
 
-#: soliddeviceengine.cpp:286
+#: soliddeviceengine.cpp:285
 msgid "File System Type"
 msgstr "סוג מערכת קבצים:"
 
-#: soliddeviceengine.cpp:287
+#: soliddeviceengine.cpp:286
 msgid "Label"
 msgstr "תווית"
 
-#: soliddeviceengine.cpp:288
+#: soliddeviceengine.cpp:287
 msgid "UUID"
 msgstr "UUID (מזהה מחיצה)"
 
-#: soliddeviceengine.cpp:297
+#: soliddeviceengine.cpp:296
 msgid "Encrypted Container"
 msgstr "מיכל מוצפן "
 
-#: soliddeviceengine.cpp:309
+#: soliddeviceengine.cpp:308
 msgid "OpticalDisc"
 msgstr "דיסק אופטי"
 
-#: soliddeviceengine.cpp:315
+#: soliddeviceengine.cpp:314
 msgid "Audio"
 msgstr "שמע"
 
-#: soliddeviceengine.cpp:318
+#: soliddeviceengine.cpp:317
 msgid "Data"
 msgstr "מידע"
 
-#: soliddeviceengine.cpp:321
+#: soliddeviceengine.cpp:320
 msgid "Video CD"
 msgstr "וידאו CD"
 
-#: soliddeviceengine.cpp:324
+#: soliddeviceengine.cpp:323
 msgid "Super Video CD"
 msgstr "תקליטור וידאו (SVCD)"
 
-#: soliddeviceengine.cpp:327
+#: soliddeviceengine.cpp:326
 msgid "Video DVD"
 msgstr "וידאו DVD"
 
-#: soliddeviceengine.cpp:330
+#: soliddeviceengine.cpp:329
 msgid "Video Blu Ray"
 msgstr "סרט בלו ריי"
 
-#: soliddeviceengine.cpp:332
+#: soliddeviceengine.cpp:331
 msgid "Available Content"
 msgstr "תוכן זמין"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "Unknown Disc Type"
 msgstr "סוג לא מוכר"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "CD Rom"
 msgstr "תקליטור"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "CD Recordable"
 msgstr "תקליטור"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "CD Rewritable"
 msgstr "ניתן לכתיבה מחודשת"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "DVD Rom"
 msgstr "DVD-ROM"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "DVD Ram"
 msgstr "DVD-RAM"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Recordable"
 msgstr "תקליטור"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Rewritable"
 msgstr "ניתן לכתיבה חוזרת"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Plus Recordable"
 msgstr "ועוד "
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Plus Rewritable"
 msgstr "ניתן לכתיבה חוזרת"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Recordable Duallayer"
 msgstr "ועוד "
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Rewritable Duallayer"
 msgstr "ניתן לכתיבה חוזרת"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "Blu Ray Rom"
 msgstr ""
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "Blu Ray Recordable"
 msgstr ""
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "Blu Ray Rewritable"
 msgstr ""
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "HD DVD Rom"
 msgstr ""
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Recordable"
 msgstr ""
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Rewritable"
 msgstr ""
 
-#: soliddeviceengine.cpp:344
+#: soliddeviceengine.cpp:343
 msgid "Disc Type"
 msgstr "סוג דיסק"
 
-#: soliddeviceengine.cpp:345
+#: soliddeviceengine.cpp:344
 msgid "Appendable"
 msgstr "ניתן להוסיף עליו"
 
-#: soliddeviceengine.cpp:346
+#: soliddeviceengine.cpp:345
 msgid "Blank"
 msgstr "ריק"
 
-#: soliddeviceengine.cpp:347
+#: soliddeviceengine.cpp:346
 msgid "Rewritable"
 msgstr "ניתן לכתיבה חוזרת"
 
-#: soliddeviceengine.cpp:348
+#: soliddeviceengine.cpp:347
 msgid "Capacity"
 msgstr "קיבולת"
 
-#: soliddeviceengine.cpp:356
+#: soliddeviceengine.cpp:355
 msgid "Camera"
 msgstr "מצלמה"
 
-#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
+#: soliddeviceengine.cpp:357 soliddeviceengine.cpp:371
 msgid "Supported Protocols"
 msgstr "פרוטוקולים נתמכים"
 
-#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
 msgid "Supported Drivers"
 msgstr "מנהלי התקנים נתמכים"
 
-#: soliddeviceengine.cpp:370
+#: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
 msgstr "נגן נדיה נייד"
 
-#: soliddeviceengine.cpp:384
+#: soliddeviceengine.cpp:383
 msgid "Battery"
 msgstr "סוללה"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "Unknown Battery"
 msgstr "סוללה לא ידועה"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 #, fuzzy
 msgid "PDA Battery"
 msgstr "סוללה של "
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "UPS Battery"
 msgstr "סוללה של UPS"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Primary Battery"
 msgstr "סוללה ראשית"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Mouse Battery"
 msgstr "סוללה של עכבר"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Keyboard Battery"
 msgstr "סוללה של מקלדת"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Keyboard Mouse Battery"
 msgstr "סוללה של עכבר מקלדת"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Camera Battery"
 msgstr "סוללה של מצלמה"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 #, fuzzy
 msgid "Phone Battery"
 msgstr "סוללה של עכבר"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 #, fuzzy
 msgid "Monitor Battery"
 msgstr "סוללה של עכבר"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
 msgstr ""
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 #, fuzzy
 #| msgid "Mouse Battery"
 msgid "Bluetooth Battery"
 msgstr "סוללה של עכבר"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 #, fuzzy
 msgid "Not Charging"
 msgstr "טוען"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Charging"
 msgstr "טוען"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Discharging"
 msgstr "פורק"
 
-#: soliddeviceengine.cpp:395
+#: soliddeviceengine.cpp:394
 msgid "Fully Charged"
 msgstr "טעונה במלואה"
 
-#: soliddeviceengine.cpp:397
+#: soliddeviceengine.cpp:396
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: soliddeviceengine.cpp:398
+#: soliddeviceengine.cpp:397
 msgid "Type"
 msgstr "סוג"
 
-#: soliddeviceengine.cpp:399
+#: soliddeviceengine.cpp:398
 msgid "Charge Percent"
 msgstr "אחוז טעינה"
 
-#: soliddeviceengine.cpp:400
+#: soliddeviceengine.cpp:399
 msgid "Rechargeable"
 msgstr "ניתן לטעינה חוזרת"
 
-#: soliddeviceengine.cpp:401
+#: soliddeviceengine.cpp:400
 msgid "Charge State"
 msgstr "מצב טעינה"
 
-#: soliddeviceengine.cpp:426
+#: soliddeviceengine.cpp:425
 msgid "Type Description"
 msgstr "תיאור הסוג"
 
-#: soliddeviceengine.cpp:431
+#: soliddeviceengine.cpp:430
 msgid "Device Types"
 msgstr "סוגי התקנים"
 
-#: soliddeviceengine.cpp:455 soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:454 soliddeviceengine.cpp:553
 msgid "Size"
 msgstr "גודל"
 
-#: soliddeviceengine.cpp:534
+#: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr ""
 
-#: soliddeviceengine.cpp:534
+#: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr ""
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:551
 msgid "Free Space"
 msgstr "מקום פנוי"
 
-#: soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:552
 msgid "Free Space Text"
 msgstr "מקום פנוי"
 
-#: soliddeviceengine.cpp:555
+#: soliddeviceengine.cpp:554
 #, fuzzy
 #| msgid "Size"
 msgid "Size Text"
 msgstr "גודל"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:580
 msgid "Temperature"
 msgstr "טמפרטורה"
 
-#: soliddeviceengine.cpp:582
+#: soliddeviceengine.cpp:581
 msgid "Temperature Unit"
 msgstr "יחידת טמפרטורה"
 
-#: soliddeviceengine.cpp:626 soliddeviceengine.cpp:630
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
 msgid "In Use"
 msgstr "בשימוש"

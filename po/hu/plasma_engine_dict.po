@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2019-12-01 18:49+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.03.70\n"
 
-#: dictengine.cpp:67
+#: dictengine.cpp:66
 #, kde-format
 msgid "No match found for %1"
 msgstr "Nincs találat erre: %1"

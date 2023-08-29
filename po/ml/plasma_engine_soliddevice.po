@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2021-03-08 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -18,590 +18,590 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.4\n"
 
-#: soliddeviceengine.cpp:113
+#: soliddeviceengine.cpp:112
 msgid "Parent UDI"
 msgstr "മാതൃ യുഡിഐ"
 
-#: soliddeviceengine.cpp:114
+#: soliddeviceengine.cpp:113
 msgid "Vendor"
 msgstr "കമ്പനി"
 
-#: soliddeviceengine.cpp:115
+#: soliddeviceengine.cpp:114
 msgid "Product"
 msgstr "ഉത്പന്നം"
 
-#: soliddeviceengine.cpp:116
+#: soliddeviceengine.cpp:115
 msgid "Description"
 msgstr "വിവരണം"
 
-#: soliddeviceengine.cpp:117
+#: soliddeviceengine.cpp:116
 msgid "Icon"
 msgstr "ചിഹ്നം"
 
-#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:593
+#: soliddeviceengine.cpp:117 soliddeviceengine.cpp:592
 msgid "Emblems"
 msgstr "മുദ്രകള്‍"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
-#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:494
+#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:474
+#: soliddeviceengine.cpp:480 soliddeviceengine.cpp:493
 msgid "State"
 msgstr "സ്ഥിതി"
 
-#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
-#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:490
-#: soliddeviceengine.cpp:492
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
+#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:489
+#: soliddeviceengine.cpp:491
 msgid "Operation result"
 msgstr "നടപടി ഫലം"
 
-#: soliddeviceengine.cpp:121
+#: soliddeviceengine.cpp:120
 msgid "Timestamp"
 msgstr "ടൈംസ്റ്റാമ്പ്"
 
-#: soliddeviceengine.cpp:129
+#: soliddeviceengine.cpp:128
 msgid "Processor"
 msgstr "പ്രൊസസ്സര്‍"
 
-#: soliddeviceengine.cpp:130
+#: soliddeviceengine.cpp:129
 msgid "Number"
 msgstr "നമ്പര്‍"
 
-#: soliddeviceengine.cpp:131
+#: soliddeviceengine.cpp:130
 msgid "Max Speed"
 msgstr "കൂടിയ വേഗം"
 
-#: soliddeviceengine.cpp:132
+#: soliddeviceengine.cpp:131
 msgid "Can Change Frequency"
 msgstr "ആവര്‍ത്തി മാറ്റാവുന്നത്"
 
-#: soliddeviceengine.cpp:140
+#: soliddeviceengine.cpp:139
 msgid "Block"
 msgstr "ബ്ലോക്ക്"
 
-#: soliddeviceengine.cpp:141
+#: soliddeviceengine.cpp:140
 msgid "Major"
 msgstr "മുഖ്യം"
 
-#: soliddeviceengine.cpp:142
+#: soliddeviceengine.cpp:141
 msgid "Minor"
 msgstr "നിസാരം"
 
-#: soliddeviceengine.cpp:143
+#: soliddeviceengine.cpp:142
 msgid "Device"
 msgstr "ഉപകരണം"
 
-#: soliddeviceengine.cpp:151
+#: soliddeviceengine.cpp:150
 msgid "Storage Access"
 msgstr "സൂക്ഷിപ്പിന്റെ അനുമതികള്‍"
 
-#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
-#: soliddeviceengine.cpp:607
+#: soliddeviceengine.cpp:151 soliddeviceengine.cpp:505
+#: soliddeviceengine.cpp:606
 msgid "Accessible"
 msgstr "സാമീപിയ്ക്കാവുന്നതു്"
 
-#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
 msgid "File Path"
 msgstr "ഫയല്‍ വഴി"
 
-#: soliddeviceengine.cpp:168
+#: soliddeviceengine.cpp:167
 msgid "Storage Drive"
 msgstr "സൂക്ഷിയ്ക്കാനുള്ള ഡ്രൈവ്"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Ide"
 msgstr "ഐഡിഇ"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Usb"
 msgstr "യുഎസ്ബി"
 
-#: soliddeviceengine.cpp:171
+#: soliddeviceengine.cpp:170
 msgid "Ieee1394"
 msgstr "ഐട്രിപ്പിള്‍ഇ1394"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Scsi"
 msgstr "സ്കസി"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Sata"
 msgstr "സാട്ട"
 
-#: soliddeviceengine.cpp:172
+#: soliddeviceengine.cpp:171
 msgid "Platform"
 msgstr "പ്ലാറ്റ്ഫോം"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Hard Disk"
 msgstr "ഹാര്‍ഡ് ഡിസ്ക്"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"
 msgstr "സിഡിറോം ഡ്രൈവ്"
 
-#: soliddeviceengine.cpp:174
+#: soliddeviceengine.cpp:173
 msgid "Floppy"
 msgstr "ഫ്ലോപ്പി"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Tape"
 msgstr "ടേപ്പ്"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Compact Flash"
 msgstr "കോമ്പാക്റ്റ് ഫ്ലാഷ്"
 
-#: soliddeviceengine.cpp:175
+#: soliddeviceengine.cpp:174
 msgid "Memory Stick"
 msgstr "മെമ്മറി സ്റ്റിക്"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Smart Media"
 msgstr "സ്മാര്‍ട്ട് മാദ്ധ്യമം"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "SdMmc"
 msgstr "എസ്ഡിഎംഎംസി"
 
-#: soliddeviceengine.cpp:176
+#: soliddeviceengine.cpp:175
 msgid "Xd"
 msgstr "എക്സ്‌ഡി"
 
-#: soliddeviceengine.cpp:178
+#: soliddeviceengine.cpp:177
 msgid "Bus"
 msgstr "ബസ്"
 
-#: soliddeviceengine.cpp:179
+#: soliddeviceengine.cpp:178
 msgid "Drive Type"
 msgstr "ഡ്രൈവിന്റെ തരം"
 
-#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
-#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
+#: soliddeviceengine.cpp:179 soliddeviceengine.cpp:192
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
 msgid "Removable"
 msgstr "നീക്കം ചെയ്യാവുന്ന"
 
-#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
-#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+#: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
+#: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Hotpluggable"
 msgstr "ഹോട്ട്പ്ലഗ് ചെയ്യാവുന്ന"
 
-#: soliddeviceengine.cpp:203
+#: soliddeviceengine.cpp:202
 msgid "Optical Drive"
 msgstr "ഒപ്റ്റിക്കല്‍ ഡ്രൈവ്"
 
-#: soliddeviceengine.cpp:208
+#: soliddeviceengine.cpp:207
 msgid "CD-R"
 msgstr "സിഡി-ആര്‍"
 
-#: soliddeviceengine.cpp:211
+#: soliddeviceengine.cpp:210
 msgid "CD-RW"
 msgstr "സിഡി-ആര്‍ഡബ്ലിയു"
 
-#: soliddeviceengine.cpp:214
+#: soliddeviceengine.cpp:213
 msgid "DVD"
 msgstr "ഡിവിഡി"
 
-#: soliddeviceengine.cpp:217
+#: soliddeviceengine.cpp:216
 msgid "DVD-R"
 msgstr "ഡിവിഡി-ആര്‍"
 
-#: soliddeviceengine.cpp:220
+#: soliddeviceengine.cpp:219
 msgid "DVD-RW"
 msgstr "ഡിവിഡി-ആര്‍ഡബ്ലിയു"
 
-#: soliddeviceengine.cpp:223
+#: soliddeviceengine.cpp:222
 msgid "DVD-RAM"
 msgstr "ഡിവിഡി-റാം"
 
-#: soliddeviceengine.cpp:226
+#: soliddeviceengine.cpp:225
 msgid "DVD+R"
 msgstr "ഡിവിഡി+ആര്‍"
 
-#: soliddeviceengine.cpp:229
+#: soliddeviceengine.cpp:228
 msgid "DVD+RW"
 msgstr "ഡിവിഡി+ആര്‍ഡബ്ലിയു"
 
-#: soliddeviceengine.cpp:232
+#: soliddeviceengine.cpp:231
 msgid "DVD+DL"
 msgstr "ഡിവിഡി+ഡിഎല്‍"
 
-#: soliddeviceengine.cpp:235
+#: soliddeviceengine.cpp:234
 msgid "DVD+DLRW"
 msgstr "ഡിവിഡി+ഡിഎല്‍ആര്‍ഡബ്ലിയു"
 
-#: soliddeviceengine.cpp:238
+#: soliddeviceengine.cpp:237
 msgid "BD"
 msgstr "ബിഡി"
 
-#: soliddeviceengine.cpp:241
+#: soliddeviceengine.cpp:240
 msgid "BD-R"
 msgstr "ബിഡി-ആര്‍"
 
-#: soliddeviceengine.cpp:244
+#: soliddeviceengine.cpp:243
 msgid "BD-RE"
 msgstr "ബിഡി-ആര്‍ഇ"
 
-#: soliddeviceengine.cpp:247
+#: soliddeviceengine.cpp:246
 msgid "HDDVD"
 msgstr "എച്ച്ഡിഡിവിഡി"
 
-#: soliddeviceengine.cpp:250
+#: soliddeviceengine.cpp:249
 msgid "HDDVD-R"
 msgstr "എച്ച്ഡിഡിവിഡി-ആര്‍"
 
-#: soliddeviceengine.cpp:253
+#: soliddeviceengine.cpp:252
 msgid "HDDVD-RW"
 msgstr "എച്ച്ഡിഡിവിഡി-ആര്‍ഡബ്ലിയു"
 
-#: soliddeviceengine.cpp:255
+#: soliddeviceengine.cpp:254
 msgid "Supported Media"
 msgstr "പിന്തുണയുള്ള മാദ്ധ്യമം"
 
-#: soliddeviceengine.cpp:257
+#: soliddeviceengine.cpp:256
 msgid "Read Speed"
 msgstr "വായനയുടെ വേഗം"
 
-#: soliddeviceengine.cpp:258
+#: soliddeviceengine.cpp:257
 msgid "Write Speed"
 msgstr "എഴുത്തിന്റെ വേഗത"
 
-#: soliddeviceengine.cpp:266
+#: soliddeviceengine.cpp:265
 msgid "Write Speeds"
 msgstr "എഴുത്തിന്റെ വേഗതകള്‍"
 
-#: soliddeviceengine.cpp:274
+#: soliddeviceengine.cpp:273
 msgid "Storage Volume"
 msgstr "സൂക്ഷിയ്ക്കാനുള്ള വാള്യം"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Other"
 msgstr "മറ്റുള്ളവ"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Unused"
 msgstr "ഉപയോഗിക്കാത്തവ"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "File System"
 msgstr "ഫയല്‍ സിസ്റ്റം"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Partition Table"
 msgstr "ഭാഗങ്ങളുടെ പട്ടിക"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Raid"
 msgstr "റൈഡ്"
 
-#: soliddeviceengine.cpp:277
+#: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Encrypted"
 msgstr "എന്‍ക്രിപ്റ്റ് ചെയ്തതു്"
 
-#: soliddeviceengine.cpp:280 soliddeviceengine.cpp:282
+#: soliddeviceengine.cpp:279 soliddeviceengine.cpp:281
 msgid "Usage"
 msgstr "ഉപയോഗം"
 
-#: soliddeviceengine.cpp:282
+#: soliddeviceengine.cpp:281
 #, kde-format
 msgid "Unknown"
 msgstr "അപരിചിതം"
 
-#: soliddeviceengine.cpp:285
+#: soliddeviceengine.cpp:284
 msgid "Ignored"
 msgstr "അവഗണിച്ചു"
 
-#: soliddeviceengine.cpp:286
+#: soliddeviceengine.cpp:285
 msgid "File System Type"
 msgstr "ഫയല്‍ സിസ്റ്റത്തിന്റെ തരം"
 
-#: soliddeviceengine.cpp:287
+#: soliddeviceengine.cpp:286
 msgid "Label"
 msgstr "ലേബല്‍"
 
-#: soliddeviceengine.cpp:288
+#: soliddeviceengine.cpp:287
 msgid "UUID"
 msgstr "യുയുഐഡി"
 
-#: soliddeviceengine.cpp:297
+#: soliddeviceengine.cpp:296
 msgid "Encrypted Container"
 msgstr "എന്‍ക്രിപ്റ്റ് ചെയ്ത കണ്ടൈനര്‍"
 
-#: soliddeviceengine.cpp:309
+#: soliddeviceengine.cpp:308
 msgid "OpticalDisc"
 msgstr "ഒപ്റ്റിക്കല്‍ ഡിസ്ക്"
 
-#: soliddeviceengine.cpp:315
+#: soliddeviceengine.cpp:314
 msgid "Audio"
 msgstr "ശബ്ദം"
 
-#: soliddeviceengine.cpp:318
+#: soliddeviceengine.cpp:317
 msgid "Data"
 msgstr "ഡേറ്റാ"
 
-#: soliddeviceengine.cpp:321
+#: soliddeviceengine.cpp:320
 msgid "Video CD"
 msgstr "വീഡിയോ സിഡി"
 
-#: soliddeviceengine.cpp:324
+#: soliddeviceengine.cpp:323
 msgid "Super Video CD"
 msgstr "സൂപ്പര്‍ വീഡിയോ സിഡി"
 
-#: soliddeviceengine.cpp:327
+#: soliddeviceengine.cpp:326
 msgid "Video DVD"
 msgstr "വീഡിയോ ഡിവിഡി"
 
-#: soliddeviceengine.cpp:330
+#: soliddeviceengine.cpp:329
 msgid "Video Blu Ray"
 msgstr "വീഡിയോ ബ്ലൂ റേ"
 
-#: soliddeviceengine.cpp:332
+#: soliddeviceengine.cpp:331
 msgid "Available Content"
 msgstr "ലഭ്യമായ ള്ളടക്കങ്ങള്‍"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "Unknown Disc Type"
 msgstr "അപരിചിതമയ ഡിസ്കിന്റെ തരം"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "CD Rom"
 msgstr "സിഡി റോം"
 
-#: soliddeviceengine.cpp:335
+#: soliddeviceengine.cpp:334
 msgid "CD Recordable"
 msgstr "റിക്കോര്‍ഡ് ചെയ്യാവുന്ന സിഡി"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "CD Rewritable"
 msgstr "വീണ്ടും എഴുതാവുന്ന സിഡി"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "DVD Rom"
 msgstr "ഡിവിഡി റോം"
 
-#: soliddeviceengine.cpp:336
+#: soliddeviceengine.cpp:335
 msgid "DVD Ram"
 msgstr "ഡിവിഡി റാം"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Recordable"
 msgstr "റിക്കോര്‍ഡ് ചെയ്യാവുന്ന ഡിവിഡി"
 
-#: soliddeviceengine.cpp:337
+#: soliddeviceengine.cpp:336
 msgid "DVD Rewritable"
 msgstr "വീണ്ടും എഴുതാവുന്ന ഡിവിഡി"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Plus Recordable"
 msgstr "റിക്കോര്‍ഡ് ചെയ്യാവുന്ന ഡിവിഡി പ്ലസ്"
 
-#: soliddeviceengine.cpp:338
+#: soliddeviceengine.cpp:337
 msgid "DVD Plus Rewritable"
 msgstr "വീണ്ടും എഴുതാവുന്ന ഡിവിഡി പ്ലസ്"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Recordable Duallayer"
 msgstr "റിക്കോര്‍ഡ് ചെയ്യാവുന്ന രണ്ടടുക്കുകളുള്ള ഡിവിഡി പ്ലസ്"
 
-#: soliddeviceengine.cpp:339
+#: soliddeviceengine.cpp:338
 msgid "DVD Plus Rewritable Duallayer"
 msgstr "വീണ്ടും എഴുതാവുന്ന രണ്ടടുക്കുകളുള്ള ഡിവിഡി പ്ലസ്"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "Blu Ray Rom"
 msgstr "ബ്ലൂ റേ റോം"
 
-#: soliddeviceengine.cpp:340
+#: soliddeviceengine.cpp:339
 msgid "Blu Ray Recordable"
 msgstr "റിക്കോര്‍ഡ് ചെയ്താവുന്ന ബ്ലൂ റേ"
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "Blu Ray Rewritable"
 msgstr "വീണ്ടും എഴുതാവുന്ന ബ്ലൂ റേ"
 
-#: soliddeviceengine.cpp:341
+#: soliddeviceengine.cpp:340
 msgid "HD DVD Rom"
 msgstr "എച്ച്ഡി ഡിവിഡി റോം"
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Recordable"
 msgstr "റിക്കോര്‍ഡ് ചെയ്യാവുന്ന എച്ച്ഡി ഡിവിഡി"
 
-#: soliddeviceengine.cpp:342
+#: soliddeviceengine.cpp:341
 msgid "HD DVD Rewritable"
 msgstr "വീണ്ടും എഴുതാവുന്ന എച്ച്ഡി ഡിവിഡി"
 
-#: soliddeviceengine.cpp:344
+#: soliddeviceengine.cpp:343
 msgid "Disc Type"
 msgstr "ഡിസ്കിന്റെ തരം"
 
-#: soliddeviceengine.cpp:345
+#: soliddeviceengine.cpp:344
 msgid "Appendable"
 msgstr "ബക്കിയുള്ളിടത്തു് എഴുതാവുന്നതു്"
 
-#: soliddeviceengine.cpp:346
+#: soliddeviceengine.cpp:345
 msgid "Blank"
 msgstr "ശൂന്യം"
 
-#: soliddeviceengine.cpp:347
+#: soliddeviceengine.cpp:346
 msgid "Rewritable"
 msgstr "വീണ്ടും എഴുതാവുന്ന"
 
-#: soliddeviceengine.cpp:348
+#: soliddeviceengine.cpp:347
 msgid "Capacity"
 msgstr "വലിപ്പം"
 
-#: soliddeviceengine.cpp:356
+#: soliddeviceengine.cpp:355
 msgid "Camera"
 msgstr "ക്യാമറ"
 
-#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
+#: soliddeviceengine.cpp:357 soliddeviceengine.cpp:371
 msgid "Supported Protocols"
 msgstr "പിന്തുണയ്ക്കുന്ന സമ്പ്രദായങ്ങള്‍"
 
-#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+#: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
 msgid "Supported Drivers"
 msgstr "പിന്തുണയുള്ള പ്രവര്‍ത്തകങ്ങള്‍"
 
-#: soliddeviceengine.cpp:370
+#: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
 msgstr "കൊണ്ടുനടക്കാവുന്ന മീഡിയ പ്ലെയര്‍"
 
-#: soliddeviceengine.cpp:384
+#: soliddeviceengine.cpp:383
 msgid "Battery"
 msgstr "ബാറ്ററി"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "Unknown Battery"
 msgstr "അപരിചിതമായ ബാറ്ററി"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "PDA Battery"
 msgstr "പിഡിഎ ബാറ്ററി"
 
-#: soliddeviceengine.cpp:387
+#: soliddeviceengine.cpp:386
 msgid "UPS Battery"
 msgstr "യൂപിഎസ് ബാറ്ററി"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Primary Battery"
 msgstr "പ്രാഥമിക ബാറ്ററി"
 
-#: soliddeviceengine.cpp:388
+#: soliddeviceengine.cpp:387
 msgid "Mouse Battery"
 msgstr "മൌസ് ബാറ്ററി"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Keyboard Battery"
 msgstr "കീബോര്‍ഡ് ബാറ്ററി"
 
-#: soliddeviceengine.cpp:389
+#: soliddeviceengine.cpp:388
 msgid "Keyboard Mouse Battery"
 msgstr "കീബോര്‍ഡ് മൌസ് ബാറ്ററി"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Camera Battery"
 msgstr "ക്യമറ ബാറ്ററി"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Phone Battery"
 msgstr "ഫോൺ ബാറ്ററി"
 
-#: soliddeviceengine.cpp:390
+#: soliddeviceengine.cpp:389
 msgid "Monitor Battery"
 msgstr "മോണിറ്റർ ബാറ്ററി"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
 msgstr "ഗെയിമിംഗ് ഇൻപുട്ട് ബാറ്ററി"
 
-#: soliddeviceengine.cpp:391
+#: soliddeviceengine.cpp:390
 msgid "Bluetooth Battery"
 msgstr "ബ്ലൂട്ടൂത്ത് ബാറ്ററി"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Not Charging"
 msgstr "ചാർജ്ജ് ആകുന്നില്ല"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Charging"
 msgstr "ചാര്‍ജ്ജ് ചെയ്തു് കൊണ്ടിരിയ്ക്കുന്നു"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:393
 msgid "Discharging"
 msgstr "ചാര്‍ജ്ജ് ഉപയോഗിച്ചുകൊണ്ടിരിയ്ക്കുന്നു"
 
-#: soliddeviceengine.cpp:395
+#: soliddeviceengine.cpp:394
 msgid "Fully Charged"
 msgstr "മുഴുവനും ചാര്‍ജ്ജ് ചെയ്തിരിയ്ക്കുന്നു"
 
-#: soliddeviceengine.cpp:397
+#: soliddeviceengine.cpp:396
 msgid "Plugged In"
 msgstr "കുത്തിയിരിക്കുന്നു"
 
-#: soliddeviceengine.cpp:398
+#: soliddeviceengine.cpp:397
 msgid "Type"
 msgstr "തരം"
 
-#: soliddeviceengine.cpp:399
+#: soliddeviceengine.cpp:398
 msgid "Charge Percent"
 msgstr "ചാര്‍ജ്ജിന്റെ ശതമാനം"
 
-#: soliddeviceengine.cpp:400
+#: soliddeviceengine.cpp:399
 msgid "Rechargeable"
 msgstr "വീണ്ടും ചാര്‍ജ്ജ് ചെയ്യാവുന്നത്"
 
-#: soliddeviceengine.cpp:401
+#: soliddeviceengine.cpp:400
 msgid "Charge State"
 msgstr "ചാര്‍ജ്ജ് സ്ഥിതി"
 
-#: soliddeviceengine.cpp:426
+#: soliddeviceengine.cpp:425
 msgid "Type Description"
 msgstr "വിവരണം ടൈപ്പുചെയ്യുക"
 
-#: soliddeviceengine.cpp:431
+#: soliddeviceengine.cpp:430
 msgid "Device Types"
 msgstr "ഉപകരണതരങ്ങള്‍"
 
-#: soliddeviceengine.cpp:455 soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:454 soliddeviceengine.cpp:553
 msgid "Size"
 msgstr "വലിപ്പം"
 
-#: soliddeviceengine.cpp:534
+#: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr "ഫയൽസംവിധാനം പ്രതികരിക്കുന്നില്ല"
 
-#: soliddeviceengine.cpp:534
+#: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "'%1' ൽ ഘടിപ്പിച്ചിരിക്കുന്ന ഫയൽ സംവിധാനം പ്രതികരിക്കുന്നില്ല"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:551
 msgid "Free Space"
 msgstr "സ്വതന്ത്രമായ സ്ഥലം"
 
-#: soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:552
 msgid "Free Space Text"
 msgstr "സ്വതന്ത്രസ്ഥല വാചകം"
 
-#: soliddeviceengine.cpp:555
+#: soliddeviceengine.cpp:554
 msgid "Size Text"
 msgstr "വലിപ്പ വാചകം"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:580
 msgid "Temperature"
 msgstr "താപനില"
 
-#: soliddeviceengine.cpp:582
+#: soliddeviceengine.cpp:581
 msgid "Temperature Unit"
 msgstr "താപനിലയുടേ യൂണിറ്റ്"
 
-#: soliddeviceengine.cpp:626 soliddeviceengine.cpp:630
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
 msgid "In Use"
 msgstr "ഉപയോഗത്തിലാണ്"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2015-03-15 14:50+0100\n"
 "Last-Translator: Adrián Chaves Fernández <adriyetichaves@gmail.com>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: powermanagementengine.cpp:491
+#: powermanagementengine.cpp:490
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Batería: %1"
 
-#: powermanagementengine.cpp:493
+#: powermanagementengine.cpp:492
 #, kde-format
 msgid "Battery"
 msgstr "Batería"

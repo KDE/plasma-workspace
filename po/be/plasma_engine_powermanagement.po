@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-08-29 01:56+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,13 +21,13 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_engine_powermanagement.po\n"
 "X-Crowdin-File-ID: 8852\n"
 
-#: powermanagementengine.cpp:491
+#: powermanagementengine.cpp:490
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Батарэя %1"
 
-#: powermanagementengine.cpp:493
+#: powermanagementengine.cpp:492
 #, kde-format
 msgid "Battery"
 msgstr "Батарэя"
