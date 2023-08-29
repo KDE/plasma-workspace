@@ -13,6 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kitemmodels 1.0 as KItemModels
 
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
@@ -172,13 +173,13 @@ PlasmoidItem {
         }
     }
 
-    PlasmaCore.SortFilterModel {
+    KItemModels.KSortFilterProxyModel {
         id: filterModel
         sourceModel: P5Support.DataModel {
             dataSource: sdSource
         }
-        filterRole: "Removable"
-        filterRegExp: {
+        filterRoleName: "Removable"
+        filterString: {
             if (devicesType === "removable") {
                 return "true"
             } else if (devicesType === "nonRemovable") {
@@ -187,7 +188,7 @@ PlasmoidItem {
                 return ""
             }
         }
-        sortRole: "Timestamp"
+        sortRoleName: "Timestamp"
         sortOrder: Qt.DescendingOrder
     }
 

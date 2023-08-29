@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kitemmodels 1.0 as KItemModels
 
 import "items"
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -64,10 +65,13 @@ PlasmaComponents3.ScrollView {
             return minHeight;
         }
 
-        model: PlasmaCore.SortFilterModel {
+        model: KItemModels.KSortFilterProxyModel {
             sourceModel: Plasmoid.systemTrayModel
-            filterRole: "effectiveStatus"
-            filterCallback: (source_row, value) => value === PlasmaCore.Types.PassiveStatus
+            filterRoleName: "effectiveStatus"
+            filterRowCallback: (sourceRow, sourceParent) => {
+                let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
+                return value === PlasmaCore.Types.PassiveStatus
+            }
         }
         delegate: ItemLoader {
             width: hiddenTasks.cellWidth

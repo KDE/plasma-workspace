@@ -13,6 +13,7 @@ import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0 as DnD
 import org.kde.kirigami 2.5 as Kirigami // For Settings.tabletMode
+import org.kde.kitemmodels 1.0 as KItemModels
 
 import "items"
 
@@ -157,10 +158,13 @@ ContainmentItem {
                     }
                 }
 
-                model: PlasmaCore.SortFilterModel {
+                model: KItemModels.KSortFilterProxyModel {
                     sourceModel: Plasmoid.systemTrayModel
-                    filterRole: "effectiveStatus"
-                    filterCallback: (source_row, value) => value === PlasmaCore.Types.ActiveStatus
+                    filterRoleName: "effectiveStatus"
+                    filterRowCallback: (sourceRow, sourceParent) => {
+                        let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
+                        return value === PlasmaCore.Types.ActiveStatus;
+                    }
                 }
 
                 delegate: ItemLoader {
