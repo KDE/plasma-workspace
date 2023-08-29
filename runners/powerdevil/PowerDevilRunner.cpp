@@ -42,6 +42,8 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     m_dimScreen = RunnerKeyword{dimScreen.untranslatedText(), dimScreen.toString()};
     const KLocalizedString screenBrightness = ki18nc("Note this is a KRunner keyword", "dim screen");
     m_screenBrightness = RunnerKeyword{screenBrightness.untranslatedText(), screenBrightness.toString()};
+    const KLocalizedString turnOffScreen = ki18nc("Note this is a KRunner keyword", "turn off screen");
+    m_turnOffScreen = RunnerKeyword{turnOffScreen.untranslatedText(), turnOffScreen.toString()};
     updateStatus();
 }
 
@@ -61,7 +63,8 @@ void PowerDevilRunner::updateSyntaxes()
     }
 
     addSyntax(QStringList{i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
-                          i18nc("Note this is a KRunner keyword", "dim screen")},
+                          i18nc("Note this is a KRunner keyword", "dim screen"),
+                          i18nc("Note this is a KRunner keyword", "turn off screen")},
               // xgettext:no-c-format
               i18n("Lists screen brightness options or sets it to the brightness defined by the search term; "
                    "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
@@ -106,6 +109,14 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         match2.setRelevance(1);
         match2.setId(QStringLiteral("DimHalf"));
         matches.append(match2);
+    } else if (matchesRunnerKeywords({m_screenBrightness, m_turnOffScreen}, type, term)) {
+        KRunner::QueryMatch match(this);
+        match.setType(KRunner::QueryMatch::ExactMatch);
+        match.setIconName(QStringLiteral("preferences-system-power-management"));
+        match.setText(i18n("Turn off screen"));
+        match.setRelevance(1);
+        match.setId(QStringLiteral("TurnOffScreen"));
+        matches.append(match);
     } else if (matchesRunnerKeywords({m_sleep}, type, term)) {
         if (m_session->canSuspend()) {
             addSuspendMatch(SuspendState, matches, type);
@@ -157,6 +168,9 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
     QDBusInterface brightnessIface(QStringLiteral("org.kde.Solid.PowerManagement"),
                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"));
+    QDBusInterface dpmsIface(QStringLiteral("org.kde.Solid.PowerManagement"),
+                             QStringLiteral("/org/kde/Solid/PowerManagement/Actions/DisplayPowerControl"),
+                             QStringLiteral("org.kde.Solid.PowerManagement.Actions.DisplayPowerControl"));
     const QString action = match.id().remove(AbstractRunner::id() + QLatin1Char('_'));
     if (action == QLatin1String("BrightnessChange")) {
         QDBusReply<int> max = brightnessIface.call("brightnessMax");
@@ -167,6 +181,8 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
     } else if (action == QLatin1String("DimHalf")) {
         QDBusReply<int> brightness = brightnessIface.asyncCall(QStringLiteral("brightness"));
         brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
+    } else if (action == QLatin1String("TurnOffScreen")) {
+        dpmsIface.asyncCall(QStringLiteral("turnOffScreen"));
     } else if (action == QLatin1String("Sleep")) {
         switch ((SleepState)match.data().toInt()) {
         case SuspendState:

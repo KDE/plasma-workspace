@@ -43,4 +43,5 @@ private:
     RunnerKeyword m_hibernate, m_toDisk;
     RunnerKeyword m_dimScreen;
     RunnerKeyword m_screenBrightness;
+    RunnerKeyword m_turnOffScreen;
 };
