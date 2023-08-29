@@ -81,7 +81,7 @@ void PowerDevilRunner::updateStatus()
     updateSyntaxes();
 }
 
-enum SleepState { StandbyState = 1, SuspendState = 2, HibernateState = 4, HybridSuspendState = 8 };
+enum SleepState { SuspendState = 2, HibernateState = 4, HybridSuspendState = 8 };
 
 void PowerDevilRunner::match(KRunner::RunnerContext &context)
 {
@@ -145,7 +145,6 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
 
     switch ((SleepState)value) {
     case SuspendState:
-    case StandbyState:
         match.setIconName(QStringLiteral("system-suspend"));
         match.setText(i18nc("Suspend to RAM", "Sleep"));
         match.setSubtext(i18n("Suspend to RAM"));
@@ -191,7 +190,6 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
     } else if (action == QLatin1String("Sleep")) {
         switch ((SleepState)match.data().toInt()) {
         case SuspendState:
-        case StandbyState:
             m_session->suspend();
             break;
         case HibernateState:
