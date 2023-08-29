@@ -81,7 +81,7 @@ void PowerDevilRunner::updateStatus()
     updateSyntaxes();
 }
 
-enum SleepState { SuspendState = 2, HibernateState = 4, HybridSuspendState = 8 };
+enum SleepState { SuspendState, HibernateState, HybridSuspendState };
 
 void PowerDevilRunner::match(KRunner::RunnerContext &context)
 {
