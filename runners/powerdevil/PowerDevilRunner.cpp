@@ -158,9 +158,7 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"));
     const QString action = match.id().remove(AbstractRunner::id() + QLatin1Char('_'));
-    if (action.startsWith(QLatin1String("ProfileChange"))) {
-        iface.asyncCall(QStringLiteral("loadProfile"), match.data().toString());
-    } else if (action == QLatin1String("BrightnessChange")) {
+    if (action == QLatin1String("BrightnessChange")) {
         QDBusReply<int> max = brightnessIface.call("brightnessMax");
         const int value = max.isValid() ? std::round(match.data().toInt() * max / 100.0) : match.data().toInt();
         brightnessIface.asyncCall("setBrightness", value);
@@ -169,7 +167,7 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
     } else if (action == QLatin1String("DimHalf")) {
         QDBusReply<int> brightness = brightnessIface.asyncCall(QStringLiteral("brightness"));
         brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
-    } else if (action.startsWith(QLatin1String("Sleep"))) {
+    } else if (action == QLatin1String("Sleep")) {
         switch ((SleepState)match.data().toInt()) {
         case SuspendState:
         case StandbyState:
