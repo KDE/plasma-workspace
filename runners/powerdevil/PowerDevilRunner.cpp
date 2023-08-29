@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2008 Dario Freddi <drf@kdemod.ath.cx>
     SPDX-FileCopyrightText: 2008 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie_clarius@yahoo.de>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -38,6 +39,10 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     m_hibernate = RunnerKeyword{hibernate.untranslatedText(), hibernate.toString()};
     const KLocalizedString toDisk = ki18nc("Note this is a KRunner keyword", "to disk");
     m_toDisk = RunnerKeyword{toDisk.untranslatedText(), toDisk.toString(), false};
+    const KLocalizedString hybridSuspend = ki18nc("Note this is a KRunner keyword", "hybrid sleep");
+    m_hybridSuspend = RunnerKeyword{hybridSuspend.untranslatedText(), hybridSuspend.toString(), false};
+    const KLocalizedString hybrid = ki18nc("Note this is a KRunner keyword", "hybrid");
+    m_hybrid = RunnerKeyword{hybrid.untranslatedText(), hybrid.toString(), false};
     const KLocalizedString dimScreen = ki18nc("Note this is a KRunner keyword", "dim screen");
     m_dimScreen = RunnerKeyword{dimScreen.untranslatedText(), dimScreen.toString()};
     const KLocalizedString screenBrightness = ki18nc("Note this is a KRunner keyword", "dim screen");
@@ -58,6 +63,10 @@ void PowerDevilRunner::updateSyntaxes()
 
     if (m_session->canHibernate()) {
         addSyntaxForKeyword({m_hibernate, m_toDisk}, i18n("Suspends the system to disk"));
+    }
+
+    if (m_session->canHybridSuspend()) {
+        addSyntaxForKeyword({m_hybrid, m_hybridSuspend}, i18n("Sleeps now and falls back to hibernate"));
     }
 
     addSyntax(QStringList{i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
@@ -114,10 +123,16 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         if (m_session->canHibernate()) {
             addSuspendMatch(HibernateState, matches, type);
         }
+
+        if (m_session->canHybridSuspend()) {
+            addSuspendMatch(HybridSuspendState, matches, type);
+        }
     } else if (matchesRunnerKeywords({m_suspend, m_toRam}, type, term)) {
         addSuspendMatch(SuspendState, matches, type);
     } else if (matchesRunnerKeywords({m_hibernate, m_toDisk}, type, term)) {
         addSuspendMatch(HibernateState, matches, type);
+    } else if (matchesRunnerKeywords({m_hybridSuspend, m_hybrid}, type, term)) {
+        addSuspendMatch(HybridSuspendState, matches, type);
     }
 
     context.addMatches(matches);
@@ -141,6 +156,12 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
         match.setText(i18nc("Suspend to disk", "Hibernate"));
         match.setSubtext(i18n("Suspend to disk"));
         match.setRelevance(0.99);
+        break;
+    case HybridSuspendState:
+        match.setIconName(QStringLiteral("system-suspend-hybrid"));
+        match.setText(i18nc("Suspend to both RAM and disk", "Hybrid sleep"));
+        match.setSubtext(i18n("Sleep now and fall back to hibernate"));
+        match.setRelevance(0.98);
         break;
     }
 
@@ -175,6 +196,9 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
             break;
         case HibernateState:
             m_session->hibernate();
+            break;
+        case HybridSuspendState:
+            m_session->hybridSuspend();
             break;
         }
     }
