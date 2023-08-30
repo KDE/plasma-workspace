@@ -35,7 +35,7 @@ public:
     int count() const;
     virtual int indexOf(const QString &path) const = 0;
 
-    virtual void load(const QStringList &customPaths = {}) = 0;
+    virtual void load(const QStringList &customPaths = {});
     /**
      * Reload when target size changes or a new package is installed
      */
