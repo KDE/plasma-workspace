@@ -907,7 +907,7 @@ void ShellCorona::unload()
     qDeleteAll(desktopViewForScreen);
     auto panelViews = m_panelViews;
     m_panelViews.clear();
-    qDeleteAll(m_panelViews);
+    qDeleteAll(panelViews);
 
     m_waitingPanels.clear();
     m_activityContainmentPlugins.clear();
