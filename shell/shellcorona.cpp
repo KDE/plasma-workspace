@@ -898,10 +898,17 @@ void ShellCorona::unload()
     if (m_shell.isEmpty()) {
         return;
     }
-    qDeleteAll(m_desktopViewForScreen);
+
+    // Make double sure that we do not access the members while we are in the process of deleting them.
+    // Most notably destroying PanelViews may issue signals that in turn cause iteration upon the m_panelViews.
+    // First clear the members, then delete them.
+    auto desktopViewForScreen = m_desktopViewForScreen;
     m_desktopViewForScreen.clear();
-    qDeleteAll(m_panelViews);
+    qDeleteAll(desktopViewForScreen);
+    auto panelViews = m_panelViews;
     m_panelViews.clear();
+    qDeleteAll(m_panelViews);
+
     m_waitingPanels.clear();
     m_activityContainmentPlugins.clear();
 
