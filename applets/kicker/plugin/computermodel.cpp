@@ -10,7 +10,6 @@
 #include "simplefavoritesmodel.h"
 
 #include <QConcatenateTablesProxyModel>
-#include <QIcon>
 
 #include <KAuthorized>
 #include <KFilePlacesModel>
@@ -91,7 +90,7 @@ QVariant RunCommandModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return i18n("Show KRunner");
     } else if (role == Qt::DecorationRole) {
-        return QIcon::fromTheme(QStringLiteral("plasma-search"));
+        return QStringLiteral("plasma-search");
     } else if (role == Kicker::DescriptionRole) {
         return i18n("Search, calculate, or run a command");
     } else if (role == Kicker::GroupRole) {

@@ -34,9 +34,9 @@ QString GroupEntry::name() const
     return m_name;
 }
 
-QIcon GroupEntry::icon() const
+QString GroupEntry::icon() const
 {
-    return QIcon::fromTheme(m_iconName, QIcon::fromTheme(QStringLiteral("unknown")));
+    return m_iconName;
 }
 
 bool GroupEntry::hasChildren() const

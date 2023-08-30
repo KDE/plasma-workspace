@@ -37,7 +37,7 @@ public:
 
     bool isValid() const override;
 
-    QIcon icon() const override;
+    QString icon() const override;
     QString name() const override;
     QString description() const override;
     KService::Ptr service() const;
@@ -64,7 +64,7 @@ private:
     QString m_description;
     // Not an actual group name, but the first character for transliterated name.
     mutable QString m_group;
-    mutable QIcon m_icon;
+    mutable QString m_icon;
     KService::Ptr m_service;
     static MenuEntryEditor *m_menuEntryEditor;
     QMetaObject::Connection m_con;
@@ -75,7 +75,7 @@ class AppGroupEntry : public AbstractGroupEntry
 public:
     AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group, bool paginate, int pageSize, bool flat, bool sorted, bool separators, int appNameFormat);
 
-    QIcon icon() const override;
+    QString icon() const override;
     QString name() const override;
 
     bool hasChildren() const override;
@@ -83,6 +83,6 @@ public:
 
 private:
     KServiceGroup::Ptr m_group;
-    mutable QIcon m_icon;
+    mutable QString m_icon;
     QPointer<AbstractModel> m_childModel;
 };

@@ -59,8 +59,8 @@ QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::DisplayWrappedRole) {
         return KStringHandler::preProcessWrap(entry->name());
     } else if (role == Qt::DecorationRole) {
-        if (!entry->icon().name().isEmpty())
-            return entry->icon().name();
+        if (!entry->icon().isEmpty())
+            return entry->icon();
         else
             return entry->icon();
     } else if (role == Kicker::DescriptionRole) {

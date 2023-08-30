@@ -10,7 +10,6 @@
 #include "runnermodel.h"
 
 #include <QAction>
-#include <QIcon>
 #include <QPluginLoader>
 #include <QUrlQuery>
 

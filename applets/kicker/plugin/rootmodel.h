@@ -19,7 +19,7 @@ class GroupEntry : public AbstractGroupEntry
 public:
     GroupEntry(AppsModel *parentModel, const QString &name, const QString &iconName, AbstractModel *childModel);
 
-    QIcon icon() const override;
+    QString icon() const override;
     QString name() const override;
 
     bool hasChildren() const override;

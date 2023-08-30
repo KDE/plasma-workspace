@@ -143,15 +143,15 @@ bool SystemEntry::isValid() const
     return m_valid;
 }
 
-QIcon SystemEntry::icon() const
+QString SystemEntry::icon() const
 {
     const QString &name = iconName();
 
     if (!name.isEmpty()) {
-        return QIcon::fromTheme(name, QIcon::fromTheme(QStringLiteral("unknown")));
+        return name;
     }
 
-    return QIcon::fromTheme(QStringLiteral("unknown"));
+    return QStringLiteral("unknown");
 }
 
 QString SystemEntry::iconName() const

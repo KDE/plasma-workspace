@@ -34,13 +34,13 @@ bool FileEntry::isValid() const
     return m_fileItem;
 }
 
-QIcon FileEntry::icon() const
+QString FileEntry::icon() const
 {
     if (m_fileItem) {
-        return QIcon::fromTheme(m_fileItem->iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
+        return m_fileItem->iconName();
     }
 
-    return QIcon::fromTheme(QStringLiteral("unknown"));
+    return QStringLiteral("unknown");
 }
 
 QString FileEntry::name() const

@@ -42,7 +42,7 @@ public:
 
     bool isValid() const override;
 
-    QIcon icon() const override;
+    QString icon() const override;
     QString iconName() const;
     QString name() const override;
     QString group() const override;

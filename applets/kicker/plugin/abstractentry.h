@@ -9,7 +9,6 @@
 
 #include "abstractmodel.h"
 
-#include <QIcon>
 #include <QUrl>
 
 class AbstractEntry
@@ -30,7 +29,7 @@ public:
 
     virtual bool isValid() const;
 
-    virtual QIcon icon() const;
+    virtual QString icon() const;
     virtual QString name() const;
     virtual QString group() const;
     virtual QString description() const;

@@ -14,7 +14,6 @@
 
 #include <QApplication>
 #include <QDir>
-#include <QIcon>
 #include <QMimeDatabase>
 #include <QQmlEngine>
 #include <QTimer>
@@ -293,7 +292,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
         if (index.isValid()) {
             return m_placesModel->icon(index);
         }
-        return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
+        return fileItem.iconName();
     } else if (role == Kicker::GroupRole) {
         return i18n("Files");
     } else if (role == Kicker::FavoriteIdRole || role == Kicker::UrlRole) {

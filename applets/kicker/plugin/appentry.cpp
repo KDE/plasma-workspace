@@ -147,7 +147,7 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
             m_service = defaultAppByName(url.host());
             if (m_service) {
                 init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
-                m_icon = QIcon();
+                m_icon = QString();
                 Q_EMIT owner->layoutChanged();
             }
         } else {
@@ -179,27 +179,10 @@ bool AppEntry::isValid() const
     return m_service->isValid();
 }
 
-QIcon AppEntry::icon() const
+QString AppEntry::icon() const
 {
     if (m_icon.isNull()) {
-        const QString serviceIcon = m_service->icon();
-
-        // Check for absolute-path-ness this way rather than using
-        // QFileInfo.isAbsolute() because that would perform a ton of unnecessary
-        // filesystem checks, and most icons are not defined in apps' desktop
-        // files with absolute paths.
-        bool isAbsoluteFilePath = serviceIcon.startsWith(QLatin1String("/"));
-
-        // Need to first check for whether the icon has an absolute path, because
-        // otherwise if the icon is just a name, QFileInfo will treat it as a
-        // relative path and return true if there randomly happens to be a file
-        // with the name of an icon in the user's homedir and we'll go down the
-        // wrong codepath and end up with a blank QIcon; See 457965.
-        if (isAbsoluteFilePath && QFileInfo::exists(serviceIcon)) {
-            m_icon = QIcon(serviceIcon);
-        } else {
-            m_icon = QIcon::fromTheme(serviceIcon, QIcon::fromTheme(QStringLiteral("unknown")));
-        }
+        m_icon = m_service->icon();
     }
     return m_icon;
 }
@@ -425,10 +408,10 @@ AppGroupEntry::AppGroupEntry(AppsModel *parentModel,
     });
 }
 
-QIcon AppGroupEntry::icon() const
+QString AppGroupEntry::icon() const
 {
     if (m_icon.isNull()) {
-        m_icon = QIcon::fromTheme(m_group->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
+        m_icon = m_group->icon();
     }
     return m_icon;
 }
