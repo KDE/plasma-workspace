@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-08-30 01:58+0000\n"
 "PO-Revision-Date: 2013-04-07 11:13+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -142,7 +142,7 @@ msgstr "νάρκη"
 msgid "Suspend to disk"
 msgstr "Αναστολή στο δίσκο"
 
-#: PowerDevilRunner.cpp:210
+#: PowerDevilRunner.cpp:209
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -150,7 +150,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "λαμπρότητα οθόνης"
 
-#: PowerDevilRunner.cpp:212
+#: PowerDevilRunner.cpp:211
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 02:00+0000\n"
+"POT-Creation-Date: 2023-08-30 01:58+0000\n"
 "PO-Revision-Date: 2022-11-18 01:29+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -75,7 +75,7 @@ msgid "Mount"
 msgstr "Prijungti"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:253
 #, kde-format
 msgid "Remove All"
 msgstr "Pašalinti visus"
@@ -95,38 +95,38 @@ msgstr "Nėra prijungta jokių keičiamųjų įrenginių"
 msgid "No disks available"
 msgstr "Nėra prieinamų diskų"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Paskiausiai prijungtas įrenginys"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nėra prieinamų įrenginių"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Konfigūruoti keičiamuosius įrenginius…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:261
 #, kde-format
 msgid "Removable Devices"
 msgstr "Keičiamieji įrenginiai"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nekeičiamieji įrenginiai"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "All Devices"
 msgstr "Visi įrenginiai"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Įkišus naują įrenginį, rodyti iškylantįjį langą"

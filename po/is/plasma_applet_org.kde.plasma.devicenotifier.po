@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 02:00+0000\n"
+"POT-Creation-Date: 2023-08-30 01:58+0000\n"
 "PO-Revision-Date: 2022-08-24 14:58+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -73,7 +73,7 @@ msgid "Mount"
 msgstr "Tengja í skráakerfið"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:253
 #, kde-format
 msgid "Remove All"
 msgstr "Fjarlægja allt"
@@ -93,38 +93,38 @@ msgstr "Engin útskiptanleg tæki tengd"
 msgid "No disks available"
 msgstr "Engir diskar tiltækir"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Nýlegasta tæki"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "No Devices Available"
 msgstr "Engin tæki tiltæk"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Stilla útskiptanleg tæki…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:261
 #, kde-format
 msgid "Removable Devices"
 msgstr "Útskiptanleg tæki"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Ekki-útskiptanleg tæki"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "All Devices"
 msgstr "Öll tæki"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Birta sprettglugga þegar ný tæki eru tengd"

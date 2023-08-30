@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-08-30 01:58+0000\n"
 "PO-Revision-Date: 2021-09-27 20:48+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -133,13 +133,13 @@ msgstr "Dvale"
 msgid "Suspend to disk"
 msgstr "Suspendér til disk"
 
-#: PowerDevilRunner.cpp:210
+#: PowerDevilRunner.cpp:209
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "Skærmens lysstyrke "
 
-#: PowerDevilRunner.cpp:212
+#: PowerDevilRunner.cpp:211
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

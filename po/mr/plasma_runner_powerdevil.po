@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-08-30 01:58+0000\n"
 "PO-Revision-Date: 2013-02-06 17:29+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -140,7 +140,7 @@ msgstr "हायबरनेट"
 msgid "Suspend to disk"
 msgstr "डिस्कवर अकार्यक्षम"
 
-#: PowerDevilRunner.cpp:210
+#: PowerDevilRunner.cpp:209
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -148,7 +148,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "स्क्रीन प्रखरता "
 
-#: PowerDevilRunner.cpp:212
+#: PowerDevilRunner.cpp:211
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"
