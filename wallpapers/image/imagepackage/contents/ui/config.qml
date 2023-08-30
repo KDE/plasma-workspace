@@ -170,12 +170,12 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        onEntered: {
+        onEntered: drag => {
             if (drag.hasUrls) {
                 drag.accept();
             }
         }
-        onDropped: {
+        onDropped: drop => {
             drop.urls.forEach(function (url) {
                 if (configDialog.currentWallpaper === "org.kde.image") {
                     imageWallpaper.addUsersWallpaper(url);
