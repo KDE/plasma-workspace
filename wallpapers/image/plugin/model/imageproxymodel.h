@@ -57,22 +57,24 @@ private Q_SLOTS:
     void slotHandleLoaded(AbstractImageListModel *model);
 
     /**
-     * Slots to handle item changes in source models.
-     */
-    void slotSourceModelAboutToBeReset();
-    void slotSourceModelReset();
-
-    /**
      * Slots to handle file change signals from KDirWatch
      */
     void slotDirWatchCreated(const QString &path);
     void slotDirWatchDeleted(const QString &path);
 
 private:
+    /**
+     * Add files to KDirWatch.
+     * Files or dirs should be already added to KDirWatch when
+     * rowsInserted or rowsRemoved is emitted.
+     */
+    void setupDirWatch();
+
     ImageListModel *m_imageModel;
     PackageListModel *m_packageModel;
 
     KDirWatch m_dirWatch;
+    QStringList m_customPaths;
 
     int m_loaded = 0;
 

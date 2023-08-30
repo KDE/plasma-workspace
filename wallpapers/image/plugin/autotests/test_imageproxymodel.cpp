@@ -228,13 +228,18 @@ void ImageProxyModelTest::testImageProxyModelRemoveBackground()
 void ImageProxyModelTest::testImageProxyModelDirWatch()
 {
     QVERIFY(m_model->m_dirWatch.contains(m_dataDir.absolutePath()));
-    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(0)));
-    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(1)));
-    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(2)));
-    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(3)));
-    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(4)));
-    QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(0)));
-    QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(1)));
+    // Duplicate watched items as their parent folder is already in KDirWatch
+    for (const QString &path : std::as_const(m_wallpaperPaths)) {
+        QVERIFY2(!m_model->m_dirWatch.contains(path), path.toLatin1());
+    }
+    for (const QString &path : std::as_const(m_packagePaths)) {
+        QFileInfo info(path);
+        while (info.absoluteFilePath() != m_dataDir.absolutePath()) {
+            // Because of KDirWatch::WatchSubDirs, some folders will still be added to KDirWatch
+            QVERIFY2(m_model->m_dirWatch.contains(info.absoluteFilePath()), info.absoluteFilePath().toLatin1());
+            info = QFileInfo(info.absolutePath()); // Parent folder
+        }
+    }
 
     m_model->deleteLater();
     m_countSpy->deleteLater();
