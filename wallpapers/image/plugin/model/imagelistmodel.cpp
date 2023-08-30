@@ -145,14 +145,11 @@ void ImageListModel::load(const QStringList &customPaths)
         return;
     }
 
-    m_customPaths = customPaths;
-    m_customPaths.removeDuplicates();
+    AbstractImageListModel::load(customPaths);
 
     ImageFinder *finder = new ImageFinder(m_customPaths);
     connect(finder, &ImageFinder::imageFound, this, &ImageListModel::slotHandleImageFound);
     QThreadPool::globalInstance()->start(finder);
-
-    m_loading = true;
 }
 
 void ImageListModel::slotHandleImageFound(const QStringList &paths)

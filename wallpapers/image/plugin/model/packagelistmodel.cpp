@@ -157,14 +157,11 @@ void PackageListModel::load(const QStringList &customPaths)
         return;
     }
 
-    m_customPaths = customPaths;
-    m_customPaths.removeDuplicates();
+    AbstractImageListModel::load(customPaths);
 
     PackageFinder *finder = new PackageFinder(m_customPaths, m_targetSize);
     connect(finder, &PackageFinder::packageFound, this, &PackageListModel::slotHandlePackageFound);
     QThreadPool::globalInstance()->start(finder);
-
-    m_loading = true;
 }
 
 QStringList PackageListModel::addBackground(const QString &path)

@@ -51,6 +51,14 @@ int AbstractImageListModel::count() const
     return rowCount();
 }
 
+void AbstractImageListModel::load(const QStringList &customPaths)
+{
+    Q_ASSERT(!m_loading && !customPaths.empty());
+    m_customPaths = customPaths;
+    m_customPaths.removeDuplicates();
+    m_loading = true;
+}
+
 void AbstractImageListModel::reload()
 {
     if (m_loading || m_customPaths.empty()) {
