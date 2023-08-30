@@ -39,7 +39,7 @@ add_test(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 # StatusIcon only works with the X11 backend
-set_tests_properties(systemtraytest PROPERTIES TIMEOUT 300 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
+set_tests_properties(systemtraytest PROPERTIES TIMEOUT 60 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
 
 add_test(
     NAME logoutgreetertest
