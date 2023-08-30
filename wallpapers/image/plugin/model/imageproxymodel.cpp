@@ -16,7 +16,21 @@
 #include "imagelistmodel.h"
 #include "packagelistmodel.h"
 
-ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &targetSize, QObject *parent)
+namespace
+{
+inline bool isChildItem(const QStringList &customPathsInKDirWatch, const QString &childPath)
+{
+    return std::any_of(customPathsInKDirWatch.cbegin(), customPathsInKDirWatch.cend(), [&childPath](const QString &customPath) {
+        if (customPath.endsWith(QDir::separator())) {
+            return childPath.startsWith(customPath);
+        } else {
+            return childPath.startsWith(customPath + QDir::separator());
+        }
+    });
+}
+}
+
+ImageProxyModel::ImageProxyModel(const QStringList &customPaths, const QSize &targetSize, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
     , m_imageModel(new ImageListModel(targetSize, this))
     , m_packageModel(new PackageListModel(targetSize, this))
@@ -25,36 +39,15 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::modelReset, this, &ImageProxyModel::countChanged);
 
-    /**
-     * Add files to KDirWatch.
-     * Files or dirs should be already added to KDirWatch when
-     * rowsInserted or rowsRemoved is emitted.
-     */
-    connect(m_imageModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
-    connect(m_packageModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
-    connect(m_imageModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
-    connect(m_packageModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
-
-    // Monitor file changes in the custom directories for the slideshow backend.
-    QStringList customPaths = _customPaths;
-
+    m_customPaths = customPaths;
     if (customPaths.empty()) {
         KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")), QStringLiteral("Wallpapers"));
-        customPaths = cfg.readEntry("usersWallpapers", QStringList{});
-        m_imageModel->m_removableWallpapers = customPaths;
-        m_packageModel->m_removableWallpapers = customPaths;
+        m_customPaths = cfg.readEntry("usersWallpapers", QStringList{});
+        m_imageModel->m_removableWallpapers = m_customPaths;
+        m_packageModel->m_removableWallpapers = m_customPaths;
 
-        customPaths += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
+        m_customPaths += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
     }
-
-    for (const QString &path : std::as_const(customPaths)) {
-        if (QFileInfo(path).isDir()) {
-            m_dirWatch.addDir(path, KDirWatch::WatchFiles | KDirWatch::WatchSubDirs);
-        }
-    }
-
-    connect(&m_dirWatch, &KDirWatch::created, this, &ImageProxyModel::slotDirWatchCreated);
-    connect(&m_dirWatch, &KDirWatch::deleted, this, &ImageProxyModel::slotDirWatchDeleted);
 
     connect(m_imageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
     connect(m_packageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
@@ -62,8 +55,8 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
     m_loaded = 0;
     Q_EMIT loadingChanged();
 
-    m_imageModel->load(customPaths);
-    m_packageModel->load(customPaths);
+    m_imageModel->load(m_customPaths);
+    m_packageModel->load(m_customPaths);
 }
 
 QHash<int, QByteArray> ImageProxyModel::roleNames() const
@@ -142,16 +135,12 @@ QStringList ImageProxyModel::addBackground(const QString &_path)
         m_pendingAddition.append(results);
 
         for (const QString &path : std::as_const(results)) {
-            if (m_dirWatch.contains(path)) {
+            if (m_dirWatch.contains(path) || isChildItem(m_customPaths, path) /* KDirWatch already monitors the parent folder */) {
                 continue;
             }
 
             const QFileInfo info(path);
             if (info.isFile()) {
-                if (m_dirWatch.contains(info.absolutePath())) {
-                    // KDirWatch already monitors the parent folder
-                    continue;
-                }
                 m_dirWatch.addFile(path);
             } else if (info.isDir()) {
                 m_dirWatch.addDir(path);
@@ -176,7 +165,7 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
     if (const QFileInfo info(packagePath); isAcceptableSuffix(info.suffix())) {
         results = m_imageModel->removeBackground(packagePath);
 
-        if (!results.empty() && !m_dirWatch.contains(info.absolutePath())) {
+        if (!results.empty() && !isChildItem(m_customPaths, results.at(0))) {
             // Don't remove the file if its parent folder is in KDirWatch, otherwise KDirWatchPrivate::removeEntry will also remove the parent folder
             m_dirWatch.removeFile(results.at(0));
         }
@@ -184,6 +173,7 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
         results = m_packageModel->removeBackground(packagePath);
 
         if (!results.empty()) {
+            // Because of KDirWatch::WatchSubDirs, some folders will still be added to KDirWatch
             m_dirWatch.removeDir(results.at(0));
         }
     }
@@ -262,50 +252,9 @@ void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
 
         connect(this, &ImageProxyModel::targetSizeChanged, m_imageModel, &AbstractImageListModel::slotTargetSizeChanged);
         connect(this, &ImageProxyModel::targetSizeChanged, m_packageModel, &AbstractImageListModel::slotTargetSizeChanged);
+        setupDirWatch();
 
         Q_EMIT loadingChanged();
-    }
-}
-
-void ImageProxyModel::slotSourceModelAboutToBeReset()
-{
-    AbstractImageListModel *model = qobject_cast<AbstractImageListModel *>(this->sender());
-
-    if (!model) {
-        return;
-    }
-
-    // Delete all items in KDirWatch
-    for (int i = 0; i < model->rowCount(); i++) {
-        const QString packageName = model->index(i, 0).data(ImageRoles::PackageNameRole).toString();
-        const QFileInfo info(packageName);
-
-        if (info.isFile()) {
-            m_dirWatch.removeFile(packageName);
-        } else if (info.isDir()) {
-            m_dirWatch.removeDir(packageName);
-        }
-    }
-}
-
-void ImageProxyModel::slotSourceModelReset()
-{
-    AbstractImageListModel *model = qobject_cast<AbstractImageListModel *>(this->sender());
-
-    if (!model) {
-        return;
-    }
-
-    // Add all items to KDirWatch
-    for (int i = 0; i < model->rowCount(); i++) {
-        const QString packageName = model->index(i, 0).data(ImageRoles::PackageNameRole).toString();
-        const QFileInfo info(packageName);
-
-        if (info.isFile()) {
-            m_dirWatch.addFile(packageName);
-        } else if (info.isDir()) {
-            m_dirWatch.addDir(packageName);
-        }
     }
 }
 
@@ -323,4 +272,17 @@ void ImageProxyModel::slotDirWatchCreated(const QString &_path)
 void ImageProxyModel::slotDirWatchDeleted(const QString &path)
 {
     removeBackground(path);
+}
+
+void ImageProxyModel::setupDirWatch()
+{
+    // Monitor file changes in the custom directories for the slideshow backend.
+    for (const QString &path : std::as_const(m_customPaths)) {
+        if (QFileInfo(path).isDir()) {
+            m_dirWatch.addDir(path, KDirWatch::WatchFiles | KDirWatch::WatchSubDirs);
+        }
+    }
+
+    connect(&m_dirWatch, &KDirWatch::created, this, &ImageProxyModel::slotDirWatchCreated);
+    connect(&m_dirWatch, &KDirWatch::deleted, this, &ImageProxyModel::slotDirWatchDeleted);
 }
