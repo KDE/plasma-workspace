@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2023-02-09 11:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -327,12 +327,12 @@ msgstr "Немагчыма ўсталяваць"
 msgid "Categories:"
 msgstr "Катэгорыі:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Спампаваць новыя віджэты Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Усталяваць віджэт з лакальнага файла…"

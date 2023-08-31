@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2023-05-09 22:47+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -321,12 +321,12 @@ msgstr ""
 msgid "Categories:"
 msgstr "Categoríes:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr ""
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr ""

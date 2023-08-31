@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2023-04-07 23:52-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -321,12 +321,12 @@ msgstr "アンインストール可能"
 msgid "Categories:"
 msgstr "カテゴリ:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "新しい Plasma ウィジェットをダウンロード"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "ローカルのファイルからインストール..."

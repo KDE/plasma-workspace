@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2021-06-16 00:40+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -66,26 +66,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Šalinti ar tvarkyti papildinius…"
 
-#: plugin/appentry.cpp:308
+#: plugin/appentry.cpp:291
 #, kde-format
 msgid "Hide Application"
 msgstr "Slėpti programą"
 
-#: plugin/appentry.cpp:367
+#: plugin/appentry.cpp:350
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:352
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
-#: plugin/recentusagemodel.cpp:216
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
+#: plugin/recentusagemodel.cpp:215
 #, kde-format
 msgid "Applications"
 msgstr "Programos"
@@ -100,17 +100,17 @@ msgstr "Nebeslėpti programų šiame submeniu"
 msgid "Unhide Applications in '%1'"
 msgstr "Nebeslėpti „%1“ kategorijos programų"
 
-#: plugin/computermodel.cpp:92
+#: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr "Rodyti KRunner"
 
-#: plugin/computermodel.cpp:96
+#: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Ieškoti, skaičiuoti ar paleisti komandą"
 
-#: plugin/computermodel.cpp:149
+#: plugin/computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "Kompiuteris"
@@ -122,42 +122,42 @@ msgstr "Kompiuteris"
 msgid "Favorites"
 msgstr "Žymelės"
 
-#: plugin/recentusagemodel.cpp:151
+#: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
 msgstr "Paskiausiai naudoti"
 
-#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
 msgstr "Failai"
 
-#: plugin/recentusagemodel.cpp:238
+#: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
 msgstr "Pamiršti programą"
 
-#: plugin/recentusagemodel.cpp:332
+#: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
-#: plugin/recentusagemodel.cpp:335
+#: plugin/recentusagemodel.cpp:334
 #, kde-format
 msgid "Forget File"
 msgstr "Pamiršti failą"
 
-#: plugin/recentusagemodel.cpp:472
+#: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
 msgstr "Viską pamiršti"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:473
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Pamiršti visas programas"
 
-#: plugin/recentusagemodel.cpp:477
+#: plugin/recentusagemodel.cpp:476
 #, kde-format
 msgid "Forget All Files"
 msgstr "Pamiršti visus failus"

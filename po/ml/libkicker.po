@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -65,26 +65,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "ആഡ്-ഓണുകൾ അൺഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ കൈകാര്യം ചെയ്യുക…"
 
-#: plugin/appentry.cpp:308
+#: plugin/appentry.cpp:291
 #, kde-format
 msgid "Hide Application"
 msgstr "പ്രയോഗം മറയ്ക്കുക"
 
-#: plugin/appentry.cpp:367
+#: plugin/appentry.cpp:350
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:352
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
-#: plugin/recentusagemodel.cpp:216
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
+#: plugin/recentusagemodel.cpp:215
 #, kde-format
 msgid "Applications"
 msgstr "പ്രയോഗങ്ങള്‍"
@@ -99,17 +99,17 @@ msgstr "ഈ ഉപമെനുവിലെ അപ്ലിക്കേഷനു�
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' ലെ അപ്ലിക്കേഷനുകൾ മറയ്ക്കാതിരിക്കുക"
 
-#: plugin/computermodel.cpp:92
+#: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr "കെറണ്ണര്‍ കാണിക്കുക"
 
-#: plugin/computermodel.cpp:96
+#: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "തിരയുക, കണക്കുകൂട്ടുക അല്ലെങ്കില്‍ ആജ്ഞ നടപ്പിലാക്കുക"
 
-#: plugin/computermodel.cpp:149
+#: plugin/computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "കമ്പ്യൂട്ടര്‍"
@@ -121,42 +121,42 @@ msgstr "കമ്പ്യൂട്ടര്‍"
 msgid "Favorites"
 msgstr "പ്രിയപ്പെട്ടവ"
 
-#: plugin/recentusagemodel.cpp:151
+#: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
 msgstr "അടുത്തിടെ ഉപയോഗിച്ചവ"
 
-#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
 msgstr "ഫയലുകൾ"
 
-#: plugin/recentusagemodel.cpp:238
+#: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
 msgstr "പ്രയോഗത്തെ മറക്കുക"
 
-#: plugin/recentusagemodel.cpp:332
+#: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "അടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
 
-#: plugin/recentusagemodel.cpp:335
+#: plugin/recentusagemodel.cpp:334
 #, kde-format
 msgid "Forget File"
 msgstr "ഫയൽ മറക്കുക"
 
-#: plugin/recentusagemodel.cpp:472
+#: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
 msgstr "എല്ലാം മറക്കുക"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:473
 #, kde-format
 msgid "Forget All Applications"
 msgstr "എല്ലാ പ്രയോഗങ്ങളും മറക്കുക"
 
-#: plugin/recentusagemodel.cpp:477
+#: plugin/recentusagemodel.cpp:476
 #, kde-format
 msgid "Forget All Files"
 msgstr "എല്ലാ ഫയലുകളും മറക്കുക"

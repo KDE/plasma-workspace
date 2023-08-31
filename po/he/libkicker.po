@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2017-05-22 05:23-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -67,26 +67,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: plugin/appentry.cpp:308
+#: plugin/appentry.cpp:291
 #, kde-format
 msgid "Hide Application"
 msgstr "הסתר יישום"
 
-#: plugin/appentry.cpp:367
+#: plugin/appentry.cpp:350
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:352
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
-#: plugin/recentusagemodel.cpp:216
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
+#: plugin/recentusagemodel.cpp:215
 #, kde-format
 msgid "Applications"
 msgstr "יישומים"
@@ -101,17 +101,17 @@ msgstr "בטל הסתרת יישומים בתת־תפריט זה"
 msgid "Unhide Applications in '%1'"
 msgstr "בטל יישומים מוסתרים ב־\"%1\""
 
-#: plugin/computermodel.cpp:92
+#: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr ""
 
-#: plugin/computermodel.cpp:96
+#: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr ""
 
-#: plugin/computermodel.cpp:149
+#: plugin/computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "מחשב"
@@ -123,43 +123,43 @@ msgstr "מחשב"
 msgid "Favorites"
 msgstr "מועדפים"
 
-#: plugin/recentusagemodel.cpp:151
+#: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
 msgstr "היו בשימוש לאחרונה"
 
-#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:238
+#: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
 msgstr "שכח יישומים"
 
-#: plugin/recentusagemodel.cpp:332
+#: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:335
+#: plugin/recentusagemodel.cpp:334
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget File"
 msgstr "שכח הכל"
 
-#: plugin/recentusagemodel.cpp:472
+#: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
 msgstr "שכח הכל"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:473
 #, kde-format
 msgid "Forget All Applications"
 msgstr "שכח את כל היישומים"
 
-#: plugin/recentusagemodel.cpp:477
+#: plugin/recentusagemodel.cpp:476
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget All Files"

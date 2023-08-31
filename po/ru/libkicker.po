@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2021-10-10 11:52+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -66,26 +66,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Удалить или настроить дополнения…"
 
-#: plugin/appentry.cpp:308
+#: plugin/appentry.cpp:291
 #, kde-format
 msgid "Hide Application"
 msgstr "Скрыть приложение"
 
-#: plugin/appentry.cpp:367
+#: plugin/appentry.cpp:350
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:352
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
-#: plugin/recentusagemodel.cpp:216
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
+#: plugin/recentusagemodel.cpp:215
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
@@ -100,17 +100,17 @@ msgstr "Вернуть все скрытые приложения в этом п
 msgid "Unhide Applications in '%1'"
 msgstr "Вернуть скрытые приложения в подменю «%1»"
 
-#: plugin/computermodel.cpp:92
+#: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr "Показать строку поиска и запуска"
 
-#: plugin/computermodel.cpp:96
+#: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Выполнить команду, вычисление или поисковый запрос"
 
-#: plugin/computermodel.cpp:149
+#: plugin/computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "Компьютер"
@@ -123,42 +123,42 @@ msgid "Favorites"
 msgstr "Избранное"
 
 # BUGME: where is this visible in UI? --aspotashev
-#: plugin/recentusagemodel.cpp:151
+#: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
 msgstr "Последние"
 
-#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
 msgstr "Файлы"
 
-#: plugin/recentusagemodel.cpp:238
+#: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
 msgstr "Убрать приложение"
 
-#: plugin/recentusagemodel.cpp:332
+#: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Открыть содержащую объект папку"
 
-#: plugin/recentusagemodel.cpp:335
+#: plugin/recentusagemodel.cpp:334
 #, kde-format
 msgid "Forget File"
 msgstr "Убрать этот файл"
 
-#: plugin/recentusagemodel.cpp:472
+#: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
 msgstr "Убрать все"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:473
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Убрать все приложения"
 
-#: plugin/recentusagemodel.cpp:477
+#: plugin/recentusagemodel.cpp:476
 #, kde-format
 msgid "Forget All Files"
 msgstr "Убрать все файлы"

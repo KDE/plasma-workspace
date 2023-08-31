@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:00+0000\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
 "PO-Revision-Date: 2021-07-19 19:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -67,26 +67,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Desinstalatu edo kudeatu gehigarriak..."
 
-#: plugin/appentry.cpp:308
+#: plugin/appentry.cpp:291
 #, kde-format
 msgid "Hide Application"
 msgstr "Ezkutatu aplikazioa"
 
-#: plugin/appentry.cpp:367
+#: plugin/appentry.cpp:350
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:352
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
-#: plugin/recentusagemodel.cpp:216
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
+#: plugin/recentusagemodel.cpp:215
 #, kde-format
 msgid "Applications"
 msgstr "Aplikazioak"
@@ -101,17 +101,17 @@ msgstr "Erakutsi azpimenu honetan ezkutatutako aplikazioak"
 msgid "Unhide Applications in '%1'"
 msgstr "Erakutsi '%1'(e)an ezkutatutako aplikazioak"
 
-#: plugin/computermodel.cpp:92
+#: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr "Erakutsi KRunner"
 
-#: plugin/computermodel.cpp:96
+#: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Bilatu, kalkulatu, edo komando bat exekutatu"
 
-#: plugin/computermodel.cpp:149
+#: plugin/computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "Ordenagailua"
@@ -123,42 +123,42 @@ msgstr "Ordenagailua"
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: plugin/recentusagemodel.cpp:151
+#: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
 msgstr "Berriki erabilia"
 
-#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
 msgstr "Fitxategiak"
 
-#: plugin/recentusagemodel.cpp:238
+#: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
 msgstr "Ahaztu aplikazioa"
 
-#: plugin/recentusagemodel.cpp:332
+#: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ireki hau barnean duen karpeta"
 
-#: plugin/recentusagemodel.cpp:335
+#: plugin/recentusagemodel.cpp:334
 #, kde-format
 msgid "Forget File"
 msgstr "Ahaztu fitxategia"
 
-#: plugin/recentusagemodel.cpp:472
+#: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
 msgstr "Ahaztu guztiak"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:473
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Ahaztu aplikazio guztiak"
 
-#: plugin/recentusagemodel.cpp:477
+#: plugin/recentusagemodel.cpp:476
 #, kde-format
 msgid "Forget All Files"
 msgstr "Ahaztu fitxategi guztiak"
