@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:53+0000\n"
+"POT-Creation-Date: 2023-08-31 02:25+0000\n"
 "PO-Revision-Date: 2014-09-18 16:18+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -318,12 +318,12 @@ msgstr ""
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Nieg Plasma-Lüttprogrammen daalladen"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"

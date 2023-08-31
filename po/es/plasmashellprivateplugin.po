@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:53+0000\n"
+"POT-Creation-Date: 2023-08-31 02:25+0000\n"
 "PO-Revision-Date: 2023-05-28 18:15+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -320,12 +320,12 @@ msgstr "No se puede instalar"
 msgid "Categories:"
 msgstr "Categorías:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Descargar nuevos elementos gráficos de Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalar elemento gráfico desde un archivo local..."

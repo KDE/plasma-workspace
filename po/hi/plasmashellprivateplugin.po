@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:53+0000\n"
+"POT-Creation-Date: 2023-08-31 02:25+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -322,12 +322,12 @@ msgstr "गैर संस्थापन योग्य"
 msgid "Categories:"
 msgstr "श्रेणियाँ :"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "नए प्लाज़्मा विजेटों को डाउनलोड करें"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "स्थानीय फ़ाइल से विजेट स्थापित करें…"

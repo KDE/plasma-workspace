@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:53+0000\n"
+"POT-Creation-Date: 2023-08-31 02:25+0000\n"
 "PO-Revision-Date: 2023-05-28 10:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -323,12 +323,12 @@ msgstr "Neodstranljiv"
 msgid "Categories:"
 msgstr "Kategorije:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Prejmi nove gradnike Plasme"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Namesti gradnik iz krajevne datoteke…"

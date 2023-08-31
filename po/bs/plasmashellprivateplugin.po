@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:53+0000\n"
+"POT-Creation-Date: 2023-08-31 02:25+0000\n"
 "PO-Revision-Date: 2014-12-28 11:50+0000\n"
 "Last-Translator: Fadil Ademovic <fademovic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -322,12 +322,12 @@ msgstr ""
 msgid "Categories:"
 msgstr "Kategorije:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Preuzmi nove plazma grafičke kontrole"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"
