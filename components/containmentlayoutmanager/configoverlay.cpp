@@ -46,7 +46,7 @@ void ConfigOverlay::setOpen(bool open)
         m_hideTimer->start();
     }
 
-    Q_EMIT openChanged();
+    Q_EMIT openChanged(m_open);
 }
 
 bool ConfigOverlay::touchInteraction() const

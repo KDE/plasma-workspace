@@ -216,6 +216,40 @@ AppletsLayout *ItemContainer::layout() const
     return m_layout;
 }
 
+void ItemContainer::onConfigOverlayComponentStatusChanged(QQmlComponent::Status status, QQmlComponent *component)
+{
+    if (status == QQmlComponent::Loading) {
+        return;
+    }
+    if (!component) {
+        component = static_cast<QQmlComponent *>(sender());
+    }
+    if (status != QQmlComponent::Ready) {
+        delete component;
+        return;
+    }
+
+    Q_ASSERT(!m_configOverlay);
+    m_configOverlay = static_cast<ConfigOverlay *>(component->beginCreate(component->creationContext()));
+
+    m_configOverlay->setVisible(false);
+    m_configOverlay->setItemContainer(this);
+    m_configOverlay->setParentItem(this);
+    m_configOverlay->setTouchInteraction(m_mouseSynthetizedFromTouch);
+    m_configOverlay->setZ(999);
+    m_configOverlay->setPosition(QPointF(0, 0));
+    m_configOverlay->setSize(size());
+
+    component->completeCreate();
+    delete component;
+
+    connect(m_configOverlay, &ConfigOverlay::openChanged, this, &ItemContainer::configOverlayVisibleChanged);
+
+    Q_EMIT configOverlayItemChanged();
+
+    m_configOverlay->setOpen(m_configOverlayVisible);
+}
+
 void ItemContainer::syncChildItemsGeometry(const QSizeF &size)
 {
     if (m_contentItem) {
@@ -235,24 +269,27 @@ void ItemContainer::syncChildItemsGeometry(const QSizeF &size)
     }
 }
 
-QQmlComponent *ItemContainer::configOverlayComponent() const
+QUrl ItemContainer::configOverlaySource() const
 {
-    return m_configOverlayComponent;
+    return m_configOverlaySource;
 }
 
-void ItemContainer::setConfigOverlayComponent(QQmlComponent *component)
+void ItemContainer::setConfigOverlaySource(const QUrl &url)
 {
-    if (component == m_configOverlayComponent) {
+    if (url == m_configOverlaySource || !url.isValid()) {
         return;
     }
 
-    m_configOverlayComponent = component;
+    m_configOverlaySource = url;
     if (m_configOverlay) {
         m_configOverlay->deleteLater();
         m_configOverlay = nullptr;
     }
+    Q_EMIT configOverlaySourceChanged();
 
-    Q_EMIT configOverlayComponentChanged();
+    if (m_configOverlayVisible) {
+        loadConfigOverlayItem();
+    }
 }
 
 ConfigOverlay *ItemContainer::configOverlayItem() const
@@ -283,47 +320,16 @@ bool ItemContainer::configOverlayVisible() const
 
 void ItemContainer::setConfigOverlayVisible(bool visible)
 {
-    if (!m_configOverlayComponent) {
+    if (!m_configOverlaySource.isValid() || visible == m_configOverlayVisible) {
         return;
     }
 
-    if (visible == configOverlayVisible()) {
-        return;
-    }
+    m_configOverlayVisible = visible;
 
     if (visible && !m_configOverlay) {
-        QQmlContext *context = QQmlEngine::contextForObject(this);
-        Q_ASSERT(context);
-        QObject *instance = m_configOverlayComponent->beginCreate(context);
-        m_configOverlay = qobject_cast<ConfigOverlay *>(instance);
-
-        if (!m_configOverlay) {
-            qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: Applet configOverlay not of ConfigOverlay type";
-            if (instance) {
-                instance->deleteLater();
-            }
-            return;
-        }
-
-        m_configOverlay->setVisible(false);
-        m_configOverlay->setItemContainer(this);
-        m_configOverlay->setParentItem(this);
-        m_configOverlay->setTouchInteraction(m_mouseSynthetizedFromTouch);
-        m_configOverlay->setZ(999);
-        m_configOverlay->setPosition(QPointF(0, 0));
-        m_configOverlay->setSize(size());
-
-        m_configOverlayComponent->completeCreate();
-
-        connect(m_configOverlay, &ConfigOverlay::openChanged, this, [this]() {
-            Q_EMIT configOverlayVisibleChanged(m_configOverlay->open());
-        });
-
-        Q_EMIT configOverlayItemChanged();
-    }
-
-    if (m_configOverlay) {
-        m_configOverlay->setOpen(visible);
+        loadConfigOverlayItem();
+    } else if (m_configOverlay) {
+        m_configOverlay->setVisible(visible);
     }
 }
 
@@ -435,6 +441,22 @@ void ItemContainer::sendUngrabRecursive(QQuickItem *item)
     QEvent ev(QEvent::UngrabMouse);
 
     QCoreApplication::sendEvent(item, &ev);
+}
+
+void ItemContainer::loadConfigOverlayItem()
+{
+    Q_ASSERT(!m_configOverlay);
+    constexpr QQmlComponent::CompilationMode mode = QQmlComponent::Asynchronous;
+    QQmlContext *context = QQmlEngine::contextForObject(this);
+    auto component = new QQmlComponent(context->engine(), context->resolvedUrl(m_configOverlaySource), mode, this);
+    if (!component->isLoading()) {
+        onConfigOverlayComponentStatusChanged(component->status(), component);
+    } else {
+        connect(component,
+                &QQmlComponent::statusChanged,
+                this,
+                std::bind(&ItemContainer::onConfigOverlayComponentStatusChanged, this, std::placeholders::_1, nullptr));
+    }
 }
 
 bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)

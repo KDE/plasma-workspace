@@ -30,7 +30,7 @@ class ItemContainer : public QQuickItem
     Q_PROPERTY(AppletsLayout::PreferredLayoutDirection preferredLayoutDirection READ preferredLayoutDirection WRITE setPreferredLayoutDirection NOTIFY
                    preferredLayoutDirectionChanged)
 
-    Q_PROPERTY(QQmlComponent *configOverlayComponent READ configOverlayComponent WRITE setConfigOverlayComponent NOTIFY configOverlayComponentChanged)
+    Q_PROPERTY(QUrl configOverlaySource READ configOverlaySource WRITE setConfigOverlaySource NOTIFY configOverlaySourceChanged)
     Q_PROPERTY(bool configOverlayVisible READ configOverlayVisible WRITE setConfigOverlayVisible NOTIFY configOverlayVisibleChanged)
     Q_PROPERTY(QQuickItem *configOverlayItem READ configOverlayItem NOTIFY configOverlayItemChanged)
 
@@ -91,8 +91,8 @@ public:
     AppletsLayout::PreferredLayoutDirection preferredLayoutDirection() const;
     void setPreferredLayoutDirection(AppletsLayout::PreferredLayoutDirection direction);
 
-    QQmlComponent *configOverlayComponent() const;
-    void setConfigOverlayComponent(QQmlComponent *component);
+    QUrl configOverlaySource() const;
+    void setConfigOverlaySource(const QUrl &url);
 
     bool configOverlayVisible() const;
     void setConfigOverlayVisible(bool visible);
@@ -172,7 +172,7 @@ Q_SIGNALS:
     void editModeConditionChanged();
     void editModeChanged(bool editMode);
     void preferredLayoutDirectionChanged();
-    void configOverlayComponentChanged();
+    void configOverlaySourceChanged();
     void configOverlayItemChanged();
     void initialSizeChanged();
     void configOverlayVisibleChanged(bool configOverlayVisile);
@@ -186,9 +186,14 @@ Q_SIGNALS:
     void contentWidthChanged();
     void contentHeightChanged();
 
+private Q_SLOTS:
+    void onConfigOverlayComponentStatusChanged(QQmlComponent::Status status, QQmlComponent *component = nullptr);
+
 private:
     void syncChildItemsGeometry(const QSizeF &size);
     void sendUngrabRecursive(QQuickItem *item);
+
+    void loadConfigOverlayItem();
 
     // internal accessorts for the contentData QProperty
     static void contentData_append(QQmlListProperty<QObject> *prop, QObject *object);
@@ -220,8 +225,9 @@ private:
     EditModeCondition m_editModeCondition = Manual;
     QSizeF m_initialSize;
 
-    QPointer<QQmlComponent> m_configOverlayComponent;
+    QUrl m_configOverlaySource;
     ConfigOverlay *m_configOverlay = nullptr;
+    bool m_configOverlayVisible = false;
 
     QPointF m_lastMousePosition = QPoint(-1, -1);
     QPointF m_mouseDownPosition = QPoint(-1, -1);

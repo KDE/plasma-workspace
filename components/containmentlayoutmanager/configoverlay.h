@@ -55,7 +55,7 @@ public:
     void setTouchInteraction(bool touch);
 
 Q_SIGNALS:
-    void openChanged();
+    void openChanged(bool open);
     void itemContainerChanged();
     void leftAvailableSpaceChanged();
     void topAvailableSpaceChanged();
