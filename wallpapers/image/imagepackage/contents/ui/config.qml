@@ -7,15 +7,15 @@
 */
 
 import QtQuick
-import QtQuick.Controls 2.5 as QtControls2
-import QtQuick.Layouts 1.0
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
-import org.kde.kquickcontrols 2.0 as KQuickControls
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.newstuff 1.91 as NewStuff
+import QtQuick.Controls as QtControls2
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
+import org.kde.plasma.wallpapers.image as PlasmaWallpaper
+import org.kde.kquickcontrols as KQuickControls
+import org.kde.kquickcontrolsaddons
+import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
 ColumnLayout {
     id: root

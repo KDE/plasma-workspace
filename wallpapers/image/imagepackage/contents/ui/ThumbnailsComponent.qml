@@ -6,12 +6,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Window 2.15 // for Screen
+import QtQuick
 
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 
 Item {
     id: thumbnailsComponent

@@ -5,12 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.3 as QtControls2
+import QtQuick
+import QtQuick.Controls as QtControls2
 import Qt5Compat.GraphicalEffects
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrolsaddons
 import org.kde.kcmutils as KCM
 
 KCM.GridDelegate {
