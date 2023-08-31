@@ -4,12 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Window 2.15
+import QtQuick
 
-import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
+import org.kde.plasma.wallpapers.image as PlasmaWallpaper
 
-import org.kde.kwindowsystem 1.0
+import org.kde.kwindowsystem
 
 BaseMediaComponent {
     id: animatedImageComponent
