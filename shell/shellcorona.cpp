@@ -9,9 +9,11 @@
 
 #include "shellcorona.h"
 #include "debug.h"
+#include "kconfigpropertymap.h"
 #include "strutmanager.h"
 
 #include <config-plasma.h>
+#include <config-workspace.h>
 
 #include <QApplication>
 #include <QDBusConnection>
@@ -1653,6 +1655,58 @@ QRgb ShellCorona::color() const
     }
 
     return defaultColor;
+}
+
+void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QString &jsonParameters, uint screenNum)
+{
+    if (wallpaperPlugin.isEmpty()) {
+        qCWarning(PLASMASHELL) << "setWallpaper: Missing wallpaperPlugin parameter";
+        return;
+    }
+    QJsonParseError error;
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(jsonParameters.toUtf8(), &error);
+    if (jsonResponse.isNull()) {
+        qCWarning(PLASMASHELL) << "setWallpaper: Could not parse Wallpaper json parameters" << error.errorString();
+        return;
+    }
+    if (!jsonResponse.isObject()) {
+        qCWarning(PLASMASHELL) << "setWallpaper: json parameter passed was not a json object";
+        return;
+    }
+    QJsonObject jsonObject = jsonResponse.object();
+    if (jsonObject.isEmpty()) {
+        qCWarning(PLASMASHELL) << "setWallpaper: Empty json object parameter";
+        return;
+    }
+
+    if (!m_desktopViewForScreen.contains(screenNum)) {
+        qCWarning(PLASMASHELL) << "setWallpaper: unknown screen" << screenNum;
+        return;
+    }
+
+    const auto currentActivity =
+        m_activityController->currentActivity() == QLatin1String("00000000-0000-0000-0000-000000000000") ? QString() : m_activityController->currentActivity();
+
+    Plasma::Containment *containment = containmentForScreen(screenNum, currentActivity, QString());
+    if (!containment) {
+        qCWarning(PLASMASHELL) << "setWallpaper: containment not found for screen" << screenNum << currentActivity;
+        return;
+    }
+
+    QObject *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
+    KConfigPropertyMap *config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
+
+    // json to KConfig
+    const auto items = config->keys();
+    for (const auto &itemName : items) {
+        auto it = jsonObject.find(itemName);
+        if (it != jsonObject.end()) {
+            qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << it.value().toVariant() << screenNum;
+            config->insert(itemName, it.value().toVariant());
+        }
+    }
+    config->writeConfig();
+    containment->setWallpaperPlugin(wallpaperPlugin);
 }
 
 QString ShellCorona::evaluateScript(const QString &script)

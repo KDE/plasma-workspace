@@ -18,9 +18,6 @@
     <method name="color">
       <arg name="output" type="u" direction="out"/>
     </method>
-    <signal name="colorChanged">
-      <arg name="changedColor" type="s" direction="out"/>
-    </signal>
     <method name="dumpCurrentLayoutJS">
       <arg name="script" type="ay" direction="out"/>
     </method>
@@ -30,5 +27,15 @@
     <method name="activateLauncherMenu">
     </method>
     <method name="refreshCurrentShell" />
+    
+    <method name="setWallpaper">
+      <arg name="wallpaperPlugin" type="s" direction="in"/>
+      <arg name="jsonParameters" type="s" direction="in"/>
+      <arg name="screenNum" type="u" direction="in"/>
+    </method>
+    
+    <signal name="colorChanged">
+      <arg name="changedColor" type="s" direction="out"/>
+    </signal>
   </interface>
 </node>

@@ -174,6 +174,7 @@ public Q_SLOTS:
     void toggleActivityManager();
     void toggleWidgetExplorer();
     QString evaluateScript(const QString &string);
+    void setWallpaper(const QString &wallpaperPlugin, const QString &jsonParameters, uint screenNum);
     void activateLauncherMenu();
     QRgb color() const;
 

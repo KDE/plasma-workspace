@@ -171,9 +171,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
         pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
         pkg.setPath(wallpaperPlugin);
         QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
-        KConfigGroup cfg = m_containment->config();
-        cfg = KConfigGroup(&cfg, "Wallpaper");
-        cfg = KConfigGroup(&cfg, wallpaperPlugin);
+        KConfigGroup cfg = m_containment->config().group("Wallpaper").group(wallpaperPlugin);
         m_currentWallpaperConfig = m_ownWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
     }
 
