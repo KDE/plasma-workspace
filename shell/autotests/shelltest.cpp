@@ -55,7 +55,7 @@ QScreen *ShellTest::insertScreen(const QRect &geometry, const QString &name)
 {
     QScreen *result = nullptr;
 
-    auto doTest = [=](QScreen *&res) {
+    auto doTest = [=, this](QScreen *&res) {
         int oldAppNumScreens = qApp->screens().size();
         int oldCoronaNumScreens = m_corona->numScreens();
 
@@ -70,7 +70,7 @@ QScreen *ShellTest::insertScreen(const QRect &geometry, const QString &name)
         //  QSignalSpy orderChangeSpy(m_corona->m_screenPool, &ScreenPool::screenOrderChanged);
 
         // Add a new output
-        exec([=] {
+        exec([=, this] {
             OutputData data;
             data.mode.resolution = {geometry.width(), geometry.height()};
             data.position = {geometry.x(), geometry.y()};
@@ -103,7 +103,7 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
 {
     QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
 
-    exec([=] {
+    exec([=, this] {
         outputOrder()->setList(order);
     });
 
@@ -153,7 +153,7 @@ void ShellTest::initTestCase()
 
 void ShellTest::cleanupTestCase()
 {
-    exec([=] {
+    exec([this] {
         outputOrder()->setList({"WL-1"});
     });
     QCOMPOSITOR_COMPARE(getAll<Output>().size(), 1); // Only the default output should be left
@@ -177,7 +177,7 @@ void ShellTest::cleanup()
     QVERIFY(oldCoronaNumScreens <= oldNumScreens);
     QSignalSpy coronaRemovedSpy(m_corona, SIGNAL(screenRemoved(int)));
 
-    exec([=] {
+    exec([=, this] {
         for (int i = oldNumScreens - 1; i >= 0; --i) {
             remove(output(i));
         }
@@ -279,7 +279,7 @@ void ShellTest::testMoveOutOfRedundant()
 
     QSignalSpy coronaAddedSpy(m_corona, SIGNAL(screenAdded(int)));
 
-    exec([=] {
+    exec([this] {
         auto *out = output(1);
         auto *xdgOut = xdgOutput(out);
         out->m_data.mode.resolution = {1280, 2048};
@@ -316,7 +316,7 @@ void ShellTest::testScreenRemoval()
     QSignalSpy removedSpy(m_corona, SIGNAL(screenRemoved(int)));
 
     // Remove outputs
-    exec([=] {
+    exec([this] {
         remove(output(2));
         remove(output(1));
     });
@@ -392,7 +392,7 @@ void ShellTest::testScreenRemovalRecyclingViews()
     QSignalSpy removedSpy(m_corona, SIGNAL(screenRemoved(int)));
 
     // Remove output
-    exec([=] {
+    exec([this] {
         remove(output(1));
     });
 
