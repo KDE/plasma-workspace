@@ -130,7 +130,7 @@ PlasmaExtras.ExpandableListItem {
         if (!hasStorageAccess || !isRemovable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
-            operation.predicate = "test-predicate-openinwindow.desktop";
+            operation.predicate = "openWithFileManager.desktop";
 
             if (!hasStorageAccess && hasPortableMediaPlayer) {
                 if (deviceItem.supportsMTP) {
@@ -250,7 +250,7 @@ PlasmaExtras.ExpandableListItem {
             // mounted removable disks (for everything else, this action is
             // already the primary one shown on the list item)
             enabled: {
-                if (modelData.predicate != "test-predicate-openinwindow.desktop") {
+                if (modelData.predicate != "openWithFileManager.desktop") {
                     return true;
                 }
                 return deviceItem.isRemovable && deviceItem.isMounted;

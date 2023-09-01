@@ -128,7 +128,9 @@ void DelayedExecutor::delayedExecute(const QString &udi)
 {
     Solid::Device device(udi);
 
+    qWarning() << "About the execute the service...";
     QString exec = m_service.exec();
+    qWarning() << "Executed the service!!!";
     MacroExpander mx(device);
     mx.expandMacrosShellQuote(exec);
 
@@ -136,7 +138,7 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
 
     // To make xdg-activation and startup feedback work we need to pass the desktop file name of what we are launching
-    if (m_service.service()->storageId().endsWith(QLatin1String("test-predicate-openinwindow.desktop"))) {
+    if (m_service.service()->storageId().endsWith(QLatin1String("openWithFileManager.desktop"))) {
         // We know that we are going to launch the default file manager, so query the desktop file name of that
         const KService::Ptr defaultFileManager = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
         job->setDesktopName(defaultFileManager->desktopEntryName());
