@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2005 Jean-Remy Falleri <jr.falleri@laposte.net>
     SPDX-FileCopyrightText: 2005-2007 Kevin Ottens <ervin@kde.org>
+    SPDX-FileCopyrightText: 2023 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -41,7 +42,7 @@ class DelayedExecutor : public QObject
 {
     Q_OBJECT
 public:
-    DelayedExecutor(const KServiceAction &service, Solid::Device &device);
+    DelayedExecutor(QString const &desktopFilePath, Solid::Device &device);
 
 private Q_SLOTS:
     void _k_storageSetupDone(Solid::ErrorType error, QVariant errorData, const QString &udi);
@@ -49,12 +50,12 @@ private Q_SLOTS:
 private:
     void delayedExecute(const QString &udi);
 
-    KServiceAction m_service;
+    KDesktopFile m_desktopFile;
 };
 
 void DeviceServiceAction::execute(Solid::Device &device)
 {
-    new DelayedExecutor(m_service, device);
+    new DelayedExecutor(m_desktopFile->fileName(), device);
 }
 
 void DelayedExecutor::_k_storageSetupDone(Solid::ErrorType error, QVariant errorData, const QString &udi)
@@ -66,14 +67,15 @@ void DelayedExecutor::_k_storageSetupDone(Solid::ErrorType error, QVariant error
     }
 }
 
-void DeviceServiceAction::setService(const KServiceAction &service)
+void DeviceServiceAction::setDesktopFile(const QString &filePath)
 {
-    m_service = service;
+    KDesktopFile *desktopFile = new KDesktopFile(filePath);
+    m_desktopFile = desktopFile;
 }
 
-KServiceAction DeviceServiceAction::service() const
+KDesktopFile *DeviceServiceAction::desktopFile() const
 {
-    return m_service;
+    return m_desktopFile;
 }
 
 int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &ret)
@@ -110,8 +112,8 @@ int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &
     return 2;
 }
 
-DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &device)
-    : m_service(service)
+DelayedExecutor::DelayedExecutor(const QString &filePath, Solid::Device &device)
+    : m_desktopFile(filePath)
 {
     if (device.is<Solid::StorageAccess>() && !device.as<Solid::StorageAccess>()->isAccessible()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
@@ -128,9 +130,9 @@ void DelayedExecutor::delayedExecute(const QString &udi)
 {
     Solid::Device device(udi);
 
-    qWarning() << "About the execute the service...";
-    QString exec = m_service.exec();
-    qWarning() << "Executed the service!!!";
+    const QStringList desktopFileActions = m_desktopFile.readActions();
+    Q_ASSERT(desktopFileActions.size() == 1); // There must be only one action in it
+    QString exec = m_desktopFile.actionGroup(desktopFileActions.first()).readEntry("Exec");
     MacroExpander mx(device);
     mx.expandMacrosShellQuote(exec);
 
@@ -138,14 +140,16 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
 
     // To make xdg-activation and startup feedback work we need to pass the desktop file name of what we are launching
-    if (m_service.service()->storageId().endsWith(QLatin1String("openWithFileManager.desktop"))) {
+    if (m_desktopFile.fileName().endsWith(QLatin1String("openWithFileManager.desktop"))) {
         // We know that we are going to launch the default file manager, so query the desktop file name of that
         const KService::Ptr defaultFileManager = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
         job->setDesktopName(defaultFileManager->desktopEntryName());
     } else {
         // Read the app that will be launched from the desktop file
-        KDesktopFile desktopFile(m_service.service()->storageId());
-        job->setDesktopName(desktopFile.desktopGroup().readEntry("X-KDE-AliasFor"));
+        const QString desktopFilename = m_desktopFile.desktopGroup().readEntry(QStringLiteral("X-KDE-AliasFor"), QString());
+        if (!desktopFilename.isEmpty()) {
+            job->setDesktopName(desktopFilename);
+        }
     }
 
     job->start();

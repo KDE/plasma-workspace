@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2007 Menard Alexis <darktears31@gmail.com>
+    SPDX-FileCopyrightText: 2023 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -15,7 +16,6 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirWatch>
-#include <KService>
 #include <Plasma5Support/DataContainer>
 #include <QDebug>
 #include <kdesktopfileactions.h>
@@ -171,12 +171,18 @@ QVariantList HotplugEngine::actionsForPredicates(const QStringList &predicates) 
 
     for (const QString &desktop : predicates) {
         const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
-        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(KService(actionUrl), true);
-        if (!services.isEmpty()) {
+        KDesktopFile actionDesktopFile(actionUrl);
+
+        const QStringList desktopFileActions = actionDesktopFile.readActions();
+
+        if (desktopFileActions.size() == 1) {
+            const QString actionName = desktopFileActions.first();
+            const KConfigGroup actionsGroup = actionDesktopFile.actionGroup(actionName);
+
             Plasma5Support::DataEngine::Data action;
             action.insert(QStringLiteral("predicate"), desktop);
-            action.insert(QStringLiteral("text"), services[0].text());
-            action.insert(QStringLiteral("icon"), services[0].icon());
+            action.insert(QStringLiteral("text"), actionsGroup.readEntry(QStringLiteral("Name"), QString()));
+            action.insert(QStringLiteral("icon"), actionsGroup.readEntry(QStringLiteral("Icon"), QString()));
             actions << action;
         }
     }
