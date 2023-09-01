@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 02:00+0000\n"
+"POT-Creation-Date: 2023-09-01 01:58+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -92,12 +92,12 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr "يېڭى تام قەغەزلىرىنى ئېلىش…"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "تام قەغىزى سۈرىتىنى ئاچ"
 
-#: imagepackage/contents/ui/main.qml:41
+#: imagepackage/contents/ui/main.qml:40
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "كېيىنكى تام قەغىزى سۈرىتى"

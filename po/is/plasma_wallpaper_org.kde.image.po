@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 02:00+0000\n"
+"POT-Creation-Date: 2023-09-01 01:58+0000\n"
 "PO-Revision-Date: 2023-03-16 20:45+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -93,12 +93,12 @@ msgstr "Bæta við mynd…"
 msgid "Get New Wallpapers…"
 msgstr "Ná í nýtt veggfóður..."
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Opna veggfóðursmynd"
 
-#: imagepackage/contents/ui/main.qml:41
+#: imagepackage/contents/ui/main.qml:40
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Næsta veggfóðursmynd"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 02:00+0000\n"
+"POT-Creation-Date: 2023-09-01 01:58+0000\n"
 "PO-Revision-Date: 2009-03-25 20:06+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhalese <danishka@gmail.com>\n"
@@ -89,13 +89,13 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr "පිංතූර"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Open Wallpaper Image"
 msgstr "පිංතූර"
 
-#: imagepackage/contents/ui/main.qml:41
+#: imagepackage/contents/ui/main.qml:40
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr ""

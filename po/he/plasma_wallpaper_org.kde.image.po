@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 02:00+0000\n"
+"POT-Creation-Date: 2023-09-01 01:58+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -95,12 +95,12 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr "קבל תמונות רקע חדשות..."
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "פתח תמונת רקע"
 
-#: imagepackage/contents/ui/main.qml:41
+#: imagepackage/contents/ui/main.qml:40
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "תמונת הרקע הבאה"

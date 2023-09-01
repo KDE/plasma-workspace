@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-01 01:58+0000\n"
 "PO-Revision-Date: 2019-10-30 20:59+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -18,43 +18,55 @@ msgstr ""
 "X-Generator: Lokalize 19.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: PowerDevilRunner.cpp:31
+#: PowerDevilRunner.cpp:32
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "passiivseisund"
 
-#: PowerDevilRunner.cpp:33
+#: PowerDevilRunner.cpp:34
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "mälus"
 
-#: PowerDevilRunner.cpp:35
+#: PowerDevilRunner.cpp:36
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "uni"
 
-#: PowerDevilRunner.cpp:37
+#: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "talveuni"
 
-#: PowerDevilRunner.cpp:39
+#: PowerDevilRunner.cpp:40
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "kettal"
 
-#: PowerDevilRunner.cpp:41 PowerDevilRunner.cpp:43 PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:42
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hybrid sleep"
+msgstr ""
+
+#: PowerDevilRunner.cpp:44
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hybrid"
+msgstr ""
+
+#: PowerDevilRunner.cpp:46 PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:73
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "ekraani tumendamine"
 
-#: PowerDevilRunner.cpp:52
+#: PowerDevilRunner.cpp:57
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -63,17 +75,22 @@ msgstr ""
 "Loetleb süsteemi magamapaneku valikud (nt passiivseisund, talveuni) ja "
 "võimaldab neid aktiveerida."
 
-#: PowerDevilRunner.cpp:56
+#: PowerDevilRunner.cpp:61
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Süsteemi viimine passiivseisundisse mälus"
 
-#: PowerDevilRunner.cpp:60
+#: PowerDevilRunner.cpp:65
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Süsteemi viimine passiivseisundisse kettal"
 
-#: PowerDevilRunner.cpp:63
+#: PowerDevilRunner.cpp:69
+#, kde-format
+msgid "Sleeps now and falls back to hibernate"
+msgstr ""
+
+#: PowerDevilRunner.cpp:72
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -82,7 +99,7 @@ msgctxt ""
 msgid "screen brightness <percent value>"
 msgstr "ekraani heledus"
 
-#: PowerDevilRunner.cpp:66
+#: PowerDevilRunner.cpp:75
 #, fuzzy, no-c-format, kde-format
 #| msgid ""
 #| "Lists screen brightness options or sets it to the brightness defined by :"
@@ -96,45 +113,56 @@ msgstr ""
 "Loetleb ekraani heleduse valikud või kehtestab heleduse, mille määrab :q:, "
 "nt ekraani heledus 50 muudab ekraani 50% võrra tuhmimaks maksimaalsest."
 
-#: PowerDevilRunner.cpp:88
+#: PowerDevilRunner.cpp:97
 #, fuzzy, kde-format
 #| msgid "Set Brightness to %1"
 msgid "Set Brightness to %1%"
 msgstr "Heleduseks määratakse '%1'"
 
-#: PowerDevilRunner.cpp:97
+#: PowerDevilRunner.cpp:106
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Ekraani täielik tumendamine"
 
-#: PowerDevilRunner.cpp:105
+#: PowerDevilRunner.cpp:114
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Ekraani tumendamine poole võrra"
 
-#: PowerDevilRunner.cpp:135
+#: PowerDevilRunner.cpp:149
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Unne"
 
-#: PowerDevilRunner.cpp:136
+#: PowerDevilRunner.cpp:150
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Passiivseisundisse mälus"
 
-#: PowerDevilRunner.cpp:141
+#: PowerDevilRunner.cpp:155
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Talveuni"
 
-#: PowerDevilRunner.cpp:142
+#: PowerDevilRunner.cpp:156
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Passiivseisundisse kettal"
 
-#: PowerDevilRunner.cpp:209
+#: PowerDevilRunner.cpp:161
+#, kde-format
+msgctxt "Suspend to both RAM and disk"
+msgid "Hybrid sleep"
+msgstr ""
+
+#: PowerDevilRunner.cpp:162
+#, kde-format
+msgid "Sleep now and fall back to hibernate"
+msgstr ""
+
+#: PowerDevilRunner.cpp:231
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -142,7 +170,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "ekraani heledus"
 
-#: PowerDevilRunner.cpp:211
+#: PowerDevilRunner.cpp:233
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"
