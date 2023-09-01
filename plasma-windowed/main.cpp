@@ -6,6 +6,7 @@
 */
 
 #include <QApplication>
+#include <QQmlDebuggingEnabler>
 #include <QSurfaceFormat>
 #include <qcommandlineoption.h>
 #include <qcommandlineparser.h>
@@ -20,6 +21,12 @@ static const char version[] = "1.0";
 
 int main(int argc, char **argv)
 {
+#if QT_CONFIG(qml_debug)
+    if (qEnvironmentVariableIsSet("PLASMA_ENABLE_QML_DEBUG")) {
+        QQmlDebuggingEnabler debugger;
+    }
+#endif
+
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     auto format = QSurfaceFormat::defaultFormat();
@@ -34,6 +41,9 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Plasma Windowed"));
+#if QT_CONFIG(qml_debug)
+    parser.addOption(QCommandLineOption(QStringList{QStringLiteral("d"), QStringLiteral("qmljsdebugger"), i18n("Enable QML Javascript debugger")}));
+#endif
     parser.addOption(
         QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
     QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
