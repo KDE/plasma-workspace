@@ -51,4 +51,4 @@ Name[zh_TW]=桌布外掛程式
 Categories=Plasma Wallpaper Plugin
 StandardResource=tmp
 Uncompress=kpackage
-KPackageType=Plasma/Wallpaper
+KPackageStructure=Plasma/Wallpaper
