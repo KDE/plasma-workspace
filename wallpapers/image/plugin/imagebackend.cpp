@@ -30,7 +30,6 @@
 ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
-    , m_slideFilterModel(new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this))
 {
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
 }
@@ -49,7 +48,12 @@ void ImageBackend::componentComplete()
     m_ready = true;
 
     // MediaProxy will handle SingleImage case
-    startSlideshow();
+    if (m_usedInConfig) {
+        ensureWallpaperModel();
+        ensureSlideshowModel();
+    } else {
+        startSlideshow();
+    }
 }
 
 QString ImageBackend::image() const
@@ -96,7 +100,9 @@ void ImageBackend::setSlideshowMode(SortingMode::Mode slideshowMode)
     }
 
     m_slideshowMode = slideshowMode;
-    m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    if (m_slideFilterModel) {
+        m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    }
     Q_EMIT slideshowModeChanged();
 
     startSlideshow();
@@ -114,7 +120,9 @@ void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
     }
 
     m_slideshowFoldersFirst = slideshowFoldersFirst;
-    m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    if (m_slideFilterModel) {
+        m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    }
     Q_EMIT slideshowFoldersFirstChanged();
 
     startSlideshow();
@@ -131,26 +139,54 @@ void ImageBackend::setTargetSize(const QSize &size)
     m_targetSize = size;
 }
 
-QAbstractItemModel *ImageBackend::wallpaperModel()
+QAbstractItemModel *ImageBackend::wallpaperModel() const
 {
-    if (!m_model) {
-        m_model = new ImageProxyModel({}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
-        connect(m_model, &ImageProxyModel::loadingChanged, this, &ImageBackend::loadingChanged);
-    }
-
+    Q_ASSERT(m_mode == SingleImage);
     return m_model;
 }
 
-SlideModel *ImageBackend::slideshowModel()
+void ImageBackend::ensureWallpaperModel()
 {
-    if (!m_slideshowModel) {
-        m_slideshowModel = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
-        m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
-        connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
-        connect(m_slideshowModel, &SlideModel::dataChanged, this, &ImageBackend::slotSlideModelDataChanged);
-        connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
+    if (m_model || m_mode != SingleImage) {
+        return;
     }
-    return m_slideshowModel;
+
+    m_model = new ImageProxyModel({}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
+    connect(m_model, &ImageProxyModel::loadingChanged, this, &ImageBackend::loadingChanged);
+
+    Q_EMIT wallpaperModelChanged();
+    Q_EMIT loadingChanged();
+}
+
+void ImageBackend::ensureSlideshowModel()
+{
+    if (m_slideshowModel || m_mode != SlideShow) {
+        return;
+    }
+
+    m_slideshowModel = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
+    m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
+
+    m_slideFilterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this);
+    m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    // setSourceModel(...) must be done in backgroundsFound() to generate a complete random order
+
+    connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
+    connect(m_slideshowModel, &SlideModel::dataChanged, this, &ImageBackend::slotSlideModelDataChanged);
+    connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
+
+    if (m_usedInConfig) {
+        // When not used in config, slide paths are set in startSlideshow()
+        m_slideshowModel->setSlidePaths(m_slidePaths);
+        if (m_slideshowModel->loading()) {
+            connect(m_slideshowModel, &SlideModel::done, this, &ImageBackend::backgroundsFound);
+        } else {
+            // In case it loads immediately
+            m_slideFilterModel->setSourceModel(m_slideshowModel);
+        }
+    }
+
+    Q_EMIT slideFilterModelChanged();
 }
 
 void ImageBackend::saveCurrentWallpaper()
@@ -162,13 +198,9 @@ void ImageBackend::saveCurrentWallpaper()
     QMetaObject::invokeMethod(this, "writeImageConfig", Qt::QueuedConnection, Q_ARG(QString, m_image.toString()));
 }
 
-QAbstractItemModel *ImageBackend::slideFilterModel()
+QAbstractItemModel *ImageBackend::slideFilterModel() const
 {
-    if (!m_slideFilterModel->sourceModel()) {
-        // make sure it's created
-        connect(slideshowModel(), &SlideModel::done, this, &ImageBackend::backgroundsFound);
-    }
-
+    Q_ASSERT(m_mode == SlideShow);
     return m_slideFilterModel;
 }
 
@@ -216,8 +248,9 @@ void ImageBackend::setSlidePaths(const QStringList &slidePaths)
     }
     if (!m_usedInConfig) {
         startSlideshow();
-    } else {
-        slideshowModel()->setSlidePaths(m_slidePaths);
+    } else if (m_slideshowModel) {
+        // When used in config, m_slideshowModel can be nullptr when the image wallpaper is being used.
+        m_slideshowModel->setSlidePaths(m_slidePaths);
     }
     Q_EMIT slidePathsChanged();
 }
@@ -234,6 +267,7 @@ void ImageBackend::showAddSlidePathsDialog()
 
 void ImageBackend::addSlidePath(const QUrl &url)
 {
+    Q_ASSERT(m_mode == SlideShow);
     if (url.isEmpty()) {
         return;
     }
@@ -259,9 +293,7 @@ void ImageBackend::addSlidePath(const QUrl &url)
 
 void ImageBackend::removeSlidePath(const QString &path)
 {
-    if (m_mode != SlideShow) {
-        return;
-    }
+    Q_ASSERT(m_mode == SlideShow);
 
     /* BUG 461003 check path is in the config*/
     m_slideshowModel->removeDir(path);
@@ -286,8 +318,9 @@ void ImageBackend::startSlideshow()
     }
     // populate background list
     m_timer.stop();
-    connect(slideshowModel(), &SlideModel::done, this, &ImageBackend::backgroundsFound);
-    slideshowModel()->setSlidePaths(m_slidePaths);
+    ensureSlideshowModel();
+    connect(m_slideshowModel, &SlideModel::done, this, &ImageBackend::backgroundsFound);
+    m_slideshowModel->setSlidePaths(m_slidePaths);
     // TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
     // about loading wallpaper slideshow while the thread runs
 }
@@ -296,7 +329,7 @@ void ImageBackend::backgroundsFound()
 {
     disconnect(m_slideshowModel, &SlideModel::done, this, nullptr);
 
-    // setSourceModel must be called after the model is loaded
+    // setSourceModel must be called after the model is loaded to generate a complete random order
     m_slideFilterModel->setSourceModel(m_slideshowModel);
 
     if (m_slideFilterModel->rowCount() == 0 || m_usedInConfig) {
@@ -388,7 +421,9 @@ void ImageBackend::setConfigMap(QQmlPropertyMap *configMap)
 
 QString ImageBackend::addUsersWallpaper(const QUrl &url)
 {
-    auto results = static_cast<ImageProxyModel *>(wallpaperModel())->addBackground(url.isLocalFile() ? url.toLocalFile() : url.toString());
+    Q_ASSERT(m_mode == SingleImage);
+    ensureWallpaperModel(); // The model is not created by default when used in desktop
+    auto results = m_model->addBackground(url.isLocalFile() ? url.toLocalFile() : url.toString());
 
     if (!m_usedInConfig) {
         m_model->commitAddition();

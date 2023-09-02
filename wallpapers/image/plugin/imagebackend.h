@@ -66,8 +66,8 @@ class ImageBackend : public QObject, public QQmlParserStatus
      */
     Q_PROPERTY(QString image READ image WRITE setImage NOTIFY imageChanged)
 
-    Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel NOTIFY wallpaperModelChanged)
+    Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel NOTIFY slideFilterModelChanged)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
@@ -114,8 +114,8 @@ public:
     QSize targetSize() const;
     void setTargetSize(const QSize &size);
 
-    QAbstractItemModel *wallpaperModel();
-    QAbstractItemModel *slideFilterModel();
+    QAbstractItemModel *wallpaperModel() const;
+    QAbstractItemModel *slideFilterModel() const;
 
     int slideTimer() const;
     void setSlideTimer(int time);
@@ -138,6 +138,8 @@ public Q_SLOTS:
 Q_SIGNALS:
     void settingsChanged();
     void imageChanged();
+    void wallpaperModelChanged();
+    void slideFilterModelChanged();
     void renderingModeChanged();
     void slideshowModeChanged();
     void slideshowFoldersFirstChanged();
@@ -161,7 +163,8 @@ protected Q_SLOTS:
     void backgroundsFound();
 
 private:
-    SlideModel *slideshowModel();
+    void ensureWallpaperModel();
+    void ensureSlideshowModel();
 
     void saveCurrentWallpaper();
 
@@ -183,6 +186,6 @@ private:
     int m_currentSlide = -1;
     ImageProxyModel *m_model = nullptr;
     SlideModel *m_slideshowModel = nullptr;
-    SlideFilterModel *m_slideFilterModel;
+    SlideFilterModel *m_slideFilterModel = nullptr;
     QFileDialog *m_dialog = nullptr;
 };
