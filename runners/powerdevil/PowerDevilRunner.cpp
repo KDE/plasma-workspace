@@ -60,15 +60,15 @@ void PowerDevilRunner::updateSyntaxes()
                              "and allows them to be activated"));
 
     if (m_session->canSuspend()) {
-        addSyntaxForKeyword({m_sleep, m_toRam}, i18n("Suspends the system to RAM"));
+        addSyntaxForKeyword({m_sleep, m_toRam}, i18n("Saves session to memory, saves power and wakes up fast"));
     }
 
     if (m_session->canHibernate()) {
-        addSyntaxForKeyword({m_hibernate, m_toDisk}, i18n("Suspends the system to disk"));
+        addSyntaxForKeyword({m_hibernate, m_toDisk}, i18n("Saves session to disk, powers off and wakes up fast"));
     }
 
     if (m_session->canHybridSuspend()) {
-        addSyntaxForKeyword({m_hybrid, m_hybridSuspend}, i18n("Sleeps now and falls back to hibernate"));
+        addSyntaxForKeyword({m_hybrid, m_hybridSuspend}, i18n("Saves session to both memory and disk, saves power and wakes up fast"));
     }
 
     addSyntax(QStringList{i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
@@ -149,19 +149,19 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
     case SuspendState:
         match.setIconName(QStringLiteral("system-suspend"));
         match.setText(i18nc("Suspend to RAM", "Sleep"));
-        match.setSubtext(i18n("Suspend to RAM"));
+        match.setSubtext(i18n("Save session to memory, save power and wake up fast"));
         match.setRelevance(1);
         break;
     case HibernateState:
         match.setIconName(QStringLiteral("system-suspend-hibernate"));
         match.setText(i18nc("Suspend to disk", "Hibernate"));
-        match.setSubtext(i18n("Suspend to disk"));
+        match.setSubtext(i18n("Save session to disk, power off and wake up slowly"));
         match.setRelevance(0.99);
         break;
     case HybridSuspendState:
         match.setIconName(QStringLiteral("system-suspend-hybrid"));
         match.setText(i18nc("Suspend to both RAM and disk", "Hybrid sleep"));
-        match.setSubtext(i18n("Sleep now and fall back to hibernate"));
+        match.setSubtext(i18n("Save session to both memory and disk, save power and wake up fast"));
         match.setRelevance(0.98);
         break;
     }
