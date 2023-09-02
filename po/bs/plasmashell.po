@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-05 02:27+0000\n"
+"POT-Creation-Date: 2023-09-02 02:34+0000\n"
 "PO-Revision-Date: 2014-12-28 11:43+0000\n"
 "Last-Translator: Fadil Ademovic <fademovic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -252,12 +252,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:1916
+#: shellcorona.cpp:1923
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj panel"
 
-#: shellcorona.cpp:1952
+#: shellcorona.cpp:1959
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"
