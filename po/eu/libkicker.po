@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-09-02 02:04+0000\n"
 "PO-Revision-Date: 2021-07-19 19:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -198,7 +198,7 @@ msgstr "Maiz erabilitako aplikazioak"
 msgid "Power / Session"
 msgstr "Energia / Saioa"
 
-#: plugin/runnermodel.cpp:203
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "Bilaketaren emaitzak"

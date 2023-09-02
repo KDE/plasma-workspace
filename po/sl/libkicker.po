@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-09-02 02:04+0000\n"
 "PO-Revision-Date: 2021-05-27 09:49+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -197,7 +197,7 @@ msgstr "Pogosto uporabljeni programi"
 msgid "Power / Session"
 msgstr "Energija / seja"
 
-#: plugin/runnermodel.cpp:203
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "Rezultati iskanja"

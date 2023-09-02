@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-09-02 02:04+0000\n"
 "PO-Revision-Date: 2021-09-30 15:43+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -196,7 +196,7 @@ msgstr "Gyakran használt alkalmazások"
 msgid "Power / Session"
 msgstr "Energiakezelés / Munkamenet"
 
-#: plugin/runnermodel.cpp:203
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "Keresési eredmények"

@@ -36,18 +36,16 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Nastavit modul činností myši"
 
 #: desktopview.cpp:224
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Shell Plasma"
+msgstr ""
 
 #: desktopview.cpp:228
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Shell Plasma"
+msgstr ""
 
 #: desktopview.cpp:231
 #, kde-format
@@ -56,11 +54,10 @@ msgid "KDE Plasma %1 Beta %2"
 msgstr ""
 
 #: desktopview.cpp:235
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Shell Plasma"
+msgstr ""
 
 #: desktopview.cpp:241
 #, kde-format
@@ -313,10 +310,3 @@ msgstr "Počet panelů"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Počítá panely"
-
-#~ msgid ""
-#~ "Load plasmashell as a standalone application, needs the shell-plugin "
-#~ "option to be specified"
-#~ msgstr ""
-#~ "Načíst plasmashell jako samostatnou aplikaci vyžaduje nastavenou volbu "
-#~ "shell-plugin"

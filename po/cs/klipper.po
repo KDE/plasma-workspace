@@ -530,12 +530,10 @@ msgid "Previous History Item"
 msgstr "Předchozí položka v historii"
 
 #: klipper.cpp:218
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Show Items at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr "Zobrazit položky na pozici myši"
+msgstr ""
 
 #: klipper.cpp:229
 #, kde-format

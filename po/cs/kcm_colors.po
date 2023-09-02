@@ -1362,6 +1362,3 @@ msgstr "Otevřít barevné schéma"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Soubory barevných schémat (*.colors)"
-
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "Získat nová barevná schémata…"

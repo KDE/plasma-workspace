@@ -48,21 +48,17 @@ msgid "Show notification badges"
 msgstr "Zobrazit počet upozornění"
 
 #: ui/ApplicationConfiguration.qml:178
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Nastavit události…"
+msgstr ""
 
 #: ui/ApplicationConfiguration.qml:204
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Tato aplikace nepodporuje nastavení upozornění podle událostí."
+msgstr ""
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
@@ -72,7 +68,7 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:300
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Přehrát zvuk"
 
 #: ui/main.qml:41
 #, kde-format
@@ -264,20 +260,13 @@ msgid "System Services"
 msgstr "Systémové služby"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Vyhledávanému termínu neodpovídá žádná aplikace ani událost."
+msgstr ""
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
-msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit."
-
-#~ msgid "Configure Notifications"
-#~ msgstr "Nastavit upozornění"
+msgstr ""

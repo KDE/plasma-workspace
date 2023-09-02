@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-09-02 02:04+0000\n"
 "PO-Revision-Date: 2021-06-16 00:40+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -197,7 +197,7 @@ msgstr "Dažniausios programos"
 msgid "Power / Session"
 msgstr "Maitinimas / seansas"
 
-#: plugin/runnermodel.cpp:203
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "Paieškos rezultatai"

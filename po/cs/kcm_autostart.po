@@ -100,11 +100,10 @@ msgid "The file '%1' must be executable to run at login."
 msgstr "Soubor '%1' musí být pro spuštění při přihlášení spustitelný."
 
 #: ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr "Přidat…"
+msgstr ""
 
 #: ui/main.qml:79
 #, kde-format
@@ -142,18 +141,16 @@ msgid "Failed"
 msgstr ""
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "Vlastnosti"
+msgstr ""
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "Odstranit"
+msgstr ""
 
 #: ui/main.qml:200
 #, kde-format

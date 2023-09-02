@@ -162,6 +162,3 @@ msgstr "Otevřít motiv"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Get New Plasma Styles…"
-#~ msgstr "Získat nové styly Plasma…"

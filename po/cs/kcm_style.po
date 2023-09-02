@@ -114,11 +114,10 @@ msgid "Secondary toolbar label"
 msgstr "Pomocný text nástrojového panelu"
 
 #: ui/EffectSettingsPopup.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
-msgstr "Nastavit ikony a panely nástrojů"
+msgstr ""
 
 #: ui/EffectSettingsPopup.qml:34
 #, kde-format

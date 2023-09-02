@@ -279,17 +279,11 @@ msgid "Available Plugins:"
 msgstr "Dostupné moduly:"
 
 #: package/contents/ui/configTimeZones.qml:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Tip: Pokud pravidelně cestujete, přidejte sem další položku pro vaše časové "
-"pásmo. Zobrazí se pouze pokud změníte časové pásmo systému na jiné."
 
 #: package/contents/ui/configTimeZones.qml:97
 #, kde-format

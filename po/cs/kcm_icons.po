@@ -70,10 +70,9 @@ msgid "Install from File…"
 msgstr "Instalovat ze souboru…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Get New Icons…"
+#, kde-format
 msgid "Get New…"
-msgstr "Získat nové ikony…"
+msgstr ""
 
 #: ui/main.qml:166
 #, kde-format
@@ -94,47 +93,3 @@ msgstr "Otevřít motiv"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Hlavní panel nástrojů"
-
-#~ msgid "Secondary Toolbars"
-#~ msgstr "Sekundární nástrojové lišty"
-
-#~ msgid "Small Icons"
-#~ msgstr "Malé ikony"
-
-#~ msgid "Dialogs"
-#~ msgstr "Dialogy"
-
-#~ msgid "Desktop icons size"
-#~ msgstr "Velikost ikon na ploše"
-
-#~ msgid "Toolbar icons size"
-#~ msgstr "Velikost ikon na nástrojovém panelu"
-
-#~ msgid "Main toolbar icons size"
-#~ msgstr "Velikost hlavního panelu nástrojů"
-
-#~ msgid "Small icons size"
-#~ msgstr "Malá velikost ikon"
-
-#~ msgid "Panel icons size"
-#~ msgstr "Velikost ikon panelu"
-
-#~ msgid "Dialog icons size"
-#~ msgstr "Velikost ikon dialogu"
-
-#~ msgid "Adjust Global Scale…"
-#~ msgstr "Upravit globální měřítko..."
-
-#~ msgctxt "@label:slider"
-#~ msgid "Size:"
-#~ msgstr "Velikost:"
-
-#~ msgid "Configure Icon Sizes"
-#~ msgstr "Nastavit velikosti ikon"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Icon Sizes"
-#~ msgstr "Nastavit velikosti ikon"

@@ -1,23 +1,23 @@
 # Translation of plasma_runner_powerdevil.po to Catalan
-# Copyright (C) 2008-2021 This_file_is_part_of_KDE
+# Copyright (C) 2008-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2013, 2015, 2017, 2018, 2019, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2013, 2015, 2017, 2018, 2019, 2020, 2021, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2012, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2021-12-27 10:49+0100\n"
+"PO-Revision-Date: 2023-09-01 10:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -55,13 +55,13 @@ msgstr "al disc"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "suspensió híbrida"
 
 #: PowerDevilRunner.cpp:44
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "híbrida"
 
 #: PowerDevilRunner.cpp:46 PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:73
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Suspèn el sistema al disc"
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Suspèn ara i, com a alternativa de reserva, hiberna"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "Suspèn"
 #: PowerDevilRunner.cpp:150
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Suspèn a la RAM"
+msgstr "Suspensió a la RAM"
 
 #: PowerDevilRunner.cpp:155
 #, kde-format
@@ -152,12 +152,12 @@ msgstr "Suspèn al disc"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Suspensió híbrida"
 
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Suspèn ara, i hiberna com a alternativa de reserva"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format

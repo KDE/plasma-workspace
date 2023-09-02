@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-09-02 02:04+0000\n"
 "PO-Revision-Date: 2022-06-17 23:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -196,7 +196,7 @@ msgstr "よく使用するアプリケーション"
 msgid "Power / Session"
 msgstr "電源/セッション"
 
-#: plugin/runnermodel.cpp:203
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "検索結果"

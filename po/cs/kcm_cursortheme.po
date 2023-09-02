@@ -242,10 +242,9 @@ msgstr[1] "%1 sekundy"
 msgstr[2] "%1 sekund"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Velikost:"
+msgstr "Velikost: %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -259,10 +258,9 @@ msgid "&Install from File…"
 msgstr "&Instalovat ze souboru…"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "Zís&kat nové kurzory…"
+msgstr "Zís&kat nové…"
 
 #: ui/main.qml:161
 #, kde-format
