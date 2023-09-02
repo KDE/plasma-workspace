@@ -191,7 +191,7 @@ void SessionManagement::hybridSuspend()
     if (!canHybridSuspend()) {
         return;
     }
-    SessionManagement::hybridSuspend();
+    SessionBackend::self()->hybridSuspend();
 }
 
 void SessionManagement::hibernate()
