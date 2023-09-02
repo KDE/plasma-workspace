@@ -20,7 +20,7 @@
     </entry>
     <entry name="Image" type="String">
       <label>Wallpaper image path or wallpaper name</label>
-      <default></default>
+      <default>@KDE_INSTALL_FULL_WALLPAPERDIR@/Next/</default>
     </entry>
     <entry name="PreviewImage" type="String">
       <label>Wallpaper preview image path</label>
