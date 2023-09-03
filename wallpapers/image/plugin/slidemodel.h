@@ -36,22 +36,21 @@ public:
 
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
-    bool loading() const;
+    QBindable<bool> loading() const;
 
 Q_SIGNALS:
     void done();
-    void loadingChanged();
 
 private Q_SLOTS:
     void slotSourceModelLoadingChanged();
 
 private:
     Q_OBJECT_BINDABLE_PROPERTY(SlideModel, QSize, m_targetSize)
-    bool m_loading = false;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideModel, bool, m_usedInConfig, true)
 
     QHash<QString, ImageProxyModel *> m_models;
     int m_loaded = 0;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideModel, bool, m_loading, false)
 
     QHash<QString, bool> m_checkedTable;
 

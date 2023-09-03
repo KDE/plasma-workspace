@@ -148,7 +148,7 @@ Q_SIGNALS:
     void slidePathsChanged();
     void uncheckedSlidesChanged();
     void configMapChanged();
-    void loadingChanged();
+    void loadingChanged(bool loading);
 
     /**
      * Emitted when the user finishes adding images using the file dialog.
@@ -175,6 +175,7 @@ private:
 
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_usedInConfig, true)
     QPointer<QQmlPropertyMap> m_configMap;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_loading, false, &ImageBackend::loadingChanged)
 
     RenderingMode m_mode = SingleImage;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, SortingMode::Mode, m_slideshowMode, SortingMode::Random, &ImageBackend::slideshowModeChanged)

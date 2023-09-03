@@ -79,7 +79,7 @@ void ImageProxyModelTest::init()
     m_countSpy = new QSignalSpy(m_model, &ImageProxyModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &ImageProxyModel::dataChanged);
 
-    QVERIFY(m_model->loading());
+    QVERIFY(m_model->loading().value());
 
     // Test loading data
     for (int i = 0; i < m_modelNum; i++) {
@@ -93,7 +93,7 @@ void ImageProxyModelTest::init()
     m_countSpy->clear();
     QCOMPARE(m_model->sourceModels().size(), m_modelNum);
 
-    QVERIFY(!m_model->loading());
+    QVERIFY(!m_model->loading().value());
 
     QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultTotalCount);
     QCOMPARE(m_model->count(), m_model->rowCount());

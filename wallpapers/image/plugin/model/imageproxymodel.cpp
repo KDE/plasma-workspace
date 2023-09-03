@@ -55,8 +55,10 @@ ImageProxyModel::ImageProxyModel(const QStringList &customPaths,
     connect(m_imageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
     connect(m_packageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
 
+    m_loading.setBinding([this] {
+        return m_loaded.value() != 2;
+    });
     m_loaded = 0;
-    Q_EMIT loadingChanged();
 
     m_imageModel->load(m_customPaths);
     m_packageModel->load(m_customPaths);
@@ -91,9 +93,9 @@ int ImageProxyModel::indexOf(const QString &packagePath) const
     return idx;
 }
 
-bool ImageProxyModel::loading() const
+QBindable<bool> ImageProxyModel::loading() const
 {
-    return m_loaded != 2;
+    return &m_loading;
 }
 
 void ImageProxyModel::reload()
@@ -103,7 +105,6 @@ void ImageProxyModel::reload()
     }
 
     m_loaded = 0;
-    Q_EMIT loadingChanged();
 }
 
 QStringList ImageProxyModel::addBackground(const QString &_path)
@@ -241,16 +242,14 @@ void ImageProxyModel::openContainingFolder(int row) const
 void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
 {
     disconnect(model, &AbstractImageListModel::loaded, this, 0);
-
-    if (++m_loaded == 2) {
+    if (m_loaded + 1 == 2) {
         // All models are loaded, now add them.
         addSourceModel(m_imageModel);
         addSourceModel(m_packageModel);
 
         setupDirWatch();
-
-        Q_EMIT loadingChanged();
     }
+    m_loaded = m_loaded + 1;
 }
 
 void ImageProxyModel::slotDirWatchCreated(const QString &_path)

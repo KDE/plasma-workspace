@@ -22,8 +22,8 @@ Item {
 
     Connections {
         target: imageWallpaper
-        function onLoadingChanged() {
-            if (imageWallpaper.loading) {
+        function onLoadingChanged(loading: bool) {
+            if (loading) {
                 return;
             }
             if (configDialog.currentWallpaper === "org.kde.image" && imageModel.indexOf(cfg_Image) < 0) {

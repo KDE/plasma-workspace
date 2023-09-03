@@ -144,10 +144,9 @@ void ImageBackend::ensureWallpaperModel()
     }
 
     m_model = new ImageProxyModel({}, QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
-    connect(m_model, &ImageProxyModel::loadingChanged, this, &ImageBackend::loadingChanged);
+    m_loading.setBinding(m_model->loading().makeBinding());
 
     Q_EMIT wallpaperModelChanged();
-    Q_EMIT loadingChanged();
 }
 
 void ImageBackend::ensureSlideshowModel()
@@ -158,6 +157,7 @@ void ImageBackend::ensureSlideshowModel()
 
     m_slideshowModel = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
+    m_loading.setBinding(m_slideshowModel->loading().makeBinding());
 
     m_slideFilterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), //
                                               QBindable<SortingMode::Mode>(&m_slideshowMode), //
@@ -167,12 +167,11 @@ void ImageBackend::ensureSlideshowModel()
 
     connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
     connect(m_slideshowModel, &SlideModel::dataChanged, this, &ImageBackend::slotSlideModelDataChanged);
-    connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
 
     if (m_usedInConfig) {
         // When not used in config, slide paths are set in startSlideshow()
         m_slideshowModel->setSlidePaths(m_slidePaths);
-        if (m_slideshowModel->loading()) {
+        if (m_slideshowModel->loading().value()) {
             connect(m_slideshowModel, &SlideModel::done, this, &ImageBackend::backgroundsFound);
         } else {
             // In case it loads immediately
@@ -313,6 +312,7 @@ void ImageBackend::startSlideshow()
     // populate background list
     m_timer.stop();
     ensureSlideshowModel();
+    m_slideFilterModel->setSourceModel(nullptr);
     connect(m_slideshowModel, &SlideModel::done, this, &ImageBackend::backgroundsFound);
     m_slideshowModel->setSlidePaths(m_slidePaths);
     // TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
@@ -324,6 +324,7 @@ void ImageBackend::backgroundsFound()
     disconnect(m_slideshowModel, &SlideModel::done, this, nullptr);
 
     // setSourceModel must be called after the model is loaded to generate a complete random order
+    Q_ASSERT(!m_slideFilterModel->sourceModel());
     m_slideFilterModel->setSourceModel(m_slideshowModel);
 
     if (m_slideFilterModel->rowCount() == 0 || m_usedInConfig) {
@@ -514,11 +515,5 @@ void ImageBackend::setUncheckedSlides(const QStringList &uncheckedSlides)
 
 bool ImageBackend::loading() const
 {
-    if (renderingMode() == SingleImage && m_model) {
-        return m_model->loading();
-    } else if (renderingMode() == SlideShow && m_slideshowModel) {
-        return m_slideshowModel->loading();
-    }
-
-    return false;
+    return m_loading;
 }

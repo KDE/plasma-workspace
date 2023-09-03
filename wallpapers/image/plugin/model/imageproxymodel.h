@@ -38,7 +38,7 @@ public:
     int count() const;
     Q_INVOKABLE int indexOf(const QString &packagePath) const;
 
-    bool loading() const;
+    QBindable<bool> loading() const;
 
     Q_INVOKABLE void reload();
     Q_INVOKABLE QStringList addBackground(const QString &_path);
@@ -76,7 +76,8 @@ private:
     KDirWatch m_dirWatch;
     QStringList m_customPaths;
 
-    int m_loaded = 0;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageProxyModel, int, m_loaded, 0)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageProxyModel, bool, m_loading, false, &ImageProxyModel::loadingChanged)
 
     QStringList m_pendingAddition;
 

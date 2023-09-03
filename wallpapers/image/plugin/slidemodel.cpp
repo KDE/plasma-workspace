@@ -12,9 +12,9 @@
 
 SlideModel::SlideModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
+    , m_targetSize(bindableTargetSize.makeBinding())
+    , m_usedInConfig(bindableUsedInConfig.makeBinding())
 {
-    m_targetSize.setBinding(bindableTargetSize.makeBinding());
-    m_usedInConfig.setBinding(bindableUsedInConfig.makeBinding());
 }
 
 QHash<int, QByteArray> SlideModel::roleNames() const
@@ -88,7 +88,7 @@ QStringList SlideModel::addDirs(const QStringList &dirs)
             m_models.insert(d, m);
             added.append(d);
 
-            if (m->loading()) {
+            if (m->loading().value()) {
                 connect(m, &ImageProxyModel::loadingChanged, this, &SlideModel::slotSourceModelLoadingChanged);
             } else {
                 // In case it loads immediately
@@ -100,7 +100,6 @@ QStringList SlideModel::addDirs(const QStringList &dirs)
 
     if (!added.empty()) {
         m_loading = m_loaded != m_models.size();
-        Q_EMIT loadingChanged();
         if (!m_loading) {
             Q_EMIT done();
         }
@@ -155,26 +154,19 @@ void SlideModel::setUncheckedSlides(const QStringList &uncheckedSlides)
     }
 }
 
-bool SlideModel::loading() const
+QBindable<bool> SlideModel::loading() const
 {
-    return m_loading;
+    return &m_loading;
 }
 
 void SlideModel::slotSourceModelLoadingChanged()
 {
-    auto m = qobject_cast<ImageProxyModel *>(sender());
-
-    if (!m) {
-        return;
-    }
-
+    auto m = static_cast<ImageProxyModel *>(sender());
     disconnect(m, &ImageProxyModel::loadingChanged, this, nullptr);
-
     addSourceModel(m);
 
     if (++m_loaded == m_models.size()) {
         m_loading = false;
-        Q_EMIT loadingChanged();
         Q_EMIT done();
     }
 }
