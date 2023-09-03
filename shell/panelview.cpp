@@ -1224,7 +1224,7 @@ void PanelView::updateExclusiveZone()
     if (KWindowSystem::isPlatformWayland()) {
         switch (m_visibilityMode) {
         case NormalPanel:
-            m_layerWindow->setExclusiveZone(totalThickness());
+            m_layerWindow->setExclusiveZone(thickness());
             break;
         case AutoHide:
             m_layerWindow->setExclusiveZone(0);
@@ -1351,12 +1351,9 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
         }
-        const int floatingSignal = rootObject->metaObject()->indexOfSignal("bottomFloatingPaddingChanged()");
+        const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessChanged()");
         if (floatingSignal >= 0) {
-            connect(rootObject, SIGNAL(bottomFloatingPaddingChanged()), this, SLOT(updateFloating()));
-            connect(rootObject, SIGNAL(topFloatingPaddingChanged()), this, SLOT(updateFloating()));
-            connect(rootObject, SIGNAL(rightFloatingPaddingChanged()), this, SLOT(updateFloating()));
-            connect(rootObject, SIGNAL(leftFloatingPaddingChanged()), this, SLOT(updateFloating()));
+            connect(rootObject, SIGNAL(floatingnessChanged()), this, SLOT(updateFloating()));
             connect(rootObject, SIGNAL(hasShadowsChanged()), this, SLOT(updateShadows()));
             connect(rootObject, SIGNAL(maskOffsetXChanged()), this, SLOT(updateMask()));
             connect(rootObject, SIGNAL(maskOffsetYChanged()), this, SLOT(updateMask()));
@@ -1518,13 +1515,15 @@ void PanelView::updateFloating()
     if (!rootObject()) {
         return;
     }
-    m_leftFloatingPadding = rootObject()->property("leftFloatingPadding").toInt();
-    m_rightFloatingPadding = rootObject()->property("rightFloatingPadding").toInt();
-    m_topFloatingPadding = rootObject()->property("topFloatingPadding").toInt();
-    m_bottomFloatingPadding = rootObject()->property("bottomFloatingPadding").toInt();
+    m_floatingness = rootObject()->property("floatingness").toFloat();
+    m_leftFloatingPadding = rootObject()->property("fixedLeftFloatingPadding").toInt();
+    m_rightFloatingPadding = rootObject()->property("fixedRightFloatingPadding").toInt();
+    m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
+    m_bottomFloatingPadding = rootObject()->property("fixedBottomFloatingPadding").toInt();
 
-    positionPanel();
     resizePanel();
+    positionPanel();
+    updateExclusiveZone();
     updateMask();
 }
 
