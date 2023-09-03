@@ -145,45 +145,6 @@ ColumnLayout {
         Layout.fillWidth: true
     }
 
-    // Per-events view header
-    Rectangle {
-        Layout.fillWidth: true
-        implicitHeight: tableHeaderText.implicitHeight + (2 * tableHeaderText.anchors.topMargin)
-
-        Kirigami.Theme.colorSet: Kirigami.Theme.View
-        Kirigami.Theme.inherit: false
-        // We want a color that's basically halfway between the view background
-        // color and the window background color. But due to the use of color
-        // scopes, only one will be available at a time. So to get basically the
-        // same thing, we blend the view background color with a smidgen of the
-        // text color.
-        color: Qt.tint(Kirigami.Theme.backgroundColor,
-                    Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.03))
-
-        visible: eventsList.count > 0
-
-        Kirigami.Heading {
-            id: tableHeaderText
-
-            anchors {
-                left: parent.left
-                leftMargin: Kirigami.Units.largeSpacing
-                right: parent.right
-                rightMargin: Kirigami.Units.smallSpacing
-                top: parent.top
-                topMargin: Kirigami.Units.smallSpacing
-            }
-
-            level: 2
-            text: i18nc("@title:table Configure individual notification events in an app", "Configure Events")
-        }
-    }
-
-    Kirigami.Separator {
-        Layout.fillWidth: true
-        visible: eventsList.count > 0
-    }
-
     // Per-events view
     QQC2.ScrollView {
         Layout.fillWidth: true
@@ -196,6 +157,11 @@ ColumnLayout {
             id: eventsList
 
             headerPositioning: ListView.OverlayHeader
+            header: Kirigami.InlineViewHeader {
+                width: eventsList.width
+                text: i18nc("@title:table Configure individual notification events in an app", "Configure Events")
+                visible: eventsList.count > 0
+            }
 
             Kirigami.PlaceholderMessage {
                 anchors.centerIn: parent
