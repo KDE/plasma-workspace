@@ -25,7 +25,17 @@ Item {
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
-    property bool hadPrompt: false;
+    property bool hadPrompt: false
+
+    function handleMessage(msg) {
+        if (!root.notification) {
+            root.notification += msg;
+        } else if (root.notification.includes(msg)) {
+            root.notificationRepeated();
+        } else {
+            root.notification += "\n" + msg
+        }
+    }
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -33,10 +43,8 @@ Item {
     Connections {
         target: authenticator
         function onFailed() {
-            if (root.notification) {
-                root.notification += "\n"
-            }
-            root.notification += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
+            const msg = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlocking failed");
+            lockScreenUi.handleMessage(msg);
             graceLockTimer.restart();
             notificationRemoveTimer.restart();
             rejectPasswordAnimation.start();
@@ -54,18 +62,12 @@ Item {
         }
 
         function onInfoMessage(msg) {
-            if (root.notification) {
-                root.notification += "\n"
-            }
-            root.notification += msg;
+            lockScreenUi.handleMessage(msg);
             lockScreenUi.hadPrompt = true;
         }
 
         function onErrorMessage(msg) {
-            if (root.notification) {
-                root.notification += "\n"
-            }
-            root.notification += msg;
+            lockScreenUi.handleMessage(msg);
         }
 
         function onPrompt(msg) {

@@ -15,6 +15,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import "../components"
 
 SessionManagementScreen {
+    id: sessionManager
 
     readonly property alias mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
@@ -92,6 +93,9 @@ SessionManagementScreen {
                 function onClearPassword() {
                     passwordBox.forceActiveFocus()
                     passwordBox.text = "";
+                }
+                function onNotificationRepeated() {
+                    sessionManager.playHighlightAnimation();
                 }
             }
         }

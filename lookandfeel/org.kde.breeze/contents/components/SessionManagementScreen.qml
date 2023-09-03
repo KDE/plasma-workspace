@@ -64,6 +64,10 @@ FocusScope {
 
     signal userSelected()
 
+    function playHighlightAnimation() {
+        bounceAnimation.start();
+    }
+
     // FIXME: move this component into a layout, rather than abusing
     // anchors and implicitly relying on other components' built-in
     // whitespace to avoid items being overlapped.
@@ -103,6 +107,27 @@ FocusScope {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
             font.italic: true
+
+            SequentialAnimation {
+                id: bounceAnimation
+                loops: 1
+                PropertyAnimation {
+                    target: notificationsLabel
+                    properties: "scale"
+                    from: 1.0
+                    to: 1.1
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.OutQuad
+                }
+                PropertyAnimation {
+                    target: notificationsLabel
+                    properties: "scale"
+                    from: 1.1
+                    to: 1.0
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InQuad
+                }
+            }
         }
         ColumnLayout {
             Layout.minimumHeight: implicitHeight
