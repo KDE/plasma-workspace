@@ -46,6 +46,8 @@ private:
     QString m_pathA, m_pathB, m_pathC;
     QProperty<QSize> m_targetSize;
     QProperty<bool> m_usedInConfig{false};
+    QProperty<SortingMode::Mode> m_sortingMode{SortingMode::Random};
+    QProperty<bool> m_sortingFoldersFirst{false};
 };
 
 void SlideFilterModelTest::initTestCase()
@@ -85,7 +87,10 @@ void SlideFilterModelTest::initTestCase()
 void SlideFilterModelTest::init()
 {
     m_model = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
-    m_filterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this);
+    m_filterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), //
+                                         QBindable<SortingMode::Mode>(&m_sortingMode), //
+                                         QBindable<bool>(&m_sortingFoldersFirst), //
+                                         this);
 
     // Test loading data
     m_model->setSlidePaths({m_standardPath});
@@ -134,7 +139,8 @@ void SlideFilterModelTest::testSlideFilterModelSortingOrder()
     QFETCH(bool, folderFirst);
     QFETCH(QStringList, expected);
 
-    m_filterModel->setSortingMode(order, folderFirst);
+    m_sortingMode = order;
+    m_sortingFoldersFirst = folderFirst;
     QCOMPARE(m_filterModel->rowCount(), 3);
 
     for (int i = 0; i < expected.size(); i++) {
@@ -148,9 +154,10 @@ void SlideFilterModelTest::testSlideFilterModelSortingRandomOrder()
     QCOMPARE(m_filterModel->rowCount(), counts.size());
 
     // Monte Carlo
+    m_sortingMode = SortingMode::Random;
+    m_sortingFoldersFirst = false;
     for (int i = 0; i < 1000; i++) {
-        m_filterModel->setSortingMode(SortingMode::Random, false);
-
+        m_filterModel->invalidate();
         const QString firstElement = m_filterModel->index(0, 0).data(ImageRoles::PackageNameRole).toString();
 
         if (firstElement == m_pathA) {
@@ -181,7 +188,8 @@ void SlideFilterModelTest::testSlideFilterModelSortingRandomOrderWithFileAddedRe
     QFETCH(bool, usedInConfig);
     m_usedInConfig = usedInConfig;
 
-    m_filterModel->setSortingMode(SortingMode::Random, false);
+    m_sortingMode = SortingMode::Random;
+    m_sortingFoldersFirst = false;
     int oldRowCount = m_filterModel->rowCount();
 
     qDebug() << "Before adding a new wallpaper";

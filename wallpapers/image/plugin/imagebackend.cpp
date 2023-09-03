@@ -100,10 +100,6 @@ void ImageBackend::setSlideshowMode(SortingMode::Mode slideshowMode)
     }
 
     m_slideshowMode = slideshowMode;
-    if (m_slideFilterModel) {
-        m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
-    }
-    Q_EMIT slideshowModeChanged();
 
     startSlideshow();
 }
@@ -120,10 +116,6 @@ void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
     }
 
     m_slideshowFoldersFirst = slideshowFoldersFirst;
-    if (m_slideFilterModel) {
-        m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
-    }
-    Q_EMIT slideshowFoldersFirstChanged();
 
     startSlideshow();
 }
@@ -167,8 +159,10 @@ void ImageBackend::ensureSlideshowModel()
     m_slideshowModel = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
     m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
 
-    m_slideFilterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), this);
-    m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    m_slideFilterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), //
+                                              QBindable<SortingMode::Mode>(&m_slideshowMode), //
+                                              QBindable<bool>(&m_slideshowFoldersFirst), //
+                                              this);
     // setSourceModel(...) must be done in backgroundsFound() to generate a complete random order
 
     connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);

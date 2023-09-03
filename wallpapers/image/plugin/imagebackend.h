@@ -177,8 +177,8 @@ private:
     QPointer<QQmlPropertyMap> m_configMap;
 
     RenderingMode m_mode = SingleImage;
-    SortingMode::Mode m_slideshowMode = SortingMode::Random;
-    bool m_slideshowFoldersFirst = false;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, SortingMode::Mode, m_slideshowMode, SortingMode::Random, &ImageBackend::slideshowModeChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_slideshowFoldersFirst, false, &ImageBackend::slideshowFoldersFirstChanged)
 
     QStringList m_slidePaths;
     QStringList m_uncheckedSlides;

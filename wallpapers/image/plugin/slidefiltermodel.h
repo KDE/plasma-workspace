@@ -19,14 +19,16 @@ class SlideFilterModel : public QSortFilterProxyModel
     Q_OBJECT
 
 public:
-    explicit SlideFilterModel(const QBindable<bool> &usedInConfig, QObject *parent);
+    explicit SlideFilterModel(const QBindable<bool> &usedInConfig,
+                              const QBindable<SortingMode::Mode> &sortingMode,
+                              const QBindable<bool> &slideshowFoldersFirst,
+                              QObject *parent);
 
     QHash<int, QByteArray> roleNames() const override;
 
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
     void setSourceModel(QAbstractItemModel *sourceModel) override;
-    void setSortingMode(SortingMode::Mode slideshowMode, bool slideshowFoldersFirst);
     void invalidate();
     void invalidateFilter();
 
@@ -37,8 +39,10 @@ private:
     void buildRandomOrder();
 
     QVector<int> m_randomOrder;
-    SortingMode::Mode m_SortingMode = SortingMode::Random;
-    bool m_SortingFoldersFirst = false;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, SortingMode::Mode, m_SortingMode, SortingMode::Random)
+    QPropertyNotifier m_SortingModeNotifier;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, bool, m_SortingFoldersFirst, false)
+    QPropertyNotifier m_slideshowFoldersFirstNotifier;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, bool, m_usedInConfig, true)
     QPropertyNotifier m_usedInConfigNotifier;
     std::random_device m_randomDevice;

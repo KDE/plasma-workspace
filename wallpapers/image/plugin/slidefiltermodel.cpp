@@ -30,16 +30,31 @@ inline QString getFilePathWithDir(const QFileInfo &fileInfo)
 }
 }
 
-SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig, QObject *parent)
+SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig,
+                                   const QBindable<SortingMode::Mode> &sortingMode,
+                                   const QBindable<bool> &slideshowFoldersFirst,
+                                   QObject *parent)
     : QSortFilterProxyModel{parent}
+    , m_SortingMode(sortingMode.makeBinding())
+    , m_SortingFoldersFirst(slideshowFoldersFirst.makeBinding())
+    , m_usedInConfig(usedInConfig.makeBinding())
     , m_random(m_randomDevice())
 {
-    m_usedInConfig.setBinding(usedInConfig.makeBinding());
     srand(time(nullptr));
     setSortCaseSensitivity(Qt::CaseSensitivity::CaseInsensitive);
     m_usedInConfigNotifier = m_usedInConfig.addNotifier([this] {
         invalidateRowsFilter();
     });
+
+    auto sortCallback = [this] {
+        if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
+            buildRandomOrder();
+        }
+        QSortFilterProxyModel::invalidate();
+        sort(0);
+    };
+    m_SortingModeNotifier = m_SortingMode.addNotifier(sortCallback);
+    m_slideshowFoldersFirstNotifier = m_SortingFoldersFirst.addNotifier(sortCallback);
 }
 
 QHash<int, QByteArray> SlideFilterModel::roleNames() const
@@ -182,23 +197,13 @@ bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelInde
     Q_UNREACHABLE();
 }
 
-void SlideFilterModel::setSortingMode(SortingMode::Mode slideshowMode, bool slideshowFoldersFirst)
-{
-    m_SortingMode = slideshowMode;
-    m_SortingFoldersFirst = slideshowFoldersFirst;
-    if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
-        buildRandomOrder();
-    }
-    QSortFilterProxyModel::invalidate();
-    sort(0);
-}
-
 void SlideFilterModel::invalidate()
 {
     if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
         std::shuffle(m_randomOrder.begin(), m_randomOrder.end(), m_random);
     }
     QSortFilterProxyModel::invalidate();
+    sort(0);
 }
 
 void SlideFilterModel::invalidateFilter()
