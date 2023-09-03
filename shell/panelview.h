@@ -268,6 +268,7 @@ private:
     int m_topPadding;
     int m_leftPadding;
     int m_rightPadding;
+    float m_floatingness;
     int m_bottomFloatingPadding;
     int m_topFloatingPadding;
     int m_leftFloatingPadding;

@@ -553,6 +553,11 @@ void PanelView::positionPanel()
         }
 
         m_layerWindow->setAnchors(anchors);
+        m_layerWindow->setMargins(QMargins((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
+                                           (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness),
+                                           (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
+                                           (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness)));
+        updateMask();
         requestUpdate();
     }
 
@@ -595,24 +600,27 @@ QRect PanelView::geometryByDistance(int distance) const
         }
     }
 
+    r = r.intersected(screenGeometry);
+
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
-        r.moveTop(screenGeometry.top() + distance);
+        r.moveTop(screenGeometry.top() + distance + (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
         break;
 
     case Plasma::Types::LeftEdge:
-        r.moveLeft(screenGeometry.left() + distance);
+        r.moveLeft(screenGeometry.left() + distance + (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
         break;
 
     case Plasma::Types::RightEdge:
-        r.moveRight(screenGeometry.right() - distance);
+        r.moveRight(screenGeometry.right() - distance - (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
         break;
 
     case Plasma::Types::BottomEdge:
     default:
-        r.moveBottom(screenGeometry.bottom() - distance);
+        r.moveBottom(screenGeometry.bottom() - distance - (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
     }
-    return r.intersected(screenGeometry);
+
+    return r;
 }
 
 void PanelView::resizePanel()
@@ -1126,6 +1134,8 @@ void PanelView::updateMask()
         setMask(QRegion());
     } else {
         QRegion mask;
+        QRect screenPanelRect = geometryByDistance(m_distance).intersected(screen()->geometry());
+        screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
 
         QQuickItem *rootObject = this->rootObject();
         if (rootObject) {
@@ -1135,6 +1145,7 @@ void PanelView::updateMask()
                 mask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
             }
         }
+        mask = mask.intersected(screenPanelRect);
         KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
         KWindowEffects::enableBackgroundContrast(this,
                                                  m_theme.backgroundContrastEnabled(),
@@ -1144,7 +1155,7 @@ void PanelView::updateMask()
                                                  mask);
 
         if (KX11Extras::compositingActive()) {
-            setMask(QRegion());
+            setMask(QRegion(screenPanelRect));
         } else {
             setMask(mask);
         }
@@ -1224,7 +1235,7 @@ void PanelView::updateExclusiveZone()
     if (KWindowSystem::isPlatformWayland()) {
         switch (m_visibilityMode) {
         case NormalPanel:
-            m_layerWindow->setExclusiveZone(totalThickness());
+            m_layerWindow->setExclusiveZone(thickness() - m_layerWindow->margins().top());
             break;
         case AutoHide:
             m_layerWindow->setExclusiveZone(0);
@@ -1259,7 +1270,7 @@ void PanelView::updateExclusiveZone()
             switch (location()) {
             case Plasma::Types::TopEdge: {
                 const qreal topOffset = thisScreen.top();
-                top_width = totalThickness() + topOffset;
+                top_width = thickness() + topOffset;
                 top_start = x() / devicePixelRatio;
                 top_end = top_start + width() - offset;
                 //                 qDebug() << "setting top edge to" << top_width << top_start << top_end;
@@ -1268,7 +1279,7 @@ void PanelView::updateExclusiveZone()
 
             case Plasma::Types::BottomEdge: {
                 const qreal bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
-                bottom_width = totalThickness() + bottomOffset;
+                bottom_width = thickness() + bottomOffset;
                 bottom_start = x() / devicePixelRatio;
                 bottom_end = bottom_start + width() - offset;
                 //                 qDebug() << "setting bottom edge to" << bottom_width << bottom_start << bottom_end;
@@ -1277,7 +1288,7 @@ void PanelView::updateExclusiveZone()
 
             case Plasma::Types::RightEdge: {
                 const qreal rightOffset = wholeScreen.right() - thisScreen.right();
-                right_width = totalThickness() + rightOffset;
+                right_width = thickness() + rightOffset;
                 right_start = y() / devicePixelRatio;
                 right_end = right_start + height() - offset;
                 //                 qDebug() << "setting right edge to" << right_width << right_start << right_end;
@@ -1286,7 +1297,7 @@ void PanelView::updateExclusiveZone()
 
             case Plasma::Types::LeftEdge: {
                 const qreal leftOffset = thisScreen.x();
-                left_width = totalThickness() + leftOffset;
+                left_width = thickness() + leftOffset;
                 left_start = y() / devicePixelRatio;
                 left_end = left_start + height() - offset;
                 //                 qDebug() << "setting left edge to" << left_width << left_start << left_end;
@@ -1366,12 +1377,9 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
         }
-        const int floatingSignal = rootObject->metaObject()->indexOfSignal("bottomFloatingPaddingChanged()");
+        const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessChanged()");
         if (floatingSignal >= 0) {
-            connect(rootObject, SIGNAL(bottomFloatingPaddingChanged()), this, SLOT(updateFloating()));
-            connect(rootObject, SIGNAL(topFloatingPaddingChanged()), this, SLOT(updateFloating()));
-            connect(rootObject, SIGNAL(rightFloatingPaddingChanged()), this, SLOT(updateFloating()));
-            connect(rootObject, SIGNAL(leftFloatingPaddingChanged()), this, SLOT(updateFloating()));
+            connect(rootObject, SIGNAL(floatingnessChanged()), this, SLOT(updateFloating()));
             connect(rootObject, SIGNAL(hasShadowsChanged()), this, SLOT(updateShadows()));
             connect(rootObject, SIGNAL(maskOffsetXChanged()), this, SLOT(updateMask()));
             connect(rootObject, SIGNAL(maskOffsetYChanged()), this, SLOT(updateMask()));
@@ -1533,13 +1541,15 @@ void PanelView::updateFloating()
     if (!rootObject()) {
         return;
     }
-    m_leftFloatingPadding = rootObject()->property("leftFloatingPadding").toInt();
-    m_rightFloatingPadding = rootObject()->property("rightFloatingPadding").toInt();
-    m_topFloatingPadding = rootObject()->property("topFloatingPadding").toInt();
-    m_bottomFloatingPadding = rootObject()->property("bottomFloatingPadding").toInt();
+    m_floatingness = rootObject()->property("floatingness").toFloat();
+    m_leftFloatingPadding = rootObject()->property("fixedLeftFloatingPadding").toInt();
+    m_rightFloatingPadding = rootObject()->property("fixedRightFloatingPadding").toInt();
+    m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
+    m_bottomFloatingPadding = rootObject()->property("fixedBottomFloatingPadding").toInt();
 
-    positionPanel();
     resizePanel();
+    positionPanel();
+    updateExclusiveZone();
     updateMask();
 }
 

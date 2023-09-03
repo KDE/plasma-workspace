@@ -245,10 +245,11 @@ ContainmentItem {
             visualParent: root
             flags: Qt.WindowStaysOnTopHint
             location: Plasmoid.location
+            floating: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
             hideOnWindowDeactivate: !Plasmoid.configuration.pin
             visible: systemTrayState.expanded
             // visualParent: implicitly set to parent
-            backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
+            backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
             type: PlasmaCore.Dialog.AppletPopup
             appletInterface: root
 
