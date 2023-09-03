@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2023-08-27 03:38\n"
+"PO-Revision-Date: 2023-09-02 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -52,13 +52,13 @@ msgstr "挂起到磁盘"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "混合睡眠"
 
 #: PowerDevilRunner.cpp:44
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "混合"
 
 #: PowerDevilRunner.cpp:46 PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:73
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "将系统挂起到磁盘"
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "立即睡眠并随后降至休眠状态"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -146,12 +146,12 @@ msgstr "挂起到磁盘"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "混合睡眠"
 
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "立即睡眠并随后降至休眠状态"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format

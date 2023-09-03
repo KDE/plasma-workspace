@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2023-09-01 12:32+0300\n"
+"PO-Revision-Date: 2023-09-02 12:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -73,23 +73,23 @@ msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
 msgstr ""
-"Sistem askıya alma (uyku kipi, bekleme kipi vs.) seçeneklerini listeler ve "
+"Sistemi askıya alma (uyku, bekleme kipi vb.) seçeneklerini listeler ve "
 "etkinleştirilmelerine izin verir"
 
 #: PowerDevilRunner.cpp:61
 #, kde-format
 msgid "Suspends the system to RAM"
-msgstr "Sistemi bellek kullanarak askıya alır"
+msgstr "Sistemi belleği kullanarak askıya alır"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
 msgid "Suspends the system to disk"
-msgstr "Sistemi disk kullanarak askıya alır"
+msgstr "Sistemi diski kullanarak askıya alır"
 
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr "Şimdi uyur ve hazırda beklemeye geri kayar"
+msgstr "Şimdi uyur ve bir süre sonra hazırda beklemeye (derin uyku) geçer"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "Uyut"
 #: PowerDevilRunner.cpp:150
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Bellek kullanarak askıya al"
+msgstr "Belleği kullanarak askıya al"
 
 #: PowerDevilRunner.cpp:155
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "Hazırda beklet"
 #: PowerDevilRunner.cpp:156
 #, kde-format
 msgid "Suspend to disk"
-msgstr "Diskte askıya al"
+msgstr "Diski kullanarak askıya al"
 
 #: PowerDevilRunner.cpp:161
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "Hibrit uyku"
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr "Şimdi uyu ve hazırda beklemeye geri kay"
+msgstr "Şimdi uyu ve bir süre sonra hazırda beklemeye (derin uyku) geç"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format

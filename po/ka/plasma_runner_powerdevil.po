@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2022-09-02 07:25+0200\n"
+"PO-Revision-Date: 2023-09-02 04:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -52,13 +52,13 @@ msgstr "დისკზე"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "ჰიბრიდული ძილი"
 
 #: PowerDevilRunner.cpp:44
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "ჰიბრიდი"
 
 #: PowerDevilRunner.cpp:46 PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:73
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "სისტემის დისკზე შეჩერება"
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "ახლა დაძინება შემდეგ პროგრამული დაძინება"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -147,12 +147,12 @@ msgstr "დისკზე შეჩერება"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "ჰიბრიდული ძილი"
 
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "ახლა დაძინება შემდეგ პროგრამული დაძინება"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format

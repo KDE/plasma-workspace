@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2023-04-07 20:08+0100\n"
+"PO-Revision-Date: 2023-09-02 07:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -53,13 +53,13 @@ msgstr "al disko"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "hibrida dormo"
 
 #: PowerDevilRunner.cpp:44
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "hibrida"
 
 #: PowerDevilRunner.cpp:46 PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:73
 #, kde-format
@@ -79,17 +79,17 @@ msgstr ""
 #: PowerDevilRunner.cpp:61
 #, kde-format
 msgid "Suspends the system to RAM"
-msgstr "Haltetas la sistemon al RAM"
+msgstr "Suspendas la sistemon al RAM"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
 msgid "Suspends the system to disk"
-msgstr "Haltetas la sistemon al disko"
+msgstr "Suspendas la sistemon al disko"
 
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Dormas nun kaj refalas al pasivumo"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -150,12 +150,12 @@ msgstr "Halteti al disko"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Hibrida dormo"
 
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Dormi nun kaj refali al pasivumo"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format
