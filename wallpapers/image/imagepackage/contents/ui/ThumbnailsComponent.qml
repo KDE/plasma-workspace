@@ -31,7 +31,10 @@ Item {
             }
             wallpapersGrid.resetCurrentIndex();
         }
+    }
 
+    Connections {
+        target: root
         function onWallpaperBrowseCompleted() {
             // Scroll to top to view added images
             wallpapersGrid.view.positionViewAtIndex(0, GridView.Beginning);

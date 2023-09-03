@@ -245,7 +245,7 @@ ColumnLayout {
             Layout.alignment: Qt.AlignRight
             icon.name: "list-add"
             text: i18nd("plasma_wallpaper_org.kde.image","Add Folder…")
-            onClicked: imageWallpaper.showAddSlidePathsDialog()
+            onClicked: root.openChooserDialog()
         }
 
         NewStuff.Button {

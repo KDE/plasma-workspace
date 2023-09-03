@@ -14,7 +14,8 @@
 
 #include <math.h>
 
-#include <QFileDialog>
+#include <QDir>
+#include <QFileInfo>
 #include <QGuiApplication>
 #include <QImageReader>
 #include <QMimeDatabase>
@@ -36,7 +37,6 @@ ImageBackend::ImageBackend(QObject *parent)
 
 ImageBackend::~ImageBackend()
 {
-    delete m_dialog;
 }
 
 void ImageBackend::classBegin()
@@ -248,21 +248,11 @@ void ImageBackend::setSlidePaths(const QStringList &slidePaths)
     Q_EMIT slidePathsChanged();
 }
 
-void ImageBackend::showAddSlidePathsDialog()
-{
-    QFileDialog *dialog = new QFileDialog(nullptr, i18n("Directory with the wallpaper to show slides from"), QString());
-    dialog->setAttribute(Qt::WA_DeleteOnClose, true);
-    dialog->setOptions(QFileDialog::ShowDirsOnly);
-    dialog->setAcceptMode(QFileDialog::AcceptOpen);
-    connect(dialog, &QDialog::accepted, this, &ImageBackend::addDirFromSelectionDialog);
-    dialog->show();
-}
-
-void ImageBackend::addSlidePath(const QUrl &url)
+bool ImageBackend::addSlidePath(const QUrl &url)
 {
     Q_ASSERT(m_mode == SlideShow);
     if (url.isEmpty()) {
-        return;
+        return false;
     }
 
     QString path = url.toLocalFile();
@@ -277,11 +267,13 @@ void ImageBackend::addSlidePath(const QUrl &url)
     const QStringList results = m_slideshowModel->addDirs({path});
 
     if (results.empty()) {
-        return;
+        return false;
     }
 
     m_slidePaths.append(results);
     Q_EMIT slidePathsChanged();
+
+    return true;
 }
 
 void ImageBackend::removeSlidePath(const QString &path)
@@ -293,14 +285,6 @@ void ImageBackend::removeSlidePath(const QString &path)
 
     if (m_slidePaths.removeOne(path)) {
         Q_EMIT slidePathsChanged();
-    }
-}
-
-void ImageBackend::addDirFromSelectionDialog()
-{
-    QFileDialog *dialog = qobject_cast<QFileDialog *>(sender());
-    if (dialog) {
-        addSlidePath(dialog->directoryUrl());
     }
 }
 
@@ -339,58 +323,17 @@ void ImageBackend::backgroundsFound()
     nextSlide();
 }
 
-void ImageBackend::showFileDialog()
+QString ImageBackend::nameFilters() const
 {
-    if (!m_dialog) {
-        QString path;
-        const QStringList &locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
-
-        if (!locations.isEmpty()) {
-            path = locations.at(0);
-        } else {
-            // HomeLocation is guaranteed not to be empty.
-            path = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0);
-        }
-
-        QMimeDatabase db;
-        QStringList imageGlobPatterns;
-        const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
-
-        for (const QByteArray &mimeType : supportedMimeTypes) {
-            QMimeType mime(db.mimeTypeForName(QString::fromLatin1(mimeType)));
-            imageGlobPatterns << mime.globPatterns();
-        }
-
-        m_dialog = new QFileDialog(nullptr, i18n("Open Image"), path, i18n("Image Files") + " (" + imageGlobPatterns.join(' ') + ')');
-        // i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-
-        m_dialog->setFileMode(QFileDialog::ExistingFiles);
-        connect(m_dialog, &QDialog::accepted, this, &ImageBackend::slotWallpaperBrowseCompleted);
+    QStringList imageGlobPatterns;
+    QMimeDatabase db;
+    const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
+    for (const QByteArray &mimeType : supportedMimeTypes) {
+        QMimeType mime(db.mimeTypeForName(QString::fromLatin1(mimeType)));
+        imageGlobPatterns << mime.globPatterns();
     }
-
-    m_dialog->show();
-    m_dialog->raise();
-    m_dialog->activateWindow();
-}
-
-void ImageBackend::slotWallpaperBrowseCompleted()
-{
-    if (!m_model || !m_dialog) {
-        return;
-    }
-
-    const QStringList selectedFiles = m_dialog->selectedFiles();
-
-    if (selectedFiles.empty()) {
-        return;
-    }
-
-    for (const QString &p : selectedFiles) {
-        m_model->addBackground(p);
-    }
-
-    Q_EMIT wallpaperBrowseCompleted();
-    Q_EMIT settingsChanged();
+    // i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+    return i18n("Image Files") + QLatin1String(" (") + imageGlobPatterns.join(QLatin1Char(' ')) + QLatin1Char(')');
 }
 
 QQmlPropertyMap *ImageBackend::configMap() const

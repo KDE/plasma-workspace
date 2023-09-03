@@ -39,12 +39,22 @@ ColumnLayout {
     property var cfg_UncheckedSlidesDefault: []
 
     signal configurationChanged()
+    /**
+     * Emitted when the user finishes adding images using the file dialog.
+     */
+    signal wallpaperBrowseCompleted();
 
     function saveConfig() {
         if (configDialog.currentWallpaper === "org.kde.image") {
             imageWallpaper.wallpaperModel.commitAddition();
             imageWallpaper.wallpaperModel.commitDeletion();
         }
+    }
+
+    function openChooserDialog() {
+        const dialogComponent = Qt.createComponent("AddFileDialog.qml");
+        dialogComponent.createObject(root);
+        dialogComponent.destroy();
     }
 
     PlasmaWallpaper.ImageBackend {
@@ -204,7 +214,7 @@ ColumnLayout {
         QtControls2.Button {
             icon.name: "list-add"
             text: i18nd("plasma_wallpaper_org.kde.image","Add Image…")
-            onClicked: imageWallpaper.showFileDialog();
+            onClicked: root.openChooserDialog();
         }
         NewStuff.Button {
             Layout.alignment: Qt.AlignRight

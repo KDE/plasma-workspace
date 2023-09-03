@@ -21,8 +21,6 @@
 
 #include "sortingmode.h"
 
-class QFileDialog;
-
 class ImageProxyModel;
 class SlideModel;
 class SlideFilterModel;
@@ -92,10 +90,10 @@ public:
     void setImage(const QString &url);
 
     // this is for QML use
-    Q_INVOKABLE void addSlidePath(const QUrl &url);
+    Q_INVOKABLE bool addSlidePath(const QUrl &url);
     Q_INVOKABLE void removeSlidePath(const QString &path);
 
-    Q_INVOKABLE void showFileDialog();
+    Q_INVOKABLE QString nameFilters() const;
 
     Q_INVOKABLE QString addUsersWallpaper(const QUrl &url);
 
@@ -150,16 +148,8 @@ Q_SIGNALS:
     void configMapChanged();
     void loadingChanged(bool loading);
 
-    /**
-     * Emitted when the user finishes adding images using the file dialog.
-     */
-    void wallpaperBrowseCompleted();
-
 protected Q_SLOTS:
-    void showAddSlidePathsDialog();
-    void slotWallpaperBrowseCompleted();
     void startSlideshow();
-    void addDirFromSelectionDialog();
     void backgroundsFound();
 
 private:
@@ -188,5 +178,4 @@ private:
     ImageProxyModel *m_model = nullptr;
     SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel = nullptr;
-    QFileDialog *m_dialog = nullptr;
 };

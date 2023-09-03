@@ -37,9 +37,8 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Quick
     Qt::Qml
     KF6::Plasma
-    KF6::KIOCore
-    KF6::KIOWidgets
     KF6::I18n
+    KF6::JobWidgets
     KF6::KIOCore
     KF6::KIOGui
     KF6::Notifications
