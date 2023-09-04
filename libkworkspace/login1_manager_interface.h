@@ -258,6 +258,13 @@ public Q_SLOTS: // METHODS
         return asyncCallWithArgumentList(QStringLiteral("HybridSleep"), argumentList);
     }
 
+    inline QDBusPendingReply<> SuspendThenHibernate(bool in0)
+    {
+        QList<QVariant> argumentList;
+        argumentList << QVariant::fromValue(in0);
+        return asyncCallWithArgumentList(QStringLiteral("SuspendThenHibernate"), argumentList);
+    }
+
     inline QDBusPendingReply<QDBusUnixFileDescriptor> Inhibit(const QString &in0, const QString &in1, const QString &in2, const QString &in3)
     {
         QList<QVariant> argumentList;

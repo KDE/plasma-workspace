@@ -34,6 +34,7 @@ public:
     virtual void suspend() = 0;
     virtual void hybridSuspend() = 0;
     virtual void hibernate() = 0;
+    virtual void suspendThenHibernate() = 0;
 
     virtual bool canShutdown() const = 0;
     virtual bool canReboot() const = 0;
@@ -83,6 +84,7 @@ public:
     void suspend() override;
     void hybridSuspend() override;
     void hibernate() override;
+    void suspendThenHibernate() override;
     bool canShutdown() const override;
     bool canReboot() const override;
     bool canSuspend() const override;
@@ -127,6 +129,9 @@ public:
     void hibernate() override
     {
     }
+    void suspendThenHibernate() override
+    {
+    }
     bool canShutdown() const override
     {
         return false;
@@ -168,6 +173,7 @@ public:
     void suspend() override;
     void hybridSuspend() override;
     void hibernate() override;
+    void suspendThenHibernate() override;
 
     bool canShutdown() const override
     {

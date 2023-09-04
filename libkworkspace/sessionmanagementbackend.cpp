@@ -92,6 +92,11 @@ void TestSessionBackend::hibernate()
     qWarning() << "hibernate";
 }
 
+void TestSessionBackend::suspendThenHibernate()
+{
+    qWarning() << "suspendThenHibernate";
+}
+
 /*********************************************************************************/
 
 LogindSessionBackend::LogindSessionBackend()
@@ -194,6 +199,11 @@ void LogindSessionBackend::hybridSuspend()
 void LogindSessionBackend::hibernate()
 {
     m_login1->Hibernate(true).waitForFinished();
+}
+
+void LogindSessionBackend::suspendThenHibernate()
+{
+    m_login1->SuspendThenHibernate(true).waitForFinished();
 }
 
 bool LogindSessionBackend::canShutdown() const

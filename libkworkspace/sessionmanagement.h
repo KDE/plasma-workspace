@@ -88,6 +88,7 @@ public Q_SLOTS:
     void suspend();
     void hybridSuspend();
     void hibernate();
+    void suspendThenHibernate();
 
     void switchUser();
     void lock();

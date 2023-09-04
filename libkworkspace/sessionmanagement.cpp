@@ -202,6 +202,14 @@ void SessionManagement::hibernate()
     SessionBackend::self()->hibernate();
 }
 
+void SessionManagement::suspendThenHibernate()
+{
+    if (!canSuspendThenHibernate()) {
+        return;
+    }
+    SessionBackend::self()->suspendThenHibernate();
+}
+
 void SessionManagement::lock()
 {
     if (!canLock()) {
