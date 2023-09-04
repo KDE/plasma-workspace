@@ -230,7 +230,7 @@ void ItemContainer::onConfigOverlayComponentStatusChanged(QQmlComponent::Status 
     }
 
     Q_ASSERT(!m_configOverlay);
-    m_configOverlay = static_cast<ConfigOverlay *>(component->beginCreate(component->creationContext()));
+    m_configOverlay = static_cast<ConfigOverlay *>(component->beginCreate(QQmlEngine::contextForObject(this)));
 
     m_configOverlay->setVisible(false);
     m_configOverlay->setItemContainer(this);
