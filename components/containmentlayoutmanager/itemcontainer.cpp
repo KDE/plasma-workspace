@@ -241,7 +241,7 @@ void ItemContainer::onConfigOverlayComponentStatusChanged(QQmlComponent::Status 
     m_configOverlay->setSize(size());
 
     component->completeCreate();
-    delete component;
+    component->deleteLater();
 
     connect(m_configOverlay, &ConfigOverlay::openChanged, this, &ItemContainer::configOverlayVisibleChanged);
 
