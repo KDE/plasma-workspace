@@ -667,7 +667,10 @@ void PanelView::resizePanel()
             setMinimumSize(targetMinSize);
         }
     }
-    if (size() != targetSize) {
+    if (m_layerWindow) {
+        m_layerWindow->setDesiredSize(size());
+        requestUpdate();
+    } else if (size() != targetSize) {
         resize(targetSize);
     }
 
