@@ -208,7 +208,7 @@ KCM.ScrollViewKCM {
             KSortFilterProxyModel {
                 id: filterModel
                 sourceModel: localeListModel
-                filterRole: "filter"
+                filterRoleName: "filter"
             }
 
             Connections {
