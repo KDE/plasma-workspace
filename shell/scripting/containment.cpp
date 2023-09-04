@@ -46,7 +46,7 @@ Containment::Containment(Plasma::Containment *containment, ScriptEngine *engine)
     setCurrentConfigGroup(QStringList());
     setCurrentGlobalConfigGroup(QStringList());
     if (containment) {
-        d->oldWallpaperPlugin = d->wallpaperPlugin = containment->wallpaper();
+        d->oldWallpaperPlugin = d->wallpaperPlugin = containment->wallpaperPlugin();
     }
 }
 
@@ -54,7 +54,7 @@ Containment::~Containment()
 {
     if (d->containment) {
         if (d->oldWallpaperPlugin != d->wallpaperPlugin || d->oldWallpaperMode != d->wallpaperMode) {
-            d->containment->setWallpaper(d->wallpaperPlugin);
+            d->containment->setWallpaperPlugin(d->wallpaperPlugin);
         }
     }
 

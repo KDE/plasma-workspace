@@ -41,10 +41,10 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     , m_containment(cont)
 {
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
-    setCurrentWallpaper(cont->containment()->wallpaper());
+    setCurrentWallpaper(cont->containment()->wallpaperPlugin());
 
     KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Wallpaper"));
-    pkg.setPath(m_containment->wallpaper());
+    pkg.setPath(m_containment->wallpaperPlugin());
     KConfigGroup cfg = m_containment->config();
     cfg = KConfigGroup(&cfg, "Wallpaper");
 
@@ -151,33 +151,33 @@ QQmlPropertyMap *ContainmentConfigView::wallpaperConfiguration() const
 
 QString ContainmentConfigView::currentWallpaper() const
 {
-    return m_currentWallpaper;
+    return m_currentWallpaperPlugin;
 }
 
-void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
+void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
 {
-    if (m_currentWallpaper == wallpaper) {
+    if (m_currentWallpaperPlugin == wallpaperPlugin) {
         return;
     }
 
     delete m_ownWallpaperConfig;
     m_ownWallpaperConfig = nullptr;
 
-    if (m_containment->wallpaper() == wallpaper) {
+    if (m_containment->wallpaperPlugin() == wallpaperPlugin) {
         syncWallpaperObjects();
     } else {
         // we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
         pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
-        pkg.setPath(wallpaper);
+        pkg.setPath(wallpaperPlugin);
         QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
-        cfg = KConfigGroup(&cfg, wallpaper);
+        cfg = KConfigGroup(&cfg, wallpaperPlugin);
         m_currentWallpaperConfig = m_ownWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
     }
 
-    m_currentWallpaper = wallpaper;
+    m_currentWallpaperPlugin = wallpaperPlugin;
     Q_EMIT currentWallpaperChanged();
     Q_EMIT wallpaperConfigurationChanged();
 }
@@ -185,7 +185,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
 void ContainmentConfigView::applyWallpaper()
 {
     static_cast<KConfigPropertyMap *>(m_currentWallpaperConfig)->writeConfig();
-    m_containment->setWallpaper(m_currentWallpaper);
+    m_containment->setWallpaperPlugin(m_currentWallpaperPlugin);
     syncWallpaperObjects();
 
     Q_EMIT wallpaperConfigurationChanged();

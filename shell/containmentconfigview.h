@@ -62,7 +62,7 @@ private:
     PlasmaQuick::ConfigModel *m_containmentActionConfigModel = nullptr;
     PlasmaQuick::ConfigModel *m_containmentPluginsConfigModel = nullptr;
     CurrentContainmentActionsModel *m_currentContainmentActionsModel = nullptr;
-    QString m_currentWallpaper;
+    QString m_currentWallpaperPlugin;
     QQmlPropertyMap *m_currentWallpaperConfig = nullptr;
     QQmlPropertyMap *m_ownWallpaperConfig = nullptr;
 };

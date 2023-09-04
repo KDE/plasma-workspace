@@ -556,7 +556,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
         QJsonObject desktopJson;
 
-        desktopJson.insert("wallpaperPlugin", cont->wallpaper());
+        desktopJson.insert("wallpaperPlugin", cont->wallpaperPlugin());
 
         // Get the config for the containment
         KConfigGroup contConfig = cont->config();
@@ -1849,7 +1849,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
     newContainment->init();
     newCg.writeEntry("activityId", oldContainment->activity());
-    newCg.writeEntry("wallpaperplugin", oldContainment->wallpaper());
+    newCg.writeEntry("wallpaperplugin", oldContainment->wallpaperPlugin());
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
     newContainment->flushPendingConstraintsEvents();

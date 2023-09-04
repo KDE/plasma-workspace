@@ -137,20 +137,20 @@ void ContextMenu::restore(const KConfigGroup &config)
 
 QList<QAction *> ContextMenu::contextualActions()
 {
-    Plasma::Containment *c = containment();
-    Q_ASSERT(c);
+    Plasma::Containment *cont = containment();
+    Q_ASSERT(cont);
     QList<QAction *> actions;
-    foreach (const QString &name, m_actionOrder) {
+    for (const QString &name : std::as_const(m_actionOrder)) {
         if (!m_actions.value(name)) {
             continue;
         }
 
         if (name == QLatin1String("_context")) {
-            actions << c->contextualActions();
+            actions << cont->contextualActions();
         }
         if (name == QLatin1String("_wallpaper")) {
-            if (!c->wallpaper().isEmpty()) {
-                QObject *wallpaperGraphicsObject = c->property("wallpaperGraphicsObject").value<QObject *>();
+            if (!cont->wallpaperPlugin().isEmpty()) {
+                QObject *wallpaperGraphicsObject = cont->property("wallpaperGraphicsObject").value<QObject *>();
                 if (wallpaperGraphicsObject) {
                     QQmlListProperty<QAction> l = wallpaperGraphicsObject->property("contextualActions").value<QQmlListProperty<QAction>>();
                     int nActions = l.count(&l);
@@ -161,9 +161,9 @@ QList<QAction *> ContextMenu::contextualActions()
             }
         } else if (QAction *a = action(name)) {
             // Bug 364292: show "Remove this Panel" option only when panelcontroller is opened
-            if (name != QLatin1String("remove") || c->isUserConfiguring()
-                || (c->containmentType() != Plasma::Containment::Panel && c->containmentType() != Plasma::Containment::CustomPanel
-                    && c->corona()->immutability() != Plasma::Types::Mutable)) {
+            if (name != QLatin1String("remove") || cont->isUserConfiguring()
+                || (cont->containmentType() != Plasma::Containment::Panel && cont->containmentType() != Plasma::Containment::CustomPanel
+                    && cont->corona()->immutability() != Plasma::Types::Mutable)) {
                 actions << a;
             }
         }
