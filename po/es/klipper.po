@@ -11,7 +11,7 @@
 # Santiago Fernandez Sancho <santi@kde-es.org>, 2005.
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2006.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2010, 2012, 2014, 2017, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2017, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2022-10-17 17:55+0200\n"
+"PO-Revision-Date: 2023-09-03 22:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:80
@@ -319,7 +319,7 @@ msgstr "Ignorar"
 #: editactiondialog.cpp:36
 #, kde-format
 msgid "Replace Clipboard"
-msgstr "Reemplazar el portapapeles"
+msgstr "Sustituir el portapapeles"
 
 #: editactiondialog.cpp:38
 #, kde-format

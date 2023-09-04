@@ -1,13 +1,13 @@
 # Translation of plasma_runner_powerdevil to Norwegian Nynorsk
 #
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010.
-# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2018, 2019, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2018, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-27 00:45+0000\n"
-"PO-Revision-Date: 2022-02-13 14:54+0100\n"
+"PO-Revision-Date: 2023-09-02 13:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -66,7 +66,7 @@ msgstr "Gjev oversikt over vente- og dvalemodus, og lèt deg ta dei i bruk"
 #: PowerDevilRunner.cpp:57
 #, kde-format
 msgid "Suspends the system to RAM"
-msgstr "Legg systemet i dvale til minnet"
+msgstr "Legg systemet i kvile til minnet"
 
 #: PowerDevilRunner.cpp:61
 #, kde-format
