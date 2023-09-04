@@ -43,6 +43,7 @@ private:
     RunnerKeyword m_sleep;
     RunnerKeyword m_hibernate, m_toDisk;
     RunnerKeyword m_hybridSuspend, m_hybrid;
+    RunnerKeyword m_suspendThenHibernate;
     RunnerKeyword m_dimScreen;
     RunnerKeyword m_screenBrightness;
 };

@@ -45,6 +45,8 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     m_hybridSuspend = RunnerKeyword{hybridSuspend.untranslatedText(), hybridSuspend.toString(), false};
     const KLocalizedString hybrid = ki18nc("Note this is a KRunner keyword", "hybrid");
     m_hybrid = RunnerKeyword{hybrid.untranslatedText(), hybrid.toString(), false};
+    const KLocalizedString suspendThenHibernate = ki18nc("Note this is a KRunner keyword", "suspend then hibernate");
+    m_suspendThenHibernate = RunnerKeyword{suspendThenHibernate.untranslatedText(), suspendThenHibernate.toString(), false};
     const KLocalizedString dimScreen = ki18nc("Note this is a KRunner keyword", "dim screen");
     m_dimScreen = RunnerKeyword{dimScreen.untranslatedText(), dimScreen.toString()};
     const KLocalizedString screenBrightness = ki18nc("Note this is a KRunner keyword", "dim screen");
@@ -70,6 +72,9 @@ void PowerDevilRunner::updateSyntaxes()
     if (m_session->canHybridSuspend()) {
         addSyntaxForKeyword({m_hybrid, m_hybridSuspend}, i18n("Sleeps now and falls back to hibernate"));
     }
+    if (m_session->canSuspendThenHibernate()) {
+        addSyntaxForKeyword({m_suspend, m_hibernate, m_suspendThenHibernate}, i18n("Sleeps now and hibernates after a while"));
+    }
 
     addSyntax(QStringList{i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
                           i18nc("Note this is a KRunner keyword", "dim screen")},
@@ -83,7 +88,7 @@ void PowerDevilRunner::updateStatus()
     updateSyntaxes();
 }
 
-enum SleepState { SuspendState, HibernateState, HybridSuspendState };
+enum SleepState { SuspendState, HibernateState, HybridSuspendState, SuspendThenHibernateState };
 
 void PowerDevilRunner::match(KRunner::RunnerContext &context)
 {
@@ -121,13 +126,14 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         if (m_session->canSuspend()) {
             addSuspendMatch(SuspendState, matches, type);
         }
-
         if (m_session->canHibernate()) {
             addSuspendMatch(HibernateState, matches, type);
         }
-
         if (m_session->canHybridSuspend()) {
             addSuspendMatch(HybridSuspendState, matches, type);
+        }
+        if (m_session->canSuspendThenHibernate()) {
+            addSuspendMatch(SuspendThenHibernateState, matches, type);
         }
     } else if (matchesRunnerKeywords({m_suspend, m_toRam}, type, term)) {
         addSuspendMatch(SuspendState, matches, type);
@@ -135,6 +141,10 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         addSuspendMatch(HibernateState, matches, type);
     } else if (matchesRunnerKeywords({m_hybridSuspend, m_hybrid}, type, term)) {
         addSuspendMatch(HybridSuspendState, matches, type);
+    } else if (matchesRunnerKeywords({m_suspend, m_hibernate, m_suspendThenHibernate}, type, term)) {
+        if (m_session->canSuspendThenHibernate()) {
+            addSuspendMatch(SuspendThenHibernateState, matches, type);
+        }
     }
 
     context.addMatches(matches);
@@ -162,6 +172,12 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
         match.setIconName(QStringLiteral("system-suspend-hybrid"));
         match.setText(i18nc("Suspend to both RAM and disk", "Hybrid sleep"));
         match.setSubtext(i18n("Sleep now and fall back to hibernate"));
+        match.setRelevance(0.98);
+        break;
+    case SuspendThenHibernateState:
+        match.setIconName(QStringLiteral("system-suspend-hybrid"));
+        match.setText(i18nc("Suspend now to RAM and later to disk", "Suspend then hibernate"));
+        match.setSubtext(i18n("Sleep now and hibernate after a while"));
         match.setRelevance(0.98);
         break;
     }
@@ -199,6 +215,9 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
             break;
         case HybridSuspendState:
             m_session->hybridSuspend();
+            break;
+        case SuspendThenHibernateState:
+            m_session->suspendThenHibernate();
             break;
         }
     }
