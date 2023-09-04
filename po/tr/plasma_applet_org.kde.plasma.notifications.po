@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-17 01:59+0000\n"
-"PO-Revision-Date: 2023-08-14 14:02+0300\n"
+"PO-Revision-Date: 2023-09-03 21:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -167,7 +167,7 @@ msgstr "%1 Daha Göster"
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
-msgstr "Okunmamış bildirim yok"
+msgstr "Okunmayan bildirim yok"
 
 #: package/contents/ui/FullRepresentation.qml:632
 #: package/contents/ui/main.qml:79
@@ -309,8 +309,8 @@ msgstr[1] "%1 çalışan iş (%​%2)"
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
-msgstr[0] "%1 okunmamış bildirim"
-msgstr[1] "%1 okunmamış bildirim"
+msgstr[0] "%1 okunmayan bildirim"
+msgstr[1] "%1 okunmayan bildirim"
 
 #: package/contents/ui/main.qml:98
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-23 02:00+0000\n"
-"PO-Revision-Date: 2023-07-06 22:46+0300\n"
+"PO-Revision-Date: 2023-09-03 21:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
-msgstr "Klavye Düzeni: %1"
+msgstr "Klavye düzeni: %1"
 
 #: ../sddm-theme/Login.qml:85
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Oturum Aç"
 #: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:304
 #, kde-format
 msgid "Caps Lock is on"
-msgstr "Büyük Harf açık"
+msgstr "Büyük Harf Açık"
 
 #: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
 #: contents/logout/Logout.qml:165
@@ -71,7 +71,7 @@ msgstr "Diğer…"
 #: ../sddm-theme/Main.qml:450
 #, kde-format
 msgid "Type in Username and Password"
-msgstr "Kullanıcı Adı ve Parola girin"
+msgstr "Kullanıcı Adı ve Parola Girin"
 
 #: ../sddm-theme/Main.qml:484
 #, kde-format
@@ -87,12 +87,12 @@ msgstr "Sanal Klavye"
 #: ../sddm-theme/Main.qml:597
 #, kde-format
 msgid "Login Failed"
-msgstr "Oturumu Açma Başarısız"
+msgstr "Oturum Açılamadı"
 
 #: ../sddm-theme/SessionButton.qml:18
 #, kde-format
 msgid "Desktop Session: %1"
-msgstr "Masaüstü Oturumu: %1"
+msgstr "Masaüstü oturumu: %1"
 
 #: contents/components/Battery.qml:54
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "Ortam denetimleri:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr "Kilit açma isteminin altınoa göster"
+msgstr "Kilit açma isteminin altında göster"
 
 #: contents/lockscreen/LockScreenUi.qml:39
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "Geri"
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Düzen değiştir"
+msgstr "Düzeni değiştir"
 
 #: contents/lockscreen/MainBlock.qml:101
 #: contents/lockscreen/NoPasswordUnlock.qml:17
@@ -237,7 +237,7 @@ msgstr[0] ""
 "veya yeniden başlatılırsa bu kullanıcı çalışmasını kaybedebilir."
 msgstr[1] ""
 "Şu anda %1 başka kullanıcı oturum açmış durumda. Bilgisayar kapatılırsa veya "
-"yeniden başlatılırsa, bu kullanıcılar işlerini kaybedebilir."
+"yeniden başlatılırsa bu kullanıcılar işlerini kaybedebilir."
 
 #: contents/logout/Logout.qml:154
 #, kde-format

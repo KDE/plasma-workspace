@@ -1,13 +1,13 @@
 # Translation of plasma_runner_powerdevil to Norwegian Nynorsk
 #
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010.
-# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2018, 2019, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2018, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2022-02-13 14:54+0100\n"
+"PO-Revision-Date: 2023-09-02 13:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -54,13 +54,13 @@ msgstr "til disken"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "hybrid kvilemodus"
 
 #: PowerDevilRunner.cpp:44
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "hybrid"
 
 #: PowerDevilRunner.cpp:46 PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:73
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "Gjev oversikt over vente- og dvalemodus, og lèt deg ta dei i bruk"
 #: PowerDevilRunner.cpp:61
 #, kde-format
 msgid "Suspends the system to RAM"
-msgstr "Legg systemet i dvale til minnet"
+msgstr "Legg systemet i kvile til minnet"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "Legg systemet i dvale til disken"
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Legg systemet i kvile til minnet (dvale til disken som reserve)"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -149,12 +149,13 @@ msgstr "Dvalemodus til disk"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Hybrid kvilemodus"
 
+# Lagrar alt både til minnet (som med kvilemodus) og disken (som med dvalemodus), og set så maskina i kvilemodus. Viss straumen går (eller batteriet går tomt), kan ein likevel starta opp att, som frå dvalemodus.
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Kvilemodus (dvalemodus som reserve)"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format
