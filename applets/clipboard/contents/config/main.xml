@@ -6,8 +6,8 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="barcodeType" type="Int">
-      <default>1</default><!-- Prison::BarcodeType::QRCode -->
+    <entry name="barcodeType" type="String">
+      <default>QRCode</default><!-- Prison::BarcodeType::QRCode -->
     </entry>
   </group>
 

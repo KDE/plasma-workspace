@@ -19,6 +19,15 @@ ColumnLayout {
 
     property alias text: barcodeItem.content
 
+    readonly property var barcodeMap: [
+        {text: i18n("QR Code"), type: Prison.Barcode.QRCode, code: "QRCode"},
+        {text: i18n("Data Matrix"), type: Prison.Barcode.DataMatrix, code: "DataMatrix"},
+        {text: i18nc("Aztec barcode", "Aztec"), type: Prison.Barcode.Aztec, code: "Aztec"},
+        {text: i18n("Code 39"), type: Prison.Barcode.Code39, code: "Code39"},
+        {text: i18n("Code 93"), type: Prison.Barcode.Code93, code: "Code93"},
+        {text: i18n("Code 128"), type: Prison.Barcode.Code128, code: "Code128"}
+    ]
+
     Keys.onPressed: event => {
         if (event.key == Qt.Key_Escape) {
             stack.pop()
@@ -26,7 +35,7 @@ ColumnLayout {
         }
     }
 
-    property var header: PlasmaExtras.PlasmoidHeading {
+    property PlasmaExtras.PlasmoidHeading header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
             anchors.fill: parent
             PlasmaComponents3.Button {
@@ -36,52 +45,40 @@ ColumnLayout {
                 onClicked: stack.pop()
             }
 
-            Component {
-                id: menuItemComponent
-                PlasmaComponents3.MenuItem { }
-            }
-
             PlasmaComponents3.Menu {
                 id: menu
-
-                onClosed: {
-                    configureButton.checked = false;
-                }
-
-                Component.onCompleted: {
-                    [
-                        {text: i18n("QR Code"), type: Prison.Barcode.QRCode},
-                        {text: i18n("Data Matrix"), type: Prison.Barcode.DataMatrix},
-                        {text: i18nc("Aztec barcode", "Aztec"), type: Prison.Barcode.Aztec},
-                        {text: i18n("Code 39"), type: Prison.Barcode.Code39},
-                        {text: i18n("Code 93"), type: Prison.Barcode.Code93},
-                        {text: i18n("Code 128"), type: Prison.Barcode.Code128}
-                    ].forEach((item) => {
-                        let menuItem = menuItemComponent.createObject(menu, {
-                            text: item.text,
-                            checkable: true,
-                            autoExclusive: true,
-                            checked: Qt.binding(() => {
-                                return barcodeItem.barcodeType === item.type;
-                            })
-                        });
-                        menuItem.clicked.connect(() => {
-                            barcodeItem.barcodeType = item.type;
-                            Plasmoid.configuration.barcodeType = item.type;
-                        });
-                        menu.addItem(menuItem);
-                    });
-                }
             }
+
+            Instantiator {
+                id: menuItemInstantiator
+                active: main.expanded && menu.opened
+                asynchronous: true
+                delegate: PlasmaComponents3.MenuItem {
+                    text: modelData.text
+                    checkable: true
+                    autoExclusive: true
+                    checked: barcodeItem.barcodeType === modelData.type
+
+                    onClicked: {
+                        barcodeItem.barcodeType = modelData.type;
+                        Plasmoid.configuration.barcodeType = modelData.code;
+                    }
+                }
+                model: barcodeView.barcodeMap
+
+                onObjectAdded: (index, object) => menu.insertItem(index, object)
+            }
+
             PlasmaComponents3.ToolButton {
                 id: configureButton
                 checkable: true
+                checked: menu.opened
                 icon.name: "configure"
 
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: i18nc("@action:button", "Change the barcode type")
 
-                onClicked: menu.popup()
+                onClicked: menu.opened ? menu.close() : menu.popup()
 
                 PlasmaComponents3.ToolTip {
                     text: parent.text
@@ -99,7 +96,7 @@ ColumnLayout {
             id: barcodeItem
             readonly property bool valid: implicitWidth > 0 && implicitHeight > 0 && implicitWidth <= width && implicitHeight <= height
             anchors.fill: parent
-            barcodeType: Plasmoid.configuration.barcodeType
+            barcodeType: barcodeView.barcodeMap.find(data => data.code === Plasmoid.configuration.barcodeType)?.type ?? barcodeView.barcodeMap[0].type
             // Cannot set visible to false as we need it to re-render when changing its size
             opacity: valid ? 1 : 0
 
