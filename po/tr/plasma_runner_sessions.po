@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2023-07-18 05:36+0300\n"
+"PO-Revision-Date: 2023-09-05 00:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -89,7 +89,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "değiştir;kullanıcı değiştir;oturum;yeni oturum"
+msgstr "değiştir;kullanıcı değiştir;oturum;yeni oturum;kullanıcıyı değiştir"
 
 #: sessionrunner.cpp:53
 #, kde-format
@@ -154,7 +154,7 @@ msgstr "Oturumu Kaydet"
 #: sessionrunner.cpp:162
 #, kde-format
 msgid "Switch User"
-msgstr "Kullanıcı Değiştir"
+msgstr "Kullanıcıyı Değiştir"
 
 #: sessionrunner.cpp:245
 #, kde-format

@@ -279,7 +279,7 @@
 ></term>
         <listitem
 ><para
->Uygulamaların panelde okunmamış ileti sayısı gibi rozetleri göstermesine izin verin.</para
+>Uygulamaların panelde okunmayan ileti sayısı gibi rozetleri göstermesine izin verin.</para
 ></listitem>
         </varlistentry>
 
@@ -358,7 +358,7 @@
 ></term>
     <listitem
 ><para
->Bu uygulamanın panelde okunmamış ileti sayısı gibi işaretler gösterip gösteremeyeceği.</para
+>Bu uygulamanın panelde okunmayan ileti sayısı gibi rozetler gösterip gösteremeyeceği.</para
 ></listitem>
     </varlistentry>
 
