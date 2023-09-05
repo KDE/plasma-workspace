@@ -116,7 +116,7 @@ PlasmaComponents3.ScrollView {
 
             sourceComponent: PlasmaExtras.PlaceholderMessage {
                 width: parent.width
-                readonly property bool hasText: model.filterRegExp.length > 0
+                readonly property bool hasText: model.filterRegularExpression.length > 0
                 iconName: hasText ? "edit-none" : "edit-paste"
                 text: hasText ? i18n("No matches") : i18n("Clipboard is empty")
             }
