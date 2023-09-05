@@ -7,7 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import "data.js" as Data
 import org.kde.plasma.private.sessions 2.0

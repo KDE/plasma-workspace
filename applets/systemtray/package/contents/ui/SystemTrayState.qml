@@ -5,7 +5,7 @@
 */
 
 import QtQuick 2.12
-import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
 //This object contains state of the SystemTray, mainly related to the 'expanded' state

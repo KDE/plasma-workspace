@@ -10,7 +10,7 @@ import QtQuick.Window 2.12
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.11 as Kirigami

@@ -12,7 +12,7 @@ import QtQuick.Controls 2.2
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 
 import org.kde.ksysguard.faces 1.0 as Faces
 

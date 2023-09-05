@@ -14,7 +14,7 @@ import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 import org.kde.notification 1.0
-import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami

@@ -12,7 +12,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // For KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
