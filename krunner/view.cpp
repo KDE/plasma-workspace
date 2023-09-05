@@ -202,17 +202,22 @@ void View::toggleDisplay()
         KX11Extras::forceActiveWindow(winId());
         return;
     }
-    setVisible(!isVisible());
+    if (isVisible()) {
+        setVisible(false);
+    } else {
+        display();
+    }
 }
 
 void View::display()
 {
+    positionOnScreen();
     setVisible(true);
 }
 
 void View::displaySingleRunner(const QString &runnerName)
 {
-    setVisible(true);
+    display();
 
     m_engine->rootObject()->setProperty("singleRunner", runnerName);
     m_engine->rootObject()->setProperty("query", QString());
@@ -220,7 +225,7 @@ void View::displaySingleRunner(const QString &runnerName)
 
 void View::displayWithClipboardContents()
 {
-    setVisible(true);
+    display();
 
     // On Wayland we cannot retrieve the clipboard selection until we get the focus
     if (QGuiApplication::focusWindow()) {
@@ -234,7 +239,7 @@ void View::displayWithClipboardContents()
 
 void View::query(const QString &term)
 {
-    setVisible(true);
+    display();
 
     m_engine->rootObject()->setProperty("singleRunner", QString());
     m_engine->rootObject()->setProperty("query", term);
@@ -242,7 +247,7 @@ void View::query(const QString &term)
 
 void View::querySingleRunner(const QString &runnerName, const QString &term)
 {
-    setVisible(true);
+    display();
 
     m_engine->rootObject()->setProperty("singleRunner", runnerName);
     m_engine->rootObject()->setProperty("query", term);
