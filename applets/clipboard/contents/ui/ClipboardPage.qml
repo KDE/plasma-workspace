@@ -6,6 +6,7 @@
 */
 
 import QtQuick 2.4
+import QtQuick.Controls as QQC
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
@@ -89,24 +90,27 @@ Menu {
     Keys.forwardTo: [stack.currentItem]
 
     property var header: PlasmaExtras.PlasmoidHeading {
-        focus: true
+        // This uses expanded to ensure the binding gets reevaluated
+        // when the plasmoid is shown again and that way ensure we are
+        // always in the correct state on show.
+        focus: main.expanded
 
-        RowLayout {
-            anchors.fill: parent
+        contentItem: RowLayout {
             enabled: clipboardMenu.model.count > 0 || filter.text.length > 0
 
             PlasmaExtras.SearchField {
                 id: filter
                 Layout.fillWidth: true
 
-                // This uses expanded to ensure the binding gets reevaluated
-                // when the plasmoid is shown again and that way ensure we are
-                // always in the correct state on show.
-                focus: main.expanded && !Kirigami.InputMethod.willShowOnActive
+                focus: !Kirigami.InputMethod.willShowOnActive
 
-                KeyNavigation.up: dialogItem.KeyNavigation.up
-                Keys.onUpPressed: event => { clipboardMenu.arrowKeyPressed(event) }
-                Keys.onDownPressed: event => { clipboardMenu.arrowKeyPressed(event) }
+                KeyNavigation.up: dialogItem.KeyNavigation.up /* ToolBar */
+                KeyNavigation.down: clipboardMenu.contentItem.count > 0 ? clipboardMenu.contentItem /* ListView */ : null
+                KeyNavigation.right: clearHistoryButton.visible ? clearHistoryButton : null
+                Keys.onDownPressed: event => {
+                    clipboardMenu.view.incrementCurrentIndex();
+                    event.accepted = false;
+                }
 
                 Connections {
                     target: main
@@ -116,6 +120,7 @@ Menu {
                 }
             }
             PlasmaComponents3.ToolButton {
+                id: clearHistoryButton
                 visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && main.clearHistoryAction.visible
 
                 icon.name: "edit-clear-history"
@@ -164,45 +169,4 @@ Menu {
         });
     }
     onTriggerAction: uuid => clipboardSource.service(uuid, "action")
-
-    Component.onCompleted: {
-        // Intercept up/down key to prevent ListView from accepting the key event.
-        clipboardMenu.view.Keys.upPressed.connect(clipboardMenu.arrowKeyPressed);
-        clipboardMenu.view.Keys.downPressed.connect(clipboardMenu.arrowKeyPressed);
-    }
-
-    function goToCurrent() {
-        clipboardMenu.view.positionViewAtIndex(clipboardMenu.view.currentIndex, ListView.Contain);
-        if (clipboardMenu.view.currentIndex !== -1) {
-            clipboardMenu.view.currentItem.forceActiveFocus();
-        }
-    }
-
-    function arrowKeyPressed(event) {
-        switch (event.key) {
-        case Qt.Key_Up: {
-            if (clipboardMenu.view.currentIndex === 0) {
-                clipboardMenu.view.currentIndex = -1;
-                filter.forceActiveFocus();
-                filter.selectAll();
-            } else if (filter.activeFocus) {
-                event.accepted = false;
-                return;
-            } else {
-                clipboardMenu.view.decrementCurrentIndex();
-                goToCurrent();
-            }
-            event.accepted = true;
-            break;
-        }
-        case Qt.Key_Down: {
-            clipboardMenu.view.incrementCurrentIndex();
-            goToCurrent();
-            event.accepted = true;
-            break;
-        }
-        default:
-            break;
-        }
-    }
 }

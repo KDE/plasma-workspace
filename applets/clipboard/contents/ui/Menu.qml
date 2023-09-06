@@ -104,6 +104,14 @@ PlasmaComponents3.ScrollView {
             }
         }
 
+        Keys.onUpPressed: event => {
+            if (view.currentIndex === 0) {
+                view.currentIndex = -1;
+                filter.selectAll();
+            }
+            event.accepted = false; // Forward to KeyNavigation.up
+        }
+
         Loader {
             id: emptyHint
 

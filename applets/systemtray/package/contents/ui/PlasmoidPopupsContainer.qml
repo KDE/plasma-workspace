@@ -65,7 +65,7 @@ StackView {
                 "width": Qt.binding(() => mainStack.width),
                 "height": Qt.binding(() => mainStack.height),
                 "x": 0,
-                "focus": true,
+                "focus": Qt.binding(() => !mainStack.busy),
                 "opacity": 1,
                 "KeyNavigation.up": mainStack.KeyNavigation.up,
                 "KeyNavigation.backtab": mainStack.KeyNavigation.backtab,
