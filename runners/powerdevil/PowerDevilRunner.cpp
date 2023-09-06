@@ -29,6 +29,8 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     , m_session(new SessionManagement(this))
 {
     setMinLetterCount(3);
+    const KLocalizedString power = ki18nc("Note this is a KRunner keyword; 'power' as in 'power saving mode'", "power");
+    m_power = RunnerKeyword{power.untranslatedText(), power.toString()};
     const KLocalizedString suspend = ki18nc("Note this is a KRunner keyword", "suspend");
     m_suspend = RunnerKeyword{suspend.untranslatedText(), suspend.toString()};
     const KLocalizedString toRam = ki18nc("Note this is a KRunner keyword", "to ram");
@@ -115,7 +117,7 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         match2.setRelevance(1);
         match2.setId(QStringLiteral("DimHalf"));
         matches.append(match2);
-    } else if (matchesRunnerKeywords({m_sleep}, type, term)) {
+    } else if (matchesRunnerKeywords({m_power, m_sleep}, type, term)) {
         if (m_session->canSuspend()) {
             addSuspendMatch(SuspendState, matches, type);
         }

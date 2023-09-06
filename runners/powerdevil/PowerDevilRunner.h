@@ -38,6 +38,7 @@ private:
     void addSyntaxForKeyword(const QList<RunnerKeyword> &keywords, const QString &description);
 
     SessionManagement *m_session;
+    RunnerKeyword m_power;
     RunnerKeyword m_suspend, m_toRam;
     RunnerKeyword m_sleep;
     RunnerKeyword m_hibernate, m_toDisk;
