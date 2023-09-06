@@ -23,6 +23,9 @@ KCM.SimpleKCM {
     property bool overrideImage: false
     property url oldImage
 
+    implicitWidth: Kirigami.Units.gridUnit * 30
+    implicitHeight: Kirigami.Units.gridUnit * 27
+
     Connections {
         target: user
         function onApplyError(errorText) {

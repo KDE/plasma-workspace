@@ -17,18 +17,25 @@ import org.kde.plasma.kcm.users 1.0 as UsersKCM
 KCM.ScrollViewKCM {
     id: root
 
-    title: i18n("Manage Users")
-    // Make the first page a sidebar
-    Kirigami.ColumnView.fillWidth: false
+    title: i18n("Users")
+
+    sidebarMode: true
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    implicitWidth: Kirigami.Units.gridUnit * 30
-    implicitHeight: Kirigami.Units.gridUnit * 20
+    implicitWidth: Kirigami.Units.gridUnit * 15
+    implicitHeight: Kirigami.Units.gridUnit * 27
 
-    // Override default false value here as it doesn't really work with the
-    // layout we have here with two pages adjacent to one another
-    framedView: true
+    actions: Kirigami.Action {
+            icon.name: "list-add-symbolic"
+            text: i18nc("@action:button As in, 'add new user'," "Add New")
+
+            onTriggered: {
+                kcm.pop();
+                kcm.push("CreateUser.qml");
+                userList.currentIndex = -1;
+            }
+        }
 
     // QML cannot update avatar image when override. By increasing this number and
     // appending it to image source with '?', we force avatar to reload
@@ -103,24 +110,4 @@ KCM.ScrollViewKCM {
             }
         }
     }
-
-    footer: RowLayout {
-        QQC2.Button {
-            icon.name: "list-add"
-
-            text: i18n("Add New User")
-
-            onClicked: {
-                kcm.pop();
-                kcm.push("CreateUser.qml");
-                userList.currentIndex = -1;
-            }
-        }
-
-        Item {
-            Layout.fillWidth: true
-        }
-    }
-
-    Item {} // For some reason, this being here keeps the layout from breaking.
 }
