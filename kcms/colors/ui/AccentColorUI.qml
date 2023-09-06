@@ -164,6 +164,7 @@ Item {
             title: i18n("Choose custom accent color")
             // User must either choose a colour or cancel the operation before doing something else
             modality: Qt.ApplicationModal
+            parentWindow: accentColorUI.Window.window
             selectedColor: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
             onAccepted: {
                 kcm.accentColor = colorDialog.selectedColor;
