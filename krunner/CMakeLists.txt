@@ -33,7 +33,7 @@ install(TARGETS krunner ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ${krunner_dbusAppXML} DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
 configure_file(org.kde.krunner.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.desktop @ONLY)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kglobalaccel)
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kglobalaccel)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KRunnerAppDBusInterface")
 configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
