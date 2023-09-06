@@ -7,6 +7,7 @@
 
 #include "plasmawindowedview.h"
 
+#include <QLoggingCategory>
 #include <QMenu>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -21,6 +22,8 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <KStatusNotifierItem>
+
+Q_LOGGING_CATEGORY(PLASMA_SDK_A11Y, "org.kde.plasma.sdk.a11y")
 
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent)
@@ -37,6 +40,19 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
                        "Rectangle {color: Kirigami.Theme.backgroundColor; anchors.fill:parent; "
                        "property Item appletInterface; onAppletInterfaceChanged: print(appletInterface.Layout.minimumWidth)}', root, \"\");"));
     m_rootObject = expr->evaluate().value<QQuickItem *>();
+
+    if (PLASMA_SDK_A11Y().isDebugEnabled()) {
+        QQmlExpression expr(
+            engine()->rootContext(),
+            contentItem(),
+            QStringLiteral("Qt.createQmlObject('import org.kde.plasma.sdk.a11y; AccessibleDebugger {options: AccessibleDebugger.Enabled}', root)"));
+        auto result = expr.evaluate();
+        if (expr.hasError()) {
+            qmlWarning(contentItem(), expr.error());
+        } else {
+            result.value<QObject *>()->setProperty("targetWindow", QVariant::fromValue(this));
+        }
+    }
 }
 
 PlasmaWindowedView::~PlasmaWindowedView()
