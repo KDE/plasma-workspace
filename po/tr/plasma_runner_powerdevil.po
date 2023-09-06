@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2023-09-02 12:55+0300\n"
+"PO-Revision-Date: 2023-09-05 20:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -89,7 +89,7 @@ msgstr "Sistemi diski kullanarak askıya alır"
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr "Şimdi uyur ve bir süre sonra hazırda beklemeye (derin uyku) geçer"
+msgstr "Uyur ve pil durumuna göre askıya alır"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "Hibrit uyku"
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr "Şimdi uyu ve bir süre sonra hazırda beklemeye (derin uyku) geç"
+msgstr "Uyu ve pil durumuna göre askıya al"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format

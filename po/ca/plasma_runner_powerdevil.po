@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-01 01:58+0000\n"
-"PO-Revision-Date: 2023-09-01 10:01+0200\n"
+"PO-Revision-Date: 2023-09-05 10:30+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -91,7 +91,7 @@ msgstr "Suspèn el sistema al disc"
 #: PowerDevilRunner.cpp:69
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr "Suspèn ara i, com a alternativa de reserva, hiberna"
+msgstr "Suspèn ara i hiberna com a alternativa de reserva"
 
 #: PowerDevilRunner.cpp:72
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "Suspensió híbrida"
 #: PowerDevilRunner.cpp:162
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr "Suspèn ara, i hiberna com a alternativa de reserva"
+msgstr "Suspèn ara i hiberna com a alternativa de reserva"
 
 #: PowerDevilRunner.cpp:231
 #, kde-format
