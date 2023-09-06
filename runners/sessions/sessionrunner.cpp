@@ -23,7 +23,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
         addSyntax(m_logoutKeywords, i18n("Logs out, exiting the current desktop session"));
     }
 
-    m_shutdownKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to shut down the computer", "shutdown;shut down")
+    m_shutdownKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to shut down the computer", "shutdown;shut down;power;power off")
                              .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canShutdown()) {
         addSyntax(m_shutdownKeywords, i18n("Turns off the computer"));
