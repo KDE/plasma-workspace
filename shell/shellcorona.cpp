@@ -2483,27 +2483,20 @@ void ShellCorona::activateTaskManagerEntry(int index)
             const auto &provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
             if (provides.contains(QLatin1String("org.kde.plasma.multitasking"))) {
                 if (QQuickItem *appletInterface = PlasmaQuick::AppletQuickItem::itemForApplet(applet)) {
-                    const auto &childItems = appletInterface->childItems();
-                    if (childItems.isEmpty()) {
-                        continue;
-                    }
+                    if (auto *metaObject = appletInterface->metaObject()) {
+                        // not using QMetaObject::invokeMethod to avoid warnings when calling
+                        // this on applets that don't have it or other child items since this
+                        // is pretty much trial and error.
 
-                    for (QQuickItem *item : childItems) {
-                        if (auto *metaObject = item->metaObject()) {
-                            // not using QMetaObject::invokeMethod to avoid warnings when calling
-                            // this on applets that don't have it or other child items since this
-                            // is pretty much trial and error.
+                        // Also, "var" arguments are treated as QVariant in QMetaObject
+                        int methodIndex = metaObject->indexOfMethod("activateTaskAtIndex(QVariant)");
+                        if (methodIndex == -1) {
+                            continue;
+                        }
 
-                            // Also, "var" arguments are treated as QVariant in QMetaObject
-                            int methodIndex = metaObject->indexOfMethod("activateTaskAtIndex(QVariant)");
-                            if (methodIndex == -1) {
-                                continue;
-                            }
-
-                            QMetaMethod method = metaObject->method(methodIndex);
-                            if (method.invoke(item, Q_ARG(QVariant, index))) {
-                                return true;
-                            }
+                        QMetaMethod method = metaObject->method(methodIndex);
+                        if (method.invoke(appletInterface, Q_ARG(QVariant, index))) {
+                            return true;
                         }
                     }
                 }
