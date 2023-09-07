@@ -28,7 +28,7 @@ KCM.ScrollViewKCM {
 
     actions: Kirigami.Action {
             icon.name: "list-add-symbolic"
-            text: i18nc("@action:button As in, 'add new user'," "Add New")
+            text: i18nc("@action:button As in, 'add new user'", "Add New")
 
             onTriggered: {
                 kcm.pop();
