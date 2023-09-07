@@ -363,7 +363,12 @@ public:
     Private(WaylandTasksModel *q);
     QHash<PlasmaWindow *, AppData> appDataCache;
     QHash<PlasmaWindow *, QTime> lastActivated;
+    PlasmaWindow *activeWindow = nullptr;
     std::vector<std::unique_ptr<PlasmaWindow>> windows;
+    // key=transient child, value=leader
+    QHash<PlasmaWindow *, PlasmaWindow *> transients;
+    // key=leader, values=transient children
+    QMultiHash<PlasmaWindow *, PlasmaWindow *> transientsDemandingAttention;
     std::unique_ptr<PlasmaWindowManagement> windowManagement;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
@@ -477,17 +482,28 @@ auto WaylandTasksModel::Private::findWindow(PlasmaWindow *window) const
 
 void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
 {
-    if (findWindow(window) != windows.end()) {
+    if (findWindow(window) != windows.end() || transients.contains(window)) {
         return;
     }
 
-    const int count = windows.size();
+    // Handle transient.
+    if (PlasmaWindow *leader = window->parentWindow.data()) {
+        transients.insert(window, leader);
 
-    q->beginInsertRows(QModelIndex(), count, count);
+        // Update demands attention state for leader.
+        if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
+            transientsDemandingAttention.insert(leader, window);
+            dataChanged(leader, QVector<int>{IsDemandingAttention});
+        }
+    } else {
+        const int count = windows.size();
 
-    windows.emplace_back(window);
+        q->beginInsertRows(QModelIndex(), count, count);
 
-    q->endInsertRows();
+        windows.emplace_back(window);
+
+        q->endInsertRows();
+    }
 
     auto removeWindow = [window, this] {
         auto it = findWindow(window);
@@ -495,9 +511,22 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             const int row = it - windows.begin();
             q->beginRemoveRows(QModelIndex(), row, row);
             windows.erase(it);
+            transientsDemandingAttention.remove(window);
             appDataCache.remove(window);
             lastActivated.remove(window);
             q->endRemoveRows();
+        } else { // Could be a transient.
+            // Removing a transient might change the demands attention state of the leader.
+            if (transients.remove(window)) {
+                if (PlasmaWindow *leader = transientsDemandingAttention.key(window)) {
+                    transientsDemandingAttention.remove(leader, window);
+                    dataChanged(leader, QVector<int>{IsDemandingAttention});
+                }
+            }
+        }
+
+        if (activeWindow == window) {
+            activeWindow = nullptr;
         }
     };
 
@@ -529,10 +558,47 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     });
 
     QObject::connect(window, &PlasmaWindow::activeChanged, q, [window, this] {
-        if (window->windowState & PlasmaWindow::state::state_active) {
-            lastActivated[window] = QTime::currentTime();
+        const bool active = window->windowState & PlasmaWindow::state::state_active;
+
+        PlasmaWindow *effectiveWindow = window;
+
+        while (effectiveWindow->parentWindow) {
+            effectiveWindow = effectiveWindow->parentWindow;
         }
-        this->dataChanged(window, IsActive);
+
+        if (active) {
+            lastActivated[effectiveWindow] = QTime::currentTime();
+
+            if (activeWindow != effectiveWindow) {
+                activeWindow = effectiveWindow;
+                this->dataChanged(effectiveWindow, IsActive);
+            }
+        } else {
+            if (activeWindow == effectiveWindow) {
+                activeWindow = nullptr;
+                this->dataChanged(effectiveWindow, IsActive);
+            }
+        }
+    });
+
+    QObject::connect(window, &PlasmaWindow::parentWindowChanged, q, [window, this] {
+        PlasmaWindow *leader = window->parentWindow.data();
+
+        // Migrate demanding attention to new leader.
+        if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
+            if (auto *oldLeader = transientsDemandingAttention.key(window)) {
+                if (window->parentWindow != oldLeader) {
+                    transientsDemandingAttention.remove(oldLeader, window);
+                    transientsDemandingAttention.insert(leader, window);
+                    dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
+                    dataChanged(leader, QVector<int>{IsDemandingAttention});
+                }
+            }
+        }
+
+        // TODO handle parent change,
+        // migrate to new leader,
+        // or add/remove proper window if it got/lost a leader.
     });
 
     QObject::connect(window, &PlasmaWindow::closeableChanged, q, [window, this] {
@@ -611,7 +677,19 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     });
 
     QObject::connect(window, &PlasmaWindow::demandsAttentionChanged, q, [window, this] {
-        this->dataChanged(window, IsDemandingAttention);
+        // Changes to a transient's state might change demands attention state for leader.
+        if (auto *leader = transients.value(window)) {
+            if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
+                if (!transientsDemandingAttention.values(leader).contains(window)) {
+                    transientsDemandingAttention.insert(leader, window);
+                    this->dataChanged(leader, QVector<int>{IsDemandingAttention});
+                }
+            } else if (transientsDemandingAttention.remove(window)) {
+                this->dataChanged(leader, QVector<int>{IsDemandingAttention});
+            }
+        } else {
+            this->dataChanged(window, QVector<int>{IsDemandingAttention});
+        }
     });
 
     QObject::connect(window, &PlasmaWindow::skipTaskbarChanged, q, [window, this] {
@@ -727,7 +805,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
-        return window->windowState.testFlag(PlasmaWindow::state::state_active);
+        return (window == d->activeWindow);
     } else if (role == IsClosable) {
         return window->windowState.testFlag(PlasmaWindow::state::state_closeable);
     } else if (role == IsMovable) {
@@ -767,7 +845,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == Activities) {
         return window->activities;
     } else if (role == IsDemandingAttention) {
-        return window->windowState.testFlag(PlasmaWindow::state::state_demands_attention);
+        return window->windowState.testFlag(PlasmaWindow::state::state_demands_attention) || d->transientsDemandingAttention.contains(window);
     } else if (role == SkipTaskbar) {
         return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->appData(window).skipTaskbar;
     } else if (role == SkipPager) {
@@ -803,13 +881,27 @@ QModelIndex WaylandTasksModel::index(int row, int column, const QModelIndex &par
 
 void WaylandTasksModel::requestActivate(const QModelIndex &index)
 {
-    // FIXME Lacks transient handling of the XWindows version.
-
     if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
-    d->windows.at(index.row())->set_state(PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
+    PlasmaWindow *window = d->windows.at(index.row()).get();
+
+    // Pull forward any transient demanding attention.
+    if (auto *transientDemandingAttention = d->transientsDemandingAttention.value(window)) {
+        window = transientDemandingAttention;
+    } else {
+        // TODO Shouldn't KWin take care of that?
+        // Bringing a transient to the front usually brings its parent with it
+        // but focus is not handled properly.
+        // TODO take into account d->lastActivation instead
+        // of just taking the first one.
+        while (d->transients.key(window)) {
+            window = d->transients.key(window);
+        }
+    }
+
+    window->set_state(PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
 }
 
 void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
