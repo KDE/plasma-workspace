@@ -1258,6 +1258,7 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateStruts()
 {
+#if HAVE_X11
     if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
         return;
     }
@@ -1265,49 +1266,60 @@ void PanelView::updateStruts()
     NETExtendedStrut strut;
 
     if (m_visibilityMode == NormalPanel) {
-        const QRect thisScreen = m_screenToFollow->geometry();
-        // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
-        const QRect wholeScreen = QRect(QPoint(0, 0), m_screenToFollow->virtualSize());
-
         if (!canSetStrut()) {
             KX11Extras::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             return;
         }
-        // extended struts are to the combined screen geoms, not the single screen
-        int leftOffset = thisScreen.x();
-        int rightOffset = wholeScreen.right() - thisScreen.right();
-        int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
-        //         qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
-        int topOffset = thisScreen.top();
 
+        // NOTE Device coordinates must be transformed to logical coordinates when setting struts.
+        // as KX11Extras::setExtendedStrut(...) will multiply struct.* by DPR again
+        // Panel sizes are already divided by DPR.
+        const double devicePixelRatio = m_screenToFollow->devicePixelRatio();
+        const QRect thisScreen{m_screenToFollow->geometry().topLeft() / devicePixelRatio, m_screenToFollow->geometry().size()};
+        QRect wholeScreen;
+        const auto screens = qGuiApp->screens();
+        for (auto screen : screens) {
+            const QRect geometry = screen->geometry();
+            wholeScreen = wholeScreen.united(QRect(geometry.topLeft() / devicePixelRatio, geometry.size()));
+        }
+
+        // extended struts are to the combined screen geoms, not the single screen
         switch (location()) {
-        case Plasma::Types::TopEdge:
+        case Plasma::Types::TopEdge: {
+            const int topOffset = thisScreen.top();
             strut.top_width = totalThickness() + topOffset;
-            strut.top_start = x();
-            strut.top_end = x() + width() - 1;
+            strut.top_start = x() / devicePixelRatio;
+            strut.top_end = x() / devicePixelRatio + width() - 1;
             //                 qDebug() << "setting top edge to" << strut.top_width << strut.top_start << strut.top_end;
             break;
+        }
 
-        case Plasma::Types::BottomEdge:
+        case Plasma::Types::BottomEdge: {
+            const int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
             strut.bottom_width = totalThickness() + bottomOffset;
-            strut.bottom_start = x();
-            strut.bottom_end = x() + width() - 1;
+            strut.bottom_start = x() / devicePixelRatio;
+            strut.bottom_end = x() / devicePixelRatio + width() - 1;
             //                 qDebug() << "setting bottom edge to" << strut.bottom_width << strut.bottom_start << strut.bottom_end;
             break;
+        }
 
-        case Plasma::Types::RightEdge:
+        case Plasma::Types::RightEdge: {
+            const int rightOffset = wholeScreen.right() - thisScreen.right();
             strut.right_width = totalThickness() + rightOffset;
-            strut.right_start = y();
-            strut.right_end = y() + height() - 1;
+            strut.right_start = y() / devicePixelRatio;
+            strut.right_end = y() / devicePixelRatio + height() - 1;
             //                 qDebug() << "setting right edge to" << strut.right_width << strut.right_start << strut.right_end;
             break;
+        }
 
-        case Plasma::Types::LeftEdge:
+        case Plasma::Types::LeftEdge: {
+            const int leftOffset = thisScreen.x();
             strut.left_width = totalThickness() + leftOffset;
-            strut.left_start = y();
-            strut.left_end = y() + height() - 1;
+            strut.left_start = y() / devicePixelRatio;
+            strut.left_end = y() / devicePixelRatio + height() - 1;
             //                 qDebug() << "setting left edge to" << strut.left_width << strut.left_start << strut.left_end;
             break;
+        }
 
         default:
             // qDebug() << "where are we?";
@@ -1328,6 +1340,7 @@ void PanelView::updateStruts()
                                  strut.bottom_width,
                                  strut.bottom_start,
                                  strut.bottom_end);
+#endif
 }
 
 void PanelView::refreshContainment()
