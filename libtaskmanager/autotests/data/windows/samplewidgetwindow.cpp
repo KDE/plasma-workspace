@@ -44,9 +44,7 @@ int main(int argc, char *argv[])
     w.raise();
     w.requestActivate();
 
-    QTimer::singleShot(5000, [&a] {
-        a.quit();
-    });
+    QTimer::singleShot(30000, &a, &QCoreApplication::quit);
 
     return a.exec();
 }
