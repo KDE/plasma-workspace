@@ -61,6 +61,9 @@ public:
     QList<QString> activities;
     quint32 pid;
     QString resourceName;
+    QPointer<PlasmaWindow> parentWindow;
+    bool wasUnmapped = false;
+
 Q_SIGNALS:
     void unmapped();
     void titleChanged();
@@ -91,11 +94,13 @@ Q_SIGNALS:
     void skipTaskbarChanged();
     void applicationMenuChanged();
     void activitiesChanged();
+    void parentWindowChanged();
     void initialStateDone();
 
 protected:
     void org_kde_plasma_window_unmapped() override
     {
+        wasUnmapped = true;
         Q_EMIT unmapped();
     }
     void org_kde_plasma_window_title_changed(const QString &title) override
@@ -282,10 +287,41 @@ protected:
     {
         resourceName = resource_name;
     }
+    void org_kde_plasma_window_parent_window(::org_kde_plasma_window *parent) override
+    {
+        PlasmaWindow *parentWindow = nullptr;
+        if (parent) {
+            parentWindow = dynamic_cast<PlasmaWindow *>(PlasmaWindow::fromObject(parent));
+        }
+        setParentWindow(parentWindow);
+    }
     void org_kde_plasma_window_initial_state() override
     {
         Q_EMIT initialStateDone();
     }
+
+private:
+    void setParentWindow(PlasmaWindow *parent)
+    {
+        const auto old = parentWindow;
+        QObject::disconnect(parentWindowUnmappedConnection);
+
+        if (parent && !parent->wasUnmapped) {
+            parentWindow = QPointer<PlasmaWindow>(parent);
+            parentWindowUnmappedConnection = QObject::connect(parent, &PlasmaWindow::unmapped, this, [this] {
+                setParentWindow(nullptr);
+            });
+        } else {
+            parentWindow = QPointer<PlasmaWindow>();
+            parentWindowUnmappedConnection = QMetaObject::Connection();
+        }
+
+        if (parentWindow.data() != old.data()) {
+            Q_EMIT parentWindowChanged();
+        }
+    }
+
+    QMetaObject::Connection parentWindowUnmappedConnection;
 };
 
 class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWindowManagement>, public QtWayland::org_kde_plasma_window_management
