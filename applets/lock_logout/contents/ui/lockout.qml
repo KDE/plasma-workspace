@@ -26,14 +26,14 @@ PlasmoidItem {
             if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 return 0
             } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
-                return height < minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons - 1;
+                return height < minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons;
             } else {
                 return width > height ? minButtonSize * visibleButtons : minButtonSize
             }
         }
         Layout.minimumHeight: {
             if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                return width >= minButtonSize * visibleButtons ? width / visibleButtons - 1 : width * visibleButtons
+                return width >= minButtonSize * visibleButtons ? width / visibleButtons : width * visibleButtons
             } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
                 return 0
             } else {
