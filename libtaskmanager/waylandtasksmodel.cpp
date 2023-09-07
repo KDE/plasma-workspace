@@ -854,7 +854,8 @@ void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
     if (window->windowState & PlasmaWindow::state::state_maximized) {
         window->set_state(PlasmaWindow::state::state_maximized | PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
     } else {
-        window->set_state(PlasmaWindow::state::state_maximized, PlasmaWindow::state::state_maximized | PlasmaWindow::state::state_active);
+        window->set_state(PlasmaWindow::state::state_maximized | PlasmaWindow::state::state_active,
+                          PlasmaWindow::state::state_maximized | PlasmaWindow::state::state_active);
     }
 }
 
