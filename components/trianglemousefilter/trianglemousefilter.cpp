@@ -24,8 +24,6 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
         m_lastCursorPosition.reset();
         m_lastTimestamp.reset();
 
-        update();
-
         if (m_interceptedHoverItem) {
             resendHoverEvents(m_interceptedHoverItem.interceptedHoverEnterPosition.value());
         }
@@ -36,7 +34,6 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
 
 bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
-    update();
     if (!m_active) {
         // Even if inactive, we still need to record the current item so when active becomes true after the child item is hovered, the filter can still work
         // correctly
