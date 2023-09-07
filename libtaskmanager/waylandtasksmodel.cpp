@@ -720,7 +720,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsShaded) {
         return window->windowState.testFlag(PlasmaWindow::state::state_shaded);
     } else if (role == IsVirtualDesktopsChangeable) {
-        window->windowState.testFlag(PlasmaWindow::state::state_maximized);
+        window->windowState.testFlag(PlasmaWindow::state::state_virtual_desktop_changeable);
     } else if (role == VirtualDesktops) {
         return window->virtualDesktops;
     } else if (role == IsOnAllVirtualDesktops) {
