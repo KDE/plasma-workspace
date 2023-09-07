@@ -157,8 +157,9 @@ void User::loadData()
         userDataChanged = true;
         Q_EMIT nameChanged();
     }
-    if (mFace != QUrl(m_dbusIface->iconFile())) {
-        mFace = QUrl(m_dbusIface->iconFile());
+    const auto localIconFile = QUrl::fromLocalFile(m_dbusIface->iconFile());
+    if (mFace != localIconFile) {
+        mFace = localIconFile;
         mOriginalFace = mFace;
         mFaceValid = QFileInfo::exists(mFace.toString());
         mOriginalFaceValid = mFaceValid;
