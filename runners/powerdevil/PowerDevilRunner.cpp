@@ -117,24 +117,18 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         match2.setRelevance(1);
         match2.setId(QStringLiteral("DimHalf"));
         matches.append(match2);
-    } else if (matchesRunnerKeywords({m_power, m_sleep}, type, term)) {
+    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_toRam}, type, term)) {
         if (m_session->canSuspend()) {
             addSuspendMatch(SuspendState, matches, type);
         }
-
+    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_hibernate, m_toDisk}, type, term)) {
         if (m_session->canHibernate()) {
             addSuspendMatch(HibernateState, matches, type);
         }
-
+    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_hybrid, m_hybridSuspend}, type, term)) {
         if (m_session->canHybridSuspend()) {
             addSuspendMatch(HybridSuspendState, matches, type);
         }
-    } else if (matchesRunnerKeywords({m_suspend, m_toRam}, type, term)) {
-        addSuspendMatch(SuspendState, matches, type);
-    } else if (matchesRunnerKeywords({m_hibernate, m_toDisk}, type, term)) {
-        addSuspendMatch(HibernateState, matches, type);
-    } else if (matchesRunnerKeywords({m_hybridSuspend, m_hybrid}, type, term)) {
-        addSuspendMatch(HybridSuspendState, matches, type);
     }
 
     context.addMatches(matches);
