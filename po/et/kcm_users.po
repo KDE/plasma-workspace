@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2020-10-25 18:48+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
 #, kde-format
 msgid "Change Password"
 msgstr "Parooli muutmine"
@@ -134,27 +134,27 @@ msgstr ""
 msgid "Create User"
 msgstr "Kasutaja loomine"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
 #, kde-format
 msgid "Name:"
 msgstr "Nimi:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
 #, kde-format
 msgid "Username:"
 msgstr "Kasutajanimi:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Standard"
 msgstr "Tavaline"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Administrator"
 msgstr "Administraator"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Konto tüüp:"
@@ -349,13 +349,8 @@ msgstr ""
 
 #: src/ui/main.qml:20
 #, kde-format
-msgid "Manage Users"
-msgstr "Kasutajate haldamine"
-
-#: src/ui/main.qml:111
-#, kde-format
-msgid "Add New User"
-msgstr "Lisa uus kasutaja"
+msgid "Users"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
@@ -496,39 +491,39 @@ msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Vali fail ..."
 
-#: src/ui/UserDetailsPage.qml:106
+#: src/ui/UserDetailsPage.qml:109
 #, fuzzy, kde-format
 #| msgid "Change Avatar"
 msgid "Change avatar"
 msgstr "Avatari muutmine"
 
-#: src/ui/UserDetailsPage.qml:154
+#: src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Email address:"
 msgstr "E-posti aadress:"
 
-#: src/ui/UserDetailsPage.qml:178
+#: src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Delete files"
 msgstr "Kustuta failid"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:188
 #, kde-format
 msgid "Keep files"
 msgstr "Jäta failid alles"
 
-#: src/ui/UserDetailsPage.qml:192
+#: src/ui/UserDetailsPage.qml:195
 #, fuzzy, kde-format
 #| msgid "Delete User..."
 msgid "Delete User…"
 msgstr "Kustuta kasutaja ..."
 
-#: src/ui/UserDetailsPage.qml:203
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:217
+#: src/ui/UserDetailsPage.qml:220
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -567,6 +562,12 @@ msgstr "Sinu konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Teised kontod"
+
+#~ msgid "Manage Users"
+#~ msgstr "Kasutajate haldamine"
+
+#~ msgid "Add New User"
+#~ msgstr "Lisa uus kasutaja"
 
 #~ msgctxt "Example email address"
 #~ msgid "john.doe@kde.org"

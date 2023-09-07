@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2020-09-03 16:22+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
 #, kde-format
 msgid "Change Password"
 msgstr "Тағйир додани ниҳонвожа"
@@ -134,27 +134,27 @@ msgstr ""
 msgid "Create User"
 msgstr "Эҷод кардани корбар"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
 #, kde-format
 msgid "Name:"
 msgstr "Ном:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
 #, kde-format
 msgid "Username:"
 msgstr "Номи корбар:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Standard"
 msgstr "Стандартӣ"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Administrator"
 msgstr "Маъмур"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Навъи ҳисоб:"
@@ -349,13 +349,8 @@ msgstr ""
 
 #: src/ui/main.qml:20
 #, kde-format
-msgid "Manage Users"
-msgstr "Идоракунии корбарон"
-
-#: src/ui/main.qml:111
-#, kde-format
-msgid "Add New User"
-msgstr "Илова кардани корбари нав"
+msgid "Users"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
@@ -480,39 +475,39 @@ msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Интихоби файл..."
 
-#: src/ui/UserDetailsPage.qml:106
+#: src/ui/UserDetailsPage.qml:109
 #, fuzzy, kde-format
 #| msgid "Change Avatar"
 msgid "Change avatar"
 msgstr "Иваз кардани расм"
 
-#: src/ui/UserDetailsPage.qml:154
+#: src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Email address:"
 msgstr "Нишонии почтаи электронӣ:"
 
-#: src/ui/UserDetailsPage.qml:178
+#: src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Delete files"
 msgstr "Файлҳо нест карда шаванд"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:188
 #, kde-format
 msgid "Keep files"
 msgstr "Файлҳо нигоҳ дошта шаванд"
 
-#: src/ui/UserDetailsPage.qml:192
+#: src/ui/UserDetailsPage.qml:195
 #, fuzzy, kde-format
 #| msgid "Delete User..."
 msgid "Delete User…"
 msgstr "Нест кардани корбар..."
 
-#: src/ui/UserDetailsPage.qml:203
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:217
+#: src/ui/UserDetailsPage.qml:220
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -551,6 +546,12 @@ msgstr "Ҳисоби шумо"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Ҳисобҳои дигар"
+
+#~ msgid "Manage Users"
+#~ msgstr "Идоракунии корбарон"
+
+#~ msgid "Add New User"
+#~ msgstr "Илова кардани корбари нав"
 
 #~ msgctxt "Example email address"
 #~ msgid "john.doe@kde.org"

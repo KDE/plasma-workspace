@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2022-06-11 09:37-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -39,7 +39,7 @@ msgstr "ਲਾਗਆਉਟ, ਮੌਜੂਦਾ ਡੈਸਕਟਾਪ ਸ਼ੈ�
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
-msgid "shutdown;shut down"
+msgid "shutdown;shut down;power;power off"
 msgstr "ਬੰਦ ਕਰੋ"
 
 #: sessionrunner.cpp:29

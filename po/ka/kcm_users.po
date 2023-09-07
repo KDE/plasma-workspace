@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2023-01-11 06:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "მოწყობილობა გათიშულია."
 msgid "An unknown error has occurred."
 msgstr "უცნობი შეცდომა."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
 #, kde-format
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
@@ -139,27 +139,27 @@ msgstr "შეუცვლელად დატოვება"
 msgid "Create User"
 msgstr "მომხმარებლის შექმნა"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
 #, kde-format
 msgid "Name:"
 msgstr "სახელი:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
 #, kde-format
 msgid "Username:"
 msgstr "მომხმარებელი:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Standard"
 msgstr "სტანდარტული"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Administrator"
 msgstr "ადმინისტრატორი"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "ანგარიშის ტიპი:"
@@ -357,13 +357,8 @@ msgstr "ანაბეჭდები დამატებული არა�
 
 #: src/ui/main.qml:20
 #, kde-format
-msgid "Manage Users"
-msgstr "მომხმარებლების მართვა"
-
-#: src/ui/main.qml:111
-#, kde-format
-msgid "Add New User"
-msgstr "ახალი მომხმარებლის დამატება"
+msgid "Users"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -485,37 +480,37 @@ msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "აირჩიეთ ფაილი…"
 
-#: src/ui/UserDetailsPage.qml:106
+#: src/ui/UserDetailsPage.qml:109
 #, kde-format
 msgid "Change avatar"
 msgstr "აირჩიეთ ავატარი"
 
-#: src/ui/UserDetailsPage.qml:154
+#: src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Email address:"
 msgstr "ელფოსტის მისამართი:"
 
-#: src/ui/UserDetailsPage.qml:178
+#: src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Delete files"
 msgstr "ფაილების წაშლა"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:188
 #, kde-format
 msgid "Keep files"
 msgstr "ფაილების დატოვება"
 
-#: src/ui/UserDetailsPage.qml:192
+#: src/ui/UserDetailsPage.qml:195
 #, kde-format
 msgid "Delete User…"
 msgstr "მომხმარებლის წაშლა…"
 
-#: src/ui/UserDetailsPage.qml:203
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "ანაბეჭდებით ავთენტიკაციის მორგება…"
 
-#: src/ui/UserDetailsPage.qml:217
+#: src/ui/UserDetailsPage.qml:220
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -558,6 +553,12 @@ msgstr "თქვენი ანგარიში"
 #, kde-format
 msgid "Other Accounts"
 msgstr "სხვა ანგარიშები"
+
+#~ msgid "Manage Users"
+#~ msgstr "მომხმარებლების მართვა"
+
+#~ msgid "Add New User"
+#~ msgstr "ახალი მომხმარებლის დამატება"
 
 #~ msgid "Continue"
 #~ msgstr "გაგრძელება"

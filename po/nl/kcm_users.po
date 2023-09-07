@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2023-01-11 11:37+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -66,7 +66,7 @@ msgstr "De verbinding met het apparaat verbroken."
 msgid "An unknown error has occurred."
 msgstr "Er is een onbekende fout opgetreden."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
 #, kde-format
 msgid "Change Password"
 msgstr "Wachtwoord wijzigen"
@@ -141,27 +141,27 @@ msgstr "Ongewijzigd laten"
 msgid "Create User"
 msgstr "Gebruiker aanmaken"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
 #, kde-format
 msgid "Name:"
 msgstr "Naam:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
 #, kde-format
 msgid "Username:"
 msgstr "Gebruikersnaam:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Standard"
 msgstr "Standaard"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Administrator"
 msgstr "Systeembeheerder"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Accounttype:"
@@ -355,13 +355,8 @@ msgstr "Geen vingerafdruk toegevoegd"
 
 #: src/ui/main.qml:20
 #, kde-format
-msgid "Manage Users"
-msgstr "Gebruikers beheren"
-
-#: src/ui/main.qml:111
-#, kde-format
-msgid "Add New User"
-msgstr "Nieuwe gebruiker toevoegen"
+msgid "Users"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -483,37 +478,37 @@ msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Bestand kiezen…"
 
-#: src/ui/UserDetailsPage.qml:106
+#: src/ui/UserDetailsPage.qml:109
 #, kde-format
 msgid "Change avatar"
 msgstr "Avatar vervangen"
 
-#: src/ui/UserDetailsPage.qml:154
+#: src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Email address:"
 msgstr "E-mailadres:"
 
-#: src/ui/UserDetailsPage.qml:178
+#: src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Delete files"
 msgstr "Bestanden verwijderen"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:188
 #, kde-format
 msgid "Keep files"
 msgstr "Bestanden bewaren"
 
-#: src/ui/UserDetailsPage.qml:192
+#: src/ui/UserDetailsPage.qml:195
 #, kde-format
 msgid "Delete User…"
 msgstr "Gebruiker verwijderen…"
 
-#: src/ui/UserDetailsPage.qml:203
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Authenticatie met vingerafdruk configureren"
 
-#: src/ui/UserDetailsPage.qml:217
+#: src/ui/UserDetailsPage.qml:220
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -560,6 +555,12 @@ msgstr "Uw account"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Andere accounts"
+
+#~ msgid "Manage Users"
+#~ msgstr "Gebruikers beheren"
+
+#~ msgid "Add New User"
+#~ msgstr "Nieuwe gebruiker toevoegen"
 
 #~ msgid "Continue"
 #~ msgstr "Doorgaan"

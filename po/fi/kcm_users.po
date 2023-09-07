@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2023-03-04 18:16+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -65,7 +65,7 @@ msgstr "Laite irrotettiin."
 msgid "An unknown error has occurred."
 msgstr "Sattui tuntematon virhe."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
 #, kde-format
 msgid "Change Password"
 msgstr "Vaihda salasana"
@@ -140,28 +140,28 @@ msgstr "Älä vaihda"
 msgid "Create User"
 msgstr "Luo käyttäjä"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
 #, kde-format
 msgid "Name:"
 msgstr "Nimi:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
 #, kde-format
 msgid "Username:"
 msgstr "Käyttäjätunnus:"
 
 # Tämä on käyttäjätilin tyyppi: standard vs. administrator
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Standard"
 msgstr "Tavallinen"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Administrator"
 msgstr "Ylläpitäjä"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Tilin tyyppi:"
@@ -375,13 +375,8 @@ msgstr "Sormenjälkiä ei ole lisätty"
 
 #: src/ui/main.qml:20
 #, kde-format
-msgid "Manage Users"
-msgstr "Hallitse käyttäjiä"
-
-#: src/ui/main.qml:111
-#, kde-format
-msgid "Add New User"
-msgstr "Lisää uusi käyttäjä"
+msgid "Users"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -503,37 +498,37 @@ msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Valitse tiedosto…"
 
-#: src/ui/UserDetailsPage.qml:106
+#: src/ui/UserDetailsPage.qml:109
 #, kde-format
 msgid "Change avatar"
 msgstr "Vaihda tunnuskuva"
 
-#: src/ui/UserDetailsPage.qml:154
+#: src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Email address:"
 msgstr "Sähköpostiosoite:"
 
-#: src/ui/UserDetailsPage.qml:178
+#: src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Delete files"
 msgstr "Poista tiedostot"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:188
 #, kde-format
 msgid "Keep files"
 msgstr "Säilytä tiedostot"
 
-#: src/ui/UserDetailsPage.qml:192
+#: src/ui/UserDetailsPage.qml:195
 #, kde-format
 msgid "Delete User…"
 msgstr "Poista käyttäjä…"
 
-#: src/ui/UserDetailsPage.qml:203
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Sormenjälkitodennuksen asetukset…"
 
-#: src/ui/UserDetailsPage.qml:217
+#: src/ui/UserDetailsPage.qml:220
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -577,6 +572,12 @@ msgstr "Oma tilisi"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Muut tilit"
+
+#~ msgid "Manage Users"
+#~ msgstr "Hallitse käyttäjiä"
+
+#~ msgid "Add New User"
+#~ msgstr "Lisää uusi käyttäjä"
 
 #~ msgid "Continue"
 #~ msgstr "Jatka"

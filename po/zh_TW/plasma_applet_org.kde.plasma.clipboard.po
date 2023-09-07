@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2023-08-07 23:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -77,7 +77,7 @@ msgstr "沒有足夠空間可以顯示 QR 碼。請嘗試調整這個小程式�
 msgid "Clipboard Contents"
 msgstr "剪貼簿內容"
 
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:121
+#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"
@@ -124,7 +124,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/ui/Menu.qml:121
+#: contents/ui/Menu.qml:129
 #, kde-format
 msgid "No matches"
 msgstr "無相符項目"

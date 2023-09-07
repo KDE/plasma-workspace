@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-09-07 01:58+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "उपकरण वियोजित दिया गया था।"
 msgid "An unknown error has occurred."
 msgstr "एक अज्ञात त्रुटि हुई।"
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:158
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
 #, kde-format
 msgid "Change Password"
 msgstr "कूटशब्द बदलें"
@@ -138,27 +138,27 @@ msgstr "अपरिवर्तित छोड़ दें"
 msgid "Create User"
 msgstr "उपयोक्ता बनाएँ"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:126
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
 #, kde-format
 msgid "Name:"
 msgstr "नाम :"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
 #, kde-format
 msgid "Username:"
 msgstr "उपयोक्ता नाम :"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Standard"
 msgstr "मानक"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
 #, kde-format
 msgid "Administrator"
 msgstr "प्रशासक"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "खाते का प्रकार :"
@@ -353,13 +353,8 @@ msgstr "कोई अंगुलि छाप नहीं जोड़ा ग�
 
 #: src/ui/main.qml:20
 #, kde-format
-msgid "Manage Users"
-msgstr "उपयोक्ताओं का प्रबंधन"
-
-#: src/ui/main.qml:111
-#, kde-format
-msgid "Add New User"
-msgstr "नया उपयोक्ता जोड़ें"
+msgid "Users"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
@@ -501,37 +496,37 @@ msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "फ़ाइल चुनें…"
 
-#: src/ui/UserDetailsPage.qml:106
+#: src/ui/UserDetailsPage.qml:109
 #, kde-format
 msgid "Change avatar"
 msgstr "अवतार बदलें"
 
-#: src/ui/UserDetailsPage.qml:154
+#: src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Email address:"
 msgstr "ई-मेल पता :"
 
-#: src/ui/UserDetailsPage.qml:178
+#: src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Delete files"
 msgstr "फ़ाइलें मिटाएँ"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:188
 #, kde-format
 msgid "Keep files"
 msgstr "फ़ाइलें रखें"
 
-#: src/ui/UserDetailsPage.qml:192
+#: src/ui/UserDetailsPage.qml:195
 #, kde-format
 msgid "Delete User…"
 msgstr "उपयोक्ता मिटाएँ..."
 
-#: src/ui/UserDetailsPage.qml:203
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "अंगुलि छाप प्रमानीकरण विन्यस्त करें..."
 
-#: src/ui/UserDetailsPage.qml:217
+#: src/ui/UserDetailsPage.qml:220
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -573,6 +568,12 @@ msgstr "आपका ख़ाता"
 #, kde-format
 msgid "Other Accounts"
 msgstr "अन्य खाते"
+
+#~ msgid "Manage Users"
+#~ msgstr "उपयोक्ताओं का प्रबंधन"
+
+#~ msgid "Add New User"
+#~ msgstr "नया उपयोक्ता जोड़ें"
 
 #~ msgid "Continue"
 #~ msgstr "जारी रखें"
