@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2015-02-04 14:28+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -169,17 +169,17 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/imagebackend.cpp:227
+#: plugin/imagebackend.cpp:253
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Direktorij koji sadrži slajdove iz kojih će se prikazati pozadina"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Open Image"
 msgstr "Otvori sliku"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Image Files"
 msgstr ""

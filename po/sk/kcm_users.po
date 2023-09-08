@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-04-17 18:41+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -357,6 +357,13 @@ msgstr "Žiadne odtlačky neboli pridané"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Pridať nového používateľa"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -521,23 +528,23 @@ msgstr ""
 "ktoré ich vyžadujú.<nl/><nl/>Prihlásenie do systému pomocou odtlačku prsta "
 "zatiaľ nie je podporované."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Nepodarilo sa získať oprávnenia na uloženie používateľa %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Nastala chyba pri ukladaní zmien"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Nepodarilo sa zmeniť veľkosť obrázka: otvorenie dočasného súboru zlyhalo"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Nepodarilo sa zmeniť veľkosť obrázka: zápis do dočasného súboru zlyhal"
@@ -554,9 +561,6 @@ msgstr "Ostatné kontá"
 
 #~ msgid "Manage Users"
 #~ msgstr "Spravovať používateľov"
-
-#~ msgid "Add New User"
-#~ msgstr "Pridať nového používateľa"
 
 #~ msgid "Continue"
 #~ msgstr "Pokračovať"

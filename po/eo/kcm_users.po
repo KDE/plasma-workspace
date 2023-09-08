@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 20:47+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -392,6 +392,12 @@ msgstr "Neniuj fingrospuroj aldonitaj"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
+msgstr "Uzantoj"
+
+#: src/ui/main.qml:31
+#, kde-format
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
 msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
@@ -558,22 +564,22 @@ msgstr ""
 "programoj kiuj petas ilin.<nl/><nl/>Ensaluti en la sistemon per via "
 "fingrospuro ankoraŭ ne estas subtenata."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Ne eblis akiri permeson konservi uzanton %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Okazis eraro dum konservado de ŝanĝoj"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Malsukcesis regrandigi bildon: malfermi tempdosieron malsukcesis"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Malsukcesis regrandigi bildon: skribo al tempdosiero malsukcesis"
@@ -587,9 +593,3 @@ msgstr "Via Konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Aliaj Kontoj"
-
-#~ msgid "Manage Users"
-#~ msgstr "Administri Uzantoj"
-
-#~ msgid "Add New User"
-#~ msgstr "Aldoni Novan Uzanton"

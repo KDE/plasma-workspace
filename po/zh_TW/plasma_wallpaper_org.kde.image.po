@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-03-06 21:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -165,17 +165,17 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr "傳遞來要設成桌布的檔案不存在，或我們無法將其辨識為桌布：%1"
 
-#: plugin/imagebackend.cpp:227
+#: plugin/imagebackend.cpp:253
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "桌布輪播之圖片目錄"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Open Image"
 msgstr "開啟影像"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Image Files"
 msgstr "影像檔"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-02-11 15:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -219,7 +219,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "No se ha encontrado ningún ejemplo para esta configuración local"
 
-#: kcmregionandlang.cpp:91
+#: kcmregionandlang.cpp:115
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -231,13 +231,13 @@ msgstr ""
 "usando la herramienta <command>localectl</command>. Considere informar de "
 "este fallo en <link>https://bugs.kde.org</link>."
 
-#: languagelistmodel.cpp:86
+#: languagelistmodel.cpp:87
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:92
+#: languagelistmodel.cpp:93
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -294,12 +294,12 @@ msgstr "No se puede localizar el ejecutable «locale-gen»"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: localelistmodel.cpp:34
+#: localelistmodel.cpp:35
 #, kde-format
 msgid "Default for System"
 msgstr "Predeterminado para el sistema"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "Predeterminado"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2022-11-18 00:42+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -173,17 +173,17 @@ msgstr ""
 "Failo, kuris buvo perduotas, kad būtų nustatytas darbalaukio fonu, nėra, "
 "arba nepavyksta jo atpažinti kaip darbalaukio fono: %1"
 
-#: plugin/imagebackend.cpp:227
+#: plugin/imagebackend.cpp:253
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalogas su darbalaukio fonais skaidrių rodymui"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Open Image"
 msgstr "Atverti paveikslą"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Image Files"
 msgstr "Paveikslų failai"

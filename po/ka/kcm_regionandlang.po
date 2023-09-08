@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-03-17 05:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -218,7 +218,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "ამ ენისთვის მაგალითი ვერ ვიპოვე"
 
-#: kcmregionandlang.cpp:91
+#: kcmregionandlang.cpp:115
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -229,13 +229,13 @@ msgstr ""
 "<command>localectl</command> პროგრამით ხელმისაწვდომი ენების სიის მიღების "
 "შეცდომა. შეავსეთ შეცდომის ანგარიში ბმულზე <link>https://bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:86
+#: languagelistmodel.cpp:87
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:92
+#: languagelistmodel.cpp:93
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -292,12 +292,12 @@ msgstr "`locale-gen` პროგრამა ვერ ვიპოვე"
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: localelistmodel.cpp:34
+#: localelistmodel.cpp:35
 #, kde-format
 msgid "Default for System"
 msgstr "ნაგულისხმები სისტემისთვის"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "სტანდარტული"

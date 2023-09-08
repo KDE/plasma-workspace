@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-03-10 13:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -361,6 +361,13 @@ msgstr "Nebyly přidány žádné otisky"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Přidat nového uživatele"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -521,22 +528,22 @@ msgid ""
 "fingerprint is not yet supported."
 msgstr ""
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Pro uložení uživatele %1 chybí oprávnění"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Při ukládání změn došlo k chybě"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Změna velikosti obrázku selhala: otevření dočasného souboru selhalo"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Změna velikosti obrázku selhala: zápis do dočasného souboru selhal"
@@ -553,6 +560,3 @@ msgstr "Jiné účty"
 
 #~ msgid "Manage Users"
 #~ msgstr "Spravovat uživatele"
-
-#~ msgid "Add New User"
-#~ msgstr "Přidat nového uživatele"

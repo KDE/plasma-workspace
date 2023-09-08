@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-02-19 14:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -217,7 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Bu yer üçün bir nümunə tapılmadı"
 
-#: kcmregionandlang.cpp:91
+#: kcmregionandlang.cpp:115
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -229,13 +229,13 @@ msgstr ""
 "dəstəyini tapmaq mümkün olmadı. <link>https://bugs.kde.org</link> saytında "
 "bu xəta haqqında məlumat verin."
 
-#: languagelistmodel.cpp:86
+#: languagelistmodel.cpp:87
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:92
+#: languagelistmodel.cpp:93
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -292,12 +292,12 @@ msgstr "\"locate-gen\" icra faylını tapmaq mümkün olmadı"
 msgid "Unknown"
 msgstr "Naməlum"
 
-#: localelistmodel.cpp:34
+#: localelistmodel.cpp:35
 #, kde-format
 msgid "Default for System"
 msgstr "Sistemin standart dili"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "Standart"

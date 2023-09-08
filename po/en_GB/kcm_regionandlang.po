@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-02-27 21:36+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -217,7 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Could not find an example for this locale"
 
-#: kcmregionandlang.cpp:91
+#: kcmregionandlang.cpp:115
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -229,13 +229,13 @@ msgstr ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 
-#: languagelistmodel.cpp:86
+#: languagelistmodel.cpp:87
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:92
+#: languagelistmodel.cpp:93
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -292,12 +292,12 @@ msgstr "Cannot locate executable `locale-gen`"
 msgid "Unknown"
 msgstr "Unknown"
 
-#: localelistmodel.cpp:34
+#: localelistmodel.cpp:35
 #, kde-format
 msgid "Default for System"
 msgstr "Default for System"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "Default"

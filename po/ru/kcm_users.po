@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-01-18 10:17+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -362,6 +362,13 @@ msgstr "Нет ни одного сохранённого отпечатка п�
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Добавить пользователя"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -530,25 +537,25 @@ msgstr ""
 "использовании приложений или при работе в командной строке.<nl/><nl/"
 ">Использование отпечатков пальцев для входа в систему пока не поддерживается."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr ""
 "Не удалось получить требуемые разрешения для сохранения параметров "
 "пользователя %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ошибка сохранения изменений"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Не удалось изменить размер изображения: не удалось открыть временный файл"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -566,9 +573,6 @@ msgstr "Другие учётные записи"
 
 #~ msgid "Manage Users"
 #~ msgstr "Управление пользователями"
-
-#~ msgid "Add New User"
-#~ msgstr "Добавить пользователя"
 
 #~ msgid "Continue"
 #~ msgstr "Продолжить"

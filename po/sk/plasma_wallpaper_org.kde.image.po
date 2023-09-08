@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-04-15 12:13+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -165,17 +165,17 @@ msgstr ""
 "Súbor odovzdaný na nastavenie ako tapety neexistuje, alebo ho nemôžeme "
 "identifikovať ako tapetu: %1"
 
-#: plugin/imagebackend.cpp:227
+#: plugin/imagebackend.cpp:253
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Adresár s tapetou na zobrazenie snímok"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Open Image"
 msgstr "Otvoriť obrázok"
 
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:364
 #, kde-format
 msgid "Image Files"
 msgstr "Súbory obrázkov"

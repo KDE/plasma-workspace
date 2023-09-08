@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-01-17 20:09+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -398,6 +398,13 @@ msgstr "Aucun ajout d'empreinte numérique"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Ajouter un nouvel utilisateur"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -563,24 +570,24 @@ msgstr ""
 "<nl/><nl/>La connexion au système avec votre empreinte digitale n'est pas "
 "encore prise en charge."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Impossible d'obtenir les permissions pour enregistrer l'utilisateur %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Une erreur est survenue durant l'enregistrement des modifications."
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Impossible de redimensionner l'image : échec de l'ouverture du fichier "
 "temporaire"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -599,9 +606,6 @@ msgstr "Autres comptes"
 
 #~ msgid "Manage Users"
 #~ msgstr "Gérer les utilisateurs"
-
-#~ msgid "Add New User"
-#~ msgstr "Ajouter un nouvel utilisateur"
 
 #~ msgid "Continue"
 #~ msgstr "Continuer"

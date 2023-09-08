@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -418,6 +418,13 @@ msgstr "Không thêm dấu vân tay nào"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Thêm người dùng mới"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -581,22 +588,22 @@ msgstr ""
 "quyền quản trị viên cho các ứng dụng và chương trình dòng lệnh có yêu cầu."
 "<nl/><nl/>Việc dùng dấu vân tay để đăng nhập vào hệ thống chưa được hỗ trợ."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Không được cho phép lưu người dùng %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Đã có lỗi khi lưu các thay đổi"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Đổi cỡ ảnh thất bại: mở tệp tạm thất bại"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Đổi cỡ ảnh thất bại: ghi vào tệp tạm thất bại"
@@ -613,9 +620,6 @@ msgstr "Danh khoản khác"
 
 #~ msgid "Manage Users"
 #~ msgstr "Quản lí người dùng"
-
-#~ msgid "Add New User"
-#~ msgstr "Thêm người dùng mới"
 
 #~ msgid "Continue"
 #~ msgstr "Tiếp tục"

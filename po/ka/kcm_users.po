@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-01-11 06:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -360,6 +360,13 @@ msgstr "ანაბეჭდები დამატებული არა�
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "ახალი მომხმარებლის დამატება"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -524,22 +531,22 @@ msgstr ""
 "სტრიქონიდან ავტორიზაციის მომთხოვნი აპლიკაციებისთვის შეგიძლიათ.<nl/><nl/"
 ">სისტემაში თითის ანაბეჭდით შესვლა ჯერჯერობით მხარდაუჭერელია."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "მომხმარებლის (%1) ჩაწერის წვდომა აკრძალულია"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "ცვლილებების შენახვის შეცდომა"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "გამოსახულების ზომის შეცვლის შეცდომა: დროებითი ფაილის გახსნის შეცდომა"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "გამოსახულების ზომის შეცვლის შეცდომა: დროებითი ფაილის ჩაწერის შეცდომა"
@@ -556,9 +563,6 @@ msgstr "სხვა ანგარიშები"
 
 #~ msgid "Manage Users"
 #~ msgstr "მომხმარებლების მართვა"
-
-#~ msgid "Add New User"
-#~ msgstr "ახალი მომხმარებლის დამატება"
 
 #~ msgid "Continue"
 #~ msgstr "გაგრძელება"

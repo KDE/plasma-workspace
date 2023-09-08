@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-02-02 21:35+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -386,6 +386,13 @@ msgstr "Keine Fingerabdrücke hinzugefügt"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Neuen Benutzer hinzufügen"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -550,24 +557,24 @@ msgstr ""
 "sie anfordern, Administratorrechte zu erteilen.<nl/><nl/>Die Anmeldung am "
 "System mit Ihrem Fingerabdruck wird noch nicht unterstützt."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Keine Berechtigung um den Benutzer %1 zu speichern"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Fehler beim Speichern der Änderungen"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Größenänderung des Bilds ist fehlgeschlagen: Öffnen der temporären Datei ist "
 "nicht möglich"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -586,9 +593,6 @@ msgstr "Andere Konten"
 
 #~ msgid "Manage Users"
 #~ msgstr "Benutzer verwalten"
-
-#~ msgid "Add New User"
-#~ msgstr "Neuen Benutzer hinzufügen"
 
 #~ msgid "Continue"
 #~ msgstr "Fortsetzen"

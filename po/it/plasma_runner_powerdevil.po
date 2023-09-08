@@ -1,12 +1,12 @@
 # translation of plasma_runner_powerdevil.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2008, 2009, 2010, 2018, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2018, 2019, 2020, 2021, 2023 Vincenzo Reale <smart2128vr@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2021-12-27 17:02+0100\n"
+"PO-Revision-Date: 2023-09-01 16:06+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -56,13 +56,13 @@ msgstr "su disco"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "sospensione ibrida"
 
 #: PowerDevilRunner.cpp:46
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "ibrido"
 
 #: PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:50 PowerDevilRunner.cpp:75
 #, kde-format
@@ -92,7 +92,7 @@ msgstr "Sospende il sistema su disco"
 #: PowerDevilRunner.cpp:71
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Sospende subito e ripiega nell'ibernazione"
 
 #: PowerDevilRunner.cpp:74
 #, kde-format
@@ -153,12 +153,12 @@ msgstr "Sospendi su disco"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Sospensione ibrida"
 
 #: PowerDevilRunner.cpp:164
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Sospendi subito e ripiega nell'ibernazione"
 
 #: PowerDevilRunner.cpp:233
 #, kde-format

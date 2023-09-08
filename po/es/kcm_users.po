@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2020.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-01-11 17:17+0100\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 12:15+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -376,7 +376,14 @@ msgstr "No se han añadido huellas dactilares"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
+
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Añadir nuevo usuario"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -542,24 +549,24 @@ msgstr ""
 "programas de la línea de órdenes que los necesiten.<nl/><nl/>El inicio de "
 "sesión en el sistema usando la huella dactilar no está implementado todavía."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "No se ha podido obtener permiso para guardar el usuario %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ha ocurrido un error al guardar los cambios"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Ha ocurrido un error al cambiar el tamaño de la imagen: ha fallado la "
 "apertura del archivo temporal"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -578,9 +585,6 @@ msgstr "Otras cuentas"
 
 #~ msgid "Manage Users"
 #~ msgstr "Gestionar usuarios"
-
-#~ msgid "Add New User"
-#~ msgstr "Añadir nuevo usuario"
 
 #~ msgid "Continue"
 #~ msgstr "Continuar"

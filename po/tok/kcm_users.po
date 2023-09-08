@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -359,6 +359,13 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "o lon e sijelo sin"
+
 #: src/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
 #| msgid "Change avatar"
@@ -522,22 +529,22 @@ msgid ""
 "fingerprint is not yet supported."
 msgstr ""
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr ""
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr ""
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -554,9 +561,6 @@ msgstr ""
 
 #~ msgid "Manage Users"
 #~ msgstr "o lawa e sijelo"
-
-#~ msgid "Add New User"
-#~ msgstr "o lon e sijelo sin"
 
 #~ msgid "Continue"
 #~ msgstr "o awen tawa"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-09-02 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -354,6 +354,13 @@ msgstr "未添加指纹"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "添加新用户"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -516,22 +523,22 @@ msgstr ""
 "指纹可以用于替代密码来解除锁屏，或在应用程序和命令行程序请求管理员权限时进行"
 "身份验证。<nl/><nl/>目前暂不支持使用指纹登录系统。"
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "无法获取保存用户 %1 的权限"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "保存更改时出错"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "调整图像大小失败：无法打开临时文件"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "调整图像大小失败：无法写入临时文件"
@@ -548,6 +555,3 @@ msgstr "其他账号"
 
 #~ msgid "Manage Users"
 #~ msgstr "管理用户"
-
-#~ msgid "Add New User"
-#~ msgstr "添加新用户"

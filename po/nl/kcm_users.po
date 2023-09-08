@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-01-11 11:37+0100\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 09:48+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -356,7 +356,14 @@ msgstr "Geen vingerafdruk toegevoegd"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Gebruikers"
+
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Nieuwe gebruiker toevoegen"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -522,24 +529,24 @@ msgstr ""
 "toepassingen en opdrachtregelprogramma's die er om vragen.<nl/><nl/"
 ">Aanmelden in het systeem met uw vingerafdruk wordt nog niet ondersteund."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Kon geen toegangsrechten verkrijgen om gebruiker %1 op te slaan"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Er was een fout tijdens opslaan van wijzigingen"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Afbeelding van grootte wijzigen is mislukt: openen van tijdelijk bestand is "
 "mislukt "
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -558,9 +565,6 @@ msgstr "Andere accounts"
 
 #~ msgid "Manage Users"
 #~ msgstr "Gebruikers beheren"
-
-#~ msgid "Add New User"
-#~ msgstr "Nieuwe gebruiker toevoegen"
 
 #~ msgid "Continue"
 #~ msgstr "Doorgaan"

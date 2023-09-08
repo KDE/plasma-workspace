@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-01-14 16:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -356,6 +356,13 @@ msgstr "لم يضف أي بصمة"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "أضف مستخدم جديد"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -519,22 +526,22 @@ msgstr ""
 "أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
 "إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "تعذر الحصول على إذن لحفظ المستخدم %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "حدث خطأ أثناء حفظ التغييرات"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشل في فتح الملف المؤقت"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"
@@ -551,9 +558,6 @@ msgstr "حسابات أخرى"
 
 #~ msgid "Manage Users"
 #~ msgstr "أدر المستخدمين"
-
-#~ msgid "Add New User"
-#~ msgstr "أضف مستخدم جديد"
 
 #~ msgid "Continue"
 #~ msgstr "تابع"

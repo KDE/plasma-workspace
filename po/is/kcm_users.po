@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-03-16 20:39+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -358,6 +358,13 @@ msgstr "Engum fingraförum bætt við"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Bæta við notanda"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -522,22 +529,22 @@ msgstr ""
 "skipanalínu sem fara fram á slík.<nl/><nl/>Ekki er enn kominn stuðningur við "
 "að skrá þig inn í tölvuna með fingrafari."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Ekki tókst að fá heimild til að vista notandann %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Villa kom upp þegar breytingar voru vistaðar"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Mistókst að breyta stærð myndar: tókst ekki að opna bráðabirgðaskrá"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -555,9 +562,6 @@ msgstr "Aðrir notendareikningar"
 
 #~ msgid "Manage Users"
 #~ msgstr "Stjórna notendum"
-
-#~ msgid "Add New User"
-#~ msgstr "Bæta við notanda"
 
 #~ msgid "Continue"
 #~ msgstr "Halda áfram"

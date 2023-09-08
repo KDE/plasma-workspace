@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-01-08 09:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -217,7 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Không tìm được ví dụ cho thiết lập vùng này"
 
-#: kcmregionandlang.cpp:91
+#: kcmregionandlang.cpp:115
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -229,13 +229,13 @@ msgstr ""
 "<command>localectl</command>. Vui lòng báo lỗi vấn đề này ở <link>https://"
 "bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:86
+#: languagelistmodel.cpp:87
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:92
+#: languagelistmodel.cpp:93
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -292,12 +292,12 @@ msgstr "Không tìm thấy tệp thực thi `locale-gen`"
 msgid "Unknown"
 msgstr "Không rõ"
 
-#: localelistmodel.cpp:34
+#: localelistmodel.cpp:35
 #, kde-format
 msgid "Default for System"
 msgstr "Mặc định cho hệ thống"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "Mặc định"

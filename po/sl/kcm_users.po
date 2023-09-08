@@ -6,17 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-01-12 08:41+0100\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 06:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -356,7 +356,14 @@ msgstr "Ni dodatnih prstnih odtisov"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Uporabniki"
+
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Dodaj novega uporabnika"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -522,23 +529,23 @@ msgstr ""
 "programe, ki jih zahtevajo.<nl/><nl/>Prijava v sistem z vašim prstnim "
 "odtisom še ni podprta."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Ni bilo mogoče dobiti dovoljenja za shranjevanje uporabnika %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Prišlo je do napake pri shranjevanju sprememb"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Sprememba velikosti slike ni uspela: odpiranje začasne datoteke ni uspelo"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -556,9 +563,6 @@ msgstr "Ostali računi"
 
 #~ msgid "Manage Users"
 #~ msgstr "Upravljaj uporabnike"
-
-#~ msgid "Add New User"
-#~ msgstr "Dodaj novega uporabnika"
 
 #~ msgid "Continue"
 #~ msgstr "Nadaljuj"

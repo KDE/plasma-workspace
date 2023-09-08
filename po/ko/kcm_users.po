@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-02-28 23:36+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -355,6 +355,13 @@ msgstr "추가한 지문 없음"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "새 사용자 추가"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -518,22 +525,22 @@ msgstr ""
 "을 사용할 수 있습니다.<nl/><nl/>시스템에 지문으로 로그인은 아직 지원하지 않습"
 "니다."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "%1 사용자를 저장할 권한을 얻을 수 없음"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "변경 내용을 저장하는 동안 오류 발생"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "이미지 크기 조정 실패: 임시 파일을 열 수 없음"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "이미지 크기 조정 실패: 임시 파일에 쓸 수 없음"
@@ -550,9 +557,6 @@ msgstr "다른 계정"
 
 #~ msgid "Manage Users"
 #~ msgstr "사용자 관리"
-
-#~ msgid "Add New User"
-#~ msgstr "새 사용자 추가"
 
 #~ msgid "Continue"
 #~ msgstr "계속"

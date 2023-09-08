@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2022-12-29 17:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -419,6 +419,13 @@ msgstr "Nicio amprentă adăugată"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Adaugă utilizator nou"
+
 #: src/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
 #| msgid "Change Avatar"
@@ -603,23 +610,23 @@ msgstr ""
 "linie de comandă care le solicită.<nl/><nl/>Autentificarea în sistem cu "
 "amprenta încă nu este susținută."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Nu s-a putut obține permisiunea de a salva utilizatorul %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "A intervenit o eroare la salvarea modificărilor"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Redimensionarea imaginii a eșuat: deschiderea fișierului temporar a eșuat"
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -637,9 +644,6 @@ msgstr "Alte conturi"
 
 #~ msgid "Manage Users"
 #~ msgstr "Gestionează utilizatorii"
-
-#~ msgid "Add New User"
-#~ msgstr "Adaugă utilizator nou"
 
 #~ msgid "Continue"
 #~ msgstr "Continuă"

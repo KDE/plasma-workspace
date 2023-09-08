@@ -1,7 +1,7 @@
 # Translation for kcm_users.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2023.
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-01-11 22:13+0100\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 22:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -400,7 +400,14 @@ msgstr "Ez da hatz-markarik gehitu"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Erabiltzaileak"
+
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Gehitu erabiltzaile berria"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -565,24 +572,24 @@ msgstr ""
 "eta behar duten aplikazio eta komando-erroko programei administratzaile "
 "baimenak emateko.<nl/><nl/>Zure sisteman saio-hastea ez da onartzen oraindik."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Ezin izan da %1 erabiltzailea gordetzeko baimenik lortu"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Errore bat gertatu da aldaketak gordetzean"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Irudiaren neurria aldatzea huts egin du: aldi baterako fitxategia irekitzea "
 "huts egin du."
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -601,9 +608,6 @@ msgstr "Beste kontu batzuk"
 
 #~ msgid "Manage Users"
 #~ msgstr "Kudeatu erabiltzaileak"
-
-#~ msgid "Add New User"
-#~ msgstr "Gehitu erabiltzaile berria"
 
 #~ msgid "Continue"
 #~ msgstr "Jarraitu"

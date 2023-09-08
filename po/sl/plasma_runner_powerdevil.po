@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: krunner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-09-01 05:51+0200\n"
+"PO-Revision-Date: 2023-09-07 06:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "napajanje"
 
 #: PowerDevilRunner.cpp:34
 #, kde-format

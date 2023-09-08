@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2023-02-19 20:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -359,6 +359,13 @@ msgstr "Ingen fingeravtrykk lagde til"
 msgid "Users"
 msgstr ""
 
+#: src/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "Legg til ny brukar"
+
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
@@ -523,23 +530,23 @@ msgstr ""
 "gje administrator­løyve til brukar­program og kommandolinje­program som spør om "
 "det.<nl/><nl/>Systempålogging med fingeravtrykk er førebels ikkje støtta."
 
-#: src/user.cpp:279
+#: src/user.cpp:280
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Fekk ikkje løyve til å lagra brukaren %1"
 
-#: src/user.cpp:284
+#: src/user.cpp:285
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Det oppstod ein feil ved lagring av endringane"
 
-#: src/user.cpp:380
+#: src/user.cpp:381
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Klarte ikkje endra storleik på bilete: Feil ved opning av mellombels fil."
 
-#: src/user.cpp:388
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
@@ -557,6 +564,3 @@ msgstr "Andre kontoar"
 
 #~ msgid "Manage Users"
 #~ msgstr "Handsam brukarar"
-
-#~ msgid "Add New User"
-#~ msgstr "Legg til ny brukar"
