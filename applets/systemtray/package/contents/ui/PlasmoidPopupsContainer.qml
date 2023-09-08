@@ -65,7 +65,7 @@ StackView {
                 "width": Qt.binding(() => mainStack.width),
                 "height": Qt.binding(() => mainStack.height),
                 "x": 0,
-                "focus": Qt.binding(() => !mainStack.busy),
+                "focus": Qt.binding(() => !mainStack.busy), // QTBUG-44043: retrigger binding after StackView is ready to restore focus
                 "opacity": 1,
                 "KeyNavigation.up": mainStack.KeyNavigation.up,
                 "KeyNavigation.backtab": mainStack.KeyNavigation.backtab,
