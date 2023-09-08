@@ -17,8 +17,9 @@
 #include <QDebug>
 #include <QIcon>
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
 
 #include <cmath>
 
@@ -185,9 +186,18 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
         brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
     } else if (action == QLatin1String("Sleep")) {
         switch ((SleepState)match.data().toInt()) {
-        case SuspendState:
+        case SuspendState: {
+            if (m_session->canSuspendThenHibernate()) {
+                const QDBusReply<QString> currProfile = iface.call(QStringLiteral("currentProfile"));
+                const KConfigGroup config(KConfig(QStringLiteral("powermanagementprofilesrc")).group(currProfile).group("SuspendSession"));
+                if (config.readEntry<bool>("suspendThenHibernate", false)) {
+                    m_session->suspendThenHibernate();
+                    break;
+                }
+            }
             m_session->suspend();
             break;
+        }
         case HibernateState:
             m_session->hibernate();
             break;
