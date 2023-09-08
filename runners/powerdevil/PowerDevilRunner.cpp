@@ -96,7 +96,7 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
     if (screenBrightnessResults != -1) {
         KRunner::QueryMatch match(this);
         match.setType(type);
-        match.setIconName(QStringLiteral("preferences-system-power-management"));
+        match.setIconName(QStringLiteral("video-display-brightness"));
         match.setText(i18n("Set Brightness to %1%", screenBrightnessResults));
         match.setData(screenBrightnessResults);
         match.setRelevance(1);
@@ -105,7 +105,7 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
     } else if (matchesRunnerKeywords({m_screenBrightness, m_dimScreen}, type, term)) {
         KRunner::QueryMatch match1(this);
         match1.setType(KRunner::QueryMatch::ExactMatch);
-        match1.setIconName(QStringLiteral("preferences-system-power-management"));
+        match1.setIconName(QStringLiteral("video-display-brightness"));
         match1.setText(i18n("Dim screen totally"));
         match1.setRelevance(1);
         match1.setId(QStringLiteral("DimTotal"));
@@ -113,7 +113,7 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
 
         KRunner::QueryMatch match2(this);
         match2.setType(type);
-        match2.setIconName(QStringLiteral("preferences-system-power-management"));
+        match2.setIconName(QStringLiteral("video-display-brightness"));
         match2.setText(i18n("Dim screen by half"));
         match2.setRelevance(1);
         match2.setId(QStringLiteral("DimHalf"));
