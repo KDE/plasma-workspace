@@ -158,10 +158,10 @@ Menu {
     onItemSelected: uuid => clipboardSource.service(uuid, "select")
     onRemove: uuid => clipboardSource.service(uuid, "remove")
     onEdit: uuid => {
-        stack.push(Qt.resolvedUrl("EditPage.qml"), {
-            text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
-            uuid: uuid
-        });
+        const m = clipboardMenu.model;
+        const index = m.index(clipboardMenu.view.currentIndex, 0);
+        const text = m.data(index, Qt.DisplayRole);
+        stack.push(Qt.resolvedUrl("EditPage.qml"), { text, uuid });
     }
     onBarcode: text => {
         stack.push(Qt.resolvedUrl("BarcodePage.qml"), {
