@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2023-09-07 10:56+0200\n"
+"PO-Revision-Date: 2023-09-08 10:18+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -400,11 +400,10 @@ msgid "Users"
 msgstr "Usatores"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Adde nove usator"
+msgstr "Adde nove"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2023-03-25 13:37+0100\n"
+"PO-Revision-Date: 2023-09-08 12:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Accelerator-Marker: &\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
@@ -400,14 +400,13 @@ msgstr "No s'ha afegit cap empremta dactilar"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Usuaris"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Afig un usuari nou"
+msgstr "Afig nou"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -607,6 +606,3 @@ msgstr "El vostre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"
-
-#~ msgid "Manage Users"
-#~ msgstr "Gestioneu els usuaris"

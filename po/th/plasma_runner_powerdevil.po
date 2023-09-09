@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
 "PO-Revision-Date: 2010-02-11 21:30+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -18,61 +18,61 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
 msgstr ""
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "ปิดพักเครื่อง"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "เก็บสถานะไว้ในหน่วยความจำ"
 
-#: PowerDevilRunner.cpp:38
+#: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "พักเครื่อง"
 
-#: PowerDevilRunner.cpp:40
+#: PowerDevilRunner.cpp:41
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "จำศีล"
 
-#: PowerDevilRunner.cpp:42
+#: PowerDevilRunner.cpp:43
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "เก็บสถานะไว้ในดิสก์"
 
-#: PowerDevilRunner.cpp:44
+#: PowerDevilRunner.cpp:45
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
 msgstr ""
 
-#: PowerDevilRunner.cpp:46
+#: PowerDevilRunner.cpp:47
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
 msgstr ""
 
-#: PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:50 PowerDevilRunner.cpp:75
+#: PowerDevilRunner.cpp:49 PowerDevilRunner.cpp:51 PowerDevilRunner.cpp:76
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "ทำหน้าจอมืดลง"
 
-#: PowerDevilRunner.cpp:59
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -81,22 +81,22 @@ msgstr ""
 "เรียกดูตัวเลือกต่าง ๆ ของรายการพักการทำงานของระบบ (เช่น พักเครื่อง, จำศีล เป็นต้น) "
 "และอนุญาตให้เรียกใช้งานพวกมันได้"
 
-#: PowerDevilRunner.cpp:63
+#: PowerDevilRunner.cpp:64
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "ปิดพักเครื่องโดยเก็บสถานะไว้ในหน่วยความจำ"
 
-#: PowerDevilRunner.cpp:67
+#: PowerDevilRunner.cpp:68
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "ปิดพักเครื่องโดยเก็บสถานะไว้ในดิสก์"
 
-#: PowerDevilRunner.cpp:71
+#: PowerDevilRunner.cpp:72
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
 msgstr ""
 
-#: PowerDevilRunner.cpp:74
+#: PowerDevilRunner.cpp:75
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -105,7 +105,7 @@ msgctxt ""
 msgid "screen brightness <percent value>"
 msgstr "ความสว่างของจอภาพ"
 
-#: PowerDevilRunner.cpp:77
+#: PowerDevilRunner.cpp:78
 #, fuzzy, no-c-format, kde-format
 #| msgid ""
 #| "Lists screen brightness options or sets it to the brightness defined by :"
@@ -119,23 +119,23 @@ msgstr ""
 "เรียกดูหรือตั้งค่าตัวเลือกต่าง ๆ ของการปรับความมืดของหน้าจอลงตามการกำหนดด้วย :q: ตัวอย่าง "
 "ความสว่างหน้าจอ 50 จะทำการเพิ่มความมืดของหน้าจอเป็น 50% ของค่าความสว่างสูงสุด"
 
-#: PowerDevilRunner.cpp:99
+#: PowerDevilRunner.cpp:100
 #, fuzzy, kde-format
 #| msgid "Set Brightness to %1"
 msgid "Set Brightness to %1%"
 msgstr "ตั้งค่าความสว่างเป็น %1"
 
-#: PowerDevilRunner.cpp:108
+#: PowerDevilRunner.cpp:109
 #, kde-format
 msgid "Dim screen totally"
 msgstr "ทำหน้าจอมืดลงเต็มที่"
 
-#: PowerDevilRunner.cpp:116
+#: PowerDevilRunner.cpp:117
 #, kde-format
 msgid "Dim screen by half"
 msgstr "ทำหน้าจอมืดลงกึ่งหนึ่ง"
 
-#: PowerDevilRunner.cpp:151
+#: PowerDevilRunner.cpp:146
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "sleep"
@@ -143,12 +143,12 @@ msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "พักเครื่อง"
 
-#: PowerDevilRunner.cpp:152
+#: PowerDevilRunner.cpp:147
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "พักเครื่องโดยเก็บสถานะไว้ในหน่วยความจำ"
 
-#: PowerDevilRunner.cpp:157
+#: PowerDevilRunner.cpp:152
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "hibernate"
@@ -156,24 +156,24 @@ msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "จำศีล"
 
-#: PowerDevilRunner.cpp:158
+#: PowerDevilRunner.cpp:153
 #, fuzzy, kde-format
 #| msgid "Suspend to Disk"
 msgid "Suspend to disk"
 msgstr "พักเครื่องโดยเก็บสถานะไว้ในดิสก์"
 
-#: PowerDevilRunner.cpp:163
+#: PowerDevilRunner.cpp:158
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
 msgstr ""
 
-#: PowerDevilRunner.cpp:164
+#: PowerDevilRunner.cpp:159
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
 msgstr ""
 
-#: PowerDevilRunner.cpp:233
+#: PowerDevilRunner.cpp:237
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -181,7 +181,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "ความสว่างของจอภาพ"
 
-#: PowerDevilRunner.cpp:235
+#: PowerDevilRunner.cpp:239
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"

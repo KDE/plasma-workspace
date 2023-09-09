@@ -1,112 +1,112 @@
 # Translation of plasma_runner_powerdevil.po to Catalan (Valencian)
-# Copyright (C) 2008-2021 This_file_is_part_of_KDE
+# Copyright (C) 2008-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2013, 2015, 2017, 2018, 2019, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2013, 2015, 2017, 2018, 2019, 2020, 2021, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2012, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2021-12-27 10:49+0100\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 11:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "energia"
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "suspén"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "a la RAM"
 
-#: PowerDevilRunner.cpp:38
+#: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "adorm"
 
-#: PowerDevilRunner.cpp:40
+#: PowerDevilRunner.cpp:41
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "hiberna"
 
-#: PowerDevilRunner.cpp:42
+#: PowerDevilRunner.cpp:43
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "al disc"
 
-#: PowerDevilRunner.cpp:44
+#: PowerDevilRunner.cpp:45
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "suspensió híbrida"
 
-#: PowerDevilRunner.cpp:46
+#: PowerDevilRunner.cpp:47
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "híbrida"
 
-#: PowerDevilRunner.cpp:48 PowerDevilRunner.cpp:50 PowerDevilRunner.cpp:75
+#: PowerDevilRunner.cpp:49 PowerDevilRunner.cpp:51 PowerDevilRunner.cpp:76
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "enfosquiment de la pantalla"
 
-#: PowerDevilRunner.cpp:59
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
 msgstr ""
-"Llista les opcions de suspensió del sistema (p. ex. dormir, hibernació) i "
+"Llista les opcions de suspensió del sistema (p. ex., dormir, hibernació) i "
 "permet activar-les"
 
-#: PowerDevilRunner.cpp:63
+#: PowerDevilRunner.cpp:64
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Suspén el sistema a la RAM"
 
-#: PowerDevilRunner.cpp:67
+#: PowerDevilRunner.cpp:68
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Suspén el sistema al disc"
 
-#: PowerDevilRunner.cpp:71
+#: PowerDevilRunner.cpp:72
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Suspén ara i hiberna com a alternativa de reserva"
 
-#: PowerDevilRunner.cpp:74
+#: PowerDevilRunner.cpp:75
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
 msgstr "brillantor de la pantalla <percent value>"
 
-#: PowerDevilRunner.cpp:77
+#: PowerDevilRunner.cpp:78
 #, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
@@ -114,64 +114,64 @@ msgid ""
 "brightness"
 msgstr ""
 "Llista les opcions de brillantor de la pantalla o les establix a la "
-"brillantor definida pel terme de busca; p. ex. brillantor de la pantalla 50 "
+"brillantor definida pel terme de busca; p. ex., brillantor de la pantalla 50 "
 "reduirà la pantalla al 50% de la brillantor màxima"
 
-#: PowerDevilRunner.cpp:99
+#: PowerDevilRunner.cpp:100
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "Establix la brillantor a %1%"
 
-#: PowerDevilRunner.cpp:108
+#: PowerDevilRunner.cpp:109
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Enfosquix la pantalla totalment"
 
-#: PowerDevilRunner.cpp:116
+#: PowerDevilRunner.cpp:117
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Enfosquix la pantalla a la meitat"
 
-#: PowerDevilRunner.cpp:151
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Suspén"
 
-#: PowerDevilRunner.cpp:152
+#: PowerDevilRunner.cpp:147
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Suspén a la RAM"
+msgstr "Suspensió a la RAM"
 
-#: PowerDevilRunner.cpp:157
+#: PowerDevilRunner.cpp:152
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Hiberna"
 
-#: PowerDevilRunner.cpp:158
+#: PowerDevilRunner.cpp:153
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Suspén al disc"
 
-#: PowerDevilRunner.cpp:163
+#: PowerDevilRunner.cpp:158
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Suspensió híbrida"
 
-#: PowerDevilRunner.cpp:164
+#: PowerDevilRunner.cpp:159
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Suspén ara i hiberna com a alternativa de reserva"
 
-#: PowerDevilRunner.cpp:233
+#: PowerDevilRunner.cpp:237
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "brillantor de la pantalla "
 
-#: PowerDevilRunner.cpp:235
+#: PowerDevilRunner.cpp:239
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "
