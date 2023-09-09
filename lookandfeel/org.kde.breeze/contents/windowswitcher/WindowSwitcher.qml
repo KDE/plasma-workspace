@@ -55,6 +55,10 @@ KWin.Switcher {
                 delegate: MouseArea {
                     width: thumbnailListView.width
                     height: delegateColumn.height + 2 * delegateColumn.y
+                    focus: ListView.isCurrentItem
+
+                    Accessible.name: model.caption
+                    Accessible.role: Accessible.ListItem
 
                     onClicked: {
                         if (tabBox.noModifierGrab) {
@@ -71,10 +75,6 @@ KWin.Switcher {
                         y: PlasmaCore.Units.smallSpacing
                         width: parent.width - 2 * PlasmaCore.Units.smallSpacing
                         spacing: PlasmaCore.Units.smallSpacing
-
-                        focus: index == thumbnailListView.currentIndex
-                        Accessible.name: model.caption
-                        Accessible.role: Accessible.Client
 
                         Item {
                             Layout.fillWidth: true
