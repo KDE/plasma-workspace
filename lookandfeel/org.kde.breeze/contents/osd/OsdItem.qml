@@ -13,6 +13,8 @@ import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 
 RowLayout {
+    id: root
+
     // OSD Timeout in msecs - how long it will stay on the screen
     property int timeout: 1800
     // This is either a text or a number, if showingProgress is set to true,
@@ -47,29 +49,29 @@ RowLayout {
         Layout.preferredWidth: Kirigami.Units.iconSizes.medium
         Layout.preferredHeight: Kirigami.Units.iconSizes.medium
         Layout.alignment: Qt.AlignVCenter
-        source: icon
+        source: root.icon
         visible: valid
     }
 
     PlasmaComponents3.ProgressBar {
         id: progressBar
-        Layout.leftMargin: iconItem.visible ?  0 : Kirigami.Units.smallSpacing // Left end spacing
+        Layout.leftMargin: iconItem.valid ? 0 : Kirigami.Units.smallSpacing // Left end spacing
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignVCenter
         // So it never exceeds the minimum popup size
         Layout.minimumWidth: 0
         Layout.rightMargin: Kirigami.Units.smallSpacing
-        visible: showingProgress
+        visible: root.showingProgress
         from: 0
-        to: osdMaxValue
-        value: Number(osdValue)
+        to: root.osdMaxValue
+        value: Number(root.osdValue)
     }
 
     // Get the width of a three-digit number so we can size the label
     // to the maximum width to avoid the progress bad resizing itself
     TextMetrics {
         id: widestLabelSize
-        text: formatPercent(osdMaxValue)
+        text: formatPercent(root.osdMaxValue)
         font: percentageLabel.font
     }
 
@@ -85,7 +87,7 @@ RowLayout {
         verticalAlignment: Text.AlignVCenter
         text: formatPercent(progressBar.value)
         wrapMode: Text.NoWrap
-        visible: showingProgress
+        visible: root.showingProgress
         // Display a subtle visual indication that the volume might be
         // dangerously high
         // ------------------------------------------------
@@ -105,8 +107,8 @@ RowLayout {
     PlasmaExtras.Heading {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.leftMargin: iconItem.visible ?  0 : Kirigami.Units.smallSpacing // Left end spacing
-        Layout.rightMargin: Kirigami.Units.smallSpacing                        // Right end spacing
+        Layout.leftMargin: iconItem.valid ? 0 : Kirigami.Units.smallSpacing
+        Layout.rightMargin: Kirigami.Units.smallSpacing
         Layout.alignment: Qt.AlignVCenter
         level: 3
         horizontalAlignment: Text.AlignHCenter
@@ -114,7 +116,7 @@ RowLayout {
         textFormat: Text.PlainText
         wrapMode: Text.NoWrap
         elide: Text.ElideRight
-        text: !showingProgress && osdValue ? osdValue : ""
-        visible: !showingProgress
+        text: !root.showingProgress && root.osdValue ? root.osdValue : ""
+        visible: !root.showingProgress
     }
 }

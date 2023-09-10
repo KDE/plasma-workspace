@@ -8,7 +8,6 @@ import QtQuick
 import org.kde.plasma.core as PlasmaCore
 
 PlasmaCore.Dialog {
-    id: root
     location: PlasmaCore.Types.Floating
     type: PlasmaCore.Dialog.OnScreenDisplay
     outputOnly: true
