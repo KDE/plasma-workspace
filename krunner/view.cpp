@@ -153,7 +153,7 @@ void View::positionOnScreen()
 {
     const auto screens = QGuiApplication::screens();
     auto screenIt = screens.cend();
-    if (KWindowSystem::isPlatformWayland()) {
+    if (KWindowSystem::isPlatformWayland() && m_floating) {
         auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
         QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
         if (reply.isValid()) {
@@ -184,6 +184,7 @@ void View::positionOnScreen()
         layerWindow->setScope(QStringLiteral("krunner"));
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         layerWindow->setMargins(margins);
+        layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);
     } else if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner->setAnchors(Qt::TopEdge);
         m_x11Positioner->setMargins(margins);
