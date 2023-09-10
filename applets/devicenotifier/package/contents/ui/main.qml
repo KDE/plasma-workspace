@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.kitemmodels 1.1 as KItemModels
 
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
@@ -53,23 +53,23 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 10
     switchHeight: Kirigami.Units.gridUnit * 10
 
-    toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
+    toolTipMainText: filterModel.count > 0 ? i18n("Most Recent Device") : i18n("No Devices Available")
     toolTipSubText: {
         if (filterModel.count > 0) {
-            var data = filterModel.get(0)
-            if (data && data.Description) {
-                return data.Description
-            }
+            const m = filterModel;
+            const index = m.index(0, 0);
+            const description = m.data(index, m.KItemModels.KRoleNames.role("Description"))
+            return description;
         }
         return ""
     }
     Plasmoid.icon: {
         let iconName;
         if (filterModel.count > 0) {
-            var data = filterModel.get(0);
-            if (data && data.Icon) {
-                iconName = data.Icon;
-            }
+            const m = filterModel;
+            const index = m.index(0, 0);
+            const icon = m.data(index, m.KItemModels.KRoleNames.role("Icon"))
+            return icon;
         } else {
             iconName = "device-notifier";
         }
