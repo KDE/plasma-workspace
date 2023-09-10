@@ -70,7 +70,7 @@ RowLayout {
     // to the maximum width to avoid the progress bad resizing itself
     TextMetrics {
         id: widestLabelSize
-        text: formatPercent(100)
+        text: formatPercent(osdMaxValue)
         font: percentageLabel.font
     }
 
