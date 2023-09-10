@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-09 01:58+0000\n"
-"PO-Revision-Date: 2023-09-03 10:26+0200\n"
+"PO-Revision-Date: 2023-09-09 10:40+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -25,7 +25,7 @@ msgstr ""
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "enerxía"
 
 #: PowerDevilRunner.cpp:35
 #, kde-format

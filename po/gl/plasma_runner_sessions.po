@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-03-25 15:15+0100\n"
+"PO-Revision-Date: 2023-09-09 11:05+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -36,11 +36,7 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Sae da sesión de escritorio"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
@@ -96,12 +92,14 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "cambiar de usuario;cambiar de usuaria;trocar;nova sesión"
+msgstr ""
+"cambiar de usuario;cambiar de usuaria;trocar de usuaria;trocar de usuario;"
+"nova sesión;cambiar de sesión"
 
 #: sessionrunner.cpp:53
 #, kde-format
 msgid "Starts a new session as a different user"
-msgstr "Inicia unha sesión nova como un usuario distinto"
+msgstr "Inicia unha sesión nova como outra persoa usuaria."
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -126,8 +124,7 @@ msgid ""
 "Switches to the active session for the user :q:, or lists all active "
 "sessions if :q: is not provided"
 msgstr ""
-"Vai á sesión activa do usuario :q:, ou lista todas as sesións activas de non "
-"fornecerse :q:"
+"Vai á sesión activa de :q:; se non fornece :q:, lista as sesións activas."
 
 #: sessionrunner.cpp:79
 #, kde-format
