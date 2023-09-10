@@ -19,6 +19,11 @@ public:
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
+    void init() override
+    {
+        configurePrivateBrowsingActions();
+        loadSyntaxes();
+    }
 
 private:
     Q_SLOT void loadSyntaxes();
