@@ -65,18 +65,18 @@ void HelpRunner::match(RunnerContext &context)
                 match.setData(syntax.exampleQueries().constFirst());
                 match.setMultiLine(true);
                 match.setMatchCategory(runner->name());
-                match.setIcon(runner->icon());
+                match.setIconName(runner->metadata().iconName());
                 matches << match;
             }
         } else {
             QueryMatch match(this);
             if (runner->metadata().value(QStringLiteral("X-Plasma-ShowDesciptionInOverview"), false)) {
-                match.setText(runner->description());
+                match.setText(runner->metadata().description());
             } else {
                 match.setText(syntaxes.constFirst().exampleQueries().constFirst());
-                match.setSubtext(runner->description());
+                match.setSubtext(runner->metadata().description());
             }
-            match.setIcon(runner->icon());
+            match.setIconName(runner->metadata().iconName());
             match.setType(QueryMatch::CompletionMatch);
             match.setData(QVariant::fromValue(runner->metadata()));
             if (!runner->metadata().value(QStringLiteral("X-KDE-ConfigModule")).isEmpty()) {
