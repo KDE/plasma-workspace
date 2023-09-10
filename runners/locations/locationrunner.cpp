@@ -64,12 +64,13 @@ void LocationsRunner::match(KRunner::RunnerContext &context)
         match.setData(url);
         match.setUrls({url});
 
-        if (!KProtocolInfo::isKnownProtocol(protocol) || KProtocolInfo::isHelperProtocol(protocol)) {
+        const bool isKnownProtocol = KProtocolInfo::isKnownProtocol(protocol, false);
+        if (!isKnownProtocol || KProtocolInfo::isHelperProtocol(protocol)) {
             const KService::Ptr service = KApplicationTrader::preferredService(QLatin1String("x-scheme-handler/") + protocol);
             if (service) {
                 match.setIconName(service->icon());
                 match.setText(i18n("Launch with %1", service->name()));
-            } else if (KProtocolInfo::isKnownProtocol(protocol)) {
+            } else if (isKnownProtocol) {
                 Q_ASSERT(KProtocolInfo::isHelperProtocol(protocol));
                 match.setIconName(KProtocolInfo::icon(protocol));
                 match.setText(i18n("Launch with %1", KIO::DesktopExecParser::executableName(KProtocolInfo::exec(protocol))));
