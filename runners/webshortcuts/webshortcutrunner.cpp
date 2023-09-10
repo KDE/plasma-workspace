@@ -60,7 +60,7 @@ void WebshortcutRunner::loadSyntaxes()
 
     QList<KRunner::RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
-    const QRegularExpression replaceRegex(QStringLiteral(":q$"));
+    const static QRegularExpression replaceRegex(QStringLiteral(":q$"));
     const QString placeholder = QStringLiteral(":q:");
     for (const QString &provider : providers) {
         KRunner::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
