@@ -5,13 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtra
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
 RowLayout {
     // OSD Timeout in msecs - how long it will stay on the screen
@@ -75,7 +74,7 @@ RowLayout {
     }
 
     // Numerical display of progress bar value
-    PlasmaExtra.Heading {
+    PlasmaExtras.Heading {
         id: percentageLabel
         Layout.rightMargin: Kirigami.Units.smallSpacing // Right end spacing
         Layout.fillHeight: true
@@ -103,8 +102,7 @@ RowLayout {
         }
     }
 
-    PlasmaExtra.Heading {
-        id: label
+    PlasmaExtras.Heading {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.leftMargin: iconItem.visible ?  0 : Kirigami.Units.smallSpacing // Left end spacing
