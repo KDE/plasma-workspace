@@ -426,18 +426,34 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
         // In case it was only unlinked from one activity
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
-    processActivitiesResults(ResultSet(m_kactivitiesQuery));
+}
 
-    // Load services once per match session. Reloading them for every character is not worth it
-    // Also filter out hidden ones since those are not relevant for matching
-    connect(this, &KRunner::AbstractRunner::prepare, this, [this]() {
+void ServiceRunner::init()
+{
+    processActivitiesResults(ResultSet(m_kactivitiesQuery)); // Load the initial ones in runners thread
+    const auto loadServices = [this]() {
         m_services = KApplicationTrader::query([](const KService::Ptr &service) {
             return !service->noDisplay();
         });
+    };
+    connect(this, &KRunner::AbstractRunner::prepare, this, [this, loadServices]() {
+        if (m_services.isEmpty()) {
+            loadServices();
+        } else {
+            KSycoca::self()->ensureCacheValid();
+            m_refilterOnDatabaseChange = false; // We have a direct connection, so onDatabaseChange will be called before this scope ends
+        }
     });
     connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
-        m_services.clear();
+        // After the first match session, we can check for updates instead of always regenerating the services
+        m_refilterOnDatabaseChange = true;
     });
+    const auto onDatabaseChange = [this, loadServices]() {
+        if (m_refilterOnDatabaseChange) {
+            loadServices();
+        }
+    };
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, onDatabaseChange, Qt::DirectConnection);
 }
 
 void ServiceRunner::processActivitiesResults(const ResultSet &results)

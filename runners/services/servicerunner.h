@@ -31,6 +31,7 @@ public:
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
+    void init() override;
 
     struct ActivityFavourite {
         QStringList linkedActivities;
@@ -47,4 +48,5 @@ private:
     const ResultWatcher m_kactivitiesWatcher;
     const KActivities::Consumer m_activitiesConsuer;
     QList<KService::Ptr> m_services;
+    bool m_refilterOnDatabaseChange = false;
 };
