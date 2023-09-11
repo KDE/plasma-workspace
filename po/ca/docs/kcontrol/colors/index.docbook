@@ -177,7 +177,7 @@
 ><para
 ><guilabel
 >Contrast</guilabel
->: Aquest control lliscant controla el contrast dels elements d'ombra, com les vores del marc i els efectes «3D» utilitzats per la majoria d'estils. Un valor més baix ofereix menys contrast i per tant vores més suaus, mentre que un valor més alt farà que les vores «destaquin» més. </para
+>: Aquest control lliscant controla el contrast dels elements d'ombra, com les vores del marc i els efectes «3D» utilitzats per la majoria d'estils. Un valor més baix ofereix menys contrast i, per tant, vores més suaus, mentre que un valor més alt farà que les vores «destaquin» més. </para
 ></listitem>
   </itemizedlist>
 
@@ -274,15 +274,15 @@
 ></listitem>
       <listitem
 ><para
->Text de l'enllaç: S'utilitza per a hiper-enllaços o per indicar el contrari «quelcom que es pot visitar», o per mostrar les relacions. </para
+>Text de l'enllaç: S'utilitza per a enllaços o per indicar el contrari «quelcom que es pot visitar», o per mostrar les relacions. </para
 ></listitem>
       <listitem
 ><para
->Text visitat: S'utilitza per a «quelcom (&pex; un hiper-enllaç) que ha estat visitat», o per indicar alguna cosa que és «vella». </para
+>Text visitat: S'utilitza per a «quelcom (&pex; un enllaç) que ha estat visitat», o per indicar alguna cosa que és «vella». </para
 ></listitem>
       <listitem
 ><para
->Text actiu: S'utilitza per indicar un element actiu o cridar l'atenció, &pex; alertes, notificacions, també per a quan es passa per sobre dels hiper-enllaços. </para
+>Text actiu: S'utilitza per indicar un element actiu o cridar l'atenció, &pex; alertes, notificacions, també per a quan es passa per sobre dels enllaços. </para
 ></listitem>
       <listitem
 ><para

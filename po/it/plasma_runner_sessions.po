@@ -1,14 +1,14 @@
 # translation of plasma_runner_sessions.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # Federico Zenith <zenith@chemeng.ntnu.no>, 2008.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2009, 2011, 2014, 2018, 2020, 2022.
+# SPDX-FileCopyrightText: 2009, 2011, 2014, 2018, 2020, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2022-12-18 10:18+0100\n"
+"PO-Revision-Date: 2023-09-07 18:01+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -32,11 +32,7 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Chiude la sessione, uscendo dalla sessione corrente del desktop"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"

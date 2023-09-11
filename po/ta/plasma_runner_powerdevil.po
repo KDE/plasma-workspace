@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-09 01:58+0000\n"
-"PO-Revision-Date: 2021-08-13 22:04+0530\n"
+"PO-Revision-Date: 2023-09-10 18:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,61 +15,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "ஆற்றல்"
 
 #: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
-msgstr ""
+msgstr "தூங்கு"
 
 #: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
-msgstr ""
+msgstr "நினைவுக்கு"
 
 #: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
-msgstr ""
+msgstr "உறங்கு"
 
 #: PowerDevilRunner.cpp:41
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
-msgstr ""
+msgstr "ஆழுறங்கு"
 
 #: PowerDevilRunner.cpp:43
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
-msgstr ""
+msgstr "வட்டுக்கு"
 
 #: PowerDevilRunner.cpp:45
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "கலப்பு உறக்கம்"
 
 #: PowerDevilRunner.cpp:47
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "கலப்பு"
 
 #: PowerDevilRunner.cpp:49 PowerDevilRunner.cpp:51 PowerDevilRunner.cpp:76
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
-msgstr ""
+msgstr "திரையை மங்கசெய்"
 
 #: PowerDevilRunner.cpp:60
 #, kde-format
@@ -91,14 +91,14 @@ msgstr "கணினியை வட்டுக்கு இடைநிறு�
 #: PowerDevilRunner.cpp:72
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "உறங்கி பழுதுகாப்பாக ஆழுறங்கும்"
 
 #: PowerDevilRunner.cpp:75
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
-msgstr ""
+msgstr "திரை பிரகாசம் <சதவீதம்>"
 
 #: PowerDevilRunner.cpp:78
 #, no-c-format, kde-format
@@ -107,6 +107,8 @@ msgid ""
 "search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
 "brightness"
 msgstr ""
+"திரை பிரகாச அமைப்புகளை பட்டியலிடும், அல்லது குறிப்பிட்ட அளவாக அமைக்கும். எ.கா. திரை "
+"பிரகாசம் 50 என்றால் திரையின் பிரகாசம் 50%-ஆக அமைக்கப்படும்."
 
 #: PowerDevilRunner.cpp:100
 #, kde-format
@@ -127,7 +129,7 @@ msgstr "பாதியளவு திரை பிரகாசம்"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "தூங்கு"
+msgstr "உறங்கு"
 
 #: PowerDevilRunner.cpp:147
 #, kde-format
@@ -138,7 +140,7 @@ msgstr "RAM-க்கு இடைநிறுத்து"
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
-msgstr ""
+msgstr "ஆழுறங்கு"
 
 #: PowerDevilRunner.cpp:153
 #, kde-format
@@ -149,21 +151,21 @@ msgstr "வட்டுக்கு இடைநிறுத்து"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "கலப்பு உறக்கம்"
 
 #: PowerDevilRunner.cpp:159
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "உறங்கி பழுதுகாப்பாக ஆழுறங்கும்"
 
 #: PowerDevilRunner.cpp:237
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
-msgstr ""
+msgstr "திரை பிரகாசம் "
 
 #: PowerDevilRunner.cpp:239
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "
-msgstr ""
+msgstr "திரையை மங்கசெய் "
