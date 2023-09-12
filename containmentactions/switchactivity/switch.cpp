@@ -10,6 +10,7 @@
 
 #include <QAction>
 #include <QDebug>
+#include <QFont>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>

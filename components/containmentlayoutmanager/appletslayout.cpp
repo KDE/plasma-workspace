@@ -9,6 +9,7 @@
 #include "containmentlayoutmanager_debug.h"
 #include "gridlayoutmanager.h"
 
+#include <QGuiApplication>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QStyleHints>

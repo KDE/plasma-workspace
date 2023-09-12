@@ -15,6 +15,7 @@
 #include "systemtraymodel.h"
 #include "systemtraysettings.h"
 
+#include <QGuiApplication>
 #include <QMenu>
 #include <QMetaMethod>
 #include <QMetaObject>

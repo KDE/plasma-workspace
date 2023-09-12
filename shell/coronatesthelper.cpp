@@ -8,6 +8,7 @@
 #include "debug.h"
 
 #include <PlasmaQuick/AppletQuickItem>
+#include <QGuiApplication>
 
 using namespace Plasma;
 

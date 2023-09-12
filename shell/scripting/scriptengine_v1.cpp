@@ -12,6 +12,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QFutureWatcher>
+#include <QGuiApplication>
 #include <QJSValueIterator>
 #include <QStandardPaths>
 
