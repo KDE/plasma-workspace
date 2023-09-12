@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,13 +45,13 @@ msgstr "KDE Plasma %1 開發版"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "KDE Plasma %1 Beta 建置版"
+msgstr "KDE Plasma %1 Beta 版"
 
 #: desktopview.cpp:231
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr "KDE Plasma %1 Beta 建置版"
+msgstr "KDE Plasma %1 Beta 版 %2"
 
 #: desktopview.cpp:235
 #, kde-format

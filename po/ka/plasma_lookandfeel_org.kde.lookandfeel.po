@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-23 02:00+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2022-11-22 07:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -281,7 +281,7 @@ msgstr "დიახ"
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: contents/osd/OsdItem.qml:31
+#: contents/osd/OsdItem.qml:32
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

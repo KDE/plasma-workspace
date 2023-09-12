@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -31,62 +31,76 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nashtlumach@gmail.com"
 
-#: imagepackage/contents/ui/config.qml:93
+#: imagepackage/contents/ui/AddFileDialog.qml:57
+#, fuzzy, kde-format
+#| msgid "Open Image"
+msgctxt "@title:window"
+msgid "Open Image"
+msgstr "Адкрыць выяву"
+
+#: imagepackage/contents/ui/AddFileDialog.qml:69
+#, fuzzy, kde-format
+#| msgid "Directory with the wallpaper to show slides from"
+msgctxt "@title:window"
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Каталог са шпалерамі для паказу слайдаў"
+
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Positioning:"
 msgstr "Становішча:"
 
-#: imagepackage/contents/ui/config.qml:96
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Маштабавана і абрэзана"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled"
 msgstr "Маштабавана"
 
-#: imagepackage/contents/ui/config.qml:104
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Маштабавана, прапорцыі захаваныя"
 
-#: imagepackage/contents/ui/config.qml:108
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Centered"
 msgstr "Па цэнтры"
 
-#: imagepackage/contents/ui/config.qml:112
+#: imagepackage/contents/ui/config.qml:122
 #, kde-format
 msgid "Tiled"
 msgstr "Скампанавана"
 
-#: imagepackage/contents/ui/config.qml:140
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Background:"
 msgstr "Фон:"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Blur"
 msgstr "Размыццё"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Solid color"
 msgstr "Суцэльны колер"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Select Background Color"
 msgstr "Абраць колер фону"
 
-#: imagepackage/contents/ui/config.qml:206
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgid "Add Image…"
 msgstr "Дадаць выяву…"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:222
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -167,17 +181,8 @@ msgstr ""
 "Пададзены для шпалеры файл не існуе, або яго немагчыма распазнаць як "
 "шпалеры: %1"
 
-#: plugin/imagebackend.cpp:253
-#, kde-format
-msgid "Directory with the wallpaper to show slides from"
-msgstr "Каталог са шпалерамі для паказу слайдаў"
-
-#: plugin/imagebackend.cpp:364
-#, kde-format
-msgid "Open Image"
-msgstr "Адкрыць выяву"
-
-#: plugin/imagebackend.cpp:364
+#. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Файлы выяў"

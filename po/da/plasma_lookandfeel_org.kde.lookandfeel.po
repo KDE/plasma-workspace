@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-23 02:00+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2020-10-04 17:18+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -287,7 +287,7 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Annullér"
 
-#: contents/osd/OsdItem.qml:31
+#: contents/osd/OsdItem.qml:32
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2021-08-31 16:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -27,62 +27,76 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "harivishnu@gmail.com"
 
-#: imagepackage/contents/ui/config.qml:93
+#: imagepackage/contents/ui/AddFileDialog.qml:57
+#, fuzzy, kde-format
+#| msgid "Open Image"
+msgctxt "@title:window"
+msgid "Open Image"
+msgstr "ചിത്രം തുറക്കുക"
+
+#: imagepackage/contents/ui/AddFileDialog.qml:69
+#, fuzzy, kde-format
+#| msgid "Directory with the wallpaper to show slides from"
+msgctxt "@title:window"
+msgid "Directory with the wallpaper to show slides from"
+msgstr "സ്ലൈഡുകൾ കാണിക്കുന്നതിന് പശ്ചാത്തലചിത്രമുള്ള കൂട"
+
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Positioning:"
 msgstr "സ്ഥാനം:"
 
-#: imagepackage/contents/ui/config.qml:96
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "വലിപ്പം മാറ്റിയതും അറ്റം വെട്ടിചുരുക്കിയതും"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled"
 msgstr "വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:104
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "ചിത്രത്തിന്റെ അനുപാതം മാറ്റാതെ വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:108
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Centered"
 msgstr "നടുവിലായിട്ട്"
 
-#: imagepackage/contents/ui/config.qml:112
+#: imagepackage/contents/ui/config.qml:122
 #, kde-format
 msgid "Tiled"
 msgstr "അടുത്തടുത്തു് വച്ചു്"
 
-#: imagepackage/contents/ui/config.qml:140
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Background:"
 msgstr "പശ്ചാത്തലം:"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Blur"
 msgstr "അവ്യക്തം"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Solid color"
 msgstr "കടും നിറം"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Select Background Color"
 msgstr "പശ്ചാത്തല നിറം തെരഞ്ഞെടുക്കുക"
 
-#: imagepackage/contents/ui/config.qml:206
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgid "Add Image…"
 msgstr "ചിത്രം ചേർക്കുക…"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:222
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -167,17 +181,8 @@ msgstr ""
 "പശ്ചാത്തലചിത്രമായി സജ്ജീകരിക്കാൻ നൽകിയ ഫയൽ നിലവിലില്ല, അല്ലെങ്കിൽ ഞങ്ങൾക്ക് ഇത് ഒരു "
 "പശ്ചാത്തലചിത്രമായി തിരിച്ചറിയാൻ കഴിഞ്ഞില്ല: %1"
 
-#: plugin/imagebackend.cpp:253
-#, kde-format
-msgid "Directory with the wallpaper to show slides from"
-msgstr "സ്ലൈഡുകൾ കാണിക്കുന്നതിന് പശ്ചാത്തലചിത്രമുള്ള കൂട"
-
-#: plugin/imagebackend.cpp:364
-#, kde-format
-msgid "Open Image"
-msgstr "ചിത്രം തുറക്കുക"
-
-#: plugin/imagebackend.cpp:364
+#. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "ചിത്ര ഫയലുകൾ"

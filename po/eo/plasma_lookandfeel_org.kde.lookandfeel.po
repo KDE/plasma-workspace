@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-23 02:00+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2023-08-06 22:58+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -282,7 +282,7 @@ msgstr "bone"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: contents/osd/OsdItem.qml:31
+#: contents/osd/OsdItem.qml:32
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

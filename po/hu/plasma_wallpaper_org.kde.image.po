@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -30,62 +30,76 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tszanto@interware.hu"
 
-#: imagepackage/contents/ui/config.qml:93
+#: imagepackage/contents/ui/AddFileDialog.qml:57
+#, fuzzy, kde-format
+#| msgid "Open Image"
+msgctxt "@title:window"
+msgid "Open Image"
+msgstr "Kép megnyitása"
+
+#: imagepackage/contents/ui/AddFileDialog.qml:69
+#, fuzzy, kde-format
+#| msgid "Directory with the wallpaper to show slides from"
+msgctxt "@title:window"
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Diavetítés háttérképeit tartalmazó mappa"
+
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Positioning:"
 msgstr "Elhelyezkedés:"
 
-#: imagepackage/contents/ui/config.qml:96
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Nyújtva és levágva"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled"
 msgstr "Nyújtva"
 
-#: imagepackage/contents/ui/config.qml:104
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Arányosan nyújtva"
 
-#: imagepackage/contents/ui/config.qml:108
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Centered"
 msgstr "Középre"
 
-#: imagepackage/contents/ui/config.qml:112
+#: imagepackage/contents/ui/config.qml:122
 #, kde-format
 msgid "Tiled"
 msgstr "Mozaikszerűen"
 
-#: imagepackage/contents/ui/config.qml:140
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Background:"
 msgstr "Háttér:"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Blur"
 msgstr "Elmosás"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Solid color"
 msgstr "Egyszínű"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Select Background Color"
 msgstr "Válassza ki a háttér színét"
 
-#: imagepackage/contents/ui/config.qml:206
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgid "Add Image…"
 msgstr "Kép hozzáadása…"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:222
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -169,17 +183,8 @@ msgstr ""
 "A háttérképként használni kívánt fájl nem létezik, vagy nem azonosítható "
 "háttérképként: %1"
 
-#: plugin/imagebackend.cpp:253
-#, kde-format
-msgid "Directory with the wallpaper to show slides from"
-msgstr "Diavetítés háttérképeit tartalmazó mappa"
-
-#: plugin/imagebackend.cpp:364
-#, kde-format
-msgid "Open Image"
-msgstr "Kép megnyitása"
-
-#: plugin/imagebackend.cpp:364
+#. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Képfájlok"

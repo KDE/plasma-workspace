@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2023-08-24 07:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -31,62 +31,76 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tulliana@gmail.com"
 
-#: imagepackage/contents/ui/config.qml:93
+#: imagepackage/contents/ui/AddFileDialog.qml:57
+#, fuzzy, kde-format
+#| msgid "Open Image"
+msgctxt "@title:window"
+msgid "Open Image"
+msgstr "Görsel Aç"
+
+#: imagepackage/contents/ui/AddFileDialog.qml:69
+#, fuzzy, kde-format
+#| msgid "Directory with the wallpaper to show slides from"
+msgctxt "@title:window"
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Duvar kağıdını içeren slaytların gösterileceği dizin"
+
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Positioning:"
 msgstr "Konumlandırma:"
 
-#: imagepackage/contents/ui/config.qml:96
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Ölçeklendirilmiş ve Kırpılmış"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled"
 msgstr "Ölçeklendirilmiş"
 
-#: imagepackage/contents/ui/config.qml:104
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Ölçeklendirilmiş, Oranları Korunan"
 
-#: imagepackage/contents/ui/config.qml:108
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Centered"
 msgstr "Ortalanmış"
 
-#: imagepackage/contents/ui/config.qml:112
+#: imagepackage/contents/ui/config.qml:122
 #, kde-format
 msgid "Tiled"
 msgstr "Döşenmiş"
 
-#: imagepackage/contents/ui/config.qml:140
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Background:"
 msgstr "Arka plan:"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Blur"
 msgstr "Bulanık"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Solid color"
 msgstr "Katı renk"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Select Background Color"
 msgstr "Arka Plan Rengini Seç"
 
-#: imagepackage/contents/ui/config.qml:206
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgid "Add Image…"
 msgstr "Görsel Ekle…"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:222
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -171,17 +185,8 @@ msgstr ""
 "Duvar kağıdı olarak ayarlanmak istenen dosya yok veya onu duvar kağıdı "
 "olarak tanımlayamıyoruz: %1"
 
-#: plugin/imagebackend.cpp:253
-#, kde-format
-msgid "Directory with the wallpaper to show slides from"
-msgstr "Duvar kağıdını içeren slaytların gösterileceği dizin"
-
-#: plugin/imagebackend.cpp:364
-#, kde-format
-msgid "Open Image"
-msgstr "Görsel Aç"
-
-#: plugin/imagebackend.cpp:364
+#. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Görsel Dosyaları"

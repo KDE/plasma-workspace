@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-12 02:00+0000\n"
 "PO-Revision-Date: 2022-05-22 10:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,62 +27,76 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: imagepackage/contents/ui/config.qml:93
+#: imagepackage/contents/ui/AddFileDialog.qml:57
+#, fuzzy, kde-format
+#| msgid "Open Image"
+msgctxt "@title:window"
+msgid "Open Image"
+msgstr "Öppna bild"
+
+#: imagepackage/contents/ui/AddFileDialog.qml:69
+#, fuzzy, kde-format
+#| msgid "Directory with the wallpaper to show slides from"
+msgctxt "@title:window"
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Katalog med skrivbordsunderlägget att visa bilder från"
+
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Positioning:"
 msgstr "Positionering:"
 
-#: imagepackage/contents/ui/config.qml:96
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Skalat och beskuret"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled"
 msgstr "Skalat"
 
-#: imagepackage/contents/ui/config.qml:104
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Skalat, behåll proportion"
 
-#: imagepackage/contents/ui/config.qml:108
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Centered"
 msgstr "Centrerat"
 
-#: imagepackage/contents/ui/config.qml:112
+#: imagepackage/contents/ui/config.qml:122
 #, kde-format
 msgid "Tiled"
 msgstr "Sida vid sida"
 
-#: imagepackage/contents/ui/config.qml:140
+#: imagepackage/contents/ui/config.qml:150
 #, kde-format
 msgid "Background:"
 msgstr "Bakgrund:"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Blur"
 msgstr "Suddig"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgid "Solid color"
 msgstr "Enkel färg"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Select Background Color"
 msgstr "Välj bakgrundsfärg"
 
-#: imagepackage/contents/ui/config.qml:206
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgid "Add Image…"
 msgstr "Lägg till bild…"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:222
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -171,17 +185,8 @@ msgstr ""
 "Filen som skickades för att användas som skrivbordsunderlägg finns inte, "
 "eller kan inte identifieras som ett skrivbordsunderlägg: %1"
 
-#: plugin/imagebackend.cpp:253
-#, kde-format
-msgid "Directory with the wallpaper to show slides from"
-msgstr "Katalog med skrivbordsunderlägget att visa bilder från"
-
-#: plugin/imagebackend.cpp:364
-#, kde-format
-msgid "Open Image"
-msgstr "Öppna bild"
-
-#: plugin/imagebackend.cpp:364
+#. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+#: plugin/imagebackend.cpp:336
 #, kde-format
 msgid "Image Files"
 msgstr "Bildfiler"
