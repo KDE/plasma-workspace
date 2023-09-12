@@ -288,11 +288,6 @@ PlasmaExtras.Representation {
                 }
             }
 
-            function isRowExpanded(row) {
-                var idx = historyModel.index(row, 0);
-                return historyModel.data(idx, NotificationManager.Notifications.IsGroupExpandedRole);
-            }
-
             function setGroupExpanded(row, expanded) {
                 var rowIdx = historyModel.index(row, 0);
                 var persistentRowIdx = historyModel.makePersistentModelIndex(rowIdx);
