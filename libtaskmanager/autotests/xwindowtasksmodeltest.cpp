@@ -6,34 +6,18 @@
 
 #include <array>
 
-#include <QDateTime>
-#include <QQmlApplicationEngine>
-#include <QRasterWindow>
-#include <QtTest>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QX11Info>
-#else
-#include <private/qtx11extras_p.h>
-#endif
 
 #include <KActivities/Consumer>
-#include <KIconLoader>
-#include <KSycoca>
-#include <KWindowSystem>
 
 #include <xcb/xcb.h>
 #include <xcb/xproto.h>
 
-#include "samplewidgetwindow.h"
+#include "common.h"
 #include "xwindowtasksmodel.h"
 
 using namespace TaskManager;
 using MimeDataMap = QMap<QString, QByteArray>;
-
-namespace
-{
-constexpr const char *dummyDesktopFileName = "org.kde.plasma.test.dummy.desktop";
-}
 
 class XWindowTasksModelTest : public QObject
 {
@@ -61,9 +45,6 @@ private Q_SLOTS:
     void test_request();
 
 private:
-    std::unique_ptr<QRasterWindow> createSingleWindow(const QString &title, QModelIndex &index);
-    void createDesktopFile(const char *fileName, const std::vector<std::string> &lines, QString &path);
-
     WId m_WId = 12345;
     QByteArray m_singleWId;
     QByteArray m_threeWIds;
@@ -124,9 +105,7 @@ void XWindowTasksModelTest::initTestCase()
 
 void XWindowTasksModelTest::cleanupTestCase()
 {
-    QFile dummyFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications")
-                    + QDir::separator() + QString::fromLatin1(dummyDesktopFileName));
-    dummyFile.remove();
+    TestUtils::cleanupTestCase();
 }
 
 void XWindowTasksModelTest::test_winIdFromMimeData_data()
@@ -220,56 +199,14 @@ void XWindowTasksModelTest::test_winIdsFromMimeData()
 
 void XWindowTasksModelTest::test_openCloseWindow()
 {
-    XWindowTasksModel model;
-
-    auto findWindow = [&model](const QString &windowTitle) {
-        for (int i = 0; i < model.rowCount(); ++i) {
-            const QString title = model.index(i, 0).data(Qt::DisplayRole).toString();
-            if (title == windowTitle) {
-                return true;
-            }
-        }
-        return false;
-    };
-
-    // Create a window to test if XWindowTasksModel can receive it
-    QSignalSpy rowInsertedSpy(&model, &XWindowTasksModel::rowsInserted);
-
-    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
-    QModelIndex index;
-    auto window = createSingleWindow(title, index);
-
-    // A new window appears
-    // Find the window in the model
-    QVERIFY(findWindow(title));
-
-    // Change the title of the window
-    {
-        QSignalSpy dataChangedSpy(&model, &XWindowTasksModel::dataChanged);
-        const QString newTitle = title + QStringLiteral("__newtitle__");
-        window->setTitle(newTitle);
-        QVERIFY(dataChangedSpy.wait());
-        QTRY_VERIFY(dataChangedSpy.constLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
-        // Make sure the title is updated
-        QTRY_VERIFY(!findWindow(title));
-        QTRY_VERIFY(findWindow(newTitle));
-    }
-
-    // Now close the window
-    {
-        int modelCount = model.rowCount();
-        QSignalSpy rowsRemovedSpy(&model, &XWindowTasksModel::rowsRemoved);
-        window->close();
-        QVERIFY(rowsRemovedSpy.wait());
-        QCOMPARE(modelCount - 1, model.rowCount());
-    }
+    TestUtils::testOpenCloseWindow(m_model);
 }
 
 void XWindowTasksModelTest::test_modelData()
 {
     const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
     QModelIndex index;
-    auto window = createSingleWindow(title, index);
+    auto window = TestUtils::createSingleWindow(m_model, title, index);
 
     // See XWindowTasksModel::data for available roles
     { // BEGIN Icon
@@ -356,7 +293,7 @@ void XWindowTasksModelTest::test_isMinimized()
 {
     const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
     QModelIndex index;
-    auto window = createSingleWindow(title, index);
+    auto window = TestUtils::createSingleWindow(m_model, title, index);
 
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsHidden).toBool());
@@ -402,67 +339,17 @@ void XWindowTasksModelTest::test_isMinimized()
 
 void XWindowTasksModelTest::test_fullscreen()
 {
-    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
-    QModelIndex index;
-    auto window = createSingleWindow(title, index);
-
-    QVERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
-
-    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
-    window->showFullScreen();
-    dataChangedSpy.wait();
-
-    // There can be more than one dataChanged signal being emitted due to caching
-    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
-    }));
-    QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreen).toBool());
-    dataChangedSpy.clear();
-    window->showNormal();
-    QVERIFY(dataChangedSpy.wait());
-    // There can be more than one dataChanged signal being emitted due to caching
-    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
-    }));
-    QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
+    TestUtils::testFullscreen(m_model);
 }
 
 void XWindowTasksModelTest::test_geometry()
 {
-    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
-    QModelIndex index;
-    auto window = createSingleWindow(title, index);
-
-    const QSize oldSize = index.data(AbstractTasksModel::Geometry).toRect().size();
-    QCoreApplication::processEvents();
-    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
-    window->resize(QSize(240, 320));
-    QVERIFY(dataChangedSpy.wait());
-
-    // There can be more than one dataChanged signal being emitted due to caching
-    // When using openbox the test is flaky
-    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::Geometry);
-    }));
-    QTRY_VERIFY(index.data(AbstractTasksModel::Geometry).toRect().size() != oldSize);
+    TestUtils::testGeometry(m_model);
 }
 
 void XWindowTasksModelTest::test_stackingOrder()
 {
-    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
-    QModelIndex index;
-    auto firstWindow = createSingleWindow(title, index);
-    const int stackingOrder1 = index.data(AbstractTasksModel::StackingOrder).toInt();
-
-    // Create another window to make stacking order change
-    QModelIndex index2;
-    auto secondWindow = createSingleWindow(QStringLiteral("second test window"), index2);
-    const int stackingOrder2 = index2.data(AbstractTasksModel::StackingOrder).toInt();
-    QVERIFY(stackingOrder2 > stackingOrder1);
-
-    firstWindow->close();
-    QCoreApplication::processEvents();
-    QTRY_VERIFY(index2.data(AbstractTasksModel::StackingOrder).toInt() < stackingOrder2);
+    TestUtils::testStackingOrder(m_model);
 }
 
 void XWindowTasksModelTest::test_lastActivated()
@@ -470,7 +357,7 @@ void XWindowTasksModelTest::test_lastActivated()
 {
     const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
     QModelIndex index;
-    auto window = createSingleWindow(title, index);
+    auto window = TestUtils::createSingleWindow(m_model, title, index);
 
     QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
     window->showMinimized();
@@ -497,95 +384,7 @@ void XWindowTasksModelTest::test_lastActivated()
 
 void XWindowTasksModelTest::test_modelDataFromDesktopFile()
 {
-    // Case 1: A normal window
-    std::vector<std::string> lines;
-    lines.emplace_back("Name=DummyWindow");
-    lines.emplace_back("GenericName=DummyGenericName");
-    lines.emplace_back(QStringLiteral("Exec=%1").arg(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath)).toStdString());
-    lines.emplace_back("Terminal=false");
-    lines.emplace_back("Type=Application");
-    lines.emplace_back(QStringLiteral("Icon=%1").arg(QFINDTESTDATA("data/windows/none.png")).toStdString());
-
-    // Test generic name, icon and launcher url
-    QString desktopFilePath;
-    createDesktopFile(dummyDesktopFileName, lines, desktopFilePath);
-
-    QSignalSpy rowsInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
-    QProcess sampleWindowProcess;
-    sampleWindowProcess.setProgram(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath));
-    sampleWindowProcess.setArguments(QStringList{
-        QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
-        QFINDTESTDATA("data/windows/samplewidgetwindow.png"),
-    });
-    sampleWindowProcess.start();
-    rowsInsertedSpy.wait();
-
-    // Find the window index
-    auto findWindowIndex = [this, &sampleWindowProcess](QModelIndex &index) {
-        const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, sampleWindowProcess.arguments().at(0));
-        QVERIFY(results.size() == 1);
-        index = results.at(0);
-        QVERIFY(index.isValid());
-        qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
-    };
-
-    QModelIndex index;
-    findWindowIndex(index);
-
-    QCOMPARE(index.data(AbstractTasksModel::AppName).toString(), QStringLiteral("DummyWindow"));
-    QCOMPARE(index.data(AbstractTasksModel::GenericName).toString(), QStringLiteral("DummyGenericName"));
-    QCOMPARE(index.data(AbstractTasksModel::LauncherUrl).toUrl(), QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
-    QCOMPARE(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(),
-             QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
-
-    // Test icon should use the icon from the desktop file (Not the png file filled with red color)
-    const QIcon windowIcon = index.data(Qt::DecorationRole).value<QIcon>();
-    QVERIFY(!windowIcon.isNull());
-    QVERIFY(windowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2).red() < 200);
-
-    // SingleMainWindow is not set, which implies it can launch a new instance.
-    QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
-
-    QSignalSpy rowsRemovedSpy(&m_model, &XWindowTasksModel::rowsRemoved);
-    sampleWindowProcess.terminate();
-    QVERIFY(rowsRemovedSpy.wait());
-
-    auto testCanLaunchNewInstance = [&](bool canLaunchNewInstance) {
-        createDesktopFile(dummyDesktopFileName, lines, desktopFilePath);
-        sampleWindowProcess.start();
-        rowsInsertedSpy.wait();
-
-        findWindowIndex(index);
-        QCOMPARE(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool(), canLaunchNewInstance);
-
-        sampleWindowProcess.terminate();
-        QVERIFY(rowsRemovedSpy.wait());
-    };
-
-    // Case 2: Set SingleMainWindow or X-GNOME-SingleWindow or both
-    lines.emplace_back("SingleMainWindow=true");
-    testCanLaunchNewInstance(false);
-
-    lines.pop_back();
-    lines.emplace_back("X-GNOME-SingleWindow=true");
-    testCanLaunchNewInstance(false);
-
-    lines.pop_back();
-    lines.emplace_back("SingleMainWindow=false");
-    lines.emplace_back("X-GNOME-SingleWindow=true");
-    testCanLaunchNewInstance(false);
-
-    lines.pop_back();
-    lines.pop_back();
-    lines.emplace_back("SingleMainWindow=true");
-    lines.emplace_back("X-GNOME-SingleWindow=false");
-    testCanLaunchNewInstance(false);
-
-    lines.pop_back();
-    lines.pop_back();
-    lines.emplace_back("SingleMainWindow=false");
-    lines.emplace_back("X-GNOME-SingleWindow=false");
-    testCanLaunchNewInstance(true);
+    TestUtils::testModelDataFromDesktopFile(m_model);
 }
 
 void XWindowTasksModelTest::test_windowState()
@@ -594,7 +393,7 @@ void XWindowTasksModelTest::test_windowState()
 
     const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
     QModelIndex index;
-    auto window = createSingleWindow(title, index);
+    auto window = TestUtils::createSingleWindow(m_model, title, index);
 
     QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
 
@@ -719,128 +518,7 @@ void XWindowTasksModelTest::test_windowState()
 
 void XWindowTasksModelTest::test_request()
 {
-    QSignalSpy rowsInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
-
-    QProcess sampleWindowProcess;
-    sampleWindowProcess.setProgram(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath));
-    sampleWindowProcess.setArguments(QStringList{
-        QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
-    });
-    sampleWindowProcess.start();
-    rowsInsertedSpy.wait();
-
-    // Find the window index
-    auto findWindowIndex = [this](QModelIndex &index, const QString &title) {
-        const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, title);
-        QVERIFY(results.size() == 1);
-        index = results.at(0);
-        QVERIFY(index.isValid());
-        qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
-    };
-
-    QModelIndex index;
-    findWindowIndex(index, sampleWindowProcess.arguments().at(0));
-
-    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
-
-    {
-        m_model.requestActivate(index);
-        QVERIFY(dataChangedSpy.wait());
-        QVERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
-    }
-
-    {
-        m_model.requestNewInstance(index);
-        QVERIFY(rowsInsertedSpy.wait());
-    }
-
-    {
-        m_model.requestToggleMinimized(index);
-        QVERIFY(dataChangedSpy.wait());
-    }
-
-    {
-        m_model.requestToggleMaximized(index);
-        QVERIFY(dataChangedSpy.wait());
-    }
-
-    {
-        m_model.requestToggleKeepAbove(index);
-        QVERIFY(dataChangedSpy.wait());
-    }
-
-    {
-        m_model.requestToggleKeepBelow(index);
-        QVERIFY(dataChangedSpy.wait());
-    }
-
-    {
-        m_model.requestToggleFullScreen(index);
-        QVERIFY(dataChangedSpy.wait());
-    }
-
-    {
-        m_model.requestToggleShaded(index);
-        QVERIFY(dataChangedSpy.wait());
-    }
-
-    QSignalSpy rowsRemovedSpy(&m_model, &XWindowTasksModel::rowsRemoved);
-    {
-        m_model.requestClose(index);
-        QVERIFY(rowsRemovedSpy.wait());
-    }
-
-    {
-        // CLose the new instance
-        findWindowIndex(index, QStringLiteral("__test_window_no_title__"));
-        m_model.requestClose(index);
-        QVERIFY(rowsRemovedSpy.wait());
-    }
-}
-
-std::unique_ptr<QRasterWindow> XWindowTasksModelTest::createSingleWindow(const QString &title, QModelIndex &index)
-{
-    auto window = std::make_unique<QRasterWindow>();
-    window->setTitle(title);
-    window->setBaseSize(QSize(320, 240));
-
-    QSignalSpy rowInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
-    window->show();
-    Q_ASSERT(rowInsertedSpy.wait());
-
-    // Find the window index
-    const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, title);
-    Q_ASSERT(results.size() == 1);
-    index = results.at(0);
-    Q_ASSERT(index.isValid());
-    qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
-
-    return window;
-}
-
-void XWindowTasksModelTest::createDesktopFile(const char *fileName, const std::vector<std::string> &lines, QString &path)
-{
-    path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications") + QDir::separator()
-        + QString::fromUtf8(fileName);
-
-    QSignalSpy databaseChangedSpy(KSycoca::self(), &KSycoca::databaseChanged);
-
-    QFile out(path);
-    if (out.exists()) {
-        qDebug() << "Removing the old desktop file in" << path;
-        out.remove();
-    }
-
-    qDebug() << "Creating a desktop file in" << path;
-    QVERIFY(out.open(QIODevice::WriteOnly));
-    out.write("[Desktop Entry]\n");
-    for (const std::string &l : lines) {
-        out.write((l + "\n").c_str());
-    }
-    out.close();
-
-    KSycoca::self()->ensureCacheValid();
-    databaseChangedSpy.wait(2500);
+    TestUtils::testRequest(m_model);
 }
 
 QTEST_MAIN(XWindowTasksModelTest)
