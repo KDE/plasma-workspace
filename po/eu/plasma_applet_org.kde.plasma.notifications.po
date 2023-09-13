@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2023-08-14 23:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -145,35 +145,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Pantailak ispilatuta daude"
 
-#: package/contents/ui/FullRepresentation.qml:429
+#: package/contents/ui/FullRepresentation.qml:424
 #, kde-format
 msgid "Close Group"
 msgstr "Itxi taldea"
 
-#: package/contents/ui/FullRepresentation.qml:574
+#: package/contents/ui/FullRepresentation.qml:569
 #, kde-format
 msgid "Show Fewer"
 msgstr "Erakutsi gutxiago"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:571
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Erakutsi %1 gehiago"
 
-#: package/contents/ui/FullRepresentation.qml:617
+#: package/contents/ui/FullRepresentation.qml:612
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ez dago irakurri gabeko Jakinarazpenik"
 
-#: package/contents/ui/FullRepresentation.qml:632
+#: package/contents/ui/FullRepresentation.qml:627
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "Jakinarazpen zerbitzua ez dago erabilgarri"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:629
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-17 01:59+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -146,35 +146,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "ਸਕਰੀਨਾਂ ਨੂੰ ਮਿਰੱਰ ਕੀਤਾ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:429
+#: package/contents/ui/FullRepresentation.qml:424
 #, kde-format
 msgid "Close Group"
 msgstr "ਗਰੁੱਪ ਬੰਦ ਕਰੋ"
 
-#: package/contents/ui/FullRepresentation.qml:574
+#: package/contents/ui/FullRepresentation.qml:569
 #, kde-format
 msgid "Show Fewer"
 msgstr "ਘੱਟ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:571
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "%1 ਹੋਰ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:617
+#: package/contents/ui/FullRepresentation.qml:612
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "ਕੋਈ ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ ਹਨ"
 
-#: package/contents/ui/FullRepresentation.qml:632
+#: package/contents/ui/FullRepresentation.qml:627
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:629
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

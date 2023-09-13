@@ -561,6 +561,3 @@ msgstr "Kontoen din"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Andre kontoar"
-
-#~ msgid "Manage Users"
-#~ msgstr "Handsam brukarar"

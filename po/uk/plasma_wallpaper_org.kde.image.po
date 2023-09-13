@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-12 02:00+0000\n"
-"PO-Revision-Date: 2023-02-19 09:37+0200\n"
+"PO-Revision-Date: 2023-09-12 14:23+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -31,15 +31,13 @@ msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Відкриття зображення"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог із зображеннями тла, з якого слід брати картинки"
