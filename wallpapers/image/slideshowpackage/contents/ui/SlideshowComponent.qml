@@ -213,7 +213,7 @@ ColumnLayout {
 
                     actions: [
                         Kirigami.Action {
-                            icon.name: "list-remove"
+                            icon.name: "edit-delete-remove-symbolic"
                             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
                             onTriggered: imageWallpaper.removeSlidePath(modelData)
                         },
