@@ -207,23 +207,6 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
-        id: buttonsRow
-        Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-        visible: configDialog.currentWallpaper == "org.kde.image"
-        QtControls2.Button {
-            icon.name: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Image…")
-            onClicked: root.openChooserDialog();
-        }
-        NewStuff.Button {
-            Layout.alignment: Qt.AlignRight
-            configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
-            text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
-            viewMode: NewStuff.Page.ViewMode.Preview
-        }
-    }
-
     Component.onDestruction: {
         wallpaper.configuration.PreviewImage = "null";
     }

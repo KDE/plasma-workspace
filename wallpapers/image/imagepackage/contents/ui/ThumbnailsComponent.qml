@@ -7,9 +7,11 @@
 */
 
 import QtQuick
+import QtQuick.Controls as QQC2
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
+import org.kde.newstuff as NewStuff
 import org.kde.plasma.plasmoid
 
 Item {
@@ -54,6 +56,32 @@ Item {
             }
         }
 
+        // FIXME: this scrolls out of view due to the lack of a headerPositioning: property
+        // in GridView, which is an omission; see https://bugreports.qt.io/browse/QTBUG-117035.
+        // Once that's added, uncomment this line to fix it!
+        // view.headerPositioning: GridView.OverlayHeader
+        // Alternatively, make the page frameless, have the views touch the edges,
+        // and just stick the header in a ColumnLayout with the view below it.
+        view.header: Kirigami.InlineViewHeader {
+            width: {
+                const scrollBar = wallpapersGrid.QQC2.ScrollBar.vertical;
+                return wallpapersGrid.width - scrollBar.width - scrollBar.leftPadding - scrollBar.rightPadding - Kirigami.Units.smallSpacing;
+            }
+            text: i18nd("plasma_wallpaper_org.kde.image", "Images")
+            actions: [
+                Kirigami.Action {
+                    icon.name: "insert-image-symbolic"
+                    text: i18ndc("plasma_wallpaper_org.kde.image", "@action:button the thing being added is an image file", "Add…")
+                    visible: configDialog.currentWallpaper == "org.kde.image"
+                    onTriggered: root.openChooserDialog();
+                },
+                NewStuff.Action {
+                    configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
+                    text: i18ndc("plasma_wallpaper_org.kde.image", "@action:button the new things being gotten are wallpapers", "Get New…")
+                    viewMode: NewStuff.Page.ViewMode.Preview
+                }
+            ]
+        }
         //kill the space for label under thumbnails
         view.model: thumbnailsComponent.imageModel
 

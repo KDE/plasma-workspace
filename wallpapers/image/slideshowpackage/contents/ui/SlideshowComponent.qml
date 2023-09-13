@@ -10,9 +10,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
-import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
 
 ColumnLayout {
@@ -158,11 +157,6 @@ ColumnLayout {
         }
     }
 
-    Kirigami.Heading {
-        text: i18nd("plasma_wallpaper_org.kde.image", "Folders")
-        level: 2
-    }
-
     GridLayout {
         columns: 2
         Layout.fillWidth: true
@@ -178,6 +172,18 @@ ColumnLayout {
 
             ListView {
                 id: slidePathsView
+                headerPositioning: ListView.OverlayHeader
+                header: Kirigami.InlineViewHeader {
+                    width: slidePathsView.width
+                    text: i18nd("plasma_wallpaper_org.kde.image", "Folders")
+                    actions: [
+                        Kirigami.Action {
+                            icon.name: "folder-add-symbolic"
+                            text: i18ndc("plasma_wallpaper_org.kde.image", "@action button the thing being added is a folder", "Add…")
+                            onTriggered: root.openChooserDialog()
+                        }
+                    ]
+                }
                 model: imageWallpaper.slidePaths
                 delegate: Kirigami.SwipeListItem {
                     id: baseListItem
@@ -239,20 +245,6 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
             anchors.fill: undefined
-        }
-
-        QQC2.Button {
-            Layout.alignment: Qt.AlignRight
-            icon.name: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Folder…")
-            onClicked: root.openChooserDialog()
-        }
-
-        NewStuff.Button {
-            Layout.alignment: Qt.AlignRight
-            configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
-            text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
-            viewMode: NewStuff.Page.ViewMode.Preview
         }
     }
 }
