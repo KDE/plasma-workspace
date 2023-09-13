@@ -219,7 +219,7 @@ ColumnLayout {
                         },
                         Kirigami.Action {
                             icon.name: "document-open-folder"
-                            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Folder")
+                            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Folder…")
                             onTriggered: Qt.openUrlExternally(modelData)
                         }
                     ]
