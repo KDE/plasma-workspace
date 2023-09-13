@@ -63,7 +63,7 @@ msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
 msgstr ""
-"Llista les opcions de suspensió del sistema (p. ex. dormir, hibernació) i "
+"Llista les opcions de suspensió del sistema (p. ex., dormir, hibernació) i "
 "permet activar-les"
 
 #: PowerDevilRunner.cpp:57
@@ -91,7 +91,7 @@ msgid ""
 "brightness"
 msgstr ""
 "Llista les opcions de brillantor de la pantalla o les establix a la "
-"brillantor definida pel terme de busca; p. ex. brillantor de la pantalla 50 "
+"brillantor definida pel terme de busca; p. ex., brillantor de la pantalla 50 "
 "reduirà la pantalla al 50% de la brillantor màxima"
 
 #: PowerDevilRunner.cpp:95
