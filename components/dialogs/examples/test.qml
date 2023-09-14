@@ -52,10 +52,9 @@ Kirigami.AbstractApplicationWindow {
                     display: "banana3"
                 }
             }
-            delegate: Kirigami.BasicListItem {
+            delegate: ItemDelegate {
                 icon.name: "kate"
-                label: display
-                highlighted: false
+                text: display
                 checkable: true
             }
         }

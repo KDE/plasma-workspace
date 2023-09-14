@@ -7,7 +7,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.kitemmodels 1.0
 import kcmregionandlang 1.0
@@ -118,11 +118,13 @@ KCM.ScrollViewKCM {
 
     view: ListView {
         model: kcm.optionsModel
-        delegate: Kirigami.BasicListItem {
-            alternatingBackground: true
-            highlighted: false
-            hoverEnabled: false
-            down: false
+        delegate: Kirigami.SubtitleDelegate {
+            id: optionsDelegate
+
+            required property int index
+            required property var model
+
+            width: ListView.view.width
 
             text: model.name
             subtitle: {
@@ -131,16 +133,26 @@ KCM.ScrollViewKCM {
                 }
                 return model.example;
             }
-            reserveSpaceForSubtitle: true
-            trailing: Item {
-                implicitWidth: changeButton.implicitWidth
+
+            Kirigami.Theme.useAlternateBackgroundColor: true
+            hoverEnabled: false
+            down: false
+
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                Kirigami.TitleSubtitle {
+                    Layout.fillWidth: true
+                    title: optionsDelegate.text
+                    subtitle: optionsDelegate.subtitle
+                    reserveSpaceForSubtitle: true
+                }
+
                 QQC2.Button {
                     id: changeButton
-                    anchors.centerIn: parent
                     text: i18nc("@action:button for change the locale used", "Modify…")
                     icon.name: "edit-entry"
                     onClicked: {
-
                         // remove the excess pages before pushing new page
                         while (kcm.depth > 1) {
                             kcm.takeLast();
@@ -151,7 +163,7 @@ KCM.ScrollViewKCM {
                             kcm.push(languageSelectPage.item);
                         } else {
                             localeListPage.active = true;
-                            localeListPage.item.setting = model.page;
+                            localeListPage.item.setting = optionsDelegate.model.page;
                             localeListPage.item.filterText = '';
                             kcm.push(localeListPage.item);
                         }
@@ -227,14 +239,31 @@ KCM.ScrollViewKCM {
                 id: localeListView
                 clip: true
                 model: filterModel
-                delegate: Kirigami.BasicListItem {
-                    alternatingBackground: true
+                delegate: Kirigami.SubtitleDelegate {
+                    id: localeDelegate
+
+                    required property var model
+
+                    width: ListView.view.width
+
                     icon.name: model.flag
                     text: model.display
-                    subtitle: model.example ? model.example : ''
-                    trailing: QQC2.Label {
-                        color: Kirigami.Theme.disabledTextColor
-                        text: model.localeName
+                    subtitle: model.example ? model.example : ""
+
+                    Kirigami.Theme.useAlternateBackgroundColor: true
+
+                    contentItem: RowLayout {
+                        Kirigami.IconTitleSubtitle {
+                            Layout.fillWidth: true
+                            icon: icon.fromControlsIcon(localeDelegate.icon)
+                            title: localeDelegate.text
+                            subtitle: localeDelegate.subtitle
+                        }
+
+                        QQC2.Label {
+                            color: Kirigami.Theme.disabledTextColor
+                            text: model.localeName
+                        }
                     }
 
                     onClicked: {

@@ -185,50 +185,58 @@ ColumnLayout {
                     ]
                 }
                 model: imageWallpaper.slidePaths
-                delegate: Kirigami.SwipeListItem {
+                delegate: Kirigami.SubtitleDelegate {
                     id: baseListItem
+
+                    required property var modelData
+
                     width: slidePathsView.width
-                    // content item includes its own padding
-                    padding: 0
                     // Don't need a highlight or hover effects
                     hoverEnabled: false
-                    contentItem: Kirigami.BasicListItem {
-                        width: slidePathsView.width - baseListItem.overlayWidth
-                        // Don't want a background highlight effect, but we can't just
-                        // set hoverEnabled to false, since then the tooltip will
-                        // never appear!
-                        activeTextColor: Kirigami.Theme.textColor
-                        background: null
-                        separatorVisible: false
+                    down: false
 
-                        // Header: the folder
-                        label: {
-                            var strippedPath = modelData.replace(/\/+$/, "");
-                            return strippedPath.split('/').pop()
-                        }
-                        // Subtitle: the path to the folder
-                        subtitle: {
-                            var strippedPath = modelData.replace(/\/+$/, "");
-                            return strippedPath.replace(/\/[^\/]*$/, '');;
-                        }
-
-                        QQC2.ToolTip.text: modelData
-                        QQC2.ToolTip.visible: hovered && (labelItem.truncated || subtitleItem.truncated)
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    text: {
+                        var strippedPath = baseListItem.modelData.replace(/\/+$/, "");
+                        return strippedPath.split('/').pop()
+                    }
+                    // Subtitle: the path to the folder
+                    subtitle: {
+                        var strippedPath = baseListItem.modelData.replace(/\/+$/, "");
+                        return strippedPath.replace(/\/[^\/]*$/, '');;
                     }
 
-                    actions: [
-                        Kirigami.Action {
-                            icon.name: "edit-delete-remove-symbolic"
-                            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
-                            onTriggered: imageWallpaper.removeSlidePath(modelData)
-                        },
-                        Kirigami.Action {
-                            icon.name: "document-open-folder"
-                            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Folder…")
-                            onTriggered: Qt.openUrlExternally(modelData)
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+
+                        Kirigami.TitleSubtitle {
+                            Layout.fillWidth: true
+                            // Header: the folder
+                            title: baseListItem.text
+                            subtitle: baseListItem.subtitle
                         }
-                    ]
+
+                        QQC2.ToolButton {
+                            icon.name: "edit-delete-remove-symbolic"
+                            text: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
+                            display: QQC2.Button.IconOnly
+                            onClicked: imageWallpaper.removeSlidePath(baseListItem.modelData)
+
+                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.text: text
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        }
+
+                        QQC2.ToolButton {
+                            icon.name: "document-open-folder"
+                            text: i18nd("plasma_wallpaper_org.kde.image", "Open Folder…")
+                            display: QQC2.Button.IconOnly
+                            onClicked: Qt.openUrlExternally(baseListItem.modelData)
+
+                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.text: text
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        }
+                    }
                 }
 
                 Kirigami.PlaceholderMessage {

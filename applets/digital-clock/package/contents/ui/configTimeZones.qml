@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.digitalclock 1.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils as KCMUtils
 import org.kde.config // KAuthorized
@@ -58,39 +58,20 @@ KCMUtils.ScrollViewKCM {
         // the first item
         currentIndex: -1
 
-        delegate: Kirigami.BasicListItem {
+        delegate: Kirigami.RadioSubtitleDelegate {
             id: timeZoneListItem
+
             readonly property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
             readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
 
+            width: ListView.view.width
+
             font.bold: isCurrent
-            fadeContent: isIdenticalToLocal
 
             // Stripes help the eye line up the text on the left and the button on the right
-            alternatingBackground: true
+            Kirigami.Theme.useAlternateBackgroundColor: true
 
-            // The standard highlight effect looks bad here because it makes the
-            // radio button disappear, so instead we recycle the hover effect to
-            // serve as a highlight effect.
-            // TODO: remove this line once list item highlight effect looks better!
-            highlighted: false
-
-            reserveSpaceForSubtitle: true
-            // FIXME: this should have already evaluated to false because
-            // the list item doesn't have an icon
-            reserveSpaceForIcon: false
-
-            // TODO: create Kirigami.MutuallyExclusiveListItem to be the
-            // RadioButton equivalent of Kirigami.CheckableListItem,
-            // and then port to use that in Plasma 5.22
-            leading: QQC2.RadioButton {
-                id: radioButton
-                visible: configuredTimezoneList.count > 1
-                checked: timeZoneListItem.isCurrent
-                onToggled: clickAction.trigger()
-            }
-
-            label: model.city
+            text: model.city
             subtitle: {
                 if (configuredTimezoneList.count > 1) {
                     if (isCurrent) {
@@ -102,21 +83,35 @@ KCMUtils.ScrollViewKCM {
                 return "";
             }
 
-            action: Kirigami.Action {
-                id: clickAction
-                onTriggered: Plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
-            }
+            checked: isCurrent
+            onToggled: Plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
 
-            trailing: RowLayout {
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                Kirigami.TitleSubtitle {
+                    Layout.fillWidth: true
+
+                    opacity: timeZoneListItem.isIdenticalToLocal ? 0.6 : 1.0
+
+                    title: timeZoneListItem.text
+                    subtitle: timeZoneListItem.subtitle
+
+                    reserveSpaceForSubtitle: true
+                }
+
                 QQC2.Button {
                     visible: model.isLocalTimeZone && KAuthorized.authorizeControlModule("kcm_clock.desktop")
                     text: i18n("Switch Systemwide Time Zone…")
                     icon.name: "preferences-system-time"
+                    font.bold: false
                     onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
                 }
+
                 QQC2.Button {
                     visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1
                     icon.name: "edit-delete"
+                    font.bold: false
                     onClicked: model.checked = false;
                     QQC2.ToolTip {
                         text: i18n("Remove this time zone")
@@ -128,6 +123,7 @@ KCMUtils.ScrollViewKCM {
         section {
             property: "isLocalTimeZone"
             delegate: Kirigami.ListSectionHeader {
+                width: configuredTimezoneList.width
                 label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
             }
         }

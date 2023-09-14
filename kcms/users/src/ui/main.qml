@@ -10,8 +10,8 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.13 as Kirigami
-import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.plasma.kcm.users 1.0 as UsersKCM
 
 KCM.ScrollViewKCM {
@@ -84,22 +84,23 @@ KCM.ScrollViewKCM {
         section {
             property: "sectionHeader"
             delegate: Kirigami.ListSectionHeader {
+                width: userList.width
                 label: section
             }
         }
 
-        delegate: Kirigami.BasicListItem {
+        delegate: Kirigami.SubtitleDelegate {
+            id: delegate
+
+            required property var model
+            required property int index
+
             property UsersKCM.User user: model.userObject
 
-            leading: KirigamiComponents.Avatar {
-                source: model.decoration + '?' + avatarVersion // force reload after saving
-                cache: false // avoid caching
-                name: model.displayPrimaryName
-            }
+            width: ListView.view.width
 
             text: model.displayPrimaryName
             subtitle: model.displaySecondaryName
-            reserveSpaceForSubtitle: true
 
             highlighted: index === userList.currentIndex
 
@@ -107,6 +108,24 @@ KCM.ScrollViewKCM {
                 userList.currentIndex = index;
                 kcm.pop();
                 kcm.push("UserDetailsPage.qml", { user });
+            }
+
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                KirigamiComponents.Avatar {
+                    source: model.decoration + '?' + avatarVersion // force reload after saving
+                    cache: false // avoid caching
+                    name: model.displayPrimaryName
+                }
+
+                Kirigami.TitleSubtitle {
+                    Layout.fillWidth: true
+                    title: delegate.text
+                    subtitle: delegate.subtitle
+                    reserveSpaceForSubtitle: true
+                    selected: delegate.highlighted
+                }
             }
         }
     }

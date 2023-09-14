@@ -4,15 +4,15 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QtControls
-import QtQml 2.15
+import QtQml
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QtControls
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
-import org.kde.private.kcms.notifications 1.0 as Private
+import org.kde.private.kcms.notifications as Private
 
 KCM.AbstractKCM {
     id: sourcesPage
@@ -108,23 +108,33 @@ KCM.AbstractKCM {
                     appConfiguration.rootIndex = kcm.sourcesModel.makePersistentModelIndex(sourceIdx);
                 }
 
-                delegate: Kirigami.BasicListItem {
+                delegate: QtControls.ItemDelegate {
                     id: sourceDelegate
+
                     width: sourcesList.width
                     text: model.display
                     icon.name: model.decoration
                     highlighted: ListView.isCurrentItem
+
                     onClicked: {
                         sourcesList.forceActiveFocus();
                         sourcesList.currentIndex = index;
                     }
-                    Rectangle {
-                        id: defaultIndicator
+
+                    leftPadding: mirrored && indicator.visible ? horizontalPadding + implicitIndicatorWidth + spacing : horizontalPadding
+                    rightPadding: !mirrored && indicator.visible ? horizontalPadding + implicitIndicatorWidth + spacing : horizontalPadding
+
+                    indicator: Rectangle {
+                        anchors {
+                            right: parent.right
+                            rightMargin: sourceDelegate.horizontalPadding
+                            verticalCenter: parent.verticalCenter
+                        }
+
                         radius: width * 0.5
                         implicitWidth: Kirigami.Units.largeSpacing
                         implicitHeight: Kirigami.Units.largeSpacing
-                        visible: kcm.defaultsIndicatorsVisible
-                        opacity: !model.isDefault
+                        visible: kcm.defaultsIndicatorsVisible && !model.isDefault
                         color: Kirigami.Theme.neutralTextColor
                     }
                 }

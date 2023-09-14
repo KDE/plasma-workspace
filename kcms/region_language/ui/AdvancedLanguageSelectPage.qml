@@ -60,6 +60,8 @@ KCM.ScrollViewKCM {
                 id: listItem
 
                 contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
                     Kirigami.ListItemDragHandle {
                         listItem: listItem
                         listView: languageListView
@@ -121,23 +123,24 @@ KCM.ScrollViewKCM {
     Component {
         id: addLanguageItemComponent
 
-        Kirigami.BasicListItem  {
+        QQC2.ItemDelegate {
             id: languageItem
 
-            width: availableLanguagesList.width
-            reserveSpaceForIcon: false
+            required property string nativeName
+            required property string languageCode
 
-            label: model.nativeName
-            action: Kirigami.Action {
-                onTriggered: {
-                    if (replaceLangIndex >= 0) {
-                        languageListModel.selectedLanguageModel.replaceLanguage(replaceLangIndex, model.languageCode);
-                        replaceLangIndex = -1;
-                    } else {
-                        languageListModel.selectedLanguageModel.addLanguage(model.languageCode);
-                    }
-                    addLanguagesSheet.close();
+            width: availableLanguagesList.width
+
+            text: nativeName
+
+            onClicked: {
+                if (replaceLangIndex >= 0) {
+                    languageListModel.selectedLanguageModel.replaceLanguage(replaceLangIndex, languageCode);
+                    replaceLangIndex = -1;
+                } else {
+                    languageListModel.selectedLanguageModel.addLanguage(languageCode);
                 }
+                addLanguagesSheet.close();
             }
         }
     }

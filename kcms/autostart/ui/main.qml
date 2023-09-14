@@ -5,13 +5,14 @@
 */
 
 import QtCore
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Dialogs 6.3
-import QtQuick.Layouts 1.11
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Dialogs
+
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2 as Kirigami
-import org.kde.plasma.kcm.autostart 1.0
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.kcm.autostart
 
 KCM.ScrollViewKCM {
     id: root
@@ -108,7 +109,7 @@ KCM.ScrollViewKCM {
                 color: (!noUnit && baseListItem.hovered) ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
                 opacity: (!baseListItem.down && baseListItem.hovered) ? 0.3 : 1
             }
-            activeTextColor: noUnit ? Kirigami.Theme.textColor : Kirigami.Theme.highlightedTextColor
+
             width: listView.width
             // content item includes its own padding
             padding: 0
@@ -134,37 +135,18 @@ KCM.ScrollViewKCM {
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
 
-                Kirigami.BasicListItem {
-                    width: listView.width - baseListItem.overlayWidth
+                Kirigami.IconTitleSubtitle {
+                    Layout.fillWidth: true
                     icon.name: model.iconName
-                    // prevent icon flickering now that we've disabled background color changes
-                    Binding on iconSelected {
-                        when: noUnit
-                        value: false
-                    }
 
                     reserveSpaceForSubtitle: true
-                    background: null
-                    activeTextColor: noUnit ? Kirigami.Theme.textColor : Kirigami.Theme.highlightedTextColor
-                    separatorVisible: false
-                    label: model.name
-                    hoverEnabled: false
+
+                    title: model.name
                     subtitle: model.source === AutostartModel.PlasmaShutdown || model.source === AutostartModel.XdgScripts ? model.targetFileDirPath : ""
-                    onClicked: {
-                        baseListItem.clicked();
-                        baseListItem.down = undefined;
-                    }
-                    // Hack to pass the click event to SwipeListItem
-                    onPressedChanged: {
-                        if (pressed) {
-                            baseListItem.down = true;
-                        } else {
-                            baseListItem.down = undefined;
-                        }
-                    }
                 }
 
                 Label {
+                    Layout.rightMargin: Kirigami.Units.smallSpacing
                     text: {
                         if (noUnit || !model.systemdUnit) {
                             return "";
@@ -176,7 +158,6 @@ KCM.ScrollViewKCM {
                     }
                     color: model.systemdUnit.activeState === i18nc("@label Entry has failed (exited with an error)", "Failed") ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.disabledTextColor
                 }
-
             }
 
             actions: [
