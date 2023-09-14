@@ -6,6 +6,9 @@
 
 # pylint: disable=too-many-arguments
 
+# For FreeBSD CI which only has python 3.9
+from __future__ import annotations
+
 import json
 import signal
 import sys
@@ -165,6 +168,9 @@ class Mpris2:
         self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call,
                                                         self.interface_handle_get_property, self.interface_handle_set_property)
         assert self.__base_reg_id != 0
+
+        print("MPRIS registered", file=sys.stdout)
+        sys.stdout.flush()
 
     def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
                                       parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:

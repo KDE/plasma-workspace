@@ -45,3 +45,4 @@ install(TARGETS kmpris ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(declarative)
 add_subdirectory(kded)
+add_subdirectory(autotests)
