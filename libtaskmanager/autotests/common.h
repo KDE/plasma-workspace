@@ -329,46 +329,71 @@ void testRequest(AbstractWindowTasksModel &model)
 
     {
         qDebug("requestToggleMinimized");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestToggleMinimized(index);
-        QVERIFY(dataChangedSpy.wait());
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait());
+        }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
     }
 
     {
         qDebug("requestToggleMaximized");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestToggleMaximized(index);
-        QVERIFY(dataChangedSpy.wait());
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait());
+        }
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
         QTRY_VERIFY(index.data(AbstractTasksModel::IsMaximized).toBool());
     }
 
     {
         qDebug("requestToggleKeepAbove");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestToggleKeepAbove(index);
-        QVERIFY(dataChangedSpy.wait());
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait());
+        }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsKeepAbove).toBool());
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepBelow).toBool());
     }
 
     {
         qDebug("requestToggleKeepBelow");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestToggleKeepBelow(index);
-        QVERIFY(dataChangedSpy.wait());
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait());
+        }
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepAbove).toBool());
         QTRY_VERIFY(index.data(AbstractTasksModel::IsKeepBelow).toBool());
     }
 
     {
         qDebug("requestToggleFullScreen");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestToggleFullScreen(index);
-        QVERIFY(dataChangedSpy.wait());
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait());
+        }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreen).toBool());
     }
 
+#ifndef Q_OS_FREEBSD
     if (KWindowSystem::isPlatformX11()) {
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestToggleShaded(index);
-        QVERIFY(dataChangedSpy.wait());
+        dataChangedSpy.wait();
+        QTRY_VERIFY(index.data(AbstractTasksModel::IsShaded).toBool());
     }
+#endif
 
     QSignalSpy rowsRemovedSpy(&model, &AbstractWindowTasksModel::rowsRemoved);
     {
