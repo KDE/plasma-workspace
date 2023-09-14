@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2020-10-04 17:18+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -43,20 +43,20 @@ msgstr "Log ind"
 msgid "Caps Lock is on"
 msgstr "Lås skift er aktiveret"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Slumre"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
 #: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Genstart"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
@@ -75,18 +75,18 @@ msgstr "Anden..."
 msgid "Type in Username and Password"
 msgstr "Indtast brugernavn og adgangskode"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
 msgstr "Vis brugere"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuelt tastatur"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "Indlogning mislykkedes"

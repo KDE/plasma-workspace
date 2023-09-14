@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -43,20 +43,20 @@ msgstr "Afmellen"
 msgid "Caps Lock is on"
 msgstr "Grootschriev-Rast is an"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
 #: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
 #: contents/logout/Logout.qml:193
 #, fuzzy, kde-format
 #| msgid "Shut down"
@@ -74,20 +74,20 @@ msgstr ""
 msgid "Type in Username and Password"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:485
 #, fuzzy, kde-format
 #| msgctxt "Button to change keyboard layout"
 #| msgid "Switch layout"
 msgid "List Users"
 msgstr "Tasttoornen wesseln"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "Anmellen is fehlslaan"

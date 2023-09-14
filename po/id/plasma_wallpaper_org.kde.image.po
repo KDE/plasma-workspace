@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-06-14 15:18+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -262,8 +262,9 @@ msgid "Remove Folder"
 msgstr "Hapus Folder"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
+#, fuzzy, kde-format
+#| msgid "Open Folder"
+msgid "Open Folder…"
 msgstr "Buka Folder"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232

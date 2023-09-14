@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-11-18 01:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -45,20 +45,20 @@ msgstr "Prisijungti"
 msgid "Caps Lock is on"
 msgstr "Įjungtos didžiosios raidės"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Pristabdyti"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
 #: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Paleisti iš naujo"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
@@ -75,18 +75,18 @@ msgstr "Kitas…"
 msgid "Type in Username and Password"
 msgstr "Įrašykite naudotojo vardą ir slaptažodį"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
 msgstr "Išvardyti naudotojus"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuali klaviatūra"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "Prisijungti nepavyko"

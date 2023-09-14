@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2020-01-15 13:09+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -252,8 +252,9 @@ msgid "Remove Folder"
 msgstr "Eemalda kataloog"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
+#, fuzzy, kde-format
+#| msgid "Open Folder"
+msgid "Open Folder…"
 msgstr "Ava kataloog"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232

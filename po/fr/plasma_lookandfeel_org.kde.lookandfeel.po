@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-10-10 07:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -49,20 +49,20 @@ msgstr "Connexion"
 msgid "Caps Lock is on"
 msgstr "Verrouillage des majuscules activé"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Veille"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
 #: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Redémarrer"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
@@ -79,18 +79,18 @@ msgstr "Autre…"
 msgid "Type in Username and Password"
 msgstr "Saisissez votre nom d'utilisateur et votre mot de passe"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
 msgstr "Lister les utilisateurs"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Clavier virtuel"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "Échec de la connexion"

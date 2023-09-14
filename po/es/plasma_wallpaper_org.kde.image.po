@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2023-09-12 05:16+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -263,8 +263,9 @@ msgid "Remove Folder"
 msgstr "Eliminar carpeta"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
+#, fuzzy, kde-format
+#| msgid "Open Folder"
+msgid "Open Folder…"
 msgstr "Abrir carpeta"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232

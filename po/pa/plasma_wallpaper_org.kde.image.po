@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2021-06-08 22:51-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -249,8 +249,9 @@ msgid "Remove Folder"
 msgstr "ਫੋਲਡਰ ਹਟਾਓ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
+#, fuzzy, kde-format
+#| msgid "Open Folder"
+msgid "Open Folder…"
 msgstr "ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232

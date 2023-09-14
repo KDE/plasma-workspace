@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2009-06-27 00:55+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -253,9 +253,10 @@ msgid "Remove Folder"
 msgstr "Map wi&skje"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Open Folder…"
+msgstr "Map wi&skje"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format

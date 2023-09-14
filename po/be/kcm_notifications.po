@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -51,14 +51,14 @@ msgstr "Паказваць у гісторыі"
 msgid "Show notification badges"
 msgstr "Паказваць значкі апавяшчэнняў"
 
-#: ui/ApplicationConfiguration.qml:178
+#: ui/ApplicationConfiguration.qml:162
 #, fuzzy, kde-format
 #| msgid "Configure Events…"
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Наладжванне падзей…"
 
-#: ui/ApplicationConfiguration.qml:204
+#: ui/ApplicationConfiguration.qml:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not support configuring notifications on a per-"
@@ -69,12 +69,12 @@ msgid ""
 msgstr ""
 "Гэтая праграма не падтрымлівае наладжванне апавяшчэнняў для кожнай падзеі."
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:257
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:300
+#: ui/ApplicationConfiguration.qml:266
 #, kde-format
 msgid "Play a sound"
 msgstr ""

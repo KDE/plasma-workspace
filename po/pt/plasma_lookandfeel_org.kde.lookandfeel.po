@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-10-11 17:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -38,20 +38,20 @@ msgstr "Ligar"
 msgid "Caps Lock is on"
 msgstr "O Caps Lock está ligado"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Suspender"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
 #: contents/logout/Logout.qml:183
 #, kde-format
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "Shut Down"
@@ -68,18 +68,18 @@ msgstr "Outro…"
 msgid "Type in Username and Password"
 msgstr "Escreva o Utilizador e Senha"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
 msgstr "Listar os Utilizadores"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Teclado Virtual"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:598
 #, kde-format
 msgid "Login Failed"
 msgstr "Autenticação sem Sucesso"

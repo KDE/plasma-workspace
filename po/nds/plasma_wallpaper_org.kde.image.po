@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2014-08-11 12:41+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -263,9 +263,10 @@ msgid "Remove Folder"
 msgstr "Achtergrundbild wegmaken"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Add Folder"
+msgid "Open Folder…"
+msgstr "Orner tofögen"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format

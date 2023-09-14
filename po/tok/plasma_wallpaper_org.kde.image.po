@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -257,9 +257,10 @@ msgid "Remove Folder"
 msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Open Containing Folder"
+msgid "Open Folder…"
+msgstr "o open e poki pi jo lipu ni"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -261,9 +261,10 @@ msgid "Remove Folder"
 msgstr "הסר תמונת רקע"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Add Folder"
+msgid "Open Folder…"
+msgstr "הוסף תיקיה"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format

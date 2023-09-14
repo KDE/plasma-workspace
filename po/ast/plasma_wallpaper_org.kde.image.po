@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2023-05-06 22:00+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -248,7 +248,7 @@ msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, kde-format
-msgid "Open Folder"
+msgid "Open Folder…"
 msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232

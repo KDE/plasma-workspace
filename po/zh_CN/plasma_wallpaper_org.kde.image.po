@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-12 02:00+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2023-09-02 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -249,8 +249,9 @@ msgid "Remove Folder"
 msgstr "移除文件夹"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, kde-format
-msgid "Open Folder"
+#, fuzzy, kde-format
+#| msgid "Open Folder"
+msgid "Open Folder…"
 msgstr "打开文件夹"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:232
