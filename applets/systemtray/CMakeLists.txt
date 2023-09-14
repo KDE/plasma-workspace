@@ -40,6 +40,7 @@ target_link_libraries(systemtraymodel_static
     Qt::Gui
     Qt${QT_VERSION_MAJOR}::GuiPrivate
     Qt::Quick
+    Qt::QuickPrivate
     Qt::DBus
     KF6::XmlGui
     KF6::I18n

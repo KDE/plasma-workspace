@@ -23,6 +23,8 @@
 #include <QQuickWindow>
 #include <QScreen>
 #include <QTimer>
+#include <QtQuick/private/qquickevents_p_p.h>
+#include <QtQuick/private/qquickmousearea_p.h>
 #include <qpa/qplatformscreen.h>
 
 #include <Plasma/Applet>
@@ -296,27 +298,14 @@ bool SystemTray::isSystemTrayApplet(const QString &appletId)
     return false;
 }
 
-void SystemTray::emitPressed(QQuickItem *mouseArea, QObject *mouseEvent)
+void SystemTray::emitPressed(QQuickMouseArea *mouseArea, QQuickMouseEvent *mouseEvent)
 {
     if (!mouseArea || !mouseEvent) {
-        return;
-    }
-
-    // QQuickMouseEvent is also private, so we cannot use QMetaObject::invokeMethod with Q_ARG
-    const QMetaObject *mo = mouseArea->metaObject();
-
-    const int pressedIdx = mo->indexOfSignal("pressed(QQuickMouseEvent*)");
-    if (pressedIdx < 0) {
-        qCWarning(SYSTEM_TRAY) << "Failed to find onPressed signal on" << mouseArea;
-        return;
-    }
-
-    QMetaMethod pressedMethod = mo->method(pressedIdx);
-
-    if (!pressedMethod.invoke(mouseArea, Q_ARG(QObject *, mouseEvent))) {
         qCWarning(SYSTEM_TRAY) << "Failed to invoke onPressed signal on" << mouseArea << "with" << mouseEvent;
         return;
     }
+
+    Q_EMIT mouseArea->pressed(mouseEvent);
 }
 
 SystemTrayModel *SystemTray::systemTrayModel()

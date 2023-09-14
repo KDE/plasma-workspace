@@ -16,6 +16,8 @@
 class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
 class QQuickItem;
+class QQuickMouseArea;
+class QQuickMouseEvent;
 
 namespace Plasma
 {
@@ -77,7 +79,7 @@ public:
      * This is needed because calling mouseArea.pressed from QML
      * only sees the "pressed" property, not the signal
      */
-    Q_INVOKABLE void emitPressed(QQuickItem *mouseArea, QObject /*QQuickMouseEvent*/ *mouseEvent);
+    Q_INVOKABLE void emitPressed(QQuickMouseArea *mouseArea, QQuickMouseEvent *mouseEvent);
 
     /**
      * Needed to preserve keyboard navigation
