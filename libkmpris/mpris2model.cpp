@@ -25,11 +25,6 @@ Mpris2Model::Mpris2Model(QObject *parent)
     connect(this, &QConcatenateTablesProxyModel::rowsAboutToBeRemoved, this, &Mpris2Model::onRowsAboutToBeRemoved);
     connect(this, &QConcatenateTablesProxyModel::rowsRemoved, this, &Mpris2Model::onRowsRemoved);
     connect(this, &QConcatenateTablesProxyModel::rowsInserted, this, &Mpris2Model::onRowsInserted);
-
-    if (rowCount() > 0) {
-        m_currentPlayer = index(m_currentIndex, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
-        Q_EMIT currentPlayerChanged();
-    }
 }
 
 Mpris2Model::~Mpris2Model()
