@@ -187,7 +187,7 @@ Item {
                     anchors.centerIn: parent
                     width: parent.width // For text wrap
                     iconName: albumArt.icon
-                    text: (root.isPlaying || root.state === "paused") ? i18n("No title") : i18n("No media playing")
+                    text: root.playbackStatus > Mpris.PlaybackStatus.Stopped ? i18n("No title") : i18n("No media playing")
                 }
             }
         }
