@@ -119,15 +119,7 @@ MouseArea {
         active: inTray || root.track.length === 0
         sourceComponent: Kirigami.Icon {
             active: compactRepresentation.containsMouse
-            source: {
-                if (root.isPlaying) {
-                    return "media-playback-playing";
-                } else if (root.state === "paused") {
-                    return "media-playback-paused";
-                } else {
-                    return "media-playback-stopped";
-                }
-            }
+            source: Plasmoid.icon
         }
     }
 
