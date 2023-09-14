@@ -389,14 +389,19 @@ void testRequest(AbstractWindowTasksModel &model)
     {
         qDebug("requestClose");
         model.requestClose(index);
-        QVERIFY(rowsRemovedSpy.wait());
+        if (rowsRemovedSpy.empty()) {
+            QVERIFY(rowsRemovedSpy.wait());
+        }
     }
 
     {
         qDebug("Close the new instance");
         findWindowIndex(index, QStringLiteral("__test_window_no_title__"));
+        rowsRemovedSpy.clear();
         model.requestClose(index);
-        QVERIFY(rowsRemovedSpy.wait());
+        if (rowsRemovedSpy.empty()) {
+            QVERIFY(rowsRemovedSpy.wait());
+        }
     }
 }
 }
