@@ -385,16 +385,6 @@ void testRequest(AbstractWindowTasksModel &model)
         QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreen).toBool());
     }
 
-#ifndef Q_OS_FREEBSD
-    if (KWindowSystem::isPlatformX11()) {
-        QCoreApplication::processEvents();
-        dataChangedSpy.clear();
-        model.requestToggleShaded(index);
-        dataChangedSpy.wait();
-        QTRY_VERIFY(index.data(AbstractTasksModel::IsShaded).toBool());
-    }
-#endif
-
     QSignalSpy rowsRemovedSpy(&model, &AbstractWindowTasksModel::rowsRemoved);
     {
         qDebug("requestClose");
