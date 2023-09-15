@@ -84,6 +84,7 @@ RuntimeDependencies:
 - 'on': ['Linux', 'FreeBSD']
   'require':
     'plasma/milou' : '@same'
+    'plasma/kglobalacceld': '@same'
 
 Options:
   require-passing-tests-on: [ '@all' ]

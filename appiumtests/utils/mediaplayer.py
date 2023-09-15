@@ -128,6 +128,10 @@ class Mpris2:
         self.player_properties: dict[str, GLib.Variant] = player_properties
         self.current_index: int = current_index
 
+        self.registered_event = threading.Event()
+        self.playback_status_set_event = threading.Event()
+        self.metadata_updated_event = threading.Event()
+
         self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SESSION, self.APP_INTERFACE, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired, None, None)
         assert self.__owner_id > 0
 
@@ -171,6 +175,7 @@ class Mpris2:
 
         print("MPRIS registered", file=sys.stdout)
         sys.stdout.flush()
+        self.registered_event.set()
 
     def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
                                       parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
@@ -240,6 +245,7 @@ class Mpris2:
         })
         Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
                                        GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        self.playback_status_set_event.set()
 
     def stop(self, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -326,6 +332,7 @@ class Mpris2:
                 })
             Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
                                            GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            self.metadata_updated_event.set()
 
         elif method_name == "Pause":
             self.set_playing(False, connection, object_path)
