@@ -312,21 +312,13 @@ void testRequest(AbstractWindowTasksModel &model)
     findWindowIndex(index, sampleWindowProcess.arguments().at(0));
     QVERIFY(index.isValid());
 
-    QSignalSpy dataChangedSpy(&model, &AbstractWindowTasksModel::dataChanged);
-
-    {
-        qDebug("requestActivate");
-        model.requestActivate(index);
-        QVERIFY(dataChangedSpy.wait());
-        QVERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
-    }
-
     {
         qDebug("requestNewInstance");
         model.requestNewInstance(index);
         QVERIFY(rowsInsertedSpy.wait());
     }
 
+    QSignalSpy dataChangedSpy(&model, &AbstractWindowTasksModel::dataChanged);
     {
         qDebug("requestToggleMinimized");
         QCoreApplication::processEvents();
@@ -336,6 +328,13 @@ void testRequest(AbstractWindowTasksModel &model)
             QVERIFY(dataChangedSpy.wait());
         }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
+    }
+
+    {
+        qDebug("requestActivate");
+        model.requestActivate(index);
+        QVERIFY(dataChangedSpy.wait());
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
     }
 
     {
