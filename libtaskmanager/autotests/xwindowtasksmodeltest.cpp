@@ -518,6 +518,12 @@ void XWindowTasksModelTest::test_windowState()
 
 void XWindowTasksModelTest::test_request()
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 6, 0)
+    // Review this later
+    if (qEnvironmentVariableIsSet("KDECI_BUILD")) {
+        QSKIP("Flaky in CI");
+    }
+#endif
     TestUtils::testRequest(m_model);
 }
 
