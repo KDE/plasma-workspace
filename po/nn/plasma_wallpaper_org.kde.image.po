@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-02-22 21:31+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -95,17 +95,6 @@ msgstr "Einsfarga"
 msgid "Select Background Color"
 msgstr "Vel bakgrunnsfarge"
 
-#: imagepackage/contents/ui/config.qml:216
-#, kde-format
-msgid "Add Image…"
-msgstr "Legg til bilete …"
-
-#: imagepackage/contents/ui/config.qml:222
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
-#, kde-format
-msgid "Get New Wallpapers…"
-msgstr "Hent nye bakgrunnsbilete …"
-
 #: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
@@ -115,6 +104,25 @@ msgstr "Opna bakgrunnsbilete"
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Neste bakgrunnsbilete"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Images"
+msgstr "Biletfiler"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#, kde-format
+msgctxt "@action:button the thing being added is an image file"
+msgid "Add…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:button the new things being gotten are wallpapers"
+msgid "Get New…"
+msgstr "Hent nye bakgrunnsbilete …"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -189,92 +197,93 @@ msgstr ""
 msgid "Image Files"
 msgstr "Biletfiler"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
 #, kde-format
 msgid "Order:"
 msgstr "Rekkjefølgje:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
 #, kde-format
 msgid "Random"
 msgstr "Tilfeldig"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
 msgid "A to Z"
 msgstr "A til Å"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Z to A"
 msgstr "Å til A"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Dato endra (nyaste først)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Dato endra (eldste første)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
 #, kde-format
 msgid "Group by folders"
 msgstr "Grupper etter mapper"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
 #, kde-format
 msgid "Change every:"
 msgstr "Byt bilete kvar:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 time"
 msgstr[1] "%1 timar"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minutt"
 msgstr[1] "%1 minutt"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 sekund"
 msgstr[1] "%1 sekund"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
 #, kde-format
 msgid "Folders"
 msgstr "Mapper"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#, kde-format
+msgctxt "@action button the thing being added is a folder"
+msgid "Add…"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
 msgid "Remove Folder"
 msgstr "Fjern mappe"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Opna mappe"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Ingen mapper for bakgrunnsbiletmapper er definerte"
-
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
-#, kde-format
-msgid "Add Folder…"
-msgstr "Legg til mappe …"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
@@ -310,3 +319,9 @@ msgstr "Det oppstod ein feil ved val av bakgrunnsbilete for Plasma:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Det oppstod ein feil ved opning av oppsettfila «kscreenlockerrc»."
+
+#~ msgid "Add Image…"
+#~ msgstr "Legg til bilete …"
+
+#~ msgid "Add Folder…"
+#~ msgstr "Legg til mappe …"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -198,27 +198,27 @@ msgstr "ലേ-ഔട്ട് മാറ്റുക"
 msgid "Unlock"
 msgstr "പൂട്ടുതുറക്കുക"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:112
+#: contents/lockscreen/MediaControls.qml:61
 #, kde-format
 msgid "No media playing"
 msgstr "മീഡിയ പ്ലേ ചെയ്യുന്നില്ല"
 
-#: contents/lockscreen/MediaControls.qml:141
+#: contents/lockscreen/MediaControls.qml:89
 #, kde-format
 msgid "Previous track"
 msgstr "മുമ്പത്തെ ട്രാക്ക്"
 
-#: contents/lockscreen/MediaControls.qml:153
+#: contents/lockscreen/MediaControls.qml:101
 #, kde-format
 msgid "Play or Pause media"
 msgstr "മീഡിയ പ്ലേ ചെയ്യുക അല്ലെങ്കിൽ താൽക്കാലികമായി നിർത്തുക"
 
-#: contents/lockscreen/MediaControls.qml:167
+#: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "Next track"
 msgstr "അടുത്ത ട്രാക്ക്"

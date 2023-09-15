@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2010-01-29 16:27+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -101,18 +101,6 @@ msgstr ""
 msgid "Select Background Color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:216
-#, kde-format
-msgid "Add Image…"
-msgstr ""
-
-#: imagepackage/contents/ui/config.qml:222
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
-msgid "Get New Wallpapers…"
-msgstr "नवीन वालपेपर पाउ..."
-
 #: imagepackage/contents/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
@@ -124,6 +112,25 @@ msgstr "वालपेपर छवि फाइल चुनू"
 #| msgid "Select Wallpaper Image File"
 msgid "Next Wallpaper Image"
 msgstr "वालपेपर छवि फाइल चुनू"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#, fuzzy, kde-format
+#| msgid "Select Wallpaper Image File"
+msgid "Images"
+msgstr "वालपेपर छवि फाइल चुनू"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#, kde-format
+msgctxt "@action:button the thing being added is an image file"
+msgid "Add…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgctxt "@action:button the new things being gotten are wallpapers"
+msgid "Get New…"
+msgstr "नवीन वालपेपर पाउ..."
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -192,96 +199,96 @@ msgstr ""
 msgid "Image Files"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
 #, kde-format
 msgid "Order:"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
 #, kde-format
 msgid "Random"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
 msgid "A to Z"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Z to A"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
 #, kde-format
 msgid "Group by folders"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
 #, fuzzy, kde-format
 #| msgid "C&hange images every:"
 msgid "Change every:"
 msgstr "छवि बदलू सबहि (&h):"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
 #, fuzzy, kde-format
 #| msgid "&Remove Folder"
 msgid "Folders"
 msgstr "फोल्डर मेटाबू (&R)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#, kde-format
+msgctxt "@action button the thing being added is a folder"
+msgid "Add…"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, fuzzy, kde-format
 #| msgid "&Remove Folder"
 msgid "Remove Folder"
 msgstr "फोल्डर मेटाबू (&R)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, fuzzy, kde-format
 #| msgid "&Remove Folder"
 msgid "Open Folder…"
 msgstr "फोल्डर मेटाबू (&R)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""
-
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
-#, fuzzy, kde-format
-#| msgid "&Add Folder..."
-msgid "Add Folder…"
-msgstr "फोल्डर जोड़ू... (&A)"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, fuzzy, kde-format
@@ -318,6 +325,11 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Add Folder..."
+#~ msgid "Add Folder…"
+#~ msgstr "फोल्डर जोड़ू... (&A)"
 
 #, fuzzy
 #~| msgid "Get New Wallpapers..."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-02-19 18:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -100,17 +100,6 @@ msgstr "Сплошной цвет"
 msgid "Select Background Color"
 msgstr "Выбор цвета фона"
 
-#: imagepackage/contents/ui/config.qml:216
-#, kde-format
-msgid "Add Image…"
-msgstr "Добавить изображение..."
-
-#: imagepackage/contents/ui/config.qml:222
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
-#, kde-format
-msgid "Get New Wallpapers…"
-msgstr "Загрузить новые обои..."
-
 #: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
@@ -120,6 +109,25 @@ msgstr "Открыть изображение обоев"
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Следующее изображение"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Images"
+msgstr "Файлы изображений"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#, kde-format
+msgctxt "@action:button the thing being added is an image file"
+msgid "Add…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:button the new things being gotten are wallpapers"
+msgid "Get New…"
+msgstr "Загрузить новые обои..."
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -197,47 +205,47 @@ msgstr ""
 msgid "Image Files"
 msgstr "Файлы изображений"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
 #, kde-format
 msgid "Order:"
 msgstr "Порядок:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
 #, kde-format
 msgid "Random"
 msgstr "Случайный"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
 msgid "A to Z"
 msgstr "По алфавиту"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Z to A"
 msgstr "По алфавиту (обратный)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "По дате (сначала новые)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "По дате (сначала старые)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
 #, kde-format
 msgid "Group by folders"
 msgstr "Группировать по папкам"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
 #, kde-format
 msgid "Change every:"
 msgstr "Сменять изображение каждые:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -246,7 +254,7 @@ msgstr[1] "%1 часа"
 msgstr[2] "%1 часов"
 msgstr[3] "%1 час"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -255,7 +263,7 @@ msgstr[1] "%1 минуты"
 msgstr[2] "%1 минут"
 msgstr[3] "%1 минута"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -264,31 +272,32 @@ msgstr[1] "%1 секунды"
 msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунда"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
 #, kde-format
 msgid "Folders"
 msgstr "Папки"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#, kde-format
+msgctxt "@action button the thing being added is a folder"
+msgid "Add…"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
 msgid "Remove Folder"
 msgstr "Удалить папку"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Открыть папку"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Расположения для поиска обоев не настроены"
-
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
-#, kde-format
-msgid "Add Folder…"
-msgstr "Добавить папку..."
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
@@ -326,6 +335,12 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Не удалось открыть файл конфигурации kscreenlockerrc."
+
+#~ msgid "Add Image…"
+#~ msgstr "Добавить изображение..."
+
+#~ msgid "Add Folder…"
+#~ msgstr "Добавить папку..."
 
 #~ msgid "Recommended wallpaper file"
 #~ msgstr "Рекомендованные обои"

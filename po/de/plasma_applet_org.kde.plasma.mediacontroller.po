@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-02-01 23:34+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,91 +16,70 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:190
+#: package/contents/ui/AlbumArtStackView.qml:191
 #, kde-format
 msgid "No title"
 msgstr "Kein Titel"
 
-#: package/contents/ui/AlbumArtStackView.qml:190
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/AlbumArtStackView.qml:191
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid "No media playing"
 msgstr "Es werden keine Medien wiedergegeben"
 
-#: package/contents/ui/ExpandedRepresentation.qml:406
-#: package/contents/ui/ExpandedRepresentation.qml:527
+#: package/contents/ui/ExpandedRepresentation.qml:367
+#: package/contents/ui/ExpandedRepresentation.qml:488
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:556
-#, kde-format
+#: package/contents/ui/ExpandedRepresentation.qml:516
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Zufällig"
 
-#: package/contents/ui/ExpandedRepresentation.qml:582
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/ExpandedRepresentation.qml:540
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Vorheriges Stück"
 
-#: package/contents/ui/ExpandedRepresentation.qml:604
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pause"
 
-#: package/contents/ui/ExpandedRepresentation.qml:604
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Wiedergabe"
 
-#: package/contents/ui/ExpandedRepresentation.qml:622
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/ExpandedRepresentation.qml:580
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Nächstes Stück"
 
-#: package/contents/ui/ExpandedRepresentation.qml:645
+#: package/contents/ui/ExpandedRepresentation.qml:603
 #, kde-format
 msgid "Repeat Track"
 msgstr "Stück wiederholen"
 
-#: package/contents/ui/ExpandedRepresentation.qml:645
+#: package/contents/ui/ExpandedRepresentation.qml:603
 #, kde-format
 msgid "Repeat"
 msgstr "Wiederholen"
 
-#: package/contents/ui/main.qml:90
-#, kde-format
-msgctxt "Open player window or bring it to the front if already open"
-msgid "Open"
-msgstr "Öffnen"
-
-#: package/contents/ui/main.qml:129
-#, kde-format
-msgctxt "Stop playback"
-msgid "Stop"
-msgstr "Anhalten"
-
-#: package/contents/ui/main.qml:142
-#, kde-format
-msgctxt "Quit player"
-msgid "Quit"
-msgstr "Beenden"
-
-#: package/contents/ui/main.qml:250
-#, kde-format
-msgid "Choose player automatically"
-msgstr "Medienspieler automatisch auswählen"
-
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -112,7 +91,7 @@ msgstr ""
 "Mittelklick zum Anhalten\n"
 "Mausrad zum Anpassen der Lautstärke"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -124,7 +103,7 @@ msgstr ""
 "Mittelklick zum Anhalten\n"
 "Mausrad zum Anpassen der Lautstärke"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -136,7 +115,7 @@ msgstr ""
 "Mittelklick zur Wiedergabe\n"
 "Mausrad zum Anpassen der Lautstärke"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -147,6 +126,27 @@ msgstr ""
 "Angehalten (%1)\n"
 "Mittelklick zur Wiedergabe\n"
 "Mausrad zum Anpassen der Lautstärke"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "Öffnen"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Anhalten"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "Beenden"
+
+#~ msgid "Choose player automatically"
+#~ msgstr "Medienspieler automatisch auswählen"
 
 #~ msgid "General"
 #~ msgstr "Allgemein"

@@ -1,11 +1,11 @@
 # Translation of kfontinst.po to Catalan
-# Copyright (C) 2004-2022 This_file_is_part_of_KDE
+# Copyright (C) 2004-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2004, 2005, 2006.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2019, 2020, 2021, 2022.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2022-09-07 18:28+0200\n"
+"PO-Revision-Date: 2023-09-14 16:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -41,8 +41,8 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
-"Voleu instal·lar el/s tipus de lletra per a ús personal (només vós els "
-"podreu usar), o per a tot el sistema (disponible/s per a tots els usuaris)?"
+"Voleu instal·lar les fonts per a ús personal (només vós els podreu usar), o "
+"per a tot el sistema (disponibles per a tots els usuaris)?"
 
 #: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:929
 #, kde-format
@@ -52,12 +52,12 @@ msgstr "On s'ha d'instal·lar"
 #: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
-msgstr "Instal·lador de tipus de lletra"
+msgstr "Instal·lador de fonts"
 
 #: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
-msgstr "Instal·lador senzill de tipus de lletra"
+msgstr "Instal·lador senzill de fonts"
 
 #: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
@@ -88,17 +88,17 @@ msgstr "S'està cancel·lant…"
 #: apps/Printer.cpp:325
 #, kde-format
 msgid "Font Printer"
-msgstr "Impressora de tipus de lletra"
+msgstr "Impressora de fonts"
 
 #: apps/Printer.cpp:327
 #, kde-format
 msgid "Simple font printer"
-msgstr "Impressora senzilla de tipus de lletra"
+msgstr "Impressora senzilla de fonts"
 
 #: apps/Printer.cpp:337
 #, kde-format
 msgid "Size index to print fonts"
-msgstr "Índex de mida per a imprimir els tipus de lletra"
+msgstr "Índex de mida per a imprimir les fonts"
 
 #: apps/Printer.cpp:341
 #, kde-format
@@ -106,34 +106,33 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
-"Tipus de lletra per a imprimir, especificada com «Família,estil», on estil "
-"és un nombre decimal de 24 bits que es compon com: <weight><width><slant>"
+"Font a imprimir, especificada com «Família,estil», on estil és un nombre "
+"decimal de 24 bits que es compon com: <weight><width><slant>"
 
 #: apps/Printer.cpp:344
 #, kde-format
 msgid "File containing list of fonts to print"
-msgstr "Fitxer que conté la llista de tipus de lletra per a imprimir"
+msgstr "Fitxer que conté la llista de fonts a imprimir"
 
 #: apps/Printer.cpp:346
 #, kde-format
 msgid "Remove file containing list of fonts to print"
-msgstr ""
-"Suprimeix el fitxer que conté la llista de tipus de lletra per a imprimir"
+msgstr "Suprimeix el fitxer que conté la llista de fonts a imprimir"
 
 #: apps/Viewer.cpp:46
 #, kde-format
 msgid "Open an existing font file"
-msgstr "Obre un fitxer existent de tipus de lletra"
+msgstr "Obre un fitxer existent de font"
 
 #: apps/Viewer.cpp:47
 #, kde-format
 msgid "Print font preview"
-msgstr "Imprimeix la vista prèvia del tipus de lletra"
+msgstr "Imprimeix la vista prèvia de la font"
 
 #: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
-msgstr "Trieu el tipus de lletra per a visualitzar"
+msgstr "Trieu la font a visualitzar"
 
 #: apps/Viewer.cpp:107
 #, kde-format
@@ -143,12 +142,12 @@ msgstr "URL a obrir"
 #: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
-msgstr "Visualitzador del tipus de lletra"
+msgstr "Visualitzador de fonts"
 
 #: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
-msgstr "Visualitzador simple de tipus de lletra"
+msgstr "Visualitzador simple de font"
 
 #: apps/Viewer.cpp:153
 #, kde-format
@@ -158,17 +157,17 @@ msgstr "(C) Craig Drummond, 2004-2007"
 #: kcmfontinst/DuplicatesDialog.cpp:47
 #, kde-format
 msgid "Duplicate Fonts"
-msgstr "Tipus de lletra duplicats"
+msgstr "Fonts duplicades"
 
 #: kcmfontinst/DuplicatesDialog.cpp:77
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "S'estan cercant els tipus de lletra duplicats. Si us plau, espereu…"
+msgstr "S'estan cercant les fonts duplicades. Si us plau, espereu…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:96
 #, kde-format
 msgid "No duplicate fonts found."
-msgstr "No s'ha trobat cap tipus de lletra duplicat."
+msgstr "No s'ha trobat cap font duplicada."
 
 #: kcmfontinst/DuplicatesDialog.cpp:104
 #, kde-format
@@ -179,8 +178,8 @@ msgstr "Suprimeix els fitxers marcats"
 #, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
-msgstr[0] "S'ha trobat %1 tipus de lletra duplicat."
-msgstr[1] "S'han trobat %1 tipus de lletra duplicats."
+msgstr[0] "S'ha trobat %1 font duplicada."
+msgstr[1] "S'han trobat %1 fonts duplicades."
 
 #: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
@@ -199,12 +198,12 @@ msgstr "Esteu segur que voleu suprimir:"
 #: kcmfontinst/DuplicatesDialog.cpp:221
 #, kde-format
 msgid "Cancel font scan?"
-msgstr "Cancel·lo la cerca del tipus de lletra?"
+msgstr "Cancel·lo la cerca de la font?"
 
 #: kcmfontinst/DuplicatesDialog.cpp:382
 #, kde-format
 msgid "Font/File"
-msgstr "Tipus de lletra/Fitxer"
+msgstr "Font/Fitxer"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -224,7 +223,7 @@ msgstr "Enllaços a"
 #: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Open in Font Viewer"
-msgstr "Obre al visualitzador del tipus de lletra"
+msgstr "Obre al visualitzador de la font"
 
 #: kcmfontinst/DuplicatesDialog.cpp:401
 #, kde-format
@@ -245,9 +244,8 @@ msgstr "Marca per a suprimir"
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Obro el tipus de lletra en el visualitzador del tipus de lletra?"
-msgstr[1] ""
-"Obro tots els %1 tipus de lletra en el visualitzador del tipus de lletra?"
+msgstr[0] "Obro la lletra en el visualitzador de fonts?"
+msgstr[1] "Obro totes les %1 lletres en el visualitzador de fonts?"
 
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
@@ -307,7 +305,7 @@ msgstr "Filtra per %1…"
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Font"
-msgstr "Tipus de lletra"
+msgstr "Font"
 
 #: kcmfontinst/FontList.cpp:556
 #, kde-format
@@ -320,8 +318,8 @@ msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
 msgstr ""
-"Aquesta columna mostra l'estat de la família del tipus de lletra, i dels "
-"estils individuals dels tipus de lletra."
+"Aquesta columna mostra l'estat de la família de la font, i dels estils "
+"individuals de les fonts de lletra."
 
 #: kcmfontinst/FontList.cpp:677
 #, kde-format
@@ -331,11 +329,10 @@ msgid ""
 "the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
-"<p>Aquesta llista mostra els tipus de lletra instal·lats. Els tipus de "
-"lletra s'agrupen per família, i el nombre dins els claudàtors representa el "
-"nombre d'estils que té disponibles la família. P. ex.</p><ul><li>Times "
-"[4]<ul><li>Normal</li><li>Negreta</li> <li>Negreta cursiva</li><li>Cursiva</"
-"li></ul></li></ul>"
+"<p>Aquesta llista mostra les instal·lades. Les fonts s'agrupen per família, "
+"i el nombre dins els claudàtors representa el nombre d'estils que té "
+"disponibles la família. P. ex.</p><ul><li>Times [4]<ul><li>Normal</"
+"li><li>Negreta</li> <li>Negreta cursiva</li><li>Cursiva</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
 #, kde-format
@@ -377,23 +374,22 @@ msgstr "Actualitza"
 #: kcmfontinst/FontList.cpp:1718
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
-msgstr ""
-"Obro tots els %1 tipus de lletra en el visualitzador del tipus de lletra?"
+msgstr "Obro totes les %1 fonts en el visualitzador de fonts?"
 
 #: kcmfontinst/GroupList.cpp:59
 #, kde-format
 msgid "All Fonts"
-msgstr "Tots els tipus de lletra"
+msgstr "Totes les fonts"
 
 #: kcmfontinst/GroupList.cpp:62
 #, kde-format
 msgid "Personal Fonts"
-msgstr "Tipus de lletra personals"
+msgstr "Fonts personals"
 
 #: kcmfontinst/GroupList.cpp:65
 #, kde-format
 msgid "System Fonts"
-msgstr "Tipus de lletra del sistema"
+msgstr "Fonts del sistema"
 
 #: kcmfontinst/GroupList.cpp:68
 #, kde-format
@@ -412,7 +408,7 @@ msgid ""
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
 "<p>De veres voleu suprimir «<b>%1</b>»?</p><p><i>Això només suprimirà el "
-"grup, i no els tipus de lletra reals.</i></p>"
+"grup, i no les fonts reals.</i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
 #, kde-format
@@ -440,14 +436,13 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>Grups de tipus de lletra</h3><p>Aquesta llista mostra els grups de tipus "
-"de lletra disponibles en el sistema. Hi ha 2 tipus principals de grups de "
-"tipus de lletra:<ul> <li><b>Estàndard</b> són grups especials usats pel "
-"gestor de tipus de lletra. <ul>%1</ul></li><li><b>A mida</b> són grups "
-"creats per vós. Per a afegir una família de tipus de lletra a un d'aquests "
-"grups, simplement arrossegueu-lo des de la llista de tipus de lletra, i "
-"deixeu-lo anar sobre el grup desitjat. Per a eliminar una família d'un grup, "
-"arrossegueu el tipus de lletra sobre el grup «Tots els tipus de lletra».</"
+"<h3>Grups de fonts</h3><p>Aquesta llista mostra els grups de fonts "
+"disponibles en el sistema. Hi ha 2 tipus principals de grups de fonts:<ul> "
+"<li><b>Estàndard</b> són grups especials usats pel gestor de fonts. <ul>%1</"
+"ul></li><li><b>Personalitzats</b> són grups creats per vós. Per a afegir una "
+"família de fonts a un d'aquests grups, simplement arrossegueu-lo des de la "
+"llista de fonts, i deixeu-lo anar sobre el grup desitjat. Per a eliminar una "
+"família d'un grup, arrossegueu la font sobre el grup «Totes les fonts».</"
 "li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:594
@@ -457,9 +452,9 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
-"<li><i>Tots els tipus de lletra</i> conté tots els tipus de lletra "
-"instal·lats en el sistema.</li><li><i>Sense classificar</i> conté tots els "
-"tipus de lletra que encara no s'han emplaçat en un grup «A mida».</li>"
+"<li><i>Totes les fonts</i> conté totes les fonts instal·lades en el sistema."
+"</li><li><i>Sense classificar</i> conté totes les fonts que encara no s'han "
+"emplaçat en un grup «Personalitzat».</li>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -471,13 +466,12 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
-"<li><i>Tots els tipus de lletra</i> conté tots els tipus de lletra "
-"instal·lats en el sistema - tant a «Sistema» com a «Personal».</"
-"li><li><i>Sistema</i> conté tots els tipus de lletra que estan instal·lats a "
-"tot el sistema (disponible per a tots els usuaris).</li><li><i>Personal</i> "
-"conté els tipus de lletra personals.</li> <li><i>Sense classificar</i> conté "
-"tots els tipus de lletra que encara no s'han emplaçat en un grup «A mida».</"
-"li>"
+"<li><i>Totes les fonts</i> conté totes les fonts instal·lades en el sistema, "
+"tant a «Sistema» com a «Personal».</li><li><i>Sistema</i> conté totes les "
+"fonts que estan instal·lades a tot el sistema (disponible per a tots els "
+"usuaris).</li><li><i>Personal</i> conté les fonts personals.</li> "
+"<li><i>Sense classificar</i> conté totes les fonts que encara no s'han "
+"emplaçat en un grup «Personalitzat».</li>"
 
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
@@ -581,7 +575,7 @@ msgstr "S'està desactivant"
 #: kcmfontinst/JobRunner.cpp:376
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "S'està actualitzant la configuració del tipus de lletra. Espereu…"
+msgstr "S'està actualitzant la configuració de la font. Espereu…"
 
 #: kcmfontinst/JobRunner.cpp:448
 #, kde-format
@@ -613,8 +607,7 @@ msgstr "El dorsal del sistema ha mort. Torneu-ho a provar.<br><i>%1</i>"
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"<i>%1</i> és un tipus de lletra de bitmap, i aquests s'han desactivat en el "
-"sistema."
+"<i>%1</i> és una font de bitmap, i aquestes s'han desactivat en el sistema."
 
 #: kcmfontinst/JobRunner.cpp:700
 #, kde-format
@@ -622,13 +615,12 @@ msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
-"<i>%1</i> conté el tipus de lletra <b>%2</b>, el qual ja està instal·lat en "
-"el sistema."
+"<i>%1</i> conté la font <b>%2</b>, la qual ja està instal·lada en el sistema."
 
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "<i>%1</i> is not a font."
-msgstr "<i>%1</i> no és cap tipus de lletra."
+msgstr "<i>%1</i> no és cap font."
 
 #: kcmfontinst/JobRunner.cpp:704
 #, kde-format
@@ -683,17 +675,17 @@ msgstr "Elimina un grup…"
 #: kcmfontinst/KCmFontInst.cpp:196
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Activa els tipus de lletra en un grup…"
+msgstr "Activa les fonts en un grup…"
 
 #: kcmfontinst/KCmFontInst.cpp:198
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Desactiva els tipus de lletra en un grup…"
+msgstr "Desactiva les fonts en un grup…"
 
 #: kcmfontinst/KCmFontInst.cpp:223
 #, kde-format
 msgid "This displays a preview of the selected font."
-msgstr "Això mostra una vista prèvia del tipus de lletra seleccionat."
+msgstr "Això mostra una vista prèvia de la font seleccionada."
 
 #: kcmfontinst/KCmFontInst.cpp:239
 #, kde-format
@@ -703,7 +695,7 @@ msgstr "Cerca els duplicats…"
 #: kcmfontinst/KCmFontInst.cpp:239
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Cerca tipus de lletra duplicats…"
+msgstr "Cerca fonts duplicades…"
 
 #: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
@@ -713,22 +705,22 @@ msgstr "Instal·la des d'un fitxer…"
 #: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr "Instal·la els tipus de lletra des d'un fitxer local"
+msgstr "Instal·la les fonts a partir d'un fitxer local"
 
 #: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Get New Fonts…"
-msgstr "Obtén tipus de lletra nous…"
+msgstr "Obtén fonts noves…"
 
 #: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Download new fonts"
-msgstr "Baixa els tipus de lletra nous"
+msgstr "Baixa fonts noves"
 
 #: kcmfontinst/KCmFontInst.cpp:245
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Suprimeix els tipus de lletra seleccionats…"
+msgstr "Suprimeix les fonts seleccionades…"
 
 #: kcmfontinst/KCmFontInst.cpp:303
 #, kde-format
@@ -738,17 +730,17 @@ msgstr "Canvia la vista prèvia del text…"
 #: kcmfontinst/KCmFontInst.cpp:405
 #, kde-format
 msgid "Add Fonts"
-msgstr "Afegeix un tipus de lletra"
+msgstr "Afegeix una font"
 
 #: kcmfontinst/KCmFontInst.cpp:531
 #, kde-format
 msgid "Failed to save list of fonts to print."
-msgstr "Ha fallat en desar la llista de tipus de lletra per a imprimir."
+msgstr "Ha fallat en desar la llista de fonts a imprimir."
 
 #: kcmfontinst/KCmFontInst.cpp:553
 #, kde-format
 msgid "Failed to start font printer."
-msgstr "Ha fallat en iniciar la impressora de tipus de lletra."
+msgstr "Ha fallat en iniciar la impressora de fonts."
 
 #: kcmfontinst/KCmFontInst.cpp:560
 #, kde-format
@@ -756,9 +748,8 @@ msgid ""
 "There are no printable fonts.\n"
 "You can only print non-bitmap and enabled fonts."
 msgstr ""
-"No hi ha cap tipus de lletra imprimible.\n"
-"Només podeu imprimir tipus de lletra que no siguin de mapa de bits i tipus "
-"de lletra activats."
+"No hi ha cap font imprimible.\n"
+"Només podeu imprimir fonts activades que no siguin de mapa de bits."
 
 #: kcmfontinst/KCmFontInst.cpp:562
 #, kde-format
@@ -783,24 +774,24 @@ msgstr "<p>De veres voleu suprimir</p><p>«<b>%1</b>»?</p>"
 #: kcmfontinst/KCmFontInst.cpp:595
 #, kde-format
 msgid "Delete Font"
-msgstr "Suprimeix el tipus de lletra"
+msgstr "Suprimeix la font"
 
 #: kcmfontinst/KCmFontInst.cpp:602
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "De veres voleu suprimir aquest tipus de lletra?"
-msgstr[1] "De veres voleu suprimir aquests %1 tipus de lletra?"
+msgstr[0] "De veres voleu suprimir aquesta font?"
+msgstr[1] "De veres voleu suprimir aquestes %1 fonts?"
 
 #: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "Delete Fonts"
-msgstr "Suprimeix els tipus de lletra"
+msgstr "Suprimeix les fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:609
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr "S'estan suprimint el/s tipus de lletra…"
+msgstr "S'estan suprimint la/es fonts…"
 
 #: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
@@ -824,7 +815,7 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:639
 #, kde-format
 msgid "Move Font"
-msgstr "Mou un tipus de lletra"
+msgstr "Mou una font"
 
 #: kcmfontinst/KCmFontInst.cpp:640 kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
@@ -838,21 +829,20 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] ""
-"<p>Esteu segur que voleu moure aquest tipus de lletra des de <i>%2</i> a <i>"
-"%3</i>?</p>"
+"<p>Esteu segur que voleu moure aquesta font des de <i>%2</i> a <i>%3</i>?</p>"
 msgstr[1] ""
-"<p>Esteu segur que voleu moure aquests %1 tipus de lletra des de <i>%2</i> a "
-"<i>%3</i>?</p>"
+"<p>Esteu segur que voleu moure aquestes %1 fonts des de <i>%2</i> a <i>%3</"
+"i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "Move Fonts"
-msgstr "Mou els tipus de lletra"
+msgstr "Mou les fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:656
 #, kde-format
 msgid "Moving font(s)…"
-msgstr "S'està/an movent el/s tipus de lletra…"
+msgstr "S'està/an movent la/es font/s…"
 
 #: kcmfontinst/KCmFontInst.cpp:670
 #, kde-format
@@ -897,19 +887,19 @@ msgstr "Introduïu el text nou:"
 #: kcmfontinst/KCmFontInst.cpp:799
 #, kde-format
 msgid "Scanning font list…"
-msgstr "S'està cercant la llista de tipus de lletra…"
+msgstr "S'està cercant la llista de fonts…"
 
 #: kcmfontinst/KCmFontInst.cpp:858
 #, kde-format
 msgid "No fonts"
-msgstr "Sense tipus de lletra"
+msgstr "Sense fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:863
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
-msgstr[0] "1 tipus de lletra"
-msgstr[1] "%1 tipus de lletra"
+msgstr[0] "1 font"
+msgstr[1] "%1 fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
@@ -919,10 +909,10 @@ msgid ""
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">Activats:</td><td>%1</td></tr><tr><td align="
-"\"right\">Desactivats:</td><td>%2</td></tr><tr><td align=\"right"
-"\">Parcialment activats:</td><td>%3</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Activades:</td><td>%1</td></tr><tr><td align="
+"\"right\">Desactivades:</td><td>%2</td></tr><tr><td align=\"right"
+"\">Parcialment activades:</td><td>%3</td></tr><tr><td align=\"right\">Total:"
+"</td><td>%4</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:882
 #, kde-format
@@ -931,8 +921,8 @@ msgid ""
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">Activats:</td><td>%1</td></tr><tr><td align="
-"\"right\">Desactivats:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"<table><tr><td align=\"right\">Activades:</td><td>%1</td></tr><tr><td align="
+"\"right\">Desactivades:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:959
@@ -958,7 +948,7 @@ msgstr "S'estan cercant els fitxers associats amb %1"
 #: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
 msgid "Installing font(s)…"
-msgstr "S'està/an instal·lant el/s tipus de lletra…"
+msgstr "S'està/an instal·lant la/es font/s…"
 
 #: kcmfontinst/KCmFontInst.cpp:1072
 #, kde-format
@@ -1011,26 +1001,26 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1103
 #, kde-format
 msgid "Enable Font"
-msgstr "Activa un tipus de lletra"
+msgstr "Activa una font"
 
 #: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1104
 #, kde-format
 msgid "Disable Font"
-msgstr "Desactiva un tipus de lletra"
+msgstr "Desactiva una font"
 
 #: kcmfontinst/KCmFontInst.cpp:1109
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "De veres voleu activar aquest tipus de lletra?"
-msgstr[1] "De veres voleu activar aquests %1 tipus de lletra?"
+msgstr[0] "De veres voleu activar aquesta font?"
+msgstr[1] "De veres voleu activar aquestes %1 fonts?"
 
 #: kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "De veres voleu desactivar aquest tipus de lletra?"
-msgstr[1] "De veres voleu desactivar aquests %1 tipus de lletra?"
+msgstr[0] "De veres voleu desactivar aquesta font?"
+msgstr[1] "De veres voleu desactivar aquestes %1 fonts?"
 
 #: kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
@@ -1041,11 +1031,10 @@ msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>De veres voleu activar aquest tipus de lletra contingut en el grup «<b>"
-"%2</b>»?</p>"
+"<p>De veres voleu activar aquesta font continguda en el grup «<b>%2</b>»?</p>"
 msgstr[1] ""
-"<p>De veres voleu activar aquests %1 tipus de lletra contingut en el grup "
-"«<b>%2</b>»?</p>"
+"<p>De veres voleu activar aquestes %1 fonts contingudes en el grup «<b>%2</"
+"b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
@@ -1056,41 +1045,41 @@ msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>De veres voleu desactivar aquest tipus de lletra contingut en el grup «<b>"
-"%2</b>»?</p>"
+"<p>De veres voleu desactivar aquesta font continguda en el grup «<b>%2</b>»?"
+"</p>"
 msgstr[1] ""
-"<p>De veres voleu desactivar aquests %1 tipus de lletra continguts en el "
-"grup «<b>%2</b>»?</p>"
+"<p>De veres voleu desactivar aquestes %1 fonts contingudes en el grup «<b>"
+"%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Enable Fonts"
-msgstr "Activa els tipus de lletra"
+msgstr "Activa les fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Disable Fonts"
-msgstr "Desactiva els tipus de lletra"
+msgstr "Desactiva les fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:1134
 #, kde-format
 msgid "Enabling font(s)…"
-msgstr "S'està/an activant el/s tipus de lletra…"
+msgstr "S'està/an activant la/es font/s…"
 
 #: kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disabling font(s)…"
-msgstr "S'està/an desactivant el/s tipus de lletra…"
+msgstr "S'està/an desactivant la/es font…"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
 msgid "Print Font Samples"
-msgstr "Imprimeix exemples dels tipus de lletra"
+msgstr "Imprimeix exemples de la font"
 
 #: kcmfontinst/PrintDialog.cpp:37
 #, kde-format
 msgid "Select size to print font:"
-msgstr "Seleccioneu la mida per a imprimir el tipus de lletra:"
+msgstr "Seleccioneu la mida per a imprimir la font:"
 
 #: kcmfontinst/PrintDialog.cpp:41
 #, kde-format
@@ -1125,7 +1114,7 @@ msgstr "48pt"
 #: kio/KioFonts.cpp:208
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr "Només es poden instal·lar tipus de lletra a «%1» o a «%2»."
+msgstr "Només es poden instal·lar fonts a «%1» o a «%2»."
 
 #: kio/KioFonts.cpp:211
 #, kde-format
@@ -1133,28 +1122,28 @@ msgid ""
 "You cannot install a fonts package directly.\n"
 "Please extract %1, and install the components individually."
 msgstr ""
-"No podeu instal·lar directament un paquet de tipus de lletra.\n"
+"No podeu instal·lar directament un paquet de fonts.\n"
 "Si us plau, extraieu %1, i instal·leu els components individualment."
 
 #: kio/KioFonts.cpp:433
 #, kde-format
 msgid "Cannot copy fonts"
-msgstr "No es poden copiar els tipus de lletra"
+msgstr "No es poden copiar les fonts"
 
 #: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
-msgstr "No es poden moure els tipus de lletra"
+msgstr "No es poden moure les fonts"
 
 #: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Only fonts may be deleted."
-msgstr "Només es poden suprimir tipus de lletra."
+msgstr "Només es poden suprimir les fonts."
 
 #: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
-msgstr "Només es poden eliminar els tipus de lletra de «%1» o de «%2»."
+msgstr "Només es poden eliminar les fonts de «%1» o de «%2»."
 
 #: kio/KioFonts.cpp:480
 #, kde-format
@@ -1169,7 +1158,7 @@ msgstr "No s'accepten mètodes especials."
 #: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
-msgstr "Tipus de lletra"
+msgstr "Fonts"
 
 #: kio/KioFonts.cpp:702
 #, kde-format
@@ -1184,21 +1173,18 @@ msgstr "El dorsal ha mort"
 #: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
-msgstr ""
-"%1 és un tipus de lletra de bitmap, i aquests s'han desactivat en el sistema."
+msgstr "%1 és una font de bitmap, i aquestes s'han desactivat en el sistema."
 
 #: kio/KioFonts.cpp:708
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
-msgstr ""
-"%1 conté el tipus de lletra <b>%2</b>, el qual ja està instal·lat en el "
-"sistema."
+msgstr "%1 conté la font <b>%2</b>, la qual ja està instal·lada en el sistema."
 
 #: kio/KioFonts.cpp:710
 #, kde-format
 msgid "%1 is not a font."
-msgstr "%1 no és cap tipus de lletra."
+msgstr "%1 no és cap font."
 
 #: kio/KioFonts.cpp:712
 #, kde-format
@@ -1255,7 +1241,7 @@ msgstr "0123456789·.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 #: lib/FcEngine.cpp:1469
 #, kde-format
 msgid "ERROR: Could not determine font's name."
-msgstr "ERROR: No s'ha pogut determinar el nom del tipus de lletra."
+msgstr "ERROR: No s'ha pogut determinar el nom de la font."
 
 #: lib/FcEngine.cpp:1472
 #, kde-format
@@ -1282,19 +1268,19 @@ msgstr "Administrador"
 
 #: lib/KfiConstants.h:74
 msgid "Thin"
-msgstr "Prim"
+msgstr "Prima"
 
 #: lib/KfiConstants.h:75
 msgid "Extra Light"
-msgstr "Extra fi"
+msgstr "Extra fina"
 
 #: lib/KfiConstants.h:76
 msgid "Ultra Light"
-msgstr "Ultra fi"
+msgstr "Ultra fina"
 
 #: lib/KfiConstants.h:77
 msgid "Light"
-msgstr "Fi"
+msgstr "Fina"
 
 #: lib/KfiConstants.h:78
 msgid "Regular"
@@ -1306,7 +1292,7 @@ msgstr "Normal"
 
 #: lib/KfiConstants.h:80
 msgid "Medium"
-msgstr "Mitjà"
+msgstr "Mitjana"
 
 #: lib/KfiConstants.h:81
 msgid "Demi Bold"
@@ -1330,15 +1316,15 @@ msgstr "Ultra negreta"
 
 #: lib/KfiConstants.h:86
 msgid "Black"
-msgstr "Gruixut"
+msgstr "Gruixuda"
 
 #: lib/KfiConstants.h:87
 msgid "Heavy"
-msgstr "Dens"
+msgstr "Densa"
 
 #: lib/KfiConstants.h:89
 msgid "Roman"
-msgstr "Romà"
+msgstr "Romana"
 
 #: lib/KfiConstants.h:90
 msgid "Italic"
@@ -1585,7 +1571,7 @@ msgstr "Canvia el text…"
 #: viewpart/FontViewPart.cpp:335
 #, kde-format
 msgid "Could not read font."
-msgstr "No s'ha pogut llegir el tipus de lletra."
+msgstr "No s'ha pogut llegir la font."
 
 #: viewpart/FontViewPart.cpp:387
 #, kde-format

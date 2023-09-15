@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2023-09-12 20:09+0100\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"PO-Revision-Date: 2023-09-14 07:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -91,17 +91,6 @@ msgstr "Solida koloro"
 msgid "Select Background Color"
 msgstr "Elekti Fonan Koloron"
 
-#: imagepackage/contents/ui/config.qml:216
-#, kde-format
-msgid "Add Image…"
-msgstr "Aldoni Bildon…"
-
-#: imagepackage/contents/ui/config.qml:222
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
-#, kde-format
-msgid "Get New Wallpapers…"
-msgstr "Ricevi Novajn Ekranfonbildojn…"
-
 #: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
@@ -111,6 +100,25 @@ msgstr "Malfermi Ekranfonan Bildon"
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Sekva Ekranfona Bildo"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Images"
+msgstr "Bilddosieroj"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#, kde-format
+msgctxt "@action:button the thing being added is an image file"
+msgid "Add…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:button the new things being gotten are wallpapers"
+msgid "Get New…"
+msgstr "Ricevi Novajn Ekranfonbildojn…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -185,92 +193,92 @@ msgstr ""
 msgid "Image Files"
 msgstr "Bilddosieroj"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
 #, kde-format
 msgid "Order:"
 msgstr "Sinsekvo:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
 #, kde-format
 msgid "Random"
 msgstr "Hazarde"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
 msgid "A to Z"
 msgstr "A ĝis Z"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Z to A"
 msgstr "Z ĝis A"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Dato modifita (plej nova unue)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Dato modifita (plej malnova unue)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
 #, kde-format
 msgid "Group by folders"
 msgstr "Grupigi laŭ dosierujoj"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
 #, kde-format
 msgid "Change every:"
 msgstr "Ŝanĝi ĉiujn:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 horon"
 msgstr[1] "%1 horojn"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuton"
 msgstr[1] "%1 minutojn"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 sekundon"
 msgstr[1] "%1 sekundojn"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
 #, kde-format
 msgid "Folders"
 msgstr "Dosierujoj"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#, kde-format
+msgctxt "@action button the thing being added is a folder"
+msgid "Add…"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
 msgid "Remove Folder"
 msgstr "Forigi Dosierujon"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
+#, kde-format
 msgid "Open Folder…"
-msgstr "Malfermi Dosierujon"
+msgstr "Malfermi Dosierujon…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Ne estas agordita iu ekranfonbildejo"
-
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
-#, kde-format
-msgid "Add Folder…"
-msgstr "Aldoni Dosierujon…"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
@@ -306,3 +314,9 @@ msgstr "Eraro okazis dum provo meti la Plasma-ekranfonbildon:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Eraro okazis dum provo malfermi kscreenlockerrc-agorddosieron."
+
+#~ msgid "Add Image…"
+#~ msgstr "Aldoni Bildon…"
+
+#~ msgid "Add Folder…"
+#~ msgstr "Aldoni Dosierujon…"

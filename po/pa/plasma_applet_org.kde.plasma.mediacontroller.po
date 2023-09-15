@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2021-05-03 20:28-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,91 +17,70 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:190
+#: package/contents/ui/AlbumArtStackView.qml:191
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: package/contents/ui/AlbumArtStackView.qml:190
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/AlbumArtStackView.qml:191
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid "No media playing"
 msgstr "ਕੋਈ ਗਾਣਾ ਨਹੀਂ ਚੱਲਦਾ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:406
-#: package/contents/ui/ExpandedRepresentation.qml:527
+#: package/contents/ui/ExpandedRepresentation.qml:367
+#: package/contents/ui/ExpandedRepresentation.qml:488
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:556
-#, kde-format
+#: package/contents/ui/ExpandedRepresentation.qml:516
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "ਰਲਵੇਂ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:582
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/ExpandedRepresentation.qml:540
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "ਪਿਛਲਾ ਟਰੈਕ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:604
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "ਵਿਰਾਮ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:604
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "ਚਲਾਓ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:622
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/ExpandedRepresentation.qml:580
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "ਅਗਲਾ ਟਰੈਕ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:645
+#: package/contents/ui/ExpandedRepresentation.qml:603
 #, kde-format
 msgid "Repeat Track"
 msgstr "ਟਰੈਕ ਨੂੰ ਦੁਹਰਾਓ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:645
+#: package/contents/ui/ExpandedRepresentation.qml:603
 #, kde-format
 msgid "Repeat"
 msgstr "ਦੁਹਰਾਓ"
 
-#: package/contents/ui/main.qml:90
-#, kde-format
-msgctxt "Open player window or bring it to the front if already open"
-msgid "Open"
-msgstr "ਖੋਲ੍ਹੋ"
-
-#: package/contents/ui/main.qml:129
-#, kde-format
-msgctxt "Stop playback"
-msgid "Stop"
-msgstr "ਰੋਕੋ"
-
-#: package/contents/ui/main.qml:142
-#, kde-format
-msgctxt "Quit player"
-msgid "Quit"
-msgstr "ਬਾਹਰ"
-
-#: package/contents/ui/main.qml:250
-#, kde-format
-msgid "Choose player automatically"
-msgstr ""
-
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -112,7 +91,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -121,7 +100,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:60
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -132,7 +111,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:61
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -142,6 +121,24 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "ਰੋਕੋ"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "ਬਾਹਰ"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

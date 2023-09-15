@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2022-10-09 15:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -198,27 +198,27 @@ msgstr "Indeling omschakelen"
 msgid "Unlock"
 msgstr "Ontgrendelen"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No title"
 msgstr "Geen titel"
 
-#: contents/lockscreen/MediaControls.qml:112
+#: contents/lockscreen/MediaControls.qml:61
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"
 
-#: contents/lockscreen/MediaControls.qml:141
+#: contents/lockscreen/MediaControls.qml:89
 #, kde-format
 msgid "Previous track"
 msgstr "Vorige track"
 
-#: contents/lockscreen/MediaControls.qml:153
+#: contents/lockscreen/MediaControls.qml:101
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Afspelen of pauzeren van medium"
 
-#: contents/lockscreen/MediaControls.qml:167
+#: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "Next track"
 msgstr "Volgende track"

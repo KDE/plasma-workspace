@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-29 01:56+0000\n"
-"PO-Revision-Date: 2023-07-07 07:30+0200\n"
+"PO-Revision-Date: 2023-09-14 18:07+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -232,8 +232,8 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
-"El text serà amb el tipus de lletra del sistema i s'expandirà per a omplir "
-"l'espai disponible."
+"El text serà amb la lletra del sistema i s'expandirà per a omplir l'espai "
+"disponible."
 
 #: package/contents/ui/configAppearance.qml:239
 #, kde-format
@@ -257,7 +257,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr "Trieu el tipus de lletra"
+msgstr "Trieu una lletra"
 
 #: package/contents/ui/configCalendar.qml:40
 #, kde-format
