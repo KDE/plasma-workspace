@@ -18,7 +18,6 @@
 #include <X11/extensions/Xrender.h>
 #include <math.h>
 #include <private/qtx11extras_p.h>
-#include <xcb/xcb_image.h>
 // #define KFI_FC_DEBUG
 
 #define KFI_PREVIEW_GROUP "KFontInst Preview Settings"
@@ -29,6 +28,19 @@ namespace KFI
 bool CFcEngine::theirFcDirty(true);
 const int CFcEngine::constScalableSizes[] = {8, 10, 12, 24, 36, 48, 64, 72, 96, 0};
 const int CFcEngine::constDefaultAlphaSize = 24;
+
+static Display *xDisplay()
+{
+    static Display *s_display = nullptr;
+    if (!s_display) {
+        if (QX11Info::isPlatformX11()) {
+            s_display = QX11Info::display();
+        } else {
+            s_display = XOpenDisplay(NULL); // TODO close it again
+        }
+    }
+    return s_display;
+}
 
 static int fcToQtWeight(int weight)
 {
@@ -115,7 +127,7 @@ inline bool equalSlant(int a, int b)
 static void closeFont(XftFont *&font)
 {
     if (font) {
-        XftFontClose(QX11Info::display(), font);
+        XftFontClose(xDisplay(), font);
     }
     font = nullptr;
 }
@@ -151,7 +163,7 @@ public:
                 if (w && h) {
                     allocatedW = requiredW;
                     allocatedH = requiredH;
-                    x11 = XCreatePixmap(QX11Info::display(), RootWindow(QX11Info::display(), 0), allocatedW, allocatedH, DefaultDepth(QX11Info::display(), 0));
+                    x11 = XCreatePixmap(xDisplay(), RootWindow(xDisplay(), 0), allocatedW, allocatedH, DefaultDepth(xDisplay(), 0));
                     return true;
                 }
             }
@@ -162,7 +174,7 @@ public:
         void free()
         {
             if (allocatedW && allocatedH) {
-                XFreePixmap(QX11Info::display(), x11);
+                XFreePixmap(xDisplay(), x11);
                 allocatedW = allocatedH = 0;
             }
         }
@@ -210,8 +222,7 @@ CFcEngine::Xft::~Xft()
 
 bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 {
-    // FIXME: no Xft on Wayland
-    if (!QX11Info::isPlatformX11()) {
+    if (!xDisplay()) {
         return false;
     }
 
@@ -223,23 +234,23 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 
     if (0x0000 == m_txtColor.color.alpha) {
         XRenderColor xrenderCol;
-        Visual *visual = DefaultVisual(QX11Info::display(), 0);
-        Colormap colorMap = DefaultColormap(QX11Info::display(), 0);
+        Visual *visual = DefaultVisual(xDisplay(), 0);
+        Colormap colorMap = DefaultColormap(xDisplay(), 0);
 
         xrenderCol.red = bnd.red() << 8;
         xrenderCol.green = bnd.green() << 8;
         xrenderCol.blue = bnd.green() << 8;
         xrenderCol.alpha = 0xFFFF;
-        XftColorAllocValue(QX11Info::display(), visual, colorMap, &xrenderCol, &m_bgndColor);
+        XftColorAllocValue(xDisplay(), visual, colorMap, &xrenderCol, &m_bgndColor);
         xrenderCol.red = txt.red() << 8;
         xrenderCol.green = txt.green() << 8;
         xrenderCol.blue = txt.green() << 8;
         xrenderCol.alpha = 0xFFFF;
-        XftColorAllocValue(QX11Info::display(), visual, colorMap, &xrenderCol, &m_txtColor);
+        XftColorAllocValue(xDisplay(), visual, colorMap, &xrenderCol, &m_txtColor);
     }
 
     XVisualInfo defaultVinfo;
-    defaultVinfo.depth = DefaultDepth(QX11Info::display(), 0);
+    defaultVinfo.depth = DefaultDepth(xDisplay(), 0);
     // normal/failsafe
     imageFormat = QImage::Format_RGB32; // 24bit
     switch (defaultVinfo.depth) {
@@ -261,10 +272,10 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
     if (defaultVinfo.depth == 30 || defaultVinfo.depth == 32) {
         // detect correct format
         int num_vinfo = 0;
-        defaultVinfo.visual = DefaultVisual(QX11Info::display(), 0);
+        defaultVinfo.visual = DefaultVisual(xDisplay(), 0);
         defaultVinfo.screen = 0;
         defaultVinfo.visualid = XVisualIDFromVisual(defaultVinfo.visual);
-        XVisualInfo *vinfo = XGetVisualInfo(QX11Info::display(), VisualIDMask | VisualScreenMask | VisualDepthMask, &defaultVinfo, &num_vinfo);
+        XVisualInfo *vinfo = XGetVisualInfo(xDisplay(), VisualIDMask | VisualScreenMask | VisualDepthMask, &defaultVinfo, &num_vinfo);
         for (int i = 0; i < num_vinfo; ++i) {
             if (vinfo[i].visual == defaultVinfo.visual) {
                 if (defaultVinfo.depth == 30) {
@@ -293,7 +304,7 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
     }
 
     if (!m_draw) {
-        m_draw = XftDrawCreate(QX11Info::display(), m_pix.x11, DefaultVisual(QX11Info::display(), 0), DefaultColormap(QX11Info::display(), 0));
+        m_draw = XftDrawCreate(xDisplay(), m_pix.x11, DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0));
     }
 
     if (m_draw) {
@@ -306,21 +317,21 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 void CFcEngine::Xft::freeColors()
 {
     // FIXME: no Xft on Wayland
-    if (!QX11Info::isPlatformX11()) {
+    if (!xDisplay()) {
         return;
     }
 
-    XftColorFree(QX11Info::display(), DefaultVisual(QX11Info::display(), 0), DefaultColormap(QX11Info::display(), 0), &m_txtColor);
-    XftColorFree(QX11Info::display(), DefaultVisual(QX11Info::display(), 0), DefaultColormap(QX11Info::display(), 0), &m_bgndColor);
+    XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_txtColor);
+    XftColorFree(xDisplay(), DefaultVisual(xDisplay(), 0), DefaultColormap(xDisplay(), 0), &m_bgndColor);
     m_txtColor.color.alpha = 0x0000;
 }
 
 bool CFcEngine::Xft::drawChar32Centre(XftFont *xftFont, quint32 ch, int w, int h) const
 {
-    if (XftCharExists(QX11Info::display(), xftFont, ch)) {
+    if (XftCharExists(xDisplay(), xftFont, ch)) {
         XGlyphInfo extents;
 
-        XftTextExtents32(QX11Info::display(), xftFont, &ch, 1, &extents);
+        XftTextExtents32(xDisplay(), xftFont, &ch, 1, &extents);
 
         int rx(((w - extents.width) / 2) + extents.x), ry(((h - extents.height) / 2) + (extents.y));
 
@@ -336,10 +347,10 @@ static const int constBorder = 2;
 bool CFcEngine::Xft::drawChar32(XftFont *xftFont, quint32 ch, int &x, int &y, int w, int h, int fontHeight, QRect &r) const
 {
     r = QRect();
-    if (XftCharExists(QX11Info::display(), xftFont, ch)) {
+    if (XftCharExists(xDisplay(), xftFont, ch)) {
         XGlyphInfo extents;
 
-        XftTextExtents32(QX11Info::display(), xftFont, &ch, 1, &extents);
+        XftTextExtents32(xDisplay(), xftFont, &ch, 1, &extents);
 
         if (extents.x > 0) {
             x += extents.x;
@@ -371,7 +382,7 @@ bool CFcEngine::Xft::drawString(XftFont *xftFont, const QString &text, int x, in
     XGlyphInfo extents;
     const FcChar16 *str = (FcChar16 *)(text.utf16());
 
-    XftTextExtents16(QX11Info::display(), xftFont, str, text.length(), &extents);
+    XftTextExtents16(xDisplay(), xftFont, str, text.length(), &extents);
     if (y + extents.height <= h) {
         XftDrawString16(m_draw, &m_txtColor, xftFont, x, y + extents.y, str, text.length());
     }
@@ -385,7 +396,7 @@ bool CFcEngine::Xft::drawString(XftFont *xftFont, const QString &text, int x, in
 void CFcEngine::Xft::drawString(const QString &text, int x, int &y, int h) const
 {
     QFont qt(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
-    XftFont *xftFont = XftFontOpen(QX11Info::display(),
+    XftFont *xftFont = XftFontOpen(xDisplay(),
                                    0,
                                    FC_FAMILY,
                                    FcTypeString,
@@ -411,7 +422,7 @@ bool CFcEngine::Xft::drawGlyph(XftFont *xftFont, FT_UInt i, int &x, int &y, int 
 {
     XGlyphInfo extents;
 
-    XftGlyphExtents(QX11Info::display(), xftFont, &i, 1, &extents);
+    XftGlyphExtents(xDisplay(), xftFont, &i, 1, &extents);
 
     if (0 == extents.width || 0 == extents.height) {
         r = QRect(0, 0, 0, 0);
@@ -544,7 +555,7 @@ bool CFcEngine::Xft::drawAllChars(XftFont *xftFont, int fontHeight, int &x, int 
 
 void cleanupXImage(void *data)
 {
-    xcb_image_destroy((xcb_image_t *)data);
+    XDestroyImage((XImage *)data);
 }
 
 QImage CFcEngine::Xft::toImage(int w, int h) const
@@ -555,7 +566,7 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
     if (!XftDrawPicture(m_draw)) {
         return QImage();
     }
-    xcb_image_t *xImage = xcb_image_get(QX11Info::connection(), m_pix.x11, 0, 0, m_pix.currentW, m_pix.currentH, ~0, XCB_IMAGE_FORMAT_Z_PIXMAP);
+    auto xImage = XGetImage(xDisplay(), m_pix.x11, 0, 0, m_pix.currentW, m_pix.currentH, ~0, ZPixmap);
     if (!xImage) {
         return QImage();
     }
@@ -563,11 +574,11 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
         // the RGB32 format requires data format 0xffRRGGBB, ensure that this fourth byte really is 0xff
         // (i.e. when using NVidia proprietary driver)
         auto lData = reinterpret_cast<quint32 *>(xImage->data);
-        for (size_t iIter = 0; iIter < (xImage->stride / 4) * xImage->height; iIter++) {
+        for (size_t iIter = 0; iIter < (xImage->bytes_per_line / 4) * xImage->height; iIter++) {
             lData[iIter] |= 0xff000000;
         }
     }
-    return QImage(xImage->data, xImage->width, xImage->height, xImage->stride, imageFormat, &cleanupXImage, xImage);
+    return QImage((const uchar *)xImage->data, xImage->width, xImage->height, xImage->bytes_per_line, imageFormat, &cleanupXImage, xImage);
 }
 
 inline int point2Pixel(int point)
@@ -690,7 +701,7 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
                         XGlyphInfo extents;
                         const FcChar16 *str = (FcChar16 *)(text.utf16());
 
-                        XftTextExtents16(QX11Info::display(), xftFont, str, text.length(), &extents);
+                        XftTextExtents16(xDisplay(), xftFont, str, text.length(), &extents);
 
                         int y = (h - extents.height) / 2;
 
@@ -762,7 +773,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                 XGlyphInfo extents;
                 const FcChar16 *str = (FcChar16 *)(text.utf16());
 
-                XftTextExtents16(QX11Info::display(), xftFont, str, text.length(), &extents);
+                XftTextExtents16(xDisplay(), xftFont, str, text.length(), &extents);
 
                 h = extents.height;
                 w = extents.width;
@@ -776,7 +787,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                         XGlyphInfo extents;
                         const FcChar16 *str = (FcChar16 *)(text.utf16());
 
-                        XftTextExtents16(QX11Info::display(), xftFont, str, text.length(), &extents);
+                        XftTextExtents16(xDisplay(), xftFont, str, text.length(), &extents);
 
                         int x = 0, y = 0;
 
@@ -1196,7 +1207,7 @@ XftFont *CFcEngine::getFont(int size)
     qDebug() << m_name << ' ' << m_style << ' ' << size;
 #endif
 
-    if (!QX11Info::isPlatformX11()) {
+    if (!xDisplay()) {
         // FIXME: no Xft on Wayland
     } else if (m_installed) {
         int weight, width, slant;
@@ -1205,7 +1216,7 @@ XftFont *CFcEngine::getFont(int size)
 
 #ifndef KFI_FC_NO_WIDTHS
         if (KFI_NULL_SETTING != width) {
-            f = XftFontOpen(QX11Info::display(),
+            f = XftFontOpen(xDisplay(),
                             0,
                             FC_FAMILY,
                             FcTypeString,
@@ -1225,7 +1236,7 @@ XftFont *CFcEngine::getFont(int size)
                             NULL);
         } else {
 #endif
-            f = XftFontOpen(QX11Info::display(),
+            f = XftFontOpen(xDisplay(),
                             0,
                             FC_FAMILY,
                             FcTypeString,
@@ -1253,7 +1264,7 @@ XftFont *CFcEngine::getFont(int size)
                                             FcTypeDouble,
                                             (double)size,
                                             NULL);
-        f = XftFontOpenPattern(QX11Info::display(), pattern);
+        f = XftFontOpenPattern(xDisplay(), pattern);
     }
 
 #ifdef KFI_FC_DEBUG
