@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     w.raise();
     w.requestActivate();
 
-    QTimer::singleShot(30000, &a, &QCoreApplication::quit);
+    QTimer::singleShot(120000, &a, &QCoreApplication::quit); // openbox is slow to respond
 
     return a.exec();
 }

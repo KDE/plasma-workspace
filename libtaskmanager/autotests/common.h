@@ -12,6 +12,7 @@
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
+#include <QtGui/private/qtx11extras_p.h>
 
 #include <KIconLoader>
 #include <KSycoca>
@@ -30,6 +31,12 @@ void cleanupTestCase()
     QFile dummyFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications")
                     + QDir::separator() + QString::fromLatin1(dummyDesktopFileName));
     dummyFile.remove();
+
+    QProcess killAllTestWindowProcess;
+    killAllTestWindowProcess.setProgram(QStringLiteral("killall"));
+    killAllTestWindowProcess.setArguments({QStringLiteral("-9"), QStringLiteral("samplewidgetwindow")});
+    killAllTestWindowProcess.start();
+    killAllTestWindowProcess.waitForFinished();
 }
 
 std::unique_ptr<QRasterWindow> createSingleWindow(const AbstractWindowTasksModel &model, const QString &title, QModelIndex &index)
@@ -288,6 +295,7 @@ void testModelDataFromDesktopFile(const AbstractWindowTasksModel &model)
 
 void testRequest(AbstractWindowTasksModel &model)
 {
+    constexpr int timeout = 30000; // openbox is slow to respond
     QSignalSpy rowsInsertedSpy(&model, &AbstractWindowTasksModel::rowsInserted);
 
     QProcess sampleWindowProcess;
@@ -296,10 +304,10 @@ void testRequest(AbstractWindowTasksModel &model)
         QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
     });
     sampleWindowProcess.start();
-    QVERIFY(rowsInsertedSpy.wait());
+    QVERIFY(rowsInsertedSpy.wait(timeout));
 
     // Find the window index
-    auto findWindowIndex = [&model](QModelIndex &index, const QString &title) {
+    auto findWindowIndex = [&model](QPersistentModelIndex &index, const QString &title) {
         const auto results = model.match(model.index(0, 0), Qt::DisplayRole, title);
         qCritical() << "results for" << title << results << "total:" << model.rowCount();
         QVERIFY(results.size() == 1);
@@ -308,14 +316,14 @@ void testRequest(AbstractWindowTasksModel &model)
         qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
     };
 
-    QModelIndex index;
+    QPersistentModelIndex index;
     findWindowIndex(index, sampleWindowProcess.arguments().at(0));
     QVERIFY(index.isValid());
 
     {
         qDebug("requestNewInstance");
         model.requestNewInstance(index);
-        QVERIFY(rowsInsertedSpy.wait());
+        QVERIFY(rowsInsertedSpy.wait(timeout));
     }
 
     QSignalSpy dataChangedSpy(&model, &AbstractWindowTasksModel::dataChanged);
@@ -324,16 +332,26 @@ void testRequest(AbstractWindowTasksModel &model)
         QCoreApplication::processEvents();
         dataChangedSpy.clear();
         model.requestToggleMinimized(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait());
+            QVERIFY(dataChangedSpy.wait(timeout));
         }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
     }
 
     {
         qDebug("requestActivate");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
         model.requestActivate(index);
-        QVERIFY(dataChangedSpy.wait());
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait(timeout));
+        }
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
     }
 
@@ -342,11 +360,23 @@ void testRequest(AbstractWindowTasksModel &model)
         QCoreApplication::processEvents();
         dataChangedSpy.clear();
         model.requestToggleMaximized(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait());
+            QVERIFY(dataChangedSpy.wait(timeout));
         }
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
         QTRY_VERIFY(index.data(AbstractTasksModel::IsMaximized).toBool());
+
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
+        model.requestToggleMaximized(index);
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait(timeout));
+        }
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsMaximized).toBool());
     }
 
     {
@@ -354,8 +384,11 @@ void testRequest(AbstractWindowTasksModel &model)
         QCoreApplication::processEvents();
         dataChangedSpy.clear();
         model.requestToggleKeepAbove(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait());
+            QVERIFY(dataChangedSpy.wait(timeout));
         }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsKeepAbove).toBool());
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepBelow).toBool());
@@ -366,11 +399,26 @@ void testRequest(AbstractWindowTasksModel &model)
         QCoreApplication::processEvents();
         dataChangedSpy.clear();
         model.requestToggleKeepBelow(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait());
+            QVERIFY(dataChangedSpy.wait(timeout));
         }
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepAbove).toBool());
         QTRY_VERIFY(index.data(AbstractTasksModel::IsKeepBelow).toBool());
+
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
+        model.requestToggleKeepBelow(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait(timeout));
+        }
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepAbove).toBool());
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepBelow).toBool());
     }
 
     {
@@ -378,18 +426,60 @@ void testRequest(AbstractWindowTasksModel &model)
         QCoreApplication::processEvents();
         dataChangedSpy.clear();
         model.requestToggleFullScreen(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait());
+            QVERIFY(dataChangedSpy.wait(timeout));
         }
         QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreen).toBool());
+
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
+        model.requestToggleFullScreen(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait(timeout));
+        }
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
+    }
+
+    if (KWindowSystem::isPlatformX11()) {
+        qDebug("requestToggleShaded");
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
+        model.requestToggleShaded(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait(timeout));
+        }
+        QTRY_VERIFY(index.data(AbstractTasksModel::IsShaded).toBool());
+
+        QCoreApplication::processEvents();
+        dataChangedSpy.clear();
+        model.requestToggleShaded(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
+        if (dataChangedSpy.empty()) {
+            QVERIFY(dataChangedSpy.wait(timeout));
+        }
+        QTRY_VERIFY(!index.data(AbstractTasksModel::IsShaded).toBool());
     }
 
     QSignalSpy rowsRemovedSpy(&model, &AbstractWindowTasksModel::rowsRemoved);
     {
         qDebug("requestClose");
         model.requestClose(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (rowsRemovedSpy.empty()) {
-            QVERIFY(rowsRemovedSpy.wait());
+            QVERIFY(rowsRemovedSpy.wait(timeout));
         }
     }
 
@@ -398,8 +488,11 @@ void testRequest(AbstractWindowTasksModel &model)
         findWindowIndex(index, QStringLiteral("__test_window_no_title__"));
         rowsRemovedSpy.clear();
         model.requestClose(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (rowsRemovedSpy.empty()) {
-            QVERIFY(rowsRemovedSpy.wait());
+            QVERIFY(rowsRemovedSpy.wait(timeout));
         }
     }
 }
