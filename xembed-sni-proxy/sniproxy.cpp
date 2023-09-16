@@ -199,7 +199,7 @@ void SNIProxy::update()
     m_pixmap = QPixmap::fromImage(std::move(image));
     if (w > s_embedSize || h > s_embedSize) {
         qCDebug(SNIPROXY) << "Scaling pixmap of window" << m_windowId << Title() << "from w*h" << w << h;
-        m_pixmap = std::move(m_pixmap).scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        m_pixmap = m_pixmap.scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
     Q_EMIT NewIcon();
     Q_EMIT NewToolTip();
@@ -359,7 +359,7 @@ QImage SNIProxy::convertFromNative(xcb_image_t *xcbImage) const
         QImage m = image.createHeuristicMask();
         QPixmap p = QPixmap::fromImage(std::move(image));
         p.setMask(QBitmap::fromImage(std::move(m)));
-        image = std::move(p).toImage();
+        image = p.toImage();
     }
 
     // work around an abort in QImage::color
