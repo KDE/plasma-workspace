@@ -205,7 +205,7 @@ void CCharTip::showTip()
                                           nullptr);
 
     if (!img.isNull()) {
-        m_pixmapLabel->setPixmap(QPixmap::fromImage(img));
+        m_pixmapLabel->setPixmap(QPixmap::fromImage(std::move(img)));
     } else {
         m_pixmapLabel->setPixmap(QPixmap());
     }

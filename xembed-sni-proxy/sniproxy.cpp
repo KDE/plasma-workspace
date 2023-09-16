@@ -187,7 +187,7 @@ SNIProxy::~SNIProxy()
 
 void SNIProxy::update()
 {
-    const QImage image = getImageNonComposite();
+    QImage image = getImageNonComposite();
     if (image.isNull()) {
         qCDebug(SNIPROXY) << "No xembed icon for" << m_windowId << Title();
         return;
@@ -196,10 +196,10 @@ void SNIProxy::update()
     int w = image.width();
     int h = image.height();
 
-    m_pixmap = QPixmap::fromImage(image);
+    m_pixmap = QPixmap::fromImage(std::move(image));
     if (w > s_embedSize || h > s_embedSize) {
         qCDebug(SNIPROXY) << "Scaling pixmap of window" << m_windowId << Title() << "from w*h" << w << h;
-        m_pixmap = m_pixmap.scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        m_pixmap = std::move(m_pixmap).scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
     Q_EMIT NewIcon();
     Q_EMIT NewToolTip();
@@ -357,10 +357,9 @@ QImage SNIProxy::convertFromNative(xcb_image_t *xcbImage) const
 
     if (format == QImage::Format_RGB32 && xcbImage->bpp == 32) {
         QImage m = image.createHeuristicMask();
-        QBitmap mask(QPixmap::fromImage(m));
-        QPixmap p = QPixmap::fromImage(image);
-        p.setMask(mask);
-        image = p.toImage();
+        QPixmap p = QPixmap::fromImage(std::move(image));
+        p.setMask(QBitmap::fromImage(std::move(m)));
+        image = std::move(p).toImage();
     }
 
     // work around an abort in QImage::color

@@ -96,7 +96,7 @@ void AsyncPackageImageResponseRunnable::run()
         image = svgRender.image(m_requestedSize.isValid() ? svgRender.size().scaled(m_requestedSize, Qt::KeepAspectRatioByExpanding) : svgRender.size());
     } else if (imageReader.read(&image)) {
         if (m_requestedSize.isValid()) {
-            image = image.scaled(m_requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            image = std::move(image).scaled(m_requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         }
     }
 

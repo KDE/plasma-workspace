@@ -417,7 +417,7 @@ QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruc
             delete static_cast<QByteArray *>(ptr);
         },
         dataRef);
-    return QPixmap::fromImage(iconImage);
+    return QPixmap::fromImage(std::move(iconImage));
 }
 
 QIcon StatusNotifierItemSource::imageVectorToPixmap(const KDbusImageVector &vector) const

@@ -101,7 +101,7 @@ QPixmap CursorTheme::createIcon(int size) const
         image = loadImage(QStringLiteral("left_ptr"), size);
 
     if (!image.isNull()) {
-        pixmap = QPixmap::fromImage(image);
+        pixmap = QPixmap::fromImage(std::move(image));
     }
 
     return pixmap;
