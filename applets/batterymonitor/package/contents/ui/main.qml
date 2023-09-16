@@ -321,11 +321,9 @@ PlasmoidItem {
         degradationReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Degraded Reason"] || "") : ""
         profileHolds: batterymonitor.activeProfileHolds
 
-        property int cookie1: -1
-        property int cookie2: -1
-        onPowerManagementChanged: disabled => {
+        onInhibitionChangeRequested: inhibit => {
             const service = pmSource.serviceForSource("PowerDevil");
-            if (disabled) {
+            if (inhibit) {
                 const reason = i18n("The battery applet has enabled system-wide inhibition");
                 const op1 = service.operationDescription("beginSuppressingSleep");
                 op1.reason = reason;
@@ -333,30 +331,16 @@ PlasmoidItem {
                 op2.reason = reason;
 
                 const job1 = service.startOperationCall(op1);
-                job1.finished.connect(job => {
-                    cookie1 = job.result;
-                });
-
                 const job2 = service.startOperationCall(op2);
-                job2.finished.connect(job => {
-                    cookie2 = job.result;
-                });
             } else {
                 const op1 = service.operationDescription("stopSuppressingSleep");
-                op1.cookie = cookie1;
                 const op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
-                op2.cookie = cookie2;
 
                 const job1 = service.startOperationCall(op1);
-                job1.finished.connect(job => {
-                    cookie1 = -1;
-                });
-
                 const job2 = service.startOperationCall(op2);
-                job2.finished.connect(job => {
-                    cookie2 = -1;
-                });
             }
+        }
+        onPowerManagementChanged: disabled => {
             batterymonitor.powermanagementDisabled = disabled
         }
 

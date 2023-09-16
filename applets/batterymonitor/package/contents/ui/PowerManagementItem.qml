@@ -21,6 +21,8 @@ ColumnLayout {
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
+    signal inhibitionChangeRequested(bool inhibit)
+
     // List of active power management inhibitions (applications that are
     // blocking sleep and screen locking).
     //
@@ -37,13 +39,17 @@ ColumnLayout {
         id: pmCheckBox
         Layout.fillWidth: true
         text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
-        checked: false
+        checked: pmSource.data["PowerManagement"]["Has Inhibition"]
         focus: true
 
         KeyNavigation.up: dialog.KeyNavigation.up
         KeyNavigation.down: batteryList.children[0]
         KeyNavigation.backtab: dialog.KeyNavigation.backtab
         KeyNavigation.tab: KeyNavigation.down
+
+        onToggled: {
+            inhibitionChangeRequested(checked)
+        }
     }
 
     // Separator line

@@ -28,4 +28,6 @@ private:
     QDBusPendingCall setKeyboardBrightness(int value, bool silent);
     QDBusPendingCall setPowerProfile(const QString &value);
     SessionManagement *m_session;
+    inline static uint m_sleepInhibitionCookie = -1;
+    inline static uint m_lockInhibitionCookie = -1;
 };

@@ -16,9 +16,6 @@
         </entry>
     </group>
     <group name="stopSuppressingSleep">
-        <entry name="cookie" type="Int">
-            <label>The cookie obtained from beginSuppressingSleep, representing the inhibition to release</label>
-        </entry>
     </group>
 
     <group name="beginSuppressingScreenPowerManagement">
@@ -27,9 +24,6 @@
         </entry>
     </group>
     <group name="stopSuppressingScreenPowerManagement">
-        <entry name="cookie" type="Int">
-            <label>The cookie obtained from beginSuppressingScreenPowerManagement, representing the inhibition to release</label>
-        </entry>
     </group>
 
     <group name="setBrightness">

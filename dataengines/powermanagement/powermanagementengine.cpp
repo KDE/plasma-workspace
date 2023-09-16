@@ -36,17 +36,19 @@
 #include <Plasma5Support/DataContainer>
 
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
+static const char FDO_POWERMANAGEMENT_SERVICE[] = "org.freedesktop.PowerManagement";
 
 namespace
 {
 template<typename ReplyType>
 void createAsyncDBusMethodCallAndCallback(QObject *parent,
+                                          const QString &destination,
                                           const QString &path,
                                           const QString &interface,
                                           const QString &method,
                                           std::function<void(ReplyType)> &&callback)
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE, path, interface, method);
+    QDBusMessage msg = QDBusMessage::createMethodCall(destination, path, interface, method);
     QDBusPendingReply<ReplyType> reply = QDBusConnection::sessionBus().asyncCall(msg);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, parent);
     parent->connect(watcher, &QDBusPendingCallWatcher::finished, parent, [callback](QDBusPendingCallWatcher *watcher) {
@@ -57,7 +59,6 @@ void createAsyncDBusMethodCallAndCallback(QObject *parent,
         watcher->deleteLater();
     });
 }
-
 }
 
 PowermanagementEngine::PowermanagementEngine(QObject *parent)
@@ -208,13 +209,24 @@ void PowermanagementEngine::init()
             qDebug() << "error connecting to profile hold changes via dbus";
         }
     }
+
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(FDO_POWERMANAGEMENT_SERVICE)) {
+        if (!QDBusConnection::sessionBus().connect(FDO_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/freedesktop/PowerManagement"),
+                                                   QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                   QStringLiteral("HasInhibitChanged"),
+                                                   this,
+                                                   SLOT(hasInhibitionChanged(bool)))) {
+            qDebug() << "error connecting to fdo inhibition changes via dbus";
+        }
+    }
 }
 
 QStringList PowermanagementEngine::basicSourceNames() const
 {
     QStringList sources;
     sources << QStringLiteral("Battery") << QStringLiteral("AC Adapter") << QStringLiteral("Sleep States") << QStringLiteral("PowerDevil")
-            << QStringLiteral("Inhibitions") << QStringLiteral("Power Profiles");
+            << QStringLiteral("Inhibitions") << QStringLiteral("Power Profiles") << QStringLiteral("PowerManagement");
     return sources;
 }
 
@@ -305,24 +317,28 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         setData(QStringLiteral("Sleep States"), QStringLiteral("Logout"), m_session->canLogout());
     } else if (name == QLatin1String("PowerDevil")) {
         createAsyncDBusMethodCallAndCallback<int>(this,
+                                                  SOLID_POWERMANAGEMENT_SERVICE,
                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
                                                   QStringLiteral("brightness"),
                                                   std::bind(&PowermanagementEngine::screenBrightnessChanged, this, std::placeholders::_1));
 
         createAsyncDBusMethodCallAndCallback<int>(this,
+                                                  SOLID_POWERMANAGEMENT_SERVICE,
                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
                                                   QStringLiteral("brightnessMax"),
                                                   std::bind(&PowermanagementEngine::maximumScreenBrightnessChanged, this, std::placeholders::_1));
 
         createAsyncDBusMethodCallAndCallback<int>(this,
+                                                  SOLID_POWERMANAGEMENT_SERVICE,
                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
                                                   QStringLiteral("keyboardBrightness"),
                                                   std::bind(&PowermanagementEngine::keyboardBrightnessChanged, this, std::placeholders::_1));
 
         createAsyncDBusMethodCallAndCallback<int>(this,
+                                                  SOLID_POWERMANAGEMENT_SERVICE,
                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
                                                   QStringLiteral("keyboardBrightnessMax"),
@@ -333,13 +349,24 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         });
 
         createAsyncDBusMethodCallAndCallback<bool>(this,
+                                                   SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/HandleButtonEvents"),
                                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.HandleButtonEvents"),
                                                    QStringLiteral("triggersLidAction"),
                                                    std::bind(&PowermanagementEngine::triggersLidActionChanged, this, std::placeholders::_1));
+    } else if (name == QLatin1String("PowerManagement")) {
+        createAsyncDBusMethodCallAndCallback<bool>(this,
+                                                   QStringLiteral("org.freedesktop.PowerManagement"),
+                                                   QStringLiteral("/org/freedesktop/PowerManagement"),
+                                                   QStringLiteral("org.freedesktop.PowerManagement"),
+                                                   QStringLiteral("HasInhibit"),
+                                                   [this](const bool &replyValue) {
+                                                       hasInhibitionChanged(replyValue);
+                                                   });
 
     } else if (name == QLatin1String("Inhibitions")) {
         createAsyncDBusMethodCallAndCallback<QList<InhibitionInfo>>(this,
+                                                                    SOLID_POWERMANAGEMENT_SERVICE,
                                                                     QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
                                                                     QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
                                                                     QStringLiteral("ListInhibitions"),
@@ -700,6 +727,11 @@ void PowermanagementEngine::triggersLidActionChanged(bool triggers)
     setData(QStringLiteral("PowerDevil"), QStringLiteral("Triggers Lid Action"), triggers);
 }
 
+void PowermanagementEngine::hasInhibitionChanged(bool inhibited)
+{
+    setData(QStringLiteral("PowerManagement"), QStringLiteral("Has Inhibition"), inhibited);
+}
+
 void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
 {
     for (auto it = removed.constBegin(); it != removed.constEnd(); ++it) {
@@ -724,6 +756,7 @@ template<typename ReplyType>
 inline void PowermanagementEngine::createPowerManagementDBusMethodCallAndNotifyChanged(const QString &method, std::function<void(ReplyType)> &&callback)
 {
     createAsyncDBusMethodCallAndCallback<ReplyType>(this,
+                                                    SOLID_POWERMANAGEMENT_SERVICE,
                                                     QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                     SOLID_POWERMANAGEMENT_SERVICE,
                                                     method,
@@ -734,6 +767,7 @@ template<typename ReplyType>
 inline void PowermanagementEngine::createPowerProfileDBusMethodCallAndNotifyChanged(const QString &method, std::function<void(ReplyType)> &&callback)
 {
     createAsyncDBusMethodCallAndCallback<ReplyType>(this,
+                                                    SOLID_POWERMANAGEMENT_SERVICE,
                                                     QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
                                                     QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
                                                     method,
