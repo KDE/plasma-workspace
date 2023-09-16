@@ -13,7 +13,7 @@ target_sources(kcm_autostart PRIVATE
    autostart.h
    unit.cpp
    unit.h)
-target_link_libraries(kcm_autostart
+target_link_libraries(kcm_autostart PRIVATE
     Qt6::Quick
     Qt6::DBus
     KF6::I18n

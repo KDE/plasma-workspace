@@ -18,7 +18,7 @@ kcmutils_generate_module_data(kcm_desktoptheme
 )
 kconfig_add_kcfg_files(kcm_desktoptheme desktopthemesettings.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_desktoptheme
+target_link_libraries(kcm_desktoptheme PRIVATE
   Qt::Quick
   KF6::CoreAddons
   KF6::KCMUtils

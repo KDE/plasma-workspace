@@ -68,7 +68,7 @@ target_link_libraries(kcm_lookandfeel_objects
 set_property(TARGET kcm_lookandfeel_objects PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 kcmutils_add_qml_kcm(kcm_lookandfeel SOURCES kcmmain.cpp)
-target_link_libraries(kcm_lookandfeel kcm_lookandfeel_objects)
+target_link_libraries(kcm_lookandfeel PRIVATE kcm_lookandfeel_objects)
 
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})

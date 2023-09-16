@@ -26,7 +26,7 @@ kcmutils_generate_module_data(kcm_cursortheme
 kconfig_add_kcfg_files(kcm_cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_cursortheme launchfeedbacksettings.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_cursortheme
+target_link_libraries(kcm_cursortheme PRIVATE
     Qt::DBus
     Qt::Quick
     KF6::Archive
@@ -43,7 +43,7 @@ target_link_libraries(kcm_cursortheme
 )
 
 if (HAVE_X11)
-   target_link_libraries(kcm_cursortheme X11::Xcursor X11::Xfixes Qt::GuiPrivate)
+   target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif ()
 
 # plasma-apply-cursortheme utility

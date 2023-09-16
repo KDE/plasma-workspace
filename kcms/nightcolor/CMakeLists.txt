@@ -9,7 +9,7 @@ kcmutils_generate_module_data(kcm_nightcolor
     SETTINGS_CLASSES NightColorSettings
 )
 kconfig_add_kcfg_files(kcm_nightcolor nightcolorsettings.kcfgc GENERATE_MOC)
-target_link_libraries(kcm_nightcolor
+target_link_libraries(kcm_nightcolor PRIVATE
     KF6::KCMUtilsQuick
     KF6::I18n
     KF6::KCMUtils

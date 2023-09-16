@@ -55,7 +55,7 @@ ecm_qt_declare_logging_category(kcm_users
 )
 ecm_qt_install_logging_categories(EXPORT KCMUSERS DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
-target_link_libraries(kcm_users
+target_link_libraries(kcm_users PRIVATE
     Qt::Quick
     Qt::QuickWidgets
     Qt::Concurrent

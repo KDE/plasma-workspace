@@ -30,7 +30,7 @@ kcmutils_generate_module_data(kcm_fonts
 )
 kconfig_add_kcfg_files(kcm_fonts fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_fonts Qt::Quick kcm_fonts_static)
+target_link_libraries(kcm_fonts PRIVATE Qt::Quick kcm_fonts_static)
 
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

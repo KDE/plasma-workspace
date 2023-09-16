@@ -39,7 +39,7 @@ ecm_qt_declare_logging_category(kcm_style
 )
 
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
-target_link_libraries(kcm_style
+target_link_libraries(kcm_style PRIVATE
     Qt::Quick
     KF6::KCMUtils
     KF6::I18n

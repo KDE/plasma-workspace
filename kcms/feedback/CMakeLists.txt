@@ -9,7 +9,7 @@ kcmutils_generate_module_data(kcm_feedback
     SETTINGS_CLASSES FeedbackSettings
 )
 kconfig_add_kcfg_files(kcm_feedback feedbacksettings.kcfgc GENERATE_MOC)
-target_link_libraries(kcm_feedback
+target_link_libraries(kcm_feedback PRIVATE
     KF6::I18n
     KF6::KCMUtils
     KF6::KCMUtilsQuick

@@ -64,7 +64,7 @@ ecm_qt_install_logging_categories(
 )
 
 ################# Link libraries ####################
-target_link_libraries(kcm_regionandlang
+target_link_libraries(kcm_regionandlang PRIVATE
     kcm_regionandlang_example_static
     Qt::Core
     Qt::DBus

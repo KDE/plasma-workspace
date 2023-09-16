@@ -11,7 +11,7 @@ kcmutils_generate_module_data(kcm_icons
 )
 kconfig_add_kcfg_files(kcm_icons iconssettingsbase.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_icons
+target_link_libraries(kcm_icons PRIVATE
     Qt::Widgets
     Qt::Svg
     Qt::Quick

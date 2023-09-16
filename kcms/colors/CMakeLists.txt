@@ -10,7 +10,7 @@ kcmutils_generate_module_data(kcm_colors
 )
 # needed for krdb
 kconfig_add_kcfg_files(kcm_colors colorssettings.kcfgc GENERATE_MOC)
-target_link_libraries(kcm_colors
+target_link_libraries(kcm_colors PRIVATE
     Qt::DBus
     Qt::Quick
     KF6::KCMUtils
@@ -26,7 +26,7 @@ target_link_libraries(kcm_colors
 )
 
 if(HAVE_X11)
-    target_link_libraries(kcm_colors X11::X11 Qt::GuiPrivate)
+    target_link_libraries(kcm_colors PRIVATE X11::X11 Qt::GuiPrivate)
 endif()
 
 target_sources(kcm_colors PRIVATE
