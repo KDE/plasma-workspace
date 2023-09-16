@@ -44,6 +44,7 @@ PlasmaExtras.Representation {
     required property var profileHolds
 
     signal powerManagementChanged(bool disabled)
+    signal inhibitionChangeRequested(bool inhibit)
     signal activateProfileRequested(string profile)
 
     collapseMarginsHint: true
@@ -58,6 +59,7 @@ PlasmaExtras.Representation {
             inhibitions: dialog.inhibitions
             inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
+            onInhibitionChangeRequested: dialog.inhibitionChangeRequested(inhibit)
             onDisabledChanged: dialog.powerManagementChanged(disabled)
         }
     }
