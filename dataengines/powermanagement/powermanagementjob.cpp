@@ -97,16 +97,15 @@ void PowerManagementJob::start()
                                                           QStringLiteral("Inhibit"));
         msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
-        setResult(reply.isValid() ? reply.value() : -1);
+        m_sleepInhibitionCookie = reply.isValid() ? reply.value() : -1;
         return;
     } else if (operation == QLatin1String("stopSuppressingSleep")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
                                                           QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
                                                           QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
                                                           QStringLiteral("UnInhibit"));
-        msg << parameters().value(QStringLiteral("cookie")).toUInt();
+        msg << m_sleepInhibitionCookie;
         QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
-        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
@@ -115,16 +114,15 @@ void PowerManagementJob::start()
                                                           QStringLiteral("Inhibit"));
         msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
-        setResult(reply.isValid() ? reply.value() : -1);
+        m_lockInhibitionCookie = reply.isValid() ? reply.value() : -1;
         return;
     } else if (operation == QLatin1String("stopSuppressingScreenPowerManagement")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
                                                           QStringLiteral("/ScreenSaver"),
                                                           QStringLiteral("org.freedesktop.ScreenSaver"),
                                                           QStringLiteral("UnInhibit"));
-        msg << parameters().value(QStringLiteral("cookie")).toUInt();
+        msg << m_lockInhibitionCookie;
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
-        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("setBrightness")) {
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
