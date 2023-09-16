@@ -1,7 +1,30 @@
 {
     "KPlugin": {
         "Description": "Controls media players using global keyboard shortcuts",
-        "Name": "Media Controller"
+        "Description[bg]": "Управление на медиен плеър с глобалните клавишни комбинации",
+        "Description[ca@valencia]": "Controla els reproductors multimèdia utilitzant les dreceres de teclat globals",
+        "Description[ca]": "Controla els reproductors multimèdia usant les dreceres de teclat globals",
+        "Description[eo]": "Mastras aŭdvidaĵajn ludilojn uzante ĉieajn fulmoklavojn",
+        "Description[es]": "Controla los reproductores multimedia mediante atajos de teclado globales",
+        "Description[ia]": "Controla executores de media usante vias breve global de claviero",
+        "Description[ka]": "აკონტროლებს მედიის დამკვრელებს გლობალური კლავიატურის მალსახმობებით",
+        "Description[nl]": "Bedient mediaspelers met globale sneltoetsen",
+        "Description[sl]": "Nadzoruje predvajalnike medijev prek globalnih bližnjic na tipkovnici",
+        "Description[uk]": "Керування мультимедійними програвачами за допомогою загальних клавіатурних скорочень",
+        "Description[x-test]": "xxControls media players using global keyboard shortcutsxx",
+        "Name": "Media Controller",
+        "Name[bg]": "Медиен контролер",
+        "Name[ca@valencia]": "Controlador multimèdia",
+        "Name[ca]": "Controlador multimèdia",
+        "Name[eo]": "Stirilo por Aŭdvidaĵoj",
+        "Name[es]": "Controlador multimedia",
+        "Name[ia]": "Controlos de Reproductor de Multimedia",
+        "Name[ka]": "მედიის კონტროლერი",
+        "Name[nl]": "Mediabediening",
+        "Name[sl]": "Nadzor medijev",
+        "Name[tr]": "Ortam Denetimcisi",
+        "Name[uk]": "Керування мультимедійними можливостями",
+        "Name[x-test]": "xxMedia Controllerxx"
     },
     "X-KDE-Kded-autoload": true
 }
