@@ -21,7 +21,7 @@
 
 FilteredPlacesModel::FilteredPlacesModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-    , m_placesModel(new KFilePlacesModel(this))
+    , m_placesModel(new KFilePlacesModel({}, this))
 {
     setSourceModel(m_placesModel);
     sort(0);
