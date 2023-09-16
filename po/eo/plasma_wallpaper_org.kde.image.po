@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2023-09-14 07:45+0100\n"
+"PO-Revision-Date: 2023-09-15 07:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -102,23 +102,21 @@ msgid "Next Wallpaper Image"
 msgstr "Sekva Ekranfona Bildo"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Bilddosieroj"
+msgstr "Bildoj"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Ricevi Novajn Ekranfonbildojn…"
+msgstr "Ricevi Novajn…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -263,7 +261,7 @@ msgstr "Dosierujoj"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
@@ -314,9 +312,3 @@ msgstr "Eraro okazis dum provo meti la Plasma-ekranfonbildon:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Eraro okazis dum provo malfermi kscreenlockerrc-agorddosieron."
-
-#~ msgid "Add Image…"
-#~ msgstr "Aldoni Bildon…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "Aldoni Dosierujon…"

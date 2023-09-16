@@ -359,14 +359,13 @@ msgstr "Nebyly přidány žádné otisky"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Uživatelé"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Přidat nového uživatele"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -557,6 +556,3 @@ msgstr "Váš účet"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Jiné účty"
-
-#~ msgid "Manage Users"
-#~ msgstr "Spravovat uživatele"

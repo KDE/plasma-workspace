@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2016, 2017, 2018, 2020, 2022.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2020, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2022-12-07 11:17+0100\n"
+"PO-Revision-Date: 2023-09-15 10:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:191
 #, kde-format
@@ -36,8 +36,7 @@ msgid "-%1"
 msgstr "-%1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:516
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Willekeurig afspelen"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2023-09-14 07:56+0200\n"
+"PO-Revision-Date: 2023-09-15 09:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -103,23 +103,21 @@ msgid "Next Wallpaper Image"
 msgstr "Naslednja slika ozadja"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Datoteke s sliko"
+msgstr "Slike"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Dodaj…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Dobi nova ozadja…"
+msgstr "Dobi novo…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -269,7 +267,7 @@ msgstr "Mape"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Dodaj…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format

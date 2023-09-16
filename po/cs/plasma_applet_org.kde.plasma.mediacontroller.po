@@ -38,8 +38,7 @@ msgid "-%1"
 msgstr "-%1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:516
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Zamíchat"
@@ -147,6 +146,3 @@ msgstr "Zastavit"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Ukončit"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Automaticky vybrat přehrávač"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2023-09-12 11:05+0200\n"
+"PO-Revision-Date: 2023-09-15 10:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -106,23 +106,21 @@ msgid "Next Wallpaper Image"
 msgstr "Fons de pantalla següent"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Fitxers d'imatge"
+msgstr "Imatges"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Afig…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Obtín fons de pantalla nous…"
+msgstr "Obtín noves…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -273,7 +271,7 @@ msgstr "Carpetes"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Afig…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
@@ -281,10 +279,9 @@ msgid "Remove Folder"
 msgstr "Elimina la carpeta"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:228
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Obri una carpeta"
+msgstr "Obri una carpeta…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
@@ -329,9 +326,3 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "S'ha produït un error en intentar obrir el fitxer de configuració "
 "«kscreenlockerrc»."
-
-#~ msgid "Add Image…"
-#~ msgstr "Afig una imatge…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "Afig una carpeta…"

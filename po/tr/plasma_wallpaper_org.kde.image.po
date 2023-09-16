@@ -24,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Serdar Soytetir"
+msgstr "Emir SARI"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tulliana@gmail.com"
+msgstr "emir_sari@îcloud.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
 #, kde-format
@@ -104,23 +104,21 @@ msgid "Next Wallpaper Image"
 msgstr "Sonraki Duvar Kağıdı Görseli"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Görsel Dosyaları"
+msgstr "Görseller"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Ekle…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Yeni Duvar Kağıtları Al…"
+msgstr "Yeni Al…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -267,7 +265,7 @@ msgstr "Klasörler"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Ekle…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
@@ -275,10 +273,9 @@ msgid "Remove Folder"
 msgstr "Klasörü Kaldır"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:228
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Klasörü Aç"
+msgstr "Klasör Aç…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
@@ -320,155 +317,3 @@ msgstr "Plasma duvar kağıdını ayarlamaya çalışırken bir hata oluştu:<nl
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "kscreenlockerrc yapılandırma dosyasını açmaya çalışırken bir hata oluştu."
-
-#~ msgid "Add Image…"
-#~ msgstr "Görsel Ekle…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "Klasör Ekle…"
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Önerilen duvar kağıdı dosyası"
-
-#~ msgid "There are no wallpapers in this slideshow"
-#~ msgstr "Bu slayt gösterisinde duvar kağıdı yok"
-
-#~ msgid "Add Custom Wallpaper"
-#~ msgstr "Özel Duvar Kağıdı Ekle"
-
-#~ msgid "Remove wallpaper"
-#~ msgstr "Duvar kağıdını sil"
-
-#~ msgid "%1 by %2"
-#~ msgstr "%2 tarafından oluşturulan %1"
-
-#, fuzzy
-#~| msgid "Remove wallpaper"
-#~ msgid "Wallpapers"
-#~ msgstr "Duvar kağıdını sil"
-
-#~ msgid "Download Wallpapers"
-#~ msgstr "Yeni duvar kağıtları indir"
-
-#~ msgid "Hours"
-#~ msgstr "Saat"
-
-#~ msgid "Open..."
-#~ msgstr "Aç..."
-
-#~ msgctxt "Unknown Author"
-#~ msgid "Unknown"
-#~ msgstr "Bilinmiyor"
-
-#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
-#~ msgstr "Resim Dosyaları (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
-
-#~ msgid "Screenshot"
-#~ msgstr "Ekran Görüntüsü"
-
-#~ msgid "Preview"
-#~ msgstr "Önizleme"
-
-#~ msgid "Center Tiled"
-#~ msgstr "Ortalı Döşenmiş"
-
-#~ msgid "Select Wallpaper Image File"
-#~ msgstr "Duvar Kağıdı Resmi Seç"
-
-#~ msgid "P&ositioning:"
-#~ msgstr "K&onumlandırma:"
-
-#~ msgid "&Color:"
-#~ msgstr "&Renk:"
-
-#~ msgid "Change wallpaper frame color"
-#~ msgstr "Duvar kağıdı çerçeve rengini değiştir"
-
-#~ msgid ""
-#~ "Change the color of the frame that it may be visible when the wallpaper "
-#~ "is centered or scaled with the same proportions."
-#~ msgstr ""
-#~ "Duvar kağıdı ortalandığında ya da eşit oranda boyutlandırıldığında "
-#~ "görülebilir olan çerçevenin rengini seçin."
-
-#~ msgid "Remove from list"
-#~ msgstr "Listeden kaldır"
-
-#~ msgctxt ""
-#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
-#~ "content of the quotes."
-#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
-#~ msgstr "hh 'Saat' mm 'Dakika' ss 'Saniye'"
-
-#~ msgid "&My downloaded wallpapers:"
-#~ msgstr "&İndirilen duvar kağıtlarım:"
-
-#~ msgid ""
-#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
-#~ "slideshow"
-#~ msgstr ""
-#~ "\"Yeni Duvar Kağıtları Al\" ile indirdiğim duvar kağıtlarını slayt "
-#~ "gösterisi olarak kullan"
-
-#~ msgid "Custom folders:"
-#~ msgstr "Özel dizinler:"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Images</span></p></body></html>"
-#~ msgstr ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Resimler</span></p></body></html>"
-
-#~ msgid "Finding images for the wallpaper slideshow."
-#~ msgstr "Duvar kağıdı slayt gösterisi için resimler bulunuyor."
-
-#~ msgid "Adding wallpaper package in %1"
-#~ msgstr "Duvar kağıdı paketi %1 içerisine ekleniyor"
-
-#~ msgid "Adding image %1"
-#~ msgstr "%1 resmi ekleniyor"
-
-#~ msgctxt "Wallpaper info, author name"
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Email:"
-#~ msgstr "E-posta:"
-
-#~ msgid "License:"
-#~ msgstr "Lisans:"
-
-#~ msgid "Color:"
-#~ msgstr "Renk:"
-
-#~ msgid "Author:"
-#~ msgstr "Yazar:"
-
-#~ msgid "Browse"
-#~ msgstr "Göz at"
-
-#~ msgid "&Picture:"
-#~ msgstr "&Resim:"
-
-#~ msgid "Testing %1 for a Wallpaper package"
-#~ msgstr "Bir duvar kağıdı paketi için %1 test ediliyor"
-
-#~ msgid "Maxpect"
-#~ msgstr "Uygun Ortala"

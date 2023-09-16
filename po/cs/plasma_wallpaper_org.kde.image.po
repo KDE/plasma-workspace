@@ -33,18 +33,16 @@ msgid "Your emails"
 msgstr "vit@pelcak.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Otevřít obrázek"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr "Adresář s tapetami pro zobrazení promítání"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:103
 #, kde-format
@@ -107,10 +105,9 @@ msgid "Next Wallpaper Image"
 msgstr "Následující obrázek tapety"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Soubory obrázků"
+msgstr "Obrázky"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
@@ -119,11 +116,10 @@ msgid "Add…"
 msgstr ""
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Získat nové tapety…"
+msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -271,10 +267,9 @@ msgid "Remove Folder"
 msgstr "Odstranit složku"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:228
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Otevřít složku"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
@@ -315,9 +310,3 @@ msgstr "Při pokusu o nastavení tapety Plasma došlo k chybě:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Nastala chyba při otevírání souboru nastavení kscreenlockerrc"
-
-#~ msgid "Add Image…"
-#~ msgstr "Přidat obrázek…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "Přidat složku…"

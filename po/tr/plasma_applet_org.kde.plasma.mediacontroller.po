@@ -37,8 +37,7 @@ msgid "-%1"
 msgstr "-%1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:516
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Karıştır"
@@ -146,27 +145,3 @@ msgstr "Durdur"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Çık"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Oynatıcıyı/Çaları kendiliğinden seç"
-
-#~ msgid "General"
-#~ msgstr "Genel"
-
-#~ msgid "Volume step:"
-#~ msgstr "Ses düzeyi çentiği:"
-
-#~ msgctxt "by Artist (player name)"
-#~ msgid "by %1 (%2)"
-#~ msgstr "%1 tarafından (%2)"
-
-#~ msgctxt "Paused (player name)"
-#~ msgid "Paused (%1)"
-#~ msgstr "Duraklatıldı (%1)"
-
-#~ msgctxt "Artist of the song"
-#~ msgid "by %1"
-#~ msgstr "Sanatçı: %1"
-
-#~ msgid "Pause playback when screen is locked"
-#~ msgstr "Ekran kilitlendiğinde oynatmayı duraklat"

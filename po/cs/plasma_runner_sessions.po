@@ -31,16 +31,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Odhlásí se a ukončí aktuální sezení pracovní plochy"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr "vypnutí;vypnout"
+msgstr ""
 
 #: sessionrunner.cpp:29
 #, kde-format

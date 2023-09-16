@@ -135,36 +135,3 @@ msgstr "Son Sorgular"
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"
-
-#~ msgid "Only query this specific runner"
-#~ msgstr "Yalnızca bu çalışanı sorgula"
-
-#~ msgid "Querying runner %1 in single runner mode"
-#~ msgstr "%1 çalışanı, tekil çalışan kipinde sorgulanıyor"
-
-#~ msgid "in category recent queries"
-#~ msgstr "son sorgular kategorisinde"
-
-#~ msgid "krunner"
-#~ msgstr "krunner"
-
-#, fuzzy
-#~| msgid "KRunner"
-#~ msgid "Show KRunner"
-#~ msgstr "KRunner"
-
-#, fuzzy
-#~| msgid "KRunner"
-#~ msgctxt "Name for krunner shortcuts category"
-#~ msgid "KRunner"
-#~ msgstr "KRunner"
-
-#~ msgid "Run Command on clipboard contents"
-#~ msgstr "Pano içindeki komutu çalıştır"
-
-#~ msgid "Run Command"
-#~ msgstr "Komut Arayüzü"
-
-#~ msgctxt "Name for krunner shortcuts category"
-#~ msgid "Run Command"
-#~ msgstr "Komut Çalıştır"
