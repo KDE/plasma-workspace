@@ -69,20 +69,20 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
     }
     case TaskManager: {
         if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
-            const Plasma::Applet *taskManager = findTaskManagerApplet(containment);
+            auto *taskManager = findTaskManagerApplet(containment);
 
             if (!taskManager) {
                 return false;
             }
 
-            QQuickItem *rootItem = firstPlasmaGraphicObjectChild(taskManager);
+            auto *taskManagerQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(taskManager);
 
-            if (!rootItem) {
+            if (!taskManagerQuickItem) {
                 return false;
             }
 
             QVariant ret;
-            QMetaObject::invokeMethod(rootItem, "hasLauncher", Q_RETURN_ARG(QVariant, ret), Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(taskManagerQuickItem, "hasLauncher", Q_RETURN_ARG(QVariant, ret), Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
             return !ret.toBool();
         }
 
@@ -123,15 +123,13 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
         const QStringList &containmentProvides = containment->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
 
         if (containmentProvides.contains(QLatin1String("org.kde.plasma.filemanagement"))) {
-            QQuickItem *rootItem = findPlasmaGraphicObjectChildIf(containment, [](QQuickItem *item) {
-                return item->objectName() == QLatin1String("folder");
-            });
+            auto *folderQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(containment);
 
-            if (!rootItem) {
+            if (!folderQuickItem) {
                 return;
             }
 
-            QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(folderQuickItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
         } else {
             containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << QUrl::fromLocalFile(entryPath));
         }
@@ -147,19 +145,19 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
     }
     case TaskManager: {
         if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
-            const Plasma::Applet *taskManager = findTaskManagerApplet(containment);
+            auto *taskManager = findTaskManagerApplet(containment);
 
             if (!taskManager) {
                 return;
             }
 
-            QQuickItem *rootItem = firstPlasmaGraphicObjectChild(taskManager);
+            auto *taskManagerQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(taskManager);
 
-            if (!rootItem) {
+            if (!taskManagerQuickItem) {
                 return;
             }
 
-            QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(taskManagerQuickItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
         }
 
         break;
@@ -205,28 +203,6 @@ void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
     if (containment && containment->immutability() != Plasma::Types::Mutable) {
         containment->internalAction(QStringLiteral("lock widgets"))->trigger();
     }
-}
-
-// FIXME why const Plasma::Applet *?
-template<class UnaryPredicate>
-QQuickItem *ContainmentInterface::findPlasmaGraphicObjectChildIf(const Plasma::Applet *applet, UnaryPredicate predicate)
-{
-    QQuickItem *gObj = PlasmaQuick::AppletQuickItem::itemForApplet(const_cast<Plasma::Applet *>(applet));
-
-    if (!gObj) {
-        return nullptr;
-    }
-
-    const QList<QQuickItem *> children = gObj->childItems();
-    const auto found = std::find_if(children.cbegin(), children.cend(), predicate);
-    return found != children.cend() ? *found : nullptr;
-}
-
-QQuickItem *ContainmentInterface::firstPlasmaGraphicObjectChild(const Plasma::Applet *applet)
-{
-    return findPlasmaGraphicObjectChildIf(applet, [](QQuickItem *) {
-        return true;
-    });
 }
 
 Plasma::Applet *ContainmentInterface::findTaskManagerApplet(Plasma::Containment *containment)
