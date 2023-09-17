@@ -94,7 +94,7 @@ FocusScope {
     ColumnLayout {
         id: prompts
         anchors.top: parent.verticalCenter
-        anchors.topMargin: Kirigami.Units.gridUnit * 0.5
+        anchors.topMargin: Kirigami.Units.largeSpacing
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
