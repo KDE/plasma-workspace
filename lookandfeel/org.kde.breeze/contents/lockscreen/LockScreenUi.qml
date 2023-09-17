@@ -309,7 +309,7 @@ Item {
                     return parts.join(" • ");
                 }
 
-                onPasswordResult: {
+                onPasswordResult: password => {
                     authenticator.respond(password)
                 }
 
