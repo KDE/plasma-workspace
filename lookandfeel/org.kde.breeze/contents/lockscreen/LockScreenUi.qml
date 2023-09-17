@@ -205,7 +205,16 @@ Item {
             }
         }
 
-        Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: Kirigami.Units.veryLongDuration * 2 }
+        PropertyAnimation {
+            id: launchAnimation
+            target: lockScreenRoot
+            property: "opacity"
+            from: 0
+            to: 1
+            duration: Kirigami.Units.veryLongDuration * 2
+        }
+
+        Component.onCompleted: launchAnimation.start();
 
         states: [
             State {
