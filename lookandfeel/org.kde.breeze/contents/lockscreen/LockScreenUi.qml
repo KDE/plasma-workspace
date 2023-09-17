@@ -565,6 +565,12 @@ Item {
             }
         }
 
+        // Note: Containment masks stretch clickable area of their buttons to
+        // the screen edges, essentially making them adhere to Fitts's law.
+        // Due to virtual keyboard button having an icon, buttons may have
+        // different heights, so fillHeight is required.
+        //
+        // Note for contributors: Keep this in sync with SDDM Main.qml footer.
         RowLayout {
             id: footer
             anchors {
@@ -576,6 +582,8 @@ Item {
             spacing: Kirigami.Units.smallSpacing
 
             PlasmaComponents3.ToolButton {
+                id: virtualKeyboardButton
+
                 focusPolicy: Qt.TabFocus
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
@@ -587,9 +595,19 @@ Item {
                 }
 
                 visible: inputPanel.status == Loader.Ready
+
+                Layout.fillHeight: true
+                containmentMask: Item {
+                    parent: virtualKeyboardButton
+                    anchors.fill: parent
+                    anchors.leftMargin: -footer.anchors.margins
+                    anchors.bottomMargin: -footer.anchors.margins
+                }
             }
 
             PlasmaComponents3.ToolButton {
+                id: keyboardButton
+
                 focusPolicy: Qt.TabFocus
                 Accessible.description: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
                 icon.name: "input-keyboard"
@@ -605,6 +623,14 @@ Item {
                 onClicked: keyboardLayoutSwitcher.keyboardLayout.switchToNextLayout()
 
                 visible: keyboardLayoutSwitcher.hasMultipleKeyboardLayouts
+
+                Layout.fillHeight: true
+                containmentMask: Item {
+                    parent: keyboardButton
+                    anchors.fill: parent
+                    anchors.leftMargin: virtualKeyboardButton.visible ? 0 : -footer.anchors.margins
+                    anchors.bottomMargin: -footer.anchors.margins
+                }
             }
 
             Item {
