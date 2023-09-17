@@ -12,6 +12,7 @@
         "Description[sl]": "Nadzoruje predvajalnike medijev prek globalnih bližnjic na tipkovnici",
         "Description[uk]": "Керування мультимедійними програвачами за допомогою загальних клавіатурних скорочень",
         "Description[x-test]": "xxControls media players using global keyboard shortcutsxx",
+        "Description[zh_CN]": "使用全局键盘快捷键控制媒体播放器",
         "Name": "Media Controller",
         "Name[bg]": "Медиен контролер",
         "Name[ca@valencia]": "Controlador multimèdia",
@@ -24,7 +25,8 @@
         "Name[sl]": "Nadzor medijev",
         "Name[tr]": "Ortam Denetimcisi",
         "Name[uk]": "Керування мультимедійними можливостями",
-        "Name[x-test]": "xxMedia Controllerxx"
+        "Name[x-test]": "xxMedia Controllerxx",
+        "Name[zh_CN]": "媒体控制器"
     },
     "X-KDE-Kded-autoload": true
 }
