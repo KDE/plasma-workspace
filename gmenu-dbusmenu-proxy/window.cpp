@@ -262,7 +262,7 @@ void Window::onMenuSubscribed(uint id)
                 DBusMenuLayoutItem item;
                 uint revision = GetLayout(Utils::treeStructureToInt(id, 0, 0), 0, {}, item);
 
-                reply << revision << QVariant::fromValue(item);
+                reply << revision << QVariant::fromValue(std::move(item));
 
                 QDBusConnection::sessionBus().send(reply);
             }
@@ -588,7 +588,7 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
             DBusMenuShortcut dbusShortcut;
             dbusShortcut.append(shortcut); // don't let it unwrap the list we append
 
-            result.insert(QStringLiteral("shortcut"), QVariant::fromValue(dbusShortcut));
+            result.insert(QStringLiteral("shortcut"), QVariant::fromValue(std::move(dbusShortcut)));
         }
     }
 

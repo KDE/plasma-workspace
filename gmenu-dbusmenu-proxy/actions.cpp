@@ -86,7 +86,7 @@ void Actions::trigger(const QString &name, const QVariant &target, uint timestam
     if (target.isValid()) {
         args << target;
     }
-    msg << QVariant::fromValue(args);
+    msg << QVariant::fromValue(std::move(args));
 
     QVariantMap platformData;
 

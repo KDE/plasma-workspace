@@ -106,7 +106,7 @@ void UpdateLaunchEnvJob::start()
                                                                     QStringLiteral("/org/freedesktop/DBus"),
                                                                     QStringLiteral("org.freedesktop.DBus"),
                                                                     QStringLiteral("UpdateActivationEnvironment"));
-    dbusActivationMsg.setArguments({QVariant::fromValue(dbusActivationEnv)});
+    dbusActivationMsg.setArguments({QVariant::fromValue(std::move(dbusActivationEnv))});
 
     auto dbusActivationReply = QDBusConnection::sessionBus().asyncCall(dbusActivationMsg);
     d->monitorReply(dbusActivationReply);
