@@ -211,14 +211,13 @@ Item {
             }
         ]
 
-        transitions:
-            Transition {
+        transitions: Transition {
             // we only animate switchting to another session, because kscreenlocker doesn't get notified when
             // coming from another session back and so we wouldn't know when to trigger the animation exactly
             from: ""
             to: "onOtherSession"
 
-            PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: Kirigami.Units.longDuration; easing.type: Easing.InQuad}
+            PropertyAnimation { properties: "y"; duration: Kirigami.Units.longDuration; easing.type: Easing.InQuad }
             PropertyAnimation { properties: "opacity"; duration: Kirigami.Units.longDuration}
 
             onRunningChanged: {
