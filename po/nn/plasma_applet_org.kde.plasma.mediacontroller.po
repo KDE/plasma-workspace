@@ -148,6 +148,3 @@ msgstr "Stopp"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Avslutt"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Vel spelar automatisk"

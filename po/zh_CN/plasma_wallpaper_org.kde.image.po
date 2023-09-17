@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2023-09-02 02:55\n"
+"PO-Revision-Date: 2023-09-16 10:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -29,15 +29,13 @@ msgid "Your emails"
 msgstr "i@guoyunhe.me, tysontan@tysontan.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "打开图像"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "选择幻灯片的壁纸目录"
@@ -103,20 +101,18 @@ msgid "Next Wallpaper Image"
 msgstr "下一张壁纸图像"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "图像文件"
+msgstr "图像"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "添加…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "获取新壁纸…"
@@ -255,7 +251,7 @@ msgstr "文件夹"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "添加…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
@@ -263,10 +259,9 @@ msgid "Remove Folder"
 msgstr "移除文件夹"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:228
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "打开文件夹"
+msgstr "打开文件夹…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:238
 #, kde-format
@@ -307,9 +302,3 @@ msgstr "尝试设置 Plasma 壁纸时出错：<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "尝试打开 kscreenlockerrc 配置文件时出错。"
-
-#~ msgid "Add Image…"
-#~ msgstr "添加图像…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "添加文件夹…"

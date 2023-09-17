@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-09-02 02:55\n"
+"PO-Revision-Date: 2023-09-16 10:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -32,16 +32,13 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "注销，退出当前桌面会话"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr "shutdown;shut down;关机"
+msgstr ""
+"shutdown;shut down;power;power off;关机;关闭;电源关闭;关闭电源;断电;断开电源"
 
 #: sessionrunner.cpp:29
 #, kde-format

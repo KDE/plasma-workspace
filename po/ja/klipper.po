@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 02:03+0000\n"
+"POT-Creation-Date: 2023-09-17 02:29+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -939,7 +939,7 @@ msgstr ""
 "shinobo@leo.bekkoame.ne.jp,ryuk@user.script.nu,md81@bird.email.ne.jp, "
 "fumiaki@okushi.com,tsuno@ngy.1st.ne.jp"
 
-#: popupproxy.cpp:145
+#: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
 msgstr "その他(&M)"

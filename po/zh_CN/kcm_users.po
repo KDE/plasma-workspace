@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2023-09-02 02:55\n"
+"PO-Revision-Date: 2023-09-16 10:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -352,14 +352,13 @@ msgstr "未添加指纹"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "用户"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "添加新用户"
+msgstr "新增"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -552,6 +551,3 @@ msgstr "您的账号"
 #, kde-format
 msgid "Other Accounts"
 msgstr "其他账号"
-
-#~ msgid "Manage Users"
-#~ msgstr "管理用户"

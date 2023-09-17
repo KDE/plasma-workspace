@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-09-16 10:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -14,20 +14,11 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kio5_applications.pot\n"
-"X-Crowdin-File-ID: 43481\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/libkmpris.pot\n"
+"X-Crowdin-File-ID: 45053\n"
 
-#: kio_applications.cpp:122
+#: multiplexermodel.cpp:71
 #, kde-format
-msgid "Applications"
-msgstr "应用程序"
-
-#: kio_applications.cpp:122
-#, kde-format
-msgid "Programs"
-msgstr "程序"
-
-#: kio_applications.cpp:131
-#, kde-format
-msgid "Unknown application folder"
-msgstr "未知应用程序文件夹"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "自动选择播放器"

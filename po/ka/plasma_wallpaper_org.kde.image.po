@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2023-09-15 06:08+0200\n"
+"PO-Revision-Date: 2023-09-16 06:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -109,7 +109,7 @@ msgstr "გამოსახულებები"
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr "დამატება..."
+msgstr "დამატება…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
 #, kde-format
@@ -258,7 +258,7 @@ msgstr "საქაღალდეები"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr "დამატება..."
+msgstr "დამატება…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:223
 #, kde-format
