@@ -77,7 +77,7 @@ target_link_libraries(kcm_regionandlang PRIVATE
     Qt::Quick
 )
 if(UBUNTU_LOCALE)
-    target_link_libraries(kcm_regionandlang PK::packagekitqt6)
+    target_link_libraries(kcm_regionandlang PRIVATE PK::packagekitqt6)
 endif()
 
 ########### unit tests ##############
