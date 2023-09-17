@@ -20,11 +20,12 @@ import org.kde.plasma.private.sessions 2.0
 import org.kde.breeze.components
 
 Item {
-
     id: lockScreenUi
+
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+
     property bool hadPrompt: false
 
     function tryToSwitchUser(canStartSession) {
@@ -76,7 +77,12 @@ Item {
             if (lockScreenUi.hadPrompt) {
                 Qt.quit();
             } else {
-                mainStack.replace(null, Qt.resolvedUrl("NoPasswordUnlock.qml"), {"userListModel": users}, StackView.Immediate)
+                mainStack.replace(null, Qt.resolvedUrl("NoPasswordUnlock.qml"),
+                    {
+                        userListModel: users
+                    },
+                    StackView.Immediate,
+                );
                 mainStack.forceActiveFocus();
             }
         }
@@ -345,9 +351,9 @@ Item {
                             if (((sessionsModel.showNewSessionEntry && sessionsModel.count === 1) ||
                                (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
                                sessionsModel.canSwitchUser) {
-                                mainStack.pop({immediate:true})
+                                mainStack.pop({ immediate: true })
                                 sessionsModel.startNewSession(true /* lock the screen too */)
-                                lockScreenRoot.state = ''
+                                lockScreenRoot.state = ""
                             } else {
                                 mainStack.push(switchSessionPage)
                             }
@@ -369,7 +375,7 @@ Item {
         Loader {
             id: inputPanel
             state: "hidden"
-            readonly property bool keyboardActive: item ? item.active : false
+            readonly property bool keyboardActive: item?.active ?? false
             Component {
                 id: keyboard
                 VirtualKeyboard {}
@@ -383,7 +389,7 @@ Item {
                 right: parent.right
             }
             function showHide() {
-                state = state == "hidden" ? "visible" : "hidden";
+                state = state === "hidden" ? "visible" : "hidden";
             }
             Component.onCompleted: {
                 inputPanel.sourceComponent = Qt.platform.pluginName.includes("wayland") ? keyboardWayland : keyboard
@@ -488,7 +494,7 @@ Item {
                 property var switchSession: finalSwitchSession
 
                 StackView.onStatusChanged: {
-                    if (StackView.status == StackView.Activating) {
+                    if (StackView.status === StackView.Activating) {
                         focus = true
                     }
                 }
@@ -497,19 +503,19 @@ Item {
 
                 // initiating animation of lockscreen for session switch
                 function initSwitchSession() {
-                    lockScreenRoot.state = 'onOtherSession'
+                    lockScreenRoot.state = "onOtherSession"
                 }
 
                 // initiating session switch and preparing lockscreen for possible return of user
                 function finalSwitchSession() {
-                    mainStack.pop({immediate:true})
+                    mainStack.pop({ immediate: true })
                     if (userListCurrentItem === null) {
                         console.warn("Switching to an undefined user")
                     } else if (userListCurrentItem.vtNumber === undefined) {
                         console.warn("Switching to an undefined VT")
                     }
                     sessionsModel.switchUser(userListCurrentItem.vtNumber)
-                    lockScreenRoot.state = ''
+                    lockScreenRoot.state = ""
                 }
 
                 Keys.onLeftPressed: userList.decrementCurrentIndex()
@@ -535,18 +541,17 @@ Item {
                         font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
                         onClicked: {
-                            mainStack.pop({immediate:true})
+                            mainStack.pop({ immediate: true })
                             sessionsModel.startNewSession(true /* lock the screen too */)
-                            lockScreenRoot.state = ''
+                            lockScreenRoot.state = ""
                         }
                     }
                 }
 
-
                 actionItems: [
                     ActionButton {
                         iconSource: "go-previous"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Back")
                         onClicked: mainStack.pop()
                         //Button gets cut off on smaller displays without this.
                         anchors{
@@ -596,7 +601,7 @@ Item {
                     inputPanel.showHide()
                 }
 
-                visible: inputPanel.status == Loader.Ready
+                visible: inputPanel.status === Loader.Ready
 
                 Layout.fillHeight: true
                 containmentMask: Item {
