@@ -150,7 +150,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
     }
     QString text(item->text());
     if (m_stripWhiteSpace) {
-        text = text.trimmed();
+        text = std::move(text).trimmed();
     }
     ActionList matchingActionsList = matchingActions(text, automatically_invoked);
 
@@ -248,7 +248,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
     if (command.isEnabled) {
         QString text(m_myClipItem->text());
         if (m_stripWhiteSpace) {
-            text = text.trimmed();
+            text = std::move(text).trimmed();
         }
         if (!command.serviceStorageId.isEmpty()) {
             KService::Ptr service = KService::serviceByStorageId(command.serviceStorageId);

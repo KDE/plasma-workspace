@@ -37,7 +37,7 @@ QString Notification::Private::sanitize(const QString &text)
 
     t.replace(QLatin1String("\n"), QStringLiteral("<br/>"));
     // Now remove all inner whitespace (\ns are already <br/>s)
-    t = t.simplified();
+    t = std::move(t).simplified();
     // Finally, check if we don't have multiple <br/>s following,
     // can happen for example when "\n       \n" is sent, this replaces
     // all <br/>s in succession with just one

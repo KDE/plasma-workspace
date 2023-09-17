@@ -1243,12 +1243,12 @@ void CFontListSortFilterProxy::timeout()
         if (-1 != commaPos) {
             QString style(query.mid(commaPos + 1));
             query.truncate(commaPos);
-            query = query.trimmed();
+            query = std::move(query).trimmed();
             query += ":style=";
-            style = style.trimmed();
+            style = std::move(style).trimmed();
             query += style;
         } else {
-            query = query.trimmed();
+            query = std::move(query).trimmed();
         }
 
         if (!m_fcQuery) {

@@ -686,7 +686,7 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
                     bool rv = false;
                     int usedWidth = 0;
 
-                    if (hasStr(xftFont, text) || hasStr(xftFont, text = text.toUpper()) || hasStr(xftFont, text = text.toLower())) {
+                    if (hasStr(xftFont, text) || hasStr(xftFont, text = std::move(text).toUpper()) || hasStr(xftFont, text = std::move(text).toLower())) {
                         XGlyphInfo extents;
                         const FcChar16 *str = (FcChar16 *)(text.utf16());
 
@@ -772,7 +772,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                 if (xft()->init(needAlpha ? Qt::black : txt, needAlpha ? Qt::white : bgnd, w, h)) {
                     bool rv = false;
 
-                    if (hasStr(xftFont, text) || hasStr(xftFont, text = text.toUpper()) || hasStr(xftFont, text = text.toLower())) {
+                    if (hasStr(xftFont, text) || hasStr(xftFont, text = std::move(text).toUpper()) || hasStr(xftFont, text = std::move(text).toLower())) {
                         XGlyphInfo extents;
                         const FcChar16 *str = (FcChar16 *)(text.utf16());
 
@@ -952,10 +952,10 @@ QImage CFcEngine::draw(const QString &name,
 
                         if (!drawGlyphs) {
                             if (!lc && uc) {
-                                previewString = previewString.toUpper();
+                                previewString = std::move(previewString).toUpper();
                             }
                             if (!uc && lc) {
-                                previewString = previewString.toLower();
+                                previewString = std::move(previewString).toLower();
                             }
                         }
 

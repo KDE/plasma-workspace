@@ -58,7 +58,8 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
     QString cmd = term;
 
     // no meanless space between friendly guys: helps simplify code
-    cmd = cmd.trimmed().remove(QLatin1Char(' '));
+    cmd = std::move(cmd).trimmed();
+    cmd.remove(QLatin1Char(' '));
 
     if (cmd.length() < 2) {
         return;

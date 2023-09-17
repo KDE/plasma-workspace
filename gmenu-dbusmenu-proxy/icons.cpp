@@ -281,7 +281,7 @@ QString Icons::actionIcon(const QString &actionName)
     }
 
     if (icon.isEmpty()) {
-        action = action.toLower();
+        action = std::move(action).toLower();
         icon = s_icons.value(action);
     }
 
