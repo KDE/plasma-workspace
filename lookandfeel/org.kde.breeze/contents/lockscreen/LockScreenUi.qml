@@ -573,6 +573,7 @@ Item {
                 right: parent.right
                 margins: Kirigami.Units.smallSpacing
             }
+            spacing: Kirigami.Units.smallSpacing
 
             PlasmaComponents3.ToolButton {
                 focusPolicy: Qt.TabFocus
