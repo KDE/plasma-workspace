@@ -58,6 +58,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_corona(corona)
     , m_visibilityMode(NormalPanel)
     , m_opacityMode(Adaptive)
+    , m_lengthMode(FillAvailable)
     , m_backgroundHints(Plasma::Types::StandardBackground)
 {
     if (KWindowSystem::isPlatformWayland()) {
@@ -447,6 +448,11 @@ PanelView::OpacityMode PanelView::opacityMode() const
     return m_opacityMode;
 }
 
+PanelView::LengthMode PanelView::lengthMode() const
+{
+    return m_lengthMode;
+}
+
 bool PanelView::adaptiveOpacityEnabled()
 {
     return m_theme.adaptiveTransparencyEnabled();
@@ -461,6 +467,21 @@ void PanelView::setOpacityMode(PanelView::OpacityMode mode)
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT opacityModeChanged();
+    }
+}
+
+void PanelView::setLengthMode(PanelView::LengthMode mode)
+{
+    if (m_lengthMode != mode) {
+        m_lengthMode = mode;
+        if (config().isValid() && config().parent().isValid()) {
+            config().parent().writeEntry("panelLengthMode", (int)mode);
+            m_corona->requestApplicationConfigSync();
+        }
+        Q_EMIT lengthModeChanged();
+        positionPanel();
+        Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
+        resizePanel();
     }
 }
 
@@ -574,29 +595,34 @@ QRect PanelView::geometryByDistance(int distance) const
     const QRect screenGeometry = s->geometry();
     QRect r(QPoint(0, 0), formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), height()) : QSize(width(), totalThickness()));
 
+    int currentOffset = 0;
+    if (m_lengthMode == PanelView::LengthMode::Custom) {
+        currentOffset = m_offset;
+    }
+
     if (formFactor() == Plasma::Types::Horizontal) {
         switch (m_alignment) {
         case Qt::AlignCenter:
-            r.moveCenter(screenGeometry.center() + QPoint(m_offset, 0));
+            r.moveCenter(screenGeometry.center() + QPoint(currentOffset, 0));
             break;
         case Qt::AlignRight:
-            r.moveRight(screenGeometry.right() - m_offset);
+            r.moveRight(screenGeometry.right() - currentOffset);
             break;
         case Qt::AlignLeft:
         default:
-            r.moveLeft(screenGeometry.left() + m_offset);
+            r.moveLeft(screenGeometry.left() + currentOffset);
         }
     } else {
         switch (m_alignment) {
         case Qt::AlignCenter:
-            r.moveCenter(screenGeometry.center() + QPoint(0, m_offset));
+            r.moveCenter(screenGeometry.center() + QPoint(0, currentOffset));
             break;
         case Qt::AlignRight:
-            r.moveBottom(screenGeometry.bottom() - m_offset);
+            r.moveBottom(screenGeometry.bottom() - currentOffset);
             break;
         case Qt::AlignLeft:
         default:
-            r.moveTop(screenGeometry.top() + m_offset);
+            r.moveTop(screenGeometry.top() + currentOffset);
         }
     }
 
@@ -633,6 +659,29 @@ void PanelView::resizePanel()
     // it can happen a moment where the qscreen gets destroyed before it gets reassigned
     // to the new screen
     if (!m_screenToFollow) {
+        return;
+    }
+
+    QSize s;
+    if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            s = QSize(totalThickness(), m_screenToFollow->size().height());
+        } else {
+            s = QSize(m_screenToFollow->size().width(), totalThickness());
+        }
+        setMinimumSize(s);
+        setMaximumSize(s);
+        resize(s);
+        return;
+    } else if (m_lengthMode == PanelView::LengthMode::FitContent) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            s = QSize(totalThickness(), m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding);
+        } else {
+            s = QSize(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, totalThickness());
+        }
+        setMinimumSize(QSize(10, 10));
+        setMaximumSize(s);
+        resize(s);
         return;
     }
 
@@ -730,6 +779,9 @@ void PanelView::restore()
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity",
                                                                  configDefaults().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive)));
+    setLengthMode(
+        (LengthMode)config().parent().readEntry<int>("panelLengthMode",
+                                                     configDefaults().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable)));
     resizePanel();
 
     Q_EMIT maximumLengthChanged();
