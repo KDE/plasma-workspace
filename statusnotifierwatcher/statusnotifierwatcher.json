@@ -115,5 +115,6 @@
     },
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-load-on-demand": false,
-    "X-KDE-Kded-phase": 1
+    "X-KDE-Kded-phase": 1,
+    "X-KDE-DBus-ServiceName": "org.kde.StatusNotifierWatcher"
 }
