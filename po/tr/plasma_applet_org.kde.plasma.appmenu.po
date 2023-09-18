@@ -48,20 +48,3 @@ msgstr "Ara"
 #, kde-format
 msgid "Search…"
 msgstr "Ara…"
-
-#~ msgid "application-menu"
-#~ msgstr "uygulama-menüsü"
-
-#~ msgid "Application Menu Widget is disabled"
-#~ msgstr "Uygulama Menüsü Gereci devre dışı"
-
-#~ msgctxt "it being the 'Application Menu Widget'"
-#~ msgid ""
-#~ "Go to System Settings > Application Style > Fine Tuning (tab) to enable "
-#~ "it."
-#~ msgstr ""
-#~ "Etkinleştirmek için Sistem Ayarları > Uygulama Biçemi > Hassas Tarama "
-#~ "(sekmesi) bölümüne gidin."
-
-#~ msgid "emblem-warning"
-#~ msgstr "amblem-uyarısı"

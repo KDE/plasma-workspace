@@ -299,6 +299,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, de KDE"
-
-#~ msgid "100%"
-#~ msgstr "100%"

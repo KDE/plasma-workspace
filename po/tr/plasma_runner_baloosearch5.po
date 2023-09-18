@@ -72,6 +72,3 @@ msgstr "Metinler"
 #, kde-format
 msgid "Files"
 msgstr "Dosyalar"
-
-#~ msgid "Search through files, emails and contacts"
-#~ msgstr "Dosyalar, e-postalar ve kişiler arasında ara"

@@ -191,9 +191,3 @@ msgstr "Açılır pencereyi kapat"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Gizli simgeleri göster"
-
-#~ msgctxt ""
-#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
-#~ "activation"
-#~ msgid "%1 (Automatic load)"
-#~ msgstr "%1 (Otomatik yükle)"

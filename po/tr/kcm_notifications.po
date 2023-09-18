@@ -273,14 +273,3 @@ msgid ""
 msgstr ""
 "Bildirim ayarlarını ve davranışlarını yapılandırmak için listeden bir "
 "uygulama seçin."
-
-#~ msgid "Configure Notifications"
-#~ msgstr "Bildirimleri Yapılandır"
-
-#~ msgid "This module lets you manage application and system notifications."
-#~ msgstr ""
-#~ "Bu modül uygulama ve sistem bildirimlerini yapılandırmanıza izin verir."
-
-#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-#~ msgid "Toggle with:"
-#~ msgstr "Şununla aç/kapat:"

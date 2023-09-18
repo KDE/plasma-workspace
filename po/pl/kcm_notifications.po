@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2019, 2020, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2022-12-29 10:28+0100\n"
+"PO-Revision-Date: 2023-09-17 13:01+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -49,31 +49,27 @@ msgid "Show notification badges"
 msgstr "Pokaż odznaki powiadomień"
 
 #: ui/ApplicationConfiguration.qml:162
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Ustawienia zdarzeń..."
+msgstr "Ustawienia zdarzeń"
 
 #: ui/ApplicationConfiguration.qml:170
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Ten program nie obsługuje ustawiania powiadomień na podstawie zdarzeń."
+msgstr "Ten program nie obsługuje ustawiania powiadomień na podstawie zdarzeń"
 
 #: ui/ApplicationConfiguration.qml:257
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Pokaż wiadomość w oknie wysuwnym"
 
 #: ui/ApplicationConfiguration.qml:266
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Odtwórz &dźwięk"
 
 #: ui/main.qml:41
 #, kde-format
@@ -265,20 +261,16 @@ msgid "System Services"
 msgstr "Usługi systemowe"
 
 #: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Żaden program lub zdarzenie nie pasuje do wyrażenia wyszukiwania."
+msgstr "Żaden program lub zdarzenie nie pasuje do szukanego wyrażenia"
 
 #: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
-msgstr "Wybierz program z wykazu, aby ustawić jego powiadomienia i zachowanie."
+msgstr "Wybierz program z wykazu, aby ustawić jego powiadomienia i zachowanie"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Ustawienia powiadomień"

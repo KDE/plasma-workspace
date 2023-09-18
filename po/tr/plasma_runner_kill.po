@@ -93,13 +93,3 @@ msgstr "&Sırala"
 #, kde-format
 msgid "It is not sure, that this will take effect"
 msgstr "Değişikliğin yansıyıp yansımayacağı belli değil"
-
-#~ msgid ""
-#~ "Process ID: %1\n"
-#~ "Running as user: %2"
-#~ msgstr ""
-#~ "Süreç ID: %1\n"
-#~ "Çalıştıran kullanıcı: %2"
-
-#~ msgid "Kill %1"
-#~ msgstr "%1 Sürecini Sonlandır"

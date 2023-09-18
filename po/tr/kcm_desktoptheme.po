@@ -164,9 +164,3 @@ msgstr "Tema Aç"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Tema Dosyaları (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Get New Plasma Styles…"
-#~ msgstr "Yeni Plasma Biçemleri Al…"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Bu modül Plasma biçemini yapılandırmanızı sağlar."

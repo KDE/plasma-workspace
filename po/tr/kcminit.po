@@ -48,6 +48,3 @@ msgstr "Başlangıçta çalıştırılacak modülleri listele"
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Çalıştırmak için yapılandırma modülü"
-
-#~ msgid "Module %1 not found"
-#~ msgstr "%1 modülü bulunamadı"

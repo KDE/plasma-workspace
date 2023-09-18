@@ -213,9 +213,3 @@ msgstr "GNOME/GTK Uygulama Biçemini Yapılandır…"
 #, kde-format
 msgid "Configure Style…"
 msgstr "Biçemi Yapılandır…"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "Bu modül, kullanıcı arayüz bileşenlerinin görünüşünü ayarlamanızı sağlar."

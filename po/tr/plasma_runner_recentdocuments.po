@@ -27,6 +27,3 @@ msgstr "İçeren Klasörü Aç"
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr ":q: ile eşleşen son kullanılan belgeleri arar."
-
-#~ msgid "Recent Document"
-#~ msgstr "Son Kullanılan Belgeler"

@@ -71,10 +71,3 @@ msgstr "Duvar Kağıdı Eylemleri"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Ayırıcı]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Run Command..."
-#~ msgstr "Komut Çalıştır..."
-
-#~ msgid "Add Panel"
-#~ msgstr "Panel Ekle"

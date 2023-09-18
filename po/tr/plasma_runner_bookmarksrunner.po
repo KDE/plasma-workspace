@@ -32,13 +32,10 @@ msgstr "yer imleri"
 #: bookmarksrunner.cpp:35
 #, kde-format
 msgid "List all web browser bookmarks"
-msgstr "Tüm web tarayıcı yer imlerini listele"
+msgstr "Tüm web tarayıcısı yer imlerini listele"
 
 #: bookmarksrunner.cpp:56
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"
 msgstr "yer imleri"
-
-#~ msgid "List all bookmarks of the browser"
-#~ msgstr "Tarayıcının tüm yer imlerinin listesi"

@@ -87,4 +87,4 @@ msgstr "Bu aygıt kaldırılamadı."
 #: ksolidnotify.cpp:228
 #, kde-format
 msgid "Could not eject this disc."
-msgstr "Bu diski çıkarılamadı."
+msgstr "Bu disk çıkarılamadı."

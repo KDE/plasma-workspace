@@ -47,7 +47,7 @@ msgstr "Kod 39"
 #: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 93"
-msgstr "93 no&#39;lu kod"
+msgstr "Kod 93"
 
 #: contents/ui/BarcodePage.qml:58
 #, kde-format
@@ -135,9 +135,3 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
-
-#~ msgid "The QR code is too large to be displayed"
-#~ msgstr "Kare kod görüntülenemeyecek kadar büyük"
-
-#~ msgid "Clear history"
-#~ msgstr "Geçmişi temizle"

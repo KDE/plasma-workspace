@@ -293,18 +293,3 @@ msgstr "Bilgisayarı kapat"
 #, kde-format
 msgid "System actions"
 msgstr "Sistem eylemleri"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Bağlantı Bilgisini Göster…"
-
-#~ msgid "Contacts"
-#~ msgstr "Bağlantılar"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Bağlantıyı Unut"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Tüm Bağlantıları Unut"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Son Bağlantılar"

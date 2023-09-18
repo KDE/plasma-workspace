@@ -209,37 +209,3 @@ msgid ""
 msgstr ""
 "Gündüz rengi %1 itibarıyla başlar ve %2 olduğunda tümüyle gündüz rengine "
 "geçilmiş olur"
-
-#~ msgid "This is what day color temperature will look like when active."
-#~ msgstr "Bu, etkinken gün rengi sıcaklığının nice görüneceğidir."
-
-#~ msgid "This is what night color temperature will look like when active."
-#~ msgstr "Bu, etkinken gece rengi sıcaklığının nice görüneceğidir."
-
-#~ msgid "Activate blue light filter"
-#~ msgstr "Mavi ışık süzgecini etkinleştir"
-
-#~ msgid "Turn on at:"
-#~ msgstr "Şu saatte aç:"
-
-#~ msgid "Turn off at:"
-#~ msgstr "Şu saatte kapat:"
-
-#~ msgid "Night Color begins changing back at %1 and ends at %2"
-#~ msgstr ""
-#~ "Gece Rengi geri değişmeye %1 saatinde başlar ve %2 saatine kadar sürer"
-
-#~ msgid "Error: Morning is before evening."
-#~ msgstr "Hata: Sabah, akşamdan öncedir."
-
-#~ msgid "Detect Location"
-#~ msgstr "Konumu Algıla"
-
-#~ msgid ""
-#~ "The device's location will be detected using GPS (if available), or by "
-#~ "sending network information to <a href=\"https://location.services."
-#~ "mozilla.com\">Mozilla Location Service</a>."
-#~ msgstr ""
-#~ "Bu aygıtın konumu GPS kullanılarak (olanaklıysa) veya ağ bilgisini <a "
-#~ "href=\"https://location.services.mozilla.com\">Mozilla Konum Servisi</"
-#~ "a>'ne gönderilerek algılanacak."

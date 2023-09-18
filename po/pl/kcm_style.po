@@ -1,5 +1,5 @@
 # translation of kcmstyle.po to
-# Version: $Revision: 1658014 $
+# Version: $Revision: 1660427 $
 # translation of kcmstyle.po to Polish
 # translation of kcmstyle.po to
 # Norbert Popiołek <norbert@kde.com.pl>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 02:01+0000\n"
-"PO-Revision-Date: 2023-04-23 11:46+0200\n"
+"PO-Revision-Date: 2023-09-17 12:58+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 ">\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -118,8 +118,7 @@ msgid "Secondary toolbar label"
 msgstr "Etykieta pobocznego paska narzędzi"
 
 #: ui/EffectSettingsPopup.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr "Ustawienia ikon i pasków narzędzi"

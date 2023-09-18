@@ -36,7 +36,7 @@ msgstr "Hafta numaralarını göster"
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
-msgstr "Kompakt sürüm:"
+msgstr "Sıkışık sürüm:"
 
 #: package/contents/ui/configGeneral.qml:38
 #, kde-format
@@ -49,20 +49,3 @@ msgstr "Ayın gününü göster"
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Hafta numarasını göster"
-
-#~ msgid "Working Day"
-#~ msgstr "İş Günü"
-
-#~ msgid "Starts at 9"
-#~ msgstr "9'da Başlar"
-
-#~ msgid "Ends at 5"
-#~ msgstr "17'de Biter"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Icon:"
-#~ msgstr "Simge:"
-
-#~ msgctxt "Show the number of the day (eg. 31) in the icon"
-#~ msgid "Day in month"
-#~ msgstr "Ayın günü"

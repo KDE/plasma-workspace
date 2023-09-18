@@ -363,12 +363,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Yazıtipi Seç"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "DPI Wayland yazıtipini zorla"
-
-#~ msgid "This module lets you configure the system fonts."
-#~ msgstr "Bu modül, sistem yazıtiplerini yapılandırmanıza izin verir."
-
-#~ msgid "Change Display Scaling…"
-#~ msgstr "Ekran Ölçeğini Değiştir…"

@@ -27,12 +27,12 @@ msgstr "Sanal Klavyeleri Yapılandır..."
 #: contents/ui/manage-inputmethod.qml:89
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
-msgstr "Sanal Klavye: Kullanılamıyor"
+msgstr "Sanal klavye: Kullanılamıyor"
 
 #: contents/ui/manage-inputmethod.qml:102
 #, kde-format
 msgid "Virtual Keyboard: disabled"
-msgstr "Sanal Klavye: Devre dışı"
+msgstr "Sanal klavye: Devre dışı"
 
 #: contents/ui/manage-inputmethod.qml:118
 #, kde-format
@@ -42,9 +42,9 @@ msgstr "Sanal Klavyeyi Göster"
 #: contents/ui/manage-inputmethod.qml:133
 #, kde-format
 msgid "Virtual Keyboard: visible"
-msgstr "Sanal Klavye: Görünür"
+msgstr "Sanal klavye: Görünür"
 
 #: contents/ui/manage-inputmethod.qml:147
 #, kde-format
 msgid "Virtual Keyboard: enabled"
-msgstr "Sanal Klavye: Etkin"
+msgstr "Sanal klavye: Etkin"

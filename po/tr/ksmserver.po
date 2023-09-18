@@ -151,7 +151,7 @@ msgstr "Oturum Yönetimi"
 #: server.cpp:886
 #, kde-format
 msgid "Log Out"
-msgstr "Çık"
+msgstr "Oturumu Kapat"
 
 #: server.cpp:891
 #, kde-format
@@ -166,17 +166,14 @@ msgstr "Yeniden Başlat"
 #: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "Onay Olmadan Çık"
+msgstr "Onaysız Oturumu Kapat"
 
 #: server.cpp:907
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Onay Olmadan Kapat"
+msgstr "Onaysız Kapat"
 
 #: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "Onay Olmadan Yeniden Başlat"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "$HOME dizinine (%1) yazma izni yok."
+msgstr "Onaysız Yeniden Başlat"

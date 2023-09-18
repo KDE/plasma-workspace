@@ -1372,22 +1372,3 @@ msgstr "Renk Şeması Aç"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Renk Şeması Dosyaları (*.colors)"
-
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "Yeni Renk Şemaları Al…"
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "Bu modül renk şeması seçmenize izin verir."
-
-#~ msgid "Use accent color:"
-#~ msgstr "Vurgu rengini kullan:"
-
-#~ msgid "From current color scheme"
-#~ msgstr "Geçerli renk şemasından"
-
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "Geçerli duvar kağıdından"
-
-#~ msgid "Custom:"
-#~ msgstr "Özel:"

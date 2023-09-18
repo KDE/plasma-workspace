@@ -48,6 +48,3 @@ msgstr "%1 konumuna git"
 #, kde-format
 msgid "Send email to %1"
 msgstr "%1 kişisine e-posta gönder"
-
-#~ msgid "Locations"
-#~ msgstr "Konumlar"

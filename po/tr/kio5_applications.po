@@ -33,7 +33,4 @@ msgstr "Programlar"
 #: kio_applications.cpp:131
 #, kde-format
 msgid "Unknown application folder"
-msgstr "Bilinmeyen uygulama dizini"
-
-#~ msgid "Settings"
-#~ msgstr "Ayarlar"
+msgstr "Bilinmeyen uygulama klasörü"

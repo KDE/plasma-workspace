@@ -26,4 +26,4 @@ msgstr "Kurulu olmayan bileşenleri :q:' kullanarak arar:"
 #: appstreamrunner.cpp:123
 #, kde-format
 msgid "Get %1…"
-msgstr "%1 bileşenini al…"
+msgstr "Al: %1…"

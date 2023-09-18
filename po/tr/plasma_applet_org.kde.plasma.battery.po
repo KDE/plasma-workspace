@@ -392,6 +392,3 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
-
-#~ msgid "Performance mode has been manually enabled"
-#~ msgstr "Başarım kipi elle etkinleştirildi"

@@ -30,10 +30,3 @@ msgstr "%1 için Görev Görünümü bulunamadı"
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/sn"
-
-#~ msgid "Job canceled by user."
-#~ msgstr "İşlem kullanıcı tarafından iptal edildi."
-
-#~ msgid "1 file"
-#~ msgid_plural "%1 files"
-#~ msgstr[0] "%1 dosya"

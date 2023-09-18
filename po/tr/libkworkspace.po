@@ -53,18 +53,3 @@ msgstr "%1: %2"
 msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
-
-#~ msgctxt ""
-#~ "Action that reorganizes the windows to try to have them less cluttered"
-#~ msgid "Unclutter Windows"
-#~ msgstr "Pencereleri Düzenle"
-
-#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
-#~ msgid "Cascade Windows"
-#~ msgstr "Pencereleri Basamakla"
-
-#~ msgid "On All Desktops"
-#~ msgstr "Tüm Masaüstlerinde"
-
-#~ msgid "No Windows"
-#~ msgstr "Pencere Yok"

@@ -294,9 +294,3 @@ msgid ""
 msgstr ""
 "Bu Global Tema, uygulanabilir bir ayar sunmuyor. Bozulmuş olabileceğinden, "
 "lütfen geliştiricisini durumdan haberdar edin."
-
-#~ msgid "Get New Global Themes…"
-#~ msgstr "Yeni Global Temalar Al…"
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "Bu modül, genel görünümü ve hissi seçmenize olanak tanır."

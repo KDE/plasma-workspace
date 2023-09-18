@@ -569,6 +569,3 @@ msgstr "Hesabınız"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Diğer Hesaplar"
-
-#~ msgid "Manage Users"
-#~ msgstr "Kullanıcıları Yönet"

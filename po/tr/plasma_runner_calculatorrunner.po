@@ -44,8 +44,3 @@ msgstr "Yaygın kullanılan bir matematik işlevi gir"
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"
 msgstr "Yaklaşık Değer"
-
-#~ msgid ""
-#~ "The exchange rates could not be updated. The following error has been "
-#~ "reported: %1"
-#~ msgstr "Kur bilgileri güncellenemedi. Hata raporu: %1"
