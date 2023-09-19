@@ -7,6 +7,8 @@
 
 #include "colorcorrect_export.h"
 
+#include <qqmlregistration.h>
+
 #include <Plasma5Support/DataEngine>
 #include <Plasma5Support/DataEngineConsumer>
 
@@ -20,6 +22,7 @@ namespace ColorCorrect
 class COLORCORRECT_EXPORT Geolocator : public QObject, public Plasma5Support::DataEngineConsumer
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(double latitude READ latitude NOTIFY latitudeChanged)
     Q_PROPERTY(double longitude READ longitude NOTIFY longitudeChanged)

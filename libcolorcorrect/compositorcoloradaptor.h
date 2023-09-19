@@ -10,6 +10,8 @@
 #include <QString>
 #include <QTime>
 
+#include <qqmlregistration.h>
+
 #include "colorcorrect_export.h"
 #include "colorcorrectconstants.h"
 
@@ -20,6 +22,7 @@ namespace ColorCorrect
 class COLORCORRECT_EXPORT CompositorAdaptor : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(int error READ error NOTIFY errorChanged)
     Q_PROPERTY(QString errorText READ errorText NOTIFY errorTextChanged)

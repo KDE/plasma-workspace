@@ -11,6 +11,8 @@
 #include <QTime>
 #include <QVariant>
 
+#include <qqmlregistration.h>
+
 #include "colorcorrect_export.h"
 
 namespace ColorCorrect
@@ -27,6 +29,7 @@ namespace ColorCorrect
 class COLORCORRECT_EXPORT SunCalc : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     /**

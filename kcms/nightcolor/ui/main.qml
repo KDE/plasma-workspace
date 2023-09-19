@@ -11,7 +11,7 @@ import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
-import org.kde.colorcorrect 0.1 as CC
+import org.kde.colorcorrect as CC
 
 import org.kde.private.kcms.nightcolor 1.0
 
@@ -36,7 +36,7 @@ KCM.SimpleKCM {
     // because the object attempts geolocation immediately when created, which is unnecessary (and bad for privacy)
 
     function startLocator() {
-        root.locator = Qt.createQmlObject('import org.kde.colorcorrect 0.1 as CC; CC.Geolocator {}', root, "geoLocatorObj");
+        root.locator = Qt.createQmlObject('import org.kde.colorcorrect as CC; CC.Geolocator {}', root, "geoLocatorObj");
     }
 
     function endLocator() {

@@ -1,4 +1,3 @@
-add_subdirectory(declarative)
 add_subdirectory(kded)
 
 set(colorcorrect_LIB_SRCS
@@ -30,6 +29,9 @@ set_target_properties(colorcorrect PROPERTIES
                       VERSION ${PROJECT_VERSION}
                       SOVERSION ${PROJECT_VERSION_MAJOR}
                       EXPORT_NAME LibColorCorrect)
+
+ecm_add_qml_module(colorcorrect URI org.kde.colorcorrect)
+ecm_finalize_qml_module(colorcorrect)
 
 install(TARGETS colorcorrect EXPORT libcolorcorrectLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
