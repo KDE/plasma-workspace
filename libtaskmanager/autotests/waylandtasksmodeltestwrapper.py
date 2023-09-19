@@ -21,10 +21,7 @@ if __name__ == '__main__':
 
     test_environ = os.environ.copy()
     test_environ["QT_QPA_PLATFORM"] = "wayland"
-    if os.path.exists(test_executable_path):
-        test_process = subprocess.Popen([test_executable_path], env = test_environ)
-    elif "KDECI_BUILD" in os.environ:
-        test_process = subprocess.Popen(["waylandtasksmodeltest"], env = test_environ) # Find in CMAKE_PREFIX_PATH
+    test_process = subprocess.Popen([test_executable_path], env = test_environ)
     assert test_process.poll() is None
 
     result: int = 1
