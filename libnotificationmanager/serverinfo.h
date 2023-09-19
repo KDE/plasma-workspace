@@ -12,6 +12,8 @@
 #include <QString>
 #include <memory>
 
+#include <qqmlregistration.h>
+
 namespace NotificationManager
 {
 /**
@@ -24,6 +26,8 @@ namespace NotificationManager
 class NOTIFICATIONMANAGER_EXPORT ServerInfo : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Can only access ServerInfo via Server")
 
     Q_PROPERTY(Status status READ status NOTIFY statusChanged)
 

@@ -1,6 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libnotificationmanager\")
 
-add_subdirectory(declarative)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
@@ -95,6 +94,9 @@ set_target_properties(notificationmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
                       SOVERSION 1
                       EXPORT_NAME LibNotificationManager)
+
+ecm_add_qml_module(notificationmanager URI org.kde.notificationmanager)
+ecm_finalize_qml_module(notificationmanager)
 
 install(TARGETS notificationmanager EXPORT notificationmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

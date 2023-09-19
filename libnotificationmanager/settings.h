@@ -14,6 +14,8 @@
 #include <QString>
 #include <memory>
 
+#include <qqmlregistration.h>
+
 #include "notificationmanager_export.h"
 
 namespace NotificationManager
@@ -32,6 +34,7 @@ namespace NotificationManager
 class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     /**
      * Whether to show critical notification popups in do not disturb mode.

@@ -14,6 +14,8 @@
 
 #include "notificationmanager_export.h"
 
+#include <qqmlregistration.h>
+
 namespace NotificationManager
 {
 /**
@@ -27,6 +29,7 @@ namespace NotificationManager
 class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     /**

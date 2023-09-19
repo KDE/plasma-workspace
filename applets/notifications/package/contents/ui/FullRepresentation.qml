@@ -16,7 +16,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.coreaddons 1.0 as KCoreAddons
 
-import org.kde.notificationmanager 1.0 as NotificationManager
+import org.kde.notificationmanager as NotificationManager
 
 import "global"
 

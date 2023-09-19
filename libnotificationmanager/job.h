@@ -10,6 +10,8 @@
 #include <QString>
 #include <QUrl>
 
+#include <qqmlregistration.h>
+
 #include "notifications.h"
 
 #include "notificationmanager_export.h"
@@ -29,6 +31,8 @@ class JobPrivate;
 class NOTIFICATIONMANAGER_EXPORT Job : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Can only access Job via JobDetailsRole of JobsModel")
 
     /**
      * The job infoMessage, e.g. "Copying".

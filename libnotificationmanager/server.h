@@ -7,9 +7,12 @@
 #pragma once
 
 #include <QObject>
+#include <QQmlEngine>
 
 #include "notificationmanager_export.h"
 #include "notifications.h"
+
+#include <qqmlregistration.h>
 
 namespace NotificationManager
 {
@@ -26,6 +29,8 @@ class ServerPrivate;
 class NOTIFICATIONMANAGER_EXPORT Server : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     /**
      * Whether the notification service could be registered.
@@ -69,6 +74,8 @@ public:
     Q_ENUM(CloseReason)
 
     static Server &self();
+
+    static Server *create(QQmlEngine *, QJSEngine *);
 
     /**
      * Registers the Notification Service on DBus.

@@ -15,7 +15,7 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.11 as Kirigami
 
-import org.kde.notificationmanager 1.0 as NotificationManager
+import org.kde.notificationmanager as NotificationManager
 import org.kde.taskmanager 0.1 as TaskManager
 
 import org.kde.plasma.private.notifications 2.0 as Notifications

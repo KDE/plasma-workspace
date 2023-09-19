@@ -11,7 +11,7 @@ import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kcmutils as KCM
 
-import org.kde.notificationmanager 1.0 as NotificationManager
+import org.kde.notificationmanager as NotificationManager
 
 KCM.SimpleKCM {
     id: root

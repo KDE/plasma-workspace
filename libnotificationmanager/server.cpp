@@ -42,6 +42,12 @@ Server &Server::self()
     return s_self;
 }
 
+Server *Server::create(QQmlEngine *, QJSEngine *)
+{
+    QQmlEngine::setObjectOwnership(&Server::self(), QQmlEngine::CppOwnership);
+    return &Server::self();
+}
+
 bool Server::init()
 {
     return d->init();

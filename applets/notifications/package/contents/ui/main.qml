@@ -16,7 +16,7 @@ import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kcmutils as KCMUtils
 import org.kde.config as KConfig
 
-import org.kde.notificationmanager 1.0 as NotificationManager
+import org.kde.notificationmanager as NotificationManager
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
