@@ -10,6 +10,8 @@
 
 #include <QConcatenateTablesProxyModel>
 
+#include <qqmlregistration.h>
+
 #include "kmpris_export.h"
 
 class Mpris2FilterProxyModel;
@@ -22,6 +24,7 @@ class PlayerContainer;
 class KMPRIS_EXPORT Mpris2Model : public QConcatenateTablesProxyModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(unsigned currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(PlayerContainer *currentPlayer READ currentPlayer NOTIFY currentPlayerChanged)

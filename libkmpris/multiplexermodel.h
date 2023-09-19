@@ -9,6 +9,8 @@
 
 #include <QSortFilterProxyModel>
 
+#include <qqmlregistration.h>
+
 #include "kmpris_export.h"
 
 class Multiplexer;
@@ -23,6 +25,7 @@ class PlayerContainer;
 class KMPRIS_EXPORT MultiplexerModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     static std::shared_ptr<MultiplexerModel> self();

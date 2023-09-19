@@ -33,6 +33,7 @@ target_include_directories(kmpris PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CUR
 target_link_libraries(kmpris
     PUBLIC
         Qt::Core
+        Qt::Qml
     PRIVATE
         Qt::DBus
         KF6::ConfigCore
@@ -41,9 +42,12 @@ target_link_libraries(kmpris
 set_target_properties(kmpris PROPERTIES
                       VERSION ${PROJECT_VERSION}
                       SOVERSION ${PROJECT_VERSION_MAJOR})
+
+ecm_add_qml_module(kmpris URI org.kde.plasma.private.mpris GENERATE_PLUGIN_SOURCE)
+ecm_finalize_qml_module(kmpris)
+
 install(TARGETS kmpris ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-add_subdirectory(declarative)
 add_subdirectory(kded)
 
 if(BUILD_TESTING)

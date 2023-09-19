@@ -9,6 +9,8 @@
 #include <QBindable>
 #include <QObject>
 
+#include <qqmlregistration.h>
+
 #include "kmpris_export.h"
 
 class QDBusPendingCallWatcher;
@@ -22,6 +24,7 @@ inline constexpr QLatin1String MPRIS2_PREFIX{"org.mpris.MediaPlayer2."};
 
 namespace LoopStatus
 {
+QML_ELEMENT
 KMPRIS_EXPORT Q_NAMESPACE //
     enum KMPRIS_EXPORT Status : std::uint32_t {
         Unknown = 0,
@@ -34,6 +37,7 @@ KMPRIS_EXPORT Q_ENUM_NS(Status)
 
 namespace ShuffleStatus
 {
+QML_ELEMENT
 KMPRIS_EXPORT Q_NAMESPACE //
     enum KMPRIS_EXPORT Status : std::uint32_t {
         Unknown = 0,
@@ -45,6 +49,7 @@ KMPRIS_EXPORT Q_ENUM_NS(Status)
 
 namespace PlaybackStatus
 {
+QML_ELEMENT
 KMPRIS_EXPORT Q_NAMESPACE //
     enum KMPRIS_EXPORT Status : std::uint32_t {
         Unknown = 0,
@@ -261,6 +266,7 @@ protected:
 class KMPRIS_EXPORT PlayerContainer : public AbstractPlayerContainer
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(LoopStatus::Status loopStatus READ loopStatus WRITE setLoopStatus NOTIFY loopStatusChanged)
     Q_PROPERTY(qlonglong position READ position WRITE setPosition NOTIFY positionChanged)

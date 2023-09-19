@@ -1,5 +1,0 @@
-# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
-# SPDX-License-Identifier: GPL-2.0-or-later
-
-module org.kde.plasma.private.mpris
-plugin mprisplugin
