@@ -10,8 +10,8 @@
 #include <QSignalSpy>
 #include <QTest>
 
-#include "mpris2filterproxymodel.h"
 #include "mpris2model.h"
+#include "mprisinterface.h"
 
 class FetchInitialPlayerTest : public QObject
 {
@@ -34,41 +34,14 @@ private:
 void FetchInitialPlayerTest::cleanup()
 {
     if (m_playerProcess) {
-        QSignalSpy finishedSpy(m_playerProcess, &QProcess::finished);
-        m_playerProcess->terminate();
-        if (m_playerProcess->state() == QProcess::Running) {
-            QVERIFY(finishedSpy.wait());
-        }
-        delete m_playerProcess;
+        MprisInterface::stopPlayer(m_playerProcess);
         m_playerProcess = nullptr;
     }
 }
 
 void FetchInitialPlayerTest::test_playerBeforeModel()
 {
-    m_playerProcess = new QProcess(this);
-    m_playerProcess->setProgram(QStringLiteral("python3"));
-    m_playerProcess->setArguments({QFINDTESTDATA(QStringLiteral("../../appiumtests/utils/mediaplayer.py")), //
-                                   QFINDTESTDATA(QStringLiteral("../../appiumtests/resources/player_b.json"))});
-    QSignalSpy startedSpy(m_playerProcess, &QProcess::started);
-    QSignalSpy readyReadSpy(m_playerProcess, &QProcess::readyReadStandardOutput);
-    m_playerProcess->setReadChannel(QProcess::StandardOutput);
-    m_playerProcess->start(QIODeviceBase::ReadOnly);
-    if (m_playerProcess->state() != QProcess::Running) {
-        QVERIFY(startedSpy.wait());
-    }
-
-    bool registered = false;
-    for (int i = 0; i < 10; ++i) {
-        if (m_playerProcess->isReadable() && m_playerProcess->readAllStandardOutput().contains("MPRIS registered")) {
-            registered = true;
-            break;
-        }
-        readyReadSpy.wait();
-    }
-    qDebug() << m_playerProcess->state();
-    qDebug() << m_playerProcess->readAllStandardError();
-    QVERIFY(registered);
+    m_playerProcess = MprisInterface::startPlayer(this);
 
     std::unique_ptr<Mpris2Model> model1 = std::make_unique<Mpris2Model>();
     QSignalSpy rowsInsertedSpy1(model1.get(), &QAbstractItemModel::rowsInserted);

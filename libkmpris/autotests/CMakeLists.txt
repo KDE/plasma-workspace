@@ -3,14 +3,13 @@
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
-add_executable(fetchinitialplayertest fetchinitialplayertest.cpp)
-target_link_libraries(fetchinitialplayertest
-    kmpris
-    Qt::Test
-)
-add_test(NAME fetchinitialplayertest
-    COMMAND fetchinitialplayertest
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/..
+ecm_add_test(fetchinitialplayertest.cpp LINK_LIBRARIES kmpris Qt::Test)
+ecm_add_test(mprisdeclarativetest.cpp LINK_LIBRARIES kmpris Qt::Test Qt::Quick Qt::Qml)
+set_tests_properties(
+    fetchinitialplayertest
+    mprisdeclarativetest
+    PROPERTIES
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/..
 )
 
 find_program(xdotool_PATH xdotool REQUIRED)
