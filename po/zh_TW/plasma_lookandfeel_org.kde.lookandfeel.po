@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-19 01:56+0000\n"
 "PO-Revision-Date: 2023-02-07 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -82,13 +82,13 @@ msgstr "請在「使用者名稱」和「密碼」框中輸入"
 msgid "List Users"
 msgstr "列出使用者"
 
-#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "虛擬鍵盤"
 
-#: ../sddm-theme/Main.qml:598
+#: ../sddm-theme/Main.qml:634
 #, kde-format
 msgid "Login Failed"
 msgstr "登入失敗"
@@ -191,7 +191,7 @@ msgstr "開始新的作業階段"
 msgid "Back"
 msgstr "返回"
 
-#: contents/lockscreen/LockScreenUi.qml:593
+#: contents/lockscreen/LockScreenUi.qml:612
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

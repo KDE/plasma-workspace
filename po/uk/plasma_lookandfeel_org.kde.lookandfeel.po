@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-19 01:56+0000\n"
 "PO-Revision-Date: 2022-10-09 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -80,13 +80,13 @@ msgstr "Введіть ім'я користувача і пароль"
 msgid "List Users"
 msgstr "Список користувачів"
 
-#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Віртуальна клавіатура"
 
-#: ../sddm-theme/Main.qml:598
+#: ../sddm-theme/Main.qml:634
 #, kde-format
 msgid "Login Failed"
 msgstr "Невдала спроба увійти"
@@ -189,7 +189,7 @@ msgstr "Розпочати новий сеанс"
 msgid "Back"
 msgstr "Назад"
 
-#: contents/lockscreen/LockScreenUi.qml:593
+#: contents/lockscreen/LockScreenUi.qml:612
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

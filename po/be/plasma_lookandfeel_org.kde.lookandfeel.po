@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-19 01:56+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -82,13 +82,13 @@ msgstr "Увядзіце імя карыстальніка і пароль"
 msgid "List Users"
 msgstr "Спіс карыстальнікаў"
 
-#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Віртуальная клавіятура"
 
-#: ../sddm-theme/Main.qml:598
+#: ../sddm-theme/Main.qml:634
 #, kde-format
 msgid "Login Failed"
 msgstr "Не ўдалося ўвайсці"
@@ -191,7 +191,7 @@ msgstr "Запусціць новы сеанс"
 msgid "Back"
 msgstr "Назад"
 
-#: contents/lockscreen/LockScreenUi.qml:593
+#: contents/lockscreen/LockScreenUi.qml:612
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

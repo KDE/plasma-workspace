@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-19 01:56+0000\n"
 "PO-Revision-Date: 2023-02-20 22:55+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -105,7 +105,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Не е налична"
 
-#: package/contents/ui/main.qml:122 package/contents/ui/main.qml:368
+#: package/contents/ui/main.qml:122 package/contents/ui/main.qml:352
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Батерия и Яркост на екрана"
@@ -210,49 +210,49 @@ msgstr "Системата е в режим на пестене на енерг�
 msgid "Scroll to adjust screen brightness"
 msgstr "Скролиране за регулиране на яркостта на екрана"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:327
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr ""
 "Аплетът на батерията е активирал системно намаление на производителността"
 
-#: package/contents/ui/main.qml:381
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Активирането на %1 не бе успешно"
 
-#: package/contents/ui/main.qml:390
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Показване на информация за енергията…"
 
-#: package/contents/ui/main.qml:396
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Показване на проценти в иконата на батерията при непълно зареждане"
 
-#: package/contents/ui/main.qml:408
+#: package/contents/ui/main.qml:392
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Конфигуриране на пестене на енергия…"
 
-#: package/contents/ui/PopupDialog.qml:114
+#: package/contents/ui/PopupDialog.qml:116
 #, kde-format
 msgid "Display Brightness"
 msgstr "Яркост на екрана"
 
-#: package/contents/ui/PopupDialog.qml:144
+#: package/contents/ui/PopupDialog.qml:146
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Яркост на клавиатурата"
 
-#: package/contents/ui/PowerManagementItem.qml:39
+#: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Ръчно блокиране на приспиване и заключване на екрана"
 
-#: package/contents/ui/PowerManagementItem.qml:70
+#: package/contents/ui/PowerManagementItem.qml:76
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -262,30 +262,30 @@ msgstr ""
 "Вашият лаптоп е конфигуриран да не се приспива при затваряне на екрана, "
 "докато е свързан с външен монитор."
 
-#: package/contents/ui/PowerManagementItem.qml:83
+#: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "%1 приложение предотвратява приспиването и заключването на екрана:"
 msgstr[1] "%1 приложения предотвратяват приспиването и заключването на екрана:"
 
-#: package/contents/ui/PowerManagementItem.qml:105
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 предотвратява приспиването и заключването на екрана (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr ""
 "%1 предотвратява приспиването и заключването на екрана (неизвестна причина)"
 
-#: package/contents/ui/PowerManagementItem.qml:109
+#: package/contents/ui/PowerManagementItem.qml:115
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "Приложение блокира приспиването и заключването на екрана (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -293,25 +293,25 @@ msgid ""
 msgstr ""
 "Приложение блокира приспиването и заключването на екрана (неизвестна причина)"
 
-#: package/contents/ui/PowerManagementItem.qml:115
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:123
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: неизвестна причина"
 
-#: package/contents/ui/PowerManagementItem.qml:119
+#: package/contents/ui/PowerManagementItem.qml:125
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Неизвестно приложение: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:127
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"

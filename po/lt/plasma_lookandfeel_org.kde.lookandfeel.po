@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-19 01:56+0000\n"
 "PO-Revision-Date: 2022-11-18 01:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -80,13 +80,13 @@ msgstr "Įrašykite naudotojo vardą ir slaptažodį"
 msgid "List Users"
 msgstr "Išvardyti naudotojus"
 
-#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuali klaviatūra"
 
-#: ../sddm-theme/Main.qml:598
+#: ../sddm-theme/Main.qml:634
 #, kde-format
 msgid "Login Failed"
 msgstr "Prisijungti nepavyko"
@@ -189,7 +189,7 @@ msgstr "Pradėti naują seansą"
 msgid "Back"
 msgstr "Atgal"
 
-#: contents/lockscreen/LockScreenUi.qml:593
+#: contents/lockscreen/LockScreenUi.qml:612
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

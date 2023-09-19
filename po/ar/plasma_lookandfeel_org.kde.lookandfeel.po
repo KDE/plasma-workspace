@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-19 01:56+0000\n"
 "PO-Revision-Date: 2022-10-09 21:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -78,13 +78,13 @@ msgstr "اكتب اسم المستخدم و كلمة السر"
 msgid "List Users"
 msgstr "اسرد المستخدمين"
 
-#: ../sddm-theme/Main.qml:552 contents/lockscreen/LockScreenUi.qml:579
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "لوحة المفاتيح الوهميّة"
 
-#: ../sddm-theme/Main.qml:598
+#: ../sddm-theme/Main.qml:634
 #, kde-format
 msgid "Login Failed"
 msgstr "فشل الولوج"
@@ -187,7 +187,7 @@ msgstr "ابدأ جلسة جديدة"
 msgid "Back"
 msgstr "عُد"
 
-#: contents/lockscreen/LockScreenUi.qml:593
+#: contents/lockscreen/LockScreenUi.qml:612
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
