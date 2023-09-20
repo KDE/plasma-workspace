@@ -110,15 +110,15 @@ void SystemTrayContainer::ensureSystrayExists()
     });
 }
 
-void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraints)
+void SystemTrayContainer::constraintsEvent(Plasma::Applet::Constraints constraints)
 {
-    if (constraints & Plasma::Types::LocationConstraint) {
+    if (constraints & Plasma::Applet::LocationConstraint) {
         if (m_innerContainment) {
             m_innerContainment->setLocation(location());
         }
     }
 
-    if (constraints & Plasma::Types::FormFactorConstraint) {
+    if (constraints & Plasma::Applet::FormFactorConstraint) {
         if (m_innerContainment) {
             if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {
                 m_innerContainment->setFormFactor(formFactor());
@@ -128,7 +128,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         }
     }
 
-    if (constraints & Plasma::Types::UiReadyConstraint) {
+    if (constraints & Plasma::Applet::UiReadyConstraint) {
         ensureSystrayExists();
     }
 }

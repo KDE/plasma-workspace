@@ -1851,7 +1851,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     newCg.writeEntry("activityId", oldContainment->activity());
     newCg.writeEntry("wallpaperplugin", oldContainment->wallpaperPlugin());
     newContainment->restore(newCg);
-    newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
+    newContainment->updateConstraints(Plasma::Applet::StartupCompletedConstraint);
     newContainment->flushPendingConstraintsEvents();
     Q_EMIT containmentAdded(newContainment);
 

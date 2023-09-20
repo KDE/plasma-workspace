@@ -382,7 +382,7 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
             cg.writeEntry(QStringLiteral("lastScreen"), 0);
             c->restore(cg);
         }
-        c->updateConstraints(Plasma::Types::AllConstraints | Plasma::Types::StartupCompletedConstraint);
+        c->updateConstraints(Plasma::Applet::AllConstraints | Plasma::Applet::StartupCompletedConstraint);
         c->flushPendingConstraintsEvents();
     }
 
