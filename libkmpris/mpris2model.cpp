@@ -98,7 +98,7 @@ PlayerContainer *Mpris2Model::playerForLauncherUrl(const QUrl &launcherUrl, unsi
         if (_idx.data(Mpris2SourceModel::InstancePidRole).toUInt() == pid) {
             idx = _idx;
             break;
-        } else if (_idx.data(Mpris2SourceModel::KDEPidRole).toUInt() == pid) {
+        } else if (pid > 0 && _idx.data(Mpris2SourceModel::KDEPidRole).toUInt() == pid) {
             idx = _idx;
             break;
         } else if (_idx.data(Mpris2SourceModel::DesktopEntryRole).toString() == desktopFileName) {

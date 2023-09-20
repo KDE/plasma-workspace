@@ -108,6 +108,12 @@ void MprisDeclarativeTest::test_Mpris2Model()
 
     // Make sure it's a real player container, and make sure PlayerContainer is registered
     QCOMPARE(evaluate<QString>(rootObject, QStringLiteral("mpris.currentPlayer.identity")), QStringLiteral("Audacious"));
+
+    // Make sure an unrelated launcher doesn't have any associated player container.
+    // This checks the `pid > 0` condition when matching KDEPidRole
+    auto launcherShouldNotHavePlayerContainer =
+        evaluate<QObject *>(rootObject, QLatin1String("mpris.playerForLauncherUrl(\"applications:dolphin.desktop\", 0)"));
+    QVERIFY(!launcherShouldNotHavePlayerContainer);
 }
 
 void MprisDeclarativeTest::test_MultiplexerModel()
