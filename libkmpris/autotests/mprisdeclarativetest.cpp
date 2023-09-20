@@ -100,10 +100,10 @@ void MprisDeclarativeTest::test_Mpris2Model()
     // Mpris2Model::playerForLauncherUrl
     auto playerContainerFromPid = evaluate<QObject *>(
         rootObject,
-        QLatin1String("mpris.playerForLauncherUrl(\"application:invalidlauncherurl.desktop\", %1)").arg(QString::number(m_playerProcess->processId())));
+        QLatin1String("mpris.playerForLauncherUrl(\"applications:invalidlauncherurl.desktop\", %1)").arg(QString::number(m_playerProcess->processId())));
     QCOMPARE(currentPlayer, playerContainerFromPid);
 
-    auto playerContainerFromLauncherUrl = evaluate<QObject *>(rootObject, QLatin1String("mpris.playerForLauncherUrl(\"application:audacious.desktop\", 0)"));
+    auto playerContainerFromLauncherUrl = evaluate<QObject *>(rootObject, QLatin1String("mpris.playerForLauncherUrl(\"applications:audacious.desktop\", 0)"));
     QCOMPARE(currentPlayer, playerContainerFromLauncherUrl);
 
     // Make sure it's a real player container, and make sure PlayerContainer is registered
