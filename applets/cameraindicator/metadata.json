@@ -1,0 +1,24 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "qydwhotmail@gmail.com",
+                "Name": "Fushan Wen"
+            }
+        ],
+        "Description": "Shows whether any camera is currently used by an app",
+        "EnabledByDefault": true,
+        "Icon": "camera-on-symbolic",
+        "Id": "org.kde.plasma.cameraindicator",
+        "License": "GPL-2.0+",
+        "Name": "Camera Indicator",
+        "Version": "1.0",
+        "Website": "https://kde.org/plasma-desktop/"
+    },
+    "Keywords": "Camera;WebCam;Indicator;Privacy;",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-NotificationArea": "true",
+    "X-Plasma-NotificationAreaCategory": "Hardware"
+}

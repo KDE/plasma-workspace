@@ -10,3 +10,7 @@ License: CC0-1.0
 Files: appiumtests/resources/*
 Copyright: None
 License: CC0-1.0
+
+Files: applets/cameraindicator/metadata.json
+Copyright: None
+License: CC0-1.0

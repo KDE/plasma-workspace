@@ -46,3 +46,9 @@ add_test(
     COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py ${KDE_INSTALL_LIBEXECDIR}
 )
 set_tests_properties(logoutgreetertest PROPERTIES TIMEOUT 300 ENVIRONMENT "PLASMA_SESSION_GUI_TEST=1")
+
+add_test(
+    NAME cameraindicatortest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/cameraindicatortest.py
+)
+set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120)
