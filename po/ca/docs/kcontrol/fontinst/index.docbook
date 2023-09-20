@@ -72,7 +72,7 @@
 ></listitem>
 </orderedlist>
 <para
->Per afegir una font a un grup, arrossegueu-la des de la llista de fonts cap a un grup. Per a eliminar una font d'un grup, arrossegueu-la cap al grup <quote
+>Per a afegir una font a un grup, arrossegueu-la des de la llista de fonts cap a un grup. Per a eliminar una font d'un grup, arrossegueu-la cap al grup <quote
 >Totes les fonts</quote
 >.</para>
 <para
@@ -133,7 +133,7 @@
 >.</para>
 
 <para
->Feu clic amb el &BMR; per obrir un menú contextual amb algunes accions addicionals, com <guilabel
+>Feu clic amb el &BMR; per a obrir un menú contextual amb algunes accions addicionals, com <guilabel
 >Activa</guilabel
 >, <guilabel
 >Desactiva</guilabel
@@ -149,7 +149,7 @@
 
 <sect3 id="font-filter">
 <title
->Filtrar les font</title>
+>Filtrar les fonts</title>
 <para
 >Un camp de text a la part superior us permetrà filtrar la llista de les fonts. Podeu filtrar les fonts basant-vos en categories diferents:</para>
         <orderedlist>

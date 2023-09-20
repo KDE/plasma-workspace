@@ -91,7 +91,7 @@
   <para
 >El color d'accent és el color en el qual es ressalten els elements enfocats o seleccionats, i també s'utilitza per a altres elements d'interfície com ara controls lliscants o icones de carpeta. També és possible tenyir tots els colors amb el color d'accent (vegeu més a les opcions de l'esquema de color a continuació). Amb <guilabel
 >Usa el color d'accent</guilabel
->, teniu tres opcions per triar un color d'accent: </para>
+>, teniu tres opcions per a triar un color d'accent: </para>
     <itemizedlist>
       <listitem
 ><para
@@ -198,7 +198,7 @@
   <para
 >El joc <guilabel
 >Colors normals</guilabel
->, el qual es mostra inicialment, en realitat no és un «joc» en el sentit utilitzat pel &plasma; (vegeu la secció següent), però presenta una sèrie de regles de color d'una manera que facilita editar l'esquema en el seu joc. Quan es crea un nou esquema de color, el normal és canviar-los en primer lloc i utilitzar els altres jocs per a ajustar els colors específics si és necessari.</para>
+>, el qual es mostra inicialment, en realitat no és un «joc» en el sentit utilitzat pel &plasma; (vegeu la secció següent), però presenta una sèrie de regles de color d'una manera que facilita editar l'esquema en el seu joc. Quan es crea un esquema nou de color, normalment els canviareu d'entrada, i utilitzareu els altres jocs per a ajustar els colors específics si és necessari.</para>
 
   <para
 >Cal tenir en compte que els <guilabel
@@ -270,19 +270,19 @@
     <itemizedlist>
       <listitem
 ><para
->Fons alternatiu: S'utilitza quan hi ha una necessitat de canviar subtilment el fons per ajudar a l'associació de l'element. Això podria utilitzar-se, &pex;, com a fons d'una capçalera, però s'utilitza sobretot per a files alternes a les llistes, especialment en llistes multicolumna, per ajudar en el seguiment visual de les files. </para
+>Fons alternatiu: S'utilitza quan hi ha una necessitat de canviar subtilment el fons per a ajudar a l'associació de l'element. Això podria utilitzar-se, &pex;, com a fons d'una capçalera, però s'utilitza sobretot per a files alternes a les llistes, especialment en llistes multicolumna, per a ajudar en el seguiment visual de les files. </para
 ></listitem>
       <listitem
 ><para
->Text de l'enllaç: S'utilitza per a enllaços o per indicar el contrari «quelcom que es pot visitar», o per mostrar les relacions. </para
+>Text de l'enllaç: S'utilitza per a enllaços o per a indicar el contrari «quelcom que es pot visitar», o per a mostrar les relacions. </para
 ></listitem>
       <listitem
 ><para
->Text visitat: S'utilitza per a «quelcom (&pex; un enllaç) que ha estat visitat», o per indicar alguna cosa que és «vella». </para
+>Text visitat: S'utilitza per a «quelcom (&pex; un enllaç) que ha estat visitat», o per a indicar alguna cosa que és «vella». </para
 ></listitem>
       <listitem
 ><para
->Text actiu: S'utilitza per indicar un element actiu o cridar l'atenció, &pex; alertes, notificacions, també per a quan es passa per sobre dels enllaços. </para
+>Text actiu: S'utilitza per a indicar un element actiu o cridar l'atenció, &pex; alertes, notificacions, també per a quan es passa per sobre dels enllaços. </para
 ></listitem>
       <listitem
 ><para
