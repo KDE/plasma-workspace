@@ -61,9 +61,6 @@ ColumnLayout {
         id: imageWallpaper
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
-            if (typeof Plasmoid !== "undefined") {
-                return Qt.size(Plasmoid.screenGeometry.width * Screen.devicePixelRatio, Plasmoid.screenGeometry.height * Screen.devicePixelRatio);
-            }
             // Lock screen configuration case
             return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
         }

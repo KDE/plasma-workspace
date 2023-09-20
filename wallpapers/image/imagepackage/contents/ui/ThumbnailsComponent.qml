@@ -87,24 +87,10 @@ Item {
 
         //set the size of the cell, depending on Screen resolution to respect the aspect ratio
         view.implicitCellWidth: {
-            let screenWidth = 0;
-            if (typeof Plasmoid !== "undefined") {
-                screenWidth = Plasmoid.screenGeometry.width;
-            } else {
-                screenWidth = Screen.width;
-            }
-
-            return screenWidth / 10 + Kirigami.Units.smallSpacing * 2
+            return Screen.width / 10 + Kirigami.Units.smallSpacing * 2
         }
         view.implicitCellHeight: {
-            let screenHeight = 0;
-            if (typeof Plasmoid !== "undefined") {
-                screenHeight = Plasmoid.screenGeometry.height;
-            } else {
-                screenHeight = Screen.height;
-            }
-
-            return screenHeight / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+            return Screen.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
         }
 
         view.reuseItems: true
