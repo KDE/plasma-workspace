@@ -28,11 +28,19 @@
     </method>
     <method name="refreshCurrentShell" />
     
+    
+    <method name="wallpaper">
+      <arg name="screenNum" type="u" direction="in"/>
+      <arg name="jsonParameters" type="s" direction="out"/>
+    </method>
     <method name="setWallpaper">
       <arg name="wallpaperPlugin" type="s" direction="in"/>
       <arg name="jsonParameters" type="s" direction="in"/>
       <arg name="screenNum" type="u" direction="in"/>
     </method>
+    <signal name="wallpaperChanged">
+      <arg name="screenNum" type="u" direction="out"/>
+    </signal>
     
     <signal name="colorChanged">
       <arg name="changedColor" type="s" direction="out"/>

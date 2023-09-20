@@ -138,6 +138,8 @@ public:
      */
     bool accentColorFromWallpaperEnabled() const;
 
+    Q_INVOKABLE QString wallpaper(uint screenNum);
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
@@ -146,6 +148,8 @@ Q_SIGNALS:
     void colorChanged(const QColor &color);
     // This API is used only by autotests, do we need something else?
     void screenOrderChanged(QList<QScreen *> screens);
+
+    void wallpaperChanged(uint screenNum, const QString &wallpaperPlugin, const QString &jsonParameters);
 
 public Q_SLOTS:
     /**

@@ -1657,6 +1657,39 @@ QRgb ShellCorona::color() const
     return defaultColor;
 }
 
+QString ShellCorona::wallpaper(uint screenNum)
+{
+    if (!m_desktopViewForScreen.contains(screenNum)) {
+        qCWarning(PLASMASHELL) << "wallpaper: unknown screen" << screenNum;
+        return QString();
+    }
+
+    auto currentActivity = m_activityController->currentActivity();
+    currentActivity = currentActivity == QLatin1String("00000000-0000-0000-0000-000000000000") ? QString() : currentActivity;
+
+    Plasma::Containment *containment = containmentForScreen(screenNum, currentActivity, QString());
+    if (!containment) {
+        qCWarning(PLASMASHELL) << "wallpaper: containment not found for screen" << screenNum << currentActivity;
+        return QString();
+    }
+
+    QObject *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
+    KConfigPropertyMap *config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
+
+    // KConfigPropertyMap to Json
+    const auto items = config->keys();
+    QJsonObject jsonObject;
+    for (const auto &itemName : items) {
+        jsonObject.insert(itemName, QJsonValue::fromVariant(config->value(itemName)));
+    }
+
+    // add wallpaperPlugin
+    jsonObject.insert(QStringLiteral("wallpaperPlugin"), containment->wallpaperPlugin());
+
+    QJsonDocument doc(jsonObject);
+    return doc.toJson(QJsonDocument::Compact);
+}
+
 void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QString &jsonParameters, uint screenNum)
 {
     if (wallpaperPlugin.isEmpty()) {
@@ -1664,16 +1697,16 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QString &js
         return;
     }
     QJsonParseError error;
-    QJsonDocument jsonResponse = QJsonDocument::fromJson(jsonParameters.toUtf8(), &error);
-    if (jsonResponse.isNull()) {
+    QJsonDocument jsonParameterDoc = QJsonDocument::fromJson(jsonParameters.toUtf8(), &error);
+    if (jsonParameterDoc.isNull()) {
         qCWarning(PLASMASHELL) << "setWallpaper: Could not parse Wallpaper json parameters" << error.errorString();
         return;
     }
-    if (!jsonResponse.isObject()) {
+    if (!jsonParameterDoc.isObject()) {
         qCWarning(PLASMASHELL) << "setWallpaper: json parameter passed was not a json object";
         return;
     }
-    QJsonObject jsonObject = jsonResponse.object();
+    QJsonObject jsonObject = jsonParameterDoc.object();
     if (jsonObject.isEmpty()) {
         qCWarning(PLASMASHELL) << "setWallpaper: Empty json object parameter";
         return;
@@ -1684,8 +1717,8 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QString &js
         return;
     }
 
-    const auto currentActivity =
-        m_activityController->currentActivity() == QLatin1String("00000000-0000-0000-0000-000000000000") ? QString() : m_activityController->currentActivity();
+    auto currentActivity = m_activityController->currentActivity();
+    currentActivity = currentActivity == QLatin1String("00000000-0000-0000-0000-000000000000") ? QString() : currentActivity;
 
     Plasma::Containment *containment = containmentForScreen(screenNum, currentActivity, QString());
     if (!containment) {
@@ -1707,6 +1740,8 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QString &js
     }
     config->writeConfig();
     containment->setWallpaperPlugin(wallpaperPlugin);
+
+    Q_EMIT wallpaperChanged(screenNum, wallpaperPlugin, jsonParameters);
 }
 
 QString ShellCorona::evaluateScript(const QString &script)
