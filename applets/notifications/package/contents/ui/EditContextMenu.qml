@@ -23,7 +23,7 @@ PlasmaExtras.Menu {
     property string link
 
     onStatusChanged: {
-        if (status === PlasmaExtras.DialogStatus.Closed) {
+        if (status === PlasmaExtras.Menu.Closed) {
             closed();
         }
     }

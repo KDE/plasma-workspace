@@ -127,7 +127,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: actionsButton
                 visible: visibleActions > 0
-                checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.DialogStatus.Closed : singleAction && singleAction.checked
+                checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.Menu.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || root
                 property int visibleActions: menuItemFactory.count
                 property QtObject singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
