@@ -218,10 +218,14 @@ private:
             if (contains(service->name(), queryList)) {
                 return true;
             }
-            // If the term length is < 3, no real point searching the Keywords and GenericName
+            // If the term length is < 3, no real point searching the untranslated Name, Keywords and GenericName
             if (weightedTermLength < 3) {
                 return false;
             }
+            if (contains(service->untranslatedName(), queryList)) {
+                return true;
+            }
+
             // Keywords
             if (contains(service->keywords(), queryList)) {
                 return true;
