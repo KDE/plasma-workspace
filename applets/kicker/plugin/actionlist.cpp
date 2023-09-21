@@ -447,7 +447,7 @@ bool handleAppstreamActions(const QString &actionId, const KService::Ptr &servic
     }
 
     const auto components =
-        appstreamPool->componentsByLaunchable(AppStream::Launchable::KindDesktopId, service->desktopEntryName() + QLatin1String(".desktop"));
+        appstreamPool->componentsByLaunchable(AppStream::Launchable::KindDesktopId, service->desktopEntryName() + QLatin1String(".desktop")).toList();
     if (components.empty()) {
         return false;
     }

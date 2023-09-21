@@ -148,7 +148,7 @@ QList<AppStream::Component> InstallerRunner::findComponentsByString(const QStrin
         }
     }
 
-    return m_db.search(query);
+    return m_db.search(query).toList();
 }
 
 #include "appstreamrunner.moc"
