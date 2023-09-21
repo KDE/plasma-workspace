@@ -7,18 +7,19 @@
 #include "holidaysevents.h"
 
 #include <KConfigGroup>
-#include <QDebug>
 
 HolidaysEventsPlugin::HolidaysEventsPlugin(QObject *parent)
     : CalendarEvents::CalendarEventsPlugin(parent)
 {
-    KSharedConfig::Ptr m_config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"));
-    const KConfigGroup regionsConfig = m_config->group("General");
-    updateSettings(regionsConfig);
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"), KConfig::NoGlobals);
+    updateSettings(config->group("General"));
 
-    m_configWatcher = KConfigWatcher::create(m_config);
-    connect(m_configWatcher.get(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &config) {
-        updateSettings(config);
+    m_configWatcher = KConfigWatcher::create(config);
+    connect(m_configWatcher.get(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &configGroup) {
+        if (configGroup.name() != QLatin1String("General")) {
+            return;
+        }
+        updateSettings(configGroup);
         loadEventsForDateRange(m_lastStartDate, m_lastEndDate);
     });
 }
@@ -35,9 +36,7 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
         return;
     }
 
-    m_lastData.clear();
     QMultiHash<QDate, CalendarEvents::EventData> data;
-
     for (KHolidays::HolidayRegion *region : qAsConst(m_regions)) {
         const KHolidays::Holiday::List holidays = region->rawHolidays(startDate, endDate);
 
@@ -61,7 +60,7 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
     m_lastEndDate = endDate;
     m_lastData = data;
 
-    Q_EMIT dataReady(data);
+    Q_EMIT dataReady(m_lastData);
 }
 
 void HolidaysEventsPlugin::updateSettings(const KConfigGroup &regionsConfig)
