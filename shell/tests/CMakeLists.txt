@@ -31,3 +31,15 @@ if(QT_QTOPENGL_FOUND)
     target_link_libraries(screenpoolmanualtest Qt::OpenGL)
 endif()
 
+
+set(setwallpapertest_SRCS
+    setwallpapertest.cpp
+    )
+add_executable(setwallpapertest)
+
+target_sources(setwallpapertest PRIVATE ${setwallpapertest_SRCS})
+target_link_libraries(setwallpapertest
+            Qt::Test
+            Qt::DBus
+    )
+

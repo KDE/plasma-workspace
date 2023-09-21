@@ -27,16 +27,17 @@
     <method name="activateLauncherMenu">
     </method>
     <method name="refreshCurrentShell" />
-    
-    
+
     <method name="wallpaper">
       <arg name="screenNum" type="u" direction="in"/>
-      <arg name="jsonParameters" type="s" direction="out"/>
+      <arg name="parameters" type="a{sv}" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
     </method>
     <method name="setWallpaper">
       <arg name="wallpaperPlugin" type="s" direction="in"/>
-      <arg name="jsonParameters" type="s" direction="in"/>
+      <arg name="parameters" type="a{sv}" direction="in"/>
       <arg name="screenNum" type="u" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QVariantMap"/>
     </method>
     <signal name="wallpaperChanged">
       <arg name="screenNum" type="u" direction="out"/>

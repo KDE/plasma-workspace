@@ -138,7 +138,7 @@ public:
      */
     bool accentColorFromWallpaperEnabled() const;
 
-    Q_INVOKABLE QString wallpaper(uint screenNum);
+    Q_INVOKABLE QVariantMap wallpaper(uint screenNum = 0);
 
 Q_SIGNALS:
     void glInitializationFailed();
@@ -149,7 +149,7 @@ Q_SIGNALS:
     // This API is used only by autotests, do we need something else?
     void screenOrderChanged(QList<QScreen *> screens);
 
-    void wallpaperChanged(uint screenNum, const QString &wallpaperPlugin, const QString &jsonParameters);
+    void wallpaperChanged(uint screenNum);
 
 public Q_SLOTS:
     /**
@@ -178,7 +178,7 @@ public Q_SLOTS:
     void toggleActivityManager();
     void toggleWidgetExplorer();
     QString evaluateScript(const QString &string);
-    void setWallpaper(const QString &wallpaperPlugin, const QString &jsonParameters, uint screenNum);
+    void setWallpaper(const QString &wallpaperPlugin, const QVariantMap &parameters, uint screenNum = 0);
     void activateLauncherMenu();
     QRgb color() const;
 
