@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-21 01:57+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -44,52 +44,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Diavetítés háttérképeit tartalmazó mappa"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Positioning:"
 msgstr "Elhelyezkedés:"
 
-#: imagepackage/contents/ui/config.qml:106
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Nyújtva és levágva"
 
-#: imagepackage/contents/ui/config.qml:110
+#: imagepackage/contents/ui/config.qml:107
 #, kde-format
 msgid "Scaled"
 msgstr "Nyújtva"
 
-#: imagepackage/contents/ui/config.qml:114
+#: imagepackage/contents/ui/config.qml:111
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Arányosan nyújtva"
 
-#: imagepackage/contents/ui/config.qml:118
+#: imagepackage/contents/ui/config.qml:115
 #, kde-format
 msgid "Centered"
 msgstr "Középre"
 
-#: imagepackage/contents/ui/config.qml:122
+#: imagepackage/contents/ui/config.qml:119
 #, kde-format
 msgid "Tiled"
 msgstr "Mozaikszerűen"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Background:"
 msgstr "Háttér:"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgid "Blur"
 msgstr "Elmosás"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:157
 #, kde-format
 msgid "Solid color"
 msgstr "Egyszínű"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:167
 #, kde-format
 msgid "Select Background Color"
 msgstr "Válassza ki a háttér színét"

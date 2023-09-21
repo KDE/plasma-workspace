@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-19 01:56+0000\n"
+"POT-Creation-Date: 2023-09-21 01:57+0000\n"
 "PO-Revision-Date: 2023-08-23 09:11+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -32,7 +32,7 @@ msgstr "Razporeditev tipk: %1"
 msgid "Username"
 msgstr "Uporabniško ime"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:62
 #, kde-format
 msgid "Password"
 msgstr "Geslo"
@@ -42,7 +42,7 @@ msgstr "Geslo"
 msgid "Log In"
 msgstr "Prijavi se"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:304
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je vključen"
@@ -82,7 +82,7 @@ msgstr "Vnesite uporabniško ime in geslo"
 msgid "List Users"
 msgstr "Seznam uporabnikov"
 
-#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:590
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -156,48 +156,48 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Kaži pod pozivom za odklepanje"
 
-#: contents/lockscreen/LockScreenUi.qml:39
+#: contents/lockscreen/LockScreenUi.qml:46
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Odklepanje ni uspelo"
 
-#: contents/lockscreen/LockScreenUi.qml:318
+#: contents/lockscreen/LockScreenUi.qml:320
 #, kde-format
 msgid "Sleep"
 msgstr "Spanje"
 
-#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "V hibernacijo"
 
-#: contents/lockscreen/LockScreenUi.qml:330
+#: contents/lockscreen/LockScreenUi.qml:332
 #, kde-format
 msgid "Switch User"
 msgstr "Preklopi uporabnika"
 
-#: contents/lockscreen/LockScreenUi.qml:526
+#: contents/lockscreen/LockScreenUi.qml:528
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Preklopi na to sejo"
 
-#: contents/lockscreen/LockScreenUi.qml:534
+#: contents/lockscreen/LockScreenUi.qml:536
 #, kde-format
 msgid "Start New Session"
 msgstr "Začni novo sejo"
 
-#: contents/lockscreen/LockScreenUi.qml:547
+#: contents/lockscreen/LockScreenUi.qml:549
 #, kde-format
 msgid "Back"
 msgstr "Nazaj"
 
-#: contents/lockscreen/LockScreenUi.qml:612
+#: contents/lockscreen/LockScreenUi.qml:614
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Preklopi razporeditev"
 
-#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/MainBlock.qml:105
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"

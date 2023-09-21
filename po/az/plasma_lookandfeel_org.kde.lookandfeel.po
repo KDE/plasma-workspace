@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-19 01:56+0000\n"
+"POT-Creation-Date: 2023-09-21 01:57+0000\n"
 "PO-Revision-Date: 2022-10-18 13:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Klaviatura qatı: %1"
 msgid "Username"
 msgstr "İstifadəçi adı"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:62
 #, kde-format
 msgid "Password"
 msgstr "Şifrə"
@@ -37,7 +37,7 @@ msgstr "Şifrə"
 msgid "Log In"
 msgstr "Giriş"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:304
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock aktivdir"
@@ -77,7 +77,7 @@ msgstr "İstifadəçi adını və Şifrəni daxil edin"
 msgid "List Users"
 msgstr "İstifadəçilər siyahısı"
 
-#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:588
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:590
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -151,48 +151,48 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Kilidi açma sorğusu altında göstərilsin"
 
-#: contents/lockscreen/LockScreenUi.qml:39
+#: contents/lockscreen/LockScreenUi.qml:46
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Kiliddən çıxarılma alınmadı"
 
-#: contents/lockscreen/LockScreenUi.qml:318
+#: contents/lockscreen/LockScreenUi.qml:320
 #, kde-format
 msgid "Sleep"
 msgstr "Yuxu"
 
-#: contents/lockscreen/LockScreenUi.qml:324 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "Gözləmə"
 
-#: contents/lockscreen/LockScreenUi.qml:330
+#: contents/lockscreen/LockScreenUi.qml:332
 #, kde-format
 msgid "Switch User"
 msgstr "İstifadəçini dəyişmək"
 
-#: contents/lockscreen/LockScreenUi.qml:526
+#: contents/lockscreen/LockScreenUi.qml:528
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Bu sesiyanı dəyişmək"
 
-#: contents/lockscreen/LockScreenUi.qml:534
+#: contents/lockscreen/LockScreenUi.qml:536
 #, kde-format
 msgid "Start New Session"
 msgstr "Yeni sesiyanı başlatmaq"
 
-#: contents/lockscreen/LockScreenUi.qml:547
+#: contents/lockscreen/LockScreenUi.qml:549
 #, kde-format
 msgid "Back"
 msgstr "Geriyə"
 
-#: contents/lockscreen/LockScreenUi.qml:612
+#: contents/lockscreen/LockScreenUi.qml:614
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Qatları dəyişmək"
 
-#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/MainBlock.qml:105
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-21 01:57+0000\n"
 "PO-Revision-Date: 2021-08-31 16:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -41,52 +41,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "സ്ലൈഡുകൾ കാണിക്കുന്നതിന് പശ്ചാത്തലചിത്രമുള്ള കൂട"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Positioning:"
 msgstr "സ്ഥാനം:"
 
-#: imagepackage/contents/ui/config.qml:106
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "വലിപ്പം മാറ്റിയതും അറ്റം വെട്ടിചുരുക്കിയതും"
 
-#: imagepackage/contents/ui/config.qml:110
+#: imagepackage/contents/ui/config.qml:107
 #, kde-format
 msgid "Scaled"
 msgstr "വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:114
+#: imagepackage/contents/ui/config.qml:111
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "ചിത്രത്തിന്റെ അനുപാതം മാറ്റാതെ വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:118
+#: imagepackage/contents/ui/config.qml:115
 #, kde-format
 msgid "Centered"
 msgstr "നടുവിലായിട്ട്"
 
-#: imagepackage/contents/ui/config.qml:122
+#: imagepackage/contents/ui/config.qml:119
 #, kde-format
 msgid "Tiled"
 msgstr "അടുത്തടുത്തു് വച്ചു്"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Background:"
 msgstr "പശ്ചാത്തലം:"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgid "Blur"
 msgstr "അവ്യക്തം"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:157
 #, kde-format
 msgid "Solid color"
 msgstr "കടും നിറം"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:167
 #, kde-format
 msgid "Select Background Color"
 msgstr "പശ്ചാത്തല നിറം തെരഞ്ഞെടുക്കുക"

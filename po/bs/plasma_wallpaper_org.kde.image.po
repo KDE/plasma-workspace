@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-21 01:57+0000\n"
 "PO-Revision-Date: 2015-02-04 14:28+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -46,56 +46,56 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Direktorij koji sadrži slajdove iz kojih će se prikazati pozadina"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Positioning:"
 msgstr "Postavljanje:"
 
-#: imagepackage/contents/ui/config.qml:106
+#: imagepackage/contents/ui/config.qml:103
 #, fuzzy, kde-format
 msgid "Scaled and Cropped"
 msgstr "Skalirano && Izrezano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:110
+#: imagepackage/contents/ui/config.qml:107
 #, kde-format
 msgid "Scaled"
 msgstr "Skalirano"
 
-#: imagepackage/contents/ui/config.qml:114
+#: imagepackage/contents/ui/config.qml:111
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Skalirano, Sačuvane proprcije"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:118
+#: imagepackage/contents/ui/config.qml:115
 #, kde-format
 msgid "Centered"
 msgstr "Centrirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:122
+#: imagepackage/contents/ui/config.qml:119
 #, kde-format
 msgid "Tiled"
 msgstr "Popločano"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:147
 #, fuzzy, kde-format
 #| msgid "Background Color:"
 msgid "Background:"
 msgstr "Pozadinska boja:"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgid "Blur"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:157
 #, kde-format
 msgid "Solid color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:167
 #, fuzzy, kde-format
 msgid "Select Background Color"
 msgstr "Pozadinska boja:"

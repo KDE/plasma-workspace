@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-21 01:57+0000\n"
 "PO-Revision-Date: 2022-05-22 10:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -41,52 +41,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalog med skrivbordsunderlägget att visa bilder från"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:100
 #, kde-format
 msgid "Positioning:"
 msgstr "Positionering:"
 
-#: imagepackage/contents/ui/config.qml:106
+#: imagepackage/contents/ui/config.qml:103
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Skalat och beskuret"
 
-#: imagepackage/contents/ui/config.qml:110
+#: imagepackage/contents/ui/config.qml:107
 #, kde-format
 msgid "Scaled"
 msgstr "Skalat"
 
-#: imagepackage/contents/ui/config.qml:114
+#: imagepackage/contents/ui/config.qml:111
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Skalat, behåll proportion"
 
-#: imagepackage/contents/ui/config.qml:118
+#: imagepackage/contents/ui/config.qml:115
 #, kde-format
 msgid "Centered"
 msgstr "Centrerat"
 
-#: imagepackage/contents/ui/config.qml:122
+#: imagepackage/contents/ui/config.qml:119
 #, kde-format
 msgid "Tiled"
 msgstr "Sida vid sida"
 
-#: imagepackage/contents/ui/config.qml:150
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Background:"
 msgstr "Bakgrund:"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgid "Blur"
 msgstr "Suddig"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:157
 #, kde-format
 msgid "Solid color"
 msgstr "Enkel färg"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:167
 #, kde-format
 msgid "Select Background Color"
 msgstr "Välj bakgrundsfärg"

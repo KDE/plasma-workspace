@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"PO-Revision-Date: 2023-09-19 12:27+0530\n"
+"Last-Translator: Shreekant Kalwar\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: sa_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "श्रीकान्त् कलवार्"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "skkalwar999@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:204
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "मूषकस्य क्रियाः प्लग-इन् विन्यस्यताम्"
+
+#: desktopview.cpp:224
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Dev"
+msgstr "KDE Plasma %1 Dev"
+
+#: desktopview.cpp:228
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "KDE Plasma %1 Beta"
+
+#: desktopview.cpp:231
+#, kde-format
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr "KDE Plasma %1 Beta %2"
+
+#: desktopview.cpp:235
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "KDE Plasma %1"
+
+#: desktopview.cpp:241
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr "कृपया दोषाणां सूचनां दातुं https://bugs.kde.org इत्यस्य उपयोगं कुर्वन्तु ।."
+
+#: main.cpp:110
+#, kde-format
+msgid "Plasma Shell"
+msgstr "प्लाज्मा-शैलम्"
+
+#: main.cpp:122
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "क्यू-एम-एल जावास्क्रिप्ट डिबगर सक्षमम्"
+
+#: main.cpp:125
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "क्रैश अनन्तरं प्लाज्मा-शैलं पुनः न आरभत"
+
+#: main.cpp:128
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "दत्तं शेल् प्लगिन् बलात् आरोपण कुर्वन्तु"
+
+#: main.cpp:132
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
+
+#: main.cpp:135
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"परीक्षणविधिं सक्षमं करोति तथा परीक्षणवातावरणं स्थापयितुं विन्यासजावास्क्रिप्टसञ्चिकां "
+"निर्दिशति"
+
+#: main.cpp:136
+#, kde-format
+msgid "file"
+msgstr "सञ्चिका"
+
+#: main.cpp:140
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "उपयोक्तृप्रतिक्रियायाः उपलब्धविकल्पान् सूचीबद्धं करोति"
+
+#: main.cpp:222
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "प्लाज्मा आरम्भं कर्तुं असफलम् अभवत्"
+
+#: main.cpp:223
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"प्लाज्मा आरभ्यतुं असमर्थः यतः OpenGL 2 अथवा  software fallback इत्यस्य सम्यक् उपयोगं "
+"कर्तुं न शक्तवान्\n"
+"कृपया पश्यन्तु यत् भवतः ग्राफिक चालकाः सम्यक् स्थापिताः सन्ति वा।."
+
+#: osd.cpp:53
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "श्रव्य निःशब्दः"
+
+#: osd.cpp:75
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "माइक्रोफोन निःशब्दः"
+
+#: osd.cpp:91
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 निःशब्दः"
+
+#: osd.cpp:113
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Touchpad सक्रियः"
+
+#: osd.cpp:115
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Touchpad निष्क्रियः"
+
+#: osd.cpp:122
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi सक्रियः"
+
+#: osd.cpp:124
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi निष्क्रियः"
+
+#: osd.cpp:131
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth सक्रियः"
+
+#: osd.cpp:133
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth निष्क्रियः"
+
+#: osd.cpp:140
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "मोबाईल अन्तर्जाल सक्रियः"
+
+#: osd.cpp:142
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "मोबाईल अन्तर्जाल निष्क्रियः"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "On-Screen कीलफलक सक्रियः"
+
+#: osd.cpp:153
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "On-Screen कीलफलक निष्क्रियः"
+
+#: shellcontainmentconfig.cpp:105
+#, kde-format
+msgid "Internal Screen on %1"
+msgstr "आन्तरिकपर्दे सक्रियः %1"
+
+#: shellcontainmentconfig.cpp:109
+#, kde-format
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
+msgstr "%1 %2 on %3"
+
+#: shellcontainmentconfig.cpp:133
+#, kde-format
+msgid "Disconnected Screen %1"
+msgstr "विच्छिन्नपर्दे %1"
+
+#: shellcorona.cpp:172 shellcorona.cpp:174
+#, kde-format
+msgid "Show Desktop"
+msgstr "कार्यमुखम् दर्शयतु"
+
+#: shellcorona.cpp:174
+#, kde-format
+msgid "Hide Desktop"
+msgstr "कार्यमुखम् गोपयन्तु"
+
+#: shellcorona.cpp:190
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "क्रियाकलाप परिवर्तकम् दर्शयतु"
+
+#: shellcorona.cpp:201
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "वर्तमानक्रियाकलापम् स्थगयन्तु"
+
+#: shellcorona.cpp:209
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "पूर्व गतिविधि परिवर्तय"
+
+#: shellcorona.cpp:217
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "अग्रगतिविधिं परिवर्तय"
+
+#: shellcorona.cpp:232
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "कार्यप्रबन्धकप्रविष्टिः %1 सक्रियताम्"
+
+#: shellcorona.cpp:259
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "कार्यमुखाः तथा पैनल्स् प्रबन्धयन्तु... "
+
+#: shellcorona.cpp:281
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "फलकयोः मध्ये कीलफलक-केन्द्रीकरणं चालयन्तु"
+
+#: shellcorona.cpp:1915
+#, kde-format
+msgid "Add Panel"
+msgstr "पैनलं संयोजयति"
+
+#: shellcorona.cpp:1951
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "रिक्त %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "कौशल्यकारिणि तन्त्रांश प्रयुक्ते"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "कौशल्यकारिणि तन्त्रांश प्रयुक्ते"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "प्रस्तुतिः क्षीणा भविष्यति"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "पुनः कदापि न दर्शयतु"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "पैनलसंख्या"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "पैनलानि गणयतु"
