@@ -147,6 +147,7 @@ class Mpris2:
         self.__player_reg_id = 0
         self.__connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
+        GLib.MainContext.default().iteration(False)  # Otherwise flaky
         print("Player exit")
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:

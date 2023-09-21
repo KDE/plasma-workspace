@@ -73,6 +73,7 @@ class MediaControllerTests(unittest.TestCase):
         player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
 
         self.mpris_interface = Mpris2(metadata, base_properties, player_properties, current_index)
+        self.mpris_interface.registered_event.wait(10)
 
     def tearDown(self) -> None:
         self.mpris_interface.quit()
