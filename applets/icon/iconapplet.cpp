@@ -326,41 +326,6 @@ QList<QAction *> IconApplet::extraActions()
 
     KDesktopFile desktopFile(m_localPath);
 
-    if (m_jumpListActions.isEmpty()) {
-        const KService service(m_localPath);
-
-        const auto jumpListActions = service.actions();
-        for (const KServiceAction &serviceAction : jumpListActions) {
-            if (serviceAction.noDisplay()) {
-                continue;
-            }
-
-            QAction *action = new QAction(QIcon::fromTheme(serviceAction.icon()), serviceAction.text(), this);
-            if (serviceAction.isSeparator()) {
-                action->setSeparator(true);
-            }
-
-            connect(action, &QAction::triggered, this, [serviceAction]() {
-                auto *job = new KIO::ApplicationLauncherJob(serviceAction);
-                auto *delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
-                job->setUiDelegate(delegate);
-                job->start();
-            });
-
-            m_jumpListActions << action;
-        }
-    }
-
-    actions << m_jumpListActions;
-
-    if (!actions.isEmpty()) {
-        if (!m_separatorAction) {
-            m_separatorAction = new QAction(this);
-            m_separatorAction->setSeparator(true);
-        }
-        actions << m_separatorAction;
-    }
-
     if (desktopFile.hasLinkType()) {
         const QUrl linkUrl = QUrl(desktopFile.readUrl());
 
@@ -389,10 +354,44 @@ QList<QAction *> IconApplet::extraActions()
                     });
                 }
             }
+
+            actions << m_openWithActions;
         }
+    } else {
+        if (m_jumpListActions.isEmpty()) {
+            const KService service(m_localPath);
+
+            const auto jumpListActions = service.actions();
+            for (const KServiceAction &serviceAction : jumpListActions) {
+                if (serviceAction.noDisplay()) {
+                    continue;
+                }
+
+                QAction *action = new QAction(QIcon::fromTheme(serviceAction.icon()), serviceAction.text(), this);
+                if (serviceAction.isSeparator()) {
+                    action->setSeparator(true);
+                }
+
+                connect(action, &QAction::triggered, this, [serviceAction]() {
+                    auto *job = new KIO::ApplicationLauncherJob(serviceAction);
+                    auto *delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
+                    job->setUiDelegate(delegate);
+                    job->start();
+                });
+
+                m_jumpListActions << action;
+            }
+        }
+        actions << m_jumpListActions;
     }
 
-    actions << m_openWithActions;
+    if (!actions.isEmpty()) {
+        if (!m_separatorAction) {
+            m_separatorAction = new QAction(this);
+            m_separatorAction->setSeparator(true);
+        }
+        actions << m_separatorAction;
+    }
 
     if (m_openContainingFolderAction) {
         actions << m_openContainingFolderAction;
