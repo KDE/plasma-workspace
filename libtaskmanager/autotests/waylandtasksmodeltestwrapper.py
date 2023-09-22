@@ -14,14 +14,27 @@ if __name__ == '__main__':
 
     environ = os.environ.copy()
     environ["KWIN_WAYLAND_NO_PERMISSION_CHECKS"] = "1"
-    kwin_process = subprocess.Popen(["kwin_wayland", "--no-lockscreen", "--no-global-shortcuts", "--no-kactivities"], env = environ)
+    kwin_process = subprocess.Popen(["kwin_wayland", "--no-lockscreen", "--no-global-shortcuts", "--no-kactivities"], env=environ, stderr=subprocess.PIPE)
 
-    time.sleep(10)
+    for _ in range(20):
+        kwin_window_shown: bool = False
+
+        while kwin_process.stderr.readable():
+            line: str = kwin_process.stderr.readline().decode(encoding="utf-8")
+            print(line)
+            if "Mesa version" in line or "successfully initialized" in line:
+                kwin_window_shown = True
+                break
+
+        if kwin_window_shown:
+            break
+        time.sleep(0.5)
+
     assert kwin_process.poll() is None
 
     test_environ = os.environ.copy()
     test_environ["QT_QPA_PLATFORM"] = "wayland"
-    test_process = subprocess.Popen([test_executable_path], env = test_environ)
+    test_process = subprocess.Popen([test_executable_path], env=test_environ)
     assert test_process.poll() is None
 
     result: int = 1
