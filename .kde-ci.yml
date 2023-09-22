@@ -81,6 +81,7 @@ RuntimeDependencies:
 - 'on': ['Linux']
   'require':
     'network/kio-extras': '@latest-kf6'
+    'plasma/powerdevil': '@same'
 - 'on': ['Linux', 'FreeBSD']
   'require':
     'plasma/milou' : '@same'

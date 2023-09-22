@@ -1,0 +1,129 @@
+<!DOCTYPE node PUBLIC
+"-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd" [
+  <!ENTITY ERROR_GENERAL "org.freedesktop.UPower.GeneralError">
+]>
+<node name="/" xmlns:doc="http://www.freedesktop.org/dbus/1.0/doc.dtd">
+  <interface name="org.freedesktop.UPower.KbdBacklight">
+    <doc:doc>
+      <doc:description>
+        <doc:para>
+          org.freedesktop.UPower.KbdBacklight is a DBus interface implemented
+          by UPower.
+	  It allows the keyboard backlight (if present) to be controlled.
+        </doc:para>
+      </doc:description>
+    </doc:doc>
+
+    <!-- ************************************************************ -->
+    <method name="GetMaxBrightness">
+      <arg name="value" direction="out" type="i">
+        <doc:doc>
+          <doc:summary>
+            The maximum value of the keyboard backlight brightness.
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>
+            Get the maximum brightness level for the keyboard backlight.
+          </doc:para>
+        </doc:description>
+        <doc:errors>
+          <doc:error name="&ERROR_GENERAL;">if an error occured while getting the maximum brightness</doc:error>
+        </doc:errors>
+      </doc:doc>
+    </method>
+
+    <!-- ************************************************************ -->
+    <method name="GetBrightness">
+      <arg name="value" direction="out" type="i">
+        <doc:doc>
+          <doc:summary>
+            The current value of the keyboard backlight brightness.
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>
+            Get the brightness level of the keyboard backlight.
+          </doc:para>
+        </doc:description>
+        <doc:errors>
+          <doc:error name="&ERROR_GENERAL;">if an error occured while getting the brightness</doc:error>
+        </doc:errors>
+      </doc:doc>
+    </method>
+
+    <!-- ************************************************************ -->
+    <method name="SetBrightness">
+      <arg name="value" direction="in" type="i">
+        <doc:doc>
+          <doc:summary>
+            The value to set the KbdBacklight brightness.
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>
+            Set the brightness level of the keyboard backlight.
+          </doc:para>
+        </doc:description>
+        <doc:errors>
+          <doc:error name="&ERROR_GENERAL;">if an error occured while setting the brightness</doc:error>
+        </doc:errors>
+      </doc:doc>
+    </method>
+
+    <!-- ************************************************************ -->
+    <signal name="BrightnessChanged">
+      <arg name="value" direction="out" type="i">
+        <doc:doc>
+          <doc:summary>
+            The new brightness value of the keyboard backlight.
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>
+	    The keyboard backlight brightness level has changed.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </signal>
+
+    <signal name="BrightnessChangedWithSource">
+      <arg name="value" direction="out" type="i">
+        <doc:doc>
+          <doc:summary>
+            The new brightness value of the keyboard backlight.
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <arg name="source" direction="out" type="s">
+        <doc:doc>
+          <doc:summary>
+            Source of the keyboard backlight brightness change, either
+            "external" if SetBrightness was called, or "internal" if the
+            hardware changed the keyboard brightness itself (automatically or
+            through a firmware-handled hotkey being pressed).
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>
+	    The keyboard backlight brightness level has changed including
+	    information about the source of the change.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </signal>
+
+  </interface>
+
+</node>
