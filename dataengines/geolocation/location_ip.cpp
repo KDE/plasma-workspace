@@ -174,6 +174,6 @@ void Ip::update()
     });
 }
 
-K_PLUGIN_CLASS_WITH_JSON(Ip, "plasma-geolocation-ip.json")
+K_PLUGIN_CLASS(Ip)
 
 #include "location_ip.moc"

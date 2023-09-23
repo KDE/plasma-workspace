@@ -34,7 +34,7 @@ Geolocation::Geolocation(QObject *parent)
 void Geolocation::init()
 {
     // TODO: should this be delayed even further, e.g. when the source is requested?
-    const QList<KPluginMetaData> offers = KPluginMetaData::findPlugins("plasma5support/geolocationprovider");
+    const QList<KPluginMetaData> offers = KPluginMetaData::findPlugins("plasma5support/geolocationprovider", {}, KPluginMetaData::AllowEmptyMetaData);
     for (const auto &metaData : offers) {
         auto result = KPluginFactory::instantiatePlugin<GeolocationProvider>(metaData, this);
         if (result) {
