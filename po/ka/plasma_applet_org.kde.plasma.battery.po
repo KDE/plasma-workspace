@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-19 01:56+0000\n"
+"POT-Creation-Date: 2023-09-24 01:45+0000\n"
 "PO-Revision-Date: 2023-02-22 06:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -231,23 +231,23 @@ msgstr ""
 msgid "&Configure Energy Saving…"
 msgstr "&ენერგიის შენახვის მორგება…"
 
-#: package/contents/ui/PopupDialog.qml:116
+#: package/contents/ui/PopupDialog.qml:115
 #, kde-format
 msgid "Display Brightness"
 msgstr "ეკრანს სიკაშკაშე"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:145
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "კლავიატურის სიკაშკაშე"
 
-#: package/contents/ui/PowerManagementItem.qml:41
+#: package/contents/ui/PowerManagementItem.qml:40
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "ძილისა და ეკრანის ჩაკეტვის ხელით დაბლოკვა"
 
-#: package/contents/ui/PowerManagementItem.qml:76
+#: package/contents/ui/PowerManagementItem.qml:75
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -257,54 +257,54 @@ msgstr ""
 "თქვენი ნოუთბუქი მორგებულია, რომ არ დაიძინოს, როცა დააფარებთ თავსახურს ან "
 "როცა გარე ეკრანია მიერთებული."
 
-#: package/contents/ui/PowerManagementItem.qml:89
+#: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "ამჟამად %1 აპლიკაცია ბლოკავს ძილს და ეკრანის დაბლოკვას:"
 msgstr[1] "ამჟამად %1 აპლიკაცია ბლოკავს ძილს და ეკრანის დაბლოკვას:"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "ამჟამად %1 ბლოკავს ძილს და ეკრანის დაბლოკვას (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:113
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "ამჟამად %1 ბლოკავს ძილს და ეკრანის დაბლოკვას (უცნობი მიზეზით)"
 
-#: package/contents/ui/PowerManagementItem.qml:115
+#: package/contents/ui/PowerManagementItem.qml:114
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "აპლიკაცია ამჟამად ძილს და ეკრანის ჩაკეტვას ბლოკავს (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr "აპლიკაცია ამჟამად ძილს და ეკრანის ჩაკეტვას ბლოკავს (მიზეზი უცნობია)"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:123
+#: package/contents/ui/PowerManagementItem.qml:122
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: უცნობი მიზეზი"
 
-#: package/contents/ui/PowerManagementItem.qml:125
+#: package/contents/ui/PowerManagementItem.qml:124
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "უცნობი აპლიკაცია: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:127
+#: package/contents/ui/PowerManagementItem.qml:126
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"

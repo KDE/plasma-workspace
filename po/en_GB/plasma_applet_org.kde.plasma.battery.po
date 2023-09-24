@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-19 01:56+0000\n"
+"POT-Creation-Date: 2023-09-24 01:45+0000\n"
 "PO-Revision-Date: 2023-02-27 21:38+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -232,23 +232,23 @@ msgstr "Show Battery Percentage on Icon When Not Fully Charged"
 msgid "&Configure Energy Saving…"
 msgstr "&Configure Energy Saving…"
 
-#: package/contents/ui/PopupDialog.qml:116
+#: package/contents/ui/PopupDialog.qml:115
 #, kde-format
 msgid "Display Brightness"
 msgstr "Display Brightness"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:145
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Keyboard Brightness"
 
-#: package/contents/ui/PowerManagementItem.qml:41
+#: package/contents/ui/PowerManagementItem.qml:40
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Manually block sleep and screen locking"
 
-#: package/contents/ui/PowerManagementItem.qml:76
+#: package/contents/ui/PowerManagementItem.qml:75
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -258,29 +258,29 @@ msgstr ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 
-#: package/contents/ui/PowerManagementItem.qml:89
+#: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "%1 application is currently blocking sleep and screen locking:"
 msgstr[1] "%1 applications are currently blocking sleep and screen locking:"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 is currently blocking sleep and screen locking (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:113
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 is currently blocking sleep and screen locking (unknown reason)"
 
-#: package/contents/ui/PowerManagementItem.qml:115
+#: package/contents/ui/PowerManagementItem.qml:114
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "An application is currently blocking sleep and screen locking (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -289,25 +289,25 @@ msgstr ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:123
+#: package/contents/ui/PowerManagementItem.qml:122
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: unknown reason"
 
-#: package/contents/ui/PowerManagementItem.qml:125
+#: package/contents/ui/PowerManagementItem.qml:124
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Unknown application: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:127
+#: package/contents/ui/PowerManagementItem.qml:126
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
