@@ -55,7 +55,6 @@ QBindable<PlayerContainer *> Multiplexer::activePlayer() const
 void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 {
     PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
-    Q_ASSUME(container);
     connect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
 
     if (m_activePlayer && m_activePlayer->playbackStatus() == PlaybackStatus::Playing) {
@@ -73,7 +72,7 @@ void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 
 void Multiplexer::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
 {
-    Q_ASSUME(m_activePlayer);
+    Q_ASSERT(m_activePlayer);
     if (m_activePlayerIndex == first) {
         disconnect(m_activePlayer, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
         m_activePlayer = nullptr;
@@ -115,7 +114,7 @@ void Multiplexer::updateIndex()
     const int rawRow =
         std::distance(sourceModel->m_containers.cbegin(), std::find(sourceModel->m_containers.cbegin(), sourceModel->m_containers.cend(), m_activePlayer));
     const QModelIndex idx = m_filterModel->mapFromSource(sourceModel->index(rawRow, 0));
-    Q_ASSUME(idx.isValid());
+    Q_ASSERT(idx.isValid());
     m_activePlayerIndex = idx.row();
 }
 

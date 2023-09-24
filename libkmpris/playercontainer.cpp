@@ -169,7 +169,9 @@ PlayerContainer::PlayerContainer(const QString &busAddress, QObject *parent)
     , m_playerIface(new OrgMprisMediaPlayer2PlayerInterface(busAddress, MPRIS2_PATH, QDBusConnection::sessionBus(), this))
     , m_rootIface(new OrgMprisMediaPlayer2Interface(busAddress, MPRIS2_PATH, QDBusConnection::sessionBus(), this))
 {
-    Q_ASSUME(busAddress.startsWith(MPRIS2_PREFIX));
+#if __has_cpp_attribute(assume)
+    [[assume(busAddress.startsWith(MPRIS2_PREFIX))]];
+#endif
 
     // MPRIS specifies, that in case a player supports several instances, each additional
     // instance after the first one is supposed to append ".instance<pid>" at the end of
@@ -476,7 +478,6 @@ void PlayerContainer::changeVolume(double delta, bool showOSD)
 
 void PlayerContainer::initBindings()
 {
-    Q_ASSUME(m_notifiers.empty());
     // Since the bindings are already used in QML, move them to C++ for better efficiency and consistency
     m_effectiveCanGoNext.setBinding([this] {
         return m_canControl.value() && m_canGoNext.value();

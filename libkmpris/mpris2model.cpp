@@ -119,7 +119,7 @@ PlayerContainer *Mpris2Model::playerForLauncherUrl(const QUrl &launcherUrl, unsi
 void Mpris2Model::onRowsInserted(const QModelIndex &, int first, int)
 {
     if (first == 0) {
-        Q_ASSUME(m_currentIndex == 0);
+        Q_ASSERT(m_currentIndex == 0);
         m_currentPlayer = index(0, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
         Q_EMIT currentPlayerChanged();
     }
