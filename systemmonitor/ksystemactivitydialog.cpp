@@ -28,7 +28,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
 {
     setAutoSaveSettings();
 
-    m_processList = new KSysGuardProcessList;
+    m_processList = new KSysGuardProcessList(this);
     m_processList->setScriptingEnabled(true);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
