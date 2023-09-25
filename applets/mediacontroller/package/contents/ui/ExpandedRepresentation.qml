@@ -242,7 +242,7 @@ PlasmaExtras.Representation {
                 }
             }
         }
-        RowLayout { // Album Art + Details
+        Item { // Album Art + Details
             id: albumRow
 
             anchors {
@@ -251,14 +251,16 @@ PlasmaExtras.Representation {
                 rightMargin: Kirigami.Units.gridUnit
             }
 
-            spacing: Kirigami.Units.gridUnit
-
             AlbumArtStackView {
                 id: albumArt
 
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.preferredWidth: 50
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: detailsColumn.visible ? parent.horizontalCenter : parent.right
+                    rightMargin: Kirigami.Units.gridUnit / 2
+                }
 
                 Connections {
                     enabled: root.expanded
@@ -285,10 +287,19 @@ PlasmaExtras.Representation {
             }
 
             ColumnLayout { // Details Column
-                visible: root.track
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.preferredWidth: 50
+                id: detailsColumn
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    left: parent.horizontalCenter
+                    leftMargin: Kirigami.Units.gridUnit / 2
+                    right: parent.right
+                }
+                visible: root.track.length > 0
+
+                Item {
+                    Layout.fillHeight: true
+                }
 
                 Kirigami.Heading { // Song Title
                     id: songTitle
@@ -337,6 +348,10 @@ PlasmaExtras.Representation {
                     text: root.album
                     Layout.fillWidth: true
                     Layout.maximumHeight: Kirigami.Units.gridUnit * 2
+                }
+
+                Item {
+                    Layout.fillHeight: true
                 }
             }
         }
@@ -652,6 +667,7 @@ PlasmaExtras.Representation {
                 delegate: PlasmaComponents3.TabButton {
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
+                    implicitWidth: 1 // HACK: suppress binding loop warnings
                     readonly property QtObject m: model
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     icon.name: model.iconName
