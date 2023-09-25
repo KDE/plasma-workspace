@@ -372,6 +372,9 @@ void testRequest(AbstractWindowTasksModel &model)
         QCoreApplication::processEvents();
         dataChangedSpy.clear();
         model.requestToggleMaximized(index);
+        if (KWindowSystem::isPlatformX11()) {
+            QX11Info::getTimestamp(); // roundtrip
+        }
         if (dataChangedSpy.empty()) {
             QVERIFY(dataChangedSpy.wait(timeout));
         }
