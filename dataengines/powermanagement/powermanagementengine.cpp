@@ -629,8 +629,9 @@ void PowermanagementEngine::deviceRemoved(const QString &udi)
     if (m_batterySources.contains(udi)) {
         Solid::Device device(udi);
         Solid::Battery *battery = device.as<Solid::Battery>();
-        if (battery)
-            battery->disconnect();
+        if (battery) {
+            battery->disconnect(this);
+        }
 
         const QString source = m_batterySources[udi];
         m_batterySources.remove(udi);
