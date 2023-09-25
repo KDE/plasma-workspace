@@ -93,17 +93,11 @@ class MediaControllerTests(unittest.TestCase):
 
         # Match song title, artist and album
         wait: WebDriverWait = WebDriverWait(self.driver, 5)
-        wait.until(
-            EC.presence_of_element_located(
-                (AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
-        wait.until(
-            EC.presence_of_element_located(
-                (AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())))  # Album
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())))  # Album
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
-        wait.until(
-            EC.presence_of_element_located(
-                (AppiumBy.NAME, ', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))))  # Artists
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, ', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))))  # Artists
 
         # Now click the play button
         play_button.click()
@@ -226,8 +220,7 @@ class MediaControllerTests(unittest.TestCase):
         self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
         [self.touch_input_iface.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, move_distance_y)]  # Swipe down
         sleep(0.5)  # Qt may ignore some touch events if there are too many, so explicitly wait a moment
-        [self.touch_input_iface.touch_move(center_pos_x + distance, center_pos_y + move_distance_y - 1)
-         for distance in range(1, move_distance_x)]  # Swipe right
+        [self.touch_input_iface.touch_move(center_pos_x + distance, center_pos_y + move_distance_y - 1) for distance in range(1, move_distance_x)]  # Swipe right
         self.touch_input_iface.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < old_volume)
         self.assertEqual(old_position, self.mpris_interface.player_properties["Position"].get_int64())
@@ -251,8 +244,7 @@ class MediaControllerTests(unittest.TestCase):
 
         # Wait until the first player is ready
         wait: WebDriverWait = WebDriverWait(self.driver, 3)
-        wait.until(
-            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
 
         # Start Player B, Total 2 players
         player_b_json_path: str = path.join(getcwd(), "resources/player_b.json")
@@ -281,8 +273,7 @@ class MediaControllerTests(unittest.TestCase):
         # Switch to Multiplexer
         # A Paused, B Paused -> A (first added)
         self.driver.find_element(by=AppiumBy.NAME, value="Choose player automatically").click()
-        wait.until(
-            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
@@ -290,37 +281,31 @@ class MediaControllerTests(unittest.TestCase):
         # A Paused, B Playing -> B
         # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
-        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play",
-                         None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
 
         # Pause B -> Still B
-        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause",
-                         None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
 
         # A Playing, B Paused -> A
-        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None,
-                         Gio.DBusSendMessageFlags.NONE, 1000)
-        wait.until(
-            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
 
         # A Playing, B Playing -> Still A
-        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play",
-                         None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         sleep(1)
         self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())  # Title
 
         # A Paused, B Playing -> B
-        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None,
-                         Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
@@ -328,8 +313,7 @@ class MediaControllerTests(unittest.TestCase):
         # Close B -> A
         self.player_b.terminate()
         self.player_b = None
-        wait.until(
-            EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
