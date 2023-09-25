@@ -266,7 +266,7 @@ protected:
 class KMPRIS_EXPORT PlayerContainer : public AbstractPlayerContainer
 {
     Q_OBJECT
-    QML_ELEMENT
+    QML_ANONYMOUS
 
     Q_PROPERTY(LoopStatus::Status loopStatus READ loopStatus WRITE setLoopStatus NOTIFY loopStatusChanged)
     Q_PROPERTY(qlonglong position READ position WRITE setPosition NOTIFY positionChanged)
