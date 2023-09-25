@@ -42,7 +42,6 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
-
     if (!m_resultsModel || !term.startsWith(m_lastLoadedQuery)) {
         auto query = UsedResources //
             | Activity::current() //
@@ -56,6 +55,9 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         m_lastLoadedQuery = term;
     }
 
+    if (!context.isValid()) {
+        return; // The initial fetching could take a moment, check the context validity afterward
+    }
     float relevance = 0.75;
     KRunner::QueryMatch::Type type = KRunner::QueryMatch::CompletionMatch;
     QList<KRunner::QueryMatch> matches;
@@ -74,17 +76,17 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         match.setType(type);
         const QString fileName = url.fileName();
         // In case our filename starts with the query, we only need to check the size to check if it is an exact match/exact match of the basename
-        const bool startsWithTerm = fileName.startsWith(term, Qt::CaseInsensitive);
-        if (term.size() >= 5 && startsWithTerm && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
+        const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive);
+        const bool startsWithTerm = indexOfTerm == 0;
+        if (indexOfTerm == -1) {
+            continue;
+        } else if (term.size() >= 5 && startsWithTerm && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::ExactMatch);
         } else if (startsWithTerm) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::PossibleMatch);
-        } else if (!fileName.contains(term, Qt::CaseInsensitive)) {
-            continue;
         }
-
         match.setIconName(KIO::iconNameForUrl(url));
         match.setData(QVariant(url));
         match.setUrls({url});
