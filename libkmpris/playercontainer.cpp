@@ -431,8 +431,8 @@ void PlayerContainer::updatePosition()
         QDBusPendingReply<QVariant> propsReply = *watcher;
         watcher->deleteLater();
         if (!propsReply.isValid() && propsReply.error().type() != QDBusError::NotSupported) {
-            qCWarning(MPRIS2) << m_dbusAddress << "does not implement" << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName()
-                              << "correctly. Error message was" << propsReply.error().name() << propsReply.error().message();
+            qCDebug(MPRIS2) << m_dbusAddress << "does not implement" << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName()
+                            << "correctly. Error message was" << propsReply.error().name() << propsReply.error().message();
             return;
         }
 
