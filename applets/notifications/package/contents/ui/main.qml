@@ -242,7 +242,7 @@ PlasmoidItem {
         id: configureAction
         text: i18n("&Configure Event Notifications and Actions…")
         icon.name: "configure"
-        visible: KConfig.KAuthorized.authorizeControlModules("kcm_notifications");
+        visible: KConfig.KAuthorized.authorizeControlModule("kcm_notifications");
         onTriggered: KCMUtils.KCMLauncher.openSystemSettings("kcm_notifications");
     }
 
