@@ -61,7 +61,10 @@ Item {
         });
 
         function replaceWhenLoaded() {
-            if (pendingImage.status === Image.Loading) {
+            // There can be a potential race: when the previous player is gone but the pending image is just ready in time,
+            // pendingImage.destroy() -> QQuickImage::deleteLater(), so in the event queue statusChanged may be emitted
+            // before pendingImage is deleted, but pendingImage is already set to null when the previous player is gone.
+            if (pendingImage === null || pendingImage.status === Image.Loading) {
                 return;
             }
 
