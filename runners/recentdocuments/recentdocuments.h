@@ -6,8 +6,11 @@
 
 #pragma once
 
+#include <KActivities/Stats/ResultModel>
 #include <KRunner/AbstractRunner>
 #include <KRunner/Action>
+
+using namespace KActivities::Stats;
 
 class RecentDocuments : public KRunner::AbstractRunner
 {
@@ -21,4 +24,6 @@ public:
 
 private:
     const KRunner::Actions m_actions;
+    QString m_lastLoadedQuery;
+    std::unique_ptr<ResultModel> m_resultsModel;
 };

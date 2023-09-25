@@ -20,10 +20,9 @@
 #include <KShell>
 
 #include <KActivities/Stats/Query>
-#include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
+#include <kactivitiesstats/resultset.h>
 
-using namespace KActivities::Stats;
 using namespace KActivities::Stats::Terms;
 
 K_PLUGIN_CLASS_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
@@ -35,46 +34,53 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
     addSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:."));
 
     setMinLetterCount(3);
+    connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
+        m_resultsModel.reset(nullptr);
+    });
 }
 
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
-    // clang-format off
     const QString term = context.query();
-    auto query = UsedResources
-            | Activity::current()
-            | Order::RecentlyUsedFirst
+
+    if (!m_resultsModel || !term.startsWith(m_lastLoadedQuery)) {
+        auto query = UsedResources //
+            | Activity::current() //
+            | Order::RecentlyUsedFirst //
             | Agent::any()
             // we search only on file name, as KActivity does not support better options
-            | Url("/*/*" + term + "*")
-            | Limit(20);
-    // clang-format on
+            | Url("/*/*" + term + "*");
 
-    const auto result = new ResultModel(query);
+        // Reuse the model in case our query starts with the previous one. We filter out irrelevant results later on anyway
+        m_resultsModel.reset(new ResultModel(query));
+        m_lastLoadedQuery = term;
+    }
 
     float relevance = 0.75;
     KRunner::QueryMatch::Type type = KRunner::QueryMatch::CompletionMatch;
-    for (int i = 0; i < result->rowCount(); ++i) {
-        const auto index = result->index(i, 0);
+    for (int i = 0; i < m_resultsModel->rowCount(); ++i) {
+        const auto index = m_resultsModel->index(i, 0);
 
-        const auto url = QUrl::fromUserInput(result->data(index, ResultModel::ResourceRole).toString(),
+        const auto url = QUrl::fromUserInput(m_resultsModel->data(index, ResultModel::ResourceRole).toString(),
                                              QString(),
                                              // We can assume local file thanks to the request Url
                                              QUrl::AssumeLocalFile);
-        const auto name = result->data(index, ResultModel::TitleRole).toString();
+        const auto name = m_resultsModel->data(index, ResultModel::TitleRole).toString();
 
         KRunner::QueryMatch match(this);
 
         match.setRelevance(relevance);
         match.setType(type);
-        if (term.size() >= 5
-            && (url.fileName().compare(term, Qt::CaseInsensitive) == 0 || QFileInfo(url.fileName()).baseName().compare(term, Qt::CaseInsensitive) == 0)) {
+        const QString fileName = url.fileName();
+        // In case our filename starts with the query, we only need to check the size to check if it is an exact match/exact match of the basename
+        const bool startsWithTerm = fileName.startsWith(term, Qt::CaseInsensitive);
+        if (term.size() >= 5 && startsWithTerm && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::ExactMatch);
-        } else if (url.fileName().startsWith(term, Qt::CaseInsensitive)) {
+        } else if (startsWithTerm) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::PossibleMatch);
-        } else if (!url.fileName().contains(term, Qt::CaseInsensitive)) {
+        } else if (!fileName.contains(term, Qt::CaseInsensitive)) {
             continue;
         }
 
