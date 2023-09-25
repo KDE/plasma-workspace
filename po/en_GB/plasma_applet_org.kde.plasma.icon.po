@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:58+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2017-01-15 12:10+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -27,12 +27,12 @@ msgstr "Failed to create icon widgets folder '%1'"
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Failed to copy icon widget desktop file from '%1' to '%2'"
 
-#: iconapplet.cpp:386
+#: iconapplet.cpp:351
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Open Containing Folder"
 
-#: iconapplet.cpp:567
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "Properties for %1"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:58+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2017-07-03 17:58+0100\n"
 "Last-Translator: Vincent Pinon <vpinon@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -31,12 +31,12 @@ msgstr ""
 "Impossible de copier le fichier desktop du composant graphique pour les "
 "icônes de « %1 » vers « %2 »"
 
-#: iconapplet.cpp:386
+#: iconapplet.cpp:351
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ouvrir le dossier contenant"
 
-#: iconapplet.cpp:567
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "Propriétés de %1"

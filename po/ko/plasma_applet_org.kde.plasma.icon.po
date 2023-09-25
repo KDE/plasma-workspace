@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:58+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2017-01-22 20:09+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,12 +27,12 @@ msgstr "아이콘 위젯 폴더 '%1'을(를) 만들 수 없음"
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "아이콘 위젯 데스크톱 파일을 '%1'에서 '%2'(으)로 복사할 수 없음"
 
-#: iconapplet.cpp:386
+#: iconapplet.cpp:351
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: iconapplet.cpp:567
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "%1 속성"

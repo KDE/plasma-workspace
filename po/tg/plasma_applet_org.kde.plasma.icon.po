@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:58+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2019-09-26 18:26+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -29,12 +29,12 @@ msgstr ""
 "Амали нусхабардории файли мизи кории виҷети нишонадор аз '%1' ба '%2' қатъ "
 "шуд"
 
-#: iconapplet.cpp:386
+#: iconapplet.cpp:351
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Кушодани ҷузвадони марбут"
 
-#: iconapplet.cpp:567
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "Хусусиятҳо барои %1"

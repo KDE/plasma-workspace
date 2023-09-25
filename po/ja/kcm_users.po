@@ -1,12 +1,12 @@
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2022-06-17 23:46-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-09-19 22:34+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -103,7 +103,7 @@ msgid ""
 "Now that you have changed your login password, you may also want to change "
 "the password on your default KWallet to match it."
 msgstr ""
-"既定の Kwallet のパスワードを変更されたログインパスワードと一致させることをお"
+"既定の KWallet のパスワードを変更されたログインパスワードと一致させることをお"
 "勧めします。"
 
 #: src/ui/ChangeWalletPassword.qml:30
@@ -189,7 +189,7 @@ msgstr "指紋を設定"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "すべて削除"
 
 #: src/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -212,180 +212,120 @@ msgid "Enrolling Fingerprint"
 msgstr "指紋を登録しています"
 
 #: src/ui/FingerprintDialog.qml:124
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右人差し指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:126
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右中指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:128
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右薬指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:130
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右小指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右親指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:134
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左人差し指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:136
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左中指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:138
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左薬指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:140
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左小指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:142
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左親指を繰り返し押し当ててください。"
 
 #: src/ui/FingerprintDialog.qml:146
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右人差し指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:148
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右中指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:150
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右薬指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:152
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右小指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:154
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに右親指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左人差し指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:158
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左中指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:160
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左薬指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:162
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左小指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "指紋センサーに %2 を繰り返し %1 してください。"
+msgstr "指紋センサーに左親指を繰り返しスワイプしてください。"
 
 #: src/ui/FingerprintDialog.qml:179
 #, kde-format
@@ -403,8 +343,7 @@ msgid "Re-enroll finger"
 msgstr "指を再登録する"
 
 #: src/ui/FingerprintDialog.qml:333
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
 msgstr "指紋を削除"
 
@@ -416,18 +355,16 @@ msgstr "指紋は追加されていません"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "ユーザ"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
 msgstr "新しいユーザを追加"
 
 #: src/ui/PicturesSheet.qml:18
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "アバターを変更"
@@ -535,15 +472,13 @@ msgid "Rich Hardwood"
 msgstr ""
 
 #: src/ui/PicturesSheet.qml:126
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "画像を選択"
 
 #: src/ui/PicturesSheet.qml:151
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "ファイルを選択..."
@@ -620,6 +555,3 @@ msgstr "あなたのアカウント"
 #, kde-format
 msgid "Other Accounts"
 msgstr "他のアカウント"
-
-#~ msgid "Manage Users"
-#~ msgstr "ユーザを管理"

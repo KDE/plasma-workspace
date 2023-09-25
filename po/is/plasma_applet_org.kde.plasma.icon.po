@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:58+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2022-10-17 16:14+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgstr "Ekki tókst að búa til táknamöppu '%1' fyrir græjuna"
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Mistókst að afrita skjáborðsskrá tákns fyrir græju úr '%1' yfir í '%2'"
 
-#: iconapplet.cpp:386
+#: iconapplet.cpp:351
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Opna möppu sem inniheldur skrána"
 
-#: iconapplet.cpp:567
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "Eiginleikar fyrir %1"
