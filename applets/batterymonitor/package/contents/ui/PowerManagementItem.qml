@@ -38,7 +38,7 @@ ColumnLayout {
         id: pmCheckBox
         Layout.fillWidth: true
         text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
-        checked: pmSource.data["PowerManagement"]["Has Inhibition"]
+        checked: Boolean(pmSource.data["PowerManagement"] && pmSource.data["PowerManagement"]["Has Inhibition"])
         focus: true
 
         KeyNavigation.up: dialog.KeyNavigation.up
