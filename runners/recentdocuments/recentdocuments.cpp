@@ -58,6 +58,7 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
 
     float relevance = 0.75;
     KRunner::QueryMatch::Type type = KRunner::QueryMatch::CompletionMatch;
+    QList<KRunner::QueryMatch> matches;
     for (int i = 0; i < m_resultsModel->rowCount(); ++i) {
         const auto index = m_resultsModel->index(i, 0);
 
@@ -96,9 +97,9 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         match.setSubtext(destUrlString);
 
         relevance -= 0.05;
-
-        context.addMatch(match);
+        matches << match;
     }
+    context.addMatches(matches);
 }
 
 void RecentDocuments::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
