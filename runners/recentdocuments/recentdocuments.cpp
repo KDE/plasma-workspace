@@ -47,10 +47,10 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         auto query = UsedResources //
             | Activity::current() //
             | Order::RecentlyUsedFirst //
-            | Agent::any()
-            | Type::files()
-            // we search only on file name, as KActivity does not support better options
-            | Url("/*/*" + term + "*");
+            | Agent::any() //
+            | Type::files() //
+            | Url("/*/*") // we search only for local files
+            | Title::contains(term); // check the title, because that is the filename
 
         // Reuse the model in case our query starts with the previous one. We filter out irrelevant results later on anyway
         m_resultsModel.reset(new ResultModel(query));
