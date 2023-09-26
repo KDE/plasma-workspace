@@ -9,6 +9,8 @@
 #include <QApplication>
 #include <QDir>
 #include <QMimeData>
+#include <QMimeDatabase>
+#include <QMimeType>
 
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
@@ -21,7 +23,6 @@
 
 #include <KActivities/Stats/Query>
 #include <KActivities/Stats/Terms>
-#include <kactivitiesstats/resultset.h>
 
 using namespace KActivities::Stats::Terms;
 
@@ -60,6 +61,7 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
     }
     float relevance = 0.75;
     KRunner::QueryMatch::Type type = KRunner::QueryMatch::CompletionMatch;
+    QMimeDatabase db;
     QList<KRunner::QueryMatch> matches;
     for (int i = 0; i < m_resultsModel->rowCount(); ++i) {
         const auto index = m_resultsModel->index(i, 0);
@@ -69,25 +71,25 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
                                              // We can assume local file thanks to the request Url
                                              QUrl::AssumeLocalFile);
         const auto name = m_resultsModel->data(index, ResultModel::TitleRole).toString();
+        const auto mimeTypeName = m_resultsModel->data(index, ResultModel::MimeType).toString();
 
         KRunner::QueryMatch match(this);
 
         match.setRelevance(relevance);
         match.setType(type);
         const QString fileName = url.fileName();
-        // In case our filename starts with the query, we only need to check the size to check if it is an exact match/exact match of the basename
-        const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive);
-        const bool startsWithTerm = indexOfTerm == 0;
-        if (indexOfTerm == -1) {
-            continue;
-        } else if (term.size() >= 5 && startsWithTerm && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
+        if (const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive); indexOfTerm == -1) {
+            continue; // A previous result or a result where the path, but not filename matches
+        } else if (term.size() >= 5 && indexOfTerm == 0 &&
+                   // We know the term starts with the query, check size to see if it is an exact match
+                   (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::ExactMatch);
-        } else if (startsWithTerm) {
+        } else if (indexOfTerm == 0 /*startswith, but not equals => smaller relevance boost*/) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::PossibleMatch);
         }
-        match.setIconName(KIO::iconNameForUrl(url));
+        match.setIconName(db.mimeTypeForName(mimeTypeName).iconName());
         match.setData(QVariant(url));
         match.setUrls({url});
         match.setId(url.toString());
