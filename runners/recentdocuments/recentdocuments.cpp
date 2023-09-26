@@ -48,6 +48,7 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
             | Activity::current() //
             | Order::RecentlyUsedFirst //
             | Agent::any()
+            | Type::files()
             // we search only on file name, as KActivity does not support better options
             | Url("/*/*" + term + "*");
 
