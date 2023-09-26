@@ -60,36 +60,35 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         return; // The initial fetching could take a moment, check the context validity afterward
     }
     float relevance = 0.75;
-    KRunner::QueryMatch::Type type = KRunner::QueryMatch::CompletionMatch;
     QMimeDatabase db;
     QList<KRunner::QueryMatch> matches;
     for (int i = 0; i < m_resultsModel->rowCount(); ++i) {
         const auto index = m_resultsModel->index(i, 0);
-
         const auto url = QUrl::fromUserInput(m_resultsModel->data(index, ResultModel::ResourceRole).toString(),
                                              QString(),
                                              // We can assume local file thanks to the request Url
                                              QUrl::AssumeLocalFile);
-        const auto name = m_resultsModel->data(index, ResultModel::TitleRole).toString();
-        const auto mimeTypeName = m_resultsModel->data(index, ResultModel::MimeType).toString();
+
+        const QString fileName = url.fileName();
+        const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive);
+        if (indexOfTerm == -1) {
+            continue; // A previous result or a result where the path, but not filename matches
+        }
 
         KRunner::QueryMatch match(this);
-
         match.setRelevance(relevance);
-        match.setType(type);
-        const QString fileName = url.fileName();
-        if (const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive); indexOfTerm == -1) {
-            continue; // A previous result or a result where the path, but not filename matches
-        } else if (term.size() >= 5 && indexOfTerm == 0 &&
-                   // We know the term starts with the query, check size to see if it is an exact match
-                   (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
+        match.setType(KRunner::QueryMatch::CompletionMatch);
+        // We know the term starts with the query, check size to see if it is an exact match
+        if (term.size() >= 5 && indexOfTerm == 0 && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::ExactMatch);
         } else if (indexOfTerm == 0 /*startswith, but not equals => smaller relevance boost*/) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::PossibleMatch);
         }
-        match.setIconName(db.mimeTypeForName(mimeTypeName).iconName());
+        const auto name = m_resultsModel->data(index, ResultModel::TitleRole).toString();
+        const QMimeType mimeType = db.mimeTypeForName(m_resultsModel->data(index, ResultModel::MimeType).toString());
+        match.setIconName(mimeType.iconName());
         match.setData(QVariant(url));
         match.setUrls({url});
         match.setId(url.toString());
