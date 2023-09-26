@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-13 02:06+0000\n"
-"PO-Revision-Date: 2023-08-14 11:41+0200\n"
+"PO-Revision-Date: 2023-09-25 10:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -178,7 +178,7 @@ msgstr "El servei de notificació no està disponible"
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
-msgstr "Actualment les notificacions són proporcionades per «%1 %2»"
+msgstr "Actualment, les notificacions són proporcionades per «%1 %2»"
 
 #: package/contents/ui/JobDetails.qml:34
 #, kde-format
@@ -314,7 +314,7 @@ msgstr[1] "%1 notificacions sense llegir"
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "No destorbar fins %1; clic del mig per a eixir ara"
+msgstr "No destorbar fins a %1; clic del mig per a eixir ara"
 
 #: package/contents/ui/main.qml:101
 #, kde-format

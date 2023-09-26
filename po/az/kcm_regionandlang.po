@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-02-19 14:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -297,7 +297,7 @@ msgstr "Naməlum"
 msgid "Default for System"
 msgstr "Sistemin standart dili"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:270
 #, kde-format
 msgid "Default"
 msgstr "Standart"
@@ -427,43 +427,43 @@ msgstr "\"%1\" dili dəstəklənmir"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Tətbiqlərinizdə görmək istədiyiniz dilləri sıra ilə əlavə edin."
 
-#: ui/AdvancedLanguageSelectPage.qml:83
+#: ui/AdvancedLanguageSelectPage.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Dili dəyişin"
 
-#: ui/AdvancedLanguageSelectPage.qml:87
+#: ui/AdvancedLanguageSelectPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Dili dəyişin"
 
-#: ui/AdvancedLanguageSelectPage.qml:98
+#: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Yuxarıya köçürün"
 
-#: ui/AdvancedLanguageSelectPage.qml:104
+#: ui/AdvancedLanguageSelectPage.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Silin"
 
-#: ui/AdvancedLanguageSelectPage.qml:117
+#: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Dil tənzimlənməyib"
 
-#: ui/AdvancedLanguageSelectPage.qml:147 ui/AdvancedLanguageSelectPage.qml:158
+#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Dillər əlavə edin"
 
-#: ui/AdvancedLanguageSelectPage.qml:175
+#: ui/AdvancedLanguageSelectPage.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -513,50 +513,50 @@ msgstr ""
 "Lazımi yerli format və dil dəstəyi faylları quraşdırılıb. İndi "
 "kompyuterinizi təhlükəsiz söndürə bilərsiniz."
 
-#: ui/main.qml:140
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Dəyşdirin…"
 
-#: ui/main.qml:181
+#: ui/main.qml:193
 #, kde-format
 msgid "Numbers"
 msgstr "Saylar"
 
-#: ui/main.qml:183
+#: ui/main.qml:195
 #, kde-format
 msgid "Time"
 msgstr "Vaxt"
 
-#: ui/main.qml:185
+#: ui/main.qml:197
 #, kde-format
 msgid "Currency"
 msgstr "Pul vahidi"
 
-#: ui/main.qml:187
+#: ui/main.qml:199
 #, kde-format
 msgid "Measurements"
 msgstr "Ölçü vahidləri"
 
-#: ui/main.qml:189
+#: ui/main.qml:201
 #, kde-format
 msgid "Paper Size"
 msgstr "Vərəq ölçüsü"
 
-#: ui/main.qml:191
+#: ui/main.qml:203
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Ünvan"
 
-#: ui/main.qml:193
+#: ui/main.qml:205
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Adı"
 
-#: ui/main.qml:195
+#: ui/main.qml:207
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

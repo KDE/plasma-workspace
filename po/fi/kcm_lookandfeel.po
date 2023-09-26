@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-06-27 15:56+0300\n"
+"PO-Revision-Date: 2023-08-26 18:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -129,7 +129,7 @@ msgstr "Peru"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Hae uusia…"
 
 #: ui/main.qml:103
 #, kde-format

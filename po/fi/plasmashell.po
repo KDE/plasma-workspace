@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-31 01:57+0000\n"
-"PO-Revision-Date: 2023-07-25 13:33+0300\n"
+"PO-Revision-Date: 2023-08-26 18:51+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -35,36 +35,28 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiritoimintojen asetukset"
 
 #: desktopview.cpp:224
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Plasma %1"
+msgstr "KDE Plasma %1 kehitysversio"
 
 #: desktopview.cpp:228
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1 Beta Build"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Plasma %1 beetakooste"
+msgstr "KDE Plasma %1 beeta"
 
 #: desktopview.cpp:231
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1 Beta Build"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr "Plasma %1 beetakooste"
+msgstr "KDE Plasma %1 beeta %2"
 
 #: desktopview.cpp:235
-#, fuzzy, kde-format
-#| msgctxt "@label %1 version string"
-#| msgid "Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Plasma %1"
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:241
 #, kde-format

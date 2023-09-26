@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-09-15 15:01+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -268,17 +268,17 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Adde…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:223
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format
 msgid "Remove Folder"
 msgstr "Remove Dossier"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
 msgid "Open Folder…"
 msgstr "Aperi dossier…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:238
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Il non ha locationes de tapete de papiro configurate"

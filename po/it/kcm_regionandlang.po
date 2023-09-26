@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-07-02 19:54+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -299,7 +299,7 @@ msgstr "Sconosciuto"
 msgid "Default for System"
 msgstr "Predefinito per il sistema"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:270
 #, kde-format
 msgid "Default"
 msgstr "Predefinito"
@@ -430,43 +430,43 @@ msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
 "Aggiungi le lingue nell'ordine in cui le vorresti vedere nelle applicazioni."
 
-#: ui/AdvancedLanguageSelectPage.qml:83
+#: ui/AdvancedLanguageSelectPage.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Cambia lingua"
 
-#: ui/AdvancedLanguageSelectPage.qml:87
+#: ui/AdvancedLanguageSelectPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Cambia lingua"
 
-#: ui/AdvancedLanguageSelectPage.qml:98
+#: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Sposta in cima"
 
-#: ui/AdvancedLanguageSelectPage.qml:104
+#: ui/AdvancedLanguageSelectPage.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: ui/AdvancedLanguageSelectPage.qml:117
+#: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Nessuna lingua configurata"
 
-#: ui/AdvancedLanguageSelectPage.qml:147 ui/AdvancedLanguageSelectPage.qml:158
+#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Aggiungi lingue"
 
-#: ui/AdvancedLanguageSelectPage.qml:175
+#: ui/AdvancedLanguageSelectPage.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -517,50 +517,50 @@ msgstr ""
 "I file necessari per la localizzazione e per la lingua sono stati "
 "installati. Adesso puoi spegnere il computer."
 
-#: ui/main.qml:140
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Modifica…"
 
-#: ui/main.qml:181
+#: ui/main.qml:193
 #, kde-format
 msgid "Numbers"
 msgstr "Numeri"
 
-#: ui/main.qml:183
+#: ui/main.qml:195
 #, kde-format
 msgid "Time"
 msgstr "Ora"
 
-#: ui/main.qml:185
+#: ui/main.qml:197
 #, kde-format
 msgid "Currency"
 msgstr "Valuta"
 
-#: ui/main.qml:187
+#: ui/main.qml:199
 #, kde-format
 msgid "Measurements"
 msgstr "Misure"
 
-#: ui/main.qml:189
+#: ui/main.qml:201
 #, kde-format
 msgid "Paper Size"
 msgstr "Dimensione del foglio"
 
-#: ui/main.qml:191
+#: ui/main.qml:203
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: ui/main.qml:193
+#: ui/main.qml:205
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Nome"
 
-#: ui/main.qml:195
+#: ui/main.qml:207
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

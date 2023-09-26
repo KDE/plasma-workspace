@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-09-09 09:55+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -261,12 +261,12 @@ msgstr "Forrit"
 msgid "System Services"
 msgstr "Kerfisþjónustur"
 
-#: ui/SourcesPage.qml:138
+#: ui/SourcesPage.qml:148
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Ekkert forrit eða viðburður passar við leitarorðið þitt."
 
-#: ui/SourcesPage.qml:161
+#: ui/SourcesPage.qml:171
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

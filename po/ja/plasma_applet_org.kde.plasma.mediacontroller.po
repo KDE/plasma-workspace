@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-04-07 23:40-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -17,65 +17,65 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:191
+#: package/contents/ui/AlbumArtStackView.qml:194
 #, kde-format
 msgid "No title"
 msgstr "タイトルなし"
 
-#: package/contents/ui/AlbumArtStackView.qml:191
+#: package/contents/ui/AlbumArtStackView.qml:194
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "No media playing"
 msgstr "再生中のメディアはありません"
 
-#: package/contents/ui/ExpandedRepresentation.qml:367
-#: package/contents/ui/ExpandedRepresentation.qml:488
+#: package/contents/ui/ExpandedRepresentation.qml:382
+#: package/contents/ui/ExpandedRepresentation.qml:503
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:516
+#: package/contents/ui/ExpandedRepresentation.qml:531
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "シャッフル"
 
-#: package/contents/ui/ExpandedRepresentation.qml:540
+#: package/contents/ui/ExpandedRepresentation.qml:555
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "前のトラック"
 
-#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/ExpandedRepresentation.qml:577
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "一時停止"
 
-#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/ExpandedRepresentation.qml:577
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "再生"
 
-#: package/contents/ui/ExpandedRepresentation.qml:580
+#: package/contents/ui/ExpandedRepresentation.qml:595
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "次のトラック"
 
-#: package/contents/ui/ExpandedRepresentation.qml:603
+#: package/contents/ui/ExpandedRepresentation.qml:618
 #, kde-format
 msgid "Repeat Track"
 msgstr "トラックをリピート"
 
-#: package/contents/ui/ExpandedRepresentation.qml:603
+#: package/contents/ui/ExpandedRepresentation.qml:618
 #, kde-format
 msgid "Repeat"
 msgstr "リピート"

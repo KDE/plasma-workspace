@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -273,14 +273,14 @@ msgstr "Aplikasi"
 msgid "System Services"
 msgstr "Layanan Sistem"
 
-#: ui/SourcesPage.qml:138
+#: ui/SourcesPage.qml:148
 #, fuzzy, kde-format
 #| msgid "No application or event matches your search term."
 msgid "No application or event matches your search term"
 msgstr ""
 "Tidak ada aplikasi atau peristiwa yang cocok dengan istilah yang kamu cari."
 
-#: ui/SourcesPage.qml:161
+#: ui/SourcesPage.qml:171
 #, fuzzy, kde-format
 #| msgid ""
 #| "Select an application from the list to configure its notification "

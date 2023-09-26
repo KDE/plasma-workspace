@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-08-25 23:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -256,12 +256,12 @@ msgstr "앱"
 msgid "System Services"
 msgstr "시스템 서비스"
 
-#: ui/SourcesPage.qml:138
+#: ui/SourcesPage.qml:148
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "검색어와 일치하는 앱이나 이벤트가 없음"
 
-#: ui/SourcesPage.qml:161
+#: ui/SourcesPage.qml:171
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

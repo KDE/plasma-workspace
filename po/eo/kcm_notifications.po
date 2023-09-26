@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-08-12 20:57+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -261,12 +261,12 @@ msgstr "Aplikoj"
 msgid "System Services"
 msgstr "Sistemaj Servoj"
 
-#: ui/SourcesPage.qml:138
+#: ui/SourcesPage.qml:148
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Neniu aplikaĵo aŭ evento kongruas kun via serĉtermino."
 
-#: ui/SourcesPage.qml:161
+#: ui/SourcesPage.qml:171
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

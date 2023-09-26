@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-08-20 15:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -257,12 +257,12 @@ msgstr "செயலிகள்"
 msgid "System Services"
 msgstr "கணினி சேவைகள்"
 
-#: ui/SourcesPage.qml:138
+#: ui/SourcesPage.qml:148
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "உங்கள் தேடலுக்கு எந்த செயலியோ நிகழ்வோ பொருந்தவில்லை"
 
-#: ui/SourcesPage.qml:161
+#: ui/SourcesPage.qml:171
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

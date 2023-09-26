@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2020-11-16 11:31+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,65 +17,65 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.03.70\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:191
+#: package/contents/ui/AlbumArtStackView.qml:194
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: package/contents/ui/AlbumArtStackView.qml:191
+#: package/contents/ui/AlbumArtStackView.qml:194
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "No media playing"
 msgstr "Nincs médialejátszás"
 
-#: package/contents/ui/ExpandedRepresentation.qml:367
-#: package/contents/ui/ExpandedRepresentation.qml:488
+#: package/contents/ui/ExpandedRepresentation.qml:382
+#: package/contents/ui/ExpandedRepresentation.qml:503
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:516
+#: package/contents/ui/ExpandedRepresentation.qml:531
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Véletlen sorrend"
 
-#: package/contents/ui/ExpandedRepresentation.qml:540
+#: package/contents/ui/ExpandedRepresentation.qml:555
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Előző szám"
 
-#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/ExpandedRepresentation.qml:577
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Szünet"
 
-#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/ExpandedRepresentation.qml:577
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Lejátszás"
 
-#: package/contents/ui/ExpandedRepresentation.qml:580
+#: package/contents/ui/ExpandedRepresentation.qml:595
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Következő szám"
 
-#: package/contents/ui/ExpandedRepresentation.qml:603
+#: package/contents/ui/ExpandedRepresentation.qml:618
 #, kde-format
 msgid "Repeat Track"
 msgstr "Szám ismétlése"
 
-#: package/contents/ui/ExpandedRepresentation.qml:603
+#: package/contents/ui/ExpandedRepresentation.qml:618
 #, kde-format
 msgid "Repeat"
 msgstr "Ismétlés"

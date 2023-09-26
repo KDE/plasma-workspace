@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-08-14 21:40+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -265,12 +265,12 @@ msgstr "Anwendungen"
 msgid "System Services"
 msgstr "Systemdienste"
 
-#: ui/SourcesPage.qml:138
+#: ui/SourcesPage.qml:148
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Es passt keine Anwendung oder Ereignis zu Ihrem Suchbegriff"
 
-#: ui/SourcesPage.qml:161
+#: ui/SourcesPage.qml:171
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

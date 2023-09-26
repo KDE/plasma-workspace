@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2023-03-04 18:07+0200\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2023-08-26 18:47+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcm.cpp:71
 #, kde-format
@@ -48,31 +48,27 @@ msgid "Show notification badges"
 msgstr "Näytä ilmoitusmerkit"
 
 #: ui/ApplicationConfiguration.qml:162
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Tapahtumien asetukset…"
+msgstr "Tapahtumien asetukset"
 
 #: ui/ApplicationConfiguration.qml:170
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Tämä sovelma ei tue tapahtumakohtaisten ilmoitusten asettamista."
+msgstr "Tämä sovellus ei tue tapahtumakohtaisten ilmoitusten asettamista"
 
 #: ui/ApplicationConfiguration.qml:257
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Näytä viesti ponnahdusikkunassa"
 
 #: ui/ApplicationConfiguration.qml:266
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Soita ääni"
 
 #: ui/main.qml:41
 #, kde-format
@@ -261,23 +257,19 @@ msgstr "Sovellukset"
 msgid "System Services"
 msgstr "Järjestelmäpalvelut"
 
-#: ui/SourcesPage.qml:138
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#: ui/SourcesPage.qml:148
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Mikään sovellus tai tapahtuma ei vastaa hakua."
+msgstr "Mikään sovellus tai tapahtuma ei vastaa hakua"
 
-#: ui/SourcesPage.qml:161
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#: ui/SourcesPage.qml:171
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Mukauta sovelluksen ilmoitusasetuksia ja toimintaa valitsemalla ensin "
-"sovellus luettelosta."
+"sovellus luettelosta"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Ilmoitusten asetukset"

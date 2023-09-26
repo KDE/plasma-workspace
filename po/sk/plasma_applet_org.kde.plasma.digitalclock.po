@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-29 01:56+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-08-06 11:29+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -286,12 +286,12 @@ msgstr ""
 "Tip: ak často cestujete, pridajte do tohto zoznamu svoje domáce časové "
 "pásmo. Zobrazí sa len vtedy, keď zmeníte systémové časové pásmo na iné."
 
-#: package/contents/ui/configTimeZones.qml:97
+#: package/contents/ui/configTimeZones.qml:78
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Hodiny momentálne používajú toto časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:99
+#: package/contents/ui/configTimeZones.qml:80
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -300,27 +300,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Skryté, keď je toto mesto mestom miestneho časového pásma"
 
-#: package/contents/ui/configTimeZones.qml:113
+#: package/contents/ui/configTimeZones.qml:105
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Prepnúť systémové časové pásmo…"
 
-#: package/contents/ui/configTimeZones.qml:122
+#: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Odstrániť toto časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Systémové časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Ďalšie časové pásma"
 
-#: package/contents/ui/configTimeZones.qml:144
+#: package/contents/ui/configTimeZones.qml:140
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -329,18 +329,18 @@ msgstr ""
 "Pridajte viac časových pásiem, aby ste ich všetky zobrazili v kontextovom "
 "okne appletu, alebo použite jedno z nich pre samotné hodiny"
 
-#: package/contents/ui/configTimeZones.qml:153
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Pridať časové pásma…"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:159
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Prepínať zobrazené časové pásmo použitím kolieska myši nad appletom hodín"
 
-#: package/contents/ui/configTimeZones.qml:170
+#: package/contents/ui/configTimeZones.qml:166
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -349,12 +349,12 @@ msgstr ""
 "Použitím tejto funkcie sa nezmení systémové časové pásmo. Keď cestujete, "
 "prepnite namiesto toho systémové časové pásmo."
 
-#: package/contents/ui/configTimeZones.qml:194
+#: package/contents/ui/configTimeZones.qml:190
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Pridať ďalšie časové pásma"
 
-#: package/contents/ui/configTimeZones.qml:205
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -363,12 +363,12 @@ msgstr ""
 "Aspoň jedno časové pásmo musí byť povolené. Vaše miestne časové pásmo bolo "
 "povolené automaticky."
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:242
+#: package/contents/ui/configTimeZones.qml:238
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

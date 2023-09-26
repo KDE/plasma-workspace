@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-09-12 05:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -267,17 +267,17 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Ekle…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:223
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format
 msgid "Remove Folder"
 msgstr "Klasörü Kaldır"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
 msgid "Open Folder…"
 msgstr "Klasör Aç…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:238
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Yapılandırılmış duvar kağıdı konumu yok"

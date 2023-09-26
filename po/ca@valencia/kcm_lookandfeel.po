@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-09-14 18:25+0200\n"
+"PO-Revision-Date: 2023-09-25 10:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -192,7 +192,7 @@ msgstr "Disposició de l'escriptori"
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr "Disposició del botons de la barra de títol"
+msgstr "Disposició dels botons de la barra de títol"
 
 #: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
 #, kde-format

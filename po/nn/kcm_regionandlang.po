@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2023-02-22 21:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -299,7 +299,7 @@ msgstr "Ukjend"
 msgid "Default for System"
 msgstr "Standard for systemet"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:241
+#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:270
 #, kde-format
 msgid "Default"
 msgstr "Standard"
@@ -430,43 +430,43 @@ msgstr "Språket «%1» er ikkje støtta"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Legg til språk i prioritert rekkjefølgje for vising i program."
 
-#: ui/AdvancedLanguageSelectPage.qml:83
+#: ui/AdvancedLanguageSelectPage.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Byt språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:87
+#: ui/AdvancedLanguageSelectPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Byt språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:98
+#: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Flytt øvst"
 
-#: ui/AdvancedLanguageSelectPage.qml:104
+#: ui/AdvancedLanguageSelectPage.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Fjern"
 
-#: ui/AdvancedLanguageSelectPage.qml:117
+#: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Ingen språk er sette opp"
 
-#: ui/AdvancedLanguageSelectPage.qml:147 ui/AdvancedLanguageSelectPage.qml:158
+#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Fleire språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:175
+#: ui/AdvancedLanguageSelectPage.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -517,50 +517,50 @@ msgstr ""
 "Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du kan "
 "trygt slå av maskina."
 
-#: ui/main.qml:140
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Endra …"
 
-#: ui/main.qml:181
+#: ui/main.qml:193
 #, kde-format
 msgid "Numbers"
 msgstr "Tal"
 
-#: ui/main.qml:183
+#: ui/main.qml:195
 #, kde-format
 msgid "Time"
 msgstr "Dato og klokkeslett"
 
-#: ui/main.qml:185
+#: ui/main.qml:197
 #, kde-format
 msgid "Currency"
 msgstr "Valuta"
 
-#: ui/main.qml:187
+#: ui/main.qml:199
 #, kde-format
 msgid "Measurements"
 msgstr "Måleeiningar"
 
-#: ui/main.qml:189
+#: ui/main.qml:201
 #, kde-format
 msgid "Paper Size"
 msgstr "Papirstorleik"
 
-#: ui/main.qml:191
+#: ui/main.qml:203
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresse"
 
-#: ui/main.qml:193
+#: ui/main.qml:205
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Namn"
 
-#: ui/main.qml:195
+#: ui/main.qml:207
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
