@@ -10,6 +10,8 @@ from typing import Any
 
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class CameraIndicatorTest(unittest.TestCase):
@@ -61,7 +63,8 @@ class CameraIndicatorTest(unittest.TestCase):
             pipewire = subprocess.Popen(["pipewire"], stdout=sys.stderr, stderr=sys.stderr)
             self.addCleanup(pipewire.terminate)
 
-        self.driver.find_element(AppiumBy.NAME, "No camera is in use")
+        # Reconnecting takes at least 5s
+        WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((AppiumBy.NAME, "No camera is in use")))
 
         if not self.pipewire_already_running_before_test:
             pipewire.terminate()
