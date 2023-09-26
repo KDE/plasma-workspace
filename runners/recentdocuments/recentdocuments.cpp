@@ -63,11 +63,8 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
     QMimeDatabase db;
     QList<KRunner::QueryMatch> matches;
     for (int i = 0; i < m_resultsModel->rowCount(); ++i) {
-        const auto index = m_resultsModel->index(i, 0);
-        const auto url = QUrl::fromUserInput(m_resultsModel->data(index, ResultModel::ResourceRole).toString(),
-                                             QString(),
-                                             // We can assume local file thanks to the request Url
-                                             QUrl::AssumeLocalFile);
+        const QModelIndex index = m_resultsModel->index(i, 0);
+        const QUrl url = QUrl::fromLocalFile(m_resultsModel->data(index, ResultModel::ResourceRole).toString());
 
         const QString fileName = url.fileName();
         const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive);
