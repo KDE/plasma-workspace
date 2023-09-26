@@ -30,7 +30,7 @@ set_target_properties(colorcorrect PROPERTIES
                       SOVERSION ${PROJECT_VERSION_MAJOR}
                       EXPORT_NAME LibColorCorrect)
 
-ecm_add_qml_module(colorcorrect URI org.kde.colorcorrect)
+ecm_add_qml_module(colorcorrect URI org.kde.colorcorrect GENERATE_PLUGIN_SOURCE)
 ecm_finalize_qml_module(colorcorrect)
 
 install(TARGETS colorcorrect EXPORT libcolorcorrectLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

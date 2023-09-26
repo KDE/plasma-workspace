@@ -95,7 +95,7 @@ set_target_properties(notificationmanager PROPERTIES
                       SOVERSION 1
                       EXPORT_NAME LibNotificationManager)
 
-ecm_add_qml_module(notificationmanager URI org.kde.notificationmanager)
+ecm_add_qml_module(notificationmanager URI org.kde.notificationmanager GENERATE_PLUGIN_SOURCE)
 ecm_finalize_qml_module(notificationmanager)
 
 install(TARGETS notificationmanager EXPORT notificationmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
