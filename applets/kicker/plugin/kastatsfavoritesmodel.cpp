@@ -679,16 +679,17 @@ void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const Activity
     if (!d || id.isEmpty())
         return;
 
-    const auto url = d->normalizedId(id).value();
-
     Q_ASSERT(!activity.values.isEmpty());
 
-    qCDebug(KICKER_DEBUG) << "removeFavoriteFrom" << id << activity << url << " (actual)";
+    qCDebug(KICKER_DEBUG) << "removeFavoriteFrom" << id << activity;
 
-    if (url.isEmpty())
+    if (!isFavorite(id)) {
         return;
+    }
 
-    d->m_watcher.unlinkFromActivity(QUrl(url), activity, Agent(agentForUrl(url)));
+    QUrl url = QUrl(id);
+
+    d->m_watcher.unlinkFromActivity(url, activity, Agent(agentForUrl(id)));
 }
 
 void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &activityId)
