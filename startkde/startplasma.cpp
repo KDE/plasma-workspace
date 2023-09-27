@@ -355,7 +355,7 @@ void setupPlasmaEnvironment()
         lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
         lnfManager.save(package, KPackage::Package());
     }
-    // check if colors changed, if so apply them and discard palsma cache
+    // check if colors changed, if so apply them and discard plasma cache
     {
         LookAndFeelManager lnfManager;
         lnfManager.setMode(LookAndFeelManager::Mode::Apply);
