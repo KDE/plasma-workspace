@@ -68,8 +68,7 @@ PlasmoidItem {
         if (filterModel.count > 0) {
             const m = filterModel;
             const index = m.index(0, 0);
-            const icon = m.data(index, m.KItemModels.KRoleNames.role("Icon"))
-            return icon;
+            iconName = m.data(index, m.KItemModels.KRoleNames.role("Icon"))
         } else {
             iconName = "device-notifier";
         }
