@@ -126,6 +126,6 @@
     "X-KDE-Keywords[vi]": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,cửa sổ,trình quản lí,buổi tối,màu,mắt,chế độ buổi tối,chế độ tối,tối,làm tối,ngủ,căng thẳng cho mắt,mỏi mắt,đỏ,dịch,cam,vàng,ấm,phủ màn hình,nhiệt độ",
     "X-KDE-Keywords[x-test]": "xxkwinxx,xxwindowxx,xxmanagerxx,xxnightxx,xxcolorsxx,xxredshiftxx,xxeyesxx,xxnight modexx,xxcolourxx,xxdark modexx,xxdarkxx,xxdimxx,xxsleepxx,xxeye strainxx,xxredxx,xxshiftxx,xxorangexx,xxyellowxx,xxwarmxx,xxscreen tintxx,xxtemperaturexx",
     "X-KDE-Keywords[zh_CN]": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,窗口,管理器,窗口管理器,夜间,颜色,夜间颜色,红移,夜间模式,暗黑模式,黑暗模式,暗色模式,深色模式,调暗,睡眠,眼睛,护眼,疲劳,红色,颜色偏移,橙色,黄色,暖色,温暖,屏幕,着色,染色,色温",
-    "X-KDE-System-Settings-Parent-Category": "display",
-    "X-KDE-Weight": 120
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 30
 }

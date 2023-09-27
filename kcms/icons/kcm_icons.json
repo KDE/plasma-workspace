@@ -133,6 +133,6 @@
     "X-KDE-Keywords[vi]": "icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,biểu tượng,hiệu ứng,cỡ,màu cao,màu thấp,thay đổi biểu tượng,nút,chủ đề nút,chủ đề biểu tượng,chủ đề,biểu tượng học",
     "X-KDE-Keywords[x-test]": "xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx,xxchange iconsxx,xxbuttonsxx,xxbutton themexx,xxicon themexx,xxthemexx,xxiconographyxx",
     "X-KDE-Keywords[zh_CN]": "icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,图标,效果,特效,动效,大小,图标大小,高彩色,低彩色,多颜色,少颜色,更改图标,修改图标,替换图标,按钮,按钮主题,图标主题,主题,图像学",
-    "X-KDE-System-Settings-Parent-Category": "appearance",
-    "X-KDE-Weight": 60
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 70
 }

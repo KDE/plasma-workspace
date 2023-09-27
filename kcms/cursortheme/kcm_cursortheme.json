@@ -125,6 +125,6 @@
     "X-KDE-Keywords[vi]": "Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,cursor size,mouse style,pointer,chuột,con trỏ,chủ đề,diện mạo con trỏ,màu con trỏ,chủ đề của con trỏ,chủ đề của chuột,diện mạo chuột,da chuột,da con trỏ,kiểu cách con trỏ,kích cỡ con trỏ,kiểu cách chuột",
     "X-KDE-Keywords[x-test]": "xxMousexx,xxCursorxx,xxThemexx,xxCursor Appearancexx,xxCursor Colorxx,xxCursor Themexx,xxMouse Themexx,xxMouse Appearancexx,xxMouse Skinxx,xxPointer Colorsxx,xxPointer Appearancexx,xxcursor skinxx,xxcursor stylexx,xxcursor sizexx,xxmouse stylexx,xxpointerxx,",
     "X-KDE-Keywords[zh_CN]": "Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,mouse style,pointer,鼠标,光标,指针,主题,光标外观,光标颜色,光标主题,光标风格,鼠标主题,鼠标外观,鼠标样式,鼠标风格,鼠标皮肤,指针颜色,指针外观,指针皮肤,指针大小,",
-    "X-KDE-System-Settings-Parent-Category": "appearance",
-    "X-KDE-Weight": 70
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 80
 }

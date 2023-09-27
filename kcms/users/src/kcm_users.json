@@ -122,6 +122,6 @@
     "X-KDE-Keywords[vi]": "users,accounts,profile picture,profile photo,avatar,name,password,passwords,email,e-mail,administrator,root user,standard user,profile,delete user,delete account,pfp,fingerprint,biometric,người dùng,danh khoản,ảnh hồ sơ,hiện thân ảo,tên,mật khẩu,thư,thư điện tử,quản trị viên,người dùng gốc,người dùng thường,hồ sơ,xoá người dùng,xoá danh khoản,dấu vân tay,sinh trắc",
     "X-KDE-Keywords[x-test]": "xxusersxx,xxaccountsxx,xxprofile picturexx,xxprofile photoxx,xxavatarxx,xxnamexx,xxpasswordxx,xxpasswordsxx,xxemailxx,xxe-mailxx,xxadministratorxx,xxroot userxx,xxstandard userxx,xxprofilexx,xxdelete userxx,xxdelete accountxx,xxpfpxx,xxfingerprintxx,xxbiometricxx",
     "X-KDE-Keywords[zh_CN]": "users,accounts,profile picture,profile photo,avatar,name,password,passwords,email,e-mail,administrator,root user,standard user,profile,delete user,delete account,pfp,fingerprint,biometric,用户,账户,账号,头像,个人资料图片,账户图片,账户照片,名称,名字,姓名,用户名,密码,口令,电子邮件,电邮,管理员,根用户,标准用户,删除用户,删除账户,删除账号,指纹,生物识别",
-    "X-KDE-System-Settings-Parent-Category": "personalization",
+    "X-KDE-System-Settings-Parent-Category": "accounts",
     "X-KDE-Weight": 40
 }

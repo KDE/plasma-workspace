@@ -132,6 +132,6 @@
     "X-KDE-Keywords[vi]": "Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme,Chủ đề Bàn làm việc,Chủ đề Plasma,kiểu cách plasma,kiểu cách bàn làm việc,da plasma,da bàn làm việc,chủ đề",
     "X-KDE-Keywords[x-test]": "xxDesktop Themexx,xxPlasma Themexx,xxplasma stylexx,xxdesktop stylexx,xxplasma skinxx,xxdesktop skinxx,xxthemexx",
     "X-KDE-Keywords[zh_CN]": "Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme,桌面主题,Plasma 主题,plasma 风格,plasma 样式,plasma 皮肤,桌面皮肤,桌面风格,桌面样式,主题",
-    "X-KDE-System-Settings-Parent-Category": "appearance",
-    "X-KDE-Weight": 20
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 50
 }

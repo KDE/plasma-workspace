@@ -187,6 +187,6 @@
     "X-KDE-Keywords[vi]": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour,màu,sắc,quy hoạch,tương phản,màu phụ kiện,quy hoạch màu,kiểu cách màu,chủ đề màu,phủ,màu chủ đạo,chế độ tối,chế độ sáng,chủ đạo,tô sáng",
     "X-KDE-Keywords[x-test]": "xxcolorxx,xxcolourxx,xxschemexx,xxcontrastxx,xxWidget colorsxx,xxColor Schemexx,xxcolor stylexx,xxcolor themexx,xxtintxx,xxaccent colorxx,xxcolor schemexx,xxdark modexx,xxlight modexx,xxaccent colourxx,xxaccentxx,xxhighlightxx,xxcolourxx",
     "X-KDE-Keywords[zh_CN]": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour,颜色,配色方案,对比度,部件颜色,颜色风格,颜色样式,配色样式,配色风格,颜色主题,着色,主题色,重点色,暗色模式,深色,深色模式,暗黑模式,黑暗模式,浅色,浅色模式,亮色模式,明亮模式,高光,高亮",
-    "X-KDE-System-Settings-Parent-Category": "appearance",
-    "X-KDE-Weight": 40
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 20
 }

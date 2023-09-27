@@ -135,6 +135,6 @@
     "X-KDE-Keywords[vi]": "fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,typography,type,letters,character,hinting,sub-pixel,text,big text,change font,size,phông chữ,cỡ phông chữ,kiểu cách,bộ mã tự,bảng,bảng điều khiển,bàn làm việc,trình quản lí tệp,thanh công cụ,trình đơn,tiêu đề cửa sổ,tiêu đề,khử răng cưa,phông chữ bàn làm việc,phông chữ thanh công cụ,chữ,phông chữ chung,thuật in,kiểu,chữ cái,dẫn phông,hạ điểm ảnh,chữ to,thay đổi phông chữ,kích cỡ",
     "X-KDE-Keywords[x-test]": "xxfontsxx,xxfont sizexx,xxstylesxx,xxcharsetsxx,xxcharacter setsxx,xxpanelxx,xxcontrol panelxx,xxdesktopsxx,xxFileManagerxx,xxToolbarsxx,xxMenuxx,xxWindow Titlexx,xxTitlexx,xxDPIxx,xxanti-aliasingxx,xxdesktop fontsxx,xxtoolbar fontsxx,xxcharacterxx,xxgeneral fontsxx,xxtypographyxx,xxtypexx,xxlettersxx,xxcharacterxx,xxhintingxx,xxsub-pixelxx,xxtextxx,xxbig textxx,xxchange fontxx,xxsizexx",
     "X-KDE-Keywords[zh_CN]": "fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,字体,字体家族,字体族,字体大小,样式,风格,字符集,面板,控制面板,桌面,文件管理器,工具栏,菜单,窗口标题,标题,点每像素,抗锯齿,反锯齿,字体平滑,桌面字体,工具栏字体,字符,字母,符号,常规字体,排版,打字机,字体微调方式,全角字体,次像素渲染方式,大字体,小字体,衬线字体,非衬线字体,更改字体,字体大小",
-    "X-KDE-System-Settings-Parent-Category": "appearance",
-    "X-KDE-Weight": 50
+    "X-KDE-System-Settings-Parent-Category": "font",
+    "X-KDE-Weight": 10
 }
