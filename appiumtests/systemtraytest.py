@@ -5,19 +5,21 @@
 # SPDX-License-Identifier: MIT
 
 import os
-from subprocess import Popen, PIPE
+import queue
+import sys
+import threading
 import unittest
 from datetime import date
+from subprocess import PIPE, Popen
 from time import sleep
-from typing import Any, Final
-import threading
+from typing import IO, Any, Final
 
 import gi
 
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gtk, GLib, Gio
+from gi.repository import Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -51,17 +53,62 @@ class XEmbedTrayIcon(threading.Thread):
         Gtk.main_quit()
 
     def __on_button_press_event(self, status_icon: Gtk.StatusIcon, button_event) -> None:
-        print("button-press-event", button_event.button)
+        print("button-press-event", button_event.button, file=sys.stderr, flush=True)
 
     def __on_button_release_event(self, status_icon: Gtk.StatusIcon, button_event) -> None:
-        print("button-release-event", button_event.button)
+        print("button-release-event", button_event.button, file=sys.stderr, flush=True)
         self.quit()
 
     def __on_popup_menu(self, status_icon: Gtk.StatusIcon, button: int, activate_time: int) -> None:
-        print("popup-menu", button, activate_time)
+        print("popup-menu", button, activate_time, file=sys.stderr, flush=True)
 
     def __on_scroll_event(self, status_icon, scroll_event) -> None:
-        print("scroll-event", scroll_event.delta_x, scroll_event.delta_y, int(scroll_event.direction))
+        print("scroll-event", scroll_event.delta_x, scroll_event.delta_y, int(scroll_event.direction), file=sys.stderr, flush=True)
+
+
+class StreamReaderThread(threading.Thread):
+    """
+    Non-blocking readline thread
+    """
+
+    def __init__(self, stream: IO[bytes]) -> None:
+        """
+        @param stream: the stream to read from
+        """
+        self.__stream: IO[bytes] = stream
+        self.__queue = queue.Queue()
+
+        self.__stop_event = threading.Event()
+
+        # Create the thread
+        super().__init__()
+
+    def run(self) -> None:
+        """
+        Collects lines from the source stream and put them in the queue.
+        """
+        while self.__stream.readable() and not self.__stop_event.is_set():
+            line: bytes = self.__stream.readline()
+            if line:
+                self.__queue.put(line.decode(encoding="utf-8").strip())
+            else:
+                break
+
+    def stop(self) -> None:
+        """
+        Stops the thread
+        """
+        self.__stop_event.set()
+
+    def readline(self) -> str | None:
+        """
+        Non-blocking readline
+        The default timeout is 5s.
+        """
+        try:
+            return self.__queue.get(block=True, timeout=5)
+        except queue.Empty:
+            return None
 
 
 class SystemTrayTests(unittest.TestCase):
@@ -70,6 +117,9 @@ class SystemTrayTests(unittest.TestCase):
     """
 
     driver: webdriver.Remote
+    xembedsniproxy: Popen[bytes]
+    xembed_tray_icon: XEmbedTrayIcon | None
+    stream_reader_thread: StreamReaderThread | None
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -96,12 +146,10 @@ class SystemTrayTests(unittest.TestCase):
 
             if reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean():
                 break
-            print(f"waiting for kded to appear on the dbus session")
+            print(f"waiting for kded to appear on the dbus session", file=sys.stderr, flush=True)
             sleep(1)
 
-        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule",
-                                                         GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"),
-                                                         Gio.DBusSendMessageFlags.NONE, 1000)
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
         self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "Module is not loaded")
 
     def tearDown(self) -> None:
@@ -119,6 +167,21 @@ class SystemTrayTests(unittest.TestCase):
         """
         cls.driver.quit()
 
+    def cleanup_xembed_tray_icon(self) -> None:
+        """
+        Cleanup function for test_xembed_tray_icon
+        """
+        self.xembedsniproxy.terminate()
+        self.xembedsniproxy = None
+
+        if self.xembed_tray_icon is not None:
+            self.xembed_tray_icon.quit()
+            self.xembed_tray_icon = None
+
+        if self.stream_reader_thread is not None and self.stream_reader_thread.is_alive():
+            self.stream_reader_thread.stop()
+            self.stream_reader_thread = None
+
     def test_xembed_tray_icon(self) -> None:
         """
         Tests XEmbed tray icons can be listed and clicked in the tray.
@@ -127,47 +190,45 @@ class SystemTrayTests(unittest.TestCase):
         matches where the window is and is top level, so match the debug
         output from xembedsniproxy instead.
         """
+        self.addCleanup(self.cleanup_xembed_tray_icon)
+
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
-        xembedsniproxy: Popen[bytes] = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
-        if not xembedsniproxy.stderr or xembedsniproxy.poll() != None:
+        self.xembedsniproxy = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
+        if not self.xembedsniproxy.stderr or self.xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
-        print(f"xembedsniproxy PID: {xembedsniproxy.pid}")
+        print(f"xembedsniproxy PID: {self.xembedsniproxy.pid}", file=sys.stderr, flush=True)
 
         title: str = f"XEmbed Status Icon Test {date.today().strftime('%Y%m%d')}"
-        xembed_tray_icon: XEmbedTrayIcon = XEmbedTrayIcon(title)
-        xembed_tray_icon.start()
+        self.xembed_tray_icon = XEmbedTrayIcon(title)
+        self.xembed_tray_icon.start()
 
         wait: WebDriverWait = WebDriverWait(self.driver, 10)
         try:
             # FocusScope in StatusNotifierItem.qml
             xembed_icon_item = wait.until(EC.presence_of_element_located((AppiumBy.NAME, title)))
         except TimeoutException:
-            xembedsniproxy.terminate()
-            xembed_tray_icon.quit()
-            self.fail("Cannot find the XEmbed icon in the system tray: {}".format(xembedsniproxy.stderr.readlines()))
+            self.fail(f"Cannot find the XEmbed icon in the system tray: {self.xembedsniproxy.stderr.readlines()}")
+
+        # Create a reader thread to work around read block
+        self.stream_reader_thread = StreamReaderThread(self.xembedsniproxy.stderr)
+        self.stream_reader_thread.start()
+        self.assertTrue(self.stream_reader_thread.is_alive(), "The reader thread is not running")
 
         # Now test clickable
         xembed_icon_item.click()
 
         success: bool = False
         for _ in range(10):
-            if xembedsniproxy.stderr.readable():
-                stderr = xembedsniproxy.stderr.readline()
-                print(stderr)
-            else:
-                print("Retrying...")
-                xembed_icon_item.click()
-                sleep(1)
-                continue
+            line_str: str | None = self.stream_reader_thread.readline()
 
-            line_str: str = stderr.decode(encoding="utf-8").strip()
-            if "Received click" in line_str:
+            if line_str is not None and "Received click" in line_str:
                 success = True
                 break
 
-        xembedsniproxy.terminate()
-        xembed_tray_icon.quit()
+            print("Retrying...", file=sys.stderr, flush=True)
+            xembed_icon_item.click()
+
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
 
 
