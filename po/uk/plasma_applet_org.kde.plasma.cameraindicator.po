@@ -1,0 +1,89 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2023-09-26 18:41+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: contents/ui/FullRepresentation.qml:40
+#, kde-format
+msgctxt "@title"
+msgid "Camera"
+msgstr "Фотоапарат"
+
+#: contents/ui/FullRepresentation.qml:43
+#, kde-format
+msgctxt "@info:status"
+msgid "Active"
+msgstr "Активна"
+
+#: contents/ui/FullRepresentation.qml:45
+#, kde-format
+msgctxt "@info:status"
+msgid "Idle"
+msgstr "Бездіяльна"
+
+#: contents/ui/FullRepresentation.qml:47
+#, kde-format
+msgctxt "@info:status"
+msgid "Error"
+msgstr "Помилка"
+
+#: contents/ui/FullRepresentation.qml:49
+#, kde-format
+msgctxt "@info:status"
+msgid "Creating"
+msgstr "Створення"
+
+#: contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgctxt "@info:status"
+msgid "Suspended"
+msgstr "Призупинено"
+
+#: contents/ui/FullRepresentation.qml:53
+#, kde-format
+msgctxt "@info:status"
+msgid "Unknown"
+msgstr "Невідомо"
+
+#: contents/ui/FullRepresentation.qml:69
+#, kde-format
+msgctxt "@info:status %1 camera name"
+msgid "%1 is in use"
+msgstr "%1 використовується"
+
+#: contents/ui/main.qml:21
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Camera indicator is unavailable"
+msgstr "Індикатор камери недоступний"
+
+#: contents/ui/main.qml:23
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "A camera is in use"
+msgid_plural "%1 cameras are in use"
+msgstr[0] "Використовується %1 камера"
+msgstr[1] "Використовується %1 камери"
+msgstr[2] "Використовується %1 камер"
+msgstr[3] "Використовується %1 камера"
+
+#: contents/ui/main.qml:25
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "No camera is in use"
+msgstr "Немає використаних камер"
