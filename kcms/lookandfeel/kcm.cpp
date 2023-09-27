@@ -195,19 +195,11 @@ int KCMLookandFeel::pluginIndex(const QString &pluginName) const
 QList<KPackage::Package> KCMLookandFeel::availablePackages(const QStringList &components)
 {
     QList<KPackage::Package> packages;
-    QStringList paths;
-    const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
-    paths.reserve(dataPaths.count());
-    for (const QString &path : dataPaths) {
-        QDir dir(path + QStringLiteral("/plasma/look-and-feel"));
-        paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
-    }
+    const QList<KPluginMetaData> packagesMetaData = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/LookAndFeel"));
 
-    for (const QString &path : paths) {
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-        pkg.setPath(path);
-        pkg.setFallbackPackage(KPackage::Package());
+    for (const KPluginMetaData &metadata : packagesMetaData) {
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), metadata.pluginId());
         if (components.isEmpty()) {
             packages << pkg;
         } else {
