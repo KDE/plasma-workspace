@@ -433,7 +433,6 @@ void PlayerContainer::updatePosition()
         }
 
         m_position = propsReply.value().toLongLong();
-        Q_EMIT positionChanged();
     });
 }
 
