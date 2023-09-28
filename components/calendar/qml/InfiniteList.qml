@@ -11,6 +11,28 @@ import org.kde.kirigami 2.20 as Kirigami
 ListView {
     id: infiniteList
 
+    // Set up alternative model for delegates at edges
+    // so that they can be set up to always show the right date (top: previous date; bottom: next date)
+    // date here means what the respective views should show(e.g. MonthView date -> month)
+    // this prevents them from showing the current date when they are being animated out of/into view
+    // since different years don't have different names for months, we don't need to set up alternative models for YearView
+    readonly property QtObject previousModel: switch(infiniteList.viewType) {
+    case InfiniteList.ViewType.DayView:
+        return previousAlternativeBackend.item?.daysModel ?? null;
+    case InfiniteList.ViewType.DecadeView:
+        return previousYearModel.item;
+    default:
+        return null;
+    }
+    readonly property QtObject nextModel: switch(infiniteList.viewType) {
+    case InfiniteList.ViewType.DayView:
+        return nextAlternativeBackend.item?.daysModel ?? null;
+    case InfiniteList.ViewType.DecadeView:
+        return nextYearModel.item;
+    default:
+        return null;
+    }
+
     readonly property double cellHeight: currentItem ? currentItem.cellHeight : 0
     readonly property double cellWidth: currentItem ? currentItem.cellWidth : 0
 
@@ -74,26 +96,6 @@ ListView {
     }
 
     onDraggingVerticallyChanged: if (draggingVertically === false) dragHandled = false; //reset the value when drag ends
-
-    Component.onCompleted: {
-        // set up alternative model for delegates at edges
-        // so that they can be set up to always show the right date (top: previous date; bottom: next date)
-        // date here means what the respective views should show(e.g. MonthView date -> month)
-        // this prevents them from showing the current date when they are being animated out of/into view
-        // since different years don't have different names for months, we don't need to set up alternative models for YearView
-
-        switch(infiniteList.viewType) {
-            case InfiniteList.ViewType.DayView:
-                infiniteList.itemAtIndex(0).gridModel = previousAlternativeBackend.item.daysModel;
-                infiniteList.itemAtIndex(2).gridModel = nextAlternativeBackend.item.daysModel;
-                break;
-
-            case InfiniteList.ViewType.DecadeView:
-                infiniteList.itemAtIndex(0).gridModel = previousYearModel.item;
-                infiniteList.itemAtIndex(2).gridModel = nextYearModel.item;
-                break;
-        }
-    }
 
     /* ------------------------------- UI ENDS ----------------- MODEL MANIPULATING FUNCTIONS ----------------------------------- */
 

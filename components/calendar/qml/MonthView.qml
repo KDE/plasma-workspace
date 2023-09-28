@@ -292,7 +292,14 @@ Item {
                 showWeekNumbers: root.showWeekNumbers
 
                 headerModel: calendarBackend.days
-                gridModel: calendarBackend.daysModel
+                gridModel: switch (index) {
+                case 1:
+                    return calendarBackend.daysModel;
+                case 0:
+                    return mainDaysCalendar.previousModel;
+                case 2:
+                    return mainDaysCalendar.nextModel;
+                }
 
                 dateMatchingPrecision: Calendar.MatchYearMonthAndDay
 
@@ -360,7 +367,14 @@ Item {
                 height: decadeView.height
                 dateMatchingPrecision: Calendar.MatchYear
 
-                gridModel: yearModel
+                gridModel: switch (index) {
+                case 1:
+                    return yearModel;
+                case 0:
+                    return decadeView.previousModel;
+                case 2:
+                    return decadeView.nextModel;
+                }
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
