@@ -34,7 +34,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 {
     addSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:."));
 
-    setMinLetterCount(3);
+    setMinLetterCount(m_minLetterCount);
     connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
         m_resultsModel.reset(nullptr);
     });
@@ -43,15 +43,15 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
-    if (!m_resultsModel || m_resultsModel->canFetchMore({}) || !term.startsWith(m_lastLoadedQuery)) {
-        auto query = UsedResources //
-            | Activity::current() //
-            | Order::RecentlyUsedFirst //
-            | Agent::any() //
+
+    if (!m_resultsModel || m_resultsModel->rowCount() == m_maxResults || m_lastLoadedQuery.size() < m_minLetterCount || !term.startsWith(m_lastLoadedQuery)) {
+        const QLatin1String asterix("*");
+        const QString termPattern = (term.size() < m_minLetterCount ? QLatin1String() : asterix) + term + asterix;
+        auto query = UsedResources | Activity::current() | Order::RecentlyUsedFirst | Agent::any() //
             | Type::files() // Only show files and not folders
-            | Limit(20) // In case we are in single runner mode, we could get tons of results for one or two letter queries
+            | Limit(m_maxResults) // In case we are in single runner mode, we could get tons of results for one or two letter queries
             | Url("/*/*") // we search only for local files
-            | Title::contains(term); // check the title, because that is the filename
+            | Title({termPattern}); // check the title, because that is the filename
 
         // Reuse the model in case our query starts with the previous one. We filter out irrelevant results later on anyway
         m_resultsModel.reset(new ResultModel(query));

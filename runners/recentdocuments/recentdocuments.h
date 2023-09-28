@@ -26,4 +26,6 @@ private:
     const KRunner::Actions m_actions;
     QString m_lastLoadedQuery;
     std::unique_ptr<ResultModel> m_resultsModel;
+    const int m_maxResults = 20;
+    const int m_minLetterCount = 3;
 };
