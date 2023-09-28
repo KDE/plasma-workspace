@@ -132,3 +132,9 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_desktoptheme_test.py
 )
 set_tests_properties(kcm_desktoptheme_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_feedback_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_feedback_test.py
+)
+set_tests_properties(kcm_feedback_test PROPERTIES TIMEOUT 120)
