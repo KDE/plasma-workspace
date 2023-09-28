@@ -43,12 +43,13 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
-    if (!m_resultsModel || !term.startsWith(m_lastLoadedQuery)) {
+    if (!m_resultsModel || m_resultsModel->canFetchMore({}) || !term.startsWith(m_lastLoadedQuery)) {
         auto query = UsedResources //
             | Activity::current() //
             | Order::RecentlyUsedFirst //
             | Agent::any() //
-            | Type::files() //
+            | Type::files() // Only show files and not folders
+            | Limit(20) // In case we are in single runner mode, we could get tons of results for one or two letter queries
             | Url("/*/*") // we search only for local files
             | Title::contains(term); // check the title, because that is the filename
 
