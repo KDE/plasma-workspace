@@ -116,7 +116,9 @@ void ItemContainer::setEditMode(bool editMode)
 
     if (m_mouseDown) {
         sendUngrabRecursive(m_contentItem);
-        grabMouse();
+        QMouseEvent ev(QEvent::MouseButtonPress, mapFromScene(m_mouseDownPosition), m_mouseDownPosition, QPointF(), Qt::LeftButton, {}, {});
+        ev.setExclusiveGrabber(ev.point(0), this);
+        QCoreApplication::sendEvent(this, &ev);
     }
 
     if (m_dragActive != editMode && m_mouseDown) {
@@ -509,7 +511,9 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         m_editModeTimer->stop();
         m_mouseDown = false;
         m_mouseSynthetizedFromTouch = false;
-        ungrabMouse();
+        if (auto mouseEvent = static_cast<QMouseEvent *>(event); mouseEvent->exclusiveGrabber(mouseEvent->point(0)) == this) {
+            mouseEvent->setExclusiveGrabber(mouseEvent->point(0), nullptr);
+        }
         event->accept();
         m_dragActive = false;
         if (m_editMode) {
@@ -539,7 +543,7 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
     }
 
     if (m_editMode) {
-        grabMouse();
+        event->setExclusiveGrabber(event->point(0), this);
         setCursor(Qt::ClosedHandCursor);
         m_dragActive = true;
         Q_EMIT dragActiveChanged();
@@ -563,7 +567,9 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     m_mouseDown = false;
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
-    ungrabMouse();
+    if (event->exclusiveGrabber(event->point(0)) == this) {
+        event->setExclusiveGrabber(event->point(0), nullptr);
+    }
 
     if (m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
@@ -598,7 +604,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
 
     if (m_layout && m_layout->itemIsManaged(this)) {
         m_layout->releaseSpace(this);
-        grabMouse();
+        event->setExclusiveGrabber(event->point(0), this);
         m_dragActive = true;
         Q_EMIT dragActiveChanged();
 
@@ -620,7 +626,6 @@ void ItemContainer::mouseUngrabEvent()
     m_mouseDown = false;
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
-    ungrabMouse();
 
     if (m_layout && m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
