@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2008 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -66,17 +67,14 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
     QList<KRunner::QueryMatch> matches;
     for (int i = 0; i < m_resultsModel->rowCount(); ++i) {
         const QModelIndex index = m_resultsModel->index(i, 0);
-        const QUrl url = QUrl::fromLocalFile(m_resultsModel->data(index, ResultModel::ResourceRole).toString());
 
-        const QString fileName = url.fileName();
+        const auto fileName = m_resultsModel->data(index, ResultModel::TitleRole).toString();
         const int indexOfTerm = fileName.indexOf(term, Qt::CaseInsensitive);
         if (indexOfTerm == -1) {
             continue; // A previous result or a result where the path, but not filename matches
         }
 
         KRunner::QueryMatch match(this);
-        match.setRelevance(relevance);
-        match.setType(KRunner::QueryMatch::CompletionMatch);
         // We know the term starts with the query, check size to see if it is an exact match
         if (term.size() >= 5 && indexOfTerm == 0 && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
             match.setRelevance(relevance + 0.1);
@@ -84,17 +82,20 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         } else if (indexOfTerm == 0 /*startswith, but not equals => smaller relevance boost*/) {
             match.setRelevance(relevance + 0.1);
             match.setType(KRunner::QueryMatch::PossibleMatch);
+        } else {
+            match.setRelevance(relevance);
+            match.setType(KRunner::QueryMatch::CompletionMatch);
         }
-        const auto name = m_resultsModel->data(index, ResultModel::TitleRole).toString();
         const QMimeType mimeType = db.mimeTypeForName(m_resultsModel->data(index, ResultModel::MimeType).toString());
         match.setIconName(mimeType.iconName());
+        const QUrl url = QUrl::fromLocalFile(m_resultsModel->data(index, ResultModel::ResourceRole).toString());
         match.setData(QVariant(url));
         match.setUrls({url});
         match.setId(url.toString());
         if (url.isLocalFile()) {
             match.setActions(m_actions);
         }
-        match.setText(name);
+        match.setText(fileName);
         QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path());
         match.setSubtext(destUrlString);
 
