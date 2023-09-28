@@ -4,14 +4,13 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.0
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
 import "data.js" as Data
-import org.kde.plasma.private.sessions 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.private.sessions
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: root
@@ -76,11 +75,35 @@ PlasmoidItem {
 
             model: Data.data
 
-            delegate: Item {
+            delegate: PlasmaCore.ToolTipArea {
                 id: iconDelegate
                 visible: Plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
                 width: items.itemWidth
                 height: items.itemHeight
+
+                activeFocusOnTab: true
+                mainText: modelData.tooltip_mainText
+                subText: modelData.tooltip_subText
+                textFormat: Text.PlainText
+
+                Accessible.name: iconDelegate.mainText
+                Accessible.description: iconDelegate.subText
+                Accessible.role: Accessible.Button
+                Keys.onPressed: event => {
+                    switch (event.key) {
+                    case Qt.Key_Space:
+                    case Qt.Key_Enter:
+                    case Qt.Key_Return:
+                    case Qt.Key_Select:
+                        performOperation(modelData.operation)
+                        break;
+                    }
+                }
+
+                TapHandler {
+                    id: tapHandler
+                    onTapped: performOperation(modelData.operation)
+                }
 
                 Kirigami.Icon {
                     id: iconButton
@@ -88,32 +111,10 @@ PlasmoidItem {
                     height: items.iconSize
                     anchors.centerIn: parent
                     source: modelData.icon
-                    scale: mouseArea.pressed ? 0.9 : 1
-                    active: mouseArea.containsMouse
-                }
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onReleased: clickHandler(modelData.operation, this)
-                    activeFocusOnTab: true
-                    Keys.onPressed: event => {
-                        switch (event.key) {
-                        case Qt.Key_Space:
-                        case Qt.Key_Enter:
-                        case Qt.Key_Return:
-                        case Qt.Key_Select:
-                            clickHandler(modelData.operation, this)
-                            break;
-                        }
-                    }
+                    scale: tapHandler.pressed ? 0.9 : 1
+                    active: iconDelegate.containsMouse
                 }
             }
-        }
-
-        function clickHandler(what, button) {
-            performOperation(what);
         }
 
         function performOperation(operation) {
