@@ -20,6 +20,12 @@ endif()
 add_subdirectory(touchinputhelper)
 
 add_test(
+    NAME analogclocktest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/analogclocktest.py
+)
+set_tests_properties(analogclocktest PROPERTIES TIMEOUT 120)
+
+add_test(
     NAME notificationstest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
 )
