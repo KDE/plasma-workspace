@@ -502,7 +502,7 @@ void PlayerContainer::initBindings()
         if (!m_xesamTitle.value().isEmpty()) {
             return m_xesamTitle.value();
         }
-        const QString xesamUrl = m_xesamUrl.value();
+        const QString &xesamUrl = m_xesamUrl.value();
         if (xesamUrl.isEmpty()) {
             return QString();
         }
@@ -526,7 +526,7 @@ void PlayerContainer::initBindings()
         if (!m_xesamAlbum.value().isEmpty()) {
             return m_xesamAlbum.value();
         }
-        const QString xesamUrl = m_xesamUrl.value();
+        const QString &xesamUrl = m_xesamUrl.value();
         if (!xesamUrl.startsWith(QLatin1String("file:///"))) {
             return QString();
         }
@@ -623,15 +623,15 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
             QVariantMap map;
             arg >> map;
 
-            m_trackId = map.value(QStringLiteral("mpris:trackid")).value<QDBusObjectPath>().path();
-            m_xesamTitle = map.value(QStringLiteral("xesam:title")).toString();
-            m_xesamUrl = map.value(QStringLiteral("xesam:url")).toString();
-            m_xesamArtist = map.value(QStringLiteral("xesam:artist")).toStringList();
-            m_xesamAlbumArtist = map.value(QStringLiteral("xesam:albumArtist")).toStringList();
-            m_xesamAlbum = map.value(QStringLiteral("xesam:album")).toString();
-            m_artUrl = map.value(QStringLiteral("mpris:artUrl")).toString();
-            m_length = map.value(QStringLiteral("mpris:length")).toDouble();
-            m_kdePid = map.value(QStringLiteral("kde:pid")).toUInt();
+            m_trackId = map[QStringLiteral("mpris:trackid")].value<QDBusObjectPath>().path();
+            m_xesamTitle = map[QStringLiteral("xesam:title")].toString();
+            m_xesamUrl = map[QStringLiteral("xesam:url")].toString();
+            m_xesamArtist = map[QStringLiteral("xesam:artist")].toStringList();
+            m_xesamAlbumArtist = map[QStringLiteral("xesam:albumArtist")].toStringList();
+            m_xesamAlbum = map[QStringLiteral("xesam:album")].toString();
+            m_artUrl = map[QStringLiteral("mpris:artUrl")].toString();
+            m_length = map[QStringLiteral("mpris:length")].toDouble();
+            m_kdePid = map[QStringLiteral("kde:pid")].toUInt();
         }
         // we give out CanControl, as this may completely
         // change the UI of the widget
