@@ -51,6 +51,12 @@ add_test(
 set_tests_properties(devicenotifiertest PROPERTIES TIMEOUT 120)
 
 add_test(
+    NAME icontest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/icontest.py
+)
+set_tests_properties(icontest PROPERTIES TIMEOUT 120)
+
+add_test(
     NAME notificationstest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
 )
