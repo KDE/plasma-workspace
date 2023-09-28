@@ -123,15 +123,15 @@ bool Mpris2SourceModel::setData(const QModelIndex &index, const QVariant &value,
     bool ok = false;
     switch (PlayerContainer *const container = m_containers.at(index.row()); role) {
     case LoopStatusRole:
-        Q_ASSERT(value.toUInt() >= 0 && value.toUInt() <= qToUnderlying(LoopStatus::Track));
-        if (value.toUInt() >= 0 && value.toUInt() <= qToUnderlying(LoopStatus::Track)) {
+        Q_ASSERT(value.toUInt() <= qToUnderlying(LoopStatus::Track));
+        if (value.toUInt() <= qToUnderlying(LoopStatus::Track)) {
             container->setLoopStatus(static_cast<LoopStatus::Status>(value.toUInt(&ok)));
             return ok;
         }
         break;
     case PlaybackStatusRole:
-        Q_ASSERT(value.toUInt() >= 0 && value.toUInt() <= qToUnderlying(PlaybackStatus::Paused));
-        if (value.toUInt() >= 0 && value.toUInt() <= qToUnderlying(PlaybackStatus::Paused)) {
+        Q_ASSERT(value.toUInt() <= qToUnderlying(PlaybackStatus::Paused));
+        if (value.toUInt() <= qToUnderlying(PlaybackStatus::Paused)) {
             container->setPlaybackStatus(static_cast<PlaybackStatus::Status>(value.toUInt(&ok)));
             return ok;
         }
@@ -140,8 +140,8 @@ bool Mpris2SourceModel::setData(const QModelIndex &index, const QVariant &value,
         container->setPosition(value.toLongLong(&ok));
         return ok;
     case ShuffleRole:
-        Q_ASSERT(value.toUInt() >= 0 && value.toUInt() <= qToUnderlying(ShuffleStatus::On));
-        if (value.toUInt() >= 0 && value.toUInt() <= qToUnderlying(ShuffleStatus::On)) {
+        Q_ASSERT(value.toUInt() <= qToUnderlying(ShuffleStatus::On));
+        if (value.toUInt() <= qToUnderlying(ShuffleStatus::On)) {
             container->setShuffle(static_cast<ShuffleStatus::Status>(value.toUInt(&ok)));
             return ok;
         }
