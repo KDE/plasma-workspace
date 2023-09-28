@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2022-02-04 17:20+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -74,7 +74,7 @@ msgid "Mount"
 msgstr "Montează"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Elimină toate"
@@ -104,28 +104,28 @@ msgstr "Cel mai recent dispozitiv"
 msgid "No Devices Available"
 msgstr "Niciun dispozitiv disponibil"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configurează dispozitive amovibile…"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispozitive amovibile"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispozitive ne-amovibile"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr "Toate dispozitivele"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Arată meniul contextual la atașarea unui dispozitiv nou"

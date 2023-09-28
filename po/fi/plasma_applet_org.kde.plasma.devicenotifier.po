@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2022-01-27 21:24+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -79,7 +79,7 @@ msgid "Mount"
 msgstr "Liitä"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Poista kaikki"
@@ -109,28 +109,28 @@ msgstr "Viimeisin laite"
 msgid "No Devices Available"
 msgstr "Ei laitteita käytettävissä"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Irrotettavien laitteiden asetukset…"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Removable Devices"
 msgstr "Siirrettävät laitteet"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Kiinteät laitteet"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr "Kaikki laitteet"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Avaa ponnahdusikkuna, kun uusi laite kytketään"

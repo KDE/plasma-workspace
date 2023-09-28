@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2022-01-19 17:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -74,7 +74,7 @@ msgid "Mount"
 msgstr "ضمّ"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "أزِل الكل"
@@ -104,28 +104,28 @@ msgstr "آخر جهاز حديث"
 msgid "No Devices Available"
 msgstr "لا أجهزة متوفّرة"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "اضبط الأجهزة المنفصلة"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Removable Devices"
 msgstr "الأجهزة المنفصلة"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "الأجهزة غير المنفصلة"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr "كلّ الأجهزة"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "افتح منبثقة عند وصل جهاز جديد"

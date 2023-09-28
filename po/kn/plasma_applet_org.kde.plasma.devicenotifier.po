@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2010-01-05 11:10+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -73,7 +73,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -107,32 +107,32 @@ msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:234
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "ಬೇರ್ಪಡಿಸಬಹುದಾದ ಸಾಧನಗಳು ಮಾತ್ರ"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "ಎಲ್ಲಾ ಸಾಧನಗಳು"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:307
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

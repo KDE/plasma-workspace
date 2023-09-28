@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:58+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-01-03 14:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -73,7 +73,7 @@ msgid "Mount"
 msgstr "Munti"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
 msgstr "Demeti Ĉiujn"
@@ -103,28 +103,28 @@ msgstr "Lasta Alligata Aparato"
 msgid "No Devices Available"
 msgstr "Neniuj Aparatoj je Dispono"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Agordi Demeteblajn Aparatojn…"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Removable Devices"
 msgstr "Demeteblaj Aparatoj"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nedemeteblaj Aparatoj"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "All Devices"
 msgstr "Ĉiuj aparatoj"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Montri ŝprucfenestron kiam nova aparato estas enŝtopata."
