@@ -31,6 +31,11 @@ add_test(
 )
 set_tests_properties(appmenutest PROPERTIES TIMEOUT 120)
 
+add_test(
+    NAME calendartest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/calendartest.py
+)
+set_tests_properties(calendartest PROPERTIES TIMEOUT 120)
 
 add_test(
     NAME notificationstest
