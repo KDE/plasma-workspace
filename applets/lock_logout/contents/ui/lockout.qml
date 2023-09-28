@@ -71,53 +71,46 @@ Flow {
 
         model: Data.data
 
-        delegate: Item {
+        delegate: PlasmaCore.ToolTipArea {
             id: iconDelegate
             visible: Plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
             width: items.itemWidth
             height: items.itemHeight
 
-            PlasmaCore.IconItem {
+            activeFocusOnTab: true
+            mainText: modelData.tooltip_mainText
+            subText: modelData.tooltip_subText
+            textFormat: Text.PlainText
+
+            Accessible.name: iconDelegate.mainText
+            Accessible.description: iconDelegate.subText
+            Accessible.role: Accessible.Button
+            Keys.onPressed: event => {
+                switch (event.key) {
+                case Qt.Key_Space:
+                case Qt.Key_Enter:
+                case Qt.Key_Return:
+                case Qt.Key_Select:
+                    performOperation(modelData.operation)
+                    break;
+                }
+            }
+
+            TapHandler {
+                id: tapHandler
+                onTapped: performOperation(modelData.operation)
+            }
+
+            Kirigami.Icon {
                 id: iconButton
                 width: items.iconSize
                 height: items.iconSize
                 anchors.centerIn: parent
                 source: modelData.icon
-                scale: mouseArea.pressed ? 0.9 : 1
-                active: mouseArea.containsMouse
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onReleased: clickHandler(modelData.operation, this)
-                    activeFocusOnTab: true
-                    Keys.onPressed: {
-                        switch (event.key) {
-                        case Qt.Key_Space:
-                        case Qt.Key_Enter:
-                        case Qt.Key_Return:
-                        case Qt.Key_Select:
-                            clickHandler(modelData.operation, this)
-                            break;
-                        }
-                    }
-                    Accessible.name: modelData.tooltip_mainText
-                    Accessible.description: modelData.tooltip_subText
-                    Accessible.role: Accessible.Button
-
-                    PlasmaCore.ToolTipArea {
-                        anchors.fill: parent
-                        mainText: modelData.tooltip_mainText
-                        subText: modelData.tooltip_subText
-                    }
-                }
-            } 
+                scale: tapHandler.pressed ? 0.9 : 1
+                active: iconDelegate.containsMouse
+            }
         }
-    }
-
-    function clickHandler(what, button) {
-        performOperation(what);
     }
 
     function performOperation(operation) {
