@@ -144,3 +144,9 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_fonts_test.py
 )
 set_tests_properties(kcm_fonts_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_icons_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_icons_test.py
+)
+set_tests_properties(kcm_icons_test PROPERTIES TIMEOUT 120)
