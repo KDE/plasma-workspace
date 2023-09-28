@@ -107,3 +107,10 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/cameraindicatortest.py
 )
 set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120)
+
+# KCM autotests
+add_test(
+    NAME kcm_autostart_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_autostart_test.py
+)
+set_tests_properties(kcm_autostart_test PROPERTIES TIMEOUT 120)
