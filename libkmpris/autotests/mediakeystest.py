@@ -14,13 +14,14 @@ import subprocess
 import sys
 import time
 import unittest
-from typing import Callable, Final
+from typing import Final
 
 assert "appiumtests" in os.getcwd(), "Make sure the current directory is appiumtests"
 sys.path.append(os.getcwd())  # for appiumtests.utils
 
 from gi.repository import Gio, GLib
-from utils.mediaplayer import (GlibMainloopThread, Mpris2, read_base_properties, read_player_metadata, read_player_properties)
+from utils.GLibMainLoopThread import GLibMainLoopThread
+from utils.mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
 KDE_VERSION: Final = 6
 SERVICE_NAME: Final = "org.freedesktop.DBus"
@@ -46,14 +47,14 @@ class MediaKeysTest(unittest.TestCase):
     @see https://bugs.kde.org/show_bug.cgi?id=474531
     """
 
-    loop_thread: GlibMainloopThread
+    loop_thread: GLibMainLoopThread
     mpris_interface: Mpris2
     kded: subprocess.Popen | None = None
     kglobalacceld: subprocess.Popen | None = None
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.loop_thread = GlibMainloopThread()
+        cls.loop_thread = GLibMainLoopThread()
         cls.loop_thread.start()
 
         # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html

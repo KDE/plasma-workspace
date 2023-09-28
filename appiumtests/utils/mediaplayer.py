@@ -16,7 +16,10 @@ import threading
 from os import getcwd, getpid, path
 from typing import Any, Final
 
+sys.path.append(path.dirname(path.abspath(__file__)))
+
 from gi.repository import Gio, GLib
+from GLibMainLoopThread import GLibMainLoopThread
 
 
 def read_player_metadata(json_dict: dict[str, Any]) -> list[dict[str, GLib.Variant]]:
@@ -82,32 +85,6 @@ def read_player_properties(json_dict: dict[str, Any], _metadata: dict[str, GLib.
     return _player_properties
 
 
-class GlibMainloopThread(threading.Thread):
-    """
-    A GLib main loop in another thread.
-    @note It's redundant to create a loop when QCoreApplication is used in the same application.
-    """
-
-    def __init__(self) -> None:
-        # Set up DBus loop
-        self.loop = GLib.MainLoop()
-        self.timer = threading.Timer(60, self.loop.quit)
-
-        # Create the thread
-        super(GlibMainloopThread, self).__init__()
-
-    def run(self) -> None:
-        """
-        Method to run the DBus main loop (on a thread)
-        """
-        self.timer.start()
-        self.loop.run()
-
-    def quit(self) -> None:
-        self.timer.cancel()
-        self.loop.quit()
-
-
 class Mpris2:
     """
     MPRIS2 interface implemented in GDBus, since dbus-python does not support property
@@ -147,7 +124,7 @@ class Mpris2:
         self.__player_reg_id = 0
         self.__connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
-        GLib.MainContext.default().iteration(False)  # Otherwise flaky
+        GLibMainLoopThread.process_events()  # Otherwise flaky
         print("Player exit")
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:
@@ -465,7 +442,7 @@ if __name__ == '__main__':
     current_index: int = 0
     player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
 
-    loopThread = GlibMainloopThread()
+    loopThread = GLibMainLoopThread()
     loopThread.start()
     player = Mpris2(metadata, base_properties, player_properties, current_index)
     print(f"Player {base_properties['Identity'].get_string()} started")
