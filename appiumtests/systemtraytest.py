@@ -128,7 +128,6 @@ class SystemTrayTests(unittest.TestCase):
         """
         desired_caps: dict[str, Any] = {}
         desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.systemtray"
-        desired_caps["timeouts"] = {'implicit': 10000}
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
         cls.driver.implicitly_wait = 10
 
@@ -157,7 +156,7 @@ class SystemTrayTests(unittest.TestCase):
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"systemtraytest_failed_test_shot_#{self.id()}.png")
+            self.driver.get_screenshot_as_file(f"failed_test_shot_systemtraytest_#{self.id()}.png")
         self.kded.kill()
 
     @classmethod

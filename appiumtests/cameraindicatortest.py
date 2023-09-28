@@ -29,7 +29,6 @@ class CameraIndicatorTest(unittest.TestCase):
         """
         desired_caps: dict[str, Any] = {}
         desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.cameraindicator"
-        desired_caps["timeouts"] = {'implicit': 5000}
         desired_caps["environ"] = {
             "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.warning=false;kpipewire_logging.warning=false",
@@ -44,7 +43,7 @@ class CameraIndicatorTest(unittest.TestCase):
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"cameraindicatortest_failed_test_shot_#{self.id()}.png")
+            self.driver.get_screenshot_as_file(f"failed_test_shot_cameraindicatortest_#{self.id()}.png")
 
     def test_0_open(self) -> None:
         """

@@ -14,14 +14,13 @@ import time
 
 
 class DigitalClockTests(unittest.TestCase):
+
     @classmethod
     def setUpClass(self):
         desired_caps = {}
         desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.digitalclock"
         desired_caps["timeouts"] = {'implicit': 10000}
-        self.driver = webdriver.Remote(
-            command_executor='http://127.0.0.1:4723',
-            desired_capabilities=desired_caps)
+        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
         self.driver.implicitly_wait = 10
         # Open Applet
         self.driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="expandApplet").click()
@@ -32,7 +31,7 @@ class DigitalClockTests(unittest.TestCase):
 
     def tearDown(self):
         if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.id()))
+            self.driver.get_screenshot_as_file(f"failed_test_shot_digitalclocktest_{self.id()}.png")
 
     @classmethod
     def tearDownClass(self):
@@ -73,7 +72,7 @@ class DigitalClockTests(unittest.TestCase):
 
     def test_months_view(self):
         dateAugust = date.today()
-        dateAugust = dateAugust.replace(month = 8);
+        dateAugust = dateAugust.replace(month=8)
 
         self.driver.find_element(by=AppiumBy.NAME, value="Months").click()
 
@@ -83,7 +82,7 @@ class DigitalClockTests(unittest.TestCase):
         self.assertEqual(self.compareMonthLabel(dateAugust), True)
 
     def test_years_view(self):
-        dateFuture = date.today() + relativedelta(years = 2)
+        dateFuture = date.today() + relativedelta(years=2)
 
         self.driver.find_element(by=AppiumBy.NAME, value="Years").click()
 
@@ -91,6 +90,7 @@ class DigitalClockTests(unittest.TestCase):
         wait = WebDriverWait(self.driver, 50)
         wait.until(lambda x: self.compareMonthLabel(dateFuture))
         self.assertEqual(self.compareMonthLabel(dateFuture), True)
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(DigitalClockTests)
