@@ -180,10 +180,6 @@ PlayerContainer::PlayerContainer(const QString &busAddress, QObject *parent)
     }
 
     initBindings();
-
-    connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
-    connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
-
     refresh();
 }
 
@@ -694,12 +690,17 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
 
     if (--m_fetchesPending == 0) {
         Q_EMIT initialFetchFinished(this);
+
+        connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
+        connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
     }
 }
 
 void PlayerContainer::onPropertiesChanged(const QString &, const QVariantMap &changedProperties, const QStringList &invalidatedProperties)
 {
     if (!invalidatedProperties.empty()) {
+        disconnect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
+        disconnect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
         refresh();
     } else {
         updateFromMap(changedProperties);
