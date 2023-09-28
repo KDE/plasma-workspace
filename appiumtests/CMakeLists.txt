@@ -174,3 +174,9 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_notifications_test.py
 )
 set_tests_properties(kcm_notifications_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_regionandlang_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_regionandlang_test.py
+)
+set_tests_properties(kcm_regionandlang_test PROPERTIES TIMEOUT 120)
