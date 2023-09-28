@@ -1,0 +1,14 @@
+[kdeglobals][KDE]
+widgetStyle=testValue
+
+[kdeglobals][General]
+ColorScheme=testValue
+
+[kdeglobals][Icons]
+Theme=testValue
+
+[plasmarc][Theme]
+name=myOtherTestValue
+
+[kcminputrc][Mouse]
+cursorTheme=testValue
