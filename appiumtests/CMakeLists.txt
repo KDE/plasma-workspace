@@ -63,6 +63,12 @@ add_test(
 set_tests_properties(lock_logouttest PROPERTIES TIMEOUT 120)
 
 add_test(
+    NAME manage-inputmethodtest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/manage-inputmethodtest.py
+)
+set_tests_properties(manage-inputmethodtest PROPERTIES TIMEOUT 120)
+
+add_test(
     NAME notificationstest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
 )
