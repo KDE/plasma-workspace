@@ -38,6 +38,13 @@ add_test(
 set_tests_properties(calendartest PROPERTIES TIMEOUT 120)
 
 add_test(
+    NAME clipboardtest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 120)
+
+add_test(
     NAME notificationstest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
 )
