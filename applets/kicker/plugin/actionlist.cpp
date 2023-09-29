@@ -16,7 +16,6 @@
 #include <QStandardPaths>
 
 #include <KApplicationTrader>
-#include <KDesktopFileActions>
 #include <KFileUtils>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
@@ -467,7 +466,7 @@ static QList<KServiceAction> additionalActions(const KService::Ptr &service)
         KService actionsService(file);
         const auto filter = actionsService.property(QStringLiteral("X-KDE-OnlyForAppIds"), QMetaType::QStringList).toStringList();
         if (filter.empty() || filter.contains(storageIdFromService(service))) {
-            actions.append(KDesktopFileActions::userDefinedServices(actionsService, true));
+            actions.append(actionsService.actions());
         }
     }
     return actions;

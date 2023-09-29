@@ -19,7 +19,8 @@ target_link_libraries(plasma_engine_hotplug
     KF6::Solid
     KF6::Service
     KF6::KIOCore
-    KF6::KIOWidgets      # KDesktopFileActions
+    KF6::KIOGui # KIO::CommandLauncherJob
+    KF6::JobWidgets # KNotificationJobUiDelegate
     KF6::Notifications
     KF6::I18n
 )

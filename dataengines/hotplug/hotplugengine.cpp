@@ -18,7 +18,6 @@
 #include <KService>
 #include <Plasma5Support/DataContainer>
 #include <QDebug>
-#include <kdesktopfileactions.h>
 
 // solid specific includes
 #include <Solid/Device>
@@ -171,7 +170,7 @@ QVariantList HotplugEngine::actionsForPredicates(const QStringList &predicates) 
 
     for (const QString &desktop : predicates) {
         const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
-        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(KService(actionUrl), true);
+        auto services = KService(actionUrl).actions();
         if (!services.isEmpty()) {
             Plasma5Support::DataEngine::Data action;
             action.insert(QStringLiteral("predicate"), desktop);

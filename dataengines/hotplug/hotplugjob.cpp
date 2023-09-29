@@ -9,7 +9,6 @@
 
 #include "deviceserviceaction.h"
 
-#include <KDesktopFileActions>
 #include <KLocalizedString>
 #include <KService>
 #include <Solid/Device>
@@ -23,7 +22,7 @@ void HotplugJob::start()
         const QString desktopFile = parameters()[QStringLiteral("predicate")].toString();
         const QString filePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktopFile);
 
-        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(KService(filePath), true);
+        auto services = KService(filePath).actions();
         if (services.size() < 1) {
             qWarning() << "Failed to resolve hotplugjob action" << desktopFile << filePath;
             setError(KJob::UserDefinedError);
