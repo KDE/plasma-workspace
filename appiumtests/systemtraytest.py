@@ -88,10 +88,10 @@ class StreamReaderThread(threading.Thread):
         Collects lines from the source stream and put them in the queue.
         """
         while self.__stream.readable() and not self.__stop_event.is_set():
-            line: bytes = self.__stream.readline()
-            if line:
-                self.__queue.put(line.decode(encoding="utf-8").strip())
-            else:
+            line_str: str = self.__stream.readline().decode(encoding="utf-8")
+            if "Received click" in line_str:
+                self.__queue.put(line_str)
+            elif len(line_str) == 0:
                 break
 
     def stop(self) -> None:
@@ -205,7 +205,7 @@ class SystemTrayTests(unittest.TestCase):
         wait: WebDriverWait = WebDriverWait(self.driver, 10)
         try:
             # FocusScope in StatusNotifierItem.qml
-            xembed_icon_item = wait.until(EC.presence_of_element_located((AppiumBy.NAME, title)))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, title)))
         except TimeoutException:
             self.fail(f"Cannot find the XEmbed icon in the system tray: {self.xembedsniproxy.stderr.readlines()}")
 
@@ -215,18 +215,16 @@ class SystemTrayTests(unittest.TestCase):
         self.assertTrue(self.stream_reader_thread.is_alive(), "The reader thread is not running")
 
         # Now test clickable
-        xembed_icon_item.click()
+        self.driver.find_element(AppiumBy.NAME, title).click()
 
         success: bool = False
         for _ in range(10):
-            line_str: str | None = self.stream_reader_thread.readline()
-
-            if line_str is not None and "Received click" in line_str:
+            if self.stream_reader_thread.readline() is not None:
                 success = True
                 break
 
             print("Retrying...", file=sys.stderr, flush=True)
-            xembed_icon_item.click()
+            self.driver.find_element(AppiumBy.NAME, title).click()
 
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
 
