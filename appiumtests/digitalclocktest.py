@@ -34,8 +34,11 @@ class DigitalClockTests(unittest.TestCase):
             self.driver.get_screenshot_as_file(f"failed_test_shot_digitalclocktest_{self.id()}.png")
 
     @classmethod
-    def tearDownClass(self):
-        self.driver.quit()
+    def tearDownClass(cls) -> None:
+        """
+        Make sure to terminate the driver again, lest it dangles.
+        """
+        cls.driver.quit()
 
     def assertResult(self, actual, expected):
         wait = WebDriverWait(self.driver, 20)

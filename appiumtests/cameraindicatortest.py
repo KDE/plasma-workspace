@@ -45,6 +45,13 @@ class CameraIndicatorTest(unittest.TestCase):
         if not self._outcome.result.wasSuccessful():
             self.driver.get_screenshot_as_file(f"failed_test_shot_cameraindicatortest_#{self.id()}.png")
 
+    @classmethod
+    def tearDownClass(cls) -> None:
+        """
+        Make sure to terminate the driver again, lest it dangles.
+        """
+        cls.driver.quit()
+
     def test_0_open(self) -> None:
         """
         Tests the widget can be opened

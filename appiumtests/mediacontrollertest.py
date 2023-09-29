@@ -62,10 +62,6 @@ class MediaControllerTests(unittest.TestCase):
         # An instance can only have one GLib.MainLoop, so no need to add one manually
         cls.touch_input_iface.init_application()
 
-    @classmethod
-    def tearDownClass(cls) -> None:
-        cls.touch_input_iface.unload_application()
-
     def setUp(self) -> None:
         json_path: str = path.join(getcwd(), "resources/player_a.json")
         with open(json_path, "r", encoding="utf-8") as f:
@@ -82,6 +78,14 @@ class MediaControllerTests(unittest.TestCase):
         self.mpris_interface.quit()
         self.mpris_interface = None
         WebDriverWait(self.driver, 5, 0.2).until(EC.presence_of_element_located((AppiumBy.NAME, "No media playing")))
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        """
+        Make sure to terminate the driver again, lest it dangles.
+        """
+        cls.touch_input_iface.unload_application()
+        cls.driver.quit()
 
     def test_track(self) -> None:
         """

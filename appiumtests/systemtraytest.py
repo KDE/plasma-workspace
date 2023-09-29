@@ -162,7 +162,7 @@ class SystemTrayTests(unittest.TestCase):
     @classmethod
     def tearDownClass(cls) -> None:
         """
-        Quits the webdriver
+        Make sure to terminate the driver again, lest it dangles.
         """
         cls.driver.quit()
 
