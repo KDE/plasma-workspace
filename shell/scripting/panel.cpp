@@ -172,6 +172,26 @@ void Panel::setAlignment(const QString &alignment)
 }
 
 // From now on only panelConfigDefaults should be used
+int Panel::floating() const
+{
+    if (panel()) {
+        return panel()->floating() ? 1 : 0;
+    } else if (auto configGroup = panelConfigDefaults().parent(); configGroup.isValid()) {
+        return configGroup.readEntry("floating", 1);
+    } else {
+        return 1;
+    }
+}
+
+void Panel::setFloating(int newFloating)
+{
+    if (panel()) {
+        panel()->setFloating(newFloating);
+    } else if (auto configGroup = panelConfigDefaults().parent(); configGroup.isValid()) {
+        configGroup.writeEntry("floating", newFloating);
+    }
+}
+
 int Panel::offset() const
 {
     if (panel()) {
