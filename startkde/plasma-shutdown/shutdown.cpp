@@ -69,10 +69,18 @@ void Shutdown::logoutComplete()
 {
     runShutdownScripts();
 
-    // technically this isn't needed in the systemd managed mode, but it seems harmless for now. Guard if it becomes an issue
-    OrgKdeKWinSessionInterface kwinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus());
-    QDBusPendingReply<> reply = kwinInterface.quit();
-    reply.waitForFinished();
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                              QStringLiteral("StopUnit"));
+    msg << QStringLiteral("graphical-session.target") << QStringLiteral("fail");
+    QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
+
+    if (!reply.isValid()) {
+        OrgKdeKWinSessionInterface kwinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus());
+        QDBusPendingReply<> reply = kwinInterface.quit();
+        reply.waitForFinished();
+    }
 
     if (m_shutdownType == KWorkSpace::ShutdownTypeHalt) {
         SessionBackend::self()->shutdown();
