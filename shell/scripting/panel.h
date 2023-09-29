@@ -43,6 +43,7 @@ class Panel : public Containment
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength)
     Q_PROPERTY(int height READ height WRITE setHeight)
     Q_PROPERTY(QString hiding READ hiding WRITE setHiding)
+    Q_PROPERTY(bool floating READ floating WRITE setFloating)
 
 public:
     explicit Panel(Plasma::Containment *containment, ScriptEngine *parent);
@@ -71,6 +72,9 @@ public:
 
     QString hiding() const;
     void setHiding(const QString &mode);
+
+    bool floating() const;
+    void setFloating(bool floating);
 
 public Q_SLOTS:
     void remove()

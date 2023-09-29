@@ -295,4 +295,21 @@ void Panel::setHiding(const QString &mode)
     }
 }
 
+bool Panel::floating() const
+{
+    if (panel()) {
+        return panel()->floating();
+    } else {
+        return panelConfig().readEntry("floating", true);
+    }
+}
+
+void Panel::setFloating(bool floating)
+{
+    if (panel()) {
+        panel()->setFloating(floating);
+    } else {
+        panelConfig().writeEntry("floating", (int)floating);
+    }
+}
 }
