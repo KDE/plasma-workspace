@@ -415,7 +415,7 @@ private:
 ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
     , m_kactivitiesQuery(Terms::LinkedResources | Terms::Agent{QStringLiteral("org.kde.plasma.favorites.applications")} | Terms::Type::any()
-                         | Terms::Activity::any() | Terms::Limit::all())
+                         | Terms::Activity::any() | Terms::Limit(25))
     , m_kactivitiesWatcher(m_kactivitiesQuery)
 {
     addSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:"));
