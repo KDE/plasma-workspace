@@ -110,7 +110,7 @@ class PanelView : public PlasmaQuick::ContainmentView
      * Property that determines whether the panel is currently floating or not
      * @since 5.25
      */
-    Q_PROPERTY(int floating READ floating WRITE setFloating NOTIFY floatingChanged)
+    Q_PROPERTY(bool floating READ floating WRITE setFloating NOTIFY floatingChanged)
 
     /**
      * The minimum thickness in pixels that the panel can have.
