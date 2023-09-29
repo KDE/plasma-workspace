@@ -77,8 +77,7 @@ class MediaKeysTest(unittest.TestCase):
 
         cls.assertTrue(name_has_owner(session_bus, "org.kde.kglobalaccel"), "kglobalacceld is not started")
 
-        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule",
-                                                         GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
         cls.assertTrue(kded_reply.get_child_value(0).get_boolean(), "mprisservice module is not loaded")
 
         json_path: str = os.path.join(os.getcwd(), "resources/player_a.json")
@@ -90,6 +89,7 @@ class MediaKeysTest(unittest.TestCase):
         player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
         cls.mpris_interface = Mpris2(metadata, base_properties, player_properties, current_index)
         cls.mpris_interface.registered_event.wait(timeout=10)
+        time.sleep(1)  # Make sure kded receives the player
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -131,7 +131,7 @@ class MediaKeysTest(unittest.TestCase):
 
         # Press again to test canNext
         self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioNext"]).wait(), 0)
-        time.sleep(1)
+        time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Konqi's Favorite")
 
     def test_3_previous(self) -> None:
@@ -150,7 +150,7 @@ class MediaKeysTest(unittest.TestCase):
 
         # Press again to test canPrevious
         self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPrev"]).wait(), 0)
-        time.sleep(1)
+        time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Katie's Favorite")
 
     def test_4_unload_mprisservice(self) -> None:
@@ -161,18 +161,17 @@ class MediaKeysTest(unittest.TestCase):
             self.skipTest(f"kded{KDE_VERSION} is not run by this test")
 
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
-        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "unloadModule",
-                                                         GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "unloadModule", GLib.Variant("(s)", ["mprisservice"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
         self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "mprisservice module is not loaded")
 
         last_playback_status: str = self.mpris_interface.player_properties["PlaybackStatus"].get_string()
         self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPlay"]).wait(), 0)
-        time.sleep(1)
+        time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["PlaybackStatus"].get_string(), last_playback_status)
 
         last_xesam_title: str = self.mpris_interface.player_properties["Metadata"]["xesam:title"]
         self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioNext"]).wait(), 0)
-        time.sleep(1)
+        time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], last_xesam_title)
 
 
