@@ -102,7 +102,7 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
             if (service->desktopEntryName().compare(idWithoutDesktop, Qt::CaseInsensitive) == 0)
                 return true;
 
-            const auto renamedFrom = service->property("X-Flatpak-RenamedFrom").toStringList();
+            const auto renamedFrom = service->property<QStringList>("X-Flatpak-RenamedFrom");
             if (renamedFrom.contains(componentId, Qt::CaseInsensitive) || renamedFrom.contains(idWithoutDesktop, Qt::CaseInsensitive))
                 return true;
 

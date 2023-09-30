@@ -353,7 +353,7 @@ void SourcesModel::load()
             return false;
         }
 
-        if (!app->property(QStringLiteral("X-GNOME-UsesNotifications")).toBool()) {
+        if (!app->property<bool>(QStringLiteral("X-GNOME-UsesNotifications"))) {
             return false;
         }
 

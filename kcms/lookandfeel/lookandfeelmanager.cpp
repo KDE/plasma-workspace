@@ -620,7 +620,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
                         KService service(serviceFile + QStringLiteral(".desktop"));
                         PlasmaAutostart as(serviceFile);
                         as.setAutostarts(false);
-                        QString serviceName = service.property(QStringLiteral("X-DBUS-ServiceName")).toString();
+                        QString serviceName = service.property<QString>(QStringLiteral("X-DBUS-ServiceName"));
                         toStop.append(serviceName);
                     }
                 }
@@ -635,7 +635,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
                     PlasmaAutostart as(serviceFile);
                     as.setCommand(service->exec());
                     as.setAutostarts(true);
-                    const QString serviceName = service->property(QStringLiteral("X-DBUS-ServiceName")).toString();
+                    const QString serviceName = service->property<QString>(QStringLiteral("X-DBUS-ServiceName"));
                     toStop.removeAll(serviceName);
                     if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
                         toStart += service;

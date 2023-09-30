@@ -195,7 +195,7 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
 
     QStringList allowedTypes({QLatin1String("Service"), QLatin1String("Application")});
 
-    if (!service || !allowedTypes.contains(service->property(QLatin1String("Type")).toString()) || service->exec().isEmpty()) {
+    if (!service || !allowedTypes.contains(service->property<QString>(QLatin1String("Type"))) || service->exec().isEmpty()) {
         return QVariant();
     }
 

@@ -265,14 +265,14 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
             // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
             if (services.isEmpty() && !xWindowsWMClassName.isEmpty()) {
                 services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
-                    return service->property(QStringLiteral("StartupWMClass")).toString().compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
+                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
                 });
                 sortServicesByMenuId(services, xWindowsWMClassName);
             }
 
             if (services.isEmpty()) {
                 services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-                    return service->property(QStringLiteral("StartupWMClass")).toString().compare(appId, Qt::CaseInsensitive) == 0;
+                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(appId, Qt::CaseInsensitive) == 0;
                 });
                 sortServicesByMenuId(services, appId);
             }
@@ -321,7 +321,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
                             }
 
                             services = KApplicationTrader::query([&rewrittenString, &serviceSearchIdentifier](const KService::Ptr &service) {
-                                return service->property(serviceSearchIdentifier).toString().compare(rewrittenString, Qt::CaseInsensitive) == 0;
+                                return service->property<QString>(serviceSearchIdentifier).compare(rewrittenString, Qt::CaseInsensitive) == 0;
                             });
                             sortServicesByMenuId(services, serviceSearchIdentifier);
 

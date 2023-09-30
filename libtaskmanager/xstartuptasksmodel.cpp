@@ -170,7 +170,7 @@ QUrl XStartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
     // Try StartupWMClass.
     if (services.empty() && !wmClass.isEmpty()) {
         services = KApplicationTrader::query([&wmClass](const KService::Ptr &service) {
-            return service->property(QStringLiteral("StartupWMClass")).toString().compare(wmClass, Qt::CaseInsensitive) == 0;
+            return service->property<QString>(QStringLiteral("StartupWMClass")).compare(wmClass, Qt::CaseInsensitive) == 0;
         });
     }
 
