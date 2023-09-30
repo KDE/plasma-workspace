@@ -104,6 +104,8 @@ KCM.ScrollViewKCM {
 
             highlighted: index === userList.currentIndex
 
+            Accessible.description: `${delegate.ListView.section}, ${i18nc("@info:usagetip", "Press Space to edit the user profile")}`
+
             onClicked: {
                 userList.currentIndex = index;
                 kcm.pop();

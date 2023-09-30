@@ -25,6 +25,7 @@ KCM.SimpleKCM {
 
     implicitWidth: Kirigami.Units.gridUnit * 30
     implicitHeight: Kirigami.Units.gridUnit * 27
+    focus: true
 
     Connections {
         target: user
@@ -106,12 +107,15 @@ KCM.SimpleKCM {
             cache: false
             name: user.realName
 
+            focus: true
             text: i18n("Change avatar")
+
+            KeyNavigation.down: realNametextField
 
             onClicked: {
                 const component = Qt.createComponent("PicturesSheet.qml")
                 const obj = component.incubateObject(usersDetailPage, {
-                    parent: usersDetailPage,
+                    focus: true,
                     usersDetailPage: usersDetailPage
                 })
                 if (obj == null) {
@@ -124,16 +128,18 @@ KCM.SimpleKCM {
         Kirigami.FormLayout {
             QQC2.TextField  {
                 id: realNametextField
-                focus: true
                 text: user.realName
                 Kirigami.FormData.label: i18n("Name:")
+
+                KeyNavigation.down: userNameField
             }
 
             QQC2.TextField {
                 id: userNameField
-                focus: true
                 text: user.name
                 Kirigami.FormData.label: i18n("Username:")
+
+                KeyNavigation.down: usertypeBox
             }
 
             QQC2.ComboBox {
@@ -148,17 +154,21 @@ KCM.SimpleKCM {
                 Kirigami.FormData.label: i18n("Account type:")
 
                 currentIndex: user.administrator ? 1 : 0
+
+                KeyNavigation.down: emailTextField
             }
 
             QQC2.TextField {
                 id: emailTextField
-                focus: true
                 text: user.email
                 Kirigami.FormData.label: i18n("Email address:")
+                KeyNavigation.down: changeButton
             }
 
             QQC2.Button {
+                id: changeButton
                 text: i18n("Change Password")
+                KeyNavigation.down: deleteUser.enabled ? deleteUser : fingerprintButton
                 onClicked: {
                     changePassword.user = user
                     changePassword.openAndClear()
@@ -173,6 +183,8 @@ KCM.SimpleKCM {
                 id: deleteUser
 
                 enabled: !usersDetailPage.user.loggedIn && (!kcm.userModel.rowCount() < 2)
+
+                KeyNavigation.down: fingerprintButton
 
                 QQC2.Menu {
                     id: deleteMenu
@@ -199,6 +211,7 @@ KCM.SimpleKCM {
         }
 
         QQC2.Button {
+            id: fingerprintButton
             Layout.topMargin: deleteUser.height
             Layout.alignment: Qt.AlignHCenter
             flat: false

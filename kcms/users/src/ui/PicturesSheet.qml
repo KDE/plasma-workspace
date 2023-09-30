@@ -52,9 +52,13 @@ Kirigami.OverlaySheet {
     component PictureButton: QQC2.Button {
         Layout.preferredHeight: Kirigami.Units.gridUnit * 6
         Layout.preferredWidth: Layout.preferredHeight
+        display: QQC2.AbstractButton.IconOnly
     }
 
     component HomeButton: PictureButton {
+        focus: !stackSwitcher.busy
+        text: i18nc("@action:button", "Go Back")
+
         ColumnLayout {
             anchors.centerIn: parent
 
@@ -71,6 +75,7 @@ Kirigami.OverlaySheet {
     }
 
     component InitialsButton: PictureButton {
+        text: i18nc("@action:button", "Initials")
         property alias color: colorRectangle.color
         property alias headingColor: heading.color
 
@@ -90,6 +95,7 @@ Kirigami.OverlaySheet {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 text: kcm.initializeString(user.displayPrimaryName)
+                Accessible.ignored: true
             }
         }
     }
@@ -120,6 +126,8 @@ Kirigami.OverlaySheet {
             PictureButton {
                 id: openButton
 
+                text: i18nc("@action:button", "Choose File…")
+
                 contentItem: Item {
                     Dialogs.FileDialog {
                         id: fileDialog
@@ -148,7 +156,7 @@ Kirigami.OverlaySheet {
                             Layout.alignment: Qt.AlignHCenter
                         }
                         QQC2.Label {
-                            text: i18nc("@action:button", "Choose File…")
+                            text: openButton.text
 
                             Layout.fillWidth: true
                             Layout.maximumWidth: Kirigami.Units.gridUnit * 5
@@ -170,6 +178,7 @@ Kirigami.OverlaySheet {
             }
 
             IconButton {
+                text: i18nc("@action:button", "Placeholder Icon")
                 iconColor: "black"
                 onClicked: stackSwitcher.push(iconsPage)
             }
@@ -188,7 +197,7 @@ Kirigami.OverlaySheet {
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.text: modelData
                     QQC2.ToolTip.visible: hovered || activeFocus
-                    Accessible.name: modelData
+                    text: modelData
 
                     Kirigami.ShadowedImage {
                         id: imgDelegate
@@ -225,7 +234,7 @@ Kirigami.OverlaySheet {
                     headingColor: modelData.dark ? "white" : "black"
                     hoverEnabled: true
 
-                    Accessible.name: modelData.name
+                    text: modelData.name
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.text: modelData.name
                     QQC2.ToolTip.visible: hovered || activeFocus
@@ -253,8 +262,11 @@ Kirigami.OverlaySheet {
             Repeater {
                 model: picturesSheet.colorPalette
                 delegate: IconButton {
+                    text: modelData.name
                     color: modelData.color
                     iconColor: modelData.dark ? "white" : "black"
+
+                    Accessible.description: i18nc("@info:whatsthis", "User avatar placeholder icon")
 
                     onClicked: {
                         colourRectangle.grabToImage(function(result) {
