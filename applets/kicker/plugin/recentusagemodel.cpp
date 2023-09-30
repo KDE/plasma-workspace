@@ -117,7 +117,7 @@ RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int orde
     , m_usage(usage)
     , m_ordering((Ordering)ordering)
     , m_complete(false)
-    , m_placesModel(new KFilePlacesModel({}, this))
+    , m_placesModel(new KFilePlacesModel(this))
 {
     refresh();
 }

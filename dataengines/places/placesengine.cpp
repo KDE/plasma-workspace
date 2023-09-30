@@ -16,7 +16,7 @@
 PlacesEngine::PlacesEngine(QObject *parent)
     : Plasma5Support::DataEngine(parent)
 {
-    m_placesModel = new KFilePlacesModel({}, this);
+    m_placesModel = new KFilePlacesModel(this);
     m_proxyModel = new PlacesProxyModel(this, m_placesModel);
     setModel(QStringLiteral("places"), m_proxyModel);
 }
