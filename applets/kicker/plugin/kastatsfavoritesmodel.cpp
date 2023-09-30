@@ -170,7 +170,7 @@ public:
 
     Private(KAStatsFavoritesModel *parent, const QString &clientId)
         : q(parent)
-        , m_query(LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_DOCUMENTS} | Type::any() | Activity::current() | Activity::global() | Limit::all())
+        , m_query(LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_DOCUMENTS} | Type::any() | Activity::current() | Activity::global() | Limit(100))
         , m_watcher(m_query)
         , m_clientId(clientId)
     {
@@ -759,7 +759,7 @@ QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
         return {};
     }
 
-    auto query = LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_DOCUMENTS} | Type::any() | Activity::any() | Url(url) | Limit::all();
+    auto query = LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_DOCUMENTS} | Type::any() | Activity::any() | Url(url) | Limit(100);
 
     ResultSet results(query);
 
