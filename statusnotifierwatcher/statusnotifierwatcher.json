@@ -113,8 +113,8 @@
         "Name[zh_CN]": "状态通知管理器",
         "Name[zh_TW]": "狀態通知管理員"
     },
+    "X-KDE-DBus-ServiceName": "org.kde.StatusNotifierWatcher",
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-load-on-demand": false,
-    "X-KDE-Kded-phase": 1,
-    "X-KDE-DBus-ServiceName": "org.kde.StatusNotifierWatcher"
+    "X-KDE-Kded-phase": 1
 }
