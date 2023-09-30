@@ -117,7 +117,7 @@
 >Passeu per sobre d'una entrada amb el punter del ratolí i apareixeran quatre icones que us permetran invocar una acció, mostrar el codi de barres, editar el contingut o eliminar l'entrada de l'historial. Utilitzeu l'&spectacle; per a capturar els codis de barres i desar-los. </para>
 
 <para
->Per a cercar a través de l'historial del porta-retalls obriu-lo (fent clic sobre el &klipper;) i escriviu la vostra consulta. Els resultats s'actualitzaran mentre escriviu. Per esborrar l'historial del porta-retalls, feu clic en la icona a la dreta del camp de cerca. </para>
+>Per a cercar a través de l'historial del porta-retalls obriu-lo (fent clic sobre el &klipper;) i escriviu la vostra consulta. Els resultats s'actualitzaran mentre escriviu. Per a esborrar l'historial del porta-retalls, feu clic en la icona a la dreta del camp de cerca. </para>
 
 <para
 >L'acció <guilabel
@@ -141,7 +141,7 @@
 >, aquest es podrà veure a l'&okular;.</para>
 
 <para
->Per usar aquesta característica, simplement copieu un &URL; o camí. Si hi ha una expressió regular en la llista del &klipper;, apareixerà un menú mostrant-vos els programes adients perquè trieu. Empreu el ratolí o el teclat per a seleccionar un programa, i el &klipper; l'executarà, obrint l'adreça cap on apunta la selecció.</para>
+>Per a usar aquesta característica, simplement copieu un &URL; o camí. Si hi ha una expressió regular en la llista del &klipper;, apareixerà un menú mostrant-vos els programes adients perquè trieu. Empreu el ratolí o el teclat per a seleccionar un programa, i el &klipper; l'executarà, obrint l'adreça cap on apunta la selecció.</para>
 
 <para
 >Si no voleu realitzar cap acció amb el contingut del porta-retalls, seleccioneu <guimenuitem
@@ -280,7 +280,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Enganxa</guimenuitem
 >.</para
 ><para
->Quan està activada, aquesta opció manté iguals la selecció i el porta-retalls, de manera que qualsevol selecció està immediatament disponible per enganxar de qualsevol manera. Si està desactivada, la selecció encara es pot desar en l'historial del porta-retalls (subjecte a les opcions següents), però només es pot enganxar utilitzant el &BMR;.</para
+>Quan està activada, aquesta opció manté iguals la selecció i el porta-retalls, de manera que qualsevol selecció està immediatament disponible per a enganxar de qualsevol manera. Si està desactivada, la selecció encara es pot desar en l'historial del porta-retalls (subjecte a les opcions següents), però només es pot enganxar utilitzant el &BMR;.</para
 ></listitem>
 </varlistentry>
 
@@ -572,7 +572,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ><para
 >L'acció seleccionada serà assignada a les tecles que escolliu.</para>
 <para
->Per escollir una tecla a mida per a l'acció que hàgiu seleccionat, feu clic a sobre de <guilabel
+>Per a escollir una tecla a mida per a l'acció que hàgiu seleccionat, feu clic a sobre de <guilabel
 >Personalitzada</guilabel
 > i llavors a <guilabel
 >Cap</guilabel

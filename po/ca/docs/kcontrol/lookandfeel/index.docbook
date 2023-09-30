@@ -174,7 +174,7 @@
 <para
 >Després de fer la selecció, feu clic al botó <guibutton
 >Aplica</guibutton
-> per confirmar la vostra elecció. </para>
+> per a confirmar la vostra elecció. </para>
 
 </sect2>
 
@@ -185,7 +185,7 @@
 <para
 >Amb el botó <guilabel
 >Obtén temes globals nous...</guilabel
-> podeu instal·lar temes globals nous per part de proveïdors de tercers. Cal estar connectat a Internet per accedir a aquests temes. En fer clic a <guibutton
+> podeu instal·lar temes globals nous per part de proveïdors de tercers. Cal estar connectat a Internet per a accedir a aquests temes. En fer clic a <guibutton
 >Instal·la</guibutton
 > en un dels temes del diàleg s'instal·larà el tema global escollit, i després de tancar el diàleg, el tema nou estarà disponible immediatament. <screenshot>
   <screeninfo
