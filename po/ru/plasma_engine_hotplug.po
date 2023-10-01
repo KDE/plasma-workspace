@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-13 00:48+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2019-10-08 15:19+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: hotplugjob.cpp:30
+#: hotplugjob.cpp:29
 #, kde-format
 msgctxt "error; %1 is the desktop file name of the service"
 msgid "Failed to resolve service action for %1."

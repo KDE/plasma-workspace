@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2020-09-28 01:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -18,48 +18,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: plugin/actionlist.cpp:86
+#: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "Avamine rakendusega:"
 
-#: plugin/actionlist.cpp:99
+#: plugin/actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "Omadused"
 
-#: plugin/actionlist.cpp:146
+#: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Lisa töölauale"
 
-#: plugin/actionlist.cpp:151
+#: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Lisa paneelile (vidin)"
 
-#: plugin/actionlist.cpp:156
+#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Kinnista tegumihaldurile"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Viimati kasutatud failid"
 
-#: plugin/actionlist.cpp:317
+#: plugin/actionlist.cpp:316
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Unusta viimati kasutatud failid"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:394
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Muuda rakendust..."
 
-#: plugin/actionlist.cpp:429
+#: plugin/actionlist.cpp:428
 #, fuzzy, kde-format
 #| msgctxt "@action opens a software center with the application"
 #| msgid "Uninstall or Manage Add-Ons..."

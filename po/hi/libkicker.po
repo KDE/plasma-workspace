@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: plugin/actionlist.cpp:86
+#: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "इसके साथ खोलें :"
 
-#: plugin/actionlist.cpp:99
+#: plugin/actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "गुण"
 
-#: plugin/actionlist.cpp:146
+#: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "डेस्कटॉप पर जोडें"
 
-#: plugin/actionlist.cpp:151
+#: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "पैनल में जोडें (विजेट)"
 
-#: plugin/actionlist.cpp:156
+#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "कार्य प्रबंधक पर पिन करें"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "हाल हीं की फ़ाइलें"
 
-#: plugin/actionlist.cpp:317
+#: plugin/actionlist.cpp:316
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "हाल की फाइलों को भूल जाएँ"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:394
 #, kde-format
 msgid "Edit Application…"
 msgstr "अनुप्रयोग संपादित करें…"
 
-#: plugin/actionlist.cpp:429
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

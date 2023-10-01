@@ -535,7 +535,7 @@ msgstr "Cargándose"
 
 #: soliddeviceengine.cpp:393
 msgid "Discharging"
-msgstr "Estase a descargar"
+msgstr "Descargando"
 
 #: soliddeviceengine.cpp:394
 msgid "Fully Charged"

@@ -1,0 +1,57 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2023 Paolo Zamponi <feus73@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2023-09-26 23:02+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#: main.cpp:44 plasmawindowedcorona.cpp:99
+#, kde-format
+msgid "Plasma Windowed"
+msgstr "Plasma a finestre"
+
+#: main.cpp:46
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Abilita il debugger Javascript QML"
+
+#: main.cpp:49 plasmawindowedcorona.cpp:101
+#, kde-format
+msgid ""
+"Makes the plasmoid stay alive in the Notification Area, even when the window "
+"is closed."
+msgstr ""
+"Fa sì che il plasmoide rimanga attivo nell'area di notifica anche quando la "
+"finestra è chiusa."
+
+#: main.cpp:51
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Forza il caricamento di un'estensione della shell specifica"
+
+#: main.cpp:55 plasmawindowedcorona.cpp:102
+#, kde-format
+msgid "The applet to open."
+msgstr "L'applet da aprire."
+
+#: main.cpp:56 plasmawindowedcorona.cpp:103
+#, kde-format
+msgid "Arguments to pass to the plasmoid."
+msgstr "Argomenti da passare al plasmoide."
+
+#: plasmawindowedview.cpp:117
+#, kde-format
+msgid "Close %1"
+msgstr "Chiudi %1"

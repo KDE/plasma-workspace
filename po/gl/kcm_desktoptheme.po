@@ -34,12 +34,12 @@ msgstr "Obter novos estilos de Plasma…"
 #: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr "Non se pode crear un ficheiro temporal."
+msgstr "Non é posíbel crear un ficheiro temporal."
 
 #: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr "Non se pode descargar o tema: %1"
+msgstr "Non é posíbel descargar o tema: %1"
 
 #: kcm.cpp:147
 #, kde-format

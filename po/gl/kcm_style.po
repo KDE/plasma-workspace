@@ -45,7 +45,7 @@ msgstr ""
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr "Non se puido aplicar o estilo «%1» seleccionado."
+msgstr "Non foi posíbel aplicar o estilo «%1» seleccionado."
 
 #: styleconfdialog.cpp:21
 #, kde-format

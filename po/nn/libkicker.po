@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2021-12-16 12:54+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,48 +20,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: plugin/actionlist.cpp:86
+#: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "Opna med:"
 
-#: plugin/actionlist.cpp:99
+#: plugin/actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "Eigenskapar"
 
-#: plugin/actionlist.cpp:146
+#: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Legg på skrivebordet"
 
-#: plugin/actionlist.cpp:151
+#: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Legg på panelet"
 
-#: plugin/actionlist.cpp:156
+#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fest til oppgåvelinja"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Nyleg brukte filer"
 
-#: plugin/actionlist.cpp:317
+#: plugin/actionlist.cpp:316
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Gløym nyleg brukte filer"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:394
 #, kde-format
 msgid "Edit Application…"
 msgstr "Rediger program …"
 
 # Det er snakk om anten å avinstallera *programmet* eller å handsama (installera) programtillegg (for programmet). Det er altså ikkje snakk om å avinstallera programtillegg. Derfor er det mellomrom rundt skråstreken.
-#: plugin/actionlist.cpp:429
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

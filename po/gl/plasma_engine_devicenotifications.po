@@ -52,7 +52,7 @@ msgstr "Non ten autorización para expulsar o disco."
 #: ksolidnotify.cpp:170
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Non se puido montar o dispositivo porque está en uso."
+msgstr "Non foi posíbel montar o dispositivo porque está en uso."
 
 #: ksolidnotify.cpp:200
 #, kde-format
@@ -80,18 +80,18 @@ msgstr ", "
 #: ksolidnotify.cpp:222
 #, kde-format
 msgid "Could not mount this device."
-msgstr "Non se puido montar o dispositivo."
+msgstr "Non foi posíbel montar o dispositivo."
 
 #: ksolidnotify.cpp:225
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Non se puido retirar o dispositivo."
+msgstr "Non foi posíbel retirar o dispositivo."
 
 #: ksolidnotify.cpp:228
 #, kde-format
 msgid "Could not eject this disc."
-msgstr "Non se puido expulsar o disco."
+msgstr "Non foi posíbel expulsar o disco."
 
 #~ msgid ""
 #~ "Could not safely remove the following device: %1\n"

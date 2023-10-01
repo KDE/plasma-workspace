@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2021-05-26 11:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,47 +21,47 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: plugin/actionlist.cpp:86
+#: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "Obre amb:"
 
-#: plugin/actionlist.cpp:99
+#: plugin/actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "Propietats"
 
-#: plugin/actionlist.cpp:146
+#: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Afegeix a l'escriptori"
 
-#: plugin/actionlist.cpp:151
+#: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Afegeix al plafó (giny)"
 
-#: plugin/actionlist.cpp:156
+#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fixa al gestor de tasques"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Fitxers recents"
 
-#: plugin/actionlist.cpp:317
+#: plugin/actionlist.cpp:316
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Oblida els fitxers recents"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:394
 #, kde-format
 msgid "Edit Application…"
 msgstr "Edita l'aplicació…"
 
-#: plugin/actionlist.cpp:429
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

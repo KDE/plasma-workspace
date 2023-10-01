@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2021-06-02 16:27+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -20,47 +20,47 @@ msgstr ""
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
-#: plugin/actionlist.cpp:86
+#: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "Otevřít pomocí:"
 
-#: plugin/actionlist.cpp:99
+#: plugin/actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: plugin/actionlist.cpp:146
+#: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Přidat na plochu"
 
-#: plugin/actionlist.cpp:151
+#: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Přidat do panelu (Widget)"
 
-#: plugin/actionlist.cpp:156
+#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Připnout do Správce úloh"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedávné soubory"
 
-#: plugin/actionlist.cpp:317
+#: plugin/actionlist.cpp:316
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zapomenout nedávné soubory"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:394
 #, kde-format
 msgid "Edit Application…"
 msgstr "Upravit aplikaci…"
 
-#: plugin/actionlist.cpp:429
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

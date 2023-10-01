@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-13 00:48+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_engine_hotplug.po\n"
 "X-Crowdin-File-ID: 8844\n"
 
-#: hotplugjob.cpp:30
+#: hotplugjob.cpp:29
 #, kde-format
 msgctxt "error; %1 is the desktop file name of the service"
 msgid "Failed to resolve service action for %1."

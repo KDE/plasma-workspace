@@ -77,7 +77,7 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
-"Non se puido atopar un trebello de «Notificacións», necesario para amosar "
+"Non foi posíbel atopar un trebello de «Notificacións», necesario para amosar "
 "notificacións. Asegúrese de que está activado ben na área de notificación ou "
 "nun trebello independente."
 

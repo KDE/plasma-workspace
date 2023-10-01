@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-10-01 01:56+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,47 +13,47 @@ msgstr ""
 "X-POFile-SpellExtra: mails svgz jpg KRunner KICKERFAVORITESMODEL\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: plugin/actionlist.cpp:86
+#: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "Abrir com:"
 
-#: plugin/actionlist.cpp:99
+#: plugin/actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "Propriedades"
 
-#: plugin/actionlist.cpp:146
+#: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Adicionar ao Ecrã"
 
-#: plugin/actionlist.cpp:151
+#: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Adicionar ao Painel (Elemento)"
 
-#: plugin/actionlist.cpp:156
+#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fixar no Gestor de Tarefas"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Ficheiros Recentes"
 
-#: plugin/actionlist.cpp:317
+#: plugin/actionlist.cpp:316
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Esquecer os Ficheiros Recentes"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:394
 #, kde-format
 msgid "Edit Application…"
 msgstr "Editar a Aplicação…"
 
-#: plugin/actionlist.cpp:429
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

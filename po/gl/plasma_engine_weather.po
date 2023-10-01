@@ -4880,7 +4880,7 @@ msgstr "Nubes diminuíndo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Sunny"
-msgstr "Estase a tornar soleado"
+msgstr "Tornando soleado"
 
 #: noaa_i18n.dat:356
 #, kde-format

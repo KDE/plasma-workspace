@@ -1,0 +1,57 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2023-09-30 09:56+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#: main.cpp:44 plasmawindowedcorona.cpp:99
+#, kde-format
+msgid "Plasma Windowed"
+msgstr "Plasma en xanelas"
+
+#: main.cpp:46
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Activar o depurador do JavaScript de QML"
+
+#: main.cpp:49 plasmawindowedcorona.cpp:101
+#, kde-format
+msgid ""
+"Makes the plasmoid stay alive in the Notification Area, even when the window "
+"is closed."
+msgstr ""
+"Fai que o trebello permaneza na área de notificación, aínda que se peche a "
+"xanela."
+
+#: main.cpp:51
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Obriga a cargar o complemento da shell indicado."
+
+#: main.cpp:55 plasmawindowedcorona.cpp:102
+#, kde-format
+msgid "The applet to open."
+msgstr "Miniaplicación para abrir."
+
+#: main.cpp:56 plasmawindowedcorona.cpp:103
+#, kde-format
+msgid "Arguments to pass to the plasmoid."
+msgstr "Argumentos para pasar ao trebello."
+
+#: plasmawindowedview.cpp:117
+#, kde-format
+msgid "Close %1"
+msgstr "Pechar %1"
