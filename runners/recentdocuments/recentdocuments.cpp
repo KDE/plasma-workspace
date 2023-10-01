@@ -34,11 +34,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
     , m_actions({KRunner::Action(QStringLiteral("open-folder"), QStringLiteral("document-open-folder"), i18n("Open Containing Folder"))})
 {
     addSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:."));
-
     setMinLetterCount(m_minLetterCount);
-    connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
-        m_resultsModel.reset(nullptr);
-    });
 }
 
 void RecentDocuments::match(KRunner::RunnerContext &context)
