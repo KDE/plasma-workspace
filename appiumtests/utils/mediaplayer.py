@@ -97,8 +97,7 @@ class Mpris2:
 
     __connection: Gio.DBusConnection
 
-    def __init__(self, metadata: list[dict[str, GLib.Variant]], base_properties: dict[str, GLib.Variant], player_properties: dict[str, GLib.Variant],
-                 current_index: int) -> None:
+    def __init__(self, metadata: list[dict[str, GLib.Variant]], base_properties: dict[str, GLib.Variant], player_properties: dict[str, GLib.Variant], current_index: int) -> None:
         assert len(metadata) > 0
         self.metadata: list[dict[str, GLib.Variant]] = metadata
         self.base_properties: dict[str, GLib.Variant] = base_properties
@@ -141,22 +140,19 @@ class Mpris2:
         player_introspection_xml: str = '\n'.join(open("../libkmpris/dbus/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8").readlines())
 
         introspection_data = Gio.DBusNodeInfo.new_for_xml(player_introspection_xml)
-        self.__player_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call,
-                                                          self.player_handle_get_property, self.player_handle_set_property)
+        self.__player_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call, self.player_handle_get_property, self.player_handle_set_property)
         assert self.__player_reg_id != 0
 
         interface_introspection_xml: str = '\n'.join(open("../libkmpris/dbus/org.mpris.MediaPlayer2.xml", encoding="utf-8").readlines())
         introspection_data = Gio.DBusNodeInfo.new_for_xml(interface_introspection_xml)
-        self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call,
-                                                        self.interface_handle_get_property, self.interface_handle_set_property)
+        self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call, self.interface_handle_get_property, self.interface_handle_set_property)
         assert self.__base_reg_id != 0
 
         print("MPRIS registered", file=sys.stdout)
         sys.stdout.flush()
         self.registered_event.set()
 
-    def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
-                                      parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+    def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
         Handles method calls for org.freedesktop.DBus.Properties
         """
@@ -221,8 +217,7 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "PlaybackStatus": self.player_properties["PlaybackStatus"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
         self.playback_status_set_event.set()
 
     def stop(self, connection: Gio.DBusConnection, object_path: str) -> None:
@@ -235,8 +230,7 @@ class Mpris2:
             "PlaybackStatus": self.player_properties["PlaybackStatus"],
             "Metadata": self.player_properties["Metadata"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_rate(self, rate: float, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -248,8 +242,7 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "Rate": self.player_properties["Rate"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_shuffle(self, shuffle: bool, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -260,8 +253,7 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "Shuffle": self.player_properties["Shuffle"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_repeat(self, repeat: str, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -272,8 +264,7 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "LoopStatus": self.player_properties["LoopStatus"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_volume(self, volume: float, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -284,11 +275,9 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "Volume": self.player_properties["Volume"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
-    def player_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
-                                  parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+    def player_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
         Handles method calls for org.mpris.MediaPlayer2.Player
         """
@@ -302,14 +291,12 @@ class Mpris2:
             self.player_properties["Metadata"] = GLib.Variant('a{sv}', self.metadata[self.current_index])
             self.player_properties["CanGoPrevious"] = GLib.Variant('b', self.current_index > 0)
             self.player_properties["CanGoNext"] = GLib.Variant('b', self.current_index < len(self.metadata) - 1)
-            changed_properties = GLib.Variant(
-                'a{sv}', {
-                    "Metadata": self.player_properties["Metadata"],
-                    "CanGoPrevious": self.player_properties["CanGoPrevious"],
-                    "CanGoNext": self.player_properties["CanGoNext"],
-                })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            changed_properties = GLib.Variant('a{sv}', {
+                "Metadata": self.player_properties["Metadata"],
+                "CanGoPrevious": self.player_properties["CanGoPrevious"],
+                "CanGoNext": self.player_properties["CanGoNext"],
+            })
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
             self.metadata_updated_event.set()
 
         elif method_name == "Pause":
@@ -333,20 +320,16 @@ class Mpris2:
             changed_properties = GLib.Variant('a{sv}', {
                 'Position': self.player_properties["Position"],
             })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, self.PLAYER_IFACE.get_string(), "Seeked",
-                                           GLib.Variant.new_tuple(self.player_properties["Position"]))
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            Gio.DBusConnection.emit_signal(connection, None, object_path, self.PLAYER_IFACE.get_string(), "Seeked", GLib.Variant.new_tuple(self.player_properties["Position"]))
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "SetPosition":
-            assert parameters[0] == self.metadata[self.current_index]["mpris:trackid"].get_string(
-            ), f"expected trackid: {parameters[0]}, actual trackid: {self.metadata[self.current_index]['mpris:trackid'].get_string()}"
+            assert parameters[0] == self.metadata[self.current_index]["mpris:trackid"].get_string(), f"expected trackid: {parameters[0]}, actual trackid: {self.metadata[self.current_index]['mpris:trackid'].get_string()}"
             self.player_properties["Position"] = GLib.Variant('x', parameters[1])
             changed_properties = GLib.Variant('a{sv}', {
                 'Position': self.player_properties["Position"],
             })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
-                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "OpenUri":
             print("OpenUri")
@@ -389,8 +372,7 @@ class Mpris2:
         # to False for this call back to be successful.
         return True
 
-    def interface_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
-                                     parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+    def interface_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
         Handles method calls for org.mpris.MediaPlayer2
         """
