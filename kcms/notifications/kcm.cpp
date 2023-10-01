@@ -10,6 +10,8 @@
 #include <QCommandLineParser>
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <QFile>
+#include <QFileInfo>
 #include <QPushButton>
 #include <QQuickItem>
 #include <QQuickRenderControl>

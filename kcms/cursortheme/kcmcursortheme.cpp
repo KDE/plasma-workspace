@@ -29,7 +29,9 @@
 #include <KTar>
 #include <KUrlRequesterDialog>
 
+#include <QDir>
 #include <QStandardItemModel>
+#include <QTemporaryFile>
 #include <private/qtx11extras_p.h>
 
 #include <X11/Xcursor/Xcursor.h>

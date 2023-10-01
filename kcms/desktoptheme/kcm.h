@@ -11,6 +11,7 @@
 #pragma once
 
 #include <KQuickManagedConfigModule>
+#include <QLoggingCategory>
 
 #include "desktopthemesettings.h"
 #include "themesmodel.h"

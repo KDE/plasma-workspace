@@ -21,6 +21,7 @@
 #include <KMessageBox>
 #include <KService>
 
+#include <QCollator>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDebug>

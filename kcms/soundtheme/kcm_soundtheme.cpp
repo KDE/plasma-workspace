@@ -12,6 +12,7 @@
 #include <canberra.h>
 
 #include <QCollator>
+#include <QDir>
 
 #include <KConfig>
 #include <KConfigGroup>

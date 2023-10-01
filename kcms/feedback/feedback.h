@@ -8,8 +8,8 @@
 #pragma once
 
 #include <KQuickManagedConfigModule>
-
 #include <KSharedConfig>
+#include <QJsonArray>
 
 class FeedbackSettings;
 class FeedbackData;

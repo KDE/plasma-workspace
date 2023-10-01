@@ -15,6 +15,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QDir>
 #include <QQuickImageProvider>
 
 #include <KCountryFlagEmojiIconEngine>

@@ -18,6 +18,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QFontDatabase>
+#include <QProcess>
 #include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickView>

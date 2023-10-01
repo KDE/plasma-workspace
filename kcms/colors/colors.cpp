@@ -14,6 +14,7 @@
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QDBusReply>
+#include <QDir>
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QProcess>
@@ -22,6 +23,7 @@
 #include <QQuickWindow>
 #include <QStandardItemModel>
 #include <QStandardPaths>
+#include <QTemporaryFile>
 
 #include <KColorScheme>
 #include <KColorUtils>

@@ -18,6 +18,7 @@
 
 #include <KConfigGroup>
 #include <KQuickManagedConfigModule>
+#include <QProcess>
 
 class RegionAndLangSettings;
 class OptionsModel;

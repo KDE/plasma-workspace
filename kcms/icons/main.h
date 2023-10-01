@@ -16,13 +16,13 @@
 #include <KQuickManagedConfigModule>
 
 #include <QCache>
+#include <QTemporaryFile>
 
 class KIconTheme;
 class IconsSettings;
 class IconsData;
 
 class QQuickItem;
-class QTemporaryFile;
 
 namespace KIO
 {
