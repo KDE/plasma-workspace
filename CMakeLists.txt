@@ -324,6 +324,20 @@ set_package_properties(KIOFuse PROPERTIES DESCRIPTION "Provide KIO support to le
                                       TYPE RUNTIME
                                       )
 
+find_package(KWinEffects COMPONENTS
+    kwineffects
+    kwinglutils
+)
+set_package_properties(KWinEffects
+    PROPERTIES DESCRIPTION "KWin effects that do not belong to the core component"
+    TYPE OPTIONAL
+    PURPOSE "Provides additional KWin effects"
+)
+if(KWinEffects_FOUND)
+find_package(epoxy REQUIRED)
+add_subdirectory(kwineffects)
+endif()
+
 if(Qt6WaylandClient_VERSION VERSION_LESS "6.6.0")
     pkg_check_modules(XKBCOMMON xkbcommon REQUIRED IMPORTED_TARGET)
 endif()

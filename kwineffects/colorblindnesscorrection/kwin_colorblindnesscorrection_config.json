@@ -1,0 +1,16 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "qydwhotmail@gmail.com",
+                "Name": "Fushan Wen"
+            }
+        ],
+        "Category": "Accessibility",
+        "Description": "Corrects screen colors for Protanopia, Deuteranopia and Tritanopia",
+        "EnabledByDefault": false,
+        "License": "GPL-2.0+",
+        "Name": "Colorblindness Correction"
+    },
+    "X-KDE-ConfigModule": "kwin_colorblindnesscorrection_config"
+}
