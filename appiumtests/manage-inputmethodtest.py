@@ -4,9 +4,10 @@
 # SPDX-License-Identifier: MIT
 
 import unittest
-from typing import Any, Final
+from typing import Final
 
 from appium import webdriver
+from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 
 WIDGET_ID: Final = "org.kde.plasma.manage-inputmethod"
@@ -24,14 +25,14 @@ class ManageInputMethodTest(unittest.TestCase):
         """
         Opens the widget and initialize the webdriver
         """
-        desired_caps: dict[str, Any] = {}
-        desired_caps["app"] = f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}"
-        desired_caps["environ"] = {
+        options = AppiumOptions()
+        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
+        options.set_capability("environ", {
             "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.warning=false",
-        }
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        cls.driver.implicitly_wait = 10
+        })
+        options.set_capability("timeouts", {'implicit': 10000})
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self) -> None:
         """

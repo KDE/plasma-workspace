@@ -5,25 +5,28 @@
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
 import unittest
-from appium import webdriver
-from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.ui import WebDriverWait
 from datetime import date
+from typing import Final
+
+from appium import webdriver
+from appium.options.common.base import AppiumOptions
+from appium.webdriver.common.appiumby import AppiumBy
 from dateutil.relativedelta import relativedelta
-import time
+from selenium.webdriver.support.ui import WebDriverWait
+
+WIDGET_ID: Final = "org.kde.plasma.digitalclock"
 
 
 class DigitalClockTests(unittest.TestCase):
 
     @classmethod
-    def setUpClass(self):
-        desired_caps = {}
-        desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.digitalclock"
-        desired_caps["timeouts"] = {'implicit': 10000}
-        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        self.driver.implicitly_wait = 10
+    def setUpClass(cls):
+        options = AppiumOptions()
+        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
+        options.set_capability("timeouts", {'implicit': 10000})
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
         # Open Applet
-        self.driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="expandApplet").click()
+        cls.driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="expandApplet").click()
 
     def setUp(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Today").click()

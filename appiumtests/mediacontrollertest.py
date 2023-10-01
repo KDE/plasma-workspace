@@ -10,13 +10,14 @@ import ctypes
 import json
 import subprocess
 import sys
-from tempfile import NamedTemporaryFile
 import unittest
 from os import getcwd, path
+from tempfile import NamedTemporaryFile
 from time import sleep
-from typing import Any
+from typing import Final
 
 from appium import webdriver
+from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
 from selenium.webdriver.remote.webelement import WebElement
@@ -25,6 +26,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from utils.mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
 CMAKE_BINARY_DIR: str = ""
+WIDGET_ID: Final = "org.kde.plasma.mediacontroller"
 
 
 class MediaControllerTests(unittest.TestCase):
@@ -44,14 +46,14 @@ class MediaControllerTests(unittest.TestCase):
         """
         Opens the widget and initialize the webdriver
         """
-        desired_caps: dict[str, Any] = {}
-        desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.mediacontroller"
-        desired_caps["environ"] = {
+        options = AppiumOptions()
+        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
+        options.set_capability("environ", {
             "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.warning=false",
-        }
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        cls.driver.implicitly_wait = 10
+        })
+        options.set_capability("timeouts", {'implicit': 10000})
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
         if path.exists(path.join(CMAKE_BINARY_DIR, "libtouchinputhelper.so")):
             cls.touch_input_iface = ctypes.cdll.LoadLibrary(path.join(CMAKE_BINARY_DIR, "libtouchinputhelper.so"))

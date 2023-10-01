@@ -6,9 +6,10 @@
 import os
 import shutil
 import unittest
-from typing import Any, Final
+from typing import Final
 
 from appium import webdriver
+from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import GLib
 
@@ -48,10 +49,10 @@ class KCMSoundThemeTest(unittest.TestCase):
                 shutil.copytree("../kcms/soundtheme/autotests/data/freedesktop", fdo_sound_theme_folder)
                 cls.addClassCleanup(lambda: shutil.rmtree(fdo_sound_theme_folder))
 
-        desired_caps: dict[str, Any] = {}
-        desired_caps["app"] = f"kcmshell{KDE_VERSION} {KCM_ID}"
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        cls.driver.implicitly_wait = 10
+        options = AppiumOptions()
+        options.set_capability("app", f"kcmshell{KDE_VERSION} {KCM_ID}")
+        options.set_capability("timeouts", {'implicit': 10000})
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self) -> None:
         """

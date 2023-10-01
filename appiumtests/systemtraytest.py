@@ -12,12 +12,13 @@ import unittest
 from datetime import date
 from subprocess import PIPE, Popen
 from time import sleep
-from typing import IO, Any, Final
+from typing import IO, Final
 
 import gi
 
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
 from appium import webdriver
+from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
@@ -25,6 +26,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 KDE_VERSION: Final = 6
+WIDGET_ID: Final = "org.kde.plasma.systemtray"
 
 
 class XEmbedTrayIcon(threading.Thread):
@@ -35,7 +37,7 @@ class XEmbedTrayIcon(threading.Thread):
     def __init__(self, title: str) -> None:
         super().__init__()
 
-        self.__timer: threading.Timer = threading.Timer(20, Gtk.main_quit)  # Failsafe
+        self.__timer: threading.Timer = threading.Timer(300, Gtk.main_quit)  # Failsafe
 
         self.__status_icon: Gtk.StatusIcon = Gtk.StatusIcon(title=title)
         self.__status_icon.set_from_icon_name("xorg")
@@ -126,10 +128,9 @@ class SystemTrayTests(unittest.TestCase):
         """
         Opens the widget and initialize the webdriver
         """
-        desired_caps: dict[str, Any] = {}
-        desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.systemtray"
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        cls.driver.implicitly_wait = 10
+        options = AppiumOptions()
+        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def setUp(self) -> None:
         self.kded = Popen([f"kded{KDE_VERSION}"])

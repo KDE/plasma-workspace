@@ -158,6 +158,7 @@ const QStringList CursorThemeModel::searchPaths()
 #else
     // Get the search path from Xcursor
     QString path = XcursorLibraryPath();
+    qCritical() << "XcursorLibraryPath" << path;
 #endif
 
     // Separate the paths

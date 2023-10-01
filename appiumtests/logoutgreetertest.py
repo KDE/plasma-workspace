@@ -4,26 +4,23 @@
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
-import unittest
-from appium import webdriver
-from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.ui import WebDriverWait
-from datetime import date
-from dateutil.relativedelta import relativedelta
 import subprocess
-import time
 import sys
+import unittest
+
+from appium import webdriver
+from appium.options.common.base import AppiumOptions
+from appium.webdriver.common.appiumby import AppiumBy
 
 
 class LogoutGreeterTests(unittest.TestCase):
 
     def setUp(self):
         self.proc = subprocess.Popen(["{}/ksmserver-logout-greeter".format(sys.argv[1]), "--windowed"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        desired_caps = {}
-        desired_caps["app"] = str(self.proc.pid)
-        desired_caps["timeouts"] = {'implicit': 10000}
-        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        self.driver.implicitly_wait = 10
+        options = AppiumOptions()
+        options.set_capability("app", str(self.proc.pid))
+        options.set_capability("timeouts", {'implicit': 10000})
+        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self):
         self.driver.quit()
