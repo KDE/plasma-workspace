@@ -218,7 +218,7 @@ msgstr "O trebello de batería activou a inhibición para todo o sistema"
 #: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
-msgstr "Non se puido activar o modo de %1"
+msgstr "Non foi posíbel activar o modo de %1"
 
 #: package/contents/ui/main.qml:376
 #, kde-format

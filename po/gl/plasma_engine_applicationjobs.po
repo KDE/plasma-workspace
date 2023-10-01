@@ -27,7 +27,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is the subject (can be anything) upon which the job is performed"
 msgid "The JobView for %1 cannot be found"
-msgstr "Non se pode atopar a JobView para %1"
+msgstr "Non é posíbel atopar a JobView para %1"
 
 #: kuiserverengine.cpp:209
 #, kde-format

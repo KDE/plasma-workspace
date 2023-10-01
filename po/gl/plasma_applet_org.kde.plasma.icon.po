@@ -19,14 +19,14 @@ msgstr ""
 #: iconapplet.cpp:92
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
-msgstr "Non se puido crear o cartafol de trebellos de iconas «%1»."
+msgstr "Non foi posíbel crear o cartafol de trebellos de iconas «%1»."
 
 #: iconapplet.cpp:138
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
-"Non se puido copiar o ficheiro de escritorio de trebello de icona de «%1» a "
-"«%2»."
+"Non foi posíbel copiar o ficheiro de escritorio de trebello de icona de «%1» "
+"a «%2»."
 
 #: iconapplet.cpp:385
 #, kde-format

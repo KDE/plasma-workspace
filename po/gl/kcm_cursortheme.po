@@ -40,12 +40,12 @@ msgstr ""
 #: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr "Non se pode crear un ficheiro temporal."
+msgstr "Non é posíbel crear un ficheiro temporal."
 
 #: kcmcursortheme.cpp:393
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Non se pode descargar o arquivo %1 de tema do cursor."
+msgstr "Non é posíbel descargar o arquivo %1 de tema do cursor."
 
 #: kcmcursortheme.cpp:424
 #, kde-format
@@ -55,7 +55,7 @@ msgstr "O ficheiro non é un arquivo de tema de iconas correcto."
 #: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr "Non se puido crear o cartafol «icons»."
+msgstr "Non foi posíbel crear o cartafol «icons»."
 
 #: kcmcursortheme.cpp:440
 #, kde-format

@@ -74,7 +74,7 @@ msgstr "Matar a configuración das aplicacións"
 #: killrunner_config.ui:39
 #, kde-format
 msgid "&Use trigger word"
-msgstr "&Utilizar a palabra detonante."
+msgstr "&Usar a palabra detonante."
 
 #. i18n: ectx: property (text), widget (QLabel, label_trigger)
 #: killrunner_config.ui:51
