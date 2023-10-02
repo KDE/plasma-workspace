@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import os
 import unittest
 from typing import Final
 
@@ -29,6 +30,11 @@ class KCMCursorThemeTest(unittest.TestCase):
         options = AppiumOptions()
         options.set_capability("app", f"kcmshell{KDE_VERSION} {KCM_ID}")
         options.set_capability("timeouts", {'implicit': 10000})
+        # From XCURSORPATH
+        icon_data_dirs: str = ":".join([f"{dir}/icons" for dir in os.environ['XDG_DATA_DIRS'].split(":")])
+        options.set_capability("environ", {
+            "XCURSOR_PATH": f"{icon_data_dirs}:~/.icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons",
+        })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self) -> None:
@@ -50,7 +56,8 @@ class KCMCursorThemeTest(unittest.TestCase):
         Tests the KCM can be opened
         """
         self.driver.find_element(AppiumBy.NAME, "&Configure Launch Feedback…")
-        self.driver.find_element(AppiumBy.NAME, "DMZ (Black)")
+        self.driver.find_element(AppiumBy.NAME, "Breeze")
+        self.driver.find_element(AppiumBy.NAME, "Breeze Light")
 
 
 if __name__ == '__main__':
