@@ -7,7 +7,9 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
+
 #include <QDir>
+#include <QLoggingCategory>
 #include <QRegularExpression>
 #include <private/qtx11extras_p.h>
 
@@ -22,6 +24,8 @@
 #define XCURSOR_LIB_MAJOR XCURSOR_MAJOR
 #define XCURSOR_LIB_MINOR XCURSOR_MINOR
 #endif
+
+Q_LOGGING_CATEGORY(KCM_CURSORTHEME, "kcm_cursortheme")
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -158,7 +162,7 @@ const QStringList CursorThemeModel::searchPaths()
 #else
     // Get the search path from Xcursor
     QString path = XcursorLibraryPath();
-    qCritical() << "XcursorLibraryPath" << path;
+    qCDebug(KCM_CURSORTHEME) << "XcursorLibraryPath:" << path;
 #endif
 
     // Separate the paths
@@ -259,6 +263,7 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
 
 void CursorThemeModel::processThemeDir(const QDir &themeDir)
 {
+    qCDebug(KCM_CURSORTHEME) << "Searching in" << themeDir;
     bool haveCursors = themeDir.exists(QStringLiteral("cursors"));
 
     // Special case handling of "default", since it's usually either a
@@ -307,7 +312,9 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 void CursorThemeModel::insertThemes()
 {
     // Scan each base dir for Xcursor themes and add them to the list.
-    for (const auto paths{searchPaths()}; const QString &baseDir : paths) {
+    const QStringList paths{searchPaths()};
+    qCDebug(KCM_CURSORTHEME) << "searchPaths:" << paths;
+    for (const QString &baseDir : paths) {
         QDir dir(baseDir);
         if (!dir.exists())
             continue;
