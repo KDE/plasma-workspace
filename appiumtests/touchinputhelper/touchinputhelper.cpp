@@ -27,9 +27,14 @@ class FakeInputInterface : public QWaylandClientExtensionTemplate<FakeInputInter
 {
 public:
     FakeInputInterface()
-        : QWaylandClientExtensionTemplate<FakeInputInterface>(ORG_KDE_KWIN_FAKE_INPUT_TOUCH_FRAME_SINCE_VERSION)
+        : QWaylandClientExtensionTemplate<FakeInputInterface>(5 /*ORG_KDE_KWIN_FAKE_INPUT_DESTROY_SINCE_VERSION*/)
     {
         initialize();
+    }
+
+    ~FakeInputInterface()
+    {
+        destroy();
     }
 };
 
