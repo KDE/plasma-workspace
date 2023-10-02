@@ -51,6 +51,10 @@ static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
+static const QString s_packageKitService = QStringLiteral("org.freedesktop.PackageKit");
+static const QString s_packageKitPath = QStringLiteral("/org/freedesktop/PackageKit");
+static const QString s_packageKitOfflineInterface = QStringLiteral("org.freedesktop.PackageKit.Offline");
+
 KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen)
     : QuickViewSharedEngine(parent)
     , m_result(false)
@@ -126,6 +130,9 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         }
     });
 
+    context->setContextProperty("softwareUpdatePending", false);
+    checkSoftwareUpdatePending();
+
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
 
@@ -169,6 +176,7 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     connect(rootObject(), SIGNAL(rebootRequested2(int)), SLOT(slotReboot(int)));
     connect(rootObject(), SIGNAL(cancelRequested()), SLOT(reject()));
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
+    connect(rootObject(), SIGNAL(cancelSoftwareUpdateRequested()), SLOT(slotCancelSoftwareUpdate()));
 
     connect(screen(), &QScreen::geometryChanged, this, [this] {
         setGeometry(screen()->geometry());
@@ -256,6 +264,45 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
         break;
     }
     reject();
+}
+
+void KSMShutdownDlg::slotCancelSoftwareUpdate()
+{
+    QDBusMessage packageKitMessage =
+        QDBusMessage::createMethodCall(s_packageKitService, s_packageKitPath, s_packageKitOfflineInterface, QStringLiteral("Cancel"));
+    QDBusPendingReply<> packageKitCall = QDBusConnection::systemBus().asyncCall(packageKitMessage);
+    QDBusPendingCallWatcher *packageKitCallWatcher = new QDBusPendingCallWatcher(packageKitCall, this);
+    connect(packageKitCallWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<> reply = *watcher;
+        watcher->deleteLater();
+
+        if (reply.isError()) {
+            qWarning() << "Failed to cancel pending software update" << reply.error().message();
+        } else {
+            checkSoftwareUpdatePending();
+        }
+    });
+}
+
+void KSMShutdownDlg::checkSoftwareUpdatePending()
+{
+    QDBusMessage packageKitMessage = QDBusMessage::createMethodCall(s_packageKitService, s_packageKitPath, s_dbusPropertiesInterface, QStringLiteral("GetAll"));
+    packageKitMessage.setArguments({s_packageKitOfflineInterface});
+    QDBusPendingReply<QVariantMap> packageKitCall = QDBusConnection::systemBus().asyncCall(packageKitMessage);
+    QDBusPendingCallWatcher *packageKitCallWatcher = new QDBusPendingCallWatcher(packageKitCall, this);
+    connect(packageKitCallWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<QVariantMap> reply = *watcher;
+        watcher->deleteLater();
+
+        if (reply.isError() || !rootContext()) {
+            return;
+        }
+
+        const QVariantMap properties = reply.value();
+        if (properties.value(QStringLiteral("UpdateTriggered")).toBool() || properties.value(QStringLiteral("UpgradeTriggered")).toBool()) {
+            rootContext()->setContextProperty("softwareUpdatePending", true);
+        }
+    });
 }
 
 void KSMShutdownDlg::accept()

@@ -41,6 +41,7 @@ public Q_SLOTS:
     void slotReboot(int);
     void slotSuspend(int);
     void slotLockScreen();
+    void slotCancelSoftwareUpdate();
 
 Q_SIGNALS:
     void accepted();
@@ -50,6 +51,8 @@ protected:
     void resizeEvent(QResizeEvent *e) override;
 
 private:
+    void checkSoftwareUpdatePending();
+
     bool m_windowed = false;
     QString m_bootOption;
     QStringList rebootOptions;

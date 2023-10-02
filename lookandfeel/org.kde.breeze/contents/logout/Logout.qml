@@ -31,6 +31,7 @@ Item {
     signal rebootRequested2(int opt)
     signal cancelRequested()
     signal lockScreenRequested()
+    signal cancelSoftwareUpdateRequested()
 
     property alias backgroundColor: backgroundRect.color
 
@@ -181,21 +182,35 @@ Item {
             }
             LogoutButton {
                 id: rebootButton
-                iconSource: "system-reboot"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
+                iconSource: softwareUpdatePending ? "update-none" : "system-reboot"
+                text: softwareUpdatePending ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Restart")
+                                            : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                 action: root.rebootRequested
                 KeyNavigation.left: hibernateButton
-                KeyNavigation.right: shutdownButton
+                KeyNavigation.right: rebootWithoutUpdatesButton
                 KeyNavigation.down: okButton
                 focus: sdtype === ShutdownType.ShutdownTypeReboot
                 visible: maysd
+            }
+            LogoutButton {
+                id: rebootWithoutUpdatesButton
+                iconSource: "system-reboot"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
+                action: () => {
+                    root.cancelSoftwareUpdateRequested()
+                    root.rebootRequested()
+                }
+                KeyNavigation.left: rebootButton
+                KeyNavigation.right: shutdownButton
+                KeyNavigation.down: okButton
+                visible: maysd && softwareUpdatePending
             }
             LogoutButton {
                 id: shutdownButton
                 iconSource: "system-shutdown"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
                 action: root.haltRequested
-                KeyNavigation.left: rebootButton
+                KeyNavigation.left: rebootWithoutUpdatesButton
                 KeyNavigation.right: logoutButton
                 KeyNavigation.down: okButton
                 focus: sdtype === ShutdownType.ShutdownTypeHalt
@@ -228,7 +243,8 @@ Item {
             text: {
                 switch (sdtype) {
                     case ShutdownType.ShutdownTypeReboot:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
+                        return softwareUpdatePending ? i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Installing software updates and restarting in 1 second", "Installing software updates and restarting in %1 seconds", root.remainingTime)
+                                                     : i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
                     case ShutdownType.ShutdownTypeHalt:
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
                     default:
