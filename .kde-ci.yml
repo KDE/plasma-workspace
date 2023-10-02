@@ -67,5 +67,10 @@ Dependencies:
     'libraries/polkit-qt-1': '@latest'
     'sdk/selenium-webdriver-at-spi': '@latest'
 
+RuntimeDependencies:
+- 'on': ['Linux']
+  'require':
+    'plasma/kde-cli-tools': '@same'
+
 Options:
   require-passing-tests-on: ['@all']

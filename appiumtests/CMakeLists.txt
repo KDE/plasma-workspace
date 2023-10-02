@@ -17,10 +17,60 @@ if(NOT SeleniumWebDriverATSPI_FOUND)
     return()
 endif()
 
-if("${QT_MAJOR_VERSION}" STREQUAL "6" AND NOT Qt${QT_MAJOR_VERSION}_VERSION VERSION_GREATER_EQUAL "6.5.0")
-    # Before Qt 6.5 the AbstractButtons didn't trigger properly at all.
-    return()
-endif()
+add_test(
+    NAME analogclocktest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/analogclocktest.py
+)
+set_tests_properties(analogclocktest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME appmenutest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/appmenutest.py
+)
+set_tests_properties(appmenutest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME calendartest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/calendartest.py
+)
+set_tests_properties(calendartest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME clipboardtest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME devicenotifiertest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/devicenotifiertest.py
+)
+set_tests_properties(devicenotifiertest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME icontest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/icontest.py
+)
+set_tests_properties(icontest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME lock_logouttest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/lock_logouttest.py
+)
+set_tests_properties(lock_logouttest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME manage-inputmethodtest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/manage-inputmethodtest.py
+)
+set_tests_properties(manage-inputmethodtest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME notificationstest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
+)
+set_tests_properties(notificationstest PROPERTIES TIMEOUT 120)
 
 add_test(
     NAME digitalclocktest
@@ -41,10 +91,95 @@ add_test(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 # StatusIcon only works with the X11 backend
-set_tests_properties(systemtraytest PROPERTIES TIMEOUT 300 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
+set_tests_properties(systemtraytest PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
 
 add_test(
     NAME logoutgreetertest
-    COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py ${KDE_INSTALL_FULL_LIBEXECDIR}
+    COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py ${KDE_INSTALL_LIBEXECDIR}
 )
 set_tests_properties(logoutgreetertest PROPERTIES TIMEOUT 300 ENVIRONMENT "PLASMA_SESSION_GUI_TEST=1")
+
+# KCM autotests
+add_test(
+    NAME kcm_autostart_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_autostart_test.py
+)
+set_tests_properties(kcm_autostart_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_colors_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_colors_test.py
+)
+set_tests_properties(kcm_colors_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_cursortheme_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_cursortheme_test.py
+)
+set_tests_properties(kcm_cursortheme_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_desktoptheme_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_desktoptheme_test.py
+)
+set_tests_properties(kcm_desktoptheme_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_feedback_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_feedback_test.py
+)
+set_tests_properties(kcm_feedback_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_fonts_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_fonts_test.py
+)
+set_tests_properties(kcm_fonts_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_icons_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_icons_test.py
+)
+set_tests_properties(kcm_icons_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_fontinst_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_fontinst_test.py
+)
+set_tests_properties(kcm_fontinst_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_lookandfeel_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_lookandfeel_test.py
+)
+set_tests_properties(kcm_lookandfeel_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_nightcolor_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_nightcolor_test.py
+)
+set_tests_properties(kcm_nightcolor_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_notifications_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_notifications_test.py
+)
+set_tests_properties(kcm_notifications_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_regionandlang_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_regionandlang_test.py
+)
+set_tests_properties(kcm_regionandlang_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_style_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_style_test.py
+)
+set_tests_properties(kcm_style_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_users_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_users_test.py
+)
+set_tests_properties(kcm_users_test PROPERTIES TIMEOUT 120)
