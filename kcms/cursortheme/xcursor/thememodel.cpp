@@ -307,13 +307,13 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 void CursorThemeModel::insertThemes()
 {
     // Scan each base dir for Xcursor themes and add them to the list.
-    foreach (const QString &baseDir, searchPaths()) {
+    for (const auto paths{searchPaths()}; const QString &baseDir : paths) {
         QDir dir(baseDir);
         if (!dir.exists())
             continue;
 
         // Process each subdir in the directory
-        foreach (const QString &name, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
+        for (const auto list{dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)}; const QString &name : list) {
             // Don't process the theme if a theme with the same name already exists
             // in the list. Xcursor will pick the first one it finds in that case,
             // and since we use the same search order, the one Xcursor picks should
