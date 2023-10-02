@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2014-10-28 15:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -31,36 +31,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:305
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "या बदलांचा प्रभाव लागू करण्याकरिता तुम्हाला केडीई पुन्हाप्रारंभ करावे लागेल."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:390
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "कर्सर शैली संग्रह %1 शोधण्यास अपयशी."
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:421
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "फाईल %1 वैध कर्सर शैली संग्रह नुरूप दृश्यास्पद आढळून येत नाही."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "%1 नावाची शैली अगोदरच तुमच्या चिन्ह शैली संचयीकेत अस्तित्वात आहे. तुम्हाला ती खोडून टाकून "
 "ही ठेवायची आहे का?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "शैली खोडून पुन्हा लिहायची का?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

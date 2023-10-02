@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2023-07-02 19:54+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -217,7 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Impossibile trovare un esempio in questa lingua"
 
-#: kcmregionandlang.cpp:115
+#: kcmregionandlang.cpp:116
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""

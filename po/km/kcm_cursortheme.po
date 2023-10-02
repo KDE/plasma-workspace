@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -31,36 +31,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:305
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "អ្នក​ត្រូវ​តែ​ចាប់ផ្តើម KDE ឡើងវិញ ដើម្បី​ឲ្យ​ការ​ផ្លាស់ប្តូរ​មាន​ប្រសិទ្ធិភាព ។"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:390
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "មិន​អាច​រក​ប័ណ្ណសារ​ស្បែក​ទស្សន៍​ទ្រនិច %1 បាន​ឡើយ ។"
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:421
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "ឯកសារ %1 ទំនង​ជា​មិន​មែន​ប័ណ្ណសារស្បែក​ទស្សន៍​ទ្រនិច​ត្រឹមត្រូវ​ទេ ។"
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgid ""
 msgstr ""
 "​ស្បែក​ដែល​មាន​ឈ្មោះ %1 មាន​រួច​ហើយ​ក្នុង​ថត​ស្បែក​រូប​តំណាង​របស់​អ្នក ។ តើ​អ្នក​ចង់​ជំនួស​វា ​ដោយ​ស្បែក​នេះ​ឬ​ទេ?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "សរសេរ​ជាន់​លើ​ស្បែក​ឬ ?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

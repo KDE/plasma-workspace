@@ -4,19 +4,20 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.analogclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 02:03+0000\n"
-"PO-Revision-Date: 2017-05-16 06:55-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-01 21:14+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: contents/config/config.qml:13
@@ -28,19 +29,19 @@ msgstr "מראה"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"
-msgstr ""
+msgstr "השעה הנוכחית היא %1, התאריך הנוכחי הוא %2"
 
 #: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
-msgstr "הראה את מחוג השניות"
+msgstr "הצגת מחוג השניות"
 
 #: contents/ui/configGeneral.qml:24
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "כללי:"
 
 #: contents/ui/configGeneral.qml:28
 #, kde-format
 msgid "Show time zone"
-msgstr "הצג את איזור הזמן"
+msgstr "הצגת אזור הזמן"

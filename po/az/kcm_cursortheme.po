@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2023-02-19 15:11+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Cari kursor mövzusunun adı"
 msgid "Current cursor size"
 msgstr "Cari kursorun ölçüsü"
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:305
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -37,27 +37,27 @@ msgstr ""
 "Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
 "başlatmalısınız."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Müvəqqəti fayl yaradıla bilmir."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:390
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Yüklənə bilməyən İkon mövzu arxivi: %1"
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:421
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fayl düzgün İkon mövzu arxivi deyil."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "\"icons\" qovluğu yaradıla bilmədi."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +66,12 @@ msgstr ""
 "%1 adlı mövzu artıq sizin ikon mövzu arxivinizdə mövcuddur. Mövcud olanı "
 "yenisi ilə əvəz etmək istəyirsiniz?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Mövzu üstünə yazılsın?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Mövzu uğurla quraşdırıldı."

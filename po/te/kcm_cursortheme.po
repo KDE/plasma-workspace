@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -30,36 +30,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:305
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ఈ మార్పులు ప్రభావితం అగుటకు మీరు KDEను పునఃప్రారంభించవలసి వుంటుంది."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:390
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "కర్సర్ థీమ్ ఆర్చివ్‌ను %1 కనుగొనలేక పోయింది."
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:421
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "ఫైలు %1 చెల్లునటువంటి కర్సర్ థీమ్ ఆర్చివ్ వలె అనిపించుటలేదు."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgstr ""
 "%1 నామముతో వున్న థీమ్ యిప్పటికే మీ ప్రతిమ థీమ్ ఫోల్డర్‌లో వుంది. మీరు దానిని దీనితో పునఃస్థాపించుదామని "
 "అనుకొనుచున్నారా?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "థీమ్‌ను వోవర్‌రైట్ చేయాలా?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

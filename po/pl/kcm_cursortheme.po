@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2023-09-17 12:58+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -30,33 +30,33 @@ msgstr "Nazwa bieżącego zestawu wskaźników"
 msgid "Current cursor size"
 msgstr "Rozmiar bieżącego wskaźnika"
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:305
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Zmiany zostaną zastosowane dopiero po ponownym uruchomieniu Plazmy."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nie można utworzyć pliku tymczasowego."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:390
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nie można pobrać archiwum zestawu ikon: %1"
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:421
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ten plik nie jest poprawnym zestawem ikon."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Nie można utworzyć katalogu 'ikon'."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +65,12 @@ msgstr ""
 "Zestaw o nazwie %1 już istnieje w twoim katalogu zestawów ikon. Czy chcesz "
 "go zastąpić?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Czy zastąpić zestaw?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Pomyślnie wgrano zestaw."

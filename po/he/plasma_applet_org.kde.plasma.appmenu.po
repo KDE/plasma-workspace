@@ -1,17 +1,18 @@
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2017-05-23 08:57-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew\n"
+"PO-Revision-Date: 2023-10-01 21:17+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -22,7 +23,7 @@ msgstr "מראה"
 #: package/contents/ui/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
-msgstr "השתמש בכפתור יחיד עבור תפריט היישומים"
+msgstr "להשתמש בכפתור יחיד עבור תפריט היישומים"
 
 #: package/contents/ui/configGeneral.qml:27
 #, kde-format
@@ -33,17 +34,17 @@ msgstr "הראה תפריט יישומים מלא"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "פתיחת תפריט"
 
 #: plugin/appmenumodel.cpp:84
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "חיפוש"
 
 #: plugin/appmenumodel.cpp:91
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "חיפוש…"
 
 #~ msgid "application-menu"
 #~ msgstr "application-menu"

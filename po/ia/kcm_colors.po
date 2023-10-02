@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:05+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2023-08-03 17:30+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
-#: colors.cpp:270
+#: colors.cpp:272
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Incapace a crear un file temporari."
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Incapace a discargar schema de color: %1"
 
-#: colors.cpp:301
+#: colors.cpp:303
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Iste file non es un file de schema de color."
 
-#: colors.cpp:320
+#: colors.cpp:322
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Falleva a crear le dossier de datos  'color-scheme'"
 
-#: colors.cpp:327
+#: colors.cpp:329
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Falleva a crear le dossier de datos  'color-scheme'"
 
-#: colors.cpp:344
+#: colors.cpp:346
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Schema de color installate con successo."

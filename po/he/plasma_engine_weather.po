@@ -1,20 +1,21 @@
 # Diego Iastrubni <elcuco@kde.org>, 2013.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2017-05-16 06:57-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-01 21:11+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -127,12 +128,10 @@ msgid "heavy rain shower"
 msgstr "ממטר גשם כבד"
 
 #: bbcukmet_i18n.dat:19
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr "ממטר גשם כבד"
+msgstr "ממטרי גשם כבדים"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
@@ -168,7 +167,7 @@ msgstr "ממטרי שלג כבדים"
 #, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr ""
+msgstr "ענן קל"
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
@@ -184,12 +183,10 @@ msgid "light rain shower"
 msgstr "ממטר גשם קל"
 
 #: bbcukmet_i18n.dat:28
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr "ממטר גשם קל"
+msgstr "ממטרי גשם קלים"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
@@ -226,13 +223,13 @@ msgstr "ממטרי שלג קל"
 #, kde-format
 msgctxt "weather condition"
 msgid "mist"
-msgstr "אד"
+msgstr "ערפל קל"
 
 #: bbcukmet_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "misty"
-msgstr "אד"
+msgstr "ערפילי קלות"
 
 #: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:264
 #, kde-format
@@ -292,7 +289,7 @@ msgstr "שמשי לפרקים"
 #, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr ""
+msgstr "ענן עבה"
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
@@ -308,12 +305,10 @@ msgid "thundery shower"
 msgstr "ממטר וסופות רעמים"
 
 #: bbcukmet_i18n.dat:48
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr "ממטר וסופות רעמים"
+msgstr "ממטרים וסופות רעמים"
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
@@ -436,12 +431,10 @@ msgid "heavy rain shower"
 msgstr "ממטר גשם כבד"
 
 #: bbcukmet_i18n.dat:69
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain showers"
-msgstr "ממטר גשם כבד"
+msgstr "ממטרי גשם כבדים"
 
 #: bbcukmet_i18n.dat:70
 #, kde-format
@@ -477,7 +470,7 @@ msgstr "ממטרי שלג כבד"
 #, kde-format
 msgctxt "weather forecast"
 msgid "light cloud"
-msgstr ""
+msgstr "ענן קל"
 
 #: bbcukmet_i18n.dat:76
 #, kde-format
@@ -492,12 +485,10 @@ msgid "light rain shower"
 msgstr "ממטר גשם קל"
 
 #: bbcukmet_i18n.dat:78
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "light rain showers"
-msgstr "ממטר גשם קל"
+msgstr "ממטרי גשם קלים"
 
 #: bbcukmet_i18n.dat:79
 #, kde-format
@@ -533,13 +524,13 @@ msgstr "ממטרי שלג קל"
 #, kde-format
 msgctxt "weather forecast"
 msgid "mist"
-msgstr "אד"
+msgstr "ערפל קל"
 
 #: bbcukmet_i18n.dat:85
 #, kde-format
 msgctxt "weather forecast"
 msgid "misty"
-msgstr "אד"
+msgstr "ערפילי קלות"
 
 #: bbcukmet_i18n.dat:86
 #, kde-format
@@ -593,13 +584,13 @@ msgstr "שמשי לפרקים"
 #, kde-format
 msgctxt "weather forecast"
 msgid "thick cloud"
-msgstr ""
+msgstr "ענן עבה"
 
 #: bbcukmet_i18n.dat:95
 #, kde-format
 msgctxt "weather forecast"
 msgid "thunderstorm"
-msgstr ""
+msgstr "סופת רעמים"
 
 #: bbcukmet_i18n.dat:96
 #, kde-format
@@ -608,12 +599,10 @@ msgid "thundery shower"
 msgstr "ממטר וסופות רעמים"
 
 #: bbcukmet_i18n.dat:97
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thundery showers"
-msgstr "ממטר וסופות רעמים"
+msgstr "ממטרים וסופות רעמים"
 
 #: bbcukmet_i18n.dat:98
 #, kde-format
@@ -631,7 +620,7 @@ msgstr "עננות לבנה"
 #, kde-format
 msgctxt "visibility"
 msgid "Excellent"
-msgstr ""
+msgstr "מצוינת"
 
 #: bbcukmet_i18n.dat:101
 #, kde-format
@@ -643,19 +632,19 @@ msgstr "טובה מאוד"
 #, kde-format
 msgctxt "visibility"
 msgid "Good"
-msgstr "טוב"
+msgstr "טובה"
 
 #: bbcukmet_i18n.dat:103
 #, kde-format
 msgctxt "visibility"
 msgid "Moderate"
-msgstr "מתון"
+msgstr "מתונה"
 
 #: bbcukmet_i18n.dat:104
 #, kde-format
 msgctxt "visibility"
 msgid "Poor"
-msgstr "גרוע"
+msgstr "גרועה"
 
 #: bbcukmet_i18n.dat:105
 #, kde-format
@@ -691,7 +680,7 @@ msgstr "ירידה בכיסוי העננות"
 #, kde-format
 msgctxt "weather condition"
 msgid "Distant Precipitation"
-msgstr "משקעים במרחק"
+msgstr "משקעים באופק"
 
 #: envcan_i18n.dat:7
 #, kde-format
@@ -727,7 +716,7 @@ msgstr "ערפל"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog Bank Near Station"
-msgstr "ערפל בקירבת התחנה"
+msgstr "ערפל בקרבת התחנה"
 
 #: envcan_i18n.dat:13
 #, kde-format
@@ -739,7 +728,7 @@ msgstr "ערפל קופא"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog Patches"
-msgstr "קרעי ערפל"
+msgstr "ערפל מקוטע"
 
 #: envcan_i18n.dat:15
 #, kde-format
@@ -1156,20 +1145,16 @@ msgid "Thunderstorm with Rain"
 msgstr "סופות רעמים עם גשם"
 
 #: envcan_i18n.dat:84
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Thunderstorm with Rain"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr "סופות רעמים עם גשם"
+msgstr "סופות רעמים עם ממטרים קלים"
 
 #: envcan_i18n.dat:85
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Recent Thunderstorm with Heavy Rain"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr "סופות רעמים עם גשם כבד בזמן האחרון"
+msgstr "סופות רעמים עם גשם כבד"
 
 #: envcan_i18n.dat:86
 #, kde-format
@@ -1646,20 +1631,16 @@ msgid "Cloudy"
 msgstr "מעונן"
 
 #: envcan_i18n.dat:165
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly cloudy"
 msgstr "מעונן חלקית"
 
 #: envcan_i18n.dat:166
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly cloudy"
-msgstr "מעונן חלקית"
+msgstr "מעונן בעיקר"
 
 #: envcan_i18n.dat:167
 #, kde-format
@@ -2648,12 +2629,10 @@ msgid "Sunny"
 msgstr "שמשי"
 
 #: envcan_i18n.dat:328
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mainly Sunny"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly sunny"
-msgstr "שמשי"
+msgstr "שמשי בעיקר"
 
 #: envcan_i18n.dat:329
 #, kde-format
@@ -2747,14 +2726,13 @@ msgstr "ארצות הברית"
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
-msgstr ""
+msgstr "היום"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1010
-#, fuzzy, kde-format
-#| msgid "Night"
+#, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
-msgstr "לילה"
+msgstr "הלילה"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:646
 #: ions/envcan/ion_envcan.cpp:1551
@@ -2809,13 +2787,13 @@ msgstr "שבת"
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
-msgstr "מידע משירות החיזור של ה־BBC"
+msgstr "מידע משירות החיזוי של ה־BBC"
 
 #: ions/dwd/ion_dwd.cpp:686
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "מקור: שירות מזג האוויר הגרמני"
 
 #: ions/envcan/ion_envcan.cpp:901 ions/envcan/ion_envcan.cpp:903
 #: ions/envcan/ion_envcan.cpp:1403 ions/envcan/ion_envcan.cpp:1544
@@ -2849,12 +2827,10 @@ msgid "Trace"
 msgstr "הצג מסלול"
 
 #: ions/envcan/ion_envcan.cpp:1607
-#, fuzzy, kde-format
-#| msgctxt "credit line, keep string short"
-#| msgid "Data from Environment Canada"
+#, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
-msgstr "מידע מ־\"Environment Canada\""
+msgstr "מידע משינויי אקלים קנדה"
 
 #: ions/noaa/ion_noaa.cpp:633
 #, kde-format
@@ -2885,7 +2861,7 @@ msgstr "אביך"
 #, kde-format
 msgctxt "weather condition"
 msgid "fog with icing"
-msgstr "ערפל בסמוך"
+msgstr "ערפל עם קפאון"
 
 #: ions/wetter.com/ion_wettercom.cpp:169
 #, kde-format
@@ -3960,12 +3936,10 @@ msgid "Partly Cloudy with Haze"
 msgstr "מעונן חלקית עם אובך"
 
 #: noaa_i18n.dat:178
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Heavy Freezing Fog"
+#, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
-msgstr "ערפל קופא כבד"
+msgstr "ערפל קופא במקטעים"
 
 #: noaa_i18n.dat:179
 #, kde-format
@@ -3989,7 +3963,7 @@ msgstr "גשם ערפל"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Fog/Mist"
-msgstr "גשם ערפל / אד"
+msgstr "גשם ערפל / ערפל קל"
 
 #: noaa_i18n.dat:183
 #, kde-format
@@ -4019,7 +3993,7 @@ msgstr "ממטרי גשם"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers Fog/Mist"
-msgstr "ממטרי גשם ערפל / אד"
+msgstr "ממטרי גשם ערפל / ערפל קל"
 
 #: noaa_i18n.dat:188
 #, kde-format
@@ -4031,7 +4005,7 @@ msgstr "ממטרי גשם בסמוך"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers in Vicinity Fog/Mist"
-msgstr "ממטרי גשם בסמוך ערפל / אד"
+msgstr "ממטרי גשם בסמוך ערפל / ערפל קל"
 
 #: noaa_i18n.dat:190
 #, kde-format
@@ -4067,67 +4041,67 @@ msgstr "ערפל רדוד בסמוך"
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Hail"
-msgstr "ממטרים ברד"
+msgstr "ממטרי ברד"
 
 #: noaa_i18n.dat:197
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Ice Pellets"
-msgstr "ממטרים כדורי ברד"
+msgstr "ממטרי כדורי ברד"
 
 #: noaa_i18n.dat:198
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Fog"
-msgstr "ממטרים בסמוך ערפל"
+msgstr "ממטרים בערפל סמוך"
 
 #: noaa_i18n.dat:199
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Snow"
-msgstr "ממטרים בסמוך שלג"
+msgstr "ממטרים בשלג סמוך"
 
 #: noaa_i18n.dat:200
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain"
-msgstr "ממטרים גשם"
+msgstr "ממטרי גשם"
 
 #: noaa_i18n.dat:201
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain Fog/Mist"
-msgstr "ממטרים גשם ערפל / אד"
+msgstr "ממטרי גשם ערפל / ערפל קל"
 
 #: noaa_i18n.dat:202
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity"
-msgstr "ממטרים גשם בסמוך"
+msgstr "ממטרי גשם בסמוך"
 
 #: noaa_i18n.dat:203
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity Fog/Mist"
-msgstr "ממטרים גשם בסמוך ערפל / אד"
+msgstr "ממטרי גשם בסמוך ערפל / אד"
 
 #: noaa_i18n.dat:204
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow"
-msgstr "ממטרים שלג"
+msgstr "ממטרי שלג"
 
 #: noaa_i18n.dat:205
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog"
-msgstr "ממטרים שלג ערפל"
+msgstr "ממטרי שלג ערפל"
 
 #: noaa_i18n.dat:206
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog/Mist"
-msgstr "ממטרים שלג ערפל / אד"
+msgstr "ממטרי שלג ערפל / ערפל קל"
 
 #: noaa_i18n.dat:207
 #, kde-format
@@ -4139,7 +4113,7 @@ msgstr "ברד קל / גראופל"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Blowing Snow"
-msgstr "שלג שלג מתעופף"
+msgstr "שלג מעיף שלג"
 
 #: noaa_i18n.dat:211
 #, kde-format
@@ -4157,7 +4131,7 @@ msgstr "שלג ערפל"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog/Mist"
-msgstr "שלג ערפל / אד"
+msgstr "שלג ערפל / ערפל קל"
 
 #: noaa_i18n.dat:214
 #, kde-format
@@ -4502,12 +4476,10 @@ msgid "Severe Tstms"
 msgstr "סופות רעמים כבדות"
 
 #: noaa_i18n.dat:275
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr "ייתכן שלג"
+msgstr "סיכוי קל לשלג / גשם מעורב בשלג"
 
 #: noaa_i18n.dat:276
 #, kde-format
@@ -4528,12 +4500,10 @@ msgid "Snow/Sleet"
 msgstr "שלג / גשם מעורב בשלג"
 
 #: noaa_i18n.dat:279
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr "ייתכן גשם"
+msgstr "סיכוי קל לגשם / גשם מעורב בשלג"
 
 #: noaa_i18n.dat:280
 #, kde-format
@@ -4554,12 +4524,10 @@ msgid "Rain/Sleet"
 msgstr "גשם / גשם מעורב בשלג"
 
 #: noaa_i18n.dat:283
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain/Freezing Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr "ייתכן גשם / גשם קופא"
+msgstr "סיכוי קל לגשם / גשם קופא"
 
 #: noaa_i18n.dat:284
 #, kde-format
@@ -4580,12 +4548,10 @@ msgid "Rain/Freezing Rain"
 msgstr "גשם / גשם קופא"
 
 #: noaa_i18n.dat:287
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Wintry Mix"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr "אווירה סגרירית"
+msgstr "צפויה אווירה סגרירית"
 
 #: noaa_i18n.dat:288
 #, kde-format
@@ -4594,12 +4560,10 @@ msgid "Wintry Mix"
 msgstr "אווירה סגרירית"
 
 #: noaa_i18n.dat:289
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Freezing Drizzle"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr "ייתכן רסס קופא"
+msgstr "סיכוי קל לרסס קופא"
 
 #: noaa_i18n.dat:290
 #, kde-format
@@ -4620,12 +4584,10 @@ msgid "Freezing Drizzle"
 msgstr "רסס קופא"
 
 #: noaa_i18n.dat:293
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Freezing Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr "ייתכן גשם קופא"
+msgstr "סיכוי קל לגשם קופא"
 
 #: noaa_i18n.dat:294
 #, kde-format
@@ -4646,12 +4608,10 @@ msgid "Freezing Rain"
 msgstr "גשם קופא"
 
 #: noaa_i18n.dat:297
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr "ייתכן גשם"
+msgstr "סיכוי קל לגשם/שלג"
 
 #: noaa_i18n.dat:298
 #, kde-format
@@ -4672,12 +4632,10 @@ msgid "Rain/Snow"
 msgstr "גשם / שלג"
 
 #: noaa_i18n.dat:301
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr "ייתכן שלג"
+msgstr "סיכוי קל לשלג"
 
 #: noaa_i18n.dat:302
 #, kde-format
@@ -4698,12 +4656,10 @@ msgid "Heavy Snow"
 msgstr "שלג כבד"
 
 #: noaa_i18n.dat:306
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Flurries"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr "ייתכנו פתיתי שלג"
+msgstr "סיכוי קל לפתיתי שלג"
 
 #: noaa_i18n.dat:307
 #, kde-format
@@ -4718,12 +4674,10 @@ msgid "Flurries Likely"
 msgstr "צפויים פתיתי שלג"
 
 #: noaa_i18n.dat:310
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow Showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr "ייתכנו ממטרי שלג"
+msgstr "סיכוי קל לממטרי שלג"
 
 #: noaa_i18n.dat:311
 #, kde-format
@@ -4744,12 +4698,10 @@ msgid "Snow Showers"
 msgstr "ממטרי שלג"
 
 #: noaa_i18n.dat:314
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Drizzle"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr "ייתכן רסס"
+msgstr "סיכוי קל לרסס"
 
 #: noaa_i18n.dat:315
 #, kde-format
@@ -4764,12 +4716,10 @@ msgid "Drizzle Likely"
 msgstr "צפוי רסס"
 
 #: noaa_i18n.dat:318
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr "ייתכן גשם"
+msgstr "סיכוי קל לגשם"
 
 #: noaa_i18n.dat:319
 #, kde-format
@@ -4790,12 +4740,10 @@ msgid "Heavy Rain"
 msgstr "גשם כבד"
 
 #: noaa_i18n.dat:323
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow Showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr "ייתכנו ממטרי שלג"
+msgstr "סיכוי קל לממטרי שלג"
 
 #: noaa_i18n.dat:324
 #, kde-format
@@ -4906,12 +4854,10 @@ msgid "Mostly Sunny"
 msgstr "שמשי"
 
 #: noaa_i18n.dat:346
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Sunny"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly Sunny"
-msgstr "שמשי"
+msgstr "שמשי חלקית"
 
 #: noaa_i18n.dat:348
 #, kde-format

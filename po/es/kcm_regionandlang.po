@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2023-02-11 15:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -219,7 +219,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "No se ha encontrado ningún ejemplo para esta configuración local"
 
-#: kcmregionandlang.cpp:115
+#: kcmregionandlang.cpp:116
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""

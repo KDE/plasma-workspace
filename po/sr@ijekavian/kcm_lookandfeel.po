@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-29 01:40+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2017-12-24 21:47+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
 # rewrite-msgid: /cursor/pointer/
-#: kcm.cpp:464
+#: kcm.cpp:465
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for cursor changes to take effect."
 msgid ""
@@ -37,7 +37,7 @@ msgid ""
 msgstr "Поново покрените КДЕ да би измене показивача ступиле на снагу."
 
 # rewrite-msgid: /Cursor/Pointer/
-#: kcm.cpp:465
+#: kcm.cpp:466
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Измењене поставке показивача"

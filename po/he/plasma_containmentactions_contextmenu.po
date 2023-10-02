@@ -4,51 +4,50 @@
 # Diego Iastrubni <elcuco@kde.org>, 2013.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-28 02:08+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-01 21:19+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: menu.cpp:98
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
-msgstr ""
+msgstr "הצגת KRunner"
 
 #: menu.cpp:103
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "פתיחת מסוף"
 
 #: menu.cpp:107
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
-msgstr "נעל את המסך"
+msgstr "נעילת המסך"
 
 #: menu.cpp:116
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Leave..."
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
-msgstr "עזוב..."
+msgstr "יציאה…"
 
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
-msgstr ""
+msgstr "הגדרת תצורת תצוגה…"
 
 #: menu.cpp:281
 #, kde-format
@@ -66,7 +65,7 @@ msgstr "[פעולות אחרות]"
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
-msgstr "פעילות של תמונת רקע"
+msgstr "פעולות של תמונת רקע"
 
 #: menu.cpp:298
 #, kde-format

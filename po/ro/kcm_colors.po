@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:05+0000\n"
+"POT-Creation-Date: 2023-10-02 01:43+0000\n"
 "PO-Revision-Date: 2022-08-14 16:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sergiu@cip.md"
 
-#: colors.cpp:270
+#: colors.cpp:272
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nu s-a putut crea un fișier temporar."
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Nu s-a putut descărca schema de culori: %1"
 
-#: colors.cpp:301
+#: colors.cpp:303
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Acest fișier nu e o schemă de culori"
 
-#: colors.cpp:320
+#: colors.cpp:322
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Crearea dosarului de date „color-scheme” a eșuat."
 
-#: colors.cpp:327
+#: colors.cpp:329
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Copierea schemei de culori în dosarul de date „color-scheme” a eșuat."
 
-#: colors.cpp:344
+#: colors.cpp:346
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Schema de culori a fost instalată cu succes."
