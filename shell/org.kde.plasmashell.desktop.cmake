@@ -46,6 +46,7 @@ Name[pt]=Área de Trabalho do Plasma
 Name[pt_BR]=Espaço de Trabalho Plasma
 Name[ro]=Spațiu de lucru al biroului Plasma
 Name[ru]=Рабочая среда Plasma
+Name[sa]=प्लाज्मा कार्यमुखम् कार्यक्षेत्र
 Name[sk]=Pracovná plocha Plasma
 Name[sl]=Delovni prostor Plasma Desktop
 Name[sr]=Плазма, радни простор површи
