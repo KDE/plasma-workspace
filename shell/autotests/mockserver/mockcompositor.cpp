@@ -47,7 +47,7 @@ DefaultCompositor::DefaultCompositor()
         add<LayerShell>();
 
         QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
-            QObject::connect(surface, &Surface::bufferCommitted, [=] {
+            QObject::connect(surface, &Surface::bufferCommitted, [this, surface] {
                 if (m_config.autoRelease) {
                     // Pretend we made a copy of the buffer and just release it immediately
                     surface->m_committed.buffer->send_release();
@@ -83,11 +83,11 @@ uint DefaultCompositor::sendXdgShellPing()
 
 void DefaultCompositor::xdgPingAndWaitForPong()
 {
-    QSignalSpy pongSpy(exec([=] {
+    QSignalSpy pongSpy(exec([this] {
                            return get<XdgWmBase>();
                        }),
                        &XdgWmBase::pong);
-    uint serial = exec([=] {
+    uint serial = exec([this] {
         return sendXdgShellPing();
     });
     QTRY_COMPARE(pongSpy.count(), 1);
