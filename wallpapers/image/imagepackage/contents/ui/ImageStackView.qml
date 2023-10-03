@@ -75,7 +75,7 @@ QQC2.StackView {
             return;
         }
 
-        doesSkipAnimation = view.currentItem == undefined || !!skipAnimation;
+        doesSkipAnimation = view.currentItem == undefined || view.currentItem.sourceSize !== view.sourceSize || !!skipAnimation;
         const baseImage = createBackgroundComponent();
         pendingImage = baseImage.createObject(view, {
             // Use mediaProxy instead of view because colorSchemeChanged needs immediately update the wallpaper
@@ -136,7 +136,7 @@ QQC2.StackView {
 
         targetSize: view.sourceSize
 
-        onActualSizeChanged: Qt.callLater(loadImage);
+        onActualSizeChanged: Qt.callLater(loadImageImmediately);
         onColorSchemeChanged: loadImageImmediately();
         onSourceFileUpdated: loadImageImmediately()
     }
