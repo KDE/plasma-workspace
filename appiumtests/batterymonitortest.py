@@ -16,11 +16,16 @@ from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
 from selenium.webdriver.support.ui import WebDriverWait
+
 from utils.GLibMainLoopThread import GLibMainLoopThread
 from utils.OrgFreedesktopUPower import OrgFreedesktopUPower
 
+assert "ENABLE_DISPLAY_DEVICE" in os.environ, "Missing ENABLE_DISPLAY_DEVICE"
+
 WIDGET_ID: Final = "org.kde.plasma.battery"
+POWERDEVIL_PATH: Final = os.environ.get("POWERDEVIL_PATH", "~/kde/usr/lib64/libexec/org_kde_powerdevil")
 POWERDEVIL_SERVICE_NAME: Final = "org.kde.Solid.PowerManagement"
+ENABLE_DISPLAY_DEVICE: Final = int(os.environ["ENABLE_DISPLAY_DEVICE"]) != 0
 
 
 def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
@@ -42,9 +47,7 @@ class BatteryMonitorTests(unittest.TestCase):
     driver: webdriver.Remote
     loop_thread: GLibMainLoopThread
     upower_interface: OrgFreedesktopUPower
-    powerdevil_path: str = ""
     powerdevil: subprocess.Popen[bytes]
-    enable_display_device: bool
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -62,7 +65,7 @@ class BatteryMonitorTests(unittest.TestCase):
         # Start the mocked upower backend
         cls.loop_thread = GLibMainLoopThread()
         cls.loop_thread.start()
-        cls.upower_interface = OrgFreedesktopUPower(None, cls.enable_display_device)
+        cls.upower_interface = OrgFreedesktopUPower(None, ENABLE_DISPLAY_DEVICE)
         # Wait until the mocked upower interface is online
         assert cls.upower_interface.registered_event.wait(10), "upower interface is not ready"
 
@@ -71,7 +74,7 @@ class BatteryMonitorTests(unittest.TestCase):
         debug_env["QT_LOGGING_RULES"] = "org.kde.powerdevil.debug=true"
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         assert not name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME), "PowerDevil is already running"
-        cls.powerdevil = subprocess.Popen([cls.powerdevil_path], env=debug_env, stdout=sys.stdout, stderr=sys.stderr)
+        cls.powerdevil = subprocess.Popen([POWERDEVIL_PATH], env=debug_env, stdout=sys.stdout, stderr=sys.stderr)
         powerdevil_started: bool = False
         for _ in range(10):
             if name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME):
@@ -295,9 +298,5 @@ class BatteryMonitorTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    assert len(sys.argv) >= 2, "Missing powerdevil path"
-    assert len(sys.argv) >= 3, "Missing enable_display_device flag"
-    BatteryMonitorTests.enable_display_device = sys.argv.pop() == "1"
-    BatteryMonitorTests.powerdevil_path = sys.argv.pop()
-    assert os.path.exists(BatteryMonitorTests.powerdevil_path)
+    assert os.path.exists(POWERDEVIL_PATH), f"{POWERDEVIL_PATH} does not exist"
     unittest.main()
