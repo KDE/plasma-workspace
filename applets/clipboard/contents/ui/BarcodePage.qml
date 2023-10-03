@@ -100,6 +100,8 @@ ColumnLayout {
             // Cannot set visible to false as we need it to re-render when changing its size
             opacity: valid ? 1 : 0
 
+            Accessible.name: barcodeView.barcodeMap.find(data => data.type === barcodeItem.barcodeType)?.text ?? barcodeView.barcodeMap[0].text
+            Accessible.role: Accessible.Graphic
             Drag.dragType: Drag.Automatic
             Drag.supportedActions: Qt.CopyAction
 
