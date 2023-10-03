@@ -58,9 +58,6 @@ class OrgFreedesktopUPower:
     __connection: Gio.DBusConnection
 
     def __init__(self, device_properties: dict[str, dict[str, GLib.Variant]] | None = None, enable_display_device: bool = True) -> None:
-        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SYSTEM, self.BUS_NAME, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired, None, None)
-        assert self.__owner_id > 0
-
         self.__upower_reg_id: int = 0
         self.__device_reg_id_map: dict[str, int] = {}  # object_path: reg_id
         self.__display_device_reg_id: int = 0
@@ -211,6 +208,9 @@ class OrgFreedesktopUPower:
 
         self.is_online: bool = False
         self.registered_event = threading.Event()
+
+        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SYSTEM, self.BUS_NAME, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired, None, None)
+        assert self.__owner_id > 0
 
     def quit(self) -> None:
         Gio.bus_unown_name(self.__owner_id)
