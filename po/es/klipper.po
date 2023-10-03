@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-09-03 22:40+0200\n"
+"PO-Revision-Date: 2023-10-02 22:26+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:80
@@ -136,7 +136,7 @@ msgstr ""
 "escoge del historial del portapapeles, mostrar automáticamente el menú "
 "emergente con las acciones aplicables. Si el menú automático se desactiva "
 "aquí, o si no se muestra para una ventana excluida, se puede mostrar usando "
-"el acceso rápido de teclado <shortcut>%1</shortcut>."
+"el atajo de teclado <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:278
 #, kde-format
@@ -268,12 +268,12 @@ msgstr "Configuración de acciones"
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
-msgstr "Accesos rápidos"
+msgstr "Atajos de teclado"
 
 #: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
-msgstr "Configuración de accesos rápidos"
+msgstr "Configuración de los atajos de teclado"
 
 #: configdialog.cpp:690
 #, kde-kuit-format
@@ -412,7 +412,7 @@ msgstr ""
 "automático de acciones, si se ha activado en la página <interface>Menú de "
 "acciones</interface>. Si esta opción está desactivada, las órdenes para esta "
 "coincidencia no se incluirán en dicho menú, aunque sí se mostrarán si el "
-"menú se activa de forma manual con el acceso rápido de teclado <shortcut>%1</"
+"menú se activa de forma manual con el atajo de teclado <shortcut>%1</"
 "shortcut>."
 
 #: editactiondialog.cpp:262

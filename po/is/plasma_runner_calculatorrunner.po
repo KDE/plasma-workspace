@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-09-09 10:02+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Enter a common math function"
 msgstr "Sláðu inn algenga reikniformúlu"
 
-#: calculatorrunner.cpp:139
+#: calculatorrunner.cpp:140
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

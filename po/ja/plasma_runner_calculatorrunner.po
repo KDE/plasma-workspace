@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2010-05-08 19:56-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:139
+#: calculatorrunner.cpp:140
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"
