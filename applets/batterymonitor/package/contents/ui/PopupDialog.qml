@@ -51,7 +51,9 @@ PlasmaExtras.Representation {
     KeyNavigation.down: pmSwitch.pmCheckBox
 
     header: PlasmaExtras.PlasmoidHeading {
-        leftPadding: Kirigami.Units.smallSpacing
+        leftPadding: !mirrored ? Kirigami.Units.smallSpacing : 0
+        rightPadding: mirrored ? Kirigami.Units.smallSpacing : 0
+
         contentItem: PowerManagementItem {
             id: pmSwitch
 
