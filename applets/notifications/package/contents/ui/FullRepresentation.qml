@@ -167,7 +167,7 @@ PlasmaExtras.Representation {
                     Accessible.name: root.clearHistoryAction.text
                     icon.name: "edit-clear-history"
                     enabled: root.clearHistoryAction.visible
-                    onClicked: action_clearHistory()
+                    onClicked: root.clearHistoryAction.trigger()
 
                     PlasmaComponents3.ToolTip {
                         text: parent.Accessible.name

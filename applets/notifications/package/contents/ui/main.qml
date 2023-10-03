@@ -231,9 +231,14 @@ PlasmoidItem {
             visible: historyModel.expiredNotificationsCount > 0
             onTriggered: {
                 historyModel.clear(NotificationManager.Notifications.ClearExpired);
+                // clear is async,
+                historyModel.countChanged.connect(closeWhenCleared)
+            }
+            function closeWhenCleared() {
                 if (historyModel.count === 0) {
                     closePlasmoid();
                 }
+                historyModel.countChanged.disconnect(closeWhenCleared)
             }
         }
     ]
