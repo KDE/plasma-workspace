@@ -22,10 +22,14 @@ struct DBusMenuItem {
     QVariantMap properties;
 };
 
+Q_DECLARE_METATYPE(DBusMenuItem)
+
 QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuItem &item);
 const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuItem &item);
 
 typedef QList<DBusMenuItem> DBusMenuItemList;
+
+Q_DECLARE_METATYPE(DBusMenuItemList)
 
 //// DBusMenuItemKeys
 /**
@@ -35,11 +39,13 @@ struct DBusMenuItemKeys {
     int id;
     QStringList properties;
 };
+Q_DECLARE_METATYPE(DBusMenuItemKeys)
 
 QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuItemKeys &);
 const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuItemKeys &);
 
 typedef QList<DBusMenuItemKeys> DBusMenuItemKeysList;
+Q_DECLARE_METATYPE(DBusMenuItemKeysList)
 
 //// DBusMenuLayoutItem
 /**
