@@ -15,6 +15,7 @@
 #include <QQuickWindow>
 #include <QSurfaceFormat>
 
+#include "debug.h"
 #include "greeter.h"
 
 #include <sessionmanagement.h>
@@ -67,6 +68,11 @@ int main(int argc, char *argv[])
     }
 
     const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+
+    if (!pkg.isValid()) {
+        qCWarning(LOGOUT_GREETER) << "Failed to load lookandfeel package" << packageName;
+    }
+
     Greeter greeter(pkg);
     if (windowed) {
         greeter.enableWindowed();
