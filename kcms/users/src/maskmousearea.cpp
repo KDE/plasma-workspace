@@ -29,7 +29,7 @@ MaskMouseArea::~MaskMouseArea()
 
 void MaskMouseArea::updateMask()
 {
-    if (parentItem() == nullptr) {
+    if (parentItem() == nullptr || parentItem()->height() < 1) {
         return;
     }
 
