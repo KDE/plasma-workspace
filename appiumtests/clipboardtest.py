@@ -133,11 +133,7 @@ class ClipboardTest(unittest.TestCase):
         press_right_key(2)
         press_space_key()
 
-        if "KDECI_BUILD" in os.environ:
-            with self.assertRaises(NoSuchElementException):
-                self.driver.find_element(AppiumBy.NAME, "QR Code")
-        else:
-            self.driver.find_element(AppiumBy.NAME, "QR Code")
+        self.driver.find_element(AppiumBy.NAME, "QR Code")
         self.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
         self.driver.find_element(AppiumBy.NAME, "Change the QR code type")
 
@@ -164,11 +160,7 @@ class ClipboardTest(unittest.TestCase):
         press_down_key(3)
         press_space_key()
         WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        if "KDECI_BUILD" in os.environ:
-            with self.assertRaises(NoSuchElementException):
-                self.driver.find_element(AppiumBy.NAME, "Aztec")  # This is from barcodeItem
-        else:
-            self.driver.find_element(AppiumBy.NAME, "Aztec")  # This is from barcodeItem
+        self.driver.find_element(AppiumBy.NAME, "Aztec")  # This is from barcodeItem
 
     def test_1_barcode_4_change_barcode_type_Code39(self) -> None:
         """
@@ -180,11 +172,7 @@ class ClipboardTest(unittest.TestCase):
         press_down_key(4)
         press_space_key()
         WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        if "KDECI_BUILD" in os.environ:
-            with self.assertRaises(NoSuchElementException):
-                self.driver.find_element(AppiumBy.NAME, "Code 39")  # This is from barcodeItem
-        else:
-            self.driver.find_element(AppiumBy.NAME, "Code 39")  # This is from barcodeItem
+        self.driver.find_element(AppiumBy.NAME, "Code 39")  # This is from barcodeItem
 
     def test_1_barcode_5_change_barcode_type_Code93(self) -> None:
         """
@@ -196,11 +184,7 @@ class ClipboardTest(unittest.TestCase):
         press_down_key(5)
         press_space_key()
         WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        if "KDECI_BUILD" in os.environ:
-            with self.assertRaises(NoSuchElementException):
-                self.driver.find_element(AppiumBy.NAME, "Code 93")  # This is from barcodeItem
-        else:
-            self.driver.find_element(AppiumBy.NAME, "Code 93")  # This is from barcodeItem
+        self.driver.find_element(AppiumBy.NAME, "Code 93")  # This is from barcodeItem
 
     def test_1_barcode_6_change_barcode_type_Code128(self) -> None:
         """
@@ -212,11 +196,7 @@ class ClipboardTest(unittest.TestCase):
         press_down_key(6)
         press_space_key()
         WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        if "KDECI_BUILD" in os.environ:
-            with self.assertRaises(NoSuchElementException):
-                self.driver.find_element(AppiumBy.NAME, "Code 128")  # This is from barcodeItem
-        else:
-            self.driver.find_element(AppiumBy.NAME, "Code 128")  # This is from barcodeItem
+        self.driver.find_element(AppiumBy.NAME, "Code 128")  # This is from barcodeItem
 
     def test_1_barcode_7_change_barcode_type_QRCode(self) -> None:
         """
@@ -228,11 +208,7 @@ class ClipboardTest(unittest.TestCase):
         press_down_key(1)
         press_space_key()
         WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        if "KDECI_BUILD" in os.environ:
-            with self.assertRaises(NoSuchElementException):
-                self.driver.find_element(AppiumBy.NAME, "QR Code")  # This is from barcodeItem
-        else:
-            self.driver.find_element(AppiumBy.NAME, "QR Code")  # This is from barcodeItem
+        self.driver.find_element(AppiumBy.NAME, "QR Code")  # This is from barcodeItem
 
     def test_1_barcode_8_go_back_to_list_from_barcode_page(self) -> None:
         """
