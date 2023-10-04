@@ -30,7 +30,6 @@ import FingerprintModel 1.0
 Kirigami.OverlaySheet {
     id: fingerprintRoot
 
-    property var account
     property var fingerprintModel: kcm.fingerprintModel
     property string currentFinger
 
@@ -39,17 +38,6 @@ Kirigami.OverlaySheet {
         PickFinger,
         Enrolling,
         EnrollComplete
-    }
-
-    function openAndClear() {
-        fingerprintModel.switchUser(account.name == kcm.userModel.getLoggedInUser().name ? "" : account.name);
-        this.open();
-    }
-
-    onOpened: {
-        if (fingerprintModel.currentlyEnrolling) {
-            fingerprintModel.stopEnrolling();
-        }
     }
 
     header: Kirigami.Heading {
@@ -344,5 +332,10 @@ Kirigami.OverlaySheet {
                 }
             }
         }
+    }
+
+    Component.onCompleted: {
+        fingerprintButton.dialog = this;
+        open();
     }
 }

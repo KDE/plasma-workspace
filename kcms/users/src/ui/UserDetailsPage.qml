@@ -218,9 +218,24 @@ KCM.SimpleKCM {
             visible: kcm.fingerprintModel.deviceFound
             text: i18n("Configure Fingerprint Authentication…")
             icon.name: "fingerprint-gui"
+
+            property Kirigami.OverlaySheet dialog: null
+
             onClicked: {
-                fingerprintDialog.account = user;
-                fingerprintDialog.openAndClear();
+                if (kcm.fingerprintModel.currentlyEnrolling) {
+                    kcm.fingerprintModel.stopEnrolling();
+                }
+                kcm.fingerprintModel.switchUser(user.name == kcm.userModel.getLoggedInUser().name ? "" : user.name);
+
+                if (fingerprintButton.dialog === null) {
+                    const component = Qt.createComponent("FingerprintDialog.qml");
+                    component.incubateObject(usersDetailPage, {
+                        focus: true,
+                    });
+                    component.destroy();
+                } else {
+                    fingerprintButton.dialog.open()
+                }
             }
         }
         QQC2.Label {
@@ -239,5 +254,4 @@ KCM.SimpleKCM {
 
     ChangePassword { id: changePassword }
     ChangeWalletPassword { id: changeWalletPassword }
-    FingerprintDialog { id: fingerprintDialog; account: user }
 }
