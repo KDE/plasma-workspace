@@ -18,9 +18,12 @@
 #include <QDBusObjectPath>
 #include <QDBusReply>
 
+#include "config-KDECI_BUILD.h"
 #include "config-X11.h"
 #if HAVE_X11
+#if !KDECI_BUILD
 #include <private/qtx11extras_p.h>
+#endif
 
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
@@ -853,12 +856,19 @@ void KDisplayManager::GDMAuthenticate()
     int dnl;
     Xauth *xau;
 
+#if KDECI_BUILD
+    dpy = ::getenv("DISPLAY");
+    if (!dpy) {
+        return;
+    }
+#else
     dpy = DisplayString(QX11Info::display());
     if (!dpy) {
         dpy = ::getenv("DISPLAY");
         if (!dpy)
             return;
     }
+#endif
     dnum = strchr(dpy, ':') + 1;
     dne = strchr(dpy, '.');
     dnl = dne ? dne - dnum : strlen(dnum);
