@@ -34,9 +34,14 @@ void MaskMouseArea::updateMask()
     }
 
     auto result = parentItem()->grabToImage();
-    connect(result.data(), &QQuickItemGrabResult::ready, this, [=, this] {
-        d->maskImage = result->image();
-    });
+    connect(
+        result.get(),
+        &QQuickItemGrabResult::ready,
+        this,
+        [result, this] {
+            d->maskImage = result->image();
+        },
+        Qt::SingleShotConnection /* Otherwise leak */);
 }
 
 void MaskMouseArea::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
