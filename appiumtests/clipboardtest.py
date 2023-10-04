@@ -45,7 +45,7 @@ def press_key(key_val: int, repeat_num: int = 1) -> None:
         handler.flush()
         for _ in range(repeat_num):
             assert subprocess.Popen(["selenium-webdriver-at-spi-inputsynth", handler.name], stdout=sys.stderr, stderr=sys.stderr).wait() == 0
-            time.sleep(0.5)
+            time.sleep(1)
 
 
 def press_tab_key(repeat_num: int = 1) -> None:
