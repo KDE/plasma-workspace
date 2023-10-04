@@ -5,6 +5,4 @@ endfunction()
 
 install_package_structure(plasma_layouttemplate layouttemplate/layouttemplate.cpp)
 install_package_structure(plasma_lookandfeel lookandfeel/lookandfeel.cpp)
-install_package_structure(plasma_wallpaper qmlWallpaper/wallpaper.cpp)
-install_package_structure(plasma_shell shell/shellpackage.cpp)
 install_package_structure(wallpaper_images wallpaperimages/wallpaperpackage.cpp)
