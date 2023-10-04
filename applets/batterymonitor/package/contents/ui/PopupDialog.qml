@@ -60,7 +60,11 @@ PlasmaExtras.Representation {
             inhibitions: dialog.inhibitions
             inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
-            onInhibitionChangeRequested: dialog.inhibitionChangeRequested(inhibit)
+
+            onInhibitionChangeRequested: inhibit => {
+                dialog.inhibitionChangeRequested(inhibit);
+            }
+
             onDisabledChanged: dialog.powerManagementChanged(disabled)
         }
     }
@@ -183,7 +187,10 @@ PlasmaExtras.Representation {
                 visible: dialog.profiles.length > 0
                 degradationReason: dialog.degradationReason
                 profileHolds: dialog.profileHolds
-                onActivateProfileRequested: dialog.activateProfileRequested(profile)
+
+                onActivateProfileRequested: profile => {
+                    dialog.activateProfileRequested(profile);
+                }
 
                 onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
             }
@@ -203,7 +210,7 @@ PlasmaExtras.Representation {
                     KeyNavigation.backtab: KeyNavigation.up
                     KeyNavigation.tab: KeyNavigation.down
 
-                    Keys.onTabPressed: {
+                    Keys.onTabPressed: event => {
                         if (index === batteryRepeater.count - 1) {
                             // Workaround to leave applet's focus on desktop
                             nextItemInFocusChain(false).forceActiveFocus(Qt.TabFocusReason);
