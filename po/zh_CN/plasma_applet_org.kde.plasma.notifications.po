@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-13 02:06+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-09-16 10:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -319,7 +319,7 @@ msgstr "中键单击以进入勿扰模式"
 msgid "Clear All Notifications"
 msgstr "清除所有通知"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "配置事件通知和操作(&C)…"

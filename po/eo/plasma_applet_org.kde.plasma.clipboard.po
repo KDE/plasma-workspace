@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-05-26 19:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,53 +20,53 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/ui/BarcodePage.qml:35
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Reiri al Tondujo"
-
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:23
 #, kde-format
 msgid "QR Code"
 msgstr "QR-kodo"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
 msgstr "Data Matrix"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Code 39"
 msgstr "Kodo 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
 msgstr "Kodo 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:28
 #, kde-format
 msgid "Code 128"
 msgstr "Kodo 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:44
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Reiri al Tondujo"
+
+#: contents/ui/BarcodePage.qml:79
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Ŝanĝi la tipon de QR-kodo"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:134
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Kreado de QR-kodo malsukcesis"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:145
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

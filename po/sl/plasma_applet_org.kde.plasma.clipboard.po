@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-05-26 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,53 +20,53 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: contents/ui/BarcodePage.qml:35
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Vrni na odložišče"
-
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:23
 #, kde-format
 msgid "QR Code"
 msgstr "Koda QR"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
 msgstr "Podatkovna matrika"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Code 39"
 msgstr "Koda 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
 msgstr "Koda 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:28
 #, kde-format
 msgid "Code 128"
 msgstr "Koda 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:44
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Vrni na odložišče"
+
+#: contents/ui/BarcodePage.qml:79
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Spremeni vrsto kode QR"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:134
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Ustvarjanje kode QR ni uspelo"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:145
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

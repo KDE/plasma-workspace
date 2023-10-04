@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kholidays_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-03 02:20+0000\n"
-"PO-Revision-Date: 2017-05-16 06:53-0400\n"
+"PO-Revision-Date: 2023-10-03 14:55+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: HolidaysConfig.qml:89
 #, kde-format
 msgid "Region"
-msgstr "איזור"
+msgstr "אזור"
 
 #: HolidaysConfig.qml:93
 #, kde-format

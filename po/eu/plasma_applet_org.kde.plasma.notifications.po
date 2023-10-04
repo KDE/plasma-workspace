@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-13 02:06+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-08-14 23:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -330,7 +330,7 @@ msgstr "Erdiko-botoia «zaratarik ez» moduan sartzeko"
 msgid "Clear All Notifications"
 msgstr "Garbitu jakinarazpen guztiak"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfiguratu gertaeren jakinarazpenak eta ekintzak..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,55 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: contents/ui/BarcodePage.qml:35
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "ഓർമ്മച്ചെപ്പിലേക്ക് മടങ്ങുക"
-
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:23
 #, kde-format
 msgid "QR Code"
 msgstr "ക്യൂആർ കോഡ്"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
 msgstr "ഡാറ്റ മെട്രിക്സ്"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "അസ്ടെക്"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Code 39"
 msgstr "കോഡ് 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
 msgstr "കോ‍ഡ് 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:28
 #, kde-format
 msgid "Code 128"
 msgstr "കോ‍ഡ് 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:44
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "ഓർമ്മച്ചെപ്പിലേക്ക് മടങ്ങുക"
+
+#: contents/ui/BarcodePage.qml:79
 #, fuzzy, kde-format
 #| msgid "Change the barcode type"
 msgid "Change the QR code type"
 msgstr "ബാർകോഡ് തരം മാറ്റുക"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:134
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "ബാർകോഡ് സൃഷ്ടിക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:145
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

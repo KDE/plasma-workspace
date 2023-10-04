@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-13 02:06+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-03-03 09:54+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -335,7 +335,7 @@ msgstr "Klik tengah untuk memasuki mode jangan ganggu"
 msgid "Clear All Notifications"
 msgstr "Bersihkan Semua Notifikasi"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfigurasikan Notifikasi Peristiwa dan Aksi..."

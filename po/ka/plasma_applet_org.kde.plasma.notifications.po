@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-13 02:06+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-08-15 06:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -328,7 +328,7 @@ msgstr "შუა წკაპი \"არ შემაწუხოთ\" რე�
 msgid "Clear All Notifications"
 msgstr "ყველა შეტყობინების გასუფთავება"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&მოვლენების შეტყობინებებისა და ქმედებების მორგება…"

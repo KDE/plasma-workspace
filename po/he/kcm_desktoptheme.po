@@ -9,47 +9,46 @@ msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"PO-Revision-Date: 2023-10-03 10:58+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
+#, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "קבל ערכות חדשות..."
+msgstr "שם סגנון הפלזמה הנוכחי"
 
 #: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "לא ניתן ליצור קובץ זמני."
 
 #: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr ""
+msgstr "לא ניתן להוריד את ערכת העיצוב: %1"
 
 #: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
-msgstr "ערכת הנושא הותקנה בהצלחה."
+msgstr "התקנת ערכת העיצוב הצליחה."
 
 #: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
-msgstr "התקנת ערכת הנושא נכשלה."
+msgstr "התקנת ערכת העיצוב נכשלה."
 
 #: kcm.cpp:262
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "הסרת ערכת העיצוב נכשלה: %1"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -58,6 +57,8 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"הכלי הזה מאפשר לך להגדיר את ערכת העיצוב של הפעלת הפלזמה הנוכחית, מבלי להגדיר "
+"אותה בטעות לערכה שאינה זמינה או שכבר מוגדרת."
 
 #: plasma-apply-desktoptheme.cpp:35
 #, kde-format
@@ -65,12 +66,14 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"שם ערכת העיצוב שברצונך להגדיר להפעלת הפלזמה הנוכחית שלך (העברת נתיב מלא "
+"תשתמש רק בחלק האחרון של הנתיב)"
 
 #: plasma-apply-desktoptheme.cpp:36
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "הצגת כל ערכות הנושא הזמינות במערכת (ומה ערכת העיצוב הנוכחית)"
 
 #: plasma-apply-desktoptheme.cpp:49
 #, kde-format
@@ -78,11 +81,12 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"ערכת העיצוב המבוקשת „%1” כבר מוגדרת כערכת העיצוב הנוכחית להפעלה של פלזמה."
 
 #: plasma-apply-desktoptheme.cpp:65
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "ערכת הנושא של הפעלת הפלזמה הנוכחית הוגדרה לכדי %1"
 
 #: plasma-apply-desktoptheme.cpp:67
 #, kde-format
@@ -90,76 +94,73 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"לא ניתן למצוא את ערכת העיצוב „%1”. ערכת העיצוב צריכה להיות אחת מהאפשרויות "
+"הבאות: %2"
 
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
+msgstr "אלו ערכות העיצוב של פלזמה שיש כרגע במערכת:"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Open Theme"
+#, kde-format
 msgid "All Themes"
-msgstr "פתח ערכת נושא"
+msgstr "כל ערכות העיצוב"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Open Theme"
+#, kde-format
 msgid "Light Themes"
-msgstr "פתח ערכת נושא"
+msgstr "ערכות עיצוב בהירות"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
-msgstr ""
+msgstr "ערכות עיצוב כהות"
 
 #: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "תואמות ערכות צבעים"
 
 #: ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Install from File"
+#, kde-format
 msgid "Install from File…"
-msgstr "התקן מקובץ"
+msgstr "התקנה מקובץ…"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "קבלת חדשות…"
 
 #: ui/main.qml:115
 #, kde-format
 msgid "Follows color scheme"
-msgstr ""
+msgstr "כמו ערכת הצבעים"
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "Open Theme"
+#, kde-format
 msgid "Edit Theme…"
-msgstr "פתח ערכת נושא"
+msgstr "עריכת ערכת עיצוב…"
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
-msgstr "הסר ערכה"
+msgstr "הסרת ערכת עיצוב"
 
 #: ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Theme"
-msgstr "הסר ערכה"
+msgstr "שחזור ערכת עיצוב"
 
 #: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
-msgstr "פתח ערכת נושא"
+msgstr "פתיחת ערכת עיצוב"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "קובצי ערכת נושא (*.zip *.tar.gz *.tar.bz2)"
+msgstr "קובצי ערכות עיצוב (‎*.zip‏ ‎*.tar.gz‏ ‎*.tar.bz2)"
 
 #, fuzzy
 #~| msgid "Get new Theme"

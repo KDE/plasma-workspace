@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -18,56 +18,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: contents/ui/BarcodePage.qml:35
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "חזור ללוח העתקה"
-
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:23
 #, kde-format
 msgid "QR Code"
 msgstr "קוד QR"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
 msgstr "מטריקס נתונים"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Code 39"
 msgstr "קוד 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
 msgstr "'וד 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:28
 #, fuzzy, kde-format
 #| msgid "Code 39"
 msgid "Code 128"
 msgstr "קוד 39"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:44
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "חזור ללוח העתקה"
+
+#: contents/ui/BarcodePage.qml:79
 #, fuzzy, kde-format
 #| msgid "Change the barcode type"
 msgid "Change the QR code type"
 msgstr "שנה סוג ברקוד"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:134
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "יצירת הברקוד נכשלה"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:145
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

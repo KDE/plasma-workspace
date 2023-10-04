@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-09-09 10:01+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,53 +18,53 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: contents/ui/BarcodePage.qml:35
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Til baka á klippispjaldið"
-
-#: contents/ui/BarcodePage.qml:53
+#: contents/ui/BarcodePage.qml:23
 #, kde-format
 msgid "QR Code"
 msgstr "QR-kóði"
 
-#: contents/ui/BarcodePage.qml:54
+#: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
 msgstr "Gagnafylki"
 
-#: contents/ui/BarcodePage.qml:55
+#: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Code 39"
 msgstr "Kóði 39"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
 msgstr "Kóði 93"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:28
 #, kde-format
 msgid "Code 128"
 msgstr "Kóði 128"
 
-#: contents/ui/BarcodePage.qml:82
+#: contents/ui/BarcodePage.qml:44
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Til baka á klippispjaldið"
+
+#: contents/ui/BarcodePage.qml:79
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Breyta gerð QR-kóða"
 
-#: contents/ui/BarcodePage.qml:137
+#: contents/ui/BarcodePage.qml:134
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Mistókst að búa til QR-kóða"
 
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:145
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

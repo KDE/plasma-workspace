@@ -17,35 +17,35 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 02:01+0000\n"
-"PO-Revision-Date: 2017-05-23 08:29-0400\n"
+"PO-Revision-Date: 2023-10-03 11:59+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 אינו ארכיון ערכת נושא תקין של GTK."
 
 #: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr "ארעה שגיאה בעת טעינת חלון התצורה עבור סגנון זה."
+msgstr "ארעה שגיאה בטעינת חלונית התצורה לסגנון זה."
 
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
+msgstr "החלת הסגנון ‚%1’ נכשלה."
 
 #: styleconfdialog.cpp:21
 #, kde-format
 msgid "Configure %1"
-msgstr "הגדרה %1"
+msgstr "הגדרת %1"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_1)
 #: stylepreview.ui:33
@@ -55,15 +55,13 @@ msgstr "לשונית 1"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Push Button"
-msgstr "כפתור"
+msgstr "כפתור לחיצה"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgid "Combo box"
 msgstr "תיבה משולבת"
 
@@ -84,7 +82,7 @@ msgstr "כפתור בחירה"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
@@ -94,154 +92,134 @@ msgstr "לשונית 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Application style"
-msgstr "&יישומים"
+msgstr "סגנון יישומים"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "הצג סמלים על גבי כפתורים"
+msgstr "הצגת סמלים על הכפתורים"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "הצג סמלים על גבי כפתורים"
+msgstr "הצגת סמלים בתפריטים"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "טקסט בסרגל הראשי"
+msgstr "תווית סרגל כלים ראשי"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "טקסט בסרגל המשני"
+msgstr "תווית סרגל כלים משני"
 
 #: ui/EffectSettingsPopup.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
-msgstr ""
+msgstr "הגדרת סמל וסרגלי כלים"
 
 #: ui/EffectSettingsPopup.qml:34
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons:"
-msgstr "הצג סמלים על גבי תפריטים:"
+msgstr "הצגת סמלים:"
 
 #: ui/EffectSettingsPopup.qml:35
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgid "On buttons"
-msgstr "כפתור בחירה"
+msgstr "על הכפתורים"
 
 #: ui/EffectSettingsPopup.qml:46
 #, kde-format
 msgid "In menus"
-msgstr ""
+msgstr "בתפריטים"
 
 #: ui/EffectSettingsPopup.qml:58
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label:"
-msgstr "טקסט בסרגל הראשי"
+msgstr "תווית סרגל כלים ראשי:"
 
 #: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 #: ui/EffectSettingsPopup.qml:61
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
 msgstr "טקסט בלבד"
 
 #: ui/EffectSettingsPopup.qml:62
-#, fuzzy, kde-format
-#| msgid "Text Beside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "טקסט לצד סמלים"
+msgstr "לצד הסמלים"
 
 #: ui/EffectSettingsPopup.qml:63
-#, fuzzy, kde-format
-#| msgid "Text Below Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "טקסט מתחת לסמלים"
+msgstr "מתחת לסמל"
 
 #: ui/EffectSettingsPopup.qml:78
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label:"
-msgstr "טקסט בסרגל המשני"
+msgstr "טקסט סרגל כלים משני:"
 
 #: ui/GtkStylePage.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "&יישומים"
+msgstr "סגנון יישום GNOME/GTK"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "ערכת עיצוב GTK:"
 
 #: ui/GtkStylePage.qml:68
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "תצוגה מקדימה"
+msgstr "תצוגה מקדימה…"
 
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "התקנה מקובץ…"
 
 #: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "&יישומים"
+msgstr "הורדת סגנונות יישום חדשים ל־GNOME/GTK…"
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "בחירת ארכיון ערכת נושא של GTK"
 
 #: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "ארכיון ערכת נושא של GTK‏ (‎*.tar.xz‏ ‎*.tar.gz‏ ‎*.tar.bz2)"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "הגדרת סמלים וסרגלי כלים"
 
 #: ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "&תצורה..."
+msgstr "הגדרת סגנון יישומי GNOME/GTK…"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure Style…"
-msgstr "&תצורה..."
+msgstr "הגדרת סגנון…"
 
 #, fuzzy
 #~| msgid ""

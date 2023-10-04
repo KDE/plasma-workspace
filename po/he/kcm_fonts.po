@@ -20,76 +20,63 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 02:19+0000\n"
-"PO-Revision-Date: 2017-05-23 10:21-0400\n"
+"PO-Revision-Date: 2023-10-03 11:42+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "אכוף דרגת DPI:"
+msgstr "אכיפת נק׳ לאינטש על גופן ב־X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "כללי"
+msgstr "גופן כללי"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "רוחב קבוע"
+msgstr "קבוע עם גופן"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "קטן"
+msgstr "גופן קטן"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "סרגלי כלים"
+msgstr "גופן סרגל כלים"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "גופן תפריט"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "כותרת החלון"
+msgstr "גופן כותרת חלון"
 
 #: kxftconfig.cpp:454
-#, fuzzy, kde-format
-#| msgctxt "use system subpixel setting"
-#| msgid "System default"
+#, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "ברירת מחדל מערכת"
+msgstr "ברירת מחדל יצרן"
 
 #: kxftconfig.cpp:456
 #, kde-format
@@ -118,12 +105,10 @@ msgid "Vertical BGR"
 msgstr "BGR אופקי"
 
 #: kxftconfig.cpp:492
-#, fuzzy, kde-format
-#| msgctxt "use system hinting settings"
-#| msgid "System default"
+#, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "ברירת מחדל מערכת"
+msgstr "ברירת מחדל יצרן"
 
 #: kxftconfig.cpp:494
 #, kde-format
@@ -155,25 +140,21 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2 נק׳"
 
 #: ui/main.qml:23
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "ה&תאמה של כל הגופנים..."
+msgstr "התאמת קנה מידה כללי…"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
-#| "started applications.</p>"
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"<p> שינויים מסויימים כמו החלקת קצוות או שינוי DPI יחולו רק על יישומים חדשים."
-"</p>"
+"חלק מהשינויים כגון החלקת קצוות או נק׳ לאינטש יחולו רק על יישומים חדשים "
+"שנפתחים מעתה."
 
 #: ui/main.qml:48
 #, kde-format
@@ -181,6 +162,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"גופנים גדולים מאוד יכולים להוליד תוצאות שנראות מוזר. במקום להשתמש בגופנים "
+"גדולים מאוד, כדי להתאים את קנה המידה הכללי של המסך."
 
 #: ui/main.qml:69
 #, kde-format
@@ -188,6 +171,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"גודלי גופנים עם נקודה עשרונית יכולים לגרום לבעיות בחלק מהיישומים. כדאי "
+"להשתמש בגודלי גופנים במספרים שלמים."
 
 #: ui/main.qml:91
 #, kde-format
@@ -195,107 +180,83 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"הדרך המומלצת לשנות את קנה המידה של ממשק המשתמש היא באמצעות יכולת קנה המידה "
+"הכללי של המסך."
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "ה&תאמה של כל הגופנים..."
+msgstr "&כיוון כל הגופנים…"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "כללי"
+msgstr "כללי:"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Select general font"
-msgstr "כללי"
+msgstr "בחירת גופן כללי"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "רוחב קבוע"
+msgstr "רוחב קבוע:"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "רוחב קבוע"
+msgstr "בחירת גופן רוחב קבוע"
 
 #: ui/main.qml:140
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "קטן"
+msgstr "קטן:"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Select small font"
-msgstr "קטן"
+msgstr "בחירת גופן קטן"
 
 #: ui/main.qml:152
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "סרגלי כלים"
+msgstr "סרגל כלים:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "סרגלי כלים"
+msgstr "בחירת גופן סרגל כלים"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "תפריט"
+msgstr "תפריט:"
 
 #: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "בחירת גופן תפריט"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "כותרת החלון"
+msgstr "כותרת חלון:"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Select window title font"
-msgstr "כותרת החלון"
+msgstr "בחירת גופן לכותרות חלונות"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Use a&nti-aliasing:"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "השתמש בהח&לקת קצוות לגופנים:"
+msgstr "החלקת קצוות:"
 
 #: ui/main.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
-msgstr "מופעל"
+msgstr "פעילה"
 
 #: ui/main.qml:200
 #, kde-kuit-format
@@ -307,29 +268,31 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"פיקסלים בתצוגות בדרך כלל מיושרים על רשת. לכן צורות של גופנים שאינן מיושרות "
+"לרשת הזאת תיראינה משוננות אלמלא נעשה שימוש בטכניקות של <emphasis>החלקת "
+"קצוות</emphasis> כדי להפחית את התופעה הזאת. בדרך כלל כדאי להשאיר את האפשרות "
+"הזאת פעילה אלא אם כן היא גורמת לבעיות."
 
 #: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "החרגת טווח מהחלקת קצוות"
 
 #: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 נק׳"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " עד "
+msgstr "עד"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Sub-pixel rendering type:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "סוג רינדור תת‏־פיקסלים:"
+msgstr "סוג עיבוד תת‏־פיקסלים:"
 
 #: ui/main.qml:321
 #, kde-kuit-format
@@ -344,13 +307,19 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>במסכי TFT או LCD כל פיקסל יחיד מורכב למעשה משלושה או ארבעה אורות בצבע "
+"אחד. אפשר לשנות את ה<emphasis>תת־פיקסלים</emphasis> האלה באופן עצמאי כדי "
+"לחדרר ולשפר את איכות הגופנים המוצגים.</para> <para>איכות העיבוד משתפרת רק אם "
+"הבחירה תואמת את האופן בו התת־פיקסלים של התצוגה שלך מיושרים. ברוב התצוגות יש "
+"סידור קווי של תת–פיקסלים של <emphasis>RGB</emphasis> (אדום-ירוק-כחול), בחלקם "
+"יש <emphasis>BGR</emphasis> (כחול-ירוק-אדום) ומגוון סידורים אקזוטיים יותר לא "
+"נתמכים על ידי היכולת הזאת.</para>לא עובד עם צגי CRT (העבים הישנים)."
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Hinting style:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "עיצוב החלקה:"
+msgstr "רמיזה:"
 
 #: ui/main.qml:367
 #, kde-kuit-format
@@ -361,12 +330,14 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"רמיזה היא טכניקה בה רמזים שמשובצעים בגופן משמשים לשיפור איכות העיבוד במיוחד "
+"בגדלים קטנים. רמיזה חזקה יותר בדרך כלל מחדדת את הקצוות אך האותיות הקטנות "
+"פחות דומות לצורת בגדלים גדולים יותר."
 
 #: ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI:"
-msgstr "אכוף דרגת DPI:"
+msgstr "אכיפת נק׳ לאינטש של הגופן:"
 
 #: ui/main.qml:408
 #, kde-kuit-format
@@ -379,11 +350,15 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>כאן יש למלא את צפיפות הנקודות לאינטש של המסך שלך כדי שגופנים על גבי "
+"המסך יהיו תואמים לגודל הפיזי שלהם בהדפסה.</para><para>כדי להגדיל את גודל "
+"הטקסט, יש לשנות את גודל הגופנים להלן. כדי לשנות את הכול לפי קנה מידה, יש "
+"להשתמש במחוון הגלילה שבעמוד <interface>תצוגה וצג</interface>.</para>"
 
 #: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
-msgstr ""
+msgstr "בחירת גופן"
 
 #, fuzzy
 #~| msgid "Force fonts DPI:"
