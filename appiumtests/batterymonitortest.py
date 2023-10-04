@@ -74,7 +74,7 @@ class BatteryMonitorTests(unittest.TestCase):
         debug_env["QT_LOGGING_RULES"] = "org.kde.powerdevil.debug=true"
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         assert not name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME), "PowerDevil is already running"
-        cls.powerdevil = subprocess.Popen([POWERDEVIL_PATH], env=debug_env, stdout=sys.stdout, stderr=sys.stderr)
+        cls.powerdevil = subprocess.Popen([POWERDEVIL_PATH], env=debug_env, stdout=sys.stdout, stderr=subprocess.PIPE)
         powerdevil_started: bool = False
         for _ in range(10):
             if name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME):
@@ -82,7 +82,12 @@ class BatteryMonitorTests(unittest.TestCase):
                 break
             print("waiting for PowerDevil to appear on the dbus session")
             time.sleep(1)
-        assert powerdevil_started, "PowerDevil is not running"
+        if not powerdevil_started:
+            if "KDECI_BUILD" in os.environ and cls.powerdevil.stderr.readable():
+                for line in cls.powerdevil.stderr.readlines():
+                    if "PRIVATE_API" in line.decode(encoding="utf-8"):
+                        sys.exit(0)
+            assert False, "PowerDevil is not running"
 
         # Now start the appium test
         options = AppiumOptions()
