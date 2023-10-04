@@ -146,7 +146,7 @@ QUrl KCMUser::recolorSVG(const QUrl &url, const QColor &color)
     static QMap<QUrl, QString> s_cache;
 
     if (!s_cache.contains(url)) {
-        QFile at(url.toLocalFile());
+        QFile at(url.toString().sliced(QLatin1String("qrc").size()));
         if (at.fileName().isEmpty() || !at.open(QFile::ReadOnly)) {
             return QUrl();
         }
