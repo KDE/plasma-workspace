@@ -16,7 +16,6 @@
 #include <QRect>
 #include <QTimer>
 #include <QWaylandClientExtensionTemplate>
-#include <qpa/qplatformnativeinterface.h>
 
 #include <abstracttasksmodel.h>
 #include <tasksmodel.h>
@@ -193,8 +192,7 @@ void init_fake_input()
             Q_UNREACHABLE(); // Crash directly to fail a test early
         }
         s_fakeInputInterface->authenticate(QLatin1String("TouchInputHelper"), QLatin1String("used in a test"));
-        QPlatformNativeInterface *const native = s_application->platformNativeInterface();
-        s_display = static_cast<struct wl_display *>(native->nativeResourceForIntegration("wl_display"));
+        s_display = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>()->display();
         wl_display_roundtrip(s_display);
         s_locked = false;
         s_locked.notify_one();

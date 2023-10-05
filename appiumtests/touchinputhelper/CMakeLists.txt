@@ -18,7 +18,6 @@ target_link_libraries(touchinputhelper
         Threads::Threads
         Qt::Core
         Qt::Gui # QGuiApplication
-        Qt::GuiPrivate
         Qt::WaylandClient # Fake input protocol
         Wayland::Client
         PW::LibTaskManager # TasksModel
