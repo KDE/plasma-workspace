@@ -4,30 +4,30 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2017-05-23 09:02-0400\n"
+"PO-Revision-Date: 2023-10-04 09:35+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: iconapplet.cpp:93
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
-msgstr "נכשל ביצירת תיקית סמלי היישומון \"%1\""
+msgstr "יצירת יישומוני סמלים לתיקייה ‚%1’ נכשלה"
 
 #: iconapplet.cpp:139
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
-msgstr "נכשל בהעתקת קובץ desktop של סמל יישומון ממיקום \"%1\" אל \"%2\""
+msgstr "העתקת קובץ desktop של יישומון סמל מ־‚%1’ ל־‚%2’ נכשלה"
 
 #: iconapplet.cpp:351
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "פתח תיקיה מכילה"
+msgstr "פתיחת התיקייה המכילה"
 
 #: iconapplet.cpp:566
 #, kde-format

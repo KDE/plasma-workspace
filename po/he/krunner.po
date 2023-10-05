@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:04+0000\n"
-"PO-Revision-Date: 2017-05-16 06:54-0400\n"
+"PO-Revision-Date: 2023-10-03 16:18+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,126 +16,125 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "אלקנה ברדוגו"
+msgstr "אלקנה ברדוגו וצוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ttv200@gmail.com"
+msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 
 #: main.cpp:77 view.cpp:47
-#, fuzzy, kde-format
-#| msgid "krunner"
+#, kde-format
 msgid "KRunner"
-msgstr "krunner"
+msgstr "KRunner"
 
 #: main.cpp:77
 #, kde-format
 msgid "Run Command interface"
-msgstr "הרץ ממשק פקודות"
+msgstr "הרצת ממשק פקודות"
 
 #: main.cpp:83
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr ""
+msgstr "להשתמש בתוכן לוח הגזירים כשאילתה ל־KRunner"
 
 #: main.cpp:84
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr ""
+msgstr "להפעיל את KRunner ברקע, לא להציג אותו."
 
 #: main.cpp:85
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "החלפת עותק קיים"
 
 #: main.cpp:86
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "להציג רק תוצאות מהתוסף שמסופק"
 
 #: main.cpp:87
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "הצגת התוספים הזמינים"
 
 #: main.cpp:94
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr ""
+msgstr "השאילתה להרצה, ייעשה שימוש רק אם לא סופק ‎-c"
 
 #: main.cpp:103
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "תוספים זמינים ל־KRunner,‏ pluginId"
 
 #: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "הגדרה"
 
 #: qml/RunCommand.qml:95
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "הגדרת ההתנהגות של KRunner"
 
 #: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "הגדרת KRunner…"
 
 #: qml/RunCommand.qml:111
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "מוצגות תוצאות רק עבור %1"
 
 #: qml/RunCommand.qml:125
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "חיפוש אחר ‚%1’…"
 
 #: qml/RunCommand.qml:126
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "חיפוש…"
 
 #: qml/RunCommand.qml:297 qml/RunCommand.qml:298 qml/RunCommand.qml:300
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "הצגת עזרה בשימוש"
 
 #: qml/RunCommand.qml:308
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "הצמדה"
 
 #: qml/RunCommand.qml:309
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "הצמדת חיפוש"
 
 #: qml/RunCommand.qml:311
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "להשאיר פתוח"
 
 #: qml/RunCommand.qml:383 qml/RunCommand.qml:388
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "שאילתות אחרונות"
 
 #: qml/RunCommand.qml:386
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "הסרה"
 
 #~ msgid "krunner"
 #~ msgstr "krunner"

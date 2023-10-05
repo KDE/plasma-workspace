@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_baloosearch5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"PO-Revision-Date: 2023-10-04 12:45+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,67 +16,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: baloosearchrunner.cpp:60
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "פתח תיקיה מכילה"
+msgstr "פתיחת התיקייה המכילה"
 
 #: baloosearchrunner.cpp:82
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
-msgstr "שמע"
+msgstr "קטעי שמע"
 
 #: baloosearchrunner.cpp:83
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "תמונה"
+msgstr "תמונות"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "וידאו"
+msgstr "סרטונים"
 
 #: baloosearchrunner.cpp:85
 #, kde-format
 msgid "Spreadsheets"
-msgstr ""
+msgstr "גיליונות נתונים"
 
 #: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Presentations"
-msgstr ""
+msgstr "מצגות"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "תיקיה"
+msgstr "תיקיות"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "מסמך"
+msgstr "מסמכים"
 
 #: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Archives"
-msgstr ""
+msgstr "ארכיונים"
 
 #: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Texts"
-msgstr ""
+msgstr "טקסטים"
 
 #: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "קבצים"
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "חפש קבצים, הודעות מייל ואנשי קשר"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-28 01:41+0000\n"
-"PO-Revision-Date: 2017-05-16 06:55-0400\n"
+"PO-Revision-Date: 2023-10-04 09:23+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -17,98 +17,85 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/ui/DeviceItem.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@info:status Free disk space"
-#| msgid "%1 free"
+#, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "%1 פנוי"
+msgstr "%1 פנויים מתוך %2"
 
 #: package/contents/ui/DeviceItem.qml:189
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Accessing..."
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr "ניגש..."
+msgstr "מתבצעת גישה…"
 
 #: package/contents/ui/DeviceItem.qml:192
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
+#, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr "מסיר..."
+msgstr "מתבצעת הסרה…"
 
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "לא לנתק עוד! עדיין יש קבצים שמועברים…"
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "פתיחת מנהל הקבצים"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "עיגון ופתיחה"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "שליפה"
 
 #: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "הסרה בבטחה"
 
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "עיגון"
 
 #: package/contents/ui/FullRepresentation.qml:43
 #: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Remove All"
-msgstr ""
+msgstr "להסיר הכול"
 
 #: package/contents/ui/FullRepresentation.qml:44
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Click to safely remove all devices"
-msgstr "לחץ כדי להסיר ההתקן בבטחה."
+msgstr "יש ללחוץ כדאי להסיר בבטחה את כל ההתקנים"
 
 #: package/contents/ui/FullRepresentation.qml:185
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "No removable devices attached"
-msgstr "התקנים קבועים"
+msgstr "אין התקנים נתיקים מחוברים"
 
 #: package/contents/ui/FullRepresentation.qml:185
-#, fuzzy, kde-format
-#| msgid "No Devices Available"
+#, kde-format
 msgid "No disks available"
-msgstr "אין התקנים זמינים"
+msgstr "אין כוננים זמינים"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Most Recent Device"
-msgstr "ההתקן ההכי חדש"
+msgstr "ההתקן העדכני ביותר"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -116,36 +103,30 @@ msgid "No Devices Available"
 msgstr "אין התקנים זמינים"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "Open auto mounter kcm"
-#| msgid "Configure Removable Devices"
+#, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "הגדרת התקנים נשלפים"
+msgstr "הגדרת התקנים נתיקים…"
 
 #: package/contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "Removable devices only"
+#, kde-format
 msgid "Removable Devices"
-msgstr "התקנים הניתנים להסרה"
+msgstr "התקנים נתיקים"
 
 #: package/contents/ui/main.qml:275
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "Non Removable Devices"
 msgstr "התקנים קבועים"
 
 #: package/contents/ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "All devices"
+#, kde-format
 msgid "All Devices"
 msgstr "כל ההתקנים"
 
 #: package/contents/ui/main.qml:307
-#, fuzzy, kde-format
-#| msgid "Open popup when new device is plugged in"
+#, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr "הראה חלון קופץ שהתקן חדש מחובר"
+msgstr "הצגת חלונית קופצת עם חיבור התקן חדש"
 
 #~ msgid "General"
 #~ msgstr "כללי"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
 "PO-Revision-Date: 2023-09-08 23:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -69,7 +69,7 @@ msgstr "Gailua deskonektatuta zegoen."
 msgid "An unknown error has occurred."
 msgstr "Errore ezezagun bat gertatu da."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
 #, kde-format
 msgid "Change Password"
 msgstr "Aldatu pasahitza"
@@ -145,27 +145,27 @@ msgstr "Utzi aldatzeke"
 msgid "Create User"
 msgstr "Sortu erabiltzailea"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
 #, kde-format
 msgid "Name:"
 msgstr "Izena:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Username:"
 msgstr "Erabiltzaile-izena:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
 #, kde-format
 msgid "Standard"
 msgstr "Arrunta"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Administrator"
 msgstr "Administratzailea"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Account type:"
 msgstr "Kontu mota:"
@@ -185,38 +185,38 @@ msgstr "Berretsi pasahitza::"
 msgid "Create"
 msgstr "Sortu"
 
-#: src/ui/FingerprintDialog.qml:57
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Konfiguratu hatz-markak"
 
-#: src/ui/FingerprintDialog.qml:67
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Garbitu dena"
 
-#: src/ui/FingerprintDialog.qml:74
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Add"
 msgstr "Gehitu"
 
-#: src/ui/FingerprintDialog.qml:83
+#: src/ui/FingerprintDialog.qml:71
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
 
-#: src/ui/FingerprintDialog.qml:91
+#: src/ui/FingerprintDialog.qml:79
 #, kde-format
 msgid "Done"
 msgstr "Eginda"
 
-#: src/ui/FingerprintDialog.qml:115
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Hatz-marka erroldatzea"
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
@@ -224,7 +224,7 @@ msgstr ""
 "Mesedez, sakatu zure eskuineko hatz erakuslea, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
@@ -232,7 +232,7 @@ msgstr ""
 "Mesedez, sakatu zure eskuineko hatz luzea, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
@@ -240,7 +240,7 @@ msgstr ""
 "Mesedez, sakatu zure eskuineko hatz nagia, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
@@ -248,14 +248,14 @@ msgstr ""
 "Mesedez, sakatu zure eskuineko hatz txikia, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 "Mesedez, sakatu zure eskuineko erpurua, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
@@ -263,7 +263,7 @@ msgstr ""
 "Mesedez, sakatu zure ezkerreko hatz erakuslea, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
@@ -271,7 +271,7 @@ msgstr ""
 "Mesedez, sakatu zure ezkerreko hatz luzea, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
@@ -279,7 +279,7 @@ msgstr ""
 "Mesedez, sakatu zure ezkerreko hatz nagia, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
@@ -287,14 +287,14 @@ msgstr ""
 "Mesedez, sakatu zure ezkerreko hatz txikia, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Mesedez, sakatu zure ezkerreko erpurua, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -302,7 +302,7 @@ msgstr ""
 "Mesedez, arin kolpatu zure eskuineko hatz erakuslea, behin eta berriz,  hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
@@ -310,7 +310,7 @@ msgstr ""
 "Mesedez, arin kolpatu zure eskuineko hatz luzea, behin eta berriz, hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
@@ -318,7 +318,7 @@ msgstr ""
 "Mesedez, arin kolpatu zure eskuineko hatz nagia, behin eta berriz,  hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
@@ -326,14 +326,14 @@ msgstr ""
 "Mesedez, arin kolpatu zure eskuineko hatz txikia, behin eta berriz, hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:154
+#: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Mesedez, arin kolpatu zure eskuineko erpurua, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:156
+#: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
@@ -341,7 +341,7 @@ msgstr ""
 "Mesedez, arin kolpatu zure ezkerreko hatz erakuslea, behin eta berriz,  hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:158
+#: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
@@ -349,7 +349,7 @@ msgstr ""
 "Mesedez, arin kolpatu zure ezkerreko hatz luzea, behin eta berriz, hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:160
+#: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
@@ -357,7 +357,7 @@ msgstr ""
 "Mesedez, arin kolpatu zure ezkerreko hatz nagia, behin eta berriz,  hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:162
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
@@ -365,34 +365,34 @@ msgstr ""
 "Mesedez, arin kolpatu zure ezkerreko hatz txikia, behin eta berriz, hatz-"
 "marka sentsorean."
 
-#: src/ui/FingerprintDialog.qml:164
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Mesedez, arin kolpatu zure ezkerreko erpurua, behin eta berriz, hatz-marka "
 "sentsorean."
 
-#: src/ui/FingerprintDialog.qml:179
+#: src/ui/FingerprintDialog.qml:167
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Hatza erroldatu da"
 
-#: src/ui/FingerprintDialog.qml:209
+#: src/ui/FingerprintDialog.qml:197
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Hautatu hatz bat erroldatzeko"
 
-#: src/ui/FingerprintDialog.qml:326
+#: src/ui/FingerprintDialog.qml:314
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Hatza berriz erroldatu"
 
-#: src/ui/FingerprintDialog.qml:333
+#: src/ui/FingerprintDialog.qml:321
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Ezabatu hatz-markak"
 
-#: src/ui/FingerprintDialog.qml:342
+#: src/ui/FingerprintDialog.qml:330
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Ez da hatz-markarik gehitu"
@@ -407,6 +407,12 @@ msgstr "Erabiltzaileak"
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
 msgstr "Gehitu ... berria"
+
+#: src/ui/main.qml:107
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -516,49 +522,73 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Hostozabalen zur bizia"
 
-#: src/ui/PicturesSheet.qml:126
+#: src/ui/PicturesSheet.qml:60
 #, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Hautatu irudi bat"
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
 
-#: src/ui/PicturesSheet.qml:151
+#: src/ui/PicturesSheet.qml:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:129
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Hautatu fitxategia..."
 
-#: src/ui/UserDetailsPage.qml:109
+#: src/ui/PicturesSheet.qml:134
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Hautatu irudi bat"
+
+#: src/ui/PicturesSheet.qml:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:269
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:111
 #, kde-format
 msgid "Change avatar"
 msgstr "Aldatu abatarra"
 
-#: src/ui/UserDetailsPage.qml:157
+#: src/ui/UserDetailsPage.qml:164
 #, kde-format
 msgid "Email address:"
 msgstr "E-posta helbidea:"
 
-#: src/ui/UserDetailsPage.qml:181
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete files"
 msgstr "Ezabatu fitxategiak"
 
-#: src/ui/UserDetailsPage.qml:188
+#: src/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Keep files"
 msgstr "Mantendu fitxategiak"
 
-#: src/ui/UserDetailsPage.qml:195
+#: src/ui/UserDetailsPage.qml:207
 #, kde-format
 msgid "Delete User…"
 msgstr "Ezabatu erabiltzailea..."
 
-#: src/ui/UserDetailsPage.qml:206
+#: src/ui/UserDetailsPage.qml:219
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Konfiguratu hatz-marka autentifikazioa..."
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:248
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

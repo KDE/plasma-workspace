@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2023-10-01 12:28+0300\n"
+"PO-Revision-Date: 2023-10-04 15:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,9 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Language: Hebrew\n"
-"X-Poedit-Country: ISRAEL\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: freespacenotifier.cpp:91
 #, kde-format
@@ -72,14 +70,14 @@ msgstr " MiB"
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
-msgstr "המקום הפנוי בתיקיית הבית שלך עומד להיגמר, נותרו לך %1 MiB (%2%)."
+msgstr "המקום הפנוי בתיקיית הבית שלך עומד להיגמר, נותרו לך %1 MiB‏ (%2%)."
 
 #: module.cpp:45
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
-msgstr "המקום הפנוי במחיצה העיקרית שלך עומד להיגמר, נותרו לך %1 MiB (%2%)."
+msgstr "המקום הפנוי במחיצה העיקרית שלך עומד להיגמר, נותרו לך %1 MiB‏ (%2%)."
 
 #: module.cpp:62
 #, kde-format

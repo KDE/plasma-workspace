@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
 "PO-Revision-Date: 2020-10-25 18:48+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
 #, kde-format
 msgid "Change Password"
 msgstr "Parooli muutmine"
@@ -134,27 +134,27 @@ msgstr ""
 msgid "Create User"
 msgstr "Kasutaja loomine"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
 #, kde-format
 msgid "Name:"
 msgstr "Nimi:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Username:"
 msgstr "Kasutajanimi:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
 #, kde-format
 msgid "Standard"
 msgstr "Tavaline"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Administrator"
 msgstr "Administraator"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Account type:"
 msgstr "Konto tüüp:"
@@ -174,175 +174,175 @@ msgstr "Parooli kinnitus:"
 msgid "Create"
 msgstr "Loo"
 
-#: src/ui/FingerprintDialog.qml:57
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:67
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:74
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:83
+#: src/ui/FingerprintDialog.qml:71
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:91
+#: src/ui/FingerprintDialog.qml:79
 #, kde-format
 msgid "Done"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:115
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:154
+#: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:156
+#: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:158
+#: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:160
+#: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:162
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:164
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:179
+#: src/ui/FingerprintDialog.qml:167
 #, kde-format
 msgid "Finger Enrolled"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:209
+#: src/ui/FingerprintDialog.qml:197
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:326
+#: src/ui/FingerprintDialog.qml:314
 #, kde-format
 msgid "Re-enroll finger"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:333
+#: src/ui/FingerprintDialog.qml:321
 #, fuzzy, kde-format
 #| msgid "Delete files"
 msgid "Delete fingerprint"
 msgstr "Kustuta failid"
 
-#: src/ui/FingerprintDialog.qml:342
+#: src/ui/FingerprintDialog.qml:330
 #, kde-format
 msgid "No fingerprints added"
 msgstr ""
@@ -358,6 +358,12 @@ msgstr ""
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
 msgstr "Lisa uus kasutaja"
+
+#: src/ui/main.qml:107
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
@@ -484,53 +490,77 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Sügavpruun"
 
-#: src/ui/PicturesSheet.qml:126
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Pildi valimine"
+#: src/ui/PicturesSheet.qml:60
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
 
-#: src/ui/PicturesSheet.qml:151
+#: src/ui/PicturesSheet.qml:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:129
 #, fuzzy, kde-format
 #| msgid "Choose File..."
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Vali fail ..."
 
-#: src/ui/UserDetailsPage.qml:109
+#: src/ui/PicturesSheet.qml:134
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Pildi valimine"
+
+#: src/ui/PicturesSheet.qml:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:269
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:111
 #, fuzzy, kde-format
 #| msgid "Change Avatar"
 msgid "Change avatar"
 msgstr "Avatari muutmine"
 
-#: src/ui/UserDetailsPage.qml:157
+#: src/ui/UserDetailsPage.qml:164
 #, kde-format
 msgid "Email address:"
 msgstr "E-posti aadress:"
 
-#: src/ui/UserDetailsPage.qml:181
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete files"
 msgstr "Kustuta failid"
 
-#: src/ui/UserDetailsPage.qml:188
+#: src/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Keep files"
 msgstr "Jäta failid alles"
 
-#: src/ui/UserDetailsPage.qml:195
+#: src/ui/UserDetailsPage.qml:207
 #, fuzzy, kde-format
 #| msgid "Delete User..."
 msgid "Delete User…"
 msgstr "Kustuta kasutaja ..."
 
-#: src/ui/UserDetailsPage.qml:206
+#: src/ui/UserDetailsPage.qml:219
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:248
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

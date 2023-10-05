@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
+"PO-Revision-Date: 2023-10-04 10:02+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: notificationaction.cpp:24
 #, kde-format
 msgid "The notification dataEngine is not set."
-msgstr "מנוע ההודעה לא הוגדר"
+msgstr "מנוע הנתונים להתראות לא הוגדר."
 
 #: notificationaction.cpp:34
 #, kde-format
 msgid "Invalid destination: %1"
-msgstr "יעד לא תקין: %1"
+msgstr "יעד שגוי: %1"
 
 #: notificationsengine.cpp:89
 #, kde-format

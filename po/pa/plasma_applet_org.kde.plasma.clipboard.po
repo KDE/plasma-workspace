@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
 "PO-Revision-Date: 2022-06-14 20:57-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -58,12 +58,12 @@ msgstr "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਵਾਪਸ ਜਾਓ"
 msgid "Change the QR code type"
 msgstr "QR ਕੋਡ ਕਿਸਮ ਬਦਲੋ"
 
-#: contents/ui/BarcodePage.qml:134
+#: contents/ui/BarcodePage.qml:136
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR ਕੋਡ ਬਣਾਉਣ ਲਈ ਅਸਫ਼ਲ"
 
-#: contents/ui/BarcodePage.qml:145
+#: contents/ui/BarcodePage.qml:147
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

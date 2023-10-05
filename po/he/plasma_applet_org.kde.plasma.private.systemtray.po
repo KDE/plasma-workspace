@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 02:01+0000\n"
-"PO-Revision-Date: 2017-05-22 05:25-0400\n"
+"PO-Revision-Date: 2023-10-04 09:55+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -26,7 +26,7 @@ msgstr "כללי"
 #: package/contents/config/config.qml:18
 #, kde-format
 msgid "Entries"
-msgstr "פריטים"
+msgstr "רשומות"
 
 #: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
@@ -57,12 +57,12 @@ msgstr "שונות"
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
-msgstr "פריט"
+msgstr "רשומה"
 
 #: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgid "Visibility"
-msgstr "נראות"
+msgstr "חשיפה"
 
 #: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
@@ -72,126 +72,124 @@ msgstr "קיצורי מקלדת"
 #: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Shown when relevant"
-msgstr ""
+msgstr "מופיע כשצריך"
 
 #: package/contents/ui/ConfigEntries.qml:242
-#, fuzzy, kde-format
-#| msgid "Always show all entries"
+#, kde-format
 msgid "Always shown"
-msgstr "הראה תמיד את כל הפריטים"
+msgstr "מופיע תמיד"
 
 #: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always hidden"
-msgstr ""
+msgstr "מוסתר תמיד"
 
 #: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Disabled"
-msgstr ""
+msgstr "מושבת"
 
 #: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
-msgstr "הראה תמיד את כל הפריטים"
+msgstr "תמיד להציג את כל הרשומות"
 
 #: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "גודל סמל לוח:"
 
 #: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "קטן"
 
 #: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "שינוי גודל עם גובה הלוח"
 
 #: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "שינוי גודל עם רוחב הלוח"
 
 #: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr ""
+msgstr "מופעל אוטומטית במצב מגע"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr ""
+msgstr "ריווח סמלי לוח:"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "קטן"
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "רגיל"
 
 #: package/contents/ui/ConfigGeneral.qml:59
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "גדול"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "מוגדר אוטומטית לגדול במצב מגע"
 
 #: package/contents/ui/ExpandedRepresentation.qml:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "חזרה"
 
 #: package/contents/ui/ExpandedRepresentation.qml:74
-#, fuzzy, kde-format
-#| msgid "Status & Notifications"
+#, kde-format
 msgid "Status and Notifications"
 msgstr "מצב והתראות"
 
 #: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
-msgstr ""
+msgstr "פעולות נוספות"
 
 #: package/contents/ui/ExpandedRepresentation.qml:234
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "להשאיר פתוח"
 
 #: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
-msgstr ""
+msgstr "הרחבת מגש המערכת"
 
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
-msgstr ""
+msgstr "להציג את כל הפריטים במגש המערכת בחלונית קופצת"
 
 #: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Close popup"
-msgstr "סגור חלון קופץ"
+msgstr "סגירת חלונית קופצת"
 
 #: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Show hidden icons"
-msgstr "הראה סמלים מוסתרים"
+msgstr "הצגת סמלים מוסתרים"
 
 #, fuzzy
 #~| msgid " (Automatic load)"

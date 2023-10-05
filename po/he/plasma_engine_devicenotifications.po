@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
+"PO-Revision-Date: 2023-10-04 10:01+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,28 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ksolidnotify.cpp:149
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "מצב התקן"
 
 #: ksolidnotify.cpp:149
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "A device can now be safely removed"
-msgstr "אפשר להסיר את ההתקן בביטחה"
+msgstr "אפשר לנתק את ההתקן בבטחה כעת"
 
 #: ksolidnotify.cpp:150
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr "אפשר להסיר את ההתקן בביטחה"
+msgstr "אפשר לנתק את ההתקן בבטחה."
 
 #: ksolidnotify.cpp:157
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "אין לך הרשאה לחיבור ההתקן."
+msgstr "אסור לך לעגן את ההתקן."
 
 #: ksolidnotify.cpp:160
 #, kde-format
@@ -48,25 +47,25 @@ msgstr "אין לך הרשאה לניתוק ההתקן."
 #: ksolidnotify.cpp:163
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "אין לך הרשאה להוצאת הדיסק."
+msgstr "אין לך הרשאה לשליפת הדיסק."
 
 #: ksolidnotify.cpp:170
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "לא יכול לחבר את ההתקן כשהוא עסוק."
+msgstr "אי אפשר לעגן את ההתקן כשהוא עסוק."
 
 #: ksolidnotify.cpp:200
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "קובץ אחד או יותר של ההתקן פתוחים ביישומים"
+msgstr "קובץ אחד או יותר בהתקן פתוח ביישום."
 
 #: ksolidnotify.cpp:202
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "קובץ אחד או יותר של ההתקן פתוחים ביישום \"%2\"."
-msgstr[1] "קובץ אחד או יותר של ההתקן פתוחים ביישומים הבאים: %2."
+msgstr[0] "קובץ אחד או יותר מההתקן פתוח ביישום „%2”."
+msgstr[1] "קובץ אחד או יותר מההתקן פתוח ביישומים הבאים: %2."
 
 #: ksolidnotify.cpp:205
 #, kde-format
@@ -77,15 +76,15 @@ msgstr ", "
 #: ksolidnotify.cpp:222
 #, kde-format
 msgid "Could not mount this device."
-msgstr "לא יכול לחבר את ההתקן."
+msgstr "אי אפש לעגן את ההתקן."
 
 #: ksolidnotify.cpp:225
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "לא יכול להסיר את ההתקן."
+msgstr "אי אפשר לנתק את ההתקן."
 
 #: ksolidnotify.cpp:228
 #, kde-format
 msgid "Could not eject this disc."
-msgstr "לא יכול להוציא את הדיסק."
+msgstr "אי אפשר לשלוף את הדיסק."

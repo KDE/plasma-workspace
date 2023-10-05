@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2017-05-23 10:18-0400\n"
+"PO-Revision-Date: 2023-10-04 15:38+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,24 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "אלקנה ברדוגו"
+msgstr "אלקנה ברדוגו וצוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ttv200@gmail.com"
+msgstr "ttv200@gmail.com, kde-l10n-he@kde.org.il"
 
 #: kcm.cpp:465
-#, fuzzy, kde-format
-#| msgid "You have to restart KDE for cursor changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
-msgstr "אתה צריך להפעיל מחדש את KDE בשביל שהשינויים של סמן עכבר יופיעו."
+msgstr "יש להפעיל את הפעלת הפלזמה מחדש כדי שהשינויים האלו יחולו."
 
 #: kcm.cpp:466
 #, kde-format
@@ -43,36 +42,34 @@ msgstr "הגדרות סמן העכבר"
 #: lnftool.cpp:33
 #, kde-format
 msgid "Global Theme Tool"
-msgstr ""
+msgstr "כלי ערכות עיצוב כלליות"
 
 #: lnftool.cpp:35
 #, kde-format
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
-msgstr ""
+msgstr "כלי שורת פקודה להחלת חבילות ערכות עיצוב כלליות לרענון התחושה והמראה."
 
 #: lnftool.cpp:37
-#, fuzzy, kde-format
-#| msgid "Marco Martin"
+#, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr "Marco Martin"
+msgstr "כל הזכויות שמורות 2017, למרקו מרטין"
 
 #: lnftool.cpp:38
 #, kde-format
 msgid "Marco Martin"
-msgstr "Marco Martin"
+msgstr "מרקו מרטין"
 
 #: lnftool.cpp:38
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "מתחזק"
 
 #: lnftool.cpp:46
-#, fuzzy, kde-format
-#| msgid "Download New Look And Feel Packages"
+#, kde-format
 msgid "List available global theme packages"
-msgstr "הורד חבילות מראה ותחושה חדשות"
+msgstr "הצגת חבילות ערכות נושא כלליות זמינות"
 
 #: lnftool.cpp:49
 #, kde-format
@@ -81,68 +78,70 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
+"החלת חבילת ערכת עיצוב כללית. יכול להיות שם של חבילה או נתיב מלא לחבילה "
+"מותקנת, בנקודה כלשהי הכלי הזה יוודא שזאת אכן חבילת ערכת עיצוב כללי ואז ינסה "
+"להחיל אותה"
 
 #: lnftool.cpp:51
 #, kde-format
 msgid "packagename"
-msgstr ""
+msgstr "שם_חבילה"
 
 #: lnftool.cpp:52
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
-msgstr ""
+msgstr "איפוס פריסת שולחן העבודה פלזמה"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Configure Look and Feel details"
+#, kde-format
 msgid "Global look and feel"
-msgstr "הגדרות מראה ותחושה"
+msgstr "מראה ותחושה כלליים"
 
 #: ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "מחיקה לצמיתות"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "למחוק את ערכת העיצוב הזאת לצמיתות?"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "למחוק לצמיתות"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "לבטל"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "קבלת חדשות…"
 
 #: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
-msgstr ""
+msgstr "מכילה פריסת שולחן עבודה"
 
 #: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
-msgstr ""
+msgstr "הצגה מקדימה של ערכת העיצוב"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr ""
+msgstr "הסרת ערכת עיצוב"
 
 #: ui/main.qml:141
 #, kde-format
@@ -150,43 +149,42 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "להחיל את %1?"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "בחירה מה להחיל…"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
+msgstr "הצגת פחות אפשרויות…"
 
 #: ui/main.qml:176
 #, kde-format
 msgid "Apply"
-msgstr ""
+msgstr "החלה"
 
 #: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "הגדרות פריסה"
 
 #: ui/MoreOptions.qml:27
-#, fuzzy, kde-format
-#| msgid "Use Desktop Layout from theme"
+#, kde-format
 msgid "Desktop layout"
-msgstr "השתמש בפריסת שולחן עבודה מערכת נושא"
+msgstr "פריסת שולחן עבודה"
 
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "פריסת כפתורי שורת כותרת"
 
 #: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
 #, kde-format
@@ -194,95 +192,95 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
+"החלת פריסת שולחן עבודה מחליפה את ההגדרה הנוכחית של שולחנות העבודה, הלוחות, "
+"המעגנים והיישומונים"
 
 #: ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "הגדרות מראה:"
 
 #: ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "צבעים"
 
 #: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
-msgstr ""
+msgstr "סגנון היישומים"
 
 #: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decoration Style"
-msgstr ""
+msgstr "סגנון עיטור חלונות"
 
 #: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decoration Size"
-msgstr ""
+msgstr "גודל עיטור חלונות"
 
 #: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
-msgstr ""
+msgstr "סמלים"
 
 #: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
-msgstr ""
+msgstr "סגנון פלזמה"
 
 #: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
-msgstr ""
+msgstr "סמני עכבר"
 
 #: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
-msgstr ""
+msgstr "גופנים"
 
 #: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "מחליף משימות"
 
 #: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
+msgstr "מסך פתיח"
 
 #: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
-msgstr ""
+msgstr "מסך נעילה"
 
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr ""
+msgstr "ההגדרה הבאה תחול על ערכת העיצוב הכללית הזאת:"
 
 #: ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "הגדרות מראה"
 
 #: ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "• הגדרות מראה"
 
 #: ui/SimpleOptions.qml:45
-#, fuzzy, kde-format
-#| msgid "Use Desktop Layout from theme"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "השתמש בפריסת שולחן עבודה מערכת נושא"
+msgstr "פריסת שולחן עבודה וחלונות"
 
 #: ui/SimpleOptions.qml:52
-#, fuzzy, kde-format
-#| msgid "Use Desktop Layout from theme"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "השתמש בפריסת שולחן עבודה מערכת נושא"
+msgstr "• פריסת שולחן עבודה וחלונות"
 
 #: ui/SimpleOptions.qml:70
 #, kde-format
@@ -290,6 +288,8 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+"ערכת העיצוב הכללית לא מספקת הגדרות מתאימות. נא ליצור קשר עם מתחזק הערכה "
+"הכללית הזאת כיוון שהיא כנראה פגומה."
 
 #, fuzzy
 #~| msgid "Download New Look And Feel Packages"

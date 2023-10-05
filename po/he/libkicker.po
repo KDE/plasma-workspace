@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:56+0000\n"
-"PO-Revision-Date: 2017-05-22 05:23-0400\n"
+"PO-Revision-Date: 2023-10-04 15:19+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
-msgstr "פתח באמצעות:"
+msgstr "פתיחה באמצעות:"
 
 #: plugin/actionlist.cpp:98
 #, kde-format
@@ -31,12 +31,12 @@ msgstr "מאפיינים"
 #: plugin/actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
-msgstr "הוסף לשולחן עבודה"
+msgstr "הוספה לשולחן העבודה"
 
 #: plugin/actionlist.cpp:150
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "הוסף ללוח (יישומון)"
+msgstr "הוספה ללוח (יישומון)"
 
 #: plugin/actionlist.cpp:155
 #, kde-format
@@ -44,33 +44,30 @@ msgid "Pin to Task Manager"
 msgstr "הצמדה למנהל המשימות"
 
 #: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "מסמכים אחרונים"
+msgstr "קבצים אחרונים"
 
 #: plugin/actionlist.cpp:316
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Forget Recent Files"
-msgstr "נקה יישומים אחרונים"
+msgstr "פינוי הקבצים האחרונים"
 
 #: plugin/actionlist.cpp:394
-#, fuzzy, kde-format
-#| msgid "Edit Application..."
+#, kde-format
 msgid "Edit Application…"
-msgstr "ערוך יישום..."
+msgstr "עריכת יישום…"
 
 #: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr ""
+msgstr "הסרה או ניהול של תוספות…"
 
 #: plugin/appentry.cpp:291
 #, kde-format
 msgid "Hide Application"
-msgstr "הסתר יישום"
+msgstr "הסתרת יישום"
 
 #: plugin/appentry.cpp:350
 #, kde-format
@@ -94,22 +91,22 @@ msgstr "יישומים"
 #: plugin/appsmodel.cpp:154
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "בטל הסתרת יישומים בתת־תפריט זה"
+msgstr "חשיפת יישומים בתת־תפריט זה"
 
 #: plugin/appsmodel.cpp:163
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "בטל יישומים מוסתרים ב־\"%1\""
+msgstr "חשיפת יישומים ב־‚%1’"
 
 #: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
-msgstr ""
+msgstr "הצגת KRunner"
 
 #: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr ""
+msgstr "חיפוש, חישוב או הרצת פקודה"
 
 #: plugin/computermodel.cpp:148
 #, kde-format
@@ -131,44 +128,42 @@ msgstr "היו בשימוש לאחרונה"
 #: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "קבצים"
 
 #: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
-msgstr "שכח יישומים"
+msgstr "לשכוח יישומים"
 
 #: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "פתיחת התיקייה המכילה"
 
 #: plugin/recentusagemodel.cpp:334
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget File"
-msgstr "שכח הכל"
+msgstr "לשכוח קובץ"
 
 #: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
-msgstr "שכח הכל"
+msgstr "לשכוח הכול"
 
 #: plugin/recentusagemodel.cpp:473
 #, kde-format
 msgid "Forget All Applications"
-msgstr "שכח את כל היישומים"
+msgstr "לשכוח את כל היישומים"
 
 #: plugin/recentusagemodel.cpp:476
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget All Files"
-msgstr "שכח הכל"
+msgstr "לשכוח את כל הקבצים"
 
 #: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
-msgstr "הסתר %1"
+msgstr "הסתרת %1"
 
 #: plugin/rootmodel.cpp:374
 #, kde-format
@@ -178,13 +173,12 @@ msgstr "כל היישומים"
 #: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "זה לא אמור להיות חשוף! יש להשתמש ב־KICKER_FAVORITES_MODEL"
 
 #: plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Often Used Documents"
+#, kde-format
 msgid "Often Used Files"
-msgstr "מסמכים בשימוש נפוץ"
+msgstr "קבצים תדירים"
 
 #: plugin/rootmodel.cpp:408
 #, kde-format
@@ -194,12 +188,12 @@ msgstr "יישומים אחרונים"
 #: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
-msgstr "יישומים בשימוש נפוץ"
+msgstr "יישומים תדירים"
 
 #: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
-msgstr "יציאה"
+msgstr "יציאה / הפעלה"
 
 #: plugin/runnermodel.cpp:217
 #, kde-format
@@ -214,33 +208,33 @@ msgstr "נעילה"
 #: plugin/systementry.cpp:198
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "יציאה"
 
 #: plugin/systementry.cpp:201 plugin/systementry.cpp:269
 #, kde-format
 msgid "Save Session"
-msgstr "שמור הפעלה"
+msgstr "שמירת הפעלה"
 
 #: plugin/systementry.cpp:204
 #, kde-format
 msgid "Switch User"
-msgstr "החלף משתמש"
+msgstr "החלפת משתמש"
 
 #: plugin/systementry.cpp:207
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "שינה"
 
 #: plugin/systementry.cpp:210
 #, kde-format
 msgid "Hibernate"
-msgstr "שינה"
+msgstr "תרדמת"
 
 #: plugin/systementry.cpp:213
-#, fuzzy, kde-format
+#, kde-format
 msgid "Restart"
-msgstr "הפעל מחדש את המחשב"
+msgstr "הפעלה מחדש"
 
 #: plugin/systementry.cpp:216
 #, kde-format
@@ -262,37 +256,37 @@ msgstr "מערכת"
 #: plugin/systementry.cpp:263
 #, kde-format
 msgid "Lock screen"
-msgstr "מסך נעילה"
+msgstr "נעילת המסך"
 
 #: plugin/systementry.cpp:266
 #, kde-format
 msgid "End session"
-msgstr "סיים הפעלה"
+msgstr "סיום הפעלה"
 
 #: plugin/systementry.cpp:272
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr "התחל הפעלה מקבילה כמשתמש אחר"
+msgstr "התחלת הפעלה מקבילה כמשתמש אחר"
 
 #: plugin/systementry.cpp:275
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "השהה לזיכרון ה־RAM"
+msgstr "השהיה לזיכרון"
 
 #: plugin/systementry.cpp:278
 #, kde-format
 msgid "Suspend to disk"
-msgstr "השהה לכונן אחסון"
+msgstr "השהיה לכונן"
 
 #: plugin/systementry.cpp:281
 #, kde-format
 msgid "Restart computer"
-msgstr "הפעל מחדש את המחשב"
+msgstr "הפעלת המחשב מחדש"
 
 #: plugin/systementry.cpp:284
 #, kde-format
 msgid "Turn off computer"
-msgstr "כבה את המחשב"
+msgstr "כיבוי המחשב"
 
 #: plugin/systemmodel.cpp:31
 #, kde-format

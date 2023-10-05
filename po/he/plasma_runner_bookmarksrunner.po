@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"PO-Revision-Date: 2023-10-04 12:46+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: bookmarksrunner.cpp:34
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
-msgstr "מוצא את סימנית הדפדפן המתאימה אל :q:."
+msgstr "מאתר את סימניית הדפדפן העונה על :q:."
 
 #: bookmarksrunner.cpp:35
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "סימניות"
 #: bookmarksrunner.cpp:35
 #, kde-format
 msgid "List all web browser bookmarks"
-msgstr "הצג את כל סימניות הדפדפן"
+msgstr "הצגת כל סימניות הדפדפן"
 
 #: bookmarksrunner.cpp:56
 #, kde-format

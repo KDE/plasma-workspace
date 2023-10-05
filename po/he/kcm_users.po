@@ -1,0 +1,585 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"PO-Revision-Date: 2023-10-04 23:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "לא נמצא התקן טביעות אצבע."
+
+#: src/fingerprintmodel.cpp:331
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "נא לנסות לסרוק את טביעת האצבע שלך מחדש."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "החלקת מהר מדי. נא לנסות שוב."
+
+#: src/fingerprintmodel.cpp:335
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "האצבע לא ממורכזת על הקורא. נא לנסות שוב."
+
+#: src/fingerprintmodel.cpp:337
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "נא להרחיק את האצבע שלך מהקורא ולנסות שוב."
+
+#: src/fingerprintmodel.cpp:345
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "רישום טביעות האצבע נכשל."
+
+#: src/fingerprintmodel.cpp:348
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr "לא נשאר מקום להתקן זה, נא למחוק טביעות אצבע אחרות כדי להמשיך."
+
+#: src/fingerprintmodel.cpp:351
+#, kde-format
+msgid "The device was disconnected."
+msgstr "המכשיר היה מנותק."
+
+#: src/fingerprintmodel.cpp:356
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "אירעה שגיאה בלתי ידועה."
+
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
+#, kde-format
+msgid "Change Password"
+msgstr "החלפת סיסמה"
+
+#: src/ui/ChangePassword.qml:32
+#, kde-format
+msgid "Set Password"
+msgstr "הגדרת סיסמה"
+
+#: src/ui/ChangePassword.qml:55
+#, kde-format
+msgid "Password"
+msgstr "סיסמה"
+
+#: src/ui/ChangePassword.qml:70
+#, kde-format
+msgid "Confirm password"
+msgstr "אישור סיסמה"
+
+#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "הסיסמאות חייבות להיות זהות"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "להחליף את סיסמת הארנק?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"עכשיו כששינית את סיסמת הכניסה שלך, אולי יהיה לך נוח להחליף את הסיסמה ב־"
+"KWallet ברירת המחדל שלך כדי להיצמד אליה."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "מה זה KWallet?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet הוא מנהל סיסמאות שמאחסן את הסיסמאות שלך לרשתות אלחוטיות ושאר משאבים "
+"מוצפנים. הוא נעול עם סיסמה משלו ששונה מסיסמת הכניסה שלך. אם שתיהן תואמות "
+"אפשר לשחרר אותו בכניסה אוטומטית כדי שלא לאלץ אותך למלא את הסיסמה של KWallet "
+"בעצמך."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "להחליף סיסמת ארנק"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "להשאיר ללא שינוי"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "יצירת משתמש"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
+#, kde-format
+msgid "Name:"
+msgstr "שם:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
+#, kde-format
+msgid "Username:"
+msgstr "שם משתמש:"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
+#, kde-format
+msgid "Standard"
+msgstr "רגיל"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Administrator"
+msgstr "הנהלה"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
+#, kde-format
+msgid "Account type:"
+msgstr "סוג חשבון:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "סיסמה:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "אישור סיסמה:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "יצירה"
+
+#: src/ui/FingerprintDialog.qml:45
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "הגדרת טביעות אצבע"
+
+#: src/ui/FingerprintDialog.qml:55
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "לפנות הכול"
+
+#: src/ui/FingerprintDialog.qml:62
+#, kde-format
+msgid "Add"
+msgstr "הוספה"
+
+#: src/ui/FingerprintDialog.qml:71
+#, kde-format
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/ui/FingerprintDialog.qml:79
+#, kde-format
+msgid "Done"
+msgstr "בוצע"
+
+#: src/ui/FingerprintDialog.qml:103
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "טביעת האצבע נרשמת"
+
+#: src/ui/FingerprintDialog.qml:112
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם האצבע הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:114
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם האמה הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:116
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם הקמיצה הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:118
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם הזרת הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:120
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "נא ללחוץ עם האגודל הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:122
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם האצבע השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם האמה השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם הקמיצה השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "נא ללחוץ עם הזרת השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "נא ללחוץ עם האגודל השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "נא להעביר את האצבע הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "נא להעביר את האמה הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "נא להעביר את הקמיצה הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "נא להעביר את הזרת הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "נא להעביר את האגודל הימנית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:144
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "נא להעביר את האצבע השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "נא להעביר את האמה השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "נא להעביר את הקמיצה השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "נא להעביר את הזרת השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "נא להעביר את האגודל השמאלית על קורא טביעות האצבע שוב ושוב."
+
+#: src/ui/FingerprintDialog.qml:167
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "טביעת האצבע נרשמה"
+
+#: src/ui/FingerprintDialog.qml:197
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "נא לבחור אצבע לרישום"
+
+#: src/ui/FingerprintDialog.qml:314
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "רישום אצבע מחדש"
+
+#: src/ui/FingerprintDialog.qml:321
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "מחיקת טביעת אצבע"
+
+#: src/ui/FingerprintDialog.qml:330
+#, kde-format
+msgid "No fingerprints added"
+msgstr "לא נוספו טביעות אצבע"
+
+#: src/ui/main.qml:20
+#, kde-format
+msgid "Users"
+msgstr "משתמשים"
+
+#: src/ui/main.qml:31
+#, kde-format
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New"
+msgstr "הוספת חדש"
+
+#: src/ui/main.qml:107
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "החלפת תמונה ייצוגית"
+
+#: src/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "זה כלום"
+
+#: src/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "פלמינגו עצבני"
+
+#: src/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "פרי הדרקון"
+
+#: src/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "בטטה"
+
+#: src/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "ענבר היקפי"
+
+#: src/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "קרן שמש מנצנצת"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "לימון-ליים"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "קסם ירקרק"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "אחו עדין"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "כחול-ירקרק פושר"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "פלזמה בכחול"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "סגול דהוי"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "סגול נמוך"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "גחל שרוף"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "שלמות נייר"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "חום קפיטריה"
+
+#: src/ui/PicturesSheet.qml:38
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "עץ עשיר"
+
+#: src/ui/PicturesSheet.qml:60
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:129
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "בחירת קובץ…"
+
+#: src/ui/PicturesSheet.qml:134
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "בחירת תמונה"
+
+#: src/ui/PicturesSheet.qml:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:269
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:111
+#, kde-format
+msgid "Change avatar"
+msgstr "החלפת תמונה ייצוגית"
+
+#: src/ui/UserDetailsPage.qml:164
+#, kde-format
+msgid "Email address:"
+msgstr "כתובת דוא״ל:"
+
+#: src/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Delete files"
+msgstr "מחיקת קבצים"
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Keep files"
+msgstr "שמירה על קבצים"
+
+#: src/ui/UserDetailsPage.qml:207
+#, kde-format
+msgid "Delete User…"
+msgstr "מחיקת משתמש…"
+
+#: src/ui/UserDetailsPage.qml:219
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "הגדרת אימות בטביעות אצבע…"
+
+#: src/ui/UserDetailsPage.qml:248
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"אפשר להשתמש בטביעות אצבע במקום בסיסמאות בשחרור המסך ואספקת הרשאות ניהול "
+"ליישומים ותוכניות מסוף שדורשות אותן.<nl/><nl/>עדיין אין תמיכה בכניסה למערכת "
+"עם טביעת האצבע שלך."
+
+#: src/user.cpp:280
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "לא ניתן לקבל הרשאה לשמירת המשתמש %1"
+
+#: src/user.cpp:285
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "אירעה שגיאה בשמירת השינויים"
+
+#: src/user.cpp:381
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr "שינוי גודל התמונה נכשל: פתיחת הקובץ הזמני נכשלה"
+
+#: src/user.cpp:389
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr "שינוי גודל התמונה נכשל: כתיבה לקובץ הזמני נכשלה"
+
+#: src/usermodel.cpp:147
+#, kde-format
+msgid "Your Account"
+msgstr "החשבון שלך"
+
+#: src/usermodel.cpp:147
+#, kde-format
+msgid "Other Accounts"
+msgstr "חשבונות אחרים"

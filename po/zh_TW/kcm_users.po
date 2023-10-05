@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
 "PO-Revision-Date: 2023-02-07 23:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -61,7 +61,7 @@ msgstr "裝置已斷線。"
 msgid "An unknown error has occurred."
 msgstr "發生了未知錯誤。"
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
 #, kde-format
 msgid "Change Password"
 msgstr "變更密碼"
@@ -132,27 +132,27 @@ msgstr "不變更"
 msgid "Create User"
 msgstr "建立使用者"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
 #, kde-format
 msgid "Name:"
 msgstr "姓名："
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Username:"
 msgstr "使用者名稱："
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
 #, kde-format
 msgid "Standard"
 msgstr "標準"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Administrator"
 msgstr "管理員"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Account type:"
 msgstr "帳號類型："
@@ -172,174 +172,174 @@ msgstr "確認密碼："
 msgid "Create"
 msgstr "建立"
 
-#: src/ui/FingerprintDialog.qml:57
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "設定指紋"
 
-#: src/ui/FingerprintDialog.qml:67
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "全部清除"
 
-#: src/ui/FingerprintDialog.qml:74
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
-#: src/ui/FingerprintDialog.qml:83
+#: src/ui/FingerprintDialog.qml:71
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
 
-#: src/ui/FingerprintDialog.qml:91
+#: src/ui/FingerprintDialog.qml:79
 #, kde-format
 msgid "Done"
 msgstr "完成"
 
-#: src/ui/FingerprintDialog.qml:115
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "正在登錄指紋"
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的右手食指。"
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的右手中指。"
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的右手無名指。"
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的右手小指。"
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的右手大拇指。"
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的左手食指。"
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的左手中指。"
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的左手無名指。"
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的左手小指。"
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "請在指紋感應器上重複按壓您的左手大拇指。"
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的右手食指。"
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的右手中指。"
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的右手無名指。"
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的右手小指。"
 
-#: src/ui/FingerprintDialog.qml:154
+#: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的右手大拇指。"
 
-#: src/ui/FingerprintDialog.qml:156
+#: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的左手食指。"
 
-#: src/ui/FingerprintDialog.qml:158
+#: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的左手中指。"
 
-#: src/ui/FingerprintDialog.qml:160
+#: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的左手無名指。"
 
-#: src/ui/FingerprintDialog.qml:162
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的左手小指。"
 
-#: src/ui/FingerprintDialog.qml:164
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "請在指紋感應器上重複滑動您的左手大拇指。"
 
-#: src/ui/FingerprintDialog.qml:179
+#: src/ui/FingerprintDialog.qml:167
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "已登錄指紋"
 
-#: src/ui/FingerprintDialog.qml:209
+#: src/ui/FingerprintDialog.qml:197
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "選擇要登錄的手指"
 
-#: src/ui/FingerprintDialog.qml:326
+#: src/ui/FingerprintDialog.qml:314
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "重新登錄手指"
 
-#: src/ui/FingerprintDialog.qml:333
+#: src/ui/FingerprintDialog.qml:321
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "刪除指紋"
 
-#: src/ui/FingerprintDialog.qml:342
+#: src/ui/FingerprintDialog.qml:330
 #, kde-format
 msgid "No fingerprints added"
 msgstr "未新增指紋"
@@ -355,6 +355,12 @@ msgstr ""
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
 msgstr "新增使用者"
+
+#: src/ui/main.qml:107
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -464,49 +470,73 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:126
+#: src/ui/PicturesSheet.qml:60
 #, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "選取圖片"
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
 
-#: src/ui/PicturesSheet.qml:151
+#: src/ui/PicturesSheet.qml:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:129
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "選取檔案…"
 
-#: src/ui/UserDetailsPage.qml:109
+#: src/ui/PicturesSheet.qml:134
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "選取圖片"
+
+#: src/ui/PicturesSheet.qml:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:269
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:111
 #, kde-format
 msgid "Change avatar"
 msgstr "變更大頭貼"
 
-#: src/ui/UserDetailsPage.qml:157
+#: src/ui/UserDetailsPage.qml:164
 #, kde-format
 msgid "Email address:"
 msgstr "電子郵件地址："
 
-#: src/ui/UserDetailsPage.qml:181
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete files"
 msgstr "刪除檔案"
 
-#: src/ui/UserDetailsPage.qml:188
+#: src/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Keep files"
 msgstr "保留檔案"
 
-#: src/ui/UserDetailsPage.qml:195
+#: src/ui/UserDetailsPage.qml:207
 #, kde-format
 msgid "Delete User…"
 msgstr "刪除使用者…"
 
-#: src/ui/UserDetailsPage.qml:206
+#: src/ui/UserDetailsPage.qml:219
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "設定指紋驗證…"
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:248
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

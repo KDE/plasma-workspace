@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-22 02:08+0000\n"
-"PO-Revision-Date: 2017-05-16 06:55-0400\n"
+"PO-Revision-Date: 2023-10-04 09:36+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -14,9 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Language: Hebrew\n"
-"X-Poedit-Country: ISRAEL\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -28,22 +26,22 @@ msgstr "כללי"
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr ""
+msgstr "הצגת פעולות:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Logout"
-msgstr ""
+msgstr "יציאה"
 
 #: contents/ui/ConfigGeneral.qml:42
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "כיבוי"
 
 #: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "הפעלה מחדש"
 
 #: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
 #, kde-format
@@ -53,74 +51,73 @@ msgstr "נעילה"
 #: contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgid "Switch User"
-msgstr "החלף משתמש"
+msgstr "החלפת משתמש"
 
 #: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
-msgstr "שינה"
+msgstr "תרדמת"
 
 #: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "שינה"
 
 #: contents/ui/data.js:6
 #, kde-format
 msgid "Lock the screen"
-msgstr "נעל את המסך"
+msgstr "נעילת המסך"
 
 #: contents/ui/data.js:12
 #, kde-format
 msgid "Switch user"
-msgstr "החלף משתמש"
+msgstr "החלפת משתמש"
 
 #: contents/ui/data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr "הכנס במקביל בתור משתמש אחר"
+msgstr "הקמת הפעלה מקבילית כמשתמש אחר"
 
 #: contents/ui/data.js:18
 #, kde-format
 msgid "Shutdown…"
-msgstr ""
+msgstr "כיבוי…"
 
 #: contents/ui/data.js:19
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "התנתק, כבה או אתחל את המחשב"
+msgstr "כיבוי המחשב"
 
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr ""
+msgstr "הפעלה מחדש…"
 
 #: contents/ui/data.js:26
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "הפעלת המחשב מחדש"
 
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr ""
+msgstr "יציאה…"
 
 #: contents/ui/data.js:33
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "סיום ההפעלה"
 
 #: contents/ui/data.js:40
 #, kde-format
 msgid "Sleep (suspend to RAM)"
-msgstr "השהייה (השהה לזיכרון ה-RAM)"
+msgstr "שינה (השהיה לזיכרון)"
 
 #: contents/ui/data.js:47
 #, kde-format
 msgid "Hibernate (suspend to disk)"
-msgstr "שינה (השהייה לכונן)"
+msgstr "תרדמת (השהיה לכונן)"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr "האם ברצונך להשהות לכונן (שינה)?"

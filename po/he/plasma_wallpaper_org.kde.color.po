@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.color\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2017-05-16 06:55-0400\n"
+"PO-Revision-Date: 2023-10-04 13:03+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: contents/ui/config.qml:21
 #, kde-format
@@ -26,4 +26,4 @@ msgstr "צבע:"
 #: contents/ui/config.qml:22
 #, kde-format
 msgid "Select Background Color"
-msgstr "בחר צבע רקע"
+msgstr "בחירת צבע רקע"

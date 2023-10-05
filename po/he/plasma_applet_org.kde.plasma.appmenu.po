@@ -5,15 +5,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-25 02:00+0000\n"
-"PO-Revision-Date: 2023-10-01 21:17+0300\n"
+"PO-Revision-Date: 2023-10-04 15:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "להשתמש בכפתור יחיד עבור תפריט היישומים"
 #: package/contents/ui/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
-msgstr "הראה תפריט יישומים מלא"
+msgstr "הצגת תפריט יישומים מלא"
 
 #: package/contents/ui/MenuDelegate.qml:62
 #, kde-format

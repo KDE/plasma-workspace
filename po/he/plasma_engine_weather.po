@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2023-10-01 21:11+0300\n"
+"PO-Revision-Date: 2023-10-04 15:46+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -1646,7 +1646,7 @@ msgstr "מעונן בעיקר"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Cloudy periods"
-msgstr "מעונן לפרקים "
+msgstr "מעונן לפרקים"
 
 #: envcan_i18n.dat:168
 #, kde-format
@@ -1817,41 +1817,31 @@ msgid "Ice fog dissipating"
 msgstr "קרח ערפל מתפזר"
 
 #: envcan_i18n.dat:196
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets"
 msgstr "פתיתי קרח"
 
 #: envcan_i18n.dat:197
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet mixed with freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
 msgstr "פתיתי קרח מעורבים בגשם קופא"
 
 #: envcan_i18n.dat:198
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet mixed with snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with snow"
 msgstr "פתיתי קרח מעורבים בשלג"
 
 #: envcan_i18n.dat:199
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet or freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
 msgstr "פתיתי קרח או גשם קופא"
 
 #: envcan_i18n.dat:200
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet or snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or snow"
 msgstr "פתיתי קרח או שלג"
@@ -2061,44 +2051,34 @@ msgid "Periods of freezing rain or snow"
 msgstr "גשם קופא או שלג, לפרקים"
 
 #: envcan_i18n.dat:235
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets"
-msgstr "כדורי ברד, לפרקים"
+msgstr "פתיתי קרח לפרקים"
 
 #: envcan_i18n.dat:236
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet mixed with freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr "כדורי ברד מעורבים עם גשם קופא, לפרקים"
+msgstr "פתיתי קרח מעורבבים בגשם קופא לפרקים"
 
 #: envcan_i18n.dat:237
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet mixed with snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with snow"
-msgstr "כדורי ברד מעורבים עם שלג, לפרקים"
+msgstr "פתיתי קרח מעורבים בשלג לפרקים"
 
 #: envcan_i18n.dat:238
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet or freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr "כדורי ברד או גשם קופא, לפרקים"
+msgstr "פתיתי קרח או גשם קופא לפרקים"
 
 #: envcan_i18n.dat:239
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet or snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or snow"
-msgstr "כדורי ברד או שלג, לפרקים"
+msgstr "פתיתי קרח או שלג לפרקים"
 
 #: envcan_i18n.dat:240
 #, kde-format
@@ -2715,7 +2695,7 @@ msgstr "רוחות ערות"
 #: ions/bbcukmet/ion_bbcukmet.cpp:563
 #, kde-format
 msgid "UK"
-msgstr "בריטניה"
+msgstr "אנגליה"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:564
 #, kde-format
@@ -2787,7 +2767,7 @@ msgstr "שבת"
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
-msgstr "מידע משירות החיזוי של ה־BBC"
+msgstr "מידע משירות מזג האוויר של ה־BBC"
 
 #: ions/dwd/ion_dwd.cpp:686
 #, kde-format
@@ -2824,19 +2804,19 @@ msgstr "ל"
 #, kde-format
 msgctxt "precipitation total, very little"
 msgid "Trace"
-msgstr "הצג מסלול"
+msgstr "הצגת מסלול"
 
 #: ions/envcan/ion_envcan.cpp:1607
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
-msgstr "מידע משינויי אקלים קנדה"
+msgstr "מידע מהמשרד לאיכות הסביבה קנדה"
 
 #: ions/noaa/ion_noaa.cpp:633
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
-msgstr "מידע משירות החיזוי הלאומי NOAA"
+msgstr "מידע משירות החיזוי הלאומי NOAA (ארה״ב)"
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -4899,4 +4879,4 @@ msgstr "מתבהר"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Clear"
-msgstr "בהיר "
+msgstr "בהיר בעיקר"

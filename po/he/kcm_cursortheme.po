@@ -19,57 +19,53 @@ msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2017-05-16 06:53-0400\n"
+"PO-Revision-Date: 2023-10-04 15:31+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current cursor theme"
-msgstr ""
+msgstr "שם ערכת הסמנים הנוכחית"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current cursor size"
-msgstr ""
+msgstr "גודל סמן נוכחי"
 
 #: kcmcursortheme.cpp:305
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
-msgstr "יש להפעיל מחדש את KDE על מנת שהשינוי הללו יכנסו לתוקף."
+msgstr "יש להפעיל את פלזמה מחדש כדי שהשינויים האלה ייכנסו לתוקף."
 
 #: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "לא ניתן ליצור קובץ זמני."
 
 #: kcmcursortheme.cpp:390
-#, fuzzy, kde-format
-#| msgid "Unable to find the cursor theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "לא ניתן למצוא את ארכיון ערכת הנושא למצביע %1."
+msgstr "לא ניתן להוריד את ארכיון ערכת הסמלים: %1"
 
 #: kcmcursortheme.cpp:421
-#, fuzzy, kde-format
-#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+#, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr "הקובץ %1 אינו ארכיון ערכת נושא למצביע תקף."
+msgstr "הקובץ אינו ארכיון ערכת סמלים תקני."
 
 #: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr ""
+msgstr "יצירת התיקייה ‚icons’ (סמלים) נכשלה."
 
 #: kcmcursortheme.cpp:437
 #, kde-format
@@ -77,30 +73,29 @@ msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr ""
-"ערכת נושא בשם %1 כבר קיים בתיקיית ערכות הנושא לסמלים שלך. האם ברצונך להחליפה "
-"בערכת נושא זו?"
+"ערכת סמלים בשם %1 כבר קיימת בתיקיית ערכות הסמלים שלך. להחליפה בערכת נושא זו?"
 
 #: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
-msgstr "לשכתב ערכת נושא?"
+msgstr "לדרוס ערכת סמלים?"
 
 #: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "הערכה הותקנה בהצלחה."
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "זמן קצוב בשניות"
 
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
+msgstr "הגודל המבוקש ‚%1’ לא זמין, ייעשה שימוש ב־%2 במקום."
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -109,6 +104,8 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"כלי זה מאפשר לך להגדיר את ערכת סמני העכבר להפעלת הפלזמה הנוכחית מבלי להגדיר "
+"בטעות ערכה שלא זמינה או שכבר מוגדרת."
 
 #: plasma-apply-cursortheme.cpp:67
 #, kde-format
@@ -116,17 +113,19 @@ msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"שם ערכת הסמנים שברצונך להגדיר להפעלת הפלזמה הנוכחית שלך (העברת נתיב מלא "
+"תשתמש רק בחלק האחרון של הנתיב)"
 
 #: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "הצגת כל ערכות הסמנים הזמינות במערכת (ומה הערכה הנוכחית)"
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr ""
+msgstr "להשתמש בגודל מסוים במקום בגודל ברירת המחדל של הערכה"
 
 #: plasma-apply-cursortheme.cpp:90
 #, kde-format
@@ -134,21 +133,21 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"הערכה המבוקשת „%1” כבר מוגדר כערכת ברירת המחדל של הפעלת הפלזמה הנוכחית."
 
 #: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
-msgstr ""
+msgstr "ערכת סמני העכבר %1 הוחלה בהצלחה על הפעלת הפלזמה הנוכחית שלך"
 
 #: plasma-apply-cursortheme.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
 "theme to display correctly."
-msgstr "יש להפעיל מחדש את KDE על מנת שהשינוי הללו יכנסו לתוקף."
+msgstr ""
+"יש להפעיל את הפעלת הפלזמה מחדש כדי שערכת הסמנים החדשה שהחלת תופיע כראוי."
 
 #: plasma-apply-cursortheme.cpp:113
 #, kde-format
@@ -156,128 +155,125 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"לא ניתן למצוא את ערכת הסמנים „%1”. הערכה צריכה להיות אחת מהאפשרויות הבאות: %2"
 
 #: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
-msgstr ""
+msgstr "ערכות הסמנים הבאות נמצאות במערכת שלך:"
 
 #: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr ""
+msgstr "(ערכת סמלים נוכחית להפעלת פלזמה זו)"
 
 #: ui/Delegate.qml:52
 #, kde-format
 msgid "Remove Theme"
-msgstr "הסר ערכה"
+msgstr "הסרת ערכה"
 
 #: ui/Delegate.qml:59
-#, fuzzy, kde-format
-#| msgid "Cursor Theme"
+#, kde-format
 msgid "Restore Cursor Theme"
-msgstr "ערכת־נושא למצביע העכבר"
+msgstr "איפוס ערכת סמנים"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "משוב טעינה"
 
 #: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "הגדרת ההנפשות שיוצגו כאשר יישום עולה."
 
 #: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "משוב סמן:"
 
 #: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 #: ui/LaunchFeedbackDialog.qml:58
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "נייח"
 
 #: ui/LaunchFeedbackDialog.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "מהבהב"
 
 #: ui/LaunchFeedbackDialog.qml:76
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "קופץ"
 
 #: ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "משוב מנהל משימות:"
 
 #: ui/LaunchFeedbackDialog.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "הפעלת הנפשה"
 
 #: ui/LaunchFeedbackDialog.qml:112
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "לעצור הנפשה לאחר:"
 
 #: ui/LaunchFeedbackDialog.qml:126 ui/LaunchFeedbackDialog.qml:138
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "שנייה"
+msgstr[1] "%1 שניות"
 
 #: ui/main.qml:58 ui/main.qml:92
 #, kde-format
 msgid "Size: %1"
-msgstr ""
+msgstr "גודל: %1"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "ה&גדרת משוב השיגור…"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgid "Install from File"
+#, kde-format
 msgid "&Install from File…"
-msgstr "התקנה מקובץ"
+msgstr "ה&תקנה מקובץ…"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
+#, kde-format
 msgid "&Get New…"
-msgstr "התקנת ערכת נושא חדשה"
+msgstr "הורדת &חדשות…"
 
 #: ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "הסר ערכה"
+msgstr "פתיחת ערכת סמלים"
 
 #: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "קובצי ערכות סמנים (‎*.tar.gz‏ ‎*.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:56
 #, kde-format

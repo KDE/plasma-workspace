@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
 "PO-Revision-Date: 2023-09-08 22:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -70,7 +70,7 @@ msgstr "Пристрій було від'єднано."
 msgid "An unknown error has occurred."
 msgstr "Сталася невідома програмі помилка."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:161
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
 #, kde-format
 msgid "Change Password"
 msgstr "Змінити пароль"
@@ -148,27 +148,27 @@ msgstr "Залишити без змін"
 msgid "Create User"
 msgstr "Створення запису користувача"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:129
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
 #, kde-format
 msgid "Name:"
 msgstr "Ім'я:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:136
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Username:"
 msgstr "Користувач:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:144
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
 #, kde-format
 msgid "Standard"
 msgstr "Стандартний"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:145
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Administrator"
 msgstr "Адміністратор"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Account type:"
 msgstr "Тип облікового запису:"
@@ -188,38 +188,38 @@ msgstr "Підтвердження пароля:"
 msgid "Create"
 msgstr "Створити"
 
-#: src/ui/FingerprintDialog.qml:57
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Налаштувати відбитки"
 
-#: src/ui/FingerprintDialog.qml:67
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Вилучити все"
 
-#: src/ui/FingerprintDialog.qml:74
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Add"
 msgstr "Додати"
 
-#: src/ui/FingerprintDialog.qml:83
+#: src/ui/FingerprintDialog.qml:71
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/ui/FingerprintDialog.qml:91
+#: src/ui/FingerprintDialog.qml:79
 #, kde-format
 msgid "Done"
 msgstr "Виконано"
 
-#: src/ui/FingerprintDialog.qml:115
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Реєстрація відбитка"
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
@@ -227,7 +227,7 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим правим вказівним пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
@@ -235,7 +235,7 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим правим середнім пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
@@ -243,7 +243,7 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим правим безіменним пальцем на "
 "датчику відбитків."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
@@ -251,14 +251,14 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим правим мізинцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 "Будь ласка, декілька раз натисніть вашим правим великим пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
@@ -266,7 +266,7 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим лівим вказівним пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
@@ -274,7 +274,7 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим лівим середнім пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
@@ -282,21 +282,21 @@ msgstr ""
 "Будь ласка, декілька раз натисніть вашим лівим безіменним пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 "Будь ласка, декілька раз натисніть вашим лівим мізинцем на датчику відбитків."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Будь ласка, декілька раз натисніть вашим лівим великим пальцем на датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -304,7 +304,7 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим правим вказівним пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
@@ -312,7 +312,7 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим правим середнім пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
@@ -320,7 +320,7 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим правим безіменним пальцем по "
 "датчику відбитків."
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
@@ -328,14 +328,14 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим правим мізинцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:154
+#: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Будь ласка, декілька раз проведіть вашим правим великим пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:156
+#: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
@@ -343,7 +343,7 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим лівим вказівним пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:158
+#: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
@@ -351,7 +351,7 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим лівим середнім пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:160
+#: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
@@ -359,41 +359,41 @@ msgstr ""
 "Будь ласка, декілька раз проведіть вашим лівим безіменним пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:162
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 "Будь ласка, декілька раз проведіть вашим лівим мізинцем по датчику відбитків."
 
-#: src/ui/FingerprintDialog.qml:164
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Будь ласка, декілька раз проведіть вашим лівим великим пальцем по датчику "
 "відбитків."
 
-#: src/ui/FingerprintDialog.qml:179
+#: src/ui/FingerprintDialog.qml:167
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Палець зареєстровано"
 
-#: src/ui/FingerprintDialog.qml:209
+#: src/ui/FingerprintDialog.qml:197
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Виберіть палець для реєстрації"
 
-#: src/ui/FingerprintDialog.qml:326
+#: src/ui/FingerprintDialog.qml:314
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Повторна реєстрація пальця"
 
-#: src/ui/FingerprintDialog.qml:333
+#: src/ui/FingerprintDialog.qml:321
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Вилучити відбиток"
 
-#: src/ui/FingerprintDialog.qml:342
+#: src/ui/FingerprintDialog.qml:330
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не додано жодного відбитка"
@@ -408,6 +408,12 @@ msgstr "Користувачі"
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
 msgstr "Додати"
+
+#: src/ui/main.qml:107
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -517,49 +523,73 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
-#: src/ui/PicturesSheet.qml:126
+#: src/ui/PicturesSheet.qml:60
 #, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Виберіть зображення"
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
 
-#: src/ui/PicturesSheet.qml:151
+#: src/ui/PicturesSheet.qml:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:129
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Вибрати файл…"
 
-#: src/ui/UserDetailsPage.qml:109
+#: src/ui/PicturesSheet.qml:134
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Виберіть зображення"
+
+#: src/ui/PicturesSheet.qml:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:269
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:111
 #, kde-format
 msgid "Change avatar"
 msgstr "Змінити аватар"
 
-#: src/ui/UserDetailsPage.qml:157
+#: src/ui/UserDetailsPage.qml:164
 #, kde-format
 msgid "Email address:"
 msgstr "Адреса ел. пошти:"
 
-#: src/ui/UserDetailsPage.qml:181
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete files"
 msgstr "Вилучити файли"
 
-#: src/ui/UserDetailsPage.qml:188
+#: src/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Keep files"
 msgstr "Зберегти файли"
 
-#: src/ui/UserDetailsPage.qml:195
+#: src/ui/UserDetailsPage.qml:207
 #, kde-format
 msgid "Delete User…"
 msgstr "Вилучити користувача…"
 
-#: src/ui/UserDetailsPage.qml:206
+#: src/ui/UserDetailsPage.qml:219
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Налаштувати розпізнавання за відбитками…"
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:248
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

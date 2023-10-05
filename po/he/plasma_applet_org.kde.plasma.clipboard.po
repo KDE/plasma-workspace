@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
-"PO-Revision-Date: 2017-05-16 06:55-0400\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"PO-Revision-Date: 2023-10-04 09:21+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: contents/ui/BarcodePage.qml:23
 #, kde-format
@@ -26,13 +26,13 @@ msgstr "קוד QR"
 #: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
-msgstr "מטריקס נתונים"
+msgstr "מטריצת נתונים"
 
 #: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec (אצטק)"
 
 #: contents/ui/BarcodePage.qml:26
 #, kde-format
@@ -42,96 +42,90 @@ msgstr "קוד 39"
 #: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
-msgstr "'וד 93"
+msgstr "קוד 93"
 
 #: contents/ui/BarcodePage.qml:28
-#, fuzzy, kde-format
-#| msgid "Code 39"
+#, kde-format
 msgid "Code 128"
-msgstr "קוד 39"
+msgstr "קוד 128"
 
 #: contents/ui/BarcodePage.qml:44
 #, kde-format
 msgid "Return to Clipboard"
-msgstr "חזור ללוח העתקה"
+msgstr "חזרה ללוח הגזירים"
 
 #: contents/ui/BarcodePage.qml:79
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
+#, kde-format
 msgid "Change the QR code type"
-msgstr "שנה סוג ברקוד"
+msgstr "שינוי סוג ברקוד ה־QR"
 
-#: contents/ui/BarcodePage.qml:134
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
+#: contents/ui/BarcodePage.qml:136
+#, kde-format
 msgid "Creating QR code failed"
-msgstr "יצירת הברקוד נכשלה"
+msgstr "יצירת קוד ה־QR נכשלה"
 
-#: contents/ui/BarcodePage.qml:145
+#: contents/ui/BarcodePage.qml:147
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
+msgstr "אין מספיק מקום להציג קוד QR. נא לנסות לשנות את גודל היישומונית."
 
 #: contents/ui/clipboard.qml:30
 #, kde-format
 msgid "Clipboard Contents"
-msgstr "תוכן לוח העתקה"
+msgstr "תוכן לוח הגזירים"
 
 #: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
 #, kde-format
 msgid "Clipboard is empty"
-msgstr "לוח העתקה ריק"
+msgstr "לוח גזירים ריק"
 
 #: contents/ui/clipboard.qml:59
-#, fuzzy, kde-format
-#| msgid "Clear history"
+#, kde-format
 msgid "Clear History"
-msgstr "נקה היסטוריה"
+msgstr "פינוי ההיסטוריה"
 
 #: contents/ui/clipboard.qml:71
-#, fuzzy, kde-format
-#| msgid "Configure Clipboard..."
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "הגדר לוח העתקה..."
+msgstr "הגדרת לוח גזירים…"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
-msgstr "עורר פעולה"
+msgstr "לעורר פעולה"
 
 #: contents/ui/DelegateToolButtons.qml:38
-#, fuzzy, kde-format
-#| msgid "Show barcode"
+#, kde-format
 msgid "Show QR code"
-msgstr "הראה ברקוד"
+msgstr "הצגת קוד QR"
 
 #: contents/ui/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Edit contents"
-msgstr "ערוך תוכן"
+msgstr "עריכת תוכן"
 
 #: contents/ui/DelegateToolButtons.qml:68
 #, kde-format
 msgid "Remove from history"
-msgstr "הסר מההיסטוריה"
+msgstr "הסרה מההיסטוריה"
 
 #: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "שמירה"
 
 #: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: contents/ui/Menu.qml:129
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "אין התאמות"
 
 #: contents/ui/UrlItemDelegate.qml:106
 #, kde-format

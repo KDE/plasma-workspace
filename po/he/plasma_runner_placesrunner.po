@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-06 02:04+0000\n"
-"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"PO-Revision-Date: 2023-10-04 12:50+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: placesrunner.cpp:26 placesrunner.cpp:50
 #, kde-format
@@ -26,9 +26,9 @@ msgstr "מקומות"
 #: placesrunner.cpp:26
 #, kde-format
 msgid "Lists all file manager locations"
-msgstr "מציג את כל המקומים של סייר הקבצים"
+msgstr "מציג את כל המקומות של מנהל הקבצים"
 
 #: placesrunner.cpp:27
 #, kde-format
 msgid "Finds file manager locations that match :q:"
-msgstr "מוצא את המיקומים של סייר הקבצים המתאימים אל :q:."
+msgstr "מאתר מקומות במנהל הקבצים שעונים על :q:"

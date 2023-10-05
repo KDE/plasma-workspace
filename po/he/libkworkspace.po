@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 02:13+0000\n"
-"PO-Revision-Date: 2023-10-01 21:16+0300\n"
+"PO-Revision-Date: 2023-10-04 15:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: kdisplaymanager.cpp:770
 #, kde-format
@@ -36,13 +36,13 @@ msgstr "לא בשימוש"
 #: kdisplaymanager.cpp:776
 #, kde-format
 msgid "X login on remote host"
-msgstr "התחברות גרפית בשרת מרוחק"
+msgstr "כניסה חזותית משרת מרוחק"
 
 #: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
-msgstr "חיבור גרפי ב־%1"
+msgstr "חיבור חזותי ב־%1"
 
 #: kdisplaymanager.cpp:778
 #, kde-format

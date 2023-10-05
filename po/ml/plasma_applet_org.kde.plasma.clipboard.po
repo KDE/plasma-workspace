@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-05 01:41+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -61,13 +61,13 @@ msgstr "ഓർമ്മച്ചെപ്പിലേക്ക് മടങ്�
 msgid "Change the QR code type"
 msgstr "ബാർകോഡ് തരം മാറ്റുക"
 
-#: contents/ui/BarcodePage.qml:134
+#: contents/ui/BarcodePage.qml:136
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "ബാർകോഡ് സൃഷ്ടിക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/ui/BarcodePage.qml:145
+#: contents/ui/BarcodePage.qml:147
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

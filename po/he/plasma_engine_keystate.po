@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_keystate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
+"PO-Revision-Date: 2023-10-04 10:01+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: keystate.cpp:15
 msgid "Shift"
@@ -72,11 +72,11 @@ msgstr "לחצן אמצעי"
 
 #: keystate.cpp:29
 msgid "First X Button"
-msgstr "כפתור X ראשון"
+msgstr "לחצן X ראשון"
 
 #: keystate.cpp:30
 msgid "Second X Button"
-msgstr "כפתור X שני"
+msgstr "לחצן X שני"
 
 #: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
 #: keystate.cpp:110

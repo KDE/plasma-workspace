@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_time\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
+"PO-Revision-Date: 2023-10-04 12:00+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: timesource.cpp:46
 msgid "Local"
@@ -24,31 +24,31 @@ msgstr "מקומי"
 
 #: timesource.cpp:61
 msgid "Timezone"
-msgstr "איזור זמן"
+msgstr "אזור זמן"
 
 #: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
 msgid "Timezone City"
-msgstr "עיר איזור זמן"
+msgstr "עיר אזור זמן"
 
 #: timesource.cpp:68 timesource.cpp:71
 msgid "Timezone Continent"
-msgstr ""
+msgstr "יבשת אזור זמן"
 
 #: timesource.cpp:72
 msgid "Timezone Country"
-msgstr "ארץ איזור זמן"
+msgstr "ארץ אזור זמן"
 
 #: timesource.cpp:97
 msgid "Offset"
-msgstr ""
+msgstr "היסט"
 
 #: timesource.cpp:100
 msgid "Timezone Abbreviation"
-msgstr ""
+msgstr "קיצור אזור זמן"
 
 #: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
 msgid "DateTime"
-msgstr ""
+msgstr "תאריך_שעה"
 
 #: timesource.cpp:146
 msgid "Latitude"
@@ -60,8 +60,8 @@ msgstr "קו אורך"
 
 #: timesource.cpp:148
 msgid "Solar"
-msgstr "שימשי"
+msgstr "שמשי"
 
 #: timesource.cpp:149
 msgid "Moon"
-msgstr "ירח"
+msgstr "ירחי"

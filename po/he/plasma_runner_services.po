@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-22 01:47+0000\n"
-"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"PO-Revision-Date: 2023-10-04 12:56+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: servicerunner.cpp:376
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "%1 - %2"
 #: servicerunner.cpp:421
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
-msgstr "מוצא יישומים שהשם או התיאור מתאימים :q:"
+msgstr "מאתר יישומים שהשם או התיאור עונים על :q:"
 
 #, fuzzy
 #~| msgid "System Settings"
