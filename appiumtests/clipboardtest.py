@@ -130,6 +130,12 @@ class ClipboardTest(unittest.TestCase):
         Tests the barcode page can be opened
         """
         press_down_key()
+        # Wait until the first item is selected
+        try:
+            self.driver.find_element(AppiumBy.NAME, "Show QR code")
+        except NoSuchElementException:
+            press_down_key()  # Try pressing down key again
+            self.driver.find_element(AppiumBy.NAME, "Show QR code")
         press_right_key(2)
         press_space_key()
 
