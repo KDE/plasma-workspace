@@ -10,18 +10,16 @@
 
 #include <KLocalizedString>
 
-#include <QCoreApplication>
 #include <QDBusArgument>
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
 #include <QDBusMetaType>
 #include <QDBusObjectPath>
 #include <QDBusReply>
+#include <QGuiApplication>
 
 #include "config-X11.h"
 #if HAVE_X11
-#include <private/qtx11extras_p.h>
-
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
 #endif // HAVE_X11
@@ -849,11 +847,16 @@ void KDisplayManager::GDMAuthenticate()
 {
 #if HAVE_X11
     FILE *fp;
-    const char *dpy, *dnum, *dne;
+    const char *dpy = nullptr, *dnum, *dne;
     int dnl;
     Xauth *xau;
 
-    dpy = DisplayString(QX11Info::display());
+    if (auto instance = qobject_cast<QGuiApplication *>(QCoreApplication::instance())) {
+        if (auto nativeInterface = instance->nativeInterface<QNativeInterface::QX11Application>()) {
+            dpy = DisplayString(nativeInterface->display());
+        }
+    }
+
     if (!dpy) {
         dpy = ::getenv("DISPLAY");
         if (!dpy)

@@ -54,7 +54,6 @@ configure_file(config-libkworkspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-l
 
 if(HAVE_X11)
     target_link_libraries(kworkspace PRIVATE X11::Xau)
-    target_link_libraries(kworkspace PRIVATE Qt::GuiPrivate)
 endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION
