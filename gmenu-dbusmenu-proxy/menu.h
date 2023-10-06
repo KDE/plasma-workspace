@@ -12,6 +12,7 @@
 
 #include "../libdbusmenuqt/dbusmenutypes_p.h"
 #include "gdbusmenutypes_p.h"
+#include "gtkmenus_interface.h"
 
 class Menu : public QObject
 {
@@ -62,6 +63,5 @@ private:
 
     QHash<uint, GMenuItemList> m_menus;
 
-    QString m_serviceName;
-    QString m_objectPath;
+    QScopedPointer<OrgGtkMenusInterface, QScopedPointerDeleteLater> m_interface;
 };

@@ -9,7 +9,6 @@
 #include "debug.h"
 
 #include <QDBusConnection>
-#include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDebug>
@@ -19,20 +18,11 @@
 
 #include "utils.h"
 
-static const QString s_orgGtkMenus = QStringLiteral("org.gtk.Menus");
-
 Menu::Menu(const QString &serviceName, const QString &objectPath, QObject *parent)
     : QObject(parent)
-    , m_serviceName(serviceName)
-    , m_objectPath(objectPath)
+    , m_interface(new OrgGtkMenusInterface(serviceName, objectPath, QDBusConnection::sessionBus(), this))
 {
-    Q_ASSERT(!serviceName.isEmpty());
-    Q_ASSERT(!m_objectPath.isEmpty());
-
-    if (!QDBusConnection::sessionBus()
-             .connect(m_serviceName, m_objectPath, s_orgGtkMenus, QStringLiteral("Changed"), this, SLOT(onMenuChanged(GMenuChangeList)))) {
-        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to menu changes for" << parent << "on" << serviceName << "at" << objectPath;
-    }
+    connect(m_interface.get(), &OrgGtkMenusInterface::Changed, this, &Menu::onMenuChanged);
 }
 
 Menu::~Menu() = default;
@@ -52,17 +42,15 @@ void Menu::start(uint id)
 
     // dbus-send --print-reply --session --dest=:1.103 /org/libreoffice/window/104857641/menus/menubar org.gtk.Menus.Start array:uint32:0
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkMenus, QStringLiteral("Start"));
-    msg.setArguments({QVariant::fromValue(QList<uint>{id})});
-
-    QDBusPendingReply<GMenuItemList> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    QDBusPendingReply<GMenuItemList> reply = m_interface->Start(QList<uint>{id});
+    auto *watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, id](QDBusPendingCallWatcher *watcher) {
         QScopedPointer<QDBusPendingCallWatcher, QScopedPointerDeleteLater> watcherPtr(watcher);
 
         QDBusPendingReply<GMenuItemList> reply = *watcherPtr;
         if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_objectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_interface->service() << "at" << m_interface->path()
+                                     << reply.error();
             Q_EMIT failedToSubscribe(id);
         } else {
             const bool hadMenu = !m_menus.isEmpty();
@@ -74,7 +62,7 @@ void Menu::start(uint id)
 
             // LibreOffice on startup fails to give us some menus right away, we'll also subscribe in onMenuChanged() if necessary
             if (menus.isEmpty()) {
-                qCWarning(DBUSMENUPROXY) << "Got an empty menu for" << id << "on" << m_serviceName << "at" << m_objectPath;
+                qCWarning(DBUSMENUPROXY) << "Got an empty menu for" << id << "on" << m_interface->service() << "at" << m_interface->path();
                 return;
             }
 
@@ -93,17 +81,13 @@ void Menu::start(uint id)
 
 void Menu::stop(const QList<uint> &ids)
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkMenus, QStringLiteral("End"));
-    msg.setArguments({
-        QVariant::fromValue(ids) // don't let it unwrap it, hence in a variant
-    });
-
-    QDBusPendingReply<void> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    QDBusPendingReply<void> reply = m_interface->End(ids);
+    auto *watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, ids](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<void> reply = *watcher;
         if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to stop subscription to" << ids << "on" << m_serviceName << "at" << m_objectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to stop subscription to" << ids << "on" << m_interface->service() << "at" << m_interface->path()
+                                     << reply.error();
         } else {
             // remove all subscriptions that we unsubscribed from
             // TODO is there a nicer algorithm for that?

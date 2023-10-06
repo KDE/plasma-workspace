@@ -27,9 +27,6 @@
 
 #include "../libdbusmenuqt/dbusmenushortcut_p.h"
 
-static const QString s_orgGtkActions = QStringLiteral("org.gtk.Actions");
-static const QString s_orgGtkMenus = QStringLiteral("org.gtk.Menus");
-
 static const QString s_applicationActionsPrefix = QStringLiteral("app.");
 static const QString s_unityActionsPrefix = QStringLiteral("unity.");
 static const QString s_windowActionsPrefix = QStringLiteral("win.");

@@ -10,6 +10,8 @@
 #include <QString>
 #include <QStringList>
 
+#include "gtkactions_interface.h"
+
 #include "gdbusmenutypes_p.h"
 
 class Actions : public QObject
@@ -37,8 +39,6 @@ private Q_SLOTS:
     void onActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
 
 private:
+    QScopedPointer<OrgGtkActionsInterface, QScopedPointerDeleteLater> m_interface;
     GMenuActionMap m_actions;
-
-    QString m_serviceName;
-    QString m_objectPath;
 };

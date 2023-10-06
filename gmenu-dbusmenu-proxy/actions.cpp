@@ -9,44 +9,27 @@
 #include "debug.h"
 
 #include <QDBusConnection>
-#include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDebug>
-#include <QVariantList>
-
-static const QString s_orgGtkActions = QStringLiteral("org.gtk.Actions");
 
 Actions::Actions(const QString &serviceName, const QString &objectPath, QObject *parent)
     : QObject(parent)
-    , m_serviceName(serviceName)
-    , m_objectPath(objectPath)
+    , m_interface(new OrgGtkActionsInterface(serviceName, objectPath, QDBusConnection::sessionBus(), this))
 {
-    Q_ASSERT(!serviceName.isEmpty());
-    Q_ASSERT(!m_objectPath.isEmpty());
-
-    if (!QDBusConnection::sessionBus().connect(serviceName,
-                                               objectPath,
-                                               s_orgGtkActions,
-                                               QStringLiteral("Changed"),
-                                               this,
-                                               SLOT(onActionsChanged(QStringList, StringBoolMap, QVariantMap, GMenuActionMap)))) {
-        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to action changes for" << parent << "on" << serviceName << "at" << objectPath;
-    }
+    connect(m_interface.get(), &OrgGtkActionsInterface::Changed, this, &Actions::onActionsChanged);
 }
 
 Actions::~Actions() = default;
 
 void Actions::load()
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkActions, QStringLiteral("DescribeAll"));
-
-    QDBusPendingReply<GMenuActionMap> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    QDBusPendingReply<GMenuActionMap> reply = m_interface->DescribeAll();
+    auto *watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<GMenuActionMap> reply = *watcher;
         if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to get actions from" << m_serviceName << "at" << m_objectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to get actions from" << m_interface->service() << "at" << m_interface->path() << reply.error();
             Q_EMIT failedToLoad();
         } else {
             m_actions = reply.value();
@@ -79,17 +62,12 @@ void Actions::trigger(const QString &name, const QVariant &target, uint timestam
         return;
     }
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkActions, QStringLiteral("Activate"));
-    msg << name;
-
-    QVariantList args;
+    QVariantList parameter;
     if (target.isValid()) {
-        args << target;
+        parameter << target;
     }
-    msg << QVariant::fromValue(std::move(args));
 
     QVariantMap platformData;
-
     if (timestamp) {
         // From documentation:
         // If the startup notification id is not available, this can be just "_TIMEtime", where
@@ -98,14 +76,12 @@ void Actions::trigger(const QString &name, const QVariant &target, uint timestam
         platformData.insert(QStringLiteral("desktop-startup-id"), QStringLiteral("_TIME") + QString::number(timestamp));
     }
 
-    msg << platformData;
-
-    QDBusPendingReply<void> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    QDBusPendingReply<void> reply = m_interface->Activate(name, parameter, platformData);
+    auto *watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, name](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<void> reply = *watcher;
         if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to invoke action" << name << "on" << m_serviceName << "at" << m_objectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to invoke action" << name << "on" << m_interface->service() << "at" << m_interface->path() << reply.error();
         }
         watcher->deleteLater();
     });

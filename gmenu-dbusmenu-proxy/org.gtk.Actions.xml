@@ -1,0 +1,39 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.gtk.Actions">
+    <method name="List">
+      <arg type="as" name="list" direction="out"/>
+    </method>
+    <method name="Describe">
+      <arg type="s" name="action_name" direction="in"/>
+      <arg type="(bgav)" name="description" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="GMenuAction"/>
+    </method>
+    <method name="DescribeAll">
+      <arg type="a{s(bgav)}" name="descriptions" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="GMenuActionMap"/>
+    </method>
+    <method name="Activate">
+      <arg type="s" name="action_name" direction="in"/>
+      <arg type="av" name="parameter" direction="in"/>
+      <arg type="a{sv}" name="platform_data" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QVariantMap"/>
+    </method>
+    <method name="SetState">
+      <arg type="s" name="action_name" direction="in"/>
+      <arg type="v" name="value" direction="in"/>
+      <arg type="a{sv}" name="platform_data" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QVariantMap"/>
+    </method>
+    <signal name="Changed">
+      <arg type="as" name="removals"/>
+      <arg type="a{sb}" name="enable_changes"/>
+      <arg type="a{sv}" name="state_changes"/>
+      <arg type="a{s(bgav)}" name="additions"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="StringBoolMap"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out2" value="QVariantMap"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out3" value="GMenuActionMap"/>
+    </signal>
+  </interface>
+</node>
