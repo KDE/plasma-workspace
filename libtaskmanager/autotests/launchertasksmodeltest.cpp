@@ -30,6 +30,12 @@ private Q_SLOTS:
     void shouldReturnValidData();
     void shouldNotCrashRemovingLauncherBug472378();
 
+    /**
+     * A desktop file that is not DBusActivatable but has DBusActivatable=true should not cause crash.
+     * @see https://bugs.kde.org/show_bug.cgi?id=475266
+     */
+    void testIllegalDBusActivatable();
+
 private:
     QStringList m_urlStrings;
 };
@@ -193,6 +199,25 @@ void LauncherTasksModelTest::shouldNotCrashRemovingLauncherBug472378()
     bool removed = m.requestRemoveLauncher(url);
     QVERIFY(removed);
     QCOMPARE(launcherListChangedSpy.count(), 3);
+}
+
+void LauncherTasksModelTest::testIllegalDBusActivatable()
+{
+    LauncherTasksModel m;
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
+
+    // Add a launcher using an application url
+    const QStringList urlStrings = {
+        QUrl::fromLocalFile(QFINDTESTDATA("data/applications/dbusnotactivatible.desktop")).toString(),
+    };
+    m.setLauncherList(urlStrings);
+    QCOMPARE(launcherListChangedSpy.size(), 1);
+    QCOMPARE(m.rowCount(), 1);
+
+    m.requestNewInstance(m.index(0, 0));
+    // It should not cause crash, and create a file
+    QTRY_VERIFY(QFileInfo::exists(QStringLiteral("~/DBusNotActivatable.test.tmp")));
+    QVERIFY(QFile::remove(QStringLiteral("~/DBusNotActivatable.test.tmp")));
 }
 
 QTEST_MAIN(LauncherTasksModelTest)

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=DBusNotActivatable
+Exec=touch ~/DBusNotActivatable.test.tmp
+Icon=firefox
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Network;WebBrowser;
+DBusActivatable=true
