@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-06 01:42+0000\n"
 "PO-Revision-Date: 2021-07-02 19:20+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -19,36 +19,36 @@ msgstr ""
 "X-Generator: Lokalize 21.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: kdisplaymanager.cpp:770
+#: kdisplaymanager.cpp:768
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: टीटीवाई लॉगइन"
 
-#: kdisplaymanager.cpp:775
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "उपयोग में नहीं"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgid "X login on remote host"
 msgstr "दूरवर्ती होस्ट पर एक्स लॉगइन"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "%1 पर एक्स लॉगइन"
 
-#: kdisplaymanager.cpp:778
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:789
+#: kdisplaymanager.cpp:787
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

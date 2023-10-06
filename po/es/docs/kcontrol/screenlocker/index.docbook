@@ -96,12 +96,12 @@
 >Si bloquea la pantalla manualmente, la protección con contraseña se activará inmediatamente.</para>
 
 <para
->Puede definir un acceso rápido de teclado para bloquear la pantalla usando el campo <guilabel
->Acceso rápido de teclado</guilabel
+>Puede definir un atajo de teclado para bloquear la pantalla usando el campo <guilabel
+>Atajo de teclado</guilabel
 >.</para>
 
 <para
->El acceso rápido predeterminado <keycombo action="simul"
+>El atajo de teclado predeterminado <keycombo action="simul"
 >&Ctrl;&Alt;<keycap
 >L</keycap
 ></keycombo

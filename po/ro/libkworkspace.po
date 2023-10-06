@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-06 01:42+0000\n"
 "PO-Revision-Date: 2022-02-04 16:48+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -20,36 +20,36 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: kdisplaymanager.cpp:770
+#: kdisplaymanager.cpp:768
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: autentificare TTY"
 
-#: kdisplaymanager.cpp:775
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "Neutilizată"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgid "X login on remote host"
 msgstr "Autentificare X la gazda distantă"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "Autentificare X pe %1"
 
-#: kdisplaymanager.cpp:778
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:789
+#: kdisplaymanager.cpp:787
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

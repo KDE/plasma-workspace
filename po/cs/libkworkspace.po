@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-06 01:42+0000\n"
 "PO-Revision-Date: 2021-06-02 16:27+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,36 +17,36 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.04.1\n"
 
-#: kdisplaymanager.cpp:770
+#: kdisplaymanager.cpp:768
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: TTY přihlášení"
 
-#: kdisplaymanager.cpp:775
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "Nepoužito"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgid "X login on remote host"
 msgstr "X přihlášení na vzdáleném počítači"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "X přihlášení na %1"
 
-#: kdisplaymanager.cpp:778
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:789
+#: kdisplaymanager.cpp:787
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

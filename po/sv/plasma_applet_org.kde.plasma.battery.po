@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-24 01:45+0000\n"
+"POT-Creation-Date: 2023-10-06 01:42+0000\n"
 "PO-Revision-Date: 2022-02-19 10:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -234,12 +234,12 @@ msgstr "Visa batteriets procentvärde på ikon"
 msgid "&Configure Energy Saving…"
 msgstr "Anpassa strömspar&hantering…"
 
-#: package/contents/ui/PopupDialog.qml:115
+#: package/contents/ui/PopupDialog.qml:117
 #, kde-format
 msgid "Display Brightness"
 msgstr "Bildskärmens ljusstyrka"
 
-#: package/contents/ui/PopupDialog.qml:145
+#: package/contents/ui/PopupDialog.qml:147
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Tangentbordets ljusstyrka"

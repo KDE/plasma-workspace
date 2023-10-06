@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-24 01:45+0000\n"
+"POT-Creation-Date: 2023-10-06 01:42+0000\n"
 "PO-Revision-Date: 2023-04-10 11:14+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -235,12 +235,12 @@ msgstr "Pokaż procent baterii na ikonie, gdy nie jest w pełni naładowana"
 msgid "&Configure Energy Saving…"
 msgstr "Ustawienia osz&czędzania energii..."
 
-#: package/contents/ui/PopupDialog.qml:115
+#: package/contents/ui/PopupDialog.qml:117
 #, kde-format
 msgid "Display Brightness"
 msgstr "Jasność wyświetlacza"
 
-#: package/contents/ui/PopupDialog.qml:145
+#: package/contents/ui/PopupDialog.qml:147
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Jasność klawiatury"

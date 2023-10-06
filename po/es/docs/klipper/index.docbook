@@ -200,7 +200,7 @@
 >Para utilizar esta funcionalidad, basta con que seleccione una &URL; o una ruta en el portapapeles. Si cumple alguna expresión regular de la lista de &klipper;, aparecerá un menú mostrándole los programas de los que dispone para que elija uno. Utilice el ratón o las teclas de cursor para seleccionar el programa que desee y &klipper; lo ejecutará, abriendo la dirección a la que apunta el contenido del portapapeles.</para>
 
 <para
->Si no quiere realizar ninguna operación con el contenido del portapapeles, seleccione <guimenuitem
+>Si no quiere realizar ninguna acción con el contenido del portapapeles, seleccione <guimenuitem
 >Desactivar este menú emergente</guimenuitem
 > en el menú emergente para volver a lo que estaba haciendo antes. Si abandona el menú, este desaparecerá, permitiéndole continuar con su trabajo. Puede cambiar el tiempo durante el cual permanece abierto el menú en el diálogo de preferencias, con la opción <guilabel
 >Mostrar menú emergente de acciones</guilabel
@@ -220,18 +220,18 @@
 >.</para>
 
 <para
->El contenido del portapapeles que se ajuste a una expresión regular también se puede editar antes de realizar una operación sobre él. Seleccione <guimenuitem
+>El contenido del portapapeles que se ajuste a una expresión regular también se puede editar antes de realizar una acción sobre él. Seleccione <guimenuitem
 >Editar contenido...</guimenuitem
 > a la derecha de la entrada del portapapeles para poder cambiar el contenido del portapapeles en el diálogo que aparecerá, antes de pulsar el botón <guibutton
 >Aceptar</guibutton
-> para ejecutar la operación apropiada.</para>
+> para ejecutar la acción apropiada.</para>
 
 <para
 >Si pulsa <keycombo action="simul"
 >&Ctrl;&Alt;<keycap
 >R</keycap
 ></keycombo
-> se mostrará el menú emergente permitiéndole repetir la última operación realizada por &klipper;.</para>
+> se mostrará el menú emergente permitiéndole repetir la última acción realizada por &klipper;.</para>
 
 </sect1>
 
@@ -334,7 +334,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Pegar</guimenuitem
 >.</para
 ><para
->Cuando está activada, esta opción mantiene la selección y el portapapeles iguales, de modo que cualquier selección esté inmediatamente disponible para pegarla con cualquier método. Si está desactivada, la selección aún se puede guardar en el historial del portapapeles (operación sujeta a las opciones siguientes), pero solo se puede pegar con el botón central del ratón.</para
+>Cuando está activada, esta opción mantiene la selección y el portapapeles iguales, de modo que cualquier selección esté inmediatamente disponible para pegarla con cualquier método. Si está desactivada, la selección aún se puede guardar en el historial del portapapeles (acción sujeta a las opciones siguientes), pero solo se puede pegar con el botón central del ratón.</para
 ></listitem>
 </varlistentry>
 
@@ -508,8 +508,8 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ><para
 >En la página <guilabel
 >Operaciones</guilabel
->, haga doble clic sobre la expresión regular u operación que desee editar o seleccionar y pulse el botón <guibutton
->Editar operación</guibutton
+>, haga doble clic sobre la expresión regular o acción que desee editar o seleccionar y pulse el botón <guibutton
+>Editar acción</guibutton
 >. Aparecerá un diálogo con el texto de la expresión en el que podrá editarla como desee.</para
 ></listitem>
 </varlistentry>
@@ -587,10 +587,10 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
 <sect1 id="shortcuts-page">
 <title
->Opciones de los accesos rápidos</title>
+>Opciones de los atajos de teclado</title>
 
 <para
->La página de accesos rápidos le permite cambiar los accesos rápidos del teclado que se utilizan para acceder a las funciones de &klipper;. Puede modificar el acceso rápido por una de las tres opciones siguientes:</para>
+>La página de atajos de teclado le permite cambiar los atajos de teclado que se utilizan para acceder a las funciones de &klipper;. Puede modificar el atajo de teclado mediante una de las tres opciones siguientes:</para>
 
 <variablelist>
 <varlistentry>
@@ -600,7 +600,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->La operación seleccionada no tiene acceso directo desde el teclado.</para
+>No se puede acceder directamente a la acción seleccionada con el teclado.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -610,7 +610,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->La operación seleccionada utiliza la tecla predeterminada de &klipper;. Estos son los accesos rápidos a los que se refiere este manual.</para
+>La acción seleccionada utiliza la tecla predeterminada de &klipper;. Estos son los atajos de teclado a los que se refiere este manual.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -620,9 +620,9 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->La operación seleccionada se asigna a las teclas que usted elija.</para>
+>La acción seleccionada se asigna a las teclas que elija.</para>
 <para
->Para elegir una tecla personalizada para la operación que ha seleccionado, pulse <guilabel
+>Para elegir una tecla personalizada para la acción que ha seleccionado, pulse <guilabel
 >Personalizar</guilabel
 > y después, <guilabel
 >Ninguna</guilabel
@@ -632,9 +632,9 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 </variablelist>
 
 <para
->Si define un acceso rápido para <guilabel
+>Si define un atajo de teclado para <guilabel
 >Abrir Klipper en la posición del ratón</guilabel
->, al pulsar dicho acceso rápido se abrirá el menú emergente de  en la posición del cursor del ratón, en lugar de hacerlo en su posición predeterminada (en el panel de &plasma;). Esto resulta útil si utiliza el ratón más que el teclado.</para>
+>, al pulsar dicho atajo de teclado se abrirá el menú emergente de  en la posición del cursor del ratón, en lugar de hacerlo en su posición predeterminada (en el panel de &plasma;). Esto resulta útil si utiliza el ratón más que el teclado.</para>
 
 </sect1>
 </chapter>

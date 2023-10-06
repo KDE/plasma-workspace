@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-06 01:42+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: kdisplaymanager.cpp:770
+#: kdisplaymanager.cpp:768
 #, fuzzy, kde-format
 #| msgctxt "user: ..."
 #| msgid "%1: TTY login"
@@ -25,7 +25,7 @@ msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: TTY دا كىرىش"
 
-#: kdisplaymanager.cpp:775
+#: kdisplaymanager.cpp:773
 #, fuzzy, kde-format
 #| msgctxt "... location (TTY or X display)"
 #| msgid "Unused"
@@ -33,12 +33,12 @@ msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "ئىشلىتىلمىگىنى"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgid "X login on remote host"
 msgstr "يىراقتىكى ماشىنىدىكى X تىزىمغا كىرىش"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:774
 #, fuzzy, kde-format
 #| msgctxt "... host"
 #| msgid "X login on %1"
@@ -46,13 +46,13 @@ msgctxt "… host"
 msgid "X login on %1"
 msgstr "%1 دىكى X تىزىمغا كىرىش"
 
-#: kdisplaymanager.cpp:778
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:789
+#: kdisplaymanager.cpp:787
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

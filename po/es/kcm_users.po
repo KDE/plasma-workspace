@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-05 01:41+0000\n"
-"PO-Revision-Date: 2023-09-09 01:01+0200\n"
+"PO-Revision-Date: 2023-10-05 11:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -388,7 +388,7 @@ msgstr "Añadir nuevo"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Pulse la tecla espacio para editar el perfil del usuario"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -502,13 +502,13 @@ msgstr "Madera Dura"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Volver"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Iniciales"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -526,13 +526,13 @@ msgstr "Escoger una imagen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Icono provisional"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Icono provisional de avatar de usuario"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

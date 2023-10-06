@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-05 01:41+0000\n"
-"PO-Revision-Date: 2023-09-08 06:34+0200\n"
+"PO-Revision-Date: 2023-10-05 10:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -368,7 +368,7 @@ msgstr "Dodaj novega"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Pritisnite preslednico za urejanje uporabnikovega profila"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -482,13 +482,13 @@ msgstr "Rich Hardwood"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Pojdi nazaj"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Inicialke"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -506,13 +506,13 @@ msgstr "Izberi sliko"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Ikona rezervacije prostora"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Ikona rezerviranega prostora za uporabnkovega avatarja"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

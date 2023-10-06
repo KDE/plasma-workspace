@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2023-10-04 22:27+0300\n"
+"PO-Revision-Date: 2023-10-04 23:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -225,6 +225,8 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"לא ניתן למצוא את ההגדרות האזוריות הזמינות באמצעות הכלי <command>localectl</"
+"command>. נא לדווח על התקלה הזאת מול <link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:87
 #, kde-format
