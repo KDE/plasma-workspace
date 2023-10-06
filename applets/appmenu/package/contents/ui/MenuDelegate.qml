@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
@@ -26,7 +27,7 @@ AbstractButton {
     //
     // In practice, this never works, at least on X11: when menuIsOpen the
     // hover event would not be delivered. Instead we rely on
-    // plasmoid.requestActivateIndex signal to filter
+    // Plasmoid.requestActivateIndex signal to filter
     // QEvent::MouseMove events and tell us when to change the index.
     onHoveredChanged: if (hovered && menuIsOpen) { activated(); }
 

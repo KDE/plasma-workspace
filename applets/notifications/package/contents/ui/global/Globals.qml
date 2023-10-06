@@ -5,6 +5,7 @@
 */
 
 pragma Singleton
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.8
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.1
@@ -94,17 +95,17 @@ QtObject {
 
             var alignment = 0;
             // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-            if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+            if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
                 alignment |= Qt.AlignLeft;
-            } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+            } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
                 alignment |= Qt.AlignRight;
             // No horizontal alignment flag has it place it left or right depending on
             // which half of the *panel* the notification plasmoid is in
             }
 
-            if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+            if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
                 alignment |= Qt.AlignTop;
-            } else if (plasmoid.location === PlasmaCore.Types.BottomEdge) {
+            } else if (Plasmoid.location === PlasmaCore.Types.BottomEdge) {
                 alignment |= Qt.AlignBottom;
             // No vertical alignment flag has it place it top or bottom edge depending on
             // which half of the *screen* the notification plasmoid is in
@@ -131,7 +132,7 @@ QtObject {
             return Qt.rect(0, 0, -1, -1);
         }
 
-        const containment = plasmoid.containment;
+        const containment = Plasmoid.containment;
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
         let rect = Qt.rect(containment.screenGeometry.x + containment.availableScreenRect.x,
                            containment.screenGeometry.y + containment.availableScreenRect.y,
@@ -141,7 +142,7 @@ QtObject {
         // When no explicit screen corner is configured,
         // restrict notification popup position by horizontal panel width
         if (visualParent && notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
-            && plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+            && Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             const visualParentWindow = visualParent.Window.window;
             if (visualParentWindow) {
                 const left = Math.max(rect.left, visualParentWindow.x);
@@ -159,14 +160,14 @@ QtObject {
             return null;
         }
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-        return (plasmoid && plasmoid.systemTrayRepresentation)
+        return (plasmoid && Plasmoid.systemTrayRepresentation)
             || plasmoidItem.compactRepresentationItem
             || plasmoidItem.fullRepresentationItem;
     }
     onVisualParentChanged: positionPopups()
 
     property QtObject obstructingDialog: null
-    readonly property QtObject focusDialog: plasmoid ? plasmoid.focussedPlasmaDialog : null
+    readonly property QtObject focusDialog: plasmoid ? Plasmoid.focussedPlasmaDialog : null
     onFocusDialogChanged: {
         if (focusDialog && !(focusDialog instanceof NotificationPopup)) {
             // keep around the last focusDialog so notifications don't jump around if there is an open but unfocused (eg pinned) Plasma dialog
@@ -211,11 +212,11 @@ QtObject {
 
             // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
             // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-            if (plasmoid.location === PlasmaCore.Types.LeftEdge
-                    || plasmoid.location === PlasmaCore.Types.RightEdge) {
+            if (Plasmoid.location === PlasmaCore.Types.LeftEdge
+                    || Plasmoid.location === PlasmaCore.Types.RightEdge) {
                 score += 1;
-            } else if (plasmoid.location === PlasmaCore.Types.TopEdge
-                       || plasmoid.location === PlasmaCore.Types.BottomEdge) {
+            } else if (Plasmoid.location === PlasmaCore.Types.TopEdge
+                       || Plasmoid.location === PlasmaCore.Types.BottomEdge) {
                 score += 2;
             }
 
@@ -225,7 +226,7 @@ QtObject {
             }
 
             // Prefer plasmoids on primary screen
-            if (plasmoid && plasmoid.containment.screen === 0) {
+            if (plasmoid && Plasmoid.containment.screen === 0) {
                 ++score;
             }
 
@@ -605,7 +606,7 @@ QtObject {
             }
             onForceActiveFocusRequested: {
                 // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-                plasmoid.forceActivateWindow(popup);
+                Plasmoid.forceActivateWindow(popup);
             }
 
             onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
