@@ -12,13 +12,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010, 2011, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:35+0000\n"
-"PO-Revision-Date: 2023-05-15 22:30+0300\n"
+"PO-Revision-Date: 2023-10-05 13:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -104,7 +104,7 @@ msgstr "K Renk Şeması Düzenleyici"
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "Renk şemalarını düzenlemek ve oluşturmak için yardımcı program"
+msgstr "Renk şemalarını düzenlemek ve oluşturmak için izlence"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "Olivier Churlaud"
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Utility creation"
-msgstr "Yardımcı program oluşturulması"
+msgstr "İzlence oluşturulması"
 
 #: editor/kcolorschemeeditor.cpp:30
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr "KCM kodu (burada tekrar kullanılıyor)"
+msgstr "KCM kodu (burada yeniden kullanılıyor)"
 
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format
