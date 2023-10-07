@@ -566,7 +566,7 @@ msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr ""
-"No queda espai en este dispositiu, suprimiu altres empremtes dactilars per "
+"No queda espai en este dispositiu, suprimiu altres empremtes dactilars per a "
 "continuar."
 
 #: src/fingerprintmodel.cpp:351
