@@ -20,7 +20,6 @@ MaskMouseArea::MaskMouseArea(QQuickItem *parent)
     setAcceptedMouseButtons(Qt::AllButtons);
     updateMask();
     connect(this, &QQuickItem::parentChanged, this, &MaskMouseArea::updateMask);
-    connect(this, &QQuickItem::parentChanged, this, &MaskMouseArea::updateMask);
 }
 
 MaskMouseArea::~MaskMouseArea()
