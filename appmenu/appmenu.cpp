@@ -28,10 +28,6 @@
 #include <KWayland/Client/surface.h>
 #include <kpluginfactory.h>
 
-#if HAVE_X11
-#include <private/qtx11extras_p.h>
-#endif
-
 static const QByteArray s_x11AppMenuServiceNamePropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");
 static const QByteArray s_x11AppMenuObjectPathPropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_OBJECT_PATH");
 
@@ -91,7 +87,7 @@ AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
     }
 
 #if HAVE_X11
-    if (!QX11Info::connection()) {
+    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>(); !interface || !interface->connection()) {
         m_xcbConn = xcb_connect(nullptr, nullptr);
     }
 #endif
@@ -119,7 +115,8 @@ AppMenuModule::~AppMenuModule()
 void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
 #if HAVE_X11
-    auto *c = QX11Info::connection();
+    auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    auto *c = interface ? interface->connection() : nullptr;
     if (!c) {
         c = m_xcbConn;
     }

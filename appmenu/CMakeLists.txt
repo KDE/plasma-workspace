@@ -30,7 +30,6 @@ target_link_libraries(appmenu
 )
 if (HAVE_X11)
     target_link_libraries(appmenu XCB::XCB)
-    target_link_libraries(appmenu Qt::GuiPrivate)
 endif()
 
 ecm_qt_declare_logging_category(appmenu
