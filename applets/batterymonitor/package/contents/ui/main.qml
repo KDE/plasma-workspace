@@ -268,7 +268,7 @@ PlasmoidItem {
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
 
         onWheel: wheel => {
-            const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y || wheel.angleDelta.x);
+            const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x);
 
             const maximumBrightness = batterymonitor.maximumScreenBrightness
             // Don't allow the UI to turn off the screen
