@@ -293,7 +293,7 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
     // Try snap instance name.
     if (!service) {
         const auto services = KApplicationTrader::query([&desktopEntry](const KService::Ptr &app) -> bool {
-            const QString snapInstanceName = app->property(QStringLiteral("X-SnapInstanceName"), QMetaType::QString).toString();
+            const QString snapInstanceName = app->property<QString>(QStringLiteral("X-SnapInstanceName"));
             return desktopEntry.compare(snapInstanceName, Qt::CaseInsensitive) == 0;
         });
 

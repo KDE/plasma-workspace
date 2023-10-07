@@ -464,7 +464,7 @@ static QList<KServiceAction> additionalActions(const KService::Ptr &service)
     const auto files = KFileUtils::findAllUniqueFiles(locations);
     for (const auto &file : files) {
         KService actionsService(file);
-        const auto filter = actionsService.property(QStringLiteral("X-KDE-OnlyForAppIds"), QMetaType::QStringList).toStringList();
+        const auto filter = actionsService.property<QStringList>(QStringLiteral("X-KDE-OnlyForAppIds"));
         if (filter.empty() || filter.contains(storageIdFromService(service))) {
             actions.append(actionsService.actions());
         }
