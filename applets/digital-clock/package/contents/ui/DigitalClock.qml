@@ -449,7 +449,7 @@ MouseArea {
             return;
         }
 
-        var delta = wheel.angleDelta.y || wheel.angleDelta.x
+        var delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : wheel.angleDelta.x);
         var newIndex = main.tzIndex;
         wheelDelta += delta;
         // magic number 120 for common "one click"
