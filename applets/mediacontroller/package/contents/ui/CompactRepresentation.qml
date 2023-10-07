@@ -80,7 +80,7 @@ MouseArea {
     property int wheelDelta: 0
 
     onWheel: wheel => {
-        wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y || wheel.angleDelta.x)
+        wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x)
         while (wheelDelta >= 120) {
             wheelDelta -= 120;
             mpris2Model.currentPlayer?.changeVolume(volumePercentStep / 100, true);
