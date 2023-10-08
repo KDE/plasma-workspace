@@ -11,14 +11,14 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2019-10-19 22:08+0200\n"
+"PO-Revision-Date: 2023-10-07 12:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -34,10 +34,9 @@ msgid "Main Toolbar"
 msgstr "Barra de ferramentas Principal"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Cor &secundaria:"
+msgstr "Barras de ferramentas secundarias"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -53,45 +52,43 @@ msgstr "Diálogos"
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Nome do tema de iconas actual."
 
 #. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
 #: iconssettingsbase.kcfg:15
 #, kde-format
 msgid "Desktop icons size"
-msgstr ""
+msgstr "Tamaño das iconas no escritorio."
 
 #. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
 #: iconssettingsbase.kcfg:21
 #, kde-format
 msgid "Toolbar icons size"
-msgstr ""
+msgstr "Tamaño das iconas nas barras de ferramentas."
 
 #. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
 #: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Main toolbar icons size"
-msgstr "Barra de ferramentas Principal"
+msgstr "Tamaño das iconas nas barras de ferramentas principais."
 
 #. i18n: ectx: label, entry (smallSize), group (SmallIcons)
 #: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
+#, kde-format
 msgid "Small icons size"
-msgstr "Iconas pequenas"
+msgstr "Tamaño das iconas pequenas."
 
 #. i18n: ectx: label, entry (panelSize), group (PanelIcons)
 #: iconssettingsbase.kcfg:39
 #, kde-format
 msgid "Panel icons size"
-msgstr ""
+msgstr "Tamaño das iconas dos paneis."
 
 #. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
 #: iconssettingsbase.kcfg:45
 #, kde-format
 msgid "Dialog icons size"
-msgstr ""
+msgstr "Tamaño das iconas dos diálogos."
 
 #: main.cpp:182
 #, kde-format
@@ -123,16 +120,14 @@ msgid "Theme installed successfully."
 msgstr "Instalouse o tema."
 
 #: main.cpp:260
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "Estanse a instalar temas de iconas…"
+msgstr "Instalando temas de iconas…"
 
 #: main.cpp:270
-#, fuzzy, kde-format
-#| msgid "Installing %1 theme..."
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instalando o tema %1…"
+msgstr "Instalando o tema «%1»…"
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format
@@ -143,15 +138,20 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Aquí pode configurar os tamaños predeterminados de varios tipos de iconas "
+"para todo o sistema. Teña en conta que non todas as aplicacións respectarán "
+"esta configuración.<nl/><nl/>Se lle parece que os obxectos da pantalla son "
+"demasiado pequenos ou demasiado grandes en xeral, e non só as iconas, "
+"quizais sería mellor que axustase a escala global en vez do tamaño das "
+"iconas."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Axustar a escala global…"
 
 #: package/contents/ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Tamaño:"
@@ -177,20 +177,17 @@ msgid "Configure Icon Sizes"
 msgstr "Configurar os tamaños das iconas"
 
 #: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "Instalar desde un ficheiro…"
 
 #: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Get New Icons..."
+#, kde-format
 msgid "Get New Icons…"
 msgstr "Obter novas iconas…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configurar os tamaños das iconas"
