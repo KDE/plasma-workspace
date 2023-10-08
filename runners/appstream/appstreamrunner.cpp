@@ -80,17 +80,17 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
     }
 
     std::set<QString> uniqueIds;
-    const auto components = findComponentsByString(context.query()).mid(0, 3);
+    const auto components = findComponentsByString(context.query());
 
-    for (const AppStream::Component &component : components) {
-        if (component.kind() != AppStream::Component::KindDesktopApp)
+    for (auto it = components.cbegin(); it != components.cend() && uniqueIds.size() < 3; it = std::next(it)) {
+        if (it->kind() != AppStream::Component::KindDesktopApp)
             continue;
 
         // KApplicationTrader uses KService which uses KSycoca which holds
         // KDirWatch instances to monitor changes. We don't need this on
         // our runner threads - let's not needlessly allocate inotify instances.
         KSycoca::disableAutoRebuild();
-        const QString componentId = component.id();
+        const QString componentId = it->id();
         const auto servicesFound = KApplicationTrader::query([&componentId](const KService::Ptr &service) {
             if (service->exec().isEmpty())
                 return false;
@@ -119,11 +119,11 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
         KRunner::QueryMatch match(this);
         match.setType(KRunner::QueryMatch::NoMatch); // Make sure it is less relavant than KCMs or apps
         match.setId(componentId);
-        match.setIcon(componentIcon(component));
-        match.setText(i18n("Get %1…", component.name()));
-        match.setSubtext(component.summary());
+        match.setIcon(componentIcon(*it));
+        match.setText(i18n("Get %1…", it->name()));
+        match.setSubtext(it->summary());
         match.setData(QUrl("appstream://" + componentId));
-        match.setRelevance(component.name().compare(context.query(), Qt::CaseInsensitive) == 0 ? 1. : 0.7);
+        match.setRelevance(it->name().compare(context.query(), Qt::CaseInsensitive) == 0 ? 1. : 0.7);
         context.addMatch(match);
     }
 }
