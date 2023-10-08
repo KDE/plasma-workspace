@@ -73,10 +73,11 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
     // Check if other plugins have already found an executable, if that is the case we do
     // not want to ask the user to install anything else
     const QList<KRunner::QueryMatch> matches = context.matches();
-    for (const auto &match : matches) {
-        if (match.id().startsWith(QLatin1String("exec://"))) {
-            return;
-        }
+    const bool execFound = std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
+        return match.id().startsWith(QLatin1String("exec://"));
+    });
+    if (execFound) {
+        return;
     }
 
     std::set<QString> uniqueIds;
