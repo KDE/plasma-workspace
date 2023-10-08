@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-05 01:41+0000\n"
-"PO-Revision-Date: 2023-09-17 12:56+0200\n"
+"PO-Revision-Date: 2023-10-07 07:45+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -400,7 +400,7 @@ msgstr "Dodaj nowy"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Naciśnij spację, aby dostosować profil użytkownika"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -514,13 +514,13 @@ msgstr "Rich Hardwood"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Idź wstecz"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Inicjały"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -538,13 +538,13 @@ msgstr "Wybierz obraz"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Ikona zastępcza"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Ikona zastępcza dla awatara użytkownika"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

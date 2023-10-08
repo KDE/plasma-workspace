@@ -11,14 +11,14 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-14 01:59+0000\n"
-"PO-Revision-Date: 2019-10-19 22:08+0200\n"
+"PO-Revision-Date: 2023-10-07 12:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -26,13 +26,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Nome do tema de iconas actual."
 
 #: main.cpp:150
 #, kde-format
@@ -64,28 +64,24 @@ msgid "Theme installed successfully."
 msgstr "Instalouse o tema."
 
 #: main.cpp:228
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "Estanse a instalar temas de iconas…"
+msgstr "Instalando temas de iconas…"
 
 #: main.cpp:238
-#, fuzzy, kde-format
-#| msgid "Installing %1 theme..."
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instalando o tema %1…"
+msgstr "Instalando o tema «%1»…"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "Instalar desde un ficheiro…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Get New Icons..."
+#, kde-format
 msgid "Get New…"
-msgstr "Obter novas iconas…"
+msgstr "Obter novidades…"
 
 #: ui/main.qml:166
 #, kde-format
