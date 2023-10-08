@@ -19,6 +19,9 @@ public:
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 
+protected:
+    void init() override;
+
 private:
     QList<AppStream::Component> findComponentsByString(const QString &query);
     AppStream::Pool m_db;

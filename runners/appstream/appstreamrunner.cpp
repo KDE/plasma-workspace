@@ -86,10 +86,6 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
         if (it->kind() != AppStream::Component::KindDesktopApp)
             continue;
 
-        // KApplicationTrader uses KService which uses KSycoca which holds
-        // KDirWatch instances to monitor changes. We don't need this on
-        // our runner threads - let's not needlessly allocate inotify instances.
-        KSycoca::disableAutoRebuild();
         const QString componentId = it->id();
         const auto servicesFound = KApplicationTrader::query([&componentId](const KService::Ptr &service) {
             if (service->exec().isEmpty())
@@ -133,6 +129,14 @@ void InstallerRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
     const QUrl appstreamUrl = match.data().toUrl();
     if (!QDesktopServices::openUrl(appstreamUrl))
         qCWarning(RUNNER_APPSTREAM) << "couldn't open" << appstreamUrl;
+}
+
+void InstallerRunner::init()
+{
+    // KApplicationTrader uses KService which uses KSycoca which holds
+    // KDirWatch instances to monitor changes. We don't need this on
+    // our runner threads - let's not needlessly allocate inotify instances.
+    KSycoca::disableAutoRebuild();
 }
 
 QList<AppStream::Component> InstallerRunner::findComponentsByString(const QString &query)
