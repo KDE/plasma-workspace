@@ -69,11 +69,15 @@ void unload_application()
     if (!s_application) {
         return;
     }
-    QTimer::singleShot(0, s_application, [] {
+    s_locked = true;
+    QMetaObject::invokeMethod(s_application, [] {
         s_application->quit();
         s_application = nullptr;
-        std::cout << "QGuiApplication quit" << std::endl;
+        s_locked = false;
+        s_locked.notify_one();
     });
+    s_locked.wait(true);
+    std::clog << "QGuiApplication quit" << std::endl;
 }
 
 void init_task_manager()
