@@ -27,6 +27,24 @@ Item {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     property bool hadPrompt: false
 
+    function tryToSwitchUser(canStartSession) {
+        if (!defaultToSwitchUser) { // context property
+            return
+        }
+        // If we are in the only session, then going to the session switcher is
+        // a pointless extra step; instead create a new session immediately
+        if (canStartSession &&
+            ((sessionsModel.showNewSessionEntry && sessionsModel.count === 1)  ||
+            (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
+            sessionsModel.canStartNewSession) {
+            sessionsModel.startNewSession(true /* lock the screen too */)
+        } else {
+            mainStack.push(switchSessionPage, {immediate: true})
+        }
+    }
+
+    Component.onCompleted: Qt.callLater(tryToSwitchUser, true)
+
     function handleMessage(msg) {
         if (!root.notification) {
             root.notification += msg;
@@ -55,8 +73,7 @@ Item {
             if (lockScreenUi.hadPrompt) {
                 Qt.quit();
             } else {
-                mainStack.push(Qt.resolvedUrl("NoPasswordUnlock.qml"),
-                               {"userListModel": users});
+                mainStack.replace(null, Qt.resolvedUrl("NoPasswordUnlock.qml"), {"userListModel": users}, StackView.Immediate)
                 mainStack.forceActiveFocus();
             }
         }
@@ -353,23 +370,6 @@ Item {
                     Layout.preferredHeight: item ? item.implicitHeight : 0
                     active: config.showMediaControls
                     source: "MediaControls.qml"
-                }
-            }
-
-            Component.onCompleted: {
-                if (defaultToSwitchUser) { //context property
-                    // If we are in the only session, then going to the session switcher is
-                    // a pointless extra step; instead create a new session immediately
-                    if (((sessionsModel.showNewSessionEntry && sessionsModel.count === 1)  ||
-                       (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
-                       sessionsModel.canStartNewSession) {
-                        sessionsModel.startNewSession(true /* lock the screen too */)
-                    } else {
-                        mainStack.push({
-                            item: switchSessionPage,
-                            immediate: true,
-                        });
-                    }
                 }
             }
         }
