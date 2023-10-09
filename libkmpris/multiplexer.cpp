@@ -73,8 +73,10 @@ void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 void Multiplexer::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
 {
     Q_ASSERT(m_activePlayer);
+    PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+    // Need to manually disconnect from the container because the source can be filtered out but not gone (e.g. a browser)
+    disconnect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
     if (m_activePlayerIndex == first) {
-        disconnect(m_activePlayer, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
         m_activePlayer = nullptr;
         // Index is updated in evaluatePlayers() later
     }
@@ -114,7 +116,7 @@ void Multiplexer::updateIndex()
     const int rawRow =
         std::distance(sourceModel->m_containers.cbegin(), std::find(sourceModel->m_containers.cbegin(), sourceModel->m_containers.cend(), m_activePlayer));
     const QModelIndex idx = m_filterModel->mapFromSource(sourceModel->index(rawRow, 0));
-    Q_ASSERT(idx.isValid());
+    Q_ASSERT_X(idx.isValid(), Q_FUNC_INFO, qUtf8Printable(QStringLiteral("m_activePlayer: %1").arg(m_activePlayer->identity())));
     m_activePlayerIndex = idx.row();
 }
 
