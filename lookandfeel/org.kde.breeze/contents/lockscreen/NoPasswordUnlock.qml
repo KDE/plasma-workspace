@@ -23,5 +23,6 @@ SessionManagementScreen {
 
     Component.onCompleted: {
         forceActiveFocus();
+        Qt.callLater(tryToSwitchUser, false)
     }
 }
