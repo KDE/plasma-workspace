@@ -1363,9 +1363,3 @@ msgstr "カラースキームを開く"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "カラースキームファイル (*.colors)"
-
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "新しいカラースキームを取得..."
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "このモジュールでカラースキームを選択できます。"

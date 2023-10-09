@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2023-09-30 22:54-0700\n"
+"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: contents/ui/FullRepresentation.qml:40
+#, kde-format
+msgctxt "@title"
+msgid "Camera"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:43
+#, kde-format
+msgctxt "@info:status"
+msgid "Active"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:45
+#, kde-format
+msgctxt "@info:status"
+msgid "Idle"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:47
+#, kde-format
+msgctxt "@info:status"
+msgid "Error"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:49
+#, kde-format
+msgctxt "@info:status"
+msgid "Creating"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgctxt "@info:status"
+msgid "Suspended"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:53
+#, kde-format
+msgctxt "@info:status"
+msgid "Unknown"
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:69
+#, kde-format
+msgctxt "@info:status %1 camera name"
+msgid "%1 is in use"
+msgstr ""
+
+#: contents/ui/main.qml:21
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Camera indicator is unavailable"
+msgstr ""
+
+#: contents/ui/main.qml:23
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "A camera is in use"
+msgid_plural "%1 cameras are in use"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/ui/main.qml:25
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "No camera is in use"
+msgstr ""

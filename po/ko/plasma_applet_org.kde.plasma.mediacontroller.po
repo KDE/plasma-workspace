@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2023-02-28 23:49+0100\n"
+"PO-Revision-Date: 2023-10-08 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:194
 #, kde-format
@@ -36,8 +36,7 @@ msgid "-%1"
 msgstr "-%1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:531
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "무순서 재생"

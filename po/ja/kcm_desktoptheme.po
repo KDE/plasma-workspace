@@ -157,6 +157,3 @@ msgstr "テーマを開く"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "テーマファイル (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Get New Plasma Styles…"
-#~ msgstr "新しい Plasma スタイルを取得..."

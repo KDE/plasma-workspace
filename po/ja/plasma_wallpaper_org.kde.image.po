@@ -312,10 +312,3 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
-
-# ACCELERATOR changed by translator
-#~ msgid "Add Image…"
-#~ msgstr "画像を追加..."
-
-#~ msgid "Add Folder…"
-#~ msgstr "フォルダを追加..."

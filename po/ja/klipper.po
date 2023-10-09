@@ -953,15 +953,3 @@ msgstr "このポップアップを無効にする"
 #, kde-format
 msgid "&Cancel"
 msgstr "キャンセル(&C)"
-
-#, fuzzy
-#~| msgid "Edit Contents"
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "内容を編集"
-
-#~ msgid "Edit Contents"
-#~ msgstr "内容を編集"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "クリップボードの内容"

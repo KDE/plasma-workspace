@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-05 01:41+0000\n"
-"PO-Revision-Date: 2023-09-08 10:18+0200\n"
+"PO-Revision-Date: 2023-10-08 21:51+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -409,7 +409,7 @@ msgstr "Adde nove"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Pressa Spatio per modificar le profilo de usator"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -523,13 +523,13 @@ msgstr "Rich Hardwood"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Vade retro"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Initiales"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -547,13 +547,13 @@ msgstr "Selige un pictura"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Icone de Substituto"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Usa Icone de Substituto de avatar de usator"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

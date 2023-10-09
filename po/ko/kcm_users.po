@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-05 01:41+0000\n"
-"PO-Revision-Date: 2023-02-28 23:36+0100\n"
+"PO-Revision-Date: 2023-10-08 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -353,20 +353,19 @@ msgstr "추가한 지문 없음"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "사용자"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "새 사용자 추가"
+msgstr "새로 추가"
 
 #: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Space 키를 눌러서 사용자 프로필 편집"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -480,13 +479,13 @@ msgstr "단단한 나무"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "뒤로 이동"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "두문자"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -504,13 +503,13 @@ msgstr "사진 선택"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "자리 비움자 아이콘"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "사용자 아바타 자리 비움자 아이콘"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

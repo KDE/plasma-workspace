@@ -294,9 +294,3 @@ msgid ""
 msgstr ""
 "このグローバルテーマは適切な設定を提供していません。壊れている可能性があるた"
 "め、このグローバルテーマのメンテナに連絡してください。"
-
-#~ msgid "Get New Global Themes…"
-#~ msgstr "新しいグローバルテーマを取得..."
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "このモジュールでグローバル ルックアンドフィールを選択できます。"

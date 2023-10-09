@@ -145,6 +145,3 @@ msgstr "停止"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "終了"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "プレーヤーを自動的に選択"

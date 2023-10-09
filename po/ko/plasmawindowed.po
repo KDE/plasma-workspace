@@ -1,0 +1,55 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Shinjo Park <kde@peremen.name>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2023-10-08 23:55+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: main.cpp:44 plasmawindowedcorona.cpp:99
+#, kde-format
+msgid "Plasma Windowed"
+msgstr "창 모드 Plasma"
+
+#: main.cpp:46
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "QML 자바스크립트 디버거 사용"
+
+#: main.cpp:49 plasmawindowedcorona.cpp:101
+#, kde-format
+msgid ""
+"Makes the plasmoid stay alive in the Notification Area, even when the window "
+"is closed."
+msgstr "창을 닫아도 Plasmoid를 알림 영역에 유지합니다."
+
+#: main.cpp:51
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "지정한 셸 플러그인 강제로 불러오기"
+
+#: main.cpp:55 plasmawindowedcorona.cpp:102
+#, kde-format
+msgid "The applet to open."
+msgstr "열 애플릿입니다."
+
+#: main.cpp:56 plasmawindowedcorona.cpp:103
+#, kde-format
+msgid "Arguments to pass to the plasmoid."
+msgstr "Plasmoid에 전달할 인자입니다."
+
+#: plasmawindowedview.cpp:117
+#, kde-format
+msgid "Close %1"
+msgstr "%1 닫기"

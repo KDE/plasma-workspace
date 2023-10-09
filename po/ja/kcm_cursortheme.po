@@ -274,6 +274,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(利用可能なサイズ: %1)"
-
-#~ msgid "This module lets you choose the mouse cursor theme."
-#~ msgstr "このモジュールでマウスカーソル テーマを選ぶことができます。"

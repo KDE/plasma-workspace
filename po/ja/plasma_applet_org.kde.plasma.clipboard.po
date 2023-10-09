@@ -133,6 +133,3 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
-
-#~ msgid "The QR code is too large to be displayed"
-#~ msgstr "QR コードが大きすぎるため表示できません"

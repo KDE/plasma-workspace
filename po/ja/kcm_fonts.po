@@ -340,8 +340,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force font DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "フォントの DPI を指定:"

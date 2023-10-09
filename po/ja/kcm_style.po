@@ -220,10 +220,3 @@ msgstr "GNOME/GTK のアプリケーションスタイルを設定..."
 #, kde-format
 msgid "Configure Style…"
 msgstr "スタイルを設定..."
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "このモジュールでは、ユーザインターフェース要素の外観をカスタマイズすること"
-#~ "ができます。"

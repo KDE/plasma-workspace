@@ -190,9 +190,3 @@ msgstr "ポップアップを閉じる"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "非表示のアイコンを表示"
-
-#~ msgctxt ""
-#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
-#~ "activation"
-#~ msgid "%1 (Automatic load)"
-#~ msgstr "%1 (自動的に読み込み)"

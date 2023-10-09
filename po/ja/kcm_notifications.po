@@ -277,6 +277,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "リストからアプリケーションを選択して通知設定と動作を設定します。"
-
-#~ msgid "Configure Notifications"
-#~ msgstr "通知を設定"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2023-02-28 23:54+0100\n"
+"PO-Revision-Date: 2023-10-08 23:54+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,15 +28,13 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "그림 열기"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "슬라이드 쇼에 사용할 그림이 있는 디렉터리 선택"
@@ -102,20 +100,18 @@ msgid "Next Wallpaper Image"
 msgstr "다음 배경 그림 파일"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "그림 파일"
+msgstr "그림"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "추가…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "새 배경 그림 가져오기…"
@@ -256,7 +252,7 @@ msgstr "폴더"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "추가…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format
@@ -264,10 +260,9 @@ msgid "Remove Folder"
 msgstr "폴더 삭제"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:231
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "폴더 열기"
+msgstr "폴더 열기…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format

@@ -293,18 +293,3 @@ msgstr "コンピュータを停止する"
 #, kde-format
 msgid "System actions"
 msgstr "システムのアクション"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "連絡先情報を表示…"
-
-#~ msgid "Contacts"
-#~ msgstr "連絡先"
-
-#~ msgid "Forget Contact"
-#~ msgstr "連絡先を忘れる"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "すべての連絡先を忘れる"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "最近使用した連絡先"

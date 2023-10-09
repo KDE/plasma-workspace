@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-02-28 23:53+0100\n"
+"PO-Revision-Date: 2023-10-08 23:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -32,11 +32,7 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "로그아웃, 현재 데스크톱 세션 끝내기"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
