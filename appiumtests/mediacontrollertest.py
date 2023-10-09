@@ -245,6 +245,11 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
         self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
 
+    def _cleanup_multiplexer(self) -> None:
+        if self.player_b:
+            self.player_b.kill()
+            self.player_b = None
+
     def test_multiplexer(self) -> None:
         """
         The multiplexer should be hidden when there is only 1 player, and shows information from the active/playing player if there is one
@@ -328,10 +333,16 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
         self.assertFalse(player_selector.is_displayed())  # Tabbar is hidden again
 
-    def _cleanup_multiplexer(self) -> None:
-        if self.player_b:
-            self.player_b.kill()
-            self.player_b = None
+    def _cleanup_filter_plasma_browser_integration(self) -> None:
+        """
+        A cleanup function to be called after the test is completed
+        """
+        if self.player_browser:
+            self.player_browser.terminate()
+            self.player_browser = None
+        if self.player_plasma_browser_integration:
+            self.player_plasma_browser_integration.terminate()
+            self.player_plasma_browser_integration = None
 
     def test_filter_plasma_browser_integration(self) -> None:
         """
@@ -366,17 +377,6 @@ class MediaControllerTests(unittest.TestCase):
             self.assertFalse(browser_tab.is_displayed())
 
         self._cleanup_filter_plasma_browser_integration()
-
-    def _cleanup_filter_plasma_browser_integration(self) -> None:
-        """
-        A cleanup function to be called after the test is completed
-        """
-        if self.player_browser:
-            self.player_browser.terminate()
-            self.player_browser = None
-        if self.player_plasma_browser_integration:
-            self.player_plasma_browser_integration.terminate()
-            self.player_plasma_browser_integration = None
 
 
 if __name__ == '__main__':
