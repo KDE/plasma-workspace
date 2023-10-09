@@ -6,6 +6,8 @@
 
 #include "appstreamrunner.h"
 
+#include <unordered_set>
+
 #include <AppStreamQt/icon.h>
 
 #include <QDebug>
@@ -17,8 +19,6 @@
 #include <KApplicationTrader>
 #include <KLocalizedString>
 #include <KSycoca>
-
-#include <set>
 
 #include "debug.h"
 
@@ -80,7 +80,7 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
         return;
     }
 
-    std::set<QString> uniqueIds;
+    std::unordered_set<QString> uniqueIds;
     const auto components = findComponentsByString(context.query());
 
     for (auto it = components.cbegin(); it != components.cend() && uniqueIds.size() < 3; it = std::next(it)) {
