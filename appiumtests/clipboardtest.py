@@ -97,11 +97,10 @@ class ClipboardTest(unittest.TestCase):
 
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
-        # Can't enable QT_FATAL_WARNINGS before "QPalette assigned to QQuickPalette" warning is fixed
-        # options.set_capability("environ", {
-        #     "QT_FATAL_WARNINGS": "1",
-        #     "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.warning=false",
-        # })
+        options.set_capability("environ", {
+            "QT_FATAL_WARNINGS": "1",
+            "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.warning=false",
+        })
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
