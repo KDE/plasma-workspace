@@ -1,32 +1,32 @@
 # translation of kcm_autostart.po to galician
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_autostart package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008, 2009.
 # Miguel Branco <mgl.branco@gmail.com>, 2008.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2019-01-01 15:32+0100\n"
+"PO-Revision-Date: 2023-10-09 13:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: autostartmodel.cpp:322
-#, fuzzy, kde-format
-#| msgid "\"%1\" is not an absolute path."
+#, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "«%1» non é unha ruta absoluta."
+msgstr "«%1» non é un URL absoluto."
 
 #: autostartmodel.cpp:325
 #, kde-format
@@ -46,95 +46,89 @@ msgstr "«%1» non é lexíbel."
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "Facer executábel"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
-msgstr ""
+msgstr "O ficheiro «%1» debe ser executábel para executarse ao saír."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr ""
+msgstr "O ficheiro «%1» debe ser executábel para executarse ao acceder."
 
 #: package/contents/ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "&Properties..."
+#, kde-format
 msgid "Properties"
-msgstr "&Propiedades…"
+msgstr "Propiedades"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgid "Remove"
-msgstr "&Retirar"
+msgstr "Retirar"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Aplicacións"
 
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "Guións de inicio"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Pre-KDE startup"
+#, kde-format
 msgid "Pre-startup Scripts"
-msgstr "Antes do inicio de KDE"
+msgstr "Guións de pre-arranque"
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Logout"
+#, kde-format
 msgid "Logout Scripts"
-msgstr "Saír"
+msgstr "Guións de saída"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "Non hai elementos de inicio automático indicados pola persoa usuaria."
 
 #: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
+"Prema o botón <interface>Engadir…</interface>, embaixo, para engadilos."
 
 #: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Choose Login Script"
-msgstr "Engadir un script…"
+msgstr "Escolla un guión de inicio"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "Escoller un guión de saída"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Engadir…"
 
 #: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
-msgstr ""
+msgstr "Engadir unha aplicación…"
 
 #: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Login Script…"
-msgstr "Engadir un script…"
+msgstr "Engadir un guión de acceso…"
 
 #: package/contents/ui/main.qml:210
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Logout Script…"
-msgstr "Engadir un script…"
+msgstr "Engadir un guión de saída…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

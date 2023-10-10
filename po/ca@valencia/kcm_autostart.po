@@ -102,12 +102,12 @@ msgstr ""
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
-msgstr "Seleccioneu l'script d'inici de sessió"
+msgstr "Seleccioneu un script d'inici de sessió"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
-msgstr "Seleccioneu l'script d'eixida"
+msgstr "Seleccioneu un script d'eixida"
 
 #: package/contents/ui/main.qml:183
 #, kde-format

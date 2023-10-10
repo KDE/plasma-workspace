@@ -189,9 +189,3 @@ msgstr "Затваряне на изскачащ прозорец"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Показване на скрити икони"
-
-#~ msgctxt ""
-#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
-#~ "activation"
-#~ msgid "%1 (Automatic load)"
-#~ msgstr "%1 (Автоматично зареждане)"

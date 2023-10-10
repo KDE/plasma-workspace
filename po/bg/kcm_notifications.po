@@ -275,7 +275,3 @@ msgstr ""
 #, kde-format
 msgid "Other Applications"
 msgstr "Други програми"
-
-#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-#~ msgid "Toggle with:"
-#~ msgstr "Превключване с:"
