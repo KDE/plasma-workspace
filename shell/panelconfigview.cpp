@@ -7,6 +7,7 @@
 #include "panelconfigview.h"
 #include "config-X11.h"
 #include "panelshadows_p.h"
+#include "panelview.h"
 #include "shellcorona.h"
 
 #include <QAction>
@@ -70,7 +71,12 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
     rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
+    connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncGeometry);
     connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncLocation);
+
+    connect(panelView, &PanelView::lengthChanged, this, &PanelConfigView::syncGeometry);
+    connect(panelView, &PanelView::geometryChanged, this, &PanelConfigView::syncGeometry);
+    connect(panelView, &PanelView::thicknessChanged, this, &PanelConfigView::syncGeometry);
 }
 
 PanelConfigView::~PanelConfigView()
@@ -126,30 +132,26 @@ void PanelConfigView::syncGeometry()
         return;
     }
 
+    QRect r(0, 0, rootObject()->implicitHeight(), rootObject()->implicitWidth());
+    QRect t = m_panelView->geometry();
+    r.moveCenter(t.center());
     if (m_containment->formFactor() == Plasma::Types::Vertical) {
-        QSize s(rootObject()->implicitWidth(), screen()->size().height());
-        resize(s);
-        setMinimumSize(s);
-        setMaximumSize(s);
-
         if (m_containment->location() == Plasma::Types::LeftEdge) {
-            setPosition(m_panelView->geometry().right(), screen()->geometry().top());
+            r.moveLeft(t.right() + 32);
         } else if (m_containment->location() == Plasma::Types::RightEdge) {
-            setPosition(m_panelView->geometry().left() - width(), screen()->geometry().top());
+            r.moveRight(t.left() - 32);
         }
-
     } else {
-        QSize s(screen()->size().width(), rootObject()->implicitHeight());
-        resize(s);
-        setMinimumSize(s);
-        setMaximumSize(s);
-
         if (m_containment->location() == Plasma::Types::TopEdge) {
-            setPosition(screen()->geometry().left(), m_panelView->geometry().bottom());
+            r.moveTop(t.bottom() + 32);
         } else if (m_containment->location() == Plasma::Types::BottomEdge) {
-            setPosition(screen()->geometry().left(), m_panelView->geometry().top() - height());
+            r.moveBottom(t.top() - 32);
         }
     }
+    setPosition(r.topLeft());
+    resize(r.size());
+    setMinimumSize(r.size());
+    setMaximumSize(r.size());
 }
 
 void PanelConfigView::syncLocation()

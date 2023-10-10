@@ -236,6 +236,7 @@ Q_SIGNALS:
     void enabledBordersChanged();
     void floatingChanged();
     void minThicknessChanged();
+    void geometryChanged();
 
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
