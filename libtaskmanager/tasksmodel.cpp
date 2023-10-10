@@ -53,6 +53,7 @@ public:
     SortMode sortMode = SortAlpha;
     bool separateLaunchers = true;
     bool launchInPlace = false;
+    bool hideActivatedLaunchers = true;
     bool launchersEverSet = false;
     bool launcherSortingDirty = false;
     bool launcherCheckNeeded = false;
@@ -1288,6 +1289,23 @@ TasksModel::GroupMode TasksModel::groupMode() const
     return d->groupingProxyModel->groupMode();
 }
 
+bool TasksModel::hideActivatedLaunchers() const
+{
+    return d->hideActivatedLaunchers;
+}
+
+void TasksModel::setHideActivatedLaunchers(bool hideActivatedLaunchers)
+{
+    if (d->hideActivatedLaunchers != hideActivatedLaunchers) {
+        d->hideActivatedLaunchers = hideActivatedLaunchers;
+
+        d->updateManualSortMap();
+        d->forceResort();
+
+        Q_EMIT hideActivatedLaunchersChanged();
+    }
+}
+
 void TasksModel::setGroupMode(GroupMode mode)
 {
     if (d->groupingProxyModel) {
@@ -2001,7 +2019,7 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
     // Filter launcher tasks we already have a startup or window task for (that
     // got through filtering).
-    if (sourceIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
+    if (d->hideActivatedLaunchers && sourceIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
         for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
             const QModelIndex &filteredIndex = d->filterProxyModel->index(i, 0);
 

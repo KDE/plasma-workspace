@@ -73,6 +73,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool separateLaunchers READ separateLaunchers WRITE setSeparateLaunchers NOTIFY separateLaunchersChanged)
     Q_PROPERTY(bool launchInPlace READ launchInPlace WRITE setLaunchInPlace NOTIFY launchInPlaceChanged)
+    Q_PROPERTY(bool hideActivatedLaunchers READ hideActivatedLaunchers WRITE setHideActivatedLaunchers NOTIFY hideActivatedLaunchersChanged)
 
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
     Q_PROPERTY(bool groupInline READ groupInline WRITE setGroupInline NOTIFY groupInlineChanged)
@@ -476,6 +477,26 @@ public:
      * associated launcher tasks.
      **/
     void setLaunchInPlace(bool launchInPlace);
+
+    /**
+     * Whether launchers should be hidden after they have been
+     * activated. Defaults to @c true.
+     *
+     * @see hideActivatedLaunchers
+     * @returns whether launchers will be hidden after they have been
+     * activated.
+     **/
+    bool hideActivatedLaunchers() const;
+
+    /**
+     * Sets whether launchers should be hidden after they have been
+     * activated. Defaults to @c true.
+     *
+     * @see hideActivatedLaunchers
+     * @param hideActivatedLaunchers Whether launchers should be hidden
+     * after they have been activated.
+     **/
+    void setHideActivatedLaunchers(bool hideActivatedLaunchers);
 
     /**
      * Returns the current group mode, i.e. the criteria by which tasks should
@@ -971,6 +992,7 @@ Q_SIGNALS:
     void sortModeChanged() const;
     void separateLaunchersChanged() const;
     void launchInPlaceChanged() const;
+    void hideActivatedLaunchersChanged() const;
     void groupModeChanged() const;
     void groupInlineChanged() const;
     void groupingWindowTasksThresholdChanged() const;
