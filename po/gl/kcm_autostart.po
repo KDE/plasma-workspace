@@ -1,32 +1,32 @@
 # translation of kcm_autostart.po to galician
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_autostart package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008, 2009.
 # Miguel Branco <mgl.branco@gmail.com>, 2008.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2019-01-01 15:32+0100\n"
+"PO-Revision-Date: 2023-10-09 13:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: autostartmodel.cpp:374
-#, fuzzy, kde-format
-#| msgid "\"%1\" is not an absolute path."
+#, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "«%1» non é unha ruta absoluta."
+msgstr "«%1» non é un URL absoluto."
 
 #: autostartmodel.cpp:377
 #, kde-format
@@ -44,21 +44,19 @@ msgid "\"%1\" is not readable."
 msgstr "«%1» non é lexíbel."
 
 #: ui/entry.qml:52
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "Nome"
+msgstr "Nome:"
 
 #: ui/entry.qml:57
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "Estado"
+msgstr "Estado:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -66,69 +64,66 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "Última activación:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "Deter"
 
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr "Inicio"
+msgstr "Iniciar"
 
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "Non é posíbel cargar os rexistros. Probe a actualizar."
 
 #: ui/entry.qml:109
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "Actualizar"
 
 #: ui/main.qml:42
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "Facer executábel"
 
 #: ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
-msgstr ""
+msgstr "O ficheiro «%1» debe ser executábel para executarse ao saír."
 
 #: ui/main.qml:58
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr ""
+msgstr "O ficheiro «%1» debe ser executábel para executarse ao acceder."
 
 #: ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Engadir…"
 
 #: ui/main.qml:80
 #, kde-format
 msgid "Add Application…"
-msgstr ""
+msgstr "Engadir unha aplicación…"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Login Script…"
-msgstr "Engadir un script…"
+msgstr "Engadir un guión de acceso…"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Logout Script…"
-msgstr "Engadir un script…"
+msgstr "Engadir un guión de saída…"
 
 #: ui/main.qml:130
 #, kde-format
@@ -136,112 +131,109 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"%1 aínda non se iniciou automaticamente. Haberá máis información despois de "
+"reiniciar o sistema."
 
 #: ui/main.qml:154
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "Aínda non se iniciou automaticamente"
 
 #: ui/main.qml:159 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "Fallou"
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "&Propiedades…"
+msgstr "Ver as propiedades"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "&Retirar"
+msgstr "Retirar a entrada"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Aplicacións"
 
 #: ui/main.qml:184
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "Guións de inicio"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Pre-KDE startup"
+#, kde-format
 msgid "Pre-startup Scripts"
-msgstr "Antes do inicio de KDE"
+msgstr "Guións de pre-arranque"
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Logout"
+#, kde-format
 msgid "Logout Scripts"
-msgstr "Saír"
+msgstr "Guións de saída"
 
 #: ui/main.qml:198
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "Non hai elementos de inicio automático indicados pola persoa usuaria."
 
 #: ui/main.qml:199
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
+"Prema o botón <interface>Engadir…</interface>, embaixo, para engadilos."
 
 #: ui/main.qml:214
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Choose Login Script"
-msgstr "Engadir un script…"
+msgstr "Escolla un guión de inicio"
 
 #: ui/main.qml:234
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "Escoller un guión de saída"
 
 #: unit.cpp:26
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "En execución"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "Non en execución"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "Inicio"
+msgstr "Iniciándose"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "Deténdose"
 
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "Produciuse un erro ao recibir a resposta da chamada a GetAll %1."
 
 #: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "Non foi posíbel abrir o diario."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

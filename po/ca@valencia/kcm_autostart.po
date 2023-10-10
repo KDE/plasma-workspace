@@ -193,12 +193,12 @@ msgstr ""
 #: ui/main.qml:214
 #, kde-format
 msgid "Choose Login Script"
-msgstr "Seleccioneu l'script d'inici de sessió"
+msgstr "Seleccioneu un script d'inici de sessió"
 
 #: ui/main.qml:234
 #, kde-format
 msgid "Choose Logout Script"
-msgstr "Seleccioneu l'script d'eixida"
+msgstr "Seleccioneu un script d'eixida"
 
 #: unit.cpp:26
 #, kde-format
