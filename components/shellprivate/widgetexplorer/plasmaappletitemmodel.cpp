@@ -24,12 +24,9 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     , m_runningCount(0)
     , m_local(false)
 {
-    const QString api(m_info.value(QStringLiteral("X-Plasma-API")));
-    if (!api.isEmpty()) {
-        const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginId() + '/';
-        QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation, _f, QStandardPaths::LocateDirectory));
-        m_local = dir.exists() && dir.isWritable();
-    }
+    const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginId() + '/';
+    QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation, _f, QStandardPaths::LocateDirectory));
+    m_local = dir.exists() && dir.isWritable();
 
     setText(m_info.name() + " - " + m_info.category().toLower());
 
