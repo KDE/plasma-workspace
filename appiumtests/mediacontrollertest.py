@@ -350,11 +350,14 @@ class MediaControllerTests(unittest.TestCase):
         """
         self.addCleanup(self._cleanup_filter_plasma_browser_integration)
 
+        # Make sure the active player is not the browser so the bug can be tested
+        wait = WebDriverWait(self.driver, 3)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
+
         player_browser_json_path: str = path.join(getcwd(), "resources/player_browser.json")
         with open(player_browser_json_path, "r", encoding="utf-8") as f:
             browser_json_data = json.load(f)
         self.player_browser = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_browser_json_path))
-        wait: WebDriverWait = WebDriverWait(self.driver, 3)
         wait.until(EC.visibility_of_element_located((AppiumBy.ACCESSIBILITY_ID, "playerSelector")))
         browser_tab: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["base_properties"]["Identity"])))
         browser_tab.click()
@@ -373,8 +376,18 @@ class MediaControllerTests(unittest.TestCase):
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["base_properties"]["Identity"]))).click()
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["metadata"][0]["xesam:title"])))
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["metadata"][0]["xesam:album"])))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
             wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
             self.assertFalse(browser_tab.is_displayed())
+
+        # When a browser starts playing a video
+        # 1. It registers the browser MPRIS instance with PlaybackStatus: Stopped/Paused, and Mpris2FilterProxyModel has it but the active player can be others
+        # 2. p-b-i also registers its MPRIS instance, and Mpris2FilterProxyModel filters out the Chromium MPRIS instance, so the browser MPRIS instance in Mpris2FilterProxyModel becomes invalid
+        # 3. PlaybackStatus changes to Playing, and the container of the browser MPRIS instance emits playbackStatusChanged() signal. However, the signal should be ignored by Multiplexer (disconnect in Multiplexer::onRowsAboutToBeRemoved)
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_browser.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_plasma_browser_integration.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))  # Confirm the backend does not crash
 
         self._cleanup_filter_plasma_browser_integration()
 
