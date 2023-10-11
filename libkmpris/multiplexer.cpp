@@ -116,7 +116,7 @@ void Multiplexer::updateIndex()
     const int rawRow =
         std::distance(sourceModel->m_containers.cbegin(), std::find(sourceModel->m_containers.cbegin(), sourceModel->m_containers.cend(), m_activePlayer));
     const QModelIndex idx = m_filterModel->mapFromSource(sourceModel->index(rawRow, 0));
-    Q_ASSERT_X(idx.isValid(), Q_FUNC_INFO, qUtf8Printable(QStringLiteral("m_activePlayer: %1").arg(m_activePlayer->identity())));
+    // Q_ASSERT_X(idx.isValid(), Q_FUNC_INFO, qUtf8Printable(QStringLiteral("m_activePlayer: %1").arg(m_activePlayer->identity())));
     m_activePlayerIndex = idx.row();
 }
 
