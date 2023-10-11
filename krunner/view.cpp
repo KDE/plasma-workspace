@@ -96,9 +96,9 @@ void View::objectIncubated()
 {
     auto mainItem = qobject_cast<QQuickItem *>(m_engine->rootObject());
     setMainItem(mainItem);
-    resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(margins()));
+    resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(padding()));
     connect(mainItem, &QQuickItem::implicitHeightChanged, this, [mainItem, this]() {
-        resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(margins()));
+        resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(padding()));
     });
 }
 
