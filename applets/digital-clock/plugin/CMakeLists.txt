@@ -26,9 +26,11 @@ target_link_libraries(digitalclockplugin
         Qt::Qml
         Qt::Widgets # for QAction...
         KF6::CoreAddons
+        KF6::I18n
+        KF6::I18nLocaleData
         KF6::KIOGui
         KF6::Service
-        KF6::I18n)
+)
 
 install(TARGETS digitalclockplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
 
