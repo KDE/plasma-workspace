@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:56+0000\n"
+"POT-Creation-Date: 2023-10-11 02:08+0000\n"
 "PO-Revision-Date: 2023-01-10 11:44+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -35,30 +35,30 @@ msgstr "Pridať na pracovnú plochu"
 
 #: plugin/actionlist.cpp:150
 #, kde-format
-msgid "Add to Panel (Widget)"
-msgstr "Pridať do panela (miniaplikácia)"
-
-#: plugin/actionlist.cpp:155
-#, kde-format
 msgid "Pin to Task Manager"
 msgstr "Pripnúť k správcovi úloh"
 
-#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:153
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Pridať do panela (miniaplikácia)"
+
+#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedávne súbory"
 
-#: plugin/actionlist.cpp:316
+#: plugin/actionlist.cpp:314
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zabudnúť nedávne dokumenty"
 
-#: plugin/actionlist.cpp:394
+#: plugin/actionlist.cpp:392
 #, kde-format
 msgid "Edit Application…"
 msgstr "Upraviť aplikáciu…"
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:426
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

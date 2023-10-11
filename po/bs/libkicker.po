@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:56+0000\n"
+"POT-Creation-Date: 2023-10-11 02:08+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -36,33 +36,33 @@ msgid "Add to Desktop"
 msgstr "Dodaj na površ"
 
 #: plugin/actionlist.cpp:150
-#, fuzzy, kde-format
-msgid "Add to Panel (Widget)"
-msgstr "Dodaj na panel"
-
-#: plugin/actionlist.cpp:155
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr ""
 
-#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:153
+#, fuzzy, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Dodaj na panel"
+
+#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
 msgstr "Skorašnji dokumenti"
 
-#: plugin/actionlist.cpp:316
+#: plugin/actionlist.cpp:314
 #, fuzzy, kde-format
 msgid "Forget Recent Files"
 msgstr "Skorašnji dokumenti"
 
-#: plugin/actionlist.cpp:394
+#: plugin/actionlist.cpp:392
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Podesavanje aplikacije..."
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:426
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

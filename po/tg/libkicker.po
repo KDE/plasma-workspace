@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:56+0000\n"
+"POT-Creation-Date: 2023-10-11 02:08+0000\n"
 "PO-Revision-Date: 2020-09-21 13:33+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -34,31 +34,31 @@ msgstr "Илова кардан ба мизи корӣ"
 
 #: plugin/actionlist.cpp:150
 #, kde-format
-msgid "Add to Panel (Widget)"
-msgstr "Илова кардан ба лавҳа (Виҷет)"
-
-#: plugin/actionlist.cpp:155
-#, kde-format
 msgid "Pin to Task Manager"
 msgstr "Васл кардан ба мудири вазифаҳо"
 
-#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:153
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Илова кардан ба лавҳа (Виҷет)"
+
+#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Файлҳои охирин"
 
-#: plugin/actionlist.cpp:316
+#: plugin/actionlist.cpp:314
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Пок кардани рӯйхати файлҳои охирин"
 
-#: plugin/actionlist.cpp:394
+#: plugin/actionlist.cpp:392
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Таҳрир кардани барнома..."
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:426
 #, fuzzy, kde-format
 #| msgctxt "@action opens a software center with the application"
 #| msgid "Uninstall or Manage Add-Ons..."

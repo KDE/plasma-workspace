@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:56+0000\n"
+"POT-Creation-Date: 2023-10-11 02:08+0000\n"
 "PO-Revision-Date: 2021-05-26 07:11+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -33,30 +33,30 @@ msgstr "Zur Arbeitsfläche hinzufügen"
 
 #: plugin/actionlist.cpp:150
 #, kde-format
-msgid "Add to Panel (Widget)"
-msgstr "Zur Kontrollleiste hinzufügen (Miniprogramm)"
-
-#: plugin/actionlist.cpp:155
-#, kde-format
 msgid "Pin to Task Manager"
 msgstr "An Fensterleiste anheften"
 
-#: plugin/actionlist.cpp:306 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:153
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Zur Kontrollleiste hinzufügen (Miniprogramm)"
+
+#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Zuletzt geöffnete Dateien"
 
-#: plugin/actionlist.cpp:316
+#: plugin/actionlist.cpp:314
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zuletzt geöffnete Dateien vergessen"
 
-#: plugin/actionlist.cpp:394
+#: plugin/actionlist.cpp:392
 #, kde-format
 msgid "Edit Application…"
 msgstr "Anwendung bearbeiten ..."
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:426
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
