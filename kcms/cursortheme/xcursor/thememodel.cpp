@@ -25,7 +25,7 @@
 #define XCURSOR_LIB_MINOR XCURSOR_MINOR
 #endif
 
-Q_LOGGING_CATEGORY(KCM_CURSORTHEME, "kcm_cursortheme")
+Q_LOGGING_CATEGORY(KCM_CURSORTHEME, "kcm_cursortheme", QtWarningMsg)
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
     : QAbstractListModel(parent)

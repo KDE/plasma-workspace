@@ -15,6 +15,10 @@ Files: applets/cameraindicator/metadata.json
 Copyright: None
 License: CC0-1.0
 
+Files: kcms/cursortheme/autotests/data/*
+Copyright: None
+License: CC0-1.0
+
 Files: kcms/soundtheme/autotests/data/*
 Copyright: None
 License: CC0-1.0
