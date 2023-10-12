@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 02:25+0000\n"
+"POT-Creation-Date: 2023-10-12 02:31+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Passwoort"
 msgid "Log In"
 msgstr "Afmellen"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Grootschriev-Rast is an"
@@ -159,22 +159,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:55
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Oplsuten is fehlslaan"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:332
 #, kde-format
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:344
 #, fuzzy, kde-format
 #| msgctxt "Button to change keyboard layout"
 #| msgid "Switch layout"

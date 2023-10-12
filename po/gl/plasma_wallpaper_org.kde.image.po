@@ -1,18 +1,18 @@
 # translation of plasma_wallpaper_image.po to Galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011, 2012, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2013, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-22 02:28+0000\n"
-"PO-Revision-Date: 2019-08-19 20:53+0200\n"
+"PO-Revision-Date: 2023-10-11 13:16+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Adrian Chaves (Gallaecio)"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "adrian@chaves.io"
 
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format
@@ -83,27 +83,25 @@ msgid "Select Background Color"
 msgstr "Escoller a cor do fondo"
 
 #: imagepackage/contents/ui/config.qml:207
-#, fuzzy, kde-format
-#| msgid "Add Image..."
+#, kde-format
 msgid "Add Image…"
 msgstr "Engadir unha imaxe…"
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Get New Wallpapers…"
-msgstr "Obter novos fondos de escritorio…"
+msgstr "Obter novos fondos…"
 
 #: imagepackage/contents/ui/main.qml:66
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Abrir a imaxe de fondo de escritorio"
+msgstr "Abrir a imaxe de fondo"
 
 #: imagepackage/contents/ui/main.qml:67
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Seguinte imaxe de fondo de escritorio"
+msgstr "Seguinte imaxe de fondo"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
@@ -113,18 +111,20 @@ msgstr "Abrir o cartafol contedor…"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Restaurar o fondo de escritorio"
+msgstr "Restaurar o fondo"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr "Retirar o fondo de pantalla"
+msgstr "Retirar o fondo"
 
 #: plasma-apply-wallpaperimage.cpp:29
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
+"Esta ferramenta permítelle definir unha imaxe como fondo para a sesión de "
+"Plasma."
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -132,6 +132,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"Un ficheiro de imaxe ou un paquete de fondo instalado que quere definir como "
+"fondo para a sesión de Plasma."
 
 #: plasma-apply-wallpaperimage.cpp:45
 #, kde-format
@@ -140,22 +142,26 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"Hai unha comiña inglesa (') sen pechar no nome de ficheiro do fondo. Póñase "
+"en contacto coa xente autora do fondo para que o solucionen, ou renomee "
+"vostede o ficheiro: %1"
 
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Produciuse un erro ao intentar definir o fondo de Plasma:\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
+"Definiuse «%1», baseado en KPackage, como fondo para todos os escritorios."
 
 #: plasma-apply-wallpaperimage.cpp:91
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "Definiuse a imaxe «%1» como fondo para todos os escritorios."
 
 #: plasma-apply-wallpaperimage.cpp:97
 #, kde-format
@@ -163,16 +169,18 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"O ficheiro indicado para definir como fondo non existe, ou non é posíbel "
+"identificalo como fondo: %1"
 
 #: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
-msgstr "Ficheiro de fondo de escritorio recomendado"
+msgstr "Ficheiro de fondo recomendado"
 
 #: plugin/imagebackend.cpp:241
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
-msgstr "Directorio que contén as imaxes para amosar como unha presentación."
+msgstr "Cartafol co fondo para amosar como unha presentación."
 
 #: plugin/imagebackend.cpp:350
 #, kde-format
@@ -217,35 +225,33 @@ msgstr "Data de modificación (de vello a novo)"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "Agrupar por cartafoles"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
 #, kde-format
 msgid "Change every:"
-msgstr "&Cambiar cada:"
+msgstr "Cambiar cada:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 hora"
+msgstr[1] "%1 horas"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:128
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "Minutos"
-msgstr[1] "Minutos"
+msgstr[0] "%1 minuto"
+msgstr[1] "%1 minutos"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
-#, fuzzy, kde-format
-#| msgid "Seconds"
+#, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] "Segundos"
-msgstr[1] "Segundos"
+msgstr[0] "%1 segundo"
+msgstr[1] "%1 segundos"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
@@ -265,11 +271,10 @@ msgstr "Abrir o cartafol"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:235
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "Non hai localizacións de fondos configuradas."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
 msgstr "Engadir un cartafol…"
 

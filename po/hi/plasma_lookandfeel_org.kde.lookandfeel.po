@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 02:25+0000\n"
+"POT-Creation-Date: 2023-10-12 02:31+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "कूटशब्द"
 msgid "Log In"
 msgstr "लॉग इन"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "कैप्स लॉक सक्रिय है"
@@ -153,24 +153,24 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:55
 #, kde-format
 msgid "Unlocking failed"
 msgstr "ताला खोलने में विफल"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:332
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "निद्रा"
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "सुप्तावस्था"
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Switch User"
 msgstr "उपयोक्ता बदलें"

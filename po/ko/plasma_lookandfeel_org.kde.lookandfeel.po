@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 02:25+0000\n"
+"POT-Creation-Date: 2023-10-12 02:31+0000\n"
 "PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "암호"
 msgid "Log In"
 msgstr "로그인"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
@@ -152,22 +152,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "잠금 해제 프롬프트 아래쪽에 표시"
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:55
 #, kde-format
 msgid "Unlocking failed"
 msgstr "잠금 해제 실패"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:332
 #, kde-format
 msgid "Sleep"
 msgstr "절전"
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "최대 절전 모드"
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Switch User"
 msgstr "사용자 전환"

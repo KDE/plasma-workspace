@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 02:25+0000\n"
+"POT-Creation-Date: 2023-10-12 02:31+0000\n"
 "PO-Revision-Date: 2022-11-11 22:27+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Salasana"
 msgid "Log In"
 msgstr "Kirjaudu"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Vaihtolukko on käytössä"
@@ -154,22 +154,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Näytä avauskehotteen alla"
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:55
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Lukituksen avaaminen epäonnistui"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:332
 #, kde-format
 msgid "Sleep"
 msgstr "Valmiustila"
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "Lepotila"
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Switch User"
 msgstr "Vaihda käyttäjää"

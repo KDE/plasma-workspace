@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 02:25+0000\n"
+"POT-Creation-Date: 2023-10-12 02:31+0000\n"
 "PO-Revision-Date: 2023-03-01 06:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,7 +42,7 @@ msgstr "Geslo"
 msgid "Log In"
 msgstr "Prijavi se"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je vključen"
@@ -156,22 +156,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Kaži pod pozivom za odklepanje"
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:55
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Odklepanje ni uspelo"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:332
 #, kde-format
 msgid "Sleep"
 msgstr "Spanje"
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "V mirovanje"
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Switch User"
 msgstr "Preklopi uporabnika"
