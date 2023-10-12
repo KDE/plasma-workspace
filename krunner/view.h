@@ -12,18 +12,8 @@
 #include <KSharedConfig>
 #include <QQuickView>
 
-#include <KWayland/Client/plasmashell.h>
 #include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
-
-namespace KWayland
-{
-namespace Client
-{
-class PlasmaShell;
-class PlasmaShellSurface;
-}
-}
 
 class X11WindowScreenRelativePositioner;
 class ViewPrivate;

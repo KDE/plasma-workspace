@@ -22,7 +22,6 @@ target_link_libraries(krunner
     KF6::PlasmaQuick
     KF6::DBusAddons
     KF6::Crash
-    KF6::WaylandClient
     KF6::Runner
     PW::KWorkspace
     LayerShellQt::Interface
