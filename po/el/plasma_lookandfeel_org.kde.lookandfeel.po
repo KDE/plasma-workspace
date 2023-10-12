@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2017-03-24 14:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Κωδικός πρόσβασης"
 msgid "Log In"
 msgstr "Αποσύνδεση"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Το Caps Lock είναι ενεργό"
@@ -155,22 +155,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:46
+#: contents/lockscreen/LockScreenUi.qml:64
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Αποτυχία ξεκλειδώματος"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:337
 #, kde-format
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:343 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:332
+#: contents/lockscreen/LockScreenUi.qml:349
 #, kde-format
 msgid "Switch User"
 msgstr "Εναλλαγή χρήστη"

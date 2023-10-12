@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -33,7 +33,7 @@ msgstr "രഹസ്യവാക്ക്"
 msgid "Log In"
 msgstr "അകത്ത് കടക്കുക "
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "ക്യാപ്‌സ് ലോക്ക് ഓണാണ്"
@@ -149,24 +149,24 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:46
+#: contents/lockscreen/LockScreenUi.qml:64
 #, kde-format
 msgid "Unlocking failed"
 msgstr "പൂട്ടുതുറക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:337
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "സ്ലീപ്"
 
-#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:343 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/lockscreen/LockScreenUi.qml:332
+#: contents/lockscreen/LockScreenUi.qml:349
 #, kde-format
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"

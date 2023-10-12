@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2022-04-04 10:12+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Parolă"
 msgid "Log In"
 msgstr "Autentificare"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
@@ -154,22 +154,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:46
+#: contents/lockscreen/LockScreenUi.qml:64
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:337
 #, kde-format
 msgid "Sleep"
 msgstr "Adormire"
 
-#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:343 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernează"
 
-#: contents/lockscreen/LockScreenUi.qml:332
+#: contents/lockscreen/LockScreenUi.qml:349
 #, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"

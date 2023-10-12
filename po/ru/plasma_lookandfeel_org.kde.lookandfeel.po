@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2022-10-17 12:00+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -41,7 +41,7 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Войти"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Включён режим Caps Lock"
@@ -156,22 +156,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Показывать под строкой ввода пароля"
 
-#: contents/lockscreen/LockScreenUi.qml:46
+#: contents/lockscreen/LockScreenUi.qml:64
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Не удалось разблокировать"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:337
 #, kde-format
 msgid "Sleep"
 msgstr "Ждущий режим"
 
-#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:343 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "Спящий режим"
 
-#: contents/lockscreen/LockScreenUi.qml:332
+#: contents/lockscreen/LockScreenUi.qml:349
 #, kde-format
 msgid "Switch User"
 msgstr "Переключить пользователя"

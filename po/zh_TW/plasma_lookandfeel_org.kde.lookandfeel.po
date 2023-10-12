@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 01:57+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2023-02-07 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -42,7 +42,7 @@ msgstr "密碼"
 msgid "Log In"
 msgstr "登入"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:306
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "大寫鎖定已開啟"
@@ -156,22 +156,22 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "在解除鎖定畫面中顯示"
 
-#: contents/lockscreen/LockScreenUi.qml:46
+#: contents/lockscreen/LockScreenUi.qml:64
 #, kde-format
 msgid "Unlocking failed"
 msgstr "解除鎖定失敗"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:337
 #, kde-format
 msgid "Sleep"
 msgstr "睡眠"
 
-#: contents/lockscreen/LockScreenUi.qml:326 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:343 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "休眠"
 
-#: contents/lockscreen/LockScreenUi.qml:332
+#: contents/lockscreen/LockScreenUi.qml:349
 #, kde-format
 msgid "Switch User"
 msgstr "切換使用者"

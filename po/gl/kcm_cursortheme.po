@@ -1,34 +1,34 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2019-02-02 10:14+0100\n"
+"PO-Revision-Date: 2023-10-11 13:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Choose the mouse cursor theme"
+#, kde-format
 msgid "Name of the current cursor theme"
-msgstr "Escoller o tema do cursor do rato"
+msgstr "Nome do tema de cursores actual."
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current cursor size"
-msgstr ""
+msgstr "Tamaño de cursor actual"
 
 #: kcmcursortheme.cpp:305
 #, kde-format
@@ -45,13 +45,14 @@ msgstr "Non é posíbel crear un ficheiro temporal."
 #: kcmcursortheme.cpp:390
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Non é posíbel descargar o arquivo %1 de tema do cursor."
+msgstr "Non é posíbel descargar o arquivo «%1» de tema do iconas."
 
 #: kcmcursortheme.cpp:421
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "O ficheiro non é un arquivo de tema de iconas correcto."
 
+# skip-rule: trasno-icon
 #: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
@@ -69,7 +70,7 @@ msgstr ""
 #: kcmcursortheme.cpp:441
 #, kde-format
 msgid "Overwrite Theme?"
-msgstr "Desexa sobrescribir o tema?"
+msgstr "Quere sobrescribir o tema?"
 
 #: kcmcursortheme.cpp:465
 #, kde-format
@@ -81,12 +82,14 @@ msgstr "O tema instalouse."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Tempo límite en segundos"
 
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr ""
+"O tamaño solicitado, «%1», non está dispoñíbel, estase usando «%2» no seu "
+"lugar."
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -95,6 +98,9 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"Esta ferramenta permítelle definir o tema de cursores para a sesión actual "
+"de Plasma, sen definir accidentalmente unha que non estea dispoñíbel ou xa "
+"estea definida."
 
 #: plasma-apply-cursortheme.cpp:67
 #, kde-format
@@ -102,17 +108,19 @@ msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"O nome do tema de cursores que quere definir para a sesión de Plasma actual "
+"(se indica unha ruta completa só se usará a última parte da ruta)."
 
 #: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "Amosar todos os temas dispoñíbeis no sistema (e cal é o actual)."
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr ""
+msgstr "Usar un tamaño específico en vez do predeterminado do tema."
 
 #: plasma-apply-cursortheme.cpp:90
 #, kde-format
@@ -120,22 +128,23 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"O tema solicitado, «%1», xa está definido como o tema da sesión de Plasma "
+"actual."
 
 #: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
-msgstr ""
+msgstr "Aplicouse o tema de cursores %1 á sesión actual de Plasma."
 
 #: plasma-apply-cursortheme.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
 "theme to display correctly."
 msgstr ""
-"Debe reiniciar a sesión de Plasma para que estes cambios xurdan efecto."
+"Debe reiniciar a sesión de Plasma para que o novo tema de cursores aplicado "
+"se amose correctamente."
 
 #: plasma-apply-cursortheme.cpp:113
 #, kde-format
@@ -143,16 +152,18 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Non foi posíbel atopar o tema «%1». O tema debería ser unha das seguintes "
+"opcións: %2"
 
 #: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
-msgstr ""
+msgstr "Ten os seguintes temas de cursores no sistema:"
 
 #: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr ""
+msgstr "(o tema actual desta sesión de Plasma)"
 
 #: ui/Delegate.qml:52
 #, kde-format
@@ -160,101 +171,97 @@ msgid "Remove Theme"
 msgstr "Retirar o tema"
 
 #: ui/Delegate.qml:59
-#, fuzzy, kde-format
-#| msgid "Mouse Cursor Theme settings"
+#, kde-format
 msgid "Restore Cursor Theme"
-msgstr "Configuración do tema do cursor do rato."
+msgstr "Restaurar o tema de cursores"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Indicación de inicio"
 
 #: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Configurar as animacións que se reproducen ao iniciar unha aplicación."
 
 #: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Indicación de cursor:"
 
 #: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Ningunha"
 
 #: ui/LaunchFeedbackDialog.qml:58
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Estática"
 
 #: ui/LaunchFeedbackDialog.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Escintilante"
 
 #: ui/LaunchFeedbackDialog.qml:76
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Elástica"
 
 #: ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Indicación do xestor de tarefas:"
 
 #: ui/LaunchFeedbackDialog.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Activar as animacións"
 
 #: ui/LaunchFeedbackDialog.qml:112
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Deter as animacións despois de:"
 
 #: ui/LaunchFeedbackDialog.qml:126 ui/LaunchFeedbackDialog.qml:138
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 segundo"
+msgstr[1] "%1 segundos"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Tamaño:"
+msgstr "Tamaño: %1"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "&Configurar a indicación de inicio…"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgid "&Install from File..."
+#, kde-format
 msgid "&Install from File…"
 msgstr "&Instalar desde un ficheiro…"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors..."
+#, kde-format
 msgid "&Get New…"
-msgstr "&Obter novos cursores…"
+msgstr "&Obter novidades…"
 
 #: ui/main.qml:161
 #, kde-format
