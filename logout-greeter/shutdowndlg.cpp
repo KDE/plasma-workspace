@@ -187,7 +187,9 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     }
     requestActivate();
 
-    KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+    if (KWindowSystem::isPlatformX11()) {
+        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+    }
 
     setKeyboardGrabEnabled(true);
     KWindowEffects::enableBlurBehind(this, true);
