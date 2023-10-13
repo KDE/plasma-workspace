@@ -253,7 +253,10 @@ bool PanelConfigView::event(QEvent *e)
     if (e->type() == QEvent::PlatformSurface) {
         switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
         case QPlatformSurfaceEvent::SurfaceCreated:
-            KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+
+            if (KWindowSystem::isPlatformX11()) {
+                KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+            }
 
             if (m_shellSurface) {
                 break;
@@ -271,6 +274,8 @@ bool PanelConfigView::event(QEvent *e)
                 m_shellSurface = interface->createSurface(s, this);
                 m_shellSurface->setPanelTakesFocus(true);
                 m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
+                m_shellSurface->setSkipTaskbar(true);
+                m_shellSurface->setSkipSwitcher(true);
             }
             break;
         case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
