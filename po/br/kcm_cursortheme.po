@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-10-13 01:43+0000\n"
 "PO-Revision-Date: 2004-09-19 18:09+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -152,12 +152,12 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:44
 #, kde-format
 msgid "Remove Theme"
 msgstr "Lemel ar c'hiz"
 
-#: ui/Delegate.qml:59
+#: ui/Delegate.qml:51
 #, fuzzy, kde-format
 #| msgid "&Cursor Theme"
 msgid "Restore Cursor Theme"

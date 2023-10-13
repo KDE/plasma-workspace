@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-10-13 01:43+0000\n"
 "PO-Revision-Date: 2023-08-03 12:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -174,12 +174,12 @@ msgstr "Sisteminizde aşağıdaki fare imleci temaları var:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Bu Plasma oturumu için geçerli tema)"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:44
 #, kde-format
 msgid "Remove Theme"
 msgstr "Temayı Kaldır"
 
-#: ui/Delegate.qml:59
+#: ui/Delegate.qml:51
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "İmleç Temasını Geri Yükle"

@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2019-11-26 22:58+0100\n"
+"PO-Revision-Date: 2023-10-12 23:43+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -37,19 +37,19 @@ msgstr "Fusos horarios"
 #: package/contents/ui/CalendarView.qml:140
 #, kde-format
 msgid "Events"
-msgstr ""
+msgstr "Eventos"
 
 #: package/contents/ui/CalendarView.qml:148
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
-msgstr ""
+msgstr "Engadir…"
 
 #: package/contents/ui/CalendarView.qml:152
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Engadir un novo evento."
 
 #: package/contents/ui/CalendarView.qml:384
 #, kde-format
@@ -64,14 +64,13 @@ msgstr "Non hai eventos este día"
 #: package/contents/ui/CalendarView.qml:432
 #, kde-format
 msgid "Switch…"
-msgstr ""
+msgstr "Cambiar…"
 
 #: package/contents/ui/CalendarView.qml:433
 #: package/contents/ui/CalendarView.qml:436
-#, fuzzy, kde-format
-#| msgid "Show local time zone"
+#, kde-format
 msgid "Switch to another timezone"
-msgstr "Mostrar o fuso horario local"
+msgstr "Cambiar a outro fuso horario"
 
 #: package/contents/ui/configAppearance.qml:50
 #, kde-format
@@ -86,53 +85,50 @@ msgstr "Amosar a data"
 #: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Adaptive location"
-msgstr ""
+msgstr "Localización adaptativa"
 
 #: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Always beside time"
-msgstr ""
+msgstr "Sempre canda a hora"
 
 #: package/contents/ui/configAppearance.qml:64
 #, kde-format
 msgid "Always below time"
-msgstr ""
+msgstr "Sempre baixo a hora"
 
 #: package/contents/ui/configAppearance.qml:72
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Mostrar os segundos"
+msgstr "Amosar os segundos:"
 
 #: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Só na indicación emerxente."
 
 #: package/contents/ui/configAppearance.qml:76
 #: package/contents/ui/configAppearance.qml:96
 #, kde-format
 msgid "Always"
-msgstr ""
+msgstr "Sempre"
 
 #: package/contents/ui/configAppearance.qml:86
-#, fuzzy, kde-format
-#| msgid "Show local time zone"
+#, kde-format
 msgid "Show time zone:"
-msgstr "Mostrar o fuso horario local"
+msgstr "Amosar o fuso horario:"
 
 #: package/contents/ui/configAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Show local time zone"
+#, kde-format
 msgid "Only when different from local time zone"
-msgstr "Mostrar o fuso horario local"
+msgstr "Só cando sexa distinto do fuso horario local."
 
 #: package/contents/ui/configAppearance.qml:105
 #, kde-format
@@ -142,7 +138,7 @@ msgstr "Amosar o fuso horario como:"
 #: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Code"
-msgstr ""
+msgstr "Código"
 
 #: package/contents/ui/configAppearance.qml:111
 #, kde-format
@@ -152,7 +148,7 @@ msgstr "Cidade"
 #: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Offset from UTC time"
-msgstr ""
+msgstr "Diferenza coa hora en UTC"
 
 #: package/contents/ui/configAppearance.qml:124
 #, kde-format
@@ -176,8 +172,7 @@ msgid "24-Hour"
 msgstr "24 horas"
 
 #: package/contents/ui/configAppearance.qml:138
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings..."
+#, kde-format
 msgid "Change Regional Settings…"
 msgstr "Cambiar a configuración rexional…"
 
@@ -208,29 +203,25 @@ msgid "Custom"
 msgstr "Personalizado"
 
 #: package/contents/ui/configAppearance.qml:200
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentación do formato de hora</a>"
 
 #: package/contents/ui/configAppearance.qml:224
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Visualización da hora:"
+msgstr "Aparencia do texto:"
 
 #: package/contents/ui/configAppearance.qml:226
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Automática"
 
 #: package/contents/ui/configAppearance.qml:230
 #, kde-format
@@ -238,34 +229,32 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"O texto usará a fonte do sistema e expandirase para encher o espazo "
+"dispoñíbel."
 
 #: package/contents/ui/configAppearance.qml:239
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is a country name associated with a particular time zone in a zone "
-#| "selection dialog"
-#| msgid "Vanuatu"
+#, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr "Vanuatu"
+msgstr "Manual"
 
 #: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Escoller o estilo…"
 
 #: package/contents/ui/configAppearance.qml:262
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1p. %2"
 
 #: package/contents/ui/configAppearance.qml:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Escoller unha fonte"
 
 #: package/contents/ui/configCalendar.qml:40
 #, kde-format
@@ -280,7 +269,7 @@ msgstr "Amosar os números das semanas"
 #: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "First day of week:"
-msgstr ""
+msgstr "Primeiro día da semana:"
 
 #: package/contents/ui/configCalendar.qml:67
 #, kde-format
@@ -293,11 +282,13 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
+"Consello: Se viaxa con frecuencia, engada á lista o fuso horario de onde "
+"vive. Só aparecerá cando cambie o fuso horario do sistema por outro."
 
 #: package/contents/ui/configTimeZones.qml:78
 #, kde-format
 msgid "Clock is currently using this time zone"
-msgstr ""
+msgstr "O reloxo está usando este fuso horario."
 
 #: package/contents/ui/configTimeZones.qml:80
 #, kde-format
@@ -306,31 +297,27 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Agóchase cando a cidade coincida co fuso horario local."
 
 #: package/contents/ui/configTimeZones.qml:105
-#, fuzzy, kde-format
-#| msgid "Show local time zone"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Mostrar o fuso horario local"
+msgstr "Cambiar o fuso horario do sistema…"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Your system time zone"
+#, kde-format
 msgid "Remove this time zone"
-msgstr "O fuso horario do sistema"
+msgstr "Retirar este fuso horario"
 
 #: package/contents/ui/configTimeZones.qml:127
-#, fuzzy, kde-format
-#| msgid "Show local time zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Mostrar o fuso horario local"
+msgstr "Fuso horario do sistema"
 
 #: package/contents/ui/configTimeZones.qml:127
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Additional Time Zones"
-msgstr "Fusos horarios"
+msgstr "Fusos horarios adicionais"
 
 #: package/contents/ui/configTimeZones.qml:140
 #, kde-format
@@ -338,17 +325,20 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
+"Engada máis fusos horarios para amosalos na indicación emerxente da "
+"miniaplicación, ou use unha delas para o reloxo en si."
 
 #: package/contents/ui/configTimeZones.qml:149
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Add Time Zones…"
-msgstr "Fusos horarios"
+msgstr "Engadir fusos horarios…"
 
 #: package/contents/ui/configTimeZones.qml:159
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
+"Cambiar o fuso horario que se amosa desprazando sobre a miniaplicación do "
+"reloxo."
 
 #: package/contents/ui/configTimeZones.qml:166
 #, kde-format
@@ -356,22 +346,21 @@ msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
+"Usar esta funcionalidade non cambia o fuso horario do sistema. Cando viaxe, "
+"cambie mellor o fuso horario do sistema."
 
 #: package/contents/ui/configTimeZones.qml:190
 #, kde-format
 msgid "Add More Timezones"
-msgstr ""
+msgstr "Engadir máis fusos horarios"
 
 #: package/contents/ui/configTimeZones.qml:201
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. 'Local' was enabled "
-#| "automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
 "automatically."
 msgstr ""
-"Ten que activar polo menos un fuso horario. O fuso horario «Local» activouse "
+"Ten que activar polo menos un fuso horario. O fuso horario local activouse "
 "automaticamente."
 
 #: package/contents/ui/configTimeZones.qml:236
@@ -390,14 +379,12 @@ msgid "Copy to Clipboard"
 msgstr "Copiar no portapapeis"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgid "Adjust Date and Time..."
+#, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Axustar a data e hora…"
 
 #: package/contents/ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Set Time Format..."
+#, kde-format
 msgid "Set Time Format…"
 msgstr "Definir o formato da hora…"
 
@@ -405,13 +392,13 @@ msgstr "Definir o formato da hora…"
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr ""
+msgstr "Hoxe é %1"
 
 #: package/contents/ui/Tooltip.qml:133
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
@@ -437,10 +424,9 @@ msgid "Local"
 msgstr "Local"
 
 #: plugin/timezonemodel.cpp:151
-#, fuzzy, kde-format
-#| msgid "Show local time zone"
+#, kde-format
 msgid "System's local time zone"
-msgstr "Mostrar o fuso horario local"
+msgstr "Fuso horario local do sistema"
 
 #, fuzzy
 #~| msgctxt ""

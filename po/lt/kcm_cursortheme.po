@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-10-13 01:43+0000\n"
 "PO-Revision-Date: 2023-02-04 19:16+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -171,12 +171,12 @@ msgstr "Savo sistemoje turite šiuos pelės žymeklio apipavidalinimus:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Dabartinis šio Plasma seanso apipavidalinimas)"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:44
 #, kde-format
 msgid "Remove Theme"
 msgstr "Šalinti apipavidalinimą"
 
-#: ui/Delegate.qml:59
+#: ui/Delegate.qml:51
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Atkurti žymeklių apipavidalinimą"

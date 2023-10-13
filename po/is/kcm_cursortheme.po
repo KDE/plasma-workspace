@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-10-13 01:43+0000\n"
 "PO-Revision-Date: 2023-09-09 09:53+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -168,12 +168,12 @@ msgstr "Þú ert með eftirfarandi músarbendilsþemu í tölvunni þinni:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Núverandi þema fyrir þessa Plasma-setu)"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:44
 #, kde-format
 msgid "Remove Theme"
 msgstr "Fjarlægja þema"
 
-#: ui/Delegate.qml:59
+#: ui/Delegate.qml:51
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Endurheimta bendilþema"
