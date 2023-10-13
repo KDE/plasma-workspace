@@ -50,7 +50,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         m_layerWindow->setCloseOnDismissed(false);
     } else {
         KX11Extras::setType(winId(), NET::Desktop);
-        KWindowSystem::setState(winId(), NET::KeepBelow);
+        KX11Extras::setState(winId(), NET::KeepBelow);
     }
 
     if (targetScreen) {

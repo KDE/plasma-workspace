@@ -52,8 +52,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
         setScreen(panelView->screen());
 #if HAVE_X11
         KX11Extras::setType(winId(), NET::Dock);
+        KX11Extras::setState(winId(), NET::KeepAbove);
 #endif
-        KWindowSystem::setState(winId(), NET::KeepAbove);
         syncGeometry();
         syncLocation();
     });
@@ -61,8 +61,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 #if HAVE_X11
     KX11Extras::setType(winId(), NET::Dock);
     KX11Extras::forceActiveWindow(winId());
+    KX11Extras::setState(winId(), NET::KeepAbove);
 #endif
-    KWindowSystem::setState(winId(), NET::KeepAbove);
 
     updateBlurBehindAndContrast();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateBlurBehindAndContrast);
@@ -202,8 +202,8 @@ void PanelConfigView::showEvent(QShowEvent *ev)
 #endif
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)) | Qt::X11BypassWindowManagerHint
              | Qt::WindowStaysOnTopHint);
-    KWindowSystem::setState(winId(), NET::KeepAbove);
 #if HAVE_X11
+    KX11Extras::setState(winId(), NET::KeepAbove);
     KX11Extras::forceActiveWindow(winId());
 #endif
     updateBlurBehindAndContrast();
@@ -255,7 +255,7 @@ bool PanelConfigView::event(QEvent *e)
         case QPlatformSurfaceEvent::SurfaceCreated:
 
             if (KWindowSystem::isPlatformX11()) {
-                KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+                KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
             }
 
             if (m_shellSurface) {

@@ -23,6 +23,9 @@
 #include <kpassworddialog.h>
 #include <kwallet.h>
 #include <kwindowsystem.h>
+#if HAVE_X11
+#include <KX11Extras>
+#endif
 
 // solid specific includes
 #include <solid/device.h>
@@ -146,10 +149,12 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
     KWindowSystem::setMainWindow(dialog->windowHandle(), wId); // correct, set dialog parent
 
 #if HAVE_X11
-    if (modal) {
-        KWindowSystem::setState(dialog->winId(), NET::Modal);
-    } else {
-        KWindowSystem::clearState(dialog->winId(), NET::Modal);
+    if (KWindowSystem::isPlatformX11()) {
+        if (modal) {
+            KX11Extras::setState(dialog->winId(), NET::Modal);
+        } else {
+            KX11Extras::clearState(dialog->winId(), NET::Modal);
+        }
     }
 #endif
 

@@ -192,7 +192,7 @@ void View::positionOnScreen()
         } else {
             KX11Extras::setOnAllDesktops(winId(), true);
         }
-        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 }
 

@@ -188,7 +188,7 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     requestActivate();
 
     if (KWindowSystem::isPlatformX11()) {
-        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 
     setKeyboardGrabEnabled(true);
