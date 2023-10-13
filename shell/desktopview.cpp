@@ -21,6 +21,7 @@
 
 #include <KAuthorized>
 #include <KStartupInfo>
+#include <KX11Extras>
 #include <kactivities/controller.h>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
@@ -48,7 +49,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         m_layerWindow->setScope(QStringLiteral("desktop"));
         m_layerWindow->setCloseOnDismissed(false);
     } else {
-        KWindowSystem::setType(winId(), NET::Desktop);
+        KX11Extras::setType(winId(), NET::Desktop);
         KWindowSystem::setState(winId(), NET::KeepBelow);
     }
 
