@@ -5,13 +5,13 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.8
+import QtQuick
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
 
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import org.kde.plasma.private.notifications as Notifications
 
 PlasmaComponents3.ScrollView {
     id: bodyTextContainer
@@ -49,19 +49,13 @@ PlasmaComponents3.ScrollView {
 
         onLinkActivated: bodyTextContainer.linkActivated(link)
 
-        // Handle left-click
-        Notifications.TextEditClickHandler {
-            target: bodyText
-            onClicked: {
-                bodyTextContainer.clicked(null);
-            }
+        TapHandler {
+            acceptedButtons: Qt.LeftButton
+            onTapped: bodyTextContainer.clicked(null)
         }
 
-        // Handle right-click and cursorShape
-        MouseArea {
-            anchors.fill: parent
+        TapHandler {
             acceptedButtons: Qt.RightButton
-
             cursorShape: {
                 if (bodyText.hoveredLink) {
                     return Qt.PointingHandCursor;
@@ -71,28 +65,15 @@ PlasmaComponents3.ScrollView {
                     return bodyTextContainer.cursorShape || Qt.IBeamCursor;
                 }
             }
-
-            onPressed: mouse => {
+            onTapped: eventPoint => {
                 contextMenu = contextMenuComponent.createObject(bodyText);
-                contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
+                contextMenu.link = bodyText.linkAt(eventPoint.position.x, eventPoint.position.y);
 
                 contextMenu.closed.connect(function() {
                     contextMenu.destroy();
                     contextMenu = null;
                 });
-                contextMenu.open(mouse.x, mouse.y);
-            }
-
-            // Pass wheel events to ListView to make scrolling work in FullRepresentation.
-            onWheel: wheel => {
-                if (bodyTextContainer.listViewParent
-                    && ((wheel.angleDelta.y > 0 && !bodyTextContainer.listViewParent.atYBeginning)
-                        || (wheel.angleDelta.y < 0 && !bodyTextContainer.listViewParent.atYEnd))) {
-                    bodyTextContainer.listViewParent.contentY -= wheel.angleDelta.y;
-                    wheel.accepted = true;
-                } else {
-                    wheel.accepted = false;
-                }
+                contextMenu.open(eventPoint.position.x, eventPoint.position.y);
             }
         }
     }

@@ -6,14 +6,12 @@ set(notificationapplet_SRCS
     filemenu.cpp
     globalshortcuts.cpp
     jobaggregator.cpp
-    texteditclickhandler.cpp
     thumbnailer.cpp
     notificationapplet.h
     fileinfo.h
     filemenu.h
     globalshortcuts.h
     jobaggregator.h
-    texteditclickhandler.h
     thumbnailer.h
 )
 

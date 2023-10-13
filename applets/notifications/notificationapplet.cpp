@@ -23,7 +23,6 @@
 #include "filemenu.h"
 #include "globalshortcuts.h"
 #include "jobaggregator.h"
-#include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
 class InputDisabler
@@ -52,7 +51,6 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
         qmlRegisterType<JobAggregator>(uri, 2, 0, "JobAggregator");
-        qmlRegisterType<TextEditClickHandler>(uri, 2, 0, "TextEditClickHandler");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
         qmlRegisterSingletonType(uri, 2, 0, "InputDisabler", [](QQmlEngine *, QJSEngine *jsEngine) -> QJSValue {
             return jsEngine->toScriptValue(InputDisabler());
