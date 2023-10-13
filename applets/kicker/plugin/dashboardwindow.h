@@ -11,6 +11,11 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 
+namespace KWayland::Client
+{
+class PlasmaShell;
+}
+
 class DashboardWindow : public QQuickWindow
 {
     Q_OBJECT
@@ -61,5 +66,6 @@ private:
     QPointer<QQuickItem> m_visualParentItem;
     QPointer<QQuickWindow> m_visualParentWindow;
     QPointer<QQuickItem> m_keyEventProxy;
+    KWayland::Client::PlasmaShell *m_plasmashell = nullptr;
     Plasma::Theme m_theme;
 };
