@@ -85,4 +85,8 @@ PlasmaComponents3.ScrollView {
             target: bodyText
         }
     }
+
+    Component.onCompleted: if (bodyTextContainer.listViewParent !== null) {
+        bodyTextContainer.listViewParent.wheelForwarder.interceptWheelEvent(bodyText);
+    }
 }

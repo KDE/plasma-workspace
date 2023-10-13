@@ -17,6 +17,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.coreaddons 1.0 as KCoreAddons
 
 import org.kde.notificationmanager as NotificationManager
+import org.kde.plasma.private.notifications as Notifications
 
 import "global"
 
@@ -230,6 +231,11 @@ PlasmaExtras.Representation {
         }
     }
 
+    Notifications.WheelForwarder {
+        id: wheelForwarder
+        toItem: scrollView.contentItem
+    }
+
     PlasmaComponents3.ScrollView {
         id: scrollView
         anchors.fill: parent
@@ -246,6 +252,8 @@ PlasmaExtras.Representation {
             topMargin: Kirigami.Units.largeSpacing
             bottomMargin: Kirigami.Units.largeSpacing
             spacing: Kirigami.Units.smallSpacing
+
+            readonly property alias wheelForwarder: wheelForwarder
 
             KeyNavigation.up: dndCheck
 
