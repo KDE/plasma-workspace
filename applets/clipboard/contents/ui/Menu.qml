@@ -9,6 +9,7 @@ import QtQml 2.15
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.workspace.components as WorkspaceComponents
 
 PlasmaComponents3.ScrollView {
     id: menu
@@ -59,6 +60,11 @@ PlasmaComponents3.ScrollView {
         }
     }
 
+    WorkspaceComponents.MouseMovementTracker {
+        id: mouseMovementTracker
+        target: menu
+    }
+
     contentItem: ListView {
         id: menuListView
 
@@ -66,16 +72,6 @@ PlasmaComponents3.ScrollView {
         highlightMoveDuration: 0
         highlightResizeDuration: 0
         currentIndex: -1
-
-        Connections {
-            target: main
-            function onExpandedChanged() {
-                if (main.expanded) {
-                    menuListView.currentIndex = -1
-                    menuListView.positionViewAtBeginning()
-                }
-            }
-        }
 
         topMargin: Kirigami.Units.largeSpacing
         bottomMargin: Kirigami.Units.largeSpacing
@@ -98,7 +94,7 @@ PlasmaComponents3.ScrollView {
             onTriggerAction: uuid => menu.triggerAction(uuid)
 
             Binding {
-                target: menuListView; when: hovered
+                target: menuListView; when: hovered && mouseMovementTracker.mouseMoved
                 property: "currentIndex"; value: index
                 restoreMode: Binding.RestoreBinding
             }

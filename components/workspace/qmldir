@@ -4,3 +4,4 @@ BatteryIcon 2.0 BatteryIcon.qml
 KeyboardLayoutSwitcher 2.0 KeyboardLayoutSwitcher.qml
 BadgeOverlay 2.0 BadgeOverlay.qml
 ShadowedLabel 2.0 ShadowedLabel.qml
+MouseMovementTracker 2.0 MouseMovementTracker.qml
