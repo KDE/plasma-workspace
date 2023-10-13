@@ -2091,7 +2091,24 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     }
 
     // find out what screen this panel should go on
-    QScreen *wantedScreen = qGuiApp->focusWindow() ? qGuiApp->focusWindow()->screen() : m_screenPool->primaryScreen();
+    QScreen *wantedScreen = nullptr;
+    auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
+    QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
+    if (reply.isValid()) {
+        const auto screens = QGuiApplication::screens();
+        auto screenIt = screens.cend();
+        const QString activeOutputName = reply.value();
+        screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+            return screen->name() == activeOutputName;
+        });
+        if (screenIt != screens.cend()) {
+            wantedScreen = *screenIt;
+        }
+    }
+    if (!wantedScreen) {
+        qCWarning(PLASMASHELL) << "Did not find a valid screen to place a new panel." << reply.error();
+        wantedScreen = qGuiApp->focusWindow() ? qGuiApp->focusWindow()->screen() : m_screenPool->primaryScreen();
+    }
 
     QList<Plasma::Types::Location> availableLocations;
     availableLocations << Plasma::Types::BottomEdge << Plasma::Types::TopEdge << Plasma::Types::LeftEdge << Plasma::Types::RightEdge;
