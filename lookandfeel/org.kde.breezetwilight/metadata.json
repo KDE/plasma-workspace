@@ -150,6 +150,5 @@
         "Name[zh_CN]": "Breeze 微风阴阳",
         "Name[zh_TW]": "Breeze Twilight",
         "Website": "https://www.kde.org"
-    },
-    "X-Plasma-MainScript": "defaults"
+    }
 }

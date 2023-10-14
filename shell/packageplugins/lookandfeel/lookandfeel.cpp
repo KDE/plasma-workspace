@@ -22,6 +22,7 @@ public:
         package->setDefaultPackageRoot(QStringLiteral("plasma/look-and-feel/"));
 
         // Defaults
+        package->removeDefinition("mainscript"); // This doesn't make sense, because we don't have one single entrypoint
         package->addFileDefinition("defaults", QStringLiteral("defaults"));
         package->addFileDefinition("layoutdefaults", QStringLiteral("layouts/defaults"));
         package->addDirectoryDefinition("plasmoidsetupscripts", QStringLiteral("plasmoidsetupscripts"));
