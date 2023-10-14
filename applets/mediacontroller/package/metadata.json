@@ -180,6 +180,5 @@
     "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
-    ],
-    "X-Plasma-StandAloneApp": true
+    ]
 }

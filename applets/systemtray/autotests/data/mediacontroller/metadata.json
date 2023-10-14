@@ -24,6 +24,5 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
     ],
-    "X-Plasma-StandAloneApp": true,
     "KPackageStructure": "Plasma/Applet"
 }

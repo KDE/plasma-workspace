@@ -168,6 +168,5 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.systemmonitor"
     ],
-    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor",
-    "X-Plasma-StandAloneApp": true
+    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor"
 }
