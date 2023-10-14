@@ -159,7 +159,6 @@
         "Name[x-test]": "xxBreezexx",
         "Name[zh_CN]": "Breeze 微风",
         "Name[zh_TW]": "微風",
-        "Version": "2.0",
         "Website": "https://www.kde.org"
     },
     "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",

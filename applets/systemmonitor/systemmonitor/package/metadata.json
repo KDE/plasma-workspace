@@ -159,7 +159,6 @@
         "Name[x-test]": "xxSystem monitor Sensorxx",
         "Name[zh_CN]": "系统监视传感器",
         "Name[zh_TW]": "系統監視器感測器",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-Provides": [

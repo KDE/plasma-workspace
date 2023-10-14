@@ -202,7 +202,6 @@
         "Name[x-test]": "xxAnalog Clockxx",
         "Name[zh_CN]": "模拟时钟",
         "Name[zh_TW]": "類比時鐘",
-        "Version": "3.0",
         "Website": "https://userbase.kde.org/Plasma/Clocks"
     },
     "X-Plasma-Provides": [

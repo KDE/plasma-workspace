@@ -155,7 +155,6 @@
         "Name[x-test]": "xxIndividual Core Usagexx",
         "Name[zh_CN]": "单个核心使用率",
         "Name[zh_TW]": "獨立核心用量",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-Provides": [

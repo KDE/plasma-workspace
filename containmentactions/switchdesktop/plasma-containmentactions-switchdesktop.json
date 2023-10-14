@@ -175,7 +175,6 @@
         "Name[x-test]": "xxSwitch Desktopxx",
         "Name[zh_CN]": "切换桌面",
         "Name[zh_TW]": "切換桌面",
-        "Version": "pre0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

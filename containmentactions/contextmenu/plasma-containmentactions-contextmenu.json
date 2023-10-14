@@ -175,7 +175,6 @@
         "Name[x-test]": "xxStandard Menuxx",
         "Name[zh_CN]": "标准菜单",
         "Name[zh_TW]": "標準選單",
-        "Version": "pre0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-HasConfigurationInterface": true

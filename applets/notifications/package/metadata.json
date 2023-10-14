@@ -200,7 +200,6 @@
         "Name[x-test]": "xxNotificationsxx",
         "Name[zh_CN]": "通知",
         "Name[zh_TW]": "通知",
-        "Version": "4.0",
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell",

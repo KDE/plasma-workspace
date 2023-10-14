@@ -149,7 +149,6 @@
         "Name[x-test]": "xxBreeze Twilightxx",
         "Name[zh_CN]": "Breeze 微风阴阳",
         "Name[zh_TW]": "Breeze Twilight",
-        "Version": "2.0",
         "Website": "https://www.kde.org"
     },
     "X-Plasma-MainScript": "defaults"

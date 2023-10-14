@@ -15,7 +15,6 @@
         "License": "GPL-2.0+",
         "Name": "Media Player",
         "Name[pl]": "Odtwarzacz multimedialny",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-DBusActivationService": "org.mpris.MediaPlayer2.*",

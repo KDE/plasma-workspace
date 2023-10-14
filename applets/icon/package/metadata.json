@@ -198,7 +198,6 @@
         "Name[x-test]": "xxIconxx",
         "Name[zh_CN]": "图标",
         "Name[zh_TW]": "圖示",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "NoDisplay": true

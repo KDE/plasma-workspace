@@ -15,7 +15,6 @@
         "License": "GPL-2.0+",
         "Name": "Device Notifier",
         "Name[pl]": "Powiadomienia o urządzeniach",
-        "Version": "1.0",
         "Website": "https://userbase.kde.org/Plasma/DeviceNotifier"
     },
     "X-Plasma-NotificationArea": "true",

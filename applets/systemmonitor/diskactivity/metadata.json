@@ -162,7 +162,6 @@
         "Name[x-test]": "xxHard Disk Activityxx",
         "Name[zh_CN]": "磁盘活动",
         "Name[zh_TW]": "硬碟活動",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-Provides": [

@@ -161,7 +161,6 @@
         "Name[x-test]": "xxNetwork speedxx",
         "Name[zh_CN]": "网络速度",
         "Name[zh_TW]": "網路速度",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-Provides": [

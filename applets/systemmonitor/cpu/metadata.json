@@ -156,7 +156,6 @@
         "Name[x-test]": "xxTotal CPU Usexx",
         "Name[zh_CN]": "总 CPU 使用情况",
         "Name[zh_TW]": "總 CPU 用量",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-Provides": [

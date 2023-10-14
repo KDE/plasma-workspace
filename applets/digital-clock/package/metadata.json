@@ -200,7 +200,6 @@
         "Name[x-test]": "xxDigital Clockxx",
         "Name[zh_CN]": "数字时钟",
         "Name[zh_TW]": "數位時鐘",
-        "Version": "3.0",
         "Website": "https://kde.org/plasma-desktop"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell",

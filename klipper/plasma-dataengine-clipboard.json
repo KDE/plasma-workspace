@@ -164,7 +164,6 @@
         "Name[x-test]": "xxClipboardxx",
         "Name[zh_CN]": "剪贴板",
         "Name[zh_TW]": "剪貼簿",
-        "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

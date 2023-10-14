@@ -163,7 +163,6 @@
         "Name[x-test]": "xxDisks & Devicesxx",
         "Name[zh_CN]": "磁盘和设备",
         "Name[zh_TW]": "硬碟與裝置",
-        "Version": "1.0",
         "Website": "https://userbase.kde.org/Plasma/DeviceNotifier"
     },
     "X-Plasma-NotificationArea": "true",

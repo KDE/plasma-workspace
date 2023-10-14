@@ -176,7 +176,6 @@
         "Name[x-test]": "xxPastexx",
         "Name[zh_CN]": "粘贴",
         "Name[zh_TW]": "貼上",
-        "Version": "pre0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

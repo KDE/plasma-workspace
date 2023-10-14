@@ -197,7 +197,6 @@
         "Name[x-test]": "xxLock/Logoutxx",
         "Name[zh_CN]": "锁屏/注销",
         "Name[zh_TW]": "鎖定/登出",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "Keywords": "Lock;Logout;Sleep;Hibernate;Switch User;",

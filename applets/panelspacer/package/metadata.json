@@ -179,7 +179,6 @@
         "Name[x-test]": "xxPanel Spacerxx",
         "Name[zh_CN]": "面板间隙",
         "Name[zh_TW]": "面板間隔器",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "NoDisplay": true

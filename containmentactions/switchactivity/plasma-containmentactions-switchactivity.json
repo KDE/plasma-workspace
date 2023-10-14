@@ -173,7 +173,6 @@
         "Name[x-test]": "xxSwitch Activityxx",
         "Name[zh_CN]": "切换活动",
         "Name[zh_TW]": "切換活動",
-        "Version": "pre0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

@@ -163,7 +163,6 @@
         "Name[x-test]": "xxDisk Usagexx",
         "Name[zh_CN]": "磁盘使用情况",
         "Name[zh_TW]": "磁碟用量",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-Provides": [
