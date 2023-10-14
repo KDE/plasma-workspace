@@ -450,7 +450,7 @@ msgstr "Canvi d'idioma"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
-msgstr "Mou a dalt de tot"
+msgstr "Mou cap a dalt de tot"
 
 #: ui/AdvancedLanguageSelectPage.qml:106
 #, kde-format

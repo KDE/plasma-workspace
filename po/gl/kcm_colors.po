@@ -10,14 +10,14 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2023-08-06 05:24+0200\n"
+"PO-Revision-Date: 2023-10-13 07:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -56,7 +56,8 @@ msgstr "Este ficheiro non é un ficheiro de esquema de cores."
 #: colors.cpp:322
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr "Non foi posíbel crear o cartafol de datos «color-scheme»."
+msgstr ""
+"Non foi posíbel crear o cartafol de datos «color-scheme» (esquema de cores)."
 
 #: colors.cpp:329
 #, kde-format
@@ -72,17 +73,15 @@ msgstr "O esquema de cores instalouse correctamente."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Color scheme name"
-msgstr "Gardar o esquema de cores"
+msgstr "Nome do esquema de cores"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Accent color"
-msgstr "Cor de inactiva"
+msgstr "Cor de énfase"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -91,12 +90,14 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"A última cor de énfase que se usou antes de que a persoa usuaria cambiase a "
+"unha cor xerada polo fondo ou á cor predeterminada."
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Se aplicar unha cor de énfase do fondo."
 
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
@@ -206,7 +207,7 @@ msgstr "Texto escollido"
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "Texto de ligazón escollida conta fondo de escolla normal."
+msgstr "Texto de ligazón de selección sobre fondo normal de selección."
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -350,7 +351,7 @@ msgstr "Vista do texto activo contra fondo normal."
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "Vista de texto inactivo contra texto normal."
+msgstr "Texto inactivo de vista sobre fondo normal de vista."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
@@ -442,7 +443,7 @@ msgstr "Decoración do foco"
 #: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
-msgstr "Decoración co rato por riba"
+msgstr "Decoración ao cubrir"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: editor/scmeditorcolors.ui:23
@@ -502,7 +503,7 @@ msgstr "Selección"
 #, kde-format
 msgctxt "color-sets"
 msgid "Tooltip"
-msgstr "Consello"
+msgstr "Indicación emerxente"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -518,7 +519,7 @@ msgstr "Complementario"
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "Cabeceira"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -608,13 +609,13 @@ msgstr "Texto escollido inactivo"
 #: editor/scmeditorcolors.ui:348
 #, kde-format
 msgid "Tooltip Background"
-msgstr "Fondo do consello"
+msgstr "Fondo de indicación emerxente"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:353
 #, kde-format
 msgid "Tooltip Text"
-msgstr "Texto do consello"
+msgstr "Texto de indicación emerxente"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:358
@@ -870,20 +871,19 @@ msgstr "&Sombrear a columna ordenada nas listas."
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "Colorar as barras de título das xanelas coa &cor de énfase."
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Cor de inactiva"
+msgstr "Tinguir todas as cores coa cor de énfase."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Intensidade da tinta:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -1163,6 +1163,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Esta ferramenta permítelle definir o esquema de cores da sesión actual de "
+"plasma, sen definir accidentalmente unha que non estea dispoñíbel ou xa "
+"estea definida."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1170,6 +1173,8 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"O nome do esquema de cores que quere definir para a sesión de Plasma actual "
+"(se indica unha ruta completa só se usará a última parte da ruta)."
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
@@ -1177,6 +1182,7 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"Amosar todos os esquemas de cores dispoñíbeis no sistema (e cal é o actual)."
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1185,6 +1191,10 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"O nome da cor de énfase que quere definir. Permítense nomes de cores de SVG "
+"(https://www.w3.org/TR/SVG11/types.html#ColorKeywords) e cores hexadecimais. "
+"Poña os códigos hexadecimais entre comiñas se o intérprete de ordes podería "
+"expandilos."
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1192,11 +1202,13 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"O tema solicitado, «%1», xa está definido como o tema da sesión de Plasma "
+"actual."
 
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
+msgstr "O esquema de cores «%1» aplicouse á sesión actual de Plasma."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
@@ -1204,13 +1216,16 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Non foi posíbel atopar o tema «%1». O tema debería ser unha das seguintes "
+"opcións: %2"
 
+# skip-rule: trasno/2012_support
 #: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr ""
+msgstr "O nome do esquema de cores non pode quedar baleiro."
 
 #: plasma-apply-colorscheme.cpp:124
 #, kde-format
@@ -1218,53 +1233,51 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"Non foi posíbel identificar como esquema de cores o ficheiro que intentou "
+"definir como tal, «%1»."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "Aplicouse a cor de énfase «%1»."
 
 #: plasma-apply-colorscheme.cpp:149
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Invalid accent color "
-msgstr "Cor de inactiva"
+msgstr "A cor de énfase non é válida."
 
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "Ten os seguintes esquemas de cores no sistema:"
 
 #: plasma-apply-colorscheme.cpp:159
-#, fuzzy, kde-format
-#| msgid "Choose the color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "Escoller o esquema de cores"
+msgstr " * %1 (esquema de cores actual)"
 
 #: ui/AccentColorUI.qml:37
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Restaurar o esquema de cores"
+msgstr "Cor de énfase do esquema de cores"
 
 #: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Cor de énfase do fondo"
 
 #: ui/AccentColorUI.qml:39
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Cor de inactiva"
+msgstr "Cor de énfase personalizada"
 
 #: ui/AccentColorUI.qml:164
 #, kde-format
 msgid "Choose custom accent color"
-msgstr ""
+msgstr "Escoller unha cor de énfase personalizada"
 
 #: ui/main.qml:87
 #, kde-format
@@ -1290,15 +1303,14 @@ msgid "Dark Schemes"
 msgstr "Esquemas escuros"
 
 #: ui/main.qml:140
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "Instalar desde un ficheiro…"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Obter novidades…"
 
 #: ui/main.qml:192
 #, kde-format
@@ -1343,8 +1355,7 @@ msgid "Disabled text"
 msgstr "Texto desactivado"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid "Edit Color Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Editar o esquema de cores…"
 

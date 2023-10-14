@@ -218,7 +218,7 @@ msgstr "Data"
 #: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Links To"
-msgstr "Enllaços a"
+msgstr "Enllaços cap a"
 
 #: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
 #, kde-format
@@ -501,12 +501,12 @@ msgstr "Elimina del grup actual."
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
 msgid "Move to personal folder."
-msgstr "Mou a la carpeta personal."
+msgstr "Mou cap a la carpeta personal."
 
 #: kcmfontinst/GroupList.cpp:901
 #, kde-format
 msgid "Move to system folder."
-msgstr "Mou a la carpeta del sistema."
+msgstr "Mou cap a la carpeta del sistema."
 
 #: kcmfontinst/JobRunner.cpp:140
 #, kde-format
@@ -836,7 +836,7 @@ msgstr[1] ""
 #: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "Move Fonts"
-msgstr "Mou les fonts"
+msgstr "Mou cap les fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:656
 #, kde-format
@@ -1132,7 +1132,7 @@ msgstr "No es poden copiar les fonts"
 #: kio/KioFonts.cpp:438
 #, kde-format
 msgid "Cannot move fonts"
-msgstr "No es poden moure les fonts"
+msgstr "No es poden moure cap les fonts"
 
 #: kio/KioFonts.cpp:449
 #, kde-format

@@ -380,7 +380,7 @@ msgstr "%1, %2"
 #: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Copy to Clipboard"
-msgstr "Copia al porta-retalls"
+msgstr "Copia a dins del porta-retalls"
 
 #: package/contents/ui/main.qml:153
 #, kde-format
