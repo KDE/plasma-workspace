@@ -33,7 +33,7 @@ msgstr ""
 #: calculatorrunner.cpp:39
 #, kde-format
 msgid "Copy to Clipboard"
-msgstr "Copia al porta-retalls"
+msgstr "Copia a dins del porta-retalls"
 
 #: calculatorrunner.cpp:133
 #, kde-format

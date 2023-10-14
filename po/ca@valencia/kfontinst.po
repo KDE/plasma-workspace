@@ -219,7 +219,7 @@ msgstr "Data"
 #: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Links To"
-msgstr "Enllaços a"
+msgstr "Enllaços cap a"
 
 #: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
 #, kde-format
@@ -507,12 +507,12 @@ msgstr "Elimina del grup actual."
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
 msgid "Move to personal folder."
-msgstr "Mou a la carpeta personal."
+msgstr "Mou cap a la carpeta personal."
 
 #: kcmfontinst/GroupList.cpp:901
 #, kde-format
 msgid "Move to system folder."
-msgstr "Mou a la carpeta del sistema."
+msgstr "Mou cap a la carpeta del sistema."
 
 #: kcmfontinst/JobRunner.cpp:143
 #, kde-format
@@ -673,7 +673,7 @@ msgstr "S'ha produït un error inesperat en processar: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:169
 #, kde-format
 msgid "Font Management"
-msgstr "Gestió dels tipus de lletra"
+msgstr "Gestioneu els tipus de lletra"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
