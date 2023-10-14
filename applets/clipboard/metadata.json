@@ -172,6 +172,5 @@
         "Name[zh_TW]": "剪貼簿"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
-    "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }

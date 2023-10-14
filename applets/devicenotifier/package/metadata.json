@@ -165,7 +165,6 @@
         "Name[zh_TW]": "硬碟與裝置",
         "Website": "https://userbase.kde.org/Plasma/DeviceNotifier"
     },
-    "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "Hardware",
     "X-Plasma-Provides": [
         "org.kde.plasma.removabledevices"

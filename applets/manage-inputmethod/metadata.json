@@ -165,6 +165,5 @@
         "Name[zh_TW]": "輸入法",
         "Website": "https://www.kde.org/plasma-desktop"
     },
-    "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }

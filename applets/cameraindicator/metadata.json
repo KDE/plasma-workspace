@@ -76,6 +76,5 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "Keywords": "Camera;WebCam;Indicator;Privacy;",
-    "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "Hardware"
 }

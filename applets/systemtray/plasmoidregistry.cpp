@@ -111,7 +111,7 @@ void PlasmoidRegistry::packageUninstalled(const QString &pluginId)
 
 void PlasmoidRegistry::registerPlugin(const KPluginMetaData &pluginMetaData)
 {
-    if (!pluginMetaData.isValid() || pluginMetaData.value(QStringLiteral("X-Plasma-NotificationArea")) != QLatin1String("true")) {
+    if (!pluginMetaData.isValid() || pluginMetaData.value(QStringLiteral("X-Plasma-NotificationAreaCategory")).isEmpty()) {
         return;
     }
 

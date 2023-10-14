@@ -18,7 +18,6 @@
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-DBusActivationService": "org.mpris.MediaPlayer2.*",
-    "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "ApplicationStatus",
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"

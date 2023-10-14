@@ -203,7 +203,6 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell",
-    "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [
         "org.kde.plasma.notifications"
