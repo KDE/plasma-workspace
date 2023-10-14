@@ -84,6 +84,7 @@ RuntimeDependencies:
     'plasma/powerdevil': '@same'
 - 'on': ['Linux', 'FreeBSD']
   'require':
+    'frameworks/qqc2-desktop-style': '@latest-kf6'
     'plasma/milou' : '@same'
     'plasma/kglobalacceld': '@same'
 
