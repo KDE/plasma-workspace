@@ -11,7 +11,6 @@
 #include <QQuickWindow>
 #include <QStandardPaths>
 #include <QWindow>
-#include <QtQml>
 
 #include <sensors/SensorQuery.h>
 
