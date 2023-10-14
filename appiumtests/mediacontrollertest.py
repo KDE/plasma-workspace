@@ -13,13 +13,10 @@ from os import getcwd, getpid, path
 from typing import Any, Final
 
 from appium import webdriver
-from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
-WIDGET_ID: Final = "org.kde.plasma.mediacontroller"
 
 
 class Mpris2:
@@ -77,7 +74,8 @@ class Mpris2:
             'CanControl': GLib.Variant('b', True),
         }
 
-        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SESSION, self.APP_INTERFACE, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired, self.on_name_acquired, self.on_name_lost)
+        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SESSION, self.APP_INTERFACE, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired,
+                                                self.on_name_acquired, self.on_name_lost)
         assert self.__owner_id > 0
 
     def quit(self) -> None:
@@ -98,12 +96,14 @@ class Mpris2:
         player_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8").readlines())
 
         introspection_data = Gio.DBusNodeInfo.new_for_xml(player_introspection_xml)
-        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call, self.player_handle_get_property, self.player_handle_set_property)
+        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call, self.player_handle_get_property,
+                                            self.player_handle_set_property)
         assert reg_id != 0
 
         interface_introspection_xml: str = '\n'.join(open("../dataengines/mpris2/org.mpris.MediaPlayer2.xml", encoding="utf-8").readlines())
         introspection_data = Gio.DBusNodeInfo.new_for_xml(interface_introspection_xml)
-        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call, self.interface_handle_get_property, self.interface_handle_set_property)
+        reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call,
+                                            self.interface_handle_get_property, self.interface_handle_set_property)
         assert reg_id != 0
 
     def on_name_acquired(self, connection, name, *args) -> None:
@@ -112,7 +112,8 @@ class Mpris2:
     def on_name_lost(self, connection, name, *args) -> None:
         pass
 
-    def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+    def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
+                                      parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
         Handles method calls for org.freedesktop.DBus.Properties
         """
@@ -177,7 +178,8 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "PlaybackStatus": self.player_properties["PlaybackStatus"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def stop(self, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -189,7 +191,8 @@ class Mpris2:
             "PlaybackStatus": self.player_properties["PlaybackStatus"],
             "Metadata": self.player_properties["Metadata"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_rate(self, rate: float, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -201,7 +204,8 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "Rate": self.player_properties["Rate"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_shuffle(self, shuffle: bool, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -212,7 +216,8 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "Shuffle": self.player_properties["Shuffle"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_repeat(self, repeat: str, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -223,7 +228,8 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "LoopStatus": self.player_properties["LoopStatus"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
     def set_volume(self, volume: float, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -234,9 +240,11 @@ class Mpris2:
         changed_properties = GLib.Variant('a{sv}', {
             "Volume": self.player_properties["Volume"],
         })
-        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+        Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                       GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
-    def player_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+    def player_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
+                                  parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
         Handles method calls for org.mpris.MediaPlayer2.Player
         """
@@ -257,12 +265,14 @@ class Mpris2:
             self.player_properties["Metadata"] = GLib.Variant('a{sv}', self.metadata)
             self.player_properties["CanGoPrevious"] = GLib.Variant('b', True)
             self.player_properties["CanGoNext"] = GLib.Variant('b', False)
-            changed_properties = GLib.Variant('a{sv}', {
-                'Metadata': self.player_properties["Metadata"],
-                "CanGoPrevious": self.player_properties["CanGoPrevious"],
-                "CanGoNext": self.player_properties["CanGoNext"],
-            })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            changed_properties = GLib.Variant(
+                'a{sv}', {
+                    'Metadata': self.player_properties["Metadata"],
+                    "CanGoPrevious": self.player_properties["CanGoPrevious"],
+                    "CanGoNext": self.player_properties["CanGoNext"],
+                })
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "Previous":
             self.metadata = {
@@ -277,12 +287,14 @@ class Mpris2:
             self.player_properties["Metadata"] = GLib.Variant('a{sv}', self.metadata)
             self.player_properties["CanGoPrevious"] = GLib.Variant('b', False)
             self.player_properties["CanGoNext"] = GLib.Variant('b', True)
-            changed_properties = GLib.Variant('a{sv}', {
-                'Metadata': self.player_properties["Metadata"],
-                "CanGoPrevious": self.player_properties["CanGoPrevious"],
-                "CanGoNext": self.player_properties["CanGoNext"],
-            })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            changed_properties = GLib.Variant(
+                'a{sv}', {
+                    'Metadata': self.player_properties["Metadata"],
+                    "CanGoPrevious": self.player_properties["CanGoPrevious"],
+                    "CanGoNext": self.player_properties["CanGoNext"],
+                })
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "Pause":
             self.set_playing(False, connection, object_path)
@@ -305,16 +317,20 @@ class Mpris2:
             changed_properties = GLib.Variant('a{sv}', {
                 'Position': self.player_properties["Position"],
             })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, self.PLAYER_IFACE.get_string(), "Seeked", GLib.Variant.new_tuple(self.player_properties["Position"]))
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            Gio.DBusConnection.emit_signal(connection, None, object_path, self.PLAYER_IFACE.get_string(), "Seeked",
+                                           GLib.Variant.new_tuple(self.player_properties["Position"]))
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "SetPosition":
-            assert parameters[0] == self.metadata["mpris:trackid"].get_string(), f"expected trackid: {parameters[0]}, actual trackid: {self.metadata['mpris:trackid'].get_string()}"
+            assert parameters[0] == self.metadata["mpris:trackid"].get_string(
+            ), f"expected trackid: {parameters[0]}, actual trackid: {self.metadata['mpris:trackid'].get_string()}"
             self.player_properties["Position"] = GLib.Variant('x', parameters[1])
             changed_properties = GLib.Variant('a{sv}', {
                 'Position': self.player_properties["Position"],
             })
-            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged",
+                                           GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "OpenUri":
             print("OpenUri")
@@ -357,7 +373,8 @@ class Mpris2:
         # to False for this call back to be successful.
         return True
 
-    def interface_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+    def interface_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str,
+                                     parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
         Handles method calls for org.mpris.MediaPlayer2
         """
@@ -428,10 +445,11 @@ class MediaControllerTests(unittest.TestCase):
         """
         Opens the widget and initialize the webdriver
         """
-        options = AppiumOptions()
-        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
-        options.set_capability("timeouts", {'implicit': 10000})
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        desired_caps: dict[str, Any] = {}
+        desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.mediacontroller"
+        desired_caps["timeouts"] = {'implicit': 5000}
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
+        cls.driver.implicitly_wait = 10
 
         cls.loopThread = GlibMainloopThread()
         cls.loopThread.start()
