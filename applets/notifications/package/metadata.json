@@ -204,8 +204,6 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell",
-    "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [

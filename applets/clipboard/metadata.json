@@ -173,8 +173,6 @@
         "Version": "1.0"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
-    "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/clipboard.qml",
     "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }

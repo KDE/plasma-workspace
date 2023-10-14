@@ -167,7 +167,5 @@
         "Name[zh_TW]": "全域選單",
         "Version": "2.0",
         "Website": "https://kde.org/plasma-desktop"
-    },
-    "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    }
 }

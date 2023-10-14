@@ -205,8 +205,6 @@
         "Version": "3.0",
         "Website": "https://userbase.kde.org/Plasma/Clocks"
     },
-    "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/analogclock.qml",
     "X-Plasma-Provides": [
         "org.kde.plasma.time",
         "org.kde.plasma.date"

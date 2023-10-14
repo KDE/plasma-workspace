@@ -5,6 +5,5 @@
         "Id": "org.kde.plasmashelltest",
         "Name": "TestShell"
     },
-    "X-Plasma-MainScript": "layout.js",
     "KPackageStructure": "Plasma/Shell"
 }

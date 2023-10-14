@@ -18,9 +18,7 @@
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
-    "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-DBusActivationService": "org.mpris.MediaPlayer2.*",
-    "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "ApplicationStatus",
     "X-Plasma-Provides": [

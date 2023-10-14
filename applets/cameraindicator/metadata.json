@@ -77,8 +77,6 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "Keywords": "Camera;WebCam;Indicator;Privacy;",
-    "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "Hardware"
 }
