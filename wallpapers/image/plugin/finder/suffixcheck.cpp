@@ -12,39 +12,42 @@
 #include <QMimeDatabase>
 #include <QSet>
 
-static QStringList s_suffixes;
-static std::mutex s_suffixMutex;
-
-QStringList suffixes()
+namespace
 {
-    std::lock_guard lock(s_suffixMutex);
+QStringList s_suffixes;
+std::once_flag s_onceFlag;
 
-    if (s_suffixes.empty()) {
-        QSet<QString> suffixeSet;
+void fillSuffixes()
+{
+    Q_ASSERT(s_suffixes.empty());
 
-        QMimeDatabase db;
-        const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
+    QSet<QString> suffixeSet;
+    QMimeDatabase db;
+    const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
 
-        for (const QByteArray &mimeType : supportedMimeTypes) {
-            QMimeType mime(db.mimeTypeForName(QString::fromLatin1(mimeType)));
-            const QStringList globPatterns = mime.globPatterns();
+    for (const QByteArray &mimeType : supportedMimeTypes) {
+        QMimeType mime(db.mimeTypeForName(QString::fromLatin1(mimeType)));
+        const QStringList globPatterns = mime.globPatterns();
 
-            for (const QString &pattern : globPatterns) {
-                suffixeSet.insert(pattern);
-            }
+        for (const QString &pattern : globPatterns) {
+            suffixeSet.insert(pattern);
         }
-
-        s_suffixes = suffixeSet.values();
     }
 
+    s_suffixes = suffixeSet.values();
+}
+}
+
+const QStringList &suffixes()
+{
+    std::call_once(s_onceFlag, &fillSuffixes);
     return s_suffixes;
 }
 
-bool isAcceptableSuffix(const QString &suffix)
+bool isAcceptableSuffix(QString &&suffix)
 {
     // Despite its name, suffixes() returns a list of glob patterns.
     // Therefore the file suffix check needs to include the "*." prefix.
-    const QStringList &globPatterns = suffixes();
-
-    return globPatterns.contains(QLatin1String("*.") + suffix.toLower());
+    std::call_once(s_onceFlag, &fillSuffixes);
+    return s_suffixes.contains(QLatin1String("*.%1").arg(std::move(suffix).toLower()));
 }

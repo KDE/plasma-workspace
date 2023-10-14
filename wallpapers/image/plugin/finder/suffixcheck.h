@@ -8,11 +8,11 @@
 
 #include <QStringList>
 
-QStringList suffixes();
+const QStringList &suffixes();
 
 /**
  * Check if the image format is supported by QImageReader.
  *
  * @return @p true if the format is supported, @p false otherwise.
  */
-bool isAcceptableSuffix(const QString &suffix);
+bool isAcceptableSuffix(QString &&suffix);
