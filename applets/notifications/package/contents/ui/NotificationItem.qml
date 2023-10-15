@@ -256,7 +256,7 @@ ColumnLayout {
                 top: notificationItem.inGroup ? bodyLabel.top : parent.top
                 right: parent.right
             }
-            visible: iconItem.active
+            visible: iconItem.shouldBeShown
 
             Kirigami.Icon {
                 id: iconItem
@@ -266,7 +266,7 @@ ColumnLayout {
                 anchors.verticalCenter: parent.verticalCenter
 
                 // don't show two identical icons
-                readonly property bool active: valid && source != notificationItem.applicationIconSource
+                readonly property bool shouldBeShown: valid && source != notificationItem.applicationIconSource
 
                 smooth: true
                 source: notificationItem.icon
