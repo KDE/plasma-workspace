@@ -335,11 +335,11 @@ PlasmoidItem {
         }
 
         var types = sdSource.data[udi]["Device Types"];
-        if (types.indexOf("Storage Access") >= 0) {
+        if (types.includes("Storage Access")) {
             return sdSource.data[udi]["Accessible"];
         }
 
-        return (types.indexOf("Storage Volume") >= 0 && types.indexOf("OpticalDisc") >= 0)
+        return (types.includes("Storage Volume") && types.includes("OpticalDisc"))
     }
 
     function symbolicizeIconName(iconName) {

@@ -22,25 +22,56 @@ PlasmaExtras.ExpandableListItem {
     id: deviceItem
 
     property string udi
-    readonly property int state: sdSource.data[udi] ? sdSource.data[udi].State : 0
+
+    // type: (key: keyof(sdSource.data[]), fallback: V) -> V
+    function sdSourceProperty(key: string, fallback: var): var {
+        return sdSource.data[udi]?.[key] ?? fallback;
+    }
+
+    readonly property int state: sdSourceProperty("State", 0)
     readonly property int operationResult: (model["Operation result"])
 
     readonly property bool isMounted: devicenotifier.isMounted(udi)
+
     readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
     readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
-    readonly property var types: model["Device Types"]
-    readonly property bool hasStorageAccess: types && types.indexOf("Storage Access") !== -1
-    readonly property bool hasPortableMediaPlayer: types && types.indexOf("Portable Media Player") !== -1
-    readonly property var supportedProtocols: model["Supported Protocols"]
-    readonly property bool supportsMTP: supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
-    readonly property bool supportsAFC: supportedProtocols && supportedProtocols.includes("afc")
 
-    readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
-    readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
-    property bool freeSpaceKnown: freeSpace > 0 && totalSpace > 0
-
-    readonly property bool isRootVolume: sdSource.data[udi] && sdSource.data[udi]["File Path"] ? sdSource.data[udi]["File Path"] == "/" : false
-    readonly property bool isRemovable: sdSource.data[udi] && sdSource.data[udi]["Removable"] ? sdSource.data[udi]["Removable"] : false
+    // Types
+    function deviceIncludesType(type: string): bool {
+        return model["Device Types"]?.includes(type) ?? false;
+    }
+    function hasStorageAccess(): bool {
+        return deviceIncludesType("Storage Access");
+    }
+    function hasPortableMediaPlayer(): bool {
+        return deviceIncludesType("Portable Media Player");
+    }
+    // Protocols
+    function deviceSupportsProtocol(protocol: string): bool {
+        return model["Supported Protocols"]?.includes(protocol) ?? false;
+    }
+    function supportsMTP(): bool {
+        return deviceSupportsProtocol("mtp");
+    }
+    function supportsAFC(): bool {
+        return deviceSupportsProtocol("afc");
+    }
+    // Storage
+    function freeSpace(): real {
+        return sdSourceProperty("Free Space", -1);
+    }
+    function totalSpace(): real {
+        return sdSourceProperty("Size", -1);
+    }
+    function freeSpaceKnown(): bool {
+        return freeSpace() > 0 && totalSpace() > 0;
+    }
+    function isRootVolume(): bool {
+        return sdSourceProperty("File Path", "") === "/";
+    }
+    function isRemovable(): bool {
+        return sdSourceProperty("Removable", false);
+    }
 
     onOperationResultChanged: {
         if (!popupIconTimer.running) {
@@ -100,7 +131,7 @@ PlasmaExtras.ExpandableListItem {
         id: updateStorageSpaceTimer
         interval: 5000
         repeat: true
-        running: isMounted && devicenotifier.expanded
+        running: deviceItem.isMounted && devicenotifier.expanded
         triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
         onTriggered: {
             const service = sdSource.serviceForSource(udi);
@@ -121,7 +152,7 @@ PlasmaExtras.ExpandableListItem {
     }
 
     function removableActionTriggered() {
-        if (model["Removable"] && isMounted) {
+        if (isRemovable() && isMounted) {
             actionTriggered();
         }
     }
@@ -131,15 +162,15 @@ PlasmaExtras.ExpandableListItem {
         let operationName
         let operation
         const wasMounted = isMounted;
-        if (!hasStorageAccess || !isRemovable || !isMounted) {
+        if (!hasStorageAccess() || !isRemovable() || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
             operation.predicate = "openWithFileManager.desktop";
 
-            if (!hasStorageAccess && hasPortableMediaPlayer) {
-                if (deviceItem.supportsMTP) {
+            if (!hasStorageAccess() && hasPortableMediaPlayer()) {
+                if (deviceItem.supportsMTP()) {
                     operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
-                } else if (deviceItem.supportsAFC) {
+                } else if (deviceItem.supportsAFC()) {
                     operation.predicate = "solid_afc.desktop" // this lives in kio-extras!
                 }
             }
@@ -183,7 +214,7 @@ PlasmaExtras.ExpandableListItem {
             if (!hpSource.data[udi]) {
                 return ""
             }
-            if (freeSpaceKnown) {
+            if (freeSpaceKnown()) {
                 const freeSpaceText = sdSource.data[udi]["Free Space Text"]
                 const totalSpaceText = sdSource.data[udi]["Size Text"]
                 return i18nc("@info:status Free disk space", "%1 free of %2", freeSpaceText, totalSpaceText)
@@ -204,8 +235,8 @@ PlasmaExtras.ExpandableListItem {
 
     // Color the subtitle red for disks with less than 5% free space
     subtitleColor: {
-        if (freeSpaceKnown) {
-            if (freeSpace / totalSpace <= 0.05) {
+        if (freeSpaceKnown()) {
+            if (freeSpace() / totalSpace() <= 0.05) {
                 return Kirigami.Theme.negativeTextColor
             }
         }
@@ -214,8 +245,8 @@ PlasmaExtras.ExpandableListItem {
 
     defaultActionButtonAction: QQC2.Action {
         icon.name: {
-            if (isRemovable) {
-                return isMounted ? "media-eject" : "document-open-folder"
+            if (deviceItem.isRemovable()) {
+                return deviceItem.isMounted ? "media-eject" : "document-open-folder"
             } else {
                 return "document-open-folder"
             }
@@ -226,12 +257,12 @@ PlasmaExtras.ExpandableListItem {
             //  and then we simply pick the sensible default action of a suitable predicate.
             // - It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
             // - It's possible for the root volume to be on a removable disk
-            if (!hasStorageAccess || !isRemovable || isRootVolume) {
+            if (!deviceItem.hasStorageAccess() || !deviceItem.isRemovable() || deviceItem.isRootVolume()) {
                 return i18n("Open in File Manager")
             } else {
-                if (!isMounted) {
+                if (!deviceItem.isMounted) {
                     return i18n("Mount and Open")
-                } else if (types && types.indexOf("OpticalDisc") !== -1) {
+                } else if (deviceItem.deviceIncludesType("OpticalDisc")) {
                     return i18n("Eject")
                 } else {
                     return i18n("Safely remove")
@@ -257,7 +288,7 @@ PlasmaExtras.ExpandableListItem {
                 if (modelData.predicate != "openWithFileManager.desktop") {
                     return true;
                 }
-                return deviceItem.isRemovable && deviceItem.isMounted;
+                return deviceItem.isRemovable() && deviceItem.isMounted;
             }
             onTriggered: {
                 const service = hpSource.serviceForSource(udi);
@@ -280,7 +311,7 @@ PlasmaExtras.ExpandableListItem {
         icon.name: "media-mount"
 
         // Only show for unmounted removable devices not in MTP mode
-        enabled: deviceItem.isRemovable && !deviceItem.isMounted && !deviceItem.supportsMTP
+        enabled: deviceItem.isRemovable() && !deviceItem.isMounted && !deviceItem.supportsMTP()
 
         onTriggered: {
             const service = sdSource.serviceForSource(udi);
