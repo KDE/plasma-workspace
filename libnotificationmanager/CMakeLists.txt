@@ -34,7 +34,7 @@ set(notificationmanager_LIB_SRCS
 ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     HEADER debug.h
     IDENTIFIER NOTIFICATIONMANAGER
-    CATEGORY_NAME org.kde.plasma.notifications
+    CATEGORY_NAME org.kde.plasma.notificationmanager
     DESCRIPTION "Plasma Notifications" EXPORT LIBNOTIFICATIONMANAGER)
 
 ecm_qt_install_logging_categories(
