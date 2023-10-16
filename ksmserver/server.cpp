@@ -302,9 +302,18 @@ public:
         : QSocketNotifier(IceConnectionNumber(conn), QSocketNotifier::Read)
         , iceConn(conn)
     {
+        count++;
     }
 
+    ~KSMConnection() override
+    {
+        count--;
+    }
+
+    Q_DISABLE_COPY_MOVE(KSMConnection)
+
     IceConn iceConn;
+    inline static size_t count = 0;
 };
 
 /* for printing hex digits */
@@ -774,6 +783,18 @@ void KSMServer::newConnection(int /*socket*/)
     IceConn iceConn = IceAcceptConnection(((KSMListener *)sender())->listenObj, &status);
     if (iceConn == nullptr)
         return;
+
+    // This should be sufficient to hold all open file descriptors that are not connection watches. The rest we will
+    // freely use to watch ICE connections.
+    static const size_t backupFileCount = 128;
+    qCDebug(KSMSERVER) << "KSMConnection::count" << KSMConnection::count;
+    if (KSMConnection::count > (fileNumberLimit() - backupFileCount)) {
+        // https://bugs.kde.org/show_bug.cgi?id=475506
+        qCWarning(KSMSERVER) << "Too many open connections. Refusing to track any more to prevent exhaustion of open file limits.";
+        std::ignore = IceCloseConnection(iceConn);
+        return;
+    }
+
     IceSetShutdownNegotiation(iceConn, false);
     IceConnectStatus cstatus;
     while ((cstatus = IceConnectionStatus(iceConn)) == IceConnectPending) {
