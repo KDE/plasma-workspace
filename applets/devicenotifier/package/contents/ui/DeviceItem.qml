@@ -182,7 +182,7 @@ PlasmaExtras.ExpandableListItem {
             } else {
                 return "emblem-error"
             }
-        } else if (deviceItem.state == 0 && Emblems && Emblems[0]) {
+        } else if (state == 0 && Emblems && Emblems[0]) {
             return Emblems[0]
         } else {
             return ""
@@ -195,7 +195,7 @@ PlasmaExtras.ExpandableListItem {
         if (message !== null) {
             return message.error
         }
-        if (deviceItem.state == 0) {
+        if (state == 0) {
             if (!hpSource.data[udi]) {
                 return ""
             }
@@ -205,7 +205,7 @@ PlasmaExtras.ExpandableListItem {
                 return i18nc("@info:status Free disk space", "%1 free of %2", freeSpaceText, totalSpaceText)
             }
             return ""
-        } else if (deviceItem.state == 1) {
+        } else if (state == 1) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
         } else if (unmountTimer.running) {
             // Unmounting, shown if unmount takes less than 1 second
@@ -257,7 +257,7 @@ PlasmaExtras.ExpandableListItem {
         onTriggered: actionTriggered()
     }
 
-    isBusy: deviceItem.state != 0
+    isBusy: state != 0
 
     // We need a JS array full of QQC2 actions; this Instantiator creates them
     // from the actions list of the data source
