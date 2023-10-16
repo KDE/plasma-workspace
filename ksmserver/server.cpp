@@ -3,6 +3,7 @@
 
     SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
     SPDX-FileCopyrightText: 2005 Lubos Lunak <l.lunak@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-FileContributor: Oswald Buddenhagen <ob6@inf.tu-dresden.de>
 
@@ -26,6 +27,7 @@
 #include <config-workspace.h>
 #include <pwd.h>
 #include <sys/param.h>
+#include <sys/resource.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #ifdef HAVE_SYS_TIME_H
@@ -95,6 +97,30 @@ extern "C" {
 #ifdef static_assert
 #undef static_assert
 #endif
+
+namespace
+{
+size_t fileNumberLimit()
+{
+    static auto limit = []() -> size_t {
+        struct rlimit limit {
+        };
+        if (getrlimit(RLIMIT_NOFILE, &limit) != 0) {
+            const auto err = errno;
+            qCWarning(KSMSERVER) << "Failed to getrlimit:" << strerror(err);
+            return std::numeric_limits<size_t>::max();
+        }
+        return limit.rlim_cur;
+    }();
+    return limit;
+}
+
+size_t perAppStartLimit()
+{
+    static auto limit = fileNumberLimit() / 4;
+    return limit;
+}
+} // namespace
 
 KSMServer *the_server = nullptr;
 
@@ -1004,28 +1030,76 @@ void KSMServer::tryRestoreNext()
     restoreTimer.stop();
     KConfigGroup config(KSharedConfig::openConfig(), sessionGroup);
 
+    struct DontStartEntry {
+        QString clientId;
+        QString appName;
+    };
+    QList<DontStartEntry> dontStartEntries;
+    QHash<QString, size_t> startCounter;
+
+    struct RestartEntry {
+        QString clientId;
+        QStringList restartCommand;
+        int restartStyleHint;
+        QString clientMachine;
+        QString userId;
+    };
+    QList<RestartEntry> entries;
+    entries.reserve(appsToStart);
     while (lastAppStarted < appsToStart) {
         lastAppStarted++;
-        QString n = QString::number(lastAppStarted);
-        QString clientId = config.readEntry(QLatin1String("clientId") + n, QString());
-        bool alreadyStarted = false;
-        foreach (KSMClient *c, clients) {
-            if (QString::fromLocal8Bit(c->clientId()) == clientId) {
-                alreadyStarted = true;
-                break;
-            }
-        }
-        if (alreadyStarted)
-            continue;
+        const auto n = QString::number(lastAppStarted);
+        const auto entry = entries.emplace_back(RestartEntry{
+            .clientId = config.readEntry(QLatin1String("clientId") + n, QString()),
+            .restartCommand = config.readEntry(QLatin1String("restartCommand") + n, QStringList()),
+            .restartStyleHint = config.readEntry(QLatin1String("restartStyleHint") + n, 0),
+            .clientMachine = config.readEntry(QLatin1String("clientMachine") + n, QString()),
+            .userId = config.readEntry(QLatin1String("userId") + n, QString()),
+        });
 
-        QStringList restartCommand = config.readEntry(QLatin1String("restartCommand") + n, QStringList());
-        if (restartCommand.isEmpty() || (config.readEntry(QStringLiteral("restartStyleHint") + n, 0) == SmRestartNever)) {
+        // Count how many times this command is going to be started. If it is too many we will create a DontStartEntry
+        // and consequently turn *all* restorations no-op in the actual start loop.
+        if (entry.restartCommand.isEmpty()) {
             continue;
         }
-        startApplication(restartCommand,
-                         config.readEntry(QStringLiteral("clientMachine") + n, QString()),
-                         config.readEntry(QStringLiteral("userId") + n, QString()));
-        lastIdStarted = clientId;
+        const auto appName = entry.restartCommand.first();
+        if (!startCounter.contains(appName)) {
+            startCounter[appName] = 0;
+        }
+        startCounter[appName]++;
+        if (startCounter[appName] == perAppStartLimit()) { // only insert this entry once! when the limit is hit
+            dontStartEntries.push_back(DontStartEntry{.clientId = entry.clientId, .appName = appName});
+        }
+    }
+
+    for (const auto &entry : dontStartEntries) {
+        qCWarning(KSMSERVER) << "Too many application starts issued for" << entry.appName << ". Not starting any more."
+                             << "Something may be broken with the application's session management.";
+    }
+
+    for (const auto &entry : entries) {
+        // We only discard the entries here because a violating app will get all entries disabled, not just the ones in
+        // excess. So we need to loop all entries twice: once to establish the in-excess apps, and again to actually start
+        // (or not).
+        const bool dontStart = std::any_of(dontStartEntries.cbegin(), dontStartEntries.cend(), [&entry](const auto &dontStartEntry) {
+            return dontStartEntry.clientId == entry.clientId;
+        });
+        if (dontStart) {
+            continue;
+        }
+
+        const bool alreadyStarted = std::any_of(clients.cbegin(), clients.cend(), [&entry](const auto &client) {
+            return QString::fromLocal8Bit(client->clientId()) == entry.clientId;
+        });
+        if (alreadyStarted) {
+            continue;
+        }
+
+        if (entry.restartCommand.isEmpty() || entry.restartStyleHint == SmRestartNever) {
+            continue;
+        }
+        startApplication(entry.restartCommand, entry.clientMachine, entry.userId);
+        lastIdStarted = entry.clientId;
         if (!lastIdStarted.isEmpty()) {
             restoreTimer.setSingleShot(true);
             restoreTimer.start(2000);
