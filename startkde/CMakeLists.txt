@@ -2,7 +2,7 @@ add_subdirectory(plasmaautostart)
 add_subdirectory(kcminit)
 add_subdirectory(waitforname)
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+if (SYSTEMD_FOUND)
     add_subdirectory(systemd)
 endif()
 
