@@ -26,8 +26,6 @@ PlasmaExtras.ExpandableListItem {
     readonly property int operationResult: (model["Operation result"])
 
     readonly property bool isMounted: devicenotifier.isMounted(udi)
-    readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
-    readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
     readonly property var types: model["Device Types"]
     readonly property bool hasStorageAccess: !!types && types.indexOf("Storage Access") !== -1
     readonly property bool hasPortableMediaPlayer: !!types && types.indexOf("Portable Media Player") !== -1
@@ -42,6 +40,24 @@ PlasmaExtras.ExpandableListItem {
     readonly property bool isRootVolume: sdSource.data[udi] && sdSource.data[udi]["File Path"] ? sdSource.data[udi]["File Path"] == "/" : false
     readonly property bool isRemovable: sdSource.data[udi] && sdSource.data[udi]["Removable"] ? sdSource.data[udi]["Removable"] : false
 
+    /*
+     * type: {
+     *   solidError: Solid::ErrorType,
+     *   error: string,
+     *   errorDetails: string,
+     *   udi: string,
+     * }?
+     */
+    readonly property var message: {
+        if (statusSource.lastUdi === udi) {
+            const data = statusSource.data[statusSource.last];
+            if (data) {
+                return data;
+            }
+        }
+        return null;
+    }
+
     onOperationResultChanged: {
         if (!popupIconTimer.running) {
             if (operationResult == 1) {
@@ -54,8 +70,8 @@ PlasmaExtras.ExpandableListItem {
         }
     }
 
-    onHasMessageChanged: {
-        if (deviceItem.hasMessage) {
+    onMessageChanged: {
+        if (message !== null) {
             messageHighlight.highlight(this)
         }
     }
@@ -81,7 +97,7 @@ PlasmaExtras.ExpandableListItem {
     SequentialAnimation {
         id: removeAnimation
         running: false
-        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
+        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.message !== null }
         PropertyAction { target: deviceItem; property: "enabled"; value: false }
         // Reset action model to hide the arrow
         PropertyAction { target: deviceItem; property: "contextualActionsModel"; value: [] }
@@ -160,8 +176,8 @@ PlasmaExtras.ExpandableListItem {
     icon: sdSource.data[udi] ? sdSource.data[udi].Icon : "device-notifier"
 
     iconEmblem: {
-        if (deviceItem.hasMessage) {
-            if (deviceItem.message.solidError === 0) {
+        if (message !== null) {
+            if (message.solidError === 0) {
                 return "emblem-information"
             } else {
                 return "emblem-error"
@@ -176,8 +192,8 @@ PlasmaExtras.ExpandableListItem {
     title: sdSource.data[udi] ? sdSource.data[udi].Description : ""
 
     subtitle: {
-        if (deviceItem.hasMessage) {
-            return deviceItem.message.error
+        if (message !== null) {
+            return message.error
         }
         if (deviceItem.state == 0) {
             if (!hpSource.data[udi]) {
