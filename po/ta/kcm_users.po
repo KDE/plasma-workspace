@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-05 01:41+0000\n"
-"PO-Revision-Date: 2023-09-10 18:47+0530\n"
+"PO-Revision-Date: 2023-10-15 12:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -359,7 +359,7 @@ msgstr "புதியவரை சேர்"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "கணக்கைத் திருத்துவதற்கு இடைவெளி விசையை அழுத்தவும்"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -473,13 +473,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "பின்னே செல்"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "சுருக்கொப்பம்"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -497,13 +497,13 @@ msgstr "படத்தை தேர்ந்தெடுப்பது"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "கொள்ளிட சின்னம்"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "பயனரின் சின்னத்திற்கான கொள்ளிடம்"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

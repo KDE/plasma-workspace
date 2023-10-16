@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2023-07-25 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -70,26 +70,6 @@ msgid ""
 msgstr ""
 "QR 코드를 표시하기에 공간이 충분하지 않습니다. 애플릿의 크기를 조정하십시오."
 
-#: contents/ui/clipboard.qml:30
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "클립보드 내용"
-
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "클립보드가 비었습니다"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
-msgid "Clear History"
-msgstr "과거 기록 비우기"
-
-#: contents/ui/clipboard.qml:71
-#, kde-format
-msgid "Configure Clipboard…"
-msgstr "클립보드 설정…"
-
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
@@ -121,6 +101,26 @@ msgstr "저장"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
+
+#: contents/ui/main.qml:30
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "클립보드 내용"
+
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "클립보드가 비었습니다"
+
+#: contents/ui/main.qml:59
+#, kde-format
+msgid "Clear History"
+msgstr "과거 기록 비우기"
+
+#: contents/ui/main.qml:71
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "클립보드 설정…"
 
 #: contents/ui/Menu.qml:129
 #, kde-format

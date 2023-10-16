@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2023-05-28 10:34+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -69,26 +69,6 @@ msgstr ""
 "Es gibt nicht genug Platz zum Anzeigen des QR-Codes. Versuchen Sie, das "
 "Programm zu vergrößern."
 
-#: contents/ui/clipboard.qml:30
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Inhalt der Zwischenablage"
-
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Zwischenablage ist leer"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
-msgid "Clear History"
-msgstr "Verlauf leeren"
-
-#: contents/ui/clipboard.qml:71
-#, kde-format
-msgid "Configure Clipboard…"
-msgstr "Zwischenablage einrichten ..."
-
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
@@ -120,6 +100,26 @@ msgstr "Speichern"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Abbrechen"
+
+#: contents/ui/main.qml:30
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Inhalt der Zwischenablage"
+
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Zwischenablage ist leer"
+
+#: contents/ui/main.qml:59
+#, kde-format
+msgid "Clear History"
+msgstr "Verlauf leeren"
+
+#: contents/ui/main.qml:71
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Zwischenablage einrichten ..."
 
 #: contents/ui/Menu.qml:129
 #, kde-format

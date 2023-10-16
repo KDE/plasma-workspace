@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2023-02-09 01:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -29,12 +29,6 @@ msgstr ""
 msgid "Appearance"
 msgstr "外觀"
 
-#: contents/ui/analogclock.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
-msgstr "目前時間是 %1；目前日期是 %2"
-
 #: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
@@ -49,3 +43,9 @@ msgstr "一般："
 #, kde-format
 msgid "Show time zone"
 msgstr "顯示時區"
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "目前時間是 %1；目前日期是 %2"

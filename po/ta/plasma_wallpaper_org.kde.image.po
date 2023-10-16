@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2022-05-24 21:19+0530\n"
+"PO-Revision-Date: 2023-10-15 13:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,15 +28,13 @@ msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "படத்தை திற"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "காட்ட வேண்டிய படங்களை கொண்ட அடைவு"
@@ -102,23 +100,21 @@ msgid "Next Wallpaper Image"
 msgstr "அடுத்த பின்புல படம்"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "படக் கோப்புகள்"
+msgstr "படங்கள்"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "சேர்…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "புதிய பின்புல படங்களை பெறு…"
+msgstr "புதியவற்றை பெறு…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -259,7 +255,7 @@ msgstr "அடைவுகள்"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "சேர்…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format
@@ -267,10 +263,9 @@ msgid "Remove Folder"
 msgstr "அடைவை நீக்கு"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:231
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "அடைவை திற"
+msgstr "அடைவை திற…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
@@ -278,42 +273,39 @@ msgid "There are no wallpaper locations configured"
 msgstr "பின்புல படங்களை கொண்ட இடங்கள் அமைக்கப்படவில்லை"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "புதிய பின்புல படங்களை பெறு…"
+msgstr "பின்புலப்படமாக அமை"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "பணிமேடை"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "பூட்டுதிரை"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "இரண்டும்"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "பிளாஸ்மாவுக்கான பின்புல படத்தை அமைக்கும்போது சிக்கல் ஏற்பட்டது:\n"
+msgstr "பிளாஸ்மாவுக்கான பின்புல படத்தை அமைக்கும்போது சிக்கல் ஏற்பட்டது:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr "பிளாஸ்மாவுக்கான பின்புல படத்தை அமைக்கும்போது சிக்கல் ஏற்பட்டது:\n"
+msgstr "kscreenlockerrc எனும் கோப்பைத் திறப்பதில் சிக்கல் ஏற்பட்டது."
 
 #~ msgid "Add Image…"
 #~ msgstr "படத்தை சேர்…"

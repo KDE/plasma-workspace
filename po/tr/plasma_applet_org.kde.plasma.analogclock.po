@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2022-07-25 12:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -26,12 +26,6 @@ msgstr ""
 msgid "Appearance"
 msgstr "Görünüş"
 
-#: contents/ui/analogclock.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
-msgstr "Geçerli zaman %1; geçerli tarih %2"
-
 #: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
@@ -46,3 +40,9 @@ msgstr "Genel:"
 #, kde-format
 msgid "Show time zone"
 msgstr "Zaman dilimini göster"
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "Geçerli zaman %1; geçerli tarih %2"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2022-07-14 09:52-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -71,26 +71,6 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:30
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Conteúdo da área de transferência"
-
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "A área de transferência está vazia"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
-msgid "Clear History"
-msgstr "Limpar histórico"
-
-#: contents/ui/clipboard.qml:71
-#, kde-format
-msgid "Configure Clipboard…"
-msgstr "Configurar a área de transferência..."
-
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
@@ -122,6 +102,26 @@ msgstr "Salvar"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
+
+#: contents/ui/main.qml:30
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Conteúdo da área de transferência"
+
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "A área de transferência está vazia"
+
+#: contents/ui/main.qml:59
+#, kde-format
+msgid "Clear History"
+msgstr "Limpar histórico"
+
+#: contents/ui/main.qml:71
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Configurar a área de transferência..."
 
 #: contents/ui/Menu.qml:129
 #, kde-format

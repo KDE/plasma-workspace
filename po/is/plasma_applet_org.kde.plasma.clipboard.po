@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2023-09-09 10:01+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -72,26 +72,6 @@ msgstr ""
 "Ekki er nóg pláss til að birta QR-kóðann. Prófaðu að breyta stærð "
 "smáforritsins."
 
-#: contents/ui/clipboard.qml:30
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Innihald klippispjalds"
-
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Klippispjald er tómt"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
-msgid "Clear History"
-msgstr "Hreinsa feril"
-
-#: contents/ui/clipboard.qml:71
-#, kde-format
-msgid "Configure Clipboard…"
-msgstr "Stilla klippispjald…"
-
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
@@ -123,6 +103,26 @@ msgstr "Vista"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Hætta við"
+
+#: contents/ui/main.qml:30
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Innihald klippispjalds"
+
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Klippispjald er tómt"
+
+#: contents/ui/main.qml:59
+#, kde-format
+msgid "Clear History"
+msgstr "Hreinsa feril"
+
+#: contents/ui/main.qml:71
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Stilla klippispjald…"
 
 #: contents/ui/Menu.qml:129
 #, kde-format

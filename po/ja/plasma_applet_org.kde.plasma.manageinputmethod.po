@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-29 01:59+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2021-07-25 22:54-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,33 +14,33 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: contents/ui/manage-inputmethod.qml:70
+#: contents/ui/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr ""
 
-#: contents/ui/manage-inputmethod.qml:89
+#: contents/ui/main.qml:89
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr ""
 
-#: contents/ui/manage-inputmethod.qml:102
+#: contents/ui/main.qml:102
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr ""
 
-#: contents/ui/manage-inputmethod.qml:118
+#: contents/ui/main.qml:118
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr ""
 
-#: contents/ui/manage-inputmethod.qml:133
+#: contents/ui/main.qml:133
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr ""
 
-#: contents/ui/manage-inputmethod.qml:147
+#: contents/ui/main.qml:147
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr ""

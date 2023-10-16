@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2023-05-26 15:19+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -71,26 +71,6 @@ msgstr ""
 "Spazio insufficiente per visualizzare il codice QR. Prova a ridimensionare "
 "questa applet."
 
-#: contents/ui/clipboard.qml:30
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Contenuto degli appunti"
-
-#: contents/ui/clipboard.qml:31 contents/ui/Menu.qml:129
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Gli appunti sono vuoti"
-
-#: contents/ui/clipboard.qml:59
-#, kde-format
-msgid "Clear History"
-msgstr "Cancella la cronologia"
-
-#: contents/ui/clipboard.qml:71
-#, kde-format
-msgid "Configure Clipboard…"
-msgstr "Configura gli appunti..."
-
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
@@ -122,6 +102,26 @@ msgstr "Salva"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annulla"
+
+#: contents/ui/main.qml:30
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Contenuto degli appunti"
+
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Gli appunti sono vuoti"
+
+#: contents/ui/main.qml:59
+#, kde-format
+msgid "Clear History"
+msgstr "Cancella la cronologia"
+
+#: contents/ui/main.qml:71
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Configura gli appunti..."
 
 #: contents/ui/Menu.qml:129
 #, kde-format

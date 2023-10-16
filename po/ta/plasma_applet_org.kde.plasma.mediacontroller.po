@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2022-12-08 21:20+0530\n"
+"PO-Revision-Date: 2023-10-15 12:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.11.90\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:194
 #, kde-format
@@ -36,8 +36,7 @@ msgid "-%1"
 msgstr "-%1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:531
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "கலக்கு"

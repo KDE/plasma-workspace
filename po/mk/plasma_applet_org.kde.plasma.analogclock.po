@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2007-11-27 12:16+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -22,12 +22,6 @@ msgstr ""
 #: contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
-
-#: contents/ui/analogclock.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
 msgstr ""
 
 #: contents/ui/configGeneral.qml:23
@@ -46,6 +40,12 @@ msgstr ""
 #| msgid "Also display the time in text"
 msgid "Show time zone"
 msgstr "Прикажи го времето и како текст"
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Display the second hand"

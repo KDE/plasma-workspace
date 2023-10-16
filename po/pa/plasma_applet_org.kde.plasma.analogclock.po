@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2020-10-10 22:46-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -25,12 +25,6 @@ msgstr ""
 msgid "Appearance"
 msgstr "ਦਿੱਖ"
 
-#: contents/ui/analogclock.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
-msgstr ""
-
 #: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
@@ -45,6 +39,12 @@ msgstr "ਆਮ:"
 #, kde-format
 msgid "Show time zone"
 msgstr "ਟਾਈਮ ਜ਼ੋਨ ਵੇਖੋ"
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
 
 #~ msgid "Show the seconds"
 #~ msgstr "ਸਕਿੰਟ ਵੇਖੋ"

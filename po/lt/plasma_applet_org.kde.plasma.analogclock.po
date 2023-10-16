@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2022-11-18 01:31+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -24,12 +24,6 @@ msgstr ""
 msgid "Appearance"
 msgstr "Išvaizda"
 
-#: contents/ui/analogclock.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
-msgstr "Dabar yra %1; Dabartinė data yra %2"
-
 #: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
@@ -44,3 +38,9 @@ msgstr "Bendra:"
 #, kde-format
 msgid "Show time zone"
 msgstr "Rodyti laiko juostą"
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "Dabar yra %1; Dabartinė data yra %2"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
 "PO-Revision-Date: 2022-07-26 15:48+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -28,12 +28,6 @@ msgstr ""
 msgid "Appearance"
 msgstr "Apparence"
 
-#: contents/ui/analogclock.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
-msgstr "L'heure courante est %1. La date courante est %2."
-
 #: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
@@ -48,6 +42,12 @@ msgstr "Général :"
 #, kde-format
 msgid "Show time zone"
 msgstr "Afficher le fuseau horaire"
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "L'heure courante est %1. La date courante est %2."
 
 #~ msgid "Show the seconds"
 #~ msgstr "Affiche les secondes"
