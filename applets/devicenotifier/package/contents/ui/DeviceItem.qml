@@ -8,6 +8,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick 2.0
 import QtQuick.Controls 2.12 as QQC2
 import QtQml.Models 2.14
@@ -20,6 +22,9 @@ import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaExtras.ExpandableListItem {
     id: deviceItem
+
+    required property int index
+    required property var model
 
     property string udi
     readonly property int state: sdSource.data[udi] ? sdSource.data[udi].State : 0
@@ -182,8 +187,8 @@ PlasmaExtras.ExpandableListItem {
             } else {
                 return "emblem-error"
             }
-        } else if (state == 0 && Emblems && Emblems[0]) {
-            return Emblems[0]
+        } else if (state == 0 && model.Emblems && model.Emblems[0]) {
+            return model.Emblems[0]
         } else {
             return ""
         }
@@ -264,6 +269,8 @@ PlasmaExtras.ExpandableListItem {
     Instantiator {
         model: hpSource.data[udi] ? hpSource.data[udi].actions : []
         delegate: QQC2.Action {
+            required property var modelData
+
             text: modelData.text
             icon.name: modelData.icon
             // We only want to show the "Show in file manager" action for

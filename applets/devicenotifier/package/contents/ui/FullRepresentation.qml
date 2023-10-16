@@ -8,6 +8,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
@@ -135,7 +137,7 @@ PlasmaExtras.Representation {
             model: filterModel
 
             delegate: DeviceItem {
-                udi: DataEngineSource
+                udi: model.DataEngineSource
             }
             highlight: PlasmaExtras.Highlight { }
             highlightMoveDuration: 0
@@ -161,12 +163,16 @@ PlasmaExtras.Representation {
             section {
                 property: "Type Description"
                 delegate: Item {
+                    id: delegate
+
+                    required property string section
+
                     height: Math.floor(childrenRect.height)
                     width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.largeSpacing * 2 : 0)
                     Kirigami.Heading {
                         level: 3
                         opacity: 0.6
-                        text: section
+                        text: delegate.section
                     }
                 }
             }
