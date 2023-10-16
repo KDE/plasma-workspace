@@ -578,7 +578,7 @@ QtObject {
                 const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                 popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
             }
-            onActionInvoked: {
+            onActionInvoked: actionName => {
                 const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                 popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
             }
@@ -586,7 +586,7 @@ QtObject {
                 const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                 popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
             }
-            onOpenUrl: {
+            onOpenUrl: url => {
                 Qt.openUrlExternally(url);
                 // Client isn't informed of this action, so we always hide the popup
                 if (model.resident) {
@@ -595,7 +595,7 @@ QtObject {
                     popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
                 }
             }
-            onFileActionInvoked: {
+            onFileActionInvoked: action => {
                 if (!model.resident
                     || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
                     popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
