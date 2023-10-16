@@ -67,7 +67,7 @@ WallpaperItem {
             return root.configuration.Image;
         }
         sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
-        wallpaperInterface: wallpaper
+        wallpaperInterface: root
 
         Wallpaper.ImageBackend {
             id: imageWallpaper
