@@ -4,10 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
 
 import org.kde.config // KAuthorized
 import org.kde.kcmutils // KCMLauncher
@@ -166,7 +165,7 @@ ColumnLayout {
                     interval: 500
                 }
 
-                running: queryTimer.queryDisplay
+                running: runnerWindow.visible && queryTimer.queryDisplay
             }
             function move_up() {
                 if (length === 0) {
@@ -395,7 +394,7 @@ ColumnLayout {
             }
             Keys.onReturnPressed: runCurrentIndex(event)
             Keys.onEnterPressed: runCurrentIndex(event)
-            
+
             Keys.onTabPressed: {
                 if (currentIndex == listView.count-1) {
                     listView.nextItemInFocusChain(true).forceActiveFocus();
@@ -430,7 +429,7 @@ ColumnLayout {
                     queryField.focus = true;
                 }
             }
-  
+
             Keys.onUpPressed: decrementCurrentIndex()
             Keys.onDownPressed: incrementCurrentIndex()
 
