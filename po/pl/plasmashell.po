@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-10-17 01:40+0000\n"
 "PO-Revision-Date: 2023-09-17 12:57+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -33,31 +33,31 @@ msgstr "lukasz.wojnilowicz@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Ustawienia wtyczki działań myszy"
 
-#: desktopview.cpp:224
+#: desktopview.cpp:225
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "Plazma KDE %1 rozwojowa"
 
-#: desktopview.cpp:228
+#: desktopview.cpp:229
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "Plazma KDE %1 Beta"
 
-#: desktopview.cpp:231
+#: desktopview.cpp:232
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "Plazma KDE %1 Beta %2"
 
-#: desktopview.cpp:235
+#: desktopview.cpp:236
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "Plazma KDE %1"
 
-#: desktopview.cpp:241
+#: desktopview.cpp:242
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-17 01:40+0000\n"
 "PO-Revision-Date: 2023-03-03 09:54+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -90,94 +90,94 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Pilih Semua"
 
-#: package/contents/ui/FullRepresentation.qml:68
+#: package/contents/ui/FullRepresentation.qml:69
 #, kde-format
 msgid "Do not disturb"
 msgstr "Jangan ganggu"
 
-#: package/contents/ui/FullRepresentation.qml:110
+#: package/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "For 1 hour"
 msgstr "Untuk 1 jam"
 
-#: package/contents/ui/FullRepresentation.qml:115
+#: package/contents/ui/FullRepresentation.qml:116
 #, kde-format
 msgid "For 4 hours"
 msgstr "Untuk 4 jam"
 
-#: package/contents/ui/FullRepresentation.qml:124
+#: package/contents/ui/FullRepresentation.qml:125
 #, kde-format
 msgid "Until this evening"
 msgstr "Sampai malam ini"
 
-#: package/contents/ui/FullRepresentation.qml:134
+#: package/contents/ui/FullRepresentation.qml:135
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "Sampai esok pagi"
 
-#: package/contents/ui/FullRepresentation.qml:146
+#: package/contents/ui/FullRepresentation.qml:147
 #, kde-format
 msgid "Until Monday"
 msgstr "Sampai Senin"
 
-#: package/contents/ui/FullRepresentation.qml:153
+#: package/contents/ui/FullRepresentation.qml:154
 #, kde-format
 msgid "Until manually disabled"
 msgstr "Sampai dinonfungsikan secara manual"
 
-#: package/contents/ui/FullRepresentation.qml:203
+#: package/contents/ui/FullRepresentation.qml:204
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Secara otomatis berakhir: %1"
 
-#: package/contents/ui/FullRepresentation.qml:215
+#: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Selagi %1 sedang aktif (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:217
+#: package/contents/ui/FullRepresentation.qml:218
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Selagi %1 sedang aktif"
 
-#: package/contents/ui/FullRepresentation.qml:223
+#: package/contents/ui/FullRepresentation.qml:224
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Layar sedang dicerminkan"
 
-#: package/contents/ui/FullRepresentation.qml:424
+#: package/contents/ui/FullRepresentation.qml:432
 #, kde-format
 msgid "Close Group"
 msgstr "Tutup Grup"
 
-#: package/contents/ui/FullRepresentation.qml:569
+#: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
 msgstr "Tampilkan Lebih Sedikit"
 
-#: package/contents/ui/FullRepresentation.qml:571
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Tampilkan %1 Lagi"
 
-#: package/contents/ui/FullRepresentation.qml:612
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "Tidak ada notifikasi yang belum dibaca."
 
-#: package/contents/ui/FullRepresentation.qml:627
+#: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "Layanan notifikasi tidak tersedia"
 
-#: package/contents/ui/FullRepresentation.qml:629
+#: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
