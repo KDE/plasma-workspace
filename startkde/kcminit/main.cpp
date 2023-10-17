@@ -67,7 +67,7 @@ bool KCMInit::runModule(const KPluginMetaData &data)
 
 void KCMInit::runModules(int phase)
 {
-    for (const KPluginMetaData &data : qAsConst(m_list)) {
+    for (const KPluginMetaData &data : std::as_const(m_list)) {
         // see ksmserver's README for the description of the phases
         int libphase = data.value(QStringLiteral("X-KDE-Init-Phase"), 1);
 
@@ -90,7 +90,7 @@ KCMInit::KCMInit(const QCommandLineParser &args)
 {
     if (args.isSet(QStringLiteral("list"))) {
         m_list = KPluginMetaData::findPlugins(QStringLiteral("plasma/kcminit"));
-        for (const KPluginMetaData &data : qAsConst(m_list)) {
+        for (const KPluginMetaData &data : std::as_const(m_list)) {
             printf("%s\n", QFile::encodeName(data.fileName()).data());
         }
         return;

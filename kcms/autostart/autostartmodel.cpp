@@ -319,7 +319,7 @@ void AutostartModel::addApplication(const KService::Ptr &service)
                                       unit};
 
     int lastApplication = -1;
-    for (const AutostartEntry &e : qAsConst(m_entries)) {
+    for (const AutostartEntry &e : std::as_const(m_entries)) {
         if (e.source == AutostartModel::AutostartEntrySource::XdgScripts) {
             break;
         }
@@ -394,7 +394,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
     if (kind == AutostartModel::AutostartEntrySource::XdgScripts) {
         int lastLoginScript = -1;
-        for (const AutostartEntry &e : qAsConst(m_entries)) {
+        for (const AutostartEntry &e : std::as_const(m_entries)) {
             if (e.source == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
                 break;
             }

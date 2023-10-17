@@ -32,7 +32,7 @@ namespace MockCompositor
 {
 bool DataDeviceManager::isClean()
 {
-    for (auto *device : qAsConst(m_dataDevices)) {
+    for (auto *device : std::as_const(m_dataDevices)) {
         // The client should not leak selection offers, i.e. if this fails, there is a missing
         // data_offer.destroy request
         if (!device->m_sentSelectionOffers.empty())

@@ -174,7 +174,7 @@ void NOAAIon::getXMLSetup() const
 // Gets specific city XML data
 void NOAAIon::getXMLData(const QString &source)
 {
-    for (const QString &fetching : qAsConst(m_jobList)) {
+    for (const QString &fetching : std::as_const(m_jobList)) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;
@@ -245,7 +245,7 @@ void NOAAIon::setup_slotJobFinished(KJob *job)
     const bool success = readXMLSetup();
     setInitialized(success);
 
-    for (const QString &source : qAsConst(m_sourcesToReset)) {
+    for (const QString &source : std::as_const(m_sourcesToReset)) {
         updateSourceEvent(source);
     }
 }

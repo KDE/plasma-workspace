@@ -417,7 +417,7 @@ void SourcesModel::loadEvents()
 {
     beginResetModel();
 
-    for (const SourceData &source : qAsConst(m_data)) {
+    for (const SourceData &source : std::as_const(m_data)) {
         for (auto &event : source.events) {
             event->load();
         }
@@ -428,7 +428,7 @@ void SourcesModel::loadEvents()
 
 void SourcesModel::saveEvents()
 {
-    for (const SourceData &source : qAsConst(m_data)) {
+    for (const SourceData &source : std::as_const(m_data)) {
         for (auto &event : source.events) {
             event->save();
         }

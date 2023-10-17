@@ -285,7 +285,7 @@ void RootModel::refresh()
             }
         };
 
-        for (AbstractEntry *entry : qAsConst(m_entryList)) {
+        for (AbstractEntry *entry : std::as_const(m_entryList)) {
             processEntry(entry);
         }
 

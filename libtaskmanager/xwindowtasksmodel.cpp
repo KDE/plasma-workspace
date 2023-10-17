@@ -733,7 +733,7 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
             // TODO: do we need to check all the transients for shaded?"
         } else if (!d->transients.isEmpty()) {
             const auto transients = d->transients.keys(window);
-            for (const auto transient : qAsConst(transients)) {
+            for (const auto transient : std::as_const(transients)) {
                 KWindowInfo info(transient, NET::WMState, NET::WM2TransientFor);
                 if (info.valid(true) && info.hasState(NET::Shaded)) {
                     window = transient;

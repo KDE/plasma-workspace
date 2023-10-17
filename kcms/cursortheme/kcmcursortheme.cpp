@@ -475,7 +475,7 @@ void CursorThemeConfig::removeThemes()
     std::transform(indices.constBegin(), indices.constEnd(), std::back_inserter(persistentIndices), [](const QModelIndex index) {
         return QPersistentModelIndex(index);
     });
-    for (const auto &idx : qAsConst(persistentIndices)) {
+    for (const auto &idx : std::as_const(persistentIndices)) {
         const CursorTheme *theme = m_themeModel->theme(idx);
 
         // Delete the theme from the harddrive

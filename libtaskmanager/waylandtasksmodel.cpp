@@ -426,7 +426,7 @@ void WaylandTasksModel::Private::initWayland()
 
     QObject::connect(windowManagement.get(), &PlasmaWindowManagement::stackingOrderChanged, q, [this](const QString &order) {
         stackingOrder = order.split(QLatin1Char(';'));
-        for (const auto &window : qAsConst(windows)) {
+        for (const auto &window : std::as_const(windows)) {
             this->dataChanged(window.get(), StackingOrder);
         }
     });

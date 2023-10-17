@@ -73,7 +73,7 @@ bool Geolocation::updatePlugins(GeolocationProvider::UpdateTriggers triggers)
 {
     bool changed = false;
 
-    for (GeolocationProvider *plugin : qAsConst(m_plugins)) {
+    for (GeolocationProvider *plugin : std::as_const(m_plugins)) {
         changed = plugin->requestUpdate(triggers) || changed;
     }
 
@@ -112,7 +112,7 @@ void Geolocation::pluginAvailabilityChanged(GeolocationProvider *provider)
     provider->requestUpdate(GeolocationProvider::ForcedUpdate);
 
     bool changed = false;
-    for (GeolocationProvider *plugin : qAsConst(m_plugins)) {
+    for (GeolocationProvider *plugin : std::as_const(m_plugins)) {
         changed = plugin->populateSharedData() || changed;
     }
 

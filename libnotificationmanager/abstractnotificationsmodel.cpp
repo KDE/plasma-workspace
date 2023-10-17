@@ -38,7 +38,7 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
     connect(&pendingRemovalTimer, &QTimer::timeout, q, [this, q] {
         QVector<int> rowsToBeRemoved;
         rowsToBeRemoved.reserve(pendingRemovals.count());
-        for (uint id : qAsConst(pendingRemovals)) {
+        for (uint id : std::as_const(pendingRemovals)) {
             int row = q->rowOfNotification(id); // oh the complexity...
             if (row == -1) {
                 continue;

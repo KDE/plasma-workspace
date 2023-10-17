@@ -25,7 +25,7 @@ Falkon::Falkon(QObject *parent)
 QList<BookmarkMatch> Falkon::match(const QString &term, bool addEverything)
 {
     QList<BookmarkMatch> matches;
-    for (const auto &bookmark : qAsConst(m_falkonBookmarkEntries)) {
+    for (const auto &bookmark : std::as_const(m_falkonBookmarkEntries)) {
         const auto obj = bookmark.toObject();
         const QString url = obj.value(QStringLiteral("url")).toString();
         BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, obj.value(QStringLiteral("name")).toString(), url);

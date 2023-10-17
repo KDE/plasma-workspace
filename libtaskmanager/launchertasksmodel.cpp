@@ -355,7 +355,7 @@ QStringList LauncherTasksModel::launcherList() const
     // Serializing the launchers
     QStringList result;
 
-    for (const auto &launcher : qAsConst(d->launchersOrder)) {
+    for (const auto &launcher : std::as_const(d->launchersOrder)) {
         const auto &activities = d->activitiesForLauncher[launcher];
 
         QString serializedLauncher;
@@ -401,7 +401,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
             // Filter out invalid activities
             const auto allActivities = d->activitiesConsumer.activities();
             ActivitiesSet validActivities;
-            for (const auto &activity : qAsConst(activities)) {
+            for (const auto &activity : std::as_const(activities)) {
                 if (allActivities.contains(activity)) {
                     validActivities << activity;
                 }

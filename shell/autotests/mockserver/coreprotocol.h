@@ -423,7 +423,7 @@ protected:
     void shm_create_pool(Resource *resource, uint32_t id, int32_t fd, int32_t size) override;
     void shm_bind_resource(Resource *resource) override
     {
-        for (auto format : qAsConst(m_formats))
+        for (auto format : std::as_const(m_formats))
             send_format(resource->handle, format);
     }
 };

@@ -400,7 +400,7 @@ void ItemContainer::componentComplete()
         syncChildItemsGeometry(size());
     }
 
-    for (auto *o : qAsConst(m_contentData)) {
+    for (auto *o : std::as_const(m_contentData)) {
         QQuickItem *item = qobject_cast<QQuickItem *>(o);
         if (item) {
             item->setParentItem(m_contentItem);

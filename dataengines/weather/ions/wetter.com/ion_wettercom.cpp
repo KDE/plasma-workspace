@@ -412,7 +412,7 @@ void WetterComIon::validate(const QString &source, bool parseError)
     }
 
     QString placeList;
-    for (const QString &place : qAsConst(m_locations)) {
+    for (const QString &place : std::as_const(m_locations)) {
         // Extra data format: placeCode;displayName
         placeList.append(QLatin1String("|place|") + place + QLatin1String("|extra|") + m_place[place].placeCode + QLatin1Char(';')
                          + m_place[place].displayName);
@@ -436,7 +436,7 @@ void WetterComIon::validate(const QString &source, bool parseError)
 
 void WetterComIon::fetchForecast(const QString &source)
 {
-    for (const QString &fetching : qAsConst(m_forecastJobList)) {
+    for (const QString &fetching : std::as_const(m_forecastJobList)) {
         if (fetching == source) {
             // already fetching!
             return;

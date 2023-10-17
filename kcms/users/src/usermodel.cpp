@@ -106,7 +106,7 @@ UserModel::~UserModel()
 
 User *UserModel::getLoggedInUser() const
 {
-    for (const auto user : qAsConst(m_userList)) {
+    for (const auto user : std::as_const(m_userList)) {
         if (user->loggedIn()) {
             return user;
         }

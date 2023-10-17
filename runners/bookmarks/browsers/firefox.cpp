@@ -51,7 +51,7 @@ Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
             profilePath = firefoxProfile.group(installConfig.first()).readEntry("Default");
         } else {
             // There are multiple profiles, find the default one
-            for (const QString &profileName : qAsConst(profilesList)) {
+            for (const QString &profileName : std::as_const(profilesList)) {
                 KConfigGroup fGrp = firefoxProfile.group(profileName);
                 if (fGrp.readEntry<int>("Default", 0)) {
                     profilePath = fGrp.readEntry("Path");

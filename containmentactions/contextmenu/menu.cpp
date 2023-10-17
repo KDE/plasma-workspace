@@ -83,7 +83,7 @@ void ContextMenu::restore(const KConfigGroup &config)
     }
     // clang-format on
 
-    for (const QString &name : qAsConst(m_actionOrder)) {
+    for (const QString &name : std::as_const(m_actionOrder)) {
         actions.insert(name, !disabled.contains(name));
     }
 

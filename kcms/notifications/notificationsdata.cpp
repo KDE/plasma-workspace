@@ -55,21 +55,21 @@ void NotificationsData::insertBehaviorSettings(int index, NotificationManager::B
 
 void NotificationsData::loadBehaviorSettings()
 {
-    for (auto *behaviorSettings : qAsConst(m_behaviorSettingsList)) {
+    for (auto *behaviorSettings : std::as_const(m_behaviorSettingsList)) {
         behaviorSettings->load();
     }
 }
 
 void NotificationsData::saveBehaviorSettings()
 {
-    for (auto *behaviorSettings : qAsConst(m_behaviorSettingsList)) {
+    for (auto *behaviorSettings : std::as_const(m_behaviorSettingsList)) {
         behaviorSettings->save();
     }
 }
 
 void NotificationsData::defaultsBehaviorSettings()
 {
-    for (auto *behaviorSettings : qAsConst(m_behaviorSettingsList)) {
+    for (auto *behaviorSettings : std::as_const(m_behaviorSettingsList)) {
         behaviorSettings->setDefaults();
     }
 }

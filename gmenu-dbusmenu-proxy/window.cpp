@@ -506,7 +506,7 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
             }
 
             int aliasedCount = 0;
-            for (const auto &aliasedItem : qAsConst(items)) {
+            for (const auto &aliasedItem : std::as_const(items)) {
                 DBusMenuLayoutItem aliasedChild{
                     Utils::treeStructureToInt(originalSubscription, originalMenu, ++aliasedCount),
                     gMenuToDBusMenuProperties(aliasedItem),

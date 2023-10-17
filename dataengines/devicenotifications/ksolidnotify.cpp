@@ -173,7 +173,7 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
 
             if (type == SolidReplyType::Eject) {
                 QString discUdi;
-                for (const Solid::Device &device : qAsConst(m_devices)) {
+                for (const Solid::Device &device : std::as_const(m_devices)) {
                     if (device.parentUdi() == udi) {
                         discUdi = device.udi();
                     }

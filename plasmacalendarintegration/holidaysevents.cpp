@@ -40,7 +40,7 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
     QMultiHash<QDate, CalendarEvents::EventData> data;
     QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> subLabelData;
 
-    for (KHolidays::HolidayRegion *region : qAsConst(m_regions)) {
+    for (KHolidays::HolidayRegion *region : std::as_const(m_regions)) {
         const KHolidays::Holiday::List holidays = region->rawHolidays(startDate, endDate);
 
         for (const KHolidays::Holiday &holiday : holidays) {

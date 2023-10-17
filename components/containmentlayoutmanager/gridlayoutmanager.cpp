@@ -140,7 +140,7 @@ void GridLayoutManager::resetLayoutFromConfig(const QRectF &newGeom, const QRect
         }
     }
 
-    for (auto *item : qAsConst(missingItems)) {
+    for (auto *item : std::as_const(missingItems)) {
         // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
         maintainItemEdgeAlignment(item, newGeom, oldGeom);
         positionItem(item);

@@ -468,7 +468,7 @@ public:
     {
         QStringList ids;
 
-        for (const auto &item : qAsConst(m_items)) {
+        for (const auto &item : std::as_const(m_items)) {
             ids << item.value();
         }
 

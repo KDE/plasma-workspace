@@ -170,7 +170,7 @@ void TimeZoneModel::update()
     }
     cities.sort(Qt::CaseInsensitive);
 
-    for (const QString &key : qAsConst(cities)) {
+    for (const QString &key : std::as_const(cities)) {
         const QTimeZone timeZone = zonesByCity.value(key);
         QString comment = timeZone.comment();
 

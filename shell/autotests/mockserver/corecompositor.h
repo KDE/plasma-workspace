@@ -114,7 +114,7 @@ public:
     global_type *get()
     {
         warnIfNotLockedByThread(Q_FUNC_INFO);
-        for (auto *global : qAsConst(m_globals)) {
+        for (auto *global : std::as_const(m_globals)) {
             if (auto *casted = qobject_cast<global_type *>(global))
                 return casted;
         }
@@ -128,7 +128,7 @@ public:
     global_type *get(int index)
     {
         warnIfNotLockedByThread(Q_FUNC_INFO);
-        for (auto *global : qAsConst(m_globals)) {
+        for (auto *global : std::as_const(m_globals)) {
             if (auto *casted = qobject_cast<global_type *>(global)) {
                 if (index--)
                     continue;
@@ -146,7 +146,7 @@ public:
     {
         warnIfNotLockedByThread(Q_FUNC_INFO);
         QVector<global_type *> matching;
-        for (auto *global : qAsConst(m_globals)) {
+        for (auto *global : std::as_const(m_globals)) {
             if (auto *casted = qobject_cast<global_type *>(global))
                 matching.append(casted);
         }

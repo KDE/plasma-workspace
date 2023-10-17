@@ -280,7 +280,7 @@ bool UKMETIon::updateIonSource(const QString &source)
 // Gets specific city XML data
 void UKMETIon::getXMLData(const QString &source)
 {
-    for (const QString &fetching : qAsConst(m_obsJobList)) {
+    for (const QString &fetching : std::as_const(m_obsJobList)) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;
@@ -902,7 +902,7 @@ void UKMETIon::validate(const QString &source)
     }
 
     QString placeList;
-    for (const QString &place : qAsConst(m_locations)) {
+    for (const QString &place : std::as_const(m_locations)) {
         const QString p = place.section(QLatin1Char('|'), 1, 1);
         placeList.append(QStringLiteral("|place|") + p + QStringLiteral("|extra|") + m_place[place].stationId);
     }

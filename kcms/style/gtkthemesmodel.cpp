@@ -119,7 +119,7 @@ QStringList GtkThemesModel::possiblePathsToThemes()
         QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("themes"), QStandardPaths::LocateDirectory);
     themesLocationsPaths << QDir::homePath() + QStringLiteral("/.themes");
 
-    for (const QString &themesLocationPath : qAsConst(themesLocationsPaths)) {
+    for (const QString &themesLocationPath : std::as_const(themesLocationsPaths)) {
         const QStringList possibleThemesDirectoriesNames = QDir(themesLocationPath).entryList(QDir::NoDotAndDotDot | QDir::AllDirs);
         for (const QString &possibleThemeDirectoryName : possibleThemesDirectoriesNames) {
             possibleThemesPaths += themesLocationPath + '/' + possibleThemeDirectoryName;

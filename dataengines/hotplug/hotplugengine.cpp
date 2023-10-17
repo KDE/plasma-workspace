@@ -106,7 +106,7 @@ void HotplugEngine::findPredicates()
         }
     }
     // qDebug() << files;
-    for (const QString &path : qAsConst(files)) {
+    for (const QString &path : std::as_const(files)) {
         KDesktopFile cfg(path);
         const QString string_predicate = cfg.desktopGroup().readEntry("X-KDE-Solid-Predicate");
         // qDebug() << path << string_predicate;

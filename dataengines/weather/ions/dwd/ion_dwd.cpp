@@ -205,7 +205,7 @@ void DWDIon::findPlace(const QString &searchText)
 
 void DWDIon::fetchWeather(QString placeName, QString placeID)
 {
-    for (const QString &fetching : qAsConst(m_forecastJobList)) {
+    for (const QString &fetching : std::as_const(m_forecastJobList)) {
         if (fetching == placeName) {
             // already fetching!
             return;
@@ -352,7 +352,7 @@ void DWDIon::calculatePositions(QStringList lines, QVector<int> &namePositionalI
 {
     QStringList stringLengths = lines[1].split(QChar::Space);
     QVector<int> lengths;
-    for (const QString &length : qAsConst(stringLengths)) {
+    for (const QString &length : std::as_const(stringLengths)) {
         lengths.append(length.count());
     }
 
@@ -388,8 +388,7 @@ void DWDIon::parseStationData(QByteArray data)
     // 01001 ENJA JAN MAYEN             70.56   -8.40    10
     // 01008 ENSB SVALBARD              78.15   15.28    29
     int lineIndex = 0;
-    for (const QString &line : qAsConst(lines)) {
-
+    for (const QString &line : std::as_const(lines)) {
         QString name = line.mid(namePositionalInfo[0], namePositionalInfo[1]).trimmed();
         QString id = line.mid(stationIdPositionalInfo[0], stationIdPositionalInfo[1]).trimmed();
 
@@ -569,7 +568,7 @@ void DWDIon::validate(const QString &searchText)
     }
 
     QString placeList;
-    for (const QString &place : qAsConst(m_locations)) {
+    for (const QString &place : std::as_const(m_locations)) {
         placeList.append(QStringLiteral("|place|") + place + QStringLiteral("|extra|") + m_place[place]);
     }
     if (m_locations.count() > 1) {

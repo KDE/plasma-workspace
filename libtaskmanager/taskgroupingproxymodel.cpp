@@ -1014,7 +1014,7 @@ void TaskGroupingProxyModel::requestToggleMaximized(const QModelIndex &index)
             return (a.data(AbstractTasksModel::StackingOrder).toInt() < b.data(AbstractTasksModel::StackingOrder).toInt());
         });
 
-        for (const QModelIndex &sourceChild : qAsConst(inStackingOrder)) {
+        for (const QModelIndex &sourceChild : std::as_const(inStackingOrder)) {
             d->abstractTasksSourceModel->requestToggleMaximized(sourceChild);
         }
     }

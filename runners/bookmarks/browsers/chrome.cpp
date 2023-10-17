@@ -72,7 +72,7 @@ Chrome::Chrome(FindProfile *findProfile, QObject *parent)
 
 Chrome::~Chrome()
 {
-    for (ProfileBookmarks *profileBookmark : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmark : std::as_const(m_profileBookmarks)) {
         delete profileBookmark;
     }
 }
@@ -83,7 +83,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
         prepare();
     }
     QList<BookmarkMatch> results;
-    for (ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmarks : std::as_const(m_profileBookmarks)) {
         results << match(term, addEveryThing, profileBookmarks);
     }
     return results;
@@ -107,7 +107,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, Prof
 void Chrome::prepare()
 {
     m_dirty = false;
-    for (ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmarks : std::as_const(m_profileBookmarks)) {
         Profile profile = profileBookmarks->profile();
         profileBookmarks->clear();
         const QJsonArray bookmarks = readChromeFormatBookmarks(profile.path());
@@ -122,7 +122,7 @@ void Chrome::prepare()
 
 void Chrome::teardown()
 {
-    for (ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmarks : std::as_const(m_profileBookmarks)) {
         profileBookmarks->tearDown();
     }
 }

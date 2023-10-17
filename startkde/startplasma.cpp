@@ -729,7 +729,7 @@ void waitForKonqi()
             services = allServices(QLatin1String("org.kde.drkonqi-"));
             if (wait_drkonqi_counter.elapsed() >= wait_drkonqi_timeout) {
                 // ask remaining drkonqis to die in a graceful way
-                for (const auto &service : qAsConst(services)) {
+                for (const auto &service : std::as_const(services)) {
                     QDBusInterface iface(service, QStringLiteral("/MainApplication"));
                     iface.call(QStringLiteral("quit"));
                 }

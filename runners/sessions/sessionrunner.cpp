@@ -168,7 +168,7 @@ void SessionRunner::match(KRunner::RunnerContext &context)
         SessList sessions;
         dm.localSessions(sessions);
 
-        for (const SessEnt &session : qAsConst(sessions)) {
+        for (const SessEnt &session : std::as_const(sessions)) {
             if (!session.vt || session.self) {
                 continue;
             }

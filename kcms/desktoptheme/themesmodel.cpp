@@ -171,7 +171,7 @@ void ThemesModel::load()
         }
     }
 
-    for (const QString &theme : qAsConst(themes)) {
+    for (const QString &theme : std::as_const(themes)) {
         int themeSepIndex = theme.lastIndexOf(QLatin1Char('/'), -1);
         const QString themeRoot = theme.left(themeSepIndex);
         int themeNameSepIndex = themeRoot.lastIndexOf(QLatin1Char('/'), -1);
@@ -240,7 +240,7 @@ QStringList ThemesModel::pendingDeletions() const
 {
     QStringList pendingDeletions;
 
-    for (const auto &item : qAsConst(m_data)) {
+    for (const auto &item : std::as_const(m_data)) {
         if (item.pendingDeletion) {
             pendingDeletions.append(item.pluginName);
         }

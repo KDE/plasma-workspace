@@ -32,7 +32,7 @@ int main(int argc, char **argv)
             activities.append(QStringLiteral("00000000-0000-0000-0000-000000000000"));
         }
         KConfigGroup newHistory = newStateLocation->group("PlasmaRunnerManager").group("History");
-        for (const QString &activity : qAsConst(activities)) {
+        for (const QString &activity : std::as_const(activities)) {
             newHistory.writeEntry(activity, history);
         }
         newHistory.sync();

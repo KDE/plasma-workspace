@@ -75,7 +75,7 @@ JobsModelPrivate::~JobsModelPrivate()
 
     // Remember which services we had running and clear their progress
     QStringList desktopEntries;
-    for (Job *job : qAsConst(m_jobViews)) {
+    for (Job *job : std::as_const(m_jobViews)) {
         if (!desktopEntries.contains(job->desktopEntry())) {
             desktopEntries.append(job->desktopEntry());
         }

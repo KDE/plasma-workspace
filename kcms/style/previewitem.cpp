@@ -304,7 +304,7 @@ void PreviewItem::dispatchEnterLeave(QWidget *enter, QWidget *leave, const QPoin
         }
     }
     if (!enterList.isEmpty()) {
-        const QPoint windowPos = qAsConst(enterList).back()->window()->mapFromGlobal(globalPos);
+        const QPoint windowPos = std::as_const(enterList).back()->window()->mapFromGlobal(globalPos);
         for (auto it = enterList.crbegin(), end = enterList.crend(); it != end; ++it) {
             auto *w = *it;
             const QPointF localPos = w->mapFromGlobal(globalPos);

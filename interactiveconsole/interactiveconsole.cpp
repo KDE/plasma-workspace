@@ -368,7 +368,7 @@ void InteractiveConsole::populateTemplatesMenu()
         return left.name() < right.name();
     });
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
-    for (const auto &templateMetaData : qAsConst(templates)) {
+    for (const auto &templateMetaData : std::as_const(templates)) {
         package.setPath(templateMetaData.pluginId());
         const QString scriptFile = package.filePath("mainscript");
         if (!scriptFile.isEmpty()) {

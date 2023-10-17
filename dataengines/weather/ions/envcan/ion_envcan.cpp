@@ -510,7 +510,7 @@ void EnvCanadaIon::getXMLSetup()
 // Gets specific city XML data
 void EnvCanadaIon::getXMLData(const QString &source)
 {
-    for (const QString &fetching : qAsConst(m_jobList)) {
+    for (const QString &fetching : std::as_const(m_jobList)) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;

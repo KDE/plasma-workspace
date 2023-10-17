@@ -1391,7 +1391,7 @@ void ShellCorona::checkAllDesktopsUiReady(bool ready)
 {
     if (!ready)
         return;
-    for (auto v : qAsConst(m_desktopViewForScreen)) {
+    for (auto v : std::as_const(m_desktopViewForScreen)) {
         if (!v->containment()->isUiReady())
             return;
 
@@ -1451,7 +1451,7 @@ void ShellCorona::createWaitingPanels()
 {
     QList<Plasma::Containment *> stillWaitingPanels;
 
-    for (Plasma::Containment *cont : qAsConst(m_waitingPanels)) {
+    for (Plasma::Containment *cont : std::as_const(m_waitingPanels)) {
         // ignore non existing (yet?) screens
         int requestedScreen = cont->lastScreen();
         if (requestedScreen < 0) {
@@ -1572,7 +1572,7 @@ void ShellCorona::toggleWidgetExplorer()
 {
     // FIXME: This does not work on wayland
     const QPoint cursorPos = QCursor::pos();
-    for (DesktopView *view : qAsConst(m_desktopViewForScreen)) {
+    for (DesktopView *view : std::as_const(m_desktopViewForScreen)) {
         if (view->screen()->geometry().contains(cursorPos)) {
             // The view QML has to provide something to display the widget explorer
             view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
@@ -1584,7 +1584,7 @@ void ShellCorona::toggleWidgetExplorer()
 void ShellCorona::toggleActivityManager()
 {
     const QPoint cursorPos = QCursor::pos();
-    for (DesktopView *view : qAsConst(m_desktopViewForScreen)) {
+    for (DesktopView *view : std::as_const(m_desktopViewForScreen)) {
         if (view->screen()->geometry().contains(cursorPos)) {
             // The view QML has to provide something to display the activity explorer
             view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleActivityManager", Qt::QueuedConnection);
@@ -2505,7 +2505,7 @@ QString ShellCorona::defaultContainmentPlugin() const
 
 void ShellCorona::updateStruts()
 {
-    for (PanelView *view : qAsConst(m_panelViews)) {
+    for (PanelView *view : std::as_const(m_panelViews)) {
         view->updateExclusiveZone();
     }
 }
