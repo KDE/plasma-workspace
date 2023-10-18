@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soliduiserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"POT-Creation-Date: 2023-10-18 01:43+0000\n"
 "PO-Revision-Date: 2007-08-22 16:48+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: soliduiserver.cpp:62
+#: soliduiserver.cpp:65
 #, kde-format
 msgid "'%1' needs a password to be accessed. Please enter a password."
 msgstr "'%1' लाई पहुँच प्राप्त पासवर्ड आवश्यक हुन्छ । कृपया एउटा पासवर्ड प्रविष्ट गर्नुहोस् ।"

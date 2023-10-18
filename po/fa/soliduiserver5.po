@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soliduiserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"POT-Creation-Date: 2023-10-18 01:43+0000\n"
 "PO-Revision-Date: 2011-09-25 19:54+0330\n"
 "Last-Translator: Mohamad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: soliduiserver.cpp:62
+#: soliduiserver.cpp:65
 #, kde-format
 msgid "'%1' needs a password to be accessed. Please enter a password."
 msgstr "دسترسی به «%1» مستلزم یک گذرواژه است. لطفاً گذرواژه‌ای وارد کنید."

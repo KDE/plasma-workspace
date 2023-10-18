@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soliduiserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"POT-Creation-Date: 2023-10-18 01:43+0000\n"
 "PO-Revision-Date: 2008-11-24 23:18+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: soliduiserver.cpp:62
+#: soliduiserver.cpp:65
 #, kde-format
 msgid "'%1' needs a password to be accessed. Please enter a password."
 msgstr "'%1' ต้องการรหัสผ่านสำหรับเข้าถึง โปรดใส่รหัสผ่าน"

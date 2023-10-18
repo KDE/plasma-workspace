@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-17 01:40+0000\n"
-"PO-Revision-Date: 2023-10-04 09:52+0300\n"
+"PO-Revision-Date: 2023-10-17 15:52+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -191,61 +191,49 @@ msgid "%2 of %1"
 msgstr "%1 מתוך %2"
 
 #: package/contents/ui/JobDetails.qml:109
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "%2 מתוך קובץ אחד"
-msgstr[1] "%2 מתוך שני קבצים"
-msgstr[2] "%2 מתוך %1 קבצים"
-msgstr[3] "%2 מתוך %1 קבצים"
+msgstr[1] "%2 מתוך %1 קבצים"
 
 #: package/contents/ui/JobDetails.qml:112
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
 msgstr[0] "%2 מתוך תיקייה"
-msgstr[1] "%2 מתוך שתי תיקיות"
-msgstr[2] "%2 מתוך %1 תיקיות"
-msgstr[3] "%2 מתוך %1 תיקיות"
+msgstr[1] "%2 מתוך %1 תיקיות"
 
 #: package/contents/ui/JobDetails.qml:115
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%2 מתוך פריט"
-msgstr[1] "%2 מתוך שני פריטים"
-msgstr[2] "%2 מתוך %1 פריטים"
-msgstr[3] "%2 מתוך %1 פריטים"
+msgstr[1] "%2 מתוך %1 פריטים"
 
 #: package/contents/ui/JobDetails.qml:123
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "קובץ"
-msgstr[1] "שני קבצים"
-msgstr[2] "%1 קבצים"
-msgstr[3] "%1 קבצים"
+msgstr[1] "%1 קבצים"
 
 #: package/contents/ui/JobDetails.qml:125
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "תיקייה"
-msgstr[1] "שתי תיקיות"
-msgstr[2] "%1 תיקיות"
-msgstr[3] "%1 תיקיות"
+msgstr[1] "%1 תיקיות"
 
 #: package/contents/ui/JobDetails.qml:127
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "פריט"
-msgstr[1] "שני פריטים"
-msgstr[2] "%1 פריטים"
-msgstr[3] "%1 פריטים"
+msgstr[1] "%1 פריטים"
 
 #: package/contents/ui/JobDetails.qml:144
 #, kde-format
@@ -295,13 +283,11 @@ msgid "Open"
 msgstr "פתיחה"
 
 #: package/contents/ui/main.qml:63
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "משימה פעילה"
-msgstr[1] "שתי משימות פעילות"
-msgstr[2] "%1 משימות פעילות"
-msgstr[3] "%1 משימות פעילות"
+msgstr[1] "%1 משימות פעילות"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
@@ -310,22 +296,18 @@ msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "משימה פעילה (%2%)"
 msgstr[1] "%1 משימות פעילות (%2%)"
-msgstr[2] "%1 משימות פעילות (%2%)"
-msgstr[3] "%1 משימות פעילות (%2%)"
 
 #: package/contents/ui/main.qml:85
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "התראה שלא נקראה"
-msgstr[1] "שתי התראות שלא נקראו"
-msgstr[2] "%1 התראות שלא נקראו"
-msgstr[3] "%1 התראות שלא נקראו"
+msgstr[1] "%1 התראות שלא נקראו"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
@@ -359,44 +341,36 @@ msgid "Just now"
 msgstr "ממש עכשיו"
 
 #: package/contents/ui/NotificationHeader.qml:126
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
 msgstr[0] "לפני דקה"
-msgstr[1] "לפני שתי דקות"
-msgstr[2] "לפני %1 דקות"
-msgstr[3] "לפני %1 דקות"
+msgstr[1] "לפני %1 דקות"
 
 #: package/contents/ui/NotificationHeader.qml:160
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
 msgstr[0] "נותרה שנייה"
-msgstr[1] "נותרו שתי שניות"
-msgstr[2] "נותרו %1 שניות"
-msgstr[3] "נותרו %1 שניות"
+msgstr[1] "נותרו %1 שניות"
 
 #: package/contents/ui/NotificationHeader.qml:164
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
 msgstr[0] "נותרה דקה"
-msgstr[1] "נותרו שתי דקות"
-msgstr[2] "נותרו %1 דקות"
-msgstr[3] "נותרו %1 דקות"
+msgstr[1] "נותרו %1 דקות"
 
 #: package/contents/ui/NotificationHeader.qml:169
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
 msgstr[0] "נותרה שעה"
-msgstr[1] "נותרו שעתיים"
-msgstr[2] "נותרו %1 שעות"
-msgstr[3] "נותרו %1 שעות"
+msgstr[1] "נותרו %1 שעות"
 
 #: package/contents/ui/NotificationHeader.qml:189
 #, kde-format
