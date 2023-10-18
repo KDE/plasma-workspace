@@ -21,15 +21,35 @@
 #include <QBuffer>
 #include <QDir>
 #include <QFile>
+#include <QGuiApplication>
 #include <QIcon>
 #include <QSet>
 #include <QTimer>
 #include <QUrlQuery>
-#include <private/qtx11extras_p.h>
 
 #include <chrono>
 
+#include <X11/Xlib.h>
+
 using namespace std::chrono_literals;
+
+namespace X11Info
+{
+[[nodiscard]] inline auto display()
+{
+    return qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
+}
+
+[[nodiscard]] inline auto connection()
+{
+    return qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
+}
+
+[[nodiscard]] inline Window appRootWindow()
+{
+    return DefaultRootWindow(display());
+}
+}
 
 namespace TaskManager
 {
@@ -218,7 +238,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
     const WId leader = info.transientFor();
 
     // Handle transient.
-    if (leader > 0 && leader != window && leader != QX11Info::appRootWindow() && !transients.contains(window) && windows.contains(leader)) {
+    if (leader > 0 && leader != window && leader != X11Info::appRootWindow() && !transients.contains(window) && windows.contains(leader)) {
         transients.insert(window, leader);
 
         // Update demands attention state for leader.
@@ -770,7 +790,7 @@ void XWindowTasksModel::requestClose(const QModelIndex &index)
         return;
     }
 
-    NETRootInfo ri(QX11Info::connection(), NET::CloseWindow);
+    NETRootInfo ri(X11Info::connection(), NET::CloseWindow);
     ri.closeWindowRequest(d->windows.at(index.row()));
 }
 
@@ -796,7 +816,7 @@ void XWindowTasksModel::requestMove(const QModelIndex &index)
 
     const QRect &geom = info->geometry();
 
-    NETRootInfo ri(QX11Info::connection(), NET::WMMoveResize);
+    NETRootInfo ri(X11Info::connection(), NET::WMMoveResize);
     ri.moveResizeRequest(window, geom.center().x(), geom.center().y(), NET::Move);
 }
 
@@ -822,7 +842,7 @@ void XWindowTasksModel::requestResize(const QModelIndex &index)
 
     const QRect &geom = info->geometry();
 
-    NETRootInfo ri(QX11Info::connection(), NET::WMMoveResize);
+    NETRootInfo ri(X11Info::connection(), NET::WMMoveResize);
     ri.moveResizeRequest(window, geom.bottomRight().x(), geom.bottomRight().y(), NET::BottomRight);
 }
 
@@ -873,7 +893,7 @@ void XWindowTasksModel::requestToggleMaximized(const QModelIndex &index)
         KX11Extras::unminimizeWindow(window);
     }
 
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
+    NETWinInfo ni(X11Info::connection(), window, X11Info::appRootWindow(), NET::WMState, NET::Properties2());
 
     if (restore) {
         ni.setState(NET::States(), NET::Max);
@@ -895,7 +915,7 @@ void XWindowTasksModel::requestToggleKeepAbove(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
 
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
+    NETWinInfo ni(X11Info::connection(), window, X11Info::appRootWindow(), NET::WMState, NET::Properties2());
 
     if (info->hasState(NET::KeepAbove)) {
         ni.setState(NET::States(), NET::KeepAbove);
@@ -913,7 +933,7 @@ void XWindowTasksModel::requestToggleKeepBelow(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
 
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
+    NETWinInfo ni(X11Info::connection(), window, X11Info::appRootWindow(), NET::WMState, NET::Properties2());
 
     if (info->hasState(NET::KeepBelow)) {
         ni.setState(NET::States(), NET::KeepBelow);
@@ -931,7 +951,7 @@ void XWindowTasksModel::requestToggleFullScreen(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
 
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
+    NETWinInfo ni(X11Info::connection(), window, X11Info::appRootWindow(), NET::WMState, NET::Properties2());
 
     if (info->hasState(NET::FullScreen)) {
         ni.setState(NET::States(), NET::FullScreen);
@@ -949,7 +969,7 @@ void XWindowTasksModel::requestToggleShaded(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
 
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
+    NETWinInfo ni(X11Info::connection(), window, X11Info::appRootWindow(), NET::WMState, NET::Properties2());
 
     if (info->hasState(NET::Shaded)) {
         ni.setState(NET::States(), NET::Shaded);
@@ -1015,7 +1035,7 @@ void XWindowTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
         return;
     }
 
-    NETRootInfo ri(QX11Info::connection(), NET::NumberOfDesktops);
+    NETRootInfo ri(X11Info::connection(), NET::NumberOfDesktops);
     ri.setNumberOfDesktops(desktop);
 
     KX11Extras::setOnDesktop(window, desktop);
@@ -1046,7 +1066,7 @@ void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
         return;
     }
 
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::Properties(), NET::Properties2());
+    NETWinInfo ni(X11Info::connection(), window, X11Info::appRootWindow(), NET::Properties(), NET::Properties2());
     NETRect rect;
 
     if (geometry.isValid()) {

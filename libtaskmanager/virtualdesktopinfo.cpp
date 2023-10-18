@@ -17,15 +17,22 @@
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
-#include <QDebug>
+#include <QGuiApplication>
 #include <QWaylandClientExtension>
 
 #include <config-X11.h>
 
 #if HAVE_X11
 #include <netwm.h>
-#include <private/qtx11extras_p.h>
 #endif // HAVE_X11
+
+namespace X11Info
+{
+[[nodiscard]] inline auto connection()
+{
+    return qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
+}
+}
 
 namespace TaskManager
 {
@@ -200,7 +207,7 @@ quint32 VirtualDesktopInfo::XWindowPrivate::position(const QVariant &desktop) co
 
 int VirtualDesktopInfo::XWindowPrivate::desktopLayoutRows() const
 {
-    const NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
+    const NETRootInfo info(X11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
     return info.desktopLayoutColumnsRows().height();
 }
 
@@ -219,7 +226,7 @@ void VirtualDesktopInfo::XWindowPrivate::requestCreateDesktop(quint32 position)
 {
     Q_UNUSED(position)
 
-    NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops);
+    NETRootInfo info(X11Info::connection(), NET::NumberOfDesktops);
     info.setNumberOfDesktops(info.numberOfDesktops() + 1);
 }
 
@@ -227,7 +234,7 @@ void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
 {
     Q_UNUSED(position)
 
-    NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops);
+    NETRootInfo info(X11Info::connection(), NET::NumberOfDesktops);
 
     if (info.numberOfDesktops() > 1) {
         info.setNumberOfDesktops(info.numberOfDesktops() - 1);

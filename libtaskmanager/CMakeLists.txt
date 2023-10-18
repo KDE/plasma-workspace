@@ -54,6 +54,7 @@ target_link_libraries(taskmanager
     PRIVATE
         Qt::Concurrent
         Qt::DBus
+        Qt::GuiPrivate
         Qt::WaylandClient
         KF6::Activities
         KF6::ConfigCore
@@ -66,7 +67,7 @@ target_link_libraries(taskmanager
 
 if (HAVE_X11)
     target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
-    target_link_libraries(taskmanager PRIVATE Qt::GuiPrivate)
+    target_link_libraries(taskmanager PRIVATE X11::X11)
 endif()
 
 set_target_properties(taskmanager PROPERTIES
