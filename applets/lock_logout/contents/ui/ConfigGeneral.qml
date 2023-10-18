@@ -33,38 +33,45 @@ Kirigami.FormLayout {
     QtControls.CheckBox {
         id: logout
         Kirigami.FormData.label: i18nc("Heading for a list of actions (leave, lock, switch user, hibernate, suspend)", "Show actions:")
-        text: i18n("Logout")
+        text: i18n("Log Out")
+        icon.name: "system-log-out"
         // ensure user cannot have all options unchecked
         enabled: session.canLogout && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: shutdown
-        text: i18n("Shutdown")
+        text: i18n("Shut Down")
+        icon.name: "system-shutdown"
         enabled: session.canShutdown && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: reboot
-        text: i18n("Reboot")
+        text: i18n("Restart")
+        icon.name: "system-reboot"
         enabled: session.canReboot && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: lock
         text: i18n("Lock")
+        icon.name: "system-lock-screen"
         enabled: session.canLock && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: switchUser
         text: i18n("Switch User")
+        icon.name: "system-switch-user"
         enabled: checkedOptions > 1 || !checked
     }
     QtControls.CheckBox {
         id: hibernate
         text: i18n("Hibernate")
+        icon.name: "system-suspend-hibernate"
         enabled: session.canHibernate && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: sleep
         text: i18nc("Suspend to RAM", "Sleep")
+        icon.name: "system-suspend"
         enabled: session.canSuspend && (checkedOptions > 1 || !checked)
     }
 }
