@@ -56,7 +56,11 @@ ColumnLayout {
         Layout.fillHeight: true
         contentHeight: itemsList.implicitHeight
 
-        Component.onCompleted: scrollView.background.visible = true
+        Component.onCompleted: {
+            if (background) {
+                background.visible = true;
+            }
+        }
 
         ListView {
             id: itemsList
