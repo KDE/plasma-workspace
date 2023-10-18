@@ -181,7 +181,7 @@ ColumnLayout {
                 Keys.forwardTo: expandButton
                 down: false
 
-                ColumnLayout {
+                contentItem: ColumnLayout {
                     RowLayout {
                         Layout.fillWidth: true
                         Layout.alignment: Qt.AlignTop

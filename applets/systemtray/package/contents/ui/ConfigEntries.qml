@@ -83,7 +83,7 @@ ColumnLayout {
                 hoverEnabled: false
                 down: false
 
-                RowLayout {
+                contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
 
                     Kirigami.Heading {
