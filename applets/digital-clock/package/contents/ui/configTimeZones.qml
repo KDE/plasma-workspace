@@ -172,7 +172,7 @@ KCMUtils.ScrollViewKCM {
     Kirigami.OverlaySheet {
         id: timezoneSheet
 
-        parent: timeZonesPage.Window.window.contentItem
+        parent: timeZonesPage.QQC2.Overlay.overlay
 
         onVisibleChanged: {
             filter.text = "";
