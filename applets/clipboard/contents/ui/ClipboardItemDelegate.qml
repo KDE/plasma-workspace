@@ -85,6 +85,10 @@ PlasmaComponents.ItemDelegate {
         maskSource: labelMaskSource
         visible: !!source && menuItem.ListView.isCurrentItem
 
+        TapHandler {
+            onTapped: menuItem.clicked() // https://bugreports.qt.io/browse/QTBUG-63395
+        }
+
         DragHandler {
             id: dragHandler
         }
