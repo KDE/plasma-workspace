@@ -39,19 +39,6 @@ Menu {
             return;
         }
         switch(event.key) {
-            case Qt.Key_Enter:
-            case Qt.Key_Return: {
-                if (clipboardMenu.view.currentIndex >= 0) {
-                    var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole
-                    if (uuid) {
-                        clipboardSource.service(uuid, "select")
-                        if (main.hideOnWindowDeactivate) {
-                            main.expanded = false;
-                        }
-                    }
-                }
-                break;
-            }
             case Qt.Key_Escape: {
                 if (filter.text != "") {
                     filter.text = "";

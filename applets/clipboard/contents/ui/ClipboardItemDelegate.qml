@@ -45,6 +45,8 @@ PlasmaComponents.ItemDelegate {
         }
     }
 
+    Keys.onEnterPressed: event => Keys.onReturnPressed(event)
+    Keys.onReturnPressed: menuItem.clicked()
     Keys.onDeletePressed: {
         remove(UuidRole);
     }
