@@ -1,7 +1,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
-
 if(NOT BUILD_TESTING OR NOT CMAKE_SYSTEM_NAME MATCHES "Linux")
     return()
 endif()
@@ -13,7 +12,7 @@ set_package_properties(SeleniumWebDriverATSPI PROPERTIES
     URL "https://invent.kde.org/sdk/selenium-webdriver-at-spi"
     TYPE OPTIONAL
 )
-if(NOT SeleniumWebDriverATSPI_FOUND)
+if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
