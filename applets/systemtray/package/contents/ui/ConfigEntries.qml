@@ -79,7 +79,9 @@ ColumnLayout {
 
             header: Kirigami.AbstractListItem {
 
+                // so that it gets neither hover nor pressed appearance when it's not interactive
                 hoverEnabled: false
+                down: false
 
                 RowLayout {
                     spacing: Kirigami.Units.smallSpacing
@@ -139,6 +141,7 @@ ColumnLayout {
                             implicitWidth: Kirigami.Units.iconSizes.smallMedium
                             implicitHeight: Kirigami.Units.iconSizes.smallMedium
                             source: model.decoration
+                            animated: false
                         }
 
                         QQC2.Label {
