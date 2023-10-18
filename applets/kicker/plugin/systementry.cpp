@@ -226,29 +226,15 @@ QString SystemEntry::group() const
 {
     switch (m_action) {
     case LockSession:
-        return i18n("Session");
-        break;
     case LogoutSession:
-        return i18n("Session");
-        break;
     case SaveSession:
-        return i18n("Session");
-        break;
     case SwitchUser:
         return i18n("Session");
-        break;
     case Suspend:
-        return i18n("System");
-        break;
     case Hibernate:
-        return i18n("System");
-        break;
     case Reboot:
-        return i18n("System");
-        break;
     case Shutdown:
         return i18n("System");
-        break;
     default:
         break;
     }
