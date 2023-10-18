@@ -74,7 +74,6 @@ Dependencies:
   'require':
     'frameworks/networkmanager-qt': '@latest-kf6'
     'libraries/polkit-qt-1': '@latest-kf6'
-    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
     'third-party/packagekit-qt': '@latest'
 
 RuntimeDependencies:
@@ -82,6 +81,7 @@ RuntimeDependencies:
   'require':
     'network/kio-extras': '@latest-kf6'
     'plasma/powerdevil': '@same'
+    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
 - 'on': ['Linux', 'FreeBSD']
   'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
