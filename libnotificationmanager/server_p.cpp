@@ -214,6 +214,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     if (m_lastNotification.applicationName() == notification.applicationName() && m_lastNotification.summary() == notification.summary()
         && m_lastNotification.body() == notification.body() && m_lastNotification.desktopEntry() == notification.desktopEntry()
         && m_lastNotification.eventId() == notification.eventId() && m_lastNotification.actionNames() == notification.actionNames()
+        && m_lastNotification.icon() == notification.icon()
         && m_lastNotification.urls() == notification.urls() && m_lastNotification.created().msecsTo(notification.created()) < 1000) {
         qCDebug(NOTIFICATIONMANAGER) << "Discarding excess notification creation request";
 
