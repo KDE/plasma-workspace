@@ -86,7 +86,7 @@ bool NotificationGroupingProxyModel::tryToGroup(const QModelIndex &sourceIndex, 
 void NotificationGroupingProxyModel::adjustMap(int anchor, int delta)
 {
     for (int i = 0; i < rowMap.count(); ++i) {
-        QVector<int> *sourceRows = rowMap.at(i);
+        QList<int> *sourceRows = rowMap.at(i);
         for (auto it = sourceRows->begin(); it != sourceRows->end(); ++it) {
             if ((*it) >= anchor) {
                 *it += delta;
@@ -105,7 +105,7 @@ void NotificationGroupingProxyModel::rebuildMap()
     rowMap.reserve(rows);
 
     for (int i = 0; i < rows; ++i) {
-        rowMap.append(new QVector<int>{i});
+        rowMap.append(new QList<int>{i});
     }
 
     checkGrouping(true /* silent */);
@@ -184,7 +184,7 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
             for (int i = start; i <= end; ++i) {
                 if (!tryToGroup(this->sourceModel()->index(i, 0))) {
                     beginInsertRows(QModelIndex(), rowMap.count(), rowMap.count());
-                    rowMap.append(new QVector<int>{i});
+                    rowMap.append(new QList<int>{i});
                     endInsertRows();
                 }
             }
@@ -199,7 +199,7 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
 
             for (int i = first; i <= last; ++i) {
                 for (int j = 0; j < rowMap.count(); ++j) {
-                    const QVector<int> *sourceRows = rowMap.at(j);
+                    const QList<int> *sourceRows = rowMap.at(j);
                     const int mapIndex = sourceRows->indexOf(i);
 
                     if (mapIndex != -1) {
@@ -257,7 +257,7 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
         connect(sourceModel,
                 &QAbstractItemModel::dataChanged,
                 this,
-                [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
                     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
                         const QModelIndex &sourceIndex = this->sourceModel()->index(i, 0);
                         QModelIndex proxyIndex = mapFromSource(sourceIndex);
@@ -306,7 +306,7 @@ QModelIndex NotificationGroupingProxyModel::parent(const QModelIndex &child) con
     if (child.internalPointer() == nullptr) {
         return QModelIndex();
     } else {
-        const int parentRow = rowMap.indexOf(static_cast<QVector<int> *>(child.internalPointer()));
+        const int parentRow = rowMap.indexOf(static_cast<QList<int> *>(child.internalPointer()));
 
         if (parentRow != -1) {
             return index(parentRow, 0);
@@ -327,7 +327,7 @@ QModelIndex NotificationGroupingProxyModel::mapFromSource(const QModelIndex &sou
     }
 
     for (int i = 0; i < rowMap.count(); ++i) {
-        const QVector<int> *sourceRows = rowMap.at(i);
+        const QList<int> *sourceRows = rowMap.at(i);
         const int childIndex = sourceRows->indexOf(sourceIndex.row());
         const QModelIndex parent = index(i, 0);
 

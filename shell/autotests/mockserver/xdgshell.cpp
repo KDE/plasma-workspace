@@ -170,12 +170,12 @@ XdgToplevel::XdgToplevel(XdgSurface *xdgSurface, int id, int version)
     });
 }
 
-void XdgToplevel::sendConfigure(const QSize &size, const QVector<uint> &states)
+void XdgToplevel::sendConfigure(const QSize &size, const QList<uint> &states)
 {
     send_configure(size.width(), size.height(), toByteArray(states));
 }
 
-uint XdgToplevel::sendCompleteConfigure(const QSize &size, const QVector<uint> &states)
+uint XdgToplevel::sendCompleteConfigure(const QSize &size, const QList<uint> &states)
 {
     sendConfigure(size, states);
     return m_xdgSurface->sendConfigure();

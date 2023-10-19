@@ -13,8 +13,8 @@
 #include <KPluginFactory>
 
 #include <QFileInfo>
+#include <QList>
 #include <QProcess>
-#include <QVector>
 
 #include <KUserFeedbackQt6/FeedbackConfigUiController>
 #include <KUserFeedbackQt6/Provider>

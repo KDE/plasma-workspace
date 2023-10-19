@@ -483,7 +483,7 @@ uint Keyboard::sendKey(wl_client *client, uint key, uint state)
 }
 
 // Shm implementation
-Shm::Shm(CoreCompositor *compositor, QVector<format> formats, int version)
+Shm::Shm(CoreCompositor *compositor, QList<format> formats, int version)
     : QtWaylandServer::wl_shm(compositor->m_display, version)
     , m_compositor(compositor)
     , m_formats(formats)

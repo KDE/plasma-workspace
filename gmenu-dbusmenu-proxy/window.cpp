@@ -219,7 +219,7 @@ void Window::initMenu()
     m_menuInited = true;
 }
 
-void Window::menuItemsChanged(const QVector<uint> &itemIds)
+void Window::menuItemsChanged(const QList<uint> &itemIds)
 {
     if (qobject_cast<Menu *>(sender()) != m_currentMenu) {
         return;
@@ -239,7 +239,7 @@ void Window::menuItemsChanged(const QVector<uint> &itemIds)
     Q_EMIT ItemsPropertiesUpdated(items, {});
 }
 
-void Window::menuChanged(const QVector<uint> &menuIds)
+void Window::menuChanged(const QList<uint> &menuIds)
 {
     if (qobject_cast<Menu *>(sender()) != m_currentMenu) {
         return;

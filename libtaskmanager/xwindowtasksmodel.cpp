@@ -64,7 +64,7 @@ public:
     Private(XWindowTasksModel *q);
     ~Private();
 
-    QVector<WId> windows;
+    QList<WId> windows;
 
     // key=transient child, value=leader
     QHash<WId, WId> transients;
@@ -87,7 +87,7 @@ public:
     void removeWindow(WId window);
     void windowChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
     void transientChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
-    void dataChanged(WId window, const QVector<int> &roles);
+    void dataChanged(WId window, const QList<int> &roles);
 
     KWindowInfo *windowInfo(WId window);
     AppData appData(WId window);
@@ -128,14 +128,14 @@ void XWindowTasksModel::Private::init()
         // Emit changes of all roles satisfied from app data cache.
         Q_EMIT q->dataChanged(q->index(0, 0),
                               q->index(windows.count() - 1, 0),
-                              QVector<int>{Qt::DecorationRole,
-                                           AbstractTasksModel::AppId,
-                                           AbstractTasksModel::AppName,
-                                           AbstractTasksModel::GenericName,
-                                           AbstractTasksModel::LauncherUrl,
-                                           AbstractTasksModel::LauncherUrlWithoutIcon,
-                                           AbstractTasksModel::CanLaunchNewInstance,
-                                           AbstractTasksModel::SkipTaskbar});
+                              QList<int>{Qt::DecorationRole,
+                                         AbstractTasksModel::AppId,
+                                         AbstractTasksModel::AppName,
+                                         AbstractTasksModel::GenericName,
+                                         AbstractTasksModel::LauncherUrl,
+                                         AbstractTasksModel::LauncherUrlWithoutIcon,
+                                         AbstractTasksModel::CanLaunchNewInstance,
+                                         AbstractTasksModel::SkipTaskbar});
     };
 
     cachedStackingOrder = KX11Extras::stackingOrder();
@@ -194,13 +194,13 @@ void XWindowTasksModel::Private::init()
         int row = windows.indexOf(oldActiveWindow);
 
         if (row != -1) {
-            dataChanged(oldActiveWindow, QVector<int>{IsActive});
+            dataChanged(oldActiveWindow, QList<int>{IsActive});
         }
 
         row = windows.indexOf(window);
 
         if (row != -1) {
-            dataChanged(window, QVector<int>{IsActive});
+            dataChanged(window, QList<int>{IsActive});
         }
     });
 
@@ -212,7 +212,7 @@ void XWindowTasksModel::Private::init()
         cachedStackingOrder = KX11Extras::stackingOrder();
         Q_ASSERT(q->hasIndex(0, 0));
         Q_ASSERT(q->hasIndex(q->rowCount() - 1, 0));
-        Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{StackingOrder});
+        Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QList<int>{StackingOrder});
     });
 
     activeWindow = KX11Extras::activeWindow();
@@ -244,7 +244,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
         // Update demands attention state for leader.
         if (info.hasState(NET::DemandsAttention) && windows.contains(leader)) {
             transientsDemandingAttention.insert(leader, window);
-            dataChanged(leader, QVector<int>{IsDemandingAttention});
+            dataChanged(leader, QList<int>{IsDemandingAttention});
         }
 
         return;
@@ -282,7 +282,7 @@ void XWindowTasksModel::Private::removeWindow(WId window)
 
             if (leader != XCB_WINDOW_NONE) {
                 transientsDemandingAttention.remove(leader, window);
-                dataChanged(leader, QVector<int>{IsDemandingAttention});
+                dataChanged(leader, QList<int>{IsDemandingAttention});
             }
         }
     }
@@ -306,10 +306,10 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
         if (info.hasState(NET::DemandsAttention)) {
             if (!transientsDemandingAttention.values(leader).contains(window)) {
                 transientsDemandingAttention.insert(leader, window);
-                dataChanged(leader, QVector<int>{IsDemandingAttention});
+                dataChanged(leader, QList<int>{IsDemandingAttention});
             }
         } else if (transientsDemandingAttention.remove(window)) {
-            dataChanged(leader, QVector<int>{IsDemandingAttention});
+            dataChanged(leader, QList<int>{IsDemandingAttention});
         }
         // Leader might have changed.
     } else if (properties2 & NET::WM2TransientFor) {
@@ -324,8 +324,8 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
                 if (leader != oldLeader) {
                     transientsDemandingAttention.remove(oldLeader, window);
                     transientsDemandingAttention.insert(leader, window);
-                    dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
-                    dataChanged(leader, QVector<int>{IsDemandingAttention});
+                    dataChanged(oldLeader, QList<int>{IsDemandingAttention});
+                    dataChanged(leader, QList<int>{IsDemandingAttention});
                 }
             }
         }
@@ -341,7 +341,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
 
     bool wipeInfoCache = false;
     bool wipeAppDataCache = false;
-    QVector<int> changedRoles;
+    QList<int> changedRoles;
 
     if (properties & (NET::WMPid) || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
@@ -422,7 +422,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     }
 }
 
-void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &roles)
+void XWindowTasksModel::Private::dataChanged(WId window, const QList<int> &roles)
 {
     const int i = windows.indexOf(window);
 

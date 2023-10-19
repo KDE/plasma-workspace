@@ -81,7 +81,7 @@ private:
     QList<CursorTheme *> list;
     QStringList baseDirs;
     QString defaultName;
-    QVector<CursorTheme *> pendingDeletions;
+    QList<CursorTheme *> pendingDeletions;
 };
 
 int CursorThemeModel::rowCount(const QModelIndex &) const

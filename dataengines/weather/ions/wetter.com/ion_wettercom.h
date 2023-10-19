@@ -13,7 +13,7 @@
 
 #include "../ion.h"
 
-#include <QVector>
+#include <QList>
 
 // wetter.com API project data
 #define PROJECTNAME "weatherion"
@@ -70,15 +70,15 @@ public:
 
         bool hasNightWeather() const;
 
-        QVector<WeatherData::ForecastInfo *> dayForecasts;
-        QVector<WeatherData::ForecastInfo *> nightForecasts;
+        QList<WeatherData::ForecastInfo *> dayForecasts;
+        QList<WeatherData::ForecastInfo *> nightForecasts;
 
     private:
-        int getMaxTemp(const QVector<WeatherData::ForecastInfo *> &forecastInfos) const;
-        int getMinTemp(const QVector<WeatherData::ForecastInfo *> &forecastInfos) const;
+        int getMaxTemp(const QList<WeatherData::ForecastInfo *> &forecastInfos) const;
+        int getMinTemp(const QList<WeatherData::ForecastInfo *> &forecastInfos) const;
     };
 
-    QVector<WeatherData::ForecastPeriod *> forecasts;
+    QList<WeatherData::ForecastPeriod *> forecasts;
 };
 
 Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_RELOCATABLE_TYPE);
@@ -144,7 +144,7 @@ private:
 
     // Key dicts
     QHash<QString, WetterComIon::PlaceInfo> m_place;
-    QVector<QString> m_locations;
+    QList<QString> m_locations;
 
     // Weather information
     QHash<QString, WeatherData> m_weatherData;

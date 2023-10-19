@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <QVector>
+#include <QList>
 
 #include <Plasma5Support/DataContainer>
 #include <Plasma5Support/DataEngine>
@@ -73,5 +73,5 @@ private:
 
     NotificationManager::JobsModel::Ptr m_jobsModel;
 
-    QVector<NotificationManager::Job *> m_jobs;
+    QList<NotificationManager::Job *> m_jobs;
 };

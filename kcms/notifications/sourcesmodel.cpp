@@ -276,8 +276,8 @@ void SourcesModel::load()
 
     QCollator collator;
 
-    QVector<SourceData> appsData;
-    QVector<SourceData> servicesData;
+    QList<SourceData> appsData;
+    QList<SourceData> servicesData;
 
     QStringList notifyRcFiles;
     QStringList desktopEntries;
@@ -325,7 +325,7 @@ void SourcesModel::load()
             // Add events
             const QStringList groups = config->groupList().filter(s_eventGroupRegExp);
 
-            QVector<NotificationManager::EventSettings *> events;
+            QList<NotificationManager::EventSettings *> events;
             events.reserve(groups.size());
             for (const QString &group : groups) {
                 const QString eventId = s_eventGroupRegExp.match(group).captured(1);

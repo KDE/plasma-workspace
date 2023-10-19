@@ -7,10 +7,10 @@
 #pragma once
 
 #include <QDBusContext>
+#include <QList>
 #include <QMultiHash>
 #include <QObject>
 #include <QString>
-#include <QVector>
 #include <QWindow> // for WId
 
 #include <functional>
@@ -91,8 +91,8 @@ private:
     void triggerAction(const QString &name, const QVariant &target, uint timestamp = 0);
     Actions *getActionsForAction(const QString &name, QString &lookupName) const;
 
-    void menuChanged(const QVector<uint> &menuIds);
-    void menuItemsChanged(const QVector<uint> &itemIds);
+    void menuChanged(const QList<uint> &menuIds);
+    void menuItemsChanged(const QList<uint> &itemIds);
 
     void onActionsChanged(const QStringList &dirty, const QString &prefix);
     void onMenuSubscribed(uint id);

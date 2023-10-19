@@ -75,7 +75,7 @@ public:
 
     DataDeviceManager *m_manager = nullptr;
     Seat *m_seat = nullptr;
-    QVector<DataOffer *> m_sentSelectionOffers;
+    QList<DataOffer *> m_sentSelectionOffers;
 
 protected:
     void data_device_release(Resource *resource) override

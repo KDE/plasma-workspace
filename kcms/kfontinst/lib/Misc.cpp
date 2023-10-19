@@ -7,6 +7,7 @@
 #include "config-paths.h"
 #include <QByteArray>
 #include <QDir>
+#include <QList>
 #include <QMap>
 #include <QProcess>
 #include <QSet>
@@ -15,7 +16,6 @@
 #include <QTextCodec>
 #include <QTextStream>
 #include <QUrlQuery>
-#include <QVector>
 #include <ctype.h>
 
 namespace KFI
@@ -379,7 +379,7 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
 
     for (; fIt != fEnd; ++fIt) {
         if (fIt.value().count() > 1) {
-            QVector<QString> orig(fIt.value().count()), modified(fIt.value().count());
+            QList<QString> orig(fIt.value().count()), modified(fIt.value().count());
             QSet<QString>::ConstIterator oIt(fIt.value().constBegin());
             bool good = true;
             int count = fIt.value().count();

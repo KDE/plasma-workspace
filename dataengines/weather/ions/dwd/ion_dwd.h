@@ -18,7 +18,7 @@
 
 #include "../ion.h"
 
-#include <QVector>
+#include <QList>
 
 #define CATALOGUE_URL "https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication&nn=16102"
 #define FORECAST_URL "https://app-prod-ws.warnwetter.de/v30/stationOverviewExtended?stationIds=%1"
@@ -68,7 +68,7 @@ public:
     };
 
     // 7 day forecast
-    QVector<WeatherData::ForecastInfo *> forecasts;
+    QList<WeatherData::ForecastInfo *> forecasts;
 
     struct WarningInfo {
         QString type;
@@ -77,7 +77,7 @@ public:
         QDateTime timestamp;
     };
 
-    QVector<WeatherData::WarningInfo *> warnings;
+    QList<WeatherData::WarningInfo *> warnings;
 
     bool isForecastsDataPending = false;
     bool isMeasureDataPending = false;
@@ -128,7 +128,7 @@ private:
     void deleteForecasts();
 
     // Helper methods
-    void calculatePositions(QStringList lines, QVector<int> &namePositionalInfo, QVector<int> &stationIdPositionalInfo);
+    void calculatePositions(QStringList lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo);
     QString camelCaseString(const QString text);
     QString extractString(QByteArray array, int start, int length);
     QString roundWindDirections(int windDirection);

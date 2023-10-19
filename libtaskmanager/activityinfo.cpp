@@ -57,7 +57,7 @@ ActivityInfo::ActivityInfo(QObject *parent)
 
     if (!d->activitiesModel) {
         d->activitiesModel = new KActivities::ActivitiesModel();
-        d->activitiesModel->setShownStates(QVector<KActivities::Info::State>{KActivities::Info::Running});
+        d->activitiesModel->setShownStates(QList<KActivities::Info::State>{KActivities::Info::Running});
     }
 
     connect(d->activitiesModel, &KActivities::ActivitiesModel::modelReset, this, &ActivityInfo::namesOfRunningActivitiesChanged);
@@ -65,7 +65,7 @@ ActivityInfo::ActivityInfo(QObject *parent)
     connect(d->activitiesModel,
             &KActivities::ActivitiesModel::dataChanged,
             this,
-            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
                 Q_UNUSED(topLeft)
                 Q_UNUSED(bottomRight)
 

@@ -10,9 +10,9 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QList>
 #include <QPalette>
 #include <QString>
-#include <QVector>
 
 struct ColorsModelData {
     QString display;
@@ -78,5 +78,5 @@ Q_SIGNALS:
 private:
     QString m_selectedScheme;
 
-    QVector<ColorsModelData> m_data;
+    QList<ColorsModelData> m_data;
 };

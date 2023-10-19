@@ -25,7 +25,7 @@ public:
     Private(XStartupTasksModel *q);
     KDirWatch *configWatcher = nullptr;
     KStartupInfo *startupInfo = nullptr;
-    QVector<KStartupInfoId> startups;
+    QList<KStartupInfoId> startups;
     QHash<QByteArray, KStartupInfoData> startupData;
     QHash<QByteArray, QUrl> launcherUrls;
 

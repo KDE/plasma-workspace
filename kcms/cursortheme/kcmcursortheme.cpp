@@ -74,7 +74,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
     }
 
     connect(m_themeModel, &QAbstractItemModel::dataChanged, this, &CursorThemeConfig::settingsChanged);
-    connect(m_themeModel, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &start, const QModelIndex &end, const QVector<int> &roles) {
+    connect(m_themeModel, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &start, const QModelIndex &end, const QList<int> &roles) {
         const QModelIndex currentThemeIndex = m_themeModel->findIndex(cursorThemeSettings()->cursorTheme());
         if (roles.contains(CursorTheme::PendingDeletionRole) && currentThemeIndex.data(CursorTheme::PendingDeletionRole) == true
             && start.row() <= currentThemeIndex.row() && currentThemeIndex.row() <= end.row()) {

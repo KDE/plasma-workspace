@@ -177,18 +177,14 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &QAbstractItemModel::rowsRemoved, q, [this] {
             updateCount();
         });
-        connect(filterModel,
-                &QAbstractItemModel::dataChanged,
-                q,
-                [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-                    Q_UNUSED(topLeft);
-                    Q_UNUSED(bottomRight);
-                    if (roles.isEmpty() || roles.contains(Notifications::UpdatedRole) || roles.contains(Notifications::ExpiredRole)
-                        || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole)
-                        || roles.contains(Notifications::ReadRole)) {
-                        updateCount();
-                    }
-                });
+        connect(filterModel, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
+            Q_UNUSED(topLeft);
+            Q_UNUSED(bottomRight);
+            if (roles.isEmpty() || roles.contains(Notifications::UpdatedRole) || roles.contains(Notifications::ExpiredRole)
+                || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole) || roles.contains(Notifications::ReadRole)) {
+                updateCount();
+            }
+        });
     }
 
     if (!sortModel) {

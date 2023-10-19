@@ -152,7 +152,7 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
     }
 }
 
-void HistoryModel::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
+void HistoryModel::clearAndBatchInsert(const QList<HistoryItemPtr> &items)
 {
     if (m_maxSize == 0) {
         // special case - cannot insert any items

@@ -90,7 +90,7 @@ QString AutoStart::startService()
     while (!m_started.isEmpty()) {
         // Check for items that depend on previously started items
         QString lastItem = m_started[0];
-        QMutableVectorIterator<AutoStartItem> it(m_startList);
+        QMutableListIterator<AutoStartItem> it(m_startList);
         while (it.hasNext()) {
             const auto &item = it.next();
             if (item.phase == m_phase && item.startAfter == lastItem) {
@@ -104,7 +104,7 @@ QString AutoStart::startService()
     }
 
     // Check for items that don't depend on anything
-    QMutableVectorIterator<AutoStartItem> it(m_startList);
+    QMutableListIterator<AutoStartItem> it(m_startList);
     while (it.hasNext()) {
         const auto &item = it.next();
         if (item.phase == m_phase && item.startAfter.isEmpty()) {
@@ -130,9 +130,9 @@ QString AutoStart::startService()
     return QString();
 }
 
-QVector<AutoStartItem> AutoStart::startList() const
+QList<AutoStartItem> AutoStart::startList() const
 {
-    QVector<AutoStartItem> ret;
+    QList<AutoStartItem> ret;
     for (const auto &asi : m_startList) {
         if (asi.phase == m_phase)
             ret << asi;

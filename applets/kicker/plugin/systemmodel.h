@@ -34,6 +34,6 @@ protected Q_SLOTS:
 private:
     void populate();
 
-    QVector<SystemEntry *> m_entries;
+    QList<SystemEntry *> m_entries;
     decltype(m_entries) m_invalidEntries;
 };

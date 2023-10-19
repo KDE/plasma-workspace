@@ -154,9 +154,9 @@ public:
         uint configureSerial = 0;
         int bufferScale = 1;
     } m_pending, m_committed;
-    QVector<DoubleBufferedState *> m_commits;
-    QVector<Callback *> m_waitingFrameCallbacks;
-    QVector<Output *> m_outputs;
+    QList<DoubleBufferedState *> m_commits;
+    QList<Callback *> m_waitingFrameCallbacks;
+    QList<Output *> m_outputs;
     SurfaceRole *m_role = nullptr;
 
 signals:
@@ -202,7 +202,7 @@ public:
     }
     bool isClean() override;
     QString dirtyMessage() override;
-    QVector<Surface *> m_surfaces;
+    QList<Surface *> m_surfaces;
     CoreCompositor *m_compositor = nullptr;
 
 signals:
@@ -305,13 +305,13 @@ public:
     CoreCompositor *m_compositor = nullptr;
 
     Pointer *m_pointer = nullptr;
-    QVector<Pointer *> m_oldPointers;
+    QList<Pointer *> m_oldPointers;
 
     Touch *m_touch = nullptr;
-    QVector<Touch *> m_oldTouchs;
+    QList<Touch *> m_oldTouchs;
 
     Keyboard *m_keyboard = nullptr;
-    QVector<Keyboard *> m_oldKeyboards;
+    QList<Keyboard *> m_oldKeyboards;
 
     uint m_capabilities = 0;
 
@@ -351,7 +351,7 @@ public:
     void sendFrame(wl_client *client);
 
     Seat *m_seat = nullptr;
-    QVector<uint> m_enterSerials;
+    QList<uint> m_enterSerials;
     QPoint m_hotspot;
 
 signals:
@@ -413,11 +413,11 @@ class Shm : public Global, public QtWaylandServer::wl_shm
 {
     Q_OBJECT
 public:
-    explicit Shm(CoreCompositor *compositor, QVector<format> formats = {format_argb8888, format_xrgb8888, format_rgb888}, int version = 1);
+    explicit Shm(CoreCompositor *compositor, QList<format> formats = {format_argb8888, format_xrgb8888, format_rgb888}, int version = 1);
     bool isClean() override;
     CoreCompositor *m_compositor = nullptr;
-    QVector<ShmPool *> m_pools;
-    const QVector<format> m_formats;
+    QList<ShmPool *> m_pools;
+    const QList<format> m_formats;
 
 protected:
     void shm_create_pool(Resource *resource, uint32_t id, int32_t fd, int32_t size) override;
@@ -434,7 +434,7 @@ class ShmPool : QObject, public QtWaylandServer::wl_shm_pool
 public:
     explicit ShmPool(Shm *shm, wl_client *client, int id, int version = 1);
     Shm *m_shm = nullptr;
-    QVector<ShmBuffer *> m_buffers;
+    QList<ShmBuffer *> m_buffers;
 
 protected:
     void shm_pool_create_buffer(Resource *resource, uint32_t id, int32_t offset, int32_t width, int32_t height, int32_t stride, uint32_t format) override;

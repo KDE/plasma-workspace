@@ -88,8 +88,8 @@ public:
     QString windDirection;
     QString windDegrees;
 
-    QVector<WeatherData::WeatherEvent *> watches;
-    QVector<WeatherData::WeatherEvent *> warnings;
+    QList<WeatherData::WeatherEvent *> watches;
+    QList<WeatherData::WeatherEvent *> warnings;
 
     float normalHigh;
     float normalLow;
@@ -100,7 +100,7 @@ public:
     QString UVRating;
 
     // 5 day Forecast
-    QVector<WeatherData::ForecastInfo *> forecasts;
+    QList<WeatherData::ForecastInfo *> forecasts;
 
     // Historical data from previous day.
     float prevHigh;

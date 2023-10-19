@@ -36,7 +36,7 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
     pendingRemovalTimer.setSingleShot(true);
     pendingRemovalTimer.setInterval(50ms);
     connect(&pendingRemovalTimer, &QTimer::timeout, q, [this, q] {
-        QVector<int> rowsToBeRemoved;
+        QList<int> rowsToBeRemoved;
         rowsToBeRemoved.reserve(pendingRemovals.count());
         for (uint id : std::as_const(pendingRemovals)) {
             int row = q->rowOfNotification(id); // oh the complexity...
@@ -182,16 +182,16 @@ void AbstractNotificationsModel::Private::setupNotificationTimeout(const Notific
     timer->start();
 }
 
-void AbstractNotificationsModel::Private::removeRows(const QVector<int> &rows)
+void AbstractNotificationsModel::Private::removeRows(const QList<int> &rows)
 {
     if (rows.isEmpty()) {
         return;
     }
 
-    QVector<int> rowsToBeRemoved(rows);
+    QList<int> rowsToBeRemoved(rows);
     std::sort(rowsToBeRemoved.begin(), rowsToBeRemoved.end());
 
-    QVector<QPair<int, int>> clearQueue;
+    QList<QPair<int, int>> clearQueue;
 
     QPair<int, int> clearRange{rowsToBeRemoved.first(), rowsToBeRemoved.first()};
 
@@ -464,7 +464,7 @@ void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
         return;
     }
 
-    QVector<int> rowsToRemove;
+    QList<int> rowsToRemove;
 
     for (int i = 0; i < d->notifications.count(); ++i) {
         const Notification &notification = d->notifications.at(i);
@@ -495,7 +495,7 @@ void AbstractNotificationsModel::setupNotificationTimeout(const Notification &no
     d->setupNotificationTimeout(notification);
 }
 
-const QVector<Notification> &AbstractNotificationsModel::notifications()
+const QList<Notification> &AbstractNotificationsModel::notifications()
 {
     return d->notifications;
 }

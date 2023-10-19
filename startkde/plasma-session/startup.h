@@ -39,7 +39,7 @@ public Q_SLOTS:
 private:
     void autoStart(int phase);
 
-    QVector<QProcess *> m_processes;
+    QList<QProcess *> m_processes;
     std::unique_ptr<QEventLoopLocker> m_lock;
     static Startup *s_self;
 };

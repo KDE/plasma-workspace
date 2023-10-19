@@ -93,7 +93,7 @@ private:
 
     KDisplayManager m_displayManager;
 
-    QVector<SessionEntry> m_data;
+    QList<SessionEntry> m_data;
 
     bool m_shouldLock = true;
 

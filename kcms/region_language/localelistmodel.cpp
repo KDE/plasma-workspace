@@ -143,7 +143,7 @@ void LocaleListModel::setSelectedConfig(int config)
         m_configType = static_cast<SettingType>(config);
     }
     Q_EMIT selectedConfigChanged();
-    Q_EMIT dataChanged(createIndex(0, 0), createIndex(rowCount(), 0), QVector<int>(1, Example));
+    Q_EMIT dataChanged(createIndex(0, 0), createIndex(rowCount(), 0), QList<int>(1, Example));
 }
 
 void LocaleListModel::setLang(const QString &lang)

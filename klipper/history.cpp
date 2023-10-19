@@ -95,7 +95,7 @@ void History::insert(const HistoryItemPtr &item)
     m_model->insert(item);
 }
 
-void History::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
+void History::clearAndBatchInsert(const QList<HistoryItemPtr> &items)
 {
     m_model->clearAndBatchInsert(items);
 }

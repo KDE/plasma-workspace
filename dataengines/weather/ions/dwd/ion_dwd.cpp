@@ -73,7 +73,7 @@ void DWDIon::reset()
 
 void DWDIon::deleteForecasts()
 {
-    // Destroy each forecast stored in a QVector
+    // Destroy each forecast stored in a QList
     for (auto it = m_weatherData.begin(), end = m_weatherData.end(); it != end; ++it) {
         qDeleteAll(it.value().forecasts);
         it.value().forecasts.clear();
@@ -348,10 +348,10 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
     m_forecastJobJSON.remove(job);
 }
 
-void DWDIon::calculatePositions(QStringList lines, QVector<int> &namePositionalInfo, QVector<int> &stationIdPositionalInfo)
+void DWDIon::calculatePositions(QStringList lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo)
 {
     QStringList stringLengths = lines[1].split(QChar::Space);
-    QVector<int> lengths;
+    QList<int> lengths;
     for (const QString &length : std::as_const(stringLengths)) {
         lengths.append(length.count());
     }
@@ -378,8 +378,8 @@ void DWDIon::parseStationData(QByteArray data)
     QString stringData = QString::fromLatin1(data);
     QStringList lines = stringData.split(QChar::LineFeed);
 
-    QVector<int> namePositionalInfo(2);
-    QVector<int> stationIdPositionalInfo(2);
+    QList<int> namePositionalInfo(2);
+    QList<int> stationIdPositionalInfo(2);
     calculatePositions(lines, namePositionalInfo, stationIdPositionalInfo);
 
     // This loop parses the station file (https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg)
@@ -432,7 +432,7 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
         QVariantList daysList = weatherMap[QStringLiteral("days")].toList();
 
         WeatherData &weatherData = m_weatherData[source];
-        QVector<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
+        QList<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
 
         // Flush out the old forecasts when updating.
         forecasts.clear();
@@ -474,7 +474,7 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
         // Warnings data
         QVariantList warningData = weatherMap[QStringLiteral("warnings")].toList();
 
-        QVector<WeatherData::WarningInfo *> &warningList = weatherData.warnings;
+        QList<WeatherData::WarningInfo *> &warningList = weatherData.warnings;
 
         // Flush out the old forecasts when updating.
         warningList.clear();

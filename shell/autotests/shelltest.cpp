@@ -433,23 +433,22 @@ void ShellTest::testScreenRemovalRecyclingViews()
 
 void ShellTest::testReorderScreens_data()
 {
-    QTest::addColumn<QVector<QRect>>("geometries");
+    QTest::addColumn<QList<QRect>>("geometries");
     QTest::addColumn<QStringList>("orderBefore");
     QTest::addColumn<QStringList>("orderAfter");
 
-    QTest::newRow("twoScreens") << QVector<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}}) << QStringList({"WL-1", "DP-1"})
-                                << QStringList({"DP-1", "WL-1"});
-    QTest::newRow("3screensReorder0_1") << QVector<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
+    QTest::newRow("twoScreens") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}}) << QStringList({"WL-1", "DP-1"}) << QStringList({"DP-1", "WL-1"});
+    QTest::newRow("3screensReorder0_1") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
                                         << QStringList({"WL-1", "DP-1", "DP-2"}) << QStringList({"DP-1", "WL-1", "DP-2"});
-    QTest::newRow("3screensReorder2_3") << QVector<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
+    QTest::newRow("3screensReorder2_3") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
                                         << QStringList({"WL-1", "DP-1", "DP-2"}) << QStringList({"DP-1", "WL-1", "DP-2"});
-    QTest::newRow("3screensShuffled") << QVector<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
+    QTest::newRow("3screensShuffled") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
                                       << QStringList({"WL-1", "DP-1", "DP-2"}) << QStringList({"DP-2", "DP-1", "WL-1"});
 }
 
 void ShellTest::testReorderScreens()
 {
-    QFETCH(QVector<QRect>, geometries);
+    QFETCH(QList<QRect>, geometries);
     QFETCH(QStringList, orderBefore);
     QFETCH(QStringList, orderAfter);
 
@@ -472,11 +471,11 @@ void ShellTest::testReorderScreens()
     }
     setScreenOrder(orderBefore, true);
 
-    QVector<DesktopView *> desktopViews;
-    QVector<PanelView *> panelViews;
-    QVector<Plasma::Containment *> desktopContainments;
-    QVector<Plasma::Containment *> panelContainments;
-    QVector<QScreen *> screens;
+    QList<DesktopView *> desktopViews;
+    QList<PanelView *> panelViews;
+    QList<Plasma::Containment *> desktopContainments;
+    QList<Plasma::Containment *> panelContainments;
+    QList<QScreen *> screens;
 
     for (int i = 0; i < orderBefore.size(); ++i) {
         auto *view = m_corona->m_desktopViewForScreen[i];
@@ -517,13 +516,13 @@ void ShellTest::testReorderScreens()
         view->screenToFollow();
     }
 
-    QVector<DesktopView *> desktopViewsAfter;
-    QVector<PanelView *> panelViewsAfter;
+    QList<DesktopView *> desktopViewsAfter;
+    QList<PanelView *> panelViewsAfter;
     panelViewsAfter.resize(orderAfter.size());
-    QVector<Plasma::Containment *> desktopContainmentsAfter;
-    QVector<Plasma::Containment *> panelContainmentsAfter;
+    QList<Plasma::Containment *> desktopContainmentsAfter;
+    QList<Plasma::Containment *> panelContainmentsAfter;
     panelContainmentsAfter.resize(orderAfter.size());
-    QVector<QScreen *> screensAfter;
+    QList<QScreen *> screensAfter;
 
     for (int i = 0; i < orderAfter.size(); ++i) {
         auto *view = m_corona->m_desktopViewForScreen[i];
@@ -571,9 +570,9 @@ void ShellTest::testReorderContainments()
     testSecondScreenInsertion();
     testPanelInsertion();
 
-    QVector<DesktopView *> desktopViews;
-    QVector<Plasma::Containment *> desktopContainments;
-    QVector<QScreen *> screens = m_corona->m_screenPool->screenOrder().toVector();
+    QList<DesktopView *> desktopViews;
+    QList<Plasma::Containment *> desktopContainments;
+    QList<QScreen *> screens = m_corona->m_screenPool->screenOrder().toVector();
     QCOMPARE(screens.size(), 3);
 
     for (int i = 0; i < screens.size(); ++i) {

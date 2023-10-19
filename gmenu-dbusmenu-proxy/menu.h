@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include <QList>
 #include <QObject>
 #include <QString>
-#include <QVector>
 
 #include "../libdbusmenuqt/dbusmenutypes_p.h"
 #include "gdbusmenutypes_p.h"
@@ -46,8 +46,8 @@ Q_SIGNALS:
     void subscribed(uint id);
     void failedToSubscribe(uint id);
 
-    void itemsChanged(const QVector<uint> &itemIds);
-    void menusChanged(const QVector<uint> &menuIds);
+    void itemsChanged(const QList<uint> &itemIds);
+    void menusChanged(const QList<uint> &menuIds);
 
 private Q_SLOTS:
     void onMenuChanged(const GMenuChangeList &changes);

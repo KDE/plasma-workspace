@@ -81,7 +81,7 @@ void EnvCanadaIon::reset()
 
 EnvCanadaIon::~EnvCanadaIon()
 {
-    // Destroy each watch/warning stored in a QVector
+    // Destroy each watch/warning stored in a QList
     deleteForecasts();
 }
 
@@ -1502,7 +1502,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
         data.insert(QStringLiteral("UV Rating"), weatherData.UVRating);
     }
 
-    const QVector<WeatherData::WeatherEvent *> &watches = weatherData.watches;
+    const QList<WeatherData::WeatherEvent *> &watches = weatherData.watches;
 
     // Set number of forecasts per day/night supported
     data.insert(QStringLiteral("Total Watches Issued"), watches.size());
@@ -1518,7 +1518,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
         data.insert(QStringLiteral("Watch Timestamp ") + number, watch->timestamp);
     }
 
-    const QVector<WeatherData::WeatherEvent *> &warnings = weatherData.warnings;
+    const QList<WeatherData::WeatherEvent *> &warnings = weatherData.warnings;
 
     data.insert(QStringLiteral("Total Warnings Issued"), warnings.size());
 
@@ -1532,7 +1532,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
         data.insert(QStringLiteral("Warning Timestamp ") + number, warning->timestamp);
     }
 
-    const QVector<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
+    const QList<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
 
     // Set number of forecasts per day/night supported
     data.insert(QStringLiteral("Total Weather Days"), forecasts.size());

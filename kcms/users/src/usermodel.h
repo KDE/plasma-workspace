@@ -46,5 +46,5 @@ public:
 
 private:
     OrgFreedesktopAccountsInterface *m_dbusInterface;
-    QVector<User *> m_userList;
+    QList<User *> m_userList;
 };

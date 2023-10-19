@@ -258,7 +258,7 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
 
 QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal dpr, int limit)
 {
-    static QVector<QStringList> s_previewIcons{
+    static QList<QStringList> s_previewIcons{
         {QStringLiteral("system-run"), QStringLiteral("exec")},
         {QStringLiteral("folder")},
         {QStringLiteral("document"), QStringLiteral("text-x-generic")},

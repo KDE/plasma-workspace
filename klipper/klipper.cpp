@@ -448,7 +448,7 @@ bool Klipper::loadHistory()
     history_stream >> version;
     delete[] version;
 
-    QVector<HistoryItemPtr> items;
+    QList<HistoryItemPtr> items;
     for (HistoryItemPtr item = HistoryItem::create(history_stream); item; item = HistoryItem::create(history_stream)) {
         items.append(item);
     }

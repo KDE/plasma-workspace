@@ -65,7 +65,7 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
     if (!m_containmentActionConfigModel) {
         m_containmentActionConfigModel = new PlasmaQuick::ConfigModel(this);
 
-        const QVector<KPluginMetaData> actions = Plasma::PluginLoader::self()->listContainmentActionsMetaData(QString());
+        const QList<KPluginMetaData> actions = Plasma::PluginLoader::self()->listContainmentActionsMetaData(QString());
 
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
 

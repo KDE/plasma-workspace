@@ -142,10 +142,10 @@ public:
      * \brief Returns all globals with the given type, if any
      */
     template<typename global_type>
-    QVector<global_type *> getAll()
+    QList<global_type *> getAll()
     {
         warnIfNotLockedByThread(Q_FUNC_INFO);
-        QVector<global_type *> matching;
+        QList<global_type *> matching;
         for (auto *global : std::as_const(m_globals)) {
             if (auto *casted = qobject_cast<global_type *>(global))
                 matching.append(casted);
@@ -202,7 +202,7 @@ protected:
     QByteArray m_socketName;
     wl_event_loop *m_eventLoop = nullptr;
     bool m_running = true;
-    QVector<Global *> m_globals;
+    QList<Global *> m_globals;
     QElapsedTimer m_timer;
 
 private:

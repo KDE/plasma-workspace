@@ -131,7 +131,7 @@ public:
 
 public Q_SLOTS:
     void nextSlide();
-    void slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
+    void slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles);
 
 Q_SIGNALS:
     void settingsChanged();

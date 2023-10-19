@@ -11,9 +11,9 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QList>
 #include <QPalette>
 #include <QString>
-#include <QVector>
 
 #include <memory>
 
@@ -71,8 +71,8 @@ Q_SIGNALS:
 
 private:
     QString m_selectedTheme;
-    // Can't use QVector because unique_ptr causes deletion of copy-ctor
-    QVector<ThemesModelData> m_data;
+    // Can't use QList because unique_ptr causes deletion of copy-ctor
+    QList<ThemesModelData> m_data;
 };
 
 struct ThemesModelData {

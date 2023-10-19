@@ -91,13 +91,13 @@ void LauncherTasksModel::Private::init()
         // Emit changes of all roles satisfied from app data cache.
         Q_EMIT q->dataChanged(q->index(0, 0),
                               q->index(launchersOrder.count() - 1, 0),
-                              QVector<int>{Qt::DisplayRole,
-                                           Qt::DecorationRole,
-                                           AbstractTasksModel::AppId,
-                                           AbstractTasksModel::AppName,
-                                           AbstractTasksModel::GenericName,
-                                           AbstractTasksModel::LauncherUrl,
-                                           AbstractTasksModel::LauncherUrlWithoutIcon});
+                              QList<int>{Qt::DisplayRole,
+                                         Qt::DecorationRole,
+                                         AbstractTasksModel::AppId,
+                                         AbstractTasksModel::AppName,
+                                         AbstractTasksModel::GenericName,
+                                         AbstractTasksModel::LauncherUrl,
+                                         AbstractTasksModel::LauncherUrlWithoutIcon});
     });
 
     QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, q, [this]() {

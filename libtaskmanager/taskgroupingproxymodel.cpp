@@ -25,7 +25,7 @@ public:
     bool groupDemandingAttention = false;
     int windowTasksThreshold = -1;
 
-    QVector<QVector<int> *> rowMap;
+    QList<QList<int> *> rowMap;
 
     QSet<QString> blacklistedAppIds;
     QSet<QString> blacklistedLauncherUrls;
@@ -40,7 +40,7 @@ public:
     void sourceRowsRemoved(const QModelIndex &parent, int start, int end);
     void sourceModelAboutToBeReset();
     void sourceModelReset();
-    void sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QVector<int> &roles = QVector<int>());
+    void sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QList<int> &roles = QList<int>());
     void adjustMap(int anchor, int delta);
 
     void rebuildMap();
@@ -121,7 +121,7 @@ void TaskGroupingProxyModel::Private::sourceRowsInserted(const QModelIndex &pare
     for (int i = start; i <= end; ++i) {
         if (!shouldGroup || !tryToGroup(q->sourceModel()->index(i, 0))) {
             q->beginInsertRows(QModelIndex(), rowMap.count(), rowMap.count());
-            rowMap.append(new QVector<int>{i});
+            rowMap.append(new QList<int>{i});
             q->endInsertRows();
         }
     }
@@ -138,7 +138,7 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
 
     for (int i = first; i <= last; ++i) {
         for (int j = 0; j < rowMap.count(); ++j) {
-            const QVector<int> *sourceRows = rowMap.at(j);
+            const QList<int> *sourceRows = rowMap.at(j);
             const int mapIndex = sourceRows->indexOf(i);
 
             if (mapIndex != -1) {
@@ -198,7 +198,7 @@ void TaskGroupingProxyModel::Private::sourceModelReset()
     q->endResetModel();
 }
 
-void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QVector<int> &roles)
+void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QList<int> &roles)
 {
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
         const QModelIndex &sourceIndex = q->sourceModel()->index(i, 0);
@@ -239,7 +239,7 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
 void TaskGroupingProxyModel::Private::adjustMap(int anchor, int delta)
 {
     for (int i = 0; i < rowMap.count(); ++i) {
-        QVector<int> *sourceRows = rowMap.at(i);
+        QList<int> *sourceRows = rowMap.at(i);
         for (auto it = sourceRows->begin(); it != sourceRows->end(); ++it) {
             if ((*it) >= anchor) {
                 *it += delta;
@@ -258,7 +258,7 @@ void TaskGroupingProxyModel::Private::rebuildMap()
     rowMap.reserve(rows);
 
     for (int i = 0; i < rows; ++i) {
-        rowMap.append(new QVector<int>{i});
+        rowMap.append(new QList<int>{i});
     }
 
     checkGrouping(true /* silent */);
@@ -434,7 +434,7 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
     }
 
     // The first child will move up to the top level.
-    QVector<int> extraChildren = rowMap.at(row)->mid(1);
+    QList<int> extraChildren = rowMap.at(row)->mid(1);
 
     // NOTE: We're going to do remove+insert transactions instead of a
     // single reparenting move transaction to save on complexity in the
@@ -457,7 +457,7 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
     }
 
     for (int i = 0; i < extraChildren.count(); ++i) {
-        rowMap.append(new QVector<int>{extraChildren.at(i)});
+        rowMap.append(new QList<int>{extraChildren.at(i)});
     }
 
     if (!silent) {
@@ -497,7 +497,7 @@ QModelIndex TaskGroupingProxyModel::parent(const QModelIndex &child) const
     if (child.internalPointer() == nullptr) {
         return QModelIndex();
     } else {
-        const int parentRow = d->rowMap.indexOf(static_cast<QVector<int> *>(child.internalPointer()));
+        const int parentRow = d->rowMap.indexOf(static_cast<QList<int> *>(child.internalPointer()));
 
         if (parentRow != -1) {
             return index(parentRow, 0);
@@ -518,7 +518,7 @@ QModelIndex TaskGroupingProxyModel::mapFromSource(const QModelIndex &sourceIndex
     }
 
     for (int i = 0; i < d->rowMap.count(); ++i) {
-        const QVector<int> *sourceRows = d->rowMap.at(i);
+        const QList<int> *sourceRows = d->rowMap.at(i);
         const int childIndex = sourceRows->indexOf(sourceIndex.row());
         const QModelIndex parent = index(i, 0);
 
@@ -1113,7 +1113,7 @@ void TaskGroupingProxyModel::requestVirtualDesktops(const QModelIndex &index, co
     if (index.parent().isValid() || !d->isGroup(index.row())) {
         d->abstractTasksSourceModel->requestVirtualDesktops(mapToSource(index), desktops);
     } else {
-        QVector<QModelIndex> groupChildren;
+        QList<QModelIndex> groupChildren;
 
         const int childCount = rowCount(index);
 
@@ -1138,7 +1138,7 @@ void TaskGroupingProxyModel::requestNewVirtualDesktop(const QModelIndex &index)
     if (index.parent().isValid() || !d->isGroup(index.row())) {
         d->abstractTasksSourceModel->requestNewVirtualDesktop(mapToSource(index));
     } else {
-        QVector<QModelIndex> groupChildren;
+        QList<QModelIndex> groupChildren;
 
         const int childCount = rowCount(index);
 
@@ -1163,7 +1163,7 @@ void TaskGroupingProxyModel::requestActivities(const QModelIndex &index, const Q
     if (index.parent().isValid() || !d->isGroup(index.row())) {
         d->abstractTasksSourceModel->requestActivities(mapToSource(index), activities);
     } else {
-        QVector<QModelIndex> groupChildren;
+        QList<QModelIndex> groupChildren;
 
         const int childCount = rowCount(index);
 
@@ -1225,7 +1225,7 @@ void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
 
             if (idx.data(AbstractTasksModel::AppId).toString() == appId
                 || launcherUrlsMatch(idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(), launcherUrl, IgnoreQueryItems)) {
-                Q_EMIT dataChanged(idx, idx, QVector<int>{AbstractTasksModel::IsGroupable});
+                Q_EMIT dataChanged(idx, idx, QList<int>{AbstractTasksModel::IsGroupable});
             }
         }
     }

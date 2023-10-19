@@ -52,8 +52,8 @@ private:
         bool enabled;
     };
     QTimer *m_reloadTimer = nullptr;
-    QVector<Data> m_screens;
-    QVector<ShellContainmentModel *> m_containments;
+    QList<Data> m_screens;
+    QList<ShellContainmentModel *> m_containments;
 };
 
 class ShellContainmentModel : public QAbstractListModel
@@ -118,7 +118,7 @@ private:
         const Plasma::Containment *containment;
     };
     QTimer *m_reloadTimer = nullptr;
-    QVector<Data> m_containments;
+    QList<Data> m_containments;
     ScreenPoolModel *m_screenPoolModel;
     QHash<QString, KActivities::Info *> m_activitiesInfos;
     KActivities::Consumer *m_activityConsumer;

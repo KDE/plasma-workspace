@@ -216,7 +216,7 @@ void XWindowTasksModelTest::test_modelData()
         QVERIFY(!oldWindowIcon.isNull());
         window->setIcon(QIcon(QFINDTESTDATA("data/windows/samplewidgetwindow.png")));
         QVERIFY(dataChangedSpy.wait());
-        QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DecorationRole));
+        QVERIFY(dataChangedSpy.takeLast().at(2).value<QList<int>>().contains(Qt::DecorationRole));
 
         const QIcon newWindowIcon = index.data(Qt::DecorationRole).value<QIcon>();
         QVERIFY(!newWindowIcon.isNull());
@@ -225,7 +225,7 @@ void XWindowTasksModelTest::test_modelData()
 
         window->setIcon(QIcon());
         QVERIFY(dataChangedSpy.wait());
-        QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DecorationRole));
+        QVERIFY(dataChangedSpy.takeLast().at(2).value<QList<int>>().contains(Qt::DecorationRole));
     } // END Icon
 
     const NET::Properties windowInfoFlags =
@@ -304,14 +304,14 @@ void XWindowTasksModelTest::test_isMinimized()
     dataChangedSpy.wait();
     // There can be more than one dataChanged signal being emitted due to caching
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsMinimized);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsMinimized);
     }));
     // The model doesn't notify data change stored under IsHidden role
     QTRY_VERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsHidden);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsHidden);
     }));
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsActive);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsActive);
     }));
     QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
     QTRY_VERIFY(index.data(AbstractTasksModel::IsHidden).toBool());
@@ -324,13 +324,13 @@ void XWindowTasksModelTest::test_isMinimized()
     window->requestActivate();
     dataChangedSpy.wait();
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsMinimized);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsMinimized);
     }));
     QVERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsHidden);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsHidden);
     }));
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsActive);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsActive);
     }));
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsHidden).toBool());
@@ -363,7 +363,7 @@ void XWindowTasksModelTest::test_lastActivated()
     window->showMinimized();
     dataChangedSpy.wait();
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsMinimized);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsMinimized);
     }));
     QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
 
@@ -376,7 +376,7 @@ void XWindowTasksModelTest::test_lastActivated()
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
     // The model doesn't notify data change stored under LastActivated role
     QTRY_VERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::LastActivated);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::LastActivated);
     }));
     qDebug() << lastActivatedTime.msecsSinceStartOfDay() << index.data(AbstractTasksModel::LastActivated).toTime().msecsSinceStartOfDay();
     QVERIFY(std::abs(lastActivatedTime.msecsSinceStartOfDay() - index.data(AbstractTasksModel::LastActivated).toTime().msecsSinceStartOfDay()) < 1000);
@@ -473,7 +473,7 @@ void XWindowTasksModelTest::test_windowState()
         QCoreApplication::processEvents();
 
         QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [role](const QVariantList &list) {
-            return list.at(2).value<QVector<int>>().contains(role);
+            return list.at(2).value<QList<int>>().contains(role);
         }));
         QVERIFY(!index.data(role).toBool());
         success = true;

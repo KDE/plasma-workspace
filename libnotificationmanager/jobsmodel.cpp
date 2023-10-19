@@ -40,7 +40,7 @@ JobsModel::JobsModel()
         endRemoveRows();
     });
 
-    connect(d, &JobsModelPrivate::jobViewChanged, this, [this](int row, Job *job, const QVector<int> &roles) {
+    connect(d, &JobsModelPrivate::jobViewChanged, this, [this](int row, Job *job, const QList<int> &roles) {
         Q_UNUSED(job);
         const QModelIndex idx = index(row, 0);
         Q_EMIT dataChanged(idx, idx, roles);

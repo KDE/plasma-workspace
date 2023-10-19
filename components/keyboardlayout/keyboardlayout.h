@@ -19,7 +19,7 @@ class KeyboardLayout : public QObject
 
     Q_PROPERTY(uint layout MEMBER mLayout WRITE setLayout NOTIFY layoutChanged)
 
-    Q_PROPERTY(const QVector<LayoutNames> &layoutsList READ getLayoutsList NOTIFY layoutsListChanged)
+    Q_PROPERTY(const QList<LayoutNames> &layoutsList READ getLayoutsList NOTIFY layoutsListChanged)
 
 public:
     explicit KeyboardLayout(QObject *parent = nullptr);
@@ -35,7 +35,7 @@ protected:
 
 private:
     void setLayout(uint index);
-    const QVector<LayoutNames> &getLayoutsList() const
+    const QList<LayoutNames> &getLayoutsList() const
     {
         return mLayoutsList;
     }
@@ -48,6 +48,6 @@ private:
     void requestDBusData();
 
     uint mLayout = 0;
-    QVector<LayoutNames> mLayoutsList;
+    QList<LayoutNames> mLayoutsList;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };

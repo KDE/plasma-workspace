@@ -75,11 +75,11 @@ class TriangleMouseFilter : public QQuickItem
 
     /**
      * The line (as two points) representing the geometry of the edge we want to filter mouse actions towards,
-     * relative to the filtered item. This property is a QVector of x1, y1, x2, y2 instead of a QLine
+     * relative to the filtered item. This property is a QList of x1, y1, x2, y2 instead of a QLine
      * for ease of use from QML which does not have a line basic type. If edgeLine is not set or is set to
      * anything other than a vector of 4 ints, the edge of the applet will be used instead.
      */
-    Q_PROPERTY(QVector<int> edgeLine MEMBER m_edgeLine NOTIFY edgeLineChanged)
+    Q_PROPERTY(QList<int> edgeLine MEMBER m_edgeLine NOTIFY edgeLineChanged)
 
     /**
      * Whether the filter will block the first hover enter event. False by default.
@@ -122,7 +122,7 @@ private:
     std::optional<decltype(std::declval<QHoverEvent>().timestamp())> m_lastTimestamp;
     std::optional<QPointF> m_interceptionPos; // point where we started intercepting
     Qt::Edge m_edge = Qt::RightEdge;
-    QVector<int> m_edgeLine;
+    QList<int> m_edgeLine;
     int m_filterTimeout = 300;
     bool m_active;
     bool m_blockFirstEnter;

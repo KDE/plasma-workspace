@@ -97,7 +97,7 @@ private:
 
     QPointer<PlasmoidRegistry> m_plasmoidRegistry;
 
-    QVector<Item> m_items;
+    QList<Item> m_items;
 };
 
 /**
@@ -146,7 +146,7 @@ public:
     int indexOfSource(const QString &source) const;
 
     StatusNotifierItemHost *m_sniHost = nullptr;
-    QVector<Item> m_items;
+    QList<Item> m_items;
 };
 Q_DECLARE_TYPEINFO(StatusNotifierModel::Item, Q_RELOCATABLE_TYPE);
 

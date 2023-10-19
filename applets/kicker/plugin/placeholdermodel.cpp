@@ -245,7 +245,7 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, SIGNAL(destroyed()), this, SLOT(reset()));
 
-    connect(sourceModelPtr, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles) {
+    connect(sourceModelPtr, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &from, const QModelIndex &to, const QList<int> &roles) {
         Q_EMIT dataChanged(sourceIndexToIndex(from), sourceIndexToIndex(to), roles);
     });
 

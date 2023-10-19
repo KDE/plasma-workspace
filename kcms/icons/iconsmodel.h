@@ -11,8 +11,8 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QList>
 #include <QString>
-#include <QVector>
 
 class IconsSettings;
 
@@ -54,6 +54,6 @@ Q_SIGNALS:
     void pendingDeletionsChanged();
 
 private:
-    QVector<IconsModelData> m_data;
+    QList<IconsModelData> m_data;
     IconsSettings *m_settings;
 };

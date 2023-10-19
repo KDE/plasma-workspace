@@ -259,12 +259,12 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
                                       QStringLiteral("activeBlend"),
                                       QStringLiteral("inactiveBlend")};
 
-    const QVector<QColor> defaultWMColors{KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
-                                          KColorScheme(QPalette::Normal, KColorScheme::Header, config).foreground().color(),
-                                          inactiveHeaderColorScheme.background().color(),
-                                          inactiveHeaderColorScheme.foreground().color(),
-                                          KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
-                                          inactiveHeaderColorScheme.background().color()};
+    const QList<QColor> defaultWMColors{KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
+                                        KColorScheme(QPalette::Normal, KColorScheme::Header, config).foreground().color(),
+                                        inactiveHeaderColorScheme.background().color(),
+                                        inactiveHeaderColorScheme.foreground().color(),
+                                        KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
+                                        inactiveHeaderColorScheme.background().color()};
 
     int i = 0;
     for (const QString &coloritem : colorItemListWM) {

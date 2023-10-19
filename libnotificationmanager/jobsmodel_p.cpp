@@ -48,7 +48,7 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
     connect(m_compressUpdatesTimer, &QTimer::timeout, this, [this] {
         for (auto it = m_pendingDirtyRoles.constBegin(), end = m_pendingDirtyRoles.constEnd(); it != end; ++it) {
             Job *job = it.key();
-            const QVector<int> roles = it.value();
+            const QList<int> roles = it.value();
             const int row = m_jobViews.indexOf(job);
             if (row == -1) {
                 continue;

@@ -38,7 +38,7 @@ void JobAggregator::setSourceModel(QAbstractItemModel *sourceModel)
         connect(m_model.data(),
                 &QAbstractItemModel::dataChanged,
                 this,
-                [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
                     Q_UNUSED(topLeft);
                     Q_UNUSED(bottomRight);
 

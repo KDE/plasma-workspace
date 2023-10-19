@@ -6,8 +6,8 @@
 
 #pragma once
 
+#include <QList>
 #include <QStringList>
-#include <QVector>
 
 class AutoStartItem
 {
@@ -35,11 +35,11 @@ public:
     {
         return m_phasedone;
     }
-    QVector<AutoStartItem> startList() const;
+    QList<AutoStartItem> startList() const;
 
 private:
     void loadAutoStartList();
-    QVector<AutoStartItem> m_startList;
+    QList<AutoStartItem> m_startList;
     QStringList m_started;
     int m_phase;
     bool m_phasedone;

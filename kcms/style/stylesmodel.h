@@ -7,8 +7,8 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QList>
 #include <QString>
-#include <QVector>
 
 struct StylesModelData {
     QString display;
@@ -56,5 +56,5 @@ Q_SIGNALS:
 private:
     QString m_selectedStyle;
 
-    QVector<StylesModelData> m_data;
+    QList<StylesModelData> m_data;
 };

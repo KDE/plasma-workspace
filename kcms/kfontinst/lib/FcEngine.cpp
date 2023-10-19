@@ -897,7 +897,7 @@ QImage CFcEngine::draw(const QString &name,
                         if (m_scalable ? valid.length() != text.length() : valid.length() < (text.length() / 2)) {
                             xft()->drawAllChars(xftFont, fSize, x, y, imgWidth, imgHeight, true, m_scalable ? 2 : -1, m_scalable ? &used : nullptr);
                         } else {
-                            QVector<uint> ucs4(valid.toUcs4());
+                            QList<uint> ucs4(valid.toUcs4());
                             QRect r;
 
                             for (int ch = 0; ch < ucs4.size(); ++ch) { // Display char by char so wraps...

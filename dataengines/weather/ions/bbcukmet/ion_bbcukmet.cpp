@@ -61,7 +61,7 @@ void UKMETIon::reset()
 
 void UKMETIon::deleteForecasts()
 {
-    // Destroy each forecast stored in a QVector
+    // Destroy each forecast stored in a QList
     QHash<QString, WeatherData>::iterator it = m_weatherData.begin(), end = m_weatherData.end();
     for (; it != end; ++it) {
         qDeleteAll(it.value().forecasts);
@@ -827,7 +827,7 @@ void UKMETIon::parseFiveDayForecast(const QString &source, QXmlStreamReader &xml
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("item"));
 
     WeatherData &weatherData = m_weatherData[source];
-    QVector<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
+    QList<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
 
     // Flush out the old forecasts when updating.
     forecasts.clear();
@@ -997,7 +997,7 @@ void UKMETIon::updateWeather(const QString &source)
     }
 
     // 5 Day forecast info
-    const QVector<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
+    const QList<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
 
     // Set number of forecasts per day/night supported
     data.insert(QStringLiteral("Total Weather Days"), forecasts.size());

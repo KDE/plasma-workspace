@@ -236,7 +236,7 @@ void KCMDesktopTheme::processPendingDeletions()
     const QString program = QStringLiteral("plasmapkg2");
 
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true, -1 /*all*/);
-    QVector<QPersistentModelIndex> persistentPendingDeletions;
+    QList<QPersistentModelIndex> persistentPendingDeletions;
     // turn into persistent model index so we can delete as we go
     std::transform(pendingDeletions.begin(), pendingDeletions.end(), std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
         return QPersistentModelIndex(idx);

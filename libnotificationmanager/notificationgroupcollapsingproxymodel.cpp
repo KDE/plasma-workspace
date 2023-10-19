@@ -39,7 +39,7 @@ void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *s
         connect(source,
                 &QAbstractItemModel::dataChanged,
                 this,
-                [this, source](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                [this, source](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
                     if (roles.isEmpty() || roles.contains(Notifications::IsGroupRole)) {
                         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
                             const QModelIndex sourceIdx = source->index(i, 0);
@@ -162,7 +162,7 @@ bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &
 
     invalidateFilter();
 
-    const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
+    const QList<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
 
     Q_EMIT dataChanged(idx, idx, dirtyRoles);
     Q_EMIT dataChanged(index(0, 0, idx), index(rowCount(idx) - 1, 0, idx), dirtyRoles);
@@ -172,7 +172,7 @@ bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &
 
 void NotificationGroupCollapsingProxyModel::invalidateGroupRoles()
 {
-    const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
+    const QList<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
 
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), dirtyRoles);
 

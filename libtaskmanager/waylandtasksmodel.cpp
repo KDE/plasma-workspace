@@ -348,7 +348,7 @@ public:
     static QString groupMimeType();
 
     void dataChanged(PlasmaWindow *window, int role);
-    void dataChanged(PlasmaWindow *window, const QVector<int> &roles);
+    void dataChanged(PlasmaWindow *window, const QList<int> &roles);
 
 private:
     WaylandTasksModel *q;
@@ -373,14 +373,14 @@ void WaylandTasksModel::Private::init()
         // Emit changes of all roles satisfied from app data cache.
         Q_EMIT q->dataChanged(q->index(0, 0),
                               q->index(windows.size() - 1, 0),
-                              QVector<int>{Qt::DecorationRole,
-                                           AbstractTasksModel::AppId,
-                                           AbstractTasksModel::AppName,
-                                           AbstractTasksModel::GenericName,
-                                           AbstractTasksModel::LauncherUrl,
-                                           AbstractTasksModel::LauncherUrlWithoutIcon,
-                                           AbstractTasksModel::CanLaunchNewInstance,
-                                           AbstractTasksModel::SkipTaskbar});
+                              QList<int>{Qt::DecorationRole,
+                                         AbstractTasksModel::AppId,
+                                         AbstractTasksModel::AppName,
+                                         AbstractTasksModel::GenericName,
+                                         AbstractTasksModel::LauncherUrl,
+                                         AbstractTasksModel::LauncherUrlWithoutIcon,
+                                         AbstractTasksModel::CanLaunchNewInstance,
+                                         AbstractTasksModel::SkipTaskbar});
     };
 
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
@@ -488,9 +488,8 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         appDataCache.remove(window);
 
         // Refresh roles satisfied from the app data cache.
-        this->dataChanged(
-            window,
-            QVector<int>{Qt::DecorationRole, AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance});
+        this->dataChanged(window,
+                          QList<int>{Qt::DecorationRole, AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance});
     });
 
     QObject::connect(window, &PlasmaWindow::activeChanged, q, [window, this] {
@@ -572,7 +571,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     });
 
     QObject::connect(window, &PlasmaWindow::geometryChanged, q, [window, this] {
-        this->dataChanged(window, QVector<int>{Geometry, ScreenGeometry});
+        this->dataChanged(window, QList<int>{Geometry, ScreenGeometry});
     });
 
     QObject::connect(window, &PlasmaWindow::demandsAttentionChanged, q, [window, this] {
@@ -584,7 +583,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     });
 
     QObject::connect(window, &PlasmaWindow::applicationMenuChanged, q, [window, this] {
-        this->dataChanged(window, QVector<int>{ApplicationMenuServiceName, ApplicationMenuObjectPath});
+        this->dataChanged(window, QList<int>{ApplicationMenuServiceName, ApplicationMenuObjectPath});
     });
 
     QObject::connect(window, &PlasmaWindow::activitiesChanged, q, [window, this] {
@@ -638,10 +637,10 @@ void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, int role)
 {
     auto it = findWindow(window);
     QModelIndex idx = q->index(it - windows.begin());
-    Q_EMIT q->dataChanged(idx, idx, QVector<int>{role});
+    Q_EMIT q->dataChanged(idx, idx, QList<int>{role});
 }
 
-void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, const QVector<int> &roles)
+void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, const QList<int> &roles)
 {
     auto it = findWindow(window);
     QModelIndex idx = q->index(it - windows.begin());

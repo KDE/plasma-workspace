@@ -13,7 +13,7 @@
 #include <Plasma5Support/DataEngineConsumer>
 
 #include <QDateTime>
-#include <QVector>
+#include <QList>
 
 class KJob;
 namespace KIO
@@ -64,7 +64,7 @@ public:
     };
 
     // 5 day Forecast
-    QVector<WeatherData::ForecastInfo *> forecasts;
+    QList<WeatherData::ForecastInfo *> forecasts;
 
     bool isForecastsDataPending = false;
 };
@@ -148,7 +148,7 @@ private:
 
     // Key dicts
     QHash<QString, UKMETIon::XMLMapInfo> m_place;
-    QVector<QString> m_locations;
+    QList<QString> m_locations;
 
     // Weather information
     QHash<QString, WeatherData> m_weatherData;

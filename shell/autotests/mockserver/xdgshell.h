@@ -53,7 +53,7 @@ public:
     {
         return m_xdgSurfaces.empty() ? "clean" : "remaining xdg surfaces";
     }
-    QVector<XdgSurface *> m_xdgSurfaces;
+    QList<XdgSurface *> m_xdgSurfaces;
     XdgToplevel *toplevel(int i = 0);
     XdgPopup *popup(int i = 0);
     XdgPopup *m_topmostGrabbingPopup = nullptr;
@@ -97,13 +97,13 @@ public:
     XdgWmBase *m_xdgWmBase = nullptr;
     Surface *m_surface = nullptr;
     bool m_configureSent = false;
-    QVector<uint> m_pendingConfigureSerials;
+    QList<uint> m_pendingConfigureSerials;
     uint m_ackedConfigureSerial = 0;
     uint m_committedConfigureSerial = 0;
     struct DoubleBufferedState {
         QRect windowGeometry = {0, 0, 0, 0};
     } m_pending, m_committed;
-    QVector<XdgPopup *> m_popups;
+    QList<XdgPopup *> m_popups;
 
 public slots:
     void verifyConfigured()
@@ -129,8 +129,8 @@ class XdgToplevel : public QObject, public QtWaylandServer::xdg_toplevel
     Q_OBJECT
 public:
     explicit XdgToplevel(XdgSurface *xdgSurface, int id, int version = 1);
-    void sendConfigure(const QSize &size = {0, 0}, const QVector<uint> &states = {});
-    uint sendCompleteConfigure(const QSize &size = {0, 0}, const QVector<uint> &states = {});
+    void sendConfigure(const QSize &size = {0, 0}, const QList<uint> &states = {});
+    uint sendCompleteConfigure(const QSize &size = {0, 0}, const QList<uint> &states = {});
     Surface *surface()
     {
         return m_xdgSurface->m_surface;

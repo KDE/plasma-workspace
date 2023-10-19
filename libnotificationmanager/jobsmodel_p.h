@@ -8,9 +8,9 @@
 
 #include <QDBusContext>
 #include <QDBusObjectPath>
+#include <QList>
 #include <QObject>
 #include <QSet>
-#include <QVector>
 
 #include "notifications.h"
 
@@ -47,7 +47,7 @@ Q_SIGNALS:
     void jobViewAboutToBeRemoved(int row); //, Job *job);
     void jobViewRemoved(int row);
 
-    void jobViewChanged(int row, Job *job, const QVector<int> &roles);
+    void jobViewChanged(int row, Job *job, const QList<int> &roles);
 
     void serviceOwnershipLost();
 
@@ -62,7 +62,7 @@ public: // stuff used by public class
     void removeAt(int row);
 
     bool m_valid = false;
-    QVector<Job *> m_jobViews;
+    QList<Job *> m_jobViews;
 
 private:
     void unwatchJob(Job *job);
@@ -79,9 +79,9 @@ private:
     int m_highestJobId = 1;
 
     QTimer *m_compressUpdatesTimer = nullptr;
-    QHash<Job *, QVector<int>> m_pendingDirtyRoles;
+    QHash<Job *, QList<int>> m_pendingDirtyRoles;
 
-    QVector<Job *> m_pendingJobViews;
+    QList<Job *> m_pendingJobViews;
 };
 
 } // namespace NotificationManager

@@ -90,7 +90,7 @@ void testOpenCloseWindow(const AbstractWindowTasksModel &model)
         const QString newTitle = title + QStringLiteral("__newtitle__");
         window->setTitle(newTitle);
         QVERIFY(dataChangedSpy.wait());
-        QTRY_VERIFY(dataChangedSpy.constLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
+        QTRY_VERIFY(dataChangedSpy.constLast().at(2).value<QList<int>>().contains(Qt::DisplayRole));
         // Make sure the title is updated
         QTRY_VERIFY(!findWindow(title));
         QTRY_VERIFY(findWindow(newTitle));
@@ -120,7 +120,7 @@ void testFullscreen(const AbstractWindowTasksModel &model)
 
     // There can be more than one dataChanged signal being emitted due to caching
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsFullScreen);
     }));
     QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreen).toBool());
     dataChangedSpy.clear();
@@ -128,7 +128,7 @@ void testFullscreen(const AbstractWindowTasksModel &model)
     QVERIFY(dataChangedSpy.wait());
     // There can be more than one dataChanged signal being emitted due to caching
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::IsFullScreen);
     }));
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
 }
@@ -148,7 +148,7 @@ void testGeometry(const AbstractWindowTasksModel &model)
     // There can be more than one dataChanged signal being emitted due to caching
     // When using openbox the test is flaky
     QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
-        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::Geometry);
+        return list.at(2).value<QList<int>>().contains(AbstractTasksModel::Geometry);
     }));
     QTRY_VERIFY(index.data(AbstractTasksModel::Geometry).toRect().size() != oldSize);
 }

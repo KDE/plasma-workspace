@@ -816,7 +816,7 @@ void NOAAIon::forecast_slotJobFinished(KJob *job)
 void NOAAIon::readForecast(const QString &source, QXmlStreamReader &xml)
 {
     WeatherData &weatherData = m_weatherData[source];
-    QVector<WeatherData::Forecast> &forecasts = weatherData.forecasts;
+    QList<WeatherData::Forecast> &forecasts = weatherData.forecasts;
 
     // Clear the current forecasts
     forecasts.clear();

@@ -215,7 +215,7 @@ void TimeZoneModel::setSelectedTimeZones(const QStringList &selectedTimeZones)
 void TimeZoneModel::selectLocalTimeZone()
 {
     m_data[0].checked = true;
-    Q_EMIT dataChanged(index(0, 0), index(0, 0), QVector<int>{CheckedRole});
+    Q_EMIT dataChanged(index(0, 0), index(0, 0), QList<int>{CheckedRole});
 }
 
 QString TimeZoneModel::localTimeZoneCity()

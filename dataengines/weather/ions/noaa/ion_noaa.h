@@ -59,7 +59,7 @@ public:
         QString low;
         QString high;
     };
-    QVector<Forecast> forecasts;
+    QList<Forecast> forecasts;
 
     bool isForecastsDataPending = false;
 

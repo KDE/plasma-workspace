@@ -11,7 +11,7 @@
 #include <QDBusServiceWatcher>
 #include <signal.h>
 
-SessionTrack::SessionTrack(const QVector<QProcess *> &processes)
+SessionTrack::SessionTrack(const QList<QProcess *> &processes)
     : m_processes(processes)
 {
     SignalHandler::self()->addSignal(SIGTERM);
@@ -39,7 +39,7 @@ SessionTrack::~SessionTrack()
     }
 
     // copy before the loop as we remove finished processes from the vector
-    const QVector<QProcess *> processesCopy = m_processes;
+    const QList<QProcess *> processesCopy = m_processes;
     for (auto process : processesCopy) {
         if (process->state() == QProcess::Running && !process->waitForFinished(500)) {
             process->kill();

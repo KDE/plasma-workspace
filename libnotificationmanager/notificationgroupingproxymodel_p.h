@@ -45,7 +45,7 @@ private:
     void checkGrouping(bool silent = false);
     void formGroupFor(const QModelIndex &index);
 
-    QVector<QVector<int> *> rowMap;
+    QList<QList<int> *> rowMap;
 };
 
 } // namespace NotificationManager

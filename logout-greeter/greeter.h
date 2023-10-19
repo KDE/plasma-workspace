@@ -9,8 +9,8 @@
 
 #pragma once
 
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 #include <kworkspace.h>
 
@@ -46,7 +46,7 @@ private:
     bool m_running = false;
 
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
-    QVector<KSMShutdownDlg *> m_dialogs;
+    QList<KSMShutdownDlg *> m_dialogs;
     bool m_windowed = false;
     KPackage::Package m_package;
 };

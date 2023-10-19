@@ -20,7 +20,7 @@
     </method>
     <method name="getLayoutsList">
       <arg type="a(sss)" direction="out"/>
-      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVector&lt;LayoutNames&gt;" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;LayoutNames&gt;" />
     </method>
   </interface>
 </node>

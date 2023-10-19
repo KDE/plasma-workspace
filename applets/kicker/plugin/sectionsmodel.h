@@ -34,6 +34,6 @@ private:
         int firstIndex;
     };
 
-    QVector<Item> m_data;
+    QList<Item> m_data;
     QHash<int, QByteArray> m_roleNames;
 };

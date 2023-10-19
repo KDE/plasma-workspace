@@ -9,8 +9,8 @@
 #include <random>
 
 #include <QBindable>
+#include <QList>
 #include <QSortFilterProxyModel>
-#include <QVector>
 
 #include "sortingmode.h"
 
@@ -38,7 +38,7 @@ public:
 private:
     void buildRandomOrder();
 
-    QVector<int> m_randomOrder;
+    QList<int> m_randomOrder;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, SortingMode::Mode, m_SortingMode, SortingMode::Random)
     QPropertyNotifier m_SortingModeNotifier;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, bool, m_SortingFoldersFirst, false)

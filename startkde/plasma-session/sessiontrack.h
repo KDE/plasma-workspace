@@ -13,10 +13,10 @@ class SessionTrack : public QObject
 {
     Q_OBJECT
 public:
-    SessionTrack(const QVector<QProcess *> &processes);
+    SessionTrack(const QList<QProcess *> &processes);
     ~SessionTrack() override;
 
 private:
-    QVector<QProcess *> m_processes;
+    QList<QProcess *> m_processes;
     QEventLoopLocker m_lock;
 };

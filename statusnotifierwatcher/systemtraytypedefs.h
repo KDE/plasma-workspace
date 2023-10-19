@@ -8,9 +8,9 @@
 #pragma once
 
 #include <QByteArray>
+#include <QList>
 #include <QMetaType>
 #include <QString>
-#include <QVector>
 
 struct KDbusImageStruct {
     int width;
@@ -18,7 +18,7 @@ struct KDbusImageStruct {
     QByteArray data;
 };
 
-typedef QVector<KDbusImageStruct> KDbusImageVector;
+typedef QList<KDbusImageStruct> KDbusImageVector;
 
 struct KDbusToolTipStruct {
     QString icon;

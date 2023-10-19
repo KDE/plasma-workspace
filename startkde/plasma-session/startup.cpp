@@ -179,7 +179,7 @@ Startup::Startup(QObject *parent)
     KJob *phase1 = nullptr;
     m_lock.reset(new QEventLoopLocker);
 
-    const QVector<KJob *> sequence = {
+    const QList<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded6"), {}, QStringLiteral("org.kde.kded6"), {}),
         x11WindowManagerJob,

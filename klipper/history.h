@@ -36,7 +36,7 @@ public:
      * Don't use this unless you're reasonable the list
      * should be reset.
      */
-    void clearAndBatchInsert(const QVector<std::shared_ptr<HistoryItem>> &items);
+    void clearAndBatchInsert(const QList<std::shared_ptr<HistoryItem>> &items);
 
     /**
      * Remove (first) history item equal to item from history

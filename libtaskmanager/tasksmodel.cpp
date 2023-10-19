@@ -20,10 +20,10 @@
 #include "launchertasksmodel_p.h"
 
 #include <QGuiApplication>
+#include <QList>
 #include <QTime>
 #include <QTimer>
 #include <QUrl>
-#include <QVector>
 
 #include <numeric>
 
@@ -58,7 +58,7 @@ public:
     bool launcherSortingDirty = false;
     bool launcherCheckNeeded = false;
     QList<int> sortedPreFilterRows;
-    QVector<int> sortRowInsertQueue;
+    QList<int> sortRowInsertQueue;
     bool sortRowInsertQueueStale = false;
     std::shared_ptr<VirtualDesktopInfo> virtualDesktopInfo;
     QHash<QString, int> activityTaskCounts;
@@ -167,7 +167,7 @@ void TasksModel::Private::initModels()
     QObject::connect(windowTasksModel,
                      &QAbstractItemModel::dataChanged,
                      q,
-                     [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                     [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
                          Q_UNUSED(topLeft)
                          Q_UNUSED(bottomRight)
 
@@ -402,7 +402,7 @@ void TasksModel::Private::initModels()
     QObject::connect(groupingProxyModel,
                      &QAbstractItemModel::dataChanged,
                      q,
-                     [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                     [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
                          Q_UNUSED(bottomRight)
 
                          // We can ignore group members.
@@ -476,18 +476,18 @@ void TasksModel::Private::initLauncherTasksModel()
     // optimized to only refresh non-launcher rows matching the inserted or about-
     // to-be-removed launcherTasksModel rows using TaskTools::appsMatch().
     QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged, q, [this]() {
-        Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{AbstractTasksModel::HasLauncher});
+        Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QList<int>{AbstractTasksModel::HasLauncher});
     });
 
     // data() implements AbstractTasksModel::HasLauncher by checking with
     // TaskTools::appsMatch, which evaluates ::AppId and ::LauncherUrlWithoutIcon.
-    QObject::connect(q, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+    QObject::connect(q, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
         if (roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)) {
             for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
                 const QModelIndex &index = q->index(i, 0);
 
                 if (!index.data(AbstractTasksModel::IsLauncher).toBool()) {
-                    Q_EMIT q->dataChanged(index, index, QVector<int>{AbstractTasksModel::HasLauncher});
+                    Q_EMIT q->dataChanged(index, index, QList<int>{AbstractTasksModel::HasLauncher});
                 }
             }
         }
@@ -532,7 +532,7 @@ void TasksModel::Private::updateManualSortMap()
         // Otherwise process any entries in the insert queue and move them intelligently
         // in the sort map.
     } else {
-        QMutableVectorIterator<int> i(sortRowInsertQueue);
+        QMutableListIterator<int> i(sortRowInsertQueue);
 
         while (i.hasNext()) {
             i.next();
@@ -1894,8 +1894,8 @@ void TasksModel::syncLaunchers()
 
     // Prep sort map for source model data changes.
     if (d->sortMode == SortManual) {
-        QVector<int> sortMapIndices;
-        QVector<int> preFilterRows;
+        QList<int> sortMapIndices;
+        QList<int> preFilterRows;
 
         for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
             const QModelIndex &launcherIndex = d->launcherTasksModel->index(i, 0);

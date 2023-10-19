@@ -26,17 +26,17 @@ public:
 
     void setupNotificationTimeout(const Notification &notification);
 
-    void removeRows(const QVector<int> &rows);
+    void removeRows(const QList<int> &rows);
 
     AbstractNotificationsModel *q;
 
-    QVector<Notification> notifications;
+    QList<Notification> notifications;
     // Fallback timeout to ensure all notifications expire eventually
     // otherwise when it isn't shown to the user and doesn't expire
     // an app might wait indefinitely for the notification to do so
     QHash<uint /*notificationId*/, QTimer *> notificationTimeouts;
 
-    QVector<uint /*notificationId*/> pendingRemovals;
+    QList<uint /*notificationId*/> pendingRemovals;
     QTimer pendingRemovalTimer;
 
     QDateTime lastRead;

@@ -10,8 +10,8 @@
 
 #include <ksgrd/SensorClient.h>
 
+#include <QList>
 #include <QStringList>
-#include <QVector>
 
 class QTimer;
 
@@ -40,7 +40,7 @@ protected Q_SLOTS:
     void updateMonitorsList();
 
 private:
-    QVector<QString> m_sensors;
+    QList<QString> m_sensors;
     QTimer *m_timer;
     int m_waitingFor;
 };

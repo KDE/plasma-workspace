@@ -15,7 +15,7 @@
 #include <xcb/xcb_atom.h>
 #include <xcb/xcb_event.h>
 
-#include <QVector>
+#include <QList>
 #include <private/qtx11extras_p.h>
 
 #include "../c_ptr.h"

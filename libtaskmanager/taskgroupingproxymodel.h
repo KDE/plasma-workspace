@@ -388,7 +388,7 @@ private:
     Q_PRIVATE_SLOT(d, void sourceRowsRemoved(const QModelIndex &parent, int start, int end))
     Q_PRIVATE_SLOT(d, void sourceModelAboutToBeReset())
     Q_PRIVATE_SLOT(d, void sourceModelReset())
-    Q_PRIVATE_SLOT(d, void sourceDataChanged(QModelIndex, QModelIndex, QVector<int>))
+    Q_PRIVATE_SLOT(d, void sourceDataChanged(QModelIndex, QModelIndex, QList<int>))
 };
 
 }

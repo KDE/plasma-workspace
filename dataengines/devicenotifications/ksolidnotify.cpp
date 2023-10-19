@@ -23,11 +23,11 @@
 #include <processcore/process.h>
 #include <processcore/processes.h>
 
+#include <QList>
 #include <QProcess>
 #include <QRegularExpression>
 #include <QStringList>
 #include <QStringView>
-#include <QVector>
 
 KSolidNotify::KSolidNotify(QObject *parent)
     : QObject(parent)

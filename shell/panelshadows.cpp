@@ -33,7 +33,7 @@ public:
 
     QHash<QWindow *, KSvg::FrameSvg::EnabledBorders> m_windows;
     QHash<QWindow *, KWindowShadow *> m_shadows;
-    QVector<KWindowShadowTile::Ptr> m_tiles;
+    QList<KWindowShadowTile::Ptr> m_tiles;
 };
 
 class PanelShadowsSingleton

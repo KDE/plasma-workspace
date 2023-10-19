@@ -292,7 +292,7 @@ public:
         });
 
         // Debugging:
-        QVector<QString> itemStrings(m_items.size());
+        QList<QString> itemStrings(m_items.size());
         std::transform(m_items.cbegin(), m_items.cend(), itemStrings.begin(), [](const NormalizedId &item) {
             return item.value();
         });
@@ -501,7 +501,7 @@ public:
     ResultWatcher m_watcher;
     QString m_clientId;
 
-    QVector<NormalizedId> m_items;
+    QList<NormalizedId> m_items;
     QHash<QString, std::shared_ptr<AbstractEntry>> m_itemEntries;
     QStringList m_ignoredItems;
 };

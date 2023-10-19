@@ -65,7 +65,7 @@ protected:
     void onNotificationRemoved(uint notificationId, Server::CloseReason reason);
 
     void setupNotificationTimeout(const Notification &notification);
-    const QVector<Notification> &notifications();
+    const QList<Notification> &notifications();
     int rowOfNotification(uint id) const;
 
 private:

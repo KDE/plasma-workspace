@@ -8,8 +8,8 @@
 
 #include <QAbstractItemModel>
 #include <QHash>
+#include <QList>
 #include <QString>
-#include <QVector>
 
 #include <KService>
 
@@ -27,7 +27,7 @@ struct SourceData {
     QString notifyRcName;
     QString desktopEntry;
 
-    QVector<NotificationManager::EventSettings *> events;
+    QList<NotificationManager::EventSettings *> events;
 
     QString display() const
     {
@@ -90,5 +90,5 @@ public:
     void setEventDefaults();
 
 private:
-    QVector<SourceData> m_data;
+    QList<SourceData> m_data;
 };

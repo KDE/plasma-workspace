@@ -23,6 +23,6 @@ public:
 private:
     bool runModule(const KPluginMetaData &data);
     void runModules(int phase);
-    QVector<KPluginMetaData> m_list;
+    QList<KPluginMetaData> m_list;
     QStringList m_alreadyInitialized;
 };

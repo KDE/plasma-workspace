@@ -193,8 +193,8 @@ void Menu::onMenuChanged(const GMenuChangeList &changes)
 {
     const bool hadMenu = !m_menus.isEmpty();
 
-    QVector<uint> dirtyMenus;
-    QVector<uint> dirtyItems;
+    QList<uint> dirtyMenus;
+    QList<uint> dirtyItems;
 
     for (const auto &change : changes) {
         auto updateSection = [&](GMenuItem &section) {
@@ -305,7 +305,7 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
     };
 
     // now find in which menus these actions are and Q_EMIT a change accordingly
-    QVector<uint> dirtyItems;
+    QList<uint> dirtyItems;
 
     for (const QString &action : dirtyActions) {
         const QString prefixedAction = prefix + action;

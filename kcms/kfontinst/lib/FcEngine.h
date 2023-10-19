@@ -8,8 +8,8 @@
 #include "KfiConstants.h"
 #include <QColor>
 #include <QFont>
+#include <QList>
 #include <QRect>
-#include <QVector>
 #include <fontconfig/fontconfig.h>
 // #include "Misc.h"
 #include "Fc.h"
@@ -84,7 +84,7 @@ public:
         return m_indexCount;
     } // Only valid after draw has been called!
     static QFont getQFont(const QString &family, quint32 style, int size);
-    const QVector<int> &sizes() const
+    const QList<int> &sizes() const
     {
         return m_sizes;
     }
@@ -151,7 +151,7 @@ private:
     QString m_name, m_descriptiveName;
     quint32 m_style;
     int m_index, m_indexCount, m_alphaSizeIndex;
-    QVector<int> m_sizes;
+    QList<int> m_sizes;
     FcBool m_scalable;
     QStringList m_addedFiles;
     QString m_previewString;

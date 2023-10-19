@@ -423,7 +423,7 @@ void ImageBackend::nextSlide()
     saveCurrentWallpaper();
 }
 
-void ImageBackend::slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)
+void ImageBackend::slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles)
 {
     Q_UNUSED(bottomRight);
 

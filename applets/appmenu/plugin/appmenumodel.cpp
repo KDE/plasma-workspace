@@ -46,7 +46,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel,
             &TaskManager::TasksModel::dataChanged,
-            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
+            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles = QList<int>()) {
                 Q_UNUSED(topLeft)
                 Q_UNUSED(bottomRight)
                 if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath)

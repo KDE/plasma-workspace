@@ -115,7 +115,7 @@ void AutostartModel::load()
     m_xdgAutoStartPath.mkpath(QStringLiteral("."));
 
     // Needed to add all script entries after application entries
-    QVector<AutostartEntry> scriptEntries;
+    QList<AutostartEntry> scriptEntries;
     const auto filesInfo = m_xdgAutoStartPath.entryInfoList(QDir::Files);
     for (const QFileInfo &fi : filesInfo) {
         if (!KDesktopFile::isDesktopFile(fi.fileName())) {

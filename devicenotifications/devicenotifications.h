@@ -7,9 +7,9 @@
 #pragma once
 
 #include <QHash>
+#include <QList>
 #include <QSocketNotifier>
 #include <QString>
-#include <QVector>
 
 #include <KDEDModule>
 
@@ -83,5 +83,5 @@ private:
 
     Udev m_udev;
     QHash<QString, QString> m_displayNames;
-    QVector<QString> m_removableDevices;
+    QList<QString> m_removableDevices;
 };
