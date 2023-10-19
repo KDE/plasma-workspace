@@ -197,7 +197,7 @@ ColumnLayout {
         }
 
         QQC2.Label {
-            text: i18n("<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
+            text: i18n("<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
             enabled: showDate.checked
             visible: cfg_dateFormat === "custom"
             wrapMode: Text.Wrap
