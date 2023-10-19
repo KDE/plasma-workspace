@@ -44,6 +44,7 @@ ConfigModel {
             name: model.display
             icon: model.decoration
             source: model.configUi
+            includeMargins: false
             visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(model.pluginPath) > -1
         }
 
