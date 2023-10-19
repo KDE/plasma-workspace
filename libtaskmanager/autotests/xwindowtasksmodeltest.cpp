@@ -9,6 +9,7 @@
 #include <private/qtx11extras_p.h>
 
 #include <KActivities/Consumer>
+#include <KWindowInfo>
 
 #include <xcb/xcb.h>
 #include <xcb/xproto.h>

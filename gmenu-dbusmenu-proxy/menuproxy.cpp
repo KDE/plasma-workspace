@@ -22,6 +22,7 @@
 #include <KConfigGroup>
 #include <KDirWatch>
 #include <KSharedConfig>
+#include <KWindowInfo>
 #include <KWindowSystem>
 #include <KX11Extras>
 

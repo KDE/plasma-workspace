@@ -22,6 +22,7 @@
 
 #include <QBitmap>
 
+#include <KWindowInfo>
 #include <KWindowSystem>
 #include <netwm.h>
 

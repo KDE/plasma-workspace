@@ -10,6 +10,7 @@
 
 #include <KWindowSystem>
 #include <QHash>
+#include <netwm_def.h>
 
 /*
  * Relay class for KWindowSystem events that batches updates
