@@ -93,7 +93,8 @@ void AsyncPackageImageResponseRunnable::run()
     if (imageReader.format() == "svg" || imageReader.format() == "svgz") {
         KSvg::Svg svgRender;
         svgRender.setImagePath(path);
-        image = svgRender.image(m_requestedSize.isValid() ? svgRender.size().scaled(m_requestedSize, Qt::KeepAspectRatioByExpanding) : svgRender.size());
+        image = svgRender.image(m_requestedSize.isValid() ? svgRender.size().toSize().scaled(m_requestedSize, Qt::KeepAspectRatioByExpanding)
+                                                          : svgRender.size().toSize());
     } else if (imageReader.read(&image)) {
         if (m_requestedSize.isValid()) {
             image = image.scaled(m_requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);

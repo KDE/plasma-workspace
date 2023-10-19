@@ -232,7 +232,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, KSvg::FrameSvg::Enable
     QMargins padding;
 
     if (enabledBorders & KSvg::FrameSvg::TopBorder) {
-        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-top-margin"));
+        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-top-margin")).toSize();
         if (marginHint.isValid()) {
             padding.setTop(marginHint.height());
         } else {
@@ -241,7 +241,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, KSvg::FrameSvg::Enable
     }
 
     if (enabledBorders & KSvg::FrameSvg::RightBorder) {
-        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-right-margin"));
+        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-right-margin")).toSize();
         if (marginHint.isValid()) {
             padding.setRight(marginHint.width());
         } else {
@@ -250,7 +250,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, KSvg::FrameSvg::Enable
     }
 
     if (enabledBorders & KSvg::FrameSvg::BottomBorder) {
-        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-bottom-margin"));
+        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-bottom-margin")).toSize();
         if (marginHint.isValid()) {
             padding.setBottom(marginHint.height());
         } else {
@@ -259,7 +259,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, KSvg::FrameSvg::Enable
     }
 
     if (enabledBorders & KSvg::FrameSvg::LeftBorder) {
-        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-left-margin"));
+        const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-left-margin")).toSize();
         if (marginHint.isValid()) {
             padding.setLeft(marginHint.width());
         } else {
