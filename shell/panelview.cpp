@@ -1000,6 +1000,7 @@ bool PanelView::event(QEvent *e)
                                 me->button(),
                                 me->buttons(),
                                 me->modifiers());
+                me2.setTimestamp(me->timestamp());
 
                 m_fakeEventPending = true;
                 QCoreApplication::sendEvent(this, &me2);
@@ -1025,6 +1026,7 @@ bool PanelView::event(QEvent *e)
                             we->modifiers(),
                             we->phase(),
                             we->inverted());
+            we2.setTimestamp(we->timestamp());
 
             m_fakeEventPending = true;
             QCoreApplication::sendEvent(this, &we2);
