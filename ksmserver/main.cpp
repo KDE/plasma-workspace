@@ -23,10 +23,10 @@
 #include <KSharedConfig>
 #include <private/qtx11extras_p.h>
 
+#include <KSelectionOwner>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
-#include <kmanagerselection.h>
 #include <ksmserver_debug.h>
 #include <kwindowsystem.h>
 
