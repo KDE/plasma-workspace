@@ -506,7 +506,7 @@ void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QS
     }
     qCDebug(KSMSERVER) << name << saveAndClose << saveOnly;
     state = ClosingSubSession;
-    saveType = SmSaveBoth; // both or local? what oes it mean?
+    saveType = SmSaveBoth; // both or local? what does it mean?
     saveSession = true;
     sessionGroup = QStringLiteral("SubSession: ") + name;
 
