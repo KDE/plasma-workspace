@@ -25,7 +25,8 @@
                 "Name[tr]": "Fuşan Wen",
                 "Name[uk]": "Fushan Wen",
                 "Name[x-test]": "xxFushan Wenxx",
-                "Name[zh_CN]": "Fushan Wen"
+                "Name[zh_CN]": "Fushan Wen",
+                "Name[zh_TW]": "Fushan Wen"
             }
         ],
         "Description": "Shows whether any camera is currently used by an app",
@@ -50,6 +51,7 @@
         "Description[uk]": "Показує, чи використовується якась камера програмою",
         "Description[x-test]": "xxShows whether any camera is currently used by an appxx",
         "Description[zh_CN]": "显示当前是否有应用正在使用相机",
+        "Description[zh_TW]": "顯示是否有任何相機正被應用程式使用",
         "EnabledByDefault": true,
         "Icon": "camera-on-symbolic",
         "Id": "org.kde.plasma.cameraindicator",
@@ -76,6 +78,7 @@
         "Name[uk]": "Індикатор камери",
         "Name[x-test]": "xxCamera Indicatorxx",
         "Name[zh_CN]": "相机指示器",
+        "Name[zh_TW]": "相機指示器",
         "Website": "https://kde.org/plasma-desktop/"
     },
     "Keywords": "Camera;WebCam;Indicator;Privacy;",
