@@ -59,6 +59,7 @@
 #include <QSocketNotifier>
 #include <QStandardPaths>
 
+#include <KNotification>
 #include <KSharedConfig>
 #include <QTemporaryFile>
 #include <kactioncollection.h>
@@ -791,6 +792,42 @@ void KSMServer::newConnection(int /*socket*/)
     if (KSMConnection::count > (fileNumberLimit() - backupFileCount)) {
         // https://bugs.kde.org/show_bug.cgi?id=475506
         qCWarning(KSMSERVER) << "Too many open connections. Refusing to track any more to prevent exhaustion of open file limits.";
+        QHash<QString, size_t> consumers;
+        for (const auto &client : clients) {
+            QString program = client->program();
+            if (program.isEmpty() && !client->restartCommand().isEmpty()) {
+                program = client->restartCommand().first();
+            }
+            if (program.isEmpty()) {
+                program = i18nc("@label an unknown executable is using resources", "[unknown]");
+            }
+
+            if (!consumers.contains(program)) {
+                consumers[program] = 0;
+            }
+            consumers[program]++;
+        }
+        std::multimap<size_t, QString> ranking; // using STL container because QMultiMap has no reverse iterators
+        for (auto it = consumers.cbegin(); it != consumers.cend(); it++) {
+            ranking.emplace(it.value(), it.key());
+        }
+
+        QString consumerInfo;
+        int i = 0;
+        for (auto it = ranking.rbegin(); i != 3 && it != ranking.rend(); it++, i++) {
+            if (!consumerInfo.isEmpty()) {
+                consumerInfo += QLatin1String(", ");
+            }
+            consumerInfo += QStringLiteral("%1:%2").arg(it->second, QString::number(it->first));
+        }
+        KNotification::event(KNotification::Error,
+                             xi18nc("@label notification; %1 is a list of executables",
+                                    "Unable to manage some apps because the system's session management resources are exhausted. Here are the top three "
+                                    "consumers of session resources:\n%1",
+                                    consumerInfo),
+                             QPixmap(),
+                             KNotification::Persistent);
+
         std::ignore = IceCloseConnection(iceConn);
         return;
     }
@@ -1087,6 +1124,11 @@ void KSMServer::tryRestore()
     for (const auto &entry : dontStartEntries) {
         qCWarning(KSMSERVER) << "Too many application starts issued for" << entry.appName << ". Not starting any more."
                              << "Something may be broken with the application's session management.";
+        KNotification::event(KNotification::Error,
+                             xi18nc("@label notification; %1 is an executable name",
+                                    "Unable to restore <application>%1</application> because it is broken and has exhausted the system's session restoration "
+                                    "resources. Please report this to the app's developers.",
+                                    entry.appName));
     }
 
     for (const auto &entry : entries) {
