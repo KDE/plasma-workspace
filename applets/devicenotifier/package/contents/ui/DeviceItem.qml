@@ -78,7 +78,7 @@ PlasmaExtras.ExpandableListItem {
     // removed in case there was a message, such as "you can now safely remove this"
     ListView.onRemove: SequentialAnimation {
         PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
-        PropertyAction { target: deviceItem; property: "isEnabled"; value: false }
+        PropertyAction { target: deviceItem; property: "enabled"; value: false }
         // Reset action model to hide the arrow
         PropertyAction { target: deviceItem; property: "contextualActionsModel"; value: [] }
         PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon }
