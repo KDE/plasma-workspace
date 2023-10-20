@@ -284,7 +284,7 @@ Item {
     // Footer
     PlasmaExtras.PlasmoidHeading {
         id: plasmoidFooter
-        location: PlasmaExtras.PlasmoidHeading.Location.Footer
+        position: PlasmaComponents.ToolBar.Footer
         anchors {
             bottom: parent.bottom
             left: parent.left

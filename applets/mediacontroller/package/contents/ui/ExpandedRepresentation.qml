@@ -359,7 +359,7 @@ PlasmaExtras.Representation {
 
     footer: PlasmaExtras.PlasmoidHeading {
         id: footerItem
-        location: PlasmaExtras.PlasmoidHeading.Location.Footer
+        position: PlasmaComponents3.ToolBar.Footer
         ColumnLayout { // Main Column Layout
             anchors.fill: parent
             RowLayout { // Seek Bar
@@ -645,7 +645,7 @@ PlasmaExtras.Representation {
 
     header: PlasmaExtras.PlasmoidHeading {
         id: headerItem
-        location: PlasmaExtras.PlasmoidHeading.Location.Header
+        position: PlasmaComponents3.ToolBar.Header
         visible: playerList.count > 2
         //this removes top padding to allow tabbar to touch the edge
         topPadding: topInset
