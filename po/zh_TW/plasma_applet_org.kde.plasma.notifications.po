@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-17 01:40+0000\n"
-"PO-Revision-Date: 2023-04-28 15:15+0900\n"
+"PO-Revision-Date: 2023-10-20 03:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -71,22 +71,19 @@ msgid "Notifications On"
 msgstr "開啟通知"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link Address"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
-msgstr "複製連結網址"
+msgstr "複製連結位址"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "複製"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "全部選擇"

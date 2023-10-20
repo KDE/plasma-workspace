@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-11 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -213,7 +213,7 @@ msgstr "Заблакаваць"
 msgid "Log Out"
 msgstr "Выхад"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
 #, kde-format
 msgid "Save Session"
 msgstr "Захаваць сеанс"
@@ -244,49 +244,47 @@ msgstr "Перазапусціць"
 msgid "Shut Down"
 msgstr "Выключыць"
 
-#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
-#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#: plugin/systementry.cpp:232
 #, kde-format
 msgid "Session"
 msgstr "Сеанс"
 
-#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
-#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#: plugin/systementry.cpp:237
 #, kde-format
 msgid "System"
 msgstr "Сістэма"
 
-#: plugin/systementry.cpp:263
+#: plugin/systementry.cpp:249
 #, kde-format
 msgid "Lock screen"
 msgstr "Заблакаваць экран"
 
-#: plugin/systementry.cpp:266
+#: plugin/systementry.cpp:252
 #, kde-format
 msgid "End session"
 msgstr "Скончыць сеанс"
 
-#: plugin/systementry.cpp:272
+#: plugin/systementry.cpp:258
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Запусціць паралельны сеанс ад імя іншага карыстальніка"
 
-#: plugin/systementry.cpp:275
+#: plugin/systementry.cpp:261
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Прыпыніць з кэшаваннем у аператыўную памяць"
 
-#: plugin/systementry.cpp:278
+#: plugin/systementry.cpp:264
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Прыпыніць з кэшаваннем на цвёрды дыск"
 
-#: plugin/systementry.cpp:281
+#: plugin/systementry.cpp:267
 #, kde-format
 msgid "Restart computer"
 msgstr "Перазапусціць камп'ютар"
 
-#: plugin/systementry.cpp:284
+#: plugin/systementry.cpp:270
 #, kde-format
 msgid "Turn off computer"
 msgstr "Выключыць камп'ютар"

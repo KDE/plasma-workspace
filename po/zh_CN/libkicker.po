@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-11 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2023-10-10 14:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -209,7 +209,7 @@ msgstr "锁定"
 msgid "Log Out"
 msgstr "注销"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
 #, kde-format
 msgid "Save Session"
 msgstr "保存会话"
@@ -240,49 +240,47 @@ msgstr "重启"
 msgid "Shut Down"
 msgstr "关机"
 
-#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
-#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#: plugin/systementry.cpp:232
 #, kde-format
 msgid "Session"
 msgstr "会话"
 
-#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
-#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#: plugin/systementry.cpp:237
 #, kde-format
 msgid "System"
 msgstr "系统"
 
-#: plugin/systementry.cpp:263
+#: plugin/systementry.cpp:249
 #, kde-format
 msgid "Lock screen"
 msgstr "锁定屏幕"
 
-#: plugin/systementry.cpp:266
+#: plugin/systementry.cpp:252
 #, kde-format
 msgid "End session"
 msgstr "结束会话"
 
-#: plugin/systementry.cpp:272
+#: plugin/systementry.cpp:258
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "作为另一个用户启动并行会话"
 
-#: plugin/systementry.cpp:275
+#: plugin/systementry.cpp:261
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "挂起到内存"
 
-#: plugin/systementry.cpp:278
+#: plugin/systementry.cpp:264
 #, kde-format
 msgid "Suspend to disk"
 msgstr "挂起到磁盘"
 
-#: plugin/systementry.cpp:281
+#: plugin/systementry.cpp:267
 #, kde-format
 msgid "Restart computer"
 msgstr "重新启动电脑"
 
-#: plugin/systementry.cpp:284
+#: plugin/systementry.cpp:270
 #, kde-format
 msgid "Turn off computer"
 msgstr "关闭电脑"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2022-09-02 07:19+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -32,35 +32,37 @@ msgstr "ქმედებების ჩვენება:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
-msgstr "გასვლა"
+msgid "Log Out"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
-#, kde-format
-msgid "Shutdown"
+#: contents/ui/ConfigGeneral.qml:43
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut Down"
 msgstr "გამორთვა"
 
-#: contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Reboot"
-msgstr "გადატვირთვა"
+#: contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Restart…"
+msgid "Restart"
+msgstr "გადატვირთვა…"
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "დაბლოკვა"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "მომხმარებლის გადართვა"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "პროგრამული ძილი"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -120,3 +122,9 @@ msgstr "ძილი (RAM-ში)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "პროგრამული ძილი (მეხსირების დისკზე დამახსოვრებით)"
+
+#~ msgid "Logout"
+#~ msgstr "გასვლა"
+
+#~ msgid "Reboot"
+#~ msgstr "გადატვირთვა"

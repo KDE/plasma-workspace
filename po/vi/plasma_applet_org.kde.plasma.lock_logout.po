@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2021-05-26 21:12+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -32,35 +32,37 @@ msgstr "Hiện hành động:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
-msgstr "Đăng xuất"
+msgid "Log Out"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
-#, kde-format
-msgid "Shutdown"
+#: contents/ui/ConfigGeneral.qml:43
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut Down"
 msgstr "Tắt"
 
-#: contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Reboot"
-msgstr "Khởi động lại"
+#: contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Restart…"
+msgid "Restart"
+msgstr "Khởi động lại…"
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Khoá"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "Chuyển người dùng"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Ngủ đông"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -120,6 +122,12 @@ msgstr "Ngủ (lưu trạng thái vào RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Ngủ đông (lưu trạng thái vào đĩa)"
+
+#~ msgid "Logout"
+#~ msgstr "Đăng xuất"
+
+#~ msgid "Reboot"
+#~ msgstr "Khởi động lại"
 
 #~ msgid "Shutdown..."
 #~ msgstr "Tắt…"

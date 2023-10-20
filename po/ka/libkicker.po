@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-11 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2022-09-02 06:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -210,7 +210,7 @@ msgstr "დაბლოკვა"
 msgid "Log Out"
 msgstr "გასვლა"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
 #, kde-format
 msgid "Save Session"
 msgstr "სესიის შენახვა"
@@ -241,49 +241,47 @@ msgstr "გადატვირთვა"
 msgid "Shut Down"
 msgstr "გამორთვა"
 
-#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
-#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#: plugin/systementry.cpp:232
 #, kde-format
 msgid "Session"
 msgstr "სესია"
 
-#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
-#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#: plugin/systementry.cpp:237
 #, kde-format
 msgid "System"
 msgstr "სისტემა"
 
-#: plugin/systementry.cpp:263
+#: plugin/systementry.cpp:249
 #, kde-format
 msgid "Lock screen"
 msgstr "ეკრანის დაბლოკვა"
 
-#: plugin/systementry.cpp:266
+#: plugin/systementry.cpp:252
 #, kde-format
 msgid "End session"
 msgstr "სესიის დასრულება"
 
-#: plugin/systementry.cpp:272
+#: plugin/systementry.cpp:258
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "სხვა მომხმარებლით პარალელური სესიის გაშვება"
 
-#: plugin/systementry.cpp:275
+#: plugin/systementry.cpp:261
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "RAM-ში შეჩერება"
 
-#: plugin/systementry.cpp:278
+#: plugin/systementry.cpp:264
 #, kde-format
 msgid "Suspend to disk"
 msgstr "დისკზე შეჩერება"
 
-#: plugin/systementry.cpp:281
+#: plugin/systementry.cpp:267
 #, kde-format
 msgid "Restart computer"
 msgstr "კომპიუტერის რესტარტი"
 
-#: plugin/systementry.cpp:284
+#: plugin/systementry.cpp:270
 #, kde-format
 msgid "Turn off computer"
 msgstr "კომპიუტერის გამორთვა"

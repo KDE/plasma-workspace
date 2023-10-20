@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2023-10-04 09:36+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -30,35 +30,37 @@ msgstr "הצגת פעולות:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
-msgstr "יציאה"
+msgid "Log Out"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
-#, kde-format
-msgid "Shutdown"
+#: contents/ui/ConfigGeneral.qml:43
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut Down"
 msgstr "כיבוי"
 
-#: contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Reboot"
-msgstr "הפעלה מחדש"
+#: contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Restart…"
+msgid "Restart"
+msgstr "הפעלה מחדש…"
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "נעילה"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "החלפת משתמש"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "תרדמת"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -118,6 +120,12 @@ msgstr "שינה (השהיה לזיכרון)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "תרדמת (השהיה לכונן)"
+
+#~ msgid "Logout"
+#~ msgstr "יציאה"
+
+#~ msgid "Reboot"
+#~ msgstr "הפעלה מחדש"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr "האם ברצונך להשהות לכונן (שינה)?"

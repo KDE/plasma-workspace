@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-11 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2021-05-28 02:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -209,7 +209,7 @@ msgstr "잠금"
 msgid "Log Out"
 msgstr "로그아웃"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
 #, kde-format
 msgid "Save Session"
 msgstr "세션 저장"
@@ -240,49 +240,47 @@ msgstr "다시 시작"
 msgid "Shut Down"
 msgstr "컴퓨터 끄기"
 
-#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
-#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#: plugin/systementry.cpp:232
 #, kde-format
 msgid "Session"
 msgstr "세션"
 
-#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
-#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#: plugin/systementry.cpp:237
 #, kde-format
 msgid "System"
 msgstr "시스템"
 
-#: plugin/systementry.cpp:263
+#: plugin/systementry.cpp:249
 #, kde-format
 msgid "Lock screen"
 msgstr "화면 잠그기"
 
-#: plugin/systementry.cpp:266
+#: plugin/systementry.cpp:252
 #, kde-format
 msgid "End session"
 msgstr "세션 끝내기"
 
-#: plugin/systementry.cpp:272
+#: plugin/systementry.cpp:258
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "다른 사용자로 새 세션 시작하기"
 
-#: plugin/systementry.cpp:275
+#: plugin/systementry.cpp:261
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "RAM 절전"
 
-#: plugin/systementry.cpp:278
+#: plugin/systementry.cpp:264
 #, kde-format
 msgid "Suspend to disk"
 msgstr "디스크 절전"
 
-#: plugin/systementry.cpp:281
+#: plugin/systementry.cpp:267
 #, kde-format
 msgid "Restart computer"
 msgstr "컴퓨터를 다시 시작합니다"
 
-#: plugin/systementry.cpp:284
+#: plugin/systementry.cpp:270
 #, kde-format
 msgid "Turn off computer"
 msgstr "컴퓨터를 끕니다"

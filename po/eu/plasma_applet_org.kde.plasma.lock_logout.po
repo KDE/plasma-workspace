@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2021-07-19 20:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -36,35 +36,37 @@ msgstr "Erakutsi ekintzak:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
-msgstr "Saio-itxi"
+msgid "Log Out"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
-#, kde-format
-msgid "Shutdown"
+#: contents/ui/ConfigGeneral.qml:43
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut Down"
 msgstr "Itzali"
 
-#: contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Reboot"
-msgstr "Berrabiarazi"
+#: contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Restart…"
+msgid "Restart"
+msgstr "Berrabiarazi…"
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Giltzatu"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "Aldatu erabiltzailea"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernatu"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -124,6 +126,12 @@ msgstr "Egin lo (eseki RAMera)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernatu (eseki diskora)"
+
+#~ msgid "Logout"
+#~ msgstr "Saio-itxi"
+
+#~ msgid "Reboot"
+#~ msgstr "Berrabiarazi"
 
 #~ msgid "Shutdown..."
 #~ msgstr "Itzali..."

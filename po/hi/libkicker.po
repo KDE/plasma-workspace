@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-11 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -209,7 +209,7 @@ msgstr "तालाबंद"
 msgid "Log Out"
 msgstr "लॉग-आउट"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
 #, kde-format
 msgid "Save Session"
 msgstr "सत्र सहेजें"
@@ -240,49 +240,47 @@ msgstr "पुनः प्रारंभ करें"
 msgid "Shut Down"
 msgstr "बन्द करें"
 
-#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
-#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#: plugin/systementry.cpp:232
 #, kde-format
 msgid "Session"
 msgstr "सत्र"
 
-#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
-#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#: plugin/systementry.cpp:237
 #, kde-format
 msgid "System"
 msgstr "तंत्र"
 
-#: plugin/systementry.cpp:263
+#: plugin/systementry.cpp:249
 #, kde-format
 msgid "Lock screen"
 msgstr "स्क्रीन तालाबंद करें"
 
-#: plugin/systementry.cpp:266
+#: plugin/systementry.cpp:252
 #, kde-format
 msgid "End session"
 msgstr "सत्र का अंत करें"
 
-#: plugin/systementry.cpp:272
+#: plugin/systementry.cpp:258
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "किसी भिन्न उपयोगकर्ता के रूप में समानांतर सत्र प्रारंभ करें"
 
-#: plugin/systementry.cpp:275
+#: plugin/systementry.cpp:261
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "रेम में निलंबित करें"
 
-#: plugin/systementry.cpp:278
+#: plugin/systementry.cpp:264
 #, kde-format
 msgid "Suspend to disk"
 msgstr "डिस्क पर निलंबित"
 
-#: plugin/systementry.cpp:281
+#: plugin/systementry.cpp:267
 #, kde-format
 msgid "Restart computer"
 msgstr "कम्प्यूटर पुनः प्रारंभ करें"
 
-#: plugin/systementry.cpp:284
+#: plugin/systementry.cpp:270
 #, kde-format
 msgid "Turn off computer"
 msgstr "कंप्यूटर बंद करें"

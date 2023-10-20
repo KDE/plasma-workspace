@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2023-02-04 09:14+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -53,43 +53,43 @@ msgstr "Obsługa sprzętu"
 msgid "Miscellaneous"
 msgstr "Różne"
 
-#: package/contents/ui/ConfigEntries.qml:84
+#: package/contents/ui/ConfigEntries.qml:90
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Rzecz"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
 msgid "Visibility"
 msgstr "Widoczność"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:101
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Skrót klawiszowy"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Pokaż, gdy potrzebne"
 
-#: package/contents/ui/ConfigEntries.qml:242
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Always shown"
 msgstr "Zawsze widoczne"
 
-#: package/contents/ui/ConfigEntries.qml:243
+#: package/contents/ui/ConfigEntries.qml:250
 #, kde-format
 msgid "Always hidden"
 msgstr "Zawsze ukryte"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:251
 #, kde-format
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#: package/contents/ui/ConfigEntries.qml:309
+#: package/contents/ui/ConfigEntries.qml:316
 #, kde-format
 msgid "Always show all entries"
 msgstr "Wszystkie rzeczy są zawsze widoczne"

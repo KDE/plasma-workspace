@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -36,35 +36,37 @@ msgstr "Паказ дзеянняў:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
-msgstr "Выйсці"
+msgid "Log Out"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
-#, kde-format
-msgid "Shutdown"
+#: contents/ui/ConfigGeneral.qml:43
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut Down"
 msgstr "Выключыць"
 
-#: contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Reboot"
-msgstr "Перазапусціць"
+#: contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Restart…"
+msgid "Restart"
+msgstr "Перазапусціць…"
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Заблакаваць"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "Пераключыць карыстальніка"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Перавесці ў рэжым сну"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -124,3 +126,9 @@ msgstr "Прыпыніць у RAM(кэшаванне у аператыўную �
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Перавесці ў рэжым сну (кэшаванне на цвёрды дыск)"
+
+#~ msgid "Logout"
+#~ msgstr "Выйсці"
+
+#~ msgid "Reboot"
+#~ msgstr "Перазапусціць"

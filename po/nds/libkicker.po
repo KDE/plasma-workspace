@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-11 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -210,7 +210,7 @@ msgstr "Afsluten"
 msgid "Log Out"
 msgstr ""
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
 #, fuzzy, kde-format
 msgid "Save Session"
 msgstr "Nieg Törn"
@@ -241,49 +241,47 @@ msgstr "Nieg starten"
 msgid "Shut Down"
 msgstr "Utmaken"
 
-#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
-#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#: plugin/systementry.cpp:232
 #, fuzzy, kde-format
 msgid "Session"
 msgstr "Nieg Törn"
 
-#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
-#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#: plugin/systementry.cpp:237
 #, kde-format
 msgid "System"
 msgstr ""
 
-#: plugin/systementry.cpp:263
+#: plugin/systementry.cpp:249
 #, kde-format
 msgid "Lock screen"
 msgstr ""
 
-#: plugin/systementry.cpp:266
+#: plugin/systementry.cpp:252
 #, fuzzy, kde-format
 msgid "End session"
 msgstr "Nieg Törn"
 
-#: plugin/systementry.cpp:272
+#: plugin/systementry.cpp:258
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr ""
 
-#: plugin/systementry.cpp:275
+#: plugin/systementry.cpp:261
 #, fuzzy, kde-format
 msgid "Suspend to RAM"
 msgstr "Utsetten"
 
-#: plugin/systementry.cpp:278
+#: plugin/systementry.cpp:264
 #, fuzzy, kde-format
 msgid "Suspend to disk"
 msgstr "Utsetten"
 
-#: plugin/systementry.cpp:281
+#: plugin/systementry.cpp:267
 #, fuzzy, kde-format
 msgid "Restart computer"
 msgstr "Nieg starten"
 
-#: plugin/systementry.cpp:284
+#: plugin/systementry.cpp:270
 #, kde-format
 msgid "Turn off computer"
 msgstr ""

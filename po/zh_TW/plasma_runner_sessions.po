@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-03-06 21:47+0900\n"
+"PO-Revision-Date: 2023-10-20 03:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: sessionrunner.cpp:20
@@ -35,16 +35,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "登出，離開現有的桌面工作階段"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr "關機;shutdown;shut down"
+msgstr "關機;shutdown;shut down;power;poweroff"
 
 #: sessionrunner.cpp:29
 #, kde-format

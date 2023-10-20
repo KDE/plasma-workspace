@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2015-07-12 20:23+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -32,35 +32,35 @@ msgstr ""
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
+msgid "Log Out"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
+#: contents/ui/ConfigGeneral.qml:43
 #, kde-format
-msgid "Shutdown"
+msgid "Shut Down"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:49
 #, kde-format
-msgid "Reboot"
+msgid "Restart"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Закључај"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "Пребаци корисника"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "У хибернацију"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"

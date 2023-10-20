@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2022-08-13 15:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -63,43 +63,43 @@ msgstr "Управление оборудованием"
 msgid "Miscellaneous"
 msgstr "Прочее"
 
-#: package/contents/ui/ConfigEntries.qml:84
+#: package/contents/ui/ConfigEntries.qml:90
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Элемент"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
 msgid "Visibility"
 msgstr "Видимость"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:101
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Комбинация клавиш"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Автоматически"
 
-#: package/contents/ui/ConfigEntries.qml:242
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Always shown"
 msgstr "Всегда показывать"
 
-#: package/contents/ui/ConfigEntries.qml:243
+#: package/contents/ui/ConfigEntries.qml:250
 #, kde-format
 msgid "Always hidden"
 msgstr "Всегда скрывать"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:251
 #, kde-format
 msgid "Disabled"
 msgstr "Отключить"
 
-#: package/contents/ui/ConfigEntries.qml:309
+#: package/contents/ui/ConfigEntries.qml:316
 #, kde-format
 msgid "Always show all entries"
 msgstr "Всегда показывать все элементы"

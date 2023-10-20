@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeplasma-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -27,35 +27,37 @@ msgstr "പ്രവർത്തികൾ കാണിക്കുക:"
 
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
-msgid "Logout"
-msgstr "പുറത്തിറങ്ങുക"
+msgid "Log Out"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
-#, kde-format
-msgid "Shutdown"
+#: contents/ui/ConfigGeneral.qml:43
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut Down"
 msgstr "അടയ്ക്കുക"
 
-#: contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Reboot"
-msgstr "പുനഃരാരംഭിക്കുക"
+#: contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Restart…"
+msgid "Restart"
+msgstr "പുനരാരംഭിക്കുക…"
 
-#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "പൂട്ടുക"
 
-#: contents/ui/ConfigGeneral.qml:57
+#: contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -115,6 +117,12 @@ msgstr "സ്ലീപ് (റാമിലേക്ക് സസ്‌പെൻ
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ഹൈബർ‌നേറ്റ് (ഡിസ്കിലേക്ക് സസ്‌പെൻഡ് ചെയ്യുക)"
+
+#~ msgid "Logout"
+#~ msgstr "പുറത്തിറങ്ങുക"
+
+#~ msgid "Reboot"
+#~ msgstr "പുനഃരാരംഭിക്കുക"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr "ഡിസ്കിലേക്ക് സസ്‌പെൻഡ് ചെയ്യാൻ നിങ്ങൾ‌ താൽ‌പ്പര്യപ്പെടുന്നോ (ഹൈബർ‌നേറ്റ്)?"
