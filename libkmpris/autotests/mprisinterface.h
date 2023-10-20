@@ -27,7 +27,7 @@ QProcess *startPlayer(QObject *parent)
 
     bool registered = false;
     for (int i = 0; i < 10; ++i) {
-        if (process->isReadable() && process->readAllStandardOutput().contains("MPRIS registered")) {
+        if (process->isReadable() && process->readAllStandardError().contains("MPRIS registered")) {
             registered = true;
             break;
         }

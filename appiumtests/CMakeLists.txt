@@ -16,7 +16,7 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
-add_subdirectory(touchinputhelper)
+add_subdirectory(inputsynth)
 
 add_test(
     NAME analogclocktest
@@ -95,11 +95,11 @@ set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 300)
 
 add_test(
     NAME mediacontrollertest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py ${CMAKE_BINARY_DIR}
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py --failfast
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
-set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH};LANG=en_US.UTF-8")
+set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH}")
 
 add_test(
     NAME systemtraytest

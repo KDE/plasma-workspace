@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import threading
+import time
 
 from gi.repository import GLib
 
@@ -44,6 +45,13 @@ class GLibMainLoopThread(threading.Thread):
         Processes some pending events in the main loop
         """
         if cls.loop is not None:
-            cls.loop.get_context().iteration(False)
+            context = cls.loop.get_context()
         else:
-            GLib.MainContext.default().iteration(False)
+            context = GLib.MainContext.default()
+
+        for _ in range(4):
+            if not context.pending():
+                time.sleep(0.1)
+                continue
+            context.iteration(may_block=False)
+            break
