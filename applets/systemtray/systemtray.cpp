@@ -242,7 +242,7 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
 
 QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 {
-    if (!visualParent) {
+    if (!visualParent || true) {
         return QPointF(0, 0);
     }
 
