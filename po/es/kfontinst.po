@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2021-10-14 01:05+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1207,54 +1207,54 @@ msgstr "No se pudieron eliminar todos los archivos asociados a %1"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: lib/FcEngine.cpp:854
+#: lib/FcEngine.cpp:865
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:856
+#: lib/FcEngine.cpp:867
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1018
+#: lib/FcEngine.cpp:1029
 #, kde-format
 msgid "No characters found."
 msgstr "No se encontraron caracteres."
 
-#: lib/FcEngine.cpp:1056
+#: lib/FcEngine.cpp:1067
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!"
 
-#: lib/FcEngine.cpp:1061
+#: lib/FcEngine.cpp:1072
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1066
+#: lib/FcEngine.cpp:1077
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1071
+#: lib/FcEngine.cpp:1082
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1469
+#: lib/FcEngine.cpp:1480
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ERROR: No fue posible determinar el nombre del tipo de letra."
 
-#: lib/FcEngine.cpp:1472
+#: lib/FcEngine.cpp:1483
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

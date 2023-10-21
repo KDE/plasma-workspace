@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2023-10-03 14:55+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
@@ -175,11 +176,13 @@ msgid "Delete Marked Files"
 msgstr "מחיקת קבצים מסומנים"
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
+#, fuzzy, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
 msgstr[0] "נמצא גופן כפול %1."
 msgstr[1] "נמצאו %1 גופנים כפולים."
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
@@ -241,11 +244,13 @@ msgid "Mark for Deletion"
 msgstr "סימון למחיקה"
 
 #: kcmfontinst/DuplicatesDialog.cpp:502
-#, kde-format
+#, fuzzy, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "לפתוח את הגופן במציג הגופנים?"
 msgstr[1] "לפתוח את %1 הגופנים במציג הגופנים?"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
@@ -769,11 +774,13 @@ msgid "Delete Font"
 msgstr "מחיקת גופן"
 
 #: kcmfontinst/KCmFontInst.cpp:602
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "למחוק את הגופן הזה?"
 msgstr[1] "למחוק את %1 הגופנים האלו?"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
@@ -813,13 +820,15 @@ msgid "Move"
 msgstr "העברה"
 
 #: kcmfontinst/KCmFontInst.cpp:645
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>להעביר את הגופן מ־<i>%2</i> ל־<i>%3</i>?</p>"
 msgstr[1] "<p>להעביר %1 גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
@@ -882,11 +891,13 @@ msgid "No fonts"
 msgstr "אין גופנים"
 
 #: kcmfontinst/KCmFontInst.cpp:863
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "גופן אחד"
 msgstr[1] "%1 גופנים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
@@ -992,21 +1003,25 @@ msgid "Disable Font"
 msgstr "השבתת גופן"
 
 #: kcmfontinst/KCmFontInst.cpp:1109
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "להפעיל את הגופן הזה?"
 msgstr[1] "להפעיל את %1 הגופנים האלו?"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1112
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "להשבית את הגופן הזה?"
 msgstr[1] "להשבית את %1 הגופנים האלו?"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1115
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
 "</p>"
@@ -1015,9 +1030,11 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>להפעיל את הגופן הזה שהוא חלק מהקבוצה ‚<b>%2</b>’?</p>"
 msgstr[1] "<p>להפעיל את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1120
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
 "b>'?</p>"
@@ -1026,6 +1043,8 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>להשבית את הגופן הזה שהוא חלק מהקבוצה ‚<b>%2</b>’?</p>"
 msgstr[1] "<p>להשבית את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
@@ -1172,59 +1191,61 @@ msgstr "לא ניתן להסיר את הקבצים המשויכים ל־%1"
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: lib/FcEngine.cpp:854
+#: lib/FcEngine.cpp:865
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "א"
 
-#: lib/FcEngine.cpp:856
+#: lib/FcEngine.cpp:867
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "אבגדהוזחטיכךלמםנןסעפףצץקרשת0123456789"
 
-#: lib/FcEngine.cpp:1018
+#: lib/FcEngine.cpp:1029
 #, kde-format
 msgid "No characters found."
 msgstr "לא נמצאו תווים."
 
-#: lib/FcEngine.cpp:1056
+#: lib/FcEngine.cpp:1067
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "דג סקרן שט לו בים זך ולפתע מצא חבורה נחמדה"
 
-#: lib/FcEngine.cpp:1061
+#: lib/FcEngine.cpp:1072
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "אבגדהוזחטיכלמנסעפצקרשת"
 
-#: lib/FcEngine.cpp:1066
+#: lib/FcEngine.cpp:1077
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "אבגדהוזחטיכלמנסעפצקרשת"
 
-#: lib/FcEngine.cpp:1071
+#: lib/FcEngine.cpp:1082
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$₪€%^&-+@~#<>{}[]־„”״׳"
 
-#: lib/FcEngine.cpp:1469
+#: lib/FcEngine.cpp:1480
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "שגיאה: לא ניתן לקבוע את שם הגופן."
 
-#: lib/FcEngine.cpp:1472
-#, kde-format
+#: lib/FcEngine.cpp:1483
+#, fuzzy, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
 msgstr[0] "%2 [פיקסל אחד]"
 msgstr[1] "%2 [%1 פיקסלים]"
+msgstr[2] ""
+msgstr[3] ""
 
 #: lib/KfiConstants.h:22
 msgid "Personal"

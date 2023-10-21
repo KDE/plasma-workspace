@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
-"PO-Revision-Date: 2023-07-07 10:57+0300\n"
+"PO-Revision-Date: 2023-10-20 12:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -148,7 +148,7 @@ msgstr "Kent"
 #: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Offset from UTC time"
-msgstr "UTC saatinden sapma"
+msgstr "UTC zamanından sapma"
 
 #: package/contents/ui/configAppearance.qml:124
 #, kde-format
@@ -158,7 +158,7 @@ msgstr "Zaman göstergesi:"
 #: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "12-Hour"
-msgstr "12 Saatlik"
+msgstr "12 Saat"
 
 #: package/contents/ui/configAppearance.qml:130
 #: package/contents/ui/configCalendar.qml:53
@@ -169,7 +169,7 @@ msgstr "Bölge öntanımlılarını kullan"
 #: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "24-Hour"
-msgstr "24 Saatlik"
+msgstr "24 Saat"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -203,16 +203,13 @@ msgid "Custom"
 msgstr "Özel"
 
 #: package/contents/ui/configAppearance.qml:200
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-"\">Saat Biçimi Belgeleri</a>"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
+"\">Zaman Biçimi Belgelendirmesi</a>"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format
@@ -321,7 +318,7 @@ msgstr "Sistem Geneli Zaman Dilimi"
 #: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Additional Time Zones"
-msgstr "Ek Saat Dilimleri"
+msgstr "Ek Zaman Dilimleri"
 
 #: package/contents/ui/configTimeZones.qml:140
 #, kde-format
@@ -329,13 +326,13 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
-"Tümünü uygulamanın açılır penceresinde görüntülemek için daha fazla saat "
+"Tümünü uygulamanın açılır penceresinde görüntülemek için daha fazla zaman "
 "dilimi ekleyin veya bunlardan birini saatin kendisi için kullanın"
 
 #: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid "Add Time Zones…"
-msgstr "Saat Dilimleri Ekle…"
+msgstr "Zaman Dilimleri Ekle…"
 
 #: package/contents/ui/configTimeZones.qml:159
 #, kde-format
@@ -412,7 +409,7 @@ msgstr "Diğer Takvimler"
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
-msgstr "%1 (UNIX Saati)"
+msgstr "%1 (UNIX Zamanı)"
 
 #: plugin/clipboardmenu.cpp:121
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
-"PO-Revision-Date: 2023-01-02 18:17+0100\n"
+"PO-Revision-Date: 2023-10-20 19:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -34,19 +34,17 @@ msgstr "Montri agojn:"
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Elsaluti"
 
 #: contents/ui/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut Down"
-msgstr "Malŝalti"
+msgstr "Fermi Sistemon"
 
 #: contents/ui/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "Restartigi…"
+msgstr "Restartigi"
 
 #: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format

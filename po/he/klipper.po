@@ -25,7 +25,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #: configdialog.cpp:80
@@ -64,12 +65,14 @@ msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
 #: configdialog.cpp:112
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
 msgstr[0] " רשומה"
 msgstr[1] " רשומות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: configdialog.cpp:131 configdialog.cpp:169
 #, kde-format
@@ -134,12 +137,14 @@ msgid "Exclude Windows..."
 msgstr "החרגת חלונות…"
 
 #: configdialog.cpp:292
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " שנייה"
 msgstr[1] " שניות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: configdialog.cpp:293
 #, kde-format

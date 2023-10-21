@@ -15,7 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
@@ -225,7 +226,7 @@ msgid "Next track"
 msgstr "הרצועה הבאה"
 
 #: contents/logout/Logout.qml:140
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
 "restarted, that user may lose work."
@@ -238,6 +239,8 @@ msgstr[0] ""
 msgstr[1] ""
 "יש עוד %1 משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
 "מידע שלהם."
+msgstr[2] ""
+msgstr[3] ""
 
 #: contents/logout/Logout.qml:154
 #, kde-format
@@ -250,25 +253,31 @@ msgid "Log Out"
 msgstr "יציאה"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
+#, fuzzy, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "מופעל מחדש עוד שנייה"
 msgstr[1] "מופעל מחדש עוד %1 שניות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: contents/logout/Logout.qml:228
-#, kde-format
+#, fuzzy, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "נכבה עוד שנייה"
 msgstr[1] "נכבה עוד %1 שניות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: contents/logout/Logout.qml:230
-#, kde-format
+#, fuzzy, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "יציאה מהפעלה עוד שנייה"
 msgstr[1] "יציאה מהפעלה עוד %1 שניות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: contents/logout/Logout.qml:241
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2021-12-12 14:50+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1210,54 +1210,54 @@ msgstr "Nepavyko pašalinti visų failų, susijusių su %1"
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: lib/FcEngine.cpp:854
+#: lib/FcEngine.cpp:865
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:856
+#: lib/FcEngine.cpp:867
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaĄąBbCcČčDdEeĘęĖėFfGgHhIiĮįYyJjKkLlMmNnOoPpRrSsŠšTtUuŲųŪūVvZzŽž0123456789"
 
-#: lib/FcEngine.cpp:1018
+#: lib/FcEngine.cpp:1029
 #, kde-format
 msgid "No characters found."
 msgstr "Nerasta jokių simbolių."
 
-#: lib/FcEngine.cpp:1056
+#: lib/FcEngine.cpp:1067
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Įlinkdama fechtuotojo špaga sublykčiojusi pragręžė apvalų arbūzą"
 
-#: lib/FcEngine.cpp:1061
+#: lib/FcEngine.cpp:1072
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "AĄBCČDEĘĖFGHIĮYJKLMNOPRSŠTUŲŪVZŽ"
 
-#: lib/FcEngine.cpp:1066
+#: lib/FcEngine.cpp:1077
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "aąbcčdeęėfghiįyjklmnoprsštuųūvzž"
 
-#: lib/FcEngine.cpp:1071
+#: lib/FcEngine.cpp:1082
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1469
+#: lib/FcEngine.cpp:1480
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "KLAIDA: Nepavyko nustatyti šrifto pavadinimo."
 
-#: lib/FcEngine.cpp:1472
+#: lib/FcEngine.cpp:1483
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

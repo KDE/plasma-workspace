@@ -15,7 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #: ksolidnotify.cpp:149
@@ -60,12 +61,14 @@ msgid "One or more files on this device are open within an application."
 msgstr "קובץ אחד או יותר בהתקן פתוח ביישום."
 
 #: ksolidnotify.cpp:202
-#, kde-format
+#, fuzzy, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "קובץ אחד או יותר מההתקן פתוח ביישום „%2”."
 msgstr[1] "קובץ אחד או יותר מההתקן פתוח ביישומים הבאים: %2."
+msgstr[2] ""
+msgstr[3] ""
 
 #: ksolidnotify.cpp:205
 #, kde-format

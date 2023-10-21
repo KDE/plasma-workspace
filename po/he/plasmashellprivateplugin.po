@@ -15,7 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
@@ -53,11 +54,13 @@ msgid "Other"
 msgstr "אחר"
 
 #: calendar/qml/DayDelegate.qml:43
-#, kde-format
+#, fuzzy, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "אירוע"
 msgstr[1] "%1 אירועים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
