@@ -102,20 +102,12 @@ execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_
 set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH};LANG=en_US.UTF-8")
 
 add_test(
-    NAME systemtraytest_x11
+    NAME systemtraytest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemtraytest.py
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 # StatusIcon only works with the X11 backend
-set_tests_properties(systemtraytest_x11 PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_KWIN_WAYLAND=0;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
-
-add_test(
-    NAME systemtraytest_wayland
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemtraytest.py
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-)
-# requestUpdate() on Wayland is crashy (called from KWindowShadowPrivate)
-set_tests_properties(systemtraytest_wayland PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11" WILL_FAIL TRUE)
+set_tests_properties(systemtraytest PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
 
 add_test(
     NAME logoutgreetertest
