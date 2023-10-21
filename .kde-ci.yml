@@ -80,7 +80,6 @@ RuntimeDependencies:
 - 'on': ['Linux']
   'require':
     'network/kio-extras': '@latest-kf6'
-    'plasma/powerdevil': '@same'
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
 - 'on': ['Linux', 'FreeBSD']
   'require':
