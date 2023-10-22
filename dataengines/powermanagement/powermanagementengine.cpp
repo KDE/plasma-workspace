@@ -66,6 +66,7 @@ PowermanagementEngine::PowermanagementEngine(QObject *parent)
     , m_sources(basicSourceNames())
     , m_session(new SessionManagement(this))
 {
+    Q_UNREACHABLE();
     qDBusRegisterMetaType<QList<InhibitionInfo>>();
     qDBusRegisterMetaType<InhibitionInfo>();
     qDBusRegisterMetaType<QList<QVariant>>();
