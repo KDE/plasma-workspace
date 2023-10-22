@@ -7,7 +7,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
+import QtQuick
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -157,7 +157,7 @@ PlasmaComponents3.AbstractButton {
                 left: parent.left
                 right: parent.right
                 top: parent.top
-                bottom: subDayLabel.top
+                bottom: parent.bottom
             }
             font.pixelSize: Math.max(
                 Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
@@ -169,6 +169,13 @@ PlasmaComponents3.AbstractButton {
             opacity: isCurrent ? 1.0 : 0.5
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
+
+            transitions: Transition {
+                AnchorAnimation {
+                    easing.type: Easing.OutCubic
+                    duration: Kirigami.Units.longDuration
+                }
+            }
         }
 
         Loader {
@@ -178,8 +185,10 @@ PlasmaComponents3.AbstractButton {
             anchors {
                 left: parent.left
                 right: parent.right
-                bottom: parent.bottom
+                top: parent.bottom
             }
+            asynchronous: true
+            opacity: 0
 
             sourceComponent: PlasmaComponents3.Label {
                 elide: Text.ElideRight
@@ -195,6 +204,35 @@ PlasmaComponents3.AbstractButton {
                 text: model.subDayLabel || model.alternateDayNumber.toString()
                 textFormat: Text.PlainText
                 wrapMode: Text.NoWrap
+            }
+
+            states: State {
+                when: subDayLabel.status === Loader.Ready && subDayLabel.implicitHeight > 1
+                AnchorChanges {
+                    target: label
+                    anchors.bottom: subDayLabel.top
+                }
+                AnchorChanges {
+                    target: subDayLabel
+                    anchors.top: undefined
+                    anchors.bottom: parent.bottom
+                }
+                PropertyChanges {
+                    target: subDayLabel
+                    opacity: 1
+                }
+            }
+
+            transitions: Transition {
+                NumberAnimation {
+                    property: "opacity"
+                    easing.type: Easing.OutCubic
+                    duration: Kirigami.Units.longDuration
+                }
+                AnchorAnimation {
+                    easing.type: Easing.OutCubic
+                    duration: Kirigami.Units.longDuration
+                }
             }
         }
 
