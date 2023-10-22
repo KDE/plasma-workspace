@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2020-10-10 23:07-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 19.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: recentdocuments.cpp:33
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
-#: recentdocuments.cpp:35
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr ":q: ਨਾਂ ਦੇ ਨਾਲ ਮਿਲਦੇ ਸਭ ਤਾਜ਼ਾ ਡੌਕੂਮੈਂਟ ਵੇਖੋ।"

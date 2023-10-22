@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -21,12 +21,12 @@ msgstr ""
 "%100>=11 && n%100<=14 ? 2 : 3;\n"
 "X-Generator: Weblate 4.10.1\n"
 
-#: recentdocuments.cpp:33
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "o open e poki pi jo lipu ni"
 
-#: recentdocuments.cpp:35
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr ""

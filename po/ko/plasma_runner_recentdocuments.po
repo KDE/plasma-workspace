@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2016-10-20 22:46+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: recentdocuments.cpp:33
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: recentdocuments.cpp:35
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "최근 사용한 문서 중 이름에 :q:이(가) 들어가는 문서를 찾습니다."

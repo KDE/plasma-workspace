@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2020-10-24 16:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.12.2\n"
 
-#: recentdocuments.cpp:33
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Mở thư mục chứa"
 
-#: recentdocuments.cpp:35
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "Tìm các tài liệu được dùng gần đây với tên khớp với :q:."

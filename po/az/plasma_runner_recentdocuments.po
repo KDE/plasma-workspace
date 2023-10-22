@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2020-08-05 17:34+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijan\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.04.3\n"
 
-#: recentdocuments.cpp:33
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Bu tərkibli qovluğu açın"
 
-#: recentdocuments.cpp:35
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "Ən son istifadə olunan :q: adlı sənədləri axtarır."

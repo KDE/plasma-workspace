@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
-"PO-Revision-Date: 2023-10-10 14:24\n"
+"PO-Revision-Date: 2023-10-21 13:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -203,16 +203,11 @@ msgid "Custom"
 msgstr "自定义"
 
 #: package/contents/ui/configAppearance.qml:200
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">时"
-"间格式文档</a>"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format

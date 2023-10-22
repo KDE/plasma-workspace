@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
-"PO-Revision-Date: 2022-09-02 07:19+0200\n"
+"PO-Revision-Date: 2023-10-21 07:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -33,19 +33,17 @@ msgstr "ქმედებების ჩვენება:"
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "გასვლა"
 
 #: contents/ui/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut Down"
 msgstr "გამორთვა"
 
 #: contents/ui/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "გადატვირთვა…"
+msgstr "გადატვირთვა"
 
 #: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
