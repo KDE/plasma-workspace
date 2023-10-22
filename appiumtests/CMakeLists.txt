@@ -114,8 +114,7 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemtraytest.py
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-# requestUpdate() on Wayland is crashy (called from KWindowShadowPrivate)
-set_tests_properties(systemtraytest_wayland PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11" WILL_FAIL TRUE)
+set_tests_properties(systemtraytest_wayland PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_XWAYLAND=1;USE_CUSTOM_BUS=1;GDK_BACKEND=x11")
 
 add_test(
     NAME logoutgreetertest
