@@ -8,14 +8,14 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2019-11-17 09:53+0100\n"
+"PO-Revision-Date: 2023-10-22 06:42+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -23,62 +23,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force font DPI:"
+#, kde-format
 msgid "Force font DPI Wayland"
-msgstr "Forzar os PPP da fonte:"
+msgstr "Forzar os PPP da fonte en Wayland."
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force font DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Forzar os PPP da fonte:"
+msgstr "Forzar os PPP da fonte en X11."
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgid "General font"
-msgstr "Xeral:"
+msgstr "Fonte xeral"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Fixed width:"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Anchura fixa:"
+msgstr "Fonte monoespazo"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small:"
+#, kde-format
 msgid "Small font"
-msgstr "Pequeno:"
+msgstr "Fonte pequena"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgid "Choose a font"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Escoller un tipo de letra"
+msgstr "Fonte das barras de ferramentas"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "Fonte dos menús"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Window title:"
+#, kde-format
 msgid "Window title font"
-msgstr "Título da xanela:"
+msgstr "Fonte dos títulos de xanela"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -148,10 +141,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "Este módulo permítelle configurar as fontes do sistema."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&Axustar todas as fontes…"
+msgstr "Axustar a escala global…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -168,6 +160,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"As fontes moi grandes poden producir resultados raros. En vez de usar un "
+"tamaño de fonte moi grande, considere axustar a escala global da pantalla."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -175,6 +169,9 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"Os tamaños de fontes con decimais causan problemas de disposición de texto "
+"nalgunhas aplicacións. Considere usar só números enteiros como tamaños de "
+"fontes."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -182,10 +179,11 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"A forma recomendada de escalar a interface é usar a funcionalidade de escala "
+"global da pantalla."
 
 #: package/contents/ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Axustar todas as fontes…"
 
@@ -195,10 +193,9 @@ msgid "General:"
 msgstr "Xeral:"
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgid "Select general font"
-msgstr "Xeral:"
+msgstr "Seleccionar a fonte xeral"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
@@ -206,10 +203,9 @@ msgid "Fixed width:"
 msgstr "Anchura fixa:"
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Fixed width:"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "Anchura fixa:"
+msgstr "Seleccionar a fonte monoespazo"
 
 #: package/contents/ui/main.qml:143
 #, kde-format
@@ -217,10 +213,9 @@ msgid "Small:"
 msgstr "Pequeno:"
 
 #: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Small:"
+#, kde-format
 msgid "Select small font"
-msgstr "Pequeno:"
+msgstr "Seleccionar a fonte pequena"
 
 #: package/contents/ui/main.qml:155
 #, kde-format
@@ -228,10 +223,9 @@ msgid "Toolbar:"
 msgstr "Barra de ferramentas:"
 
 #: package/contents/ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid "Choose a font"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "Escoller un tipo de letra"
+msgstr "Seleccionar a fonte das barras de ferramentas"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -239,10 +233,9 @@ msgid "Menu:"
 msgstr "Menú:"
 
 #: package/contents/ui/main.qml:168
-#, fuzzy, kde-format
-#| msgid "Select Font"
+#, kde-format
 msgid "Select menu font"
-msgstr "Seleccionar a fonte"
+msgstr "Seleccionar a fonte dos menús"
 
 #: package/contents/ui/main.qml:178
 #, kde-format
@@ -250,10 +243,9 @@ msgid "Window title:"
 msgstr "Título da xanela:"
 
 #: package/contents/ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Window title:"
+#, kde-format
 msgid "Select window title font"
-msgstr "Título da xanela:"
+msgstr "Seleccionar a fonte dos títulos de xanela"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
@@ -275,6 +267,11 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Os píxeles das pantallas adoitan aliñarse nunha grade. Polo tanto, as formas "
+"das fontes que non se aliñan coa grade terán un aspecto pixelado e "
+"incorrecto a non ser que use técnicas de <emphasis>suavizado</emphasis> para "
+"reducir o efecto. Por regra xeral, cómpre manter esta opción activada a non "
+"ser que cause problemas."
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -310,6 +307,15 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>En pantallas TFT ou LCD cada píxel está formado por tres ou catro "
+"luces monocroma. Estes <emphasis>subpíxeles</emphasis> poden cambiarse de "
+"maneira independente para mellorar aínda máis a calidade das fontes que se "
+"amosan.</para> <para>A calidade de renderización só mellora se a selección "
+"coincide co xeito en que se aliña cada subpíxel da pantalla. A maioría das "
+"pantallas ten unha orde linear de subpíxeles <emphasis>RGB</emphasis> "
+"(vermello, verde, azul), algunhas teñen <emphasis>BGR</emphasis> (azul, "
+"verde, vermello) e algunhas ordes exóticas son incompatíbeis con esta "
+"funcionalidade.</para>Isto non funciona con monitores CRT."
 
 #: package/contents/ui/main.qml:329
 #, kde-format
@@ -326,6 +332,11 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"As indicacións son unha técnica na que se usan as indicacións incrustadas "
+"nunha fonte para mellorar a calidade de renderización, en especial en "
+"tamaños pequenos. Mellores indicacións adoitan causar extremos mellor "
+"definidos, pero as letras pequenas terán unha forma peor definida en tamaños "
+"grandes."
 
 #: package/contents/ui/main.qml:380
 #, kde-format
@@ -343,6 +354,13 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Escriba os DPI (puntos por polgada) da súa pantalla para que as fontes "
+"da pantalla coincidan co seu tamaño físico ao imprimilas. Cambiar o valor "
+"desta opción a un distinto do predeterminado causará un conflito con moitas "
+"aplicacións; algunhas iconas e imaxes poderían non escalar como se espera.</"
+"para><para>Para aumentar o tamaño do texto, cambie o tamaño das fontes "
+"enriba. Para escalar todo, use o control esvaradío de escala na páxina "
+"<interface>Pantalla e monitor</interface>.</para>"
 
 #: package/contents/ui/main.qml:428
 #, kde-format
