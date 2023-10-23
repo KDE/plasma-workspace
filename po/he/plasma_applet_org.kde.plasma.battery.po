@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:42+0000\n"
-"PO-Revision-Date: 2023-10-05 11:34+0300\n"
+"PO-Revision-Date: 2023-10-22 08:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -179,13 +179,13 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "שינה ונעילת מסך אוטומטית מושבתות"
 
 #: package/contents/ui/main.qml:195
-#, fuzzy, kde-format
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "יישום ביקש להפעיל מצב ביצועים משופרים"
-msgstr[1] "%1 יישומים ביקשו להפעיל מצב ביצועים משופרים"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "שני יישומים ביקשו להפעיל מצב ביצועים משופרים"
+msgstr[2] "%1 יישומים ביקשו להפעיל מצב ביצועים משופרים"
+msgstr[3] "%1 יישומים ביקשו להפעיל מצב ביצועים משופרים"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -193,13 +193,13 @@ msgid "System is in Performance mode"
 msgstr "המערכת במצב ביצועים משופרים"
 
 #: package/contents/ui/main.qml:203
-#, fuzzy, kde-format
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "יישום ביקש להפעיל מצב חיסכון בחשמל"
-msgstr[1] "%1 יישומים ביקשו להפעיל מצב חיסכון בחשמל"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "שני יישומים ביקשו להפעיל מצב חיסכון בחשמל"
+msgstr[2] "%1 יישומים ביקשו להפעיל מצב חיסכון בחשמל"
+msgstr[3] "%1 יישומים ביקשו להפעיל מצב חיסכון בחשמל"
 
 #: package/contents/ui/main.qml:207
 #, kde-format
@@ -262,13 +262,13 @@ msgstr ""
 "המחשב הנייד שלך מוגדר לא לישון כשהמסך הפנימי נסגר בזמן שמחובר צג חיצוני."
 
 #: package/contents/ui/PowerManagementItem.qml:88
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "יישום אחד חוסם כרגע שינה ונעילת מסך:"
-msgstr[1] "%1 יישומים חוסמים כרגע שינה ונעילת מסך:"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "שני יישומים חוסמים כרגע שינה ונעילת מסך:"
+msgstr[2] "%1 יישומים חוסמים כרגע שינה ונעילת מסך:"
+msgstr[3] "%1 יישומים חוסמים כרגע שינה ונעילת מסך:"
 
 #: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
@@ -376,13 +376,13 @@ msgid "Performance may be reduced."
 msgstr "הביצועים כנראה מצומצמים."
 
 #: package/contents/ui/PowerProfileItem.qml:216
-#, fuzzy, kde-format
+#, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "יישום אחד ביקש להפעיל %2:"
-msgstr[1] "%1 יישומים ביקשו להפעיל %2:"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "שני יישומים ביקשו להפעיל %2:"
+msgstr[2] "%1 יישומים ביקשו להפעיל %2:"
+msgstr[3] "%1 יישומים ביקשו להפעיל %2:"
 
 #: package/contents/ui/PowerProfileItem.qml:234
 #, kde-format

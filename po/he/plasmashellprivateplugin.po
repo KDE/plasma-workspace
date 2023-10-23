@@ -3,21 +3,22 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-31 01:57+0000\n"
-"PO-Revision-Date: 2023-10-04 15:14+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-22 08:39+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -54,13 +55,13 @@ msgid "Other"
 msgstr "אחר"
 
 #: calendar/qml/DayDelegate.qml:43
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "אירוע"
-msgstr[1] "%1 אירועים"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "שני אירועים"
+msgstr[2] "%1 אירועים"
+msgstr[3] "%1 אירועים"
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format

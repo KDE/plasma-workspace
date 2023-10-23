@@ -3,21 +3,22 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2023-10-04 10:01+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-22 08:38+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: ksolidnotify.cpp:149
 #, kde-format
@@ -61,14 +62,14 @@ msgid "One or more files on this device are open within an application."
 msgstr "קובץ אחד או יותר בהתקן פתוח ביישום."
 
 #: ksolidnotify.cpp:202
-#, fuzzy, kde-format
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "קובץ אחד או יותר מההתקן פתוח ביישום „%2”."
 msgstr[1] "קובץ אחד או יותר מההתקן פתוח ביישומים הבאים: %2."
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] "קובץ אחד או יותר מההתקן פתוח ביישומים הבאים: %2."
+msgstr[3] "קובץ אחד או יותר מההתקן פתוח ביישומים הבאים: %2."
 
 #: ksolidnotify.cpp:205
 #, kde-format

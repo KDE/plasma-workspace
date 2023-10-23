@@ -13,21 +13,22 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2006.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-10-03 16:13+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-22 08:39+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -65,14 +66,14 @@ msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
 msgstr[0] " רשומה"
 msgstr[1] " רשומות"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] "רשומות"
+msgstr[3] "רשומות"
 
 #: configdialog.cpp:131 configdialog.cpp:169
 #, kde-format
@@ -137,14 +138,14 @@ msgid "Exclude Windows..."
 msgstr "החרגת חלונות…"
 
 #: configdialog.cpp:292
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " שנייה"
 msgstr[1] " שניות"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] " שניות"
+msgstr[3] " שניות"
 
 #: configdialog.cpp:293
 #, kde-format
