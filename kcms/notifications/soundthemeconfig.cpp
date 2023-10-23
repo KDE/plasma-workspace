@@ -6,7 +6,7 @@
 
 #include "soundthemeconfig.h"
 
-const QString DEFAULT_SOUND_THEME = QStringLiteral("oxygen");
+const QString DEFAULT_SOUND_THEME = QStringLiteral("ocean");
 
 SoundThemeConfig::SoundThemeConfig(QObject *parent)
     : QObject(parent)
