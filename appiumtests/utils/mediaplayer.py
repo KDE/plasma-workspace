@@ -95,7 +95,7 @@ class Mpris2:
     PLAYER_IFACE: Final = GLib.Variant('s', "org.mpris.MediaPlayer2.Player")
     APP_INTERFACE: Final = f"org.mpris.MediaPlayer2.appiumtest.instance{str(getpid())}"
 
-    __connection: Gio.DBusConnection
+    __connection: Gio.DBusConnection | None = None
 
     def __init__(self, metadata: list[dict[str, GLib.Variant]], base_properties: dict[str, GLib.Variant], player_properties: dict[str, GLib.Variant], current_index: int) -> None:
         assert len(metadata) > 0
@@ -150,7 +150,7 @@ class Mpris2:
             self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call, self.interface_handle_get_property, self.interface_handle_set_property)
         assert self.__base_reg_id != 0
 
-        print("MPRIS registered", file=sys.stdout)
+        print("MPRIS registered", file=sys.stderr, flush=True)
         sys.stdout.flush()
         self.registered_event.set()
 
@@ -171,7 +171,7 @@ class Mpris2:
             else:
                 assert False, f"Unknown interface {interface}"
 
-            print(f"Get: {interface} {property_name} {ret}")
+            print(f"Get: {interface} {property_name} {ret}", file=sys.stderr, flush=True)
             # https://bugzilla.gnome.org/show_bug.cgi?id=765603
             invocation.return_value(GLib.Variant('(v)', [ret]))
 
@@ -184,7 +184,7 @@ class Mpris2:
             else:
                 assert False, f"Unknown interface {interface}"
 
-            print(f"GetAll: {interface} {ret}")
+            print(f"GetAll: {interface} {ret}", file=sys.stderr, flush=True)
             invocation.return_value(GLib.Variant.new_tuple(ret))
 
         elif method_name == "Set":
@@ -206,7 +206,7 @@ class Mpris2:
             else:
                 assert False, f"Unknown property {property_name}"
 
-            print(f"Set: {interface} {property_name} {value}")
+            print(f"Set: {interface} {property_name} {value}", file=sys.stderr, flush=True)
 
         else:
             invocation.return_value(None)
@@ -285,7 +285,7 @@ class Mpris2:
         """
         assert interface_name == "org.mpris.MediaPlayer2.Player", f"Wrong interface name {interface_name} from {sender}"
 
-        print(f"player_handle_method_call method_name: {method_name}")
+        print(f"player_handle_method_call method_name: {method_name}", file=sys.stderr, flush=True)
 
         if method_name == "Next" or method_name == "Previous":
             self.current_index += 1 if method_name == "Next" else -1
@@ -334,7 +334,7 @@ class Mpris2:
             Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
 
         elif method_name == "OpenUri":
-            print("OpenUri")
+            print("OpenUri", file=sys.stderr, flush=True)
 
         else:
             # In case the interface adds new methods, fail here for easier discovery
@@ -356,7 +356,7 @@ class Mpris2:
         assert interface_name == "org.mpris.MediaPlayer2.Player", f"Wrong interface name {interface_name} from {sender}"
         assert key in self.player_properties.keys(), f"{key} does not exist"
 
-        print(f"player_handle_set_property key: {key}, value: {value}")
+        print(f"player_handle_set_property key: {key}, value: {value}", file=sys.stderr, flush=True)
 
         if key == "Rate":
             self.set_rate(value, connection, object_path)
@@ -381,9 +381,9 @@ class Mpris2:
         assert interface_name == "org.mpris.MediaPlayer2", f"Wrong interface name {interface_name} from {sender}"
 
         if method_name == "Raise":
-            print("Raise")
+            print("Raise", file=sys.stderr, flush=True)
         elif method_name == "Quit":
-            print("Quit")
+            print("Quit", file=sys.stderr, flush=True)
         else:
             assert False, f"method f{method_name} does not exist"
 
@@ -429,4 +429,4 @@ if __name__ == '__main__':
     loopThread = GLibMainLoopThread()
     loopThread.start()
     player = Mpris2(metadata, base_properties, player_properties, current_index)
-    print(f"Player {base_properties['Identity'].get_string()} started")
+    print(f"Player {base_properties['Identity'].get_string()} started", file=sys.stderr, flush=True)

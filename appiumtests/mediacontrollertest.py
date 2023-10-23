@@ -6,10 +6,12 @@
 
 # pylint: disable=too-many-arguments
 
-import ctypes
 import json
+import os
+import pathlib
 import subprocess
 import sys
+import sysconfig
 import unittest
 from os import getcwd, path
 from tempfile import NamedTemporaryFile
@@ -25,7 +27,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from utils.mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
-CMAKE_BINARY_DIR: str = ""
+if "KDECI_BUILD" not in os.environ:
+    CMAKE_INSTALL_PREFIX: Final = os.environ.get("CMAKE_INSTALL_PREFIX", os.path.join(pathlib.Path.home(), "kde", "usr"))
+    SITE_PACKAGES_DIR: Final = os.path.join(CMAKE_INSTALL_PREFIX, sysconfig.get_path("platlib")[len(sys.prefix + os.sep):])
+    for subdir in os.listdir(SITE_PACKAGES_DIR):
+        sys.path.append(os.path.join(SITE_PACKAGES_DIR, subdir))
+
+# This also initializes GLib.MainLoop as QGuiApplication creates an internal one
+# An instance can only have one GLib.MainLoop, so no need to create another one manually
+import inputsynth as IS
+
 WIDGET_ID: Final = "org.kde.plasma.mediacontroller"
 
 
@@ -39,7 +50,6 @@ class MediaControllerTests(unittest.TestCase):
     player_b: subprocess.Popen | None = None
     player_browser: subprocess.Popen | None = None
     player_plasma_browser_integration: subprocess.Popen | None = None
-    touch_input_iface: ctypes.CDLL
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -55,16 +65,10 @@ class MediaControllerTests(unittest.TestCase):
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
-        if path.exists(path.join(CMAKE_BINARY_DIR, "libtouchinputhelper.so")):
-            cls.touch_input_iface = ctypes.cdll.LoadLibrary(path.join(CMAKE_BINARY_DIR, "libtouchinputhelper.so"))
-        else:
-            cls.touch_input_iface = ctypes.cdll.LoadLibrary("libtouchinputhelper.so")
-
-        # This also initializes GLib.MainLoop as Qt also uses it
-        # An instance can only have one GLib.MainLoop, so no need to add one manually
-        cls.touch_input_iface.init_application()
-
     def setUp(self) -> None:
+        # Can't init the module in setUpClass because the nested wayland session may not be ready yet
+        IS.init_module()
+
         json_path: str = path.join(getcwd(), "resources/player_a.json")
         with open(json_path, "r", encoding="utf-8") as f:
             json_dict: dict[str, list | dict] = json.load(f)
@@ -74,9 +78,11 @@ class MediaControllerTests(unittest.TestCase):
         player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
 
         self.mpris_interface = Mpris2(metadata, base_properties, player_properties, current_index)
-        self.mpris_interface.registered_event.wait(10)
+        assert self.mpris_interface.registered_event.wait(10)
 
     def tearDown(self) -> None:
+        if not self._outcome.result.wasSuccessful():
+            self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
         self.mpris_interface.quit()
         self.mpris_interface = None
         WebDriverWait(self.driver, 5, 0.2).until(EC.presence_of_element_located((AppiumBy.NAME, "No media playing")))
@@ -86,7 +92,6 @@ class MediaControllerTests(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        cls.touch_input_iface.unload_application()
         cls.driver.quit()
 
     def test_track(self) -> None:
@@ -164,84 +169,77 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
 
-        # Initialize TasksModel and fake_input
-        self.touch_input_iface.init_task_manager()
-        self.touch_input_iface.init_fake_input()
+        IS.init_task_manager()
+        self.assertGreater(IS.get_task_count(), 0)
 
-        self.assertGreater(self.touch_input_iface.get_task_count(), 0)
-
-        self.touch_input_iface.maximize_window(0)
+        IS.maximize_window(0)
         sleep(1)  # Window animation
+        wait.until(lambda _: IS.is_window_maximized(0))
 
         # Get the geometry of the widget window
-        self.touch_input_iface.get_window_rect.restype = ctypes.POINTER(ctypes.c_int * 4)
-        rect = self.touch_input_iface.get_window_rect(0).contents  # x,y,width,height
+        rect: tuple[int] = IS.get_window_rect(0)  # x,y,width,height
         self.assertGreater(rect[2], 1, f"Invalid width {rect[2]}")
         self.assertGreater(rect[3], 1, f"Invalid height {rect[3]}")
 
         # Get the geometry of the virtual screen
-        self.touch_input_iface.get_screen_rect.restype = ctypes.POINTER(ctypes.c_int * 4)
-        screen_rect = self.touch_input_iface.get_screen_rect(0).contents  # x,y,width,height
+        screen_rect: tuple[int] = IS.get_screen_rect(0)  # x,y,width,height
         self.assertEqual(screen_rect[0], 0)
         self.assertEqual(screen_rect[1], 0)
         self.assertGreater(screen_rect[2], 1, f"Invalid screen width {rect[2]}")
         self.assertGreater(screen_rect[3], 1, f"Invalid screen height {rect[3]}")
 
         # Get the center point
-        center_pos_x: int = rect[1] + int(rect[3] / 2)
-        center_pos_y: int = rect[0] + int(rect[2] / 2)
-        move_distance_x: int = screen_rect[2] - int(rect[2] / 2)
-        move_distance_y: int = screen_rect[3] - int(rect[3] / 2)
+        center_pos_x: int = screen_rect[0] + int(screen_rect[2] / 2)
+        center_pos_y: int = screen_rect[1] + int(screen_rect[3] / 2)
 
         # Touch the window
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        self.touch_input_iface.touch_up()
+        IS.touch_down(center_pos_x, center_pos_y)
+        IS.touch_up()
 
         # Swipe right -> Position++
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        [self.touch_input_iface.touch_move(int(center_pos_x + distance), center_pos_y) for distance in range(1, move_distance_x)]
-        self.touch_input_iface.touch_up()
+        IS.touch_down(center_pos_x, center_pos_y)
+        [IS.touch_move(center_pos_x + distance, center_pos_y) for distance in range(1, center_pos_x)]
+        IS.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > 0)
 
         # Swipe left -> Position--
         old_position: int = self.mpris_interface.player_properties["Position"].get_int64()
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        [self.touch_input_iface.touch_move(center_pos_x - distance, center_pos_y) for distance in range(1, move_distance_x)]
-        self.touch_input_iface.touch_up()
+        IS.touch_down(center_pos_x, center_pos_y)
+        [IS.touch_move(center_pos_x - distance, center_pos_y) for distance in range(1, center_pos_x)]
+        IS.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() < old_position)
-
         # Swipe down: Volume--
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        [self.touch_input_iface.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, move_distance_y)]
-        self.touch_input_iface.touch_up()
+        IS.touch_down(center_pos_x, center_pos_y)
+        [IS.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, center_pos_y)]
+        IS.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < 1.0)
 
         # Swipe up: Volume++
         old_volume: float = self.mpris_interface.player_properties["Volume"].get_double()
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        [self.touch_input_iface.touch_move(center_pos_x, center_pos_y - distance) for distance in range(1, move_distance_y)]
-        self.touch_input_iface.touch_up()
+        IS.touch_down(center_pos_x, center_pos_y)
+        [IS.touch_move(center_pos_x, center_pos_y - distance) for distance in range(1, center_pos_y)]
+        IS.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() > old_volume)
 
         # Swipe down and then swipe right, only volume should change
         old_volume = self.mpris_interface.player_properties["Volume"].get_double()
         old_position = self.mpris_interface.player_properties["Position"].get_int64()
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        [self.touch_input_iface.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, move_distance_y)]  # Swipe down
+        IS.touch_down(center_pos_x, center_pos_y)
+        [IS.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, center_pos_y)]  # Swipe down
         sleep(0.5)  # Qt may ignore some touch events if there are too many, so explicitly wait a moment
-        [self.touch_input_iface.touch_move(center_pos_x + distance, center_pos_y + move_distance_y - 1) for distance in range(1, move_distance_x)]  # Swipe right
-        self.touch_input_iface.touch_up()
+        [IS.touch_move(center_pos_x + distance, center_pos_y + center_pos_y - 1) for distance in range(1, center_pos_x)]  # Swipe right
+        IS.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < old_volume)
         self.assertEqual(old_position, self.mpris_interface.player_properties["Position"].get_int64())
 
         # Swipe right and then swipe up, only position should change
         old_volume = self.mpris_interface.player_properties["Volume"].get_double()
         old_position = self.mpris_interface.player_properties["Position"].get_int64()
-        self.touch_input_iface.touch_down(center_pos_x, center_pos_y)
-        [self.touch_input_iface.touch_move(center_pos_x + distance, center_pos_y) for distance in range(1, move_distance_x)]  # Swipe right
+        IS.touch_down(center_pos_x, center_pos_y)
+        [IS.touch_move(center_pos_x + distance, center_pos_y) for distance in range(1, center_pos_x)]  # Swipe right
         sleep(0.5)
-        [self.touch_input_iface.touch_move(center_pos_x + move_distance_x - 1, center_pos_y - distance) for distance in range(1, move_distance_y)]  # Swipe up
-        self.touch_input_iface.touch_up()
+        [IS.touch_move(center_pos_x + center_pos_x - 1, center_pos_y - distance) for distance in range(1, center_pos_y)]  # Swipe up
+        IS.touch_up()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
         self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
 
@@ -393,6 +391,4 @@ class MediaControllerTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    assert len(sys.argv) >= 2, f"Missing CMAKE_CURRENT_BINARY_DIR argument {len(sys.argv)}"
-    CMAKE_BINARY_DIR = sys.argv.pop()
     unittest.main()
