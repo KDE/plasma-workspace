@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-07-19 14:06+0300\n"
+"PO-Revision-Date: 2023-10-23 13:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -671,8 +671,8 @@ msgid ""
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "İmleçle seçilen içerik kendiliğinden panoya kopyalanır, böylece bir Yapıştır "
-"eylemi veya orta tıklama ile yapıştırılabilir.<br/><a href=\"1\">Seçim ve "
-"pano hakkında daha fazla bilgi</a>."
+"eylemi veya orta tık ile yapıştırılabilir.<br/><a href=\"1\">Seçim ve pano "
+"hakkında daha fazla bilgi</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -689,7 +689,7 @@ msgid ""
 "using a middle-click."
 msgstr ""
 "İmleçle seçilen içerik panoya açıkça kopyalanmaz, pano geçmişinde depolanmaz "
-"ve yalnızca orta tıklama ile yapıştırılabilir."
+"ve yalnızca orta tık ile yapıştırılabilir."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
