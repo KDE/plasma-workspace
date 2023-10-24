@@ -270,31 +270,31 @@ KCM.ScrollViewKCM {
                         if (model.localeName !== i18n("Default")) {
                             switch (setting) {
                             case SettingType.Lang:
-                                kcm.settings.lang = localeName;
+                                kcm.settings.lang = model.localeName;
                                 break;
                             case SettingType.Numeric:
-                                kcm.settings.numeric = localeName;
+                                kcm.settings.numeric = model.localeName;
                                 break;
                             case SettingType.Time:
-                                kcm.settings.time = localeName;
+                                kcm.settings.time = model.localeName;
                                 break;
                             case SettingType.Currency:
-                                kcm.settings.monetary = localeName;
+                                kcm.settings.monetary = model.localeName;
                                 break;
                             case SettingType.Measurement:
-                                kcm.settings.measurement = localeName;
+                                kcm.settings.measurement = model.localeName;
                                 break;
                             case SettingType.PaperSize:
-                                kcm.settings.paperSize = localeName;
+                                kcm.settings.paperSize = model.localeName;
                                 break;
                             case SettingType.Address:
-                                kcm.settings.address = localeName;
+                                kcm.settings.address = model.localeName;
                                 break;
                             case SettingType.NameStyle:
-                                kcm.settings.nameStyle = localeName;
+                                kcm.settings.nameStyle = model.localeName;
                                 break;
                             case SettingType.PhoneNumbers:
-                                kcm.settings.phoneNumbers = localeName;
+                                kcm.settings.phoneNumbers = model.localeName;
                                 break;
                             }
                         } else {
