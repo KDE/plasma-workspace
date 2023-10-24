@@ -157,7 +157,7 @@ PlasmaComponents3.AbstractButton {
                 left: parent.left
                 right: parent.right
                 top: parent.top
-                bottom: parent.bottom
+                bottom: subDayLabel.top
             }
             font.pixelSize: Math.max(
                 Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
@@ -208,10 +208,6 @@ PlasmaComponents3.AbstractButton {
 
             states: State {
                 when: subDayLabel.status === Loader.Ready && subDayLabel.implicitHeight > 1
-                AnchorChanges {
-                    target: label
-                    anchors.bottom: subDayLabel.top
-                }
                 AnchorChanges {
                     target: subDayLabel
                     anchors.top: undefined
