@@ -162,7 +162,6 @@ int main(int argc, char *argv[])
     const QString executableName = QString::fromUtf8(argv[0]);
     startup = executableName.endsWith(QLatin1String("kcminit_startup")); // started from startkde?
 
-    KWorkSpace::detectPlatform(argc, argv);
     QGuiApplication::setDesktopSettingsAware(false);
     QGuiApplication app(argc, argv); // gui is needed for several modules
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("kcminit"));

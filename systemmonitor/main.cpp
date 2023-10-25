@@ -16,7 +16,6 @@
 
 int main(int argc, char **argv)
 {
-    KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("systemmonitor"));
 
