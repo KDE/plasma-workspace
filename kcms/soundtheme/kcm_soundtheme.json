@@ -31,6 +31,7 @@
         "Description[zh_TW]": "選擇通知用的音效主題",
         "Icon": "emblem-music-symbolic",
         "Name": "System Sounds",
+        "Name[ast]": "Soníos del sistema",
         "Name[bg]": "Системни звуци",
         "Name[ca@valencia]": "Sons del sistema",
         "Name[ca]": "Sons del sistema",
