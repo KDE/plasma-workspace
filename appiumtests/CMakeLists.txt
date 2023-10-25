@@ -29,6 +29,12 @@ add_test(
 set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 300)
 
 add_test(
+    NAME lock_logouttest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/lock_logouttest.py
+)
+set_tests_properties(lock_logouttest PROPERTIES TIMEOUT 120)
+
+add_test(
     NAME mediacontrollertest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
