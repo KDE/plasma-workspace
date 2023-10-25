@@ -239,19 +239,34 @@ ContainmentItem {
         }
 
         //Main popup
-        PlasmaCore.Dialog {
+        PlasmaCore.AppletPopup {
             id: dialog
             objectName: "popupWindow"
             visualParent: root
-            flags: Qt.WindowStaysOnTopHint
-            location: Plasmoid.location
-            floating: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
+            popupDirection: switch (Plasmoid.location) {
+                case PlasmaCore.Types.TopEdge:
+                    return Qt.BottomEdge
+                case PlasmaCore.Types.LeftEdge:
+                    return Qt.RightEdge
+                case PlasmaCore.Types.RightEdge:
+                    return Qt.LeftEdge
+                default:
+                    return Qt.TopEdge
+            }
+            margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
+
+            floating: Plasmoid.location == PlasmaCore.Desktop
+
+            removeBorderStrategy: Plasmoid.location === PlasmaCore.Types.Floating
+            ? PlasmaCore.AppletPopup.AtScreenEdges
+            : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
+
+
             hideOnWindowDeactivate: !Plasmoid.configuration.pin
             visible: systemTrayState.expanded
-            // visualParent: implicitly set to parent
-            backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
-            type: PlasmaCore.Dialog.AppletPopup
             appletInterface: root
+
+            backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.AppletPopup.SolidBackground : PlasmaCore.AppletPopup.StandardBackground
 
             onVisibleChanged: {
                 if (!visible) {
@@ -275,16 +290,16 @@ ContainmentItem {
                 KSvg.SvgItem {
                     // Only draw for popups of panel applets, not desktop applets
                     visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
-                        .includes(Plasmoid.location)
+                        .includes(Plasmoid.location) && dialog.margin == 0
                     anchors {
                         top: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : parent.top
                         left: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : parent.left
                         right: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : parent.right
                         bottom: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : parent.bottom
-                        topMargin: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : -dialog.margins.top
-                        leftMargin: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : -dialog.margins.left
-                        rightMargin: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -dialog.margins.right
-                        bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -dialog.margins.bottom
+                        topMargin: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : -dialog.topPadding
+                        leftMargin: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : -dialog.leftPadding
+                        rightMargin: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -dialog.rightPadding
+                        bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -dialog.bottomPadding
                     }
                     height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? 1 : undefined
                     width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
