@@ -30,7 +30,6 @@
 
 #include <Plasma/PluginLoader>
 #include <PlasmaQuick/AppletQuickItem>
-#include <PlasmaQuick/Dialog>
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
 
@@ -869,7 +868,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 
     qmlObj->completeInitialization();
 
-    auto dialog = qobject_cast<PlasmaQuick::Dialog *>(qmlObj->rootObject());
+    auto dialog = qobject_cast<QQuickWindow *>(qmlObj->rootObject());
     if (!dialog) {
         qCWarning(PLASMASHELL) << "Alternatives UI does not inherit from Dialog";
         delete qmlObj;
@@ -881,7 +880,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
         }
         qmlObj->deleteLater();
     });
-    connect(dialog, &PlasmaQuick::Dialog::visibleChanged, qmlObj, [qmlObj](bool visible) {
+    connect(dialog, &QQuickWindow::visibleChanged, qmlObj, [qmlObj](bool visible) {
         if (visible) {
             return;
         }
