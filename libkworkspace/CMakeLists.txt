@@ -3,13 +3,11 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     kworkspace.cpp
     sessionmanagement.cpp
     sessionmanagementbackend.cpp
-    updatelaunchenvjob.cpp
     autostartscriptdesktopfile.cpp
     kdisplaymanager.h
     kworkspace.h
     sessionmanagement.h
     sessionmanagementbackend.h
-    updatelaunchenvjob.h
     autostartscriptdesktopfile.h
     login1_manager_interface.cpp
     login1_manager_interface.h
@@ -73,7 +71,6 @@ install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARG
 install( FILES kdisplaymanager.h
                kworkspace.h
                sessionmanagement.h
-               updatelaunchenvjob.h
                autostartscriptdesktopfile.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h

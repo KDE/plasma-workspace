@@ -83,7 +83,7 @@
 #include "kscreenlocker_interface.h"
 #include "kwinsession_interface.h"
 
-#include <updatelaunchenvjob.h>
+#include <KUpdateLaunchEnvironmentJob>
 
 extern "C" {
 #include <X11/ICE/ICEmsg.h>
@@ -585,8 +585,12 @@ KSMServer::KSMServer(InitFlags flags)
         fclose(f);
         setenv("SESSION_MANAGER", session_manager, true);
 
-        auto updateEnvJob = new UpdateLaunchEnvJob(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
-        updateEnvJob->exec();
+        QProcessEnvironment newEnv;
+        newEnv.insert(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
+        auto updateEnvJob = new KUpdateLaunchEnvironmentJob(newEnv);
+        QEventLoop loop;
+        QObject::connect(updateEnvJob, &KUpdateLaunchEnvironmentJob::finished, &loop, &QEventLoop::quit);
+        loop.exec();
 
         free(session_manager);
     }
