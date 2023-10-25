@@ -101,7 +101,7 @@ Flow {
                 onTapped: performOperation(modelData.operation)
             }
 
-            Kirigami.Icon {
+            PlasmaCore.IconItem {
                 id: iconButton
                 width: items.iconSize
                 height: items.iconSize
