@@ -5,24 +5,28 @@
 # SPDX-License-Identifier: MIT
 
 import os
-from subprocess import Popen, PIPE
+import queue
+import sys
+import threading
 import unittest
 from datetime import date
+from subprocess import PIPE, Popen
 from time import sleep
-from typing import Any, Final
-import threading
+from typing import IO, Final
 
 import gi
 
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
 from appium import webdriver
+from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gtk, GLib, Gio
+from gi.repository import Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 KDE_VERSION: Final = 5
+WIDGET_ID: Final = "org.kde.plasma.systemtray"
 
 
 class XEmbedTrayIcon(threading.Thread):
@@ -33,7 +37,7 @@ class XEmbedTrayIcon(threading.Thread):
     def __init__(self, title: str) -> None:
         super().__init__()
 
-        self.__timer: threading.Timer = threading.Timer(20, Gtk.main_quit)  # Failsafe
+        self.__timer: threading.Timer = threading.Timer(300, Gtk.main_quit)  # Failsafe
 
         self.__status_icon: Gtk.StatusIcon = Gtk.StatusIcon(title=title)
         self.__status_icon.set_from_icon_name("xorg")
@@ -51,17 +55,62 @@ class XEmbedTrayIcon(threading.Thread):
         Gtk.main_quit()
 
     def __on_button_press_event(self, status_icon: Gtk.StatusIcon, button_event) -> None:
-        print("button-press-event", button_event.button)
+        print("button-press-event", button_event.button, file=sys.stderr, flush=True)
 
     def __on_button_release_event(self, status_icon: Gtk.StatusIcon, button_event) -> None:
-        print("button-release-event", button_event.button)
+        print("button-release-event", button_event.button, file=sys.stderr, flush=True)
         self.quit()
 
     def __on_popup_menu(self, status_icon: Gtk.StatusIcon, button: int, activate_time: int) -> None:
-        print("popup-menu", button, activate_time)
+        print("popup-menu", button, activate_time, file=sys.stderr, flush=True)
 
     def __on_scroll_event(self, status_icon, scroll_event) -> None:
-        print("scroll-event", scroll_event.delta_x, scroll_event.delta_y, int(scroll_event.direction))
+        print("scroll-event", scroll_event.delta_x, scroll_event.delta_y, int(scroll_event.direction), file=sys.stderr, flush=True)
+
+
+class StreamReaderThread(threading.Thread):
+    """
+    Non-blocking readline thread
+    """
+
+    def __init__(self, stream: IO[bytes]) -> None:
+        """
+        @param stream: the stream to read from
+        """
+        self.__stream: IO[bytes] = stream
+        self.__queue = queue.Queue()
+
+        self.__stop_event = threading.Event()
+
+        # Create the thread
+        super().__init__()
+
+    def run(self) -> None:
+        """
+        Collects lines from the source stream and put them in the queue.
+        """
+        while self.__stream.readable() and not self.__stop_event.is_set():
+            line_str: str = self.__stream.readline().decode(encoding="utf-8")
+            if "Received click" in line_str:
+                self.__queue.put(line_str)
+            elif len(line_str) == 0:
+                break
+
+    def stop(self) -> None:
+        """
+        Stops the thread
+        """
+        self.__stop_event.set()
+
+    def readline(self) -> str | None:
+        """
+        Non-blocking readline
+        The default timeout is 5s.
+        """
+        try:
+            return self.__queue.get(block=True, timeout=5)
+        except queue.Empty:
+            return None
 
 
 class SystemTrayTests(unittest.TestCase):
@@ -70,17 +119,18 @@ class SystemTrayTests(unittest.TestCase):
     """
 
     driver: webdriver.Remote
+    xembedsniproxy: Popen[bytes]
+    xembed_tray_icon: XEmbedTrayIcon | None
+    stream_reader_thread: StreamReaderThread | None
 
     @classmethod
     def setUpClass(cls) -> None:
         """
         Opens the widget and initialize the webdriver
         """
-        desired_caps: dict[str, Any] = {}
-        desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.systemtray"
-        desired_caps["timeouts"] = {'implicit': 10000}
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
-        cls.driver.implicitly_wait = 10
+        options = AppiumOptions()
+        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def setUp(self) -> None:
         self.kded = Popen([f"kded{KDE_VERSION}"])
@@ -96,12 +146,10 @@ class SystemTrayTests(unittest.TestCase):
 
             if reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean():
                 break
-            print(f"waiting for kded to appear on the dbus session")
+            print(f"waiting for kded to appear on the dbus session", file=sys.stderr, flush=True)
             sleep(1)
 
-        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule",
-                                                         GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"),
-                                                         Gio.DBusSendMessageFlags.NONE, 1000)
+        kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
         self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "Module is not loaded")
 
     def tearDown(self) -> None:
@@ -109,15 +157,30 @@ class SystemTrayTests(unittest.TestCase):
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"systemtraytest_failed_test_shot_#{self.id()}.png")
+            self.driver.get_screenshot_as_file(f"failed_test_shot_systemtraytest_#{self.id()}.png")
         self.kded.kill()
 
     @classmethod
     def tearDownClass(cls) -> None:
         """
-        Quits the webdriver
+        Make sure to terminate the driver again, lest it dangles.
         """
         cls.driver.quit()
+
+    def cleanup_xembed_tray_icon(self) -> None:
+        """
+        Cleanup function for test_xembed_tray_icon
+        """
+        self.xembedsniproxy.terminate()
+        self.xembedsniproxy = None
+
+        if self.xembed_tray_icon is not None:
+            self.xembed_tray_icon.quit()
+            self.xembed_tray_icon = None
+
+        if self.stream_reader_thread is not None and self.stream_reader_thread.is_alive():
+            self.stream_reader_thread.stop()
+            self.stream_reader_thread = None
 
     def test_xembed_tray_icon(self) -> None:
         """
@@ -127,47 +190,43 @@ class SystemTrayTests(unittest.TestCase):
         matches where the window is and is top level, so match the debug
         output from xembedsniproxy instead.
         """
+        self.addCleanup(self.cleanup_xembed_tray_icon)
+
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
-        xembedsniproxy: Popen[bytes] = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
-        if not xembedsniproxy.stderr or xembedsniproxy.poll() != None:
+        self.xembedsniproxy = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
+        if not self.xembedsniproxy.stderr or self.xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
-        print(f"xembedsniproxy PID: {xembedsniproxy.pid}")
+        print(f"xembedsniproxy PID: {self.xembedsniproxy.pid}", file=sys.stderr, flush=True)
 
         title: str = f"XEmbed Status Icon Test {date.today().strftime('%Y%m%d')}"
-        xembed_tray_icon: XEmbedTrayIcon = XEmbedTrayIcon(title)
-        xembed_tray_icon.start()
+        self.xembed_tray_icon = XEmbedTrayIcon(title)
+        self.xembed_tray_icon.start()
 
         wait: WebDriverWait = WebDriverWait(self.driver, 10)
         try:
             # FocusScope in StatusNotifierItem.qml
-            xembed_icon_item = wait.until(EC.presence_of_element_located((AppiumBy.NAME, title)))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, title)))
         except TimeoutException:
-            xembedsniproxy.terminate()
-            xembed_tray_icon.quit()
-            self.fail("Cannot find the XEmbed icon in the system tray: {}".format(xembedsniproxy.stderr.readlines()))
+            self.fail(f"Cannot find the XEmbed icon in the system tray: {self.xembedsniproxy.stderr.readlines()}")
+
+        # Create a reader thread to work around read block
+        self.stream_reader_thread = StreamReaderThread(self.xembedsniproxy.stderr)
+        self.stream_reader_thread.start()
+        self.assertTrue(self.stream_reader_thread.is_alive(), "The reader thread is not running")
 
         # Now test clickable
-        xembed_icon_item.click()
+        self.driver.find_element(AppiumBy.NAME, title).click()
 
         success: bool = False
         for _ in range(10):
-            if xembedsniproxy.stderr.readable():
-                stderr = xembedsniproxy.stderr.readline()
-                print(stderr)
-            else:
-                print("Retrying...")
-                xembed_icon_item.click()
-                sleep(1)
-                continue
-
-            line_str: str = stderr.decode(encoding="utf-8").strip()
-            if "Received click" in line_str:
+            if self.stream_reader_thread.readline() is not None:
                 success = True
                 break
 
-        xembedsniproxy.terminate()
-        xembed_tray_icon.quit()
+            print("Retrying...", file=sys.stderr, flush=True)
+            self.driver.find_element(AppiumBy.NAME, title).click()
+
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
 
 
