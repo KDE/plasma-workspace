@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-21 01:40+0000\n"
-"PO-Revision-Date: 2023-05-05 23:07+0200\n"
+"PO-Revision-Date: 2023-10-24 13:33+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -193,12 +193,12 @@ msgstr ""
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "Tamañu"
 
 #: kcmfontinst/DuplicatesDialog.cpp:385
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
@@ -213,7 +213,7 @@ msgstr ""
 #: kcmfontinst/DuplicatesDialog.cpp:401
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Propiedaes"
 
 #: kcmfontinst/DuplicatesDialog.cpp:403
 #, kde-format
@@ -235,7 +235,7 @@ msgstr[1] ""
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
 msgid "Family"
-msgstr ""
+msgstr "Familia"
 
 #: kcmfontinst/FontFilter.cpp:105
 #, kde-format
@@ -321,7 +321,7 @@ msgstr ""
 #: kcmfontinst/FontList.cpp:1007
 #, kde-format
 msgid "%1 [%2]"
-msgstr ""
+msgstr "%1 [%2]"
 
 #: kcmfontinst/FontList.cpp:1306
 #, kde-format
@@ -358,17 +358,17 @@ msgstr ""
 #: kcmfontinst/GroupList.cpp:59
 #, kde-format
 msgid "All Fonts"
-msgstr ""
+msgstr "Toles fontes"
 
 #: kcmfontinst/GroupList.cpp:62
 #, kde-format
 msgid "Personal Fonts"
-msgstr ""
+msgstr "Fontes personales"
 
 #: kcmfontinst/GroupList.cpp:65
 #, kde-format
 msgid "System Fonts"
-msgstr ""
+msgstr "Fontes del sistema"
 
 #: kcmfontinst/GroupList.cpp:68
 #, kde-format
@@ -1173,11 +1173,11 @@ msgid "ERROR: Could not determine font's name."
 msgstr ""
 
 #: lib/FcEngine.cpp:1483
-#, fuzzy, kde-format
+#, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
 msgstr[0] "%2 [1 píxel]"
-msgstr[1] "%2 [1 píxeles]"
+msgstr[1] "%2 [%1 píxeles]"
 
 #: lib/KfiConstants.h:22
 msgid "Personal"

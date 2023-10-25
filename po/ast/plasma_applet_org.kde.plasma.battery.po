@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:42+0000\n"
-"PO-Revision-Date: 2023-05-09 21:21+0200\n"
+"PO-Revision-Date: 2023-10-25 01:48+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -55,7 +55,7 @@ msgstr ""
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/BatteryItem.qml:223
 #, kde-format
@@ -189,8 +189,8 @@ msgstr ""
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Una aplicación solicitó activar el mou «Aforru d'enerxía»"
+msgstr[1] "%1 aplicaciones solicitaron activar el mou «Aforru d'enerxía»"
 
 #: package/contents/ui/main.qml:207
 #, kde-format
@@ -250,6 +250,8 @@ msgid ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 msgstr ""
+"El portátil ta configuráu pa nun se dormir al zarrar la tapa mentanto heba "
+"un monitor esternu conectáu."
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
@@ -272,6 +274,7 @@ msgstr ""
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
+"Una aplicación ta bloquiándo la dormición ya'l bloquéu de la pantalla (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -279,6 +282,8 @@ msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
+"Una aplicación ta bloquiándo la dormición ya'l bloquéu de la pantalla "
+"(motivu desconocíu)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -330,17 +335,20 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
+"Desactivóse'l mou «Rindimientu» p'amenorgar la xeneración de calor porque "
+"l'ordenador detectó que pue tar en cuellu."
 
 #: package/contents/ui/PowerProfileItem.qml:186
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr ""
+"El mou «Rindimientu» nun ta disponible porque l'ordenador ta mui caldiu."
 
 #: package/contents/ui/PowerProfileItem.qml:188
 #, kde-format
 msgid "Performance mode is unavailable."
-msgstr ""
+msgstr "El mou Rindimientu nun ta disponible."
 
 #: package/contents/ui/PowerProfileItem.qml:201
 #, kde-format
@@ -348,11 +356,14 @@ msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
 "has detected that it may be sitting on your lap."
 msgstr ""
+"Ye posible que s'amenorgue'l rindimientu pa disminuir la xeneración de calor "
+"porque l'ordenador detectó que pue tar en cuellu."
 
 #: package/contents/ui/PowerProfileItem.qml:203
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr ""
+"Ye posible que s'amenorgue'l rindimientu porque l'ordenador ta mui caldiu."
 
 #: package/contents/ui/PowerProfileItem.qml:205
 #, kde-format
