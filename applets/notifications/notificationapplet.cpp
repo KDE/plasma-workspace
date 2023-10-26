@@ -18,6 +18,7 @@
 #include <Plasma/Containment>
 #include <PlasmaQuick/AppletQuickItem>
 #include <PlasmaQuick/Dialog>
+#include <PlasmaQuick/PlasmaWindow>
 
 #include "fileinfo.h"
 #include "filemenu.h"
@@ -74,15 +75,24 @@ void NotificationApplet::configChanged()
 {
 }
 
+static bool isPlasmaWindow(QWindow *window)
+{
+    if (qobject_cast<PlasmaQuick::Dialog *>(window) || qobject_cast<PlasmaQuick::PlasmaWindow *>(window)) {
+        return true;
+    }
+    return false;
+}
+
 QWindow *NotificationApplet::focussedPlasmaDialog() const
 {
     auto *focusWindow = qApp->focusWindow();
-    if (qobject_cast<PlasmaQuick::Dialog *>(focusWindow)) {
+    if (isPlasmaWindow(focusWindow)) {
         return focusWindow;
     }
-
     if (focusWindow) {
-        return qobject_cast<PlasmaQuick::Dialog *>(focusWindow->transientParent());
+        if (isPlasmaWindow(focusWindow->transientParent())) {
+            return focusWindow->transientParent();
+        }
     }
 
     return nullptr;
