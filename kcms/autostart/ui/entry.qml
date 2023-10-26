@@ -5,11 +5,11 @@
 */
 
 import QtQuick
-import QtQuick.Controls 2.10 as QQC2
-import QtQuick.Layouts 1.11
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2 as Kirigami
-import org.kde.plasma.kcm.autostart 1.0
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.kcm.autostart
 
 KCM.SimpleKCM {
     id: entryPage
