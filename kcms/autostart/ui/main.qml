@@ -27,16 +27,7 @@ KCM.ScrollViewKCM {
 
         Connections {
             target: kcm.model
-            function onError(message) {
-                errorMessage.type = Kirigami.MessageType.Error;
-                errorMessage.visible = true;
-                errorMessage.text = message;
-            }
-
-        }
-
-        Connections {
-            target: kcm.model
+            
             property var fixItAction: Kirigami.Action {
                 property string fileName
                 text: i18n("Make Executable")
@@ -45,6 +36,12 @@ KCM.ScrollViewKCM {
                     kcm.model.makeFileExecutable(fileName);
                     errorMessage.visible = false;
                 }
+            }
+            
+            function onError(message) {
+                errorMessage.type = Kirigami.MessageType.Error;
+                errorMessage.visible = true;
+                errorMessage.text = message;
             }
 
             function onNonExecutableScript(fileName, kind) {
@@ -65,7 +62,7 @@ KCM.ScrollViewKCM {
 
     actions: [
         Kirigami.Action {
-            icon.name: "list-add"
+            icon.name: "list-add-symbolic"
             text: i18nc("@action:button", "Add…")
 
             checkable: true
@@ -77,18 +74,18 @@ KCM.ScrollViewKCM {
             }
 
             Kirigami.Action {
-                text: i18n("Add Application…")
-                icon.name: "list-add"
+                text: i18nc("@action:button", "Add Application…")
+                icon.name: "list-add-symbolic"
                 onTriggered: kcm.model.showApplicationDialog(root)
             }
             Kirigami.Action {
-                text: i18n("Add Login Script…")
-                icon.name: "list-add"
+                text: i18nc("@action:button", "Add Login Script…")
+                icon.name: "list-add-symbolic"
                 onTriggered: loginFileDialogLoader.active = true
             }
             Kirigami.Action {
-                text: i18n("Add Logout Script…")
-                icon.name: "list-add"
+                text: i18nc("@action:button", "Add Logout Script…")
+                icon.name: "list-add-symbolic"
                 onTriggered: logoutFileDialogLoader.active = true
             }
         }
@@ -196,7 +193,7 @@ KCM.ScrollViewKCM {
             width: parent.width - (Kirigami.Units.largeSpacing * 4)
             visible: parent.count === 0
             text: i18n("No user-specified autostart items")
-            explanation: xi18nc("@info", "Click the <interface>Add…</interface> button below to add some")
+            explanation: xi18nc("@info 'some' refers to autostart items", "Click the <interface>Add…</interface> button to add some")
         }
     }
 
