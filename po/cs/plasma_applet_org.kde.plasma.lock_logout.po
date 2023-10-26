@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
 "PO-Revision-Date: 2021-06-02 16:29+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -36,19 +36,17 @@ msgstr "Zobrazit činnosti:"
 #: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Odhlásit se"
 
 #: contents/ui/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut Down"
 msgstr "Vypnout"
 
 #: contents/ui/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "Restartovat…"
+msgstr "Restartovat"
 
 #: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
 #, kde-format
@@ -125,9 +123,3 @@ msgstr "Uspat (do paměti)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernovat (Uspat na disk)"
-
-#~ msgid "Logout"
-#~ msgstr "Odhlásit se"
-
-#~ msgid "Reboot"
-#~ msgstr "Restartovat"
