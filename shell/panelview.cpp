@@ -63,7 +63,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     if (KWindowSystem::isPlatformWayland()) {
         m_layerWindow = LayerShellQt::Window::get(this);
         m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);
-        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
         m_layerWindow->setScope(QStringLiteral("dock"));
         m_layerWindow->setCloseOnDismissed(false);
     }
