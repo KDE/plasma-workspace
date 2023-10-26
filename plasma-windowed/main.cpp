@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setApplicationVersion(QLatin1String(version));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
-    KLocalizedString::setApplicationDomain("plasmawindowed");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasmawindowed"));
 
     KDBusService service(KDBusService::Unique);
 

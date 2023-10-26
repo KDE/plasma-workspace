@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
     }
 #endif
 
-    KLocalizedString::setApplicationDomain("plasmashell");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasmashell"));
 
     // The executable's path is added to the library/plugin paths.
     // This does not make much sense for plasmashell.

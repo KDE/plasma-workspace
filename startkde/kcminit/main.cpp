@@ -165,7 +165,7 @@ int main(int argc, char *argv[])
     KWorkSpace::detectPlatform(argc, argv);
     QGuiApplication::setDesktopSettingsAware(false);
     QGuiApplication app(argc, argv); // gui is needed for several modules
-    KLocalizedString::setApplicationDomain("kcminit");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("kcminit"));
     KAboutData about(QStringLiteral("kcminit"),
                      i18n("KCMInit"),
                      QString(),

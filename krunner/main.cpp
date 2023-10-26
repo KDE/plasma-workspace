@@ -69,7 +69,7 @@ int main(int argc, char **argv)
     }
 #endif
 
-    KLocalizedString::setApplicationDomain("krunner");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("krunner"));
 
     //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
     //     QGuiApplication app(argc, argv);

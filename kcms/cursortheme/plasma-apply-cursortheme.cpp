@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     QCoreApplication::setApplicationName(QStringLiteral("plasma-apply-cursortheme"));
     QCoreApplication::setApplicationVersion(QStringLiteral("1.0"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
-    KLocalizedString::setApplicationDomain("plasma-apply-cursortheme");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasma-apply-cursortheme"));
 
     QCommandLineParser *parser = new QCommandLineParser;
     parser->addHelpOption();

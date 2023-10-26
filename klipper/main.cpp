@@ -21,7 +21,7 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("klipper");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("klipper"));
 
     KAboutData aboutData(QStringLiteral("klipper"),
                          i18n("Klipper"),

@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     QCoreApplication::setApplicationName(QStringLiteral("plasma-apply-colorscheme"));
     QCoreApplication::setApplicationVersion(QStringLiteral("1.0"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
-    KLocalizedString::setApplicationDomain("plasma-apply-colorscheme");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasma-apply-colorscheme"));
 
     QCommandLineParser *parser = new QCommandLineParser;
     parser->addHelpOption();
