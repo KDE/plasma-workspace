@@ -65,14 +65,6 @@ KCM.ScrollViewKCM {
             icon.name: "list-add-symbolic"
             text: i18nc("@action:button", "Add…")
 
-            checkable: true
-            checked: menu.opened
-            onTriggered: if (menu.opened) {
-                menu.close();
-            } else {
-                menu.open();
-            }
-
             Kirigami.Action {
                 text: i18nc("@action:button", "Add Application…")
                 icon.name: "list-add-symbolic"
