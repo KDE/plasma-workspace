@@ -7,12 +7,15 @@
 import QtQuick 2.2
 
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.12 as QQC2
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kscreenlocker 1.0 as ScreenLocker
 
 import "../components"
+import "../components/animation"
 
 SessionManagementScreen {
     id: sessionManager
@@ -112,5 +115,48 @@ SessionManagementScreen {
             Keys.onEnterPressed: clicked()
             Keys.onReturnPressed: clicked()
         }
+    }
+
+    component FailableLabel : PlasmaComponents3.Label {
+        id: _failableLabel
+        required property int kind
+        required property string label
+
+        visible: authenticator.authenticatorTypes & kind
+        text: label
+        horizontalAlignment: Text.AlignHCenter
+        Layout.fillWidth: true
+
+        RejectPasswordAnimation {
+            id: _rejectAnimation
+            target: _failableLabel
+            onFinished: _timer.restart()
+        }
+
+        Connections {
+            target: authenticator
+            function onNoninteractiveError(kind, authenticator) {
+                if (kind & _failableLabel.kind) {
+                    _failableLabel.text = Qt.binding(() => authenticator.errorMessage)
+                    _rejectAnimation.start()
+                }
+            }
+        }
+        Timer {
+            id: _timer
+            interval: Kirigami.Units.humanMoment
+            onTriggered: {
+                _failableLabel.text = Qt.binding(() => _failableLabel.label)
+            }
+        }
+    }
+
+    FailableLabel {
+        kind: ScreenLocker.Authenticator.Fingerprint
+        label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "(or scan your fingerprint on the reader)")
+    }
+    FailableLabel {
+        kind: ScreenLocker.Authenticator.Smartcard
+        label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "(or scan your smartcard)")
     }
 }

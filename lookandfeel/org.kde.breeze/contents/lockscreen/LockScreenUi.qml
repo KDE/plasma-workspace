@@ -14,6 +14,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kscreenlocker 1.0 as ScreenLocker
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -60,7 +61,10 @@ Item {
 
     Connections {
         target: authenticator
-        function onFailed() {
+        function onFailed(kind) {
+            if (kind != 0) { // if this is coming from the noninteractive authenticators
+                return;
+            }
             const msg = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlocking failed");
             lockScreenUi.handleMessage(msg);
             graceLockTimer.restart();
@@ -78,22 +82,23 @@ Item {
             }
         }
 
-        function onInfoMessage(msg) {
-            lockScreenUi.handleMessage(msg);
+        function onInfoMessageChanged() {
+            lockScreenUi.handleMessage(authenticator.InfoMessage);
             lockScreenUi.hadPrompt = true;
         }
 
-        function onErrorMessage(msg) {
-            lockScreenUi.handleMessage(msg);
+        function onErrorMessageChanged() {
+            lockScreenUi.handleMessage(authenticator.errorMessage);
         }
 
-        function onPrompt(msg) {
-            root.notification = msg;
+        function onPromptChanged() {
+            root.notification = Qt.binding(() => authenticator.prompt);
             mainBlock.showPassword = true;
             mainBlock.mainPasswordBox.forceActiveFocus();
             lockScreenUi.hadPrompt = true;
         }
-        function onPromptForSecret(msg) {
+        function onPromptForSecretChanged() {
+            root.notification = Qt.binding(() => authenticator.promptForSecret);
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
             lockScreenUi.hadPrompt = true;
@@ -137,8 +142,6 @@ Item {
     MouseArea {
         id: lockScreenRoot
 
-        property bool calledUnlock: false
-        property bool uiVisible: false
         property bool blockUI: mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive
 
         x: parent.x
@@ -146,25 +149,14 @@ Item {
         width: parent.width
         height: parent.height
         hoverEnabled: true
-        cursorShape: uiVisible ? Qt.ArrowCursor : Qt.BlankCursor
+        cursorShape: authenticator.state == ScreenLocker.Authenticators.Authenticating ? Qt.ArrowCursor : Qt.BlankCursor
         drag.filterChildren: true
-        onPressed: uiVisible = true;
-        onPositionChanged: uiVisible = true;
-        onUiVisibleChanged: {
-            if (blockUI) {
-                fadeoutTimer.running = false;
-            } else if (uiVisible) {
-                fadeoutTimer.restart();
-            }
-            if (!calledUnlock) {
-                calledUnlock = true
-                authenticator.tryUnlock();
-            }
-        }
+        onPressed: authenticator.startAuthenticating()
+        onPositionChanged: authenticator.startAuthenticating()
         onBlockUIChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
-                uiVisible = true;
+                authenticator.startAuthenticating();
             } else {
                 fadeoutTimer.restart();
             }
@@ -172,8 +164,8 @@ Item {
         Keys.onEscapePressed: {
             // If the escape key is pressed, kscreenlocker will turn off the screen.
             // We do not want to show the password prompt in this case.
-            if (uiVisible) {
-                uiVisible = false;
+            if (authenticator.state == ScreenLocker.Authenticators.Authenticating) {
+                authenticator.stopAuthenticating();
                 if (inputPanel.keyboardActive) {
                     inputPanel.showHide();
                 }
@@ -181,7 +173,7 @@ Item {
             }
         }
         Keys.onPressed: event => {
-            uiVisible = true;
+            authenticator.startAuthenticating();
             event.accepted = false;
         }
         Timer {
@@ -190,7 +182,7 @@ Item {
             onTriggered: {
                 if (!lockScreenRoot.blockUI) {
                     mainBlock.mainPasswordBox.showPassword = false;
-                    lockScreenRoot.uiVisible = false;
+                    authenticator.stopAuthenticating();
                 }
             }
         }
@@ -241,7 +233,7 @@ Item {
 
         WallpaperFader {
             anchors.fill: parent
-            state: lockScreenRoot.uiVisible ? "on" : "off"
+            state: authenticator.state == ScreenLocker.Authenticators.Authenticating ? "on" : "off"
             source: wallpaper
             mainStack: mainStack
             footer: footer
@@ -300,7 +292,7 @@ Item {
 
             initialItem: MainBlock {
                 id: mainBlock
-                lockScreenUiVisible: lockScreenRoot.uiVisible
+                lockScreenUiVisible: authenticator.state == ScreenLocker.Authenticators.Authenticating
 
                 showUserList: userList.y + mainStack.y > 0
 

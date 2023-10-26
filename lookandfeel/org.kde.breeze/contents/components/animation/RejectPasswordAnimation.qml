@@ -12,9 +12,12 @@ QtObject {
 
     property Item target
 
+    signal finished()
+
     readonly property Animation __animation: RejectPasswordPathAnimation {
         id: animation
         target: Item { id: fakeTarget }
+        onFinished: root.finished()
     }
 
     property Binding __bindEnabled: Binding {

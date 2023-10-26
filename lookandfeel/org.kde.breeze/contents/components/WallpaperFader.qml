@@ -18,7 +18,6 @@ Item {
     property Item mainStack
     property Item footer
     property alias source: wallpaperBlur.source
-    state: lockScreenRoot.uiVisible ? "on" : "off"
     property real factor: 0
     readonly property bool lightColorScheme: Math.max(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b) > 0.5
 
