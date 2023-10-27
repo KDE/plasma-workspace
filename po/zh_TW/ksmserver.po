@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-08-07 23:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -143,37 +143,37 @@ msgid ""
 "the lock screen."
 msgstr "以不支援鎖定螢幕的方式啟動。只在有其他組件提供鎖定螢幕時才需要。"
 
-#: server.cpp:881
+#: server.cpp:885
 #, kde-format
 msgid "Session Management"
 msgstr "工作階段管理"
 
-#: server.cpp:886
+#: server.cpp:890
 #, kde-format
 msgid "Log Out"
 msgstr "登出"
 
-#: server.cpp:891
+#: server.cpp:895
 #, kde-format
 msgid "Shut Down"
 msgstr "關機"
 
-#: server.cpp:896
+#: server.cpp:900
 #, kde-format
 msgid "Reboot"
 msgstr "重新啟動"
 
-#: server.cpp:902
+#: server.cpp:906
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "不經確認直接登出"
 
-#: server.cpp:907
+#: server.cpp:911
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "不經確認直接關機"
 
-#: server.cpp:912
+#: server.cpp:916
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "不經確認直接重新啟動"

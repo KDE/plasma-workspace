@@ -1,6 +1,6 @@
 # translation of ksmserver.po to Polish
 # translation of ksmserver.po to
-# Version: $Revision: 1650408 $
+# Version: $Revision: 1663411 $
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2009, 2010, 2011.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-04-10 11:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -146,37 +146,37 @@ msgstr ""
 "Rozpoczyna bez obsługi blokowania ekranu. Potrzebne tylko gdy inny składnik "
 "zapewnia blokowanie ekranu."
 
-#: server.cpp:881
+#: server.cpp:885
 #, kde-format
 msgid "Session Management"
 msgstr "Zarządzanie sesjami"
 
-#: server.cpp:886
+#: server.cpp:890
 #, kde-format
 msgid "Log Out"
 msgstr "Wyloguj"
 
-#: server.cpp:891
+#: server.cpp:895
 #, kde-format
 msgid "Shut Down"
 msgstr "Wyłącz"
 
-#: server.cpp:896
+#: server.cpp:900
 #, kde-format
 msgid "Reboot"
 msgstr "Uruchom ponownie"
 
-#: server.cpp:902
+#: server.cpp:906
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Wyloguj bez potwierdzenia"
 
-#: server.cpp:907
+#: server.cpp:911
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Zamknij bez potwierdzenia"
 
-#: server.cpp:912
+#: server.cpp:916
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Uruchom ponownie bez potwierdzenia"

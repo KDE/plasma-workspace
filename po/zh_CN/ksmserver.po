@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-10-21 13:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -135,37 +135,37 @@ msgid ""
 "the lock screen."
 msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁屏时需要。"
 
-#: server.cpp:881
+#: server.cpp:885
 #, kde-format
 msgid "Session Management"
 msgstr "会话管理"
 
-#: server.cpp:886
+#: server.cpp:890
 #, kde-format
 msgid "Log Out"
 msgstr "注销"
 
-#: server.cpp:891
+#: server.cpp:895
 #, kde-format
 msgid "Shut Down"
 msgstr "关机"
 
-#: server.cpp:896
+#: server.cpp:900
 #, kde-format
 msgid "Reboot"
 msgstr "重启"
 
-#: server.cpp:902
+#: server.cpp:906
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "注销而无需确认"
 
-#: server.cpp:907
+#: server.cpp:911
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "关机而无需确认"
 
-#: server.cpp:912
+#: server.cpp:916
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "重启而无需确认"

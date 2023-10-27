@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2020-04-25 11:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -154,42 +154,42 @@ msgstr ""
 "Запустить без поддержки блокировки экрана. Необходимо только если другой "
 "компонент обеспечивает блокировку экрана."
 
-#: server.cpp:881
+#: server.cpp:885
 #, kde-format
 msgid "Session Management"
 msgstr "Управление сеансами"
 
 # shutdown-method
-#: server.cpp:886
+#: server.cpp:890
 #, kde-format
 msgid "Log Out"
 msgstr "Завершить сеанс"
 
-#: server.cpp:891
+#: server.cpp:895
 #, kde-format
 msgid "Shut Down"
 msgstr "Выключить"
 
-#: server.cpp:896
+#: server.cpp:900
 #, kde-format
 msgid "Reboot"
 msgstr "Перезагрузить"
 
 # shutdown-method
-#: server.cpp:902
+#: server.cpp:906
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Завершить сеанс без подтверждения"
 
 # shutdown-method
-#: server.cpp:907
+#: server.cpp:911
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "Выключить компьютер без подтверждения"
 
 # shutdown-method
-#: server.cpp:912
+#: server.cpp:916
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Перезагрузить компьютер без подтверждения"

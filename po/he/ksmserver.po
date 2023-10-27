@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-10-04 09:03+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -150,37 +150,37 @@ msgid ""
 "the lock screen."
 msgstr "מתחיל ללא תמיכה במסך נעילה. נחוץ רק אם רכיבים אחרים מספקים מסך נעילה."
 
-#: server.cpp:881
+#: server.cpp:885
 #, kde-format
 msgid "Session Management"
 msgstr "ניהול הפעלות"
 
-#: server.cpp:886
+#: server.cpp:890
 #, kde-format
 msgid "Log Out"
 msgstr "יציאה"
 
-#: server.cpp:891
+#: server.cpp:895
 #, kde-format
 msgid "Shut Down"
 msgstr "כיבוי"
 
-#: server.cpp:896
+#: server.cpp:900
 #, kde-format
 msgid "Reboot"
 msgstr "הפעלה מחדש"
 
-#: server.cpp:902
+#: server.cpp:906
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "יציאה ללא בקשת אישור"
 
-#: server.cpp:907
+#: server.cpp:911
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "כיבוי ללא בקשת אישור"
 
-#: server.cpp:912
+#: server.cpp:916
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "הפעל מחדש ללא בקשת אישור"

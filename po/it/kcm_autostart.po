@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-08-19 17:05+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -87,45 +87,51 @@ msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
 msgstr "Aggiorna"
 
-#: ui/main.qml:42
+#: ui/main.qml:33
 #, kde-format
 msgid "Make Executable"
 msgstr "Rendi eseguibile"
 
-#: ui/main.qml:56
+#: ui/main.qml:53
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Il file «%1» deve essere eseguibile per poter essere avviato all'uscita."
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 "Il file «%1» deve essere eseguibile per poter essere avviato all'accesso."
 
-#: ui/main.qml:69
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Aggiungi…"
 
-#: ui/main.qml:80
-#, kde-format
+#: ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Aggiungi applicazione..."
 
-#: ui/main.qml:85
-#, kde-format
+#: ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Add Login Script…"
+msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Aggiungi script di accesso…"
 
-#: ui/main.qml:90
-#, kde-format
+#: ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Add Logout Script…"
+msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Aggiungi script di uscita…"
 
-#: ui/main.qml:130
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -134,70 +140,72 @@ msgstr ""
 "%1 non è stato ancora avviato automaticamente. I dettagli saranno "
 "disponibili dopo il riavvio del sistema."
 
-#: ui/main.qml:154
+#: ui/main.qml:143
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Non ancora avviato automaticamente"
 
-#: ui/main.qml:159 unit.cpp:30
+#: ui/main.qml:148 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "Non riuscito"
 
-#: ui/main.qml:165
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Vedi le proprietà"
 
-#: ui/main.qml:171
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Rimuovi voce"
 
-#: ui/main.qml:181
+#: ui/main.qml:170
 #, kde-format
 msgid "Applications"
 msgstr "Applicazioni"
 
-#: ui/main.qml:184
+#: ui/main.qml:173
 #, kde-format
 msgid "Login Scripts"
 msgstr "Script di accesso"
 
-#: ui/main.qml:187
+#: ui/main.qml:176
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scegli script di pre-avvio"
 
-#: ui/main.qml:190
+#: ui/main.qml:179
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Script di uscita"
 
-#: ui/main.qml:198
+#: ui/main.qml:187
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Nessuna voce di avvio automatico specificata dall'utente"
 
-#: ui/main.qml:199
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Click the <interface>Add…</interface> button below to add some"
+#: ui/main.qml:188
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Click the <interface>Add…</interface> button below to add some"
+msgctxt "@info 'some' refers to autostart items"
+msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 "Fai clic sul pulsante <interface>Aggiungi...</interface> qui sotto per "
 "aggiungere"
 
-#: ui/main.qml:214
+#: ui/main.qml:203
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Scegli script di accesso"
 
-#: ui/main.qml:234
+#: ui/main.qml:223
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Scegli script di uscita"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-09-05 00:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Klavye düzeni: %1"
 msgid "Username"
 msgstr "Kullanıcı Adı"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:62
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:65
 #, kde-format
 msgid "Password"
 msgstr "Parola"
@@ -38,7 +38,7 @@ msgstr "Parola"
 msgid "Log In"
 msgstr "Oturum Aç"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:323
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:315
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Büyük Harf Açık"
@@ -78,7 +78,7 @@ msgstr "Kullanıcı Adı ve Parola Girin"
 msgid "List Users"
 msgstr "Kullanıcıları Listele"
 
-#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:590
+#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:582
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -152,52 +152,62 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Kilit açma isteminin altında göster"
 
-#: contents/lockscreen/LockScreenUi.qml:64
+#: contents/lockscreen/LockScreenUi.qml:68
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Kilit açılamadı"
 
-#: contents/lockscreen/LockScreenUi.qml:337
+#: contents/lockscreen/LockScreenUi.qml:329
 #, kde-format
 msgid "Sleep"
 msgstr "Uyut"
 
-#: contents/lockscreen/LockScreenUi.qml:343 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:174
 #, kde-format
 msgid "Hibernate"
 msgstr "Hazırda Beklet"
 
-#: contents/lockscreen/LockScreenUi.qml:349
+#: contents/lockscreen/LockScreenUi.qml:341
 #, kde-format
 msgid "Switch User"
 msgstr "Kullanıcıyı Değiştir"
 
-#: contents/lockscreen/LockScreenUi.qml:528
+#: contents/lockscreen/LockScreenUi.qml:520
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Bu Oturuma Geç"
 
-#: contents/lockscreen/LockScreenUi.qml:536
+#: contents/lockscreen/LockScreenUi.qml:528
 #, kde-format
 msgid "Start New Session"
 msgstr "Yeni Oturum Başlat"
 
-#: contents/lockscreen/LockScreenUi.qml:549
+#: contents/lockscreen/LockScreenUi.qml:541
 #, kde-format
 msgid "Back"
 msgstr "Geri"
 
-#: contents/lockscreen/LockScreenUi.qml:614
+#: contents/lockscreen/LockScreenUi.qml:606
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Düzeni değiştir"
 
-#: contents/lockscreen/MainBlock.qml:105
+#: contents/lockscreen/MainBlock.qml:108
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "Kilidi Aç"
+
+#: contents/lockscreen/MainBlock.qml:156
+#, kde-format
+msgid "(or scan your fingerprint on the reader)"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:160
+#, kde-format
+msgid "(or scan your smartcard)"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format

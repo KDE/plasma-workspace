@@ -48,33 +48,23 @@
 <orderedlist>
     <listitem
 ><para
-><quote
->Totes les fonts</quote
->: Mostra totes les fonts, tant les personals com les del sistema.</para
+>«Totes les fonts»: Mostra totes les fonts, tant les personals com les del sistema.</para
 ></listitem>
     <listitem
 ><para
-><quote
->Fonts personals</quote
->: Les fonts mostrades seran les vostres fonts personals i no estaran disponibles per als altres usuaris.</para
+>«Fonts personals»: Les fonts mostrades seran les vostres fonts personals i no estaran disponibles per als altres usuaris.</para
 ></listitem>
     <listitem
 ><para
-><quote
->Fonts del sistema</quote
->: Les fonts mostrades són les disponibles per a tots els usuaris. Instal·lar o suprimir una font per a tot el sistema requereix privilegis d'administrador.</para
+>«Fonts del sistema»: Les fonts mostrades són les disponibles per a tots els usuaris. Instal·lar o suprimir una font per a tot el sistema requereix privilegis d'administrador.</para
 ></listitem>
     <listitem
 ><para
-><quote
->Sense classificar</quote
->: Llista totes les fonts que no estan dins d'altres grups definits per l'usuari. Aquest grup només apareixerà si teniu alguns grups definits per usuari.</para
+>«Sense classificar»: Llista totes les fonts que no estan dins d'altres grups definits per l'usuari. Aquest grup només apareixerà si teniu alguns grups definits per usuari.</para
 ></listitem>
 </orderedlist>
 <para
->Per a afegir una font a un grup, arrossegueu-la des de la llista de fonts cap a un grup. Per a eliminar una font d'un grup, arrossegueu-la cap al grup <quote
->Totes les fonts</quote
->.</para>
+>Per a afegir una font a un grup, arrossegueu-la des de la llista de fonts cap a un grup. Per a eliminar una font d'un grup, arrossegueu-la cap al grup «Totes les fonts».</para>
 <para
 >A sota d'aquesta llista trobareu botons per a crear un grup nou, eliminar-lo i habilitar o inhabilitar les fonts en el grup actual.</para>
 <para
@@ -93,9 +83,7 @@
 <title
 >Llista de fonts</title>
 <para
->La pantalla principal és una llista de les fonts instal·lades, agrupades pel nom de la família de les fonts. El número entre claudàtors representa el nombre d'estils instal·lats per a aquesta família. Per exemple, la font <quote
->Times</quote
-> es pot llistar com a: <itemizedlist
+>La pantalla principal és una llista de les fonts instal·lades, agrupades pel nom de la família de les fonts. El número entre claudàtors representa el nombre d'estils instal·lats per a aquesta família. Per exemple, la font «Times» es pot llistar com a: <itemizedlist
 > <listitem>
     <para
 >Times [4]</para>
@@ -196,11 +184,7 @@
 >Obtén les novetats candents</guilabel
 >. L'entrada <guilabel
 >Obtén fonts noves...</guilabel
-> en el botó de l'eina (que es troba sobre la llista de grups), us permet instal·lar les fonts des d'Internet. El fet de baixar fonts d'aquesta manera les instal·larà en el grup de <quote
->Fonts personals</quote
->. Per a instal·lar-les a tot el sistema, les haureu de moure al grup <quote
->Fonts del sistema</quote
-> -això es pot aconseguir arrossegant-les sobre aquesta entrada del grup-.</para>
+> en el botó de l'eina (que es troba sobre la llista de grups), us permet instal·lar les fonts des d'Internet. El fet de baixar fonts d'aquesta manera les instal·larà en el grup de «Fonts personals». Per a instal·lar-les a tot el sistema, les haureu de moure al grup «Fonts del sistema» -això es pot aconseguir arrossegant-les sobre aquesta entrada del grup-.</para>
 </sect3>
 
 </sect2>
@@ -214,15 +198,7 @@
 <para
 >Feu clic al botó <guilabel
 >Cerca els duplicats...</guilabel
-> per a obrir una eina senzilla que explorarà el vostre sistema cercant fonts amb diversos fitxers associats. Per exemple, si teniu <quote
->times.ttf</quote
-> i <quote
->times.TTF</quote
-> instal·lades a <quote
->/usr/local/share/fonts</quote
-> el dorsal per a les fonts (anomenat <quote
->FontConfig</quote
->) només en veurà una. De manera que si en desinstal·leu una, tornarà a aparèixer, atès que només s'ha eliminat un d'aquests fitxers. Executar aquesta eina generarà un diàleg llistant cada font que disposi de duplicat, i la corresponent llista de fitxers. Per a seleccionar un fitxer a suprimir, feu clic sobre la columna que contingui la icona de la paperera.</para>
+> per a obrir una eina senzilla que explorarà el vostre sistema cercant fonts amb diversos fitxers associats. Per exemple, si teniu «times.ttf» i «times.TTF» instal·lades a «/usr/local/share/fonts» el dorsal per a les fonts (anomenat «FontConfig») només en veurà una. De manera que si en desinstal·leu una, tornarà a aparèixer, atès que només s'ha eliminat un d'aquests fitxers. Executar aquesta eina generarà un diàleg llistant cada font que disposi de duplicat, i la corresponent llista de fitxers. Per a seleccionar un fitxer a suprimir, feu clic sobre la columna que contingui la icona de la paperera.</para>
 </sect2>
 
 <sect2 id="font-preview">

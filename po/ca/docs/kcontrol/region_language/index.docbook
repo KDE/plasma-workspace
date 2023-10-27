@@ -64,9 +64,7 @@
 <para
 >En fer clic al botó <guilabel
 >Afegeix-ne més...</guilabel
-> a la subpàgina d'idioma es mostrarà la llista d'idiomes disponibles i inicialment es mostrarà la llengua seleccionada. Si la selecció mostra <quote
->No hi ha cap idioma configurat</quote
->, no heu definit cap país i teniu de manera predeterminada l'idioma establert pel sistema, normalment C. Si l'idioma que voleu utilitzar no es mostra en aquesta llista, haureu d'instal·lar-la utilitzant el mètode habitual del vostre sistema. </para>
+> a la subpàgina d'idioma es mostrarà la llista d'idiomes disponibles i inicialment es mostrarà la llengua seleccionada. Si la selecció mostra «No hi ha cap idioma configurat», no heu definit cap país i teniu de manera predeterminada l'idioma establert pel sistema, normalment C. Si l'idioma que voleu utilitzar no es mostra en aquesta llista, haureu d'instal·lar-la utilitzant el mètode habitual del vostre sistema. </para>
 
 <para
 >Podeu eliminar un idioma de la llista principal seleccionant-lo i fent clic a la icona <inlinemediaobject

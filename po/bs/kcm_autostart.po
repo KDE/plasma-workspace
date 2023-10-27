@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2013-10-18 20:13+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -90,117 +90,120 @@ msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
 msgstr ""
 
-#: ui/main.qml:42
+#: ui/main.qml:33
 #, kde-format
 msgid "Make Executable"
 msgstr ""
 
-#: ui/main.qml:56
+#: ui/main.qml:53
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: ui/main.qml:69
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
-#: ui/main.qml:80
+#: ui/main.qml:69
 #, kde-format
+msgctxt "@action:button"
 msgid "Add Application…"
 msgstr ""
 
-#: ui/main.qml:85
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Add Script..."
+msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Dodaj skriptu..."
 
-#: ui/main.qml:90
+#: ui/main.qml:79
 #, fuzzy, kde-format
 #| msgid "Add Script..."
+msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Dodaj skriptu..."
 
-#: ui/main.qml:130
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:143
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr ""
 
-#: ui/main.qml:159 unit.cpp:30
+#: ui/main.qml:148 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:154
 #, fuzzy, kde-format
 #| msgid "&Properties..."
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "&Svojstva..."
 
-#: ui/main.qml:171
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "&Ukloni"
 
-#: ui/main.qml:181
+#: ui/main.qml:170
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:173
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: ui/main.qml:187
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Pre-KDE startup"
 msgid "Pre-startup Scripts"
 msgstr "Pred pokretanje KDE‑a"
 
-#: ui/main.qml:190
+#: ui/main.qml:179
 #, kde-format
 msgid "Logout Scripts"
 msgstr ""
 
-#: ui/main.qml:198
+#: ui/main.qml:187
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: ui/main.qml:199
+#: ui/main.qml:188
 #, kde-kuit-format
-msgctxt "@info"
-msgid "Click the <interface>Add…</interface> button below to add some"
+msgctxt "@info 'some' refers to autostart items"
+msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 
-#: ui/main.qml:214
+#: ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Choose Login Script"
 msgstr "Dodaj skriptu..."
 
-#: ui/main.qml:234
+#: ui/main.qml:223
 #, kde-format
 msgid "Choose Logout Script"
 msgstr ""

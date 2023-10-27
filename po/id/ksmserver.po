@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2020-05-03 09:57+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -138,40 +138,40 @@ msgstr ""
 "Jalankan tanpa dukungan layar kunci. Hanya diperlukan jika komponen lain "
 "menyediakan layar kunci."
 
-#: server.cpp:881
+#: server.cpp:885
 #, kde-format
 msgid "Session Management"
 msgstr "Pengelolaan Sesi"
 
-#: server.cpp:886
+#: server.cpp:890
 #, kde-format
 msgid "Log Out"
 msgstr "Keluar Log"
 
-#: server.cpp:891
+#: server.cpp:895
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "Shut Down"
 msgstr "Matikan"
 
-#: server.cpp:896
+#: server.cpp:900
 #, fuzzy, kde-format
 #| msgid "Reboot"
 msgid "Reboot"
 msgstr "Reboot"
 
-#: server.cpp:902
+#: server.cpp:906
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Keluar Log Tanpa Konfirmasi"
 
-#: server.cpp:907
+#: server.cpp:911
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "Halt Tanpa Konfirmasi"
 
-#: server.cpp:912
+#: server.cpp:916
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Nyalakan Ulang Tanpa Konfirmasi"

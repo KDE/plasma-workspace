@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-09-25 10:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -88,43 +88,49 @@ msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
 msgstr "Actualitza"
 
-#: ui/main.qml:42
+#: ui/main.qml:33
 #, kde-format
 msgid "Make Executable"
 msgstr "Fes que siga executable"
 
-#: ui/main.qml:56
+#: ui/main.qml:53
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr "El fitxer «%1» ha de ser executable per a executar-se en eixir."
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "El fitxer «%1» ha de ser executable per a executar-se en entrar."
 
-#: ui/main.qml:69
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Afig…"
 
-#: ui/main.qml:80
-#, kde-format
+#: ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Afig una aplicació…"
 
-#: ui/main.qml:85
-#, kde-format
+#: ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Add Login Script…"
+msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Afig un script d'inici…"
 
-#: ui/main.qml:90
-#, kde-format
+#: ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Add Logout Script…"
+msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Afig un script d'eixida…"
 
-#: ui/main.qml:130
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -133,69 +139,71 @@ msgstr ""
 "%1 encara no s'ha iniciat automàticament. Els detalls estaran disponibles "
 "després de reiniciar el sistema."
 
-#: ui/main.qml:154
+#: ui/main.qml:143
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Encara no s'ha iniciat automàticament"
 
-#: ui/main.qml:159 unit.cpp:30
+#: ui/main.qml:148 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "No s'ha pogut"
 
-#: ui/main.qml:165
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Veure les propietats"
 
-#: ui/main.qml:171
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Elimina l'entrada"
 
-#: ui/main.qml:181
+#: ui/main.qml:170
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: ui/main.qml:184
+#: ui/main.qml:173
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts d'inici de sessió"
 
-#: ui/main.qml:187
+#: ui/main.qml:176
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts previs a l'inici"
 
-#: ui/main.qml:190
+#: ui/main.qml:179
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripts d'eixida de sessió"
 
-#: ui/main.qml:198
+#: ui/main.qml:187
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 
-#: ui/main.qml:199
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Click the <interface>Add…</interface> button below to add some"
+#: ui/main.qml:188
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Click the <interface>Add…</interface> button below to add some"
+msgctxt "@info 'some' refers to autostart items"
+msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 "Feu clic en el botó <interface>Afig…</interface> de davall per a afegir-ne"
 
-#: ui/main.qml:214
+#: ui/main.qml:203
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Seleccioneu un script d'inici de sessió"
 
-#: ui/main.qml:234
+#: ui/main.qml:223
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Seleccioneu un script d'eixida"

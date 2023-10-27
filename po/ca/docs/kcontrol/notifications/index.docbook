@@ -49,9 +49,7 @@
 >Arranjament de les notificacions del sistema</title>
 
 <para
->El &plasma;, com totes les aplicacions, necessita informar a l'usuari quan es produeix un problema, es finalitza una tasca o si succeeix quelcom. El &plasma; empra un conjunt de <quote
->Notificacions del sistema</quote
-> per a mantenir informat a l'usuari de què està succeint.</para>
+>El &plasma;, com totes les aplicacions, necessita informar a l'usuari quan es produeix un problema, es finalitza una tasca o si succeeix quelcom. El &plasma; empra un conjunt de «Notificacions del sistema» per a mantenir informat a l'usuari de què està succeint.</para>
 
 <para
 >Utilitzant aquest mòdul, podreu determinar el que farà el &plasma; per a comunicar-vos cada esdeveniment.</para>

@@ -134,9 +134,7 @@
 >Accions</title>
 
 <para
->El &klipper; pot realitzar accions sobre el contingut del porta-retalls, basant-se en una expressió regular en particular. Per exemple, qualsevol contingut del porta-retalls que comenci amb <quote
->http://</quote
-> es podrà passar al Firefox o al &konqueror; com un &URL; a obrir. A més, si el contingut coincideix amb un camí, es poden realitzar accions similars segons el tipus de fitxer. Per exemple, si es copia al porta-retalls el camí a un fitxer <acronym
+>El &klipper; pot realitzar accions sobre el contingut del porta-retalls, basant-se en una expressió regular en particular. Per exemple, qualsevol contingut del porta-retalls que comenci amb «http://» es podrà passar al Firefox o al &konqueror; com un &URL; a obrir. A més, si el contingut coincideix amb un camí, es poden realitzar accions similars segons el tipus de fitxer. Per exemple, si es copia al porta-retalls el camí a un fitxer <acronym
 >PDF</acronym
 >, aquest es podrà veure a l'&okular;.</para>
 
@@ -191,11 +189,7 @@
 
 <note
 ><para
->El &X-Window; usa dues memòries intermèdies per separat de l'historial del porta-retalls: La <quote
->selecció</quote
-> i el <quote
->porta-retalls</quote
->. El text se situa a la memòria intermèdia de selecció simplement quan aquest és seleccionat i es pot enganxar amb el &BMR;. Per a situar el text a la memòria intermèdia del porta-retalls, seleccioneu-lo i premeu <keycombo
+>El &X-Window; usa dues memòries intermèdies per separat de l'historial del porta-retalls: La «selecció» i el «porta-retalls». El text se situa a la memòria intermèdia de selecció simplement quan aquest és seleccionat i es pot enganxar amb el &BMR;. Per a situar el text a la memòria intermèdia del porta-retalls, seleccioneu-lo i premeu <keycombo
 >&Ctrl;<keycap
 >X</keycap
 > </keycombo
@@ -313,9 +307,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->Quan se selecciona una àrea de la pantalla amb el ratolí o el teclat, això s'anomena la <quote
->selecció</quote
->. Aquesta opció determina si les seleccions de text es desen en l'historial del porta-retalls. És possible triar entre <guilabel
+>Quan se selecciona una àrea de la pantalla amb el ratolí o el teclat, això s'anomena la «selecció». Aquesta opció determina si les seleccions de text es desen en l'historial del porta-retalls. És possible triar entre <guilabel
 >Desa sempre en l'historial</guilabel
 > i <guilabel
 >Només quan es copiï explícitament</guilabel
@@ -473,9 +465,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >QRegularExpression</classname
 > de les &Qt;, la qual utilitza PCRE (Perl Compatible Regular Expressions -expressions regulars admeses per Perl-).</para>
 <para
->Podeu afegir una descripció del tipus expressió regular (&pex;, <quote
->HTTP URL</quote
->) fent clic <mousebutton
+>Podeu afegir una descripció del tipus expressió regular (&pex;, «HTTP URL») fent clic <mousebutton
 >esquerre</mousebutton
 > en la columna <guilabel
 >Descripció</guilabel
