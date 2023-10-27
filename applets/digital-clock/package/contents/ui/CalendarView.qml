@@ -577,6 +577,7 @@ PlasmaExtras.Representation {
             id: monthView
 
             anchors {
+                fill: parent
                 leftMargin: Kirigami.Units.smallSpacing
                 rightMargin: Kirigami.Units.smallSpacing
                 bottomMargin: Kirigami.Units.smallSpacing

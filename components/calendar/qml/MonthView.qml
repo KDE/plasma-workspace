@@ -15,8 +15,6 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 Item {
     id: root
 
-    anchors.fill: parent // TODO KF6 don't use anchors
-
     /**
      * Currently selected month name.
      * \property string MonthView::selectedMonth
