@@ -65,7 +65,7 @@ Item {
     /**
      * SwipeView currentIndex needed for binding a TabBar to the MonthView.
      */
-    property int currentIndex: swipeView.currentIndex
+    property alias currentIndex: swipeView.currentIndex
 
     property alias cellHeight: mainDaysCalendar.cellHeight
     property QtObject daysModel: calendarBackend.daysModel
