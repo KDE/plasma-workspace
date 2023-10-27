@@ -63,7 +63,7 @@ public:
     {
         return m_boundingSize;
     }
-    inline QRect rect() const;
+    inline QRectF rect() const;
     void setPosition(const QPoint &p)
     {
         m_pos = p;
@@ -102,9 +102,9 @@ PreviewCursor::PreviewCursor(const CursorTheme *theme, const QString &name, int 
     m_pixmap = QPixmap::fromImage(m_images.front().image);
 }
 
-QRect PreviewCursor::rect() const
+QRectF PreviewCursor::rect() const
 {
-    return QRect(m_pos, m_pixmap.size()).adjusted(-(cursorSpacing / 2), -(cursorSpacing / 2), cursorSpacing / 2, cursorSpacing / 2);
+    return QRectF(m_pos, m_pixmap.size()).adjusted(-(cursorSpacing / 2), -(cursorSpacing / 2), cursorSpacing / 2, cursorSpacing / 2);
 }
 
 // ------------------------------------------------------------------------------
@@ -217,21 +217,21 @@ void PreviewWidget::updateImplicitSize()
 void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty()) {
-        double devicePixelRatio = 1;
+        double deviceCoordinateWidth = width();
 #if HAVE_X11
         if (KWindowSystem::isPlatformX11()) {
-            devicePixelRatio = window()->devicePixelRatio();
+            deviceCoordinateWidth *= window()->devicePixelRatio();
         }
 #endif
-        const int spacing = cursorSpacing / devicePixelRatio / 2;
+        const int spacing = cursorSpacing / 2;
         int nextX = spacing;
         int nextY = spacing;
 
         for (auto *c : std::as_const(list)) {
             c->setPosition(nextX, nextY);
-            const int boundingSize = c->boundingSize() / devicePixelRatio;
+            const int boundingSize = c->boundingSize();
             nextX += boundingSize + spacing;
-            if (nextX + boundingSize > width()) {
+            if (nextX + boundingSize > deviceCoordinateWidth) {
                 nextX = spacing;
                 nextY += boundingSize + spacing;
             }
@@ -278,7 +278,7 @@ void PreviewWidget::paint(QPainter *painter)
         if (c->pixmap().isNull())
             continue;
 
-        painter->drawPixmap(c->position() * devicePixelRatio, *c);
+        painter->drawPixmap(c->position(), *c);
     }
 }
 
@@ -289,8 +289,14 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     if (needLayout)
         layoutItems();
 
-    auto it = std::find_if(list.cbegin(), list.cend(), [e](const PreviewCursor *c) {
-        return c->rect().contains(e->pos());
+    double devicePixelRatio = 1.0;
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        devicePixelRatio = window()->devicePixelRatio();
+    }
+#endif
+    auto it = std::find_if(list.cbegin(), list.cend(), [e, devicePixelRatio](const PreviewCursor *c) {
+        return c->rect().contains(e->position() * devicePixelRatio);
     });
     const PreviewCursor *cursor = it != list.cend() ? *it : nullptr;
 
