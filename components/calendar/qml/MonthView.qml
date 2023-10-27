@@ -73,7 +73,6 @@ Item {
     KeyNavigation.up: viewHeader.previousButton
     // The view can have no highlighted item, so always highlight the first item
     Keys.onDownPressed: swipeView.currentItem.focusFirstCellOfView()
-    signal upPressed(var event)
 
     function isToday(date) {
         return date.toDateString() === new Date().toDateString();
@@ -273,7 +272,7 @@ Item {
 
            function handleUpPress(event) {
                 if(root.showDigitalClockHeader) {
-                    root.upPressed(event);
+                    root.Keys.onUpPressed(event);
                     return;
                 }
                 swipeView.Keys.onUpPressed(event);

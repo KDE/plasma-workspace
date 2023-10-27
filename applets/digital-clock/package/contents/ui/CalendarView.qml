@@ -599,7 +599,6 @@ PlasmaExtras.Representation {
             KeyNavigation.left: KeyNavigation.tab
             KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
             Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
-            onUpPressed: Keys.onUpPressed(event)
         }
     }
 }
