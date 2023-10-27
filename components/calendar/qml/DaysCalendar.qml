@@ -116,7 +116,6 @@ Item {
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
 
-                Accessible.onPressAction: mouseArea.clicked(null);
                 Keys.onPressed: event => {
                     if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
                         event.accepted = false;
