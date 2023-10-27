@@ -266,6 +266,27 @@ Item {
             updateDecadeOverview();
         }
 
+        WheelHandler {
+            acceptedDevices: PointerDevice.Mouse
+            parent: swipeView.currentItem
+            onWheel: wheel => {
+                if (wheel.angleDelta.y === 0) {
+                    wheel.accepted = false;
+                    return;
+                }
+                // magic number 15 for common "one scroll"
+                // See https://doc.qt.io/qt-6/qml-qtquick-wheelhandler.html#rotation-prop
+                while(rotation >= 15) {
+                    rotation -= 15;;
+                    root.previousView();
+                }
+                while(rotation <= -15) {
+                    rotation += 15;
+                    root.nextView();
+                }
+            }
+        }
+
         // MonthView
         InfiniteList {
            id: mainDaysCalendar
@@ -313,8 +334,6 @@ Item {
                         root.currentDateAuxilliaryText = date.subLabel;
                     }
                 }
-                onScrollUp: root.nextView()
-                onScrollDown: root.previousView()
             }
         }
 
@@ -341,8 +360,6 @@ Item {
                     calendarBackend.goToMonth(date.monthNumber);
                     swipeView.currentIndex = 0;
                 }
-                onScrollUp: root.nextView()
-                onScrollDown: root.previousView()
             }
         }
 
@@ -382,8 +399,6 @@ Item {
                     swipeView.currentIndex = 1;
                 }
 
-                onScrollUp: root.nextView()
-                onScrollDown: root.previousView()
             }
         }
     }

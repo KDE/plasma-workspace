@@ -17,8 +17,6 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     id: daysCalendar
 
-    signal scrollUp
-    signal scrollDown
     signal activated(int index, var date, var item)
 
     readonly property int gridColumns: showWeekNumbers ? calendarGrid.columns + 1 : calendarGrid.columns
@@ -145,32 +143,9 @@ Item {
                         repeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     }
                 }
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    property int wheelDelta: 0
 
-                    onClicked: {
-                        daysCalendar.activated(index, model, delegate)
-                    }
-                    onWheel: wheel => {
-                        var delta = wheel.angleDelta.y || wheel.angleDelta.x
-                        wheelDelta += delta
-
-                        // magic number 120 for common "one click"
-                        // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-
-
-                        while(wheelDelta >= 120) {
-                            wheelDelta -= 120;
-                            daysCalendar.scrollDown()
-                        }
-
-                        while(wheelDelta <= -120) {
-                            wheelDelta += 120
-                            daysCalendar.scrollUp()
-                        }
-                    }
+                onClicked: {
+                    daysCalendar.activated(index, model, delegate)
                 }
             }
         }
