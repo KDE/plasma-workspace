@@ -88,8 +88,6 @@ Item {
 
         spacing: root.borderWidth
         columnSpacing: parent.squareCell ? (daysCalendar.width - daysCalendar.columns * (daysCalendar.cellWidth - root.borderWidth)) / daysCalendar.columns : root.borderWidth
-        property bool containsEventItems: false // FIXME
-        property bool containsTodoItems: false // FIXME
 
         Repeater {
             id: days
