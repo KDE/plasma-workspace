@@ -7,11 +7,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.2
+import QtQuick
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.workspace.calendar 2.0
-import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -43,11 +42,6 @@ Item {
     readonly property int cellWidth: Math.floor((swipeView.width - (daysCalendar.columns + 1) * root.borderWidth) / (daysCalendar.columns + (showWeekNumbers ? 1 : 0)))
     // Take the calendar height, subtract the inner spacings and divide by number of rows (root.weeks + one row for day names)
     readonly property int cellHeight:  Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * root.borderWidth) / calendarGrid.rows)
-
-    KSvg.Svg {
-        id: calendarSvg
-        imagePath: "widgets/calendar"
-    }
 
     Column {
         id: weeksColumn
