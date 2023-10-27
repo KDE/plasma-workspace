@@ -169,13 +169,6 @@ PlasmaComponents3.AbstractButton {
             opacity: isCurrent ? 1.0 : 0.5
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
-
-            transitions: Transition {
-                AnchorAnimation {
-                    easing.type: Easing.OutCubic
-                    duration: Kirigami.Units.longDuration
-                }
-            }
         }
 
         Loader {
