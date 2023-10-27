@@ -17,7 +17,6 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     id: daysCalendar
 
-    signal headerClicked
     signal scrollUp
     signal scrollDown
     signal activated(int index, var date, var item)
