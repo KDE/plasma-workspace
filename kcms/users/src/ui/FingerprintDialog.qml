@@ -86,7 +86,7 @@ Kirigami.OverlaySheet {
 
     Item {
         id: rootPanel
-        implicitWidth: Kirigami.Units.gridUnit * 12
+        implicitWidth: Kirigami.Units.gridUnit * 20
         Layout.maximumWidth: Kirigami.Units.gridUnit * 24
         Layout.leftMargin: Kirigami.Units.smallSpacing
         Layout.rightMargin: Kirigami.Units.smallSpacing
@@ -301,6 +301,7 @@ Kirigami.OverlaySheet {
                         }
                         QQC2.Label {
                             Layout.fillWidth: true
+                            elide: Text.ElideRight
                             text: finger.friendlyName
                         }
                     }
