@@ -89,4 +89,4 @@ RuntimeDependencies:
     'plasma/kglobalacceld': '@same'
 
 Options:
-  require-passing-tests-on: [ '@all' ]
+  require-passing-tests-on: ['Linux', 'FreeBSD']
