@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-09-25 10:45+0200\n"
+"PO-Revision-Date: 2023-10-27 11:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -110,22 +110,19 @@ msgid "Add…"
 msgstr "Afegeix…"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Afegeix una aplicació…"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Afegeix un script d'inici…"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Afegeix un script de sortida…"
@@ -190,13 +187,10 @@ msgid "No user-specified autostart items"
 msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 
 #: ui/main.qml:188
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Click the <interface>Add…</interface> button below to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr ""
-"Feu clic al botó <interface>Afegeix…</interface> de sota per a afegir-ne"
+msgstr "Feu clic al botó <interface>Afegeix…</interface> per a afegir-ne"
 
 #: ui/main.qml:203
 #, kde-format

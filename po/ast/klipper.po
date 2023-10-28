@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-10-24 23:40+0200\n"
+"PO-Revision-Date: 2023-10-28 00:33+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: configdialog.cpp:80
 #, kde-format
 msgid "Selection and Clipboard:"
-msgstr ""
+msgstr "Seleición ya cartafueyu:"
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -48,8 +48,8 @@ msgstr ""
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " entrada"
+msgstr[1] " entraes"
 
 #: configdialog.cpp:131 configdialog.cpp:169
 #, kde-format
@@ -114,8 +114,8 @@ msgstr ""
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " segundu"
+msgstr[1] " segundos"
 
 #: configdialog.cpp:293
 #, kde-format
@@ -126,7 +126,7 @@ msgstr ""
 #: configdialog.cpp:302
 #, kde-format
 msgid "Options:"
-msgstr ""
+msgstr "Opciones:"
 
 #: configdialog.cpp:329
 #, kde-format
@@ -152,7 +152,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: configdialog.cpp:374
 #, kde-format
@@ -227,7 +227,7 @@ msgstr ""
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atayos"
 
 #: configdialog.cpp:609
 #, kde-format
@@ -285,7 +285,7 @@ msgstr ""
 #: editactiondialog.cpp:126
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: editactiondialog.cpp:179
 #, kde-format
@@ -329,7 +329,7 @@ msgstr ""
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "Descripción:"
 
 #: editactiondialog.cpp:223
 #, kde-format
@@ -386,7 +386,7 @@ msgstr ""
 #: editcommanddialog.cpp:62
 #, kde-format
 msgid "Command:"
-msgstr ""
+msgstr "Comandu:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -431,7 +431,7 @@ msgstr ""
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Iconu:"
 
 #: historyimageitem.cpp:36
 #, kde-format
@@ -780,7 +780,7 @@ msgstr ""
 #: main.cpp:27
 #, kde-format
 msgid "Klipper"
-msgstr ""
+msgstr "Klipper"
 
 #: main.cpp:29
 #, kde-format

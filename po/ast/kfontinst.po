@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-21 01:40+0000\n"
-"PO-Revision-Date: 2023-10-24 13:33+0200\n"
+"PO-Revision-Date: 2023-10-28 00:28+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -611,7 +611,7 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
-msgstr ""
+msgstr "L'autenticación falló.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:720
 #, kde-format
@@ -847,8 +847,8 @@ msgstr ""
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 fonte"
+msgstr[1] "%1 fontes"
 
 #: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
@@ -1020,27 +1020,27 @@ msgstr ""
 #: kcmfontinst/PrintDialog.cpp:42
 #, kde-format
 msgid "12pt"
-msgstr ""
+msgstr "12pt"
 
 #: kcmfontinst/PrintDialog.cpp:43
 #, kde-format
 msgid "18pt"
-msgstr ""
+msgstr "18pt"
 
 #: kcmfontinst/PrintDialog.cpp:44
 #, kde-format
 msgid "24pt"
-msgstr ""
+msgstr "24pt"
 
 #: kcmfontinst/PrintDialog.cpp:45
 #, kde-format
 msgid "36pt"
-msgstr ""
+msgstr "36pt"
 
 #: kcmfontinst/PrintDialog.cpp:46
 #, kde-format
 msgid "48pt"
-msgstr ""
+msgstr "48pt"
 
 #: kio/KioFonts.cpp:208
 #, kde-format
@@ -1118,7 +1118,7 @@ msgstr ""
 #: kio/KioFonts.cpp:712
 #, kde-format
 msgid "Could not remove all files associated with %1"
-msgstr ""
+msgstr "Nun se pudieron quitar tolos ficheros asociaos con «%1»"
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:107
 #, kde-format
@@ -1147,7 +1147,7 @@ msgstr "Nun s'atopó nengún caráuter."
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr "La neña cuerre feliz xunto al ḷḷagu ya'l horru"
+msgstr "La neña cuerre feliz xunto al ḷḷagu ya l'horru"
 
 #: lib/FcEngine.cpp:1072
 #, kde-format
@@ -1460,7 +1460,7 @@ msgstr ""
 #: viewpart/CharTip.cpp:152
 #, kde-format
 msgid "Category"
-msgstr ""
+msgstr "Categoría"
 
 #: viewpart/CharTip.cpp:153
 #, kde-format
@@ -1500,7 +1500,7 @@ msgstr ""
 #: viewpart/FontViewPart.cpp:335
 #, kde-format
 msgid "Could not read font."
-msgstr ""
+msgstr "Nun se pudo lleer la fonte."
 
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
@@ -1531,7 +1531,7 @@ msgstr ""
 #: viewpart/PreviewSelectAction.cpp:32
 #, kde-format
 msgid "All Characters"
-msgstr ""
+msgstr "Tolos caráuteres"
 
 #: viewpart/PreviewSelectAction.cpp:40
 #, kde-format
@@ -1905,7 +1905,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:107
 msgid "CJK Symbols and Punctuation"
-msgstr ""
+msgstr "Símbolos ya puntuación de CJK"
 
 #: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
 msgid "Hiragana"
@@ -1933,7 +1933,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:114
 msgid "CJK Strokes"
-msgstr ""
+msgstr "Trazos de CJK"
 
 #: viewpart/UnicodeBlocks.h:115
 msgid "Katakana Phonetic Extensions"
@@ -1945,7 +1945,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:117
 msgid "CJK Compatibility"
-msgstr ""
+msgstr "Compatibilidá con CJK"
 
 #: viewpart/UnicodeBlocks.h:118
 msgid "CJK Unified Ideographs Extension A"
@@ -1957,7 +1957,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:120
 msgid "CJK Unified Ideographs"
-msgstr ""
+msgstr "Ideógrafos unificaos de CJK"
 
 #: viewpart/UnicodeBlocks.h:121
 msgid "Yi Syllables"

@@ -124,9 +124,3 @@ msgstr "Kvilemodus til minnet"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Dvalemodus til disken"
-
-#~ msgid "Logout"
-#~ msgstr "Logg ut"
-
-#~ msgid "Reboot"
-#~ msgstr "Start på nytt"

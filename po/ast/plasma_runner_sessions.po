@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-05-03 22:38+0200\n"
+"PO-Revision-Date: 2023-10-28 00:16+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -23,7 +23,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr ""
+msgstr "zarrar la sesión;zarru de la sesión"
 
 #: sessionrunner.cpp:23
 #, kde-format
@@ -36,12 +36,12 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr ""
+msgstr "apagar;apagáu;enerxía"
 
 #: sessionrunner.cpp:29
 #, kde-format
 msgid "Turns off the computer"
-msgstr ""
+msgstr "Apaga l'ordenador"
 
 #: sessionrunner.cpp:32
 #, kde-format
@@ -49,12 +49,12 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr ""
+msgstr "reaniciar;reaniciu"
 
 #: sessionrunner.cpp:35
 #, kde-format
 msgid "Reboots the computer"
-msgstr ""
+msgstr "Reanicia l'ordenador"
 
 #: sessionrunner.cpp:39
 #, kde-format
@@ -66,7 +66,7 @@ msgstr ""
 #: sessionrunner.cpp:41
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
-msgstr ""
+msgstr "Bloquia les sesiones actuales ya anicia'l curiapantalles"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -75,6 +75,8 @@ msgctxt ""
 "desktop session"
 msgid "save;save session"
 msgstr ""
+"guardar la sesión;guardáu de la sesión;guardáu de sesiones;guardáu de les "
+"sesiones"
 
 #: sessionrunner.cpp:47
 #, kde-format
@@ -87,29 +89,29 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr ""
+msgstr "cambiar d'usuariu;cambéu d'usuariu;sesión nueva"
 
 #: sessionrunner.cpp:53
 #, kde-format
 msgid "Starts a new session as a different user"
-msgstr ""
+msgstr "Anicia una sesión nueva con otru usuariu"
 
 #: sessionrunner.cpp:56
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr ""
+msgstr "sesiones"
 
 #: sessionrunner.cpp:57
 #, kde-format
 msgid "Lists all sessions"
-msgstr ""
+msgstr "Llista toles sesiones"
 
 #: sessionrunner.cpp:60
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr ""
+msgstr "cambiar;cambéu"
 
 #: sessionrunner.cpp:62
 #, kde-format
@@ -122,30 +124,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Zarrar la sesión"
 
 #: sessionrunner.cpp:89
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr ""
+msgstr "Apagar"
 
 #: sessionrunner.cpp:99
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr ""
+msgstr "Reaniciar"
 
 #: sessionrunner.cpp:109
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Bloquiar"
 
 #: sessionrunner.cpp:119
 #, kde-format
 msgid "Save Session"
-msgstr ""
+msgstr "Guardar la sesión"
 
 #: sessionrunner.cpp:162
 #, kde-format

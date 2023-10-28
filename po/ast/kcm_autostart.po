@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-10-24 15:07+0200\n"
+"PO-Revision-Date: 2023-10-27 23:52+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -105,22 +105,19 @@ msgid "Add…"
 msgstr "Amestar…"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Una aplicación…"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Un script al aniciar la sesión…"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Un script al zarrar la sesión…"
@@ -167,38 +164,38 @@ msgstr "Aplicaciones"
 #: ui/main.qml:173
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "Scripts d'aniciu de sesión"
 
 #: ui/main.qml:176
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr ""
+msgstr "Scripts previos al aniciu"
 
 #: ui/main.qml:179
 #, kde-format
 msgid "Logout Scripts"
-msgstr ""
+msgstr "Scripts de zarru de sesión"
 
 #: ui/main.qml:187
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "Nun hai nengún elementu d'aniciu automáticu especificáu pol usuariu"
 
 #: ui/main.qml:188
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr ""
+msgstr "Calca'l botón <interface>Amestar…</interface> p'amestar dalgún"
 
 #: ui/main.qml:203
 #, kde-format
 msgid "Choose Login Script"
-msgstr ""
+msgstr "Escoyeta d'un script d'aniciu de sesión"
 
 #: ui/main.qml:223
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "Escoyeta d'un script de zarru de sesión"
 
 #: unit.cpp:26
 #, kde-format

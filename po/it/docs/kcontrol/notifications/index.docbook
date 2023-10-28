@@ -162,7 +162,7 @@
     <varlistentry>
     <term
 >Notifiche a bassa priorità: <guiicon
->Mostra finestra a comparsa</guiicon
+>Mostra una finestra a comparsa</guiicon
 > e <guiicon
 >Mostra nella cronologia</guiicon
 ></term>
@@ -259,7 +259,7 @@
 ></term>
         <listitem
 ><para
->Se la finestra di notifica debba rimanere visibile per tutta la durata dell'avanzamento oppure venir nascosta automaticamente. Sarà sempre mostrata nuovamente quando un processo termina o se non ha successo.</para
+>Se la finestra di notifica debba rimanere visibile per tutta la durata dell'avanzamento, oppure venir nascosta automaticamente. Sarà sempre mostrata nuovamente quando un processo termina, oppure non ha successo.</para
 ></listitem>
         </varlistentry>
 
