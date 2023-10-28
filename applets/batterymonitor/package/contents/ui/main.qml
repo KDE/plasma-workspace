@@ -98,6 +98,7 @@ PlasmoidItem {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property var manuallyInhibited: false
     readonly property var activeProfileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
     readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
 
@@ -245,6 +246,7 @@ PlasmoidItem {
         remainingTime: batterymonitor.remainingTime
         activeProfile: batterymonitor.actuallyActiveProfile
         inhibitions: batterymonitor.inhibitions
+        manuallyInhibited: batterymonitor.manuallyInhibited
         inhibitsLidAction: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
         profilesInstalled: pmSource.data["Power Profiles"] ? pmSource.data["Power Profiles"]["Installed"] : false
         profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
@@ -270,6 +272,7 @@ PlasmoidItem {
                 const job1 = service.startOperationCall(op1);
                 const job2 = service.startOperationCall(op2);
             }
+            Logic.updateInhibitions(batterymonitor, pmSource);
         }
         onPowerManagementChanged: disabled => {
             batterymonitor.powermanagementDisabled = disabled

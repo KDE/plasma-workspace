@@ -31,6 +31,7 @@ ColumnLayout {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property var manuallyInhibited: false
     property bool inhibitsLidAction
 
     // UI to manually inhibit sleep and screen locking
@@ -38,7 +39,7 @@ ColumnLayout {
         id: pmCheckBox
         Layout.fillWidth: true
         text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
-        checked: Boolean(pmSource.data["PowerManagement"] && pmSource.data["PowerManagement"]["Has Inhibition"])
+        checked: root.manuallyInhibited
         focus: true
 
         KeyNavigation.up: dialog.KeyNavigation.up

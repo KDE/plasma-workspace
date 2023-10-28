@@ -38,16 +38,18 @@ function stringForBatteryState(batteryData, source) {
 
 function updateInhibitions(rootItem, source) {
     const inhibitions = [];
+    const manualInhibitions = [];
 
     if (source.data["Inhibitions"]) {
         for (let key in pmSource.data["Inhibitions"]) {
-            if (key === "plasmashell" || key === "plasmoidviewer") { // ignore our own inhibition
-                continue;
+            if (key === "plasmashell" || key === "plasmoidviewer") {
+                manualInhibitions.push(key);
+            } else {
+                inhibitions.push(pmSource.data["Inhibitions"][key]);
             }
-
-            inhibitions.push(pmSource.data["Inhibitions"][key]);
         }
     }
 
+    rootItem.manuallyInhibited = manualInhibitions.length > 0;
     rootItem.inhibitions = inhibitions;
 }

@@ -33,6 +33,7 @@ PlasmaExtras.Representation {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property var manuallyInhibited: false
     property bool inhibitsLidAction
 
     property string inhibitionReason
