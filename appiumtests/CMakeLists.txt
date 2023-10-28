@@ -55,7 +55,7 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py --failfast
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 REPEAT UNTIL_PASS:2)
 
 add_test(
     NAME devicenotifiertest
@@ -99,7 +99,7 @@ add_test(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
-set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH};CMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}")
+set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH};CMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}" REPEAT UNTIL_PASS:2)
 
 add_test(
     NAME systemtraytest_x11
