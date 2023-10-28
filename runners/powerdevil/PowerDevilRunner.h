@@ -6,15 +6,22 @@
 
 #pragma once
 
+#include <KLocalizedString>
 #include <KRunner/AbstractRunner>
 #include <QDBusConnection>
 
 class SessionManagement;
 
 struct RunnerKeyword {
-    QString triggerWord;
-    QString translatedTriggerWord;
-    bool supportPartialMatch = true;
+    inline RunnerKeyword(KLocalizedString str, bool partialMatch = true)
+        : triggerWord(str.untranslatedText())
+        , translatedTriggerWord(str.toString())
+        , supportPartialMatch(partialMatch)
+    {
+    }
+    const QString triggerWord;
+    const QString translatedTriggerWord;
+    const bool supportPartialMatch = true;
 };
 
 class PowerDevilRunner : public KRunner::AbstractRunner
@@ -38,11 +45,11 @@ private:
     void addSyntaxForKeyword(const QList<RunnerKeyword> &keywords, const QString &description);
 
     SessionManagement *m_session;
-    RunnerKeyword m_power;
-    RunnerKeyword m_suspend, m_toRam;
-    RunnerKeyword m_sleep;
-    RunnerKeyword m_hibernate, m_toDisk;
-    RunnerKeyword m_hybridSuspend, m_hybrid;
-    RunnerKeyword m_dimScreen;
-    RunnerKeyword m_screenBrightness;
+    const RunnerKeyword m_power;
+    const RunnerKeyword m_suspend, m_toRam;
+    const RunnerKeyword m_sleep;
+    const RunnerKeyword m_hibernate, m_toDisk;
+    const RunnerKeyword m_hybridSuspend, m_hybrid;
+    const RunnerKeyword m_dimScreen;
+    const RunnerKeyword m_screenBrightness;
 };

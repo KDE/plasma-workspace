@@ -8,7 +8,6 @@
 
 #include "PowerDevilRunner.h"
 
-// kde-workspace/libs
 #include <sessionmanagement.h>
 
 #include <QDBusConnectionInterface>
@@ -19,7 +18,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KLocalizedString>
 
 #include <cmath>
 
@@ -28,28 +26,18 @@ K_PLUGIN_CLASS_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
     , m_session(new SessionManagement(this))
+    , m_power(ki18nc("Note this is a KRunner keyword; 'power' as in 'power saving mode'", "power"))
+    , m_suspend(ki18nc("Note this is a KRunner keyword", "suspend"))
+    , m_toRam(ki18nc("Note this is a KRunner keyword", "to ram"), false)
+    , m_sleep(ki18nc("Note this is a KRunner keyword", "sleep"))
+    , m_hibernate(ki18nc("Note this is a KRunner keyword", "hibernate"))
+    , m_toDisk(ki18nc("Note this is a KRunner keyword", "to disk"), false)
+    , m_hybridSuspend(ki18nc("Note this is a KRunner keyword", "hybrid sleep"), false)
+    , m_hybrid(ki18nc("Note this is a KRunner keyword", "hybrid"), false)
+    , m_dimScreen(ki18nc("Note this is a KRunner keyword", "dim screen"))
+    , m_screenBrightness(ki18nc("Note this is a KRunner keyword", "dim screen"))
 {
     setMinLetterCount(3);
-    const KLocalizedString power = ki18nc("Note this is a KRunner keyword; 'power' as in 'power saving mode'", "power");
-    m_power = RunnerKeyword{power.untranslatedText(), power.toString()};
-    const KLocalizedString suspend = ki18nc("Note this is a KRunner keyword", "suspend");
-    m_suspend = RunnerKeyword{suspend.untranslatedText(), suspend.toString()};
-    const KLocalizedString toRam = ki18nc("Note this is a KRunner keyword", "to ram");
-    m_toRam = RunnerKeyword{toRam.untranslatedText(), toRam.toString(), false};
-    const KLocalizedString sleep = ki18nc("Note this is a KRunner keyword", "sleep");
-    m_sleep = RunnerKeyword{sleep.untranslatedText(), sleep.toString()};
-    const KLocalizedString hibernate = ki18nc("Note this is a KRunner keyword", "hibernate");
-    m_hibernate = RunnerKeyword{hibernate.untranslatedText(), hibernate.toString()};
-    const KLocalizedString toDisk = ki18nc("Note this is a KRunner keyword", "to disk");
-    m_toDisk = RunnerKeyword{toDisk.untranslatedText(), toDisk.toString(), false};
-    const KLocalizedString hybridSuspend = ki18nc("Note this is a KRunner keyword", "hybrid sleep");
-    m_hybridSuspend = RunnerKeyword{hybridSuspend.untranslatedText(), hybridSuspend.toString(), false};
-    const KLocalizedString hybrid = ki18nc("Note this is a KRunner keyword", "hybrid");
-    m_hybrid = RunnerKeyword{hybrid.untranslatedText(), hybrid.toString(), false};
-    const KLocalizedString dimScreen = ki18nc("Note this is a KRunner keyword", "dim screen");
-    m_dimScreen = RunnerKeyword{dimScreen.untranslatedText(), dimScreen.toString()};
-    const KLocalizedString screenBrightness = ki18nc("Note this is a KRunner keyword", "dim screen");
-    m_screenBrightness = RunnerKeyword{screenBrightness.untranslatedText(), screenBrightness.toString()};
     updateStatus();
 }
 
