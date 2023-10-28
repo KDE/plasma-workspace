@@ -152,11 +152,11 @@ SessionManagementScreen {
     }
 
     FailableLabel {
-        kind: ScreenLocker.Authenticator.Fingerprint
+        kind: ScreenLocker.NoninteractiveAuthenticatorType.Fingerprint
         label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "(or scan your fingerprint on the reader)")
     }
     FailableLabel {
-        kind: ScreenLocker.Authenticator.Smartcard
+        kind: ScreenLocker.NoninteractiveAuthenticatorType.Smartcard
         label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "(or scan your smartcard)")
     }
 }

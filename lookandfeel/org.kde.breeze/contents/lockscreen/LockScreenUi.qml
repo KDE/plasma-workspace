@@ -149,7 +149,7 @@ Item {
         width: parent.width
         height: parent.height
         hoverEnabled: true
-        cursorShape: authenticator.state == ScreenLocker.Authenticators.Authenticating ? Qt.ArrowCursor : Qt.BlankCursor
+        cursorShape: authenticator.state == ScreenLocker.AuthenticatorsState.Authenticating ? Qt.ArrowCursor : Qt.BlankCursor
         drag.filterChildren: true
         onPressed: authenticator.startAuthenticating()
         onPositionChanged: authenticator.startAuthenticating()
@@ -164,7 +164,7 @@ Item {
         Keys.onEscapePressed: {
             // If the escape key is pressed, kscreenlocker will turn off the screen.
             // We do not want to show the password prompt in this case.
-            if (authenticator.state == ScreenLocker.Authenticators.Authenticating) {
+            if (authenticator.state == ScreenLocker.AuthenticatorsState.Authenticating) {
                 authenticator.stopAuthenticating();
                 if (inputPanel.keyboardActive) {
                     inputPanel.showHide();
@@ -233,7 +233,7 @@ Item {
 
         WallpaperFader {
             anchors.fill: parent
-            state: authenticator.state == ScreenLocker.Authenticators.Authenticating ? "on" : "off"
+            state: authenticator.state == ScreenLocker.AuthenticatorsState.Authenticating ? "on" : "off"
             source: wallpaper
             mainStack: mainStack
             footer: footer
@@ -292,7 +292,7 @@ Item {
 
             initialItem: MainBlock {
                 id: mainBlock
-                lockScreenUiVisible: authenticator.state == ScreenLocker.Authenticators.Authenticating
+                lockScreenUiVisible: authenticator.state == ScreenLocker.AuthenticatorsState.Authenticating
 
                 showUserList: userList.y + mainStack.y > 0
 
