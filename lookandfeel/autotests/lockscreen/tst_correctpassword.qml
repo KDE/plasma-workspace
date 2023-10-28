@@ -25,7 +25,7 @@ LockScreen {
                 keyClick(password[i]);
             }
             keyClick(Qt.Key_Enter);
-            successSpy.wait();
+            compare(successSpy.count, 1)
             quitSpy.wait();
         }
     }
