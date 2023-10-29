@@ -56,6 +56,7 @@
         "Category": "System Information",
         "Description": "System monitor Widget that shows physical memory usage",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام الذاكرة الفعلية",
+        "Description[ast]": "Un widget del supervisor del sistema qu'amuesa l'usu de la memoria física",
         "Description[az]": "Sistem monitoru vidjeti fiziki yaddaşın istifadəsini göstərir",
         "Description[be]": "Віджэт сістэмнага назіральніка, які паказвае выкарыстанне фізічнай памяці",
         "Description[bg]": "Уиджет за системен монитор, което показва използването на физическа памет",

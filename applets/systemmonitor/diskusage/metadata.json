@@ -59,6 +59,7 @@
         "Category": "System Information",
         "Description": "System monitor Widget that shows the usage of the root partition",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام قسم الجذر",
+        "Description[ast]": "Un widget del supervisor del sistema qu'amuesa l'usu de la partición root",
         "Description[az]": "Sistem monitoru vidjeti kök bölməsinin istifadəsini göstərir",
         "Description[be]": "Віджэт сістэмнага назіральніка, які паказвае выкарыстанне каранёвага раздзела",
         "Description[bg]": "Уиджет за системен монитор, който показва използването на основния дял",

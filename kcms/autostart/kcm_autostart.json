@@ -56,6 +56,7 @@
         "Icon": "system-run",
         "Name": "Autostart",
         "Name[ar]": "بدء تلقائي",
+        "Name[ast]": "Aniciu automáticu",
         "Name[az]": "Avtomatik başlama",
         "Name[be]": "Аўтазапуск",
         "Name[bg]": "Автоматично стартиране",
