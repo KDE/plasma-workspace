@@ -83,7 +83,7 @@ Item {
         }
 
         function onInfoMessageChanged() {
-            lockScreenUi.handleMessage(authenticator.InfoMessage);
+            lockScreenUi.handleMessage(authenticator.infoMessage);
             lockScreenUi.hadPrompt = true;
         }
 
