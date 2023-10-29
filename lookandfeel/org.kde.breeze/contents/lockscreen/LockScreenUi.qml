@@ -196,7 +196,7 @@ Item {
             interval: 3000
             onTriggered: {
                 root.clearPassword();
-                authenticator.tryUnlock();
+                authenticator.startAuthenticating();
             }
         }
 
