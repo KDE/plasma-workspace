@@ -38,7 +38,7 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     , m_screenBrightness(ki18nc("Note this is a KRunner keyword", "dim screen"))
 {
     setMinLetterCount(3);
-    updateStatus();
+    updateSyntaxes();
 }
 
 void PowerDevilRunner::updateSyntaxes()
@@ -65,11 +65,6 @@ void PowerDevilRunner::updateSyntaxes()
               // xgettext:no-c-format
               i18n("Lists screen brightness options or sets it to the brightness defined by the search term; "
                    "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
-}
-
-void PowerDevilRunner::updateStatus()
-{
-    updateSyntaxes();
 }
 
 enum SleepState { SuspendState, HibernateState, HybridSuspendState };

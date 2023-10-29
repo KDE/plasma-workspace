@@ -33,9 +33,6 @@ public:
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 
-private Q_SLOTS:
-    void updateStatus();
-
 private:
     void updateSyntaxes();
     void addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::Type type);
