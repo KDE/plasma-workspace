@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-29 01:39+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -398,17 +398,17 @@ msgstr "Dấu vân tay đã được thêm"
 msgid "Pick a finger to enroll"
 msgstr "Chọn một ngón tay để thêm dấu vân"
 
-#: src/ui/FingerprintDialog.qml:314
+#: src/ui/FingerprintDialog.qml:315
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Thêm lại dấu vân tay"
 
-#: src/ui/FingerprintDialog.qml:321
+#: src/ui/FingerprintDialog.qml:322
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Xoá dấu vân tay"
 
-#: src/ui/FingerprintDialog.qml:330
+#: src/ui/FingerprintDialog.qml:331
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Không thêm dấu vân tay nào"

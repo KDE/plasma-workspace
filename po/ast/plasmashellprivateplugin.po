@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-31 01:57+0000\n"
-"PO-Revision-Date: 2023-10-25 01:24+0200\n"
+"PO-Revision-Date: 2023-10-28 19:58+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -192,7 +192,7 @@ msgstr "Accesibilidá"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Llanzadores d'aplicaciones"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
@@ -272,7 +272,7 @@ msgstr "Productividá"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Información del sistema"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"

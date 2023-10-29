@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-10-22 08:45+0300\n"
+"PO-Revision-Date: 2023-10-27 16:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -204,12 +204,12 @@ msgstr "פתיחה"
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(או לסרוק את האצבע שלך על הקורא)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(או לסרוק את הכרטיס החכם שלך)"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format

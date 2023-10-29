@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-21 01:40+0000\n"
-"PO-Revision-Date: 2023-10-28 00:28+0200\n"
+"PO-Revision-Date: 2023-10-29 00:09+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -571,7 +571,7 @@ msgstr ""
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
-msgstr ""
+msgstr "<i>%1</i> contién la fonte <b>%2</b> que xá ta instalada nel sistema."
 
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
@@ -1170,7 +1170,7 @@ msgstr ""
 #: lib/FcEngine.cpp:1480
 #, kde-format
 msgid "ERROR: Could not determine font's name."
-msgstr ""
+msgstr "ERROR: Nun se pudo determinar el nome de la fonte."
 
 #: lib/FcEngine.cpp:1483
 #, kde-format

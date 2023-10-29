@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-29 01:39+0000\n"
 "PO-Revision-Date: 2023-08-20 06:13-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -329,18 +329,18 @@ msgstr ""
 msgid "Pick a finger to enroll"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:314
+#: src/ui/FingerprintDialog.qml:315
 #, kde-format
 msgid "Re-enroll finger"
 msgstr ""
 
-#: src/ui/FingerprintDialog.qml:321
+#: src/ui/FingerprintDialog.qml:322
 #, fuzzy, kde-format
 #| msgid "Delete files"
 msgid "Delete fingerprint"
 msgstr "ਫ਼ਾਇਲਾਂ ਹਟਾਓ"
 
-#: src/ui/FingerprintDialog.qml:330
+#: src/ui/FingerprintDialog.qml:331
 #, kde-format
 msgid "No fingerprints added"
 msgstr ""

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-09-17 12:54+0200\n"
+"PO-Revision-Date: 2023-10-28 09:31+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -110,22 +110,19 @@ msgid "Add…"
 msgstr "Dodaj…"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Dodaj program..."
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Dodaj skrypt wykonywany na wejściu..."
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Dodaj skrypt wykonywany na wyjściu..."
@@ -191,13 +188,10 @@ msgstr ""
 "Nie ma żadnych rzeczy określonych przez użytkownika do samo-uruchomienia"
 
 #: ui/main.qml:188
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Click the <interface>Add…</interface> button below to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr ""
-"Naciśnij przycisk <interface>Dodaj...</interface>, aby dodać jakąś rzecz"
+msgstr "Naciśnij przycisk <interface>Dodaj…</interface>, aby dodać jakąś rzecz"
 
 #: ui/main.qml:203
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-10-28 00:33+0200\n"
+"PO-Revision-Date: 2023-10-29 00:03+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: configdialog.cpp:106
 #, kde-format
 msgid "Clipboard history:"
-msgstr ""
+msgstr "Historial del cartafueyu:"
 
 #: configdialog.cpp:112
 #, kde-format
@@ -176,6 +176,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Estes aiciones apaecen nel menú emerxente que se puen configurar na páxina "
+"<interface>Menú d'aiciones</interface>"
 
 #: configdialog.cpp:574
 #, kde-kuit-format
@@ -205,12 +207,12 @@ msgstr ""
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr ""
+msgstr "Menú d'aiciones"
 
 #: configdialog.cpp:605
 #, kde-format
 msgid "Action Menu"
-msgstr ""
+msgstr "Menú d'aiciones"
 
 #: configdialog.cpp:606
 #, kde-format
@@ -232,7 +234,7 @@ msgstr "Atayos"
 #: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
-msgstr ""
+msgstr "Configuración de los atayos"
 
 #: configdialog.cpp:690
 #, kde-kuit-format
@@ -454,7 +456,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr ""
+msgstr "&Configurar Klipper…"
 
 #: klipper.cpp:185
 #, kde-format
@@ -693,7 +695,7 @@ msgstr ""
 #: klipper.kcfg:67
 #, kde-format
 msgid "History size:"
-msgstr ""
+msgstr "Tamañu del historial:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71

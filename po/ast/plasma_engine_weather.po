@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-05-03 22:37+0200\n"
+"PO-Revision-Date: 2023-10-29 00:17+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -247,7 +247,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "partly cloudy"
-msgstr ""
+msgstr "parcialmente nuble"
 
 #: bbcukmet_i18n.dat:39
 #, kde-format
@@ -542,7 +542,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "partly cloudy"
-msgstr ""
+msgstr "parcialmente nuble"
 
 #: bbcukmet_i18n.dat:88
 #, kde-format
@@ -1172,7 +1172,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Tornado"
-msgstr ""
+msgstr "Tornáu"
 
 #: envcan_i18n.dat:89
 #, kde-format
@@ -2695,18 +2695,18 @@ msgstr ""
 #: ions/bbcukmet/ion_bbcukmet.cpp:563
 #, kde-format
 msgid "UK"
-msgstr ""
+msgstr "R.X."
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:564
 #, kde-format
 msgid "USA"
-msgstr ""
+msgstr "EE.XX."
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/dwd/ion_dwd.cpp:663
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
-msgstr ""
+msgstr "Güei"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1010
 #, kde-format
@@ -2719,49 +2719,49 @@ msgstr ""
 #, kde-format
 msgctxt "Short for Saturday"
 msgid "Sat"
-msgstr ""
+msgstr "Sáb"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:646
 #: ions/envcan/ion_envcan.cpp:1552
 #, kde-format
 msgctxt "Short for Sunday"
 msgid "Sun"
-msgstr ""
+msgstr "Dom"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:647
 #: ions/envcan/ion_envcan.cpp:1553
 #, kde-format
 msgctxt "Short for Monday"
 msgid "Mon"
-msgstr ""
+msgstr "Llu"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:648
 #: ions/envcan/ion_envcan.cpp:1554
 #, kde-format
 msgctxt "Short for Tuesday"
 msgid "Tue"
-msgstr ""
+msgstr "Mar"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:649
 #: ions/envcan/ion_envcan.cpp:1555
 #, kde-format
 msgctxt "Short for Wednesday"
 msgid "Wed"
-msgstr ""
+msgstr "Mié"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:650
 #: ions/envcan/ion_envcan.cpp:1556
 #, kde-format
 msgctxt "Short for Thursday"
 msgid "Thu"
-msgstr ""
+msgstr "Xue"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:651
 #: ions/envcan/ion_envcan.cpp:1557
 #, kde-format
 msgctxt "Short for Friday"
 msgid "Fri"
-msgstr ""
+msgstr "Vie"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1031
 #, kde-format
@@ -2781,7 +2781,7 @@ msgstr ""
 #: ions/noaa/ion_noaa.cpp:550
 #, kde-format
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ions/envcan/ion_envcan.cpp:1548
 #, kde-format
@@ -2871,7 +2871,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "rain"
-msgstr ""
+msgstr "lluvia"
 
 #: ions/wetter.com/ion_wettercom.cpp:177
 #, kde-format
@@ -2955,7 +2955,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "n/a"
-msgstr ""
+msgstr "n/d"
 
 #: ions/wetter.com/ion_wettercom.cpp:361
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-29 01:39+0000\n"
 "PO-Revision-Date: 2023-10-09 15:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -378,17 +378,17 @@ msgstr "Пръстът е регистриран"
 msgid "Pick a finger to enroll"
 msgstr "Сложете пръст за вземане на отпечатък"
 
-#: src/ui/FingerprintDialog.qml:314
+#: src/ui/FingerprintDialog.qml:315
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Сложете отново пръста"
 
-#: src/ui/FingerprintDialog.qml:321
+#: src/ui/FingerprintDialog.qml:322
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Изтриване на отпечатъци"
 
-#: src/ui/FingerprintDialog.qml:330
+#: src/ui/FingerprintDialog.qml:331
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не са добавени отпечатъци"

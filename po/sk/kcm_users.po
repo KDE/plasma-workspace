@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-29 01:39+0000\n"
 "PO-Revision-Date: 2023-04-17 18:41+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -337,17 +337,17 @@ msgstr "Odtlačok pridaný"
 msgid "Pick a finger to enroll"
 msgstr "Vyberte prst na pridanie"
 
-#: src/ui/FingerprintDialog.qml:314
+#: src/ui/FingerprintDialog.qml:315
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Znovu pridať prst"
 
-#: src/ui/FingerprintDialog.qml:321
+#: src/ui/FingerprintDialog.qml:322
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Vymazať odtlačok prsta"
 
-#: src/ui/FingerprintDialog.qml:330
+#: src/ui/FingerprintDialog.qml:331
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Žiadne odtlačky neboli pridané"

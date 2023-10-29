@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-05 01:41+0000\n"
+"POT-Creation-Date: 2023-10-29 01:39+0000\n"
 "PO-Revision-Date: 2023-10-06 17:23+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -378,17 +378,17 @@ msgstr "Empreinte digitale d'un doigt enregistrée"
 msgid "Pick a finger to enroll"
 msgstr "Sélectionner un doigt pour l'enregistrement"
 
-#: src/ui/FingerprintDialog.qml:314
+#: src/ui/FingerprintDialog.qml:315
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Ré-enregistrer l'empreinte digitale d'un doigt"
 
-#: src/ui/FingerprintDialog.qml:321
+#: src/ui/FingerprintDialog.qml:322
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Supprimer une empreinte digitale"
 
-#: src/ui/FingerprintDialog.qml:330
+#: src/ui/FingerprintDialog.qml:331
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Aucun ajout d'empreinte numérique"

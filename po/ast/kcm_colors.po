@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2023-05-01 23:52+0200\n"
+"PO-Revision-Date: 2023-10-28 19:55+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,7 +30,7 @@ msgstr "alministradores@softastur.org"
 #: colors.cpp:272
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Nun ye posible crear un ficheru temporal."
 
 #: colors.cpp:285
 #, kde-format
@@ -86,12 +86,12 @@ msgstr ""
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr ""
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr ""
+msgstr "Una utilidá pa editar ya crear esquemes de color"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -1231,17 +1231,17 @@ msgstr ""
 #: ui/main.qml:112
 #, kde-format
 msgid "All Schemes"
-msgstr ""
+msgstr "Tolos esquemes"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Light Schemes"
-msgstr ""
+msgstr "Esquemes claros"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Dark Schemes"
-msgstr ""
+msgstr "Esquemes escuros"
 
 #: ui/main.qml:140
 #, kde-format
@@ -1266,7 +1266,7 @@ msgstr ""
 #: ui/main.qml:221
 #, kde-format
 msgid "Button"
-msgstr ""
+msgstr "Botón"
 
 #: ui/main.qml:259
 #, kde-format
@@ -1283,7 +1283,7 @@ msgstr ""
 #: ui/main.qml:268
 #, kde-format
 msgid "Normal text"
-msgstr ""
+msgstr "Testu normal"
 
 #: ui/main.qml:276
 #, kde-format
@@ -1293,7 +1293,7 @@ msgstr ""
 #: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
-msgstr ""
+msgstr "Testu desactiváu"
 
 #: ui/main.qml:301
 #, kde-format
