@@ -882,11 +882,13 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 void PanelView::integrateScreen()
 {
     updateMask();
-    KX11Extras::setOnAllDesktops(winId(), true);
-    KX11Extras::setType(winId(), NET::Dock);
 #if HAVE_X11
-    // QXcbWindow isn't installed and thus inaccessible to us, but it does read this magic property...
-    setProperty("_q_xcb_wm_window_type", QNativeInterface::Private::QXcbWindow::Dock);
+    if (KWindowSystem::isPlatformX11()) {
+        KX11Extras::setOnAllDesktops(winId(), true);
+        KX11Extras::setType(winId(), NET::Dock);
+        // QXcbWindow isn't installed and thus inaccessible to us, but it does read this magic property...
+        setProperty("_q_xcb_wm_window_type", QNativeInterface::Private::QXcbWindow::Dock);
+    }
 #endif
     setVisibilityMode(m_visibilityMode);
 
@@ -1152,7 +1154,7 @@ void PanelView::updateMask()
                                                  m_theme.backgroundSaturation(),
                                                  mask);
 
-        if (KX11Extras::compositingActive()) {
+        if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
             setMask(QRegion(screenPanelRect));
         } else {
             setMask(mask);
