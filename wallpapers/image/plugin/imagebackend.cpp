@@ -476,7 +476,7 @@ void ImageBackend::setPauseSlideshow(bool pauseSlideshow)
     m_pauseSlideshow = pauseSlideshow;
     Q_EMIT pauseSlideshowChanged();
 
-    if (!m_ready) {
+    if (!m_slideFilterModel) {
         return;
     }
 
