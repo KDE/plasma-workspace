@@ -67,7 +67,7 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
 
     if (cmd.compare(QLatin1String("universe"), Qt::CaseInsensitive) == 0 || cmd.compare(QLatin1String("life"), Qt::CaseInsensitive) == 0) {
         KRunner::QueryMatch match(this);
-        match.setType(KRunner::QueryMatch::PossibleMatch);
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Moderate);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(QStringLiteral("42"));
         match.setData(QStringLiteral("42"));
@@ -133,7 +133,7 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
     QString result = calculate(cmd, &isApproximate, base, customBase);
     if (!result.isEmpty() && (foundPrefix || result != cmd)) {
         KRunner::QueryMatch match(this);
-        match.setType(KRunner::QueryMatch::HelperMatch);
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::High);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
         if (isApproximate) {

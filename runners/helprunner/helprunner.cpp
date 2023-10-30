@@ -77,7 +77,7 @@ void HelpRunner::match(RunnerContext &context)
                 match.setSubtext(runner->metadata().description());
             }
             match.setIconName(runner->metadata().iconName());
-            match.setType(QueryMatch::CompletionMatch);
+            match.setCategoryRelevance(QueryMatch::CategoryRelevance::Low);
             match.setData(QVariant::fromValue(runner->metadata()));
             if (!runner->metadata().value(QStringLiteral("X-KDE-ConfigModule")).isEmpty()) {
                 match.setActions(m_actionList);

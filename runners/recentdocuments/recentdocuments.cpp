@@ -74,13 +74,13 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         // We know the term starts with the query, check size to see if it is an exact match
         if (term.size() >= 5 && indexOfTerm == 0 && (fileName.size() == term.size() || QFileInfo(fileName).baseName().size() == term.size())) {
             match.setRelevance(relevance + 0.1);
-            match.setType(KRunner::QueryMatch::ExactMatch);
+            match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
         } else if (indexOfTerm == 0 /*startswith, but not equals => smaller relevance boost*/) {
             match.setRelevance(relevance + 0.1);
-            match.setType(KRunner::QueryMatch::PossibleMatch);
+            match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::High);
         } else {
             match.setRelevance(relevance);
-            match.setType(KRunner::QueryMatch::CompletionMatch);
+            match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Low);
         }
         const QMimeType mimeType = db.mimeTypeForName(m_resultsModel->data(index, ResultModel::MimeType).toString());
         match.setIconName(mimeType.iconName());

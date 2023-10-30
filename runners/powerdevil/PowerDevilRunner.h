@@ -35,10 +35,10 @@ public:
 
 private:
     void updateSyntaxes();
-    void addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::Type type);
+    void addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::CategoryRelevance categoryRelevance);
     // Returns -1 if there is no match, otherwise the percentage that the user has entered
     int matchesScreenBrightnessKeywords(const QString &query) const;
-    bool matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, KRunner::QueryMatch::Type &type, const QString &query) const;
+    bool matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, KRunner::QueryMatch::CategoryRelevance &categoryRelevance, const QString &query) const;
     void addSyntaxForKeyword(const QList<RunnerKeyword> &keywords, const QString &description);
 
     SessionManagement *m_session;

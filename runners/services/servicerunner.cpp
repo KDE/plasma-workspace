@@ -251,7 +251,7 @@ private:
             const QString name = service->name();
             const QString exec = service->exec();
 
-            KRunner::QueryMatch::Type type = KRunner::QueryMatch::PossibleMatch;
+            KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
             qreal relevance(0.6);
 
             // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
@@ -264,7 +264,7 @@ private:
                 }
             } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
                 relevance = 1;
-                type = KRunner::QueryMatch::ExactMatch;
+                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
             } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
                 relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
@@ -289,7 +289,7 @@ private:
             }
 
             KRunner::QueryMatch match(m_runner);
-            match.setType(type);
+            match.setCategoryRelevance(categoryRelevance);
             setupMatch(service, match);
             if (service->categories().contains(QLatin1String("KDE"))) {
                 qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
@@ -323,7 +323,6 @@ private:
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
 
             KRunner::QueryMatch match(m_runner);
-            match.setType(KRunner::QueryMatch::PossibleMatch);
             setupMatch(service, match);
 
             qreal relevance = 0.4;
@@ -366,7 +365,6 @@ private:
                 }
 
                 KRunner::QueryMatch match(m_runner);
-                match.setType(KRunner::QueryMatch::PossibleMatch);
                 if (!action.icon().isEmpty()) {
                     match.setIconName(action.icon());
                 } else {
@@ -389,7 +387,7 @@ private:
                 qreal relevance = 0.5;
                 if (action.text().compare(query, Qt::CaseInsensitive) == 0) {
                     relevance = 0.65;
-                    match.setType(KRunner::QueryMatch::HelperMatch); // Give it a higer match type to ensure it is shown, BUG: 455436
+                    match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::High); // Give it a higer match type to ensure it is shown, BUG: 455436
                 } else if (matchIndex == 0) {
                     relevance += 0.05;
                 }

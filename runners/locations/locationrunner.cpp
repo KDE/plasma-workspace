@@ -55,12 +55,12 @@ void LocationsRunner::match(KRunner::RunnerContext &context)
         match.setRelevance(1);
         match.setData(url);
         match.setUrls({url});
-        match.setType(KRunner::QueryMatch::ExactMatch);
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
         context.addMatch(match);
     } else if (!url.isLocalFile() && !url.isEmpty() && !url.scheme().isEmpty()) {
         const QString protocol = url.scheme();
         KRunner::QueryMatch match(this);
-        match.setType(KRunner::QueryMatch::PossibleMatch);
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Low);
         match.setData(url);
         match.setUrls({url});
 

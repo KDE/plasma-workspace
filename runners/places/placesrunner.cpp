@@ -50,46 +50,46 @@ void PlacesRunner::match(KRunner::RunnerContext &context)
     const bool all = term.compare(i18n("places"), Qt::CaseInsensitive) == 0;
     for (int i = 0; i <= m_places->rowCount(); i++) {
         QModelIndex current_index = m_places->index(i, 0);
-        KRunner::QueryMatch::Type type = KRunner::QueryMatch::NoMatch;
         qreal relevance = 0;
 
         const QString text = m_places->text(current_index);
+        int categoryRelevance = 0;
         if ((all && !text.isEmpty()) || text.compare(term, Qt::CaseInsensitive) == 0) {
-            type = KRunner::QueryMatch::ExactMatch;
+            categoryRelevance = KRunner::QueryMatch::ExactMatch;
             relevance = all ? 0.9 : 1.0;
         } else if (text.contains(term, Qt::CaseInsensitive)) {
-            type = KRunner::QueryMatch::PossibleMatch;
+            categoryRelevance = KRunner::QueryMatch::PossibleMatch;
             relevance = 0.7;
+        } else {
+            continue;
         }
 
-        if (type != KRunner::QueryMatch::NoMatch) {
-            KRunner::QueryMatch match(this);
-            match.setType(type);
-            match.setRelevance(relevance);
-            match.setIcon(m_places->icon(current_index));
-            match.setText(text);
+        KRunner::QueryMatch match(this);
+        match.setCategoryRelevance(categoryRelevance);
+        match.setRelevance(relevance);
+        match.setIcon(m_places->icon(current_index));
+        match.setText(text);
 
-            // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
-            // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
-            const QString groupName = m_places->data(current_index, KFilePlacesModel::GroupRole).toString();
-            if (!groupName.isEmpty() && name() != groupName) {
-                match.setSubtext(groupName);
-            }
-
-            // if we have to mount it set the device udi instead of the URL, as we can't open it directly
-            if (m_places->isDevice(current_index) && m_places->setupNeeded(current_index)) {
-                const QString udi = m_places->deviceForIndex(current_index).udi();
-                match.setId(udi);
-                match.setData(udi);
-            } else {
-                const QUrl url = KFilePlacesModel::convertedUrl(m_places->url(current_index));
-                match.setData(url);
-                match.setUrls({url});
-                match.setId(url.toDisplayString());
-            }
-
-            matches << match;
+        // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
+        // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
+        const QString groupName = m_places->data(current_index, KFilePlacesModel::GroupRole).toString();
+        if (!groupName.isEmpty() && name() != groupName) {
+            match.setSubtext(groupName);
         }
+
+        // if we have to mount it set the device udi instead of the URL, as we can't open it directly
+        if (m_places->isDevice(current_index) && m_places->setupNeeded(current_index)) {
+            const QString udi = m_places->deviceForIndex(current_index).udi();
+            match.setId(udi);
+            match.setData(udi);
+        } else {
+            const QUrl url = KFilePlacesModel::convertedUrl(m_places->url(current_index));
+            match.setData(url);
+            match.setUrls({url});
+            match.setId(url.toDisplayString());
+        }
+
+        matches << match;
     }
 
     context.addMatches(matches);

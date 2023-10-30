@@ -72,22 +72,22 @@ enum SleepState { SuspendState, HibernateState, HybridSuspendState };
 void PowerDevilRunner::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
-    KRunner::QueryMatch::Type type = KRunner::QueryMatch::ExactMatch;
+    KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
     QList<KRunner::QueryMatch> matches;
 
     int screenBrightnessResults = matchesScreenBrightnessKeywords(term);
     if (screenBrightnessResults != -1) {
         KRunner::QueryMatch match(this);
-        match.setType(type);
+        match.setCategoryRelevance(categoryRelevance);
         match.setIconName(QStringLiteral("video-display-brightness"));
         match.setText(i18n("Set Brightness to %1%", screenBrightnessResults));
         match.setData(screenBrightnessResults);
         match.setRelevance(1);
         match.setId(QStringLiteral("BrightnessChange"));
         matches.append(match);
-    } else if (matchesRunnerKeywords({m_screenBrightness, m_dimScreen}, type, term)) {
+    } else if (matchesRunnerKeywords({m_screenBrightness, m_dimScreen}, categoryRelevance, term)) {
         KRunner::QueryMatch match1(this);
-        match1.setType(KRunner::QueryMatch::ExactMatch);
+        match1.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
         match1.setIconName(QStringLiteral("video-display-brightness"));
         match1.setText(i18n("Dim screen totally"));
         match1.setRelevance(1);
@@ -95,33 +95,33 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
         matches.append(match1);
 
         KRunner::QueryMatch match2(this);
-        match2.setType(type);
+        match2.setCategoryRelevance(categoryRelevance);
         match2.setIconName(QStringLiteral("video-display-brightness"));
         match2.setText(i18n("Dim screen by half"));
         match2.setRelevance(1);
         match2.setId(QStringLiteral("DimHalf"));
         matches.append(match2);
-    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_toRam}, type, term)) {
+    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_toRam}, categoryRelevance, term)) {
         if (m_session->canSuspend()) {
-            addSuspendMatch(SuspendState, matches, type);
+            addSuspendMatch(SuspendState, matches, categoryRelevance);
         }
-    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_hibernate, m_toDisk}, type, term)) {
+    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_hibernate, m_toDisk}, categoryRelevance, term)) {
         if (m_session->canHibernate()) {
-            addSuspendMatch(HibernateState, matches, type);
+            addSuspendMatch(HibernateState, matches, categoryRelevance);
         }
-    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_hybrid, m_hybridSuspend}, type, term)) {
+    } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_hybrid, m_hybridSuspend}, categoryRelevance, term)) {
         if (m_session->canHybridSuspend()) {
-            addSuspendMatch(HybridSuspendState, matches, type);
+            addSuspendMatch(HybridSuspendState, matches, categoryRelevance);
         }
     }
 
     context.addMatches(matches);
 }
 
-void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::Type type)
+void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::CategoryRelevance categoryRelevance)
 {
     KRunner::QueryMatch match(this);
-    match.setType(type);
+    match.setCategoryRelevance(categoryRelevance);
 
     switch ((SleepState)value) {
     case SuspendState:
@@ -191,12 +191,14 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
     }
 }
 
-bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, KRunner::QueryMatch::Type &type, const QString &query) const
+bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keywords,
+                                             KRunner::QueryMatch::CategoryRelevance &categoryRelevance,
+                                             const QString &query) const
 {
-    return std::any_of(keywords.begin(), keywords.end(), [&query, &type](const RunnerKeyword &keyword) {
+    return std::any_of(keywords.begin(), keywords.end(), [&query, &categoryRelevance](const RunnerKeyword &keyword) {
         bool exactMatch =
             keyword.triggerWord.compare(query, Qt::CaseInsensitive) == 0 || keyword.translatedTriggerWord.compare(query, Qt::CaseInsensitive) == 0;
-        type = exactMatch ? KRunner::QueryMatch::ExactMatch : KRunner::QueryMatch::CompletionMatch;
+        categoryRelevance = exactMatch ? KRunner::QueryMatch::CategoryRelevance::Highest : KRunner::QueryMatch::CategoryRelevance::Low;
         if (!exactMatch && keyword.supportPartialMatch) {
             return keyword.triggerWord.startsWith(query, Qt::CaseInsensitive) || keyword.translatedTriggerWord.startsWith(query, Qt::CaseInsensitive);
         }

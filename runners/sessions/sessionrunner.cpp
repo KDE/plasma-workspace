@@ -73,14 +73,14 @@ static inline bool anyKeywordMatches(const QStringList &keywords, const QString 
 
 void SessionRunner::matchCommands(QList<KRunner::QueryMatch> &matches, const QString &term)
 {
+    KRunner::QueryMatch match(this);
+    match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
+    match.setRelevance(0.9);
     if (anyKeywordMatches(m_logoutKeywords, term)) {
         if (m_session.canLogout()) {
-            KRunner::QueryMatch match(this);
             match.setText(i18nc("log out command", "Log Out"));
             match.setIconName(QStringLiteral("system-log-out"));
             match.setData(LogoutAction);
-            match.setType(KRunner::QueryMatch::ExactMatch);
-            match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_shutdownKeywords, term)) {
@@ -89,38 +89,27 @@ void SessionRunner::matchCommands(QList<KRunner::QueryMatch> &matches, const QSt
             match.setText(i18nc("turn off computer command", "Shut Down"));
             match.setIconName(QStringLiteral("system-shutdown"));
             match.setData(ShutdownAction);
-            match.setType(KRunner::QueryMatch::ExactMatch);
-            match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_restartKeywords, term)) {
         if (m_session.canReboot()) {
-            KRunner::QueryMatch match(this);
             match.setText(i18nc("restart computer command", "Restart"));
             match.setIconName(QStringLiteral("system-reboot"));
             match.setData(RestartAction);
-            match.setType(KRunner::QueryMatch::ExactMatch);
-            match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_lockKeywords, term)) {
         if (m_session.canLock()) {
-            KRunner::QueryMatch match(this);
             match.setText(i18nc("lock screen command", "Lock"));
             match.setIconName(QStringLiteral("system-lock-screen"));
             match.setData(LockAction);
-            match.setType(KRunner::QueryMatch::ExactMatch);
-            match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_saveKeywords, term)) {
         if (m_session.canSaveSession()) {
-            KRunner::QueryMatch match(this);
             match.setText(i18n("Save Session"));
             match.setIconName(QStringLiteral("system-save-session"));
             match.setData(SaveAction);
-            match.setType(KRunner::QueryMatch::ExactMatch);
-            match.setRelevance(0.9);
             matches << match;
         }
     }
@@ -157,7 +146,7 @@ void SessionRunner::match(KRunner::RunnerContext &context)
 
     if (switchUser && m_session.canSwitchUser() && dm.isSwitchable() && dm.numReserve() >= 0) {
         KRunner::QueryMatch match(this);
-        match.setType(KRunner::QueryMatch::ExactMatch);
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
         match.setIconName(QStringLiteral("system-switch-user"));
         match.setText(i18n("Switch User"));
         matches << match;
@@ -174,32 +163,35 @@ void SessionRunner::match(KRunner::RunnerContext &context)
             }
 
             QString name = KDisplayManager::sess2Str(session);
-            KRunner::QueryMatch::Type type = KRunner::QueryMatch::NoMatch;
+            KRunner::QueryMatch::CategoryRelevance categoryRelevance;
             qreal relevance = 0.7;
 
             if (listAll) {
-                type = KRunner::QueryMatch::ExactMatch;
+                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
                 relevance = 1;
             } else if (matchUser) {
-                if (name.compare(user, Qt::CaseInsensitive) == 0) {
+                const int nameIdx = name.indexOf(user, Qt::CaseInsensitive);
+                if (nameIdx == 0 && name.size() == user.size()) {
                     // we need an elif branch here because we don't
                     // want the last conditional to be checked if !listAll
-                    type = KRunner::QueryMatch::ExactMatch;
+                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
                     relevance = 1;
-                } else if (name.contains(user, Qt::CaseInsensitive)) {
-                    type = KRunner::QueryMatch::PossibleMatch;
+                } else if (nameIdx == 0) {
+                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
+                } else {
+                    continue;
                 }
+            } else {
+                continue;
             }
 
-            if (type != KRunner::QueryMatch::NoMatch) {
-                KRunner::QueryMatch match(this);
-                match.setType(type);
-                match.setRelevance(relevance);
-                match.setIconName(QStringLiteral("user-identity"));
-                match.setText(name);
-                match.setData(QString::number(session.vt));
-                matches << match;
-            }
+            KRunner::QueryMatch match(this);
+            match.setCategoryRelevance(categoryRelevance);
+            match.setRelevance(relevance);
+            match.setIconName(QStringLiteral("user-identity"));
+            match.setText(name);
+            match.setData(QString::number(session.vt));
+            matches << match;
         }
     }
 

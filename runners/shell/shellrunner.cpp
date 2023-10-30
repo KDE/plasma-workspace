@@ -42,7 +42,7 @@ void ShellRunner::match(KRunner::RunnerContext &context)
         const QString command = parsingResult.value();
         KRunner::QueryMatch match(this);
         match.setId(QStringLiteral("exec://") + command);
-        match.setType(KRunner::QueryMatch::ExactMatch);
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", context.query()));
         match.setData(QVariantList({command, envs}));
@@ -58,7 +58,7 @@ void ShellRunner::run(const KRunner::RunnerContext &context, const KRunner::Quer
         const QVariantList data = match.data().toList();
         const QStringList list = data.at(1).toStringList();
         QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-        for (const auto &str : list) {
+        for (const QString &str : list) {
             const int pos = str.indexOf('=');
             env.insert(str.left(pos), str.mid(pos + 1));
         }

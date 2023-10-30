@@ -24,7 +24,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     , m_match(this)
     , m_filterBeforeRun(false)
 {
-    m_match.setType(KRunner::QueryMatch::ExactMatch);
+    m_match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
     m_match.setRelevance(0.9);
 
     // Listen for KUriFilter plugin config changes and update state...
