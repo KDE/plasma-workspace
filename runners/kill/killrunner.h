@@ -30,20 +30,14 @@ public:
     void reloadConfiguration() override;
 
 private:
-    /** The trigger word */
+    const KRunner::Actions m_actionList;
     QString m_triggerWord;
+    bool m_hasTrigger = false;
 
-    /** How to sort */
+    // process lister
+    KSysGuard::Processes *const m_processes;
     Sort m_sorting;
 
-    /** process lister */
-    KSysGuard::Processes *const m_processes;
-
-    const KRunner::Actions m_actionList;
-
-    /** Reuse value */
-    bool m_hasTrigger;
-
-    // If the process list needs to be refreshed when matching
+    // If the process list needs to be refreshed when matching. This is only done once the trigger word (if set) is used
     bool m_needsRefresh;
 };

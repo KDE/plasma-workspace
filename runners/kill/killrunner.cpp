@@ -111,16 +111,9 @@ void KillRunner::match(KRunner::RunnerContext &context)
 void KillRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
     const quint64 pid = match.data().toUInt();
+    const int signal = match.selectedAction() ? match.selectedAction().id().toInt() : 9; // default: SIGKILL
 
-    int signal;
-    if (match.selectedAction()) {
-        signal = match.selectedAction().id().toInt();
-    } else {
-        signal = 9; // default: SIGKILL
-    }
-
-    const QStringList args = {QStringLiteral("-%1").arg(signal), QString::number(pid)};
-    int returnCode = KProcess::execute(QStringLiteral("kill"), args);
+    int returnCode = KProcess::execute(QStringLiteral("kill"), {QStringLiteral("-%1").arg(signal), QString::number(pid)});
     if (returnCode == 0) {
         return;
     }
