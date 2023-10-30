@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2023-10-24 13:31+0200\n"
+"PO-Revision-Date: 2023-10-29 21:42+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -59,6 +59,8 @@ msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
+"Esta aplicación nun ye compatible cola configuración d'avisos pa eventos "
+"individuales"
 
 #: ui/ApplicationConfiguration.qml:257
 #, kde-format
@@ -87,7 +89,7 @@ msgstr ""
 #: ui/main.qml:56
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
-msgstr ""
+msgstr "Plasma nun ta forniendo lo avisos"
 
 #: ui/main.qml:63
 #, kde-format
@@ -182,8 +184,8 @@ msgstr ""
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 segundu"
+msgstr[1] "%1 segundos"
 
 #: ui/main.qml:222
 #, kde-format
@@ -233,7 +235,7 @@ msgstr ""
 #: ui/main.qml:307
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Configurar…"
 
 #: ui/PopupPositionPage.qml:14
 #, kde-format
@@ -248,12 +250,12 @@ msgstr "Configuración de les aplicaciones"
 #: ui/SourcesPage.qml:99
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #: ui/SourcesPage.qml:100
 #, kde-format
 msgid "System Services"
-msgstr ""
+msgstr "Servicios del sistema"
 
 #: ui/SourcesPage.qml:148
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2023-10-28 23:42+0200\n"
+"PO-Revision-Date: 2023-10-29 21:33+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -32,6 +32,7 @@ msgstr "alministradores@softastur.org"
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
+"Tienes de reaniciar la sesión de Plasma pa qu'estos cambeos faigan efeutu."
 
 #: kcm.cpp:466
 #, kde-format
@@ -217,7 +218,7 @@ msgstr ""
 #: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
-msgstr ""
+msgstr "Iconos"
 
 #: ui/MoreOptions.qml:63
 #, kde-format
@@ -227,12 +228,12 @@ msgstr ""
 #: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
-msgstr ""
+msgstr "Cursores"
 
 #: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
-msgstr ""
+msgstr "Fontes"
 
 #: ui/MoreOptions.qml:66
 #, kde-format

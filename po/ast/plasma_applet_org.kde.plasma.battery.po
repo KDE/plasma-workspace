@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:42+0000\n"
-"PO-Revision-Date: 2023-10-25 01:48+0200\n"
+"PO-Revision-Date: 2023-10-29 22:38+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -38,18 +38,18 @@ msgstr ""
 #: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Remaining Time:"
-msgstr ""
+msgstr "Tiempu que queda:"
 
 #: package/contents/ui/BatteryItem.qml:191
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Estimando…"
 
 #: package/contents/ui/BatteryItem.qml:203
 #, kde-format
 msgid "Battery Health:"
-msgstr ""
+msgstr "Vída últil:"
 
 #: package/contents/ui/BatteryItem.qml:209
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "%1%"
 #: package/contents/ui/BatteryItem.qml:223
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr ""
+msgstr "La batería ta configurada pa cargar hasta'l %1% aproximadamente."
 
 #: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
@@ -215,12 +215,12 @@ msgstr ""
 #: package/contents/ui/main.qml:374
 #, kde-format
 msgid "&Show Energy Information…"
-msgstr ""
+msgstr "&Amosar la información d'enerxía…"
 
 #: package/contents/ui/main.qml:380
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr ""
+msgstr "Amosar el porcentaxe de batería nel iconu cuando nun ta cargada"
 
 #: package/contents/ui/main.qml:392
 #, kde-format
@@ -295,19 +295,19 @@ msgstr "%1: %2"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
-msgstr ""
+msgstr "%1: motivu desconocíu"
 
 #: package/contents/ui/PowerManagementItem.qml:124
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Aplicación desconocida: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr ""
+msgstr "Aplicación desconocida: motivu desconocíu"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
@@ -348,7 +348,7 @@ msgstr ""
 #: package/contents/ui/PowerProfileItem.qml:188
 #, kde-format
 msgid "Performance mode is unavailable."
-msgstr "El mou Rindimientu nun ta disponible."
+msgstr "El mou «Rindimientu» nun ta disponible."
 
 #: package/contents/ui/PowerProfileItem.qml:201
 #, kde-format
