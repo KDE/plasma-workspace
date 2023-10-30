@@ -134,7 +134,7 @@ Kirigami.OverlaySheet {
                         title: i18nc("@title", "Choose a picture")
                         onAccepted: {
                             usersDetailPage.oldImage = usersDetailPage.user.face
-                            usersDetailPage.user.face = fileDialog.fileUrl
+                            usersDetailPage.user.face = fileDialog.selectedFile
                             usersDetailPage.overrideImage = true
                             picturesSheet.close()
                         }
