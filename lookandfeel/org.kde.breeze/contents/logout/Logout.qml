@@ -166,6 +166,7 @@ Item {
                 action: root.sleepRequested
                 KeyNavigation.left: logoutButton
                 KeyNavigation.right: hibernateButton
+                KeyNavigation.down: okButton
                 visible: spdMethods.SuspendState
             }
             LogoutButton {
@@ -175,6 +176,7 @@ Item {
                 action: root.hibernateRequested
                 KeyNavigation.left: suspendButton
                 KeyNavigation.right: rebootButton
+                KeyNavigation.down: okButton
                 visible: spdMethods.HibernateState
             }
             LogoutButton {
@@ -184,6 +186,7 @@ Item {
                 action: root.rebootRequested
                 KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
+                KeyNavigation.down: okButton
                 focus: sdtype === ShutdownType.ShutdownTypeReboot
                 visible: maysd
             }
@@ -194,6 +197,7 @@ Item {
                 action: root.haltRequested
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: logoutButton
+                KeyNavigation.down: okButton
                 focus: sdtype === ShutdownType.ShutdownTypeHalt
                 visible: maysd
             }
@@ -204,6 +208,7 @@ Item {
                 action: root.logoutRequested
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
+                KeyNavigation.down: okButton
                 focus: sdtype === ShutdownType.ShutdownTypeNone
                 visible: canLogout
             }
@@ -235,17 +240,29 @@ Item {
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
+                id: okButton
                 implicitWidth: Kirigami.Units.gridUnit * 6
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
+                Keys.onEnterPressed: root.currentAction()
+                Keys.onReturnPressed: root.currentAction()
+                KeyNavigation.left: cancelButton
+                KeyNavigation.right: cancelButton
+                KeyNavigation.up: suspendButton
             }
             PlasmaComponents.Button {
+                id: cancelButton
                 implicitWidth: Kirigami.Units.gridUnit * 6
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: root.cancelRequested()
+                Keys.onEnterPressed: root.cancelRequested()
+                Keys.onReturnPressed: root.cancelRequested()
+                KeyNavigation.left: okButton
+                KeyNavigation.right: okButton
+                KeyNavigation.up: suspendButton
             }
         }
     }
