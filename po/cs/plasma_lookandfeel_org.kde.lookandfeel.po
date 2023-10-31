@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-31 01:40+0000\n"
 "PO-Revision-Date: 2023-01-04 15:29+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -53,13 +53,13 @@ msgid "Sleep"
 msgstr "Uspat"
 
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
-#: contents/logout/Logout.qml:183
+#: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Restartovat"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:196
 #, kde-format
 msgid "Shut Down"
 msgstr "Vypnout"
@@ -164,7 +164,7 @@ msgstr "Odemčení selhalo"
 msgid "Sleep"
 msgstr "Uspat"
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernovat"
@@ -259,12 +259,12 @@ msgstr[2] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Při restartu počítač vstoupí do obrazovky pro nastavení firmwaru."
 
-#: contents/logout/Logout.qml:203
+#: contents/logout/Logout.qml:207
 #, kde-format
 msgid "Log Out"
 msgstr "Odhlásit se"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:231
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
@@ -272,7 +272,7 @@ msgstr[0] "Restartování za sekundu"
 msgstr[1] "Restartování za %1 sekundy"
 msgstr[2] "Restartování za %1 sekund"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:233
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -280,7 +280,7 @@ msgstr[0] "Vypnutí za sekundu"
 msgstr[1] "Vypnutí za %1 sekundy"
 msgstr[2] "Vypnutí za %1 sekund"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -288,12 +288,12 @@ msgstr[0] "Odhlášení za sekundu"
 msgstr[1] "Odhlášení za %1 sekundy"
 msgstr[2] "Odhlášení za %1 sekund"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:259
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušit"

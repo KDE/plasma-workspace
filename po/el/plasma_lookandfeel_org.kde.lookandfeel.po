@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-31 01:40+0000\n"
 "PO-Revision-Date: 2017-03-24 14:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -51,13 +51,13 @@ msgid "Sleep"
 msgstr ""
 
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
-#: contents/logout/Logout.qml:183
+#: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:196
 #, fuzzy, kde-format
 #| msgid "Shut down"
 msgid "Shut Down"
@@ -165,7 +165,7 @@ msgstr "Αποτυχία ξεκλειδώματος"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr ""
@@ -254,14 +254,14 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
-#: contents/logout/Logout.qml:203
+#: contents/logout/Logout.qml:207
 #, fuzzy, kde-format
 #| msgctxt "Button to log out of the desktop session"
 #| msgid "Log out"
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:231
 #, fuzzy, kde-format
 #| msgid "Reboot in 1 second"
 #| msgid_plural "Reboot in %1 seconds"
@@ -270,26 +270,26 @@ msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο"
 msgstr[1] "Επανεκκίνηση σε %1 δευτερόλεπτα"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:233
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Τερματισμός σε 1 δευτερόλεπτο"
 msgstr[1] "Τερματισμός σε %1 δευτερόλεπτα"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Αποσύνδεση σε 1 δευτερόλεπτο"
 msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "OK"
 msgstr "Εντάξει"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:259
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"

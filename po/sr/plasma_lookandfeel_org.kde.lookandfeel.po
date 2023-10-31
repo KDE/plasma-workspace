@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-31 01:40+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -52,13 +52,13 @@ msgstr ""
 
 # rewrite-msgid: /Restart/Reset/
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
-#: contents/logout/Logout.qml:183
+#: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Ресетуј"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:196
 #, fuzzy, kde-format
 #| msgid "Shutdown"
 msgid "Shut Down"
@@ -166,7 +166,7 @@ msgstr "Откључавање пропало"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr ""
@@ -257,13 +257,13 @@ msgstr[3] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
-#: contents/logout/Logout.qml:203
+#: contents/logout/Logout.qml:207
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
 # rewrite-msgid: /Reboot/Reset/
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:231
 #, fuzzy, kde-format
 #| msgid "Reboot in 1 second"
 #| msgid_plural "Reboot in %1 seconds"
@@ -274,7 +274,7 @@ msgstr[1] "Ресетовање за %1 секунде"
 msgstr[2] "Ресетовање за %1 секунди"
 msgstr[3] "Ресетовање за 1 секунду"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:233
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -283,7 +283,7 @@ msgstr[1] "Гашење за %1 секунде"
 msgstr[2] "Гашење за %1 секунди"
 msgstr[3] "Гашење за 1 секунду"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -292,12 +292,12 @@ msgstr[1] "Одјављивање за %1 секунде"
 msgstr[2] "Одјављивање за %1 секунди"
 msgstr[3] "Одјављивање за 1 секунду"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "OK"
 msgstr "У реду"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:259
 #, kde-format
 msgid "Cancel"
 msgstr "Одустани"

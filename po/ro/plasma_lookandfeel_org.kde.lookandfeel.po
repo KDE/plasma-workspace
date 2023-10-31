@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-31 01:40+0000\n"
 "PO-Revision-Date: 2022-04-04 10:12+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -51,13 +51,13 @@ msgid "Sleep"
 msgstr "Adormire"
 
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
-#: contents/logout/Logout.qml:183
+#: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Repornire"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:196
 #, kde-format
 msgid "Shut Down"
 msgstr "Deconectare"
@@ -164,7 +164,7 @@ msgstr "Deblocare eșuată"
 msgid "Sleep"
 msgstr "Adormire"
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:174
+#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernează"
@@ -260,12 +260,12 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "La repornire, calculatorul va intra în ecranul de configurare firmware."
 
-#: contents/logout/Logout.qml:203
+#: contents/logout/Logout.qml:207
 #, kde-format
 msgid "Log Out"
 msgstr "Ieșire din sistem"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:231
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
@@ -273,7 +273,7 @@ msgstr[0] "Se repornește în 1 secundă"
 msgstr[1] "Se repornește în %1 secunde"
 msgstr[2] "Se repornește în %1 de secunde"
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:233
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -281,7 +281,7 @@ msgstr[0] "Se deconectează în 1 secundă"
 msgstr[1] "Se deconectează în %1 secunde"
 msgstr[2] "Se deconectează în %1 de secunde"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -289,12 +289,12 @@ msgstr[0] "Se iese în 1 secundă"
 msgstr[1] "Se iese în %1 secunde"
 msgstr[2] "Se iese în %1 de secunde"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "OK"
 msgstr "Bine"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:259
 #, kde-format
 msgid "Cancel"
 msgstr "Renunță"
