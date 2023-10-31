@@ -101,7 +101,7 @@ Item {
 
         readonly property color colorBorder: Kirigami.Theme.textColor
 
-        fragmentShader: "UserDelegate.frag.qsb"
+        fragmentShader: "qrc:/qt/qml/org/kde/breeze/components/shaders/UserDelegate.frag.qsb"
     }
 
     PlasmaComponents3.Label {

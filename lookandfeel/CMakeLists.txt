@@ -2,7 +2,7 @@ plasma_install_package(org.kde.breeze org.kde.breeze.desktop look-and-feel looka
 plasma_install_package(org.kde.breezedark org.kde.breezedark.desktop look-and-feel lookandfeel)
 plasma_install_package(org.kde.breezetwilight org.kde.breezetwilight.desktop look-and-feel lookandfeel)
 
-ecm_add_qml_module(components URI "org.kde.breeze.components" GENERATE_PLUGIN_SOURCE)
+ecm_add_qml_module(components URI "org.kde.breeze.components" NO_GENERATE_PLUGIN_SOURCE)
 ecm_target_qml_sources(components SOURCES
     org.kde.breeze/components/animation/RejectPasswordAnimation.qml
     org.kde.breeze/components/animation/RejectPasswordPathAnimation.qml
@@ -16,13 +16,14 @@ ecm_target_qml_sources(components SOURCES
     org.kde.breeze/components/VirtualKeyboard_wayland.qml
     org.kde.breeze/components/WallpaperFader.qml
 )
+target_sources(components PRIVATE org.kde.breeze/components/componentsplugin.cpp)
 ecm_finalize_qml_module(components DESTINATION ${KDE_INSTALL_QMLDIR})
 
 qt_add_shaders(components LNFSHADERS
     PRECOMPILE
     BATCHABLE
     OPTIMIZED
-    PREFIX "/org/kde/breeze/components"
+    PREFIX "/qt/qml/org/kde/breeze/components/shaders/"
     FILES
         org.kde.breeze/components/UserDelegate.frag
         org.kde.breeze/components/WallpaperFader.frag

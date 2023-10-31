@@ -71,7 +71,7 @@ Item {
                     0,         0,         0,         1
                 ));
 
-        fragmentShader: "WallpaperFader.frag.qsb"
+        fragmentShader: "qrc:/qt/qml/org/kde/breeze/components/shaders/WallpaperFader.frag.qsb"
     }
 
     states: [
