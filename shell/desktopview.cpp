@@ -191,7 +191,7 @@ void DesktopView::resetAccentColor()
     Q_EMIT accentColorChanged(Qt::transparent);
 }
 
-#if PROJECT_VERSION_PATCH >= 80
+#if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
 bool DesktopView::showPreviewBanner() const
 {
     static const bool shouldShowPreviewBanner = !KConfigGroup(KSharedConfig::openConfig("kdeglobals"), "General").readEntry("HideDesktopPreviewBanner", false);
@@ -200,6 +200,29 @@ bool DesktopView::showPreviewBanner() const
 
 QString DesktopView::previewBannerTitle() const
 {
+    // Plasma 6 pre-release versions
+    if constexpr (PROJECT_VERSION_MAJOR == 5 && PROJECT_VERSION_MINOR >= 80) {
+        if constexpr (PROJECT_VERSION_PATCH == 80) {
+            // Development
+            return i18nc("@label %1 is the Plasma version", "KDE Plasma 6.0 Dev");
+        } else if constexpr (PROJECT_VERSION_MINOR == 80) {
+            // Alpha, 5.80.0
+            return i18nc("@label %1 is the Plasma version", "KDE Plasma 6.0 Alpha");
+        } else if constexpr (PROJECT_VERSION_MINOR == 90) {
+            // Beta 1, 5.90.0
+            return i18nc("@label %1 is the Plasma version", "KDE Plasma 6.0 Beta 1");
+        } else if constexpr (PROJECT_VERSION_MINOR == 91) {
+            // Beta 2, 5.91.0
+            return i18nc("@label %1 is the Plasma version", "KDE Plasma 6.0 Beta 2");
+        } else if constexpr (PROJECT_VERSION_MINOR == 92) {
+            // RC1, 5.92.0
+            return i18nc("@label %1 is the Plasma version, RC meaning Release Candidate", "KDE Plasma 6.0 RC1");
+        } else if constexpr (PROJECT_VERSION_MINOR == 93) {
+            // RC2, 5.93.0
+            return i18nc("@label %1 is the Plasma version, RC meaning Release Candidate", "KDE Plasma 6.0 RC2");
+        }
+    }
+
     /*
      * Versions are reported as follows:
      *  Development, 5.27.80 -> KDE Plasma 6.0 Dev

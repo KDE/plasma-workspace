@@ -38,7 +38,7 @@ class DesktopView : public PlasmaQuick::ContainmentView
 
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor RESET resetAccentColor NOTIFY accentColorChanged)
 
-#if PROJECT_VERSION_PATCH >= 80
+#if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     Q_PROPERTY(bool showPreviewBanner READ showPreviewBanner CONSTANT)
     Q_PROPERTY(QString previewBannerTitle READ previewBannerTitle CONSTANT)
     Q_PROPERTY(QString previewBannerText READ previewBannerText CONSTANT)
@@ -63,7 +63,7 @@ public:
     void setAccentColor(const QColor &);
     void resetAccentColor();
 
-#if PROJECT_VERSION_PATCH >= 80
+#if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     bool showPreviewBanner() const;
     QString previewBannerTitle() const;
     QString previewBannerText() const;
