@@ -155,7 +155,7 @@ private:
     WId windowWmClientLeader(WId w);
     QByteArray windowSessionId(WId w, WId leader);
 
-    void tryRestoreNext();
+    void tryRestore();
     void startupDone();
 
     void runShutdownScripts();
@@ -205,12 +205,9 @@ private:
     KSMClient *clientInteracting;
     QString sessionGroup;
     QTimer protectionTimer;
-    QTimer restoreTimer;
     QString xonCommand;
     // sequential startup
     int appsToStart;
-    int lastAppStarted;
-    QString lastIdStarted;
 
     QStringList excludeApps;
 

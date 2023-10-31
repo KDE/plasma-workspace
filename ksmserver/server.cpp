@@ -645,7 +645,6 @@ KSMServer::KSMServer(InitFlags flags)
     signal(SIGPIPE, SIG_IGN);
 
     connect(&protectionTimer, &QTimer::timeout, this, &KSMServer::protectionTimeout);
-    connect(&restoreTimer, &QTimer::timeout, this, &KSMServer::tryRestoreNext);
     connect(this, &KSMServer::sessionRestored, this, [this]() {
         auto reply = m_restoreSessionCall.createReply();
         QDBusConnection::sessionBus().send(reply);
@@ -987,8 +986,6 @@ void KSMServer::restoreSession()
     setDelayedReply(true);
     m_restoreSessionCall = message();
 
-    lastAppStarted = 0;
-    lastIdStarted.clear();
     state = KSMServer::Restoring;
 
     auto reply = m_kwinInterface->loadSession(currentSession());
@@ -999,7 +996,7 @@ void KSMServer::restoreSession()
             qWarning() << "Failed to notify kwin of current session " << reply.error().message();
         }
         restoreLegacySession(KSharedConfig::openConfig().data());
-        tryRestoreNext();
+        tryRestore();
     });
 }
 
@@ -1010,24 +1007,19 @@ void KSMServer::restoreSubSession(const QString &name)
     KConfigGroup configSessionGroup(KSharedConfig::openConfig(), sessionGroup);
     int count = configSessionGroup.readEntry("count", 0);
     appsToStart = count;
-    lastAppStarted = 0;
-    lastIdStarted.clear();
 
     state = RestoringSubSession;
-    tryRestoreNext();
+    tryRestore();
 }
 
-void KSMServer::clientRegistered(const char *previousId)
+void KSMServer::clientRegistered(const char * /* previousId */)
 {
-    if (previousId && lastIdStarted == QString::fromLocal8Bit(previousId))
-        tryRestoreNext();
 }
 
-void KSMServer::tryRestoreNext()
+void KSMServer::tryRestore()
 {
     if (state != Restoring && state != RestoringSubSession)
         return;
-    restoreTimer.stop();
     KConfigGroup config(KSharedConfig::openConfig(), sessionGroup);
 
     struct DontStartEntry {
@@ -1046,9 +1038,8 @@ void KSMServer::tryRestoreNext()
     };
     QList<RestartEntry> entries;
     entries.reserve(appsToStart);
-    while (lastAppStarted < appsToStart) {
-        lastAppStarted++;
-        const auto n = QString::number(lastAppStarted);
+    for (int i = 0; i < appsToStart; i++) {
+        const auto n = QString::number(i);
         const auto entry = entries.emplace_back(RestartEntry{
             .clientId = config.readEntry(QLatin1String("clientId") + n, QString()),
             .restartCommand = config.readEntry(QLatin1String("restartCommand") + n, QStringList()),
@@ -1099,18 +1090,9 @@ void KSMServer::tryRestoreNext()
             continue;
         }
         startApplication(entry.restartCommand, entry.clientMachine, entry.userId);
-        lastIdStarted = entry.clientId;
-        if (!lastIdStarted.isEmpty()) {
-            restoreTimer.setSingleShot(true);
-            restoreTimer.start(2000);
-            return; // we get called again from the clientRegistered handler
-        }
     }
 
     // all done
-    appsToStart = 0;
-    lastIdStarted.clear();
-
     if (state == Restoring) {
         Q_EMIT sessionRestored();
     } else { // subsession
