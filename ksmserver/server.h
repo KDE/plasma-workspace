@@ -151,9 +151,7 @@ private:
 
     void runShutdownScripts();
 
-    // public dcop interface
-
-public Q_SLOTS: // public dcop interface
+public Q_SLOTS: // public dbus interface
     void logout(int, int, int);
     bool canShutdown();
     bool isShuttingDown() const;
