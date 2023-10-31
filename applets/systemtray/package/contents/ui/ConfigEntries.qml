@@ -8,7 +8,7 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.3
 
 import org.kde.plasma.plasmoid 2.0
@@ -67,6 +67,7 @@ ColumnLayout {
 
             property real visibilityColumnWidth: Kirigami.Units.gridUnit
             property real keySequenceColumnWidth: Kirigami.Units.gridUnit
+            readonly property int iconSize: Kirigami.Units.iconSizes.smallMedium
 
             clip: true
 
@@ -77,37 +78,33 @@ ColumnLayout {
             }
             reuseItems: true
 
-            header: Kirigami.AbstractListItem {
+            header: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
 
-                // so that it gets neither hover nor pressed appearance when it's not interactive
-                hoverEnabled: false
-                down: false
-
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.smallSpacing
-
-                    Kirigami.Heading {
-                        text: i18nc("Name of the system tray entry", "Entry")
-                        level: 2
-                        Layout.fillWidth: true
-                    }
-                    Kirigami.Heading {
-                        text: i18n("Visibility")
-                        level: 2
-                        Layout.preferredWidth: itemsList.visibilityColumnWidth
-                        Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
-                    }
-                    Kirigami.Heading {
-                        text: i18n("Keyboard Shortcut")
-                        level: 2
-                        Layout.preferredWidth: itemsList.keySequenceColumnWidth
-                        Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
-                    }
-                    QQC2.Button { // Configure button column
-                        icon.name: "configure"
-                        enabled: false
-                        opacity: 0
-                    }
+                Item {
+                    implicitWidth: itemsList.iconSize
+                }
+                Kirigami.Heading {
+                    text: i18nc("Name of the system tray entry", "Entry")
+                    level: 2
+                    Layout.fillWidth: true
+                }
+                Kirigami.Heading {
+                    text: i18n("Visibility")
+                    level: 2
+                    Layout.preferredWidth: itemsList.visibilityColumnWidth
+                    Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
+                }
+                Kirigami.Heading {
+                    text: i18n("Keyboard Shortcut")
+                    level: 2
+                    Layout.preferredWidth: itemsList.keySequenceColumnWidth
+                    Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                }
+                QQC2.Button { // Configure button column
+                    icon.name: "configure"
+                    enabled: false
+                    opacity: 0
                 }
             }
 
@@ -118,11 +115,15 @@ ColumnLayout {
                 }
             }
 
-            delegate: Kirigami.AbstractListItem {
+            delegate: QQC2.ItemDelegate {
                 id: listItem
 
-                background: null
+                width: itemsList.width
+
+                // Don't need highlight, hover, or pressed effects
                 highlighted: false
+                hoverEnabled: false
+                down: false
 
                 readonly property bool isPlasmoid: model.itemType === "Plasmoid"
 
@@ -138,8 +139,8 @@ ColumnLayout {
                         spacing: Kirigami.Units.smallSpacing
 
                         Kirigami.Icon {
-                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                            implicitWidth: itemsList.iconSize
+                            implicitHeight: itemsList.iconSize
                             source: model.decoration
                             animated: false
                         }
