@@ -12,7 +12,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kirigami 2.20 as Kirigami
 
-import "../components"
+import org.kde.breeze.components
 import "timer.js" as AutoTriggerTimer
 
 import org.kde.plasma.private.sessions 2.0

@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.2
 
 import org.kde.kirigami 2.20 as Kirigami
 
-import "../components"
+import org.kde.breeze.components
 import "timer.js" as AutoTriggerTimer
 
 ActionButton {

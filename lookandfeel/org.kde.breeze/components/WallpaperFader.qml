@@ -10,7 +10,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.sessions 2.0
-import "../components"
+import org.kde.breeze.components
 
 Item {
     id: wallpaperFader

@@ -17,8 +17,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kscreenlocker 1.0 as ScreenLocker
 
 import org.kde.plasma.private.sessions 2.0
-import "../components"
-import "../components/animation"
+import org.kde.breeze.components
 
 Item {
 
@@ -370,6 +369,14 @@ Item {
             id: inputPanel
             state: "hidden"
             readonly property bool keyboardActive: item ? item.active : false
+            Component {
+                id: keyboard
+                VirtualKeyboard {}
+            }
+            Component {
+                id: keyboardWayland
+                VirtualKeyboard_wayland {}
+            }
             anchors {
                 left: parent.left
                 right: parent.right
@@ -378,7 +385,7 @@ Item {
                 state = state == "hidden" ? "visible" : "hidden";
             }
             Component.onCompleted: {
-                inputPanel.source = Qt.platform.pluginName.includes("wayland") ? "../components/VirtualKeyboard_wayland.qml" : "../components/VirtualKeyboard.qml"
+                inputPanel.sourceComponent = Qt.platform.pluginName.includes("wayland") ? keyboardWayland : keyboard
             }
 
             onKeyboardActiveChanged: {

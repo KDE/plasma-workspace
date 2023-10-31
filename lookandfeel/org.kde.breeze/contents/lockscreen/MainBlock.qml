@@ -14,8 +14,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kscreenlocker 1.0 as ScreenLocker
 
-import "../components"
-import "../components/animation"
+import org.kde.breeze.components
 
 SessionManagementScreen {
     id: sessionManager

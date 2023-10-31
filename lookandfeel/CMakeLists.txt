@@ -2,33 +2,39 @@ plasma_install_package(org.kde.breeze org.kde.breeze.desktop look-and-feel looka
 plasma_install_package(org.kde.breezedark org.kde.breezedark.desktop look-and-feel lookandfeel)
 plasma_install_package(org.kde.breezetwilight org.kde.breezetwilight.desktop look-and-feel lookandfeel)
 
+ecm_add_qml_module(components URI "org.kde.breeze.components" GENERATE_PLUGIN_SOURCE)
+ecm_target_qml_sources(components SOURCES
+    org.kde.breeze/components/animation/RejectPasswordAnimation.qml
+    org.kde.breeze/components/animation/RejectPasswordPathAnimation.qml
+    org.kde.breeze/components/ActionButton.qml
+    org.kde.breeze/components/Battery.qml
+    org.kde.breeze/components/Clock.qml
+    org.kde.breeze/components/SessionManagementScreen.qml
+    org.kde.breeze/components/UserDelegate.qml
+    org.kde.breeze/components/UserList.qml
+    org.kde.breeze/components/VirtualKeyboard.qml
+    org.kde.breeze/components/VirtualKeyboard_wayland.qml
+    org.kde.breeze/components/WallpaperFader.qml
+)
+ecm_finalize_qml_module(components DESTINATION ${KDE_INSTALL_QMLDIR})
 
-add_custom_target(dummytargetforqsb ALL)
-qt_add_shaders(dummytargetforqsb LNFSHADERS
+qt_add_shaders(components LNFSHADERS
     PRECOMPILE
     BATCHABLE
     OPTIMIZED
+    PREFIX "/org/kde/breeze/components"
     FILES
-        org.kde.breeze/contents/components/UserDelegate.frag
-        org.kde.breeze/contents/components/WallpaperFader.frag
+        org.kde.breeze/components/UserDelegate.frag
+        org.kde.breeze/components/WallpaperFader.frag
     OUTPUTS
         UserDelegate.frag.qsb
         WallpaperFader.frag.qsb
-)
-set(QSB_OUTPUT_FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/.qsb/UserDelegate.frag.qsb
-    ${CMAKE_CURRENT_BINARY_DIR}/.qsb/WallpaperFader.frag.qsb
-)
-
-install(FILES ${QSB_OUTPUT_FILES}
-    DESTINATION ${PLASMA_DATA_INSTALL_DIR}/look-and-feel/org.kde.breeze.desktop/contents/components
 )
 
 if (INSTALL_SDDM_THEME)
     configure_file(sddm-theme/theme.conf.cmake ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf)
 
 # Install the login theme into the SDDM directory
-# Longer term we need to look at making SDDM load from look and feel somehow.. and allow copying at runtime
     #NOTE this trailing slash is important to rename the directory
     install(DIRECTORY sddm-theme/
         DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
@@ -40,13 +46,5 @@ if (INSTALL_SDDM_THEME)
 
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf
         DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
-    )
-
-    install(DIRECTORY org.kde.breeze/contents/components
-        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
-        PATTERN "README.txt" EXCLUDE
-    )
-    install(FILES ${QSB_OUTPUT_FILES}
-            DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze/components
     )
 endif()

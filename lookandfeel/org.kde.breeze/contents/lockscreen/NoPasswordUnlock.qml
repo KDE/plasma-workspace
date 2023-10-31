@@ -7,7 +7,7 @@ import QtQuick 2.2
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-import "../components"
+import org.kde.breeze.components
 
 SessionManagementScreen {
     focus: true
