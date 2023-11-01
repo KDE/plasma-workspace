@@ -39,10 +39,10 @@ static const QString customAccentColorPackage2 = QStringLiteral("testdata/custom
 // Fix illegal filename on Windows
 #define renameBizarreFile(dataDir)                                                                                                                             \
     QFile bizarreFileOrig(dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5_orig));                                                         \
-    QVERIFY(bizarreFileOrig.exists());                                                                                                                         \
+    QVERIFY2(bizarreFileOrig.exists(), qUtf8Printable(dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5_orig)));                            \
     QVERIFY(bizarreFileOrig.rename(dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5)));
 
 #define restoreBizarreFile(dataDir)                                                                                                                            \
     QFile bizarreFile(dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5));                                                                  \
-    QVERIFY(bizarreFile.exists());                                                                                                                             \
+    QVERIFY2(bizarreFile.exists(), qUtf8Printable((dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5))));                                   \
     QVERIFY(bizarreFile.rename(dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5_orig)));
