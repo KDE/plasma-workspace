@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-08 02:42+0000\n"
-"PO-Revision-Date: 2023-01-17 20:09+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-10-06 17:23+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -365,7 +365,7 @@ msgstr "Ajouter un nouvel utilisateur"
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr "Changer un avatar"
+msgstr "Changer l'avatar"
 
 #: package/contents/ui/PicturesSheet.qml:22
 #, kde-format

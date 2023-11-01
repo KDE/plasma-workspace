@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-27 17:52+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-08-19 23:08+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -148,12 +148,12 @@ msgstr "Notifications normales :"
 #: package/contents/ui/main.qml:123
 #, kde-format
 msgid "Show over full screen windows"
-msgstr "Afficher au premier plan les fenêtre en plein écran"
+msgstr "Afficher par-dessus les fenêtres en plein écran"
 
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Low priority notifications:"
-msgstr "Notifications de faible priorité"
+msgstr "Notifications de faible priorité :"
 
 #: package/contents/ui/main.qml:136
 #, kde-format
@@ -205,7 +205,7 @@ msgstr "Retour additionnel d'utilisation"
 #: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Application progress:"
-msgstr "Progression d'une tache dans une application"
+msgstr "Progression d'une tâche dans une application :"
 
 #: package/contents/ui/main.qml:252 package/contents/ui/main.qml:292
 #, kde-format
