@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-01 01:41+0000\n"
 "PO-Revision-Date: 2023-08-20 15:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -60,12 +60,12 @@ msgid ""
 "basis"
 msgstr "தனிப்பட்ட நிகழ்வுகளுக்கான அறிவிப்புகளை அமைத்தலை இந்த செயலி ஆதரிக்கவில்லை"
 
-#: ui/ApplicationConfiguration.qml:257
+#: ui/ApplicationConfiguration.qml:259
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "மேல்தோன்றும் அறிவிப்பை காட்டு"
 
-#: ui/ApplicationConfiguration.qml:266
+#: ui/ApplicationConfiguration.qml:268
 #, kde-format
 msgid "Play a sound"
 msgstr "ஒலியெழுப்பு"

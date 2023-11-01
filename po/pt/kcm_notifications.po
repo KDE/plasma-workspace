@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-01 01:41+0000\n"
 "PO-Revision-Date: 2022-12-28 18:40+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -61,12 +61,12 @@ msgid ""
 msgstr ""
 "Esta aplicação não suporta a configuração de notificações por cada evento."
 
-#: ui/ApplicationConfiguration.qml:257
+#: ui/ApplicationConfiguration.qml:259
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:266
+#: ui/ApplicationConfiguration.qml:268
 #, kde-format
 msgid "Play a sound"
 msgstr ""

@@ -414,7 +414,7 @@ msgstr "Appuyez sur la touche « Espace » pour modifier un profil utilisateur
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr "Changer un avatar"
+msgstr "Changer l'avatar"
 
 #: src/ui/PicturesSheet.qml:22
 #, kde-format

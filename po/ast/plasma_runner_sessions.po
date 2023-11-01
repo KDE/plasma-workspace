@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-07 01:58+0000\n"
-"PO-Revision-Date: 2023-10-28 00:16+0200\n"
+"PO-Revision-Date: 2023-10-30 10:32+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -61,7 +61,7 @@ msgstr "Reanicia l'ordenador"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr ""
+msgstr "bloquiar;bloquéu;bloquéu de la pantalla;bloquéu de pantalla"
 
 #: sessionrunner.cpp:41
 #, kde-format

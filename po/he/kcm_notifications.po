@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-01 01:41+0000\n"
 "PO-Revision-Date: 2023-10-04 22:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -62,12 +62,12 @@ msgid ""
 "basis"
 msgstr "היישום הזה לא תומך בהגדרת התראות בהתאם לאירוע"
 
-#: ui/ApplicationConfiguration.qml:257
+#: ui/ApplicationConfiguration.qml:259
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "הצגת הודעה בחלונית קופצת"
 
-#: ui/ApplicationConfiguration.qml:266
+#: ui/ApplicationConfiguration.qml:268
 #, kde-format
 msgid "Play a sound"
 msgstr "השמעת צליל"

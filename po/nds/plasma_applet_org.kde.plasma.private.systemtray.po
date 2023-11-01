@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-01 01:41+0000\n"
 "PO-Revision-Date: 2014-06-09 20:50+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -52,45 +52,45 @@ msgstr "Reedschap-Kuntrull"
 msgid "Miscellaneous"
 msgstr "Annerswat"
 
-#: package/contents/ui/ConfigEntries.qml:90
+#: package/contents/ui/ConfigEntries.qml:88
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Indrääg"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:93
 #, kde-format
 msgid "Visibility"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:99
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:248
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Shown when relevant"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:250
 #, kde-format
 msgid "Always shown"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:250
+#: package/contents/ui/ConfigEntries.qml:251
 #, kde-format
 msgid "Always hidden"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:251
+#: package/contents/ui/ConfigEntries.qml:252
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgid "Disabled"
 msgstr "Anmaakt"
 
-#: package/contents/ui/ConfigEntries.qml:316
+#: package/contents/ui/ConfigEntries.qml:317
 #, kde-format
 msgid "Always show all entries"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-01 01:41+0000\n"
 "PO-Revision-Date: 2022-07-28 21:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -52,43 +52,43 @@ msgstr "Контрол на хардуера"
 msgid "Miscellaneous"
 msgstr "Допълнителни"
 
-#: package/contents/ui/ConfigEntries.qml:90
+#: package/contents/ui/ConfigEntries.qml:88
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Запис"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:93
 #, kde-format
 msgid "Visibility"
 msgstr "Видимост"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:99
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Клавишна комбинация"
 
-#: package/contents/ui/ConfigEntries.qml:248
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Показва се, когато е необходимо"
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:250
 #, kde-format
 msgid "Always shown"
 msgstr "Винаги показвано"
 
-#: package/contents/ui/ConfigEntries.qml:250
+#: package/contents/ui/ConfigEntries.qml:251
 #, kde-format
 msgid "Always hidden"
 msgstr "Винаги скрито"
 
-#: package/contents/ui/ConfigEntries.qml:251
+#: package/contents/ui/ConfigEntries.qml:252
 #, kde-format
 msgid "Disabled"
 msgstr "Забранено"
 
-#: package/contents/ui/ConfigEntries.qml:316
+#: package/contents/ui/ConfigEntries.qml:317
 #, kde-format
 msgid "Always show all entries"
 msgstr "Винаги показване на всички записи"

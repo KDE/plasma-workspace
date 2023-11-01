@@ -23,4 +23,4 @@ msgstr ""
 #: package/contents/ui/main.qml:46
 #, kde-format
 msgid "Set flexible size"
-msgstr "Régler la taille flexible"
+msgstr "Rendre la taille flexible"

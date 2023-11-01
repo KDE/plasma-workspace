@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-14 01:59+0000\n"
-"PO-Revision-Date: 2023-05-01 23:52+0200\n"
+"PO-Revision-Date: 2023-10-30 10:30+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,18 +15,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Nome del estilu d'iconos actual"
 
 #: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Nun ye posible crear el ficheru temporal."
 
 #: main.cpp:161
 #, kde-format
@@ -44,31 +44,33 @@ msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr ""
+"Prodúxose un problema demientres el procesu d'instalación. Por embargu, "
+"instaláronse la mayoría d'estilos del archivu"
 
 #: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "L'estilu instalóse correutamente"
 
 #: main.cpp:228
 #, kde-format
 msgid "Installing icon themes…"
-msgstr ""
+msgstr "Instalando los estilos d'iconos…"
 
 #: main.cpp:238
 #, kde-format
 msgid "Installing %1 theme…"
-msgstr ""
+msgstr "Instalando l'estilu «%1»…"
 
 #: ui/main.qml:45
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instalar dende un ficheru…"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Consiguir…"
 
 #: ui/main.qml:166
 #, kde-format
@@ -88,7 +90,7 @@ msgstr ""
 #: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Ficheros d'estilu (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Dialogs"
 #~ msgstr "Diálogos"

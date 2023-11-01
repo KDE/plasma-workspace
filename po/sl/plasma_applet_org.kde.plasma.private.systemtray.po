@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-01 01:41+0000\n"
 "PO-Revision-Date: 2022-07-26 07:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -55,43 +55,43 @@ msgstr "Nadzor strojne opreme"
 msgid "Miscellaneous"
 msgstr "Razno"
 
-#: package/contents/ui/ConfigEntries.qml:90
+#: package/contents/ui/ConfigEntries.qml:88
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Vnos"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:93
 #, kde-format
 msgid "Visibility"
 msgstr "Vidnost"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:99
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Tipkovna bližnjica"
 
-#: package/contents/ui/ConfigEntries.qml:248
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Pokaži kadar je bistveno"
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:250
 #, kde-format
 msgid "Always shown"
 msgstr "Vedno pokaži"
 
-#: package/contents/ui/ConfigEntries.qml:250
+#: package/contents/ui/ConfigEntries.qml:251
 #, kde-format
 msgid "Always hidden"
 msgstr "Vedno skrij"
 
-#: package/contents/ui/ConfigEntries.qml:251
+#: package/contents/ui/ConfigEntries.qml:252
 #, kde-format
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: package/contents/ui/ConfigEntries.qml:316
+#: package/contents/ui/ConfigEntries.qml:317
 #, kde-format
 msgid "Always show all entries"
 msgstr "Vedno pokaži vse vnose"

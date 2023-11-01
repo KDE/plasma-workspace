@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-10-29 00:03+0200\n"
+"PO-Revision-Date: 2023-10-31 20:02+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -176,7 +176,7 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
-"Estes aiciones apaecen nel menú emerxente que se puen configurar na páxina "
+"Estes aiciones apaecen nel menú emerxente que se pue configurar na páxina "
 "<interface>Menú d'aiciones</interface>"
 
 #: configdialog.cpp:574
@@ -757,7 +757,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr ""
+msgstr "%1 - Elementos del cartafueyu"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -850,7 +850,7 @@ msgstr ""
 #: main.cpp:44
 #, kde-format
 msgid "Martin Gräßlin"
-msgstr ""
+msgstr "Martin Gräßlin"
 
 #: main.cpp:44
 #, kde-format
@@ -872,7 +872,7 @@ msgstr "alministradores@softastur.org"
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
-msgstr ""
+msgstr "&Más"
 
 #: urlgrabber.cpp:200
 #, kde-format
