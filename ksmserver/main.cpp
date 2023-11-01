@@ -266,7 +266,6 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
-    server->setupShortcuts();
     int ret = a->exec();
     kde_running.release(); // needs to be done before QGuiApplication destruction
     delete a;

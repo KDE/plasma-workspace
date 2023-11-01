@@ -43,7 +43,6 @@ target_link_libraries(ksmserver
     PW::KScreenLocker
     PW::KWorkspace
     KF6::XmlGui
-    KF6::GlobalAccel
     KF6::I18n
     KF6::KIOCore
     KF6::KIOGui

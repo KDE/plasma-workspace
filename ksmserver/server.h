@@ -99,8 +99,6 @@ public:
     void startDefaultSession();
     void shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode);
 
-    void setupShortcuts();
-
 Q_SIGNALS:
     void logoutFinished(bool sessionClosed);
 
@@ -114,13 +112,6 @@ private Q_SLOTS:
 
     void protectionTimeout();
     void timeoutQuit();
-
-    void defaultLogout();
-    void logoutWithoutConfirmation();
-    void haltWithConfirmation();
-    void haltWithoutConfirmation();
-    void rebootWithConfirmation();
-    void rebootWithoutConfirmation();
 
 private:
     void handlePendingInteractions();
