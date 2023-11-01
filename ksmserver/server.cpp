@@ -206,10 +206,9 @@ void KSMInteractDoneProc(SmsConn /* smsConn */, SmPointer managerData, Bool canc
 void KSMSaveYourselfRequestProc(SmsConn smsConn, SmPointer /* managerData */, int saveType, Bool shutdown, int interactStyle, Bool fast, Bool global)
 {
     if (shutdown) {
-        the_server->shutdown(fast ? KWorkSpace::ShutdownConfirmNo : KWorkSpace::ShutdownConfirmDefault,
-                             KWorkSpace::ShutdownTypeDefault,
-                             KWorkSpace::ShutdownModeDefault);
-    } else if (!global) {
+        qCWarning(KSMSERVER) << "Shutdown via ICE was called but not supported";
+    }
+    if (!global) {
         SmsSaveYourself(smsConn, saveType, false, interactStyle, fast);
         SmsSaveComplete(smsConn);
     }

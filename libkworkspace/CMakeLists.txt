@@ -1,6 +1,5 @@
 
 set(kworkspace_LIB_SRCS kdisplaymanager.cpp
-    kworkspace.cpp
     sessionmanagement.cpp
     sessionmanagementbackend.cpp
     autostartscriptdesktopfile.cpp

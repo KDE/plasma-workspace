@@ -62,16 +62,6 @@ enum KWinSessionState {
     Quitting = 2,
 };
 
-void KSMServer::logout(int confirm, int sdtype, int sdmode)
-{
-    // KDE5: remove me
-    if (sdtype == KWorkSpace::ShutdownTypeLogout) {
-        sdtype = KWorkSpace::ShutdownTypeNone;
-    }
-
-    shutdown((KWorkSpace::ShutdownConfirm)confirm, (KWorkSpace::ShutdownType)sdtype, (KWorkSpace::ShutdownMode)sdmode);
-}
-
 bool KSMServer::closeSession()
 {
     qCDebug(KSMSERVER) << "Close session called. Current state is:" << state;
@@ -92,69 +82,9 @@ bool KSMServer::closeSession()
     return false;
 }
 
-bool KSMServer::canShutdown()
-{
-    return KDisplayManager().canShutdown();
-}
-
 bool KSMServer::isShuttingDown() const
 {
     return state >= Shutdown;
-}
-
-// this method exists purely for compatibility
-void KSMServer::shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode)
-{
-    qCDebug(KSMSERVER) << "Shutdown called with confirm " << confirm << " type " << sdtype << " and mode " << sdmode;
-    if (state >= Shutdown) { // already performing shutdown
-        return;
-    }
-    if (state != Idle) { // performing startup
-        return;
-    }
-
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    config->reparseConfiguration(); // config may have changed in the KControl module
-
-    KConfigGroup cg(config, QStringLiteral("General"));
-
-    bool logoutConfirmed = (confirm == KWorkSpace::ShutdownConfirmYes      ? false
-                                : confirm == KWorkSpace::ShutdownConfirmNo ? true
-                                                                           : !cg.readEntry("confirmLogout", true));
-
-    int shutdownType = (sdtype != KWorkSpace::ShutdownTypeDefault ? sdtype : cg.readEntry("shutdownType", (int)KWorkSpace::ShutdownType::ShutdownTypeHalt));
-
-    if (!logoutConfirmed) {
-        OrgKdeLogoutPromptInterface logoutPrompt(QStringLiteral("org.kde.LogoutPrompt"), QStringLiteral("/LogoutPrompt"), QDBusConnection::sessionBus());
-        switch (shutdownType) {
-        case KWorkSpace::ShutdownTypeHalt:
-            logoutPrompt.promptShutDown();
-            break;
-        case KWorkSpace::ShutdownTypeReboot:
-            logoutPrompt.promptReboot();
-            break;
-        case KWorkSpace::ShutdownTypeNone:
-            Q_FALLTHROUGH();
-        default:
-            logoutPrompt.promptLogout();
-            break;
-        }
-    } else {
-        OrgKdeShutdownInterface shutdownIface(QStringLiteral("org.kde.Shutdown"), QStringLiteral("/Shutdown"), QDBusConnection::sessionBus());
-        switch (shutdownType) {
-        case KWorkSpace::ShutdownTypeHalt:
-            shutdownIface.logoutAndShutdown();
-            break;
-        case KWorkSpace::ShutdownTypeReboot:
-            shutdownIface.logoutAndReboot();
-            break;
-        case KWorkSpace::ShutdownTypeNone:
-            Q_FALLTHROUGH();
-        default:
-            shutdownIface.logout();
-            break;
-        }
-    }
 }
 
 void KSMServer::performLogout()

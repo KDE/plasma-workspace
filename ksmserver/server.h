@@ -98,7 +98,6 @@ public:
     void restoreSession();
     void setRestoreSession(const QString &sessionName);
     void startDefaultSession();
-    void shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode);
 
 Q_SIGNALS:
     void logoutFinished(bool sessionClosed);
@@ -153,8 +152,6 @@ private:
     void runShutdownScripts();
 
 public Q_SLOTS: // public dbus interface
-    void logout(int, int, int);
-    bool canShutdown();
     bool isShuttingDown() const;
     QString currentSession();
     void saveCurrentSession();
