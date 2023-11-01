@@ -303,14 +303,15 @@ if(${ICU_FOUND})
     set(HAVE_ICU TRUE)
 endif()
 
-find_package(KF6KExiv2)
-set_package_properties(KF6KExiv2
-        PROPERTIES URL "https://www.exiv2.org" DESCRIPTION "Image metadata support"
+find_package(KExiv2Qt6)
+set_package_properties(KExiv2Qt6
+        PROPERTIES URL "https://commits.kde.org/libkexiv2"
+        DESCRIPTION "Image metadata support"
         TYPE OPTIONAL
         PURPOSE "Provides metadata for image wallpaper plugin"
         )
-if(${KF6KExiv2_FOUND})
-    set(HAVE_KF6KExiv2 TRUE)
+if(${KExiv2Qt6_FOUND})
+    set(HAVE_KExiv2 TRUE)
 endif()
 
 find_package(KIOExtras)

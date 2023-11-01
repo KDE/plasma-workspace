@@ -13,7 +13,7 @@
 #include <KIO/PreviewJob>
 
 #include "../finder/mediametadatafinder.h"
-#include "config-KF6KExiv2.h"
+#include "config-KExiv2.h"
 
 AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
     : QAbstractListModel(parent)
@@ -201,7 +201,7 @@ void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const M
 {
     const QPersistentModelIndex index = m_sizeJobsUrls.take(path);
 
-#if HAVE_KF6KExiv2
+#if HAVE_KExiv2
     if (!metadata.title.isEmpty()) {
         auto title = new QString(metadata.title);
         if (m_backgroundTitleCache.insert(path, title, 1)) {

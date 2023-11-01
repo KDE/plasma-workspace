@@ -47,10 +47,10 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     PW::LibTaskManager
     )
 
-if(HAVE_KF6KExiv2)
-    target_link_libraries(plasma_wallpaper_imageplugin_static KF6::KExiv2)
+if(HAVE_KExiv2)
+    target_link_libraries(plasma_wallpaper_imageplugin_static KExiv2Qt6)
 endif()
-configure_file(config-KF6KExiv2.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KF6KExiv2.h)
+configure_file(config-KExiv2.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-KExiv2.h)
 
 add_library(plasma_wallpaper_imageplugin SHARED imageplugin.cpp)
 target_link_libraries(plasma_wallpaper_imageplugin
