@@ -346,6 +346,7 @@ void KSMServer::cancelShutdown(KSMClient *c)
                 if (!discard.isEmpty())
                     executeCommand(discard);
             }
+            c->resetState();
         }
     }
     state = Idle;
