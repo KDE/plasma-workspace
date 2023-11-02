@@ -66,8 +66,8 @@ PlasmoidItem {
             const child = panelLayout.children[i];
             if (!child.visible) continue;
 
-            if (child.applet && child.applet.pluginName === 'org.kde.plasma.panelspacer' && child.applet.configuration.expanding) {
-                if (child === Plasmoid.parent) {
+            if (child.applet && child.applet.plasmoid.pluginName === 'org.kde.plasma.panelspacer' && child.applet.plasmoid.configuration.expanding) {
+                if (child.applet.plasmoid === Plasmoid) {
                     thisSpacerIndex = expandingSpacers
                 }
                 sizeHints.push(0)
