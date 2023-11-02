@@ -65,6 +65,7 @@ PlasmoidItem {
             }
         }
 
+        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         Layout.minimumWidth: implicitWidth
         Layout.minimumHeight: implicitHeight
 
