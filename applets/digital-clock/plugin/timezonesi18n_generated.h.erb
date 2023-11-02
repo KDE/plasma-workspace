@@ -12,15 +12,7 @@
 
 namespace TimezonesI18nData
 {
-using TimezoneCityToL10nMap = QHash<QString, QString>;
 using TimezoneContinentToL10nMap = QHash<QString, QString>;
-
-static TimezoneCityToL10nMap timezoneCityToL10nMap()
-{
-    return {<% cities.each do |city| %>
-        {QStringLiteral("<%= city %>"), i18nc("<%= city_description(city) %>", "<%= to_city_name(city) %>")},<%end%>
-    };
-}
 
 static TimezoneContinentToL10nMap timezoneContinentToL10nMap()
 {

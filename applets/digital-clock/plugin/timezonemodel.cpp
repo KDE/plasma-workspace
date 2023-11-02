@@ -13,6 +13,10 @@
 #include <QStringMatcher>
 #include <QTimeZone>
 
+#include <unicode/localebuilder.h>
+#include <unicode/tznames.h>
+#include <unicode/unistr.h>
+
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
@@ -137,61 +141,53 @@ bool TimeZoneModel::setData(const QModelIndex &index, const QVariant &value, int
 
 void TimeZoneModel::update()
 {
+    const auto locale = icu::Locale(QLocale::system().name().toLatin1());
+    UErrorCode error = U_ZERO_ERROR;
+    const std::unique_ptr<icu::TimeZoneNames> tzNames(icu::TimeZoneNames::createInstance(locale, error));
+    if (!U_SUCCESS(error)) {
+        qWarning() << "failed to create timezone names" << u_errorName(error);
+        return;
+    }
+    icu::UnicodeString result;
+
     beginResetModel();
     m_data.clear();
 
     QTimeZone localZone = QTimeZone(QTimeZone::systemTimeZoneId());
-    const QStringList data = QString::fromUtf8(localZone.id()).split(QLatin1Char('/'));
-
+    const icu::UnicodeString &localCity =
+        tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(localZone.id().data(), localZone.id().size())), result);
     TimeZoneData local;
     local.isLocalTimeZone = true;
     local.id = QStringLiteral("Local");
     local.region = i18nc("This means \"Local Timezone\"", "Local");
-    local.city = m_timezonesI18n->i18nCity(data.last());
+    local.city = localCity.isBogus() ? QString() : QString::fromUtf16(localCity.getBuffer(), localCity.length());
     local.comment = i18n("System's local time zone");
     local.checked = false;
 
     m_data.append(local);
 
-    QStringList cities;
-    QHash<QString, QTimeZone> zonesByCity;
-
     const QList<QByteArray> systemTimeZones = QTimeZone::availableTimeZoneIds();
 
-    for (auto it = systemTimeZones.constBegin(); it != systemTimeZones.constEnd(); ++it) {
-        const QTimeZone zone(*it);
-        const QStringList splitted = QString::fromUtf8(zone.id()).split(QStringLiteral("/"));
+    for (const auto &id : systemTimeZones) {
+        const QTimeZone zone(id);
 
-        // CITY | COUNTRY | CONTINENT
-        const QString key = QStringLiteral("%1|%2|%3").arg(splitted.last(), QLocale::countryToString(zone.country()), splitted.first());
-
-        cities.append(key);
-        zonesByCity.insert(key, zone);
-    }
-    cities.sort(Qt::CaseInsensitive);
-
-    for (const QString &key : std::as_const(cities)) {
-        const QTimeZone timeZone = zonesByCity.value(key);
-        QString comment = timeZone.comment();
-
-        if (!comment.isEmpty()) {
-            comment = i18n(comment.toUtf8());
-        }
-
-        const QStringList cityCountryContinent = key.split(QLatin1Char('|'));
+        const icu::UnicodeString &exemplarCity = tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(id.data(), id.size())), result);
+        const QString continent = m_timezonesI18n->i18nContinents(QString::fromUtf8(QByteArrayView(id).mid(0, id.indexOf('/'))));
 
         TimeZoneData newData;
         newData.isLocalTimeZone = false;
-        newData.id = timeZone.id();
-        newData.region = timeZone.country() == QLocale::AnyCountry
-            ? QString()
-            : m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
-        newData.city = m_timezonesI18n->i18nCity(cityCountryContinent.at(0));
-        newData.comment = comment;
+        newData.id = id;
+        newData.city = exemplarCity.isBogus() ? zone.id() : QString::fromUtf16(exemplarCity.getBuffer(), exemplarCity.length());
+        newData.region = zone.country() == QLocale::AnyCountry ? QString() : continent + QLatin1Char('/') + m_timezonesI18n->i18nCountry(zone.country());
+        newData.comment = zone.comment();
         newData.checked = false;
-        newData.offsetFromUtc = timeZone.offsetFromUtc(QDateTime::currentDateTimeUtc());
+        newData.offsetFromUtc = zone.offsetFromUtc(QDateTime::currentDateTimeUtc());
         m_data.append(newData);
     }
+
+    std::sort(m_data.begin() + 1, m_data.end(), [](const TimeZoneData &left, const TimeZoneData &right) {
+        return left.city.compare(right.city) < 0;
+    });
 
     endResetModel();
 }
@@ -220,9 +216,7 @@ void TimeZoneModel::selectLocalTimeZone()
 
 QString TimeZoneModel::localTimeZoneCity()
 {
-    const QTimeZone localZone = QTimeZone(QTimeZone::systemTimeZoneId());
-    const QStringList data = QString::fromUtf8(localZone.id()).split(QLatin1Char('/'));
-    return m_timezonesI18n->i18nCity(data.last());
+    return m_data[0].city;
 }
 
 void TimeZoneModel::slotUpdate()

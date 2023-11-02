@@ -17,14 +17,6 @@ TimezonesI18n::TimezonesI18n(QObject *parent)
 {
 }
 
-QString TimezonesI18n::i18nCity(const QString &city)
-{
-    if (!m_isInitialized) {
-        init();
-    }
-    return m_i18nCities.value(city, city);
-}
-
 QString TimezonesI18n::i18nContinents(const QString &continent)
 {
     if (!m_isInitialized) {
@@ -50,7 +42,6 @@ QString TimezonesI18n::i18nCountry(QLocale::Country country)
 
 void TimezonesI18n::init()
 {
-    m_i18nCities = TimezonesI18nData::timezoneCityToL10nMap();
     m_i18nContinents = TimezonesI18nData::timezoneContinentToL10nMap();
 
     m_isInitialized = true;

@@ -16,14 +16,12 @@ class TimezonesI18n : public QObject
 
 public:
     explicit TimezonesI18n(QObject *parent = nullptr);
-    Q_INVOKABLE QString i18nCity(const QString &city);
     Q_INVOKABLE QString i18nContinents(const QString &continent);
     Q_INVOKABLE QString i18nCountry(QLocale::Country country);
 
 private:
     void init();
 
-    QHash<QString, QString> m_i18nCities;
     QHash<QString, QString> m_i18nContinents;
     QHash<QLocale::Country, QString> m_i18nCountries;
     bool m_isInitialized;

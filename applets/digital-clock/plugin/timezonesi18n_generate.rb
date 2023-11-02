@@ -21,30 +21,12 @@ end
 # For simplicity's sake continents and cities are not modeled as fully functional objects but rather use
 # this context wrapper. Slightly less code.
 class RenderContext < OpenStruct
-  def initialize(continents:, cities:)
+  def initialize(continents:)
     super
-  end
-
-  def city_description(city)
-    return 'This is a generic time zone name, localize as needed' if city.start_with?('UTC')
-
-    'This is a city associated with particular time zone'
   end
 
   def continent_description(_continent)
     'This is a continent/area associated with a particular timezone'
-  end
-
-  # prettify city name
-  def to_city_name(city)
-    city = city.tr('_', ' ')
-    {
-      'DumontDUrville' => 'Dumont d’Urville',
-      'ComodRivadavia' => 'Comodoro Rivadavia',
-      'Kiev' => 'Kyiv', # tzdata has the legacy transliteration
-      'Uzhgorod' => 'Uzhhorod', # tzdata has the legacy transliteration
-      'Zaporozhye' => 'Zaporizhzhia' # tzdata has the legacy transliteration
-    }.fetch(city, city)
   end
 
   # prettify continent name
@@ -58,7 +40,6 @@ raise 'tzdata.zi missing, your tzdata was possibly built without' unless File.ex
 data = File.read('/usr/share/zoneinfo/tzdata.zi')
 
 continents = []
-cities = []
 data.split("\n").each do |line|
   line = line.strip
   next if line[0] == '#' # comment
@@ -82,31 +63,11 @@ data.split("\n").each do |line|
   # some links also have fake continent values (e.g. `L America/Denver SystemV/MST7MDT`) followed by regions therein
   next if %w[systemv us etc canada brazil mexico chile].any? { |x| x == continent.downcase }
 
-  city = parts[-1]
-
-  # some links are simply pointing at directions within a region/country
-  next if %w[north east south west].any? { |x| x == city.downcase }
-  # some links are abbreviations (e.g. `Australia/NSW` for new south wales)
-  # Australia has some more links for regions but we'd have to filter them individually and I can't be bothered.
-  next if city.size <= 3 && city.upcase == city
-  # some are Knox and also known as Knox_IN for reasons
-  next if city == 'Knox_IN'
-
   continents << continent
-  cities << city
 end
 
-# make sure fake cities exist
-(0..14).each do |i|
-  cities << format('UTC+%02d:00', i)
-  cities << format('UTC-%02d:00', i)
-end
-# The partial hours are from original code this script was built based on. They do not actually correspond to timezone
-# links though, so I'm not sure how they work but keep them regardless since I hope there's magic going on somehwere.
-cities += %w[UTC UTC+03:30 UTC+04:30 UTC+05:30 UTC+05:45 UTC+06:30 UTC+09:30 UTC-03:30 UTC-04:30]
 
-cities = cities.sort_by(&:downcase).uniq
 continents = continents.sort_by(&:downcase).uniq
 
-data = Template.render(RenderContext.new(cities: cities, continents: continents))
+data = Template.render(RenderContext.new(continents: continents))
 File.write("#{__dir__}/timezonesi18n_generated.h", data)

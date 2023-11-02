@@ -30,6 +30,8 @@ target_link_libraries(digitalclockplugin
         KF6::I18nLocaleData
         KF6::KIOGui
         KF6::Service
+        ICU::i18n
+        ICU::uc
 )
 
 install(TARGETS digitalclockplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
