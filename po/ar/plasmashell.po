@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-02 01:40+0000\n"
 "PO-Revision-Date: 2023-07-06 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,7 +34,55 @@ msgstr "safa1996alfulaij@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "اضبط ملحقة إجراءات الفأرة"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:207
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Dev"
+msgstr "بلازما %1"
+
+#: desktopview.cpp:210
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Alpha"
+msgstr "بلازما %1 بيتا"
+
+#: desktopview.cpp:213
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 1"
+msgstr "بلازما %1 بيتا"
+
+#: desktopview.cpp:216
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1 Beta Build"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 2"
+msgstr "بلازما %1 بيتا"
+
+#: desktopview.cpp:219
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC1"
+msgstr "بلازما %1"
+
+#: desktopview.cpp:222
+#, fuzzy, kde-format
+#| msgctxt "@label %1 version string"
+#| msgid "Plasma %1"
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC2"
+msgstr "بلازما %1"
+
+#: desktopview.cpp:248
 #, fuzzy, kde-format
 #| msgctxt "@label %1 version string"
 #| msgid "Plasma %1"
@@ -42,7 +90,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "بلازما %1"
 
-#: desktopview.cpp:229
+#: desktopview.cpp:252
 #, fuzzy, kde-format
 #| msgctxt "@label %1 version string"
 #| msgid "Plasma %1 Beta Build"
@@ -50,7 +98,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "بلازما %1 بيتا"
 
-#: desktopview.cpp:232
+#: desktopview.cpp:255
 #, fuzzy, kde-format
 #| msgctxt "@label %1 version string"
 #| msgid "Plasma %1 Beta Build"
@@ -58,7 +106,7 @@ msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "بلازما %1 بيتا"
 
-#: desktopview.cpp:236
+#: desktopview.cpp:259
 #, fuzzy, kde-format
 #| msgctxt "@label %1 version string"
 #| msgid "Plasma %1"
@@ -66,7 +114,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "بلازما %1"
 
-#: desktopview.cpp:242
+#: desktopview.cpp:265
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"

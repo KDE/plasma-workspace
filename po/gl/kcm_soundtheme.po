@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-02 01:40+0000\n"
 "PO-Revision-Date: 2023-08-05 10:09+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -28,7 +28,7 @@ msgstr "FreeDesktop"
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Tema de sons de reserva de freedesktop.org"
 
-#: ui/main.qml:59
+#: ui/main.qml:67
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -38,7 +38,7 @@ msgid_plural "Based on: %2"
 msgstr[0] "Baseado en: %2"
 msgstr[1] "Baseado en: %2"
 
-#: ui/main.qml:70
+#: ui/main.qml:78
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -47,14 +47,22 @@ msgid "Preview sounds:"
 msgstr "Sons de exemplo:"
 
 # skip-rule: trasno-11.0-en-sound
-#: ui/main.qml:84
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Escoitar «%1»."
 
-#: ui/main.qml:106
+#: ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Escoitar o son de demostración do tema «%1»."
+
+# skip-rule: trasno-11.0-en-sound
+#: ui/main.qml:139
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Preview sound \"%1\""
+msgid "Failed to preview sound: %1"
+msgstr "Escoitar «%1»."

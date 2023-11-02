@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-17 01:40+0000\n"
-"PO-Revision-Date: 2023-10-27 00:59+0200\n"
+"PO-Revision-Date: 2023-11-01 23:10+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -20,28 +20,28 @@ msgstr ""
 #: fileinfo.cpp:170
 #, kde-format
 msgid "Open with %1"
-msgstr ""
+msgstr "Abrir con «%1»"
 
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr ""
+msgstr "Ábrir con…"
 
 #: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Abrir la carpeta contenedora"
 
 #: filemenu.cpp:129
 #, kde-format
 msgid "&Copy"
-msgstr ""
+msgstr "&Copiar"
 
 #: filemenu.cpp:137
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
-msgstr ""
+msgstr "Copiar la llocalización"
 
 #: filemenu.cpp:193
 #, kde-format
@@ -69,19 +69,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
-msgstr ""
+msgstr "Copiar la direición del enllaz"
 
 #: package/contents/ui/EditContextMenu.qml:44
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr ""
+msgstr "Copiar"
 
 #: package/contents/ui/EditContextMenu.qml:61
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr ""
+msgstr "Seleicionar too"
 
 #: package/contents/ui/FullRepresentation.qml:69
 #, kde-format
@@ -150,13 +150,13 @@ msgstr ""
 #: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
-msgstr ""
+msgstr "Amosar menos"
 
 #: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
-msgstr ""
+msgstr "Amosar %1 más"
 
 #: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:105
@@ -168,7 +168,7 @@ msgstr ""
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
-msgstr ""
+msgstr "El serviciu d'avisos nun ta disponible"
 
 #: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
@@ -193,45 +193,45 @@ msgstr "%2 de %1"
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 de %1 ficheru"
+msgstr[1] "%2 de %1 ficheros"
 
 #: package/contents/ui/JobDetails.qml:112
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 de %1 carpeta"
+msgstr[1] "%2 de %1 carpetes"
 
 #: package/contents/ui/JobDetails.qml:115
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 de %1 elementu"
+msgstr[1] "%2 de %1 elementos"
 
 #: package/contents/ui/JobDetails.qml:123
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ficheru"
+msgstr[1] "%1 ficheros"
 
 #: package/contents/ui/JobDetails.qml:125
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 carpeta"
+msgstr[1] "%1 carpetes"
 
 #: package/contents/ui/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 elementu"
+msgstr[1] "%1 elementos"
 
 #: package/contents/ui/JobDetails.qml:144
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "%1%"
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
-msgstr ""
+msgstr "Posar"
 
 #: package/contents/ui/JobItem.qml:188
 #, kde-format
@@ -261,13 +261,13 @@ msgstr ""
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
-msgstr ""
+msgstr "Anubrir los detalles"
 
 #: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
-msgstr ""
+msgstr "Amosar los detalles"
 
 #: package/contents/ui/JobItem.qml:232
 #: package/contents/ui/ThumbnailStrip.qml:169
@@ -278,34 +278,34 @@ msgstr "Más opciones…"
 #: package/contents/ui/JobItem.qml:260
 #, kde-format
 msgid "Open"
-msgstr ""
+msgstr "Abrir"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 trabayu n'execución"
+msgstr[1] "%1 trabayos n'execución"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 trabayu n'execución (%2%)"
+msgstr[1] "%1 trabayos n'execución (%2%)"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 avisu ensin lleer"
+msgstr[1] "%1 avisos ensin lleer"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
@@ -325,7 +325,7 @@ msgstr ""
 #: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Clear All Notifications"
-msgstr ""
+msgstr "Borrar tolos avisos"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
@@ -336,72 +336,72 @@ msgstr ""
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "Puramente agora"
 
 #: package/contents/ui/NotificationHeader.qml:126
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hai %1 m"
+msgstr[1] "Hai %1 m"
 
 #: package/contents/ui/NotificationHeader.qml:160
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Falta %1 s"
+msgstr[1] "Falten %1 s"
 
 #: package/contents/ui/NotificationHeader.qml:164
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Falta %1 m"
+msgstr[1] "Falten %1 m"
 
 #: package/contents/ui/NotificationHeader.qml:169
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Falta %1 h"
+msgstr[1] "Falten %1 h"
 
 #: package/contents/ui/NotificationHeader.qml:189
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Configurar"
 
 #: package/contents/ui/NotificationHeader.qml:206
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
 #: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgid "Minimize"
-msgstr ""
+msgstr "Minimizar"
 
 #: package/contents/ui/NotificationHeader.qml:230
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Zarrar"
 
 #: package/contents/ui/NotificationItem.qml:186
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
-msgstr ""
+msgstr "%1 (en posa)"
 
 #: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
-msgstr ""
+msgstr "%1 (falló)"
 
 #: package/contents/ui/NotificationItem.qml:193
 #, kde-format
@@ -412,7 +412,7 @@ msgstr ""
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
-msgstr ""
+msgstr "%1 (finó)"
 
 #: package/contents/ui/NotificationItem.qml:199
 #, kde-format
@@ -423,7 +423,7 @@ msgstr ""
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
-msgstr ""
+msgstr "Responder"
 
 #: package/contents/ui/NotificationReplyField.qml:36
 #, kde-format
@@ -435,4 +435,4 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Unviar"

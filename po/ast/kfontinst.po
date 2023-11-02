@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-21 01:40+0000\n"
-"PO-Revision-Date: 2023-10-31 20:02+0100\n"
+"PO-Revision-Date: 2023-11-01 15:00+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -2177,7 +2177,7 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:36
 msgid "Greek"
-msgstr ""
+msgstr "Griegu"
 
 #: viewpart/UnicodeScripts.h:39
 msgid "Han"
@@ -2185,7 +2185,7 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:40
 msgid "Hangul"
-msgstr ""
+msgstr "Hangul"
 
 #: viewpart/UnicodeScripts.h:44
 msgid "Inherited"
@@ -2193,15 +2193,15 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:50
 msgid "Latin"
-msgstr ""
+msgstr "Llatín"
 
 #: viewpart/UnicodeScripts.h:52
 msgid "Linear B"
-msgstr ""
+msgstr "Llinial B"
 
 #: viewpart/UnicodeScripts.h:57
 msgid "Nko"
-msgstr ""
+msgstr "Nko"
 
 #: viewpart/UnicodeScripts.h:63
 msgid "Phags Pa"
@@ -2209,4 +2209,4 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
-msgstr ""
+msgstr "Yi"

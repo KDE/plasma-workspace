@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
-"PO-Revision-Date: 2023-10-20 10:12+0200\n"
+"PO-Revision-Date: 2023-11-01 11:01+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -84,7 +84,7 @@ msgstr "Datum tonen"
 #: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Adaptive location"
-msgstr "Aan te passen locatie"
+msgstr "Adaptieve locatie"
 
 #: package/contents/ui/configAppearance.qml:63
 #, kde-format

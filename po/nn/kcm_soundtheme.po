@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-02 01:40+0000\n"
 "PO-Revision-Date: 2023-08-05 23:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -30,7 +30,7 @@ msgstr "FreeDesktop"
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Reserve-lydtema frå freedesktop.org"
 
-#: ui/main.qml:59
+#: ui/main.qml:67
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -40,7 +40,7 @@ msgid_plural "Based on: %2"
 msgstr[0] "Basert på: %2"
 msgstr[1] "Basert på: %2"
 
-#: ui/main.qml:70
+#: ui/main.qml:78
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -48,14 +48,21 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "Førehandsvis lydar:"
 
-#: ui/main.qml:84
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Førehandsvis lyd «%1»"
 
-#: ui/main.qml:106
+#: ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Førehandsvis demolyd for temaet «%1»"
+
+#: ui/main.qml:139
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Preview sound \"%1\""
+msgid "Failed to preview sound: %1"
+msgstr "Førehandsvis lyd «%1»"

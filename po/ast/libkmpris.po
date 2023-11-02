@@ -6,39 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
-"PO-Revision-Date: 2023-11-02 00:11+0100\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"PO-Revision-Date: 2023-10-25 12:30+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
-"Language: ast\n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: contents/config/config.qml:13
+#: multiplexermodel.cpp:71
 #, kde-format
-msgid "Appearance"
-msgstr "Aspeutu"
-
-#: contents/ui/configGeneral.qml:23
-#, kde-format
-msgid "Show seconds hand"
-msgstr ""
-
-#: contents/ui/configGeneral.qml:24
-#, kde-format
-msgid "General:"
-msgstr "Xeneral:"
-
-#: contents/ui/configGeneral.qml:28
-#, kde-format
-msgid "Show time zone"
-msgstr ""
-
-#: contents/ui/main.qml:80
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Current time is %1; Current date is %2"
+msgctxt "@action:button"
+msgid "Choose player automatically"
 msgstr ""

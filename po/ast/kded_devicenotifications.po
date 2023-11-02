@@ -6,45 +6,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
-"PO-Revision-Date: 2023-11-02 00:10+0100\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"PO-Revision-Date: 2023-10-25 12:30+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
-"Language: ast\n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: package/contents/config/config.qml:9
+#: devicenotifications.cpp:275
 #, kde-format
-msgid "Appearance"
-msgstr "Aspeutu"
-
-#: package/contents/config/config.qml:14
-#, kde-format
-msgid "%1 Details"
+msgid "%1 has been plugged in."
 msgstr ""
 
-#: package/contents/config/config.qml:20
+#: devicenotifications.cpp:275
 #, kde-format
-msgid "Sensors Details"
+msgid "A USB device has been plugged in."
 msgstr ""
 
-#: package/contents/ui/main.qml:33
+#: devicenotifications.cpp:278
 #, kde-format
-msgid "System Monitor"
-msgstr "Supervisor del sistema"
+msgctxt "@title:notifications"
+msgid "USB Device Detected"
+msgstr ""
 
-#: package/contents/ui/main.qml:34
+#: devicenotifications.cpp:295
 #, kde-format
-msgctxt "Sensor name: value"
-msgid "%1: %2"
-msgstr "%1: %2"
+msgid "%1 has been unplugged."
+msgstr ""
 
-#: package/contents/ui/main.qml:57
+#: devicenotifications.cpp:295
 #, kde-format
-msgctxt "@action"
-msgid "Open System Monitor…"
-msgstr "Abrir el supervisor del sistema…"
+msgid "A USB device has been unplugged."
+msgstr ""
+
+#: devicenotifications.cpp:298
+#, kde-format
+msgctxt "@title:notifications"
+msgid "USB Device Removed"
+msgstr ""
