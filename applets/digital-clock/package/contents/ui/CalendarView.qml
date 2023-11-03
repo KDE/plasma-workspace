@@ -423,6 +423,7 @@ PlasmaExtras.Representation {
                     text: i18n("Time Zones")
                     maximumLineCount: 1
                     elide: Text.ElideRight
+                    Accessible.ignored: true
                 }
 
                 PlasmaComponents3.ToolButton {

@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
+import subprocess
 import unittest
 from datetime import date
 from typing import Final
@@ -12,12 +13,16 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from dateutil.relativedelta import relativedelta
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 WIDGET_ID: Final = "org.kde.plasma.digitalclock"
 
 
 class DigitalClockTests(unittest.TestCase):
+
+    driver: webdriver.Remote
 
     @classmethod
     def setUpClass(cls):
@@ -26,7 +31,7 @@ class DigitalClockTests(unittest.TestCase):
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
         # Open Applet
-        cls.driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="expandApplet").click()
+        cls.driver.find_element(AppiumBy.ACCESSIBILITY_ID, "digital-clock-compactrepresentation").click()
 
     def setUp(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Today").click()
@@ -58,7 +63,7 @@ class DigitalClockTests(unittest.TestCase):
             monthString = dateToTest.strftime("%B %Y")
         return monthLabel.text == monthString
 
-    def test_next_month(self):
+    def test_1_next_month(self):
         nextMonthDate = date.today() + relativedelta(months=1)
 
         self.driver.find_element(by=AppiumBy.NAME, value="Next Month").click()
@@ -67,7 +72,7 @@ class DigitalClockTests(unittest.TestCase):
         wait.until(lambda x: self.compareMonthLabel(nextMonthDate))
         self.assertEqual(self.compareMonthLabel(nextMonthDate), True)
 
-    def test_prev_month(self):
+    def test_1_prev_month(self):
         lastMonthDate = date.today() - relativedelta(months=1)
 
         self.driver.find_element(by=AppiumBy.NAME, value="Previous Month").click()
@@ -76,7 +81,7 @@ class DigitalClockTests(unittest.TestCase):
         wait.until(lambda x: self.compareMonthLabel(lastMonthDate))
         self.assertEqual(self.compareMonthLabel(lastMonthDate), True)
 
-    def test_months_view(self):
+    def test_1_months_view(self):
         dateAugust = date.today()
         dateAugust = dateAugust.replace(month=8)
 
@@ -87,7 +92,7 @@ class DigitalClockTests(unittest.TestCase):
         wait.until(lambda x: self.compareMonthLabel(dateAugust))
         self.assertEqual(self.compareMonthLabel(dateAugust), True)
 
-    def test_years_view(self):
+    def test_1_years_view(self):
         dateFuture = date.today() + relativedelta(years=2)
 
         self.driver.find_element(by=AppiumBy.NAME, value="Years").click()
@@ -97,7 +102,34 @@ class DigitalClockTests(unittest.TestCase):
         wait.until(lambda x: self.compareMonthLabel(dateFuture))
         self.assertEqual(self.compareMonthLabel(dateFuture), True)
 
+    def test_2_config_dialog_1_appearance(self) -> None:
+        """
+        Opens the config dialog
+        """
+        subprocess.check_call(["plasmawindowed", "--config"])
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Date format:")))
+
+    def test_2_config_dialog_2_calendar_plugin_list(self) -> None:
+        """
+        Checks the calendar plugin list
+        """
+        self.driver.find_element(AppiumBy.NAME, "Calendar").click()
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Available Plugins:")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Holidays")))
+
+    def test_2_config_dialog_3_timezones(self) -> None:
+        """
+        Checks the timezone list
+        """
+        self.driver.find_element(AppiumBy.NAME, "Time Zones").click()
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Time Zones…"))).click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add More Timezones")))
+        self.driver.find_element(AppiumBy.NAME, "Search").send_keys("utc+03:00")
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "UTC+03:00")))
+
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(DigitalClockTests)
-    unittest.TextTestRunner(verbosity=2).run(suite)
+    unittest.main()

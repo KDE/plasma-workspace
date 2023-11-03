@@ -86,7 +86,6 @@ PlasmoidItem {
 
         Accessible.name: tooltipLoader.item.Accessible.name
         Accessible.description: tooltipLoader.item.Accessible.description
-        Accessible.role: Accessible.Button
     }
     fullRepresentation: CalendarView { }
 

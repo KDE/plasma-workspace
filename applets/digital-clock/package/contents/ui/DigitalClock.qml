@@ -7,7 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.6
+import QtQuick
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import org.kde.plasma.plasmoid 2.0
@@ -18,6 +18,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 MouseArea {
     id: main
+    objectName: "digital-clock-compactrepresentation"
 
     property string timeFormat
     property string timeFormatWithSeconds
@@ -65,6 +66,9 @@ MouseArea {
 
     property bool wasExpanded
     property int wheelDelta: 0
+
+    Accessible.role: Accessible.Button
+    Accessible.onPressAction: main.clicked(null)
 
     onDateFormatChanged: {
         setupLabels();
