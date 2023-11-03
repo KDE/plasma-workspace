@@ -25,4 +25,3 @@ add_subdirectory(weather)
 add_subdirectory(statusnotifieritem)
 
 add_subdirectory(mouse)
-add_subdirectory(systemmonitor)
