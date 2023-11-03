@@ -93,7 +93,10 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     }
     minimumWidthChanged();
     minimumHeightChanged();
-    QObject::connect(applet->containment(), &Plasma::Containment::configureRequested, this, &PlasmaWindowedView::showConfigurationInterface);
+    QObject::connect(applet->containment(),
+                     &Plasma::Containment::configureRequested,
+                     this,
+                     static_cast<void (PlasmaWindowedView::*)(Plasma::Applet *)>(&PlasmaWindowedView::showConfigurationInterface));
 
     Q_ASSERT(!m_statusNotifier);
     if (m_withStatusNotifier) {
@@ -146,6 +149,22 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         connect(applet, &Plasma::Applet::statusChanged, this, syncStatus);
         syncStatus();
     }
+}
+
+void PlasmaWindowedView::showConfigurationInterface()
+{
+    if (!m_applet) {
+        return;
+    }
+
+    if (!m_configView) {
+        m_configView = new PlasmaQuick::ConfigView(m_applet);
+        m_configView->init();
+        m_configView->setTransientParent(this);
+    }
+
+    m_configView->show();
+    m_configView->requestActivate();
 }
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)

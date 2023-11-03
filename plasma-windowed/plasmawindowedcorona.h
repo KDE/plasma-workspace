@@ -9,6 +9,8 @@
 
 #include <Plasma/Corona>
 
+class PlasmaWindowedView;
+
 class PlasmaWindowedCorona : public Plasma::Corona
 {
     Q_OBJECT
@@ -26,5 +28,6 @@ public Q_SLOTS:
 
 private:
     Plasma::Containment *m_containment = nullptr;
+    PlasmaWindowedView *m_view = nullptr;
     bool m_hasStatusNotifier = false;
 };

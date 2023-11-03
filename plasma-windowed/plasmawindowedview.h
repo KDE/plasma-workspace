@@ -24,6 +24,7 @@ public:
 
     void setApplet(Plasma::Applet *applet);
     void setHasStatusNotifier(bool stay);
+    void showConfigurationInterface();
 
 protected:
     void resizeEvent(QResizeEvent *ev) override;
