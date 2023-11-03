@@ -750,6 +750,9 @@ QString WaylandTasksModel::Private::groupMimeType()
 void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, int role)
 {
     auto it = findWindow(window);
+    if (it == windows.end()) {
+        return;
+    }
     QModelIndex idx = q->index(it - windows.begin());
     Q_EMIT q->dataChanged(idx, idx, QList<int>{role});
 }
@@ -757,6 +760,9 @@ void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, int role)
 void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, const QList<int> &roles)
 {
     auto it = findWindow(window);
+    if (it == windows.end()) {
+        return;
+    }
     QModelIndex idx = q->index(it - windows.begin());
     Q_EMIT q->dataChanged(idx, idx, roles);
 }
