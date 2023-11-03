@@ -95,7 +95,7 @@ bool SessionManagement::canSuspendThenHibernate() const
 
 bool SessionManagement::canSwitchUser() const
 {
-    return KAuthorized::authorizeAction(QStringLiteral("start_new_session"));
+    return KAuthorized::authorizeAction(QStringLiteral("start_new_session")) && SessionBackend::self()->canSwitchUser();
 }
 
 bool SessionManagement::canLock() const

@@ -91,6 +91,7 @@ public:
     bool canHybridSuspend() const override;
     bool canHibernate() const override;
     bool canSuspendThenHibernate() const override;
+    bool canSwitchUser() const override;
 
 private:
     OrgFreedesktopLogin1ManagerInterface *m_login1;

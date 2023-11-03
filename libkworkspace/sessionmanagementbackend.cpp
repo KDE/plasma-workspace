@@ -17,8 +17,6 @@
 #include <KConfigGroup>
 #include <iostream>
 
-#include "kdisplaymanager.h"
-
 #include "login1_manager_interface.h"
 
 static SessionBackend *s_backend = nullptr;
@@ -55,7 +53,7 @@ bool SessionBackend::confirmLogout() const
 
 bool SessionBackend::canSwitchUser() const
 {
-    return KDisplayManager().isSwitchable();
+    return false;
 }
 
 DummySessionBackend::DummySessionBackend()
@@ -235,4 +233,9 @@ bool LogindSessionBackend::canHibernate() const
 bool LogindSessionBackend::canSuspendThenHibernate() const
 {
     return m_canSuspendThenHibernate;
+}
+
+bool LogindSessionBackend::canSwitchUser() const
+{
+    return true;
 }

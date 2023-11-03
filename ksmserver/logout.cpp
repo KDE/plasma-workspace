@@ -50,7 +50,6 @@
 #include <KLocalizedString>
 #include <KNotification>
 #include <KSharedConfig>
-#include <kdisplaymanager.h>
 
 #include "kwinsession_interface.h"
 #include "logoutprompt_interface.h"
