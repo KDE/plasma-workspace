@@ -42,7 +42,7 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/batterymonitortest.py --failfast
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-set_tests_properties(batterymonitortest_withoutdisplaydevice PROPERTIES TIMEOUT 120 ENVIRONMENT "ENABLE_DISPLAY_DEVICE=0;POWERDEVIL_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/org_kde_powerdevil")
+set_tests_properties(batterymonitortest_withoutdisplaydevice PROPERTIES TIMEOUT 120 ENVIRONMENT "ENABLE_DISPLAY_DEVICE=0;POWERDEVIL_PATH=${l}/org_kde_powerdevil")
 
 add_test(
     NAME calendartest
@@ -121,6 +121,18 @@ add_test(
     COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py
 )
 set_tests_properties(logoutgreetertest PROPERTIES TIMEOUT 300 ENVIRONMENT "PLASMA_SESSION_GUI_TEST=1;KDE_INSTALL_FULL_LIBEXECDIR=${KDE_INSTALL_FULL_LIBEXECDIR}")
+
+
+pkg_search_module(PamWrapper pam_wrapper)
+if (PamWrapper_FOUND)
+    pkg_get_variable(PamWrapperModuleDir pam_wrapper "modules")
+    add_test(
+        NAME lockscreen_test
+        COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/lockscreentest.py
+            --pammatrixpath ${PamWrapperModuleDir}/pam_matrix.so
+            --kscreenlockergreetpath ${KDE_INSTALL_FULL_LIBEXECDIR}/kscreenlocker_greet
+    )
+endif()
 
 add_test(
     NAME cameraindicatortest
