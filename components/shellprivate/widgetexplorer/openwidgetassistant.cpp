@@ -34,9 +34,7 @@ OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
     connect(m_fileWidget, SIGNAL(accepted()), this, SLOT(finished()));
     layout->addWidget(m_fileWidget);
 
-    m_fileWidget->setFilter(QString());
-    const QStringList mimes{QStringLiteral("application/x-plasma")};
-    m_fileWidget->setMimeFilter(mimes);
+    m_fileWidget->setFilters({KFileFilter::fromMimeType(QStringLiteral("application/x-plasma"))});
 
     m_filePage = new KPageWidgetItem(m_filePageWidget, i18n("Select Plasmoid File"));
     addPage(m_filePage);
