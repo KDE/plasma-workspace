@@ -1,7 +1,7 @@
 # Translation of ksmserver.po to Slovenian
 # SLOVENIAN TRANSLATION OF KSMSERVER.
 # Copyright (C) 2000, 2003, 2004 Free Software Foundation, Inc.
-# $Id: ksmserver.po 1664000 2023-11-04 02:01:47Z scripty $
+# $Id: ksmserver.po 1664040 2023-11-04 12:43:25Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2000.
@@ -9,22 +9,22 @@
 # Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2009, 2010, 2012.
 # Andrej Vernekar <andrej.vernekar@gmail.com>, 2012.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2023.
+# SPDX-FileCopyrightText: 2020, 2023 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-16 10:55+0100\n"
+"PO-Revision-Date: 2023-11-04 08:54+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -152,7 +152,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[neznano]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -162,6 +162,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Nekaterih aplikacij ni mogoče upravljati, ker so sistemski viri za "
+"upravljanje sej izčrpani. Tukaj so trije največji uporabniki virov seje:\n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -206,6 +209,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Ni mogoče obnoviti <application>%1</application>, ker je pokvarjena in "
+"jeizčrpala sistemska sredstva za obnovitev seje. Prosimo, da to sporočite "
+"razvijalcem aplikacije."
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Ni dovoljenja za pisanje v mapo $HOME (%1)."

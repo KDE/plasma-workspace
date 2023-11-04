@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-02 01:40+0000\n"
-"PO-Revision-Date: 2023-08-20 09:29+0200\n"
+"PO-Revision-Date: 2023-11-03 10:16+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.90\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: kcm_soundtheme.cpp:108
 #, kde-format
@@ -56,8 +56,6 @@ msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Jouer un aperçu du son de démonstration pour le thème « %1 »"
 
 #: ui/main.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Preview sound \"%1\""
+#, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "Jouer un aperçu du son « %1 »"
+msgstr "Impossible de jouer un aperçu du son : %1"

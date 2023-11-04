@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-09-17 12:57+0200\n"
+"PO-Revision-Date: 2023-11-04 12:24+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -34,52 +34,40 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Ustawienia wtyczki działań myszy"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Dev"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "Plazma KDE %1 rozwojowa"
+msgstr "Plazma KDE 6.0 rozwojowa"
 
 #: desktopview.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "Plazma KDE %1 Beta"
+msgstr "Plazma KDE 6.0 Alfa"
 
 #: desktopview.cpp:213
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "Plazma KDE %1 Beta"
+msgstr "Plazma KDE 6.0 Beta 1"
 
 #: desktopview.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
-#| msgid "KDE Plasma %1 Beta %2"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "Plazma KDE %1 Beta %2"
+msgstr "Plazma KDE 6.0 Beta 2"
 
 #: desktopview.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "Plazma KDE %1"
+msgstr "Plazma KDE 6.0 RC1"
 
 #: desktopview.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "Plazma KDE %1"
+msgstr "Plazma KDE 6.0 RC2"
 
 #: desktopview.cpp:248
 #, kde-format
@@ -229,13 +217,13 @@ msgstr "Bluetooth wyłączone"
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "Mobilny internet włączony"
+msgstr "Internet komórkowy włączony"
 
 #: osd.cpp:142
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Mobilny internet wyłączony"
+msgstr "Internet komórkowy wyłączony"
 
 #: osd.cpp:150
 #, kde-format

@@ -5,13 +5,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2022.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2023.
+# SPDX-FileCopyrightText: 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-15 11:53+0300\n"
+"PO-Revision-Date: 2023-11-04 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -147,7 +147,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[bilinmeyen]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -157,6 +157,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Sistemin oturum yönetimi kaynakları tükendiğinden bazı uygulamalar "
+"yönetilemiyor. Oturum kaynaklarının ilk üç tüketicisi şunlardır:\n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -201,3 +204,6 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"<application>%1</application> bozuk olduğundan ve sistemin oturum geri "
+"yükleme kaynaklarını tükettiğinden geri yüklenemiyor. Lütfen bunu "
+"uygulamanın geliştiricilerine bildirin."

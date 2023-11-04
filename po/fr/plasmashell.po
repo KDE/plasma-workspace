@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-10-26 11:53+0200\n"
+"PO-Revision-Date: 2023-11-03 10:17+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -27,12 +27,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Thomas Vergnaud, Simon Depiets"
+msgstr "Thomas Vergnaud, Simon Depiets, Xavier Besnard"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "thomas.vergnaud@mailo.eu, sdepiets@gmail.com"
+msgstr "thomas.vergnaud@mailo.eu, sdepiets@gmail.com, xavier.besnard@neuf.fr"
 
 #: currentcontainmentactionsmodel.cpp:204
 #, kde-format
@@ -40,52 +40,40 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Configurer le module externe pour les actions de la souris"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Dev"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "KDE Plasma %1 Développement"
+msgstr "KDE Plasma 6.0 Dev"
 
 #: desktopview.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "KDE Plasma %1 Bêta"
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:213
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "KDE Plasma %1 Bêta"
+msgstr "KDE Plasma 6.0 Bêta 1"
 
 #: desktopview.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
-#| msgid "KDE Plasma %1 Beta %2"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "KDE Plasma %1 Bêta %2"
+msgstr "KDE Plasma 6.0 Bêta 2"
 
 #: desktopview.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "KDE Plasma %1"
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "KDE Plasma %1"
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:248
 #, kde-format
