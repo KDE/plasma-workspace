@@ -328,8 +328,8 @@ void ScreenPool::screenInvariants()
     // QScreen bookeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
-    qWarning() << "Checking screens: available:" << m_availableScreens << "redundant:" << m_redundantScreens << "fake:" << m_fakeScreens
-               << "all:" << allScreens;
+    qCDebug(SCREENPOOL) << "Checking screens: available:" << m_availableScreens << "redundant:" << m_redundantScreens << "fake:" << m_fakeScreens
+                        << "all:" << allScreens;
     Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count()) == m_outputOrderWatcher->outputOrder().count());
     Q_ASSERT(allScreens.count() == m_sizeSortedScreens.count());
 
