@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2020-04-25 13:41+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -141,41 +141,65 @@ msgstr ""
 "Käivitamine lukustusekraani toetuseta. Vajalik ainult siis, kui mõni muu "
 "komponent pakub lukustusekraani."
 
-#: server.cpp:885
+#: server.cpp:802
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:825
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:968
 #, kde-format
 msgid "Session Management"
 msgstr "Seansihaldur"
 
-#: server.cpp:890
+#: server.cpp:973
 #, kde-format
 msgid "Log Out"
 msgstr "Väljalogimine"
 
-#: server.cpp:895
+#: server.cpp:978
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: server.cpp:900
+#: server.cpp:983
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: server.cpp:906
+#: server.cpp:989
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Väljalogimine kinnitust küsimata"
 
-#: server.cpp:911
+#: server.cpp:994
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "Arvuti seiskamine kinnitust küsimata"
 
-#: server.cpp:916
+#: server.cpp:999
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Taaskäivitamine kinnitust küsimata"
+
+#: server.cpp:1129
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "$HOME kataloogis (%1) puudub kirjutamisõigus."

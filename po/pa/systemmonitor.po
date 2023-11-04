@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-03 00:46+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2023-08-20 06:00-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "alam.yellow@gmail.com"
 msgid "Show System Activity"
 msgstr "ਸਿਸਟਮ ਸਰਗਰਮੀ ਵੇਖਾਓ"
 
-#: main.cpp:23
+#: main.cpp:22
 #, kde-format
 msgid "System Activity"
 msgstr "ਸਿਸਟਮ ਸਰਗਰਮੀ"

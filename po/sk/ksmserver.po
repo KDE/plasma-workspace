@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2023-04-14 18:15+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -144,40 +144,64 @@ msgstr ""
 "Spustí bez podpory zamknutia obrazovky. Potrebné iba, ak iný komponent "
 "poskytuje zamykanie obrazovky."
 
-#: server.cpp:885
+#: server.cpp:802
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:825
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:968
 #, kde-format
 msgid "Session Management"
 msgstr "Správa sedení"
 
-#: server.cpp:890
+#: server.cpp:973
 #, kde-format
 msgid "Log Out"
 msgstr "Odhlásiť"
 
-#: server.cpp:895
+#: server.cpp:978
 #, kde-format
 msgid "Shut Down"
 msgstr "Vypnúť"
 
-#: server.cpp:900
+#: server.cpp:983
 #, kde-format
 msgid "Reboot"
 msgstr "Reštartovať"
 
-#: server.cpp:906
+#: server.cpp:989
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Odhlásiť bez potvrdenia"
 
-#: server.cpp:911
+#: server.cpp:994
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Vypnúť bez potvrdenia"
 
-#: server.cpp:916
+#: server.cpp:999
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Reštartovať bez potvrdenia"
+
+#: server.cpp:1129
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Nie je právo na zápis do adresára $HOME (%1)."

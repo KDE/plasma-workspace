@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2021-07-06 20:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -140,41 +140,65 @@ msgstr ""
 "तालाबंद स्क्रीन के समर्थन के बिना शुरू होता है। केवल तभी आवश्यक है जब अन्य घटक तालाबंद "
 "स्क्रीन प्रदान करें।"
 
-#: server.cpp:885
+#: server.cpp:802
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:825
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:968
 #, kde-format
 msgid "Session Management"
 msgstr "सत्र प्रबंधन"
 
-#: server.cpp:890
+#: server.cpp:973
 #, kde-format
 msgid "Log Out"
 msgstr "लॉग-आउट"
 
-#: server.cpp:895
+#: server.cpp:978
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: server.cpp:900
+#: server.cpp:983
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: server.cpp:906
+#: server.cpp:989
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "पुष्टि किए बिना लॉग आउट करें"
 
-#: server.cpp:911
+#: server.cpp:994
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "पुष्टि किए बिना रोक दें"
 
-#: server.cpp:916
+#: server.cpp:999
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "पुष्टि किए बिना पुनः प्रारंभ करें"
+
+#: server.cpp:1129
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "$HOME डिरेक्ट्री (%1) के लिए कोई लेखन अभिगम नहीं है।"

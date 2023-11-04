@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2023-08-07 23:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -143,40 +143,64 @@ msgid ""
 "the lock screen."
 msgstr "以不支援鎖定螢幕的方式啟動。只在有其他組件提供鎖定螢幕時才需要。"
 
-#: server.cpp:885
+#: server.cpp:802
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:825
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:968
 #, kde-format
 msgid "Session Management"
 msgstr "工作階段管理"
 
-#: server.cpp:890
+#: server.cpp:973
 #, kde-format
 msgid "Log Out"
 msgstr "登出"
 
-#: server.cpp:895
+#: server.cpp:978
 #, kde-format
 msgid "Shut Down"
 msgstr "關機"
 
-#: server.cpp:900
+#: server.cpp:983
 #, kde-format
 msgid "Reboot"
 msgstr "重新啟動"
 
-#: server.cpp:906
+#: server.cpp:989
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "不經確認直接登出"
 
-#: server.cpp:911
+#: server.cpp:994
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "不經確認直接關機"
 
-#: server.cpp:916
+#: server.cpp:999
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "不經確認直接重新啟動"
+
+#: server.cpp:1129
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "沒有寫入 $HOME 目錄（%1）的權限。"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2016-01-22 22:45+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -155,42 +155,66 @@ msgstr ""
 "Εκκίνηση χωρίς υποστήριξη κλειδώματος οθόνης. Χρειάζεται μόνο αν κάποιο άλλο "
 "συστατικό παρέχει το κλείδωμα της οθόνης."
 
-#: server.cpp:885
+#: server.cpp:802
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:825
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:968
 #, fuzzy, kde-format
 #| msgid "The KDE Session Manager"
 msgid "Session Management"
 msgstr "Ο διαχειριστής συνεδρίας του KDE"
 
-#: server.cpp:890
+#: server.cpp:973
 #, kde-format
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: server.cpp:895
+#: server.cpp:978
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: server.cpp:900
+#: server.cpp:983
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: server.cpp:906
+#: server.cpp:989
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Αποσύνδεση χωρίς επιβεβαίωση"
 
-#: server.cpp:911
+#: server.cpp:994
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "Τερματισμός χωρίς επιβεβαίωση"
 
-#: server.cpp:916
+#: server.cpp:999
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Επανεκκίνηση χωρίς επιβεβαίωση"
+
+#: server.cpp:1129
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Αδυναμία πρόσβασης εγγραφής στον κατάλογο $HOME (%1)."

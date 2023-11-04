@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2008-06-07 19:55+0200\n"
 "Last-Translator: Lukáš Tinkl <ltinkl@redhat.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "koty@seznam.cz"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - spouští inicializace ovládacích modulů."
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Vypsat moduly, které jsou spuštěny při startu"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Konfigurační modul ke spuštění"

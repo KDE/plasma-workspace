@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2020-11-20 06:03+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "harivishnu@gmail.com,mail@subinsb.com"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - കണ്‍ട്രോള്‍ മോഡ്യൂളുകള്‍ക്കായുള്ള തുടക്ക ചടങ്ങുകള്‍ പ്രവര്‍ത്തിപ്പിയ്ക്കുന്നു."
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "തുടങ്ങിയപ്പോള്‍ പ്രവര്‍ത്തിച്ച മോഡ്യൂളുകള്‍ കാണിക്കുക"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgid "Configuration module to run"
 msgstr "പ്രവര്‍ത്തിപ്പിയ്ക്കുവാനുള്ള ക്രമീകരണ മോഡ്യൂള്‍"

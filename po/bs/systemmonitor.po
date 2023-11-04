@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-03 00:46+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2015-01-04 13:31+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Show System Activity"
 msgstr "Aktivnost sistema"
 
-#: main.cpp:23
+#: main.cpp:22
 #, kde-format
 msgid "System Activity"
 msgstr "Aktivnost Sistema"

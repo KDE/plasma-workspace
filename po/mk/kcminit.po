@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2008-12-21 16:39+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -28,24 +28,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bobibobi@freemail.com.mk"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr ""
 "KCMInit - извршува иницијализации при стартување за модули од Контролниот "
 "центар."
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Листа на модули што се извршуваат на стартување"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Конфигурациски модул за отворање"

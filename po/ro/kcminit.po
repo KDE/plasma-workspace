@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2020-09-24 23:08+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sergiu@cip.md"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - inițializează modulele de control la pornire."
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Enumeră modulele rulate la pornire"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Modulul de configurație de rulat"

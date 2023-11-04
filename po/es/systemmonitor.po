@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: systemmonitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-03 00:46+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2022-09-04 12:36+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "ecuadra@eloihr.net"
 msgid "Show System Activity"
 msgstr "Mostrar la actividad del sistema"
 
-#: main.cpp:23
+#: main.cpp:22
 #, kde-format
 msgid "System Activity"
 msgstr "Actividad del sistema"

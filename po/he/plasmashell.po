@@ -3,31 +3,32 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-02 01:40+0000\n"
-"PO-Revision-Date: 2023-10-04 15:10+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"PO-Revision-Date: 2023-11-03 23:30+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "אלקנה ברדוגו וצוות התרגום של KDE ישראל"
+msgstr "אלקנה ברדוגו,צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ttv200@gmail.com, kde-l10n-he@kde.org"
+msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 
 #: currentcontainmentactionsmodel.cpp:204
 #, kde-format
@@ -35,52 +36,40 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "הגדרת תוסף פעולות עכבר"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Dev"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "פלזמה מבית KDE‏ %1 למפתחים"
+msgstr "פלזמה 6.0 למפתחים מבית KDE‏"
 
 #: desktopview.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "פלזמה מבית KDE‏ %1 בטא"
+msgstr "פלזמה 6.0 אלפא מבית KDE‏"
 
 #: desktopview.cpp:213
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "פלזמה מבית KDE‏ %1 בטא"
+msgstr "פלזמה 6.0 בטא 1 מבית KDE‏"
 
 #: desktopview.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
-#| msgid "KDE Plasma %1 Beta %2"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "פלזמה מבית KDE‏ %1 בטא %2"
+msgstr "פלזמה 6.0 בטא 2 מבית KDE‏"
 
 #: desktopview.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "פלזמה מבית KDE‏ %1"
+msgstr "פלזמה 6.0 מועמדת ראשונה להפצה מבית KDE‏"
 
 #: desktopview.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "פלזמה מבית KDE‏ %1"
+msgstr "פלזמה 6.0 מועמדת שנייה להפצה מבית KDE‏"
 
 #: desktopview.cpp:248
 #, kde-format
@@ -112,54 +101,54 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "נא לפנות אל bugs.kde.org כדי לדווח על תקלות"
 
-#: main.cpp:110
+#: main.cpp:105
 #, kde-format
 msgid "Plasma Shell"
 msgstr "מעטפת פלזמה"
 
-#: main.cpp:122
+#: main.cpp:117
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "הפעלת מנפה שגיאות JavaScript ל־QML"
 
-#: main.cpp:125
+#: main.cpp:120
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "לא להפעיל את plasma-shell (מעטפת פלזמה) אוטומטית לאחר קריסה"
 
-#: main.cpp:128
+#: main.cpp:123
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "לאלץ את טעינת תוסף המעטפת המסופק"
 
-#: main.cpp:132
+#: main.cpp:127
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "החלפת עותק קיים"
 
-#: main.cpp:135
+#: main.cpp:130
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr "מפעיל מצב בדיקה ומציין את פריסת קובץ ה־javascript להקמת סביבת הבדיקות"
 
-#: main.cpp:136
+#: main.cpp:131
 #, kde-format
 msgid "file"
 msgstr "קובץ"
 
-#: main.cpp:140
+#: main.cpp:135
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "מציג את האפשרויות הזמינות למשוב המשתמש"
 
-#: main.cpp:222
+#: main.cpp:217
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "הפעלת פלזמה נכשלה"
 
-#: main.cpp:223
+#: main.cpp:218
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

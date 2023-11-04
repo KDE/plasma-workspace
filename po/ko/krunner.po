@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2023-07-25 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,47 +28,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: main.cpp:77 view.cpp:47
+#: main.cpp:71 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:77
+#: main.cpp:71
 #, kde-format
 msgid "Run Command interface"
 msgstr "실행 명령 인터페이스"
 
-#: main.cpp:83
+#: main.cpp:77
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "클립보드 내용을 KRunner 질의로 사용"
 
-#: main.cpp:84
+#: main.cpp:78
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "KRunner를 배경에서 시작하고 표시하지 않습니다."
 
-#: main.cpp:85
+#: main.cpp:79
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "실행 중인 인스턴스 대체"
 
-#: main.cpp:86
+#: main.cpp:80
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "지정한 플러그인의 결과만 표시"
 
-#: main.cpp:87
+#: main.cpp:81
 #, kde-format
 msgid "List available plugins"
 msgstr "사용 가능한 플러그인 목록 표시"
 
-#: main.cpp:94
+#: main.cpp:88
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "실행할 질의, -c 옵션을 지정하지 않았을 때만 사용"
 
-#: main.cpp:103
+#: main.cpp:97
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-02 01:40+0000\n"
-"PO-Revision-Date: 2023-08-05 07:22+0200\n"
+"PO-Revision-Date: 2023-11-03 05:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -60,8 +60,6 @@ msgid "Preview the demo sound for the theme \"%1\""
 msgstr "დემო ხმის მინიატურა თემისთვის \"%1\""
 
 #: ui/main.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Preview sound \"%1\""
+#, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "მინიატურის ხმა \"%1\""
+msgstr "მინიატურის ხმა ჩავარდა: \"%1\""

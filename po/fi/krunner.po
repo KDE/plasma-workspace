@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-02 02:04+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2023-08-26 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -36,47 +36,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tpr@d5k.net, mikko.piippo@helsinki.fi, translator@legisign.org"
 
-#: main.cpp:77 view.cpp:47
+#: main.cpp:71 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:77
+#: main.cpp:71
 #, kde-format
 msgid "Run Command interface"
 msgstr "Komentojen suoritus"
 
-#: main.cpp:83
+#: main.cpp:77
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Käytä leikepöydän sisältöä KRunner-kyselynä"
 
-#: main.cpp:84
+#: main.cpp:78
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Käynnistä KRunner taustalle, näyttämättä sitä."
 
-#: main.cpp:85
+#: main.cpp:79
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Korvaa aiempi instanssi"
 
-#: main.cpp:86
+#: main.cpp:80
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Näytä vain valitun liitännäisen tulokset"
 
-#: main.cpp:87
+#: main.cpp:81
 #, kde-format
 msgid "List available plugins"
 msgstr "Luettele käytettävissä olevat liitännäiset"
 
-#: main.cpp:94
+#: main.cpp:88
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Suoritettava kysely, käytetään vain jos -c on annettu"
 
-#: main.cpp:103
+#: main.cpp:97
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

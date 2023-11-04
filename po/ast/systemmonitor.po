@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-03 00:46+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2023-10-29 21:58+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -32,7 +32,7 @@ msgstr "alministradores@softastur.org"
 msgid "Show System Activity"
 msgstr ""
 
-#: main.cpp:23
+#: main.cpp:22
 #, kde-format
 msgid "System Activity"
 msgstr "Actividá del sistema"

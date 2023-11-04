@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-04 01:39+0000\n"
 "PO-Revision-Date: 2021-04-11 13:39+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -137,41 +137,65 @@ msgstr ""
 "ലോക്ക് സ്ക്രീൻ പിന്തുണയില്ലാതെ ആരംഭിക്കുന്നു. മറ്റ് ഘടകങ്ങൾ ലോക്ക് സ്ക്രീൻ നൽകുന്നുവെങ്കിൽ മാത്രം "
 "ആവശ്യമാണ്."
 
-#: server.cpp:885
+#: server.cpp:802
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:825
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:968
 #, kde-format
 msgid "Session Management"
 msgstr "സെഷന്‍ നടത്തിപ്പുകാരന്‍"
 
-#: server.cpp:890
+#: server.cpp:973
 #, kde-format
 msgid "Log Out"
 msgstr "പുറത്തിറങ്ങുക"
 
-#: server.cpp:895
+#: server.cpp:978
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: server.cpp:900
+#: server.cpp:983
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: server.cpp:906
+#: server.cpp:989
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "സ്ഥിരീകരണമില്ലാതെ പുറത്ത് കടക്കുക"
 
-#: server.cpp:911
+#: server.cpp:994
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "സ്ഥിരീകരണമില്ലാതെ നിർത്തുക"
 
-#: server.cpp:916
+#: server.cpp:999
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "സ്ഥിരീകരണമില്ലാതെ പുനഃരാരംഭിക്കുക"
+
+#: server.cpp:1129
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "$HOME കൂടയിലേക്ക് എഴുത്തവകാശമില്ല (%1)."
