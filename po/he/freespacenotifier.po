@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2023-10-04 15:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -21,20 +21,20 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: freespacenotifier.cpp:91
-#, kde-format
-msgid "Configure Warning…"
-msgstr "הגדרת אזהרה…"
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr "פתיחה ב־Flielight"
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, kde-format
 msgid "Open in File Manager"
 msgstr "פתיחה במנהל הקבצים"
+
+#: freespacenotifier.cpp:106
+#, kde-format
+msgid "Configure Warning…"
+msgstr "הגדרת אזהרה…"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

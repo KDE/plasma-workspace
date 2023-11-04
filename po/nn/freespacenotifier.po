@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2021-12-16 12:44+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,20 +20,20 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: freespacenotifier.cpp:91
-#, kde-format
-msgid "Configure Warning…"
-msgstr "Set opp varsling …"
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Opna i Filelight"
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Opna i filhandsamar"
+
+#: freespacenotifier.cpp:106
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Set opp varsling …"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

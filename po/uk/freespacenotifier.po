@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2021-05-26 08:57+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,20 +20,20 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: freespacenotifier.cpp:91
-#, kde-format
-msgid "Configure Warning…"
-msgstr "Налаштувати попередження…"
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Відкрити у Filelight"
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Відкрити у програмі для керування файлами"
+
+#: freespacenotifier.cpp:106
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Налаштувати попередження…"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

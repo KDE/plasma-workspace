@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2021-06-04 14:54-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -19,20 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: freespacenotifier.cpp:91
-#, kde-format
-msgid "Configure Warning…"
-msgstr "Configurar aviso..."
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Abrir no Filelight"
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Abrir no gerenciador de arquivos..."
+
+#: freespacenotifier.cpp:106
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Configurar aviso..."
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

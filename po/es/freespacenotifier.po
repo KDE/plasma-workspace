@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2021-05-27 01:04+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -20,20 +20,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.04.1\n"
 
-#: freespacenotifier.cpp:91
-#, kde-format
-msgid "Configure Warning…"
-msgstr "Configurar advertencia..."
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Abrir en Filelight"
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Abrir en el gestor de archivos"
+
+#: freespacenotifier.cpp:106
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Configurar advertencia..."
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

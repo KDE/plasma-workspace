@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2011-05-24 20:06+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -20,24 +20,24 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=1;\n"
 
-#: freespacenotifier.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "Allows the user to configure the warning notification being shown"
-#| msgid "Configure Warning"
-msgid "Configure Warning…"
-msgstr "Tetapan Amaran"
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager"
 msgid "Open in File Manager"
 msgstr "Buka Pengurus Fail"
+
+#: freespacenotifier.cpp:106
+#, fuzzy, kde-format
+#| msgctxt "Allows the user to configure the warning notification being shown"
+#| msgid "Configure Warning"
+msgid "Configure Warning…"
+msgstr "Tetapan Amaran"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2015-02-14 22:41+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,24 +20,24 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: freespacenotifier.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "Allows the user to configure the warning notification being shown"
-#| msgid "Configure Warning..."
-msgid "Configure Warning…"
-msgstr "Konfiguriši upozorenje..."
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "Otvori menadžer datoteka..."
+
+#: freespacenotifier.cpp:106
+#, fuzzy, kde-format
+#| msgctxt "Allows the user to configure the warning notification being shown"
+#| msgid "Configure Warning..."
+msgid "Configure Warning…"
+msgstr "Konfiguriši upozorenje..."
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9

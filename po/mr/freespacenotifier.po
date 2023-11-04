@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
 "PO-Revision-Date: 2013-02-12 11:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: freespacenotifier.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "Allows the user to configure the warning notification being shown"
-#| msgid "Configure Warning"
-msgid "Configure Warning…"
-msgstr "इशारा संयोजीत करा"
-
-#: freespacenotifier.cpp:95
+#: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:98
+#: freespacenotifier.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager"
 msgid "Open in File Manager"
 msgstr "फाईल व्यवस्थापक उघडा"
+
+#: freespacenotifier.cpp:106
+#, fuzzy, kde-format
+#| msgctxt "Allows the user to configure the warning notification being shown"
+#| msgid "Configure Warning"
+msgid "Configure Warning…"
+msgstr "इशारा संयोजीत करा"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9
