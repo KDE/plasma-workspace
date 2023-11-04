@@ -21,7 +21,6 @@
 #include <KFileItemListProperties>
 #include <KLocalizedString>
 #include <KPropertiesDialog>
-#include <KProtocolManager>
 #include <KSharedConfig>
 #include <KUrlMimeData>
 
