@@ -19,7 +19,6 @@
 
 #include <KIO/Job>
 #include <KLocalizedString>
-#include <KProtocolManager>
 
 constexpr int evaluationTimeout = 10000;
 
