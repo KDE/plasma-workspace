@@ -50,6 +50,7 @@ Dependencies:
     'frameworks/kdesu': '@latest'
     'frameworks/kpeople': '@latest'
     'frameworks/prison': '@latest'
+    'frameworks/kuserfeedback': '@stable'
     'plasma/layer-shell-qt': '@same'
     'plasma/kscreenlocker': '@same'
     'plasma/libkscreen': '@same'
@@ -58,7 +59,6 @@ Dependencies:
     'plasma/kpipewire': '@same'
     'plasma/plasma-nano': '@same'
     'libraries/plasma-wayland-protocols': '@latest'
-    'libraries/kuserfeedback': '@stable'
     'graphics/libkexiv2': '@latest'
 
 - 'on': ['Linux']
