@@ -14,21 +14,22 @@
 # Diego Iastrubni <elcuco@kde.org>, 2006, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-10-04 09:03+0300\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-11-05 14:41+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -154,7 +155,7 @@ msgstr "מתחיל ללא תמיכה במסך נעילה. נחוץ רק אם ר�
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[לא ידוע]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -164,6 +165,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"לא ניתן לנהל חלק מהיישומים כי משאבי ניהול הפעלות המערכת מנוצלים עד תום. הנה "
+"שלושת הצרכנים התובעניים ביותר ממשאבי המערכת:\n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -208,6 +212,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "אין הרשאות כתיבה לתיקית הבית (%1)."
