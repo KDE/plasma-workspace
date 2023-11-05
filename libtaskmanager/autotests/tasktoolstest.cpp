@@ -41,6 +41,12 @@ void TaskToolsTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
 
+    // Set up applications.menu so that kservice works
+    const QString menusDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String{"/menus"};
+    QDir(menusDir).removeRecursively();
+    QDir(menusDir).mkpath(QStringLiteral("."));
+    QFile::copy(QFINDTESTDATA("../../../menu/desktop/plasma-applications.menu"), menusDir + QLatin1String("/applications.menu"));
+
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
     qputenv("XDG_DATA_DIRS", dataDir.toUtf8());
