@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     environ = os.environ.copy()
     environ["KWIN_WAYLAND_NO_PERMISSION_CHECKS"] = "1"
-    kwin_process = subprocess.Popen(["kwin_wayland", "--no-lockscreen", "--no-global-shortcuts", "--no-kactivities"], env=environ, stderr=subprocess.PIPE)
+    kwin_process = subprocess.Popen(["kwin_wayland", "--no-lockscreen", "--no-global-shortcuts", "--no-kactivities", "--socket", "waylandtasksmodeltest"], env=environ, stderr=subprocess.PIPE)
 
     for _ in range(20):
         kwin_window_shown: bool = False
@@ -34,6 +34,7 @@ if __name__ == '__main__':
 
     test_environ = os.environ.copy()
     test_environ["QT_QPA_PLATFORM"] = "wayland"
+    test_environ["WAYLAND_DISPLAY"] = "waylandtasksmodeltest"
     test_process = subprocess.Popen([test_executable_path], env=test_environ)
     assert test_process.poll() is None
 
