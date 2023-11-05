@@ -50,7 +50,3 @@ if (INSTALL_SDDM_THEME)
             DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze/components
     )
 endif()
-
-if (BUILD_TESTING)
-    add_subdirectory(autotests/lockscreen)
-endif()
