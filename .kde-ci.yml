@@ -7,8 +7,6 @@ Dependencies:
     'frameworks/attica': '@latest'
     'frameworks/baloo': '@latest'
     'frameworks/extra-cmake-modules': '@latest'
-    'frameworks/kactivities': '@latest'
-    'frameworks/kactivities-stats': '@latest'
     'frameworks/kauth': '@latest'
     'frameworks/kbookmarks': '@latest'
     'frameworks/kcmutils': '@latest'
@@ -58,6 +56,8 @@ Dependencies:
     'plasma/libksysguard': '@same'
     'plasma/kpipewire': '@same'
     'plasma/plasma-nano': '@same'
+    'plasma/kactivities': '@latest' # Different branch scheme due to formerly being a Framework
+    'plasma/kactivities-stats': '@latest' # Different branch scheme due to formerly being a Framework
     'libraries/plasma-wayland-protocols': '@latest'
     'graphics/libkexiv2': '@latest'
 
