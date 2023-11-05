@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-15 14:58+0100\n"
+"PO-Revision-Date: 2023-11-04 10:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -151,7 +151,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[desconegut]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -161,6 +161,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"No s'han pogut gestionar algunes aplicacions perquè els recursos de gestió "
+"de sessions del sistema estan exhaurits. Estos són els tres principals "
+"consumidors de recursos de sessió:\n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -205,3 +209,6 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"No s'ha pogut restaurar l'aplicació <application>%1</application> perquè "
+"està trencada i ha exhaurit els recursos de restauració de la sessió del "
+"sistema. Informeu-ne als desenvolupadors de l'aplicació."

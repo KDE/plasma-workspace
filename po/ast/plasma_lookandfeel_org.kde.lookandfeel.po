@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-31 01:40+0000\n"
-"PO-Revision-Date: 2023-05-03 22:37+0200\n"
+"PO-Revision-Date: 2023-11-04 22:36+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
-msgstr ""
+msgstr "Distribución del tecláu: %1"
 
 #: ../sddm-theme/Login.qml:85
 #, kde-format
@@ -30,36 +30,36 @@ msgstr ""
 #: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:65
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
 #, kde-format
 msgid "Log In"
-msgstr ""
+msgstr "Aniciar la sesión"
 
 #: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:315
 #, kde-format
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "El Bloq Mayús ta activáu"
 
 #: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "Dormir"
 
 #: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
 #: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Reaniciar"
 
 #: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
 #: contents/logout/Logout.qml:196
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Apagar"
 
 #: ../sddm-theme/Main.qml:235
 #, kde-format
@@ -70,68 +70,68 @@ msgstr ""
 #: ../sddm-theme/Main.qml:450
 #, kde-format
 msgid "Type in Username and Password"
-msgstr ""
+msgstr "Escribi'l nome d'usuariu ya la contraseña"
 
 #: ../sddm-theme/Main.qml:485
 #, kde-format
 msgid "List Users"
-msgstr ""
+msgstr "Llistar los usuarios"
 
 #: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:582
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Tecláu virtual"
 
 #: ../sddm-theme/Main.qml:634
 #, kde-format
 msgid "Login Failed"
-msgstr ""
+msgstr "L'aniciu de la sesión falló"
 
 #: ../sddm-theme/SessionButton.qml:18
 #, kde-format
 msgid "Desktop Session: %1"
-msgstr ""
+msgstr "Sesión del escritoriu: %1"
 
 #: contents/components/Battery.qml:54
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
-msgstr ""
+msgstr "Batería al %1%"
 
 #: contents/components/UserList.qml:71
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
-msgstr ""
+msgstr "Ensin usar"
 
 #: contents/components/UserList.qml:77
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
-msgstr ""
+msgstr "TTY %1"
 
 #: contents/components/UserList.qml:79
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
-msgstr ""
+msgstr "na TTY %1 (pantalla %2)"
 
 #: contents/components/UserList.qml:83
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
 #, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Reló:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
@@ -143,7 +143,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Controles multimedia:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
@@ -154,59 +154,59 @@ msgstr ""
 #: contents/lockscreen/LockScreenUi.qml:68
 #, kde-format
 msgid "Unlocking failed"
-msgstr ""
+msgstr "El desbloquéu falló"
 
 #: contents/lockscreen/LockScreenUi.qml:329
 #, kde-format
 msgid "Sleep"
-msgstr ""
+msgstr "Dormir"
 
 #: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
-msgstr ""
+msgstr "Ivernar"
 
 #: contents/lockscreen/LockScreenUi.qml:341
 #, kde-format
 msgid "Switch User"
-msgstr ""
+msgstr "Cambiar d'usuariu"
 
 #: contents/lockscreen/LockScreenUi.qml:520
 #, kde-format
 msgid "Switch to This Session"
-msgstr ""
+msgstr "Cambair a esta sesión"
 
 #: contents/lockscreen/LockScreenUi.qml:528
 #, kde-format
 msgid "Start New Session"
-msgstr ""
+msgstr "Aniciar una sesión nueva"
 
 #: contents/lockscreen/LockScreenUi.qml:541
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: contents/lockscreen/LockScreenUi.qml:606
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Cambiar la distribución"
 
 #: contents/lockscreen/MainBlock.qml:108
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
-msgstr ""
+msgstr "Desbloquiar"
 
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(o escania la buelga nel llector)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(o escania la tarxeta intelixente)"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
@@ -221,7 +221,7 @@ msgstr ""
 #: contents/lockscreen/MediaControls.qml:89
 #, kde-format
 msgid "Previous track"
-msgstr ""
+msgstr "Pista anterior"
 
 #: contents/lockscreen/MediaControls.qml:101
 #, kde-format
@@ -231,7 +231,7 @@ msgstr ""
 #: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "Next track"
-msgstr ""
+msgstr "Pista siguiente"
 
 #: contents/logout/Logout.qml:140
 #, kde-format
@@ -242,7 +242,11 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"Hai otru usuariu cola sesión aniciada. Si s'apaga o reanicia l'ordenador, ye "
+"posible qu'esi usuariu pierda'l trabayu."
 msgstr[1] ""
+"Hai %1 usuarios cola sesión aniciada. Si s'apaga o reanicia l'ordenador, ye "
+"posible qu'esos usuarios pierdan el trabayu."
 
 #: contents/logout/Logout.qml:154
 #, kde-format
@@ -252,7 +256,7 @@ msgstr ""
 #: contents/logout/Logout.qml:207
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Zarrar la sesión"
 
 #: contents/logout/Logout.qml:231
 #, kde-format
@@ -278,7 +282,7 @@ msgstr[1] ""
 #: contents/logout/Logout.qml:247
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "D'acuerdu"
 
 #: contents/logout/Logout.qml:259
 #, kde-format
@@ -289,7 +293,7 @@ msgstr ""
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/splash/Splash.qml:79
 #, kde-format
@@ -298,4 +302,4 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
-msgstr ""
+msgstr "Plasma, creáu por KDE"

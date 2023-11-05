@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-10-24 23:40+0200\n"
+"PO-Revision-Date: 2023-11-04 22:30+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -36,67 +36,67 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr ""
+msgstr "KDE Plasma 6.0 Dev"
 
 #: desktopview.cpp:210
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr ""
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr ""
+msgstr "KDE Plasma 6.0 Beta 1"
 
 #: desktopview.cpp:216
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr ""
+msgstr "KDE Plasma 6.0 Beta 2"
 
 #: desktopview.cpp:219
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:222
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:248
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr ""
+msgstr "KDE Plasma %1 Dev"
 
 #: desktopview.cpp:252
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr ""
+msgstr "KDE Plasma %1 Beta"
 
 #: desktopview.cpp:255
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Beta %2"
 
 #: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr ""
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:265
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Visita bugs.kde.org pa informar de problemes"
 
 #: main.cpp:105
 #, kde-format

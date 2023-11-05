@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-15 08:04+0200\n"
+"PO-Revision-Date: 2023-11-04 20:00+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -152,7 +152,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[невідомий]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -162,6 +162,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Керування деякими програмами неможливе, оскільки вичерпано ресурси засобу "
+"керування сеансом системи. Ось три найбільших споживачів ресурсів сеансу:\n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -206,6 +209,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Не вдалося відновити роботу <application>%1</application>, оскільки програму "
+"пошкоджено і вичерпано ресурси засобу відновлення сеансу системи. Будь "
+"ласка, повідомте про це розробників програми."
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Немає доступу на запис до каталогу $HOME (%1)."
