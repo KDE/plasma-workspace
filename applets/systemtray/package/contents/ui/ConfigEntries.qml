@@ -79,14 +79,16 @@ ColumnLayout {
             reuseItems: true
 
             header: RowLayout {
+                width: itemsList.width
                 spacing: Kirigami.Units.smallSpacing
 
                 Item {
-                    implicitWidth: itemsList.iconSize
+                    implicitWidth: itemsList.iconSize + 2 * Kirigami.Units.smallSpacing
                 }
                 Kirigami.Heading {
                     text: i18nc("Name of the system tray entry", "Entry")
                     level: 2
+                    elide: Text.ElideRight
                     Layout.fillWidth: true
                 }
                 Kirigami.Heading {
@@ -105,6 +107,7 @@ ColumnLayout {
                     icon.name: "configure"
                     enabled: false
                     opacity: 0
+                    Layout.rightMargin: 2 * Kirigami.Units.smallSpacing
                 }
             }
 
