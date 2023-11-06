@@ -36,11 +36,15 @@ KCM.SimpleKCM {
     // because the object attempts geolocation immediately when created, which is unnecessary (and bad for privacy)
 
     function startLocator() {
-        locator = Qt.createQmlObject('import org.kde.colorcorrect as CC; CC.Geolocator {}', root, "geoLocatorObj");
+        if (!locator) {
+            locator = Qt.createQmlObject('import org.kde.colorcorrect as CC; CC.Geolocator {}', root, "geoLocatorObj");
+        }
     }
 
     function endLocator() {
-        locator.destroy();
+        if (locator) {
+            locator.destroy();
+        }
     }
 
     Connections {
