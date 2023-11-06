@@ -71,7 +71,7 @@ KCM.SimpleKCM {
         }
         function onLongitudeChanged() {
             if (root.doneLocating) {
-                kcm.nightColorSettings.longitudeAuto = root.locator.latitude
+                kcm.nightColorSettings.longitudeAuto = root.locator.longitude
             }
         }
     }
