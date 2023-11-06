@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2008-11-18 00:18+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,61 +17,61 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: PowerDevilRunner.cpp:33
+#: PowerDevilRunner.cpp:29
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
 msgstr ""
 
-#: PowerDevilRunner.cpp:35
+#: PowerDevilRunner.cpp:30
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "wusnyć"
 
-#: PowerDevilRunner.cpp:37
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "do pomjatka"
 
-#: PowerDevilRunner.cpp:39
+#: PowerDevilRunner.cpp:32
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "spać"
 
-#: PowerDevilRunner.cpp:41
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "zymski spar"
 
-#: PowerDevilRunner.cpp:43
+#: PowerDevilRunner.cpp:34
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "do tačele"
 
-#: PowerDevilRunner.cpp:45
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
 msgstr ""
 
-#: PowerDevilRunner.cpp:47
+#: PowerDevilRunner.cpp:36
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
 msgstr ""
 
-#: PowerDevilRunner.cpp:49 PowerDevilRunner.cpp:51 PowerDevilRunner.cpp:76
+#: PowerDevilRunner.cpp:37 PowerDevilRunner.cpp:38 PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "wobrazowku ćěmnić"
 
-#: PowerDevilRunner.cpp:60
+#: PowerDevilRunner.cpp:48
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -80,22 +80,22 @@ msgstr ""
 "Naliči opcije za zastajenje systema (na př. zastajić, spać) a rjaduje jich "
 "aktiwizowanje"
 
-#: PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:52
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Zastaji system a wostaji jón w pomjatku"
 
-#: PowerDevilRunner.cpp:68
+#: PowerDevilRunner.cpp:56
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Zastaji system a pisa tuchwilny staw do tačele"
 
-#: PowerDevilRunner.cpp:72
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
 msgstr ""
 
-#: PowerDevilRunner.cpp:75
+#: PowerDevilRunner.cpp:63
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword, it should end with a space"
 #| msgid "screen brightness "
@@ -104,7 +104,7 @@ msgctxt ""
 msgid "screen brightness <percent value>"
 msgstr "swětłosć wobrazowki "
 
-#: PowerDevilRunner.cpp:78
+#: PowerDevilRunner.cpp:66
 #, fuzzy, no-c-format, kde-format
 #| msgid ""
 #| "Lists screen brightness options or sets it to the brightness defined by :"
@@ -118,61 +118,61 @@ msgstr ""
 "Naliči opcije za swětłosć wobrazowki a rjaduje swětłosć definowanu přez :q:; "
 "na př. swětłosć 50 by wobrazowku na 50% maksimalneje swětłosće přićěmniło"
 
-#: PowerDevilRunner.cpp:100
+#: PowerDevilRunner.cpp:83
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "Swětłosć postajić: %1%"
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:92
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Wobrazowku doćěmnić"
 
-#: PowerDevilRunner.cpp:117
+#: PowerDevilRunner.cpp:100
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Wobrazowku přićěmnić"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:129
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Spać"
 
-#: PowerDevilRunner.cpp:147
+#: PowerDevilRunner.cpp:130
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Zastajić (do RAM)"
 
-#: PowerDevilRunner.cpp:152
+#: PowerDevilRunner.cpp:135
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Zymski spar"
 
-#: PowerDevilRunner.cpp:153
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Zastajić (do tačele)"
 
-#: PowerDevilRunner.cpp:158
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
 msgstr ""
 
-#: PowerDevilRunner.cpp:159
+#: PowerDevilRunner.cpp:142
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
 msgstr ""
 
-#: PowerDevilRunner.cpp:237
+#: PowerDevilRunner.cpp:222
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "swětłosć wobrazowki "
 
-#: PowerDevilRunner.cpp:239
+#: PowerDevilRunner.cpp:224
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

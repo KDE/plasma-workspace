@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-09-07 12:16+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -124,7 +124,7 @@ msgstr ""
 "Cambia a la sesión activa para el usuario :q:, o lista todas las sesiones "
 "activas si no se indica :q:"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -136,29 +136,29 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Apagar"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Bloquear"
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Save Session"
 msgstr "Guardar sesión"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Switch User"
 msgstr "Cambiar usuario"
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -173,7 +173,7 @@ msgstr ""
 "+F{número de sesión}</li><li>La búsqueda de Plasma (escriba «%1»)</"
 "li><li><i>Widgets</i> de Plasma (como el lanzador de aplicaciones)</li></ul>"
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Nueva sesión de escritorio"

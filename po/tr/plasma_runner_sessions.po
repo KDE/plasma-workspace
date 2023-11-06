@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-09-07 14:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -122,7 +122,7 @@ msgstr ""
 "Etkin oturum için :q: kullanıcısına geçmeyi sağlar veya :q: verilmediyse "
 "etkin oturumların listesini verir"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -134,29 +134,29 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Yeniden Başlat"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Kilitle"
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Save Session"
 msgstr "Oturumu Kaydet"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Switch User"
 msgstr "Kullanıcıyı Değiştir"
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -171,7 +171,7 @@ msgstr ""
 "p><ul><li>Kontrol+Seçenek+F {oturum numarası}</li><li>Plasma arama (%1 "
 "yazın)</li><li>Plasma araç takımları (örneğin uygulama başlatıcısı)</li></ul>"
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Yeni Masaüstü Oturumu"

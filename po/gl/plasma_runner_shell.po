@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2019-10-19 21:47+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Run in Terminal Window"
 msgstr "Executar nunha xanela de terminal"
 
-#: shellrunner.cpp:33
+#: shellrunner.cpp:34
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "Atopa ordes que casen con :q:, coa sintaxe normal da shell"

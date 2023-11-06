@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-10-04 12:55+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -20,61 +20,61 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: PowerDevilRunner.cpp:33
+#: PowerDevilRunner.cpp:29
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
 msgstr "חשמל"
 
-#: PowerDevilRunner.cpp:35
+#: PowerDevilRunner.cpp:30
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "השהיה"
 
-#: PowerDevilRunner.cpp:37
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "לזיכרון"
 
-#: PowerDevilRunner.cpp:39
+#: PowerDevilRunner.cpp:32
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "שינה"
 
-#: PowerDevilRunner.cpp:41
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "תרדמת"
 
-#: PowerDevilRunner.cpp:43
+#: PowerDevilRunner.cpp:34
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "לכונן"
 
-#: PowerDevilRunner.cpp:45
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
 msgstr "שינה מעורבת"
 
-#: PowerDevilRunner.cpp:47
+#: PowerDevilRunner.cpp:36
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
 msgstr "מעורבת"
 
-#: PowerDevilRunner.cpp:49 PowerDevilRunner.cpp:51 PowerDevilRunner.cpp:76
+#: PowerDevilRunner.cpp:37 PowerDevilRunner.cpp:38 PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "עמעום מסך"
 
-#: PowerDevilRunner.cpp:60
+#: PowerDevilRunner.cpp:48
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -82,29 +82,29 @@ msgid ""
 msgstr ""
 "מציג את אפשרויות ההשהיה של המערכת (למשל: שינה, תרדמת) ומאפשר להפעיל אותן"
 
-#: PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:52
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "משהה את המערכת לזיכרון"
 
-#: PowerDevilRunner.cpp:68
+#: PowerDevilRunner.cpp:56
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "משהה את המערכת לכונן"
 
-#: PowerDevilRunner.cpp:72
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
 msgstr "ישן כעת ונסוג לתרדמת"
 
-#: PowerDevilRunner.cpp:75
+#: PowerDevilRunner.cpp:63
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
 msgstr "בהירות מסך <ערך באחוזים>"
 
-#: PowerDevilRunner.cpp:78
+#: PowerDevilRunner.cpp:66
 #, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
@@ -114,61 +114,61 @@ msgstr ""
 "מציג את אפשרויות בהירות המסך או מגדיר את הבהירות שמוגדרת בביטוי החיפוש, למשל "
 "‚בהירות מסך 50’ תעמעם את המסך ל־50% בהירות לכל היותר"
 
-#: PowerDevilRunner.cpp:100
+#: PowerDevilRunner.cpp:83
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "הגדרת הבהירות ל־%1%"
 
-#: PowerDevilRunner.cpp:109
+#: PowerDevilRunner.cpp:92
 #, kde-format
 msgid "Dim screen totally"
 msgstr "עמעום המסך לחלוטין"
 
-#: PowerDevilRunner.cpp:117
+#: PowerDevilRunner.cpp:100
 #, kde-format
 msgid "Dim screen by half"
 msgstr "עמעום המסך עד החצי"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:129
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "שינה"
 
-#: PowerDevilRunner.cpp:147
+#: PowerDevilRunner.cpp:130
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "השהייה לזיכרון"
 
-#: PowerDevilRunner.cpp:152
+#: PowerDevilRunner.cpp:135
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "תרדמת"
 
-#: PowerDevilRunner.cpp:153
+#: PowerDevilRunner.cpp:136
 #, kde-format
 msgid "Suspend to disk"
 msgstr "השהיה לכונן"
 
-#: PowerDevilRunner.cpp:158
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
 msgstr "שינה מעורבת"
 
-#: PowerDevilRunner.cpp:159
+#: PowerDevilRunner.cpp:142
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
 msgstr "לישון כעת ולסגת לתרדמת"
 
-#: PowerDevilRunner.cpp:237
+#: PowerDevilRunner.cpp:222
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "בהירות מסך "
 
-#: PowerDevilRunner.cpp:239
+#: PowerDevilRunner.cpp:224
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

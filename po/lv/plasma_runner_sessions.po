@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2011-07-08 12:56+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -137,7 +137,7 @@ msgstr ""
 "Pārslēdz uz lietotāja :q: aktīvo sesiju, vai parāda visu aktīvo sesiju "
 "sarakstu, ja :q: nav norādīts"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -151,7 +151,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "izslēgt"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -159,25 +159,25 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "pārstartēt"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "jauna sesija"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "pārslēgt lietotāju"
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -187,7 +187,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

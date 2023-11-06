@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-10-21 13:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Run in Terminal Window"
 msgstr "在终端窗口中运行"
 
-#: shellrunner.cpp:33
+#: shellrunner.cpp:34
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "查找匹配 :q: 的命令，使用通用 shell 语法"

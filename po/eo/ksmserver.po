@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-04-07 20:08+0100\n"
+"PO-Revision-Date: 2023-11-05 17:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -147,7 +147,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[nekonata]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -157,6 +157,8 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Ne eblas administri iujn programojn ĉar la seancadministraj rimedoj de la "
+"sistemo estas elĉerpitaj. Jen la pintaj tri konsumantoj de seancorimedoj:%1"
 
 #: server.cpp:968
 #, kde-format
@@ -201,3 +203,6 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Ne eblas restarigi <application>%1</application> ĉar ĝi estas rompita kaj "
+"elĉerpis la seancorestaŭrajn rimedojn de la sistemo. Bonvolu raporti ĉi tion "
+"al la evoluistoj de la programo."

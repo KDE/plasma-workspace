@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-09-07 09:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -122,7 +122,7 @@ msgstr ""
 "Wisselt naar de actieve sessie van gebnruiker :q: of toont alle active "
 "sessies als :q: niet is gegeven"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -134,29 +134,29 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Systeem afsluiten"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Herstarten"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Vergrendelen"
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Save Session"
 msgstr "Sessie opslaan"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Switch User"
 msgstr "Gebruiker wisselen"
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -171,7 +171,7 @@ msgstr ""
 "+F{nummer van de sessie}</li><li>Plasma zoeken (typ '%1')</li><li>Plasma "
 "widgets (zoals de starter van toepassingen)</li></ul>"
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Nieuwe bureaubladsessie"

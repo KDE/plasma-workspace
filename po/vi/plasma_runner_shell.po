@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2020-10-24 12:24+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Run in Terminal Window"
 msgstr "Chạy trong cửa sổ dòng lệnh"
 
-#: shellrunner.cpp:33
+#: shellrunner.cpp:34
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "Tìm các lệnh khớp với :q:, sử dụng cú pháp hệ vỏ thông thường"

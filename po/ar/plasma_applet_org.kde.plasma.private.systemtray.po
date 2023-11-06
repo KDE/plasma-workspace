@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-01 01:41+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2022-08-08 21:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -54,43 +54,43 @@ msgstr "تحكّم العتاد"
 msgid "Miscellaneous"
 msgstr "متنوّع"
 
-#: package/contents/ui/ConfigEntries.qml:88
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "المدخلة"
 
-#: package/contents/ui/ConfigEntries.qml:93
+#: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
 msgid "Visibility"
 msgstr "الظّهور"
 
-#: package/contents/ui/ConfigEntries.qml:99
+#: package/contents/ui/ConfigEntries.qml:101
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "اختصار لوحة المفاتيح"
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:252
 #, kde-format
 msgid "Shown when relevant"
 msgstr "تظهر عند الاحتياج"
 
-#: package/contents/ui/ConfigEntries.qml:250
+#: package/contents/ui/ConfigEntries.qml:253
 #, kde-format
 msgid "Always shown"
 msgstr "دائما ظاهرة"
 
-#: package/contents/ui/ConfigEntries.qml:251
+#: package/contents/ui/ConfigEntries.qml:254
 #, kde-format
 msgid "Always hidden"
 msgstr "دائما مخفية"
 
-#: package/contents/ui/ConfigEntries.qml:252
+#: package/contents/ui/ConfigEntries.qml:255
 #, kde-format
 msgid "Disabled"
 msgstr "معطلة"
 
-#: package/contents/ui/ConfigEntries.qml:317
+#: package/contents/ui/ConfigEntries.qml:320
 #, kde-format
 msgid "Always show all entries"
 msgstr "أظهر كلّ المدخلات دائمًا"

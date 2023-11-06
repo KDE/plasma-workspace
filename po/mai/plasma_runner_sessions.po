@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2010-01-29 16:24+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -129,7 +129,7 @@ msgid ""
 "sessions if :q: is not provided"
 msgstr "स्विच मे क्रियाशील सत्र क'लेल प्रयोक्ता अथवा सबहि क्रियाशील अछि नहि"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -141,29 +141,29 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr ""
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr ""
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, fuzzy, kde-format
 msgid "Save Session"
 msgstr "नवीन सत्र"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, fuzzy, kde-format
 msgid "Switch User"
 msgstr "प्रयोक्ता"
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -173,7 +173,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, fuzzy, kde-format
 msgid "New Desktop Session"
 msgstr "नवीन सत्र"

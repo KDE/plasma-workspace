@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2009-06-27 00:58+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -121,7 +121,7 @@ msgid ""
 "sessions if :q: is not provided"
 msgstr ""
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -133,30 +133,30 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr ""
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr ""
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "Save Session"
 msgstr "Nije Sesje"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Switch User"
 msgstr ""
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -166,7 +166,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

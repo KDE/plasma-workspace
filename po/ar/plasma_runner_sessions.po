@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-07 01:58+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2022-12-22 09:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 "يبدّل إلى الجلسة النشطة للمستخدِم :q:، أو يسرد الجلسات النشطة إن لم يُوفَّر :q:"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
@@ -137,29 +137,29 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "أطفئ"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "أعد التّشغيل"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "اقفل"
 
-#: sessionrunner.cpp:119
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Save Session"
 msgstr "احفظ الجلسة"
 
-#: sessionrunner.cpp:162
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Switch User"
 msgstr "بدل المستخدم"
 
-#: sessionrunner.cpp:245
+#: sessionrunner.cpp:237
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -173,7 +173,7 @@ msgstr ""
 "p><ul><li>Ctrl+Alt+F{رقم الجلسة}</li><li>بحث بلازما (اكتب '%1')</"
 "li><li>بريمج سطح مكتب بلازما (مثل مطلق التطبيقات)</li></ul>"
 
-#: sessionrunner.cpp:254
+#: sessionrunner.cpp:246
 #, kde-format
 msgid "New Desktop Session"
 msgstr "جلسة سطح مكتب جديدة"

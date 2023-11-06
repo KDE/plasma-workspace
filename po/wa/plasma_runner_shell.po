@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2009-05-31 10:04+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Run in Terminal Window"
 msgstr "Enonder dins on &terminå"
 
-#: shellrunner.cpp:33
+#: shellrunner.cpp:34
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""

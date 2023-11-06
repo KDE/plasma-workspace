@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2009-04-21 10:07+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Run in Terminal Window"
 msgstr "រត់​នៅ​ក្នុយ​​បង្អួច​ស្ថានីយ"
 
-#: shellrunner.cpp:33
+#: shellrunner.cpp:34
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "រក​ពាក្យ​បញ្ជា​ដែល​ផ្គូផ្គង​នឹង :q: ដោយ​ប្រើ​វាក្យសម្ព័ន្ធ​សែល​ធម្មតា"
