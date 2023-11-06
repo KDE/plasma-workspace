@@ -36,11 +36,11 @@ KCM.SimpleKCM {
     // because the object attempts geolocation immediately when created, which is unnecessary (and bad for privacy)
 
     function startLocator() {
-        root.locator = Qt.createQmlObject('import org.kde.colorcorrect as CC; CC.Geolocator {}', root, "geoLocatorObj");
+        locator = Qt.createQmlObject('import org.kde.colorcorrect as CC; CC.Geolocator {}', root, "geoLocatorObj");
     }
 
     function endLocator() {
-        root.locator.destroy();
+        locator.destroy();
     }
 
     Connections {
@@ -62,15 +62,16 @@ KCM.SimpleKCM {
 
     // Update backend when locator is changed
     Connections {
-        target: locator
+        target: root.locator
+
         function onLatitudeChanged() {
             if (root.doneLocating) {
-                kcm.nightColorSettings.latitudeAuto = locator.latitude
+                kcm.nightColorSettings.latitudeAuto = root.locator.latitude
             }
         }
         function onLongitudeChanged() {
             if (root.doneLocating) {
-                kcm.nightColorSettings.longitudeAuto = locator.latitude
+                kcm.nightColorSettings.longitudeAuto = root.locator.latitude
             }
         }
     }
@@ -310,7 +311,7 @@ KCM.SimpleKCM {
                     && root.doneLocating
                 enabled: kcm.nightColorSettings.active
                 wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
+                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(root.locator.latitude * 100)/100, Math.round(root.locator.longitude * 100)/100)
             }
 
             // Show time entry fields in manual timings mode
@@ -426,7 +427,7 @@ KCM.SimpleKCM {
 
             Kirigami.LoadingPlaceholder {
                 id: loadingPlaceholder
-                visible: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
+                visible: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic && (!root.locator || !root.doneLocating)
                 text: i18nc("@info:placeholder", "Locating…")
                 anchors.centerIn: parent
             }
@@ -442,9 +443,9 @@ KCM.SimpleKCM {
                     (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
                 enabled: kcm.nightColorSettings.active
                 latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (locator !== undefined) ? locator.latitude : kcm.nightColorSettings.latitudeFixed
+                    && (root.locator !== undefined) ? root.locator.latitude : kcm.nightColorSettings.latitudeFixed
                 longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (locator !== undefined) ? locator.longitude : kcm.nightColorSettings.longitudeFixed
+                    && (root.locator !== undefined) ? root.locator.longitude : kcm.nightColorSettings.longitudeFixed
             }
         }
     }
