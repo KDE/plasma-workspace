@@ -19,8 +19,8 @@ KCM.SimpleKCM {
     id: root
     property int error: cA.error
     property bool defaultRequested: false
-    property var locator
-    readonly property bool doneLocating: locator !== undefined && !(locator.latitude == 0 && locator.longitude == 0)
+    property QtObject locator
+    readonly property bool doneLocating: locator && !(locator.latitude == 0 && locator.longitude == 0)
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
@@ -62,16 +62,12 @@ KCM.SimpleKCM {
 
     // Update backend when locator is changed
     Connections {
-        target: locator
+        target: root.locator
         function onLatitudeChanged() {
-            if (root.doneLocating) {
-                kcm.nightColorSettings.latitudeAuto = locator.latitude
-            }
-        } 
+            kcm.nightColorSettings.latitudeAuto = root.locator.latitude
+        }
         function onLongitudeChanged() {
-            if (root.doneLocating) {
-                kcm.nightColorSettings.longitudeAuto = locator.latitude
-            }
+            kcm.nightColorSettings.longitudeAuto = root.locator.longitude
         }
     }
 
@@ -408,7 +404,7 @@ KCM.SimpleKCM {
                 text: i18n("Error: Transition time overlaps.")
             }
         }
-        
+
         // Show location chooser in manual location mode
         LocationsFixedView {
             visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
