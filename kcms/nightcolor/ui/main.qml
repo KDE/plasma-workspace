@@ -19,7 +19,8 @@ KCM.SimpleKCM {
     id: root
 
     property var locator
-    readonly property bool doneLocating: locator !== undefined && !(locator.latitude == 0 && locator.longitude == 0)
+    readonly property bool doneLocating: locator !== undefined && !(locator.latitude === 0 && locator.longitude === 0)
+
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
@@ -45,7 +46,7 @@ KCM.SimpleKCM {
     Connections {
         target: kcm.nightColorSettings
         function onActiveChanged() {
-            if (kcm.nightColorSettings.active && kcm.nightColorSettings.mode == NightColorMode.Automatic) {
+            if (kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic) {
                 startLocator();
             } else {
                 endLocator();
@@ -54,7 +55,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+        if (kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active) {
             startLocator();
         }
     }
@@ -138,7 +139,7 @@ KCM.SimpleKCM {
                         kcm.nightColorSettings.mode = currentIndex - 1;
                     }
                     kcm.nightColorSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+                    if (currentIndex - 1 === NightColorMode.Automatic && kcm.nightColorSettings.active) {
                         startLocator();
                     } else {
                         endLocator();
@@ -240,7 +241,7 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
-                    text: tempSliderDay.value == tempSliderDay.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
+                    text: tempSliderDay.value === tempSliderDay.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
             }
@@ -299,7 +300,7 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
-                    text: tempSliderNight.value == tempSliderNight.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
+                    text: tempSliderNight.value === tempSliderNight.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
             }
