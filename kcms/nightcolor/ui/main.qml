@@ -18,7 +18,6 @@ import org.kde.private.kcms.nightcolor 1.0
 KCM.SimpleKCM {
     id: root
 
-    property bool defaultRequested: false
     property var locator
     readonly property bool doneLocating: locator !== undefined && !(locator.latitude == 0 && locator.longitude == 0)
     implicitHeight: Kirigami.Units.gridUnit * 29
