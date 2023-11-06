@@ -60,6 +60,21 @@ KCM.SimpleKCM {
         }
     }
 
+    // Update backend when locator is changed
+    Connections {
+        target: locator
+        function onLatitudeChanged() {
+            if (root.doneLocating) {
+                kcm.nightColorSettings.latitudeAuto = locator.latitude
+            }
+        } 
+        function onLongitudeChanged() {
+            if (root.doneLocating) {
+                kcm.nightColorSettings.longitudeAuto = locator.latitude
+            }
+        }
+    }
+
     header: ColumnLayout{
         Kirigami.InlineMessage {
             id: errorMessage
