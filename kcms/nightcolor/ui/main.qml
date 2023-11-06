@@ -113,8 +113,8 @@ KCM.SimpleKCM {
 
             QQC2.ComboBox {
                 id: modeSwitcher
-                // Work around https://bugs.kde.org/show_bug.cgi?id=403153
-                Layout.minimumWidth: Kirigami.Units.gridUnit * 17
+
+                implicitContentWidthPolicy: QQC2.ComboBox.WidestText
                 Kirigami.FormData.label: i18n("Switching times:")
                 model: [
                     i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
