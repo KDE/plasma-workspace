@@ -11,9 +11,8 @@ QQC2.TextField {
     id: field
 
     property string backend
-    horizontalAlignment: TextInput.AlignHCenter
 
-    onBackendChanged: updateTextFromBackend()
+    horizontalAlignment: TextInput.AlignHCenter
 
     function getNormedDate() {
         var nD = new Date();
@@ -52,11 +51,13 @@ QQC2.TextField {
         backend = hours + minutes;
     }
 
-    onTextChanged: updateBackendFromText()
     inputMask: "00:00"
     selectByMouse: false
     inputMethodHints: Qt.ImhTime
     validator: RegularExpressionValidator { regularExpression: /^[0-2]?[0-9]:[0-5][0-9]$/ }
 
-    onEditingFinished: submit()
+    onTextEdited: updateBackendFromText()
+    onEditingFinished: updateBackendFromText()
+
+    onBackendChanged: updateTextFromBackend()
 }
