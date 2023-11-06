@@ -9,6 +9,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 ColumnLayout {
+    id: root
 
     property double latitude
     property double longitude
@@ -29,13 +30,15 @@ ColumnLayout {
         wrapMode: Text.Wrap
         Layout.fillWidth: true
         horizontalAlignment: Qt.AlignHCenter
-        text: i18n("Color temperature begins changing to night time at %1 and is fully changed by %2", prettyTime(eveningTimings.begin), prettyTime(eveningTimings.end))
+        text: i18n("Color temperature begins changing to night time at %1 and is fully changed by %2",
+            root.prettyTime(root.eveningTimings.begin), root.prettyTime(root.eveningTimings.end))
     }
 
     QQC2.Label {
         wrapMode: Text.Wrap
         Layout.fillWidth: true
         horizontalAlignment: Qt.AlignHCenter
-        text: i18n("Color temperature begins changing to day time at %1 and is fully changed by %2", prettyTime(morningTimings.begin), prettyTime(morningTimings.end))
+        text: i18n("Color temperature begins changing to day time at %1 and is fully changed by %2",
+            root.prettyTime(root.morningTimings.begin), root.prettyTime(root.morningTimings.end))
     }
 }
