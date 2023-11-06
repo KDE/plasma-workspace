@@ -43,11 +43,13 @@ include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus ShaderTools)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
-                    Auth Parts Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime
-                    Svg Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
-                    CoreAddons ActivitiesStats Activities KIO Prison PlasmaQuick Package
+                    Auth Parts Runner Notifications NotifyConfig NewStuff Wallet IdleTime
+                    Svg Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons
+                    CoreAddons KIO Prison PlasmaQuick Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
                     OPTIONAL_COMPONENTS DocTools)
+find_package(KF6 ${PROJECT_VERSION} REQUIRED COMPONENTS
+                    Plasma Plasma5Support Wayland ActivitiesStats Activities)
 
 if (BUILD_TESTING)
     include(ECMAddTests)
