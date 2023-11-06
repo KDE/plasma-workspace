@@ -4,16 +4,16 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 import org.kde.colorcorrect as CC
 
-import org.kde.private.kcms.nightcolor 1.0
+import org.kde.private.kcms.nightcolor
 
 KCM.SimpleKCM {
     id: root
