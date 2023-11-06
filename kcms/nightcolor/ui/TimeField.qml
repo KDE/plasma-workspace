@@ -8,8 +8,6 @@ import QtQuick
 import QtQuick.Controls as QQC2
 
 QQC2.TextField {
-    id: field
-
     property string backend
 
     horizontalAlignment: TextInput.AlignHCenter
