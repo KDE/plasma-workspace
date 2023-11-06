@@ -18,8 +18,8 @@ import org.kde.private.kcms.nightcolor 1.0
 KCM.SimpleKCM {
     id: root
 
-    property var locator
-    readonly property bool doneLocating: locator !== undefined && !(locator.latitude === 0 && locator.longitude === 0)
+    property QtObject locator
+    readonly property bool doneLocating: locator !== null && !(locator.latitude === 0 && locator.longitude === 0)
 
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
@@ -311,7 +311,11 @@ KCM.SimpleKCM {
                     && root.doneLocating
                 enabled: kcm.nightColorSettings.active
                 wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(root.locator.latitude * 100)/100, Math.round(root.locator.longitude * 100)/100)
+                text: root.locator
+                    ? i18n("Latitude: %1°   Longitude: %2°",
+                        Math.round(root.locator.latitude * 100) / 100,
+                        Math.round(root.locator.longitude * 100) / 100)
+                    : ""
             }
 
             // Show time entry fields in manual timings mode
@@ -442,10 +446,14 @@ KCM.SimpleKCM {
                 visible: kcm.nightColorSettings.mode === NightColorMode.Location ||
                     (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
                 enabled: kcm.nightColorSettings.active
-                latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (root.locator !== undefined) ? root.locator.latitude : kcm.nightColorSettings.latitudeFixed
-                longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (root.locator !== undefined) ? root.locator.longitude : kcm.nightColorSettings.longitudeFixed
+
+                latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic && root.locator
+                    ? root.locator.latitude
+                    : kcm.nightColorSettings.latitudeFixed
+
+                longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic && root.locator
+                    ? root.locator.longitude
+                    : kcm.nightColorSettings.longitudeFixed
             }
         }
     }
