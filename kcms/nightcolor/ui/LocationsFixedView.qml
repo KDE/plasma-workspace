@@ -245,7 +245,7 @@ Kirigami.FormLayout {
             }
             NumberField {
                 id: latitudeFixedField
-                validator: DoubleValidator {bottom: -90; top: 90; decimals: 10}
+                validator: DoubleValidator {bottom: -90; top: 90; decimals: 2}
                 backend: kcm.nightColorSettings.latitudeFixed
                 onBackendChanged: {
                     kcm.nightColorSettings.latitudeFixed = backend;
@@ -262,7 +262,7 @@ Kirigami.FormLayout {
             }
             NumberField {
                 id: longitudeFixedField
-                validator: DoubleValidator {bottom: -180; top: 180; decimals: 10}
+                validator: DoubleValidator {bottom: -180; top: 180; decimals: 2}
                 backend: kcm.nightColorSettings.longitudeFixed
                 onBackendChanged: {
                     kcm.nightColorSettings.longitudeFixed = backend;
