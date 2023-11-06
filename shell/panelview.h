@@ -17,9 +17,11 @@
 
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
+#include <PlasmaQuick/PopupPlasmaWindow>
 
 class AutoHideScreenEdge;
 class ShellCorona;
+class PanelConfigView;
 
 namespace LayerShellQt
 {
@@ -102,6 +104,13 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(OpacityMode opacityMode READ opacityMode WRITE setOpacityMode NOTIFY opacityModeChanged)
 
     /**
+     *  Property that determines how a panel's length behaves.
+     *
+     * @see LengthMode
+     */
+    Q_PROPERTY(LengthMode lengthMode READ lengthMode WRITE setLengthMode NOTIFY lengthModeChanged)
+
+    /**
      *  Property that determines whether adaptive opacity is used.
      */
     Q_PROPERTY(bool adaptiveOpacityEnabled READ adaptiveOpacityEnabled NOTIFY adaptiveOpacityEnabledChanged)
@@ -132,6 +141,14 @@ public:
         Translucent /** The panel will always be translucent */
     };
     Q_ENUM(OpacityMode)
+
+    /** Enumeration of possible length sizing modes. */
+    enum LengthMode {
+        FillAvailable = 0, /** The panel will always fill all the available screen width/height */
+        FitContent, /** The panel will always have the same size as its content */
+        Custom /** The panel size and offset can be set by the user */
+    };
+    Q_ENUM(LengthMode)
 
     explicit PanelView(ShellCorona *corona, QScreen *targetScreen = nullptr, QWindow *parent = nullptr);
     ~PanelView() override;
@@ -180,6 +197,8 @@ public:
     PanelView::OpacityMode opacityMode() const;
     bool adaptiveOpacityEnabled();
     void setOpacityMode(PanelView::OpacityMode mode);
+    PanelView::LengthMode lengthMode() const;
+    void setLengthMode(PanelView::LengthMode mode);
     void updateAdaptiveOpacityEnabled();
 
     /**
@@ -219,11 +238,13 @@ Q_SIGNALS:
     void enabledBordersChanged();
     void floatingChanged();
     void minThicknessChanged();
+    void geometryChanged();
 
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
     void visibilityModeChanged();
     void opacityModeChanged();
+    void lengthModeChanged();
     void adaptiveOpacityEnabledChanged();
 
 protected Q_SLOTS:
@@ -280,11 +301,13 @@ private:
     bool m_containsMouse = false;
     bool m_fakeEventPending = false;
     Qt::Alignment m_alignment;
-    QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
+    QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
+    QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView = 0;
     ShellCorona *m_corona;
     QTimer m_strutsTimer;
     VisibilityMode m_visibilityMode;
     OpacityMode m_opacityMode;
+    LengthMode m_lengthMode;
     Plasma::Theme m_theme;
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;

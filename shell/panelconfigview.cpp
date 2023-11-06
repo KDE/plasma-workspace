@@ -7,7 +7,10 @@
 #include "panelconfigview.h"
 #include "config-X11.h"
 #include "panelshadows_p.h"
+#include "panelview.h"
 #include "shellcorona.h"
+
+#include <LayerShellQt/Window>
 
 #include <QAction>
 #include <QDebug>
@@ -18,6 +21,8 @@
 #include <QScreen>
 
 #include <KWindowSystem>
+#include <plasmaquick/popupplasmawindow.h>
+#include <qnamespace.h>
 #if HAVE_X11
 #include <KX11Extras>
 #endif
@@ -34,14 +39,164 @@
 
 using namespace std::chrono_literals;
 
-//////////////////////////////PanelConfigView
-PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
-    : ConfigView(containment, parent)
+PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *panelView, PanelConfigView *mainConfigView, QWindow *parent)
+    : PlasmaWindow(parent)
     , m_containment(containment)
     , m_panelView(panelView)
+    , m_mainConfigView(mainConfigView)
+{
+    if (KWindowSystem::isPlatformWayland()) {
+        m_layerWindow = LayerShellQt::Window::get(this);
+        m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+        m_layerWindow->setScope(QStringLiteral("dock"));
+        m_layerWindow->setCloseOnDismissed(false);
+    }
+    setScreen(m_panelView->screen());
+
+    connect(this, &PanelRulerView::mainItemChanged, this, &PanelRulerView::syncPanelLocation);
+}
+
+PanelRulerView::~PanelRulerView()
+{
+}
+
+void PanelRulerView::syncPanelLocation()
+{
+    if (!mainItem()) {
+        return;
+    }
+    const QRect available = m_containment->corona()->availableScreenRect(m_containment->screen());
+
+    switch (m_containment->location()) {
+    case Plasma::Types::TopEdge:
+        setBorders(Qt::BottomEdge);
+        break;
+    case Plasma::Types::LeftEdge:
+        setBorders(Qt::RightEdge);
+        break;
+    case Plasma::Types::RightEdge:
+        setBorders(Qt::LeftEdge);
+        break;
+    case Plasma::Types::BottomEdge:
+    default:
+        setBorders(Qt::TopEdge);
+    }
+
+    switch (m_containment->location()) {
+    case Plasma::Types::LeftEdge:
+    case Plasma::Types::RightEdge:
+        setMaximumWidth(mainItem()->implicitWidth());
+        setWidth(mainItem()->implicitWidth());
+        setMaximumHeight(available.height());
+        setHeight(available.height());
+        break;
+    case Plasma::Types::TopEdge:
+    case Plasma::Types::BottomEdge:
+    default:
+        setMaximumWidth(available.width());
+        setWidth(available.width());
+        setMaximumHeight(mainItem()->implicitHeight());
+        setHeight(mainItem()->implicitHeight());
+        break;
+    }
+
+    if (KWindowSystem::isPlatformX11()) {
+        KX11Extras::setType(winId(), NET::Dock);
+        KX11Extras::setState(winId(), NET::KeepAbove);
+        switch (m_containment->location()) {
+        case Plasma::Types::TopEdge:
+            setPosition(available.topLeft() + screen()->geometry().topLeft());
+            break;
+        case Plasma::Types::LeftEdge:
+            setPosition(available.topLeft() + screen()->geometry().topLeft());
+            break;
+        case Plasma::Types::RightEdge:
+            setPosition(available.topLeft() + screen()->geometry().topRight() - QPoint(width(), 0));
+            break;
+        case Plasma::Types::BottomEdge:
+        default:
+            setPosition(available.bottomLeft() + screen()->geometry().topLeft() - QPoint(0, height()));
+        }
+    } else if (m_layerWindow) {
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+        LayerShellQt::Window::Anchors anchors;
+
+        switch (m_containment->location()) {
+        case Plasma::Types::TopEdge:
+            anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            break;
+        case Plasma::Types::LeftEdge:
+            anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            break;
+        case Plasma::Types::RightEdge:
+            anchors.setFlag(LayerShellQt::Window::AnchorRight);
+            break;
+        case Plasma::Types::BottomEdge:
+        default:
+            anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+            break;
+        }
+
+        if (m_containment->formFactor() == Plasma::Types::Horizontal) {
+            switch (m_panelView->alignment()) {
+            case Qt::AlignLeft:
+                anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+                break;
+            case Qt::AlignCenter:
+                break;
+            case Qt::AlignRight:
+                anchors.setFlag(LayerShellQt::Window::AnchorRight);
+                break;
+            }
+        } else {
+            switch (m_panelView->alignment()) {
+            case Qt::AlignLeft:
+                anchors.setFlag(LayerShellQt::Window::AnchorTop);
+                break;
+            case Qt::AlignCenter:
+                break;
+            case Qt::AlignRight:
+                anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+                break;
+            }
+        }
+
+        m_layerWindow->setAnchors(anchors);
+
+        requestUpdate();
+    }
+}
+
+void PanelRulerView::showEvent(QShowEvent *ev)
+{
+    syncPanelLocation();
+    PlasmaWindow::showEvent(ev);
+}
+
+void PanelRulerView::focusOutEvent(QFocusEvent *ev)
+{
+    const QWindow *focusWindow = QGuiApplication::focusWindow();
+
+    if (focusWindow
+        && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow") || focusWindow == m_mainConfigView)) {
+        return;
+    }
+
+    m_mainConfigView->close();
+    close();
+
+    PlasmaWindow::focusOutEvent(ev);
+}
+
+//////////////////////////////PanelConfigView
+PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
+    : PlasmaQuick::PopupPlasmaWindow()
+    , m_containment(containment)
+    , m_panelView(panelView)
+    , m_sharedQmlEngine(std::make_unique<PlasmaQuick::SharedQmlEngine>(this))
 {
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
-    engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
 
     setScreen(panelView->screen());
 
@@ -50,27 +205,19 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_screenSyncTimer.setInterval(150ms);
     connect(&m_screenSyncTimer, &QTimer::timeout, [this, panelView]() {
         setScreen(panelView->screen());
-#if HAVE_X11
-        KX11Extras::setType(winId(), NET::Dock);
-        KX11Extras::setState(winId(), NET::KeepAbove);
-#endif
         syncGeometry();
-        syncLocation();
     });
 
-#if HAVE_X11
-    KX11Extras::setType(winId(), NET::Dock);
-    KX11Extras::forceActiveWindow(winId());
-    KX11Extras::setState(winId(), NET::KeepAbove);
-#endif
-
-    updateBlurBehindAndContrast();
-    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateBlurBehindAndContrast);
-
-    rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
-    rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
+    m_sharedQmlEngine->rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
+    m_sharedQmlEngine->rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
-    connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncLocation);
+    connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncGeometry);
+
+    connect(panelView, &PanelView::lengthChanged, this, &PanelConfigView::syncGeometry);
+    connect(panelView, &PanelView::geometryChanged, this, &PanelConfigView::syncGeometry);
+    connect(panelView, &PanelView::thicknessChanged, this, &PanelConfigView::syncGeometry);
+
+    setMargin(4);
 }
 
 PanelConfigView::~PanelConfigView()
@@ -79,19 +226,21 @@ PanelConfigView::~PanelConfigView()
 
 void PanelConfigView::init()
 {
-    setSource(m_containment->corona()->kPackage().fileUrl("panelconfigurationui"));
+    m_sharedQmlEngine->setInitializationDelayed(true);
+    m_sharedQmlEngine->setSource(m_containment->corona()->kPackage().fileUrl("panelconfigurationui"));
+    m_sharedQmlEngine->completeInitialization({{QStringLiteral("panelConfiguration"), QVariant::fromValue(this)}});
+    setMainItem(qobject_cast<QQuickItem *>(m_sharedQmlEngine->rootObject()));
+    if (mainItem()) {
+        if (m_panelRulerView) {
+            QQuickItem *ruler = mainItem()->property("panelRuler").value<QQuickItem *>();
+            m_panelRulerView->setMainItem(ruler);
+            m_panelRulerView->syncPanelLocation();
+        }
+        setWidth(mainItem()->implicitWidth() + leftPadding() + rightPadding());
+        setHeight(mainItem()->implicitHeight() + topPadding() + bottomPadding());
+        mainItem()->setVisible(true);
+    }
     syncGeometry();
-    syncLocation();
-}
-
-void PanelConfigView::updateBlurBehindAndContrast()
-{
-    KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled());
-    KWindowEffects::enableBackgroundContrast(this,
-                                             m_theme.backgroundContrastEnabled(),
-                                             m_theme.backgroundContrast(),
-                                             m_theme.backgroundIntensity(),
-                                             m_theme.backgroundSaturation());
 }
 
 void PanelConfigView::showAddWidgetDialog()
@@ -122,110 +271,44 @@ void PanelConfigView::addPanelSpacer()
 
 void PanelConfigView::syncGeometry()
 {
-    if (!m_containment || !rootObject()) {
-        return;
-    }
-
-    if (m_containment->formFactor() == Plasma::Types::Vertical) {
-        QSize s(rootObject()->implicitWidth(), screen()->size().height());
-        resize(s);
-        setMinimumSize(s);
-        setMaximumSize(s);
-
-        if (m_containment->location() == Plasma::Types::LeftEdge) {
-            setPosition(m_panelView->geometry().right(), screen()->geometry().top());
-        } else if (m_containment->location() == Plasma::Types::RightEdge) {
-            setPosition(m_panelView->geometry().left() - width(), screen()->geometry().top());
-        }
-
-    } else {
-        QSize s(screen()->size().width(), rootObject()->implicitHeight());
-        resize(s);
-        setMinimumSize(s);
-        setMaximumSize(s);
-
-        if (m_containment->location() == Plasma::Types::TopEdge) {
-            setPosition(screen()->geometry().left(), m_panelView->geometry().bottom());
-        } else if (m_containment->location() == Plasma::Types::BottomEdge) {
-            setPosition(screen()->geometry().left(), m_panelView->geometry().top() - height());
-        }
-    }
-}
-
-void PanelConfigView::syncLocation()
-{
-    if (!m_containment) {
-        return;
-    }
-
-    KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
-    KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders;
-
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
-        slideLocation = KWindowEffects::TopEdge;
-        enabledBorders = KSvg::FrameSvg::BottomBorder;
-        break;
-    case Plasma::Types::RightEdge:
-        slideLocation = KWindowEffects::RightEdge;
-        enabledBorders = KSvg::FrameSvg::LeftBorder;
-        break;
-    case Plasma::Types::BottomEdge:
-        slideLocation = KWindowEffects::BottomEdge;
-        enabledBorders = KSvg::FrameSvg::TopBorder;
+        setPopupDirection(Qt::BottomEdge);
         break;
     case Plasma::Types::LeftEdge:
-        slideLocation = KWindowEffects::LeftEdge;
-        enabledBorders = KSvg::FrameSvg::RightBorder;
+        setPopupDirection(Qt::RightEdge);
         break;
+    case Plasma::Types::RightEdge:
+        setPopupDirection(Qt::LeftEdge);
+        break;
+    case Plasma::Types::BottomEdge:
     default:
-        break;
+        setPopupDirection(Qt::TopEdge);
     }
-
-    KWindowEffects::slideWindow(this, slideLocation, -1);
-
-    if (m_enabledBorders != enabledBorders) {
-        m_enabledBorders = enabledBorders;
-
-        PanelShadows::self()->setEnabledBorders(this, enabledBorders);
-
-        Q_EMIT enabledBordersChanged();
+    queuePositionUpdate();
+    update();
+    if (m_panelRulerView) {
+        m_panelRulerView->syncPanelLocation();
     }
 }
 
 void PanelConfigView::showEvent(QShowEvent *ev)
 {
-    QQuickWindow::showEvent(ev);
-
-#if HAVE_X11
-    KX11Extras::setType(winId(), NET::Dock);
-#endif
-    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)) | Qt::X11BypassWindowManagerHint
-             | Qt::WindowStaysOnTopHint);
-#if HAVE_X11
-    KX11Extras::setState(winId(), NET::KeepAbove);
-    KX11Extras::forceActiveWindow(winId());
-#endif
-    updateBlurBehindAndContrast();
-    syncGeometry();
-    syncLocation();
-
-    // this because due to Qt xcb implementation the actual flags gets set only after a while after the window is actually visible
-    m_screenSyncTimer.start();
-
     if (m_containment) {
         m_containment->setUserConfiguring(true);
     }
-
-    PanelShadows::self()->addWindow(this, m_enabledBorders);
+    PopupPlasmaWindow::showEvent(ev);
 }
 
 void PanelConfigView::hideEvent(QHideEvent *ev)
 {
-    QQuickWindow::hideEvent(ev);
+    PopupPlasmaWindow::hideEvent(ev);
 
     if (m_containment) {
         m_containment->setUserConfiguring(false);
+    }
+    if (m_panelRulerView) {
+        m_panelRulerView->hide();
     }
     deleteLater();
 }
@@ -234,59 +317,15 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
 {
     const QWindow *focusWindow = QGuiApplication::focusWindow();
 
-    if (focusWindow && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow"))) {
+    if (focusWindow
+        && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow") || focusWindow == m_panelRulerView)) {
         return;
     }
     Q_UNUSED(ev)
     close();
-}
-
-void PanelConfigView::moveEvent(QMoveEvent *ev)
-{
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(ev->pos());
+    if (m_panelRulerView) {
+        m_panelRulerView->close();
     }
-}
-
-bool PanelConfigView::event(QEvent *e)
-{
-    if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
-        case QPlatformSurfaceEvent::SurfaceCreated:
-
-            if (KWindowSystem::isPlatformX11()) {
-                KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
-            }
-
-            if (m_shellSurface) {
-                break;
-            }
-            if (ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona())) {
-                using namespace KWayland::Client;
-                PlasmaShell *interface = c->waylandPlasmaShellInterface();
-                if (!interface) {
-                    break;
-                }
-                Surface *s = Surface::fromWindow(this);
-                if (!s) {
-                    break;
-                }
-                m_shellSurface = interface->createSurface(s, this);
-                m_shellSurface->setPanelTakesFocus(true);
-                m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
-                m_shellSurface->setSkipTaskbar(true);
-                m_shellSurface->setSkipSwitcher(true);
-            }
-            break;
-        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-            delete m_shellSurface;
-            m_shellSurface = nullptr;
-            PanelShadows::self()->removeWindow(this);
-            break;
-        }
-    }
-
-    return PlasmaQuick::ConfigView::event(e);
 }
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
@@ -314,6 +353,33 @@ PanelView::OpacityMode PanelConfigView::opacityMode() const
 KSvg::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
 {
     return m_enabledBorders;
+}
+
+PanelRulerView *PanelConfigView::panelRulerView()
+{
+    if (!m_panelRulerView) {
+        m_panelRulerView = new PanelRulerView(m_containment, m_panelView, this);
+        // It's a queued connection because m_panelRulerView needs a bit to have the proper size after visibleChanged is emitted
+        connect(
+            m_panelRulerView,
+            &PanelRulerView::visibleChanged,
+            this,
+            [this](bool visible) {
+                if (visible) {
+                    setMargin(std::min(m_panelRulerView->width(), m_panelRulerView->height()) + 4);
+                } else {
+                    setMargin(4);
+                }
+            },
+            Qt::QueuedConnection);
+    }
+
+    if (mainItem()) {
+        QQuickItem *ruler = mainItem()->property("panelRuler").value<QQuickItem *>();
+        m_panelRulerView->setMainItem(ruler);
+        m_panelRulerView->syncPanelLocation();
+    }
+    return m_panelRulerView;
 }
 
 #include "moc_panelconfigview.cpp"

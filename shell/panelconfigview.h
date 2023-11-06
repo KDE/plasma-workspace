@@ -7,7 +7,8 @@
 #pragma once
 
 #include <Plasma/Theme>
-#include <PlasmaQuick/ConfigView>
+#include <PlasmaQuick/PopupPlasmaWindow>
+#include <PlasmaQuick/SharedQmlEngine>
 
 #include "panelview.h"
 
@@ -17,6 +18,7 @@
 #include <QQuickItem>
 #include <QQuickView>
 #include <QStandardItemModel>
+#include <plasmaquick/plasmawindow.h>
 
 class PanelView;
 
@@ -25,26 +27,40 @@ namespace Plasma
 class Containment;
 }
 
-namespace KWayland
+class PanelRulerView : public PlasmaQuick::PlasmaWindow
 {
-namespace Client
-{
-class PlasmaShellSurface;
-}
-}
+    Q_OBJECT
 
-class PanelConfigView : public PlasmaQuick::ConfigView
+public:
+    PanelRulerView(Plasma::Containment *interface, PanelView *panelView, PanelConfigView *mainConfigView, QWindow *parent = nullptr);
+    ~PanelRulerView() override;
+
+    void syncPanelLocation();
+
+protected:
+    void showEvent(QShowEvent *ev) override;
+    void focusOutEvent(QFocusEvent *ev) override;
+
+private:
+    Plasma::Containment *m_containment;
+    PanelView *m_panelView;
+    PanelConfigView *m_mainConfigView;
+    LayerShellQt::Window *m_layerWindow = nullptr;
+};
+
+class PanelConfigView : public PlasmaQuick::PopupPlasmaWindow
 {
     Q_OBJECT
     Q_PROPERTY(PanelView::VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
     Q_PROPERTY(PanelView::OpacityMode opacityMode READ opacityMode WRITE setOpacityMode NOTIFY opacityModeChanged)
     Q_PROPERTY(KSvg::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
+    Q_PROPERTY(PanelRulerView *panelRulerView READ panelRulerView CONSTANT)
 
 public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = nullptr);
     ~PanelConfigView() override;
 
-    void init() override;
+    void init();
 
     PanelView::VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
@@ -54,12 +70,12 @@ public:
 
     KSvg::FrameSvg::EnabledBorders enabledBorders() const;
 
+    PanelRulerView *panelRulerView();
+
 protected:
     void showEvent(QShowEvent *ev) override;
     void hideEvent(QHideEvent *ev) override;
     void focusOutEvent(QFocusEvent *ev) override;
-    void moveEvent(QMoveEvent *ev) override;
-    bool event(QEvent *e) override;
 
 public Q_SLOTS:
     void showAddWidgetDialog();
@@ -67,10 +83,6 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void syncGeometry();
-    void syncLocation();
-
-private Q_SLOTS:
-    void updateBlurBehindAndContrast();
 
 Q_SIGNALS:
     void visibilityModeChanged();
@@ -80,8 +92,9 @@ Q_SIGNALS:
 private:
     Plasma::Containment *m_containment;
     QPointer<PanelView> m_panelView;
+    PanelRulerView *m_panelRulerView = nullptr;
     KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
     QTimer m_screenSyncTimer;
-    QPointer<KWayland::Client::PlasmaShellSurface> m_shellSurface;
+    std::unique_ptr<PlasmaQuick::SharedQmlEngine> m_sharedQmlEngine;
 };
