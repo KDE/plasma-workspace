@@ -423,11 +423,6 @@ add_subdirectory(phonon)
 
 add_subdirectory(interactiveconsole)
 
-if(Qt6WaylandClient_VERSION VERSION_LESS "6.6.0")
-    find_package(WaylandProtocols 1.31 REQUIRED)
-    add_subdirectory(qtwayland-integration)
-endif()
-
 # This ensures pressing the eject button on a CD drive ejects the disc
 # It listens to the Solid::OpticalDrive::ejectPressed signal that is only
 # supported by Solid in the HAL backend and does nothing with UDev

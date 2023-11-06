@@ -57,14 +57,6 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 6, 0)
-    bool usingPlasmaShellIntegration = false;
-    if (qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET")) {
-        qputenv("QT_WAYLAND_SHELL_INTEGRATION", "plasma-shell");
-        usingPlasmaShellIntegration = true;
-    }
-#endif
-
     // this works around a bug of Qt and the plasmashell protocol
     // consider disabling when layer-shell lands
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
@@ -86,16 +78,6 @@ int main(int argc, char *argv[])
             app.quit();
         }
     });
-
-#if QT_VERSION < QT_VERSION_CHECK(6, 6, 0)
-    if (usingPlasmaShellIntegration) {
-        // Force qtwayland to load our plasma-shell integration plugin. qtwayland loads
-        // the shell integration plugin on demand, we need to create a window.
-        QWindow w;
-        w.create();
-        qunsetenv("QT_WAYLAND_SHELL_INTEGRATION");
-    }
-#endif
 
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasmashell"));
 
