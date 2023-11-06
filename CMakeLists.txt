@@ -11,6 +11,7 @@ set(QT_MIN_VERSION "6.5.0")
 set(KF6_MIN_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
+option(PLASMA_X11_DEFAULT_SESSION "Use X11 session by default for Plasma" OFF)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
@@ -137,6 +138,10 @@ set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configurat
                        TYPE OPTIONAL
                        PURPOSE "Needed to build font configuration and installation tools"
                       )
+
+if(PLASMA_X11_DEFAULT_SESSION)
+    set(WITH_X11 1)
+endif()
 
 if(WITH_X11)
     find_package(X11)
@@ -368,8 +373,6 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 # locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
 ecm_query_qt(QtBinariesDir QT_INSTALL_BINS)
-
-option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
 
 if(KF6DocTools_FOUND)
   add_subdirectory(doc)

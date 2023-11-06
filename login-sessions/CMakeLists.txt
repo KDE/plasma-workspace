@@ -1,11 +1,11 @@
 ## For Plasma end users
 
-if(PLASMA_WAYLAND_DEFAULT_SESSION)
-   set(PLASMA_X11_DESKTOP_FILENAME plasmax11.desktop CACHE INTERNAL "Filename for Plasma X11 session")
-   set(PLASMA_WAYLAND_DESKTOP_FILENAME plasma.desktop CACHE INTERNAL "Filename for Plasma Wayland session")
-else()
+if(PLASMA_X11_DEFAULT_SESSION)
    set(PLASMA_X11_DESKTOP_FILENAME plasma.desktop CACHE INTERNAL "Filename for Plasma X11 session")
    set(PLASMA_WAYLAND_DESKTOP_FILENAME plasmawayland.desktop CACHE INTERNAL "Filename for Plasma Wayland session")
+else()
+   set(PLASMA_X11_DESKTOP_FILENAME plasmax11.desktop CACHE INTERNAL "Filename for Plasma X11 session")
+   set(PLASMA_WAYLAND_DESKTOP_FILENAME plasma.desktop CACHE INTERNAL "Filename for Plasma Wayland session")
 endif()
 
 configure_file(plasmax11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PLASMA_X11_DESKTOP_FILENAME})
