@@ -21,10 +21,17 @@
 #include "abstractwindowtasksmodel.h"
 #include "samplewidgetwindow.h"
 
+extern KSERVICE_EXPORT int ksycoca_ms_between_checks;
+
 namespace TestUtils
 {
 using namespace TaskManager;
 constexpr const char *dummyDesktopFileName = "org.kde.plasma.test.dummy.desktop";
+
+void initTestCase()
+{
+    ksycoca_ms_between_checks = 0;
+}
 
 void cleanupTestCase()
 {
@@ -180,8 +187,6 @@ void createDesktopFile(const char *fileName, const std::vector<std::string> &lin
     path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications") + QDir::separator()
         + QString::fromUtf8(fileName);
 
-    QSignalSpy databaseChangedSpy(KSycoca::self(), &KSycoca::databaseChanged);
-
     QFile out(path);
     if (out.exists()) {
         qDebug() << "Removing the old desktop file in" << path;
@@ -197,7 +202,6 @@ void createDesktopFile(const char *fileName, const std::vector<std::string> &lin
     out.close();
 
     KSycoca::self()->ensureCacheValid();
-    databaseChangedSpy.wait(2500);
 }
 
 void testModelDataFromDesktopFile(const AbstractWindowTasksModel &model)

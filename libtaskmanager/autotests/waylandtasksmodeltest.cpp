@@ -38,6 +38,8 @@ private:
 
 void WaylandTasksModelTest::initTestCase()
 {
+    TestUtils::initTestCase();
+
     if (!KWindowSystem::isPlatformWayland()) {
         QSKIP("Test is not running on Wayland.");
     }

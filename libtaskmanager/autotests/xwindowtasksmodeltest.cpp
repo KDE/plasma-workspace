@@ -57,6 +57,7 @@ private:
 
 void XWindowTasksModelTest::initTestCase()
 {
+    TestUtils::initTestCase();
     if (!KWindowSystem::isPlatformX11()) {
         QSKIP("Test is not running on X11.");
     }

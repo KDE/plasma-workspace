@@ -62,6 +62,7 @@ target_link_libraries(taskmanager
         KF6::KIOCore
         KF6::KIOGui
         KF6::JobWidgets
+        KF6::Service
         KF6::WindowSystem
 )
 
