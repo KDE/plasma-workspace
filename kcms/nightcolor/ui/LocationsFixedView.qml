@@ -170,7 +170,7 @@ Kirigami.FormLayout {
                     }
 
                     TapHandler {
-                        onTapped: {
+                        onTapped: eventPoint => {
                             let clickPos = mapImage.mapFromItem(root, eventPoint.scenePosition);
                             mapPin.rawX = clickPos.x;
                             mapPin.rawY = clickPos.y;
