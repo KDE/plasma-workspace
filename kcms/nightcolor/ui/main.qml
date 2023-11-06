@@ -67,7 +67,7 @@ KCM.SimpleKCM {
             if (root.doneLocating) {
                 kcm.nightColorSettings.latitudeAuto = locator.latitude
             }
-        } 
+        }
         function onLongitudeChanged() {
             if (root.doneLocating) {
                 kcm.nightColorSettings.longitudeAuto = locator.latitude
@@ -75,7 +75,7 @@ KCM.SimpleKCM {
         }
     }
 
-    header: ColumnLayout{
+    header: ColumnLayout {
         Kirigami.InlineMessage {
             id: errorMessage
             Layout.fillWidth: true
@@ -408,7 +408,7 @@ KCM.SimpleKCM {
                 text: i18n("Error: Transition time overlaps.")
             }
         }
-        
+
         // Show location chooser in manual location mode
         LocationsFixedView {
             visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
