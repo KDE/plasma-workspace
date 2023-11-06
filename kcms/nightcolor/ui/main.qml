@@ -17,7 +17,7 @@ import org.kde.private.kcms.nightcolor 1.0
 
 KCM.SimpleKCM {
     id: root
-    property int error: cA.error
+
     property bool defaultRequested: false
     property var locator
     readonly property bool doneLocating: locator !== undefined && !(locator.latitude == 0 && locator.longitude == 0)
@@ -80,7 +80,7 @@ KCM.SimpleKCM {
         Kirigami.InlineMessage {
             id: errorMessage
             Layout.fillWidth: true
-            visible: error != CC.CompositorAdaptor.ErrorCodeSuccess
+            visible: cA.error !== CC.CompositorAdaptor.ErrorCodeSuccess
             type: Kirigami.MessageType.Error
             text: cA.errorText
         }
