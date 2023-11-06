@@ -23,7 +23,6 @@
 #include <KRunner/RunnerManager>
 
 #include <iostream>
-#include <kworkspace.h>
 
 #include "view.h"
 

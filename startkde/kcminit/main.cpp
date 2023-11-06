@@ -25,7 +25,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <kworkspace.h>
 
 static int ready[2];
 static bool startup = false;

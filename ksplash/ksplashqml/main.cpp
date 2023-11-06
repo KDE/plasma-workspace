@@ -11,8 +11,6 @@
 #include <QFile>
 #include <QTextStream>
 
-#include <kworkspace.h>
-
 int main(int argc, char **argv)
 {
     // read ksplashrc as config file, not ksplashqmlrc

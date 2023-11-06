@@ -32,7 +32,6 @@
 #include <kcrash.h>
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
-#include <kworkspace.h>
 
 #include "coronatesthelper.h"
 #include "debug.h"

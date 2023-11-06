@@ -14,7 +14,6 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <kworkspace.h>
 #include <sessionmanagement.h>
 
 int SystemEntry::s_instanceCount = 0;

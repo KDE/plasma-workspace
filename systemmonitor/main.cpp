@@ -10,8 +10,6 @@
 #include <KAboutData>
 #include <KLocalizedString>
 
-#include <kworkspace.h>
-
 #include "ksystemactivitydialog.h"
 
 int main(int argc, char **argv)
