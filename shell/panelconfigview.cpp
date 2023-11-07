@@ -292,6 +292,19 @@ void PanelConfigView::syncGeometry()
     }
 }
 
+void PanelConfigView::keyPressEvent(QKeyEvent *ev)
+{
+    QQuickWindow::keyPressEvent(ev);
+    if (ev->isAccepted()) {
+        return;
+    }
+
+    if (ev->matches(QKeySequence::Cancel)) {
+        ev->accept();
+        close();
+    }
+}
+
 void PanelConfigView::showEvent(QShowEvent *ev)
 {
     if (m_containment) {
