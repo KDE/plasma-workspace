@@ -228,7 +228,7 @@ public:
         setHinting(hStyle);
 
         KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
-        KConfigGroup cg(config, "General");
+        KConfigGroup cg(config, QStringLiteral("General"));
         m_isImmutable = cg.isEntryImmutable("XftAntialias");
 
         const auto aaState = xft.getAntiAliasing();

@@ -277,7 +277,7 @@ void URLGrabber::loadSettings()
     qDeleteAll(m_myActions);
     m_myActions.clear();
 
-    KConfigGroup cg(KSharedConfig::openConfig(), "General");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("General"));
     int num = cg.readEntry("Number of Actions", 0);
     QString group;
     for (int i = 0; i < num; i++) {
@@ -288,7 +288,7 @@ void URLGrabber::loadSettings()
 
 void URLGrabber::saveSettings() const
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), "General");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("General"));
     cg.writeEntry("Number of Actions", m_myActions.count());
 
     int i = 0;

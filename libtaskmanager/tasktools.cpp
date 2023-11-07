@@ -631,7 +631,7 @@ QString defaultApplication(const QUrl &url)
             return command;
         }
     } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
+        KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
         QString browserApp = config.readPathEntry("BrowserApplication", QString());
 
         if (browserApp.isEmpty()) {

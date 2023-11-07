@@ -87,7 +87,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 {
     m_match.setActions({});
 
-    const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group("General").readEntry("BrowserApplication");
+    const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group(QStringLiteral("General")).readEntry("BrowserApplication");
     KService::Ptr service;
     if (!browserFile.isEmpty()) {
         service = KService::serviceByStorageId(browserFile);

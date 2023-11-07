@@ -127,12 +127,12 @@ void Settings::Private::setGroupBehavior(KConfigGroup &group, const Settings::No
 
 KConfigGroup Settings::Private::servicesGroup() const
 {
-    return config->group("Services");
+    return config->group(QStringLiteral("Services"));
 }
 
 KConfigGroup Settings::Private::applicationsGroup() const
 {
-    return config->group("Applications");
+    return config->group(QStringLiteral("Applications"));
 }
 
 QStringList Settings::Private::behaviorMatchesList(const KConfigGroup &group, Settings::NotificationBehavior behavior, bool on) const

@@ -568,7 +568,7 @@ void Klipper::slotQuit()
                                                           KStandardGuiItem::cancel(),
                                                           QStringLiteral("StartAutomatically"));
 
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
     if (autoStart == KMessageBox::PrimaryAction) {
         config.writeEntry("AutoStart", true);
     } else if (autoStart == KMessageBox::SecondaryAction) {

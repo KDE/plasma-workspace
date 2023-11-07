@@ -56,7 +56,7 @@ SplashApp::SplashApp(int &argc, char **argv)
     m_window = parser.isSet(QStringLiteral("window"));
     m_theme = parser.positionalArguments().value(0);
     if (m_theme.isEmpty()) {
-        KConfigGroup ksplashCfg = KSharedConfig::openConfig()->group("KSplash");
+        KConfigGroup ksplashCfg = KSharedConfig::openConfig()->group(QStringLiteral("KSplash"));
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             m_theme = ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"));
         }

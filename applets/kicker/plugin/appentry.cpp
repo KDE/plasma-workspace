@@ -356,7 +356,7 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
 KService::Ptr AppEntry::defaultAppByName(const QString &name)
 {
     if (name == QLatin1String("browser")) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
+        KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
         QString browser = config.readPathEntry("BrowserApplication", QString());
 
         if (browser.isEmpty()) {

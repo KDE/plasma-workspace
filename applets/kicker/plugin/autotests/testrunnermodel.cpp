@@ -47,7 +47,7 @@ void TestRunnerModel::initTestCase()
     databaseChangedSpy.wait(2500);
 
     // Disable all DBus runners, those might cause a slowdown/timeout on CI
-    KConfigGroup pluginsConfig = KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group("Plugins");
+    KConfigGroup pluginsConfig = KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group(QStringLiteral("Plugins"));
     const auto runners = KRunner::RunnerManager::runnerMetaDataList();
     for (const KPluginMetaData &runner : runners) {
         if (runner.value(QStringLiteral("X-Plasma-API")).startsWith(QLatin1String("DBus"))) {
@@ -60,7 +60,7 @@ void TestRunnerModel::cleanupTestCase()
 {
     const QString appsPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
     QDir(appsPath).removeRecursively();
-    KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->deleteGroup("Plugins");
+    KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->deleteGroup(QStringLiteral("Plugins"));
 }
 
 void TestRunnerModel::testQuery()

@@ -56,7 +56,7 @@ CViewer::CViewer()
     createGUI(m_preview);
 
     setAutoSaveSettings();
-    applyMainWindowSettings(KSharedConfig::openConfig()->group("MainWindow"));
+    applyMainWindowSettings(KSharedConfig::openConfig()->group(QStringLiteral("MainWindow")));
 }
 
 void CViewer::fileOpen()

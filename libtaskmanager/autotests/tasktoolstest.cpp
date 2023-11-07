@@ -123,7 +123,7 @@ void TaskToolsTest::shouldFindDefaultApp()
 {
     // FIXME Test other recognized default app types.
 
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
     config.writePathEntry("BrowserApplication", QLatin1String("konqueror"));
 
     QVERIFY(defaultApplication(QUrl("wrong://url")).isEmpty());

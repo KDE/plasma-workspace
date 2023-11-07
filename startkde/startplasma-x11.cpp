@@ -46,7 +46,7 @@ int main(int argc, char **argv)
     {
         KConfig cfg(QStringLiteral("kdeglobals"));
 
-        KConfigGroup kscreenGroup = cfg.group("KScreen");
+        KConfigGroup kscreenGroup = cfg.group(QStringLiteral("KScreen"));
         const auto screenScaleFactors = kscreenGroup.readEntry("ScreenScaleFactors", QByteArray());
         if (!screenScaleFactors.isEmpty()) {
             qputenv("QT_SCREEN_SCALE_FACTORS", screenScaleFactors);

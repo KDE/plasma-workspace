@@ -23,8 +23,8 @@
 #include <Plasma/Plasma>
 
 RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent)
-    : KRunner::ResultsModel(KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group("Plugins"),
-                            KSharedConfig::openStateConfig()->group("KickerRunnerManager"),
+    : KRunner::ResultsModel(KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group(QStringLiteral("Plugins")),
+                            KSharedConfig::openStateConfig()->group(QStringLiteral("KickerRunnerManager")),
                             parent)
     , m_runnerId(runnerId)
 {

@@ -167,7 +167,7 @@ Startup::Startup(QObject *parent)
 
         const KConfig cfg(QStringLiteral("ksplashrc"));
         // the splashscreen and progress indicator
-        KConfigGroup ksplashCfg = cfg.group("KSplash");
+        KConfigGroup ksplashCfg = cfg.group(QStringLiteral("KSplash"));
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             QProcess::startDetached(QStringLiteral("ksplashqml"), {});
         }

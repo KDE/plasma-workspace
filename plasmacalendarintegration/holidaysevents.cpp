@@ -12,7 +12,7 @@ HolidaysEventsPlugin::HolidaysEventsPlugin(QObject *parent)
     : CalendarEvents::CalendarEventsPlugin(parent)
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"), KConfig::NoGlobals);
-    updateSettings(config->group("General"));
+    updateSettings(config->group(QStringLiteral("General")));
 
     m_configWatcher = KConfigWatcher::create(config);
     connect(m_configWatcher.get(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &configGroup) {

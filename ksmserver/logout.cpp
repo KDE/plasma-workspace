@@ -116,7 +116,7 @@ void KSMServer::shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::Shutdo
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     config->reparseConfiguration(); // config may have changed in the KControl module
 
-    KConfigGroup cg(config, "General");
+    KConfigGroup cg(config, QStringLiteral("General"));
 
     bool logoutConfirmed = (confirm == KWorkSpace::ShutdownConfirmYes      ? false
                                 : confirm == KWorkSpace::ShutdownConfirmNo ? true
@@ -171,7 +171,7 @@ void KSMServer::performLogout()
     state = Shutdown;
 
     // shall we save the session on logout?
-    KConfigGroup cg(KSharedConfig::openConfig(), "General");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("General"));
     saveSession = (cg.readEntry("loginMode", QStringLiteral("restorePreviousLogout")) == QLatin1String("restorePreviousLogout"));
 
     qCDebug(KSMSERVER) << "saveSession is " << saveSession;
@@ -364,7 +364,7 @@ void KSMServer::startProtection()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     config->reparseConfiguration(); // config may have changed in the KControl module
-    KConfigGroup cg(config, "General");
+    KConfigGroup cg(config, QStringLiteral("General"));
 
     int timeout = cg.readEntry("clientShutdownTimeoutSecs", 15) * 1000;
 

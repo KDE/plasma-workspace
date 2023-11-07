@@ -286,7 +286,7 @@ popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
 
     (void)winId();
     windowHandle()->resize(540, 560); // default, if there is no saved size
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
 
@@ -350,7 +350,7 @@ void EditActionDialog::slotAccepted()
     saveAction();
 
     qCDebug(KLIPPER_LOG) << "Saving dialogue state";
-    KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.writeEntry("ColumnState", m_commandList->horizontalHeader()->saveState().toBase64());
     accept();

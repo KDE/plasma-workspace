@@ -24,7 +24,7 @@
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     : KMainWindow(parent)
-    , m_configGroup(KSharedConfig::openConfig()->group("TaskDialog"))
+    , m_configGroup(KSharedConfig::openConfig()->group(QStringLiteral("TaskDialog")))
 {
     setAutoSaveSettings();
 

@@ -571,7 +571,7 @@ KSMServer::KSMServer(InitFlags flags)
 
     state = Idle;
     saveSession = false;
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
     clientInteracting = nullptr;
     xonCommand = config.readEntry("xonCommand", "xon");
 
@@ -898,7 +898,7 @@ void KSMServer::storeSession()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     config->reparseConfiguration(); // config may have changed in the KControl module
-    KConfigGroup generalGroup(config, "General");
+    KConfigGroup generalGroup(config, QStringLiteral("General"));
     excludeApps = generalGroup.readEntry("excludeApps").toLower().split(QRegularExpression(QStringLiteral("[,:]")), Qt::SkipEmptyParts);
     KConfigGroup configSessionGroup(config, sessionGroup);
     int count = configSessionGroup.readEntry("count", 0);
@@ -962,7 +962,7 @@ void KSMServer::storeSession()
     }
     cg.writeEntry("count", count);
 
-    KConfigGroup cg2(config, "General");
+    KConfigGroup cg2(config, QStringLiteral("General"));
 
     storeLegacySession(config.data());
     config->sync();

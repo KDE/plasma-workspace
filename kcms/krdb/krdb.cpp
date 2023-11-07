@@ -328,7 +328,7 @@ int xftDpi()
 
     if (KWindowSystem::isPlatformWayland()) {
         KConfig cfg(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup = cfg.group("Xwayland");
+        KConfigGroup xwaylandGroup = cfg.group(QStringLiteral("Xwayland"));
         qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
         dpi = scale * 96;
     } else {

@@ -39,7 +39,7 @@ int main(int argc, char **argv)
         // Delete old values
         krunnerrc->group("General").deleteEntry("history");
         krunnerrc->deleteGroup("PlasmaRunnerManager");
-        krunnerrc->group("PlasmaRunnerManager").writeEntry("migrated", true);
+        krunnerrc->group(QStringLiteral("PlasmaRunnerManager")).writeEntry("migrated", true);
         krunnerrc->sync();
         qApp->exit();
     });

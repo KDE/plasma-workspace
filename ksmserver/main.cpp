@@ -247,7 +247,7 @@ int main(int argc, char *argv[])
 
     IceSetIOErrorHandler(IoErrorHandler);
 
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
 
     QString loginMode = config.readEntry("loginMode", "restorePreviousLogout");
 

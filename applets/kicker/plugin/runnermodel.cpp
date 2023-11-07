@@ -31,8 +31,8 @@ RunnerModel::RunnerModel(QObject *parent)
     connect(&m_queryTimer, &QTimer::timeout, this, &RunnerModel::startQuery);
     const auto readFavorites = [this]() {
         m_favoritePluginIds = m_krunnerConfig
-                                  ->group("Plugins") //
-                                  .group("Favorites")
+                                  ->group(QStringLiteral("Plugins")) //
+                                  .group(QStringLiteral("Favorites"))
                                   .readEntry("plugins", QStringList(QStringLiteral("krunner_services")));
         if (m_mergeResults && !m_models.isEmpty()) {
             m_models.constFirst()->setFavoriteIds(m_favoritePluginIds);

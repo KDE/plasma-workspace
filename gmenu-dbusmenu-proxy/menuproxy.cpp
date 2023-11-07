@@ -230,7 +230,7 @@ void MenuProxy::writeGtk3Settings()
 
     // mostly taken from kde-gtk-config
     auto cfg = KSharedConfig::openConfig(gtk3SettingsIniPath(), KConfig::NoGlobals);
-    KConfigGroup group(cfg, "Settings");
+    KConfigGroup group(cfg, QStringLiteral("Settings"));
 
     QStringList gtkModules = group.readEntry("gtk-modules", QString()).split(QLatin1Char(':'), Qt::SkipEmptyParts);
     addOrRemoveAppMenuGtkModule(gtkModules);

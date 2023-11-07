@@ -49,7 +49,7 @@ SessionBackend::SessionBackend()
 
 bool SessionBackend::confirmLogout() const
 {
-    return m_kserverConfig->config()->group("General").readEntry("confirmLogout", true);
+    return m_kserverConfig->config()->group(QStringLiteral("General")).readEntry("confirmLogout", true);
 }
 
 bool SessionBackend::canSwitchUser() const

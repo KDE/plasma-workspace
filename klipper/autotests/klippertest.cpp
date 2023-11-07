@@ -63,7 +63,7 @@ void KlipperTest::testBug465225()
 
     // Prepare config
     auto klipperConfig = KSharedConfig::openConfig(fileName, KConfig::NoGlobals);
-    KConfigGroup config(klipperConfig, "General");
+    KConfigGroup config(klipperConfig, QStringLiteral("General"));
     config.writeEntry("IgnoreImages", false);
     config.writeEntry("MaxClipItems", 30);
     QVERIFY(config.sync());

@@ -22,7 +22,7 @@ public:
         : QObject(parent)
     {
         KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"));
-        m_configGroup = config->group("General");
+        m_configGroup = config->group(QStringLiteral("General"));
         m_regions = m_configGroup.readEntry("selectedRegions", QStringList());
     }
 

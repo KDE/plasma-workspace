@@ -123,14 +123,14 @@ static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry
 
 void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig::WriteConfigFlags writeConfigFlag, std::optional<QColor> accentColor)
 {
-    const auto accent = accentColor.value_or(configOutput->group("General").readEntry("AccentColor", QColor()));
+    const auto accent = accentColor.value_or(configOutput->group(QStringLiteral("General")).readEntry("AccentColor", QColor()));
 
     const auto hasAccent = [configOutput, &accent, accentColor]() {
         if (accent == QColor(Qt::transparent)) {
             return false;
         }
 
-        return configOutput->group("General").hasKey("AccentColor")
+        return configOutput->group(QStringLiteral("General")).hasKey("AccentColor")
             || accentColor.has_value(); // It's obvious that when accentColor.hasValue, it has (non-default/non-transparent) accent. reading configOutput for
                                         // any config is unreliable in this file.
     }();
@@ -140,7 +140,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     KSharedConfigPtr config = KSharedConfig::openConfig(colorSchemePath, KConfig::SimpleConfig);
 
     const auto applyAccentToTitlebar =
-        config->group("General").readEntry("TitlebarIsAccentColored", config->group("General").readEntry("accentActiveTitlebar", false));
+        config->group("General").readEntry("TitlebarIsAccentColored", config->group(QStringLiteral("General")).readEntry("accentActiveTitlebar", false));
     const auto tintAccent = config->group("General").hasKey("TintFactor");
     const auto tintFactor = config->group("General").readEntry<qreal>("TintFactor", DefaultTintFactor);
 

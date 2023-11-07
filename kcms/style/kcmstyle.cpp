@@ -51,7 +51,7 @@ Q_DECL_EXPORT void kcminit()
 {
     uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
     KConfig _config(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-    KConfigGroup config(&_config, "X11");
+    KConfigGroup config(&_config, QStringLiteral("X11"));
 
     // This key is written by the "colors" module.
     bool exportKDEColors = config.readEntry("exportKDEColors", true);

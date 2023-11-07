@@ -404,7 +404,7 @@ which can be configured on the <interface>Action Menu</interface> page."),
     // Add some vertical space between our buttons and the dialogue buttons
     layout->setRowMinimumHeight(4, 16);
 
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty()) {
         qCDebug(KLIPPER_LOG) << "Restoring column state";
@@ -500,7 +500,7 @@ void ActionsWidget::resetModifiedState()
     m_actionsTree->resetModifiedState();
 
     qCDebug(KLIPPER_LOG) << "Saving column state";
-    KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     grp.writeEntry("ColumnState", m_actionsTree->header()->saveState().toBase64());
 }
 
@@ -615,7 +615,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
 
@@ -642,7 +642,7 @@ void ConfigDialog::updateSettings()
 
     KlipperSettings::self()->save();
 
-    KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
+    KConfigGroup grp = KSharedConfig::openConfig()->group(QStringLiteral("ConfigDialog"));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
 }
 

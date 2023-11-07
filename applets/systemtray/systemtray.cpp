@@ -66,7 +66,7 @@ void SystemTray::init()
 
     if (KWindowSystem::isPlatformWayland()) {
         auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
-        KConfigGroup kscreenGroup = config->group("KScreen");
+        KConfigGroup kscreenGroup = config->group(QStringLiteral("KScreen"));
         m_xwaylandClientsScale = kscreenGroup.readEntry("XwaylandClientsScale", true);
 
         m_configWatcher = KConfigWatcher::create(config);

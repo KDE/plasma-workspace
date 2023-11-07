@@ -50,7 +50,7 @@ View::View(QWindow *)
     m_stateData = KSharedConfig::openConfig(QStringLiteral("krunnerstaterc"), //
                                             KConfig::NoGlobals,
                                             QStandardPaths::GenericDataLocation)
-                      ->group("General");
+                      ->group(QStringLiteral("General"));
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group) {
         const QLatin1String pluginsGrp("Plugins");

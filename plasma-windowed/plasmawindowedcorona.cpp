@@ -48,7 +48,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     m_view->setHasStatusNotifier(m_hasStatusNotifier);
     m_view->show();
 
-    KConfigGroup appletsGroup(KSharedConfig::openConfig(), "Applets");
+    KConfigGroup appletsGroup(KSharedConfig::openConfig(), QStringLiteral("Applets"));
     QString plugin;
     for (const QString &group : appletsGroup.groupList()) {
         KConfigGroup cg(&appletsGroup, group);

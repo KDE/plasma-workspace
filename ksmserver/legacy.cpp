@@ -70,7 +70,7 @@ void KSMServer::performLegacySessionSave()
 
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     config->reparseConfiguration(); // config may have changed in the KControl module
-    KConfigGroup cg(config, "General");
+    KConfigGroup cg(config, QStringLiteral("General"));
 
     int wmSaveYourselfTimeout = cg.readEntry("legacySaveTimeoutSecs", 4) * 1000;
 

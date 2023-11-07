@@ -205,7 +205,7 @@ int main(int argc, char *argv[])
             s_multipleInvokations = true;
 
             qCritical("Open GL context could not be created");
-            auto configGroup = KSharedConfig::openConfig()->group("QtQuickRendererSettings");
+            auto configGroup = KSharedConfig::openConfig()->group(QStringLiteral("QtQuickRendererSettings"));
             if (configGroup.readEntry("SceneGraphBackend") != QLatin1String("software")) {
                 configGroup.writeEntry("SceneGraphBackend", "software", KConfigBase::Global | KConfigBase::Persistent);
                 configGroup.sync();

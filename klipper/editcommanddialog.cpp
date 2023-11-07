@@ -128,7 +128,7 @@ captured texts from the match pattern."),
 
     (void)winId();
     windowHandle()->resize(560, 440); // default, if there is no saved size
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
 
@@ -179,7 +179,7 @@ void EditCommandDialog::slotAccepted()
 {
     saveCommand();
 
-    KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     accept();
 }

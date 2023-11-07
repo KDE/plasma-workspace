@@ -167,7 +167,7 @@ void runStartupConfig()
     // export LC_* variables set by kcmshell5 formats into environment
     // so it can be picked up by QLocale and friends.
     KConfig config(QStringLiteral("plasma-localerc"));
-    KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
+    KConfigGroup formatsConfig = KConfigGroup(&config, QStringLiteral("Formats"));
 
     const auto lcValues = {"LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"};
     for (auto lc : lcValues) {
@@ -177,7 +177,7 @@ void runStartupConfig()
         }
     }
 
-    KConfigGroup languageConfig = KConfigGroup(&config, "Translations");
+    KConfigGroup languageConfig = KConfigGroup(&config, QStringLiteral("Translations"));
     const QString value = languageConfig.readEntry("LANGUAGE", QString());
     if (!value.isEmpty()) {
         qputenv("LANGUAGE", value.toUtf8());
@@ -200,7 +200,7 @@ void setupCursor(bool wayland)
     // TODO: consider linking directly
     if (!wayland) {
         const KConfig cfg(QStringLiteral("kcminputrc"));
-        const KConfigGroup inputCfg = cfg.group("Mouse");
+        const KConfigGroup inputCfg = cfg.group(QStringLiteral("Mouse"));
 
         const auto cursorTheme = inputCfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
         const auto cursorSize = inputCfg.readEntry("cursorSize", 24);
@@ -480,7 +480,7 @@ QProcess *setupKSplash()
     if (!desktopLockedAtStart) {
         const KConfig cfg(QStringLiteral("ksplashrc"));
         // the splashscreen and progress indicator
-        KConfigGroup ksplashCfg = cfg.group("KSplash");
+        KConfigGroup ksplashCfg = cfg.group(QStringLiteral("KSplash"));
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             p = new QProcess;
             p->setProcessChannelMode(QProcess::ForwardedChannels);
@@ -558,7 +558,7 @@ void startKSplashViaSystemd()
 {
     const KConfig cfg(QStringLiteral("ksplashrc"));
     // the splashscreen and progress indicator
-    KConfigGroup ksplashCfg = cfg.group("KSplash");
+    KConfigGroup ksplashCfg = cfg.group(QStringLiteral("KSplash"));
     if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                                   QStringLiteral("/org/freedesktop/systemd1"),
@@ -718,7 +718,7 @@ bool startPlasmaSession(bool wayland)
 void waitForKonqi()
 {
     const KConfig cfg(QStringLiteral("startkderc"));
-    const KConfigGroup grp = cfg.group("WaitForDrKonqi");
+    const KConfigGroup grp = cfg.group(QStringLiteral("WaitForDrKonqi"));
     bool wait_drkonqi = grp.readEntry("Enabled", true);
     if (wait_drkonqi) {
         // wait for remaining drkonqi instances with timeout (in seconds)

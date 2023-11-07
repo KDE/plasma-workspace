@@ -46,7 +46,7 @@ void KillRunnerConfig::save()
     KCModule::save();
 
     KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup grp = cfg->group("Runners").group(KRUNNER_PLUGIN_NAME);
+    KConfigGroup grp = cfg->group(QStringLiteral("Runners")).group(KRUNNER_PLUGIN_NAME);
 
     grp.writeEntry(CONFIG_USE_TRIGGERWORD, m_ui->useTriggerWord->isChecked());
     grp.writeEntry(CONFIG_TRIGGERWORD, m_ui->triggerWord->text());

@@ -634,7 +634,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         }
 
     } else if (matches(application, QLatin1String("browser"))) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
+        KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
         QString browserApp = config.readPathEntry("BrowserApplication", QString());
         if (browserApp.isEmpty()) {
             const KService::Ptr htmlApp = KApplicationTrader::preferredService(QStringLiteral("text/html"));
