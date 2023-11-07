@@ -87,7 +87,7 @@ KCM.GridViewKCM {
                         }
 
                         QtControls.Label {
-                            Layout.fillWidth: true
+                            Layout.alignment: Qt.AlignRight
                             color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                             text: i18n("Size: %1", model[sizeCombo.textRole])
                             elide: Text.ElideRight
