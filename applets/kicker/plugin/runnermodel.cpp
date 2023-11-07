@@ -180,14 +180,15 @@ QString RunnerModel::query() const
 
 void RunnerModel::setQuery(const QString &query)
 {
+    if (m_query == query) {
+        return; // do not init models if the query doesn't change. particularly important during startup!
+    }
     if (m_models.isEmpty()) {
         initializeModels();
     }
-    if (m_query != query) {
-        m_query = query;
-        m_queryTimer.start();
-        Q_EMIT queryChanged();
-    }
+    m_query = query;
+    m_queryTimer.start();
+    Q_EMIT queryChanged();
 }
 
 void RunnerModel::startQuery()
