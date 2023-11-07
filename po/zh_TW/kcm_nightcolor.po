@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:55+0000\n"
+"POT-Creation-Date: 2023-11-07 03:42+0000\n"
 "PO-Revision-Date: 2022-11-11 20:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -64,42 +64,42 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "經度："
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "藍光濾鏡讓螢幕顏色偏向暖色調。"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Switching times:"
 msgstr "切換時間："
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Always off"
 msgstr "永遠關閉"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "目前所在地的日落及日出"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "手動指定所在地的日落及日出"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Custom times"
 msgstr "自訂時間"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Always on night color"
 msgstr "總是使用夜色"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:171
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -111,82 +111,82 @@ msgstr ""
 "mozilla.com'>Mozilla 定位服務 (Mozilla Location Service)</link> 來定期更新本"
 "裝置的所在地。"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:190
 #, kde-format
 msgid "Day color temperature:"
 msgstr "日色色溫："
 
-#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#: package/contents/ui/main.qml:233 package/contents/ui/main.qml:292
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:237 package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "暖色調"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:243 package/contents/ui/main.qml:302
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "冷色調（無濾鏡）"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:243 package/contents/ui/main.qml:302
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
 msgstr "冷色調"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Night color temperature:"
 msgstr "夜色色溫："
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:313
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "緯度：%1°  經度：%2°"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:323
 #, kde-format
 msgid "Begin night color at:"
 msgstr "夜色開始時間："
 
-#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:336 package/contents/ui/main.qml:359
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "輸入格式：HH:MM"
 
-#: package/contents/ui/main.qml:331
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Begin day color at:"
 msgstr "日色開始時間："
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:368
 #, kde-format
 msgid "Transition duration:"
 msgstr "過渡時間："
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:377
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1分鐘"
 
-#: package/contents/ui/main.qml:375
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "輸入分鐘 - 最小值：1，最大值：600"
 
-#: package/contents/ui/main.qml:393
+#: package/contents/ui/main.qml:408
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "錯誤：過渡時間重疊。"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:430
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

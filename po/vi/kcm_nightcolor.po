@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:55+0000\n"
+"POT-Creation-Date: 2023-11-07 03:42+0000\n"
 "PO-Revision-Date: 2022-10-01 17:38+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -63,42 +63,42 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Kinh độ:"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Bộ lọc ánh sáng lam khiến màu trên màn hình ấm hơn."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Switching times:"
 msgstr "Thời điểm chuyển:"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Always off"
 msgstr "Luôn tắt"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Hoàng hôn và bình minh ở địa điểm hiện tại"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Hoàng hôn và bình minh ở địa điểm tự chọn"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Custom times"
 msgstr "Thời điểm tự chọn"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Always on night color"
 msgstr "Luôn dùng màu buổi tối"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:171
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,82 +110,82 @@ msgstr ""
 "cách gửi thông tin mạng đến <link url=\"https://location.services.mozilla.com"
 "\">Dịch vụ Vị trí Mozilla</link>."
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:190
 #, kde-format
 msgid "Day color temperature:"
 msgstr "Nhiệt độ màu ban ngày:"
 
-#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#: package/contents/ui/main.qml:233 package/contents/ui/main.qml:292
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:237 package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Ấm"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:243 package/contents/ui/main.qml:302
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Mát (không lọc)"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:243 package/contents/ui/main.qml:302
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
 msgstr "Mát"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Night color temperature:"
 msgstr "Nhiệt độ màu buổi tối:"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:313
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Vĩ độ: %1°   Kinh độ: %2°"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:323
 #, kde-format
 msgid "Begin night color at:"
 msgstr "Bắt đầu màu buổi tối vào:"
 
-#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:336 package/contents/ui/main.qml:359
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Định dạng nhập: GG:PP"
 
-#: package/contents/ui/main.qml:331
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Begin day color at:"
 msgstr "Bắt đầu màu ban ngày vào:"
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:368
 #, kde-format
 msgid "Transition duration:"
 msgstr "Thời gian chuyển tiếp:"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:377
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 phút"
 
-#: package/contents/ui/main.qml:375
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Nhập số phút - tối thiểu 1, tối đa 600"
 
-#: package/contents/ui/main.qml:393
+#: package/contents/ui/main.qml:408
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Lỗi: Thời gian chuyển tiếp chồng chéo."
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:430
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

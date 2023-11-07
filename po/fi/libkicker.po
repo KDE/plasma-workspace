@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2019, 2020, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 02:38+0000\n"
-"PO-Revision-Date: 2021-06-04 23:03+0300\n"
+"PO-Revision-Date: 2023-10-07 10:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: plugin/actionlist.cpp:86
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Lisää työpöydälle"
 #: plugin/actionlist.cpp:151
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Lisää paneeliin (sovelma)"
+msgstr "Lisää paneeliin (sovelmaksi)"
 
 #: plugin/actionlist.cpp:156
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "Muokkaa sovellusta…"
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr "Lisäosien hallinta ja asennuksen poisto…"
+msgstr "Poista tai hallitse lisäosia…"
 
 #: plugin/appentry.cpp:308
 #, kde-format

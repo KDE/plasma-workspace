@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008, 2009.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2018, 2019, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2018, 2019, 2021, 2022, 2023.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2011.
 #
 # KDE Finnish translation sprint participants:
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:37+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
