@@ -215,61 +215,49 @@ void testModelDataFromDesktopFile(const AbstractWindowTasksModel &model)
     lines.emplace_back("Type=Application");
     lines.emplace_back(std::string("Icon=") + QFINDTESTDATA("data/windows/none.png").toStdString());
 
-    // Test generic name, icon and launcher url
-    QString desktopFilePath;
-    TestUtils::createDesktopFile(dummyDesktopFileName, lines, desktopFilePath);
-
-    QSignalSpy rowsInsertedSpy(&model, &AbstractWindowTasksModel::rowsInserted);
-    QProcess sampleWindowProcess;
-    sampleWindowProcess.setProgram(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath));
-    sampleWindowProcess.setArguments(QStringList{
-        QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
-        QFINDTESTDATA("data/windows/samplewidgetwindow.png"),
-    });
-    sampleWindowProcess.start();
-    rowsInsertedSpy.wait();
-
-    // Find the window index
-    auto findWindowIndex = [&model, &sampleWindowProcess](QModelIndex &index) {
-        const auto results = model.match(model.index(0, 0), Qt::DisplayRole, sampleWindowProcess.arguments().at(0));
-        QVERIFY(results.size() == 1);
-        index = results.at(0);
-        QVERIFY(index.isValid());
-        qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
-    };
-
-    QModelIndex index;
-    findWindowIndex(index);
-
-    QCOMPARE(index.data(AbstractTasksModel::AppName).toString(), QStringLiteral("DummyWindow"));
-    QCOMPARE(index.data(AbstractTasksModel::GenericName).toString(), QStringLiteral("DummyGenericName"));
-    QCOMPARE(index.data(AbstractTasksModel::LauncherUrl).toUrl(), QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
-    QCOMPARE(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(),
-             QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
-
-    // Test icon should use the icon from the desktop file (Not the png file filled with red color)
-    const QIcon windowIcon = index.data(Qt::DecorationRole).value<QIcon>();
-    QVERIFY(!windowIcon.isNull());
-    QVERIFY(windowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2).red() < 200);
-
-    // SingleMainWindow is not set, which implies it can launch a new instance.
-    QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
-
-    QSignalSpy rowsRemovedSpy(&model, &AbstractWindowTasksModel::rowsRemoved);
-    sampleWindowProcess.terminate();
-    QVERIFY(rowsRemovedSpy.wait());
-
     auto testCanLaunchNewInstance = [&](bool canLaunchNewInstance) {
+        QString desktopFilePath;
+
+        QSignalSpy rowsInsertedSpy(&model, &AbstractWindowTasksModel::rowsInserted);
+        QSignalSpy rowsRemovedSpy(&model, &AbstractWindowTasksModel::rowsRemoved);
+
         TestUtils::createDesktopFile(dummyDesktopFileName, lines, desktopFilePath);
+        QProcess sampleWindowProcess;
+
+        sampleWindowProcess.setProgram(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath));
+        sampleWindowProcess.setArguments(QStringList{
+            QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
+            QFINDTESTDATA("data/windows/samplewidgetwindow.png"),
+        });
         sampleWindowProcess.start();
         rowsInsertedSpy.wait();
 
-        findWindowIndex(index);
+        // find newly created window
+        const auto results = model.match(model.index(0, 0), Qt::DisplayRole, sampleWindowProcess.arguments().at(0));
+        QVERIFY(results.size() == 1);
+        QModelIndex index = results.at(0);
+        QVERIFY(index.isValid());
+
+        QCOMPARE(index.data(AbstractTasksModel::AppName).toString(), QStringLiteral("DummyWindow"));
+        QCOMPARE(index.data(AbstractTasksModel::GenericName).toString(), QStringLiteral("DummyGenericName"));
+        QCOMPARE(index.data(AbstractTasksModel::LauncherUrl).toUrl(), QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
+        QCOMPARE(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(),
+                 QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
+
+        // Test icon should use the icon from the desktop file (Not the png file filled with red color)
+        const QIcon windowIcon = index.data(Qt::DecorationRole).value<QIcon>();
+        QVERIFY(!windowIcon.isNull());
+        QVERIFY(windowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2).red() < 200);
+
         QCOMPARE(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool(), canLaunchNewInstance);
 
         sampleWindowProcess.terminate();
         QVERIFY(rowsRemovedSpy.wait());
+        sampleWindowProcess.waitForFinished();
     };
+
+    // Case 1: Default case
+    testCanLaunchNewInstance(true);
 
     // Case 2: Set SingleMainWindow or X-GNOME-SingleWindow or both
     lines.emplace_back("SingleMainWindow=true");
