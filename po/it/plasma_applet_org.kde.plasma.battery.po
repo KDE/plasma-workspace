@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-02-18 09:23+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -243,12 +243,12 @@ msgstr ""
 msgid "&Configure Energy Saving…"
 msgstr "&Configura il risparmio energetico..."
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:121
 #, kde-format
 msgid "Display Brightness"
 msgstr "Luminosità schermo"
 
-#: package/contents/ui/PopupDialog.qml:147
+#: package/contents/ui/PopupDialog.qml:151
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Luminosità tastiera"

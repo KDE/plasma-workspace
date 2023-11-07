@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 01:39+0000\n"
-"PO-Revision-Date: 2023-03-04 18:16+0200\n"
+"PO-Revision-Date: 2023-09-26 18:15+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -376,14 +376,13 @@ msgstr "Sormenjälkiä ei ole lisätty"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Käyttäjät"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Lisää uusi käyttäjä"
+msgstr "Lisää uusi"
 
 #: src/ui/main.qml:107
 #, kde-format

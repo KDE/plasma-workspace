@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2022-12-08 21:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -229,12 +229,12 @@ msgstr "ஆற்றல் நிறைந்திராத பட்சத்�
 msgid "&Configure Energy Saving…"
 msgstr "&ஆற்றல் சேமிப்பை அமை…"
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:121
 #, kde-format
 msgid "Display Brightness"
 msgstr "காட்சிக் கருவி பிரகாசம்"
 
-#: package/contents/ui/PopupDialog.qml:147
+#: package/contents/ui/PopupDialog.qml:151
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "விசைப்பலகை பிரகாசம்"

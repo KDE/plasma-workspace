@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-17 15:16+0100\n"
+"PO-Revision-Date: 2023-11-06 16:44+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -144,7 +144,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[incognite]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -154,6 +154,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Incapace a gerer alcun apps proque le ressources de gestion de systema es "
+"exhaurite. Hic on ha le tres principal consumitores de ressources de "
+"session:\n"
+"%1 "
 
 #: server.cpp:968
 #, kde-format
@@ -198,6 +202,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Incapace a restabilir <application>%1</application> proque il es rupte e ha "
+"exhaurite le ressources de restabilir de session de systema. Pro favor tu "
+"reporta iste al disveloppatores del app. "
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Necun accesso in scriptura al directorio $HOME  (%1)."

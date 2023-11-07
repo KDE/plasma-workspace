@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-09-12 12:07+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -236,12 +236,12 @@ msgstr ""
 msgid "&Configure Energy Saving…"
 msgstr "&Grunnstilla orkusparnað…"
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:121
 #, kde-format
 msgid "Display Brightness"
 msgstr "Skjábirta"
 
-#: package/contents/ui/PopupDialog.qml:147
+#: package/contents/ui/PopupDialog.qml:151
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Lyklaborðsbirta"

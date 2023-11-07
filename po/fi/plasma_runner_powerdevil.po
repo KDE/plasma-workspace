@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008, 2009.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2018, 2019, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2018, 2019, 2021, 2022, 2023.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2011.
 #
 # KDE Finnish translation sprint participants:
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2022-01-10 21:16+0200\n"
+"PO-Revision-Date: 2023-09-26 18:18+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:37+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: PowerDevilRunner.cpp:29
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "virta"
 
 #: PowerDevilRunner.cpp:30
 #, kde-format
@@ -61,13 +61,13 @@ msgstr "levylle"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "hybridivalmiustila"
 
 #: PowerDevilRunner.cpp:36
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "hybridi"
 
 #: PowerDevilRunner.cpp:37 PowerDevilRunner.cpp:38 PowerDevilRunner.cpp:64
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Keskeyttää järjestelmän levylle"
 #: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Siirtyy nyt valmiustilaan (tai lepotilaan)"
 
 #: PowerDevilRunner.cpp:63
 #, kde-format
@@ -158,12 +158,12 @@ msgstr "Keskeytä levylle"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Hybridivalmiustila"
 
 #: PowerDevilRunner.cpp:142
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Siirry nyt valmiustilaan (tai lepotilaan)"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2022-01-24 13:39+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -61,7 +61,7 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Hosszúság:"
 
-#: ui/main.qml:87
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid ""
 #| "Night Color makes the colors on the screen warmer to reduce eye strain at "
@@ -71,42 +71,42 @@ msgstr ""
 "Az Éjszakai mód melegebb színeket állít be a kijelzőn, hogy kímélje a szemét "
 "az Ön által megadott időtartamban."
 
-#: ui/main.qml:98
+#: ui/main.qml:113
 #, fuzzy, kde-format
 #| msgid "Activation time:"
 msgid "Switching times:"
 msgstr "Aktiválás:"
 
-#: ui/main.qml:100
+#: ui/main.qml:115
 #, kde-format
 msgid "Always off"
 msgstr ""
 
-#: ui/main.qml:101
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Sunset to sunrise at current location"
 msgid "Sunset and sunrise at current location"
 msgstr "Napnyugtától napkeltéig, helyi idő szerint"
 
-#: ui/main.qml:102
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Sunset to sunrise at manual location"
 msgid "Sunset and sunrise at manual location"
 msgstr "Napnyugtától napkeltéig, egyéni helyszín ideje szerint"
 
-#: ui/main.qml:103
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Custom time"
 msgid "Custom times"
 msgstr "Egyéni időpontban"
 
-#: ui/main.qml:104
+#: ui/main.qml:119
 #, fuzzy, kde-format
 #| msgid "Always on"
 msgid "Always on night color"
 msgstr "Mindig bekapcsolva"
 
-#: ui/main.qml:156
+#: ui/main.qml:171
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -118,85 +118,85 @@ msgstr ""
 "elérhető), vagy a hálózati információk elküldésével a <link url='https://"
 "location.services.mozilla.com'>Mozilla Location Service</link>-nek."
 
-#: ui/main.qml:175
+#: ui/main.qml:190
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Day color temperature:"
 msgstr "Éjszakai mód hőmérséklete:"
 
-#: ui/main.qml:218 ui/main.qml:277
+#: ui/main.qml:233 ui/main.qml:292
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 K"
 
-#: ui/main.qml:222 ui/main.qml:281
+#: ui/main.qml:237 ui/main.qml:296
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Meleg"
 
-#: ui/main.qml:228 ui/main.qml:287
+#: ui/main.qml:243 ui/main.qml:302
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
-#: ui/main.qml:228 ui/main.qml:287
+#: ui/main.qml:243 ui/main.qml:302
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
 msgstr "Hideg"
 
-#: ui/main.qml:234
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Night color temperature:"
 msgstr "Éjszakai mód hőmérséklete:"
 
-#: ui/main.qml:298
+#: ui/main.qml:313
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Szélesség: %1°, hosszúság: %2°"
 
-#: ui/main.qml:308
+#: ui/main.qml:323
 #, kde-format
 msgid "Begin night color at:"
 msgstr ""
 
-#: ui/main.qml:321 ui/main.qml:344
+#: ui/main.qml:336 ui/main.qml:359
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Formátum: ÓÓ:PP"
 
-#: ui/main.qml:331
+#: ui/main.qml:346
 #, kde-format
 msgid "Begin day color at:"
 msgstr ""
 
-#: ui/main.qml:353
+#: ui/main.qml:368
 #, kde-format
 msgid "Transition duration:"
 msgstr "Átmenet időtartama:"
 
-#: ui/main.qml:362
+#: ui/main.qml:377
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 perc"
 msgstr[1] "%1 perc"
 
-#: ui/main.qml:375
+#: ui/main.qml:390
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Minimum 1, maximum 600 perc"
 
-#: ui/main.qml:393
+#: ui/main.qml:408
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Hiba: az átmeneti idők átfedésben vannak."
 
-#: ui/main.qml:415
+#: ui/main.qml:430
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@info:placeholder"

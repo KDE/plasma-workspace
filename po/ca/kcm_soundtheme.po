@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-02 01:40+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-11-02 10:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,18 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: kcm_soundtheme.cpp:108
+#: kcm_soundtheme.cpp:109
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
 msgstr "FreeDesktop"
 
-#: kcm_soundtheme.cpp:109
+#: kcm_soundtheme.cpp:110
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Tema de so alternatiu de reserva de «freedesktop.org»"
 
-#: ui/main.qml:67
+#: ui/main.qml:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable notification sounds"
+msgstr ""
+
+#: ui/main.qml:90
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -40,7 +46,7 @@ msgid_plural "Based on: %2"
 msgstr[0] "Basat en: %2"
 msgstr[1] "Basats en: %2"
 
-#: ui/main.qml:78
+#: ui/main.qml:101
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -48,19 +54,19 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "Presentació preliminar dels sons:"
 
-#: ui/main.qml:92
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Presentació preliminar del so «%1»"
 
-#: ui/main.qml:114
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Presentació preliminar del so de mostra per al tema «%1»"
 
-#: ui/main.qml:139
+#: ui/main.qml:162
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "La presentació preliminar del so ha fallat: %1"

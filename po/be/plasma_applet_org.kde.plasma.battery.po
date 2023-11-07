@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -239,12 +239,12 @@ msgstr ""
 msgid "&Configure Energy Saving…"
 msgstr "&Наладжванне энергазберажэння…"
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:121
 #, kde-format
 msgid "Display Brightness"
 msgstr "Яркасць дысплэя"
 
-#: package/contents/ui/PopupDialog.qml:147
+#: package/contents/ui/PopupDialog.qml:151
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Яркасць клавіятуры"

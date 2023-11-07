@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -65,42 +65,42 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Longitudo:"
 
-#: ui/main.qml:87
+#: ui/main.qml:102
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "La blua lumfiltrilo faras la kolorojn sur la ekrano pli varmaj."
 
-#: ui/main.qml:98
+#: ui/main.qml:113
 #, kde-format
 msgid "Switching times:"
 msgstr "Ŝanĝtempoj:"
 
-#: ui/main.qml:100
+#: ui/main.qml:115
 #, kde-format
 msgid "Always off"
 msgstr "Ĉiam for"
 
-#: ui/main.qml:101
+#: ui/main.qml:116
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Sunsubiro kaj sunleviĝo ĉe nuna loko"
 
-#: ui/main.qml:102
+#: ui/main.qml:117
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Sunsubiro kaj sunleviĝo ĉe mana loko"
 
-#: ui/main.qml:103
+#: ui/main.qml:118
 #, kde-format
 msgid "Custom times"
 msgstr "Propraj tempoj"
 
-#: ui/main.qml:104
+#: ui/main.qml:119
 #, kde-format
 msgid "Always on night color"
 msgstr "Ĉiam sur nokta koloro"
 
-#: ui/main.qml:156
+#: ui/main.qml:171
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -112,83 +112,83 @@ msgstr ""
 "sendante retajn informojn al <link url='https://location.services.mozilla."
 "com'>Mozilla Location Service</link>."
 
-#: ui/main.qml:175
+#: ui/main.qml:190
 #, kde-format
 msgid "Day color temperature:"
 msgstr "Taga kolortemperaturo:"
 
-#: ui/main.qml:218 ui/main.qml:277
+#: ui/main.qml:233 ui/main.qml:292
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:222 ui/main.qml:281
+#: ui/main.qml:237 ui/main.qml:296
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Varma"
 
-#: ui/main.qml:228 ui/main.qml:287
+#: ui/main.qml:243 ui/main.qml:302
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Malvarmeta (neniu filtrilo)"
 
-#: ui/main.qml:228 ui/main.qml:287
+#: ui/main.qml:243 ui/main.qml:302
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
 msgstr "Malvarmeta"
 
-#: ui/main.qml:234
+#: ui/main.qml:249
 #, kde-format
 msgid "Night color temperature:"
 msgstr "Nokta kolortemperaturo:"
 
-#: ui/main.qml:298
+#: ui/main.qml:313
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitudo: %1° Longitudo: %2°"
 
-#: ui/main.qml:308
+#: ui/main.qml:323
 #, kde-format
 msgid "Begin night color at:"
 msgstr "Komenci noktan koloron ĉe:"
 
-#: ui/main.qml:321 ui/main.qml:344
+#: ui/main.qml:336 ui/main.qml:359
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Eniga formato: HH:MM"
 
-#: ui/main.qml:331
+#: ui/main.qml:346
 #, kde-format
 msgid "Begin day color at:"
 msgstr "Komenci tagan koloron ĉe:"
 
-#: ui/main.qml:353
+#: ui/main.qml:368
 #, kde-format
 msgid "Transition duration:"
 msgstr "Daŭro de transiro:"
 
-#: ui/main.qml:362
+#: ui/main.qml:377
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuto"
 msgstr[1] "%1 minutoj"
 
-#: ui/main.qml:375
+#: ui/main.qml:390
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Enigo minutoj - min. 1, maks. 600"
 
-#: ui/main.qml:393
+#: ui/main.qml:408
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Eraro: Transira tempo interkovras."
 
-#: ui/main.qml:415
+#: ui/main.qml:430
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
