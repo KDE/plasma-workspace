@@ -21,6 +21,8 @@ import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
+import org.kde.plasma.private.brightnesscontrolplugin
+
 import "logic.js" as Logic
 
 PlasmoidItem {
@@ -59,6 +61,15 @@ PlasmoidItem {
     property int screenBrightness
     property int keyboardBrightness
     property int screenBrightnessPercent: maximumScreenBrightness ? Math.round(100 * screenBrightness / maximumScreenBrightness) : 0
+    property int keyboardBrightnessPercent: maximumKeyboardBrightness ? Math.round(100 * keyboardBrightness / maximumKeyboardBrightness) : 0
+
+    NightColorMonitor {
+        id: nightColorMonitor
+    }
+    NightColorInhibitor {
+        id: nightColorInhibitor
+    }
+    property bool isNightColorActive: nightColorMonitor.running && nightColorMonitor.currentTemperature != 6500
 
     function symbolicizeIconName(iconName) {
         const symbolicSuffix = "-symbolic";
@@ -78,19 +89,53 @@ PlasmoidItem {
     LayoutMirroring.childrenInherit: true
 
     Plasmoid.status: {
-        return isScreenBrightnessAvailable || isKeyboardBrightnessAvailable ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
+        return isScreenBrightnessAvailable || isKeyboardBrightnessAvailable || isNightColorActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
     }
 
     toolTipMainText: {
-        return isScreenBrightnessAvailable ? i18n("Screen brightness at %1%", screenBrightnessPercent) : "";
+        const parts = [];
+        if (isScreenBrightnessAvailable) {
+            parts.push(i18n("Screen brightness at %1%", screenBrightnessPercent));
+        }
+        if (isKeyboardBrightnessAvailable) {
+            parts.push(i18n("Keyboard brightness at %1%", keyboardBrightnessPercent));
+        }
+        if (nightColorMonitor.enabled) {
+            if (!nightColorMonitor.running) {
+                parts.push(i18nc("Status", "Night Light off"));
+            } else if (nightColorMonitor.currentTemperature != 6500) {
+                parts.push(i18nc("Status; placeholder is a temperature", "Night Light at %1K", nightColorMonitor.currentTemperature));
+            }
+        }
+        
+        return parts.join("\n");
     }
 
     toolTipSubText: {
-        return isScreenBrightnessAvailable ? i18n("Scroll to adjust screen brightness") : "";
+        const parts = [];
+        if (isScreenBrightnessAvailable) {
+            parts.push(i18n("Scroll to adjust screen brightness"));
+        }
+        if (nightColorMonitor.enabled) {
+            parts.push(i18n("Middle-click to toggle Night Light"));
+        }
+        return parts.join("\n");
     }
 
     Plasmoid.icon: {
         let iconName = "brightness-high";
+
+        if (nightColorMonitor.enabled) {
+            if (!nightColorMonitor.running) {
+                iconName = "redshift-status-off";
+            } else if (nightColorMonitor.currentTemperature != 6500) {
+                if (nightColorMonitor.daylight) {
+                    iconName = "redshift-status-day";
+                } else {
+                    iconName = "redshift-status-on";
+                }
+            }
+        }
 
         if (inPanel) {
             return symbolicizeIconName(iconName);
@@ -158,6 +203,33 @@ PlasmoidItem {
                 newBrightness = Math.round(brightnesscontrol.screenBrightness/stepSize + delta/120) * stepSize;
             }
             brightnesscontrol.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
+        }
+
+        acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+        property bool wasExpanded: false
+        onPressed: wasExpanded = brightnesscontrol.expanded
+        onClicked: mouse => {
+            if (mouse.button == Qt.MiddleButton) {
+                toggleNightColorInhibition();
+            } else {
+                brightnesscontrol.expanded = !wasExpanded;
+            }
+        }
+
+        function toggleNightColorInhibition() {
+            if (!nightColorMonitor.available) {
+                return;
+            }
+            switch (nightColorInhibitor.state) {
+            case NightColorInhibitor.Inhibiting:
+            case NightColorInhibitor.Inhibited:
+                nightColorInhibitor.uninhibit();
+                break;
+            case NightColorInhibitor.Uninhibiting:
+            case NightColorInhibitor.Uninhibited:
+                nightColorInhibitor.inhibit();
+                break;
+            }
         }
     }
 

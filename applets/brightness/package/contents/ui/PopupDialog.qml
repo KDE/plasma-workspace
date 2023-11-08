@@ -122,6 +122,16 @@ PlasmaExtras.Representation {
                 }
             }
 
+            NightColorItem {
+                id: nightColorItem
+
+                width: scrollView.availableWidth
+
+                KeyNavigation.up: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.up
+
+                text: i18n("Night Light")
+            }
+
         }
     }
 }

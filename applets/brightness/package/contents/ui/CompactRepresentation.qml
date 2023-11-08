@@ -24,14 +24,9 @@ MouseArea {
     activeFocusOnTab: true
     hoverEnabled: true
 
-    property bool wasExpanded
-
     Accessible.name: Plasmoid.title
     Accessible.description: `${toolTipMainText}; ${toolTipSubText}`
     Accessible.role: Accessible.Button
-
-    onPressed: wasExpanded = brightnesscontrol.expanded
-    onClicked: brightnesscontrol.expanded = !wasExpanded
 
     Kirigami.Icon {
         anchors.fill: parent
