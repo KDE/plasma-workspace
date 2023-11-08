@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:35+0000\n"
-"PO-Revision-Date: 2022-08-26 09:30+0200\n"
+"PO-Revision-Date: 2023-11-07 12:23+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -67,7 +67,7 @@ msgstr "Naam kleurenschema"
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr "Accentueringskleur"
+msgstr "Accentuatiekleur"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -76,7 +76,7 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
-"De laatst gebruikte aangepaste accentueringskleur voordat de gebruiker "
+"De laatst gebruikte aangepaste accentuatiekleur voordat de gebruiker "
 "omschakelde naar uit achtergrondafbeelding gegenereerde kleur of de "
 "standaard kleur"
 
@@ -85,8 +85,7 @@ msgstr ""
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
-"Of de accentueringskleur uit achtergrondafbeelding zou moeten worden "
-"toegepast"
+"Of de accentuatiekleur uit achtergrondafbeelding zou moeten worden toegepast"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -868,7 +867,7 @@ msgstr "Kleur alle kleuren met de kleur voor accentueren "
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr "Titelbalken van vensters kleuren met de a&ccentueringskleur"
+msgstr "Titelbalken van vensters kleuren met de a&ccentuatiekleur"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
@@ -1169,7 +1168,7 @@ msgstr "Donkere schema's"
 #: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Use accent color:"
-msgstr "Accentueringskleur gebruiken:"
+msgstr "Accentuatiekleur gebruiken:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
@@ -1190,7 +1189,7 @@ msgstr "Aangepast:"
 #: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
-msgstr "Aangepaste accentueringskleur kiezen"
+msgstr "Aangepaste accentuatiekleur kiezen"
 
 #: package/contents/ui/main.qml:361
 #, kde-format
