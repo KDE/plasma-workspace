@@ -50,8 +50,8 @@ class KCMNightColorTest(unittest.TestCase):
         Tests the KCM can be opened
         """
         self.driver.find_element(AppiumBy.NAME, "The blue light filter makes the colors on the screen warmer.")
-        self.driver.find_element(AppiumBy.NAME, "Day color temperature:")
-        self.driver.find_element(AppiumBy.NAME, "Night color temperature:")
+        self.driver.find_element(AppiumBy.NAME, "Day light temperature:")
+        self.driver.find_element(AppiumBy.NAME, "Night light temperature:")
 
 
 if __name__ == '__main__':

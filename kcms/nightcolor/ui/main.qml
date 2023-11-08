@@ -116,7 +116,7 @@ KCM.SimpleKCM {
                     i18n("Sunset and sunrise at current location"),
                     i18n("Sunset and sunrise at manual location"),
                     i18n("Custom times"),
-                    i18n("Always on night color")
+                    i18n("Always on night light")
                 ]
                 Connections {
                     target: kcm.nightColorSettings
@@ -187,7 +187,7 @@ KCM.SimpleKCM {
             }
 
             GridLayout {
-                Kirigami.FormData.label: i18n("Day color temperature:")
+                Kirigami.FormData.label: i18n("Day light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
                 enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant
 
@@ -246,7 +246,7 @@ KCM.SimpleKCM {
             }
 
             GridLayout {
-                Kirigami.FormData.label: i18n("Night color temperature:")
+                Kirigami.FormData.label: i18n("Night light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderNight
                 enabled: kcm.nightColorSettings.active
 
@@ -320,7 +320,7 @@ KCM.SimpleKCM {
                 Layout.minimumWidth: modeSwitcher.width
                 Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings && kcm.nightColorSettings.active
-                Kirigami.FormData.label: i18n("Begin night color at:")
+                Kirigami.FormData.label: i18n("Begin night light at:")
                 backend: kcm.nightColorSettings.eveningBeginFixed
                 onBackendChanged: {
                     kcm.nightColorSettings.eveningBeginFixed = backend;
@@ -343,7 +343,7 @@ KCM.SimpleKCM {
                 Layout.minimumWidth: modeSwitcher.width
                 Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings && kcm.nightColorSettings.active
-                Kirigami.FormData.label: i18n("Begin day color at:")
+                Kirigami.FormData.label: i18n("Begin day light at:")
                 backend: kcm.nightColorSettings.morningBeginFixed
                 onBackendChanged: {
                     kcm.nightColorSettings.morningBeginFixed = backend;

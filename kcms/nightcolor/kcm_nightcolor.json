@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_nightcolor",
-        "Description": "Adjust color temperature based on time",
+        "Description": "Adjust screen color temperature based on time",
         "Description[ar]": "يضبط حرارة اللون بالاعتماد على الوقت",
         "Description[az]": "Rəng temperaturunu vaxta görə təyin edir",
         "Description[be]": "Падладжванне колеравай тэмпературы ў залежнасці ад часу дня",
@@ -50,7 +50,7 @@
             "desktop"
         ],
         "Icon": "redshift-status-on",
-        "Name": "Night Color",
+        "Name": "Night Light",
         "Name[ar]": "لون ليلي",
         "Name[az]": "Gecə Rəngi",
         "Name[be]": "Начны колер",
