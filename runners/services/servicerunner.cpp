@@ -426,19 +426,12 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
         // In case it was only unlinked from one activity
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
-}
 
-void ServiceRunner::init()
-{
-    processActivitiesResults(ResultSet(m_kactivitiesQuery)); // Load the initial ones in runners thread
-    const auto loadServices = [this]() {
-        m_services = KApplicationTrader::query([](const KService::Ptr &service) {
-            return !service->noDisplay();
-        });
-    };
-    connect(this, &KRunner::AbstractRunner::prepare, this, [this, loadServices]() {
+    connect(this, &KRunner::AbstractRunner::prepare, this, [this]() {
         if (m_services.isEmpty()) {
-            loadServices();
+            m_services = KApplicationTrader::query([](const KService::Ptr &service) {
+                return !service->noDisplay();
+            });
         } else {
             KSycoca::self()->ensureCacheValid();
             m_refilterOnDatabaseChange = false; // We have a direct connection, so onDatabaseChange will be called before this scope ends
@@ -448,12 +441,20 @@ void ServiceRunner::init()
         // After the first match session, we can check for updates instead of always regenerating the services
         m_refilterOnDatabaseChange = true;
     });
-    const auto onDatabaseChange = [this, loadServices]() {
+}
+
+void ServiceRunner::init()
+{
+    processActivitiesResults(ResultSet(m_kactivitiesQuery));
+
+    //  connect to the thread-local singleton here
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
         if (m_refilterOnDatabaseChange) {
-            loadServices();
+            m_services = KApplicationTrader::query([](const KService::Ptr &service) {
+                return !service->noDisplay();
+            });
         }
-    };
-    connect(KSycoca::self(), &KSycoca::databaseChanged, this, onDatabaseChange, Qt::DirectConnection);
+    });
 }
 
 void ServiceRunner::processActivitiesResults(const ResultSet &results)

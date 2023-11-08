@@ -71,7 +71,6 @@ void ServiceRunnerTest::initTestCase()
 
     // Init the KRunner test properties
     initProperties();
-    QTest::qWait(1); // matchingResumed
 }
 
 void ServiceRunnerTest::cleanupTestCase()
