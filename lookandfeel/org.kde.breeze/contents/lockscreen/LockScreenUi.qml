@@ -272,7 +272,9 @@ Item {
                 users.append({
                     name: kscreenlocker_userName,
                     realName: kscreenlocker_userName,
-                    icon: kscreenlocker_userImage !== "" ? "file://" + kscreenlocker_userImage : "",
+                    icon: kscreenlocker_userImage !== ""
+                          ? "file://" + kscreenlocker_userImage.split("/").map(encodeURIComponent).join("/")
+                          : "",
                 })
             }
         }
