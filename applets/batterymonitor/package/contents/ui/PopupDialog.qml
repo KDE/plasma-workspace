@@ -20,9 +20,6 @@ PlasmaExtras.Representation {
 
     property int remainingTime
 
-    property bool isBrightnessAvailable
-    property bool isKeyboardBrightnessAvailable
-
     property string activeProfile
     property var profiles
 
@@ -92,11 +89,7 @@ PlasmaExtras.Representation {
             spacing: Kirigami.Units.smallSpacing * 2
 
             readonly property Item firstHeaderItem: {
-                if (brightnessSlider.visible) {
-                    return brightnessSlider;
-                } else if (keyboardBrightnessSlider.visible) {
-                    return keyboardBrightnessSlider;
-                } else if (powerProfileItem.visible) {
+                if (powerProfileItem.visible) {
                     return powerProfileItem;
                 }
                 return null;
@@ -104,72 +97,8 @@ PlasmaExtras.Representation {
             readonly property Item lastHeaderItem: {
                 if (powerProfileItem.visible) {
                     return powerProfileItem;
-                } else if (keyboardBrightnessSlider.visible) {
-                    return keyboardBrightnessSlider;
-                } else if (brightnessSlider.visible) {
-                    return brightnessSlider;
                 }
                 return null;
-            }
-
-            BrightnessItem {
-                id: brightnessSlider
-
-                width: scrollView.availableWidth
-
-                icon.name: "video-display-brightness"
-                text: i18n("Display Brightness")
-                type: BrightnessItem.Type.Screen
-                visible: dialog.isBrightnessAvailable
-                value: batterymonitor.screenBrightness
-                maximumValue: batterymonitor.maximumScreenBrightness
-
-                KeyNavigation.up: pmSwitch.pmCheckBox
-                KeyNavigation.down: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.down
-                KeyNavigation.backtab: KeyNavigation.up
-                KeyNavigation.tab: KeyNavigation.down
-                stepSize: batterymonitor.maximumScreenBrightness/100
-
-                onMoved: batterymonitor.screenBrightness = value
-                onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
-
-                // Manually dragging the slider around breaks the binding
-                Connections {
-                    target: batterymonitor
-                    function onScreenBrightnessChanged() {
-                        brightnessSlider.value = batterymonitor.screenBrightness;
-                    }
-                }
-            }
-
-            BrightnessItem {
-                id: keyboardBrightnessSlider
-
-                width: scrollView.availableWidth
-
-                icon.name: "input-keyboard-brightness"
-                text: i18n("Keyboard Brightness")
-                type: BrightnessItem.Type.Keyboard
-                showPercentage: false
-                value: batterymonitor.keyboardBrightness
-                maximumValue: batterymonitor.maximumKeyboardBrightness
-                visible: dialog.isKeyboardBrightnessAvailable
-
-                KeyNavigation.up: brightnessSlider.visible ? brightnessSlider : brightnessSlider.KeyNavigation.up
-                KeyNavigation.down: powerProfileItem.visible ? powerProfileItem : powerProfileItem.KeyNavigation.down
-                KeyNavigation.backtab: KeyNavigation.up
-                KeyNavigation.tab: KeyNavigation.down
-
-                onMoved: batterymonitor.keyboardBrightness = value
-                onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
-
-                // Manually dragging the slider around breaks the binding
-                Connections {
-                    target: batterymonitor
-                    function onKeyboardBrightnessChanged() {
-                        keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness;
-                    }
-                }
             }
 
             PowerProfileItem {
@@ -177,7 +106,6 @@ PlasmaExtras.Representation {
 
                 width: scrollView.availableWidth
 
-                KeyNavigation.up: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.up
                 KeyNavigation.down: batteryRepeater.count > 0 ? batteryRepeater.itemAt(0) : null
                 KeyNavigation.backtab: KeyNavigation.up
                 KeyNavigation.tab: KeyNavigation.down
@@ -203,7 +131,6 @@ PlasmaExtras.Representation {
 
                     battery: model
                     remainingTime: dialog.remainingTime
-                    matchHeightOfSlider: brightnessSlider.slider
 
                     KeyNavigation.up: index === 0 ? batteryList.lastHeaderItem : batteryRepeater.itemAt(index - 1)
                     KeyNavigation.down: index + 1 < batteryRepeater.count ? batteryRepeater.itemAt(index + 1) : null

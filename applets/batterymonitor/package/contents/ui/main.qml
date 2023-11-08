@@ -37,7 +37,6 @@ PlasmoidItem {
             disconnectSource(source);
         }
         onDataChanged: {
-            Logic.updateBrightness(batterymonitor, pmSource);
             Logic.updateInhibitions(batterymonitor, pmSource);
         }
     }
@@ -55,21 +54,17 @@ PlasmoidItem {
             }
         }
     }
-    property QtObject updateScreenBrightnessJob
-    property QtObject updateKeyboardBrightnessJob
 
-    readonly property bool isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
-    readonly property bool isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
     readonly property bool hasBatteries: batteries.count > 0 && pmSource.data["Battery"]["Has Cumulative"]
-    readonly property bool hasBrightness: isBrightnessAvailable || isKeyboardBrightnessAvailable
     readonly property bool kcmAuthorized: KAuthorized.authorizeControlModule("powerdevilprofilesconfig")
     readonly property bool kcmEnergyInformationAuthorized: KAuthorized.authorizeControlModule("kcm_energyinfo")
+    readonly property var profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
+    readonly property bool isProfilesAvailable: profiles.length > 0
     readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
-    readonly property bool isSomehowinPowerSaveMode: actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
+    readonly property bool isSomehowInPowerSaveMode: actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
     readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && activeProfileHolds.length > 0
-    readonly property bool isHeldOnPowerSaveMode: isSomehowinPowerSaveMode && activeProfileHolds.length > 0
-    readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
-    readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
+    readonly property bool isHeldOnPowerSaveMode: isSomehowInPowerSaveMode && activeProfileHolds.length > 0
+    readonly property bool isPluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
     readonly property bool isSomehowFullyCharged: (pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
                                                    // When we are using a charge threshold, the kernel
                                                    // may stop charging within a percentage point of the actual threshold
@@ -91,9 +86,6 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     property bool powermanagementDisabled: false
-    property bool disableBrightnessUpdate: true
-    property int screenBrightness
-    property int keyboardBrightness
 
     // List of active power management inhibitions (applications that are
     // blocking sleep and screen locking).
@@ -119,9 +111,7 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 10
     switchHeight: Kirigami.Units.gridUnit * 10
 
-    Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
-                                     hasBrightness ? i18n("Brightness") :
-                                     hasBatteries ? i18n("Battery") : i18n("Power Management"))
+    Plasmoid.title: hasBatteries ? i18n("Power and Battery") : i18n("Power Management")
 
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -131,11 +121,11 @@ PlasmoidItem {
             return PlasmaCore.Types.ActiveStatus;
         }
 
-        if (pmSource.data.Battery["Has Cumulative"] && !isSomehowFullyCharged) {
+        if (pmSource.data.Battery["Has Cumulative"] && pmSource.data["Battery"]["State"] === "Discharging") {
             return PlasmaCore.Types.ActiveStatus;
         }
 
-        if (isHeldOnPerformanceMode || isHeldOnPowerSaveMode) {
+        if (isSomehowInPerformanceMode || isSomehowInPowerSaveMode) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -198,7 +188,7 @@ PlasmoidItem {
             } else {
                 parts.push(i18n("System is in Performance mode"));
             }
-        } else if (isSomehowinPowerSaveMode) {
+        } else if (isSomehowInPowerSaveMode) {
             if (isHeldOnPowerSaveMode) {
                 parts.push(i18np("An application has requested activating Power Save mode",
                                 "%1 applications have requested activating Power Save mode",
@@ -206,10 +196,6 @@ PlasmoidItem {
             } else {
                 parts.push(i18n("System is in Power Save mode"));
             }
-        }
-
-        if (isBrightnessAvailable) {
-            parts.push(i18n("Scroll to adjust screen brightness"));
         }
 
         return parts.join("\n");
@@ -220,7 +206,7 @@ PlasmoidItem {
         if (hasBatteries) {
             iconName = "battery-full";
         } else {
-            iconName = "video-display-brightness";
+            iconName = "battery-profile-performance";
         }
 
         if (inPanel) {
@@ -230,67 +216,12 @@ PlasmoidItem {
         return iconName;
     }
 
-    onScreenBrightnessChanged: {
-        if (disableBrightnessUpdate) {
-            return;
-        }
-        const service = pmSource.serviceForSource("PowerDevil");
-        const operation = service.operationDescription("setBrightness");
-        operation.brightness = screenBrightness;
-        // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = batterymonitor.expanded;
-        updateScreenBrightnessJob = service.startOperationCall(operation);
-        updateScreenBrightnessJob.finished.connect(job => {
-            Logic.updateBrightness(batterymonitor, pmSource);
-        });
-    }
-
-    onKeyboardBrightnessChanged: {
-        if (disableBrightnessUpdate) {
-            return;
-        }
-        var service = pmSource.serviceForSource("PowerDevil");
-        var operation = service.operationDescription("setKeyboardBrightness");
-        operation.brightness = keyboardBrightness;
-        // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = batterymonitor.expanded;
-        updateKeyboardBrightnessJob = service.startOperationCall(operation);
-        updateKeyboardBrightnessJob.finished.connect(job => {
-            Logic.updateBrightness(batterymonitor, pmSource);
-        });
-    }
-
     compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
         isHeldOnPerformanceMode: batterymonitor.isHeldOnPerformanceMode
         isHeldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
-
-        onWheel: wheel => {
-            const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x);
-
-            const maximumBrightness = batterymonitor.maximumScreenBrightness
-            // Don't allow the UI to turn off the screen
-            // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-            const minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-            const stepSize = Math.max(1, maximumBrightness / 20)
-
-            let newBrightness;
-            if (Math.abs(delta) < 120) {
-                // Touchpad scrolling
-                brightnessError += delta * stepSize / 120;
-                const change = Math.round(brightnessError);
-                brightnessError -= change;
-                newBrightness = batterymonitor.screenBrightness + change;
-            } else if (wheel.modifiers & Qt.ShiftModifier) {
-                newBrightness = Math.round((Math.round(batterymonitor.screenBrightness * 100 / maximumBrightness) + delta/120) / 100 * maximumBrightness)
-            } else {
-                // Discrete/wheel scrolling
-                newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize;
-            }
-            batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
-        }
     }
 
     fullRepresentation: PopupDialog {
@@ -307,9 +238,6 @@ PlasmoidItem {
         Layout.preferredHeight: implicitHeight
 
         model: batteries
-
-        isBrightnessAvailable: batterymonitor.isBrightnessAvailable
-        isKeyboardBrightnessAvailable: batterymonitor.isKeyboardBrightnessAvailable
 
         pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
         remainingTime: batterymonitor.remainingTime
@@ -349,7 +277,7 @@ PlasmoidItem {
             componentName: "plasma_workspace"
             eventId: "warning"
             iconName: "speedometer"
-            title: i18n("Battery and Brightness")
+            title: i18n("Power Management")
         }
 
         onActivateProfileRequested: profile => {
@@ -398,7 +326,6 @@ PlasmoidItem {
     }
 
     Component.onCompleted: {
-        Logic.updateBrightness(batterymonitor, pmSource);
         Logic.updateInhibitions(batterymonitor, pmSource)
 
         Plasmoid.setInternalAction("configure", configureAction);

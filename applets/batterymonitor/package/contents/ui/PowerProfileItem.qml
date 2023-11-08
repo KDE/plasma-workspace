@@ -91,11 +91,13 @@ PlasmaComponents3.ItemDelegate {
                     id: activeProfileLabel
                     Layout.alignment: Qt.AlignRight
                     text: activeProfileData ? activeProfileData.label : ""
+
                 }
             }
 
             PlasmaComponents3.Slider {
                 id: slider
+                visible: root.activeProfileData !== undefined
                 Layout.fillWidth: true
 
                 activeFocusOnTab: false
@@ -131,6 +133,7 @@ PlasmaComponents3.ItemDelegate {
 
             RowLayout {
                 spacing: 0
+                visible: root.activeProfileData !== undefined
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 Layout.bottomMargin: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
