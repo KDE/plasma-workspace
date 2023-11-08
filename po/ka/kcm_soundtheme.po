@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-11-03 05:28+0100\n"
+"PO-Revision-Date: 2023-11-08 03:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -33,7 +33,7 @@ msgstr "გადასართველი ხმის თემა freedeskt
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "გაფრთხილების ხმების ჩართვა"
 
 #: ui/main.qml:90
 #, kde-format

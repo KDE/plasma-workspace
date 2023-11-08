@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2022-05-21 12:15+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -171,17 +171,17 @@ msgstr "Ny session"
 msgid "Filters"
 msgstr "Filter"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Välj Plasmoid-fil"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Installation av paketet %1 misslyckades."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installation Failure"
 msgstr "Installation misslyckades"

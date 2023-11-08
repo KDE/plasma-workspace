@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-05-30 08:07+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -174,17 +174,17 @@ msgstr "Nova seja"
 msgid "Filters"
 msgstr "Filtri"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Izberi datoteko s Plasmoidom"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Nameščanje paketa %1 ni uspelo."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installation Failure"
 msgstr "Spodletela namestitev"

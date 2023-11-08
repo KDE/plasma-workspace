@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-31 01:40+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-10-27 21:18+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Teklatuaren antolamendua: %1"
 msgid "Username"
 msgstr "Erabiltzaile-izena"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:65
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
 msgstr "Pasahitza"
@@ -40,53 +40,53 @@ msgstr "Pasahitza"
 msgid "Log In"
 msgstr "Hasi saioa"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:315
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Blok Maius aktibatua dago"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Egin lo"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
 #: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Berrabiarazi"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
 #: contents/logout/Logout.qml:196
 #, kde-format
 msgid "Shut Down"
 msgstr "Itzali"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Bestelakoa..."
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:456
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Tekleatu erabiltzaile-izena eta pasahitza"
 
-#: ../sddm-theme/Main.qml:485
+#: ../sddm-theme/Main.qml:491
 #, kde-format
 msgid "List Users"
 msgstr "Zerrendatu erabiltzaileak"
 
-#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:582
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Alegiazko teklatua"
 
-#: ../sddm-theme/Main.qml:634
+#: ../sddm-theme/Main.qml:640
 #, kde-format
 msgid "Login Failed"
 msgstr "Saio-hastea huts egin du"
@@ -96,35 +96,35 @@ msgstr "Saio-hastea huts egin du"
 msgid "Desktop Session: %1"
 msgstr "Mahaigain saioa: %1"
 
-#: contents/components/Battery.qml:54
+#: components/Battery.qml:54
 #, kde-format
 msgid "%1%"
 msgstr "%%1"
 
-#: contents/components/Battery.qml:55
+#: components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Bateria maila: %%1"
 
-#: contents/components/UserList.qml:71
+#: components/UserList.qml:71
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "Erabili gabe"
 
-#: contents/components/UserList.qml:77
+#: components/UserList.qml:77
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
-#: contents/components/UserList.qml:79
+#: components/UserList.qml:79
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "TTY %1(e)an (%2 bistaratzailea)"
 
-#: contents/components/UserList.qml:83
+#: components/UserList.qml:83
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
@@ -154,59 +154,59 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Erakutsi giltzapetik askatzeko gonbitaren azpian"
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:67
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Giltzapetik askatzeak huts egin du"
 
-#: contents/lockscreen/LockScreenUi.qml:329
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgid "Sleep"
 msgstr "Egin lo"
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernatu"
 
-#: contents/lockscreen/LockScreenUi.qml:341
+#: contents/lockscreen/LockScreenUi.qml:340
 #, kde-format
 msgid "Switch User"
 msgstr "Aldatu erabiltzailea"
 
-#: contents/lockscreen/LockScreenUi.qml:520
+#: contents/lockscreen/LockScreenUi.qml:527
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Aldatu saioa honetara"
 
-#: contents/lockscreen/LockScreenUi.qml:528
+#: contents/lockscreen/LockScreenUi.qml:535
 #, kde-format
 msgid "Start New Session"
 msgstr "Hasi saio berria"
 
-#: contents/lockscreen/LockScreenUi.qml:541
+#: contents/lockscreen/LockScreenUi.qml:548
 #, kde-format
 msgid "Back"
 msgstr "Atzera"
 
-#: contents/lockscreen/LockScreenUi.qml:606
+#: contents/lockscreen/LockScreenUi.qml:613
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Aldatu antolamendua"
 
-#: contents/lockscreen/MainBlock.qml:108
+#: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "Giltzapetik askatu"
 
-#: contents/lockscreen/MainBlock.qml:156
+#: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(edo eskaneatu zure hatz-marka irakurgailuan)"
 
-#: contents/lockscreen/MainBlock.qml:160
+#: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
 msgstr "(edo eskaneatu zure txartel-adimenduna)"

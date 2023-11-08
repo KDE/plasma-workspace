@@ -86,7 +86,7 @@
 
 <sect2>
   <title
->Accentueringskleur</title>
+>Accentuatiekleur</title>
 
   <para
 >De accentkleur is de kleur waarin elementen met focus of geselecteerde worden geaccentueerd en wordt ook gebruikt voor sommige andere interface-elementen zoals schuifregelaars of map-pictogrammen. Het is ook mogelijk alle kleuren een tint te geven met de accentkleur (zie meer over de optie kleurschema hieronder). Met <guilabel

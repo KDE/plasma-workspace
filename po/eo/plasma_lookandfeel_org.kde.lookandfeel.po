@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-31 01:40+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-10-27 07:10+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Klavara aranĝo: %1"
 msgid "Username"
 msgstr "Uzantnomo"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:65
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
 msgstr "Pasvorto"
@@ -40,53 +40,53 @@ msgstr "Pasvorto"
 msgid "Log In"
 msgstr "Ensaluti"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:315
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Majskulo estas aktiva"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Dormi"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
 #: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Rekomenci"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
 #: contents/logout/Logout.qml:196
 #, kde-format
 msgid "Shut Down"
 msgstr "Fermi sistemon"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Alia…"
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:456
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Tajpu Uzantnomon kaj Pasvorton"
 
-#: ../sddm-theme/Main.qml:485
+#: ../sddm-theme/Main.qml:491
 #, kde-format
 msgid "List Users"
 msgstr "Listo de Uzantoj"
 
-#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:582
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuala Klavaro"
 
-#: ../sddm-theme/Main.qml:634
+#: ../sddm-theme/Main.qml:640
 #, kde-format
 msgid "Login Failed"
 msgstr "Ensaluto malsukcesis"
@@ -96,35 +96,35 @@ msgstr "Ensaluto malsukcesis"
 msgid "Desktop Session: %1"
 msgstr "Labortabla Sesio: %1"
 
-#: contents/components/Battery.qml:54
+#: components/Battery.qml:54
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:55
+#: components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Baterio ĉe %1%"
 
-#: contents/components/UserList.qml:71
+#: components/UserList.qml:71
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "Neuzata"
 
-#: contents/components/UserList.qml:77
+#: components/UserList.qml:77
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
-#: contents/components/UserList.qml:79
+#: components/UserList.qml:79
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "ĉe TTY %1 (Ekrano %2)"
 
-#: contents/components/UserList.qml:83
+#: components/UserList.qml:83
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
@@ -154,59 +154,59 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Montri sub malŝlosa prompto"
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:67
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Malŝloso malsukcesis"
 
-#: contents/lockscreen/LockScreenUi.qml:329
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgid "Sleep"
 msgstr "Dormi"
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Pasivumigi"
 
-#: contents/lockscreen/LockScreenUi.qml:341
+#: contents/lockscreen/LockScreenUi.qml:340
 #, kde-format
 msgid "Switch User"
 msgstr "Ŝanĝi Uzanton"
 
-#: contents/lockscreen/LockScreenUi.qml:520
+#: contents/lockscreen/LockScreenUi.qml:527
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Ŝanĝi al Ĉi tiu Seanco"
 
-#: contents/lockscreen/LockScreenUi.qml:528
+#: contents/lockscreen/LockScreenUi.qml:535
 #, kde-format
 msgid "Start New Session"
 msgstr "Komenci Novan Seancon"
 
-#: contents/lockscreen/LockScreenUi.qml:541
+#: contents/lockscreen/LockScreenUi.qml:548
 #, kde-format
 msgid "Back"
 msgstr "Reen"
 
-#: contents/lockscreen/LockScreenUi.qml:606
+#: contents/lockscreen/LockScreenUi.qml:613
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Ŝanĝi aranĝon"
 
-#: contents/lockscreen/MainBlock.qml:108
+#: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "Malŝlosi"
 
-#: contents/lockscreen/MainBlock.qml:156
+#: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(aŭ skanu vian fingrospuron sur la legilo)"
 
-#: contents/lockscreen/MainBlock.qml:160
+#: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
 msgstr "(aŭ skanu vian inteligentan memorkarton)"

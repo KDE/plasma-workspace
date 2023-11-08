@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-05-30 22:58+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -169,17 +169,17 @@ msgstr "Нова сесия"
 msgid "Filters"
 msgstr "Филтри"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Избиране на файл на плазмоид"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Инсталирането на пакета %1 е неуспешно."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installation Failure"
 msgstr "Неуспех при инсталиране"

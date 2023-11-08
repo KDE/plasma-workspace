@@ -11,22 +11,22 @@
 # Vincent PINON <vincent.pinon@st.com>, 2013.
 # Sebastien Renard <renard@kde.org>, 2014, 2015.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2020.
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
+# SPDX-FileCopyrightText: 2023 Xavier BESNARD <xavier.besnard@neuf.fr>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-15 20:53+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-11-07 09:45+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -158,7 +158,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[inconnu]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -168,6 +168,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Impossible de gérer certaines applications parce que les ressources de "
+"gestion de session du système sont épuisées. Voici les trois principaux "
+"consommateurs de ressources de la session : \n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -212,6 +216,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Impossible de restaurer l'application <application>%1</application> car elle "
+"est plantée et a épuisée les ressources de restauration de la session du "
+"système. Veuillez le signaler à l'équipe de développement de l’application."
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Pas d'accès en écriture au dossier $HOME (%1)."

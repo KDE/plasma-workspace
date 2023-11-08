@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-08-08 19:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -171,17 +171,17 @@ msgstr "Ny økt"
 msgid "Filters"
 msgstr "Filter"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vel skjermelement-fil"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Feil ved installering av pakken %1."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installation Failure"
 msgstr "Mislukka installering"

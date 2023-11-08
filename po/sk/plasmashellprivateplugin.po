@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 01:57+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-08-06 11:50+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -170,17 +170,17 @@ msgstr "Nové sedenie"
 msgid "Filters"
 msgstr "Filtre"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Inštalácia balíčka %1 zlyhala."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
 #, kde-format
 msgid "Installation Failure"
 msgstr "Zlyhanie inštalácie"

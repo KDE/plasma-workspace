@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-11-02 20:46+0100\n"
+"PO-Revision-Date: 2023-11-07 06:43+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -32,7 +32,7 @@ msgstr "Retrodefaŭlta sonetoso el freedesktop.org"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "Ebligi sciigajn sonojn"
 
 #: ui/main.qml:90
 #, kde-format

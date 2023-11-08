@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-31 01:40+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2017-03-24 14:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Διάταξη πληκτρολογίου: %1"
 msgid "Username"
 msgstr "Όνομα χρήστη"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:65
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
@@ -38,55 +38,55 @@ msgstr "Κωδικός πρόσβασης"
 msgid "Log In"
 msgstr "Αποσύνδεση"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:315
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Το Caps Lock είναι ενεργό"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:464
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
 #: contents/logout/Logout.qml:165
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:471
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
 #: contents/logout/Logout.qml:185
 #, kde-format
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:478
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
 #: contents/logout/Logout.qml:196
 #, fuzzy, kde-format
 #| msgid "Shut down"
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:456
 #, kde-format
 msgid "Type in Username and Password"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:485
+#: ../sddm-theme/Main.qml:491
 #, fuzzy, kde-format
 #| msgid "Switch User"
 msgid "List Users"
 msgstr "Εναλλαγή χρήστη"
 
-#: ../sddm-theme/Main.qml:560 contents/lockscreen/LockScreenUi.qml:582
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Εικονικό πληκτρολόγιο"
 
-#: ../sddm-theme/Main.qml:634
+#: ../sddm-theme/Main.qml:640
 #, kde-format
 msgid "Login Failed"
 msgstr "Αποτυχία σύνδεσης"
@@ -96,35 +96,35 @@ msgstr "Αποτυχία σύνδεσης"
 msgid "Desktop Session: %1"
 msgstr "Συνεδρία επιφάνειας εργασίας: %1"
 
-#: contents/components/Battery.qml:54
+#: components/Battery.qml:54
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:55
+#: components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
 msgstr ""
 
-#: contents/components/UserList.qml:71
+#: components/UserList.qml:71
 #, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "Αχρησιμοποίητη"
 
-#: contents/components/UserList.qml:77
+#: components/UserList.qml:77
 #, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
-#: contents/components/UserList.qml:79
+#: components/UserList.qml:79
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "στο TTY %1 (Οθόνη %2)"
 
-#: contents/components/UserList.qml:83
+#: components/UserList.qml:83
 #, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
@@ -155,60 +155,60 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:67
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Αποτυχία ξεκλειδώματος"
 
-#: contents/lockscreen/LockScreenUi.qml:329
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:335 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:341
+#: contents/lockscreen/LockScreenUi.qml:340
 #, kde-format
 msgid "Switch User"
 msgstr "Εναλλαγή χρήστη"
 
-#: contents/lockscreen/LockScreenUi.qml:520
+#: contents/lockscreen/LockScreenUi.qml:527
 #, fuzzy, kde-format
 #| msgid "Switch Session"
 msgid "Switch to This Session"
 msgstr "Εναλλαγή συνεδρίας"
 
-#: contents/lockscreen/LockScreenUi.qml:528
+#: contents/lockscreen/LockScreenUi.qml:535
 #, kde-format
 msgid "Start New Session"
 msgstr "Έναρξη νέας συνεδρίας"
 
-#: contents/lockscreen/LockScreenUi.qml:541
+#: contents/lockscreen/LockScreenUi.qml:548
 #, kde-format
 msgid "Back"
 msgstr "Πίσω"
 
-#: contents/lockscreen/LockScreenUi.qml:606
+#: contents/lockscreen/LockScreenUi.qml:613
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Εναλλαγή διάταξης"
 
-#: contents/lockscreen/MainBlock.qml:108
+#: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
 msgstr "Ξεκλείδωμα"
 
-#: contents/lockscreen/MainBlock.qml:156
+#: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr ""
 
-#: contents/lockscreen/MainBlock.qml:160
+#: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
 msgstr ""

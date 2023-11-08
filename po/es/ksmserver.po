@@ -9,13 +9,13 @@
 # Santiago Fernandez Sancho <santi@kde-es.org>, 2005.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2012, 2013, 2014, 2015, 2018, 2020, 2023.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2018, 2020, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:39+0000\n"
-"PO-Revision-Date: 2023-03-15 16:57+0100\n"
+"PO-Revision-Date: 2023-11-07 22:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: logout.cpp:340
@@ -154,7 +154,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[desconocido]"
 
 #: server.cpp:825
 #, kde-kuit-format
@@ -164,6 +164,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"No se pueden administrar algunas aplicaciones porque los recursos de gestión "
+"de sesiones del sistema se han agotado. Estos son los tres consumidores "
+"máximos de recursos de la sesión:\n"
+"%1"
 
 #: server.cpp:968
 #, kde-format
@@ -208,6 +212,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"No se ha podido restaurar <application>%1</application> porque está dañada y "
+"ha agotado los recursos de restauración de la sesión del sistema. Comunique "
+"este problema a los desarrolladores de la aplicación."
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "No tiene permiso de escritura en el directorio $HOME (%1)."
