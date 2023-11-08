@@ -198,8 +198,8 @@ KCM.SimpleKCM {
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
                     Layout.columnSpan: 3
-                    from: kcm.minDayTemp
-                    to: kcm.maxDayTemp
+                    from: kcm.maxDayTemp
+                    to: kcm.minDayTemp
                     stepSize: 100
                     live: true
 
@@ -234,13 +234,13 @@ KCM.SimpleKCM {
                 }
                 //row 2
                 QQC2.Label {
-                    text: i18nc("Night colour red-ish", "Warm")
+                    text: i18nc("Night colour blue-ish; no blue light filter activated", "Cool (no filter)")
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
-                    text: tempSliderDay.value == tempSliderDay.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
+                    text: i18nc("Night colour red-ish", "Warm")
                 }
                 Item {}
             }
@@ -257,8 +257,8 @@ KCM.SimpleKCM {
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
                     Layout.columnSpan: 3
-                    from: kcm.minNightTemp
-                    to: kcm.maxNightTemp
+                    from: kcm.maxNightTemp
+                    to: kcm.minNightTemp
                     stepSize: 100
                     live: true
 
@@ -293,13 +293,13 @@ KCM.SimpleKCM {
                 }
                 //row 2
                 QQC2.Label {
-                    text: i18nc("Night colour red-ish", "Warm")
+                    text: i18nc("Night colour blue-ish; no blue light filter activated", "Cool (no filter)")
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
-                    text: tempSliderNight.value == tempSliderNight.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
+                    text: i18nc("Night colour red-ish", "Warm")
                 }
                 Item {}
             }
