@@ -111,11 +111,11 @@ class MediaKeysTest(unittest.TestCase):
         Global shortcut for "Play/Pause media playback"
         """
         self.assertEqual(self.mpris_interface.player_properties["PlaybackStatus"].get_string(), "Stopped")
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPlay"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioPlay"])
         self.assertTrue(self.mpris_interface.playback_status_set_event.wait(timeout=10))
         self.mpris_interface.playback_status_set_event.clear()
         self.assertEqual(self.mpris_interface.player_properties["PlaybackStatus"].get_string(), "Playing")
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPlay"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioPlay"])
         self.assertTrue(self.mpris_interface.playback_status_set_event.wait(timeout=10))
         self.mpris_interface.playback_status_set_event.clear()
         self.assertEqual(self.mpris_interface.player_properties["PlaybackStatus"].get_string(), "Paused")
@@ -124,13 +124,13 @@ class MediaKeysTest(unittest.TestCase):
         """
         Global shortcut for "Media playback next"
         """
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioNext"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioNext"])
         self.assertTrue(self.mpris_interface.metadata_updated_event.wait(10))
         self.mpris_interface.metadata_updated_event.clear()
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Konqi's Favorite")
 
         # Press again to test canNext
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioNext"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioNext"])
         time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Konqi's Favorite")
 
@@ -138,18 +138,18 @@ class MediaKeysTest(unittest.TestCase):
         """
         Global shortcut for "Media playback previous"
         """
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPrev"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioPrev"])
         self.assertTrue(self.mpris_interface.metadata_updated_event.wait(10))
         self.mpris_interface.metadata_updated_event.clear()
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Konqi ❤️️ Katie")
 
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPrev"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioPrev"])
         self.assertTrue(self.mpris_interface.metadata_updated_event.wait(10))
         self.mpris_interface.metadata_updated_event.clear()
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Katie's Favorite")
 
         # Press again to test canPrevious
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPrev"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioPrev"])
         time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], "Katie's Favorite")
 
@@ -165,12 +165,12 @@ class MediaKeysTest(unittest.TestCase):
         self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "mprisservice module is not loaded")
 
         last_playback_status: str = self.mpris_interface.player_properties["PlaybackStatus"].get_string()
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioPlay"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioPlay"])
         time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["PlaybackStatus"].get_string(), last_playback_status)
 
         last_xesam_title: str = self.mpris_interface.player_properties["Metadata"]["xesam:title"]
-        self.assertEqual(subprocess.Popen(["xdotool", "key", "XF86AudioNext"]).wait(), 0)
+        subprocess.check_call(["xdotool", "key", "XF86AudioNext"])
         time.sleep(0.5)
         self.assertEqual(self.mpris_interface.player_properties["Metadata"]["xesam:title"], last_xesam_title)
 
