@@ -11,8 +11,8 @@ import QtQuick
 
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
@@ -122,7 +122,7 @@ PlasmoidItem {
             }
         }
 
-        WorkspaceComponents.ShadowedLabel {
+        PlasmaExtras.ShadowedLabel {
             id: iconLabel
 
             anchors {
