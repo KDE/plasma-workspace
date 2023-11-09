@@ -19,22 +19,17 @@ extern "C" {
 
 #include <fixx11h.h>
 
-// needed to avoid clash with INT8 defined in X11/Xmd.h on solaris
-#define QT_CLEAN_NAMESPACE 1
 #include <QDBusContext>
 #include <QDBusMessage>
+#include <QMap>
 #include <QObject>
 #include <QStringList>
-
-#include <KConfigGroup>
-#include <QMap>
 #include <QTime>
 #include <QTimer>
 #include <QWindow>
-#include <kworkspace.h>
 
-#define SESSION_PREVIOUS_LOGOUT "saved at previous logout"
-#define SESSION_BY_USER "saved by user"
+#include <KConfigGroup>
+#include <kworkspace.h>
 
 class KProcess;
 
@@ -55,7 +50,12 @@ struct SMData {
     QString wmClientMachine;
     QString wmclass1, wmclass2;
 };
-typedef QMap<WId, SMData> WindowMap;
+using WindowMap = QMap<WId, SMData>;
+
+constexpr QLatin1String SESSION_PREFIX("Session: ");
+constexpr QLatin1String SUBSESSION_PREFIX("SubSession: ");
+constexpr QLatin1String SESSION_PREVIOUS_LOGOUT("saved at previous logout");
+constexpr QLatin1String SESSION_BY_USER("saved by user");
 
 class KSMServer : public QObject, protected QDBusContext
 {
@@ -69,8 +69,9 @@ public:
     };
 
     Q_DECLARE_FLAGS(InitFlags, InitFlag)
-    KSMServer(InitFlags flags);
+    explicit KSMServer(InitFlags flags);
     ~KSMServer() override;
+    Q_DISABLE_COPY_MOVE(KSMServer);
 
     static KSMServer *self();
 

@@ -6,29 +6,27 @@
     SPDX-License-Identifier: MIT
 */
 
+#include <cerrno>
 #include <config-ksmserver.h>
 #include <config-workspace.h>
-#include <errno.h>
+#include <cstdlib>
+#include <cstring>
 #include <fcntl.h>
 #include <fixx11h.h>
-#include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
-
-#include <KMessageBox>
 
 #include "server.h"
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KRuntimePlatform>
 #include <KSharedConfig>
-#include <private/qtx11extras_p.h>
-
 #include <KSelectionOwner>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
 #include <ksmserver_debug.h>
 #include <kwindowsystem.h>
+#include <private/qtx11extras_p.h>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -36,23 +34,18 @@
 
 static const char version[] = "0.4";
 
-Display *dpy = nullptr;
-Colormap colormap = 0;
-Visual *visual = nullptr;
-
-extern KSMServer *the_server;
-
 void IoErrorHandler(IceConn iceConn)
 {
-    the_server->ioError(iceConn);
+    KSMServer::self()->ioError(iceConn);
 }
 
 bool writeTest(QByteArray path)
 {
     path += "/XXXXXX";
     int fd = mkstemp(path.data());
-    if (fd == -1)
+    if (fd == -1) {
         return false;
+    }
     if (write(fd, "Hello World\n", 12) == -1) {
         int save_errno = errno;
         close(fd);
@@ -74,28 +67,31 @@ void sanity_check(int argc, char *argv[])
         msg = i18n("$HOME not set!");
     }
     if (msg.isEmpty() && access(path.data(), W_OK)) {
-        if (errno == ENOENT)
+        if (errno == ENOENT) {
             msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
-        else if (readOnly.isEmpty())
+        } else if (readOnly.isEmpty()) {
             msg = xi18nc("@info",
                          "No write access to $HOME directory (%1). If this is intentional, set <envar>KDE_HOME_READONLY=1</envar> in your environment.",
                          QFile::decodeName(path));
+        }
     }
     if (msg.isEmpty() && access(path.data(), R_OK)) {
-        if (errno == ENOENT)
+        if (errno == ENOENT) {
             msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
-        else
+        } else {
             msg = i18n("No read access to $HOME directory (%1).", QFile::decodeName(path));
+        }
     }
     if (msg.isEmpty() && readOnly.isEmpty() && !writeTest(path)) {
-        if (errno == ENOSPC)
+        if (errno == ENOSPC) {
             msg = i18n("$HOME directory (%1) is out of disk space.", QFile::decodeName(path));
-        else
+        } else {
             msg = i18n(
                 "Writing to the $HOME directory (%2) failed with "
                 "the error '%1'",
                 QString::fromLocal8Bit(strerror(errno)),
                 QFile::decodeName(path));
+        }
     }
     if (msg.isEmpty()) {
         path = getenv("ICEAUTHORITY");
@@ -104,45 +100,50 @@ void sanity_check(int argc, char *argv[])
             path += "/.ICEauthority";
         }
 
-        if (access(path.data(), W_OK) && (errno != ENOENT))
+        if (access(path.data(), W_OK) && (errno != ENOENT)) {
             msg = i18n("No write access to '%1'.", QFile::decodeName(path));
-        else if (access(path.data(), R_OK) && (errno != ENOENT))
+        } else if (access(path.data(), R_OK) && (errno != ENOENT)) {
             msg = i18n("No read access to '%1'.", QFile::decodeName(path));
+        }
     }
     if (msg.isEmpty()) {
         path = getenv("KDETMP");
-        if (path.isEmpty())
+        if (path.isEmpty()) {
             path = "/tmp";
+        }
         if (!writeTest(path)) {
-            if (errno == ENOSPC)
+            if (errno == ENOSPC) {
                 msg = i18n("Temp directory (%1) is out of disk space.", QFile::decodeName(path));
-            else
+            } else {
                 msg = i18n(
                     "Writing to the temp directory (%2) failed with\n    "
                     "the error '%1'",
                     QString::fromLocal8Bit(strerror(errno)),
                     QFile::decodeName(path));
+            }
         }
     }
     if (msg.isEmpty() && (path != "/tmp")) {
         path = "/tmp";
         if (!writeTest(path)) {
-            if (errno == ENOSPC)
+            if (errno == ENOSPC) {
                 msg = i18n("Temp directory (%1) is out of disk space.", QFile::decodeName(path));
-            else
+            } else {
                 msg = i18n(
                     "Writing to the temp directory (%2) failed with\n    "
                     "the error '%1'",
                     QString::fromLocal8Bit(strerror(errno)),
                     QFile::decodeName(path));
+            }
         }
     }
     if (msg.isEmpty()) {
         path += "/.ICE-unix";
-        if (access(path.data(), W_OK) && (errno != ENOENT))
+        if (access(path.data(), W_OK) && (errno != ENOENT)) {
             msg = i18n("No write access to '%1'.", QFile::decodeName(path));
-        else if (access(path.data(), R_OK) && (errno != ENOENT))
+        } else if (access(path.data(), R_OK) && (errno != ENOENT)) {
             msg = i18n("No read access to '%1'.", QFile::decodeName(path));
+        }
     }
     if (!msg.isEmpty()) {
         const QString msg_pre = i18n(
@@ -172,7 +173,7 @@ int main(int argc, char *argv[])
     qputenv("QT_QPA_PLATFORM", QByteArrayLiteral("xcb"));
 
     QCoreApplication::setQuitLockEnabled(false);
-    QGuiApplication *a = new QGuiApplication(argc, argv);
+    auto a = new QGuiApplication(argc, argv);
 
     // now the QPA platform is set, unset variable again to not launch apps with incorrect environment
     if (origQpaPlatform.isEmpty()) {
@@ -238,7 +239,7 @@ int main(int argc, char *argv[])
         flags |= KSMServer::InitFlag::NoLockScreen;
     }
 
-    KSMServer *server = new KSMServer(flags);
+    auto server = new KSMServer(flags);
 
     // for the KDE-already-running check in startkde
     KSelectionOwner kde_running("_KDE_RUNNING", 0);
@@ -255,14 +256,15 @@ int main(int argc, char *argv[])
         loginMode = QStringLiteral("emptySession");
     }
 
-    if (parser.isSet(restoreOption))
-        server->setRestoreSession(QStringLiteral(SESSION_BY_USER));
-    else if (loginMode == QLatin1String("restorePreviousLogout"))
-        server->setRestoreSession(QStringLiteral(SESSION_PREVIOUS_LOGOUT));
-    else if (loginMode == QLatin1String("restoreSavedSession"))
-        server->setRestoreSession(QStringLiteral(SESSION_BY_USER));
-    else
+    if (parser.isSet(restoreOption)) {
+        server->setRestoreSession(SESSION_BY_USER);
+    } else if (loginMode == QLatin1String("restorePreviousLogout")) {
+        server->setRestoreSession(SESSION_PREVIOUS_LOGOUT);
+    } else if (loginMode == QLatin1String("restoreSavedSession")) {
+        server->setRestoreSession(SESSION_BY_USER);
+    } else {
         server->startDefaultSession();
+    }
 
     KDBusService service(KDBusService::Unique);
 

@@ -13,7 +13,6 @@
 */
 
 #include <config-ksmserver.h>
-#include <config-unix.h> // HAVE_LIMITS_H
 #include <config-workspace.h>
 
 #include <ksmserver_debug.h>
@@ -29,16 +28,13 @@
 #include <sys/un.h>
 
 #include <assert.h>
+#include <climits>
 #include <errno.h>
 #include <signal.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-
-#ifdef HAVE_LIMITS_H
-#include <limits.h>
-#endif
 
 #include <QApplication>
 #include <QFile>
@@ -69,8 +65,9 @@ enum KWinSessionState {
 void KSMServer::logout(int confirm, int sdtype, int sdmode)
 {
     // KDE5: remove me
-    if (sdtype == KWorkSpace::ShutdownTypeLogout)
+    if (sdtype == KWorkSpace::ShutdownTypeLogout) {
         sdtype = KWorkSpace::ShutdownTypeNone;
+    }
 
     shutdown((KWorkSpace::ShutdownConfirm)confirm, (KWorkSpace::ShutdownType)sdtype, (KWorkSpace::ShutdownMode)sdmode);
 }
@@ -109,10 +106,10 @@ bool KSMServer::isShuttingDown() const
 void KSMServer::shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode)
 {
     qCDebug(KSMSERVER) << "Shutdown called with confirm " << confirm << " type " << sdtype << " and mode " << sdmode;
-    if (state >= Shutdown) // already performing shutdown
+    if (state >= Shutdown) { // already performing shutdown
         return;
-    if (state != Idle) // performing startup
-    {
+    }
+    if (state != Idle) { // performing startup
         return;
     }
 
@@ -179,8 +176,9 @@ void KSMServer::performLogout()
 
     qCDebug(KSMSERVER) << "saveSession is " << saveSession;
 
-    if (saveSession)
-        sessionGroup = QStringLiteral("Session: ") + QString::fromLocal8Bit(SESSION_PREVIOUS_LOGOUT);
+    if (saveSession) {
+        sessionGroup = SESSION_PREFIX + SESSION_PREVIOUS_LOGOUT;
+    }
 
     saveType = saveSession ? SmSaveBoth : SmSaveGlobal;
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
@@ -213,17 +211,20 @@ void KSMServer::performLogout()
 
     qCDebug(KSMSERVER) << "clients should be empty, " << clients.count();
 
-    if (clients.isEmpty())
+    if (clients.isEmpty()) {
         completeShutdownOrCheckpoint();
+    }
 }
 
 void KSMServer::saveCurrentSession()
 {
-    if (state != Idle)
+    if (state != Idle) {
         return;
+    }
 
-    if (currentSession().isEmpty() || currentSession() == QString::fromLocal8Bit(SESSION_PREVIOUS_LOGOUT))
-        sessionGroup = QLatin1String("Session: ") + QString::fromLocal8Bit(SESSION_BY_USER);
+    if (currentSession().isEmpty() || currentSession() == SESSION_PREVIOUS_LOGOUT) {
+        sessionGroup = SESSION_PREFIX + QString::fromLocal8Bit(SESSION_BY_USER);
+    }
 
     state = Checkpoint;
 
@@ -241,15 +242,17 @@ void KSMServer::saveCurrentSession()
         c->resetState();
         SmsSaveYourself(c->connection(), saveType, false, SmInteractStyleNone, false);
     }
-    if (clients.isEmpty())
+    if (clients.isEmpty()) {
         completeShutdownOrCheckpoint();
+    }
 }
 
 void KSMServer::saveCurrentSessionAs(const QString &session)
 {
-    if (state != Idle)
+    if (state != Idle) {
         return;
-    sessionGroup = QStringLiteral("Session: ") + session;
+    }
+    sessionGroup = SESSION_PREFIX + session;
     saveCurrentSession();
 }
 
@@ -262,42 +265,41 @@ void KSMServer::saveYourselfDone(KSMClient *client, bool success)
         // only now. Discard the saved state in order to avoid
         // the saved data building up.
         QStringList discard = client->discardCommand();
-        if (!discard.isEmpty())
+        if (!discard.isEmpty()) {
             executeCommand(discard);
+        }
         return;
     }
-    if (success) {
-        client->saveYourselfDone = true;
-        completeShutdownOrCheckpoint();
-    } else {
-        // fake success to make KDE's logout not block with broken
-        // apps. A perfect ksmserver would display a warning box at
-        // the very end.
-        client->saveYourselfDone = true;
-        completeShutdownOrCheckpoint();
-    }
+    // Always fake success to make Plasma's logout not block with broken
+    // apps. A perfect ksmserver would display a warning box at
+    // the very end.
+    client->saveYourselfDone = true;
+    completeShutdownOrCheckpoint();
     startProtection();
 }
 
 void KSMServer::interactRequest(KSMClient *client, int /*dialogType*/)
 {
-    if (state == Shutdown || state == ClosingSubSession)
+    if (state == Shutdown || state == ClosingSubSession) {
         client->pendingInteraction = true;
-    else
+    } else {
         SmsInteract(client->connection());
+    }
 
     handlePendingInteractions();
 }
 
 void KSMServer::interactDone(KSMClient *client, bool cancelShutdown_)
 {
-    if (client != clientInteracting)
+    if (client != clientInteracting) {
         return; // should not happen
+    }
     clientInteracting = nullptr;
-    if (cancelShutdown_)
+    if (cancelShutdown_) {
         cancelShutdown(client);
-    else
+    } else {
         handlePendingInteractions();
+    }
 }
 
 void KSMServer::phase2Request(KSMClient *client)
@@ -309,8 +311,9 @@ void KSMServer::phase2Request(KSMClient *client)
 
 void KSMServer::handlePendingInteractions()
 {
-    if (clientInteracting)
+    if (clientInteracting) {
         return;
+    }
 
     foreach (KSMClient *c, clients) {
         if (c->pendingInteraction) {
@@ -343,8 +346,9 @@ void KSMServer::cancelShutdown(KSMClient *c)
             if (c->saveYourselfDone) {
                 // Discard also saved state.
                 QStringList discard = c->discardCommand();
-                if (!discard.isEmpty())
+                if (!discard.isEmpty()) {
                     executeCommand(discard);
+                }
             }
             c->resetState();
         }
@@ -379,8 +383,9 @@ shutdown.
 */
 void KSMServer::protectionTimeout()
 {
-    if ((state != Shutdown && state != Checkpoint && state != ClosingSubSession) || clientInteracting)
+    if ((state != Shutdown && state != Checkpoint && state != ClosingSubSession) || clientInteracting) {
         return;
+    }
 
     foreach (KSMClient *c, clients) {
         if (!c->saveYourselfDone && !c->waitForPhase2) {
@@ -399,14 +404,16 @@ void KSMServer::completeShutdownOrCheckpoint()
         return;
 
     QList<KSMClient *> pendingClients;
-    if (state == ClosingSubSession)
+    if (state == ClosingSubSession) {
         pendingClients = clientsToSave;
-    else
+    } else {
         pendingClients = clients;
+    }
 
     foreach (KSMClient *c, pendingClients) {
-        if (!c->saveYourselfDone && !c->waitForPhase2)
+        if (!c->saveYourselfDone && !c->waitForPhase2) {
             return; // not done yet
+        }
     }
 
     // do phase 2
@@ -418,13 +425,15 @@ void KSMServer::completeShutdownOrCheckpoint()
             waitForPhase2 = true;
         }
     }
-    if (waitForPhase2)
+    if (waitForPhase2) {
         return;
+    }
 
-    if (saveSession)
+    if (saveSession) {
         storeSession();
-    else
+    } else {
         discardSession();
+    }
 
     qCDebug(KSMSERVER) << "state is " << state;
     if (state == Shutdown) {
@@ -509,7 +518,7 @@ void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QS
     state = ClosingSubSession;
     saveType = SmSaveBoth; // both or local? what does it mean?
     saveSession = true;
-    sessionGroup = QStringLiteral("SubSession: ") + name;
+    sessionGroup = SUBSESSION_PREFIX + name;
 
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
     // performLegacySessionSave(); FIXME
@@ -559,8 +568,9 @@ void KSMServer::completeKillingSubSession()
 
 void KSMServer::signalSubSessionClosed()
 {
-    if (state != KillingSubSession)
+    if (state != KillingSubSession) {
         return;
+    }
     clientsToKill.clear();
     clientsToSave.clear();
     // TODO tell the subSession manager the close request was carried out
