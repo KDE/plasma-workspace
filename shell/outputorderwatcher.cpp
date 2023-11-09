@@ -293,7 +293,7 @@ WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
                 Q_EMIT outputOrderChanged(m_outputOrder);
             }
         }
-        // otherwse wait for next QGuiApp screenAdded/removal
+        // otherwise wait for next QGuiApp screenAdded/removal
         // to keep things in sync
     });
 }
