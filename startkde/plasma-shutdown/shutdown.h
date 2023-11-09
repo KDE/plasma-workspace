@@ -22,6 +22,7 @@ public:
 private Q_SLOTS:
     void logoutCancelled();
     void logoutComplete();
+    void ksmServerComplete();
 
 private:
     void startLogout(KWorkSpace::ShutdownType shutdownType);

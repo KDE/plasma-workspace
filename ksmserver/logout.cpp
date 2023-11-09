@@ -427,7 +427,6 @@ void KSMServer::completeKilling()
 void KSMServer::killingCompleted()
 {
     Q_EMIT logoutFinished(true);
-    qApp->quit();
 }
 
 void KSMServer::timeoutQuit()
@@ -508,4 +507,9 @@ void KSMServer::signalSubSessionClosed()
     state = Idle;
     qCDebug(KSMSERVER) << state;
     Q_EMIT subSessionClosed();
+}
+
+void KSMServer::resetLogout()
+{
+    state = Idle;
 }

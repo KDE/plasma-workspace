@@ -22,5 +22,8 @@
     <!-- Shutdown kwin at the end of the session -->
       <method name="quit">
       </method>
+        <method name="closeWaylandWindows">
+          <arg type="b" direction="out" />
+      </method>
    </interface>
 </node>

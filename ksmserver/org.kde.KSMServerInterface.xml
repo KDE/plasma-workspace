@@ -36,5 +36,8 @@
         <!-- Performs a logout and closes the session. Returns true if the session was closed successfully, false if cancelled by the user-->
         <arg type="b" direction="out"/>
     </method>
+    <method name="resetLogout">
+      <!-- Called when logout is cancelled -->
+    </method>
   </interface>
 </node>

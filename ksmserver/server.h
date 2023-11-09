@@ -98,6 +98,7 @@ public:
     void restoreSession();
     void setRestoreSession(const QString &sessionName);
     void startDefaultSession();
+    void resetLogout();
 
 Q_SIGNALS:
     void logoutFinished(bool sessionClosed);
