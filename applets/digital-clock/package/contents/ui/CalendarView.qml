@@ -381,8 +381,17 @@ PlasmaExtras.Representation {
                 visible: holidaysList.count == 0
 
                 iconName: "checkmark"
-                text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
-                                                               : i18n("No events for this day");
+                text: {
+                    if (monthView.isToday(monthView.currentDate)) {
+                        return i18n("No events for today");
+                    } else if (monthView.isToday(monthView.currentDate - 86400000)) { // 24 hrs
+                        return i18n("No events for tomorrow");
+                    } else if (monthView.isToday(monthView.currentDate + 86400000)) { // 24 hrs
+                        return i18n("No events for yesterday");
+                    } else {
+                        return i18n("No events for this day");
+                    }
+                }
             }
         }
 
