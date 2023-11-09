@@ -26,7 +26,7 @@ void TestBookmarksMatch::testQueryMatchConversion()
 {
     QFETCH(QString, searchTerm);
     QFETCH(QString, bookmarkDescription);
-    QFETCH(int, expectedMatchType);
+    QFETCH(int, expectedMatchCategoryRelevance);
     QFETCH(qreal, expectedRelevance);
 
     BookmarkMatch bookmarkMatch(QIcon::fromTheme("unknown"), searchTerm, "KDE Community", "https://somehost.com/", bookmarkDescription);
@@ -34,7 +34,7 @@ void TestBookmarksMatch::testQueryMatchConversion()
 
     QCOMPARE(match.text(), "KDE Community");
     QCOMPARE(match.data().toString(), "https://somehost.com/");
-    QCOMPARE(match.type(), expectedMatchType);
+    QCOMPARE(match.categoryRelevance(), expectedMatchCategoryRelevance);
     QCOMPARE(match.relevance(), expectedRelevance);
 }
 
@@ -42,20 +42,20 @@ void TestBookmarksMatch::testQueryMatchConversion_data()
 {
     QTest::addColumn<QString>("searchTerm");
     QTest::addColumn<QString>("bookmarkDescription");
-    QTest::addColumn<int>("expectedMatchType");
+    QTest::addColumn<int>("expectedMatchCategoryRelevance");
     QTest::addColumn<qreal>("expectedRelevance");
 
     auto newRow = [](const char *dataTag, const QString searchTerm, const QString bookmarkDescription, int expectedMatchType, qreal expectedRelevance) {
         QTest::newRow(dataTag) << searchTerm << bookmarkDescription << expectedMatchType << expectedRelevance;
     };
 
-    newRow("no text match", "krunner", "", (int)QueryMatch::PossibleMatch, 0.18);
-    newRow("title partly matches", "kde", "", (int)QueryMatch::PossibleMatch, 0.45);
-    newRow("title exactly matches", "kde community", "", (int)QueryMatch::ExactMatch, 1.0);
-    newRow("url partly matches", "somehost", "", (int)QueryMatch::PossibleMatch, 0.2);
-    newRow("url exactly matches", "https://somehost.com/", "", (int)QueryMatch::PossibleMatch, 0.2);
-    newRow("description exactly matches", "test", "test", (int)QueryMatch::ExactMatch, 1.0);
-    newRow("description partly matches", "test", "testme", (int)QueryMatch::PossibleMatch, 0.3);
+    newRow("no text match", "krunner", "", (int)QueryMatch::CategoryRelevance::Low, 0.18);
+    newRow("title partly matches", "kde", "", (int)QueryMatch::CategoryRelevance::Low, 0.45);
+    newRow("title exactly matches", "kde community", "", (int)QueryMatch::CategoryRelevance::Highest, 1.0);
+    newRow("url partly matches", "somehost", "", (int)QueryMatch::CategoryRelevance::Low, 0.2);
+    newRow("url exactly matches", "https://somehost.com/", "", (int)QueryMatch::CategoryRelevance::Low, 0.2);
+    newRow("description exactly matches", "test", "test", (int)QueryMatch::CategoryRelevance::Highest, 1.0);
+    newRow("description partly matches", "test", "testme", (int)QueryMatch::CategoryRelevance::Low, 0.3);
 }
 
 void TestBookmarksMatch::testAddToList()

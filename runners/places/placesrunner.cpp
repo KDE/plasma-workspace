@@ -17,6 +17,7 @@
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <qttypetraits.h>
 
 K_PLUGIN_CLASS_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
@@ -55,10 +56,10 @@ void PlacesRunner::match(KRunner::RunnerContext &context)
         const QString text = m_places->text(current_index);
         int categoryRelevance = 0;
         if ((all && !text.isEmpty()) || text.compare(term, Qt::CaseInsensitive) == 0) {
-            categoryRelevance = KRunner::QueryMatch::ExactMatch;
+            categoryRelevance = qToUnderlying(KRunner::QueryMatch::CategoryRelevance::Highest);
             relevance = all ? 0.9 : 1.0;
         } else if (text.contains(term, Qt::CaseInsensitive)) {
-            categoryRelevance = KRunner::QueryMatch::PossibleMatch;
+            categoryRelevance = qToUnderlying(KRunner::QueryMatch::CategoryRelevance::High);
             relevance = 0.7;
         } else {
             continue;
