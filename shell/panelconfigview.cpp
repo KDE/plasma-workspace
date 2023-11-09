@@ -183,8 +183,8 @@ void PanelRulerView::focusOutEvent(QFocusEvent *ev)
         return;
     }
 
-    m_mainConfigView->close();
-    close();
+    m_mainConfigView->hide();
+    hide();
 
     PlasmaWindow::focusOutEvent(ev);
 }
@@ -301,7 +301,7 @@ void PanelConfigView::keyPressEvent(QKeyEvent *ev)
 
     if (ev->matches(QKeySequence::Cancel)) {
         ev->accept();
-        close();
+        hide();
     }
 }
 
@@ -320,9 +320,6 @@ void PanelConfigView::hideEvent(QHideEvent *ev)
     if (m_containment) {
         m_containment->setUserConfiguring(false);
     }
-    if (m_panelRulerView) {
-        m_panelRulerView->hide();
-    }
     deleteLater();
 }
 
@@ -331,14 +328,12 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
     const QWindow *focusWindow = QGuiApplication::focusWindow();
 
     if (focusWindow
-        && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow") || focusWindow == m_panelRulerView)) {
+        && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow")
+            || focusWindow == m_panelRulerView.get())) {
         return;
     }
     Q_UNUSED(ev)
-    close();
-    if (m_panelRulerView) {
-        m_panelRulerView->close();
-    }
+    hide();
 }
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
@@ -371,10 +366,10 @@ KSvg::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
 PanelRulerView *PanelConfigView::panelRulerView()
 {
     if (!m_panelRulerView) {
-        m_panelRulerView = new PanelRulerView(m_containment, m_panelView, this);
+        m_panelRulerView = std::make_unique<PanelRulerView>(m_containment, m_panelView, this);
         // It's a queued connection because m_panelRulerView needs a bit to have the proper size after visibleChanged is emitted
         connect(
-            m_panelRulerView,
+            m_panelRulerView.get(),
             &PanelRulerView::visibleChanged,
             this,
             [this](bool visible) {
@@ -392,7 +387,7 @@ PanelRulerView *PanelConfigView::panelRulerView()
         m_panelRulerView->setMainItem(ruler);
         m_panelRulerView->syncPanelLocation();
     }
-    return m_panelRulerView;
+    return m_panelRulerView.get();
 }
 
 #include "moc_panelconfigview.cpp"
