@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2022-06-17 23:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -196,93 +196,93 @@ msgstr "よく使用するアプリケーション"
 msgid "Power / Session"
 msgstr "電源/セッション"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:218
 #, kde-format
 msgid "Search results"
 msgstr "検索結果"
 
-#: plugin/systementry.cpp:195
+#: plugin/systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "ロック"
 
-#: plugin/systementry.cpp:198
+#: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "ログアウト"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "セッションを保存"
 
-#: plugin/systementry.cpp:204
+#: plugin/systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "ユーザの切り替え"
 
-#: plugin/systementry.cpp:207
+#: plugin/systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "スリープ"
 
-#: plugin/systementry.cpp:210
+#: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "ハイバネート"
 
-#: plugin/systementry.cpp:213
+#: plugin/systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "再起動"
 
-#: plugin/systementry.cpp:216
+#: plugin/systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "シャットダウン"
 
-#: plugin/systementry.cpp:232
+#: plugin/systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "セッション"
 
-#: plugin/systementry.cpp:237
+#: plugin/systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "システム"
 
-#: plugin/systementry.cpp:249
+#: plugin/systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "画面をロックする"
 
-#: plugin/systementry.cpp:252
+#: plugin/systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "セッションを終了する"
 
-#: plugin/systementry.cpp:258
+#: plugin/systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "別のユーザとして並行するセッションを開始する"
 
-#: plugin/systementry.cpp:261
+#: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "状態をメモリに保持して待機する"
 
-#: plugin/systementry.cpp:264
+#: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "状態をディスクに退避して待機する"
 
-#: plugin/systementry.cpp:267
+#: plugin/systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "コンピュータを再起動する"
 
-#: plugin/systementry.cpp:270
+#: plugin/systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "コンピュータを停止する"

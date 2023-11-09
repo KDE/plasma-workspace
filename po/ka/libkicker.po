@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2022-09-02 06:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -195,93 +195,93 @@ msgstr "ხშირად გამოყენებული აპლიკ�
 msgid "Power / Session"
 msgstr "კვება / სესია"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:218
 #, kde-format
 msgid "Search results"
 msgstr "ძებნს შედეგები"
 
-#: plugin/systementry.cpp:195
+#: plugin/systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "დაბლოკვა"
 
-#: plugin/systementry.cpp:198
+#: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "გასვლა"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "სესიის შენახვა"
 
-#: plugin/systementry.cpp:204
+#: plugin/systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "მომხმარებლის გადართვა"
 
-#: plugin/systementry.cpp:207
+#: plugin/systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ძილი"
 
-#: plugin/systementry.cpp:210
+#: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "პროგრამული ძილი"
 
-#: plugin/systementry.cpp:213
+#: plugin/systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "გადატვირთვა"
 
-#: plugin/systementry.cpp:216
+#: plugin/systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "გამორთვა"
 
-#: plugin/systementry.cpp:232
+#: plugin/systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "სესია"
 
-#: plugin/systementry.cpp:237
+#: plugin/systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "სისტემა"
 
-#: plugin/systementry.cpp:249
+#: plugin/systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "ეკრანის დაბლოკვა"
 
-#: plugin/systementry.cpp:252
+#: plugin/systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "სესიის დასრულება"
 
-#: plugin/systementry.cpp:258
+#: plugin/systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "სხვა მომხმარებლით პარალელური სესიის გაშვება"
 
-#: plugin/systementry.cpp:261
+#: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "RAM-ში შეჩერება"
 
-#: plugin/systementry.cpp:264
+#: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "დისკზე შეჩერება"
 
-#: plugin/systementry.cpp:267
+#: plugin/systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "კომპიუტერის რესტარტი"
 
-#: plugin/systementry.cpp:270
+#: plugin/systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "კომპიუტერის გამორთვა"

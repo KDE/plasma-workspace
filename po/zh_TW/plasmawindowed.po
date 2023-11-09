@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-10-20 03:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.11.70\n"
 
-#: main.cpp:44 plasmawindowedcorona.cpp:99
+#: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Plasma 視窗版"
@@ -27,7 +27,7 @@ msgstr "Plasma 視窗版"
 msgid "Enable QML Javascript debugger"
 msgstr "開啟 QML Javascript 除錯器"
 
-#: main.cpp:49 plasmawindowedcorona.cpp:101
+#: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -39,17 +39,17 @@ msgstr ""
 msgid "Force loading the given shell plugin"
 msgstr "強制載入指定的 shell 外掛程式"
 
-#: main.cpp:55 plasmawindowedcorona.cpp:102
+#: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
 msgstr "要開啟的小程式。"
 
-#: main.cpp:56 plasmawindowedcorona.cpp:103
+#: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr ""
 
-#: plasmawindowedview.cpp:117
+#: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
 msgstr "關閉 %1"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2021-05-26 09:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -197,93 +197,93 @@ msgstr "Часто використовувані програми"
 msgid "Power / Session"
 msgstr "Живлення/Сеанс"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:218
 #, kde-format
 msgid "Search results"
 msgstr "Результати пошуку"
 
-#: plugin/systementry.cpp:195
+#: plugin/systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "Заблокувати"
 
-#: plugin/systementry.cpp:198
+#: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "Вийти"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "Зберегти сеанс"
 
-#: plugin/systementry.cpp:204
+#: plugin/systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "Перемкнути користувача"
 
-#: plugin/systementry.cpp:207
+#: plugin/systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Призупинити"
 
-#: plugin/systementry.cpp:210
+#: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "Приспати"
 
-#: plugin/systementry.cpp:213
+#: plugin/systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "Перезапустити"
 
-#: plugin/systementry.cpp:216
+#: plugin/systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "Вимкнути"
 
-#: plugin/systementry.cpp:232
+#: plugin/systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "Сеанс"
 
-#: plugin/systementry.cpp:237
+#: plugin/systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "Система"
 
-#: plugin/systementry.cpp:249
+#: plugin/systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "Заблокувати екран"
 
-#: plugin/systementry.cpp:252
+#: plugin/systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "Завершити сеанс"
 
-#: plugin/systementry.cpp:258
+#: plugin/systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Почати паралельний сеанс як інший користувач"
 
-#: plugin/systementry.cpp:261
+#: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Сон зі збереженням до RAM"
 
-#: plugin/systementry.cpp:264
+#: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Сон зі збереженням на диск"
 
-#: plugin/systementry.cpp:267
+#: plugin/systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "Перезавантажити комп’ютер"
 
-#: plugin/systementry.cpp:270
+#: plugin/systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "Вимкнути комп’ютер"

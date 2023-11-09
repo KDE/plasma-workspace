@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -107,32 +107,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:105
+#: main.cpp:104
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Hệ vỏ Plasma"
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Bật trình gỡ lỗi QML Javascript"
 
-#: main.cpp:120
+#: main.cpp:119
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Đừng tự động khởi động lại hệ vỏ plasma sau một sự cố"
 
-#: main.cpp:123
+#: main.cpp:122
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Ép tải phần cài cắm của hệ vỏ đã cho"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Thay thế một hiện thể đã có"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -141,22 +141,22 @@ msgstr ""
 "Bật chế độ kiểm thử và chỉ định tệp javascript bố cục để cài đặt môi trường "
 "kiểm thử"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgid "file"
 msgstr "tệp"
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Liệt kê các lựa chọn khả dụng cho phản hồi của người dùng"
 
-#: main.cpp:217
+#: main.cpp:216
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma khởi động thất bại"
 
-#: main.cpp:218
+#: main.cpp:217
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

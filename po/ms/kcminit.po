@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2008-05-29 19:43+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sharuzzaman@myrealbox.com"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - melaksanakan initialisasi permulaan untuk Modul Kawalan."
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Senarai modul yang akan dilaksakan ketika permulaan"
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Modul tetapan untuk dilaksana"

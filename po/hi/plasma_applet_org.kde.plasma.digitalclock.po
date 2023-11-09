@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -60,13 +60,13 @@ msgstr "आज के लिए कोई कार्यक्रम नही�
 msgid "No events for this day"
 msgstr "आज के लिए कोई कार्यक्रम नहीं है"
 
-#: package/contents/ui/CalendarView.qml:432
+#: package/contents/ui/CalendarView.qml:433
 #, kde-format
 msgid "Switch…"
 msgstr "बदलें…"
 
-#: package/contents/ui/CalendarView.qml:433
-#: package/contents/ui/CalendarView.qml:436
+#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:437
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "दूसरे समय क्षेत्र में बदलें"
@@ -202,7 +202,7 @@ msgctxt "custom date format"
 msgid "Custom"
 msgstr "तदनुकूल"
 
-#: package/contents/ui/configAppearance.qml:200
+#: package/contents/ui/configAppearance.qml:207
 #, fuzzy, kde-format
 #| msgid ""
 #| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -214,45 +214,45 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">समय प्रारूप प्रलेखन</a>"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:231
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "समय प्रदर्शन :"
 
-#: package/contents/ui/configAppearance.qml:226
+#: package/contents/ui/configAppearance.qml:233
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:230
+#: package/contents/ui/configAppearance.qml:237
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:239
+#: package/contents/ui/configAppearance.qml:246
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:262
+#: package/contents/ui/configAppearance.qml:269
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:273
+#: package/contents/ui/configAppearance.qml:280
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -377,17 +377,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "क्लिपबोर्ड पर नकल बनाएं"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "दिनांक और समय समायोजित करें…"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Set Time Format…"
 msgstr "समय प्रारूप नियत करें..."

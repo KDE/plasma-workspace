@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-09-27 05:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: main.cpp:44 plasmawindowedcorona.cpp:99
+#: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Plasma ფანჯარაში"
@@ -28,7 +28,7 @@ msgstr "Plasma ფანჯარაში"
 msgid "Enable QML Javascript debugger"
 msgstr "QML-ის Javascript-ის გამმართველს ჩართვა"
 
-#: main.cpp:49 plasmawindowedcorona.cpp:101
+#: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -41,17 +41,17 @@ msgstr ""
 msgid "Force loading the given shell plugin"
 msgstr "გარსის მითითებული დამატების ძალით ჩატვირთვა"
 
-#: main.cpp:55 plasmawindowedcorona.cpp:102
+#: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
 msgstr "აპლეტი ღიაა."
 
-#: main.cpp:56 plasmawindowedcorona.cpp:103
+#: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "პლაზმოიდისთვის გადაცემული არგუმენტები."
 
-#: plasmawindowedview.cpp:117
+#: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
 msgstr "%1-ის დახურვა"

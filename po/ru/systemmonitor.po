@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2012-10-22 22:28+0400\n"
 "Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -42,7 +42,7 @@ msgstr "shaforostoff@kde.ru,darkstar@altlinux.ru,skull@kde.ru"
 msgid "Show System Activity"
 msgstr "Показать активность системы"
 
-#: main.cpp:22
+#: main.cpp:20
 #, kde-format
 msgid "System Activity"
 msgstr "Запущенные процессы"

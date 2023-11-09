@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -33,7 +33,7 @@ msgstr "രഹസ്യവാക്ക്"
 msgid "Log In"
 msgstr "അകത്ത് കടക്കുക "
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "ക്യാപ്‌സ് ലോക്ക് ഓണാണ്"
@@ -73,7 +73,7 @@ msgstr "ഉപയോക്തൃനാമവും രഹസ്യവാക്�
 msgid "List Users"
 msgstr "ഉപയോക്താക്കളെ പട്ടികപ്പെടുത്തുക"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -88,40 +88,6 @@ msgstr "അകത്ത്കടക്കുന്നത് പരാജയപ�
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "ഡെസ്ക്ടോപ്പ് സെഷൻ:%1"
-
-#: components/Battery.qml:54
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
-#: components/Battery.qml:55
-#, kde-format
-msgid "Battery at %1%"
-msgstr "%1% ബാറ്ററി"
-
-#: components/UserList.qml:71
-#, kde-format
-msgctxt "Nobody logged in on that session"
-msgid "Unused"
-msgstr "ഉപയോഗിക്കാത്ത"
-
-#: components/UserList.qml:77
-#, kde-format
-msgctxt "User logged in on console number"
-msgid "TTY %1"
-msgstr "TTY %1"
-
-#: components/UserList.qml:79
-#, kde-format
-msgctxt "User logged in on console (X display number)"
-msgid "on TTY %1 (Display %2)"
-msgstr "TTY %1 ൽ (ഡിസ്പ്പ്ലെ  %2)"
-
-#: components/UserList.qml:83
-#, kde-format
-msgctxt "Username (location)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
 #, fuzzy, kde-format
@@ -154,39 +120,39 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "പൂട്ടുതുറക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/lockscreen/LockScreenUi.qml:328
+#: contents/lockscreen/LockScreenUi.qml:330
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "സ്ലീപ്"
 
-#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/lockscreen/LockScreenUi.qml:340
+#: contents/lockscreen/LockScreenUi.qml:342
 #, kde-format
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: contents/lockscreen/LockScreenUi.qml:527
+#: contents/lockscreen/LockScreenUi.qml:529
 #, kde-format
 msgid "Switch to This Session"
 msgstr "ഈ സെഷനിലേക്ക് സ്വിച്ചുചെയ്യുക"
 
-#: contents/lockscreen/LockScreenUi.qml:535
+#: contents/lockscreen/LockScreenUi.qml:537
 #, kde-format
 msgid "Start New Session"
 msgstr "പുതിയ സെഷൻ ആരംഭിക്കുക"
 
-#: contents/lockscreen/LockScreenUi.qml:548
+#: contents/lockscreen/LockScreenUi.qml:550
 #, kde-format
 msgid "Back"
 msgstr "തിരികെ"
 
-#: contents/lockscreen/LockScreenUi.qml:613
+#: contents/lockscreen/LockScreenUi.qml:615
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -303,6 +269,28 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "കെ‌ഡി‌ഇ നിർമ്മിച്ച പ്ലാസ്മ"
+
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Battery at %1%"
+#~ msgstr "%1% ബാറ്ററി"
+
+#~ msgctxt "Nobody logged in on that session"
+#~ msgid "Unused"
+#~ msgstr "ഉപയോഗിക്കാത്ത"
+
+#~ msgctxt "User logged in on console number"
+#~ msgid "TTY %1"
+#~ msgstr "TTY %1"
+
+#~ msgctxt "User logged in on console (X display number)"
+#~ msgid "on TTY %1 (Display %2)"
+#~ msgstr "TTY %1 ൽ (ഡിസ്പ്പ്ലെ  %2)"
+
+#~ msgctxt "Username (location)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
 
 #~ msgid "100%"
 #~ msgstr "100%"

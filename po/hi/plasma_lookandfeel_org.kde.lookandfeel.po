@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "कूटशब्द"
 msgid "Log In"
 msgstr "लॉग इन"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "कैप्स लॉक सक्रिय है"
@@ -77,7 +77,7 @@ msgstr "उपयोक्ता नाम और कूटशब्द टा�
 msgid "List Users"
 msgstr "उपयोक्ता सूची दिखाएँ"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -92,40 +92,6 @@ msgstr "लॉगइन असफल"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "डेस्कटॉप सत्र : %1"
-
-#: components/Battery.qml:54
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
-#: components/Battery.qml:55
-#, kde-format
-msgid "Battery at %1%"
-msgstr "बैटरी %1% पर है"
-
-#: components/UserList.qml:71
-#, kde-format
-msgctxt "Nobody logged in on that session"
-msgid "Unused"
-msgstr "उपयोग में नहीं"
-
-#: components/UserList.qml:77
-#, kde-format
-msgctxt "User logged in on console number"
-msgid "TTY %1"
-msgstr "टीटीवाई %1"
-
-#: components/UserList.qml:79
-#, kde-format
-msgctxt "User logged in on console (X display number)"
-msgid "on TTY %1 (Display %2)"
-msgstr "टीटीवाई %1 पर (प्रदर्शन %2)"
-
-#: components/UserList.qml:83
-#, kde-format
-msgctxt "Username (location)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
 #, fuzzy, kde-format
@@ -158,39 +124,39 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "ताला खोलने में विफल"
 
-#: contents/lockscreen/LockScreenUi.qml:328
+#: contents/lockscreen/LockScreenUi.qml:330
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "निद्रा"
 
-#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "सुप्तावस्था"
 
-#: contents/lockscreen/LockScreenUi.qml:340
+#: contents/lockscreen/LockScreenUi.qml:342
 #, kde-format
 msgid "Switch User"
 msgstr "उपयोक्ता बदलें"
 
-#: contents/lockscreen/LockScreenUi.qml:527
+#: contents/lockscreen/LockScreenUi.qml:529
 #, kde-format
 msgid "Switch to This Session"
 msgstr "इस सत्र में बदलें"
 
-#: contents/lockscreen/LockScreenUi.qml:535
+#: contents/lockscreen/LockScreenUi.qml:537
 #, kde-format
 msgid "Start New Session"
 msgstr "नया सत्र प्रारंभ करें"
 
-#: contents/lockscreen/LockScreenUi.qml:548
+#: contents/lockscreen/LockScreenUi.qml:550
 #, kde-format
 msgid "Back"
 msgstr "पीछे"
 
-#: contents/lockscreen/LockScreenUi.qml:613
+#: contents/lockscreen/LockScreenUi.qml:615
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -307,6 +273,28 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "केडीई द्वारा बनाया गया प्लाज़्मा"
+
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Battery at %1%"
+#~ msgstr "बैटरी %1% पर है"
+
+#~ msgctxt "Nobody logged in on that session"
+#~ msgid "Unused"
+#~ msgstr "उपयोग में नहीं"
+
+#~ msgctxt "User logged in on console number"
+#~ msgid "TTY %1"
+#~ msgstr "टीटीवाई %1"
+
+#~ msgctxt "User logged in on console (X display number)"
+#~ msgid "on TTY %1 (Display %2)"
+#~ msgstr "टीटीवाई %1 पर (प्रदर्शन %2)"
+
+#~ msgctxt "Username (location)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
 
 #~ msgid "100%"
 #~ msgstr "१००%"

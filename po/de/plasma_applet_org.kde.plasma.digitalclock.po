@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-07-09 01:04+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -60,13 +60,13 @@ msgstr "Heute keine Termine"
 msgid "No events for this day"
 msgstr "Keine Termine an diesem Tag"
 
-#: package/contents/ui/CalendarView.qml:432
+#: package/contents/ui/CalendarView.qml:433
 #, kde-format
 msgid "Switch…"
 msgstr "Wechseln ..."
 
-#: package/contents/ui/CalendarView.qml:433
-#: package/contents/ui/CalendarView.qml:436
+#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:437
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Zu anderer Zeitzone wechseln"
@@ -201,7 +201,7 @@ msgctxt "custom date format"
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: package/contents/ui/configAppearance.qml:200
+#: package/contents/ui/configAppearance.qml:207
 #, fuzzy, kde-format
 #| msgid ""
 #| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -213,19 +213,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Dokumentation zum Zeitformat</a>"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Textanzeige:"
 
-#: package/contents/ui/configAppearance.qml:226
+#: package/contents/ui/configAppearance.qml:233
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: package/contents/ui/configAppearance.qml:230
+#: package/contents/ui/configAppearance.qml:237
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -234,25 +234,25 @@ msgstr ""
 "Der Text entspricht der Systemschriftart und wird an den verfügbaren Platz "
 "angepasst."
 
-#: package/contents/ui/configAppearance.qml:239
+#: package/contents/ui/configAppearance.qml:246
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manuell"
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Darstellung auswählen ..."
 
-#: package/contents/ui/configAppearance.qml:262
+#: package/contents/ui/configAppearance.qml:269
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:273
+#: package/contents/ui/configAppearance.qml:280
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -373,17 +373,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "In die Zwischenablage kopieren"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Datum und Zeit einstellen ..."
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Zeitformat einstellen ..."

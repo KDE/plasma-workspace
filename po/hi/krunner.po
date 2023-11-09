@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2020-08-14 10:05+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Kde-hindi\n"
@@ -28,47 +28,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "rawkoder@fastmail.com"
 
-#: main.cpp:71 view.cpp:47
+#: main.cpp:70 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "केरनर"
 
-#: main.cpp:71
+#: main.cpp:70
 #, kde-format
 msgid "Run Command interface"
 msgstr "कमांड लाइन अंतराफलक चालू करें"
 
-#: main.cpp:77
+#: main.cpp:76
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "क्लिपबोर्ड की विषय सूची केरनर में पृच्छा की भाँति उपयोग करें"
 
-#: main.cpp:78
+#: main.cpp:77
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "केरनर पृष्ठभूमि में प्रारंभ करें, दिखाएँ नहीं।"
 
-#: main.cpp:79
+#: main.cpp:78
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "अभूत इंस्टैंस को स्थानान्तरित करें"
 
-#: main.cpp:80
+#: main.cpp:79
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr ""
 
-#: main.cpp:81
+#: main.cpp:80
 #, kde-format
 msgid "List available plugins"
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:87
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "पृच्छा, -c न प्रदान करने पर ही उपयोग होगी"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-07-10 14:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -60,13 +60,13 @@ msgstr "Няма събития за днес"
 msgid "No events for this day"
 msgstr "Няма събития за този ден"
 
-#: package/contents/ui/CalendarView.qml:432
+#: package/contents/ui/CalendarView.qml:433
 #, kde-format
 msgid "Switch…"
 msgstr "Превключване…"
 
-#: package/contents/ui/CalendarView.qml:433
-#: package/contents/ui/CalendarView.qml:436
+#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:437
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Превключване към друга часова зона"
@@ -201,7 +201,7 @@ msgctxt "custom date format"
 msgid "Custom"
 msgstr "Персонализиран"
 
-#: package/contents/ui/configAppearance.qml:200
+#: package/contents/ui/configAppearance.qml:207
 #, fuzzy, kde-format
 #| msgid ""
 #| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -213,19 +213,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Документация за времевия формат </a>"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Показване на текст:"
 
-#: package/contents/ui/configAppearance.qml:226
+#: package/contents/ui/configAppearance.qml:233
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: package/contents/ui/configAppearance.qml:230
+#: package/contents/ui/configAppearance.qml:237
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -234,25 +234,25 @@ msgstr ""
 "Текстът ще следва системния шрифт и ще се разширява, за да запълни наличното "
 "пространство."
 
-#: package/contents/ui/configAppearance.qml:239
+#: package/contents/ui/configAppearance.qml:246
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Ръчно"
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Избор на стил…"
 
-#: package/contents/ui/configAppearance.qml:262
+#: package/contents/ui/configAppearance.qml:269
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:273
+#: package/contents/ui/configAppearance.qml:280
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -376,17 +376,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Копиране в клипборда"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Сверяване на дата и час…"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Задаване на формат на времето…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-08-17 21:29+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -110,32 +110,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Посетете bugs.kde.org, за да докладвате за грешки"
 
-#: main.cpp:105
+#: main.cpp:104
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Обвивка на Plasma"
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Активиране на QML Javascript откриване на грешки"
 
-#: main.cpp:120
+#: main.cpp:119
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Без автоматично рестартиране на Plasma обвивка след срив"
 
-#: main.cpp:123
+#: main.cpp:122
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Принудително зареждане на дадената приставка на обвивката"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменяне на съществуваща инстанция"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -144,22 +144,22 @@ msgstr ""
 "Активира тестовия режим и определя файла с оформление на javascript, за да "
 "настрои среда за тестване"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Списък на наличните опции за обратна връзка от потребителите"
 
-#: main.cpp:217
+#: main.cpp:216
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma не успя да стартира"
 
-#: main.cpp:218
+#: main.cpp:217
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

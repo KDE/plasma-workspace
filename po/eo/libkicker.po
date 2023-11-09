@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -197,93 +197,93 @@ msgstr "Ofte Uzataj Aplikoj"
 msgid "Power / Session"
 msgstr "Potenco / Seanco"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:218
 #, kde-format
 msgid "Search results"
 msgstr "Serĉrezultoj"
 
-#: plugin/systementry.cpp:195
+#: plugin/systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "Ŝlosi"
 
-#: plugin/systementry.cpp:198
+#: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "Elsaluti"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "Konservi Seancon"
 
-#: plugin/systementry.cpp:204
+#: plugin/systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "Ŝanĝi Uzanton"
 
-#: plugin/systementry.cpp:207
+#: plugin/systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Dormi"
 
-#: plugin/systementry.cpp:210
+#: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "Pasivumigi"
 
-#: plugin/systementry.cpp:213
+#: plugin/systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "Rekomenci"
 
-#: plugin/systementry.cpp:216
+#: plugin/systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "Fermi sistemon"
 
-#: plugin/systementry.cpp:232
+#: plugin/systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "Seanco"
 
-#: plugin/systementry.cpp:237
+#: plugin/systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "Sistemo"
 
-#: plugin/systementry.cpp:249
+#: plugin/systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "Ŝlosi ekranon"
 
-#: plugin/systementry.cpp:252
+#: plugin/systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "Fini la seancon"
 
-#: plugin/systementry.cpp:258
+#: plugin/systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Komenci paralelan seancon kiel malsama uzanto"
 
-#: plugin/systementry.cpp:261
+#: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Suspendi al RAM"
 
-#: plugin/systementry.cpp:264
+#: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Suspendi al disko"
 
-#: plugin/systementry.cpp:267
+#: plugin/systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "Rekomenci komputilon"
 
-#: plugin/systementry.cpp:270
+#: plugin/systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "Malŝalti komputilon"

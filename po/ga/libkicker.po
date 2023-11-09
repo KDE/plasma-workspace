@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2012-09-21 16:01-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -196,93 +196,93 @@ msgstr "Feidhmchláir Shuiteáilte"
 msgid "Power / Session"
 msgstr "Seisiún"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:218
 #, kde-format
 msgid "Search results"
 msgstr ""
 
-#: plugin/systementry.cpp:195
+#: plugin/systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr ""
 
-#: plugin/systementry.cpp:198
+#: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, fuzzy, kde-format
 msgid "Save Session"
 msgstr "Seisiún"
 
-#: plugin/systementry.cpp:204
+#: plugin/systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr ""
 
-#: plugin/systementry.cpp:207
+#: plugin/systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: plugin/systementry.cpp:210
+#: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr ""
 
-#: plugin/systementry.cpp:213
+#: plugin/systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: plugin/systementry.cpp:216
+#: plugin/systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: plugin/systementry.cpp:232
+#: plugin/systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "Seisiún"
 
-#: plugin/systementry.cpp:237
+#: plugin/systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr ""
 
-#: plugin/systementry.cpp:249
+#: plugin/systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr ""
 
-#: plugin/systementry.cpp:252
+#: plugin/systementry.cpp:251
 #, fuzzy, kde-format
 msgid "End session"
 msgstr "Seisiún"
 
-#: plugin/systementry.cpp:258
+#: plugin/systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr ""
 
-#: plugin/systementry.cpp:261
+#: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr ""
 
-#: plugin/systementry.cpp:264
+#: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr ""
 
-#: plugin/systementry.cpp:267
+#: plugin/systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr ""
 
-#: plugin/systementry.cpp:270
+#: plugin/systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr ""

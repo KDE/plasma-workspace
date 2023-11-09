@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2008-07-19 16:09+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -28,23 +28,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pier_andreit@yahoo.it"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr ""
 "KCMInit - esegue i servizi di inizializzazione per i moduli di controllo."
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Elenca i moduli eseguiti all'avvio"
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Modulo di configurazione da eseguire"

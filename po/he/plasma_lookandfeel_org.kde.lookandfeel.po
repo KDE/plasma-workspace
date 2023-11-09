@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-10-27 16:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -40,7 +40,7 @@ msgstr "סיסמה"
 msgid "Log In"
 msgstr "כניסה"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock דולק"
@@ -80,7 +80,7 @@ msgstr "נא להקליד שם משתמש וסיסמה"
 msgid "List Users"
 msgstr "הצגת משתמשים"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -95,40 +95,6 @@ msgstr "הכניסה נכשלה"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "הפעלת שולחן עבודה: %1"
-
-#: components/Battery.qml:54
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
-#: components/Battery.qml:55
-#, kde-format
-msgid "Battery at %1%"
-msgstr "הסוללה טעונה ב־%1%"
-
-#: components/UserList.qml:71
-#, kde-format
-msgctxt "Nobody logged in on that session"
-msgid "Unused"
-msgstr "לא בשימוש"
-
-#: components/UserList.qml:77
-#, kde-format
-msgctxt "User logged in on console number"
-msgid "TTY %1"
-msgstr "TTY %1"
-
-#: components/UserList.qml:79
-#, kde-format
-msgctxt "User logged in on console (X display number)"
-msgid "on TTY %1 (Display %2)"
-msgstr "ב־TTY‏ %1 (תצוגה %2)"
-
-#: components/UserList.qml:83
-#, kde-format
-msgctxt "Username (location)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
 #, kde-format
@@ -159,37 +125,37 @@ msgstr "הצגה תחת בקשת השחרור"
 msgid "Unlocking failed"
 msgstr "השחרור נכשל"
 
-#: contents/lockscreen/LockScreenUi.qml:328
+#: contents/lockscreen/LockScreenUi.qml:330
 #, kde-format
 msgid "Sleep"
 msgstr "שינה"
 
-#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "תרדמת"
 
-#: contents/lockscreen/LockScreenUi.qml:340
+#: contents/lockscreen/LockScreenUi.qml:342
 #, kde-format
 msgid "Switch User"
 msgstr "החלפת משתמש"
 
-#: contents/lockscreen/LockScreenUi.qml:527
+#: contents/lockscreen/LockScreenUi.qml:529
 #, kde-format
 msgid "Switch to This Session"
 msgstr "מעבר להפעלה זו"
 
-#: contents/lockscreen/LockScreenUi.qml:535
+#: contents/lockscreen/LockScreenUi.qml:537
 #, kde-format
 msgid "Start New Session"
 msgstr "התחלת הפעלה חדשה"
 
-#: contents/lockscreen/LockScreenUi.qml:548
+#: contents/lockscreen/LockScreenUi.qml:550
 #, kde-format
 msgid "Back"
 msgstr "חזרה"
 
-#: contents/lockscreen/LockScreenUi.qml:613
+#: contents/lockscreen/LockScreenUi.qml:615
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -318,6 +284,28 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "פלזמה פותחה על ידי KDE"
+
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Battery at %1%"
+#~ msgstr "הסוללה טעונה ב־%1%"
+
+#~ msgctxt "Nobody logged in on that session"
+#~ msgid "Unused"
+#~ msgstr "לא בשימוש"
+
+#~ msgctxt "User logged in on console number"
+#~ msgid "TTY %1"
+#~ msgstr "TTY %1"
+
+#~ msgctxt "User logged in on console (X display number)"
+#~ msgid "on TTY %1 (Display %2)"
+#~ msgstr "ב־TTY‏ %1 (תצוגה %2)"
+
+#~ msgctxt "Username (location)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
 
 #~ msgid "Configure"
 #~ msgstr "הגדרות"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-11-04 22:36+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -37,7 +37,7 @@ msgstr "Contraseña"
 msgid "Log In"
 msgstr "Aniciar la sesión"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:314
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "El Bloq Mayús ta activáu"
@@ -77,7 +77,7 @@ msgstr "Escribi'l nome d'usuariu ya la contraseña"
 msgid "List Users"
 msgstr "Llistar los usuarios"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:589
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -92,40 +92,6 @@ msgstr "L'aniciu de la sesión falló"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sesión del escritoriu: %1"
-
-#: components/Battery.qml:54
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
-#: components/Battery.qml:55
-#, kde-format
-msgid "Battery at %1%"
-msgstr "Batería al %1%"
-
-#: components/UserList.qml:71
-#, kde-format
-msgctxt "Nobody logged in on that session"
-msgid "Unused"
-msgstr "Ensin usar"
-
-#: components/UserList.qml:77
-#, kde-format
-msgctxt "User logged in on console number"
-msgid "TTY %1"
-msgstr "TTY %1"
-
-#: components/UserList.qml:79
-#, kde-format
-msgctxt "User logged in on console (X display number)"
-msgid "on TTY %1 (Display %2)"
-msgstr "na TTY %1 (pantalla %2)"
-
-#: components/UserList.qml:83
-#, kde-format
-msgctxt "Username (location)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
 #, kde-format
@@ -156,37 +122,37 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "El desbloquéu falló"
 
-#: contents/lockscreen/LockScreenUi.qml:328
+#: contents/lockscreen/LockScreenUi.qml:330
 #, kde-format
 msgid "Sleep"
 msgstr "Dormir"
 
-#: contents/lockscreen/LockScreenUi.qml:334 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Ivernar"
 
-#: contents/lockscreen/LockScreenUi.qml:340
+#: contents/lockscreen/LockScreenUi.qml:342
 #, kde-format
 msgid "Switch User"
 msgstr "Cambiar d'usuariu"
 
-#: contents/lockscreen/LockScreenUi.qml:527
+#: contents/lockscreen/LockScreenUi.qml:529
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Cambair a esta sesión"
 
-#: contents/lockscreen/LockScreenUi.qml:535
+#: contents/lockscreen/LockScreenUi.qml:537
 #, kde-format
 msgid "Start New Session"
 msgstr "Aniciar una sesión nueva"
 
-#: contents/lockscreen/LockScreenUi.qml:548
+#: contents/lockscreen/LockScreenUi.qml:550
 #, kde-format
 msgid "Back"
 msgstr "Atrás"
 
-#: contents/lockscreen/LockScreenUi.qml:613
+#: contents/lockscreen/LockScreenUi.qml:615
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -303,3 +269,25 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, creáu por KDE"
+
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Battery at %1%"
+#~ msgstr "Batería al %1%"
+
+#~ msgctxt "Nobody logged in on that session"
+#~ msgid "Unused"
+#~ msgstr "Ensin usar"
+
+#~ msgctxt "User logged in on console number"
+#~ msgid "TTY %1"
+#~ msgstr "TTY %1"
+
+#~ msgctxt "User logged in on console (X display number)"
+#~ msgid "on TTY %1 (Display %2)"
+#~ msgstr "na TTY %1 (pantalla %2)"
+
+#~ msgctxt "Username (location)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2022-11-10 12:14\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -31,22 +31,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - ініцыялізацыя модуляў кіравання падчас запуску сістэмы."
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Паказаць спіс модуляў, якія запускаюцца падчас запуску"
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Модуль канфігурацыі для запуску"

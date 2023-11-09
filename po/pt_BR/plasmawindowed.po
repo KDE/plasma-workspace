@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-10-20 00:50-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: main.cpp:44 plasmawindowedcorona.cpp:99
+#: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Janela do plasma"
@@ -27,7 +27,7 @@ msgstr "Janela do plasma"
 msgid "Enable QML Javascript debugger"
 msgstr "Ativar o depurador QML JavaScript"
 
-#: main.cpp:49 plasmawindowedcorona.cpp:101
+#: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -41,17 +41,17 @@ msgstr ""
 msgid "Force loading the given shell plugin"
 msgstr "Forçar o carregamento do plugin de shell fornecido"
 
-#: main.cpp:55 plasmawindowedcorona.cpp:102
+#: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
 msgstr "O applet a ser aberto."
 
-#: main.cpp:56 plasmawindowedcorona.cpp:103
+#: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Argumentos a serem passados para o plasmoide."
 
-#: plasmawindowedview.cpp:117
+#: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
 msgstr "Fechar %1"

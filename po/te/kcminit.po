@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "k.meetme@gmail.com,infyquest@gmail.com"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - పారంభపు సిద్దీకరణను నియంత్రణ మాడ్యూల్సు కొరకు నడుపుతుంది."
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "ప్రారంభము వద్ద నడిచే జాబితా మాడ్యూల్సు"
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Configuration module to run"
 msgstr "నడుచుటకు ఆకృతీకరణ మాడ్యూల్"

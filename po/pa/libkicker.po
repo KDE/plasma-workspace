@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2021-06-08 22:41-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -195,93 +195,93 @@ msgstr "ਅਕਸਰ ਵਰਤੇ ਗਏ ਐਪਲੀਕੇਸ਼ਨ"
 msgid "Power / Session"
 msgstr "ਪਾਵਰ / ਸ਼ੈਸ਼ਨ"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:218
 #, kde-format
 msgid "Search results"
 msgstr "ਖੋਜ ਦੇ ਨਤੀਜੇ"
 
-#: plugin/systementry.cpp:195
+#: plugin/systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "ਲਾਕ"
 
-#: plugin/systementry.cpp:198
+#: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "ਲਾਗ ਆਉਟ"
 
-#: plugin/systementry.cpp:201 plugin/systementry.cpp:255
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "ਸ਼ੈਸ਼ਨ ਸੰਭਾਲੋ"
 
-#: plugin/systementry.cpp:204
+#: plugin/systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ"
 
-#: plugin/systementry.cpp:207
+#: plugin/systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ਸਲੀਪ"
 
-#: plugin/systementry.cpp:210
+#: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "ਹਾਈਬਰਨੇਟ ਕਰੋ"
 
-#: plugin/systementry.cpp:213
+#: plugin/systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
-#: plugin/systementry.cpp:216
+#: plugin/systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: plugin/systementry.cpp:232
+#: plugin/systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "ਸ਼ੈਸ਼ਨ"
 
-#: plugin/systementry.cpp:237
+#: plugin/systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "ਸਿਸਟਮ"
 
-#: plugin/systementry.cpp:249
+#: plugin/systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "ਸਕਰੀਨ ਨੂੰ ਲਾਕ ਕਰੋ"
 
-#: plugin/systementry.cpp:252
+#: plugin/systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "ਸ਼ੈਸ਼ਨ ਖਤਮ ਕਰੋ"
 
-#: plugin/systementry.cpp:258
+#: plugin/systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "ਵੱਖਰੇ ਵਰਤੋਂਕਾਰ ਵਜੋਂ ਸਮਾਂਤਰ ਸ਼ੈਸ਼ਨ ਸ਼ੁਰੂ ਕਰੋ"
 
-#: plugin/systementry.cpp:261
+#: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "ਰੈਮ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
 
-#: plugin/systementry.cpp:264
+#: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "ਡਿਸਕ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
 
-#: plugin/systementry.cpp:267
+#: plugin/systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "ਕੰਪਿਊਟਰ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ"
 
-#: plugin/systementry.cpp:270
+#: plugin/systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "ਕੰਪਿਊਟਰ ਨੂੰ ਬੰਦ ਕਰੋ"

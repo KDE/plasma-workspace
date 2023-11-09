@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-07-30 12:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,47 +27,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: main.cpp:71 view.cpp:47
+#: main.cpp:70 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "கேரன்னர்"
 
-#: main.cpp:71
+#: main.cpp:70
 #, kde-format
 msgid "Run Command interface"
 msgstr "கட்டளைகளை இயக்கும் இடைமுகப்பு"
 
-#: main.cpp:77
+#: main.cpp:76
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "பிடிப்புப்பலகையின் உள்ளடக்கத்தை கேரன்னரில் பயன்படுத்து"
 
-#: main.cpp:78
+#: main.cpp:77
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "கேரன்னரை பின்னணியில் தொடக்கி, அதைக் காட்டாதே."
 
-#: main.cpp:79
+#: main.cpp:78
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "ஏற்கனவே உள்ளதற்கு பதிலாக இது இயங்கட்டும்"
 
-#: main.cpp:80
+#: main.cpp:79
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "குறிப்பிட்ட செருகுநிரலிலிருந்தான முடிவுகளை மட்டும் காட்டு"
 
-#: main.cpp:81
+#: main.cpp:80
 #, kde-format
 msgid "List available plugins"
 msgstr "உள்ள செருகுநிரல்களை பட்டியலிடு"
 
-#: main.cpp:88
+#: main.cpp:87
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "இயக்க வேண்டிய வினா, -c வழங்கப்படவில்லையெனில் மட்டும் பயன்படுத்தப்படும்"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

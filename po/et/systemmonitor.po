@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2016-01-12 01:44+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Show System Activity"
 msgstr "Näita süsteemi tegevust"
 
-#: main.cpp:22
+#: main.cpp:20
 #, kde-format
 msgid "System Activity"
 msgstr "Süsteemi tegevus"

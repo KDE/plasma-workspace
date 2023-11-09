@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2007-11-04 18:50+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -29,23 +29,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nabin@mpp.org.np"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:170
 #, fuzzy, kde-format
 #| msgid "KCMInit - runs startups initialization for Control Modules."
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - नियन्त्रण मोड्युल थालनीका लागि सुरुबाट चलाउछ"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "प्रारम्भमा चल्ने मोड्युल सूचीकृत गर्नुहोस्"
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Configuration module to run"
 msgstr "कन्फिगरेसन मोड्युल चलाउन"

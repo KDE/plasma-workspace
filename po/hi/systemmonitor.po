@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2021-07-01 18:17+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Show System Activity"
 msgstr "तंत्र क्रियाएँ दिखाएं"
 
-#: main.cpp:22
+#: main.cpp:20
 #, kde-format
 msgid "System Activity"
 msgstr "तंत्र क्रियाएँ"
