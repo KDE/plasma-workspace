@@ -25,15 +25,16 @@ MouseArea {
 
     property bool showLocalTimezone: Plasmoid.configuration.showLocalTimezone
     property bool showDate: Plasmoid.configuration.showDate
+    property bool localizeDate: Plasmoid.configuration.dateFormat === "longDate" || Plasmoid.configuration.dateFormat === "shortDate"
     property var dateFormat: {
         if (Plasmoid.configuration.dateFormat === "custom") {
             return Plasmoid.configuration.customDateFormat; // str
         } else if (Plasmoid.configuration.dateFormat === "longDate") {
-            return Qt.SystemLocaleLongDate; // int
+            return Locale.LongFormat; // int
         } else if (Plasmoid.configuration.dateFormat === "isoDate") {
             return Qt.ISODate; // int
         } else { // "shortDate"
-            return Qt.SystemLocaleShortDate; // int
+            return Locale.ShortFormat; // int
         }
     }
 
@@ -655,7 +656,11 @@ MouseArea {
         }
 
         if (main.showDate) {
-            dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
+            if (main.localizeDate) {
+                dateLabel.text = Qt.formatDate(main.getCurrentTime(), Qt.locale(), main.dateFormat);
+            } else {
+                dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
+            }
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";

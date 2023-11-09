@@ -156,12 +156,12 @@ ColumnLayout {
                     {
                         label: i18n("Long Date"),
                         name: "longDate",
-                        format: Qt.SystemLocaleLongDate
+                        format: Locale.LongFormat
                     },
                     {
                         label: i18n("Short Date"),
                         name: "shortDate",
-                        format: Qt.SystemLocaleShortDate
+                        format: Locale.ShortFormat
                     },
                     {
                         label: i18n("ISO Date"),
@@ -173,7 +173,7 @@ ColumnLayout {
                         name: "custom"
                     }
                 ]
-                onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
+                onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"];
 
                 Component.onCompleted: {
                     const isConfiguredDateFormat = item => item["name"] === Plasmoid.configuration.dateFormat;
@@ -184,8 +184,15 @@ ColumnLayout {
             QQC2.Label {
                 Layout.fillWidth: true
                 textFormat: Text.PlainText
-                text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text
-                                                                            : dateFormat.model[dateFormat.currentIndex].format)
+                text: {
+                    if (cfg_dateFormat === "shortDate" || cfg_dateFormat === "longDate") {
+                        return Qt.formatDate(new Date(), Qt.locale(), dateFormat.model[dateFormat.currentIndex].format);
+                    } else if (cfg_dateFormat === "custom") {
+                        return Qt.formatDate(new Date(), customDateFormat.text);
+                    } else {
+                        return Qt.formatDate(new Date(), dateFormat.model[dateFormat.currentIndex].format);
+                    }
+                }
             }
         }
 
