@@ -131,9 +131,10 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
         const QString baseName = QFileInfo(url.fileName()).completeBaseName();
         bool isExactMatch = url.fileName().compare(searchTerm, Qt::CaseInsensitive) == 0 || baseName.compare(searchTerm, Qt::CaseInsensitive) == 0;
         bool isPossibleMatch = url.fileName().contains(searchTerm, Qt::CaseInsensitive);
-        match.type = isExactMatch ? KRunner::QueryMatch::ExactMatch
-            : isPossibleMatch     ? KRunner::QueryMatch::PossibleMatch
-                                  : KRunner::QueryMatch::CompletionMatch;
+        const auto categoryRelevance = isExactMatch ? KRunner::QueryMatch::CategoryRelevance::Highest
+            : isPossibleMatch                       ? KRunner::QueryMatch::CategoryRelevance::Moderate
+                                                    : KRunner::QueryMatch::CategoryRelevance::Low;
+        match.categoryRelevance = qToUnderlying(categoryRelevance);
         QVariantMap properties;
 
         QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();

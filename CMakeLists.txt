@@ -49,7 +49,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     CoreAddons KIO Prison Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
                     OPTIONAL_COMPONENTS DocTools)
-find_package(KF6 ${PROJECT_VERSION} REQUIRED COMPONENTS
+find_package(KF6 REQUIRED COMPONENTS
                     Plasma PlasmaQuick Plasma5Support Wayland ActivitiesStats Activities)
 
 if (BUILD_TESTING)
