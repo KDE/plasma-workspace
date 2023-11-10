@@ -16,21 +16,25 @@ import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 
 PlasmoidItem {
-    Layout.minimumWidth: tabBar.implicitWidth
-    Layout.minimumHeight: tabBar.implicitHeight
+    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? tabBar.implicitHeight : tabBar.implicitWidth
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? tabBar.implicitWidth : tabBar.implicitHeight
 
+    Plasmoid.constraintHints: Plasmoid.CanFillArea
     preferredRepresentation: fullRepresentation
 
     PlasmaComponents.TabBar {
         id: tabBar
 
-        anchors.fill: parent
+        anchors.centerIn: parent
+        rotation: Plasmoid.formFactor === PlasmaCore.Types.Vertical ?  -90 : 0
+        transformOrigin: Item.Center
+        width: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? parent.height : parent.width
+        height: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? parent.width : parent.height
+
 
         position: {
-            //TODO: custom background drawing
             switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
-            case PlasmaCore.Types.RightEdge:
             case PlasmaCore.Types.TopEdge:
                 return PlasmaComponents.TabBar.Header;
             default:
@@ -49,6 +53,7 @@ PlasmoidItem {
                 checked: model.current
                 text: model.name
                 activeFocusOnTab: true
+                width: implicitWidth
 
                 Keys.onPressed: event => {
                     switch (event.key) {
@@ -72,16 +77,9 @@ PlasmoidItem {
 
                 onCheckedChanged: {
                     if(model.current) {
-                        tabBar.currentTab = tab;
                         if (tabBar.activeFocus) {
                             forceActiveFocus();
                         }
-                    }
-                }
-
-                Component.onCompleted: {
-                    if(model.current) {
-                        tabBar.currentTab = tab;
                     }
                 }
             }
