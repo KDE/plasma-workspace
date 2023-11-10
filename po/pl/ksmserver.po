@@ -1,6 +1,6 @@
 # translation of ksmserver.po to Polish
 # translation of ksmserver.po to
-# Version: $Revision: 1664040 $
+# Version: $Revision: 1664505 $
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2009, 2010, 2011.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-11-04 12:30+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Wylogowywanie przerwane przez '%1'"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME nieustawiony!"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Katalog $HOME (%1) nie istnieje."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -48,37 +48,37 @@ msgstr ""
 "zamierzone, to ustaw zmienną<envar>KDE_HOME_READONLY=1</envar> w swoim "
 "środowisku."
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Brak praw odczytu do katalogu $HOME (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Wyczerpano przestrzeń przechowywania w katalogu $HOME (%1)."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Zapisywanie do katalogu $HOME (%2) zakończyło się błędem '%1'"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Brak prawa zapisu do '%1'."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Brak prawa odczytu do '%1'."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Wyczerpano przestrzeń przechowywania w katalogu tymczasowym (%1)."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -87,7 +87,7 @@ msgstr ""
 "Zapisywanie do katalogu tymczasowego (%2) zakończyło się\n"
 "    błędem '%1'."
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -96,7 +96,7 @@ msgstr ""
 "Wykryto następujący problem z wgranymi pakietami\n"
 "przy próbie uruchomienia Plazmy:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -107,12 +107,12 @@ msgstr ""
 "\n"
 "Plazma nie może się uruchomić.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Błędnie wgrane Przestrzenie Pracy Plazmy!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -122,22 +122,22 @@ msgstr ""
 "X11R6 \n"
 "protokołem zarządzania sesją (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Odtwarza poprzednią sesję, o ile jest dostępna"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Dopuść także zdalne połączenia"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Uruchamia sesję w trybie zablokowanym"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -146,13 +146,13 @@ msgstr ""
 "Rozpoczyna bez obsługi blokowania ekranu. Potrzebne tylko gdy inny składnik "
 "zapewnia blokowanie ekranu."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nieznany]"
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -165,42 +165,7 @@ msgstr ""
 "zasobów posiedzenia:\n"
 "%1"
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Zarządzanie sesjami"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Wyloguj"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "Wyłącz"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "Uruchom ponownie"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Wyloguj bez potwierdzenia"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "Zamknij bez potwierdzenia"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Uruchom ponownie bez potwierdzenia"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -211,6 +176,27 @@ msgstr ""
 "Nie można przywrócić <application>%1</application>, bo jest uszkodzona lub "
 "wyczerpała zasoby przywracania posiedzenia systemu. Zachęcamy do zgłoszenia "
 "tego twórcom tej aplikacji."
+
+#~ msgid "Session Management"
+#~ msgstr "Zarządzanie sesjami"
+
+#~ msgid "Log Out"
+#~ msgstr "Wyloguj"
+
+#~ msgid "Shut Down"
+#~ msgstr "Wyłącz"
+
+#~ msgid "Reboot"
+#~ msgstr "Uruchom ponownie"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Wyloguj bez potwierdzenia"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Zamknij bez potwierdzenia"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Uruchom ponownie bez potwierdzenia"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Brak praw zapisu do katalogu $HOME (%1)."

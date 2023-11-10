@@ -1,7 +1,7 @@
 # Translation of ksmserver.po to Slovenian
 # SLOVENIAN TRANSLATION OF KSMSERVER.
 # Copyright (C) 2000, 2003, 2004 Free Software Foundation, Inc.
-# $Id: ksmserver.po 1664040 2023-11-04 12:43:25Z scripty $
+# $Id: ksmserver.po 1664505 2023-11-10 02:11:52Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-11-04 08:54+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -26,22 +26,22 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.4\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Odjavo je preklical '%1'"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME ni nastavljena!"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Mapa $HOME (%1) ne obstaja."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -51,37 +51,37 @@ msgstr ""
 "Ni dostopa za pisanje do imenika $HOME (%1). Če je to namerno, nastavite "
 "<envar>KDE_HOME_READONLY=1</envar> v vašem okolju."
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Ni dovoljenja za branje iz mape $HOME (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "V mapi $HOME (%1) ni neporabljenega prostora."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Zapisovanje v mapo $HOME (%2) je spodletelo z napako '%1'"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Brez pisalnega dostopa do '%1'."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Brez bralnega dostopa do '%1'."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "V začasni mapi (%1) ni neporabljenega prostora."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -90,7 +90,7 @@ msgstr ""
 "Zapisovanje v začasno mapo (%2) je spodletelo\n"
 "    z napako '%1'"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -99,7 +99,7 @@ msgstr ""
 "Med poskusom zagona Plasme je bila zaznana naslednja\n"
 "napaka v namestitvi:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -110,12 +110,12 @@ msgstr ""
 "\n"
 "Plasme ni mogoče zagnati.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Težava v namestitvi delovnega prostora Plasma!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -124,22 +124,22 @@ msgstr ""
 "Zanesljivi upravljalnik sej za Plasmo, ki se pogovarja po standardnem\n"
 "protokolu za upravljanje sej za X11R6 (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Obnovi shranjeno uporabniško sejo, če obstaja"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Dovoli tudi oddaljene povezave"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Zažene sejo v zaklenjenem načinu"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -148,13 +148,13 @@ msgstr ""
 "Zaženi brez podpore za zaklep zaslona. Zahtevano le, če zaklep zaslona "
 "ponuja drugi sestavni del."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[neznano]"
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -166,42 +166,7 @@ msgstr ""
 "upravljanje sej izčrpani. Tukaj so trije največji uporabniki virov seje:\n"
 "%1"
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Upravljanje sej"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Odjavi"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "Zaustavi"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "Ponovno zaženi"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Odjavi brez potrditve"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "Zaustavi brez potrditve"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Znova zaženi brez potrditve"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -212,6 +177,27 @@ msgstr ""
 "Ni mogoče obnoviti <application>%1</application>, ker je pokvarjena in "
 "jeizčrpala sistemska sredstva za obnovitev seje. Prosimo, da to sporočite "
 "razvijalcem aplikacije."
+
+#~ msgid "Session Management"
+#~ msgstr "Upravljanje sej"
+
+#~ msgid "Log Out"
+#~ msgstr "Odjavi"
+
+#~ msgid "Shut Down"
+#~ msgstr "Zaustavi"
+
+#~ msgid "Reboot"
+#~ msgstr "Ponovno zaženi"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Odjavi brez potrditve"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Zaustavi brez potrditve"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Znova zaženi brez potrditve"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Ni dovoljenja za pisanje v mapo $HOME (%1)."

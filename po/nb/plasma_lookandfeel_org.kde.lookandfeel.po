@@ -268,27 +268,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma fra KDE"
-
-#, fuzzy
-#~ msgid "%1%"
-#~ msgstr "%1 %"
-
-#, fuzzy
-#~ msgid "Battery at %1%"
-#~ msgstr "Batterinivå: %1 %"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "Ubrukt"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "på terminal %1 (%2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"

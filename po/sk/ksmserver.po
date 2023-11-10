@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-04-14 18:15+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Odhlásenie zrušil '%1'"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME nie je nastavený!"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Adresár $HOME (%1) neexistuje."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -47,37 +47,37 @@ msgstr ""
 "Nie je prístup na zápis do adresára $HOME (%1). Ak je to zámerné, nastavte "
 "vo svojom prostredí <envar>KDE_HOME_READONLY=1</envar>."
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Nie je právo na čítanie do adresára $HOME (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Adresár $HOME (%1) nemá dosť miesta na disku."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Zápis do adresára $HOME (%2) zlyhal s chybou '%1'"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nie je prístup na zápis do '%1'."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nie je prístup na čítanie do '%1'."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Dočasný adresár (%1) nemá dosť miesta na disku."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -86,7 +86,7 @@ msgstr ""
 "Zápis do dočasného adresára (%2) zlyhal\n"
 "    s chybou '%1'"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -95,7 +95,7 @@ msgstr ""
 "Boli zistené nasledovné problémy inštalácie\n"
 "pri pokuse spustiť Plasmu:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -106,12 +106,12 @@ msgstr ""
 "\n"
 "Plasmu nie je možné spustiť.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problém s inštaláciou pracovnej plochy Plasma!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -120,22 +120,22 @@ msgstr ""
 "Spoľahlivý správca KDE sedení, ktorý komunikuje štandardným X11R6 \n"
 "protokolom správy sedenia (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Obnoví uložené užívateľské sedenie, ak je dostupné"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Povolí aj vzdialené pripojenia"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Spustí sedenie v zamknutom režime"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -144,13 +144,13 @@ msgstr ""
 "Spustí bez podpory zamknutia obrazovky. Potrebné iba, ak iný komponent "
 "poskytuje zamykanie obrazovky."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -159,42 +159,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Správa sedení"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Odhlásiť"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "Vypnúť"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "Reštartovať"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Odhlásiť bez potvrdenia"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "Vypnúť bez potvrdenia"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Reštartovať bez potvrdenia"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -202,6 +167,27 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "Session Management"
+#~ msgstr "Správa sedení"
+
+#~ msgid "Log Out"
+#~ msgstr "Odhlásiť"
+
+#~ msgid "Shut Down"
+#~ msgstr "Vypnúť"
+
+#~ msgid "Reboot"
+#~ msgstr "Reštartovať"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Odhlásiť bez potvrdenia"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Vypnúť bez potvrdenia"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Reštartovať bez potvrdenia"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Nie je právo na zápis do adresára $HOME (%1)."

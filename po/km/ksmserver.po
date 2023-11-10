@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2012-06-14 13:44+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "ការ​ចេញ​ត្រូវ​បាន​បោះបង់​ដោយ '%1'"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr ""
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr ""
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -41,51 +41,51 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr ""
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr ""
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr ""
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr ""
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr ""
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr ""
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -93,12 +93,12 @@ msgid ""
 "Plasma is unable to start.\n"
 msgstr ""
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr ""
 
-#: main.cpp:193
+#: main.cpp:194
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -110,35 +110,35 @@ msgstr ""
 "កម្មវិធី​គ្រប់គ្រង​សម័យ KDE គួរ​ឲ្យ​ទុកចិត្ត ដែលប្រើ X11R6 \n"
 "ពិធីការ​គ្រប់គ្រង​សម័យ (XSMP) ខ្នាត​គំរូ ។"
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "ស្ដារ​សម័យ​របស់​អ្នក​ប្រើ​ដែល​បាន​រក្សា​ទុក ប្រសិន​បើ​មាន"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "អនុញ្ញាត​ឲ្យ​មាន​ការ​តភ្ជាប់​ពី​ចម្ងាយ​ផង​ដែរ"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr ""
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -147,44 +147,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:968
-#, fuzzy, kde-format
-#| msgid "The KDE Session Manager"
-msgid "Session Management"
-msgstr "កម្មវិធី​គ្រប់គ្រង​សម័យ KDE"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "ចេញ​"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr ""
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr ""
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "ចេញ​ដោយ​មិន​មានការ​បញ្ជាក់"
-
-#: server.cpp:994
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
-msgid "Shut Down Without Confirmation"
-msgstr "ផ្អាក​ដោយ​គ្មានការ​បញ្ជាក់"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "ចាប់ផ្ដើម​ឡើង​វិញ​ដោយ​គ្មាន​ការ​បញ្ជាក់"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -192,6 +155,25 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#, fuzzy
+#~| msgid "The KDE Session Manager"
+#~ msgid "Session Management"
+#~ msgstr "កម្មវិធី​គ្រប់គ្រង​សម័យ KDE"
+
+#~ msgid "Log Out"
+#~ msgstr "ចេញ​"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "ចេញ​ដោយ​មិន​មានការ​បញ្ជាក់"
+
+#, fuzzy
+#~| msgid "Halt Without Confirmation"
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "ផ្អាក​ដោយ​គ្មានការ​បញ្ជាក់"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "ចាប់ផ្ដើម​ឡើង​វិញ​ដោយ​គ្មាន​ការ​បញ្ជាក់"
 
 #, fuzzy
 #~| msgid ""

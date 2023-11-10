@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2020-04-25 13:41+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "X-Generator: Lokalize 19.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "'%1' katkestas väljalogimise"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME pole määratud!"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME kataloogi (%1) ei ole olemas."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -44,37 +44,37 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME kataloogis (%1) puudub lugemisõigus."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME kataloogis (%1) on ruum otsa lõppenud."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Kirjutamine $HOME kataloogi (%2) lõppes veaga '%1'"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Kataloogis \"%1\" puudub kirjutamisõigus."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Kataloogis \"%1\" puudub lugemisõigus."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Ajutises kataloogis (%1) on ruum otsa lõppenud."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -83,7 +83,7 @@ msgstr ""
 "Kirjutamine ajutisse kataloogi (%2)\n"
 "    lõppes veaga '%1'"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -92,7 +92,7 @@ msgstr ""
 "Plasma käivitamise ajal tuvastati\n"
 "järgmine paigaldusprobleem:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -103,12 +103,12 @@ msgstr ""
 "\n"
 "Plasma käivitamine ei õnnestunud.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma töötsooni paigalduse probleem!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -117,22 +117,22 @@ msgstr ""
 "Töökindel Plasma seansihaldur, mis suhtleb standardse X11R6 \n"
 "seansihalduse protokolli (XSMP) abil."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Võimaluse korral taastab eelmise seansi"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Lubatud on ka kaugühendused"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Seansi käivitamine lukustatud režiimis"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -141,13 +141,13 @@ msgstr ""
 "Käivitamine lukustusekraani toetuseta. Vajalik ainult siis, kui mõni muu "
 "komponent pakub lukustusekraani."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -156,43 +156,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Seansihaldur"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Väljalogimine"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr ""
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr ""
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Väljalogimine kinnitust küsimata"
-
-#: server.cpp:994
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
-msgid "Shut Down Without Confirmation"
-msgstr "Arvuti seiskamine kinnitust küsimata"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Taaskäivitamine kinnitust küsimata"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -200,6 +164,23 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "Session Management"
+#~ msgstr "Seansihaldur"
+
+#~ msgid "Log Out"
+#~ msgstr "Väljalogimine"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Väljalogimine kinnitust küsimata"
+
+#, fuzzy
+#~| msgid "Halt Without Confirmation"
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Arvuti seiskamine kinnitust küsimata"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Taaskäivitamine kinnitust küsimata"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "$HOME kataloogis (%1) puudub kirjutamisõigus."

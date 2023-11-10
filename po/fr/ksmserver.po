@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-11-07 09:45+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -31,22 +31,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Déconnexion annulée par « %1 »"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME n'est pas défini"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Le dossier $HOME (%1) n'existe pas."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -57,37 +57,37 @@ msgstr ""
 "veuillez définir la variable <envar>KDE_HOME_READONLY=1</envar> dans votre "
 "environnement."
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Pas d'accès en lecture au dossier $HOME (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Le dossier $HOME (%1) est plein."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Impossible d'écrire dans le dossier $HOME (%2). Message d'erreur : %1"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Pas d'accès en écriture à %1"
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Pas d'accès en lecture à %1"
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Le dossier temporaire (%1) est plein."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 "Impossible d'écrire dans le dossier temporaire (%2). Message d'erreur : %1"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -104,7 +104,7 @@ msgstr ""
 "Le problème d'installation suivant a été détecté\n"
 "lors de la tentative de démarrage de Plasma : "
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -115,12 +115,12 @@ msgstr ""
 "\n"
 "Plasma ne peut pas démarrer.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problème d'installation de l'environnement Plasma"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -129,22 +129,22 @@ msgstr ""
 "Le gestionnaire fiable de sessions de Plasma, qui gère le protocole\n"
 "standard de gestion de sessions X11R6 (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restaure la session précédente, si disponible"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Autoriser aussi les connexions distantes"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Démarre la session dans un mode verrouillé"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -154,13 +154,13 @@ msgstr ""
 "utilisé que quand un composant tiers prend en charge le verrouillage de "
 "l'écran."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[inconnu]"
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -173,42 +173,7 @@ msgstr ""
 "consommateurs de ressources de la session : \n"
 "%1"
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Gestion des sessions"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Déconnexion"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "Éteindre"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "Redémarrer"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Déconnexion sans confirmation"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "Éteindre sans confirmation"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Redémarrer sans confirmation"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -219,6 +184,27 @@ msgstr ""
 "Impossible de restaurer l'application <application>%1</application> car elle "
 "est plantée et a épuisée les ressources de restauration de la session du "
 "système. Veuillez le signaler à l'équipe de développement de l’application."
+
+#~ msgid "Session Management"
+#~ msgstr "Gestion des sessions"
+
+#~ msgid "Log Out"
+#~ msgstr "Déconnexion"
+
+#~ msgid "Shut Down"
+#~ msgstr "Éteindre"
+
+#~ msgid "Reboot"
+#~ msgstr "Redémarrer"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Déconnexion sans confirmation"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Éteindre sans confirmation"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Redémarrer sans confirmation"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Pas d'accès en écriture au dossier $HOME (%1)."

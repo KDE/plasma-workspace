@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-08-07 23:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -27,22 +27,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "登出已由 %1 取消"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "未設定 $HOME。"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME 目錄（%1）不存在。"
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -52,51 +52,51 @@ msgstr ""
 "沒有家目錄 ($HOME) 的寫入權限 (%1)。如果這是有意的，請在您的環境中設定 "
 "<envar>KDE_HOME_READONLY=1</envar>。"
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "沒有讀取 $HOME 目錄（%1）的權限。"
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME 目錄（%1）磁碟空間已用盡。"
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "寫入 $HOME 目錄（%2）時發生錯誤 '%1'"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "沒有寫入 '%1' 的權限。"
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "沒有讀取 '%1' 的權限。"
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "暫存目錄（%1）磁碟空間已用盡。"
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr "寫入暫存目錄（%2）時發生錯誤 '%1'"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr "啟動 Plasma 時偵測到以下的安裝問題："
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -107,12 +107,12 @@ msgstr ""
 "\n"
 "無法啟動 Plasma。\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma 工作空間安裝發生問題。"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -121,35 +121,35 @@ msgstr ""
 "可信賴的 Plasma 工作階段管理者應該使用標準的\n"
 "X11R6 工作階段管理協定 (XSMP)。"
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "如果可以，回復之前的工作階段"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "也允許遠端連接"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "以鎖定模式啟動工作階段"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr "以不支援鎖定螢幕的方式啟動。只在有其他組件提供鎖定螢幕時才需要。"
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -158,42 +158,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "工作階段管理"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "登出"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "關機"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "重新啟動"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "不經確認直接登出"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "不經確認直接關機"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "不經確認直接重新啟動"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -201,6 +166,27 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "Session Management"
+#~ msgstr "工作階段管理"
+
+#~ msgid "Log Out"
+#~ msgstr "登出"
+
+#~ msgid "Shut Down"
+#~ msgstr "關機"
+
+#~ msgid "Reboot"
+#~ msgstr "重新啟動"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "不經確認直接登出"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "不經確認直接關機"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "不經確認直接重新啟動"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "沒有寫入 $HOME 目錄（%1）的權限。"

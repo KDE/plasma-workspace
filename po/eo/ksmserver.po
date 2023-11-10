@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-11-05 17:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "'%1' nuligis la elsaluton"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME nedifinita!"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME dosierujo (%1) ne ekzistas."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -46,37 +46,37 @@ msgstr ""
 "Neniu skribaliro al $HOME dosierujo (%1). Sie tio estas intenca, metu "
 "<envar>KDE_HOME_READONLY=1</envar> en via medio."
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Neniu leg-aliro al $HOME dosierujo (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME dosierujo (%1) ne plu havas diskospacon."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Skribo al $HOME dosierujo (%2) malsukcesis kun la eraro '%1'"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Neniu skribaliro al '%1'."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Neniu leg-aliro al '%1'."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Dumtempdosierujo (%1) ne plu havas diskospacon."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -85,7 +85,7 @@ msgstr ""
 "Skribo al la dumtempdosierujo (%2) malsukcesis kun\n"
 "    la eraro '%1'"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -94,7 +94,7 @@ msgstr ""
 "La sekva instalproblemo estis detektita\n"
 "dum provo startigi Plasma:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -105,12 +105,12 @@ msgstr ""
 "\n"
 "Plasma estas nekapabla starti.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma-Laborspaca instalproblemo!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -119,22 +119,22 @@ msgstr ""
 "La fidinda Plasma-seancadministrilo kiu parolas la norman X11R6-\n"
 "seancadministran protokolon XSMP."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restarigas la antaŭan uzantoseancon, se ekzistas"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permesi ankaŭ forajn konektojn"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Startigas la seancon en ŝlosita reĝimo"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -143,13 +143,13 @@ msgstr ""
 "Startas sen ekranŝlosa subteno. Nur bezonata se alia komponanto provizas la "
 "ekranŝloson."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nekonata]"
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -160,42 +160,7 @@ msgstr ""
 "Ne eblas administri iujn programojn ĉar la seancadministraj rimedoj de la "
 "sistemo estas elĉerpitaj. Jen la pintaj tri konsumantoj de seancorimedoj:%1"
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Seanc-Administrado"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Elsaluto"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "Malŝalti"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "Restartigi"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Elsaluti sen konfirmo"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "Malŝalti sen konfirmo"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Restartigi sen konfirmo"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -206,3 +171,24 @@ msgstr ""
 "Ne eblas restarigi <application>%1</application> ĉar ĝi estas rompita kaj "
 "elĉerpis la seancorestaŭrajn rimedojn de la sistemo. Bonvolu raporti ĉi tion "
 "al la evoluistoj de la programo."
+
+#~ msgid "Session Management"
+#~ msgstr "Seanc-Administrado"
+
+#~ msgid "Log Out"
+#~ msgstr "Elsaluto"
+
+#~ msgid "Shut Down"
+#~ msgstr "Malŝalti"
+
+#~ msgid "Reboot"
+#~ msgstr "Restartigi"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Elsaluti sen konfirmo"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Malŝalti sen konfirmo"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Restartigi sen konfirmo"

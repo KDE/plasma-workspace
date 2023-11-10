@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2020-04-25 11:11+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,22 +32,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Выход отменён программой «%1»"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "Переменная $HOME не установлена."
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Домашний каталог (%1) не существует."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -55,37 +55,37 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Нет прав на чтение из домашнего каталога (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Нет свободного места в домашнем домашнем каталоге (%1)."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Не удалось записать в домашний каталог (%2): произошла ошибка «%1»"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Нет прав на запись в «%1»."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Нет прав на чтение из «%1»."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Нет свободного места в каталоге для временных файлов (%1)."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -95,7 +95,7 @@ msgstr ""
 "    произошла ошибка «%1»"
 
 # BUGME: KDE is a comminity, not software --aspotashev
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -104,7 +104,7 @@ msgstr ""
 "При попытке запуска Plasma обнаружена\n"
 "следующая проблема:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -116,12 +116,12 @@ msgstr ""
 "Не удалось запустить сеанс Plasma.\n"
 
 # BUGME: please don't use exclamation marks --aspotashev
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Не удалось запустить сеанс Plasma"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -130,22 +130,22 @@ msgstr ""
 "Диспетчер сеанса Plasma, использующий стандартный \n"
 "протокол управления сеансами X11R6 (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Восстанавливать предыдущий сеанс (если возможно)"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Разрешить также удалённые соединения"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Запускать сеанс в режиме блокировки"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -154,13 +154,13 @@ msgstr ""
 "Запустить без поддержки блокировки экрана. Необходимо только если другой "
 "компонент обеспечивает блокировку экрана."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -169,47 +169,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "Управление сеансами"
-
-# shutdown-method
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "Завершить сеанс"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "Выключить"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "Перезагрузить"
-
-# shutdown-method
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "Завершить сеанс без подтверждения"
-
-# shutdown-method
-#: server.cpp:994
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
-msgid "Shut Down Without Confirmation"
-msgstr "Выключить компьютер без подтверждения"
-
-# shutdown-method
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "Перезагрузить компьютер без подтверждения"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -217,6 +177,33 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "Session Management"
+#~ msgstr "Управление сеансами"
+
+# shutdown-method
+#~ msgid "Log Out"
+#~ msgstr "Завершить сеанс"
+
+#~ msgid "Shut Down"
+#~ msgstr "Выключить"
+
+#~ msgid "Reboot"
+#~ msgstr "Перезагрузить"
+
+# shutdown-method
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "Завершить сеанс без подтверждения"
+
+# shutdown-method
+#, fuzzy
+#~| msgid "Halt Without Confirmation"
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "Выключить компьютер без подтверждения"
+
+# shutdown-method
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "Перезагрузить компьютер без подтверждения"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "Нет прав на запись в домашний каталог (%1)."

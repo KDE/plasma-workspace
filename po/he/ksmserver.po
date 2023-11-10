@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-11-05 14:41+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,22 +31,22 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: logout.cpp:340
+#: logout.cpp:343
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "היציאה בוטלה על ידי ‚%1’"
 
-#: main.cpp:74
+#: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
 msgstr "‎$HOME אינו מוגדר!"
 
-#: main.cpp:78 main.cpp:86
+#: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "תיקיית ‎$HOME‏ (%1) אינה קיימת."
 
-#: main.cpp:81
+#: main.cpp:74
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -56,37 +56,37 @@ msgstr ""
 "אין גישה לכתיבה לתיקיית ‎$HOME‏ (%1). אם זה במכוון, יש להגדיר את "
 "<envar>KDE_HOME_READONLY=1</envar> בסביבה שלך."
 
-#: main.cpp:88
+#: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "אין הרשאות לקרוא מתיקיית הבית (%1)."
 
-#: main.cpp:92
+#: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "המקום בתיקיית ‎$HOME נגמר (%1)."
 
-#: main.cpp:95
+#: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "הכתיבה לתיקיית ‎$HOME‏ (%2) נכשלה עם השגיאה ‚%1’"
 
-#: main.cpp:108 main.cpp:143
+#: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "אין הרשאות כתיבה אל ‚%1’."
 
-#: main.cpp:110 main.cpp:145
+#: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "אין הרשאות קריאה מ־‚%1’."
 
-#: main.cpp:118 main.cpp:131
+#: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "שטח האחסון בתיקייה הזמנית (%1) אזל."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:119 main.cpp:133
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -95,7 +95,7 @@ msgstr ""
 "כתיבה לתיקייה הזמנית (%2) נכשלה עם\n"
 "   השגיאה: ‚%1’"
 
-#: main.cpp:149
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -104,7 +104,7 @@ msgstr ""
 "הבעיות האלו התגלו בהתקנה\n"
 "בניסיון להפעיל את פלזמה:"
 
-#: main.cpp:152
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -115,12 +115,12 @@ msgstr ""
 "\n"
 "ההפעלה של פלזמה נכשלה.\n"
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "בעיה בהתקנת סביבת העבודה פלזמה!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -129,35 +129,35 @@ msgstr ""
 "מנהל ההפעלה האמין של פלזמה שמשתמש בפרוטוקול ניהול\n"
 "ההפעלה הסטנדרטי של XSMP) X11R6)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "משחזר את ההפעלה שנשמרה, אם יש"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "לאפשר גם חיבורים מרוחקים"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "מתחיל את ההפעלה במצב נעול"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr "מתחיל ללא תמיכה במסך נעילה. נחוץ רק אם רכיבים אחרים מספקים מסך נעילה."
 
-#: server.cpp:802
+#: server.cpp:814
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[לא ידוע]"
 
-#: server.cpp:825
+#: server.cpp:837
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -169,42 +169,7 @@ msgstr ""
 "שלושת הצרכנים התובעניים ביותר ממשאבי המערכת:\n"
 "%1"
 
-#: server.cpp:968
-#, kde-format
-msgid "Session Management"
-msgstr "ניהול הפעלות"
-
-#: server.cpp:973
-#, kde-format
-msgid "Log Out"
-msgstr "יציאה"
-
-#: server.cpp:978
-#, kde-format
-msgid "Shut Down"
-msgstr "כיבוי"
-
-#: server.cpp:983
-#, kde-format
-msgid "Reboot"
-msgstr "הפעלה מחדש"
-
-#: server.cpp:989
-#, kde-format
-msgid "Log Out Without Confirmation"
-msgstr "יציאה ללא בקשת אישור"
-
-#: server.cpp:994
-#, kde-format
-msgid "Shut Down Without Confirmation"
-msgstr "כיבוי ללא בקשת אישור"
-
-#: server.cpp:999
-#, kde-format
-msgid "Reboot Without Confirmation"
-msgstr "הפעל מחדש ללא בקשת אישור"
-
-#: server.cpp:1129
+#: server.cpp:1109
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -215,6 +180,27 @@ msgstr ""
 "Unable to restore <application>%1</application> because it is broken and has "
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
+
+#~ msgid "Session Management"
+#~ msgstr "ניהול הפעלות"
+
+#~ msgid "Log Out"
+#~ msgstr "יציאה"
+
+#~ msgid "Shut Down"
+#~ msgstr "כיבוי"
+
+#~ msgid "Reboot"
+#~ msgstr "הפעלה מחדש"
+
+#~ msgid "Log Out Without Confirmation"
+#~ msgstr "יציאה ללא בקשת אישור"
+
+#~ msgid "Shut Down Without Confirmation"
+#~ msgstr "כיבוי ללא בקשת אישור"
+
+#~ msgid "Reboot Without Confirmation"
+#~ msgstr "הפעל מחדש ללא בקשת אישור"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "אין הרשאות כתיבה לתיקית הבית (%1)."
