@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <unordered_map>
 #include <vector>
 
 #include <QAbstractListModel>
@@ -68,7 +69,7 @@ public:
 
 private Q_SLOTS:
     void onServiceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);
-    void onServiceNamesFeteched(QDBusPendingCallWatcher *watcher);
+    void onServiceNamesFetched(QDBusPendingCallWatcher *watcher);
     void onInitialFetchFinished(PlayerContainer *container);
     void onInitialFetchFailed(PlayerContainer *container);
 
@@ -80,7 +81,7 @@ private:
     void removeMediaPlayer(const QString &sourceName);
 
     std::vector<PlayerContainer *> m_containers;
-    bool m_listReady = false;
+    std::unordered_map<QString, PlayerContainer *> m_pendingContainers;
 
     friend class Multiplexer;
 };

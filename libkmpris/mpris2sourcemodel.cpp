@@ -199,7 +199,7 @@ QHash<int, QByteArray> Mpris2SourceModel::roleNames() const
 
 void Mpris2SourceModel::onServiceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner)
 {
-    if (!m_listReady || !serviceName.startsWith(MPRIS2_PREFIX)) {
+    if (!serviceName.startsWith(MPRIS2_PREFIX)) {
         return;
     }
 
@@ -216,7 +216,7 @@ void Mpris2SourceModel::onServiceOwnerChanged(const QString &serviceName, const 
     }
 }
 
-void Mpris2SourceModel::onServiceNamesFeteched(QDBusPendingCallWatcher *watcher)
+void Mpris2SourceModel::onServiceNamesFetched(QDBusPendingCallWatcher *watcher)
 {
     QDBusPendingReply<QStringList> propsReply = *watcher;
     watcher->deleteLater();
@@ -235,23 +235,23 @@ void Mpris2SourceModel::onServiceNamesFeteched(QDBusPendingCallWatcher *watcher)
             // this call being dealt with
             // NB: _disappearing_ between sending this call and doing
             // this processing is fine
-            const QString sourceName = serviceName.mid(23);
+            const QString sourceName = serviceName.sliced(MPRIS2_PREFIX.size());
             const bool exist = std::any_of(m_containers.cbegin(), m_containers.cend(), [&sourceName](PlayerContainer *c) {
                 return c->objectName() == sourceName;
             });
-            if (!exist) {
+            if (!exist && !m_pendingContainers.contains(sourceName)) {
                 qCDebug(MPRIS2) << "Haven't already seen" << serviceName;
                 addMediaPlayer(serviceName, sourceName);
             }
         }
     }
-
-    m_listReady = true;
 }
 
 void Mpris2SourceModel::onInitialFetchFinished(PlayerContainer *container)
 {
     qCDebug(MPRIS2) << "Props fetch for" << container->objectName() << "finished; adding";
+    const auto erased = m_pendingContainers.erase(container->objectName());
+    Q_ASSERT_X(erased == 1, Q_FUNC_INFO, qUtf8Printable(container->objectName()));
 
     // don't let future refreshes trigger this
     disconnect(container, &PlayerContainer::initialFetchFinished, this, &Mpris2SourceModel::onInitialFetchFinished);
@@ -372,6 +372,8 @@ void Mpris2SourceModel::onInitialFetchFinished(PlayerContainer *container)
 void Mpris2SourceModel::onInitialFetchFailed(PlayerContainer *container)
 {
     qCWarning(MPRIS2) << "Failed to find a working MPRIS2 interface for" << container->dbusAddress();
+    const auto erased = m_pendingContainers.erase(container->objectName());
+    Q_ASSERT_X(erased == 1, Q_FUNC_INFO, qUtf8Printable(container->objectName()));
     delete container;
 }
 
@@ -379,13 +381,16 @@ void Mpris2SourceModel::fetchServiceNames()
 {
     QDBusPendingCall call = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     auto watcher = new QDBusPendingCallWatcher(call, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, &Mpris2SourceModel::onServiceNamesFeteched);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &Mpris2SourceModel::onServiceNamesFetched);
 }
 
 void Mpris2SourceModel::addMediaPlayer(const QString &serviceName, const QString &sourceName)
 {
+    Q_ASSERT_X(!m_pendingContainers.contains(sourceName), Q_FUNC_INFO, qUtf8Printable(sourceName));
+
     PlayerContainer *const container = new PlayerContainer(serviceName, this);
     container->setObjectName(sourceName);
+    m_pendingContainers.emplace(sourceName, container);
 
     connect(container, &PlayerContainer::initialFetchFinished, this, &Mpris2SourceModel::onInitialFetchFinished);
     connect(container, &PlayerContainer::initialFetchFailed, this, &Mpris2SourceModel::onInitialFetchFailed);
@@ -396,6 +401,16 @@ void Mpris2SourceModel::removeMediaPlayer(const QString &sourceName)
     auto it = std::find_if(m_containers.begin(), m_containers.end(), [&sourceName](PlayerContainer *c) {
         return c->objectName() == sourceName;
     });
+    if (it == m_containers.end()) {
+        auto pendingIt = m_pendingContainers.find(sourceName);
+        if (pendingIt == m_pendingContainers.end()) [[unlikely]] {
+            // This can happen before the service list is fetched and a player disappears on DBus
+            return;
+        }
+        delete pendingIt->second;
+        m_pendingContainers.erase(pendingIt);
+        return;
+    }
 
     PlayerContainer *container = *it;
     disconnect(container, nullptr, this, nullptr);

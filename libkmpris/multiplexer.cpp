@@ -113,10 +113,26 @@ void Multiplexer::onPlaybackStatusChanged()
 void Multiplexer::updateIndex()
 {
     const auto sourceModel = static_cast<Mpris2SourceModel *>(m_filterModel->sourceModel());
-    const int rawRow =
-        std::distance(sourceModel->m_containers.cbegin(), std::find(sourceModel->m_containers.cbegin(), sourceModel->m_containers.cend(), m_activePlayer));
-    const QModelIndex idx = m_filterModel->mapFromSource(sourceModel->index(rawRow, 0));
-    Q_ASSERT_X(idx.isValid(), Q_FUNC_INFO, qUtf8Printable(QStringLiteral("m_activePlayer: %1").arg(m_activePlayer->identity())));
+    const auto beginIt = sourceModel->m_containers.cbegin();
+    const auto endIt = sourceModel->m_containers.cend();
+    const int sourceRow = std::distance(beginIt, std::find(beginIt, endIt, m_activePlayer.value()));
+    const QModelIndex idx = m_filterModel->mapFromSource(sourceModel->index(sourceRow, 0));
+    Q_ASSERT_X(idx.isValid(),
+               Q_FUNC_INFO,
+               qUtf8Printable(QStringLiteral("Current active player: \"%1\" Available players: \"%2\" Pending players: \"%3\"")
+                                  .arg(m_activePlayer->identity(),
+                                       std::accumulate(beginIt,
+                                                       endIt,
+                                                       QString(),
+                                                       [](QString &left, PlayerContainer *right) {
+                                                           return std::move(left) + QLatin1Char(',') + right->identity();
+                                                       }),
+                                       std::accumulate(sourceModel->m_pendingContainers.cbegin(),
+                                                       sourceModel->m_pendingContainers.cend(),
+                                                       QString(),
+                                                       [](QString &left, auto &right) {
+                                                           return std::move(left) + QLatin1Char(',') + right.first /* sourceName */;
+                                                       }))));
     m_activePlayerIndex = idx.row();
 }
 
