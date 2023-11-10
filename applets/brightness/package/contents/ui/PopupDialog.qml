@@ -6,12 +6,12 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
 PlasmaExtras.Representation {
     id: dialog
@@ -20,7 +20,7 @@ PlasmaExtras.Representation {
     property bool isScreenBrightnessAvailable
     property bool isKeyboardBrightnessAvailable
 
-    KeyNavigation.down: screenBrightnessSliderVisible ? screenBrightnessSlider : screenBrightnessSlider.KeyNavigation.down
+    KeyNavigation.down: screenBrightnessSlider.Visible ? screenBrightnessSlider : screenBrightnessSlider.KeyNavigation.down
 
     contentItem: PlasmaComponents3.ScrollView {
         id: scrollView
