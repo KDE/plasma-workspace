@@ -3,7 +3,7 @@
         "Description": "Provides shortcuts for common session actions",
         "Name": "Session Shortcuts"
     },
+    "OnlyShowIn": "KDE",
     "X-KDE-Kded-autoload": true,
-    "X-KDE-Kded-load-on-demand": false,
-    "OnlyShowIn": "KDE"
+    "X-KDE-Kded-load-on-demand": false
 }
