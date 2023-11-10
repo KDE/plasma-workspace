@@ -49,7 +49,7 @@
             "handset",
             "desktop"
         ],
-        "Icon": "preferences-desktop-display-nightcolor",
+        "Icon": "redshift-status-on",
         "Name": "Night Color",
         "Name[ar]": "لون ليلي",
         "Name[az]": "Gecə Rəngi",
