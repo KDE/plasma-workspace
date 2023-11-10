@@ -4,19 +4,23 @@
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
+import os
+import pathlib
 import subprocess
-import sys
 import unittest
+from typing import Final
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 
+KDE_INSTALL_FULL_LIBEXECDIR: Final = os.environ.get("KDE_INSTALL_FULL_LIBEXECDIR", os.path.join(pathlib.Path.home(), "kde", "usr", "lib64", "libexec"))
+
 
 class LogoutGreeterTests(unittest.TestCase):
 
     def setUp(self):
-        self.proc = subprocess.Popen(["{}/ksmserver-logout-greeter".format(sys.argv[1]), "--windowed"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.proc = subprocess.Popen([f"{KDE_INSTALL_FULL_LIBEXECDIR}/ksmserver-logout-greeter", "--windowed"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         options = AppiumOptions()
         options.set_capability("app", str(self.proc.pid))
         options.set_capability("timeouts", {'implicit': 10000})
@@ -55,5 +59,4 @@ class LogoutGreeterTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(LogoutGreeterTests)
-    unittest.TextTestRunner(verbosity=2).run(suite)
+    unittest.main()
