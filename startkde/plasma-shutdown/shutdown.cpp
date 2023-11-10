@@ -12,6 +12,10 @@
 #include "kwin_interface.h"
 #include "sessionmanagementbackend.h"
 
+#include "config.h"
+
+using namespace Qt::StringLiterals;
+
 Shutdown::Shutdown(QObject *parent)
     : QObject(parent)
 {
@@ -52,11 +56,22 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
             qApp->quit();
         }
         if (closeSessionReply.value()) {
-            logoutComplete();
+            ksmServerComplete();
         } else {
             logoutCancelled();
         }
     });
+}
+
+void Shutdown::ksmServerComplete()
+{
+    // Now record windows that are not session managed
+    int ret = QProcess::execute(QStringLiteral(PLASMA_FALLBACK_SESSION_SAVE_BIN));
+    if (ret) {
+        qCWarning(PLASMA_SESSION) << "plasma-fallback-session-save failed with return code" << ret;
+    }
+    // INSERT KWIN CALL HERE
+    logoutComplete();
 }
 
 void Shutdown::logoutCancelled()

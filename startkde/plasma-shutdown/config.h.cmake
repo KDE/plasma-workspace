@@ -1,0 +1,1 @@
+#define PLASMA_FALLBACK_SESSION_SAVE_BIN "${CMAKE_INSTALL_FULL_LIBEXECDIR}/plasma-fallback-session-save"

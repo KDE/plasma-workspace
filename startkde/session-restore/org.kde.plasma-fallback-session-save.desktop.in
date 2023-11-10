@@ -1,0 +1,11 @@
+[Desktop Entry]
+Exec=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-fallback-session-save
+Name=Plasma Session Save
+Icon=plasmashell
+Type=Application
+X-KDE-StartupNotify=false
+OnlyShowIn=KDE;
+NoDisplay=true
+X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
+
+

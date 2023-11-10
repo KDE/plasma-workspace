@@ -20,6 +20,7 @@ public:
     void logoutAndShutdown();
     void logoutAndReboot();
 private Q_SLOTS:
+    void ksmServerComplete();
     void logoutCancelled();
     void logoutComplete();
 

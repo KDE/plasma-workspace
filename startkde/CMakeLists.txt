@@ -44,7 +44,7 @@ target_link_libraries(startplasma-wayland PRIVATE
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
 add_subdirectory(session-shortcuts)
-
+add_subdirectory(session-restore)
 
 #FIXME: reconsider, looks fishy
 if(NOT CMAKE_INSTALL_PREFIX STREQUAL "/usr")
