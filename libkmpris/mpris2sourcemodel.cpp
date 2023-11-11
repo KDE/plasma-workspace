@@ -123,14 +123,14 @@ bool Mpris2SourceModel::setData(const QModelIndex &index, const QVariant &value,
     bool ok = false;
     switch (PlayerContainer *const container = m_containers.at(index.row()); role) {
     case LoopStatusRole:
-        Q_ASSERT(value.toUInt() <= qToUnderlying(LoopStatus::Track));
+        Q_ASSERT_X(value.toUInt() <= qToUnderlying(LoopStatus::Track), Q_FUNC_INFO, qUtf8Printable(QString::number(value.toUInt())));
         if (value.toUInt() <= qToUnderlying(LoopStatus::Track)) {
             container->setLoopStatus(static_cast<LoopStatus::Status>(value.toUInt(&ok)));
             return ok;
         }
         break;
     case PlaybackStatusRole:
-        Q_ASSERT(value.toUInt() <= qToUnderlying(PlaybackStatus::Paused));
+        Q_ASSERT_X(value.toUInt() <= qToUnderlying(PlaybackStatus::Paused), Q_FUNC_INFO, qUtf8Printable(QString::number(value.toUInt())));
         if (value.toUInt() <= qToUnderlying(PlaybackStatus::Paused)) {
             container->setPlaybackStatus(static_cast<PlaybackStatus::Status>(value.toUInt(&ok)));
             return ok;
@@ -140,14 +140,14 @@ bool Mpris2SourceModel::setData(const QModelIndex &index, const QVariant &value,
         container->setPosition(value.toLongLong(&ok));
         return ok;
     case ShuffleRole:
-        Q_ASSERT(value.toUInt() <= qToUnderlying(ShuffleStatus::On));
+        Q_ASSERT_X(value.toUInt() <= qToUnderlying(ShuffleStatus::On), Q_FUNC_INFO, qUtf8Printable(QString::number(value.toUInt())));
         if (value.toUInt() <= qToUnderlying(ShuffleStatus::On)) {
             container->setShuffle(static_cast<ShuffleStatus::Status>(value.toUInt(&ok)));
             return ok;
         }
         break;
     case VolumeRole:
-        Q_ASSERT(value.toDouble() >= 0.0 && value.toDouble() <= 1.0);
+        Q_ASSERT_X(value.toDouble() >= 0.0 && value.toDouble() <= 1.0, Q_FUNC_INFO, qUtf8Printable(QString::number(value.toDouble())));
         if (value.toDouble() >= 0.0 && value.toDouble() <= 1.0) {
             container->setVolume(value.toDouble(&ok));
             return ok;

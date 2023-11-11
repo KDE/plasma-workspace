@@ -254,7 +254,7 @@ void PlayerContainer::setVolume(double value)
 
 void PlayerContainer::Next()
 {
-    Q_ASSERT(m_canGoNext.value());
+    Q_ASSERT_X(m_canGoNext.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canGoNext.value()) {
         return;
     }
@@ -269,7 +269,7 @@ void PlayerContainer::OpenUri(const QString &Uri)
 
 void PlayerContainer::Pause()
 {
-    Q_ASSERT(m_canPause.value());
+    Q_ASSERT_X(m_canPause.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canPause.value()) {
         return;
     }
@@ -278,7 +278,7 @@ void PlayerContainer::Pause()
 
 void PlayerContainer::Play()
 {
-    Q_ASSERT(m_canPlay.value());
+    Q_ASSERT_X(m_canPlay.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canPlay.value()) {
         return;
     }
@@ -287,8 +287,8 @@ void PlayerContainer::Play()
 
 void PlayerContainer::PlayPause()
 {
-    Q_ASSERT(m_canPlay.value());
-    Q_ASSERT(m_canPause.value());
+    Q_ASSERT_X(m_canPlay.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
+    Q_ASSERT_X(m_canPause.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canPlay.value() || !m_canPause.value()) {
         return;
     }
@@ -297,7 +297,7 @@ void PlayerContainer::PlayPause()
 
 void PlayerContainer::Previous()
 {
-    Q_ASSERT(m_canGoPrevious.value());
+    Q_ASSERT_X(m_canGoPrevious.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canGoPrevious.value()) {
         return;
     }
@@ -307,7 +307,7 @@ void PlayerContainer::Previous()
 
 void PlayerContainer::Seek(qlonglong Offset)
 {
-    Q_ASSERT(m_canSeek.value());
+    Q_ASSERT_X(m_canSeek.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canSeek.value()) {
         return;
     }
@@ -316,7 +316,7 @@ void PlayerContainer::Seek(qlonglong Offset)
 
 void PlayerContainer::Stop()
 {
-    Q_ASSERT(m_canStop.value());
+    Q_ASSERT_X(m_canStop.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canStop.value()) {
         return;
     }
@@ -382,7 +382,7 @@ QStringList AbstractPlayerContainer::supportedUriSchemes() const
 
 void PlayerContainer::Quit()
 {
-    Q_ASSERT(m_canQuit.value());
+    Q_ASSERT_X(m_canQuit.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canQuit.value()) {
         return;
     }
@@ -390,7 +390,7 @@ void PlayerContainer::Quit()
 }
 void PlayerContainer::Raise()
 {
-    Q_ASSERT(m_canRaise.value());
+    Q_ASSERT_X(m_canRaise.value(), Q_FUNC_INFO, qUtf8Printable(identity()));
     if (!m_canRaise.value()) {
         return;
     }

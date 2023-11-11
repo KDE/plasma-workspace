@@ -72,7 +72,7 @@ void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 
 void Multiplexer::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
 {
-    Q_ASSERT(m_activePlayer);
+    Q_ASSERT_X(m_activePlayer, Q_FUNC_INFO, qUtf8Printable(QString::number(first)));
     PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     // Need to manually disconnect from the container because the source can be filtered out but not gone (e.g. a browser)
     disconnect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
