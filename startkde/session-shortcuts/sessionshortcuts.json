@@ -1,7 +1,27 @@
 {
     "KPlugin": {
         "Description": "Provides shortcuts for common session actions",
-        "Name": "Session Shortcuts"
+        "Description[ca@valencia]": "Proporciona dreceres per a accions habituals de sessió",
+        "Description[ca]": "Proporciona dreceres per a accions habituals de sessió",
+        "Description[he]": "מספק קיצורים לפעולות הפעלה נפוצות",
+        "Description[ia]": "Il forni vias breve per actione de session commun",
+        "Description[nl]": "Levert sneltoetsen voor gemeenschappelijke acties in sessie",
+        "Description[sl]": "Nudi bližnjice za običajne dejavnosti seje",
+        "Description[tr]": "Temel oturum eylemleri için kısayollar sağlar",
+        "Description[uk]": "Надає клавіатурні скорочення для типових дій у сеансі",
+        "Description[x-test]": "xxProvides shortcuts for common session actionsxx",
+        "Description[zh_TW]": "提供快捷鍵給一般工作階段動作",
+        "Name": "Session Shortcuts",
+        "Name[ca@valencia]": "Dreceres de sessió",
+        "Name[ca]": "Dreceres de sessió",
+        "Name[he]": "קיצורי דרך להפעלה",
+        "Name[ia]": "Vias breve  de Session",
+        "Name[nl]": "Sneltoetsen van sessie",
+        "Name[sl]": "Bližnjice seje",
+        "Name[tr]": "Oturum Kısayolları",
+        "Name[uk]": "Скорочення сеансу",
+        "Name[x-test]": "xxSession Shortcutsxx",
+        "Name[zh_TW]": "工作階段快捷鍵"
     },
     "OnlyShowIn": "KDE",
     "X-KDE-Kded-autoload": true,
