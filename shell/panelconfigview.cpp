@@ -38,6 +38,7 @@
 #include <chrono>
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *panelView, PanelConfigView *mainConfigView, QWindow *parent)
     : PlasmaWindow(parent)
@@ -208,8 +209,11 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
         syncGeometry();
     });
 
-    m_sharedQmlEngine->rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
-    m_sharedQmlEngine->rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
+    m_sharedQmlEngine->rootContext()->setContextProperties({
+        QQmlContext::PropertyPair{u"plasmoid"_s, QVariant::fromValue(containment)},
+        QQmlContext::PropertyPair{u"panel"_s, QVariant::fromValue(panelView)},
+        QQmlContext::PropertyPair{u"configDialog"_s, QVariant::fromValue(this)},
+    });
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
     connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncGeometry);
 
