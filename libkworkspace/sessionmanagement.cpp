@@ -118,11 +118,6 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
         return;
     }
 
-    if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
-        qWarning() << "shutdown";
-        return;
-    }
-
     bool confirm = confirmationMode == ConfirmationMode::ForcePrompt;
     if (confirmationMode == ConfirmationMode::Default) {
         confirm = SessionBackend::self()->confirmLogout();
@@ -139,11 +134,6 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
 void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
 {
     if (!canReboot()) {
-        return;
-    }
-
-    if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
-        qWarning() << "reboot";
         return;
     }
 
