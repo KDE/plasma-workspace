@@ -362,36 +362,31 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
 
     // Filter by region
     if (d->filterByRegion != RegionFilterMode::Mode::Disabled && d->regionGeometry.isValid()) {
-        QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
+        QRect regionGeometry = d->regionGeometry;
+        const QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
 
 #if HAVE_X11
         if (static const bool isX11 = KWindowSystem::isPlatformX11(); isX11 && windowGeometry.isValid()) {
-            const double devicePixelRatio = qGuiApp->devicePixelRatio();
-            const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
-            const QPoint screenTopLeft = screenGeometry.topLeft();
-            // AbstractTasksModel::Geometry returns a size that belongs to the device coordinate system
-            const QPoint windowTopLeft =
-                screenTopLeft + QPoint(windowGeometry.x() - screenTopLeft.x(), windowGeometry.y() - screenTopLeft.y()) / devicePixelRatio;
-            windowGeometry = QRect(windowTopLeft, windowGeometry.size() / devicePixelRatio);
+            // On X11, in regionGeometry, the topLeft position belongs to the device coordinate system
+            // but the size belongs to the logical coordinate system (which means the reported size is divided by DPR)
+            regionGeometry = QRect(regionGeometry.topLeft(), regionGeometry.size() * qGuiApp->devicePixelRatio());
         }
 #endif
-        // On X11, in regionGeometry, the original point of the topLeft position belongs to the device coordinate system
-        // but the size belongs to the logical coordinate system (which means the reported size is already divided by DPR)
         switch (d->filterByRegion) {
         case RegionFilterMode::Mode::Inside: {
-            if (!d->regionGeometry.contains(windowGeometry)) {
+            if (!regionGeometry.contains(windowGeometry)) {
                 return false;
             }
             break;
         }
         case RegionFilterMode::Mode::Intersect: {
-            if (!d->regionGeometry.intersects(windowGeometry)) {
+            if (!regionGeometry.intersects(windowGeometry)) {
                 return false;
             }
             break;
         }
         case RegionFilterMode::Mode::Outside: {
-            if (d->regionGeometry.contains(windowGeometry)) {
+            if (regionGeometry.contains(windowGeometry)) {
                 return false;
             }
             break;
