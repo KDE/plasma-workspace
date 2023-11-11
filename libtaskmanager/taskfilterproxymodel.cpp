@@ -369,14 +369,14 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
             const double devicePixelRatio = qGuiApp->devicePixelRatio();
             const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
             const QPoint screenTopLeft = screenGeometry.topLeft();
-            // AbstractTasksModel::Geometry returns a size that belongs to the non-scaled coordinate system
+            // AbstractTasksModel::Geometry returns a size that belongs to the device coordinate system
             const QPoint windowTopLeft =
                 screenTopLeft + QPoint(windowGeometry.x() - screenTopLeft.x(), windowGeometry.y() - screenTopLeft.y()) / devicePixelRatio;
             windowGeometry = QRect(windowTopLeft, windowGeometry.size() / devicePixelRatio);
         }
 #endif
-        // On X11, in regionGeometry, the original point of the topLeft position belongs to the non-scaled coordinate system
-        // but the size belongs to the scaled coordinate system (which means the reported size is already divided by DPR)
+        // On X11, in regionGeometry, the original point of the topLeft position belongs to the device coordinate system
+        // but the size belongs to the logical coordinate system (which means the reported size is already divided by DPR)
         switch (d->filterByRegion) {
         case RegionFilterMode::Mode::Inside: {
             if (!d->regionGeometry.contains(windowGeometry)) {
