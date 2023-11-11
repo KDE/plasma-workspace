@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2023-11-07 18:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -125,22 +125,18 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Toplo"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Hladno (brez filtra)"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "Hladno"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Toplo"
 
 #: ui/main.qml:249
 #, kde-format
@@ -212,6 +208,10 @@ msgid ""
 "%2"
 msgstr ""
 "Začetek spreminjanja nočnih barv ob %1 in so popolnoma spremenjene ob %2"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "Hladno"
 
 #~ msgid "This is what day color temperature will look like when active."
 #~ msgstr "Tako bo videti dnevna barvna temperature, kadar bo aktivna."

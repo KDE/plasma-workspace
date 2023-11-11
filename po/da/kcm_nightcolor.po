@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2020-01-30 20:22+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -129,21 +129,15 @@ msgstr ""
 
 #: ui/main.qml:237 ui/main.qml:296
 #, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Varm"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "Kølig"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Varm"
 
 #: ui/main.qml:249
 #, fuzzy, kde-format
@@ -216,6 +210,10 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "Natfarver begynder at ændre sig tilbage kl. %1"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "Kølig"
 
 #, fuzzy
 #~| msgid "Activate Night Color"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2022-09-13 19:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -123,22 +123,18 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "சிவப்பு"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "நீலம் (நிறமாற்றம் இல்லாமல்)"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "நீலம்"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "சிவப்பு"
 
 #: ui/main.qml:249
 #, kde-format
@@ -206,6 +202,10 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "நிறவெப்பம், பகலுக்கானதாக %1-க்கு மாறத் தொடங்கி, %2-க்குள் முழுதாக மாறியிருக்கும்"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "நீலம்"
 
 #~ msgid "This is what day color temperature will look like when active."
 #~ msgstr "பகலில் நிறங்கள் இவ்வாறு தோற்றமளிக்கும்."

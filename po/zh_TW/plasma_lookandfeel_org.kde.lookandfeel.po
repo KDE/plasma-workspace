@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-02-07 20:11+0900\n"
+"PO-Revision-Date: 2023-11-10 23:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -172,12 +172,12 @@ msgstr "解除鎖定"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "（或是在辨識器上掃描您的指紋）"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "（或是掃描您的智慧卡）"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format

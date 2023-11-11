@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2022-10-15 12:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -124,22 +124,18 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Varm"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Kjøleg (inkje filter)"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "Kjøleg"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Varm"
 
 #: ui/main.qml:249
 #, kde-format
@@ -207,3 +203,7 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "Endring til dagfargar tek til kl. %1 og er klar kl. %2"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "Kjøleg"

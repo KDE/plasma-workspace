@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -119,20 +119,14 @@ msgstr ""
 
 #: ui/main.qml:237 ui/main.qml:296
 #, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr ""
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
+msgctxt "Night colour red-ish"
+msgid "Warm"
 msgstr ""
 
 #: ui/main.qml:249

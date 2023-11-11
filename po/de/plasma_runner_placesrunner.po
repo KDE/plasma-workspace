@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2016-12-13 16:25+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -14,17 +14,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: placesrunner.cpp:26 placesrunner.cpp:50
+#: placesrunner.cpp:27 placesrunner.cpp:51
 #, kde-format
 msgid "places"
 msgstr "orte"
 
-#: placesrunner.cpp:26
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Listet alle Orte in der Dateiverwaltung auf."
 
-#: placesrunner.cpp:27
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Findet Orte in der Dateiverwaltung, die auf :q: passen."

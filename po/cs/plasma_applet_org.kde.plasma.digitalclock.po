@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2016, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2023 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-02-17 14:12+0100\n"
+"PO-Revision-Date: 2023-11-02 13:56+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -210,6 +210,8 @@ msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
+"\">Dokumentace formátu času</a>"
 
 #: package/contents/ui/configAppearance.qml:231
 #, kde-format
@@ -282,6 +284,8 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
+"Tip: Pokud pravidelně cestujete, přidejte vaše domovské časové pásmo. "
+"Zobrazí se pouze pokud změníte časové pásmo systému na jiné."
 
 #: package/contents/ui/configTimeZones.qml:78
 #, kde-format

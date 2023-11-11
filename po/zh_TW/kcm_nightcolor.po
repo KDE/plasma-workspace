@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2022-11-11 20:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -122,22 +122,18 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "暖色調"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "冷色調（無濾鏡）"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "冷色調"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "暖色調"
 
 #: ui/main.qml:249
 #, kde-format
@@ -204,6 +200,10 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "在 %1 開始逐漸變更至日間色溫，到 %2 時完全變更"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "冷色調"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."

@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 01:39+0000\n"
-"PO-Revision-Date: 2023-03-10 13:39+0100\n"
+"PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -365,7 +365,7 @@ msgstr "Uživatelé"
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr ""
+msgstr "Přidat nové"
 
 #: src/ui/main.qml:107
 #, kde-format
@@ -491,7 +491,7 @@ msgstr "Jít zpět"
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Iniciály"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format

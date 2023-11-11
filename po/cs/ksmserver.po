@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
-# Vít Pelčák <vit@pelcak.org>, 2012, 2013, 2014, 2020, 2023.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:48+0000\n"
-"PO-Revision-Date: 2023-03-16 16:34+0100\n"
+"PO-Revision-Date: 2023-11-08 14:25+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -144,7 +144,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[neznámý]"
 
 #: server.cpp:837
 #, kde-kuit-format
@@ -163,24 +163,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Session Management"
-#~ msgstr "Správa sezení"
-
-#~ msgid "Log Out"
-#~ msgstr "Odhlásit se"
-
-#~ msgid "Shut Down"
-#~ msgstr "Vypnout"
-
-#~ msgid "Reboot"
-#~ msgstr "Restartovat"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Odhlásit se bez potvrzení"
-
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Vypnout bez potvrzení"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Restartovat bez potvrzení"

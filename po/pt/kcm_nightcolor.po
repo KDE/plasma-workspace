@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2022-09-11 11:07+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -126,22 +126,18 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Quente"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Frio (sem filtro)"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "Fria"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Quente"
 
 #: ui/main.qml:249
 #, kde-format
@@ -213,6 +209,10 @@ msgid ""
 msgstr ""
 "A temperatura da cor começa a mudar para a versão diurna às %1 e muda por "
 "completo às %2"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "Fria"
 
 #~ msgid "This is what day color temperature will look like when active."
 #~ msgstr "Isto é como ficará a temperatura da cor diurna quando ficar activa."

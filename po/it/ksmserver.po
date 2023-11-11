@@ -3,7 +3,7 @@
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Andrea Celli <andrea.celli@libero.it>, 2007.
 # Luca Bellonda <lbellonda@gmail.com>, 2008.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2009, 2015, 2018, 2020, 2023.
+# SPDX-FileCopyrightText: 2009, 2015, 2018, 2020, 2023 Vincenzo Reale <smart2128vr@gmail.com>
 # Nicola Ruggero <nicola@nxnt.org>, 2009, 2010.
 # Pino Toscano <toscano.pino@tiscali.it>, 2012, 2013.
 #
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:48+0000\n"
-"PO-Revision-Date: 2023-03-16 14:35+0100\n"
+"PO-Revision-Date: 2023-11-08 10:28+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: logout.cpp:343
 #, kde-format
@@ -149,7 +149,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[sconosciuto]"
 
 #: server.cpp:837
 #, kde-kuit-format
@@ -159,6 +159,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Impossibile gestire alcune applicazioni perché le risorse di gestione delle "
+"sessioni del sistema sono esaurite. Ecco i tre principali consumatori delle "
+"risorse di sessione:\n"
+"%1"
 
 #: server.cpp:1109
 #, kde-kuit-format
@@ -168,6 +172,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Impossibile ripristinare <application>%1</application> perché è danneggiata "
+"e ha esaurito le risorse di ripristino della sessione del sistema. Segnalalo "
+"agli sviluppatori dell'applicazione."
 
 #~ msgid "Session Management"
 #~ msgstr "Gestione della sessione"

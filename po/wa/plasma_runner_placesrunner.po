@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2010-01-22 15:26+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: placesrunner.cpp:26 placesrunner.cpp:50
+#: placesrunner.cpp:27 placesrunner.cpp:51
 #, kde-format
 msgid "places"
 msgstr "eplaeçmints"
 
-#: placesrunner.cpp:26
+#: placesrunner.cpp:27
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Fé l' djivêye di tos les eplaeçmints do manaedjeu des fitchîs"
 
-#: placesrunner.cpp:27
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Trove les eplaeçmints do manaedjeu ki corespondèt a :q:"

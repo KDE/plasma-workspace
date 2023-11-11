@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2022-08-14 16:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -134,21 +134,15 @@ msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
 #, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Caldă"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "Rece"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Caldă"
 
 #: ui/main.qml:249
 #, fuzzy, kde-format
@@ -222,6 +216,10 @@ msgid ""
 "%2"
 msgstr ""
 "Culoarea nocturnă începe să se schimbe la %1 și e schimbată complet la %2"
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "Rece"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."

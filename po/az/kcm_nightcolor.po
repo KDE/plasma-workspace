@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-11 01:44+0000\n"
 "PO-Revision-Date: 2022-11-11 11:55+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -121,22 +121,18 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "İsti"
-
-#: ui/main.qml:243 ui/main.qml:302
-#, kde-format
-msgctxt "No blue light filter activated"
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Soyuq (rəng süzgəci olmadan)"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format
-msgctxt "Night colour blue-ish"
-msgid "Cool"
-msgstr "Soyuq"
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "İsti"
 
 #: ui/main.qml:249
 #, kde-format
@@ -208,6 +204,10 @@ msgid ""
 msgstr ""
 "Gündüz rejimi üçün rəng temperaturunun dəyişməyə başlama və tam dəyişmə "
 "vaxtı %1 ilə %2 arasında baş verir."
+
+#~ msgctxt "Night colour blue-ish"
+#~ msgid "Cool"
+#~ msgstr "Soyuq"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."

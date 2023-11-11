@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011, 2013.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2013, 2014, 2015.
+# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2015, 2023 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # Vit Pelcak <vit@pelcak.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2023-02-22 10:53+0100\n"
+"PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -42,7 +42,7 @@ msgstr "Otevřít obrázek"
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "Adresář s tapetami pro zobrazení promítání"
 
 #: imagepackage/contents/ui/config.qml:100
 #, kde-format
@@ -113,13 +113,13 @@ msgstr "Obrázky"
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr ""
+msgstr "Získat nové…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -259,7 +259,7 @@ msgstr "Složky"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format
@@ -269,7 +269,7 @@ msgstr "Odstranit složku"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
 msgid "Open Folder…"
-msgstr ""
+msgstr "Otevřít složku…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format

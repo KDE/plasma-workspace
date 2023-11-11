@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-01-04 15:29+0100\n"
+"PO-Revision-Date: 2023-11-06 10:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -170,12 +170,12 @@ msgstr "Odemknout"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(nebo oskenujte svůj otisk prstu na čtečce)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(nebo oskenujte svou čipovou kartu)"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
@@ -278,25 +278,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma byla vytvořena v rámci projektu KDE"
-
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery at %1%"
-#~ msgstr "Baterie je na %1%"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "Nepoužito"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "na TTY %1 (obrazovka %2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"

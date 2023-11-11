@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2023 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-13 02:10+0000\n"
-"PO-Revision-Date: 2021-06-02 16:30+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-11-02 13:57+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: package/contents/config/config.qml:9
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Monitor systému"
 #, kde-format
 msgctxt "Sensor name: value"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: package/contents/ui/main.qml:57
 #, kde-format

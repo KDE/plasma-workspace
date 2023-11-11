@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2012, 2014, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2010, 2012, 2014, 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # Lukáš Tinkl <lukas@kde.org>, 2013.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-12 02:01+0000\n"
-"PO-Revision-Date: 2023-04-26 11:27+0200\n"
+"PO-Revision-Date: 2023-11-02 13:56+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: gtkpage.cpp:58
 #, kde-format
@@ -117,7 +117,7 @@ msgstr "Pomocný text nástrojového panelu"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
-msgstr ""
+msgstr "Nastavit ikonu a panely nástrojů"
 
 #: ui/EffectSettingsPopup.qml:34
 #, kde-format

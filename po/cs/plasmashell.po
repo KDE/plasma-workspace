@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2016, 2017, 2018, 2020.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-06-14 14:55+0200\n"
+"PO-Revision-Date: 2023-11-06 10:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -39,67 +39,67 @@ msgstr "Nastavit modul činností myši"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr ""
+msgstr "KDE Plasma 6.0 Vývoj"
 
 #: desktopview.cpp:210
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr ""
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr ""
+msgstr "KDE Plasma 6.0 Beta 1"
 
 #: desktopview.cpp:216
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr ""
+msgstr "KDE Plasma 6.0 Beta 2"
 
 #: desktopview.cpp:219
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:222
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:248
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr ""
+msgstr "KDE Plasma %1 Vývoj"
 
 #: desktopview.cpp:252
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr ""
+msgstr "KDE Plasma %1 Beta"
 
 #: desktopview.cpp:255
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Beta %2"
 
 #: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr ""
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:265
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Pro hlášení chyb použijte http://bugs.kde.org"
 
 #: main.cpp:104
 #, kde-format

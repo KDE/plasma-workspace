@@ -1,55 +1,55 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2023 Vit Pelcak <vit@pelcak.org>
 #
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-11-10 23:09+0900\n"
-"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
-"Language: zh_TW\n"
+"PO-Revision-Date: 2023-11-06 09:57+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
 #: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
-msgstr "Plasma 視窗版"
+msgstr "Plasma v okně"
 
 #: main.cpp:46
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "開啟 QML Javascript 除錯器"
+msgstr "Povolit ladicí nástroj QML JavaScript"
 
 #: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
-msgstr "讓小元件在視窗關閉後依然繼續存活在通知區域裡。"
+msgstr ""
 
 #: main.cpp:51
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "強制載入指定的 shell 外掛程式"
+msgstr "Vynutit načítání daného moduly shellu"
 
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr "要開啟的小程式。"
+msgstr ""
 
 #: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr "要傳遞給小元件的引數。"
+msgstr "Argumenty, které se mají předat plasmoidu."
 
 #: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
-msgstr "關閉 %1"
+msgstr "Zavřít %1"

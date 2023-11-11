@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-16 01:40+0000\n"
-"PO-Revision-Date: 2023-05-03 22:35+0200\n"
+"PO-Revision-Date: 2023-11-11 00:53+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,85 +15,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: contents/ui/BarcodePage.qml:23
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "Códigu QR"
 
 #: contents/ui/BarcodePage.qml:24
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Matriz de datos"
 
 #: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Code 39"
 
 #: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Code 93"
 
 #: contents/ui/BarcodePage.qml:28
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Code 128"
 
 #: contents/ui/BarcodePage.qml:44
 #, kde-format
 msgid "Return to Clipboard"
-msgstr ""
+msgstr "Volver al cartafueyu"
 
 #: contents/ui/BarcodePage.qml:79
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Camudar el tipu de códigu QR"
 
 #: contents/ui/BarcodePage.qml:136
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "La creación del códigu QR falló"
 
 #: contents/ui/BarcodePage.qml:147
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Nun hai abondu espaciu p'amosar el códigu QR. Prueba a redimensionar esti "
+"applet."
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
-msgstr ""
+msgstr "Invocar l'aición"
 
 #: contents/ui/DelegateToolButtons.qml:38
 #, kde-format
 msgid "Show QR code"
-msgstr ""
+msgstr "Amosar el códigu QR"
 
 #: contents/ui/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Edit contents"
-msgstr ""
+msgstr "Editar el conteníu"
 
 #: contents/ui/DelegateToolButtons.qml:68
 #, kde-format
 msgid "Remove from history"
-msgstr ""
+msgstr "Quitar del historial"
 
 #: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: contents/ui/EditPage.qml:90
 #, kde-format
@@ -104,27 +106,27 @@ msgstr ""
 #: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard Contents"
-msgstr ""
+msgstr "Conteníu del cartafueyu"
 
 #: contents/ui/main.qml:31 contents/ui/Menu.qml:129
 #, kde-format
 msgid "Clipboard is empty"
-msgstr ""
+msgstr "El cartafueyu ta baleru"
 
 #: contents/ui/main.qml:59
 #, kde-format
 msgid "Clear History"
-msgstr ""
+msgstr "Borrar l'historial"
 
 #: contents/ui/main.qml:71
 #, kde-format
 msgid "Configure Clipboard…"
-msgstr ""
+msgstr "Configurar el cartafueyu…"
 
 #: contents/ui/Menu.qml:129
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "Nun hai nenguna coincidencia"
 
 #: contents/ui/UrlItemDelegate.qml:106
 #, kde-format

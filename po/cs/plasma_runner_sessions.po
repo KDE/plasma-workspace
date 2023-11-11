@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011, 2014, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2011, 2014, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-01-06 11:12+0100\n"
+"PO-Revision-Date: 2023-11-02 13:57+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -36,7 +36,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr ""
+msgstr "vypnutí;vypnout;napájení;vypnout napájení"
 
 #: sessionrunner.cpp:29
 #, kde-format
