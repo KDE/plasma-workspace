@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016 Eike Hein <hein@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -26,6 +27,8 @@
 #include <QScreen>
 #include <QUrlQuery>
 #include <qnamespace.h>
+
+#include <defaultservice.h>
 
 namespace TaskManager
 {
@@ -631,20 +634,8 @@ QString defaultApplication(const QUrl &url)
             return command;
         }
     } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
-        KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
-        QString browserApp = config.readPathEntry("BrowserApplication", QString());
-
-        if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-
-            if (htmlApp) {
-                browserApp = htmlApp->storageId();
-            }
-        } else if (browserApp.startsWith('!')) {
-            browserApp.remove(0, 1);
-        }
-
-        return browserApp;
+        const auto service = DefaultService::browser();
+        return service ? service->storageId() : DefaultService::legacyBrowserExec();
     } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
 

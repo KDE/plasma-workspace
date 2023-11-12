@@ -11,6 +11,7 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     autostartscriptdesktopfile.h
     login1_manager_interface.cpp
     login1_manager_interface.h
+    defaultservice.cpp
    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
@@ -44,6 +45,7 @@ target_link_libraries(kworkspace
         KF6::I18n
         KF6::WindowSystem
         KF6::ConfigCore
+        KF6::Service
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
                                       INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/kworkspace6>" )

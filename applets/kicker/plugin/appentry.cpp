@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2015 Eike Hein <hein@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -26,6 +27,8 @@
 #include <KShell>
 #include <KSycoca>
 #include <KWindowSystem>
+
+#include <defaultservice.h>
 
 #include <Plasma/Plasma>
 
@@ -355,20 +358,7 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
 
 KService::Ptr AppEntry::defaultAppByName(const QString &name)
 {
-    if (name == QLatin1String("browser")) {
-        KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
-        QString browser = config.readPathEntry("BrowserApplication", QString());
-
-        if (browser.isEmpty()) {
-            return KApplicationTrader::preferredService(QStringLiteral("text/html"));
-        } else if (browser.startsWith(QLatin1Char('!'))) {
-            browser.remove(0, 1);
-        }
-
-        return KService::serviceByStorageId(browser);
-    }
-
-    return KService::Ptr();
+    return DefaultService::browser();
 }
 
 AppEntry::~AppEntry()

@@ -9,4 +9,5 @@ target_link_libraries(krunner_webshortcuts
     KF6::Service
     KF6::KIOWidgets
     KF6::I18n
+    PW::KWorkspace
 )

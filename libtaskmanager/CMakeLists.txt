@@ -64,6 +64,7 @@ target_link_libraries(taskmanager
         KF6::JobWidgets
         KF6::Service
         KF6::WindowSystem
+        PW::KWorkspace
 )
 
 if (HAVE_X11)

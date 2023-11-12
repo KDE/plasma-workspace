@@ -38,7 +38,10 @@ target_link_libraries(krunner_bookmarks_common
 )
 
 kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp browserfactory.cpp INSTALL_NAMESPACE "kf6/krunner")
-target_link_libraries(krunner_bookmarksrunner krunner_bookmarks_common)
+target_link_libraries(krunner_bookmarksrunner
+    krunner_bookmarks_common
+    PW::KWorkspace
+)
 
 # Currently tests include only chrome, so no need to get include them if json is not found
 if(BUILD_TESTING)

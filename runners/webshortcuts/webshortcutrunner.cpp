@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2007 Teemu Rytilahti <tpr@iki.fi>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -18,6 +19,7 @@
 #include <KUriFilter>
 #include <QDBusConnection>
 #include <QIcon>
+#include <defaultservice.h>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
@@ -87,14 +89,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 {
     m_match.setActions({});
 
-    const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group(QStringLiteral("General")).readEntry("BrowserApplication");
-    KService::Ptr service;
-    if (!browserFile.isEmpty()) {
-        service = KService::serviceByStorageId(browserFile);
-    }
-    if (!service) {
-        service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-    }
+    auto service = DefaultService::browser();
     if (!service) {
         return;
     }

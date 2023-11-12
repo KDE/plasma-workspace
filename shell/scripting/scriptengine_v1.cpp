@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 Aaron Seigo <aseigo@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -30,6 +31,8 @@
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
 #include <qstandardpaths.h>
+
+#include <defaultservice.h>
 
 #include "../screenpool.h"
 #include "appinterface.h"
@@ -634,19 +637,11 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         }
 
     } else if (matches(application, QLatin1String("browser"))) {
-        KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
-        QString browserApp = config.readPathEntry("BrowserApplication", QString());
-        if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-            if (htmlApp) {
-                browserApp = storageId ? htmlApp->storageId() : htmlApp->exec();
-            }
-        } else if (browserApp.startsWith('!')) {
-            browserApp.remove(0, 1);
+        auto service = DefaultService::browser();
+        if (service) {
+            return onlyExec(storageId ? service->storageId() : service->exec());
         }
-
-        return onlyExec(browserApp);
-
+        return onlyExec(DefaultService::legacyBrowserExec());
     } else if (matches(application, QLatin1String("terminal"))) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
         return onlyExec(confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole")));

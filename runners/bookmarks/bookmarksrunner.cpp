@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2007 Glenn Ergeerts <glenn.ergeerts@telenet.be>
     SPDX-FileCopyrightText: 2012 Marco Gulino <marco.gulino@xpeppers.com>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -19,6 +20,8 @@
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KSharedConfig>
+
+#include <defaultservice.h>
 
 #include "bookmarkmatch.h"
 #include "bookmarksrunner_defs.h"
@@ -65,19 +68,8 @@ void BookmarksRunner::match(KRunner::RunnerContext &context)
 
 QString BookmarksRunner::findBrowserName()
 {
-    // HACK find the default browser
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
-    QString exec = config.readPathEntry(QStringLiteral("BrowserApplication"), QString());
-    // qDebug() << "Found exec string: " << exec;
-    if (exec.isEmpty()) {
-        KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-        if (service) {
-            exec = service->exec();
-        }
-    }
-
-    // qDebug() << "KRunner::Bookmarks: found executable " << exec << " as default browser";
-    return exec;
+    const auto service = DefaultService::browser();
+    return service ? service->exec() : DefaultService::legacyBrowserExec();
 }
 
 void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &action)
