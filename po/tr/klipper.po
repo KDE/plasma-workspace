@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-10-23 13:02+0300\n"
+"PO-Revision-Date: 2023-11-11 23:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -123,7 +123,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 "Bir eylem kalıbıyla eşleşen metin seçildiğinde veya pano geçmişinden "
-"seçildiğinde, uygun eylemlerle birlikte açılır menüyü otomatik olarak "
+"seçildiğinde, uygun eylemlerle birlikte açılır menüyü kendiliğinden "
 "gösterin. Burada otomatik menü kapalıysa veya dışarıda tutulan bir pencere "
 "için gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
 "görüntülenebilir."
@@ -567,12 +567,12 @@ msgstr ""
 #: klipper.cpp:564
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
-msgstr "Klipper oturum açtığınızda otomatik olarak başlatılsın mı?"
+msgstr "Klipper oturum açtığınızda kendiliğinden başlatılsın mı?"
 
 #: klipper.cpp:565
 #, kde-format
 msgid "Automatically Start Klipper?"
-msgstr "Klipper Otomatik Olarak Başlatılsın mı?"
+msgstr "Klipper Kendiliğinden Başlatılsın mı?"
 
 #: klipper.cpp:566
 #, kde-format

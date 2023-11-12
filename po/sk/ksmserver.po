@@ -5,21 +5,21 @@
 # Richard Fric <Richard.Fric@kdemail.net>, 2006, 2007, 2010.
 # Michal Sulek <misurel@gmail.com>, 2009, 2010.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2017.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2020, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:48+0000\n"
-"PO-Revision-Date: 2023-04-14 18:15+0200\n"
-"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
+"PO-Revision-Date: 2023-11-11 15:19+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: logout.cpp:343
@@ -148,7 +148,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[neznáme]"
 
 #: server.cpp:837
 #, kde-kuit-format
@@ -158,6 +158,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Nie je možné spravovať niektoré aplikácie, pretože systémové prostriedky na "
+"správu sedení sú vyčerpané. Tu sú traja najväčší spotrebitelia zdrojov "
+"sedenia:\n"
+"%1"
 
 #: server.cpp:1109
 #, kde-kuit-format
@@ -167,6 +171,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Nie je možné obnoviť <application>%1</application>, pretože je nefunkčná a "
+"vyčerpala zdroje systému na obnovenie sedenia. Nahláste to, prosím vývojárom "
+"aplikácie."
 
 #~ msgid "Session Management"
 #~ msgstr "Správa sedení"

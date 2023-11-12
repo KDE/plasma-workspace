@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-13 01:43+0000\n"
-"PO-Revision-Date: 2023-10-30 10:27+0100\n"
+"PO-Revision-Date: 2023-11-12 00:43+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -70,7 +70,7 @@ msgstr "¿Quies sobrescribir l'estilu?"
 #: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "L'estilu instalóse correutamente."
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)

@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-01 01:41+0000\n"
-"PO-Revision-Date: 2023-08-06 11:27+0200\n"
+"PO-Revision-Date: 2023-11-11 14:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: kcm.cpp:73
 #, kde-format
@@ -49,21 +49,17 @@ msgid "Show notification badges"
 msgstr "Zobrazovať odznaky"
 
 #: ui/ApplicationConfiguration.qml:162
-#, fuzzy, kde-format
-#| msgid "Configure events:"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Nastaviť udalosti:"
+msgstr "Nastaviť udalosti"
 
 #: ui/ApplicationConfiguration.qml:170
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Táto aplikácia nepodporuje nastavenie upozornení na základe udalostí."
+msgstr "Táto aplikácia nepodporuje nastavenie upozornení na základe udalostí"
 
 #: ui/ApplicationConfiguration.qml:259
 #, kde-format
@@ -265,21 +261,17 @@ msgid "System Services"
 msgstr "Systémové služby"
 
 #: ui/SourcesPage.qml:148
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Žiadna aplikácia alebo udalosť nezodpovedá hľadanému výrazu."
+msgstr "Žiadna aplikácia alebo udalosť nezodpovedá hľadanému výrazu"
 
 #: ui/SourcesPage.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
-"Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a spravávania."
+"Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a správania"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Nastaviť upozornenia"

@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:48+0000\n"
-"PO-Revision-Date: 2023-03-17 21:46+0100\n"
+"PO-Revision-Date: 2023-11-11 16:30+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: logout.cpp:343
@@ -145,7 +145,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[неизвестно]"
 
 #: server.cpp:837
 #, kde-kuit-format
@@ -155,6 +155,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Не можете да управлявате някои приложения, защото ресурсите за управление на "
+"сесиите на системата са изчерпани. Това са трите най-големи потребители на "
+"ресурси в сесията:\n"
+"%1"
 
 #: server.cpp:1109
 #, kde-kuit-format
@@ -164,6 +168,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Не е възможно да се възстанови приложението <application>%1</application>, "
+"защото е повредено и е изчерпало ресурсите за възстановяване на сесиите на "
+"системата. Моля, докладвайте за това на разработчиците на приложението."
 
 #~ msgid "Session Management"
 #~ msgstr "Управление на сесиите"

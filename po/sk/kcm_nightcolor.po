@@ -1,20 +1,20 @@
 # translation of kcm_nightcolor.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2017.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Dušan Kazik <prescott66@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 01:44+0000\n"
-"PO-Revision-Date: 2023-01-11 21:20+0100\n"
+"PO-Revision-Date: 2023-11-11 14:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ui/LocationsFixedView.qml:39
@@ -122,12 +122,10 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Studená (žiadný filter)"
+msgstr "Studená (žiadny filter)"
 
 #: ui/main.qml:243 ui/main.qml:302
 #, kde-format

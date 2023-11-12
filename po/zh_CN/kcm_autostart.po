@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-10-21 13:51\n"
+"PO-Revision-Date: 2023-11-11 07:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -105,22 +105,19 @@ msgid "Add…"
 msgstr "添加…"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "添加应用程序…"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "添加登录脚本…"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "添加注销脚本…"
@@ -183,12 +180,10 @@ msgid "No user-specified autostart items"
 msgstr "没有用户指定的自动启动项目"
 
 #: ui/main.qml:188
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Click the <interface>Add…</interface> button below to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr "点击 <interface>添加…</interface> 按钮来添加一些内容"
+msgstr ""
 
 #: ui/main.qml:203
 #, kde-format

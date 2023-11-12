@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 01:44+0000\n"
-"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"PO-Revision-Date: 2023-11-11 07:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -124,9 +124,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Malvarmeta (neniu filtrilo)"
@@ -207,7 +205,3 @@ msgid ""
 msgstr ""
 "Kolora temperaturo komencas ŝanĝiĝi al taga tempo ĉe %1 kaj estas plene "
 "ŝanĝita de %2"
-
-#~ msgctxt "Night colour blue-ish"
-#~ msgid "Cool"
-#~ msgstr "Malvarmeta"

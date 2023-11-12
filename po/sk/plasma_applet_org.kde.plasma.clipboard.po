@@ -1,20 +1,20 @@
 # translation of plasma_applet_org.kde.plasma.clipboard.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-16 01:40+0000\n"
-"PO-Revision-Date: 2022-01-04 20:28+0100\n"
+"PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/ui/BarcodePage.qml:23
@@ -68,6 +68,8 @@ msgstr "Vytvorenie QR kódu zlyhalo"
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Na zobrazenie kódu QR nie je dostatok miesta. Skúste zmeniť veľkosť tohto "
+"appletu."
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format

@@ -9,7 +9,7 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en http://trasno.gpul.org
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:48+0000\n"
-"PO-Revision-Date: 2023-06-28 07:55+0200\n"
+"PO-Revision-Date: 2023-11-11 14:28+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: logout.cpp:343
 #, kde-format
@@ -154,7 +154,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "(descoñecido)"
 
 #: server.cpp:837
 #, kde-kuit-format
@@ -164,6 +164,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Non é posíbel xestionar algunhas aplicacións porque se esgotaron os recursos "
+"de xestión da sesión do sistema. Estes son os tres consumidores principais "
+"dos recursos da sesión:\n"
+"%1"
 
 #: server.cpp:1109
 #, kde-kuit-format
@@ -173,6 +177,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Non é posíbel restaurar <application>%1</application> porque rompeu e "
+"esgotou os recursos de restauración da sesión do sistema. Informe disto ao "
+"equipo desenvolvedor da aplicación."
 
 #~ msgid "Session Management"
 #~ msgstr "Xestión de sesións"
