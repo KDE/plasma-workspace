@@ -17,6 +17,7 @@
         "Description[eu]": "Egora-jakinarazlerako erabiltzaile-interfazeak hornitzen dituen zerbitzuak kudeatzen ditu",
         "Description[fi]": "Hallitsee tilailmoitinkäyttöliittymän tarjoavia palveluja",
         "Description[fr]": "Gère les services fournissant des interfaces utilisateurs pour la notification d'état",
+        "Description[gl]": "Xestiona servizos que fornecen interfaces de usuario para o notificador de estado.",
         "Description[he]": "מנהל שירותים שמספרים ממשקי משתמש למודיע המצב",
         "Description[hi]": "उन सेवाओं का प्रबंधन करता है जो स्टेटस सूचक उपयोक्ता इंटरफेस प्रदान करती हैं",
         "Description[hu]": "Kezeli az állapotértesítést nyújtó szolgáltatásokat",

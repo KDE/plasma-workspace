@@ -17,6 +17,7 @@
         "Description[eu]": "KSysguard jaurtitzen du Ktrl + Ihes sakatzean",
         "Description[fi]": "Käynnistää Ctrl+Esc-painalluksella KSysGuardin",
         "Description[fr]": "Lancer KSysguard avec « CTRL » + « Échap »",
+        "Description[gl]": "Inicia KSysguard con Ctrl + Escape.",
         "Description[he]": "מפעיל את מנהל התהליכים עם Ctrl + Escape",
         "Description[hi]": "Ctrl + Escape पर के-सिसगार्ड चालू करता है",
         "Description[hu]": "KSysguard futtatása a Ctrl+Esc megnyomásakor",
