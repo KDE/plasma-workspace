@@ -482,19 +482,18 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
     // Read the BAMF_DESKTOP_FILE_HINT environment variable which contains the actual desktop file path for Snaps.
     QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
     if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
-        const QByteArray appDir = QByteArrayLiteral("APPDIR");
-
+        constexpr QByteArrayView bamfDesktopFileHint{"BAMF_DESKTOP_FILE_HINT"};
+        constexpr QByteArrayView appDir{"APPDIR"};
         const auto lines = environFile.readAll().split('\0');
-        for (const QByteArray &line : lines) {
+        for (const QByteArrayView line : lines) {
             const int equalsIdx = line.indexOf('=');
             if (equalsIdx <= 0) {
                 continue;
             }
 
-            const QByteArray key = line.left(equalsIdx);
+            const QByteArrayView key = line.sliced(0, equalsIdx);
             if (key == bamfDesktopFileHint) {
-                const QByteArray value = line.mid(equalsIdx + 1);
+                const QByteArrayView value = line.sliced(equalsIdx + 1);
 
                 KService::Ptr service = KService::serviceByDesktopPath(QString::fromUtf8(value));
                 if (service) {
@@ -503,7 +502,7 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
                 break;
             } else if (key == appDir) {
                 // For AppImage
-                const QByteArray value = line.mid(equalsIdx + 1);
+                const QByteArrayView value = line.sliced(equalsIdx + 1);
                 const auto desktopFileList = QDir(QString::fromUtf8(value)).entryInfoList(QStringList{QStringLiteral("*.desktop")}, QDir::Files);
                 if (!desktopFileList.empty()) {
                     return {QExplicitlySharedDataPointer<KService>(new KService(desktopFileList[0].absoluteFilePath()))};
