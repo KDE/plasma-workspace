@@ -317,7 +317,8 @@ ColumnLayout {
         visible: results.count > 0
         enabled: visible
         Layout.fillWidth: true
-        Layout.preferredHeight: Math.min(Screen.height, results.contentHeight)
+        Layout.fillHeight: true
+        Layout.maximumHeight: results.contentHeight
 
         Milou.ResultsView {
             id: results
@@ -364,10 +365,11 @@ ColumnLayout {
 
     PlasmaComponents3.ScrollView {
         Layout.fillWidth: true
+        Layout.fillHeight: true
+        Layout.maximumHeight: results.contentHeight
         visible: root.query.length === 0 && listView.count > 0
         // don't accept keyboard input when not visible so the keys propagate to the other list
         enabled: visible
-        Layout.preferredHeight: Math.min(Screen.height, listView.contentHeight)
 
         ListView {
             id: listView // needs this id so the delegate can access it
@@ -395,7 +397,7 @@ ColumnLayout {
             }
             Keys.onReturnPressed: runCurrentIndex(event)
             Keys.onEnterPressed: runCurrentIndex(event)
-            
+
             Keys.onTabPressed: {
                 if (currentIndex == listView.count-1) {
                     listView.nextItemInFocusChain(true).forceActiveFocus();
@@ -430,7 +432,7 @@ ColumnLayout {
                     queryField.focus = true;
                 }
             }
-  
+
             Keys.onUpPressed: decrementCurrentIndex()
             Keys.onDownPressed: incrementCurrentIndex()
 
