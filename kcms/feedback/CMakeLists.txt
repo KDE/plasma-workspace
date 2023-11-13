@@ -13,7 +13,7 @@ target_link_libraries(kcm_feedback PRIVATE
     KF6::I18n
     KF6::KCMUtils
     KF6::KCMUtilsQuick
-    KUserFeedbackCoreQt6
+    KF6::UserFeedbackCore
 )
 
 ecm_qt_declare_logging_category(kcm_feedback

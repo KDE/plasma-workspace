@@ -7,15 +7,15 @@
 
 #include "userfeedback.h"
 
-#include <KUserFeedbackQt6/ApplicationVersionSource>
-#include <KUserFeedbackQt6/CompilerInfoSource>
-#include <KUserFeedbackQt6/OpenGLInfoSource>
-#include <KUserFeedbackQt6/PlatformInfoSource>
-#include <KUserFeedbackQt6/Provider>
-#include <KUserFeedbackQt6/QPAInfoSource>
-#include <KUserFeedbackQt6/QtVersionSource>
-#include <KUserFeedbackQt6/ScreenInfoSource>
-#include <KUserFeedbackQt6/UsageTimeSource>
+#include <KUserFeedback/ApplicationVersionSource>
+#include <KUserFeedback/CompilerInfoSource>
+#include <KUserFeedback/OpenGLInfoSource>
+#include <KUserFeedback/PlatformInfoSource>
+#include <KUserFeedback/Provider>
+#include <KUserFeedback/QPAInfoSource>
+#include <KUserFeedback/QtVersionSource>
+#include <KUserFeedback/ScreenInfoSource>
+#include <KUserFeedback/UsageTimeSource>
 
 #include <KLocalizedString>
 

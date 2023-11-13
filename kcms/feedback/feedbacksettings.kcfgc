@@ -1,6 +1,6 @@
 File=feedbacksettings.kcfg
 ClassName=FeedbackSettings
-IncludeFiles="KUserFeedbackQt6/Provider"
+IncludeFiles="KUserFeedback/Provider"
 Mutators=true
 DefaultValueGetters=true
 GenerateProperties=true

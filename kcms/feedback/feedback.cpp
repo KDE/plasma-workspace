@@ -16,8 +16,8 @@
 #include <QList>
 #include <QProcess>
 
-#include <KUserFeedbackQt6/FeedbackConfigUiController>
-#include <KUserFeedbackQt6/Provider>
+#include <KUserFeedback/FeedbackConfigUiController>
+#include <KUserFeedback/Provider>
 
 #include "feedbackdata.h"
 #include "feedbacksettings.h"

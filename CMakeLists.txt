@@ -85,7 +85,7 @@ set_package_properties(KF6QuickCharts PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(KUserFeedbackQt6)
+find_package(KF6UserFeedback)
 find_package(KSysGuard CONFIG REQUIRED)
 
 find_package(KF6Baloo)
