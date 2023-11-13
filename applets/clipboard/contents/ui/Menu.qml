@@ -98,7 +98,12 @@ PlasmaComponents3.ScrollView {
             onTriggerAction: uuid => menu.triggerAction(uuid)
 
             Binding {
-                target: menuListView; when: hovered
+                target: menuListView
+                // don't change currentIndex if it would make listview scroll
+                // see https://bugs.kde.org/show_bug.cgi?id=387797
+                // this is a workaround till https://bugreports.qt.io/browse/QTBUG-114574 gets fixed
+                // which would allow a proper solution
+                when: hovered && (y - menuListView.contentY + height  + 1 /* border */ < menuListView.height) && (y - menuListView.contentY >= 0)
                 property: "currentIndex"; value: index
                 restoreMode: Binding.RestoreBinding
             }
