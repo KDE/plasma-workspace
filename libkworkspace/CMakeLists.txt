@@ -1,10 +1,11 @@
 
-set(kworkspace_LIB_SRCS kdisplaymanager.cpp
+set(kworkspace_LIB_SRCS
     sessionmanagement.cpp
     sessionmanagementbackend.cpp
     autostartscriptdesktopfile.cpp
-    kdisplaymanager.h
     kworkspace.h
+    sessionsmodel.h
+    sessionsmodel.cpp
     sessionmanagement.h
     sessionmanagementbackend.h
     autostartscriptdesktopfile.h
@@ -68,9 +69,9 @@ ecm_qt_declare_logging_category(kworkspace
 
 install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
-install( FILES kdisplaymanager.h
-               kworkspace.h
+install( FILES kworkspace.h
                sessionmanagement.h
+               sessionsmodel.h
                autostartscriptdesktopfile.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
@@ -91,6 +92,6 @@ install(EXPORT libkworkspaceLibraryTargets
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibKWorkspaceLibraryTargets.cmake )
 
-if(BUILD_TESTING)
+#if(BUILD_TESTING)
     add_subdirectory(tests)
-endif()
+#endif()

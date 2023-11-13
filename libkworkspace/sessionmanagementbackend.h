@@ -76,6 +76,7 @@ class LogindSessionBackend : public SessionBackend
     Q_OBJECT
 public:
     static bool exists();
+    static QString sessionIfaceName();
     LogindSessionBackend();
 
     SessionManagement::State state() const override;

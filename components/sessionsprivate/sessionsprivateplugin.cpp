@@ -8,8 +8,8 @@
 
 #include <QQmlEngine>
 
-#include "sessionsmodel.h"
 #include <sessionmanagement.h>
+#include <sessionsmodel.h>
 
 void SessionsPrivatePlugin::registerTypes(const char *uri)
 {

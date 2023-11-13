@@ -38,6 +38,11 @@ bool LogindSessionBackend::exists()
     return getLogindMode() != None;
 }
 
+QString LogindSessionBackend::sessionIfaceName()
+{
+    return getLogindMode() == Logind1 ? "org.freedesktop.login1.Session" : "org.freedesktop.ConsoleKit.Session";
+}
+
 OrgFreedesktopLogin1ManagerInterface::OrgFreedesktopLogin1ManagerInterface(const QString &, const QString &, const QDBusConnection &connection, QObject *parent)
     : QDBusAbstractInterface(getLogindMode() == Logind1 ? QStringLiteral("org.freedesktop.login1") : QStringLiteral("org.freedesktop.ConsoleKit"),
                              getLogindMode() == Logind1 ? QStringLiteral("/org/freedesktop/login1") : QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
@@ -50,5 +55,3 @@ OrgFreedesktopLogin1ManagerInterface::OrgFreedesktopLogin1ManagerInterface(const
 OrgFreedesktopLogin1ManagerInterface::~OrgFreedesktopLogin1ManagerInterface()
 {
 }
-
-#include "login1_manager_interface.moc"

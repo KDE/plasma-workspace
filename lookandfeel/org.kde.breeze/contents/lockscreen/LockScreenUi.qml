@@ -123,7 +123,6 @@ Item {
 
     SessionsModel {
         id: sessionsModel
-        showNewSessionEntry: false
     }
 
     P5Support.DataSource {
@@ -357,11 +356,9 @@ Item {
                         iconSource: "system-switch-user"
                         onClicked: {
                             // If there are no existing sessions to switch to, create a new one instead
-                            if (((sessionsModel.showNewSessionEntry && sessionsModel.count === 1) ||
-                               (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
-                               sessionsModel.canSwitchUser) {
-                                mainStack.pop({ immediate: true })
-                                sessionsModel.startNewSession(true /* lock the screen too */)
+                            if (sessionsModel.count === 0 && sessionManagement.canSwitchUser) {
+                                mainStack.pop({immediate:true})
+                                sessionsModel.startNewSession()
                                 lockScreenRoot.state = ""
                             } else {
                                 mainStack.push(switchSessionPage)
