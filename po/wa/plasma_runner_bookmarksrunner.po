@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-13 01:39+0000\n"
 "PO-Revision-Date: 2010-01-22 15:23+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: bookmarksrunner.cpp:34
+#: bookmarksrunner.cpp:37
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Trove des rimåkes do betchteu waibe ki corespondèt a :q:."
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:38
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "rimåkes"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:38
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Fé l' djivêye des rimåkes di tos les betchteus waibe"
 
-#: bookmarksrunner.cpp:56
+#: bookmarksrunner.cpp:59
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

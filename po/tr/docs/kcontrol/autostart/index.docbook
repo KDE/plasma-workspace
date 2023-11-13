@@ -39,7 +39,7 @@
 <keyword
 >sistem ayarları</keyword>
 <keyword
->otomatik başlatma</keyword>
+>kendiliğinden başlat</keyword>
 <keyword
 >masaüstü dosyası</keyword>
 <keyword
@@ -52,7 +52,7 @@
 >Otomatik Başlatma Yöneticisi</title>
 
 <para
->Bu modül, kişisel &plasma;'nız ile hangi programların başlatılacağını yönetmek için bir yapılandırma aracıdır. Programları veya betikleri eklemenize izin verir, böylece &plasma; oturumunuz başlatılırken veya kapatılırken otomatik olarak çalıştırılr ve onları ayrıca yönetebilirsiniz.</para>
+>Bu modül, kişisel &plasma;'nız ile hangi programların başlatılacağını yönetmek için bir yapılandırma aracıdır. Programları veya betikleri eklemenize izin verir, böylece &plasma; oturumunuz başlatılırken veya kapatılırken kendiliğinden çalıştırılr ve onları ayrıca yönetebilirsiniz.</para>
 
 <note
 ><para
@@ -100,7 +100,7 @@
 > bölümlerine bakın.</para>
 
 <para
->Bazı &kde; uygulamaları, otomatik başlatma davranışını kendileri yapılandırırlar; &eg;, bir uygulamanın otomatik başlatmasını onun ayarlar iletişim kutusunda etkinleştirebilir veya devre dışı bırakabilirsiniz (&kalarm;) veya <menuchoice
+>Bazı &kde; uygulamaları, kendiliğinden başlatma davranışını kendileri yapılandırırlar; &eg;, bir uygulamanın otomatik başlatmasını onun ayarlar iletişim kutusunda etkinleştirebilir veya devre dışı bırakabilirsiniz (&kalarm;) veya <menuchoice
 ><guimenu
 >Dosya</guimenu
 ><guimenuitem
@@ -275,7 +275,7 @@
 <para
 >Bu, eklemek istediğiniz betiğin konumunu soran bir iletişim kutusu açar. Oturumu kapanışında çalıştırılmak üzere ayarlanmış betikler <filename class="directory"
 >$HOME/.config/plasma-workspace/shutdown</filename
-> dizinine kopyalanır veya sembolik bağlantı oluşturulur ve kullanıcı oturumu kapattıktan sonta &plasma; kapanışında otomatik olarak çalıştırılacaktır. </para>
+> dizinine kopyalanır veya sembolik bağlantı oluşturulur ve kullanıcı oturumu kapattıktan sonta &plasma; kapanışında kendiliğinden çalıştırılacaktır. </para>
 </listitem>
 </varlistentry>
 </variablelist>

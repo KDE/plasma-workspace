@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-13 01:39+0000\n"
 "PO-Revision-Date: 2010-03-10 14:16+0200\n"
 "Last-Translator: Petros Vidalis <p_vidalis@hotmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -20,27 +20,27 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:143 webshortcutrunner.cpp:160
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Αναζήτηση %1 για %2"
 
-#: webshortcutrunner.cpp:67
+#: webshortcutrunner.cpp:69
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Άνοιγμα \"%1\" σε ένα δικτυακό περιηγητή με το ερώτημα :q:."
 
-#: webshortcutrunner.cpp:72
+#: webshortcutrunner.cpp:74
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr ""
 
-#: webshortcutrunner.cpp:107
+#: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in private window"
 msgstr ""
 
-#: webshortcutrunner.cpp:107
+#: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in incognito window"
 msgstr ""

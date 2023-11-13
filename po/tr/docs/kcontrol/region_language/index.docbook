@@ -107,7 +107,7 @@
 <note>
 <para
 >Daha öncesinde, Dil ve Biçimler ayrı ayarlardı. &plasma; 5.26 sürümünden bu yana, Bölge ve Dil adı verilen bu ayar sayfasında toplandılar. Bir dili değiştirmek, o dil için olan sayıları, para birimini &etc; <emphasis
->otomatik olarak</emphasis
+>kendiliğinden</emphasis
 > ilgili ülkeye veya bölgeye göre değiştirir. Ancak, bu değişiklik eski yapılandırmayı bozmaz. Yapılandırma dosyası halen <emphasis
 >~/.config/plasma-localerc</emphasis
 > konumunda bulunur. </para>

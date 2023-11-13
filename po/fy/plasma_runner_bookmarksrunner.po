@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-13 01:39+0000\n"
 "PO-Revision-Date: 2010-07-13 17:28+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: bookmarksrunner.cpp:34
+#: bookmarksrunner.cpp:37
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Sykje om blêdwizers fan webblêder mei :q:."
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:38
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "blêdwizers"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:38
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Alle blêdwizers fan de webblêder opsomme"
 
-#: bookmarksrunner.cpp:56
+#: bookmarksrunner.cpp:59
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

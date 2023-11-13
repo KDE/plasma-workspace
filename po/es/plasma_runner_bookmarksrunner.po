@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-13 01:39+0000\n"
 "PO-Revision-Date: 2009-12-17 13:58-0000\n"
 "Last-Translator: Cristina Yenyxe González García <the.blue.valkyrie@gmail."
 "com>\n"
@@ -19,23 +19,23 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: bookmarksrunner.cpp:34
+#: bookmarksrunner.cpp:37
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Encuentra marcadores del navegador web que coincidan con :q:."
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:38
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "marcadores"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:38
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Listar todos los marcadores del navegador web"
 
-#: bookmarksrunner.cpp:56
+#: bookmarksrunner.cpp:59
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

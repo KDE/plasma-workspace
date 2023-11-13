@@ -50,7 +50,7 @@
 >Bu modülü kullanarak, ekran kilidinin etkinleştirilmesi için ne kadar zaman geçmesi gerektiğini belirleyebilir, şifre olmadan ekran kilidini açmak için yetkisiz kullanım süresini yapılandırabilir ve ekran kilitleyicinizin görünüşünü seçebilirsiniz.</para>
 
 <para
->En üstte, ekran kilidininin otomatik olarak başlatılması için <guilabel
+>En üstte, ekran kilidininin kendiliğinden başlatılması için <guilabel
 >Ekranı kendiliğinden kilitle</guilabel
 > seçeneği ve kilidin çalışmaya başlayacağı boşta kalma süresini ayarlamak için bir döndürme kutusu bulunur. İstediğiniz bir pozitif tamsayıyı girebilirsiniz.</para>
 

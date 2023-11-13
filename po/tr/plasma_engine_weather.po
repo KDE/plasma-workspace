@@ -5,13 +5,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2022-03-12 15:26+0300\n"
+"PO-Revision-Date: 2023-11-13 02:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -50,32 +50,32 @@ msgstr "bulutlu"
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with hail"
-msgstr "dolulu bulutlu"
+msgstr "bulutlu, dolu ile"
 
 #: bbcukmet_i18n.dat:6
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with heavy snow"
-msgstr "şiddetli yağmurlu bulutlu"
+msgstr "bulutlu, yoğun kar ile"
 
 #: bbcukmet_i18n.dat:7
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with light snow"
-msgstr "hafif yağmurlu bulutlu"
+msgstr "bulutlu, hafif kar ile"
 
 #: bbcukmet_i18n.dat:8
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with sleet"
-msgstr "sulu sepken bulutlu"
+msgstr "bulutlu, sulusepken ile"
 
 #: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:167
 #: ions/wetter.com/ion_wettercom.cpp:168 ions/wetter.com/ion_wettercom.cpp:170
 #, kde-format
 msgctxt "weather condition"
 msgid "drizzle"
-msgstr "çiseleme"
+msgstr "çiseleyen yağmur"
 
 #: bbcukmet_i18n.dat:10
 #, kde-format
@@ -117,7 +117,7 @@ msgstr "sağanak dolu"
 #, kde-format
 msgctxt "weather condition"
 msgid "hazy"
-msgstr "sisli"
+msgstr "puslu"
 
 #: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "şiddetli sağanak yağmur"
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr "şiddetli sağanak yağış"
+msgstr "şiddetli sağanak yağmur"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
@@ -153,25 +153,25 @@ msgstr "şiddetli sağanak"
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow"
-msgstr "şiddetli kar"
+msgstr "yoğun kar"
 
 #: bbcukmet_i18n.dat:23
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow shower"
-msgstr "şiddetli sağanak kar"
+msgstr "yoğun sağanak kar"
 
 #: bbcukmet_i18n.dat:24
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow showers"
-msgstr "şiddetli sağanak kar"
+msgstr "yoğun sağanak kar"
 
 #: bbcukmet_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr "hafif bulut"
+msgstr "hafif bulutlu"
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
@@ -190,7 +190,7 @@ msgstr "hafif sağanak yağmur"
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr "hafif sağanak yağış"
+msgstr "hafif sağanak yağmur"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
@@ -239,13 +239,13 @@ msgstr "sisli"
 #, kde-format
 msgctxt "weather condition"
 msgid "N/A"
-msgstr "Kullanılamıyor"
+msgstr "Yok"
 
 #: bbcukmet_i18n.dat:37
 #, kde-format
 msgctxt "weather condition"
 msgid "na"
-msgstr "kullanılamıyor"
+msgstr "yok"
 
 #: bbcukmet_i18n.dat:38
 #, kde-format
@@ -263,19 +263,19 @@ msgstr "kum fırtınası"
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet"
-msgstr "sulu sepken"
+msgstr "sulusepken"
 
 #: bbcukmet_i18n.dat:41
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet shower"
-msgstr "sulu sepken sağanak"
+msgstr "sağanak sulusepken"
 
 #: bbcukmet_i18n.dat:42
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet showers"
-msgstr "sulu sepken sağanak"
+msgstr "sağanak sulusepken"
 
 #: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:207
 #, kde-format
@@ -287,13 +287,13 @@ msgstr "güneşli"
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr "güneşli aralıklar"
+msgstr "aralıklarla güneşli"
 
 #: bbcukmet_i18n.dat:45
 #, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr "ağır bulut"
+msgstr "ağır bulutlu"
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
@@ -324,7 +324,7 @@ msgstr "tropik fırtına"
 #, kde-format
 msgctxt "weather condition"
 msgid "white cloud"
-msgstr "beyaz bulut"
+msgstr "beyaz bulutlu"
 
 #: bbcukmet_i18n.dat:51
 #, kde-format
@@ -354,31 +354,31 @@ msgstr "bulutlu"
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with hail"
-msgstr "dolulu bulutlu"
+msgstr "bulutlu, dolu ile"
 
 #: bbcukmet_i18n.dat:56
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with heavy snow"
-msgstr "şiddetli karlı bulutlu"
+msgstr "bulutlu, yoğun kar ile"
 
 #: bbcukmet_i18n.dat:57
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with light snow"
-msgstr "hafif karlı bulutlu"
+msgstr "bulutlu, hafif kar ile"
 
 #: bbcukmet_i18n.dat:58
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with sleet"
-msgstr "sulu sepken bulutlu"
+msgstr "bulutlu, sulusepken ile"
 
 #: bbcukmet_i18n.dat:59
 #, kde-format
 msgctxt "weather forecast"
 msgid "drizzle"
-msgstr "çiseleme"
+msgstr "çiseleyen yağmur"
 
 #: bbcukmet_i18n.dat:60
 #, kde-format
@@ -396,7 +396,7 @@ msgstr "sisli"
 #, kde-format
 msgctxt "weather forecast"
 msgid "grey cloud"
-msgstr "gri bulut"
+msgstr "gri bulutlu"
 
 #: bbcukmet_i18n.dat:63
 #, kde-format
@@ -420,7 +420,7 @@ msgstr "sağanak dolu"
 #, kde-format
 msgctxt "weather forecast"
 msgid "hazy"
-msgstr "sisli"
+msgstr "puslu"
 
 #: bbcukmet_i18n.dat:67
 #, kde-format
@@ -474,7 +474,7 @@ msgstr "şiddetli sağanak kar"
 #, kde-format
 msgctxt "weather forecast"
 msgid "light cloud"
-msgstr "hafif bulut"
+msgstr "hafif bulutlu"
 
 #: bbcukmet_i18n.dat:76
 #, kde-format
@@ -588,7 +588,7 @@ msgstr "aralıklarla güneşli"
 #, kde-format
 msgctxt "weather forecast"
 msgid "thick cloud"
-msgstr "ağır bulut"
+msgstr "ağır bulutlu"
 
 #: bbcukmet_i18n.dat:95
 #, kde-format
@@ -618,7 +618,7 @@ msgstr "tropik fırtına"
 #, kde-format
 msgctxt "weather forecast"
 msgid "white cloud"
-msgstr "beyaz bulut"
+msgstr "beyaz bulutlu"
 
 #: bbcukmet_i18n.dat:100
 #, kde-format
@@ -660,7 +660,7 @@ msgstr "Çok Zayıf"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow"
-msgstr "Esintili Kar"
+msgstr "Tipi"
 
 #: envcan_i18n.dat:3 noaa_i18n.dat:10
 #, kde-format
@@ -678,7 +678,7 @@ msgstr "Bulutlu"
 #, kde-format
 msgctxt "weather condition"
 msgid "Decreasing Cloud"
-msgstr "Azalan Bulut"
+msgstr "Azalan Bulutlar"
 
 #: envcan_i18n.dat:6
 #, kde-format
@@ -738,7 +738,7 @@ msgstr "Sis Örtüsü"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing drizzle"
-msgstr "İnce kar"
+msgstr "Çiseleyen Buz"
 
 #: envcan_i18n.dat:16
 #, kde-format
@@ -750,7 +750,7 @@ msgstr "Donmuş yağmur"
 #, kde-format
 msgctxt "weather condition"
 msgid "Funnel Cloud"
-msgstr "Bulut Hortumu"
+msgstr "Huni Bulutu"
 
 #: envcan_i18n.dat:18 noaa_i18n.dat:42
 #, kde-format
@@ -768,7 +768,7 @@ msgstr "Pus"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Blowing Snow"
-msgstr "Yoğun Rüzgarlı Kar"
+msgstr "Yoğun Tipi"
 
 #: envcan_i18n.dat:21
 #, kde-format
@@ -780,7 +780,7 @@ msgstr "Yoğun Etkili Kar Yağışı"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle"
-msgstr "Şiddetli Çiselti"
+msgstr "Şiddetli Çiseleyen Yağmur"
 
 #: envcan_i18n.dat:23
 #, kde-format
@@ -870,19 +870,19 @@ msgstr "Buz Pelteleri"
 #, kde-format
 msgctxt "weather condition"
 msgid "Increasing Cloud"
-msgstr "Artan bulut"
+msgstr "Artan Bulutlar"
 
 #: envcan_i18n.dat:38 noaa_i18n.dat:106
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle"
-msgstr "Hafif Çiselti"
+msgstr "Hafif Çiseleyen Yağmur"
 
 #: envcan_i18n.dat:39 noaa_i18n.dat:111
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle"
-msgstr "Hafif Sonan Çiselti"
+msgstr "Hafif Çiseleyen Buz"
 
 #: envcan_i18n.dat:40 noaa_i18n.dat:115
 #, kde-format
@@ -930,7 +930,7 @@ msgstr "Şimşek Görünümü"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mainly Clear"
-msgstr "Genellikle Açık"
+msgstr "Genelde Açık"
 
 #: envcan_i18n.dat:48
 #, kde-format
@@ -948,7 +948,7 @@ msgstr "Duman"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mixed Rain and Drizzle"
-msgstr "Çiseltiyle Karışık Yağmur"
+msgstr "Karışık Yağmur ve Çiselti"
 
 #: envcan_i18n.dat:51
 #, kde-format
@@ -960,7 +960,7 @@ msgstr "Sağanak Karla Karışık Yağmur"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy"
-msgstr "Genellikle Bulutlu"
+msgstr "Genelde Bulutlu"
 
 #: envcan_i18n.dat:53
 #, kde-format
@@ -996,7 +996,7 @@ msgstr "Sağanak"
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Drizzle"
-msgstr "Yakın Zamanda Çiselti"
+msgstr "Yakın Zamanda Çiseleyen Yağmur"
 
 #: envcan_i18n.dat:59
 #, kde-format
@@ -1182,7 +1182,7 @@ msgstr "Bora"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few clouds"
-msgstr "Az sayıda bulut"
+msgstr "Birkaç bulut"
 
 #: envcan_i18n.dat:90
 #, kde-format
@@ -1230,7 +1230,7 @@ msgstr "Az miktarda sağanak"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or drizzle"
-msgstr "Az miktarda sağanak veya çiseleme"
+msgstr "Biraz sağanak veya çiseleyen yağmur"
 
 #: envcan_i18n.dat:98
 #, kde-format
@@ -1272,7 +1272,7 @@ msgstr "Az miktarda sulu kar veya yağmur"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A mix of sun and cloud"
-msgstr "Güneşli ve bulutlu"
+msgstr "Güneş ve bulut karışımı"
 
 #: envcan_i18n.dat:105
 #, kde-format
@@ -1284,25 +1284,25 @@ msgstr "Şiddetli kar fırtınası"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle"
-msgstr "Çiseleme ihtimali"
+msgstr "Çiseleyen yağmur olasılığı"
 
 #: envcan_i18n.dat:107
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with freezing drizzle"
-msgstr "Donmuş çiseleme ile karışık çiseleme ihtimali"
+msgstr "Çiseleyen buz ile karışık çiseleyen yağmur"
 
 #: envcan_i18n.dat:108
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with rain"
-msgstr "Yağmur ile karışık çiseleme ihtimali"
+msgstr "Yağmur ile karışık çiselti olasılığı"
 
 #: envcan_i18n.dat:109
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle or rain"
-msgstr "Çiseleme ihtimali veya yağmur"
+msgstr "Yağmur veya çiselti olasılığı"
 
 #: envcan_i18n.dat:110
 #, kde-format
@@ -1344,31 +1344,31 @@ msgstr "Hafif kar veya gök gürültülü yağmur ihtimali"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing drizzle"
-msgstr "Donmuş çiseleme ihtimali"
+msgstr "Çiseleyen buz olasılığı"
 
 #: envcan_i18n.dat:117
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain"
-msgstr "Donmuş yağmur ihtimali"
+msgstr "Donan yağmur olasılığı"
 
 #: envcan_i18n.dat:118
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain mixed with snow"
-msgstr "Karla karışık donmuş yağmur ihtimali"
+msgstr "Karla karışık donan yağmur olasılığı"
 
 #: envcan_i18n.dat:119
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or rain"
-msgstr "Donmuş yağmur veya yağmur ihtimali"
+msgstr "Yağmur veya donan yağmur olasılığı"
 
 #: envcan_i18n.dat:120
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or snow"
-msgstr "Donmuş yağmur veya kar ihtimali"
+msgstr "Kar veya donan yağmur olasılığı"
 
 #: envcan_i18n.dat:121
 #, kde-format
@@ -1380,13 +1380,13 @@ msgstr "Hafif yağmur ihtimali"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow and blowing snow"
-msgstr "Hafif kar ve rüzgârlı kar ihtimali"
+msgstr "Hafif kar veya tipi olasılığı"
 
 #: envcan_i18n.dat:123
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with freezing drizzle"
-msgstr "Hafif karla karışık donmuş çiseleme ihtimali"
+msgstr "Çiseleyen buz ile karışık hafif kar olasılığı"
 
 #: envcan_i18n.dat:124
 #, kde-format
@@ -1404,7 +1404,7 @@ msgstr "Yağmurla karışık hafif kar ihtimali"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or freezing rain"
-msgstr "Hafif yağmur veya donmuş kar ihtimali"
+msgstr "Donan yağmur veya hafif kar olasılığı"
 
 #: envcan_i18n.dat:127
 #, kde-format
@@ -1428,37 +1428,37 @@ msgstr "Hafif ıslak kar ihtimali"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain"
-msgstr "Yağmur ihtimali"
+msgstr "Yağmur olasılığı"
 
 #: envcan_i18n.dat:131
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain at times heavy"
-msgstr "Bazen şiddetlenen yağmur ihtimali"
+msgstr "Bazen şiddetlenen yağmur olasılığı"
 
 #: envcan_i18n.dat:132
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain mixed with snow"
-msgstr "Karla karışık yağmur ihtimali"
+msgstr "Karla karışık yağmur olasılığı"
 
 #: envcan_i18n.dat:133
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or drizzle"
-msgstr "Yağmur veya çiseleme ihtimali"
+msgstr "Yağmur veya çiselti olasılığı"
 
 #: envcan_i18n.dat:134
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or freezing rain"
-msgstr "Yağmur veya donmuş yağmur ihtimali"
+msgstr "Donan yağmur veya yağmur olasılığı"
 
 #: envcan_i18n.dat:135
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or snow"
-msgstr "Yağmur veya kar ihtimali"
+msgstr "Yağmur veya kar olasılığı"
 
 #: envcan_i18n.dat:136
 #, kde-format
@@ -1536,25 +1536,25 @@ msgstr "Kar ve tipi ihtimali"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing drizzle"
-msgstr "Donmuş hafif karla karışık kar ihtimali"
+msgstr "Çiseleyen buz ile karışık kar olasılığı"
 
 #: envcan_i18n.dat:149
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing rain"
-msgstr "Donmuş yağmur ile karışık kar ihtimali"
+msgstr "Donan yağmur ile karışık kar olasılığı"
 
 #: envcan_i18n.dat:150
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with rain"
-msgstr "Yağmurla karışık kar ihtimali"
+msgstr "Karla karışık yağmur olasılığı"
 
 #: envcan_i18n.dat:151
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow or rain"
-msgstr "Yağmur veya kar ihtimali"
+msgstr "Yağmur veya kar olasılığı"
 
 #: envcan_i18n.dat:152
 #, kde-format
@@ -1626,7 +1626,7 @@ msgstr "Açık"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clearing"
-msgstr "Açılmakta"
+msgstr "Açılıyor"
 
 #: envcan_i18n.dat:164 noaa_i18n.dat:342
 #, kde-format
@@ -1650,13 +1650,13 @@ msgstr "Genelde bulutlu"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Cloudy periods"
-msgstr "Bulutlu zamanlar"
+msgstr "Bulutlu aralıklar"
 
 #: envcan_i18n.dat:168
 #, kde-format
 msgctxt "weather forecast"
 msgid "Cloudy with sunny periods"
-msgstr "Bulutlu ve güneşli zamanlar"
+msgstr "Güneşli aralıklarla bulutlu"
 
 #: envcan_i18n.dat:169 noaa_i18n.dat:317
 #, kde-format
@@ -1668,7 +1668,7 @@ msgstr "Çiseleme"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle mixed with freezing drizzle"
-msgstr "Donmuş çiseleme ile beraber normal çiseleme"
+msgstr "Çiseleyen buz ile karışık çiseleyen yağmur olasılığı"
 
 #: envcan_i18n.dat:171
 #, kde-format
@@ -1680,7 +1680,7 @@ msgstr "Yağmurla karışık çiseleme"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle or freezing drizzle"
-msgstr "Çiseleme veya donmuş çiseleme"
+msgstr "Çiseleyen buz veya çiseleyen yağmur olasılığı"
 
 #: envcan_i18n.dat:173
 #, kde-format
@@ -1758,7 +1758,7 @@ msgstr "Sis örtüsü"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing drizzle"
-msgstr "Donmuş çiseleme"
+msgstr "Çiseleyen buz"
 
 #: envcan_i18n.dat:186
 #, kde-format
@@ -1854,7 +1854,7 @@ msgstr "Kar veya buz parçacıkları"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing cloudiness"
-msgstr "Artan bulut oluşumu"
+msgstr "Artan bulutluluk"
 
 #: envcan_i18n.dat:202
 #, kde-format
@@ -1878,19 +1878,19 @@ msgstr "Hafif kar ve tipi"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blizzard and blowing snow"
-msgstr "Hafif kar, tipi ve rüzgârlı kar"
+msgstr "Hafif kar veya tipi"
 
 #: envcan_i18n.dat:206
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blowing snow"
-msgstr "Hafif kar ve rüzgârlı kar"
+msgstr "Hafif kar ve tipi"
 
 #: envcan_i18n.dat:207
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing drizzle"
-msgstr "Hafif karla karışık donmuş çiseleme"
+msgstr "Çiseleyen buz ile karışık hafif kar"
 
 #: envcan_i18n.dat:208
 #, kde-format
@@ -1914,7 +1914,7 @@ msgstr "Hafif karla karışık yağmur"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing drizzle"
-msgstr "Hafif karla karışık donmuş çiseleme"
+msgstr "Çiseleyen buz veya hafif kar"
 
 #: envcan_i18n.dat:212
 #, kde-format
@@ -1968,181 +1968,181 @@ msgstr "Bulutla kaplı"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle"
-msgstr "Aralıklı çiseleme"
+msgstr "Çiseleme dönemleri"
 
 #: envcan_i18n.dat:221
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with freezing drizzle"
-msgstr "Donmuş çiseleme ile karışık, aralıklı çiseleme"
+msgstr "Çiseleyen buz ile karışık çiseleyen yağmur dönemleri"
 
 #: envcan_i18n.dat:222
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with rain"
-msgstr "Yağmurla karışık, aralıklı çiseleme"
+msgstr "Yağmur ile karışık çiselti dönemleri"
 
 #: envcan_i18n.dat:223
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or freezing drizzle"
-msgstr "Donmuş çiseleme veya aralıklı çiseleme"
+msgstr "Çiseleyen buz veya çiseleyen yağmur dönemleri"
 
 #: envcan_i18n.dat:224
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or rain"
-msgstr "Yağmur veya aralıklı çiseleme"
+msgstr "Yağmur veya çiselti dönemleri"
 
 #: envcan_i18n.dat:225
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle"
-msgstr "Aralıklı donmuş çiseleme"
+msgstr "Çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:226
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or drizzle"
-msgstr "Çiseleme veya aralıklı donmuş çiseleme"
+msgstr "Çiseleyen yağmur veya buz dönemleri"
 
 #: envcan_i18n.dat:227
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or rain"
-msgstr "Yağmur veya aralıklı donmuş çiseleme"
+msgstr "Yağmur veya çiselti dönemleri"
 
 #: envcan_i18n.dat:228
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain"
-msgstr "Aralıklı donmuş yağmur"
+msgstr "Çiseleyen yağmur dönemleri"
 
 #: envcan_i18n.dat:229
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with ice pellets"
-msgstr "Buz parçacıklarıyla karışık, aralıklı donmuş yağmur"
+msgstr "Buz topaklarıyla karışık çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:230
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with rain"
-msgstr "Yağmurla karışık, aralıklı donmuş yağmur"
+msgstr "Yağmurla karışık çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:231
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with snow"
-msgstr "Karla karışık, aralıklı donmuş yağmur"
+msgstr "Karla karışık çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:232
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or ice pellets"
-msgstr "Buz parçacıkları veya aralıklı donmuş yağmur"
+msgstr "Buz topakları veya çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:233
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or rain"
-msgstr "Aralıklı donmuş yağmur veya yağmur"
+msgstr "Yağmur veya çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:234
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or snow"
-msgstr "Aralıklı donmuş yağmur veya kar"
+msgstr "Kar veya çiseleyen buz dönemleri"
 
 #: envcan_i18n.dat:235
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets"
-msgstr "Aralıklarla buz parçacıkları"
+msgstr "Buz topakları dönemleri"
 
 #: envcan_i18n.dat:236
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr "Donmuş yağmurla karışık aralıklarla buz parçacıkları"
+msgstr "Çiseleyen buzla karışık buz topakları dönemleri"
 
 #: envcan_i18n.dat:237
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with snow"
-msgstr "Karla karışık aralıklarla buz parçacıkları"
+msgstr "Karla karışık buz topakları dönemleri"
 
 #: envcan_i18n.dat:238
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr "Donmuş yağmurla karışık aralıklarla buz parçacıkları"
+msgstr "Çiseleyen buz veya buz topakları dönemleri"
 
 #: envcan_i18n.dat:239
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or snow"
-msgstr "Karla karışık, aralıklarla buz parçacıkları"
+msgstr "Kar veya buz topakları dönemleri"
 
 #: envcan_i18n.dat:240
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow"
-msgstr "Aralıklı hafif kar"
+msgstr "Hafif kar dönemleri"
 
 #: envcan_i18n.dat:241
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blizzard"
-msgstr "Aralıklı hafif kar ve tipi"
+msgstr "Tipi ve hafif kar dönemleri"
 
 #: envcan_i18n.dat:242
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blizzard and blowing snow"
-msgstr "Aralıklı hafif kar, tipi ve rüzgârlı kar"
+msgstr "Tipi ve hafif kar dönemleri"
 
 #: envcan_i18n.dat:243
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blowing snow"
-msgstr "Aralıklı hafif kar ve rüzgârlı kar"
+msgstr "Tipi ve hafif kar dönemleri"
 
 #: envcan_i18n.dat:244
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing drizzle"
-msgstr "Donmuş çiseleme ile karışık, aralıklı hafif kar"
+msgstr "Çiseleyen buz ile karışık hafif kar dönemleri"
 
 #: envcan_i18n.dat:245
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing rain"
-msgstr "Donmuş yağmurla karışık, aralıklı hafif kar"
+msgstr "Çiseleyen buz ile karışık hafif kar dönemleri"
 
 #: envcan_i18n.dat:246
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with ice pellets"
-msgstr "Buz parçacıklarıyla karışık, aralıklı hafif kar"
+msgstr "Buz topakları ile karışık hafif kar dönemleri"
 
 #: envcan_i18n.dat:247
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with rain"
-msgstr "Yağmurla karışık, aralıklı hafif kar"
+msgstr "Yağmurla karışık hafif kar dönemleri"
 
 #: envcan_i18n.dat:248
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing drizzle"
-msgstr "Aralıklı hafif kar veya donmuş çiseleme"
+msgstr "Çiseleyen buz veya hafif kar dönemleri"
 
 #: envcan_i18n.dat:249
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing rain"
-msgstr "Aralıklı hafif kar veya donmuş yağmur"
+msgstr "Donan yağmur veya hafif kar dönemleri"
 
 #: envcan_i18n.dat:250
 #, kde-format
@@ -2622,7 +2622,7 @@ msgstr "Genellikle güneşli"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Sunny with cloudy periods"
-msgstr "Ara sıra bulutlu ve güneşli"
+msgstr "Bulutlu aralıklarla güneşli"
 
 #: envcan_i18n.dat:330 noaa_i18n.dat:273
 #, kde-format
@@ -2826,7 +2826,7 @@ msgstr "Veri: NOAA Ulusal Hava Hizmetleri"
 #, kde-format
 msgctxt "weather condition"
 msgid "few clouds"
-msgstr "az bulutlu"
+msgstr "birkaç bulut"
 
 #: ions/wetter.com/ion_wettercom.cpp:160 ions/wetter.com/ion_wettercom.cpp:161
 #, kde-format
@@ -2987,25 +2987,25 @@ msgstr "Gece"
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds"
-msgstr "Az Bulutlu"
+msgstr "Birkaç Bulut"
 
 #: noaa_i18n.dat:2
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds and Breezy"
-msgstr "Az Bulutlu ve Esintili"
+msgstr "Birkaç Bulut ve Esinti"
 
 #: noaa_i18n.dat:3
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds and Windy"
-msgstr "Az Bulutlu ve Rüzgârlı"
+msgstr "Birkaç Bulut ve Rüzgar"
 
 #: noaa_i18n.dat:4
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds with Haze"
-msgstr "Az Bulutlu ve Puslu"
+msgstr "Birkaç Bulut ve Pus"
 
 #: noaa_i18n.dat:5
 #, kde-format
@@ -3035,7 +3035,7 @@ msgstr "Esintili"
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear and Breezy"
-msgstr "Açık ve esintili"
+msgstr "Açık ve Esintili"
 
 #: noaa_i18n.dat:12
 #, kde-format
@@ -3191,7 +3191,7 @@ msgstr "Donmuş Yağmur-Kar"
 #, kde-format
 msgctxt "weather condition"
 msgid "Funnel Cloud in Vicinity"
-msgstr "Görüş Alanı içinde Hortum"
+msgstr "Çevrede Huni Bulutu"
 
 #: noaa_i18n.dat:43
 #, kde-format
@@ -3863,7 +3863,7 @@ msgstr "Çoğunlukla Bulutlu ve Rüzgârlı"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy with Haze"
-msgstr "Çoğunlukla Bulutlu ve Hafif Sisli"
+msgstr "Çoğunlukla Bulutlu ve Puslu"
 
 #: noaa_i18n.dat:168
 #, kde-format
@@ -3905,19 +3905,19 @@ msgstr "Görüş Alanı içinde Kısmi Sis"
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Breezy"
-msgstr "Kısmen Bulutlu ve Esintili"
+msgstr "Parçalı Bulutlu ve Esintili"
 
 #: noaa_i18n.dat:176
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Windy"
-msgstr "Kısmen Bulutlu ve Rüzgârlı"
+msgstr "Parçalı Bulutlu ve Rüzgârlı"
 
 #: noaa_i18n.dat:177
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy with Haze"
-msgstr "Kısmen Bulutlu ve Hafif Sisli"
+msgstr "Parçalı Bulutlu ve Puslu"
 
 #: noaa_i18n.dat:178
 #, kde-format
@@ -4823,7 +4823,7 @@ msgstr "Sıcak"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Cloudy"
-msgstr "Genellikle Bulutlu"
+msgstr "Genelde Bulutlu"
 
 #: noaa_i18n.dat:344
 #, kde-format
@@ -4847,7 +4847,7 @@ msgstr "Kısmi Güneşli"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing Clouds"
-msgstr "Artan Bulut"
+msgstr "Artan Bulutlar"
 
 #: noaa_i18n.dat:349
 #, kde-format
@@ -4859,19 +4859,19 @@ msgstr "Bulutlanıyor"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Gradual Clearing"
-msgstr "Kademeli Açılma"
+msgstr "Kademeli Olarak Açılıyor"
 
 #: noaa_i18n.dat:352
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clearing Late"
-msgstr "Açılmakta"
+msgstr "Geç Açılıyor"
 
 #: noaa_i18n.dat:353
 #, kde-format
 msgctxt "weather forecast"
 msgid "Decreasing Clouds"
-msgstr "Azalan Bulut"
+msgstr "Azalan Bulutlar"
 
 #: noaa_i18n.dat:354
 #, kde-format
@@ -4883,4 +4883,4 @@ msgstr "Güneş açıyor"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Clear"
-msgstr "Genellikle Açık"
+msgstr "Çoğunlukla Açık"

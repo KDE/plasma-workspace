@@ -337,7 +337,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Yalnızca açıkça kopyalandığında</guilabel
 > arasında seçim yapılabilir. <guilabel
 >Her zaman geçmişe kaydet</guilabel
-> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman otomatik olarak kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
+> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman kendiliğinden kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
 </listitem>
 </varlistentry
 > 
@@ -357,7 +357,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Asla geçmişe kaydetme</guilabel
 > arasından seçim yapılabilir. <guilabel
 >Her zaman geçmişe kaydet</guilabel
-> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman otomatik olarak kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
+> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman kendiliğinden kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
 </listitem>
 </varlistentry
 > 

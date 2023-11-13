@@ -117,7 +117,7 @@
 ><para
 ><guilabel
 >Geçerli duvar kağıdından</guilabel
->: Bu, masaüstü arka plan görselinizden otomatik olarak eşleşen bir renk çıkarır. </para
+>: Bu, masaüstü arka plan görselinizden kendiliğinden eşleşen bir renk çıkarır. </para
 ></listitem>
       <listitem
 ><para
@@ -333,7 +333,7 @@
     </itemizedlist>
 
     <para
->Ayrıca Etkin Olmayan Metin dışında, metin rollerinin her biri için karşılık gelen bir arka plan rolü vardır. Şu anda (Normal ve Alternatif Arka Plan hariç), bu renkler kullanıcı tarafından seçilmez, Normal Arka Plan ve ilgili Metin rengine göre otomatik olarak belirlenir. Bu renkler, "Ana Renkler" dışındaki kümelerden biri seçilerek önizlenebilir.</para>
+>Ayrıca Etkin Olmayan Metin dışında, metin rollerinin her biri için karşılık gelen bir arka plan rolü vardır. Şu anda (Normal ve Alternatif Arka Plan hariç), bu renkler kullanıcı tarafından seçilmez, Normal Arka Plan ve ilgili Metin rengine göre kendiliğinden belirlenir. Bu renkler, "Ana Renkler" dışındaki kümelerden biri seçilerek önizlenebilir.</para>
 
     <para
 >Renk rolünün seçimi geliştiriciye bırakılmıştır; yukarıdakiler, tipik kullanımı temsil etmesi amaçlanan yönergelerdir.</para>

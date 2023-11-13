@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_webshortcuts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-13 01:39+0000\n"
 "PO-Revision-Date: 2021-12-27 17:09+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:143 webshortcutrunner.cpp:160
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Cerca %2 in %1"
 
-#: webshortcutrunner.cpp:67
+#: webshortcutrunner.cpp:69
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Apre «%1» in un browser web con l'interrogazione :q:."
 
-#: webshortcutrunner.cpp:72
+#: webshortcutrunner.cpp:74
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Cerca utilizzando la sintassi Bang di DuckDuckGo"
 
-#: webshortcutrunner.cpp:107
+#: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in private window"
 msgstr "Cerca in una finestra privata"
 
-#: webshortcutrunner.cpp:107
+#: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Cerca in una finestra in incognito"

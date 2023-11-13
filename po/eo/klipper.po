@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-17 02:29+0000\n"
-"PO-Revision-Date: 2023-07-21 18:55+0100\n"
+"PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -339,7 +339,7 @@ msgstr ""
 "Ago efektiviĝas kiam ĝia <interface>kongrua ŝablono</interface> kongruas kun "
 "la enhavo de la tondujo. Kiam tio okazas, la <interface>komandoj</interface> "
 "de la ago aperas en la ŝprucmenuo de Klipper; se unu el ili estas elektita, "
-"la komando estas ekzekutita."
+"la komando estas plenumita."
 
 #: editactiondialog.cpp:203
 #, kde-format

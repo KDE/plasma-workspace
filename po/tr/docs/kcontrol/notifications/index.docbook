@@ -79,7 +79,7 @@
 >Rahatsız Etmeyin kipi</title>
 
     <para
->Bu kip, geçerli görevinize odaklanmanızı sağlamak için tüm görsel ve çoğu sesli bildirimleri devre dışı bırakır. Bu bölümdeki ayarlar, &plasma;'nın hangi durumlarda otomatik olarak rahatsız etmeyin kipini etkinleştireceğini belirlemenize izin verir.</para>
+>Bu kip, geçerli görevinize odaklanmanızı sağlamak için tüm görsel ve çoğu sesli bildirimleri devre dışı bırakır. Bu bölümdeki ayarlar, &plasma;'nın hangi durumlarda kendiliğinden rahatsız etmeyin kipini etkinleştireceğini belirlemenize izin verir.</para>
 
     <variablelist>
 
@@ -90,7 +90,7 @@
 ></term>
     <listitem
 ><para
->Örneğin bir sunum sırasında ekranlarınızı yansıttığınızda, rahatsız etmeyin kipini otomatik olarak etkinleştirin.</para
+>Örneğin bir sunum sırasında ekranlarınızı yansıttığınızda, rahatsız etmeyin kipini kendiliğinden etkinleştirin.</para
 ></listitem>
     </varlistentry>
 
@@ -101,7 +101,7 @@
 ></term>
     <listitem
 ><para
->Örneğin bir çevrimiçi ders sırasında ekranınızı paylaştığınızda, rahatsız etmeyin kipini otomatik olarak etkinleştirin.</para
+>Örneğin bir çevrimiçi ders sırasında ekranınızı paylaştığınızda, rahatsız etmeyin kipini kendiliğinden etkinleştirin.</para
 ></listitem>
     </varlistentry>
 
@@ -210,7 +210,7 @@
 ></term>
     <listitem
 ><para
->Bildirim açılır penceresi kaç saniye sonra otomatik olarak kaybolur. 1-120 saniye arasında herhangi bir seçim yapabilirsiniz.</para
+>Bildirim açılır penceresi kaç saniye sonra kendiliğinden kaybolur. 1-120 saniye arasında herhangi bir seçim yapabilirsiniz.</para
 ></listitem>
     </varlistentry>
 
@@ -259,7 +259,7 @@
 ></term>
         <listitem
 ><para
->Açılır pencerenin tüm ilerleme süresi boyunca görünür kalması mı yoksa otomatik olarak gizlenmesi mi gerektiği. Görev bittiğinde veya başarısız olduğunda her zaman yeniden gösterilecektir.</para
+>Açılır pencerenin tüm ilerleme süresi boyunca görünür kalması mı yoksa kendiliğinden gizlenmesi mi gerektiği. Görev bittiğinde veya başarısız olduğunda her zaman yeniden gösterilecektir.</para
 ></listitem>
         </varlistentry>
 
