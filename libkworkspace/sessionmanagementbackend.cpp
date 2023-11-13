@@ -15,6 +15,7 @@
 #include <QDBusPendingCallWatcher>
 
 #include <KConfigGroup>
+#include <iostream>
 
 #include "kdisplaymanager.h"
 
@@ -69,32 +70,32 @@ TestSessionBackend::TestSessionBackend()
 
 void TestSessionBackend::shutdown()
 {
-    qWarning() << "shutdown";
+    std::cout << "shutdown" << std::endl;
 }
 
 void TestSessionBackend::reboot()
 {
-    qWarning() << "reboot";
+    std::cout << "reboot" << std::endl;
 }
 
 void TestSessionBackend::suspend()
 {
-    qWarning() << "suspend";
+    std::cout << "suspend" << std::endl;
 }
 
 void TestSessionBackend::hybridSuspend()
 {
-    qWarning() << "hybridSuspend";
+    std::cout << "hybridSuspend" << std::endl;
 }
 
 void TestSessionBackend::hibernate()
 {
-    qWarning() << "hibernate";
+    std::cout << "hibernate" << std::endl;
 }
 
 void TestSessionBackend::suspendThenHibernate()
 {
-    qWarning() << "suspendThenHibernate";
+    std::cout << "suspendThenHibernate" << std::endl;
 }
 
 /*********************************************************************************/

@@ -7,16 +7,18 @@
 import subprocess
 import sys
 import unittest
+import os
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 
+KDE_INSTALL_FULL_LIBEXECDIR = os.environ.get("KDE_INSTALL_FULL_LIBEXECDIR", "/usr/libexec")
 
 class LogoutGreeterTests(unittest.TestCase):
 
     def setUp(self):
-        self.proc = subprocess.Popen(["{}/ksmserver-logout-greeter".format(sys.argv[1]), "--windowed"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.proc = subprocess.Popen(["{}/ksmserver-logout-greeter".format(KDE_INSTALL_FULL_LIBEXECDIR), "--windowed"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         options = AppiumOptions()
         options.set_capability("app", str(self.proc.pid))
         options.set_capability("timeouts", {'implicit': 10000})
@@ -26,34 +28,33 @@ class LogoutGreeterTests(unittest.TestCase):
         self.driver.quit()
         self.assertEqual(self.proc.returncode != None, True)
         try:
-            self.proc.terminate(timeout=5)
+            self.proc.terminate()
         except subprocess.TimeoutExpired:
             self.proc.kill()
         if not self._outcome.result.wasSuccessful():
             self.driver.get_screenshot_as_file(f"failed_test_shot_logoutgreetertest_{self.id()}.png")
 
-    def assertStdErrLine(self, expected):
+    def assertStdOutLine(self, expected):
         out, err = self.proc.communicate()
-        errLines = err.splitlines()
-        self.assertEqual(expected, errLines[(len(errLines) - 1)].decode('UTF-8'))
+        outLines = out.splitlines()
+        self.assertEqual(expected, outLines[(len(outLines) - 1)].decode('UTF-8'))
 
     def test_sleep(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Sleep").click()
-        self.assertStdErrLine("suspend")
+        self.assertStdOutLine("suspend")
 
     def test_hibernate(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Hibernate").click()
-        self.assertStdErrLine("hibernate")
+        self.assertStdOutLine("hibernate")
 
     def test_restart(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Restart").click()
-        self.assertStdErrLine("reboot")
+        self.assertStdOutLine("reboot")
 
     def test_restart(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Shut Down").click()
-        self.assertStdErrLine("shutdown")
+        self.assertStdOutLine("shutdown")
 
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(LogoutGreeterTests)
-    unittest.TextTestRunner(verbosity=2).run(suite)
+    unittest.main()

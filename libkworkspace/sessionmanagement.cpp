@@ -12,6 +12,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+#include <iostream>
+
 #include "kscreenlocker_interface.h"
 #include "ksmserver_interface.h"
 #include "logoutprompt_interface.h"
@@ -119,7 +121,7 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
     }
 
     if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
-        qWarning() << "shutdown";
+        std::cout << "shutdown" << std::endl;
         return;
     }
 
@@ -143,7 +145,7 @@ void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
     }
 
     if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
-        qWarning() << "reboot";
+        std::cout << "reboot" << std::endl;
         return;
     }
 
