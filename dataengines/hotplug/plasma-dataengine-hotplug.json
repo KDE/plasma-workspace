@@ -67,6 +67,7 @@
         "Description[eu]": "Beroan konekta daitezkeen gailuen jarraipena egiten du, haiek agertu eta desagertu ahala.",
         "Description[fi]": "Tarkkailee ajonaikaisesti kytkettäviä laitteita.",
         "Description[fr]": "Surveille l'apparition ou la disparition de périphériques pouvant être connectés à chaud.",
+        "Description[gl]": "Segue a pista dos dispositivos conectábeis en quente a medida que van aparecendo e desaparecendo.",
         "Description[hi]": "हॉट-प्लग करने योग्य उपकरणों को उनके दिखाई देने और गायब होने पर ट्रैक करता है।",
         "Description[hu]": "Követi a menet közben csatolható (hot-pluggable) eszközöket.",
         "Description[ia]": "Il tracia dispositivos hot-pluggable (insertabile a calide) assi como illos appare e disappare",
