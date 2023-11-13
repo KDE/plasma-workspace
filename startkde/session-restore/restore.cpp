@@ -14,6 +14,7 @@
 #include <KSharedConfig>
 
 #include "debug.h"
+#include "qdir.h"
 
 int main(int argc, char *argv[])
 {
@@ -24,6 +25,17 @@ int main(int argc, char *argv[])
     QList<KJob *> jobs;
     QEventLoop e;
 
+    // Make a list of all autostart .desktop files for subsequent filtering
+    QSet<QString> autoStartFiles;
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart"), QStandardPaths::LocateDirectory);
+    for (const QString &dir : dirs) {
+        const QDir d(dir);
+        const QFileInfoList files = d.entryInfoList(QStringList() << QStringLiteral("*.desktop"));
+        for (const QFileInfo &file : files) {
+            autoStartFiles.insert(file.completeBaseName());
+        }
+    }
+
     for (const QString &groupName : config->groupList()) {
         const QString appId = config->group(groupName).readEntry("appId");
         auto service = KService::serviceByDesktopName(appId);
@@ -33,6 +45,9 @@ int main(int argc, char *argv[])
         }
 
         if (service->noDisplay()) {
+            continue;
+        }
+        if (autoStartFiles.contains(service->desktopEntryName())) {
             continue;
         }
 
