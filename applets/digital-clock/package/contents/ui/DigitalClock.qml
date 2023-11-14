@@ -237,7 +237,7 @@ MouseArea {
                 target: dateLabel
 
                 height: timeLabel.height
-                width: dateLabel.paintedWidth + Kirigami.Units.smallSpacing
+                width: dateLabel.paintedWidth
 
                 font.pixelSize: 1024
                 verticalAlignment: Text.AlignVCenter
@@ -257,7 +257,7 @@ MouseArea {
                 target: timeLabel
 
                 height: sizehelper.height
-                width: sizehelper.contentWidth
+                width: timeLabel.paintedWidth
 
                 fontSizeMode: Text.VerticalFit
             }
