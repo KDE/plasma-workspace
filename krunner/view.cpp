@@ -26,14 +26,16 @@
 #include <KX11Extras>
 
 #include <LayerShellQt/Window>
+#include <qnamespace.h>
 
 #include "appadaptor.h"
 #include "x11windowscreenrelativepositioner.h"
 
 KCONFIGGROUP_DECLARE_ENUM_QOBJECT(View, HistoryBehavior)
 
-View::View(QWindow *)
+View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     : PlasmaQuick::PlasmaWindow()
+    , m_engine(engine)
     , m_floating(false)
 {
     KCrash::initialize();
@@ -68,11 +70,7 @@ View::View(QWindow *)
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
 
-    m_engine = new PlasmaQuick::SharedQmlEngine(this);
-    m_engine->engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
-    m_engine->setInitializationDelayed(true);
     connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
-
     m_engine->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
     m_engine->setSource(QUrl(QStringLiteral("qrc:/krunner/RunCommand.qml")));
     m_engine->completeInitialization();
@@ -94,12 +92,16 @@ View::~View()
 
 void View::objectIncubated()
 {
-    auto mainItem = qobject_cast<QQuickItem *>(m_engine->rootObject());
-    setMainItem(mainItem);
-    resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize()));
-    connect(mainItem, &QQuickItem::implicitHeightChanged, this, [mainItem, this]() {
-        resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize()));
-    });
+    auto item = qobject_cast<QQuickItem *>(m_engine->rootObject());
+    setMainItem(item);
+
+    auto updateSize = [this]() {
+        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize()));
+    };
+
+    connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
+    connect(this, &View::paddingChanged, this, updateSize);
+    updateSize();
 }
 
 void View::slotFocusWindowChanged()
@@ -123,7 +125,7 @@ void View::setFreeFloating(bool floating)
     m_floating = floating;
     if (m_floating) {
         KWindowEffects::slideWindow(this, KWindowEffects::NoEdge);
-        setBorders(Qt::Edges());
+        setBorders(Qt::LeftEdge | Qt::TopEdge | Qt::RightEdge | Qt::BottomEdge);
     } else {
         KWindowEffects::slideWindow(this, KWindowEffects::TopEdge);
         setBorders(Qt::LeftEdge | Qt::RightEdge | Qt::BottomEdge);

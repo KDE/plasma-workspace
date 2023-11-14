@@ -28,6 +28,9 @@ ColumnLayout {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    // Spacing needs to be 0 to not make the last spacer item add a fake margin
+    spacing: 0
+
     Connections {
         target: runnerWindow
         function onHistoryBehaviorChanged() {
@@ -319,6 +322,8 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.maximumHeight: results.contentHeight
+        // This replaces the ColumnLayout spacing
+        Layout.topMargin: Kirigami.Units.smallSpacing
 
         Milou.ResultsView {
             id: results
@@ -367,6 +372,8 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.maximumHeight: results.contentHeight
+        // This replaces the ColumnLayout spacing
+        Layout.topMargin: Kirigami.Units.smallSpacing
         visible: root.query.length === 0 && listView.count > 0
         // don't accept keyboard input when not visible so the keys propagate to the other list
         enabled: visible

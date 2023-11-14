@@ -30,7 +30,7 @@ class View : public PlasmaQuick::PlasmaWindow
     Q_PROPERTY(QStringList favoriteIds MEMBER m_favoriteIds NOTIFY favoriteIdsChanged)
 
 public:
-    explicit View(QWindow *parent = nullptr);
+    explicit View(PlasmaQuick::SharedQmlEngine *engine, QWindow *parent = nullptr);
     ~View() override;
 
     enum HistoryBehavior {
