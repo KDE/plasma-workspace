@@ -147,10 +147,14 @@ void View::loadConfig()
 
 void View::showEvent(QShowEvent *event)
 {
-    KX11Extras::setOnAllDesktops(winId(), true);
+    if (KWindowSystem::isPlatformX11()) {
+        KX11Extras::setOnAllDesktops(winId(), true);
+    }
     QQuickWindow::showEvent(event);
     requestActivate();
-    KX11Extras::forceActiveWindow(winId());
+    if (KWindowSystem::isPlatformX11()) {
+        KX11Extras::forceActiveWindow(winId());
+    }
 }
 
 void View::positionOnScreen()
@@ -203,7 +207,7 @@ void View::positionOnScreen()
 
 void View::toggleDisplay()
 {
-    if (isVisible() && !QGuiApplication::focusWindow()) {
+    if (isVisible() && !QGuiApplication::focusWindow() && KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
         return;
     }
