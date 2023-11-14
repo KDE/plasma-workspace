@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie.clarius@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -22,9 +23,13 @@ MouseArea {
     property real brightnessError: 0
     property QtObject batteries
     property bool hasBatteries: false
+    required property bool isSomehowInPerformanceMode
     required property bool isSetToPerformanceMode
+    required property bool isSomehowInPowerSaveMode
     required property bool isSetToPowerSaveMode
+    required property bool isManuallyInhibited
     required property bool isSomehowFullyCharged
+    required property bool isDischarging
 
     activeFocusOnTab: true
     hoverEnabled: true
@@ -35,11 +40,19 @@ MouseArea {
     Accessible.description: `${toolTipMainText}; ${toolTipSubText}`
     Accessible.role: Accessible.Button
 
+    property string powerModeIcon: root.isManuallyInhibited
+            ? "speedometer" 
+            : root.isSomehowInPerformanceMode 
+            ? "battery-profile-performance-symbolic" 
+            : root.isSomehowInPowerSaveMode 
+            ? "battery-profile-powersave-symbolic" 
+            : Plasmoid.icon
+
     // "No Batteries" case
     Kirigami.Icon {
         anchors.fill: parent
         visible: !root.hasBatteries
-        source: Plasmoid.icon
+        source: root.powerModeIcon
         active: root.containsMouse
     }
 
@@ -64,17 +77,15 @@ MouseArea {
 
                 property real iconSize: Math.min(width, height)
 
-                // "Held on a Power Profile mode while plugged in" use case; show the
-                // icon of the active mode so the user can notice this at a glance
+                // Manual inhibition or power profile active while not discharging:
+                // Show the active mode so the user can notice this at a glance
                 Kirigami.Icon {
-                    id: powerProfileModeIcon
+                    id: powerModeIcon
 
                     anchors.fill: parent
 
-                    visible: batteryContainer.pluggedIn && (root.isSetToPerformanceMode || root.isSetToPowerSaveMode)
-                    source: root.isSetToPerformanceMode
-                        ? "battery-profile-performance-symbolic"
-                        : "battery-profile-powersave-symbolic"
+                    visible: !root.isDischarging && (root.isManuallyInhibited || root.isSomehowInPerformanceMode || root.isSomehowInPowerSaveMode)
+                    source: root.powerModeIcon
                     active: root.containsMouse
                 }
 
@@ -87,7 +98,7 @@ MouseArea {
                     width: height
 
                     active: root.containsMouse
-                    visible: !powerProfileModeIcon.visible
+                    visible: !powerModeIcon.visible
                     hasBattery: root.hasBatteries
                     percent: batteryContainer.percent
                     pluggedIn: batteryContainer.pluggedIn

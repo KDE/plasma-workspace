@@ -60,6 +60,7 @@ PlasmoidItem {
     readonly property bool kcmAuthorized: KAuthorized.authorizeControlModule("powerdevilprofilesconfig")
     readonly property bool kcmEnergyInformationAuthorized: KAuthorized.authorizeControlModule("kcm_energyinfo")
     readonly property bool isPluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
+    readonly property bool isDischarging: pmSource.data.Battery["Has Cumulative"] && pmSource.data["Battery"]["State"] === "Discharging"
     readonly property bool isSomehowFullyCharged: (pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
                                                    // When we are using a charge threshold, the kernel
                                                    // may stop charging within a percentage point of the actual threshold
@@ -296,7 +297,7 @@ PlasmoidItem {
         if (hasBatteries) {
             iconName = "battery-full";
         } else {
-            iconName = "battery-profile-performance";
+            iconName = "speedometer";
         }
 
         if (inPanel) {
@@ -309,9 +310,13 @@ PlasmoidItem {
     compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
+        isSomehowInPerformanceMode: batterymonitor.isSomehowInPerformanceMode
         isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || batterymonitor.isManuallyInPerformanceMode
+        isSomehowInPowerSaveMode: batterymonitor.isSomehowInPowerSaveMode
         isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || batterymonitor.isManuallyInPowerSaveMode
+        isManuallyInhibited: batterymonitor.powermanagementDisabled
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
+        isDischarging: batterymonitor.isDischarging
 
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton
         property bool wasExpanded: false
