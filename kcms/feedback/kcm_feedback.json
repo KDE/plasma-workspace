@@ -136,5 +136,5 @@
     "X-KDE-Keywords[x-test]": "xxfeedbackxx,xxreportxx,xxcontactxx,xxdata collectionxx,xxstatisticsxx,xxusagexx,xxlogxx,xxloggingxx,xxtelemetryxx",
     "X-KDE-Keywords[zh_CN]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,反馈,回馈,反映,报告,联系,数据收集,数据统计,统计数据,使用数据,用量,使用率,使用水平,日志,日志记录,上报,遥测",
     "X-KDE-System-Settings-Parent-Category": "security-privacy",
-    "X-KDE-Weight": 40
+    "X-KDE-Weight": 50
 }
