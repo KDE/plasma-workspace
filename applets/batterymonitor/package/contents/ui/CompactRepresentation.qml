@@ -2,12 +2,14 @@
     SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie.clarius@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick
 import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -22,9 +24,12 @@ MouseArea {
     property real brightnessError: 0
     property QtObject batteries
     property bool hasBatteries: false
-    required property bool isHeldOnPerformanceMode
-    required property bool isHeldOnPowerSaveMode
+    required property bool isSomehowInPerformanceMode
+    required property bool isSomehowInPowerSaveMode
+    required property bool isSomehowInhibited
     required property bool isSomehowFullyCharged
+    required property bool isPluggedIn
+    required property bool isDischarging
 
     activeFocusOnTab: true
     hoverEnabled: true
@@ -42,7 +47,7 @@ MouseArea {
     Kirigami.Icon {
         anchors.fill: parent
         visible: !root.hasBatteries
-        source: Plasmoid.icon
+        source: root.isSomehowInhibited ? "speedometer-symbolic" : root.isSomehowInPerformanceMode ? "battery-profile-performance-symbolic" : root.isSomehowInPowerSaveMode ? "battery-profile-powersave-symbolic" : "speedometer-symbolic"
         active: root.containsMouse
     }
 
@@ -67,21 +72,6 @@ MouseArea {
 
                 property real iconSize: Math.min(width, height)
 
-                // "Held on a Power Profile mode while plugged in" use case; show the
-                // icon of the active mode so the user can notice this at a glance
-                Kirigami.Icon {
-                    id: powerProfileModeIcon
-
-                    anchors.fill: parent
-
-                    visible: batteryContainer.pluggedIn && (root.isHeldOnPowerSaveMode || root.isHeldOnPerformanceMode)
-                    source: root.isHeldOnPerformanceMode
-                        ? "battery-profile-performance-symbolic"
-                        : "battery-profile-powersave-symbolic"
-                    active: root.containsMouse
-                }
-
-                // Show normal battery icon
                 WorkspaceComponents.BatteryIcon {
                     id: batteryIcon
 
@@ -90,13 +80,14 @@ MouseArea {
                     width: height
 
                     active: root.containsMouse
-                    visible: !powerProfileModeIcon.visible
                     hasBattery: root.hasBatteries
                     percent: batteryContainer.percent
                     pluggedIn: batteryContainer.pluggedIn
                 }
 
                 WorkspaceComponents.BadgeOverlay {
+                    id: percentageOverlay
+
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
 
@@ -105,6 +96,42 @@ MouseArea {
                     text: i18nc("battery percentage below battery icon", "%1%", percent)
                     icon: batteryIcon
                 }
+
+                Rectangle {
+                    id: statusOverlay
+
+                    visible: root.isDischarging && !percentageOverlay.visible && (root.isSomehowInPerformanceMode || root.isSomehowInPowerSaveMode || root.isSomehowInhibited)
+
+                    color: Kirigami.Theme.backgroundColor
+                    width: batteryContainer.iconSize * 0.6
+                    height: overlayIcon.height
+                    radius: 3
+                    opacity: 0.9
+                        
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+
+                    Kirigami.Icon {
+                        id: overlayIcon
+
+                        height: parent.width
+                        width: height
+                        anchors.centerIn: parent
+
+                        source: root.isSomehowInhibited ? "speedometer-symbolic" : root.isSomehowInPerformanceMode ? "battery-profile-performance-symbolic" : root.isSomehowInPowerSaveMode ? "battery-profile-powersave-symbolic" : "speedometer-symbolic"
+                    }
+
+                    layer.enabled: true
+                    layer.effect: DropShadow {
+                        horizontalOffset: 0
+                        verticalOffset: 0
+                        radius: 2
+                        samples: radius * 2
+                        color: Qt.rgba(0, 0, 0, 0.5)
+                    }
+                }
+
+
             }
         }
     }

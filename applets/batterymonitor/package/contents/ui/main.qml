@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013-2015 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2021-2022 ivan tkachenko <me@ratijas.tk>
+    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie.clarius@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -64,6 +65,7 @@ PlasmoidItem {
     readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && activeProfileHolds.length > 0
     readonly property bool isHeldOnPowerSaveMode: isSomehowInPowerSaveMode && activeProfileHolds.length > 0
     readonly property bool isPluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
+    readonly property bool isDischarging: pmSource.data.Battery["Has Cumulative"] && pmSource.data["Battery"]["State"] === "Discharging"
     readonly property bool isSomehowFullyCharged: (pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
                                                    // When we are using a charge threshold, the kernel
                                                    // may stop charging within a percentage point of the actual threshold
@@ -218,9 +220,12 @@ PlasmoidItem {
     compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
-        isHeldOnPerformanceMode: batterymonitor.isHeldOnPerformanceMode
-        isHeldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
+        isSomehowInPerformanceMode: batterymonitor.isSomehowInPerformanceMode
+        isSomehowInPowerSaveMode: batterymonitor.isSomehowinPowerSaveMode
+        isSomehowInhibited: batterymonitor.inhibitions.length > 0 || powermanagementDisabled
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
+        isPluggedIn: batterymonitor.isPluggedIn
+        isDischarging: batterymonitor.isDischarging
     }
 
     fullRepresentation: PopupDialog {
