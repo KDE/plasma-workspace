@@ -501,14 +501,14 @@ void PlayerContainer::initBindings()
         if (!m_xesamTitle.value().isEmpty()) {
             return m_xesamTitle.value();
         }
-        const QString &xesamUrl = m_xesamUrl.value();
+        const QStringView xesamUrl{m_xesamUrl.value()};
         if (xesamUrl.isEmpty()) {
             return QString();
         }
         if (int lastSlashPos = xesamUrl.lastIndexOf(QLatin1Char('/')); lastSlashPos < 0 || lastSlashPos == xesamUrl.size() - 1) {
             return QString();
         } else {
-            const QString lastUrlPart = xesamUrl.sliced(lastSlashPos + 1);
+            const QStringView lastUrlPart = xesamUrl.sliced(lastSlashPos + 1);
             return QUrl::fromEncoded(lastUrlPart.toLatin1()).toString();
         }
     });
