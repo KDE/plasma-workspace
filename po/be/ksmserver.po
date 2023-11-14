@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:48+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/ksmserver.po\n"
 "X-Crowdin-File-ID: 8557\n"
 
-#: logout.cpp:343
+#: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Выхад скасаваны \"%1\""
@@ -144,13 +144,13 @@ msgstr ""
 "Запускаць без падтрымкі экрана блакавання. Патрэбна, калі экран блакавання "
 "падаецца іншым кампанентам."
 
-#: server.cpp:814
+#: server.cpp:813
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:837
+#: server.cpp:836
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -159,7 +159,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1109
+#: server.cpp:1108
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

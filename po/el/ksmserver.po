@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:48+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2016-01-22 22:45+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: logout.cpp:343
+#: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Η αποσύνδεση ακυρώθηκε από το χρήστη '%1'"
@@ -155,13 +155,13 @@ msgstr ""
 "Εκκίνηση χωρίς υποστήριξη κλειδώματος οθόνης. Χρειάζεται μόνο αν κάποιο άλλο "
 "συστατικό παρέχει το κλείδωμα της οθόνης."
 
-#: server.cpp:814
+#: server.cpp:813
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:837
+#: server.cpp:836
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -170,7 +170,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1109
+#: server.cpp:1108
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

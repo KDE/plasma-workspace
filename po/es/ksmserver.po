@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:48+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-07 22:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: logout.cpp:343
+#: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Cierre de sesión cancelado por «%1»"
@@ -150,13 +150,13 @@ msgstr ""
 "Inicia la sesión sin permitir bloquear la pantalla. Solo se necesita si hay "
 "otro componente que proporcione el bloqueo de pantalla."
 
-#: server.cpp:814
+#: server.cpp:813
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[desconocido]"
 
-#: server.cpp:837
+#: server.cpp:836
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -169,7 +169,7 @@ msgstr ""
 "máximos de recursos de la sesión:\n"
 "%1"
 
-#: server.cpp:1109
+#: server.cpp:1108
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

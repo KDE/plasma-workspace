@@ -1,6 +1,6 @@
 # translation of ksmserver.po to Polish
 # translation of ksmserver.po to
-# Version: $Revision: 1664505 $
+# Version: $Revision: 1664773 $
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2009, 2010, 2011.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:48+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-04 12:30+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: logout.cpp:343
+#: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Wylogowywanie przerwane przez '%1'"
@@ -146,13 +146,13 @@ msgstr ""
 "Rozpoczyna bez obsługi blokowania ekranu. Potrzebne tylko gdy inny składnik "
 "zapewnia blokowanie ekranu."
 
-#: server.cpp:814
+#: server.cpp:813
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nieznany]"
 
-#: server.cpp:837
+#: server.cpp:836
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -165,7 +165,7 @@ msgstr ""
 "zasobów posiedzenia:\n"
 "%1"
 
-#: server.cpp:1109
+#: server.cpp:1108
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

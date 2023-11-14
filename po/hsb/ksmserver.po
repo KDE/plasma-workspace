@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:48+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2004-04-20 16:20+0200\n"
 "Last-Translator: Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>\n"
 "Language-Team: Upper Sorbian\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: logout.cpp:343
+#: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr ""
@@ -131,13 +131,13 @@ msgid ""
 "the lock screen."
 msgstr ""
 
-#: server.cpp:814
+#: server.cpp:813
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:837
+#: server.cpp:836
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -146,7 +146,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1109
+#: server.cpp:1108
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

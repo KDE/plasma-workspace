@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2022-12-29 17:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -125,12 +125,12 @@ msgstr "Fixează căutarea"
 msgid "Keep Open"
 msgstr "Ține deschis"
 
-#: qml/RunCommand.qml:383 qml/RunCommand.qml:388
+#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
 #, kde-format
 msgid "Recent Queries"
 msgstr "Interogări recente"
 
-#: qml/RunCommand.qml:386
+#: qml/RunCommand.qml:388
 #, kde-format
 msgid "Remove"
 msgstr "Elimină"

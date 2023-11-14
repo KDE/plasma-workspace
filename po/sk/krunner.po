@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-11 15:20+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -125,12 +125,12 @@ msgstr "Pripnúť hľadanie"
 msgid "Keep Open"
 msgstr "Ponechať otvorené"
 
-#: qml/RunCommand.qml:383 qml/RunCommand.qml:388
+#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
 #, kde-format
 msgid "Recent Queries"
 msgstr "Nedávne dopyty"
 
-#: qml/RunCommand.qml:386
+#: qml/RunCommand.qml:388
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"

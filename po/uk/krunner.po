@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-07-24 21:19+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -128,12 +128,12 @@ msgstr "Пришпилити пошук"
 msgid "Keep Open"
 msgstr "Тримати відкритим"
 
-#: qml/RunCommand.qml:383 qml/RunCommand.qml:388
+#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
 #, kde-format
 msgid "Recent Queries"
 msgstr "Нещодавні запити"
 
-#: qml/RunCommand.qml:386
+#: qml/RunCommand.qml:388
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-11 08:50+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -96,8 +96,9 @@ msgid "Custom times"
 msgstr "Нетипові моменти часу"
 
 #: ui/main.qml:119
-#, kde-format
-msgid "Always on night color"
+#, fuzzy, kde-format
+#| msgid "Always on night color"
+msgid "Always on night light"
 msgstr "Завжди нічні кольори"
 
 #: ui/main.qml:171
@@ -113,8 +114,9 @@ msgstr ""
 "location.services.mozilla.com'>Служби розташування Mozilla</link>."
 
 #: ui/main.qml:190
-#, kde-format
-msgid "Day color temperature:"
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "Температура денних кольорів:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -136,8 +138,9 @@ msgid "Warm"
 msgstr "Теплий"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Night color temperature:"
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "Температура нічних кольорів:"
 
 #: ui/main.qml:313
@@ -146,8 +149,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Широта: %1°     Довгота: %2°"
 
 #: ui/main.qml:323
-#, kde-format
-msgid "Begin night color at:"
+#, fuzzy, kde-format
+#| msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr "Вмикати нічні кольори о:"
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -156,8 +160,9 @@ msgid "Input format: HH:MM"
 msgstr "Формат вхідних даних: ГГ:ХХ"
 
 #: ui/main.qml:346
-#, kde-format
-msgid "Begin day color at:"
+#, fuzzy, kde-format
+#| msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr "Вмикати денні кольори о:"
 
 #: ui/main.qml:368

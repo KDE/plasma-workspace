@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2021-11-09 18:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr "Cancelar"
 msgid "Clipboard Contents"
 msgstr "Conteúdo da Área de Transferência"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
@@ -117,7 +117,7 @@ msgstr "Limpar o Histórico"
 msgid "Configure Clipboard…"
 msgstr "Configurar a Área de Transferência…"
 
-#: contents/ui/Menu.qml:129
+#: contents/ui/Menu.qml:134
 #, kde-format
 msgid "No matches"
 msgstr "Sem correspondências"

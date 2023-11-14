@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2022-09-13 19:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -95,8 +95,9 @@ msgid "Custom times"
 msgstr "விருப்ப நேரங்கள்"
 
 #: ui/main.qml:119
-#, kde-format
-msgid "Always on night color"
+#, fuzzy, kde-format
+#| msgid "Always on night color"
+msgid "Always on night light"
 msgstr "எப்போதும் இரவு நிறத்தைப் பயன்படுத்து"
 
 #: ui/main.qml:171
@@ -112,8 +113,9 @@ msgstr ""
 "இருப்பிடம் அவ்வப்போது புதுப்பிக்கப்படும்."
 
 #: ui/main.qml:190
-#, kde-format
-msgid "Day color temperature:"
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "பகலுக்கான நிறவெப்பநிலை:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -137,8 +139,9 @@ msgid "Warm"
 msgstr "சிவப்பு"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Night color temperature:"
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "இரவுக்கான நிறவெப்பநிலை:"
 
 #: ui/main.qml:313
@@ -147,8 +150,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "அட்சரேகை: %1°   தீர்க்கரேகை: %2°"
 
 #: ui/main.qml:323
-#, kde-format
-msgid "Begin night color at:"
+#, fuzzy, kde-format
+#| msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr "இரவு நிறத்துக்கு இந்நேரத்தில் மாறு:"
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -157,8 +161,9 @@ msgid "Input format: HH:MM"
 msgstr "உள்ளீட்டு படிவம்: மம:நிநி"
 
 #: ui/main.qml:346
-#, kde-format
-msgid "Begin day color at:"
+#, fuzzy, kde-format
+#| msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr "பகல் நிறத்துக்கு இந்நேரத்தில் மாறு:"
 
 #: ui/main.qml:368

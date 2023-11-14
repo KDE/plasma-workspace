@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-05-29 08:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -109,7 +109,7 @@ msgstr "Cancelar"
 msgid "Clipboard Contents"
 msgstr "Contido do portapapeis"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "O portapapeis está baleiro"
@@ -124,7 +124,7 @@ msgstr "Borrar o historial"
 msgid "Configure Clipboard…"
 msgstr "Configurar o portapapeis…"
 
-#: contents/ui/Menu.qml:129
+#: contents/ui/Menu.qml:134
 #, kde-format
 msgid "No matches"
 msgstr "Non hai coincidencias"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-11 11:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -98,8 +98,9 @@ msgid "Custom times"
 msgstr "Hora personalitzada"
 
 #: ui/main.qml:119
-#, kde-format
-msgid "Always on night color"
+#, fuzzy, kde-format
+#| msgid "Always on night color"
+msgid "Always on night light"
 msgstr "Color de nit sempre actiu"
 
 #: ui/main.qml:171
@@ -116,8 +117,9 @@ msgstr ""
 "d'ubicació de Mozilla)."
 
 #: ui/main.qml:190
-#, kde-format
-msgid "Day color temperature:"
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "Temperatura del color de dia:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -139,8 +141,9 @@ msgid "Warm"
 msgstr "Càlid"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Night color temperature:"
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "Temperatura del color de nit:"
 
 #: ui/main.qml:313
@@ -149,8 +152,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitud: %1°   Longitud: %2°"
 
 #: ui/main.qml:323
-#, kde-format
-msgid "Begin night color at:"
+#, fuzzy, kde-format
+#| msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr "El color de nit comença a les:"
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -159,8 +163,9 @@ msgid "Input format: HH:MM"
 msgstr "Format d'entrada: HH:MM"
 
 #: ui/main.qml:346
-#, kde-format
-msgid "Begin day color at:"
+#, fuzzy, kde-format
+#| msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr "El color de dia comença a les:"
 
 #: ui/main.qml:368

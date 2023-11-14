@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2020-03-05 18:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -102,7 +102,7 @@ msgstr "Kohandatud ajal"
 #: ui/main.qml:119
 #, fuzzy, kde-format
 #| msgid "Always on"
-msgid "Always on night color"
+msgid "Always on night light"
 msgstr "Alati sees"
 
 #: ui/main.qml:171
@@ -117,7 +117,7 @@ msgstr ""
 #: ui/main.qml:190
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
-msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "Öine värvustemperatuur:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -141,7 +141,7 @@ msgstr "Soe "
 #: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
-msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "Öine värvustemperatuur:"
 
 #: ui/main.qml:313
@@ -152,7 +152,7 @@ msgstr "Laiuskraad: %1   Pikkuskraad: %2"
 
 #: ui/main.qml:323
 #, kde-format
-msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr ""
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -162,7 +162,7 @@ msgstr "Sisestusvorming: HH:MM"
 
 #: ui/main.qml:346
 #, kde-format
-msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr ""
 
 #: ui/main.qml:368

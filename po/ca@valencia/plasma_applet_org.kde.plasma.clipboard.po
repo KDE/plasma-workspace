@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-05-26 09:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr "Cancel·la"
 msgid "Clipboard Contents"
 msgstr "Contingut del porta-retalls"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El porta-retalls està buit"
@@ -127,7 +127,7 @@ msgstr "Neteja l'historial"
 msgid "Configure Clipboard…"
 msgstr "Configura el porta-retalls…"
 
-#: contents/ui/Menu.qml:129
+#: contents/ui/Menu.qml:134
 #, kde-format
 msgid "No matches"
 msgstr "Sense coincidències"

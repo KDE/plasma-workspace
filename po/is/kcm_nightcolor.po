@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2022-10-17 16:01+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -94,8 +94,9 @@ msgid "Custom times"
 msgstr "Sérstilltur tími"
 
 #: ui/main.qml:119
-#, kde-format
-msgid "Always on night color"
+#, fuzzy, kde-format
+#| msgid "Always on night color"
+msgid "Always on night light"
 msgstr "Alltaf kveikt á næturlitum"
 
 #: ui/main.qml:171
@@ -111,8 +112,9 @@ msgstr ""
 "services.mozilla.com'>Mozilla-staðsetningarþjónustunnar</link>."
 
 #: ui/main.qml:190
-#, kde-format
-msgid "Day color temperature:"
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "Lithitastig dagslita:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -136,8 +138,9 @@ msgid "Warm"
 msgstr "Hlýtt"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Night color temperature:"
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "Lithitastig næturlita:"
 
 #: ui/main.qml:313
@@ -146,8 +149,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Breiddargráða: %1°   Lengdargráða: %2°"
 
 #: ui/main.qml:323
-#, kde-format
-msgid "Begin night color at:"
+#, fuzzy, kde-format
+#| msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr "Byrja næturliti kl.:"
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -156,8 +160,9 @@ msgid "Input format: HH:MM"
 msgstr "Inntakssnið: HH:MM"
 
 #: ui/main.qml:346
-#, kde-format
-msgid "Begin day color at:"
+#, fuzzy, kde-format
+#| msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr "Byrja dagsliti kl.:"
 
 #: ui/main.qml:368

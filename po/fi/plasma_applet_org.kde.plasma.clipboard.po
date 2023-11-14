@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-05-29 21:17+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -107,7 +107,7 @@ msgstr "Peru"
 msgid "Clipboard Contents"
 msgstr "Leikepöydän sisältö"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:129
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Leikepöytä on tyhjä"
@@ -122,7 +122,7 @@ msgstr "Tyhjennä historia"
 msgid "Configure Clipboard…"
 msgstr "Leikepöydän asetukset…"
 
-#: contents/ui/Menu.qml:129
+#: contents/ui/Menu.qml:134
 #, kde-format
 msgid "No matches"
 msgstr "Ei osumia"

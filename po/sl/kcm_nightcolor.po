@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-11 09:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -97,8 +97,9 @@ msgid "Custom times"
 msgstr "Časi po meri"
 
 #: ui/main.qml:119
-#, kde-format
-msgid "Always on night color"
+#, fuzzy, kde-format
+#| msgid "Always on night color"
+msgid "Always on night light"
 msgstr "Vedno vključene nočne barve"
 
 #: ui/main.qml:171
@@ -114,8 +115,9 @@ msgstr ""
 "mozilla.com'>Mozilla Location Service</link>."
 
 #: ui/main.qml:190
-#, kde-format
-msgid "Day color temperature:"
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "Dnevna barvna temperatura:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -137,8 +139,9 @@ msgid "Warm"
 msgstr "Toplo"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Night color temperature:"
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "Nočna barvna temperatura:"
 
 #: ui/main.qml:313
@@ -147,8 +150,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Širina: %1°   Dolžina: %2°"
 
 #: ui/main.qml:323
-#, kde-format
-msgid "Begin night color at:"
+#, fuzzy, kde-format
+#| msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr "Začni nočne barve ob:"
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -157,8 +161,9 @@ msgid "Input format: HH:MM"
 msgstr "Vhodni format: HH:MM"
 
 #: ui/main.qml:346
-#, kde-format
-msgid "Begin day color at:"
+#, fuzzy, kde-format
+#| msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr "Začni dnevne barve ob:"
 
 #: ui/main.qml:368

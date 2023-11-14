@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 01:44+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2022-09-10 11:05+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -93,8 +93,9 @@ msgid "Custom times"
 msgstr "Custom times"
 
 #: ui/main.qml:119
-#, kde-format
-msgid "Always on night color"
+#, fuzzy, kde-format
+#| msgid "Always on night color"
+msgid "Always on night light"
 msgstr "Always on night colour"
 
 #: ui/main.qml:171
@@ -110,8 +111,9 @@ msgstr ""
 "mozilla.com'>Mozilla Location Service</link>."
 
 #: ui/main.qml:190
-#, kde-format
-msgid "Day color temperature:"
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
 msgstr "Day colour temperature:"
 
 #: ui/main.qml:233 ui/main.qml:292
@@ -135,8 +137,9 @@ msgid "Warm"
 msgstr "Warm"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Night color temperature:"
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
 msgstr "Night colour temperature:"
 
 #: ui/main.qml:313
@@ -145,8 +148,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitude: %1°   Longitude: %2°"
 
 #: ui/main.qml:323
-#, kde-format
-msgid "Begin night color at:"
+#, fuzzy, kde-format
+#| msgid "Begin night color at:"
+msgid "Begin night light at:"
 msgstr "Begin night colour at:"
 
 #: ui/main.qml:336 ui/main.qml:359
@@ -155,8 +159,9 @@ msgid "Input format: HH:MM"
 msgstr "Input format: HH:MM"
 
 #: ui/main.qml:346
-#, kde-format
-msgid "Begin day color at:"
+#, fuzzy, kde-format
+#| msgid "Begin day color at:"
+msgid "Begin day light at:"
 msgstr "Begin day colour at:"
 
 #: ui/main.qml:368
