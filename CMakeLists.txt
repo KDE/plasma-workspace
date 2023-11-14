@@ -190,6 +190,14 @@ if(PipeWire_FOUND)
   find_package(Libdrm REQUIRED)
 endif()
 
+# FreeBSD systems might have libxcrypt but their shadow equivalent doesn't use it
+if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    pkg_check_modules(libxcrypt libxcrypt>=4)
+    if(libxcrypt_FOUND)
+        set(HAVE_CRYPT_GENSALT true)
+    endif()
+endif()
+
 find_package(Qt6WaylandClient COMPONENTS Private)
 find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests

@@ -6,6 +6,9 @@
 /* Define to 1 if you have the <sys/time.h> header file. */
 #cmakedefine HAVE_SYS_TIME_H 1
 
+/* Define to 1 if you have libxcrypt with crypt_gensalt and the shadow package is linked against it */
+#cmakedefine01 HAVE_CRYPT_GENSALT
+
 /* place where plasma-frameworks things are installed */
 #define PLASMA_RELATIVE_DATA_INSTALL_DIR "@PLASMA_RELATIVE_DATA_INSTALL_DIR@"
 

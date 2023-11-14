@@ -13,8 +13,13 @@
 #include <KWallet>
 #include <QImage>
 #include <QtConcurrent>
+#include <config-workspace.h>
 #include <sys/types.h>
 #include <unistd.h>
+
+#if HAVE_CRYPT_GENSALT
+#include <crypt.h>
+#endif
 
 User::User(QObject *parent)
     : QObject(parent)
@@ -197,6 +202,7 @@ void User::loadData()
     }
 }
 
+#if !(HAVE_CRYPT_GENSALT)
 static char saltCharacter()
 {
     static constexpr const quint32 letterCount = 64;
@@ -211,9 +217,13 @@ static char saltCharacter()
 
     return saltCharacters[index];
 }
+#endif
 
 static QString saltPassword(const QString &plain)
 {
+#if HAVE_CRYPT_GENSALT
+    QString salt = crypt_gensalt(NULL, 0, NULL, 0);
+#else
     QString salt;
 
     salt.append("$6$");
@@ -223,6 +233,7 @@ static QString saltPassword(const QString &plain)
     }
 
     salt.append("$");
+#endif
 
     auto stdStrPlain = plain.toStdString();
     auto cStrPlain = stdStrPlain.c_str();
