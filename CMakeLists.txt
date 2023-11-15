@@ -289,6 +289,9 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         message(FATAL_ERROR "(UBUNTU_PACKAGEKIT || GLIBC_LOCALE_GEN) and GLIBC_LOCALE_PREGENERATED both enabled")
     endif()
 
+    add_feature_info(UBUNTU_LOCALE UBUNTU_LOCALE "Install language packages on Ubuntu-like systems")
+    add_feature_info(GLIBC_LOCALE_GEN GLIBC_LOCALE_GEN "Generate glibc locales")
+    add_feature_info(GLIBC_LOCALE_PREGENERATED GLIBC_LOCALE_PREGENERATED "glibc locales are pregenerated")
     ################## Find libraries ###################
     if(REGION_LANG_GENERATE_LOCALE_HELPER)
         find_package(PolkitQt6-1)
