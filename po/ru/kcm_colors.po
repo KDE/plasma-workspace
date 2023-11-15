@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-02 01:43+0000\n"
-"PO-Revision-Date: 2023-02-17 11:18+0300\n"
+"PO-Revision-Date: 2023-11-14 22:35+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -1306,7 +1306,7 @@ msgstr "Установить из файла..."
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Загрузить…"
 
 #: ui/main.qml:192
 #, kde-format

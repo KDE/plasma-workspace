@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-21 01:40+0000\n"
-"PO-Revision-Date: 2023-11-11 23:32+0300\n"
+"PO-Revision-Date: 2023-11-14 19:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -491,22 +491,22 @@ msgstr "Dışa Aktar…"
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr "\"%1\" konumuna ekle."
+msgstr "\"%1\" konumuna ekleyin."
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Remove from current group."
-msgstr "Bu gruptan kaldır."
+msgstr "Bu gruptan kaldırın."
 
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
 msgid "Move to personal folder."
-msgstr "Kişisel dizine taşı."
+msgstr "Kişisel klasöre taşıyın."
 
 #: kcmfontinst/GroupList.cpp:901
 #, kde-format
 msgid "Move to system folder."
-msgstr "Sistem dizinine taşı."
+msgstr "Sistem klasörüne taşıyın."
 
 #: kcmfontinst/JobRunner.cpp:140
 #, kde-format
@@ -530,8 +530,8 @@ msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
-"<h3>Tamamlandı</h3><p>Lütfen açık olan uygulamaların değişiklikleri "
-"öğrenebilmesi için yeniden başlatılmaları gerektiğini unutmayın.</p>"
+"<h3>Bitti</h3><p>Lütfen açık olan uygulamaların değişiklikleri öğrenebilmesi "
+"için yeniden başlatılmaları gerektiğini unutmayın.</p>"
 
 #: kcmfontinst/JobRunner.cpp:208
 #, kde-format

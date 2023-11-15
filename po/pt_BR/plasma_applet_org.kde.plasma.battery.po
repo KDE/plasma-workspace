@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-02-14 10:17-0300\n"
+"PO-Revision-Date: 2023-11-14 14:14-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -286,23 +286,19 @@ msgstr ""
 "desconhecido)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
-"%1 aplicativo está atualmente bloqueando a suspensão e bloqueio de tela:"
+"Um aplicativo está atualmente bloqueando a suspensão e bloqueio de tela (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"%1 está atualmente bloqueando a suspensão e bloqueio de tela (motivo "
-"desconhecido)"
+"Um aplicativo está atualmente bloqueando a suspensão e bloqueio de tela "
+"(motivo desconhecido)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -320,15 +316,13 @@ msgstr "%1: motivo desconhecido"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Aplicativo desconhecido: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: motivo desconhecido"
+msgstr "Aplicativo desconhecido: motivo desconhecido"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-12 12:39+0200\n"
+"PO-Revision-Date: 2023-11-14 04:54+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -94,10 +94,9 @@ msgid "Custom times"
 msgstr "מועדים בהתאמה אישית"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "תמיד צבע לילה"
+msgstr "תאורת לילה פעילה תמיד"
 
 #: ui/main.qml:171
 #, kde-kuit-format
@@ -112,10 +111,9 @@ msgstr ""
 "link>."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "טמפרטורת צבע יום:"
+msgstr "טמפרטורת תאורת יום:"
 
 #: ui/main.qml:233 ui/main.qml:292
 #, kde-format
@@ -136,10 +134,9 @@ msgid "Warm"
 msgstr "חמים"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "טמפרטורת צבע לילה:"
+msgstr "טמפרטורת תאורת לילה:"
 
 #: ui/main.qml:313
 #, kde-format
@@ -147,10 +144,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "קו רוחב: %1°   קו גובה: %2°"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "להתחיל צבע לילה ב־:"
+msgstr "להתחיל תאורת לילה ב־:"
 
 #: ui/main.qml:336 ui/main.qml:359
 #, kde-format
@@ -158,10 +154,9 @@ msgid "Input format: HH:MM"
 msgstr "תבנית קלט: HH:MM"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "להתחיל את צבע היום ב־:"
+msgstr "להתחיל תאורת יום ב־:"
 
 #: ui/main.qml:368
 #, kde-format

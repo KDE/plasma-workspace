@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2023-07-25 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,110 +28,110 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: main.cpp:70 view.cpp:47
+#: main.cpp:73 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:70
+#: main.cpp:73
 #, kde-format
 msgid "Run Command interface"
 msgstr "실행 명령 인터페이스"
 
-#: main.cpp:76
+#: main.cpp:79
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "클립보드 내용을 KRunner 질의로 사용"
 
-#: main.cpp:77
+#: main.cpp:80
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "KRunner를 배경에서 시작하고 표시하지 않습니다."
 
-#: main.cpp:78
+#: main.cpp:81
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "실행 중인 인스턴스 대체"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "지정한 플러그인의 결과만 표시"
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "List available plugins"
 msgstr "사용 가능한 플러그인 목록 표시"
 
-#: main.cpp:87
+#: main.cpp:90
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "실행할 질의, -c 옵션을 지정하지 않았을 때만 사용"
 
-#: main.cpp:96
+#: main.cpp:99
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "사용 가능한 KRunner 플러그인, pluginId"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure"
 msgstr "설정"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "KRunner 행동 설정"
 
-#: qml/RunCommand.qml:98
+#: qml/RunCommand.qml:101
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner 설정…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:114
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "%1의 결과만 표시"
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' 찾기…"
 
-#: qml/RunCommand.qml:126
+#: qml/RunCommand.qml:129
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "찾기…"
 
-#: qml/RunCommand.qml:297 qml/RunCommand.qml:298 qml/RunCommand.qml:300
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "사용 도움말 표시"
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "고정"
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "검색 고정"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "열린 상태로 유지"
 
-#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
+#: qml/RunCommand.qml:392 qml/RunCommand.qml:397
 #, kde-format
 msgid "Recent Queries"
 msgstr "최근 질의"
 
-#: qml/RunCommand.qml:388
+#: qml/RunCommand.qml:395
 #, kde-format
 msgid "Remove"
 msgstr "삭제"

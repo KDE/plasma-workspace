@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2023-07-29 12:08+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -31,113 +31,113 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "karl@huftis.org"
 
-#: main.cpp:70 view.cpp:47
+#: main.cpp:73 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:70
+#: main.cpp:73
 #, kde-format
 msgid "Run Command interface"
 msgstr "Grensesnitt for køyring av kommandoar"
 
 # Dette og neste er kommandolinjeargument, og bør derfor slutta med punktum.
-#: main.cpp:76
+#: main.cpp:79
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Bruk innhald på utklippstavle til KRunner-spørjing."
 
-#: main.cpp:77
+#: main.cpp:80
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Start KRunner i bakgrunnen (ikkje vis noko)."
 
-#: main.cpp:78
+#: main.cpp:81
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Erstatt ein instans som finst frå før."
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Vis berre resultat frå valt programtillegg."
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "List available plugins"
 msgstr "Vis oversikt over tilgjengelege programtillegg."
 
-#: main.cpp:87
+#: main.cpp:90
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""
 "Spørjing som skal køyrast. Vert berre brukt om «-c»-argumentet ikkje er "
 "oppgjeve."
 
-#: main.cpp:96
+#: main.cpp:99
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "Tilgjengelege KRunner-tillegg, pluginID"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure"
 msgstr "Set opp"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Set opp KRunner-åtferd"
 
-#: qml/RunCommand.qml:98
+#: qml/RunCommand.qml:101
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Set opp KRunner …"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:114
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "Viser berre resultat frå %1"
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Søk etter «%1» …"
 
-#: qml/RunCommand.qml:126
+#: qml/RunCommand.qml:129
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Søk …"
 
-#: qml/RunCommand.qml:297 qml/RunCommand.qml:298 qml/RunCommand.qml:300
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Vis brukshjelp"
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "Kopla fast"
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "Kopla fast søket"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "Hald ope"
 
-#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
+#: qml/RunCommand.qml:392 qml/RunCommand.qml:397
 #, kde-format
 msgid "Recent Queries"
 msgstr "Siste søk"
 
-#: qml/RunCommand.qml:388
+#: qml/RunCommand.qml:395
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"

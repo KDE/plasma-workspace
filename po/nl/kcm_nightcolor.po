@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-11 10:15+0100\n"
+"PO-Revision-Date: 2023-11-14 10:26+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -93,10 +93,9 @@ msgid "Custom times"
 msgstr "Eigen tijden"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "Altijd op nachtkleur"
+msgstr "Altijd op nachtlicht"
 
 #: ui/main.qml:171
 #, kde-kuit-format
@@ -111,10 +110,9 @@ msgstr ""
 "services.mozilla.com\">Mozilla locatieservice</link> te zenden."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Dagkleurtemperatuur: "
+msgstr "Daglichttemperatuur:"
 
 #: ui/main.qml:233 ui/main.qml:292
 #, kde-format
@@ -135,10 +133,9 @@ msgid "Warm"
 msgstr "Warm"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Nachtkleurtemperatuur: "
+msgstr "Nachtlichttemperatuur:"
 
 #: ui/main.qml:313
 #, kde-format
@@ -146,10 +143,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Breedtegraad: %1°   Lengtegraad: %2°"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Nachtkleur begint op:"
+msgstr "Nachtlicht begint om:"
 
 #: ui/main.qml:336 ui/main.qml:359
 #, kde-format
@@ -157,10 +153,9 @@ msgid "Input format: HH:MM"
 msgstr "Invoerformaat: HH:MM"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Dagkleur begint op:"
+msgstr "Daglicht begint om:"
 
 #: ui/main.qml:368
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-12 18:01+0100\n"
+"PO-Revision-Date: 2023-11-14 09:01+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -93,8 +93,7 @@ msgid "Custom times"
 msgstr "Tempores personalisate"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Sempre Active sur color de nocte"
 
@@ -111,8 +110,7 @@ msgstr ""
 "services.mozilla.com'>Mozilla Location Service</link>."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Temperatura de Color de Die:"
 
@@ -135,8 +133,7 @@ msgid "Warm"
 msgstr "Calide"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Temperatura de Color de Nocte:"
 
@@ -146,8 +143,7 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitude: %1°   Longitude: %2°"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Initia color de nocte a :"
 
@@ -157,8 +153,7 @@ msgid "Input format: HH:MM"
 msgstr "Formato de ingresso: HH:MM"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Initia color de die a:"
 

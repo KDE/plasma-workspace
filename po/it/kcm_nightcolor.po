@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Paolo Zamponi <feus73@gmail.com>, 2018, 2019, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2022-09-10 15:09+0200\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2023-11-14 15:25+0100\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -93,10 +93,9 @@ msgid "Custom times"
 msgstr "Orari personalizzato"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "Colore notturno sempre attivo"
+msgstr "Luce notturna sempre attiva"
 
 #: ui/main.qml:171
 #, kde-kuit-format
@@ -111,10 +110,9 @@ msgstr ""
 "url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Temperatura del colore diurno:"
+msgstr "Temperatura della luce diurna:"
 
 #: ui/main.qml:233 ui/main.qml:292
 #, kde-format
@@ -123,9 +121,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:237 ui/main.qml:296
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Freddo (nessun filtro)"
@@ -137,10 +133,9 @@ msgid "Warm"
 msgstr "Caldo"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Temperatura del colore notturno:"
+msgstr "Temperatura della luce notturna:"
 
 #: ui/main.qml:313
 #, kde-format
@@ -148,10 +143,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitudine: %1°   Longitudine: %2°"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Il colore notturno inizia alle:"
+msgstr "La luce notturna inizia alle:"
 
 #: ui/main.qml:336 ui/main.qml:359
 #, kde-format
@@ -159,10 +153,9 @@ msgid "Input format: HH:MM"
 msgstr "Formato d'inserimento: OO:MM"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Il colore diurno inizia alle:"
+msgstr "La luce diurna inizia alle:"
 
 #: ui/main.qml:368
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2022-10-17 11:55+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -30,110 +30,110 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aspotashev@gmail.com, translation-team@basealt.ru"
 
-#: main.cpp:70 view.cpp:47
+#: main.cpp:73 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "Диалог поиска и запуска"
 
-#: main.cpp:70
+#: main.cpp:73
 #, kde-format
 msgid "Run Command interface"
 msgstr "Интерфейс запуска команд"
 
-#: main.cpp:76
+#: main.cpp:79
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Использовать содержимое буфера обмена в качестве запроса KRunner."
 
-#: main.cpp:77
+#: main.cpp:80
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Запустить KRunner без показа окна программы."
 
-#: main.cpp:78
+#: main.cpp:81
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменить существующий запущенный процесс."
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr ""
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "List available plugins"
 msgstr ""
 
-#: main.cpp:87
+#: main.cpp:90
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Поисковый запрос. Не используется, если указан параметр «-c»."
 
-#: main.cpp:96
+#: main.cpp:99
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr ""
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure"
 msgstr "Настроить"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Настроить поведение KRunner"
 
-#: qml/RunCommand.qml:98
+#: qml/RunCommand.qml:101
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Настроить KRunner…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:114
 #, kde-format
 msgid "Showing only results from %1"
 msgstr ""
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Поиск «%1»…"
 
-#: qml/RunCommand.qml:126
+#: qml/RunCommand.qml:129
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Поиск…"
 
-#: qml/RunCommand.qml:297 qml/RunCommand.qml:298 qml/RunCommand.qml:300
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Показать справку"
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "Закрепить"
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "Закрепить поиск"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "Оставить открытым"
 
-#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
+#: qml/RunCommand.qml:392 qml/RunCommand.qml:397
 #, kde-format
 msgid "Recent Queries"
 msgstr "Последние запросы"
 
-#: qml/RunCommand.qml:388
+#: qml/RunCommand.qml:395
 #, kde-format
 msgid "Remove"
 msgstr "Удалить"

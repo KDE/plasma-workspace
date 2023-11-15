@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2023-07-30 12:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,110 +27,110 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: main.cpp:70 view.cpp:47
+#: main.cpp:73 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "கேரன்னர்"
 
-#: main.cpp:70
+#: main.cpp:73
 #, kde-format
 msgid "Run Command interface"
 msgstr "கட்டளைகளை இயக்கும் இடைமுகப்பு"
 
-#: main.cpp:76
+#: main.cpp:79
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "பிடிப்புப்பலகையின் உள்ளடக்கத்தை கேரன்னரில் பயன்படுத்து"
 
-#: main.cpp:77
+#: main.cpp:80
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "கேரன்னரை பின்னணியில் தொடக்கி, அதைக் காட்டாதே."
 
-#: main.cpp:78
+#: main.cpp:81
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "ஏற்கனவே உள்ளதற்கு பதிலாக இது இயங்கட்டும்"
 
-#: main.cpp:79
+#: main.cpp:82
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "குறிப்பிட்ட செருகுநிரலிலிருந்தான முடிவுகளை மட்டும் காட்டு"
 
-#: main.cpp:80
+#: main.cpp:83
 #, kde-format
 msgid "List available plugins"
 msgstr "உள்ள செருகுநிரல்களை பட்டியலிடு"
 
-#: main.cpp:87
+#: main.cpp:90
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "இயக்க வேண்டிய வினா, -c வழங்கப்படவில்லையெனில் மட்டும் பயன்படுத்தப்படும்"
 
-#: main.cpp:96
+#: main.cpp:99
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "உள்ள கேரன்னர் செருகுநிரல்கள், pluginId"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure"
 msgstr "அமை"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:98
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "கேரன்னரின் நடத்தையை மாற்றியமையுங்கள்"
 
-#: qml/RunCommand.qml:98
+#: qml/RunCommand.qml:101
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "கேரன்னரை அமை…"
 
-#: qml/RunCommand.qml:111
+#: qml/RunCommand.qml:114
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "%1 இலிருந்தான முடிவுகள் மட்டும்"
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' தனில் தேடு…"
 
-#: qml/RunCommand.qml:126
+#: qml/RunCommand.qml:129
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "தேடு…"
 
-#: qml/RunCommand.qml:297 qml/RunCommand.qml:298 qml/RunCommand.qml:300
+#: qml/RunCommand.qml:300 qml/RunCommand.qml:301 qml/RunCommand.qml:303
 #, kde-format
 msgid "Show Usage Help"
 msgstr "பயன்படுத்துவது குறித்த உதவியை காட்டு"
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:311
 #, kde-format
 msgid "Pin"
 msgstr "தக்கவை"
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:312
 #, kde-format
 msgid "Pin Search"
 msgstr "தேடலை தக்கவை"
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: qml/RunCommand.qml:385 qml/RunCommand.qml:390
+#: qml/RunCommand.qml:392 qml/RunCommand.qml:397
 #, kde-format
 msgid "Recent Queries"
 msgstr "சமீப தேடல்கள்"
 
-#: qml/RunCommand.qml:388
+#: qml/RunCommand.qml:395
 #, kde-format
 msgid "Remove"
 msgstr "நீக்கு"

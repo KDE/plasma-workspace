@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-11 22:15+0300\n"
+"PO-Revision-Date: 2023-11-14 18:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -94,8 +94,7 @@ msgid "Custom times"
 msgstr "Özel zamanlar"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Her zaman açık"
 
@@ -112,16 +111,15 @@ msgstr ""
 "gönderilerek düzenli olarak güncellenecektir."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Gün rengi sıcaklığı:"
+msgstr "Gün ışığı sıcaklığı:"
 
 #: ui/main.qml:233 ui/main.qml:292
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
-msgstr "%1K"
+msgstr "%1 K"
 
 #: ui/main.qml:237 ui/main.qml:296
 #, kde-format
@@ -136,10 +134,9 @@ msgid "Warm"
 msgstr "Sıcak"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Gece rengi sıcaklığı:"
+msgstr "Gece ışığı sıcaklığı:"
 
 #: ui/main.qml:313
 #, kde-format
@@ -147,10 +144,9 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Enlem: %1°   Boylam: %2°"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Gece rengini başlatma saati:"
+msgstr "Gece ışığını başlatma saati:"
 
 #: ui/main.qml:336 ui/main.qml:359
 #, kde-format
@@ -158,10 +154,9 @@ msgid "Input format: HH:MM"
 msgstr "Giriş biçimi: SS:DD"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Gün rengini başlatma saati:"
+msgstr "Gün ışığını başlatma saati:"
 
 #: ui/main.qml:368
 #, kde-format
