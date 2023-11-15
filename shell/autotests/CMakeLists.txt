@@ -75,5 +75,4 @@ PLASMASHELL_UNIT_TESTS(
     screenpooltest
     shelltest
 )
-# FIXME test is broken https://invent.kde.org/plasma/plasma-workspace/-/issues/86
-set_tests_properties(shelltest PROPERTIES DISABLED TRUE)
+
