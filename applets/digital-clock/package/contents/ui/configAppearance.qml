@@ -17,9 +17,8 @@ import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // For KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
 
-ColumnLayout {
+SimpleKCM {
     id: appearancePage
-
     property alias cfg_autoFontAndSize: autoFontAndSizeRadioButton.checked
 
     // boldText and fontStyleName are not used in DigitalClock.qml
@@ -44,7 +43,6 @@ ColumnLayout {
     property alias cfg_dateDisplayFormat: dateDisplayFormat.currentIndex
 
     Kirigami.FormLayout {
-        Layout.fillWidth: true
 
         RowLayout {
             Kirigami.FormData.label: i18n("Information:")
@@ -269,10 +267,6 @@ ColumnLayout {
             text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
             font: fontDialog.fontChosen
         }
-    }
-
-    Item {
-        Layout.fillHeight: true
     }
 
     QtDialogs.FontDialog {

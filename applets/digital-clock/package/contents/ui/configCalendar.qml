@@ -11,8 +11,9 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kcmutils as KCM
 
-ColumnLayout {
+KCM.SimpleKCM {
     id: calendarPage
 
     signal configurationChanged()
@@ -24,16 +25,13 @@ ColumnLayout {
         Plasmoid.configuration.enabledCalendarPlugins = eventPluginsManager.enabledPlugins;
     }
 
-    PlasmaCalendar.EventPluginsManager {
-        id: eventPluginsManager
-        Component.onCompleted: {
-            populateEnabledPluginsList(Plasmoid.configuration.enabledCalendarPlugins);
-        }
-    }
-
     Kirigami.FormLayout {
-        Layout.alignment: Qt.AlignTop
-        Layout.fillWidth: true
+        PlasmaCalendar.EventPluginsManager {
+            id: eventPluginsManager
+            Component.onCompleted: {
+                populateEnabledPluginsList(Plasmoid.configuration.enabledCalendarPlugins);
+            }
+        }
 
         QQC2.CheckBox {
             id: showWeekNumbers

@@ -9,21 +9,21 @@ import QtQuick.Controls 2.5
 
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kcmutils as KCM
 
-Kirigami.FormLayout {
-    anchors.left: parent.left
-    anchors.right: parent.right
-    
+KCM.SimpleKCM {
     property alias cfg_compactView: compactViewRadioButton.checked
 
-    RadioButton {
-        id: compactViewRadioButton
-        text: i18n("Use single button for application menu")
-    }
+    Kirigami.FormLayout {
+        RadioButton {
+            id: compactViewRadioButton
+            text: i18n("Use single button for application menu")
+        }
 
-    RadioButton {
-        id: fullViewRadioButton
-        checked: !compactViewRadioButton.checked
-        text: i18n("Show full application menu")
+        RadioButton {
+            id: fullViewRadioButton
+            checked: !compactViewRadioButton.checked
+            text: i18n("Show full application menu")
+        }
     }
 }

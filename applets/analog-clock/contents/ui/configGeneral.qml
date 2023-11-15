@@ -7,24 +7,21 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0
 import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kcmutils as KCM
 
-
-Kirigami.FormLayout {
+KCM.SimpleKCM {
     property alias cfg_showSecondHand: showSecondHandCheckBox.checked
     property alias cfg_showTimezoneString: showTimezoneCheckBox.checked
 
-    anchors {
-        left: parent.left
-        right: parent.right
-    }
-
-    CheckBox {
-        id: showSecondHandCheckBox
-        text: i18n("Show seconds hand")
-        Kirigami.FormData.label: i18n("General:")
-    }
-    CheckBox {
-        id: showTimezoneCheckBox
-        text: i18n("Show time zone")
+    Kirigami.FormLayout {
+        CheckBox {
+            id: showSecondHandCheckBox
+            text: i18n("Show seconds hand")
+            Kirigami.FormData.label: i18n("General:")
+        }
+        CheckBox {
+            id: showTimezoneCheckBox
+            text: i18n("Show time zone")
+        }
     }
 }

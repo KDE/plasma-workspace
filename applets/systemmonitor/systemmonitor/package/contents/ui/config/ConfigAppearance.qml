@@ -13,9 +13,9 @@ import QtQuick.Controls 2.2 as QQC2
 import org.kde.kquickcontrols 2.0
 import org.kde.config // for KAuthorized
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kcmutils as KCM
 
-
-QQC2.Control {
+KCM.SimpleKCM {
     id: root
 
     signal configurationChanged
