@@ -49,7 +49,8 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
         watcher->deleteLater();
         if (closeSessionReply.isError()) {
             qCWarning(PLASMA_SESSION) << "ksmserver failed to complete logout";
-            qApp->quit();
+            logoutCancelled();
+            return;
         }
         if (closeSessionReply.value()) {
             logoutComplete();
