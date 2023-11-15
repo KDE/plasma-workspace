@@ -1,5 +1,6 @@
 # translation of kcmfonts.po to Italian
 #
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
 # Andrea RIZZI <arizzi@pi.infn.it>, 2004.
 # Andrea Celli <andrea.celli@libero.it>, 2006.
@@ -7,21 +8,20 @@
 # Leonardo Finetti <finex@finex.org>, 2007, 2008, 2010, 2012.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2017, 2018, 2020, 2021, 2022, 2023.
-# Paolo Zamponi <feus73@gmail.com>, 2018, 2019, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-18 09:44+0200\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"PO-Revision-Date: 2023-11-12 09:58+0100\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -267,11 +267,11 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
-"I pixel sui display sono generalmente allineati in una griglia. Quindi forme "
-"di caratteri che non si allineano con questa griglia appariranno bloccati e "
-"sbagliati a meno che le tecniche <emphasis>anti-aliasing</emphasis> sono "
-"utilizzate per ridurre questo effetto. In genere si desidera mantenere "
-"abilitata questa opzione a meno che non causi problemi."
+"I pixel sugli schermi sono generalmente allineati in una griglia. Le forme "
+"dei caratteri che non si allineano con questa griglia appariranno quindi "
+"bloccate e sbagliate, a meno che non vengano utilizzate delle tecniche di "
+"<emphasis>anti-aliasing</emphasis> per ridurre questo effetto. In genere "
+"vorresti mantenere abilitata questa opzione, a meno che non causi problemi."
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -307,15 +307,16 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
-"<para>Su schermi TFT o LCD ogni singolo pixel è effettivamente composto da "
-"tre o quattro luci monocromatiche più piccole. Questi <emphasis>sotto-pixel</"
-"emphasis> possono essere modificati in modo indipendente per migliorare "
-"ulteriormente la qualità dei caratteri visualizzati.</para> <para> La "
-"qualità di rendering è migliorata solo se la selezione corrisponde al modo "
-"in cui i sotto-pixel dello schermo sono allineati. La maggior parte degli "
-"schermi ha un ordinamento lineare di sotto-pixel <emphasis>RGB</emphasis>, "
-"alcuni hanno <emphasis>BGR</emphasis> e alcuni ordinamenti esotici non sono "
-"supportati da questa funzione. </para> Questo non funziona con i monitor CRT."
+"<para>Negli schermi TFT o LCD ogni singolo pixel è effettivamente composto "
+"da tre o quattro luci monocromatiche più piccole. Questi <emphasis>sotto-"
+"pixel</emphasis> possono essere modificati in modo indipendente per "
+"migliorare ulteriormente la qualità dei caratteri visualizzati.</para> "
+"<para> La qualità di rendering è migliorata solo se la selezione corrisponde "
+"al modo in cui i sotto-pixel dello schermo sono allineati. La maggior parte "
+"degli schermi ha un ordinamento lineare di sotto-pixel <emphasis>RGB</"
+"emphasis>, altri <emphasis>BGR</emphasis>, mentre alcuni ordinamenti esotici "
+"non sono supportati da questa funzionalità. </para> Non funziona con i "
+"monitor a tubo catodico."
 
 #: package/contents/ui/main.qml:329
 #, kde-format
@@ -335,7 +336,7 @@ msgstr ""
 "L'hinting è una tecnica in cui gli hint incorporati in un carattere sono "
 "utilizzati per migliorare la qualità di resa soprattutto a dimensioni "
 "ridotte. Un hinting più forte generalmente porta a bordi più nitidi, ma le "
-"lettere minuscole assomigliano meno alla loro forma a grandi dimensioni."
+"lettere minuscole assomiglieranno meno alla loro forma a grandi dimensioni."
 
 #: package/contents/ui/main.qml:380
 #, kde-format
