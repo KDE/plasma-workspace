@@ -80,7 +80,7 @@ PlasmaExtras.ExpandableListItem {
         PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
         PropertyAction { target: deviceItem; property: "enabled"; value: false }
         // Reset action model to hide the arrow
-        PropertyAction { target: deviceItem; property: "contextualActionsModel"; value: [] }
+        PropertyAction { target: deviceItem; property: "contextualActions"; value: [] }
         PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon }
         PropertyAction { target: deviceItem; property: "title"; value: statusSource.lastDescription }
         PropertyAction { target: deviceItem; property: "subtitle"; value: statusSource.lastMessage }
@@ -263,15 +263,15 @@ PlasmaExtras.ExpandableListItem {
                 devicenotifier.currentIndex = -1;
             }
         }
-        onObjectAdded: (index, object) => deviceItem.contextualActionsModel.push(object)
+        onObjectAdded: (index, object) => deviceItem.contextualActions.push(object)
         onObjectRemoved: (index, object) => {
-            deviceItem.contextualActionsModel = Array.prototype.slice.call(deviceItem.contextualActionsModel)
+            deviceItem.contextualActions = Array.prototype.slice.call(deviceItem.contextualActions)
                 .filter(action => action !== object);
         }
     }
 
     // "Mount" action that does not open it in the file manager
-    contextualActionsModel: QQC2.Action {
+    contextualActions: QQC2.Action {
         text: i18n("Mount")
         icon.name: "media-mount"
 
