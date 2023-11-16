@@ -7,7 +7,6 @@
 */
 #include "klipperpopup.h"
 
-#include "klipper_debug.h"
 #include <QGuiApplication>
 #include <QKeyEvent>
 #include <QScreen>
@@ -18,6 +17,7 @@
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <KWindowInfo>
+#include <KWindowSystem>
 
 #include "history.h"
 #include "klipper.h"
@@ -65,9 +65,12 @@ KlipperPopup::KlipperPopup(History *history)
     , m_lastEvent(nullptr)
 {
     ensurePolished();
-    KWindowInfo windowInfo(winId(), NET::WMGeometry);
-    QRect geometry = windowInfo.geometry();
-    QScreen *screen = QGuiApplication::screenAt(geometry.center());
+    QScreen *screen = nullptr;
+    if (KWindowSystem::isPlatformX11()) {
+        KWindowInfo windowInfo(winId(), NET::WMGeometry);
+        QRect geometry = windowInfo.geometry();
+        screen = QGuiApplication::screenAt(geometry.center());
+    }
     if (screen == nullptr) {
         screen = QGuiApplication::screens()[0];
     }
