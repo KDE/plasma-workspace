@@ -158,7 +158,7 @@ MouseArea {
                 target: timeLabel
 
                 height: sizehelper.height
-                width: sizehelper.contentWidth
+                width: timeLabel.paintedWidth
 
                 font.pixelSize: timeLabel.height
             }
