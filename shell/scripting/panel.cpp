@@ -277,6 +277,8 @@ QString Panel::hiding() const
         return "none";
     case PanelView::AutoHide:
         return "autohide";
+    case PanelView::DodgeWindows:
+        return "dodgewindows";
     }
     return "none";
 }
@@ -286,6 +288,9 @@ void Panel::setHiding(const QString &mode)
     PanelView::VisibilityMode visibilityMode = PanelView::NormalPanel;
     if (mode.compare("autohide", Qt::CaseInsensitive) == 0) {
         visibilityMode = PanelView::AutoHide;
+    }
+    if (mode.compare("dodgewindows", Qt::CaseInsensitive) == 0) {
+        visibilityMode = PanelView::DodgeWindows;
     }
 
     if (panel()) {

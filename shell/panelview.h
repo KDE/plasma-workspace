@@ -131,6 +131,7 @@ public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
         AutoHide, /**the panel will be shownn only if the mouse cursor is on screen edges */
+        DodgeWindows, /* the panel will be normally visible, but will hide if a window would cover it */
     };
     Q_ENUM(VisibilityMode)
 
@@ -269,6 +270,7 @@ private Q_SLOTS:
     void updatePadding();
     void updateFloating();
     void updateShadows();
+    void updateTouchingWindow();
 
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
@@ -300,6 +302,7 @@ private:
     bool m_floating;
     bool m_containsMouse = false;
     bool m_fakeEventPending = false;
+    bool m_touchingWindow = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView = 0;

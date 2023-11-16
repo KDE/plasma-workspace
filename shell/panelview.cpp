@@ -117,6 +117,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
     updatePadding();
     updateFloating();
+    updateTouchingWindow();
 }
 
 PanelView::~PanelView()
@@ -861,7 +862,7 @@ void PanelView::restoreAutoHide()
 
 void PanelView::setAutoHideEnabled(bool enabled)
 {
-    if (m_visibilityMode == VisibilityMode::AutoHide) {
+    if (m_visibilityMode == VisibilityMode::AutoHide || (m_visibilityMode == VisibilityMode::DodgeWindows && m_touchingWindow)) {
         if (!m_autoHideScreenEdge) {
             m_autoHideScreenEdge = AutoHideScreenEdge::create(this);
         }
@@ -1292,6 +1293,7 @@ void PanelView::updateExclusiveZone()
             m_layerWindow->setExclusiveZone(thickness() - m_layerWindow->margins().top());
             break;
         case AutoHide:
+        case DodgeWindows:
             m_layerWindow->setExclusiveZone(0);
             break;
         }
@@ -1422,17 +1424,19 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
 
         updatePadding();
         updateFloating();
-        int paddingSignal = rootObject->metaObject()->indexOfSignal("bottomPaddingChanged()");
+        const int paddingSignal = rootObject->metaObject()->indexOfSignal("bottomPaddingChanged()");
+        const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessChanged()");
+        const int touchingWindowSignal = rootObject->metaObject()->indexOfSignal("touchingWindowChanged()");
+
         if (paddingSignal >= 0) {
             connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(topPaddingChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(rightPaddingChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(updatePadding()));
+        }
+        if (floatingSignal >= 0) {
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
-        }
-        const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessChanged()");
-        if (floatingSignal >= 0) {
             connect(rootObject, SIGNAL(floatingnessChanged()), this, SLOT(updateFloating()));
             connect(rootObject, SIGNAL(hasShadowsChanged()), this, SLOT(updateShadows()));
             connect(rootObject, SIGNAL(maskOffsetXChanged()), this, SLOT(updateMask()));
@@ -1444,6 +1448,10 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(panelMaskChanged()), this, SLOT(updateMask()));
             updateMask();
         }
+        if (touchingWindowSignal >= 0) {
+            connect(rootObject, SIGNAL(touchingWindowChanged()), this, SLOT(updateTouchingWindow()));
+        }
+        updateTouchingWindow();
     }
 }
 
@@ -1502,6 +1510,15 @@ void PanelView::showTemporarily()
     t->start();
 }
 
+void PanelView::updateTouchingWindow()
+{
+    if (!rootObject()) {
+        return;
+    }
+    m_touchingWindow = rootObject()->property("touchingWindow").toBool();
+    restoreAutoHide();
+}
+
 void PanelView::screenDestroyed(QObject *)
 {
     //     NOTE: this is overriding the screen destroyed slot, we need to do this because
@@ -1514,7 +1531,7 @@ void PanelView::screenDestroyed(QObject *)
 
 bool PanelView::edgeActivated() const
 {
-    return m_visibilityMode == PanelView::AutoHide;
+    return m_visibilityMode == PanelView::AutoHide || m_visibilityMode == PanelView::DodgeWindows;
 }
 
 void PanelView::updateEnabledBorders()

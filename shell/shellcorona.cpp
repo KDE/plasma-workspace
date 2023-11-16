@@ -483,6 +483,9 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             case PanelView::AutoHide:
                 panelJson.insert("hiding", "autohide");
                 break;
+            case PanelView::DodgeWindows:
+                panelJson.insert("hiding", "dodgewindows");
+                break;
             case PanelView::NormalPanel:
             default:
                 panelJson.insert("hiding", "normal");
@@ -1112,7 +1115,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     }
 
     return std::accumulate(m_panelViews.cbegin(), m_panelViews.cend(), QRegion(screen->geometry()), [screen](const QRegion &a, const PanelView *v) {
-        if (v->isVisible() && screen == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && screen == v->screen() && v->visibilityMode() == PanelView::NormalPanel) {
             // if the panel is being moved around, we still want to calculate it from the edge
             return a - v->geometryByDistance(0);
         }
