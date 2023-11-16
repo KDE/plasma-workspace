@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-11 03:18+0100\n"
+"PO-Revision-Date: 2023-11-15 06:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -94,8 +94,7 @@ msgid "Custom times"
 msgstr "დროის ხელის მითითება"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "ღამის ფერების ყოველთვის ჩართვა"
 
@@ -112,8 +111,7 @@ msgstr ""
 "მდებარეობის სერვისისთვის</a> გაგზავნით."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "დღის ფერების ტემპერატურა:"
 
@@ -136,8 +134,7 @@ msgid "Warm"
 msgstr "თბილი"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "ღამის ფერების ტემპერატურა:"
 
@@ -147,8 +144,7 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "განედი: %1°  გრძედი: %2°"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "ღამის ფერების დაწყება:"
 
@@ -158,10 +154,9 @@ msgid "Input format: HH:MM"
 msgstr "შეიყვანეთ დრო: სს:წწ"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "დღის ფერების დაწყება:"
+msgstr "დღის სინათლე იწყება:"
 
 #: ui/main.qml:368
 #, kde-format
