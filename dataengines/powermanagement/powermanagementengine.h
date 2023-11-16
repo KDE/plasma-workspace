@@ -62,6 +62,7 @@ private Q_SLOTS:
     void inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
     void chargeStopThresholdChanged(int threshold);
 
+    void updatePowerProfileDaemonInstalled(const bool &installed);
     void updatePowerProfileCurrentProfile(const QString &profile);
     void updatePowerProfileChoices(const QStringList &choices);
     void updatePowerProfilePerformanceInhibitedReason(const QString &reason);

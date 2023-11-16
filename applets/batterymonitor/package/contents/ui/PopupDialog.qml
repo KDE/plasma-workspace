@@ -20,6 +20,7 @@ PlasmaExtras.Representation {
 
     property int remainingTime
 
+    property var profilesInstalled
     property string activeProfile
     property var profiles
 
@@ -110,9 +111,10 @@ PlasmaExtras.Representation {
                 KeyNavigation.backtab: KeyNavigation.up
                 KeyNavigation.tab: KeyNavigation.down
 
+                profilesInstalled: dialog.profilesInstalled
+                profilesAvailable: dialog.profiles.length > 0
                 activeProfile: dialog.activeProfile
                 inhibitionReason: dialog.inhibitionReason
-                visible: dialog.profiles.length > 0
                 degradationReason: dialog.degradationReason
                 profileHolds: dialog.profileHolds
 

@@ -378,6 +378,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
     } else if (name == QLatin1String("UserActivity")) {
         setData(QStringLiteral("UserActivity"), QStringLiteral("IdleTime"), KIdleTime::instance()->idleTime());
     } else if (name == QLatin1String("Power Profiles")) {
+        updatePowerProfileDaemonInstalled(QDBusConnection::systemBus().interface()->isServiceRegistered(QStringLiteral("net.hadess.PowerProfiles")).value());
         createPowerProfileDBusMethodCallAndNotifyChanged<QString>(
             QStringLiteral("currentProfile"),
             std::bind(&PowermanagementEngine::updatePowerProfileCurrentProfile, this, std::placeholders::_1));
@@ -585,6 +586,11 @@ void PowermanagementEngine::updateOverallBattery()
 void PowermanagementEngine::updateAcPlugState(bool onBattery)
 {
     setData(QStringLiteral("AC Adapter"), QStringLiteral("Plugged in"), !onBattery);
+}
+
+void PowermanagementEngine::updatePowerProfileDaemonInstalled(const bool &installed)
+{
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Installed"), installed);
 }
 
 void PowermanagementEngine::updatePowerProfileCurrentProfile(const QString &activeProfile)

@@ -16,6 +16,9 @@ PlasmaComponents3.ItemDelegate {
 
     property alias slider: slider
 
+    property bool profilesInstalled
+    property bool profilesAvailable
+
     property string activeProfile
 
     property string inhibitionReason
@@ -90,14 +93,14 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: activeProfileLabel
                     Layout.alignment: Qt.AlignRight
-                    text: activeProfileData ? activeProfileData.label : ""
-
+                    text: !root.profilesAvailable ? i18nc("Power profile", "Not available") : activeProfileData ? activeProfileData.label : ""
+                    enabled: root.profilesAvailable
                 }
             }
 
             PlasmaComponents3.Slider {
                 id: slider
-                visible: root.activeProfileData !== undefined
+                visible: root.profilesAvailable
                 Layout.fillWidth: true
 
                 activeFocusOnTab: false
@@ -133,7 +136,7 @@ PlasmaComponents3.ItemDelegate {
 
             RowLayout {
                 spacing: 0
-                visible: root.activeProfileData !== undefined
+                visible: root.profilesAvailable
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 Layout.bottomMargin: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
@@ -247,6 +250,20 @@ PlasmaComponents3.ItemDelegate {
                     || inhibitionPerformanceHint.visible
                     || inhibitionHoldersHint.visible
             }
+
+            RowLayout {
+                visible: !root.profilesInstalled
+                spacing: Kirigami.Units.smallSpacing
+
+                PlasmaComponents3.Label {
+                    text: xi18n("Power profiles may be supported on your device.<nl/>Try installing the <command>power-profiles-daemon</command> package using your distribution's package manager and restarting the system.")
+                    enabled: false
+                    font: Kirigami.Theme.smallFont
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
+                }
+            }
+
         }
     }
 }
