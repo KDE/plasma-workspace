@@ -139,7 +139,7 @@ Item {
             text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
                          "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.",
                          "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
-                         sessionsModel.count)
+                         sessionsModel.count - 1)
             visible: sessionsModel.count > 1
         }
 
