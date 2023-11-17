@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2009-12-16 23:31+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -809,30 +809,30 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, fuzzy, kde-format
 #| msgid "Keep clipboard contents"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "Zatrzëmôj zamkłoscë tacnika"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr ""
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, fuzzy, kde-format
 #| msgid "Regular expression:"
 msgid "Invalid regular expression, %1"
 msgstr "Regùlarny wësłów:"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tacnik je pùsti"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"

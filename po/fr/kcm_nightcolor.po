@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-12 13:36+0100\n"
+"PO-Revision-Date: 2023-11-15 12:52+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -97,8 +97,7 @@ msgid "Custom times"
 msgstr "Heures personnalisées"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Toujours en couleur de nuit"
 
@@ -116,8 +115,7 @@ msgstr ""
 "localisation de Mozilla</a>."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Température de couleur de jour :"
 
@@ -140,8 +138,7 @@ msgid "Warm"
 msgstr "Chaud"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Température de couleur de nuit :"
 
@@ -151,8 +148,7 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitude : %1°   Longitude : %2 °"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Démarrer la couleur de nuit à :"
 
@@ -162,8 +158,7 @@ msgid "Input format: HH:MM"
 msgstr "Format : HH:MM"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Démarrer la couleur de jour à :"
 

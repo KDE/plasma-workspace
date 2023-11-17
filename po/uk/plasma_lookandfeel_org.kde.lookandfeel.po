@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-10-27 20:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Увійти"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Увімкнено Caps Lock"
@@ -80,7 +80,7 @@ msgstr "Введіть ім'я користувача і пароль"
 msgid "List Users"
 msgstr "Список користувачів"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -120,42 +120,42 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Показувати під запитом щодо розблокування"
 
-#: contents/lockscreen/LockScreenUi.qml:67
+#: contents/lockscreen/LockScreenUi.qml:68
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Помилка розблокування"
 
-#: contents/lockscreen/LockScreenUi.qml:330
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Sleep"
 msgstr "Призупинити"
 
-#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Приспати"
 
-#: contents/lockscreen/LockScreenUi.qml:342
+#: contents/lockscreen/LockScreenUi.qml:356
 #, kde-format
 msgid "Switch User"
 msgstr "Перемкнути користувача"
 
-#: contents/lockscreen/LockScreenUi.qml:529
+#: contents/lockscreen/LockScreenUi.qml:543
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Перемикнутися на цей сеанс"
 
-#: contents/lockscreen/LockScreenUi.qml:537
+#: contents/lockscreen/LockScreenUi.qml:551
 #, kde-format
 msgid "Start New Session"
 msgstr "Розпочати новий сеанс"
 
-#: contents/lockscreen/LockScreenUi.qml:550
+#: contents/lockscreen/LockScreenUi.qml:563
 #, kde-format
 msgid "Back"
 msgstr "Назад"
 
-#: contents/lockscreen/LockScreenUi.qml:615
+#: contents/lockscreen/LockScreenUi.qml:628
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

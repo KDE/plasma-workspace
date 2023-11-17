@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2022-12-31 16:56+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -830,28 +830,28 @@ msgstr ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "%1 - Clipboard Items"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr "Search…"
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "Invalid regular expression, %1"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Clipboard is empty"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, kde-format
 msgid "No matches"
 msgstr "No matches"

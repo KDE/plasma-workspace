@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-07-20 05:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -825,28 +825,28 @@ msgstr ""
 "თუ არჩეულია ფაილის სახელი ან URL, მხტუნარა მენიუ მისი MIME ტიპის შესაბამის "
 "აპლიკაციებსაც შეიცავს."
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "%1 - ბუფერის ჩანაწერები"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr "ძებნა…"
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "არასწორი რეგულარული გამოსახულება: %1"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, kde-format
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2022-10-14 18:32+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Mật khẩu"
 msgid "Log In"
 msgstr "Đăng nhập"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock đang bật"
@@ -77,7 +77,7 @@ msgstr "Gõ vào tên người dùng và mật khẩu"
 msgid "List Users"
 msgstr "Liệt kê người dùng"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -117,42 +117,42 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Hiện ở dưới lời nhắc mở khoá"
 
-#: contents/lockscreen/LockScreenUi.qml:67
+#: contents/lockscreen/LockScreenUi.qml:68
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Mở khoá thất bại"
 
-#: contents/lockscreen/LockScreenUi.qml:330
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Sleep"
 msgstr "Ngủ"
 
-#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Ngủ đông"
 
-#: contents/lockscreen/LockScreenUi.qml:342
+#: contents/lockscreen/LockScreenUi.qml:356
 #, kde-format
 msgid "Switch User"
 msgstr "Chuyển người dùng"
 
-#: contents/lockscreen/LockScreenUi.qml:529
+#: contents/lockscreen/LockScreenUi.qml:543
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Chuyển sang phiên này"
 
-#: contents/lockscreen/LockScreenUi.qml:537
+#: contents/lockscreen/LockScreenUi.qml:551
 #, kde-format
 msgid "Start New Session"
 msgstr "Bắt đầu phiên mới"
 
-#: contents/lockscreen/LockScreenUi.qml:550
+#: contents/lockscreen/LockScreenUi.qml:563
 #, kde-format
 msgid "Back"
 msgstr "Lùi"
 
-#: contents/lockscreen/LockScreenUi.qml:615
+#: contents/lockscreen/LockScreenUi.qml:628
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

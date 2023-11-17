@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-07-30 11:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -787,28 +787,28 @@ msgstr ""
 "கோப்போ முகவரியோ தேர்ந்தெடுக்கப்பட்டால், அதன் மைம்வகைக்கு (கோப்புவகைக்கு) உரிய "
 "செயலிகளையும் மேல்தோன்றும் பட்டியில் காட்டு."
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "%1 - பிடிப்புப்பலகையின் உள்ளடக்கம்"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr "தேடு…"
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "செல்லுபடியாகாத சுருங்குறித் தொடர், %1"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"

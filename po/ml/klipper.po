@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -807,31 +807,31 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, fuzzy, kde-format
 #| msgid "Clipboard Contents"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "ഓര്‍മ്മച്ചെപ്പിലെ ഉള്ളടക്കങ്ങള്‍"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search…"
 msgstr "തിരയുക..."
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, fuzzy, kde-format
 #| msgid "Regular expression:"
 msgid "Invalid regular expression, %1"
 msgstr "റെഗുലര്‍ എക്സ്പ്രഷന്‍:"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ശൂന്യമാണു്"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"

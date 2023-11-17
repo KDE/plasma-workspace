@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -828,28 +828,28 @@ msgstr ""
 "Nếu một tên tệp hoặc URL được bôi đen, thì sẽ thêm các ứng dụng có thể chấp "
 "nhận kiểu MIME của nó vào trình đơn hành động."
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "%1 - Các mục bảng nháp"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr "Tìm kiếm…"
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "Biểu thức chính quy không hợp lệ, %1"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Bảng nháp trống"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, kde-format
 msgid "No matches"
 msgstr "Không mục nào khớp"

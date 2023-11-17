@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -819,30 +819,30 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, fuzzy, kde-format
 #| msgid "Keep clipboard contents"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "ನಕಲು ಫಲಕದ ವಿಷಯಗಳನ್ನು ಇರಿಸು"
 
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr ""
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, fuzzy, kde-format
 #| msgid "Regular expression:"
 msgid "Invalid regular expression, %1"
 msgstr "ಸಾಮಾನ್ಯ ಎಕ್ಸ್‍ಪ್ರೆಶನ್:"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ನಕಲು ಫಲಕವು ಖಾಲಿ ಇದೆ"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"

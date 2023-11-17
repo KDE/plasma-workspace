@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-17 02:29+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-02-05 18:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -858,29 +858,29 @@ msgstr ""
 "Если выбран файл или URL-адрес, во всплывающем меню также будут показаны "
 "приложения для соответствующего типа MIME."
 
-#: klipperpopup.cpp:105
+#: klipperpopup.cpp:108
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
 msgstr "%1 — содержимое буфера обмена"
 
 # search box placeholder --aspotashev
-#: klipperpopup.cpp:109
+#: klipperpopup.cpp:112
 #, kde-format
 msgid "Search…"
 msgstr "Поиск…"
 
-#: klipperpopup.cpp:167
+#: klipperpopup.cpp:170
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "Недопустимое регулярное выражение, %1"
 
-#: klipperpopup.cpp:172
+#: klipperpopup.cpp:175
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
 
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:177
 #, kde-format
 msgid "No matches"
 msgstr "Совпадений не найдено"

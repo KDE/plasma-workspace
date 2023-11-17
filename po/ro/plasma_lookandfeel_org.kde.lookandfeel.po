@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2022-04-04 10:12+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Parolă"
 msgid "Log In"
 msgstr "Autentificare"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:316
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
@@ -78,7 +78,7 @@ msgstr "Tastați numele de utilizator și parola"
 msgid "List Users"
 msgstr "Enumeră utilizatorii"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:591
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -120,42 +120,42 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:67
+#: contents/lockscreen/LockScreenUi.qml:68
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
-#: contents/lockscreen/LockScreenUi.qml:330
+#: contents/lockscreen/LockScreenUi.qml:344
 #, kde-format
 msgid "Sleep"
 msgstr "Adormire"
 
-#: contents/lockscreen/LockScreenUi.qml:336 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernează"
 
-#: contents/lockscreen/LockScreenUi.qml:342
+#: contents/lockscreen/LockScreenUi.qml:356
 #, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"
 
-#: contents/lockscreen/LockScreenUi.qml:529
+#: contents/lockscreen/LockScreenUi.qml:543
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Comută la această sesiune"
 
-#: contents/lockscreen/LockScreenUi.qml:537
+#: contents/lockscreen/LockScreenUi.qml:551
 #, kde-format
 msgid "Start New Session"
 msgstr "Începe o sesiune nouă"
 
-#: contents/lockscreen/LockScreenUi.qml:550
+#: contents/lockscreen/LockScreenUi.qml:563
 #, kde-format
 msgid "Back"
 msgstr "Înapoi"
 
-#: contents/lockscreen/LockScreenUi.qml:615
+#: contents/lockscreen/LockScreenUi.qml:628
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

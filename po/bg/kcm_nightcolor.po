@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-11-11 16:23+0100\n"
+"PO-Revision-Date: 2023-11-16 14:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -93,8 +93,7 @@ msgid "Custom times"
 msgstr "Времена, зададени от потребителя"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Вечерни цветове са винаги включени"
 
@@ -112,8 +111,7 @@ msgstr ""
 "Mozilla</link>."
 
 #: ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Температура на дневни цветове:"
 
@@ -136,8 +134,7 @@ msgid "Warm"
 msgstr "Топло"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Температура на Вечерни цветове:"
 
@@ -147,8 +144,7 @@ msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Географска ширина: %1 Географска дължина: %2"
 
 #: ui/main.qml:323
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Вечерни цветове започват в:"
 
@@ -158,8 +154,7 @@ msgid "Input format: HH:MM"
 msgstr "Входен формат: HH:MM"
 
 #: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Дневни цветове започват в:"
 
