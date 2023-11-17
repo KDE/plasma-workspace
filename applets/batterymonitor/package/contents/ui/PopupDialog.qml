@@ -121,7 +121,7 @@ PlasmaExtras.Representation {
                 profileHolds: dialog.profileHolds
 
                 onActivateProfileRequested: profile => {
-                    dialog.activateProfileRequested(profile);
+                    batterymonitor.activateProfileRequested(profile);
                 }
 
                 onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)

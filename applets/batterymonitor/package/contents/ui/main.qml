@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013-2015 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2021-2022 ivan tkachenko <me@ratijas.tk>
+    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie.clarius@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -75,6 +76,7 @@ PlasmoidItem {
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Smoothed Remaining msec"])
 
     readonly property var profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
+    readonly property bool isInBalancedMode: actuallyActiveProfile === "balanced"
     property bool isManuallyInPerformanceMode: false // to be set on power profile requested through the applet
     property bool isManuallyInPowerSaveMode: false // to be set on power profile requested through the applet
     readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
@@ -109,6 +111,31 @@ PlasmoidItem {
         }
 
         return iconName + symbolicSuffix;
+    }
+
+    signal activateProfileRequested(string profile)
+    onActivateProfileRequested: profile => {
+        if (profile === actuallyActiveProfile) {
+            return;
+        }
+        const service = pmSource.serviceForSource("PowerDevil");
+        const op = service.operationDescription("setPowerProfile");
+        op.profile = profile;
+
+        const job = service.startOperationCall(op);
+        job.finished.connect(job => {
+            if (!job.result) {
+                powerProfileError.text = i18n("Failed to activate %1 mode", profile);
+                powerProfileError.sendEvent();
+            }
+        });
+    }
+    Notification {
+        id: powerProfileError
+        componentName: "plasma_workspace"
+        eventId: "warning"
+        iconName: "speedometer"
+        title: i18n("Power Management")
     }
 
     switchWidth: Kirigami.Units.gridUnit * 10
@@ -189,7 +216,7 @@ PlasmoidItem {
                                  "%1 applications have requested activating Performance mode",
                                  activeProfileHolds.length));
             } else {
-                parts.push(i18n("System is in Performance mode"));
+                parts.push(i18n("System is in Performance mode; scroll to change"));
             }
         } else if (isSomehowInPowerSaveMode) {
             if (isHeldOnPowerSaveMode) {
@@ -197,8 +224,10 @@ PlasmoidItem {
                                 "%1 applications have requested activating Power Save mode",
                                 activeProfileHolds.length));
             } else {
-                parts.push(i18n("System is in Power Save mode"));
+                parts.push(i18n("System is in Power Save mode; scroll to change"));
             }
+        } else if (isInBalancedMode) {
+            parts.push(i18n("System is in Balanced Power mode; scroll to change"));
         }
 
         return parts.join("\n");
@@ -225,6 +254,22 @@ PlasmoidItem {
         isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || batterymonitor.isManuallyInPerformanceMode
         isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || batterymonitor.isManuallyInPowerSaveMode
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
+
+        onWheel: wheel => {
+            let profiles = batterymonitor.profiles;
+            if (!profiles) {
+                return;
+            }
+            let activeProfile = batterymonitor.actuallyActiveProfile;
+            let newProfile = activeProfile;
+
+            const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x);
+            // Magic number 120 for common "one click"
+            // See: https://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            const steps = Math.round(delta/120);
+            const newProfileIndex = Math.max(0, Math.min(profiles.length - 1, profiles.indexOf(activeProfile) + steps));
+            batterymonitor.activateProfileRequested(profiles[newProfileIndex]);
+        }
     }
 
     fullRepresentation: PopupDialog {
