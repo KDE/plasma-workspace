@@ -82,7 +82,7 @@ target_link_libraries(kickerplugin
                       KF6::Service
                       KF6::WindowSystem
                       KF6::XmlGui
-                      KF6::WaylandClient
+                      Plasma::KWaylandClient
                       PW::KWorkspace)
 
 if (${HAVE_APPSTREAMQT})

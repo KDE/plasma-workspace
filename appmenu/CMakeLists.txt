@@ -22,7 +22,7 @@ target_link_libraries(appmenu
     Qt::WaylandClientPrivate
     KF6::DBusAddons
     KF6::KIOCore
-    KF6::WaylandClient
+    Plasma::KWaylandClient
     KF6::WindowSystem
     Wayland::Client
     PkgConfig::XKBCommon

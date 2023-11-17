@@ -20,7 +20,7 @@ target_link_libraries(screenpoolmanualtest
             KF6::ConfigCore
             KF6::Service
             KF6::WindowSystem
-            KF6::WaylandClient
+            Plasma::KWaylandClient
             Wayland::Client
                         )
 if(HAVE_X11)

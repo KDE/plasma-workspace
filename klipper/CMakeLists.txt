@@ -47,7 +47,7 @@ target_link_libraries(libklipper_common_static
     KF6::WindowSystem
     KF6::WidgetsAddons
     KF6::XmlGui
-    KF6::WaylandClient
+    Plasma::KWaylandClient
     KF6::IconThemes
     KF6::IconWidgets
     ${ZLIB_LIBRARY})

@@ -50,7 +50,9 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
                     OPTIONAL_COMPONENTS DocTools)
 find_package(KF6 ${PROJECT_VERSION} REQUIRED COMPONENTS
-                    Plasma PlasmaQuick Plasma5Support Wayland ActivitiesStats Activities)
+                    Plasma PlasmaQuick Plasma5Support ActivitiesStats Activities)
+
+find_package(KWayland ${PROJECT_VERSION} REQUIRED)
 
 if (BUILD_TESTING)
     include(ECMAddTests)

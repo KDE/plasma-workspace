@@ -99,7 +99,7 @@ target_link_libraries(plasmashell
  KF6::WidgetsAddons
  KF6::ConfigGui
  KF6::Package
- KF6::WaylandClient
+ Plasma::KWaylandClient
  KF6::Notifications
  KF6::GuiAddons
  KF6::Service

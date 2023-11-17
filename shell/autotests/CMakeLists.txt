@@ -42,7 +42,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             KF6::Activities
                             KF6::ConfigCore
                             KF6::Service
-                            KF6::WaylandClient
+                            Plasma::KWaylandClient
                             KF6::WindowSystem
                             KF6::Package
                             KF6::Plasma
