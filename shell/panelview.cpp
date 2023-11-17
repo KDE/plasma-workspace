@@ -117,7 +117,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
     updatePadding();
     updateFloating();
-    updateTouchingWindow();
+    updateTouchingActiveWindow();
 }
 
 PanelView::~PanelView()
@@ -862,7 +862,7 @@ void PanelView::restoreAutoHide()
 
 void PanelView::setAutoHideEnabled(bool enabled)
 {
-    if (m_visibilityMode == VisibilityMode::AutoHide || (m_visibilityMode == VisibilityMode::DodgeWindows && m_touchingWindow)) {
+    if (m_visibilityMode == VisibilityMode::AutoHide || (m_visibilityMode == VisibilityMode::DodgeWindows && m_touchingActiveWindow)) {
         if (!m_autoHideScreenEdge) {
             m_autoHideScreenEdge = AutoHideScreenEdge::create(this);
         }
@@ -1426,7 +1426,7 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
         updateFloating();
         const int paddingSignal = rootObject->metaObject()->indexOfSignal("bottomPaddingChanged()");
         const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessChanged()");
-        const int touchingWindowSignal = rootObject->metaObject()->indexOfSignal("touchingWindowChanged()");
+        const int touchingActiveWindowSignal = rootObject->metaObject()->indexOfSignal("touchingActiveWindowChanged()");
 
         if (paddingSignal >= 0) {
             connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(updatePadding()));
@@ -1448,10 +1448,10 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(panelMaskChanged()), this, SLOT(updateMask()));
             updateMask();
         }
-        if (touchingWindowSignal >= 0) {
-            connect(rootObject, SIGNAL(touchingWindowChanged()), this, SLOT(updateTouchingWindow()));
+        if (touchingActiveWindowSignal >= 0) {
+            connect(rootObject, SIGNAL(touchingActiveWindowChanged()), this, SLOT(updateTouchingActiveWindow()));
         }
-        updateTouchingWindow();
+        updateTouchingActiveWindow();
     }
 }
 
@@ -1510,12 +1510,12 @@ void PanelView::showTemporarily()
     t->start();
 }
 
-void PanelView::updateTouchingWindow()
+void PanelView::updateTouchingActiveWindow()
 {
     if (!rootObject()) {
         return;
     }
-    m_touchingWindow = rootObject()->property("touchingWindow").toBool();
+    m_touchingActiveWindow = rootObject()->property("touchingActiveWindow").toBool();
     restoreAutoHide();
 }
 

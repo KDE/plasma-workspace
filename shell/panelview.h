@@ -270,7 +270,7 @@ private Q_SLOTS:
     void updatePadding();
     void updateFloating();
     void updateShadows();
-    void updateTouchingWindow();
+    void updateTouchingActiveWindow();
 
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
@@ -302,7 +302,7 @@ private:
     bool m_floating;
     bool m_containsMouse = false;
     bool m_fakeEventPending = false;
-    bool m_touchingWindow = false;
+    bool m_touchingActiveWindow = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView = 0;
