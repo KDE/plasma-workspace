@@ -99,6 +99,50 @@ KCM.SimpleKCM {
             wrapMode: Text.WordWrap
         }
 
+        DayNightView {
+            Layout.margins: Kirigami.Units.smallSpacing
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 30
+            Layout.alignment: Qt.AlignCenter
+
+            readonly property real latitude: kcm.nightColorSettings.mode === NightColorMode.Location
+                ? kcm.nightColorSettings.latitudeFixed
+                : (locator?.locatingDone) ? locator.latitude : kcm.nightColorSettings.latitudeAuto
+            readonly property real longitude: kcm.nightColorSettings.mode === NightColorMode.Location
+                ? kcm.nightColorSettings.longitudeFixed
+                : (locator?.locatingDone) ? locator.longitude : kcm.nightColorSettings.longitudeAuto
+
+            readonly property var morningTimings: sunCalc.getMorningTimings(latitude, longitude)
+            readonly property var eveningTimings: sunCalc.getEveningTimings(latitude, longitude)
+
+            enabled: kcm.nightColorSettings.active
+
+            dayTemperature: kcm.nightColorSettings.dayTemperature
+            nightTemperature: kcm.nightColorSettings.nightTemperature
+
+            alwaysOn: kcm.nightColorSettings.mode === NightColorMode.Constant
+            dayTransitionOn: kcm.nightColorSettings.mode === NightColorMode.Timings
+                ? minutesForFixed(kcm.nightColorSettings.morningBeginFixed)
+                : minutesForDate(morningTimings.begin)
+            dayTransitionOff: kcm.nightColorSettings.mode === NightColorMode.Timings
+                ? (minutesForFixed(kcm.nightColorSettings.morningBeginFixed) + kcm.nightColorSettings.transitionTime) % 1440
+                : minutesForDate(morningTimings.end)
+            nightTransitionOn: kcm.nightColorSettings.mode === NightColorMode.Timings
+                ? minutesForFixed(kcm.nightColorSettings.eveningBeginFixed)
+                : minutesForDate(eveningTimings.begin)
+            nightTransitionOff: kcm.nightColorSettings.mode === NightColorMode.Timings
+                ? (minutesForFixed(kcm.nightColorSettings.eveningBeginFixed) + kcm.nightColorSettings.transitionTime) % 1440
+                : minutesForDate(eveningTimings.end)
+
+            function minutesForFixed(dateString) {
+                // The fixed timings format is "hhmm"
+                const hours = parseInt(dateString.substring(0, 2), 10)
+                const mins = parseInt(dateString.substring(2, 4), 10)
+                return hours * 60 + mins
+            }
+        }
+
+
         Kirigami.FormLayout {
             id: parentLayout
 
@@ -398,35 +442,19 @@ KCM.SimpleKCM {
             enabled: kcm.nightColorSettings.active
         }
 
-        // Show start/end times in automatic and manual location modes
         Item {
-            visible: kcm.nightColorSettings.mode === NightColorMode.Automatic || kcm.nightColorSettings.mode === NightColorMode.Location
-                && kcm.nightColorSettings.active
+            visible: kcm.nightColorSettings.active
+                && kcm.nightColorSettings.mode === NightColorMode.Automatic
+                && (!locator || !root.doneLocating)
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.fillWidth: true
-            implicitHeight: Math.max(loadingPlaceholder.implicitHeight, timings.implicitHeight)
+            implicitHeight: loadingPlaceholder.implicitHeight
 
             Kirigami.LoadingPlaceholder {
                 id: loadingPlaceholder
-                visible: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
+
                 text: i18nc("@info:placeholder", "Locating…")
                 anchors.centerIn: parent
-            }
-
-            TimingsView {
-                id: timings
-                anchors {
-                    top: parent.top
-                    left: parent.left
-                    right: parent.right
-                }
-                visible: kcm.nightColorSettings.mode === NightColorMode.Location ||
-                    (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
-                enabled: kcm.nightColorSettings.active
-                latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && locator ? locator.latitude : kcm.nightColorSettings.latitudeFixed
-                longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && locator ? locator.longitude : kcm.nightColorSettings.longitudeFixed
             }
         }
     }
