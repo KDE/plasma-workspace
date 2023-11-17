@@ -199,6 +199,7 @@
         "Name[zh_TW]": "鎖定/登出",
         "Website": "https://www.kde.org/plasma-desktop"
     },
+    "X-Plasma-API-Minimum-Version": "6.0",
     "Keywords": "Lock;Logout;Sleep;Hibernate;Switch User;",
     "Keywords[ar]": "اقفل;اخرج;نم;أسبت;بدل المستخدم;",
     "Keywords[ast]": "Bloquiar;Bloquéu;Suspender;Suspensión;Dormir;Dormición;Ivernar;Ivernación;Hibernar;Hibernación;Cambiar d'usuariu;Cambéu d'usuariu;Cambéu d'usuarios;",

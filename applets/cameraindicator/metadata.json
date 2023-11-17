@@ -91,5 +91,6 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "Keywords": "Camera;WebCam;Indicator;Privacy;",
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "Hardware"
 }

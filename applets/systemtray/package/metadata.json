@@ -157,5 +157,6 @@
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "NoDisplay": true,
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-ContainmentType": "CustomEmbedded"
 }

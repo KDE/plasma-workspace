@@ -169,5 +169,6 @@
         "Name[zh_CN]": "全局菜单",
         "Name[zh_TW]": "全域選單",
         "Website": "https://kde.org/plasma-desktop"
-    }
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
 }

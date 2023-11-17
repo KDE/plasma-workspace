@@ -196,6 +196,7 @@
     "Keywords[zh_TW]": "Power Management;Battery;System;Energy;",
     "X-Plasma-DBusActivationService": "org.kde.Solid.PowerManagement",
     "X-Plasma-NotificationAreaCategory": "Hardware",
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-Provides": [
         "org.kde.plasma.powermanagement"
     ]

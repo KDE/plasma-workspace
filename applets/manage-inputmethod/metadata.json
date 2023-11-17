@@ -166,5 +166,6 @@
         "Name[zh_TW]": "輸入法",
         "Website": "https://www.kde.org/plasma-desktop"
     },
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }

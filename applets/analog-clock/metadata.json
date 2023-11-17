@@ -205,6 +205,7 @@
         "Name[zh_TW]": "類比時鐘",
         "Website": "https://userbase.kde.org/Plasma/Clocks"
     },
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-Provides": [
         "org.kde.plasma.time",
         "org.kde.plasma.date"

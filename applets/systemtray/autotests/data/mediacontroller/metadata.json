@@ -22,5 +22,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
     ],
+    "X-Plasma-API-Minimum-Version": "6.0",
     "KPackageStructure": "Plasma/Applet"
 }
