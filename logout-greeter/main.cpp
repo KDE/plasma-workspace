@@ -55,20 +55,6 @@ int main(int argc, char *argv[])
             qputenv("PLASMA_SESSION_GUI_TEST", "1");
         }
     }
-
-    // because we export stuff as horrific contextProperties we need to know "maysd" may shutdown, at the time of initial creation and can't update
-    // later.
-    // Force the backend to load everything now, then the shared backend will be cached when a new object is created later
-
-    // TODO Plasma 6, just have the greeter QML import and use the SessionManagement object directly
-    // We don't need any special slot handling in ShutdownDlg
-    SessionManagement m_session;
-    if (m_session.state() == SessionManagement::State::Loading) {
-        QEventLoop e;
-        QObject::connect(&m_session, &SessionManagement::stateChanged, &e, &QEventLoop::quit);
-        e.exec();
-    }
-
     const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
 
     if (!pkg.isValid()) {

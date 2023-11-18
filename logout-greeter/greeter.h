@@ -31,8 +31,6 @@ public:
     void init();
     void enableWindowed();
 
-    bool eventFilter(QObject *watched, QEvent *event) override;
-
 public Q_SLOTS:
     void promptLogout();
     void promptShutDown();
@@ -40,12 +38,11 @@ public Q_SLOTS:
 
 private:
     void adoptScreen(QScreen *screen);
-    void rejected();
     void setupWaylandIntegration();
 
     bool m_running = false;
 
-    KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    QString m_defaultAction;
     QList<KSMShutdownDlg *> m_dialogs;
     bool m_windowed = false;
     KPackage::Package m_package;

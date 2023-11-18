@@ -11,6 +11,7 @@
 
 #include <QApplication>
 #include <QDebug>
+#include <QQmlEngine>
 #include <QScreen>
 
 #include "shutdowndlg.h"
@@ -65,7 +66,7 @@ void Greeter::adoptScreen(QScreen *screen)
         return;
     }
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, screen);
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_defaultAction, screen);
     w->setWindowed(m_windowed);
     w->installEventFilter(this);
     m_dialogs << w;
@@ -74,37 +75,11 @@ void Greeter::adoptScreen(QScreen *screen)
         m_dialogs.removeOne(w);
         w->deleteLater();
     });
-    connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
 
-    connect(w, &KSMShutdownDlg::accepted, this, []() {
-        QApplication::exit(1);
-    });
+    connect(w->engine().get(), &QQmlEngine::quit, qApp, &QCoreApplication::quit, Qt::QueuedConnection);
 
     w->setGeometry(screen->geometry());
     w->init(m_package);
-}
-
-void Greeter::rejected()
-{
-    QApplication::exit(1);
-}
-
-bool Greeter::eventFilter(QObject *watched, QEvent *event)
-{
-    if (qobject_cast<KSMShutdownDlg *>(watched)) {
-        if (event->type() == QEvent::MouseButtonPress) {
-            // check that the position is on no window
-            QMouseEvent *me = static_cast<QMouseEvent *>(event);
-            if (std::any_of(m_dialogs.cbegin(), m_dialogs.cend(), [me](KSMShutdownDlg *dialog) {
-                    return dialog->geometry().contains(me->globalPosition().toPoint());
-                })) {
-                return false;
-            }
-            // click outside, close
-            rejected();
-        }
-    }
-    return false;
 }
 
 void Greeter::promptLogout()
@@ -112,7 +87,7 @@ void Greeter::promptLogout()
     if (m_running) {
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    m_defaultAction = QStringLiteral("logout");
     init();
 }
 
@@ -121,7 +96,7 @@ void Greeter::promptShutDown()
     if (m_running) {
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    m_defaultAction = QStringLiteral("shutdown");
     init();
 }
 
@@ -130,6 +105,6 @@ void Greeter::promptReboot()
     if (m_running) {
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    m_defaultAction = QStringLiteral("reboot");
     init();
 }

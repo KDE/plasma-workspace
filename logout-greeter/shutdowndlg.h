@@ -11,8 +11,6 @@
 #include <QScreen>
 
 #include <PlasmaQuick/QuickViewSharedEngine>
-#include <kworkspace.h>
-#include <sessionmanagement.h>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -23,7 +21,7 @@ class KSMShutdownDlg : public PlasmaQuick::QuickViewSharedEngine
     Q_OBJECT
 
 public:
-    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen);
+    KSMShutdownDlg(QWindow *parent, const QString &defaultAction, QScreen *screen);
 
     void setWindowed(bool windowed)
     {
@@ -32,27 +30,9 @@ public:
     void init(const KPackage::Package &package);
     bool result() const;
 
-public Q_SLOTS:
-    void accept();
-    void reject();
-    void slotLogout();
-    void slotHalt();
-    void slotReboot();
-    void slotReboot(int);
-    void slotSuspend(int);
-    void slotLockScreen();
-
-Q_SIGNALS:
-    void accepted();
-    void rejected();
-
 protected:
     void resizeEvent(QResizeEvent *e) override;
 
 private:
     bool m_windowed = false;
-    QString m_bootOption;
-    QStringList rebootOptions;
-    bool m_result : 1;
-    SessionManagement m_session;
 };

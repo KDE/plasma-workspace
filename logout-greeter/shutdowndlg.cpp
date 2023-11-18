@@ -51,9 +51,8 @@ static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
-KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen)
+KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, const QString &defaultAction, QScreen *screen)
     : QuickViewSharedEngine(parent)
-    , m_result(false)
 // this is a WType_Popup on purpose. Do not change that! Not
 // having a popup here has severe side effects.
 {
@@ -92,23 +91,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     // QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     // windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     QQmlContext *context = rootContext();
-    context->setContextProperty(QStringLiteral("maysd"), m_session.canShutdown());
-    context->setContextProperty(QStringLiteral("sdtype"), sdtype);
-
-    QQmlPropertyMap *mapShutdownType = new QQmlPropertyMap(this);
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeDefault"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeDefault));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeNone"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeNone));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeReboot"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeReboot));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeHalt"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeHalt));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeLogout"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeLogout));
-    context->setContextProperty(QStringLiteral("ShutdownType"), mapShutdownType);
-
-    QQmlPropertyMap *mapSpdMethods = new QQmlPropertyMap(this);
-    mapSpdMethods->insert(QStringLiteral("StandbyState"), m_session.canSuspend());
-    mapSpdMethods->insert(QStringLiteral("SuspendState"), m_session.canSuspend());
-    mapSpdMethods->insert(QStringLiteral("HibernateState"), m_session.canHibernate());
-    context->setContextProperty(QStringLiteral("spdMethods"), mapSpdMethods);
-    context->setContextProperty(QStringLiteral("canLogout"), m_session.canLogout());
+    context->setContextProperty(QStringLiteral("defaultAction"), defaultAction);
 
     // Trying to access a non-existent context property throws an error, always create the property and then update it later
     context->setContextProperty("rebootToFirmwareSetup", false);
@@ -125,20 +108,6 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
             context->setContextProperty("rebootToFirmwareSetup", true);
         }
     });
-
-    // TODO KF6 remove, used to read "BootManager" from kdmrc
-    context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
-
-    // TODO KF6 remove. Unused
-    context->setContextProperty(QStringLiteral("choose"), false);
-
-    // TODO KF6 remove, used to call KDisplayManager::bootOptions
-    QStringList rebootOptions;
-    int def = 0;
-    QQmlPropertyMap *rebootOptionsMap = new QQmlPropertyMap(this);
-    rebootOptionsMap->insert(QStringLiteral("options"), QVariant::fromValue(rebootOptions));
-    rebootOptionsMap->insert(QStringLiteral("default"), QVariant::fromValue(def));
-    context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
 
     // engine stuff
     engine()->rootContext()->setContextObject(new KLocalizedContext(engine().get()));
@@ -161,14 +130,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     if (!errors().isEmpty()) {
         qCWarning(LOGOUT_GREETER) << errors();
     }
-
-    connect(rootObject(), SIGNAL(logoutRequested()), SLOT(slotLogout()));
-    connect(rootObject(), SIGNAL(haltRequested()), SLOT(slotHalt()));
-    connect(rootObject(), SIGNAL(suspendRequested(int)), SLOT(slotSuspend(int)));
-    connect(rootObject(), SIGNAL(rebootRequested()), SLOT(slotReboot()));
-    connect(rootObject(), SIGNAL(rebootRequested2(int)), SLOT(slotReboot(int)));
-    connect(rootObject(), SIGNAL(cancelRequested()), SLOT(reject()));
-    connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
 
     connect(screen(), &QScreen::geometryChanged, this, [this] {
         setGeometry(screen()->geometry());
@@ -205,65 +166,4 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
     } else {
         //        setMask(m_view->mask());
     }
-}
-
-void KSMShutdownDlg::slotLogout()
-{
-    m_session.requestLogout(SessionManagement::ConfirmationMode::Skip);
-    accept();
-}
-
-void KSMShutdownDlg::slotReboot()
-{
-    // no boot option selected -> current
-    m_bootOption.clear();
-    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
-    accept();
-}
-
-void KSMShutdownDlg::slotReboot(int opt)
-{
-    if (int(rebootOptions.size()) > opt)
-        m_bootOption = rebootOptions[opt];
-    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
-    accept();
-}
-
-void KSMShutdownDlg::slotLockScreen()
-{
-    m_bootOption.clear();
-    m_session.lock();
-    reject();
-}
-
-void KSMShutdownDlg::slotHalt()
-{
-    m_bootOption.clear();
-    m_session.requestShutdown(SessionManagement::ConfirmationMode::Skip);
-    accept();
-}
-
-void KSMShutdownDlg::slotSuspend(int spdMethod)
-{
-    m_bootOption.clear();
-    switch (spdMethod) {
-    case 1: // Solid::PowerManagement::StandbyState:
-    case 2: // Solid::PowerManagement::SuspendState:
-        m_session.suspend();
-        break;
-    case 4: // Solid::PowerManagement::HibernateState:
-        m_session.hibernate();
-        break;
-    }
-    reject();
-}
-
-void KSMShutdownDlg::accept()
-{
-    Q_EMIT accepted();
-}
-
-void KSMShutdownDlg::reject()
-{
-    Q_EMIT rejected();
 }

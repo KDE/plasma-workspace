@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+    SPDX-FileCopyrightText: 2023 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -21,39 +22,13 @@ Item {
     id: root
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-    height: screenGeometry.height
-    width: screenGeometry.width
-
-    signal logoutRequested()
-    signal haltRequested()
-    signal suspendRequested(int spdMethod)
-    signal rebootRequested()
-    signal rebootRequested2(int opt)
-    signal cancelRequested()
-    signal lockScreenRequested()
 
     property alias backgroundColor: backgroundRect.color
 
-    function sleepRequested() {
-        root.suspendRequested(2);
-    }
-
-    function hibernateRequested() {
-        root.suspendRequested(4);
-    }
-
     property real timeout: 30
     property real remainingTime: root.timeout
-    property var currentAction: {
-        switch (sdtype) {
-            case ShutdownType.ShutdownTypeReboot:
-                return root.rebootRequested;
-            case ShutdownType.ShutdownTypeHalt:
-                return root.haltRequested;
-            default:
-                return root.logoutRequested;
-        }
-    }
+
+    property var currentAction
 
     KCoreAddons.KUser {
         id: kuser
@@ -65,8 +40,12 @@ Item {
         includeUnusedSessions: false
     }
 
+    SessionManagement {
+        id: sessionManagement
+    }
+
     QQC2.Action {
-        onTriggered: root.cancelRequested()
+        onTriggered: Qt.quit()
         shortcut: "Escape"
     }
 
@@ -89,6 +68,23 @@ Item {
         }
     }
 
+    Component.onCompleted: {
+        switch (defaultAction) {
+        case "reboot":
+            rebootButton.focus = true;
+            root.currentAction = rebootButton.action;
+            break;
+        case "shutdown":
+            shutdownButton.focus = true;
+            root.currentAction = shutdownButton.action;
+            break;
+        default:
+            logoutButton.focus = true;
+            root.currentAction = logoutButton.action;
+            break;
+        }
+    }
+
     function isLightColor(color) {
         return Math.max(color.r, color.g, color.b) > 0.5
     }
@@ -102,7 +98,7 @@ Item {
     }
     MouseArea {
         anchors.fill: parent
-        onClicked: root.cancelRequested()
+        onClicked: Qt.quit
     }
     UserDelegate {
         width: Kirigami.Units.gridUnit * 8
@@ -163,54 +159,65 @@ Item {
                 id: suspendButton
                 iconSource: "system-suspend"
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                action: root.sleepRequested
-                KeyNavigation.left: logoutButton
+                action: function() {
+                    sessionManagement.suspend();
+                    Qt.quit();
+                }                KeyNavigation.left: logoutButton
                 KeyNavigation.right: hibernateButton
                 KeyNavigation.down: okButton
-                visible: spdMethods.SuspendState
+                visible: sessionManagement.canSuspend
             }
             LogoutButton {
                 id: hibernateButton
                 iconSource: "system-suspend-hibernate"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
-                action: root.hibernateRequested
+                action: function() {
+                    sessionManagement.hibernate();
+                    Qt.quit();
+                }
                 KeyNavigation.left: suspendButton
                 KeyNavigation.right: rebootButton
                 KeyNavigation.down: okButton
-                visible: spdMethods.HibernateState
+                visible: sessionManagement.canHibernate
             }
             LogoutButton {
                 id: rebootButton
                 iconSource: "system-reboot"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                action: root.rebootRequested
+                action: function() {
+                    sessionManagement.requestReboot(SessionManagement.Skip);
+                    Qt.quit();
+                }
                 KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
                 KeyNavigation.down: okButton
-                focus: sdtype === ShutdownType.ShutdownTypeReboot
-                visible: maysd
+                visible: sessionManagement.canReboot
             }
             LogoutButton {
                 id: shutdownButton
                 iconSource: "system-shutdown"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                action: root.haltRequested
+                action: function() {
+                    sessionManagement.requestShutdown(SessionManagement.Skip);
+                    Qt.quit();
+                }
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: logoutButton
                 KeyNavigation.down: okButton
-                focus: sdtype === ShutdownType.ShutdownTypeHalt
-                visible: maysd
+                visible: sessionManagement.canShutdown
             }
             LogoutButton {
                 id: logoutButton
                 iconSource: "system-log-out"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out")
-                action: root.logoutRequested
+                action: function() {
+                    sessionManagement.requestLogout(SessionManagement.Skip);
+                    Qt.quit();
+                }
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
                 KeyNavigation.down: okButton
-                focus: sdtype === ShutdownType.ShutdownTypeNone
-                visible: canLogout
+                visible: sessionManagement.canLogout
             }
         }
 
@@ -226,10 +233,10 @@ Item {
                 }
             }
             text: {
-                switch (sdtype) {
-                    case ShutdownType.ShutdownTypeReboot:
+                switch (defaultAction) {
+                    case "reboot":
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
-                    case ShutdownType.ShutdownTypeHalt:
+                    case "shutdown":
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
                     default:
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Logging out in 1 second", "Logging out in %1 seconds", root.remainingTime);
@@ -245,9 +252,9 @@ Item {
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
-                onClicked: root.currentAction()
-                Keys.onEnterPressed: root.currentAction()
-                Keys.onReturnPressed: root.currentAction()
+                onClicked: root.currentAction.action()
+                Keys.onEnterPressed: root.currentAction.action()
+                Keys.onReturnPressed: root.currentAction.action()
                 KeyNavigation.left: cancelButton
                 KeyNavigation.right: cancelButton
                 KeyNavigation.up: suspendButton
@@ -257,9 +264,9 @@ Item {
                 implicitWidth: Kirigami.Units.gridUnit * 6
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
-                onClicked: root.cancelRequested()
-                Keys.onEnterPressed: root.cancelRequested()
-                Keys.onReturnPressed: root.cancelRequested()
+                onClicked: Qt.quit()
+                Keys.onEnterPressed: Qt.quit
+                Keys.onReturnPressed: Qt.quit
                 KeyNavigation.left: okButton
                 KeyNavigation.right: okButton
                 KeyNavigation.up: suspendButton
