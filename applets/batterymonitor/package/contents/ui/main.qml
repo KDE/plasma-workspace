@@ -116,19 +116,30 @@ PlasmoidItem {
     signal activateProfileRequested(string profile)
     onActivateProfileRequested: profile => {
         if (profile === actuallyActiveProfile) {
+            showPowerProfileOsd(profile);
             return;
         }
         const service = pmSource.serviceForSource("PowerDevil");
         const op = service.operationDescription("setPowerProfile");
         op.profile = profile;
-
         const job = service.startOperationCall(op);
         job.finished.connect(job => {
-            if (!job.result) {
+            if (job.result) {
+                showPowerProfileOsd(profile);
+            } else {
                 powerProfileError.text = i18n("Failed to activate %1 mode", profile);
                 powerProfileError.sendEvent();
             }
         });
+    }
+    function showPowerProfileOsd(profile) {
+        if (batterymonitor.expanded) {
+            return; // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
+        }
+        const service = pmSource.serviceForSource("PowerDevil");
+        const op = service.operationDescription("showPowerProfileOsd");
+        op.profile = profile;
+        const job = service.startOperationCall(op);
     }
     Notification {
         id: powerProfileError

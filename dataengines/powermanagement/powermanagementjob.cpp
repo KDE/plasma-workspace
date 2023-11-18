@@ -147,6 +147,13 @@ void PowerManagementJob::start()
             },
             this);
         return;
+    } else if (operation == QLatin1String("showPowerProfileOsd")) {
+        QDBusMessage osdMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                             QStringLiteral("/org/kde/osdService"),
+                                                             QStringLiteral("org.kde.osdService"),
+                                                             QStringLiteral("powerProfileChanged"));
+        osdMsg << parameters().value(QStringLiteral("profile")).toString();
+        QDBusConnection::sessionBus().call(osdMsg);
     }
 
     qDebug() << "don't know what to do with " << operation;
