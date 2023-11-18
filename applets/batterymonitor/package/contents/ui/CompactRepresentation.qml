@@ -35,9 +35,6 @@ MouseArea {
     Accessible.description: `${toolTipMainText}; ${toolTipSubText}`
     Accessible.role: Accessible.Button
 
-    onPressed: wasExpanded = batterymonitor.expanded
-    onClicked: batterymonitor.expanded = !wasExpanded
-
     // "No Batteries" case
     Kirigami.Icon {
         anchors.fill: parent

@@ -113,6 +113,28 @@ PlasmoidItem {
         return iconName + symbolicSuffix;
     }
 
+    signal inhibitionChangeRequested(bool inhibit)
+    onInhibitionChangeRequested: inhibit => {
+        const service = pmSource.serviceForSource("PowerDevil");
+        if (inhibit) {
+            const reason = i18n("The battery applet has enabled system-wide inhibition");
+            const op1 = service.operationDescription("beginSuppressingSleep");
+            op1.reason = reason;
+            const op2 = service.operationDescription("beginSuppressingScreenPowerManagement");
+            op2.reason = reason;
+
+            const job1 = service.startOperationCall(op1);
+            const job2 = service.startOperationCall(op2);
+        } else {
+            const op1 = service.operationDescription("stopSuppressingSleep");
+            const op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
+
+            const job1 = service.startOperationCall(op1);
+            const job2 = service.startOperationCall(op2);
+        }
+        Logic.updateInhibitions(batterymonitor, pmSource);
+    }
+
     signal activateProfileRequested(string profile)
     onActivateProfileRequested: profile => {
         if (profile === actuallyActiveProfile) {
@@ -218,7 +240,9 @@ PlasmoidItem {
         } // otherwise, don't add anything
 
         if (powermanagementDisabled) {
-            parts.push(i18n("Automatic sleep and screen locking are disabled"));
+            parts.push(i18n("Automatic sleep and screen locking are disabled; middle-clik to re-enable"));
+        } else {
+            parts.push(i18n("Middle-click to disable automatic sleep and screen locking"));
         }
 
         if (isSomehowInPerformanceMode) {
@@ -266,6 +290,17 @@ PlasmoidItem {
         isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || batterymonitor.isManuallyInPowerSaveMode
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
 
+        acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+        property bool wasExpanded: false
+        onPressed: wasExpanded = batterymonitor.expanded
+        onClicked: mouse => {
+            if (mouse.button == Qt.MiddleButton) {
+                batterymonitor.inhibitionChangeRequested(!batterymonitor.powermanagementDisabled);
+            } else {
+                batterymonitor.expanded = !wasExpanded;
+            }
+        }
+
         onWheel: wheel => {
             let profiles = batterymonitor.profiles;
             if (!profiles) {
@@ -310,26 +345,6 @@ PlasmoidItem {
         degradationReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Degraded Reason"] || "") : ""
         profileHolds: batterymonitor.activeProfileHolds
 
-        onInhibitionChangeRequested: inhibit => {
-            const service = pmSource.serviceForSource("PowerDevil");
-            if (inhibit) {
-                const reason = i18n("The battery applet has enabled system-wide inhibition");
-                const op1 = service.operationDescription("beginSuppressingSleep");
-                op1.reason = reason;
-                const op2 = service.operationDescription("beginSuppressingScreenPowerManagement");
-                op2.reason = reason;
-
-                const job1 = service.startOperationCall(op1);
-                const job2 = service.startOperationCall(op2);
-            } else {
-                const op1 = service.operationDescription("stopSuppressingSleep");
-                const op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
-
-                const job1 = service.startOperationCall(op1);
-                const job2 = service.startOperationCall(op2);
-            }
-            Logic.updateInhibitions(batterymonitor, pmSource);
-        }
         onPowerManagementChanged: disabled => {
             batterymonitor.powermanagementDisabled = disabled
         }

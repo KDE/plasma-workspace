@@ -62,7 +62,7 @@ PlasmaExtras.Representation {
             pluggedIn: dialog.pluggedIn
 
             onInhibitionChangeRequested: inhibit => {
-                dialog.inhibitionChangeRequested(inhibit);
+                batterymonitor.inhibitionChangeRequested(inhibit);
             }
 
             onDisabledChanged: dialog.powerManagementChanged(disabled)
