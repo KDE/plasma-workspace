@@ -207,7 +207,7 @@ QString JobPrivate::text() const
 
         if (!destUrlString.isEmpty()) {
             const QString currentFileName = url.fileName().toHtmlEscaped();
-            if (!currentFileName.isEmpty()) {
+            if (!currentFileName.isEmpty() && currentFileName != QLatin1Char('.')) {
                 return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
             } else {
                 if (m_totalItems) {
