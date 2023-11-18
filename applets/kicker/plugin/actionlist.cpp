@@ -418,9 +418,7 @@ QVariantList appstreamActions(const KService::Ptr &service)
 
     // Don't show action if we can't find any app to handle appstream:// URLs.
     if (!appStreamHandler) {
-        if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream")) || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
-            return {};
-        }
+        return {};
     }
 
     QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons…"),
