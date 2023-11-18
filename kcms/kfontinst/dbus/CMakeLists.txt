@@ -13,7 +13,7 @@ target_link_libraries(fontinst_bin
                       Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst)
 
 set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
-target_link_libraries(fontinst_helper Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst Qt::Core5Compat)
+target_link_libraries(fontinst_helper Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst)
 
 ecm_qt_declare_logging_category(fontinst_bin
     HEADER kfontinst_debug.h
