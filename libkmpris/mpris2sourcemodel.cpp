@@ -371,7 +371,7 @@ void Mpris2SourceModel::onInitialFetchFinished(PlayerContainer *container)
 
 void Mpris2SourceModel::onInitialFetchFailed(PlayerContainer *container)
 {
-    qCWarning(MPRIS2) << "Failed to find a working MPRIS2 interface for" << container->dbusAddress();
+    qCDebug(MPRIS2) << "Failed to find a working MPRIS2 interface for" << container->dbusAddress();
     const auto erased = m_pendingContainers.erase(container->objectName());
     Q_ASSERT_X(erased == 1, Q_FUNC_INFO, qUtf8Printable(container->objectName()));
     delete container;
@@ -405,6 +405,7 @@ void Mpris2SourceModel::removeMediaPlayer(const QString &sourceName)
         auto pendingIt = m_pendingContainers.find(sourceName);
         if (pendingIt == m_pendingContainers.end()) [[unlikely]] {
             // This can happen when a player appears and disappears on DBus before the service list is fetched
+            // or a player is invalid (like lacking identity)
             return;
         }
         delete pendingIt->second;

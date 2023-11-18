@@ -25,7 +25,7 @@ from gi.repository import Gio, GLib
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from utils.mediaplayer import (Mpris2, read_base_properties, read_player_metadata, read_player_properties)
+from utils.mediaplayer import (InvalidMpris2, Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
 if "KDECI_BUILD" not in os.environ:
     CMAKE_INSTALL_PREFIX: Final = os.environ.get("CMAKE_INSTALL_PREFIX", os.path.join(pathlib.Path.home(), "kde", "usr"))
@@ -83,8 +83,9 @@ class MediaControllerTests(unittest.TestCase):
     def tearDown(self) -> None:
         if not self._outcome.result.wasSuccessful():
             self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
-        self.mpris_interface.quit()
-        self.mpris_interface = None
+        if self.mpris_interface is not None:
+            self.mpris_interface.quit()
+            self.mpris_interface = None
         WebDriverWait(self.driver, 5, 0.2).until(EC.presence_of_element_located((AppiumBy.NAME, "No media playing")))
 
     @classmethod
@@ -388,6 +389,19 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))  # Confirm the backend does not crash
 
         self._cleanup_filter_plasma_browser_integration()
+
+    def test_bug477144_invalid_player(self) -> None:
+        """
+        Do not crash when a player is invalid or its DBus interface returns any errors on initialization
+        @see https://bugs.kde.org/show_bug.cgi?id=477144
+        """
+        if self.mpris_interface is not None:
+            self.mpris_interface.quit()
+
+        placeholder_element: WebElement = self.driver.find_element(AppiumBy.NAME, "No media playing")
+        self.mpris_interface = InvalidMpris2()
+        self.assertTrue(self.mpris_interface.registered_event.wait(10))
+        self.assertTrue(placeholder_element.is_displayed())
 
 
 if __name__ == '__main__':

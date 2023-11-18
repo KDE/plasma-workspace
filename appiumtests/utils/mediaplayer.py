@@ -9,6 +9,7 @@
 # For FreeBSD CI which only has python 3.9
 from __future__ import annotations
 
+import logging
 import json
 import signal
 import sys
@@ -98,7 +99,6 @@ class Mpris2:
     __connection: Gio.DBusConnection | None = None
 
     def __init__(self, metadata: list[dict[str, GLib.Variant]], base_properties: dict[str, GLib.Variant], player_properties: dict[str, GLib.Variant], current_index: int) -> None:
-        assert len(metadata) > 0
         self.metadata: list[dict[str, GLib.Variant]] = metadata
         self.base_properties: dict[str, GLib.Variant] = base_properties
         self.player_properties: dict[str, GLib.Variant] = player_properties
@@ -116,6 +116,8 @@ class Mpris2:
         self.__base_reg_id: int = 0
 
     def quit(self) -> None:
+        if self.__connection is None:
+            return
         Gio.bus_unown_name(self.__owner_id)
         self.__connection.unregister_object(self.__prop_reg_id)
         self.__prop_reg_id = 0
@@ -124,7 +126,7 @@ class Mpris2:
         self.__connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
         GLibMainLoopThread.process_events()  # Otherwise flaky
-        print("Player exit")
+        logging.info("Player exit")
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:
         """
@@ -151,7 +153,6 @@ class Mpris2:
         assert self.__base_reg_id != 0
 
         print("MPRIS registered", file=sys.stderr, flush=True)
-        sys.stdout.flush()
         self.registered_event.set()
 
     def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
@@ -173,7 +174,7 @@ class Mpris2:
 
             print(f"Get: {interface} {property_name} {ret}", file=sys.stderr, flush=True)
             # https://bugzilla.gnome.org/show_bug.cgi?id=765603
-            invocation.return_value(GLib.Variant('(v)', [ret]))
+            invocation.return_value(GLib.Variant.new_tuple(ret))
 
         elif method_name == "GetAll":
             interface = parameters[0]
@@ -209,7 +210,8 @@ class Mpris2:
             print(f"Set: {interface} {property_name} {value}", file=sys.stderr, flush=True)
 
         else:
-            invocation.return_value(None)
+            logging.error("Unhandled method: %s", method_name)
+            invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.UNKNOWN_METHOD, f"Unknown method {method_name}")
 
     def set_playing(self, playing: bool, connection: Gio.DBusConnection, object_path: str) -> None:
         """
@@ -338,7 +340,8 @@ class Mpris2:
 
         else:
             # In case the interface adds new methods, fail here for easier discovery
-            assert False, f"{method_name} does not exist"
+            logging.error("%s does not exist", method_name)
+            invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.NOT_SUPPORTED, f"Invalid method {method_name}")
 
     def player_handle_get_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, value: Any):
         """
@@ -367,7 +370,7 @@ class Mpris2:
         elif key == "Volume":
             self.set_volume(value, connection, object_path)
         else:
-            assert False
+            return False
 
         # What is the correct thing to return here on success?  It appears that
         # we need to return something other than None or what would be evaluated
@@ -385,7 +388,8 @@ class Mpris2:
         elif method_name == "Quit":
             print("Quit", file=sys.stderr, flush=True)
         else:
-            assert False, f"method f{method_name} does not exist"
+            logging.error("%s does not exist", method_name)
+            invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.NOT_SUPPORTED, f"Invalid method {method_name}")
 
     def interface_handle_get_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, value: Any):
         """
@@ -404,6 +408,57 @@ class Mpris2:
         assert key in self.base_properties.keys(), f"{key} does not exist"
 
         return True
+
+
+class InvalidMpris2(Mpris2):
+    """
+    MPRIS2 interfaces with invalid responses
+    """
+
+    def __init__(self) -> None:
+        super().__init__([], {}, {}, 0)
+
+    def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+        """
+        @override
+        """
+        invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.NOT_SUPPORTED, "")
+
+    def player_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+        """
+        @override
+        """
+        invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.NOT_SUPPORTED, "")
+
+    def player_handle_get_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, value: Any):
+        """
+        @override
+        """
+        return None
+
+    def player_handle_set_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, key: str, value: Any) -> bool:
+        """
+        @override
+        """
+        return False
+
+    def interface_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+        """
+        @override
+        """
+        invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.NOT_SUPPORTED, "")
+
+    def interface_handle_get_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, value: Any):
+        """
+        @override
+        """
+        return None
+
+    def interface_handle_set_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, key: str, value: Any) -> bool:
+        """
+        @override
+        """
+        return False
 
 
 player: Mpris2
@@ -429,4 +484,4 @@ if __name__ == '__main__':
     loopThread = GLibMainLoopThread()
     loopThread.start()
     player = Mpris2(metadata, base_properties, player_properties, current_index)
-    print(f"Player {base_properties['Identity'].get_string()} started", file=sys.stderr, flush=True)
+    logging.info("Player %s started", base_properties['Identity'].get_string())

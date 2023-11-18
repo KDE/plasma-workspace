@@ -677,8 +677,8 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
     }
 
     if (propsReply.isError()) {
-        qCWarning(MPRIS2) << m_dbusAddress << "does not implement" << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName() << "correctly"
-                          << "Error message was" << propsReply.error().name() << propsReply.error().message();
+        qCDebug(MPRIS2) << m_dbusAddress << "does not implement" << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName() << "correctly"
+                        << "Error message was" << propsReply.error().name() << propsReply.error().message();
         m_fetchesPending = 0;
         Q_EMIT initialFetchFailed(this);
         return;
