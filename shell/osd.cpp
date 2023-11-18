@@ -154,6 +154,23 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
     }
 }
 
+void Osd::powerProfileChanged(const QString &profile)
+{
+    QString icon;
+    QString name;
+    if (profile == QStringLiteral("power-saver")) {
+        icon = QStringLiteral("battery-profile-powersave");
+        name = i18nc("Power profile was changed to power save mode, keep short", "Power Save Mode");
+    } else if (profile == QStringLiteral("balanced")) {
+        icon = QStringLiteral("speedometer");
+        name = i18nc("Power profile was changed to balanced mode, keep short", "Balanced Power Mode");
+    } else if (profile == QStringLiteral("performance")) {
+        icon = QStringLiteral("battery-profile-performance");
+        name = i18nc("Power profile was changed to performance mode, keep short", "Performance Mode");
+    }
+    showText(icon, name);
+}
+
 bool Osd::init()
 {
     if (!m_osdConfigGroup.readEntry("Enabled", true)) {
