@@ -541,12 +541,11 @@ void PlayerContainer::initBindings()
         return QString();
     });
 
-    m_notifiers.reserve(2);
     auto callback = [this] {
         updatePosition();
     };
-    m_notifiers.emplace_back(m_rate.addNotifier(callback));
-    m_notifiers.emplace_back(m_playbackStatus.addNotifier(callback));
+    m_rateNotifier = m_rate.addNotifier(callback);
+    m_playbackStatusNotifier = m_playbackStatus.addNotifier(callback);
 }
 
 void PlayerContainer::updateFromMap(const QVariantMap &map)

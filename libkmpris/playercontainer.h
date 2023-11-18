@@ -328,5 +328,6 @@ private:
     OrgMprisMediaPlayer2PlayerInterface *m_playerIface = nullptr;
     OrgMprisMediaPlayer2Interface *m_rootIface = nullptr;
 
-    std::vector<QPropertyNotifier> m_notifiers;
+    QPropertyNotifier m_rateNotifier;
+    QPropertyNotifier m_playbackStatusNotifier;
 };
