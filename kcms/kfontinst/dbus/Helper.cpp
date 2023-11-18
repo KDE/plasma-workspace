@@ -14,7 +14,6 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDomDocument>
-#include <QTextCodec>
 #include <kio/global.h>
 #include <signal.h>
 #include <sys/errno.h>
@@ -76,7 +75,6 @@ static void cleanup()
 
 Helper::Helper()
 {
-    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
     registerSignalHandler(signalHander);
     qAddPostRoutine(cleanup);
     theFontFolder.init(true, true);

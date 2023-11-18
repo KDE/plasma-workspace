@@ -13,7 +13,6 @@
 #include <QSet>
 #include <QStandardPaths>
 #include <QTemporaryFile>
-#include <QTextCodec>
 #include <QTextStream>
 #include <QUrlQuery>
 #include <ctype.h>
@@ -294,12 +293,6 @@ uint qHash(const KFI::Misc::TFont &key)
 // Taken from qdom.cpp
 QString encodeText(const QString &str, QTextStream &s)
 {
-    // we never explicitly set the codec on the stream, so the locale
-    // default codec is fine here
-    const QTextCodec *const codec = QTextCodec::codecForLocale();
-
-    Q_ASSERT(codec);
-
     QString retval(str);
     int len = retval.length(), i = 0;
 
@@ -323,7 +316,7 @@ QString encodeText(const QString &str, QTextStream &s)
             len += 3;
             i += 4;
         } else {
-            if (codec->canEncode(ati)) {
+            if (ati.isPrint()) {
                 ++i;
             } else {
                 // We have to use a character reference to get it through.

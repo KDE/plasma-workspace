@@ -13,7 +13,6 @@ target_link_libraries(kfontinst
     Qt::Xml
     Qt::Gui
 )
-target_link_libraries(kfontinst PRIVATE Qt::Core5Compat) # for QTextCodec
 
 set_target_properties(kfontinst PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
 
