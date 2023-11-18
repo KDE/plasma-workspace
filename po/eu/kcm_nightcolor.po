@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-18 01:37+0000\n"
 "PO-Revision-Date: 2022-09-10 14:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -66,43 +66,43 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Longitudea:"
 
-#: ui/main.qml:102
+#: ui/main.qml:98
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Argi urdinaren iragazkiak pantailako koloreak epelagoak egiten ditu."
 
-#: ui/main.qml:113
+#: ui/main.qml:109
 #, kde-format
 msgid "Switching times:"
 msgstr "Aldatzeko orduak:"
 
-#: ui/main.qml:115
+#: ui/main.qml:111
 #, kde-format
 msgid "Always off"
 msgstr "Beti itzalita"
 
-#: ui/main.qml:116
+#: ui/main.qml:112
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Iluntzea eta egunsentia uneko kokalekuan"
 
-#: ui/main.qml:117
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Iluntzea eta egunsentia eskuz ezarritako kokalekuan"
 
-#: ui/main.qml:118
+#: ui/main.qml:114
 #, kde-format
 msgid "Custom times"
 msgstr "Norberak finkatutako orduak"
 
-#: ui/main.qml:119
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "Beti gaueko kolorean"
 
-#: ui/main.qml:171
+#: ui/main.qml:167
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -114,19 +114,19 @@ msgstr ""
 "balego), edo<link url='https://location.services.mozilla.com'>Mozillaren "
 "kokapen zerbitzura</link> sareko informazioa bidaliz."
 
-#: ui/main.qml:190
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Day color temperature:"
 msgid "Day light temperature:"
 msgstr "Gaueko kolorearen tenperatura:"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:229 ui/main.qml:288
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:237 ui/main.qml:296
+#: ui/main.qml:233 ui/main.qml:292
 #, fuzzy, kde-format
 #| msgctxt "No blue light filter activated"
 #| msgid "Cool (no filter)"
@@ -134,63 +134,63 @@ msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Freskoa (iragazkirik gabe)"
 
-#: ui/main.qml:243 ui/main.qml:302
+#: ui/main.qml:239 ui/main.qml:298
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Epela"
 
-#: ui/main.qml:249
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Night color temperature:"
 msgid "Night light temperature:"
 msgstr "Gaueko kolorearen tenperatura:"
 
-#: ui/main.qml:313
+#: ui/main.qml:309
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitudea: %1°   Longitudea: %2º"
 
-#: ui/main.qml:323
+#: ui/main.qml:319
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "Gaueko kolorearen hasiera:"
 
-#: ui/main.qml:336 ui/main.qml:359
+#: ui/main.qml:332 ui/main.qml:355
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Sarrerako formatua: HH:MM"
 
-#: ui/main.qml:346
+#: ui/main.qml:342
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "Eguneko kolorearen hasiera:"
 
-#: ui/main.qml:368
+#: ui/main.qml:364
 #, kde-format
 msgid "Transition duration:"
 msgstr "Iragaite iraupena:"
 
-#: ui/main.qml:377
+#: ui/main.qml:373
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "minutu %1"
 msgstr[1] "%1 minutu"
 
-#: ui/main.qml:390
+#: ui/main.qml:386
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Sarrera minututan - txikiena 1, handiena 600"
 
-#: ui/main.qml:408
+#: ui/main.qml:404
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Errorea: Iragaite denbora gainezartzen da."
 
-#: ui/main.qml:430
+#: ui/main.qml:426
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

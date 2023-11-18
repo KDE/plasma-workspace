@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-18 01:37+0000\n"
 "PO-Revision-Date: 2022-09-13 19:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -62,45 +62,45 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "தீர்க்கரேகை:"
 
-#: ui/main.qml:102
+#: ui/main.qml:98
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr ""
 "நீங்கள் தேர்ந்தெடுக்கும் நேரங்களில் காட்சிக் கருவியிலுள்ள நிறங்களை நயமானவையாக "
 "(சிவந்தவையாக) நீல வடிகட்டி மாற்றும்."
 
-#: ui/main.qml:113
+#: ui/main.qml:109
 #, kde-format
 msgid "Switching times:"
 msgstr "மாறும் நேரம்:"
 
-#: ui/main.qml:115
+#: ui/main.qml:111
 #, kde-format
 msgid "Always off"
 msgstr "ஒருபோதும் வேண்டாம்"
 
-#: ui/main.qml:116
+#: ui/main.qml:112
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "தற்போதைய இருப்பிடத்திற்கான சூரிய மறைவும் உதயமும்"
 
-#: ui/main.qml:117
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "தேர்ந்தெடுக்கும் இருப்பிடத்திற்கான சூரிய மறைவும் உதயமும்"
 
-#: ui/main.qml:118
+#: ui/main.qml:114
 #, kde-format
 msgid "Custom times"
 msgstr "விருப்ப நேரங்கள்"
 
-#: ui/main.qml:119
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "எப்போதும் இரவு நிறத்தைப் பயன்படுத்து"
 
-#: ui/main.qml:171
+#: ui/main.qml:167
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -112,19 +112,19 @@ msgstr ""
 "com'>மொசில்லா இருப்பிட சேவைக்கு</link> பிணைய விவரங்களை அனுப்பியோ, இச்சாதனத்தின் "
 "இருப்பிடம் அவ்வப்போது புதுப்பிக்கப்படும்."
 
-#: ui/main.qml:190
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Day color temperature:"
 msgid "Day light temperature:"
 msgstr "பகலுக்கான நிறவெப்பநிலை:"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:229 ui/main.qml:288
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:237 ui/main.qml:296
+#: ui/main.qml:233 ui/main.qml:292
 #, fuzzy, kde-format
 #| msgctxt "No blue light filter activated"
 #| msgid "Cool (no filter)"
@@ -132,63 +132,63 @@ msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "நீலம் (நிறமாற்றம் இல்லாமல்)"
 
-#: ui/main.qml:243 ui/main.qml:302
+#: ui/main.qml:239 ui/main.qml:298
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "சிவப்பு"
 
-#: ui/main.qml:249
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Night color temperature:"
 msgid "Night light temperature:"
 msgstr "இரவுக்கான நிறவெப்பநிலை:"
 
-#: ui/main.qml:313
+#: ui/main.qml:309
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "அட்சரேகை: %1°   தீர்க்கரேகை: %2°"
 
-#: ui/main.qml:323
+#: ui/main.qml:319
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "இரவு நிறத்துக்கு இந்நேரத்தில் மாறு:"
 
-#: ui/main.qml:336 ui/main.qml:359
+#: ui/main.qml:332 ui/main.qml:355
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "உள்ளீட்டு படிவம்: மம:நிநி"
 
-#: ui/main.qml:346
+#: ui/main.qml:342
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "பகல் நிறத்துக்கு இந்நேரத்தில் மாறு:"
 
-#: ui/main.qml:368
+#: ui/main.qml:364
 #, kde-format
 msgid "Transition duration:"
 msgstr "நிலைமாற்றம் நீடிக்கும் காலம்:"
 
-#: ui/main.qml:377
+#: ui/main.qml:373
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 நிமிடம்"
 msgstr[1] "%1 நிமிடங்கள்"
 
-#: ui/main.qml:390
+#: ui/main.qml:386
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "நிமிடங்களாக உள்ளிடவும் - குறைந்தது 1, அதிகபட்சம் 600"
 
-#: ui/main.qml:408
+#: ui/main.qml:404
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "பிழை: நிலைமாற்ற நேரங்கள் முரண்படுகின்றன."
 
-#: ui/main.qml:430
+#: ui/main.qml:426
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

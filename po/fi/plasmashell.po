@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-18 01:37+0000\n"
 "PO-Revision-Date: 2023-08-26 18:51+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "lasse.liehu@gmail.com,translator@legisign.org"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiritoimintojen asetukset"
 
-#: desktopview.cpp:207
+#: desktopview.cpp:219
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Dev"
@@ -42,7 +42,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma %1 kehitysversio"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:222
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -50,7 +50,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma %1 beeta"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:225
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -58,7 +58,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma %1 beeta"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:228
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 #| msgid "KDE Plasma %1 Beta %2"
@@ -66,7 +66,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma %1 beeta %2"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:231
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -74,7 +74,7 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:234
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -82,31 +82,31 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:248
+#: desktopview.cpp:251
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 kehitysversio"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:255
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 beeta"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:258
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 beeta %2"
 
-#: desktopview.cpp:259
+#: desktopview.cpp:262
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:268
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
