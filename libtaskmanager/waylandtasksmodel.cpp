@@ -596,9 +596,28 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             }
         }
 
-        // TODO handle parent change,
-        // migrate to new leader,
-        // or add/remove proper window if it got/lost a leader.
+        if (transients.remove(window)) {
+            if (leader) { // leader change.
+                transients.insert(window, leader);
+            } else { // lost a leader, add to regular windows list.
+                Q_ASSERT(findWindow(window) == windows.end());
+
+                const int count = windows.size();
+                q->beginInsertRows(QModelIndex(), count, count);
+                windows.emplace_back(window);
+                q->endInsertRows();
+            }
+        } else if (leader) { // gained a leader, remove from regular windows list.
+            auto it = findWindow(window);
+            Q_ASSERT(it != windows.end());
+
+            const int row = it - windows.begin();
+            q->beginRemoveRows(QModelIndex(), row, row);
+            windows.erase(it);
+            appDataCache.remove(window);
+            lastActivated.remove(window);
+            q->endRemoveRows();
+        }
     });
 
     QObject::connect(window, &PlasmaWindow::closeableChanged, q, [window, this] {
