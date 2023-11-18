@@ -15,6 +15,7 @@
 
 #include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
+#include <qstringliteral.h>
 
 Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     : QObject(corona)
@@ -152,6 +153,23 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
         showText(QStringLiteral("input-keyboard-virtual-off"),
                  i18nc("on screen keyboard was disabled because physical keyboard was plugged in, keep short", "On-Screen Keyboard Deactivated"));
     }
+}
+
+void Osd::powerProfileChanged(const QString &profile)
+{
+    QString icon;
+    QString name;
+    if (profile == QStringLiteral("power-save")) {
+        icon = QStringLiteral("battery-profile-power-save");
+        name = i18nc("Power profile was changed to power save mode, keep short", "Power Save");
+    } else if (profile == QStringLiteral("balanced")) {
+        icon = QStringLiteral("speedometer");
+        name = i18nc("Power profile was changed to balanced mode, keep short", "Balanced");
+    } else if (profile == QStringLiteral("performance")) {
+        icon = QStringLiteral("battery-profile-performance");
+        name = i18nc("Power profile was changed to performance mode, keep short", "Performance");
+    }
+    showText(icon, name);
 }
 
 bool Osd::init()
