@@ -25,16 +25,28 @@ MouseArea {
 
     property bool showLocalTimezone: Plasmoid.configuration.showLocalTimezone
     property bool showDate: Plasmoid.configuration.showDate
-    property bool localizeDate: Plasmoid.configuration.dateFormat === "longDate" || Plasmoid.configuration.dateFormat === "shortDate"
-    property var dateFormat: {
+    // This is quite convoluted in Qt 6:
+    // Qt.formatDate with locale only accepts Locale.FormatType as format type,
+    // no Qt.DateFormat (ISODate) and no format string.
+    // Locale.toString on the other hand only formats a date *with* time...
+    property var dateFormatter: {
         if (Plasmoid.configuration.dateFormat === "custom") {
-            return Plasmoid.configuration.customDateFormat; // str
-        } else if (Plasmoid.configuration.dateFormat === "longDate") {
-            return Locale.LongFormat; // int
+            Plasmoid.configuration.customDateFormat; // create a binding dependency on this property.
+            return (d) => {
+                return Qt.locale().toString(d, Plasmoid.configuration.customDateFormat);
+            };
         } else if (Plasmoid.configuration.dateFormat === "isoDate") {
-            return Qt.ISODate; // int
-        } else { // "shortDate"
-            return Locale.ShortFormat; // int
+            return (d) => {
+                return Qt.formatDate(d, Qt.ISODate);
+            };
+        } else if (Plasmoid.configuration.dateFormat === "longDate") {
+            return (d) => {
+                return Qt.formatDate(d, Qt.locale(), Locale.LongFormat);
+            };
+        } else {
+            return (d) => {
+                return Qt.formatDate(d, Qt.locale(), Locale.ShortFormat);
+            };
         }
     }
 
@@ -71,7 +83,7 @@ MouseArea {
     Accessible.role: Accessible.Button
     Accessible.onPressAction: main.clicked(null)
 
-    onDateFormatChanged: {
+    onDateFormatterChanged: {
         setupLabels();
     }
 
@@ -661,11 +673,7 @@ MouseArea {
         }
 
         if (main.showDate) {
-            if (main.localizeDate) {
-                dateLabel.text = Qt.formatDate(main.getCurrentTime(), Qt.locale(), main.dateFormat);
-            } else {
-                dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
-            }
+            dateLabel.text = main.dateFormatter(main.getCurrentTime());
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";
