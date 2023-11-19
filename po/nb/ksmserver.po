@@ -155,16 +155,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Log Out"
-#~ msgstr "Logg ut"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Logg ut uten bekreftelse"
-
-#, fuzzy
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Stopp datamaskinen uten bekreftelse"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Start datamaskinen om igjen uten bekreftelse"

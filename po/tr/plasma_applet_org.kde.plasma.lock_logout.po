@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-20 12:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,44 +27,44 @@ msgstr ""
 msgid "General"
 msgstr "Genel"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Eylemleri göster:"
 
-#: contents/ui/ConfigGeneral.qml:36
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
 msgstr "Oturumu Kapat"
 
-#: contents/ui/ConfigGeneral.qml:43
+#: contents/ui/ConfigGeneral.qml:41
 #, kde-format
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: contents/ui/ConfigGeneral.qml:49
+#: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Restart"
 msgstr "Yeniden Başlat"
 
-#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Kilitle"
 
-#: contents/ui/ConfigGeneral.qml:61
+#: contents/ui/ConfigGeneral.qml:59
 #, kde-format
 msgid "Switch User"
 msgstr "Kullanıcıyı Değiştir"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Hazırda Beklet"
 
-#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"

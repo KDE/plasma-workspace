@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2022-08-13 15:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -28,12 +28,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Внешний вид"
 
-#: package/contents/ui/configGeneral.qml:21
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Использовать одну кнопку для меню приложения"
 
-#: package/contents/ui/configGeneral.qml:27
+#: package/contents/ui/configGeneral.qml:26
 #, kde-format
 msgid "Show full application menu"
 msgstr "Показывать полную строку меню приложения"

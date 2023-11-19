@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-02-09 01:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -29,17 +29,17 @@ msgstr ""
 msgid "Appearance"
 msgstr "外觀"
 
-#: contents/ui/configGeneral.qml:23
+#: contents/ui/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "顯示秒針"
 
-#: contents/ui/configGeneral.qml:24
+#: contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "一般："
 
-#: contents/ui/configGeneral.qml:28
+#: contents/ui/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "顯示時區"

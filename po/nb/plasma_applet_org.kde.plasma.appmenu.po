@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2018-06-27 19:03+0100\n"
 "Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Utseende"
 
-#: package/contents/ui/configGeneral.qml:21
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Bruk enkeltknapp for programmeny"
 
-#: package/contents/ui/configGeneral.qml:27
+#: package/contents/ui/configGeneral.qml:26
 #, kde-format
 msgid "Show full application menu"
 msgstr "Vis full programmeny"

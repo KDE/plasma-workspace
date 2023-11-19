@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-04-07 23:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -25,12 +25,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Apero"
 
-#: package/contents/ui/configGeneral.qml:21
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Uzi unusolan butonon por aplikaĵa menuo"
 
-#: package/contents/ui/configGeneral.qml:27
+#: package/contents/ui/configGeneral.qml:26
 #, kde-format
 msgid "Show full application menu"
 msgstr "Montri plenan aplikaĵan menuon"

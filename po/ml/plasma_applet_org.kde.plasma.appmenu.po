@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -24,12 +24,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "ബാഹ്യരൂപം"
 
-#: package/contents/ui/configGeneral.qml:21
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "പ്രയോഗ വിഭവസൂചികയ്ക്കായി ഒറ്റ ബട്ടൺ ഉപയോഗിക്കുക"
 
-#: package/contents/ui/configGeneral.qml:27
+#: package/contents/ui/configGeneral.qml:26
 #, kde-format
 msgid "Show full application menu"
 msgstr "മുഴുവൻ പ്രയോഗ വിഭവസൂചികയും പ്രദർശിപ്പിയ്ക്കുക"

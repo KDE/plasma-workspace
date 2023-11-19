@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2022-07-25 20:35+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -24,17 +24,17 @@ msgstr ""
 msgid "Appearance"
 msgstr "Aspetto"
 
-#: contents/ui/configGeneral.qml:23
+#: contents/ui/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Mostra la lancetta dei secondi"
 
-#: contents/ui/configGeneral.qml:24
+#: contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "Generale:"
 
-#: contents/ui/configGeneral.qml:28
+#: contents/ui/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Mostra il fuso orario"

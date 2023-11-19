@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-11-11 23:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -29,123 +29,123 @@ msgstr "Genel"
 msgid "Entries"
 msgstr "Girdiler"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:33
 #, kde-format
 msgid "Application Status"
 msgstr "Uygulama Durumu"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Communications"
 msgstr "İletişim"
 
-#: package/contents/ui/ConfigEntries.qml:38
+#: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "System Services"
 msgstr "Sistem Hizmetleri"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Hardware Control"
 msgstr "Donanım Denetimi"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:42
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:74
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Girdi"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:80
 #, kde-format
 msgid "Visibility"
 msgstr "Görünürlük"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klavye Kısayolu"
 
-#: package/contents/ui/ConfigEntries.qml:252
+#: package/contents/ui/ConfigEntries.qml:237
 #, kde-format
 msgid "Shown when relevant"
 msgstr "İlgili olduğunda gösterilir"
 
-#: package/contents/ui/ConfigEntries.qml:253
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Always shown"
 msgstr "Her zaman göster"
 
-#: package/contents/ui/ConfigEntries.qml:254
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always hidden"
 msgstr "Daima gizli"
 
-#: package/contents/ui/ConfigEntries.qml:255
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: package/contents/ui/ConfigEntries.qml:320
+#: package/contents/ui/ConfigEntries.qml:304
 #, kde-format
 msgid "Always show all entries"
 msgstr "Her zaman bütün girdileri göster"
 
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:24
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Panel simge boyutu:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:26
 #, kde-format
 msgid "Small"
 msgstr "Küçük"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "Panel yüksekliği ile ölçeklendir"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "Panel genişliğiyle ölçeklendir"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Dokunmatik Kip'teyken kendiliğinden etkin"
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Panel simge aralıklandırması:"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Küçük"
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Olağan"
 
-#: package/contents/ui/ConfigGeneral.qml:59
+#: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Büyük"
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2009-01-28 14:59+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -24,19 +24,19 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:23
+#: contents/ui/configGeneral.qml:19
 #, fuzzy, kde-format
 #| msgid "Show &seconds hand"
 msgid "Show seconds hand"
 msgstr "सेकन्ड कांटा देखाव (&s)"
 
-#: contents/ui/configGeneral.qml:24
+#: contents/ui/configGeneral.qml:20
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "सामान्य"
 
-#: contents/ui/configGeneral.qml:28
+#: contents/ui/configGeneral.qml:24
 #, fuzzy, kde-format
 #| msgid "Show &time zone"
 msgid "Show time zone"

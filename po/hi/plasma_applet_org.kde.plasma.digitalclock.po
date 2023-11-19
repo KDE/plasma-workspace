@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -71,138 +71,138 @@ msgstr "बदलें…"
 msgid "Switch to another timezone"
 msgstr "दूसरे समय क्षेत्र में बदलें"
 
-#: package/contents/ui/configAppearance.qml:50
+#: package/contents/ui/configAppearance.qml:48
 #, kde-format
 msgid "Information:"
 msgstr "जानकारी :"
 
-#: package/contents/ui/configAppearance.qml:54
+#: package/contents/ui/configAppearance.qml:52
 #, kde-format
 msgid "Show date"
 msgstr "तारीख़ दिखाएँ"
 
-#: package/contents/ui/configAppearance.qml:62
+#: package/contents/ui/configAppearance.qml:60
 #, kde-format
 msgid "Adaptive location"
 msgstr "अनुकूलक स्थान"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:61
 #, kde-format
 msgid "Always beside time"
 msgstr "हमेशा समय के बगल में"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Always below time"
 msgstr "हमेशा समय के नीचे"
 
-#: package/contents/ui/configAppearance.qml:72
+#: package/contents/ui/configAppearance.qml:70
 #, fuzzy, kde-format
 #| msgid "Show seconds"
 msgid "Show seconds:"
 msgstr "सेकंड दिखाएँ"
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:76
-#: package/contents/ui/configAppearance.qml:96
+#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:94
 #, kde-format
 msgid "Always"
 msgstr "हमेशा"
 
-#: package/contents/ui/configAppearance.qml:86
+#: package/contents/ui/configAppearance.qml:84
 #, kde-format
 msgid "Show time zone:"
 msgstr "समयक्षेत्र दिखाएँ :"
 
-#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "स्थानीय समय क्षेत्र से अलग होने पर ही"
 
-#: package/contents/ui/configAppearance.qml:105
+#: package/contents/ui/configAppearance.qml:103
 #, kde-format
 msgid "Display time zone as:"
 msgstr "समय क्षेत्र को इस रूप में प्रदर्शित करें:"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Code"
 msgstr "कोड"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:109
 #, kde-format
 msgid "City"
 msgstr "शहर"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "यूटीसी समय से अन्तर्लम्ब"
 
-#: package/contents/ui/configAppearance.qml:124
+#: package/contents/ui/configAppearance.qml:122
 #, kde-format
 msgid "Time display:"
 msgstr "समय प्रदर्शन :"
 
-#: package/contents/ui/configAppearance.qml:129
+#: package/contents/ui/configAppearance.qml:127
 #, kde-format
 msgid "12-Hour"
 msgstr "१२-घंटे"
 
-#: package/contents/ui/configAppearance.qml:130
-#: package/contents/ui/configCalendar.qml:53
+#: package/contents/ui/configAppearance.qml:128
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "क्षेत्र पूर्वन्यस्तों का प्रयोग करें"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "24-Hour"
 msgstr "२४-घंटे"
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:136
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "क्षेत्रीय सेटिंग्स बदलें..."
 
-#: package/contents/ui/configAppearance.qml:149
+#: package/contents/ui/configAppearance.qml:147
 #, kde-format
 msgid "Date format:"
 msgstr "दिनांक प्रारूप :"
 
-#: package/contents/ui/configAppearance.qml:157
+#: package/contents/ui/configAppearance.qml:155
 #, kde-format
 msgid "Long Date"
 msgstr "लंबा दिनांक"
 
-#: package/contents/ui/configAppearance.qml:162
+#: package/contents/ui/configAppearance.qml:160
 #, kde-format
 msgid "Short Date"
 msgstr "छोटा दिनांक"
 
-#: package/contents/ui/configAppearance.qml:167
+#: package/contents/ui/configAppearance.qml:165
 #, kde-format
 msgid "ISO Date"
 msgstr "आइएसओ दिनांक"
 
-#: package/contents/ui/configAppearance.qml:172
+#: package/contents/ui/configAppearance.qml:170
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "तदनुकूल"
 
-#: package/contents/ui/configAppearance.qml:207
+#: package/contents/ui/configAppearance.qml:205
 #, fuzzy, kde-format
 #| msgid ""
 #| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -214,66 +214,66 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">समय प्रारूप प्रलेखन</a>"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:229
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "समय प्रदर्शन :"
 
-#: package/contents/ui/configAppearance.qml:233
+#: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:235
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:246
+#: package/contents/ui/configAppearance.qml:244
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:256
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:269
+#: package/contents/ui/configAppearance.qml:267
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:280
+#: package/contents/ui/configAppearance.qml:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:38
 #, kde-format
 msgid "General:"
 msgstr "सामान्य :"
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:39
 #, kde-format
 msgid "Show week numbers"
 msgstr "सप्ताह की क्रमसंख्या दिखाएँ"
 
-#: package/contents/ui/configCalendar.qml:46
+#: package/contents/ui/configCalendar.qml:44
 #, kde-format
 msgid "First day of week:"
 msgstr "सप्ताह का पहला दिन :"
 
-#: package/contents/ui/configCalendar.qml:67
+#: package/contents/ui/configCalendar.qml:65
 #, kde-format
 msgid "Available Plugins:"
 msgstr "उपलब्ध प्लगइन्स :"

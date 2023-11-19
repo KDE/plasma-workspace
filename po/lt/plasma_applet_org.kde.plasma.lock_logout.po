@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2021-06-16 00:32+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -26,46 +26,46 @@ msgstr ""
 msgid "General"
 msgstr "Bendri"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Rodyti veiksmus:"
 
-#: contents/ui/ConfigGeneral.qml:36
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:43
+#: contents/ui/ConfigGeneral.qml:41
 #, fuzzy, kde-format
 #| msgid "Shutdown"
 msgid "Shut Down"
 msgstr "Išjungti"
 
-#: contents/ui/ConfigGeneral.qml:49
+#: contents/ui/ConfigGeneral.qml:47
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
 msgstr "Paleisti iš naujo…"
 
-#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Užrakinti"
 
-#: contents/ui/ConfigGeneral.qml:61
+#: contents/ui/ConfigGeneral.qml:59
 #, kde-format
 msgid "Switch User"
 msgstr "Perjungti naudotoją"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Užmigdyti"
 
-#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"

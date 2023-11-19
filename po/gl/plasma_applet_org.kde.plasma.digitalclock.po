@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-21 09:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -72,137 +72,137 @@ msgstr "Cambiar…"
 msgid "Switch to another timezone"
 msgstr "Cambiar a outro fuso horario"
 
-#: package/contents/ui/configAppearance.qml:50
+#: package/contents/ui/configAppearance.qml:48
 #, kde-format
 msgid "Information:"
 msgstr "Información:"
 
-#: package/contents/ui/configAppearance.qml:54
+#: package/contents/ui/configAppearance.qml:52
 #, kde-format
 msgid "Show date"
 msgstr "Amosar a data"
 
-#: package/contents/ui/configAppearance.qml:62
+#: package/contents/ui/configAppearance.qml:60
 #, kde-format
 msgid "Adaptive location"
 msgstr "Localización adaptativa"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:61
 #, kde-format
 msgid "Always beside time"
 msgstr "Sempre canda a hora"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Always below time"
 msgstr "Sempre baixo a hora"
 
-#: package/contents/ui/configAppearance.qml:72
+#: package/contents/ui/configAppearance.qml:70
 #, kde-format
 msgid "Show seconds:"
 msgstr "Amosar os segundos:"
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr "Nunca"
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr "Só na indicación emerxente."
 
-#: package/contents/ui/configAppearance.qml:76
-#: package/contents/ui/configAppearance.qml:96
+#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:94
 #, kde-format
 msgid "Always"
 msgstr "Sempre"
 
-#: package/contents/ui/configAppearance.qml:86
+#: package/contents/ui/configAppearance.qml:84
 #, kde-format
 msgid "Show time zone:"
 msgstr "Amosar o fuso horario:"
 
-#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Só cando sexa distinto do fuso horario local."
 
-#: package/contents/ui/configAppearance.qml:105
+#: package/contents/ui/configAppearance.qml:103
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Amosar o fuso horario como:"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Code"
 msgstr "Código"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:109
 #, kde-format
 msgid "City"
 msgstr "Cidade"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Diferenza coa hora en UTC"
 
-#: package/contents/ui/configAppearance.qml:124
+#: package/contents/ui/configAppearance.qml:122
 #, kde-format
 msgid "Time display:"
 msgstr "Visualización da hora:"
 
-#: package/contents/ui/configAppearance.qml:129
+#: package/contents/ui/configAppearance.qml:127
 #, kde-format
 msgid "12-Hour"
 msgstr "12 horas"
 
-#: package/contents/ui/configAppearance.qml:130
-#: package/contents/ui/configCalendar.qml:53
+#: package/contents/ui/configAppearance.qml:128
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Usar o predeterminado da rexión"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "24-Hour"
 msgstr "24 horas"
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:136
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "Cambiar a configuración rexional…"
 
-#: package/contents/ui/configAppearance.qml:149
+#: package/contents/ui/configAppearance.qml:147
 #, kde-format
 msgid "Date format:"
 msgstr "Formato da data:"
 
-#: package/contents/ui/configAppearance.qml:157
+#: package/contents/ui/configAppearance.qml:155
 #, kde-format
 msgid "Long Date"
 msgstr "Data longa"
 
-#: package/contents/ui/configAppearance.qml:162
+#: package/contents/ui/configAppearance.qml:160
 #, kde-format
 msgid "Short Date"
 msgstr "Data curta"
 
-#: package/contents/ui/configAppearance.qml:167
+#: package/contents/ui/configAppearance.qml:165
 #, kde-format
 msgid "ISO Date"
 msgstr "Data ISO"
 
-#: package/contents/ui/configAppearance.qml:172
+#: package/contents/ui/configAppearance.qml:170
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Personalizado"
 
-#: package/contents/ui/configAppearance.qml:207
+#: package/contents/ui/configAppearance.qml:205
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -211,19 +211,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentación do formato de hora</a>"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:229
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Aparencia do texto:"
 
-#: package/contents/ui/configAppearance.qml:233
+#: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automática"
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:235
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -232,46 +232,46 @@ msgstr ""
 "O texto usará a fonte do sistema e expandirase para encher o espazo "
 "dispoñíbel."
 
-#: package/contents/ui/configAppearance.qml:246
+#: package/contents/ui/configAppearance.qml:244
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: package/contents/ui/configAppearance.qml:256
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Escoller o estilo…"
 
-#: package/contents/ui/configAppearance.qml:269
+#: package/contents/ui/configAppearance.qml:267
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1p. %2"
 
-#: package/contents/ui/configAppearance.qml:280
+#: package/contents/ui/configAppearance.qml:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Escoller unha fonte"
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:38
 #, kde-format
 msgid "General:"
 msgstr "Xeral:"
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:39
 #, kde-format
 msgid "Show week numbers"
 msgstr "Amosar os números das semanas"
 
-#: package/contents/ui/configCalendar.qml:46
+#: package/contents/ui/configCalendar.qml:44
 #, kde-format
 msgid "First day of week:"
 msgstr "Primeiro día da semana:"
 
-#: package/contents/ui/configCalendar.qml:67
+#: package/contents/ui/configCalendar.qml:65
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Complementos dispoñíbeis:"

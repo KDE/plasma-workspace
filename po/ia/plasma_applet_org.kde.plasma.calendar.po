@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2020-02-16 21:36+0100\n"
 "Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -22,29 +22,29 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: package/contents/ui/configGeneral.qml:24
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Calendar version:"
 msgstr "Version de calendario:"
 
-#: package/contents/ui/configGeneral.qml:26
+#: package/contents/ui/configGeneral.qml:22
 #, kde-format
 msgid "Show week numbers"
 msgstr "Monstra numeros de septimana"
 
-#: package/contents/ui/configGeneral.qml:36
+#: package/contents/ui/configGeneral.qml:31
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
 msgstr "Version  compacte:"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:33
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Monstrar die del mense"
 
-#: package/contents/ui/configGeneral.qml:44
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"

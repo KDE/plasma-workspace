@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2022-07-26 07:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -29,17 +29,17 @@ msgstr ""
 msgid "Appearance"
 msgstr "Videz"
 
-#: contents/ui/configGeneral.qml:23
+#: contents/ui/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Pokaži sekundni kazalec"
 
-#: contents/ui/configGeneral.qml:24
+#: contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "Splošno:"
 
-#: contents/ui/configGeneral.qml:28
+#: contents/ui/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Pokaži časovni pas"

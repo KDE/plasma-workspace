@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-02-09 01:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "外觀"
 
-#: package/contents/ui/configGeneral.qml:21
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "應用程式選單使用單一按鈕"
 
-#: package/contents/ui/configGeneral.qml:27
+#: package/contents/ui/configGeneral.qml:26
 #, kde-format
 msgid "Show full application menu"
 msgstr "顯示完整應用程式選單"

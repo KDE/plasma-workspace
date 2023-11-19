@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2022-12-29 17:35+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -25,17 +25,17 @@ msgstr ""
 msgid "Appearance"
 msgstr "Aspect"
 
-#: contents/ui/configGeneral.qml:23
+#: contents/ui/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Arată săgeata secundelor"
 
-#: contents/ui/configGeneral.qml:24
+#: contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "Generale:"
 
-#: contents/ui/configGeneral.qml:28
+#: contents/ui/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Arată fusul orar"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-20 08:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -74,137 +74,137 @@ msgstr "Перемкнути…"
 msgid "Switch to another timezone"
 msgstr "Перемкнутися на інший часовий пояс"
 
-#: package/contents/ui/configAppearance.qml:50
+#: package/contents/ui/configAppearance.qml:48
 #, kde-format
 msgid "Information:"
 msgstr "Інформація:"
 
-#: package/contents/ui/configAppearance.qml:54
+#: package/contents/ui/configAppearance.qml:52
 #, kde-format
 msgid "Show date"
 msgstr "Показувати дату"
 
-#: package/contents/ui/configAppearance.qml:62
+#: package/contents/ui/configAppearance.qml:60
 #, kde-format
 msgid "Adaptive location"
 msgstr "Адаптивне місце перебування"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:61
 #, kde-format
 msgid "Always beside time"
 msgstr "Завжди поряд із часом"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Always below time"
 msgstr "Завжди під часом"
 
-#: package/contents/ui/configAppearance.qml:72
+#: package/contents/ui/configAppearance.qml:70
 #, kde-format
 msgid "Show seconds:"
 msgstr "Показувати секунди:"
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr "Ніколи"
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr "Лише у підказці"
 
-#: package/contents/ui/configAppearance.qml:76
-#: package/contents/ui/configAppearance.qml:96
+#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:94
 #, kde-format
 msgid "Always"
 msgstr "Завжди"
 
-#: package/contents/ui/configAppearance.qml:86
+#: package/contents/ui/configAppearance.qml:84
 #, kde-format
 msgid "Show time zone:"
 msgstr "Показ часового поясу:"
 
-#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Лише якщо відрізняється від місцевого часового поясу"
 
-#: package/contents/ui/configAppearance.qml:105
+#: package/contents/ui/configAppearance.qml:103
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Режим показу часового поясу:"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Code"
 msgstr "Код"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:109
 #, kde-format
 msgid "City"
 msgstr "Місто"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Різниця із всесвітнім часом"
 
-#: package/contents/ui/configAppearance.qml:124
+#: package/contents/ui/configAppearance.qml:122
 #, kde-format
 msgid "Time display:"
 msgstr "Показ часу:"
 
-#: package/contents/ui/configAppearance.qml:129
+#: package/contents/ui/configAppearance.qml:127
 #, kde-format
 msgid "12-Hour"
 msgstr "12-годинний"
 
-#: package/contents/ui/configAppearance.qml:130
-#: package/contents/ui/configCalendar.qml:53
+#: package/contents/ui/configAppearance.qml:128
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Типове для регіону"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "24-Hour"
 msgstr "24-годинний"
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:136
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "Змінити параметри локалізації…"
 
-#: package/contents/ui/configAppearance.qml:149
+#: package/contents/ui/configAppearance.qml:147
 #, kde-format
 msgid "Date format:"
 msgstr "Формат дати:"
 
-#: package/contents/ui/configAppearance.qml:157
+#: package/contents/ui/configAppearance.qml:155
 #, kde-format
 msgid "Long Date"
 msgstr "Дата повністю"
 
-#: package/contents/ui/configAppearance.qml:162
+#: package/contents/ui/configAppearance.qml:160
 #, kde-format
 msgid "Short Date"
 msgstr "Скорочена дата"
 
-#: package/contents/ui/configAppearance.qml:167
+#: package/contents/ui/configAppearance.qml:165
 #, kde-format
 msgid "ISO Date"
 msgstr "Дата у форматі ISO"
 
-#: package/contents/ui/configAppearance.qml:172
+#: package/contents/ui/configAppearance.qml:170
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Нетиповий"
 
-#: package/contents/ui/configAppearance.qml:207
+#: package/contents/ui/configAppearance.qml:205
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -213,19 +213,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Документація із формату запису часу</a>"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:229
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Показ тексту:"
 
-#: package/contents/ui/configAppearance.qml:233
+#: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:235
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -234,46 +234,46 @@ msgstr ""
 "У тексті буде використано загальносистемний шрифт так, щоб заповнити усе "
 "доступне місце."
 
-#: package/contents/ui/configAppearance.qml:246
+#: package/contents/ui/configAppearance.qml:244
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Вручну"
 
-#: package/contents/ui/configAppearance.qml:256
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Вибрати стиль…"
 
-#: package/contents/ui/configAppearance.qml:269
+#: package/contents/ui/configAppearance.qml:267
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1пт %2"
 
-#: package/contents/ui/configAppearance.qml:280
+#: package/contents/ui/configAppearance.qml:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Виберіть шрифт"
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:38
 #, kde-format
 msgid "General:"
 msgstr "Загальне:"
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:39
 #, kde-format
 msgid "Show week numbers"
 msgstr "Показувати номери тижнів"
 
-#: package/contents/ui/configCalendar.qml:46
+#: package/contents/ui/configCalendar.qml:44
 #, kde-format
 msgid "First day of week:"
 msgstr "Перший день тижня:"
 
-#: package/contents/ui/configCalendar.qml:67
+#: package/contents/ui/configCalendar.qml:65
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Доступні додатки:"

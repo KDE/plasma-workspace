@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2020-01-23 16:06+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,29 +25,29 @@ msgstr ""
 msgid "General"
 msgstr "Splošno"
 
-#: package/contents/ui/configGeneral.qml:24
+#: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Calendar version:"
 msgstr "Koledar verzija:"
 
-#: package/contents/ui/configGeneral.qml:26
+#: package/contents/ui/configGeneral.qml:22
 #, kde-format
 msgid "Show week numbers"
 msgstr "Pokaži številke tednov"
 
-#: package/contents/ui/configGeneral.qml:36
+#: package/contents/ui/configGeneral.qml:31
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
 msgstr "Kompaktna verzija:"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:33
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Prikaži dan v mesecu"
 
-#: package/contents/ui/configGeneral.qml:44
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"

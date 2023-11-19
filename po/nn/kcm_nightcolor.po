@@ -208,7 +208,3 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "Endring til dagfargar tek til kl. %1 og er klar kl. %2"
-
-#~ msgctxt "Night colour blue-ish"
-#~ msgid "Cool"
-#~ msgstr "Kjøleg"

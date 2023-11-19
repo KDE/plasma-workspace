@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-02-09 01:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,123 +30,123 @@ msgstr "一般"
 msgid "Entries"
 msgstr "項目"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:33
 #, kde-format
 msgid "Application Status"
 msgstr "應用程式狀態"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Communications"
 msgstr "通訊"
 
-#: package/contents/ui/ConfigEntries.qml:38
+#: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "System Services"
 msgstr "系統服務"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Hardware Control"
 msgstr "硬體控制"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:42
 #, kde-format
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:74
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "項目"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:80
 #, kde-format
 msgid "Visibility"
 msgstr "可見度"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "鍵盤捷徑"
 
-#: package/contents/ui/ConfigEntries.qml:252
+#: package/contents/ui/ConfigEntries.qml:237
 #, kde-format
 msgid "Shown when relevant"
 msgstr "有關時顯示"
 
-#: package/contents/ui/ConfigEntries.qml:253
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Always shown"
 msgstr "總是顯示"
 
-#: package/contents/ui/ConfigEntries.qml:254
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always hidden"
 msgstr "永遠隱藏"
 
-#: package/contents/ui/ConfigEntries.qml:255
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Disabled"
 msgstr "停用"
 
-#: package/contents/ui/ConfigEntries.qml:320
+#: package/contents/ui/ConfigEntries.qml:304
 #, kde-format
 msgid "Always show all entries"
 msgstr "總是顯示所有項目"
 
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:24
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "面板圖示大小："
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:26
 #, kde-format
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "依據面板高度改變"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "依據面板寬度改變"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "觸控模式時自動啟用"
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "面板圖示間隔："
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "中"
 
-#: package/contents/ui/ConfigGeneral.qml:59
+#: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

@@ -167,24 +167,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Session Management"
-#~ msgstr "Økthandsaming"
-
-#~ msgid "Log Out"
-#~ msgstr "Logg ut"
-
-#~ msgid "Shut Down"
-#~ msgstr "Slå av"
-
-#~ msgid "Reboot"
-#~ msgstr "Start på nytt"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Logg ut utan stadfesting"
-
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Slå av datamaskina utan stadfesting"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Start datamaskina på nytt utan stadfesting"

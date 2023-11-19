@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -28,99 +28,99 @@ msgstr "ਆਮ"
 msgid "Entries"
 msgstr "ਐਂਟਰੀਆਂ"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:33
 #, kde-format
 msgid "Application Status"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਥਿਤੀ"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Communications"
 msgstr "ਸੰਚਾਰ"
 
-#: package/contents/ui/ConfigEntries.qml:38
+#: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "System Services"
 msgstr "ਸਿਸਟਮ ਸਰਵਿਸਾਂ"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Hardware Control"
 msgstr "ਹਾਰਡਵੇਅਰ ਕੰਟਰੋਲ"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:42
 #, kde-format
 msgid "Miscellaneous"
 msgstr "ਫੁਟਕਲ"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:74
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "ਐਂਟਰੀ"
 
-#: package/contents/ui/ConfigEntries.qml:95
+#: package/contents/ui/ConfigEntries.qml:80
 #, kde-format
 msgid "Visibility"
 msgstr "ਦਿੱਖ"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "ਕੀਬੋਰਡ ਦਾ ਸ਼ਾਰਟਕੱਟ"
 
-#: package/contents/ui/ConfigEntries.qml:252
+#: package/contents/ui/ConfigEntries.qml:237
 #, kde-format
 msgid "Shown when relevant"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:253
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Always shown"
 msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਓ"
 
-#: package/contents/ui/ConfigEntries.qml:254
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always hidden"
 msgstr "ਹਮੇਸ਼ਾਂ ਓਹਲੇ"
 
-#: package/contents/ui/ConfigEntries.qml:255
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Disabled"
 msgstr "ਬੰਦ ਹੈ"
 
-#: package/contents/ui/ConfigEntries.qml:320
+#: package/contents/ui/ConfigEntries.qml:304
 #, kde-format
 msgid "Always show all entries"
 msgstr "ਹਮੇਸ਼ਾ ਸਾਰੀਆਂ ਐਂਟਰੀਆਂ ਨੂੰ ਦਿਖਾਓ"
 
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:24
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:26
 #, kde-format
 msgid "Small"
 msgstr "ਛੋਟਾ"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "ਪੈਨਲ ਦੀ ਉਚਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: package/contents/ui/ConfigGeneral.qml:49
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of system tray icons in the Panel"
 #| msgid "Panel icon size:"
@@ -128,26 +128,26 @@ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:52
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "ਛੋਟਾ"
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:59
+#: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

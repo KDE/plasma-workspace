@@ -151,16 +151,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Log Out"
-#~ msgstr "Olggosčáliheapmi"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Nannenkeahtes olggosčáliheapmi"
-
-#, fuzzy
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Bisset dihtora nannenkeahttá"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Vuolggat dihtora ođđasit nannenkeahttá"

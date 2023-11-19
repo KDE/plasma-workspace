@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-21 17:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -27,44 +27,44 @@ msgstr ""
 msgid "General"
 msgstr "一般"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "顯示動作："
 
-#: contents/ui/ConfigGeneral.qml:36
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
 msgstr "登出"
 
-#: contents/ui/ConfigGeneral.qml:43
+#: contents/ui/ConfigGeneral.qml:41
 #, kde-format
 msgid "Shut Down"
 msgstr "關機"
 
-#: contents/ui/ConfigGeneral.qml:49
+#: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Restart"
 msgstr "重新啟動"
 
-#: contents/ui/ConfigGeneral.qml:55 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "鎖定"
 
-#: contents/ui/ConfigGeneral.qml:61
+#: contents/ui/ConfigGeneral.qml:59
 #, kde-format
 msgid "Switch User"
 msgstr "切換使用者"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "睡眠"
 
-#: contents/ui/ConfigGeneral.qml:73 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
