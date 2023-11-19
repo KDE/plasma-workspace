@@ -19,7 +19,6 @@
 #include "logoutpromptadaptor.h"
 
 #include <KWindowSystem>
-#include <LayerShellQt/Shell>
 
 Greeter::Greeter(const KPackage::Package &package)
     : QObject()
@@ -35,17 +34,8 @@ Greeter::~Greeter()
     qDeleteAll(m_dialogs);
 }
 
-void Greeter::setupWaylandIntegration()
-{
-    if (!KWindowSystem::isPlatformWayland() || m_windowed) {
-        return;
-    }
-    LayerShellQt::Shell::useLayerShell();
-}
-
 void Greeter::init()
 {
-    setupWaylandIntegration();
     const auto screens = qApp->screens();
     for (QScreen *screen : screens) {
         adoptScreen(screen);
