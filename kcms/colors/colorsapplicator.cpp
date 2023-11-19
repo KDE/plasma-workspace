@@ -140,7 +140,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     KSharedConfigPtr config = KSharedConfig::openConfig(colorSchemePath, KConfig::SimpleConfig);
 
     const auto applyAccentToTitlebar =
-        config->group("General").readEntry("TitlebarIsAccentColored", config->group(QStringLiteral("General")).readEntry("accentActiveTitlebar", false));
+        config->group("General").readEntry("TitlebarIsAccentColored", config->group(QStringLiteral("General")).readEntry("accentActiveTitlebar", true));
     const auto tintAccent = config->group("General").hasKey("TintFactor");
     const auto tintFactor = config->group("General").readEntry<qreal>("TintFactor", DefaultTintFactor);
 

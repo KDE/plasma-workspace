@@ -31,7 +31,7 @@ void SchemeEditorOptions::loadOptions()
     KConfigGroup generalGroup(m_config, "General");
     shadeSortedColumn->setChecked(generalGroup.readEntry("shadeSortColumn", true));
 
-    accentTitlebar->setChecked(generalGroup.readEntry("TitlebarIsAccentColored", generalGroup.readEntry("accentActiveTitlebar", false)));
+    accentTitlebar->setChecked(generalGroup.readEntry("TitlebarIsAccentColored", generalGroup.readEntry("accentActiveTitlebar", true)));
 
     KConfigGroup KDEgroup(m_config, "KDE");
     contrastSlider->setValue(KDEgroup.readEntry("contrast", KColorScheme::contrastF() * 10));
