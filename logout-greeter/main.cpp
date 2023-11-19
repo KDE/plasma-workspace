@@ -47,9 +47,12 @@ int main(int argc, char *argv[])
         parser.addOption(lnfOption);
         parser.addHelpOption();
         parser.process(app);
-        windowed = parser.isSet(testingOption);
         if (parser.isSet(lnfOption)) {
             packageName = parser.value(lnfOption);
+        }
+        if (parser.isSet(testingOption)) {
+            windowed = true;
+            qputenv("PLASMA_SESSION_GUI_TEST", "1");
         }
     }
 
