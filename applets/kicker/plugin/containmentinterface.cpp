@@ -31,7 +31,7 @@ ContainmentInterface::~ContainmentInterface()
 {
 }
 
-bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
+bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentInterface::Target target, const KService::Ptr &service)
 {
     if (!appletInterface) {
         return false;
@@ -68,7 +68,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
         break;
     }
     case TaskManager: {
-        if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
+        if (service && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
             auto *taskManager = findTaskManagerApplet(containment);
 
             if (!taskManager) {
@@ -91,7 +91,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
     return false;
 }
 
-bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
+bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInterface::Target target, const KService::Ptr &service)
 {
     // Only the task manager supports toggle-able launchers
     if (target != TaskManager) {
@@ -108,7 +108,7 @@ bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInte
         return false;
     }
 
-    if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
+    if (service && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
         auto *taskManager = findTaskManagerApplet(containment);
 
         if (!taskManager) {
@@ -122,7 +122,10 @@ bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInte
         }
 
         QVariant ret;
-        QMetaObject::invokeMethod(taskManagerQuickItem, "hasLauncher", Q_RETURN_ARG(QVariant, ret), Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+        QMetaObject::invokeMethod(taskManagerQuickItem,
+                                  "hasLauncher",
+                                  Q_RETURN_ARG(QVariant, ret),
+                                  Q_ARG(QVariant, QUrl(QLatin1String("applications:") + service->storageId())));
         return ret.toBool();
     }
 

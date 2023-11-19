@@ -10,6 +10,8 @@
 #include <QQuickItem>
 #include <QUrl>
 
+#include <KService>
+
 namespace Plasma
 {
 class Applet;
@@ -32,9 +34,9 @@ public:
     explicit ContainmentInterface(QObject *parent = nullptr);
     ~ContainmentInterface() override;
 
-    static Q_INVOKABLE bool mayAddLauncher(QObject *appletInterface, Target target, const QString &entryPath = QString());
+    static bool mayAddLauncher(QObject *appletInterface, Target target, const KService::Ptr &service = {});
 
-    static Q_INVOKABLE bool hasLauncher(QObject *appletInterface, Target target, const QString &entryPath = QString());
+    static Q_INVOKABLE bool hasLauncher(QObject *appletInterface, Target target, const KService::Ptr &service);
 
     static Q_INVOKABLE void addLauncher(QObject *appletInterface, Target target, const QString &entryPath);
 
