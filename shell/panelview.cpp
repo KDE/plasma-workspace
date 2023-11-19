@@ -1138,9 +1138,6 @@ bool PanelView::event(QEvent *e)
     }
 
     case QEvent::Hide: {
-        if (m_panelConfigView && m_panelConfigView->isVisible()) {
-            m_panelConfigView->hide();
-        }
         m_containsMouse = false;
         break;
     }
