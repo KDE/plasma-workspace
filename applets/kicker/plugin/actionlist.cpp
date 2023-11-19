@@ -146,8 +146,8 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
         actionList << addToDesktopAction;
     }
 
-    if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-        if (!ContainmentInterface::hasLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+    if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service)) {
+        if (!ContainmentInterface::hasLauncher(appletInterface, ContainmentInterface::TaskManager, service)) {
             QVariantMap addToTaskManagerAction =
                 Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("pin"), QStringLiteral("addToTaskManager"));
             actionList << addToTaskManagerAction;
@@ -177,7 +177,7 @@ bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, 
         }
         return true;
     } else if (actionId == QLatin1String("addToTaskManager")) {
-        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service)) {
             ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
         }
         return true;
