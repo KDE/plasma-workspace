@@ -107,7 +107,7 @@ PlasmoidItem {
                 parts.push(i18nc("Status; placeholder is a temperature", "Night Light at %1K", nightColorMonitor.currentTemperature));
             }
         }
-        
+
         return parts.join("\n");
     }
 
@@ -250,6 +250,17 @@ PlasmoidItem {
         isScreenBrightnessAvailable: brightnesscontrol.isScreenBrightnessAvailable
         isKeyboardBrightnessAvailable: brightnesscontrol.isKeyboardBrightnessAvailable
     } // todo
+
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            id: configureNightLight
+            icon.name: "configure"
+            text: "Configure Night Light…"
+            visible: KAuthorized.authorize("kcm_nightcolor")
+            priority: PlasmaCore.Action.LowPriority
+            onTriggered: KCMLauncher.openSystemSettings("kcm_nightcolor")
+        }
+    ]
 
     Component.onCompleted: {
         Logic.updateBrightness(brightnesscontrol, pmSource);
