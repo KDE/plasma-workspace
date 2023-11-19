@@ -154,21 +154,30 @@ SimpleKCM {
                     {
                         label: i18n("Long Date"),
                         name: "longDate",
-                        format: Locale.LongFormat
+                        formatter: (d) => {
+                            return Qt.formatDate(d, Qt.locale(), Locale.LongFormat);
+                        }
                     },
                     {
                         label: i18n("Short Date"),
                         name: "shortDate",
-                        format: Locale.ShortFormat
+                        formatter: (d) => {
+                            return Qt.formatDate(d, Qt.locale(), Locale.ShortFormat);
+                        }
                     },
                     {
                         label: i18n("ISO Date"),
                         name: "isoDate",
-                        format: Qt.ISODate
+                        formatter: (d) => {
+                            return Qt.formatDate(d, Qt.ISODate);
+                        }
                     },
                     {
                         label: i18nc("custom date format", "Custom"),
-                        name: "custom"
+                        name: "custom",
+                        formatter: (d) => {
+                            return Qt.locale().toString(d, customDateFormat.text);
+                        }
                     }
                 ]
                 onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"];
@@ -182,15 +191,7 @@ SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 textFormat: Text.PlainText
-                text: {
-                    if (cfg_dateFormat === "shortDate" || cfg_dateFormat === "longDate") {
-                        return Qt.formatDate(new Date(), Qt.locale(), dateFormat.model[dateFormat.currentIndex].format);
-                    } else if (cfg_dateFormat === "custom") {
-                        return Qt.formatDate(new Date(), customDateFormat.text);
-                    } else {
-                        return Qt.formatDate(new Date(), dateFormat.model[dateFormat.currentIndex].format);
-                    }
-                }
+                text: dateFormat.model[dateFormat.currentIndex].formatter(new Date());
             }
         }
 
