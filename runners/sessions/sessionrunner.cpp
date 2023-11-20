@@ -151,51 +151,6 @@ void SessionRunner::match(KRunner::RunnerContext &context)
         match.setText(i18n("Switch User"));
         matches << match;
     }
-
-    // now add the active sessions
-    if (listAll || matchUser) {
-        SessList sessions;
-        dm.localSessions(sessions);
-
-        for (const SessEnt &session : std::as_const(sessions)) {
-            if (!session.vt || session.self) {
-                continue;
-            }
-
-            QString name = KDisplayManager::sess2Str(session);
-            KRunner::QueryMatch::CategoryRelevance categoryRelevance;
-            qreal relevance = 0.7;
-
-            if (listAll) {
-                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-                relevance = 1;
-            } else if (matchUser) {
-                const int nameIdx = name.indexOf(user, Qt::CaseInsensitive);
-                if (nameIdx == 0 && name.size() == user.size()) {
-                    // we need an elif branch here because we don't
-                    // want the last conditional to be checked if !listAll
-                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-                    relevance = 1;
-                } else if (nameIdx == 0) {
-                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
-                } else {
-                    continue;
-                }
-            } else {
-                continue;
-            }
-
-            KRunner::QueryMatch match(this);
-            match.setCategoryRelevance(categoryRelevance);
-            match.setRelevance(relevance);
-            match.setIconName(QStringLiteral("user-identity"));
-            match.setText(name);
-            match.setData(QString::number(session.vt));
-            matches << match;
-        }
-    }
-
-    context.addMatches(matches);
 }
 
 void SessionRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)

@@ -44,6 +44,5 @@ private:
     QStringList m_usersKeywords;
     QString m_sessionsKeyword;
     QString m_switchKeyword;
-    KDisplayManager dm;
     SessionManagement m_session;
 };
