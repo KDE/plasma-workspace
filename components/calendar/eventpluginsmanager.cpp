@@ -138,43 +138,10 @@ private:
 EventPluginsManagerPrivate::EventPluginsManagerPrivate()
     : model(std::make_unique<EventPluginsModel>(this))
 {
-    auto plugins = KPluginMetaData::findPlugins(QStringLiteral("plasmacalendarplugins"), [](const KPluginMetaData &md) {
-        return md.rawData().contains(QStringLiteral("KPlugin"));
-    });
-    for (const KPluginMetaData &plugin : std::as_const(plugins)) {
+    const auto plugins = KPluginMetaData::findPlugins(QStringLiteral("plasmacalendarplugins"));
+    for (const KPluginMetaData &plugin : plugins) {
         availablePlugins.insert(plugin.fileName(),
                                 {plugin.name(), plugin.description(), plugin.iconName(), plugin.value(QStringLiteral("X-KDE-PlasmaCalendar-ConfigUi"))});
-    }
-
-    // Fallback for legacy pre-KPlugin plugins so we can still load them
-    const QStringList paths = QCoreApplication::libraryPaths();
-    for (const QString &libraryPath : paths) {
-        const QString path(libraryPath + QStringLiteral("/plasmacalendarplugins"));
-        QDir dir(path);
-
-        if (!dir.exists()) {
-            continue;
-        }
-
-        const QStringList entryList = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
-
-        for (const QString &fileName : entryList) {
-            const QString absolutePath = dir.absoluteFilePath(fileName);
-            if (availablePlugins.contains(absolutePath)) {
-                continue;
-            }
-
-            QPluginLoader loader(absolutePath);
-            // Load only our own plugins
-            if (loader.metaData().value(QStringLiteral("IID")) == QLatin1String("org.kde.CalendarEventsPlugin")) {
-                const auto md = loader.metaData().value(QStringLiteral("MetaData")).toObject();
-                availablePlugins.insert(absolutePath,
-                                        {md.value(QStringLiteral("Name")).toString(),
-                                         md.value(QStringLiteral("Description")).toString(),
-                                         md.value(QStringLiteral("Icon")).toString(),
-                                         md.value(QStringLiteral("ConfigUi")).toString()});
-            }
-        }
     }
 }
 
