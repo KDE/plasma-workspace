@@ -4,7 +4,6 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-shellprivate.h.cmake ${CMAKE_C
 set(plasmashellprivateplugin_SRCS
     widgetexplorer/kcategorizeditemsviewmodels.cpp
     widgetexplorer/plasmaappletitemmodel.cpp
-    widgetexplorer/openwidgetassistant.cpp
     widgetexplorer/widgetexplorer.cpp
     shellprivateplugin.cpp
 )

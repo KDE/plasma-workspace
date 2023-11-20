@@ -9,6 +9,7 @@
 #include "widgetexplorer.h"
 
 #include <QDebug>
+#include <QFileDialog>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQmlExpression>
@@ -17,8 +18,8 @@
 #include <KAuthorized>
 #include <KLazyLocalizedString>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KNSWidgets/Dialog>
-#include <KX11Extras>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -35,7 +36,6 @@
 
 #include "config-workspace.h"
 #include "kcategorizeditemsviewmodels_p.h"
-#include "openwidgetassistant_p.h"
 
 using namespace KActivities;
 using namespace KCategorizedItemsViewModels;
@@ -92,7 +92,6 @@ public:
     QHash<QString, int> runningApplets; // applet name => count
     // extra hash so we can look up the names of deleted applets
     QHash<Plasma::Applet *, QString> appletNames;
-    QPointer<Plasma::OpenWidgetAssistant> openAssistant;
     KPackage::Package *package;
 
     PlasmaAppletItemModel itemModel;
@@ -499,17 +498,28 @@ void WidgetExplorer::downloadWidgets()
 
 void WidgetExplorer::openWidgetFile()
 {
-    Plasma::OpenWidgetAssistant *assistant = d->openAssistant.data();
-    if (!assistant) {
-        assistant = new Plasma::OpenWidgetAssistant(nullptr);
-        d->openAssistant = assistant;
-    }
+    QFileDialog *dialog = new QFileDialog;
+    dialog->setMimeTypeFilters({"application/x-plasma"});
+    dialog->setWindowTitle(i18n("Select Plasmoid File"));
+    dialog->setFileMode(QFileDialog::ExistingFile);
+    dialog->setAttribute(Qt::WA_DeleteOnClose, true);
 
-    KX11Extras::setOnDesktop(assistant->winId(), KX11Extras::currentDesktop());
-    assistant->setAttribute(Qt::WA_DeleteOnClose, true);
-    assistant->show();
-    assistant->raise();
-    assistant->setFocus();
+    connect(dialog, &QFileDialog::fileSelected, [](const QString &packageFilePath) {
+        if (packageFilePath.isEmpty()) {
+            // TODO: user visible error handling
+            qDebug() << "hm. no file path?";
+            return;
+        }
+
+        auto job = KPackage::PackageJob::install(QStringLiteral("Plasma/Applet"), packageFilePath);
+        connect(job, &KJob::result, [packageFilePath](KJob *job) {
+            if (job->error()) {
+                KMessageBox::error(nullptr, i18n("Installing the package %1 failed.", packageFilePath), i18n("Installation Failure"));
+            }
+        });
+    });
+
+    dialog->show();
 
     Q_EMIT shouldClose();
 }
