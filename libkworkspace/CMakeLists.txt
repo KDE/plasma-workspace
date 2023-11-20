@@ -11,6 +11,9 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     login1_manager_interface.cpp
     login1_manager_interface.h
     defaultservice.cpp
+    defaultservice.h
+    defaultwallpaper.cpp
+    defaultwallpaper.h
    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
@@ -44,6 +47,8 @@ target_link_libraries(kworkspace
         KF6::WindowSystem
         KF6::ConfigCore
         KF6::Service
+        KF6::Package
+        KF6::Plasma
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
                                       INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/kworkspace6>" )

@@ -15,23 +15,23 @@ ecm_add_test(test_packagefinder.cpp TEST_NAME testpackageimagefinder
 
 # ImageListModel test
 ecm_add_test(test_imagelistmodel.cpp TEST_NAME testimagelistmodel
-    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+    LINK_LIBRARIES Qt::Test PW::KWorkspace plasma_wallpaper_imageplugin_static)
 
 # PackageListModel test
 ecm_add_test(test_packagelistmodel.cpp TEST_NAME testpackageimagelistmodel
-    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+    LINK_LIBRARIES Qt::Test PW::KWorkspace plasma_wallpaper_imageplugin_static)
 
 # ImageProxyModel test
 ecm_add_test(test_imageproxymodel.cpp TEST_NAME testimageproxymodel
-    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+    LINK_LIBRARIES Qt::Test PW::KWorkspace plasma_wallpaper_imageplugin_static)
 
 # SlideModel test
 ecm_add_test(test_slidemodel.cpp TEST_NAME testslidemodel
-    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+    LINK_LIBRARIES Qt::Test PW::KWorkspace plasma_wallpaper_imageplugin_static)
 
 # SlideFilterModel test
 ecm_add_test(test_slidefiltermodel.cpp TEST_NAME testslidefiltermodel
-    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+    LINK_LIBRARIES Qt::Test PW::KWorkspace plasma_wallpaper_imageplugin_static)
 
 # ImageBackend test
 add_executable(testimagebackend tst_imagebackend.cpp)
@@ -39,6 +39,7 @@ target_link_libraries(testimagebackend
     Qt::Qml
     Qt::QuickTest
     Qt::Test
+    PW::KWorkspace
 )
 add_test(NAME testimagebackend
     COMMAND testimagebackend

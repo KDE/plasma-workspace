@@ -6,6 +6,8 @@
 
 #include "mediaproxy.h"
 
+#include "defaultwallpaper.h"
+
 #include <QBuffer>
 #include <QFileInfo>
 #include <QGuiApplication>
@@ -155,52 +157,14 @@ void MediaProxy::openModelImage()
 void MediaProxy::useSingleImageDefaults()
 {
     m_source.clear(); // BUG 460692
-    // Try from the look and feel package first, then from the plasma theme
-    KPackage::Package lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    // If empty, it will be the default (currently Breeze)
-    if (!packageName.isEmpty()) {
-        lookAndFeelPackage.setPath(packageName);
-    }
 
-    KConfigGroup lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(lookAndFeelPackage.filePath("defaults")), "Wallpaper");
-
-    const QString image = lnfDefaultsConfig.readEntry("Image", "");
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
-
-    if (!image.isEmpty()) {
-        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/") + image, QStandardPaths::LocateDirectory));
-
-        if (package.isValid()) {
-            m_source = QUrl::fromLocalFile(package.path());
-        }
-    }
-
-    // Try to get a default from the plasma theme
-    if (m_source.isEmpty()) {
-        Plasma::Theme theme;
-        QString path = theme.wallpaperPath();
-        int index = path.indexOf(QLatin1String("/contents/images/"));
-        if (index > -1) { // We have file from package -> get path to package
-            m_source = QUrl::fromLocalFile(path.left(index));
-        } else {
-            m_source = QUrl::fromLocalFile(path);
-        }
-
-        package.setPath(m_source.toLocalFile());
-    }
+    auto package = DefaultWallpaper::defaultWallpaperPackage();
 
     if (!package.isValid()) {
-        // Use Next
-        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/Next"), QStandardPaths::LocateDirectory));
-
-        if (package.isValid()) {
-            m_source = QUrl::fromLocalFile(package.path());
-        } else {
-            return;
-        }
+        return;
     }
+
+    m_source = QUrl::fromLocalFile(package.path());
 
     PackageFinder::findPreferredImageInPackage(package, m_targetSize);
 
