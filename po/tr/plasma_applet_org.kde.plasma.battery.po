@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-17 18:10+0300\n"
+"PO-Revision-Date: 2023-11-19 17:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 "X-POOTLE-MTIME: 1413102233.000000\n"
 
 #: package/contents/ui/BatteryItem.qml:105
@@ -44,12 +44,12 @@ msgstr ""
 #: package/contents/ui/BatteryItem.qml:185
 #, kde-format
 msgid "Time To Full:"
-msgstr "Dolma Süresi:"
+msgstr "Dolma süresi:"
 
 #: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Remaining Time:"
-msgstr "Kalan Süre:"
+msgstr "Kalan süre:"
 
 #: package/contents/ui/BatteryItem.qml:191
 #, kde-format
@@ -107,10 +107,9 @@ msgid "Not present"
 msgstr "Mevcut değil"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Güç Yönetimi"
+msgstr "Güç ve Pil"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -310,11 +309,10 @@ msgid "Power Profile"
 msgstr "Güç Profili"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Kullanılabilir Pil Yok"
+msgstr "Kullanılamıyor"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -377,6 +375,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Güç profilleri aygıtınızda destekleniyor olabilir.<nl/>Dağıtımınızın paket "
+"yöneticisini kullanarak <command>power-profiles-daemon</command> paketini "
+"kurun ve sistemi yeniden başlatın."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

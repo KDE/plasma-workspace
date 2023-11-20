@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 01:39+0000\n"
+"POT-Creation-Date: 2023-11-20 02:00+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "अलिकडील दस्तऐवज"
 msgid "Edit Application…"
 msgstr "अनुप्रयोग"
 
-#: plugin/actionlist.cpp:426
+#: plugin/actionlist.cpp:424
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

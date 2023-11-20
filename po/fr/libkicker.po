@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 01:39+0000\n"
+"POT-Creation-Date: 2023-11-20 02:00+0000\n"
 "PO-Revision-Date: 2021-05-27 14:48+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -65,7 +65,7 @@ msgstr "Oublier les fichiers récents"
 msgid "Edit Application…"
 msgstr "Éditer une application…"
 
-#: plugin/actionlist.cpp:426
+#: plugin/actionlist.cpp:424
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

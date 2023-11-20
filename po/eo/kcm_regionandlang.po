@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-20 02:00+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -293,17 +293,17 @@ msgstr "Ne povas trovi ruleblan `locale-gen`"
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: localelistmodel.cpp:35
+#: localelistmodel.cpp:33
 #, kde-format
 msgid "Default for System"
 msgstr "Defaŭlto por Sistemo"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:84 ui/main.qml:270
+#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
 #, kde-format
 msgid "Default"
 msgstr "Defaŭlto"
 
-#: localelistmodel.cpp:80
+#: localelistmodel.cpp:78
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -311,14 +311,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:163
+#: localelistmodel.cpp:161
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Sistema defaŭlto C"
 
-#: localelistmodel.cpp:166
+#: localelistmodel.cpp:164
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 01:39+0000\n"
+"POT-Creation-Date: 2023-11-20 02:00+0000\n"
 "PO-Revision-Date: 2023-03-06 21:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -60,7 +60,7 @@ msgstr "遺忘最近的檔案"
 msgid "Edit Application…"
 msgstr "編輯應用程式…"
 
-#: plugin/actionlist.cpp:426
+#: plugin/actionlist.cpp:424
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

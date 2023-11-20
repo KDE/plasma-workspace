@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-05-17 07:19+0100\n"
+"PO-Revision-Date: 2023-11-19 07:08+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -102,10 +102,9 @@ msgid "Not present"
 msgstr "Ne ĉeestas"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Energiadministrado"
+msgstr "Energio kaj Baterio"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -304,11 +303,10 @@ msgid "Power Profile"
 msgstr "Energioprofilo"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Neniuj Baterioj Disponeblaj"
+msgstr "Ne disponebla"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -371,25 +369,6 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "Baterio kaj Brileco"
-
-#~ msgid "Brightness"
-#~ msgstr "Brileco"
-
-#~ msgid "Battery"
-#~ msgstr "Baterio:"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "Rulumu por alĝustigi ekranbrilecon"
-
-#~ msgid "Display Brightness"
-#~ msgstr "Ekranbrileco"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "Klavarbrileco"
+"Energiprofiloj povas esti subtenataj en via aparato.<nl/>Provu instali la "
+"pakon <command>power-profiles-daemon</command> uzante la pakadministrilon de "
+"via distribuado kaj rekomencante la sistemon."

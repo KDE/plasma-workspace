@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-13 01:39+0000\n"
+"POT-Creation-Date: 2023-11-20 02:00+0000\n"
 "PO-Revision-Date: 2023-10-07 10:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "Unohda viimeisimmät tiedostot"
 msgid "Edit Application…"
 msgstr "Muokkaa sovellusta…"
 
-#: plugin/actionlist.cpp:426
+#: plugin/actionlist.cpp:424
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

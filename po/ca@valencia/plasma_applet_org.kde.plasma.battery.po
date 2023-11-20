@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-09-25 10:52+0200\n"
+"PO-Revision-Date: 2023-11-19 11:25+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -68,7 +68,7 @@ msgstr "%1%"
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
-"La bateria està configurada per a carregar només fins a %1% aproximadament."
+"La bateria està configurada per a carregar només fins al %1% aproximadament."
 
 #: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
@@ -104,10 +104,9 @@ msgid "Not present"
 msgstr "No hi és"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Gestió de l'energia"
+msgstr "Energia i bateria"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -117,22 +116,22 @@ msgstr "Gestió de l'energia"
 #: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Bateria a %1%, no està carregant"
+msgstr "Bateria al %1%, no està carregant"
 
 #: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Bateria a %1%, connectada però encara està descarregant"
+msgstr "Bateria al %1%, connectada però encara està descarregant"
 
 #: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Bateria a %1%, s'està carregant"
+msgstr "Bateria al %1%, s'està carregant"
 
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Bateria a %1%"
+msgstr "Bateria al %1%"
 
 #: package/contents/ui/main.qml:160
 #, kde-format
@@ -319,11 +318,10 @@ msgid "Power Profile"
 msgstr "Perfil d'energia"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "No hi ha cap bateria disponible"
+msgstr "No disponible"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -387,25 +385,6 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "Bateria i brillantor"
-
-#~ msgid "Brightness"
-#~ msgstr "Brillantor"
-
-#~ msgid "Battery"
-#~ msgstr "Bateria"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "Desplaceu per a ajustar la brillantor de la pantalla"
-
-#~ msgid "Display Brightness"
-#~ msgstr "Brillantor de la pantalla"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "Brillantor del teclat"
+"Els perfils d'energia poden ser compatibles amb este dispositiu.<nl/>Proveu "
+"instal·lant el paquet <command>power-profiles-daemon</command> utilitzant el "
+"gestor de paquets de la vostra distribució i reiniciant el sistema."

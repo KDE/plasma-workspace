@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-17 08:56+0200\n"
+"PO-Revision-Date: 2023-11-19 08:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -101,10 +101,9 @@ msgid "Not present"
 msgstr "Немає"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Керування живленням"
+msgstr "Живлення і акумулятор"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -318,11 +317,10 @@ msgid "Power Profile"
 msgstr "Профіль живлення"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Акумуляторів не виявлено"
+msgstr "Немає доступу"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -391,6 +389,10 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"На вашому пристрої може бути передбачено підтримку профілів живлення.<nl/"
+">Спробуйте встановити пакунок <command>power-profiles-daemon</command> за "
+"допомогою програми для керування пакунками вашого дистрибутива, а потім "
+"перезапустити систему."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

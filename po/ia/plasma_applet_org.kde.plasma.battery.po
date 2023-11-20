@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-23 15:16+0100\n"
+"PO-Revision-Date: 2023-11-19 17:40+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:105
@@ -98,10 +98,9 @@ msgid "Not present"
 msgstr "Non presente"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Gestion de energia"
+msgstr "Energia (Power) e Batteria"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -303,11 +302,10 @@ msgid "Power Profile"
 msgstr "Profilo de energia"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Necun batterias disponibile"
+msgstr "Non disponibile"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -374,6 +372,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Profilod de energia pote esser supporate sur tu dispositivo.<nl/>Tu essaya "
+"installar le  pacchetto de <command>power-profiles-daemon</command> que usa "
+"le administrator de pacchettos de tu distribuition e restarta le systema. "
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

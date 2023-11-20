@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-22 06:55+0100\n"
+"PO-Revision-Date: 2023-11-19 06:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -99,10 +99,9 @@ msgid "Not present"
 msgstr "არ არსებობს"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "ენერგიის მართვა"
+msgstr "კვება და ელემენტი"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -301,11 +300,10 @@ msgid "Power Profile"
 msgstr "კვების პროფილი"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "ელემენტი ხელმიუწვდომელია"
+msgstr "ხელმიუწვდომელია"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -369,6 +367,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"თქვენს მოწყობილობაზე, შეიძლება, კვების პროფილები მხარდაჭერილი იყოს.<nl/"
+">სცადეთ, დააყენოთ პაკეტი <command>power-profiles-daemon</command> თქვენი "
+"დისტრიბუტივის პაკეტების მმართველით და და გადატვირთოთ სისტემა."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"
