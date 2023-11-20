@@ -31,6 +31,7 @@ public:
         RestartAction,
         LockAction,
         SaveAction,
+        SwitchAction,
     };
 
 private:
@@ -42,8 +43,6 @@ private:
     QStringList m_lockKeywords;
     QStringList m_saveKeywords;
     QStringList m_usersKeywords;
-    QString m_sessionsKeyword;
-    QString m_switchKeyword;
-    KDisplayManager dm;
+    QStringList m_switchKeyword;
     SessionManagement m_session;
 };

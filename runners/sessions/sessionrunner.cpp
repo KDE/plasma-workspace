@@ -52,17 +52,8 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     m_usersKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to switch user sessions", "switch user;new session")
                           .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canSwitchUser()) {
-        addSyntax(m_usersKeywords, i18n("Starts a new session as a different user"));
+        addSyntax(m_usersKeywords, i18n("Switch to a session as a different user"));
     }
-
-    m_sessionsKeyword = i18nc("KRunner keyword to list user sessions", "sessions");
-    KRunner::RunnerSyntax sessionsSyntax(m_sessionsKeyword, i18n("Lists all sessions"));
-    addSyntax(sessionsSyntax);
-
-    m_switchKeyword = i18nc("KRunner keyword to switch user sessions", "switch");
-    addSyntax(m_switchKeyword + QStringLiteral(" :q:"),
-              i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
-
     setMinLetterCount(3);
 }
 
@@ -73,8 +64,11 @@ static inline bool anyKeywordMatches(const QStringList &keywords, const QString 
     });
 }
 
-void SessionRunner::matchCommands(QList<KRunner::QueryMatch> &matches, const QString &term)
+void SessionRunner::match(KRunner::RunnerContext &context)
 {
+    const QString term = context.query();
+    QList<KRunner::QueryMatch> matches;
+
     KRunner::QueryMatch match(this);
     match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
     match.setRelevance(0.9);
@@ -114,89 +108,14 @@ void SessionRunner::matchCommands(QList<KRunner::QueryMatch> &matches, const QSt
             match.setData(SaveAction);
             matches << match;
         }
-    }
-}
-
-void SessionRunner::match(KRunner::RunnerContext &context)
-{
-    const QString term = context.query();
-    QString user;
-    bool matchUser = false;
-
-    QList<KRunner::QueryMatch> matches;
-
-    // first compare with "sessions" keyword
-    // "SESSIONS" must *NOT* be translated (i18n)
-    // as it is used as an internal command trigger (e.g. via d-bus),
-    // not as a user supplied query. and yes, "Ugh, magic strings"
-    bool listAll = anyKeywordMatches(QStringList({QStringLiteral("SESSIONS"), m_sessionsKeyword}), term);
-
-    if (!listAll) {
-        // no luck, try the "switch" user command
-        if (term.startsWith(m_switchKeyword, Qt::CaseInsensitive)) {
-            user = term.right(term.size() - m_switchKeyword.length()).trimmed();
-            listAll = user.isEmpty();
-            matchUser = !listAll;
-        } else {
-            // we know it's not "sessions" or "switch <something>", so let's
-            // try some other possibilities
-            matchCommands(matches, term);
-        }
-    }
-
-    bool switchUser = listAll || anyKeywordMatches(m_usersKeywords, term);
-
-    if (switchUser && m_session.canSwitchUser() && dm.isSwitchable() && dm.numReserve() >= 0) {
-        KRunner::QueryMatch match(this);
-        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
-        match.setIconName(QStringLiteral("system-switch-user"));
-        match.setText(i18n("Switch User"));
-        matches << match;
-    }
-
-    // now add the active sessions
-    if (listAll || matchUser) {
-        SessList sessions;
-        dm.localSessions(sessions);
-
-        for (const SessEnt &session : std::as_const(sessions)) {
-            if (!session.vt || session.self) {
-                continue;
-            }
-
-            QString name = KDisplayManager::sess2Str(session);
-            KRunner::QueryMatch::CategoryRelevance categoryRelevance;
-            qreal relevance = 0.7;
-
-            if (listAll) {
-                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-                relevance = 1;
-            } else if (matchUser) {
-                const int nameIdx = name.indexOf(user, Qt::CaseInsensitive);
-                if (nameIdx == 0 && name.size() == user.size()) {
-                    // we need an elif branch here because we don't
-                    // want the last conditional to be checked if !listAll
-                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-                    relevance = 1;
-                } else if (nameIdx == 0) {
-                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
-                } else {
-                    continue;
-                }
-            } else {
-                continue;
-            }
-
-            KRunner::QueryMatch match(this);
-            match.setCategoryRelevance(categoryRelevance);
-            match.setRelevance(relevance);
-            match.setIconName(QStringLiteral("user-identity"));
-            match.setText(name);
-            match.setData(QString::number(session.vt));
+    } else if (anyKeywordMatches(m_usersKeywords, term)) {
+        if (m_session.canSwitchUser()) {
+            match.setText(i18n("Switch User"));
+            match.setIconName(QStringLiteral("system-switch-user"));
+            match.setData(SwitchAction);
             matches << match;
         }
     }
-
     context.addMatches(matches);
 }
 
@@ -219,39 +138,11 @@ void SessionRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
         case SaveAction:
             m_session.saveSession();
             break;
+        case SwitchAction:
+            m_session.switchUser();
+            break;
         }
         return;
-    }
-
-    if (!match.data().toString().isEmpty()) {
-        dm.lockSwitchVT(match.data().toString().toInt());
-        return;
-    }
-
-    const auto config = KSharedConfig::openConfig(QStringLiteral("ksmserverrc"));
-    KMessageBox::setDontShowAgainConfig(config.data());
-    KGuiItem continueButton = KStandardGuiItem::cont();
-    continueButton.setText(u"Enter new session"_s);
-    KGuiItem cancelButton = KStandardGuiItem::cancel();
-    cancelButton.setText(u"Stay in current session"_s);
-    KMessageBox::ButtonCode confirmNewSession =
-        KMessageBox::warningContinueCancel(nullptr,
-                                           i18n("<p>You are about to enter a new desktop session.</p>"
-                                                "<p>A login screen will be displayed and the current session will be hidden.</p>"
-                                                "<p>You can switch between desktop sessions using:</p>"
-                                                "<ul>"
-                                                "<li>Ctrl+Alt+F{number of session}</li>"
-                                                "<li>Plasma search (type '%1')</li>"
-                                                "<li>Plasma widgets (such as the application launcher)</li>"
-                                                "</ul>",
-                                                m_switchKeyword),
-                                           i18n("New Desktop Session"),
-                                           continueButton,
-                                           cancelButton,
-                                           QStringLiteral("ConfirmNewSession"));
-    if (confirmNewSession == KMessageBox::Continue) {
-        m_session.lock();
-        dm.startReserve();
     }
 }
 
