@@ -265,8 +265,8 @@ Item {
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: Qt.quit()
-                Keys.onEnterPressed: Qt.quit
-                Keys.onReturnPressed: Qt.quit
+                Keys.onEnterPressed: Qt.quit()
+                Keys.onReturnPressed: Qt.quit()
                 KeyNavigation.left: okButton
                 KeyNavigation.right: okButton
                 KeyNavigation.up: suspendButton
