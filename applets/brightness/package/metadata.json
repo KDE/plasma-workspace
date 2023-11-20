@@ -107,12 +107,32 @@
             },
             {
                 "Email": "natalie.clarius@kde.org",
-                "Name": "Natalie Clarius"
+                "Name": "Natalie Clarius",
+                "Name[ca@valencia]": "Natalie Clarius",
+                "Name[ca]": "Natalie Clarius",
+                "Name[eo]": "Natalie Clarius",
+                "Name[ia]": "Natalie Clarius",
+                "Name[ka]": "ნატალი კლარიუსი",
+                "Name[nl]": "Natalie Clarius",
+                "Name[sl]": "Natalie Clarius",
+                "Name[tr]": "Natalie Clarius",
+                "Name[uk]": "Natalie Clarius",
+                "Name[x-test]": "xxNatalie Clariusxx"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Brightness%20Control",
         "Category": "System Information",
         "Description": "Control brightness and color of your screens and keyboards",
+        "Description[ca@valencia]": "Control de la brillantor i color de les pantalles i teclats",
+        "Description[ca]": "Control de la lluminositat i color de les pantalles i teclats",
+        "Description[eo]": "Regi brilecon kaj koloron de viaj ekranoj kaj klavaroj",
+        "Description[ia]": "Controla brillantia e color de tu schermos e clavieros",
+        "Description[ka]": "მართეთ თქვენი ეკრანებისა და კლავიატურების სიკაშკაშე და ფერები",
+        "Description[nl]": "Helderheid en kleur van uw scherm en toetsenborden besturen",
+        "Description[sl]": "Nadzirajte svetlost in barvo svojih zaslonov in tipkovnic",
+        "Description[tr]": "Ekranların ve klavyelerin parlaklığını ve rengini ayarlayın",
+        "Description[uk]": "Керування яскравістю і кольором на вашому екрані та у підсвічування клавіатури",
+        "Description[x-test]": "xxControl brightness and color of your screens and keyboardsxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"
@@ -120,7 +140,17 @@
         "Icon": "brightness-high",
         "Id": "org.kde.plasma.brightness",
         "License": "GPL-2.0+",
-        "Name": "Brightness and Color"
+        "Name": "Brightness and Color",
+        "Name[ca@valencia]": "Brillantor i color",
+        "Name[ca]": "Lluminositat i color",
+        "Name[eo]": "Brileco kaj Koloro",
+        "Name[ia]": "Brillantia e Color",
+        "Name[ka]": "სიკაშკაშე და ფერი",
+        "Name[nl]": "Helderheid en kleur",
+        "Name[sl]": "Svetlost in barva",
+        "Name[tr]": "Parlaklık ve Renk",
+        "Name[uk]": "Яскравість і колір",
+        "Name[x-test]": "xxBrightness and Colorxx"
     },
     "Keywords": "Power Management;Brightness;Color;Light;Screen;Display;Monitor;Keyboard;Night;Temperature",
     "X-Plasma-DBusActivationService": "org.kde.Solid.PowerManagement",
