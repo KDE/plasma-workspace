@@ -132,6 +132,7 @@ public:
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
         AutoHide, /**the panel will be shownn only if the mouse cursor is on screen edges */
         DodgeWindows, /* the panel will be normally visible, but will hide if a window would cover it */
+        WindowsGoBelow, /* the panel is always visible but will not reserve any space */
     };
     Q_ENUM(VisibilityMode)
 

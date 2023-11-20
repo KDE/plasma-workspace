@@ -486,6 +486,9 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             case PanelView::DodgeWindows:
                 panelJson.insert("hiding", "dodgewindows");
                 break;
+            case PanelView::WindowsGoBelow:
+                panelJson.insert("hiding", "windowsgobelow");
+                break;
             case PanelView::NormalPanel:
             default:
                 panelJson.insert("hiding", "normal");

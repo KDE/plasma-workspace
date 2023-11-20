@@ -292,6 +292,9 @@ void Panel::setHiding(const QString &mode)
     if (mode.compare("dodgewindows", Qt::CaseInsensitive) == 0) {
         visibilityMode = PanelView::DodgeWindows;
     }
+    if (mode.compare("windowsgobelow", Qt::CaseInsensitive) == 0) {
+        visibilityMode = PanelView::WindowsGoBelow;
+    }
 
     if (panel()) {
         panel()->setVisibilityMode(visibilityMode);

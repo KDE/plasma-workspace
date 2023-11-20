@@ -1291,6 +1291,7 @@ void PanelView::updateExclusiveZone()
             break;
         case AutoHide:
         case DodgeWindows:
+        case WindowsGoBelow:
             m_layerWindow->setExclusiveZone(0);
             break;
         }
