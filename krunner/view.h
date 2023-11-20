@@ -10,6 +10,7 @@
 #include <KConfigWatcher>
 #include <KPluginMetaData>
 #include <KSharedConfig>
+#include <PlasmaActivities/Consumer>
 #include <QQuickView>
 
 #include <PlasmaQuick/PlasmaWindow>
@@ -87,6 +88,7 @@ public:
 Q_SIGNALS:
     void pinnedChanged();
     void helpEnabledChanged();
+    void activityChanged(const QString &activity);
 
 protected:
     void showEvent(QShowEvent *event) override;
@@ -119,4 +121,5 @@ private:
     QStringList m_favoriteIds;
     X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
     HistoryBehavior m_historyBehavior = HistoryBehavior::CompletionSuggestion;
+    KActivities::Consumer m_consumer;
 };

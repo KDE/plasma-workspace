@@ -64,6 +64,8 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
             assignFavoriteIds();
         }
     });
+    connect(&m_consumer, &KActivities::Consumer::currentActivityChanged, this, &View::activityChanged);
+    Q_EMIT activityChanged(m_consumer.currentActivity());
 
     loadConfig();
 

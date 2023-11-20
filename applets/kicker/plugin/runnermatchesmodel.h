@@ -11,6 +11,7 @@
 
 #include <KRunner/QueryMatch>
 #include <KRunner/ResultsModel>
+#include <PlasmaActivities/Consumer>
 #include <optional>
 
 namespace KRunner
@@ -60,4 +61,5 @@ public:
 private:
     const QString m_runnerId;
     QString m_name;
+    KActivities::Consumer m_consumer;
 };

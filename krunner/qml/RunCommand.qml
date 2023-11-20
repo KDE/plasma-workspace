@@ -39,6 +39,9 @@ ColumnLayout {
         function onFavoriteIdsChanged() {
             results.model.favoriteIds = runnerWindow.favoriteIds
         }
+        function onActivityChanged(activity) {
+            runnerManager.setHistoryEnvironmentIdentifier(activity)
+        }
     }
     Component.onCompleted: {
         runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled

@@ -22,6 +22,7 @@ target_link_libraries(krunner
     KF6::KIOGui
     KF6::I18n
     Plasma::PlasmaQuick
+    Plasma::Activities
     KF6::DBusAddons
     KF6::Crash
     KF6::Runner
