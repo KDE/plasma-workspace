@@ -28,24 +28,6 @@ Item {
 
     property bool hadPrompt: false
 
-    function tryToSwitchUser(canStartSession) {
-        if (!defaultToSwitchUser) { // context property
-            return
-        }
-        // If we are in the only session, then going to the session switcher is
-        // a pointless extra step; instead create a new session immediately
-        if (canStartSession &&
-            ((sessionsModel.showNewSessionEntry && sessionsModel.count === 1)  ||
-            (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
-            sessionsModel.canStartNewSession) {
-            sessionsModel.startNewSession(true /* lock the screen too */)
-        } else {
-            mainStack.push(switchSessionPage, {immediate: true})
-        }
-    }
-
-    Component.onCompleted: Qt.callLater(tryToSwitchUser, true)
-
     function handleMessage(msg) {
         if (!root.notification) {
             root.notification += msg;
@@ -121,22 +103,10 @@ Item {
         }
     }
 
-    SessionsModel {
-        id: sessionsModel
-        showNewSessionEntry: false
-    }
-
     P5Support.DataSource {
         id: keystateSource
         engine: "keystate"
         connectedSources: "Caps Lock"
-    }
-
-    Loader {
-        id: changeSessionComponent
-        active: false
-        source: "ChangeSession.qml"
-        visible: false
     }
 
     RejectPasswordAnimation {
@@ -215,34 +185,6 @@ Item {
         }
 
         Component.onCompleted: launchAnimation.start();
-
-        states: [
-            State {
-                name: "onOtherSession"
-                // for slide out animation
-                PropertyChanges { target: lockScreenRoot; y: lockScreenRoot.height }
-                // we also change the opacity just to be sure it's not visible even on unexpected screen dimension changes with possible race conditions
-                PropertyChanges { target: lockScreenRoot; opacity: 0 }
-            }
-        ]
-
-        transitions: Transition {
-            // we only animate switchting to another session, because kscreenlocker doesn't get notified when
-            // coming from another session back and so we wouldn't know when to trigger the animation exactly
-            from: ""
-            to: "onOtherSession"
-
-            PropertyAnimation { properties: "y"; duration: Kirigami.Units.longDuration; easing.type: Easing.InQuad }
-            PropertyAnimation { properties: "opacity"; duration: Kirigami.Units.longDuration}
-
-            onRunningChanged: {
-                // after the animation has finished switch session: since we only animate the transition TO state "onOtherSession"
-                // and not the other way around, we don't have to check the state we transitioned into
-                if (/* lockScreenRoot.state == "onOtherSession" && */ !running) {
-                    mainStack.currentItem.switchSession()
-                }
-            }
-        }
 
         WallpaperFader {
             anchors.fill: parent
@@ -356,18 +298,9 @@ Item {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                         iconSource: "system-switch-user"
                         onClicked: {
-                            // If there are no existing sessions to switch to, create a new one instead
-                            if (((sessionsModel.showNewSessionEntry && sessionsModel.count === 1) ||
-                               (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
-                               sessionsModel.canSwitchUser) {
-                                mainStack.pop({ immediate: true })
-                                sessionsModel.startNewSession(true /* lock the screen too */)
-                                lockScreenRoot.state = ""
-                            } else {
-                                mainStack.push(switchSessionPage)
-                            }
+                            sessionManagement.switchUser();
                         }
-                        visible: sessionsModel.canStartNewSession && sessionsModel.canSwitchUser
+                        visible: sessionManagement.canSwitchUser
                     }
                 ]
 
@@ -495,80 +428,6 @@ Item {
                     }
                 }
             ]
-        }
-
-        Component {
-            id: switchSessionPage
-            SessionManagementScreen {
-                property var switchSession: finalSwitchSession
-
-                StackView.onStatusChanged: {
-                    if (StackView.status === StackView.Activating) {
-                        focus = true
-                    }
-                }
-
-                userListModel: sessionsModel
-
-                // initiating animation of lockscreen for session switch
-                function initSwitchSession() {
-                    lockScreenRoot.state = "onOtherSession"
-                }
-
-                // initiating session switch and preparing lockscreen for possible return of user
-                function finalSwitchSession() {
-                    mainStack.pop({ immediate: true })
-                    if (userListCurrentItem === null) {
-                        console.warn("Switching to an undefined user")
-                    } else if (userListCurrentItem.vtNumber === undefined) {
-                        console.warn("Switching to an undefined VT")
-                    }
-                    sessionsModel.switchUser(userListCurrentItem.vtNumber)
-                    lockScreenRoot.state = ""
-                }
-
-                Keys.onLeftPressed: userList.decrementCurrentIndex()
-                Keys.onRightPressed: userList.incrementCurrentIndex()
-                Keys.onEnterPressed: initSwitchSession()
-                Keys.onReturnPressed: initSwitchSession()
-                Keys.onEscapePressed: mainStack.pop()
-
-                ColumnLayout {
-                    Layout.fillWidth: true
-                    spacing: Kirigami.Units.gridUnit
-
-                    PlasmaComponents3.Button {
-                        Layout.fillWidth: true
-                        font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch to This Session")
-                        onClicked: initSwitchSession()
-                        visible: sessionsModel.count > 0
-                    }
-
-                    PlasmaComponents3.Button {
-                        Layout.fillWidth: true
-                        font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
-                        onClicked: {
-                            mainStack.pop({ immediate: true })
-                            sessionsModel.startNewSession(true /* lock the screen too */)
-                            lockScreenRoot.state = ""
-                        }
-                    }
-                }
-
-                actionItems: [
-                    ActionButton {
-                        iconSource: "go-previous"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Back")
-                        onClicked: mainStack.pop()
-                        //Button gets cut off on smaller displays without this.
-                        anchors{
-                            verticalCenter: parent.top
-                        }
-                    }
-                ]
-            }
         }
 
         Loader {

@@ -14,11 +14,12 @@
 
 #include <iostream>
 
-#include "kscreenlocker_interface.h"
 #include "ksmserver_interface.h"
 #include "logoutprompt_interface.h"
 #include "screenlocker_interface.h"
 #include "shutdown_interface.h"
+
+#include "libkworkspace_debug.h"
 
 // add a constructor with the service names and paths pre-populated
 class LogoutPromptIface : public OrgKdeLogoutPromptInterface
@@ -223,11 +224,36 @@ void SessionManagement::lock()
 
 void SessionManagement::switchUser()
 {
-    if (!canSwitchUser()) {
+    if (!canSwitchUser() || !canLock()) {
         return;
     }
-    OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
-    iface.SwitchUser();
+
+    if (!qEnvironmentVariableIsSet("XDG_SEAT_PATH")) {
+        qCWarning(LIBKWORKSPACE_DEBUG) << "Cannot switch user: XDG_SEAT_PATH not set";
+        return;
+    }
+
+    // lock first
+    OrgFreedesktopScreenSaverInterface screenSaverIface(QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                        QStringLiteral("/ScreenSaver"),
+                                                        QDBusConnection::sessionBus());
+    QDBusPendingReply<> pendingLock = screenSaverIface.Lock();
+
+    // then tell the display manager to switch
+    auto watcher = new QDBusPendingCallWatcher(pendingLock, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [](QDBusPendingCallWatcher *watcher) {
+        if (watcher->isError()) {
+            qCWarning(LIBKWORKSPACE_DEBUG) << "Failed to lock screen before switching user:" << watcher->error().message();
+            return;
+        }
+        QDBusMessage switchToGreeterMessage = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DisplayManager"),
+                                                                             qgetenv("XDG_SEAT_PATH"),
+                                                                             QStringLiteral("org.freedesktop.DisplayManager.Seat"),
+                                                                             "SwitchToGreeter");
+
+        QDBusConnection::systemBus().asyncCall(switchToGreeterMessage);
+    });
 }
 
 void SessionManagement::saveSession()
