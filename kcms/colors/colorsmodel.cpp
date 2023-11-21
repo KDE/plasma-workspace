@@ -68,6 +68,8 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
         return item.tints;
     case TintFactor:
         return item.tintFactor;
+    case TitlebarTintFactor:
+        return item.titlebarTintFactor;
     }
 
     return QVariant();
@@ -118,6 +120,7 @@ QHash<int, QByteArray> ColorsModel::roleNames() const
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
         {Tints, QByteArrayLiteral("tints")},
         {TintFactor, QByteArrayLiteral("tintFactor")},
+        {TitlebarTintFactor, QByteArrayLiteral("TitlebarTintFactor")},
     };
 }
 
@@ -206,18 +209,17 @@ void ColorsModel::load()
 
         const bool colorActiveTitleBar = group.readEntry("accentActiveTitlebar", false);
 
-        ColorsModelData item{
-            name,
-            baseName,
-            palette,
-            activeTitleBarBackground,
-            activeTitleBarForeground,
-            fi.isWritable(),
-            colorActiveTitleBar,
-            false, // pending deletion
-            group.hasKey("TintFactor"),
-            group.readEntry<qreal>("TintFactor", DefaultTintFactor),
-        };
+        ColorsModelData item{name,
+                             baseName,
+                             palette,
+                             activeTitleBarBackground,
+                             activeTitleBarForeground,
+                             fi.isWritable(),
+                             colorActiveTitleBar,
+                             false, // pending deletion
+                             group.hasKey("TintFactor"),
+                             group.readEntry<qreal>("TintFactor", DefaultTintFactor),
+                             group.readEntry<qreal>("TitlebarTintFactor", DefaultTitlebarTintFactor)};
 
         m_data.append(item);
     }

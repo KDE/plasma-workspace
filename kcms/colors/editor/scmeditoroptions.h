@@ -36,6 +36,7 @@ private Q_SLOTS:
     void on_accentTitlebar_stateChanged(int state);
     void on_tintColors_stateChanged(int state);
     void on_tintStrengthSlider_valueChanged(int value);
+    void on_titlebarTintStrengthSlider_valueChanged(int value);
 
 private:
     /** load options from global */

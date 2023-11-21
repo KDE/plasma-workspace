@@ -41,13 +41,17 @@ void SchemeEditorOptions::loadOptions()
 
     tintColors->blockSignals(true);
     tintStrengthSlider->blockSignals(true);
+    titlebarTintStrengthSlider->blockSignals(true);
 
     tintColors->setChecked(generalGroup.hasKey("TintFactor"));
     tintStrengthSlider->setEnabled(generalGroup.hasKey("TintFactor"));
     tintStrengthSlider->setValue(generalGroup.readEntry<qreal>("TintFactor", DefaultTintFactor) * 100);
+    titlebarTintStrengthSlider->setEnabled(generalGroup.hasKey("TitlebarTintFactor"));
+    titlebarTintStrengthSlider->setValue(generalGroup.readEntry<qreal>("TitlebarTintFactor", DefaultTitlebarTintFactor) * 100);
 
     tintColors->blockSignals(false);
     tintStrengthSlider->blockSignals(false);
+    titlebarTintStrengthSlider->blockSignals(false);
 
     // NOTE: keep this in sync with kdelibs/kdeui/colors/kcolorscheme.cpp
     // NOTE: remove extra logic from updateFromOptions and on_useInactiveEffects_stateChanged when this changes!
@@ -94,6 +98,14 @@ void SchemeEditorOptions::on_tintStrengthSlider_valueChanged(int value)
     Q_EMIT changed(true);
 }
 
+void SchemeEditorOptions::on_titlebarTintStrengthSlider_valueChanged(int value)
+{
+    KConfigGroup group(m_config, "General");
+    group.writeEntry("TitlebarTintFactor", (qreal)value / 100.0);
+
+    Q_EMIT changed(true);
+}
+
 void SchemeEditorOptions::on_useInactiveEffects_stateChanged(int state)
 {
     KConfigGroup group(m_config, "ColorEffects:Inactive");
@@ -129,5 +141,12 @@ void SchemeEditorOptions::on_accentTitlebar_stateChanged(int state)
     group.deleteEntry("accentActiveTitlebar");
     group.deleteEntry("accentInactiveTitlebar");
 
+    if (state == Qt::Checked) {
+        group.writeEntry("TitlebarTintFactor", DefaultTitlebarTintFactor);
+        titlebarTintStrengthSlider->setEnabled(true);
+    } else {
+        group.deleteEntry("TitlebarTintFactor");
+        titlebarTintStrengthSlider->setEnabled(false);
+    }
     Q_EMIT changed(true);
 }

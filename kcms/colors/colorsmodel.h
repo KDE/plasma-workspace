@@ -25,6 +25,7 @@ struct ColorsModelData {
     bool pendingDeletion;
     bool tints;
     qreal tintFactor;
+    qreal titlebarTintFactor;
 };
 Q_DECLARE_TYPEINFO(ColorsModelData, Q_RELOCATABLE_TYPE);
 
@@ -51,6 +52,7 @@ public:
         PendingDeletionRole,
         Tints,
         TintFactor,
+        TitlebarTintFactor,
     };
 
     int rowCount(const QModelIndex &parent) const override;

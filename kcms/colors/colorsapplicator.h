@@ -82,4 +82,6 @@ void applyScheme(const QString &colorSchemePath,
 
 const qreal DefaultTintFactor = 0.15;
 
+const qreal DefaultTitlebarTintFactor = 0.07;
+
 QColor tintColor(const QColor &base, const QColor &with, qreal factor = DefaultTintFactor);

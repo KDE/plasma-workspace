@@ -110,6 +110,8 @@ QColor tintColor(const QColor &base, const QColor &with, qreal factor)
     const auto withLAB = linearSRGBToOKLab(toLinearSRGB.map(with));
     baseLAB.a = lerp(baseLAB.a, withLAB.a, factor);
     baseLAB.b = lerp(baseLAB.b, withLAB.b, factor);
+    // We only want this transform to be significant on high factor values
+    baseLAB.L = lerp(baseLAB.L, withLAB.L, pow(factor, 3));
 
     return fromLinearSRGB.map(OKLabToLinearSRGB(baseLAB));
 }
@@ -143,6 +145,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         config->group("General").readEntry("TitlebarIsAccentColored", config->group(QStringLiteral("General")).readEntry("accentActiveTitlebar", false));
     const auto tintAccent = config->group("General").hasKey("TintFactor");
     const auto tintFactor = config->group("General").readEntry<qreal>("TintFactor", DefaultTintFactor);
+    const auto titlebarTintFactor = config->group("General").readEntry<qreal>("TitlebarTintFactor", DefaultTitlebarTintFactor);
 
     const QStringList colorSetGroupList{QStringLiteral("Colors:View"),
                                         QStringLiteral("Colors:Window"),
@@ -234,16 +237,16 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         if (item == QStringLiteral("Colors:Header") && hasAccent) {
             const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
             const auto accentedWindowBackground = accentBackground(accent, windowBackground);
-            const auto inactiveWindowBackground = tintColor(windowBackground, accent, tintFactor);
+            const auto tintedWindowBackground = tintColor(windowBackground, accentedWindowBackground, titlebarTintFactor);
 
             if (applyAccentToTitlebar) {
                 targetGroup = KConfigGroup(configOutput, item);
-                targetGroup.writeEntry("BackgroundNormal", accentedWindowBackground);
-                targetGroup.writeEntry("ForegroundNormal", accentForeground(accentedWindowBackground, true));
+                targetGroup.writeEntry("BackgroundNormal", tintedWindowBackground);
+                targetGroup.writeEntry("ForegroundNormal", accentForeground(tintedWindowBackground, true));
 
                 targetGroup = targetGroup.group("Inactive");
-                targetGroup.writeEntry("BackgroundNormal", inactiveWindowBackground);
-                targetGroup.writeEntry("ForegroundNormal", accentForeground(inactiveWindowBackground, false));
+                targetGroup.writeEntry("BackgroundNormal", windowBackground);
+                targetGroup.writeEntry("ForegroundNormal", accentForeground(windowBackground, false));
             }
         }
     }
@@ -274,22 +277,12 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
 
     if (hasAccent && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
         const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
+        const auto tintedWindowBackground = tintColor(windowBackground, accent, tintFactor);
+        groupWMOut.writeEntry("activeBackground", tintedWindowBackground, writeConfigFlag);
+        groupWMOut.writeEntry("activeForeground", accentForeground(tintedWindowBackground, true), writeConfigFlag);
 
-        if (tintAccent) {
-            const auto tintedWindowBackground = tintColor(windowBackground, accent, tintFactor);
-            if (!applyAccentToTitlebar) {
-                groupWMOut.writeEntry("activeBackground", tintedWindowBackground, writeConfigFlag);
-                groupWMOut.writeEntry("activeForeground", accentForeground(tintedWindowBackground, true), writeConfigFlag);
-            }
-            groupWMOut.writeEntry("inactiveBackground", tintedWindowBackground, writeConfigFlag);
-            groupWMOut.writeEntry("inactiveForeground", accentForeground(tintedWindowBackground, false), writeConfigFlag);
-        }
-
-        if (applyAccentToTitlebar) {
-            const auto accentedWindowBackground = accentBackground(accent, windowBackground);
-            groupWMOut.writeEntry("activeBackground", accentedWindowBackground, writeConfigFlag);
-            groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true), writeConfigFlag);
-        }
+        groupWMOut.writeEntry("inactiveBackground", windowBackground, writeConfigFlag);
+        groupWMOut.writeEntry("inactiveForeground", accentForeground(windowBackground, false), writeConfigFlag);
     }
 
     const QStringList groupNameList{QStringLiteral("ColorEffects:Inactive"), QStringLiteral("ColorEffects:Disabled")};

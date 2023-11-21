@@ -33,13 +33,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="accentTitlebar">
-     <property name="text">
-      <string>Make window titlebars a&amp;ccent-colored</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QCheckBox" name="tintColors">
      <property name="text">
       <string>Tint all colors with accent color</string>
@@ -55,6 +48,23 @@
    </item>
    <item>
     <widget class="QSlider" name="tintStrengthSlider">
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="accentTitlebar">
+     <property name="text">
+      <string>Tint window titlebars with accent color</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="titlebarTintStrengthSlider">
      <property name="maximum">
       <number>100</number>
      </property>
