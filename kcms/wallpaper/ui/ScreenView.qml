@@ -46,8 +46,8 @@ QQC2.Pane {
     }
     
     readonly property real relativeFactor: {
-        var relativeSize = Qt.size(width == 0 ? 1 : totalSize.width / (0.8 * width),
-                                   height == 0 ? 1 : totalSize.height / (0.8 * height));
+        var relativeSize = Qt.size(width === 0 ? 1 : totalSize.width / (0.8 * width),
+                                   height === 0 ? 1 : totalSize.height / (0.8 * height));
             if (relativeSize.width > relativeSize.height) {
             // Available width smaller than height, optimize for width (we have
             // '>' because the available width, height is in the denominator).
@@ -65,7 +65,7 @@ QQC2.Pane {
             yOffset: pane.yOffset
             screen: outputs[index]
             onScreenSelected: (screenName) => { pane.screenSelected(screenName) }
-            isSelected: pane.selectedScreen ? outputs[index].name == pane.selectedScreen.name : false
+            isSelected: pane.selectedScreen ? outputs[index].name === pane.selectedScreen.name : false
         }
     }
 }

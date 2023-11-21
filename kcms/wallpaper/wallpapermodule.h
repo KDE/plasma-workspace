@@ -83,6 +83,7 @@ private:
     QString m_activityId;
     QString m_containmentIdx;
     QString m_defaultWallpaper;
+    QList<QScreen *> m_screens;
 };
 
 #endif // WALLPAPERMODULE_H

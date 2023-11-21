@@ -1,4 +1,4 @@
-#include "wallpapermodule.h"
+﻿#include "wallpapermodule.h"
 
 #include "config-workspace.h"
 #include "defaultwallpaper.h"
@@ -73,7 +73,12 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<KConfigPropertyMap>(uri, 1);
 
     m_outputOrderWatcher = OutputOrderWatcher::instance(this);
-    connect(m_outputOrderWatcher, &OutputOrderWatcher::outputOrderChanged, this, [this](const QStringList & /* outputOrder */) {
+    connect(m_outputOrderWatcher, &OutputOrderWatcher::outputOrderChanged, this, [this](const QStringList &outputOrder) {
+        if (!outputOrder.contains(m_selectedScreen->name())) {
+            // current screen was removed
+            m_selectedScreen = mainUi()->window()->screen();
+            Q_EMIT selectedScreenChanged();
+        }
         onScreenChanged();
     });
 
@@ -103,6 +108,16 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
     connect(this, &WallpaperModule::settingsChanged, this, &KAbstractConfigModule::setNeedsSave);
 
     setButtons(Apply | Default);
+
+    m_screens = qApp->screens();
+    connect(qApp, &QGuiApplication::screenRemoved, this, [this](QScreen *screen) {
+        m_screens.removeAll(screen);
+        Q_EMIT screensChanged();
+    });
+    connect(qApp, &QGuiApplication::screenAdded, this, [this](QScreen *screen) {
+        m_screens << screen;
+        Q_EMIT screensChanged();
+    });
 }
 
 void WallpaperModule::onScreenChanged()
@@ -330,7 +345,7 @@ QString WallpaperModule::currentWallpaperPlugin() const
 
 QList<QScreen *> WallpaperModule::screens() const
 {
-    return qApp->screens();
+    return m_screens;
 }
 
 QScreen *WallpaperModule::selectedScreen() const
