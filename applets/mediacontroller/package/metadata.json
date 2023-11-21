@@ -176,9 +176,9 @@
         "Name[zh_TW]": "媒體播放器",
         "Website": "https://www.kde.org/plasma-desktop"
     },
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-DBusActivationService": "org.mpris.MediaPlayer2.*",
     "X-Plasma-NotificationAreaCategory": "SystemServices",
-    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
     ]

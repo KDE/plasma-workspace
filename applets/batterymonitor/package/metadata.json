@@ -112,6 +112,7 @@
         "Description[ca@valencia]": "Controla la configuració de la gestió de l'energia i consulta l'estat d'energia de la bateria",
         "Description[ca]": "Controla la configuració de la gestió d'energia i consulta l'estat d'energia de la bateria",
         "Description[eo]": "Regi energiadministrajn agordojn kaj vidi la energiostaton de via baterio",
+        "Description[he]": "שליטה בהגדרות ניהול צריכת חשמל וצפייה במצב החשמלי של הסוללה שלך",
         "Description[ia]": "Controla preferentias de gestion de energia e vide le stato de tu batteria",
         "Description[ka]": "აკონტროლეთ კვების მართვის პარამეტრები და იხილეთ თქვენი ელემენტის კვების სტატუსი",
         "Description[nl]": "Instellingen voor besturing van energiebeheer en zie de energiestatus van uw batterij",
@@ -130,6 +131,7 @@
         "Name[ca@valencia]": "Energia i bateria",
         "Name[ca]": "Energia i bateria",
         "Name[eo]": "Energio kaj Baterio",
+        "Name[he]": "צריכת חשמל וסוללה",
         "Name[ia]": "Energia (Power) e Batteria",
         "Name[ka]": "ენერგია და ელემენტი",
         "Name[nl]": "Energie en batterij",
@@ -194,9 +196,9 @@
     "Keywords[x-test]": "xxPower Managementxx;xxBatteryxx;xxSystemxx;xxEnergyxx;",
     "Keywords[zh_CN]": "电源管理;电池;系统;能源;",
     "Keywords[zh_TW]": "Power Management;Battery;System;Energy;",
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-DBusActivationService": "org.kde.Solid.PowerManagement",
     "X-Plasma-NotificationAreaCategory": "Hardware",
-    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-Provides": [
         "org.kde.plasma.powermanagement"
     ]

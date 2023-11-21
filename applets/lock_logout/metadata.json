@@ -199,7 +199,6 @@
         "Name[zh_TW]": "鎖定/登出",
         "Website": "https://www.kde.org/plasma-desktop"
     },
-    "X-Plasma-API-Minimum-Version": "6.0",
     "Keywords": "Lock;Logout;Sleep;Hibernate;Switch User;",
     "Keywords[ar]": "اقفل;اخرج;نم;أسبت;بدل المستخدم;",
     "Keywords[ast]": "Bloquiar;Bloquéu;Suspender;Suspensión;Dormir;Dormición;Ivernar;Ivernación;Hibernar;Hibernación;Cambiar d'usuariu;Cambéu d'usuariu;Cambéu d'usuarios;",
@@ -254,5 +253,6 @@
     "Keywords[vi]": "Lock;Logout;Sleep;Hibernate;Switch User;Khoá;Đăng xuất;Ngủ;Ngủ đông;Chuyển người dùng;",
     "Keywords[x-test]": "xxLockxx;xxLogoutxx;xxSleepxx;xxHibernatexx;xxSwitch Userxx;",
     "Keywords[zh_CN]": "锁定;注销;待机;睡眠;休眠;切换用户;",
-    "Keywords[zh_TW]": "Lock;Logout;Sleep;Hibernate;Switch User;"
+    "Keywords[zh_TW]": "Lock;Logout;Sleep;Hibernate;Switch User;",
+    "X-Plasma-API-Minimum-Version": "6.0"
 }

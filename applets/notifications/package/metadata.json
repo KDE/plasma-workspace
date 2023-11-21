@@ -205,8 +205,8 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell",
-    "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [
         "org.kde.plasma.notifications"
     ]
