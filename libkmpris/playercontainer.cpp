@@ -27,6 +27,7 @@ AbstractPlayerContainer::AbstractPlayerContainer(QObject *parent)
 AbstractPlayerContainer::~AbstractPlayerContainer()
 {
 }
+
 bool AbstractPlayerContainer::canControl() const
 {
     return m_canControl.value();
@@ -525,18 +526,17 @@ void PlayerContainer::initBindings()
         if (!m_xesamAlbum.value().isEmpty()) {
             return m_xesamAlbum.value();
         }
-        const QString &xesamUrl = m_xesamUrl.value();
+        const QStringView xesamUrl{m_xesamUrl.value()};
         if (!xesamUrl.startsWith(QLatin1String("file:///"))) {
             return QString();
         }
-        const QStringList urlParts = xesamUrl.split(QLatin1Char('/'));
+        const QList<QStringView> urlParts = xesamUrl.split(QLatin1Char('/'));
         if (urlParts.size() < 3) {
             return QString();
         }
         // if we play a local file without title and artist, show its containing folder instead
-        const auto lastFolderPathIt = std::next(urlParts.crbegin());
-        if (!lastFolderPathIt->isEmpty()) {
-            return *lastFolderPathIt;
+        if (auto lastFolderPathIt = std::next(urlParts.crbegin()); !lastFolderPathIt->isEmpty()) {
+            return QUrl::fromEncoded(lastFolderPathIt->toLatin1()).toString();
         }
         return QString();
     });

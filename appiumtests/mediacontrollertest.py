@@ -403,6 +403,20 @@ class MediaControllerTests(unittest.TestCase):
         self.assertTrue(self.mpris_interface.registered_event.wait(10))
         self.assertTrue(placeholder_element.is_displayed())
 
+    def test_bug477335_decode_xesam_url(self) -> None:
+        """
+        Make sure "xesam_url" is decoded before using it in other places like album name
+        """
+        if self.mpris_interface is not None:
+            self.mpris_interface.quit()
+
+        player_with_encoded_url_json_path: str = path.join(getcwd(), "resources/player_with_encoded_url.json")
+        with subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_with_encoded_url_json_path)) as player_with_encoded_url:
+            wait = WebDriverWait(self.driver, 3)
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Flash Funk")))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "League of Legends")))  # Album name deducted from folder name
+            player_with_encoded_url.terminate()
+
 
 if __name__ == '__main__':
     unittest.main()

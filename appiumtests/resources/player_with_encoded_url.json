@@ -1,0 +1,43 @@
+{
+    "base_properties": {
+        "CanQuit": true,
+        "Fullscreen": false,
+        "CanSetFullscreen": false,
+        "CanRaise": true,
+        "HasTrackList": true,
+        "Identity": "PlayerWithEncodedUrl",
+        "DesktopEntry": "audacious",
+        "SupportedUriSchemes": [
+            "file"
+        ],
+        "SupportedMimeTypes": [
+            "application/ogg"
+        ]
+    },
+    "player_properties": {
+        "PlaybackStatus": "Stopped",
+        "LoopStatus": "None",
+        "Rate": 1.0,
+        "Shuffle": false,
+        "Metadata": {},
+        "Position": 0,
+        "MinimumRate": 1.0,
+        "MaximumRate": 1.0,
+        "Volume": 1.0,
+        "CanGoNext": false,
+        "CanGoPrevious": false,
+        "CanPlay": true,
+        "CanPause": true,
+        "CanSeek": false,
+        "CanControl": true
+    },
+    "metadata": [
+        {
+            "mpris:trackid": "/audacious/1",
+            "xesam:url": "file:///mnt/data/Music/League%20of%20Legends/Flash%20Funk%20marshmallow%20remix.ogg",
+            "mpris:length": 221467000,
+            "xesam:title": "Flash Funk",
+            "xesam:artist": []
+        }
+    ]
+}
