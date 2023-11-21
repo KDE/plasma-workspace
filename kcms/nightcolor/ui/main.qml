@@ -40,7 +40,7 @@ KCM.SimpleKCM {
     }
 
     function endLocator() {
-        root.locator.destroy();
+        root.locator?.destroy();
     }
 
     Connections {
@@ -292,7 +292,7 @@ KCM.SimpleKCM {
                     && root.doneLocating
                 enabled: kcm.nightColorSettings.active
                 wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
+                text: i18n("Latitude: %1°   Longitude: %2°", Math.round((locator?.latitude || 0) * 100)/100, Math.round((locator?.longitude || 0) * 100)/100)
             }
 
             // Show time entry fields in manual timings mode
@@ -424,9 +424,9 @@ KCM.SimpleKCM {
                     (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
                 enabled: kcm.nightColorSettings.active
                 latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (locator !== undefined) ? locator.latitude : kcm.nightColorSettings.latitudeFixed
+                    && locator ? locator.latitude : kcm.nightColorSettings.latitudeFixed
                 longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (locator !== undefined) ? locator.longitude : kcm.nightColorSettings.longitudeFixed
+                    && locator ? locator.longitude : kcm.nightColorSettings.longitudeFixed
             }
         }
     }
