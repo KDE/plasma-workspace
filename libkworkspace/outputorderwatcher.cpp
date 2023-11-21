@@ -6,7 +6,6 @@
 */
 
 #include "outputorderwatcher.h"
-#include "debug.h"
 
 #include <QGuiApplication>
 #include <QScreen>
@@ -187,7 +186,8 @@ void X11OutputOrderWatcher::refresh()
             continue;
         }
 
-        const auto screenName = QString::fromUtf8((const char *)xcb_randr_get_output_info_name(output.get()), xcb_randr_get_output_info_name_length(output.get()));
+        const auto screenName =
+            QString::fromUtf8((const char *)xcb_randr_get_output_info_name(output.get()), xcb_randr_get_output_info_name_length(output.get()));
 
         auto orderCookie = xcb_randr_get_output_property(QX11Info::connection(), randr_outputs[i], m_kdeScreenAtom, XCB_ATOM_ANY, 0, 100, false, false);
         ScopedPointer<xcb_randr_get_output_property_reply_t> orderReply(xcb_randr_get_output_property_reply(QX11Info::connection(), orderCookie, nullptr));

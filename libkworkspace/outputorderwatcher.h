@@ -9,7 +9,8 @@
 #include <QAbstractNativeEventFilter>
 #include <QObject>
 
-#include <config-plasma.h>
+#include "kworkspace_export.h"
+#include <config-outputorder.h>
 
 #if HAVE_X11
 #include <xcb/xcb.h>
@@ -22,7 +23,7 @@ class QTimer;
  * This class watches for output ordering changes from
  * the relevant backend
  */
-class OutputOrderWatcher : public QObject
+class KWORKSPACE_EXPORT OutputOrderWatcher : public QObject
 {
     Q_OBJECT
 public:

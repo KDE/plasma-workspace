@@ -88,7 +88,7 @@ QScreen *ScreenPool::screenForId(int id) const
     return m_availableScreens[id];
 }
 
-int ScreenPool::idForScreen(QScreen *screen) const
+int ScreenPool::idForScreen(const QScreen *screen) const
 {
     return m_availableScreens.indexOf(screen);
 }

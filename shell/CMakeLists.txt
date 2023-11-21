@@ -44,7 +44,6 @@ set (plasma_shell_SRCS
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
-    outputorderwatcher.cpp
     shellcorona.cpp
     osd.cpp
     coronatesthelper.cpp
@@ -68,7 +67,6 @@ kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GEN
 
 add_executable(plasmashell)
 qt6_generate_wayland_protocol_client_sources(plasmashell FILES
-    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
     ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
 )
 

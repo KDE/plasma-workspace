@@ -1,4 +1,6 @@
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-outputorder.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-outputorder.h)
+
 set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     sessionmanagement.cpp
     sessionmanagementbackend.cpp
@@ -14,6 +16,8 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     defaultservice.h
     defaultwallpaper.cpp
     defaultwallpaper.h
+    outputorderwatcher.cpp
+    outputorderwatcher.h
    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
@@ -42,6 +46,7 @@ target_link_libraries(kworkspace
         KF6::CoreAddons
     PRIVATE
         Qt::DBus
+        Qt::WaylandClient
         KF6::I18n
         KF6::WindowSystem
         KF6::ConfigCore
@@ -55,7 +60,7 @@ target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_
 configure_file(config-libkworkspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h)
 
 if(HAVE_X11)
-    target_link_libraries(kworkspace PRIVATE X11::Xau)
+    target_link_libraries(kworkspace PRIVATE X11::Xau XCB::XCB XCB::RANDR Qt::GuiPrivate)
 endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION
@@ -70,12 +75,17 @@ ecm_qt_declare_logging_category(kworkspace
     EXPORT PLASMAWORKSPACE
 )
 
+qt6_generate_wayland_protocol_client_sources(kworkspace FILES
+    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+)
+
 install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES kdisplaymanager.h
                kworkspace.h
                sessionmanagement.h
                autostartscriptdesktopfile.h
+               outputorderwatcher.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/kworkspace6 COMPONENT Devel )

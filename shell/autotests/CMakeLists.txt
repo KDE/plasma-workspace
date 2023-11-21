@@ -25,7 +25,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                     ../currentcontainmentactionsmodel.cpp
                     ../panelshadows.cpp
                     ../desktopview.cpp
-                    ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../outputorderwatcher.cpp
+                    ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp
 		    ../autohidescreenedge.cpp
                         )
                set(plasmashell_dbusXML ../dbus/org.kde.PlasmaShell.xml)
@@ -55,6 +55,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt::DBus
                             Wayland::Client
                             Wayland::Server
+                            PW::KWorkspace
                             LayerShellQt::Interface
                             SharedClientTest
                                      )

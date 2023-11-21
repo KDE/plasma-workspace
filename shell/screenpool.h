@@ -28,7 +28,7 @@ public:
     ~ScreenPool() override;
 
     int idForName(const QString &connector) const;
-    int idForScreen(QScreen *screen) const;
+    int idForScreen(const QScreen *screen) const;
 
     QScreen *screenForId(int id) const;
 
