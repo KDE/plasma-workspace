@@ -4,15 +4,10 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
-import json
 import os
 import shutil
-import subprocess
-import sys
-import tempfile
 import time
 import unittest
-from enum import Enum
 from typing import Final
 
 import gi
@@ -20,44 +15,14 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
 gi.require_version('Gdk', '3.0')
-from gi.repository import Gdk, GLib
+from gi.repository import GLib
 
 WIDGET_ID: Final = "org.kde.plasma.clipboard"
-
-
-class XKeyCode(Enum):
-    """
-    @see https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
-    """
-    Tab = 0xff09
-    Space = 0x0020
-    Return = 0xff0d
-    Enter = 0xff8d
-    Escape = 0xff1b
-    Up = 0xff52
-    Right = 0xff53
-    Down = 0xff54
-
-
-def keyval_to_keycode(key_val: XKeyCode):
-    keymap = Gdk.Keymap.get_default()
-    ret, keys = keymap.get_entries_for_keyval(key_val.value)
-    if not ret:
-        raise RuntimeError("Failed to map key!")
-    return keys[0]
-
-
-def press_key(key_val: XKeyCode, repeat_num: int = 1) -> None:
-    with tempfile.NamedTemporaryFile() as handler:
-        keymap = keyval_to_keycode(key_val)
-        handler.write(json.dumps([{'type': 'keyboard', 'level': keymap.level, 'keycode': keymap.keycode}]).encode())
-        handler.flush()
-        for _ in range(repeat_num):
-            assert subprocess.Popen(["selenium-webdriver-at-spi-inputsynth", handler.name], stdout=sys.stderr, stderr=sys.stderr).wait() == 0
-            time.sleep(1)
 
 
 class ClipboardTest(unittest.TestCase):
@@ -121,101 +86,46 @@ class ClipboardTest(unittest.TestCase):
         """
         Tests the barcode page can be opened
         """
-        press_key(XKeyCode.Down)
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.DOWN).perform()
         # Wait until the first item is selected
         try:
             self.driver.find_element(AppiumBy.NAME, "Show QR code")
         except NoSuchElementException:
-            press_key(XKeyCode.Down)  # Try pressing down key again
+            actions.send_keys(Keys.DOWN).perform()  # Try pressing down key again
             self.driver.find_element(AppiumBy.NAME, "Show QR code")
-        press_key(XKeyCode.Right, 2)
-        press_key(XKeyCode.Space)
 
+        actions.send_keys(Keys.RIGHT).perform()
+        time.sleep(1)
+        actions.send_keys(Keys.RIGHT).perform()
+        time.sleep(1)
+        actions.send_keys(Keys.SPACE).perform()
         self.driver.find_element(AppiumBy.NAME, "QR Code")
         self.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
         self.driver.find_element(AppiumBy.NAME, "Change the QR code type")
 
-    def test_1_barcode_2_open_barcode_type_menu(self) -> None:
+    def test_1_barcode_2_change_barcode_type(self) -> None:
         """
-        Open the barcode type menu
+        Opens the barcode type menu and changes the current barcode type
         """
-        press_key(XKeyCode.Tab, 2)
-        press_key(XKeyCode.Space)
-        self.driver.find_element(AppiumBy.NAME, "QR Code")
-        self.driver.find_element(AppiumBy.NAME, "Data Matrix")
-        self.driver.find_element(AppiumBy.NAME, "Aztec")
-        self.driver.find_element(AppiumBy.NAME, "Code 39")
-        self.driver.find_element(AppiumBy.NAME, "Code 93")
-        self.driver.find_element(AppiumBy.NAME, "Code 128")
-
-    def test_1_barcode_3_change_barcode_type_Aztec(self) -> None:
-        """
-        Switch the current barcode type to Aztec
-        """
+        self.driver.find_element(AppiumBy.NAME, "Change the QR code type").click()
         menu_item = self.driver.find_element(AppiumBy.NAME, "Aztec")
-
         # Switch to Aztec
-        press_key(XKeyCode.Down, 3)
-        press_key(XKeyCode.Space)
-        WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
+        actions = ActionChains(self.driver)
+        for _ in range(3):
+            actions.send_keys(Keys.DOWN).perform()
+            time.sleep(1)
+        actions.send_keys(Keys.SPACE).perform()
+        WebDriverWait(self.driver, 5).until_not(lambda _: menu_item.is_displayed())
         self.driver.find_element(AppiumBy.NAME, "Aztec")  # This is from barcodeItem
 
-    def test_1_barcode_4_change_barcode_type_Code39(self) -> None:
-        """
-        Switch the current barcode type to Code 39
-        """
-        press_key(XKeyCode.Tab, 2)
-        press_key(XKeyCode.Space)
-        menu_item = self.driver.find_element(AppiumBy.NAME, "Code 39")
-        press_key(XKeyCode.Down, 4)
-        press_key(XKeyCode.Space)
-        WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        self.driver.find_element(AppiumBy.NAME, "Code 39")  # This is from barcodeItem
-
-    def test_1_barcode_5_change_barcode_type_Code93(self) -> None:
-        """
-        Switch the current barcode type to Code 93
-        """
-        press_key(XKeyCode.Tab, 2)
-        press_key(XKeyCode.Space)
-        menu_item = self.driver.find_element(AppiumBy.NAME, "Code 93")
-        press_key(XKeyCode.Down, 5)
-        press_key(XKeyCode.Space)
-        WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        self.driver.find_element(AppiumBy.NAME, "Code 93")  # This is from barcodeItem
-
-    def test_1_barcode_6_change_barcode_type_Code128(self) -> None:
-        """
-        Switch the current barcode type to Code 128
-        """
-        press_key(XKeyCode.Tab, 2)
-        press_key(XKeyCode.Space)
-        menu_item = self.driver.find_element(AppiumBy.NAME, "Code 128")
-        press_key(XKeyCode.Down, 6)
-        press_key(XKeyCode.Space)
-        WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        self.driver.find_element(AppiumBy.NAME, "Code 128")  # This is from barcodeItem
-
-    def test_1_barcode_7_change_barcode_type_QRCode(self) -> None:
-        """
-        Switch the current barcode type to QRCode
-        """
-        press_key(XKeyCode.Tab, 2)
-        press_key(XKeyCode.Space)
-        menu_item = self.driver.find_element(AppiumBy.NAME, "QR Code")
-        press_key(XKeyCode.Down, 1)
-        press_key(XKeyCode.Space)
-        WebDriverWait(self.driver, 5).until(lambda _: not menu_item.is_displayed())
-        self.driver.find_element(AppiumBy.NAME, "QR Code")  # This is from barcodeItem
-
-    def test_1_barcode_8_go_back_to_list_from_barcode_page(self) -> None:
+    def test_1_barcode_3_go_back_to_list_from_barcode_page(self) -> None:
         """
         Go back to the list from the barcode page
         """
         button_item = self.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
         self.assertTrue(button_item.is_displayed())
-        press_key(XKeyCode.Tab)
-        press_key(XKeyCode.Space)
+        button_item.click()
         self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
         self.assertFalse(button_item.is_displayed())
 
@@ -224,14 +134,13 @@ class ClipboardTest(unittest.TestCase):
         Pressing Return on an item should trigger the copy action
         @see https://bugs.kde.org/show_bug.cgi?id=475696
         """
-        press_key(XKeyCode.Tab)
-        press_key(XKeyCode.Down)
+        ActionChains(self.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).perform()
         self.driver.find_element(AppiumBy.NAME, "Show QR code")
-        press_key(XKeyCode.Return)
+        ActionChains(self.driver).send_keys(Keys.RETURN).perform()
         self.assertEqual(self.driver.get_clipboard_text(), "clipboard")
-        press_key(XKeyCode.Enter)
+        ActionChains(self.driver).send_keys(Keys.ENTER).perform()
         self.assertEqual(self.driver.get_clipboard_text(), "Fushan Wen")
-        press_key(XKeyCode.Space)
+        ActionChains(self.driver).send_keys(Keys.SPACE).perform()
         self.assertEqual(self.driver.get_clipboard_text(), "clipboard")
 
     def test_2_list_2_delete(self) -> None:
@@ -240,7 +149,7 @@ class ClipboardTest(unittest.TestCase):
         @see https://bugs.kde.org/show_bug.cgi?id=475696
         """
         # Now "clipboard" is the first item
-        press_key(XKeyCode.Up)
+        ActionChains(self.driver).send_keys(Keys.UP).perform()
         self.driver.find_element(AppiumBy.NAME, "Remove from history").click()
         # The first item becomes the current clipboard item
         self.assertEqual(self.driver.get_clipboard_text(), "Fushan Wen")

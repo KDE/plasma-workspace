@@ -55,7 +55,7 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py --failfast
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 DISABLED TRUE)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300)
 
 add_test(
     NAME devicenotifiertest
