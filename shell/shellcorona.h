@@ -12,6 +12,7 @@
 #include "config-X11.h"
 #include "plasma/corona.h"
 
+#include <QDBusArgument>
 #include <QDBusContext>
 #include <QDBusVariant>
 #include <QPointer>
@@ -317,3 +318,6 @@ private:
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
     friend class ShellTest;
 };
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, QColor &color);
+QDBusArgument &operator<<(QDBusArgument &argument, const QColor &color);

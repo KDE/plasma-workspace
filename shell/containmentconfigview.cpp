@@ -7,9 +7,12 @@
 #include "containmentconfigview.h"
 #include "config-workspace.h"
 #include "currentcontainmentactionsmodel.h"
+#include "qdbusinterface.h"
+#include "qdbusreply.h"
 #include "shellcorona.h"
 
 #include <QDBusConnection>
+#include <QDBusMetaType>
 #include <QDebug>
 #include <QDir>
 #include <QQmlComponent>
@@ -127,6 +130,13 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
                                               QStringLiteral("packageUninstalled"),
                                               m_wallpaperConfigModel,
                                               SLOT(repopulate()));
+
+        QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.plasmashell"),
+                                              QStringLiteral("/PlasmaShell"),
+                                              QStringLiteral("org.kde.PlasmaShell"),
+                                              QStringLiteral("wallpaperChanged"),
+                                              this,
+                                              SLOT(onWallpaperChanged(uint)));
     }
     return m_wallpaperConfigModel;
 }
@@ -182,10 +192,35 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
 
 void ContainmentConfigView::applyWallpaper()
 {
-    static_cast<KConfigPropertyMap *>(m_currentWallpaperConfig)->writeConfig();
-    m_containment->setWallpaperPlugin(m_currentWallpaperPlugin);
-    syncWallpaperObjects();
+    auto iface = new QDBusInterface("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", QDBusConnection::sessionBus(), this);
+    if (!iface->isValid()) {
+        qWarning() << qPrintable(QDBusConnection::sessionBus().lastError().message());
+        QCoreApplication::instance()->quit();
+    }
 
+    QVariantMap params;
+    for (const auto &key : m_currentWallpaperConfig->keys()) {
+        if (key.endsWith("Default")) {
+            continue;
+        }
+        if (!m_currentWallpaperConfig->value(key).isNull()) {
+            params.insert(key, m_currentWallpaperConfig->value(key));
+        }
+    }
+
+    if (m_currentWallpaperPlugin == QLatin1String("org.kde.image")) {
+        params.insert("Image", m_currentWallpaperConfig->value("Image"));
+        params.remove("PreviewImage");
+    }
+
+    const QDBusReply<void> response = iface->call(QStringLiteral("setWallpaper"), m_currentWallpaperPlugin, params, uint(m_containment->screen()));
+    if (!response.isValid()) {
+        qWarning() << "failed to set wallpaper:" << response.error();
+    }
+}
+
+void ContainmentConfigView::onWallpaperChanged(uint /*screenIdx*/)
+{
     Q_EMIT wallpaperConfigurationChanged();
 }
 

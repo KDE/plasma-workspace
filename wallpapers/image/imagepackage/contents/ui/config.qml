@@ -164,6 +164,7 @@ ColumnLayout {
             }
             KQuickControls.ColorButton {
                 id: colorButton
+                color: cfg_Color
                 dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
 
                 KCM.SettingHighlighter {

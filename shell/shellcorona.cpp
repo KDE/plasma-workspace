@@ -84,6 +84,26 @@
 using namespace std::chrono_literals;
 static const int s_configSyncDelay = 10000; // 10 seconds
 
+Q_DECLARE_METATYPE(QColor)
+
+QDBusArgument &operator<<(QDBusArgument &argument, const QColor &color)
+{
+    argument.beginStructure();
+    argument << color.rgba();
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, QColor &color)
+{
+    argument.beginStructure();
+    QRgb rgba;
+    argument >> rgba;
+    argument.endStructure();
+    color = QColor::fromRgba(rgba);
+    return argument;
+}
+
 ShellCorona::ShellCorona(QObject *parent)
     : Plasma::Corona(parent)
     , m_config(KSharedConfig::openConfig(QStringLiteral("plasmarc")))
@@ -99,6 +119,8 @@ ShellCorona::ShellCorona(QObject *parent)
     setupWaylandIntegration();
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", QStringLiteral("It is not possible to create objects of type Panel"));
+
+    qDBusRegisterMetaType<QColor>();
 
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
@@ -1708,6 +1730,7 @@ QVariantMap ShellCorona::wallpaper(uint screenNum)
 
 void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap &parameters, uint screenNum)
 {
+    qDBusRegisterMetaType<QColor>();
     if (wallpaperPlugin.isEmpty()) {
         qCWarning(PLASMASHELL) << "setWallpaper: Missing wallpaperPlugin parameter";
         return;
@@ -1741,12 +1764,21 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
     for (const auto &itemName : items) {
         auto it = parameters.find(itemName);
         if (it != parameters.end()) {
-            qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << it.value() << screenNum;
-            config->insert(itemName, it.value());
+            auto value = it.value();
+            // for some reason QColor is not properly unmarshalled despite my efforts
+            if (itemName == QStringLiteral("Color") && value.metaType() == QMetaType::fromType<QDBusArgument>()) {
+                QColor v;
+                value.value<QDBusArgument>() >> v;
+                value = v;
+            }
+
+            qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << value << screenNum;
+            config->insert(itemName, value);
         }
     }
     config->writeConfig();
     containment->setWallpaperPlugin(wallpaperPlugin);
+    containment->config().sync();
 
     Q_EMIT wallpaperChanged(screenNum);
 }

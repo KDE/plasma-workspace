@@ -48,6 +48,9 @@ public:
 
     Q_INVOKABLE void applyWallpaper();
 
+public Q_SLOTS:
+    void onWallpaperChanged(uint screenIdx);
+
 Q_SIGNALS:
     void currentWallpaperChanged();
     void wallpaperConfigurationChanged();
