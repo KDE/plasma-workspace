@@ -25,6 +25,7 @@ class RunnerMatchesModel : public KRunner::ResultsModel
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(QString description READ description CONSTANT)
+    Q_PROPERTY(AbstractModel *favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
 
 public:
     explicit RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent = nullptr);
@@ -48,6 +49,13 @@ public:
         return rowCount();
     }
 
+    AbstractModel *favoritesModel() const
+    {
+        return m_favoritesModel;
+    }
+    void setFavoritesModel(AbstractModel *model);
+    Q_SIGNAL void favoritesModelChanged() const;
+
     void setMatches(const QList<KRunner::QueryMatch> &matches);
 
     QHash<int, QByteArray> roleNames() const override
@@ -58,6 +66,7 @@ public:
     Q_SIGNAL void requestUpdateQueryString(const QString &term);
 
 private:
+    AbstractModel *m_favoritesModel = nullptr;
     const QString m_runnerId;
     QString m_name;
 };

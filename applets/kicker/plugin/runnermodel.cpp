@@ -218,10 +218,13 @@ void RunnerModel::initializeModels()
         auto model = new RunnerMatchesModel(QString(), i18n("Search results"), this);
         model->runnerManager()->setAllowedRunners(m_runners);
         model->setFavoriteIds(m_favoritePluginIds);
+        model->setFavoritesModel(m_favoritesModel);
         m_models.append(model);
     } else {
         for (const QString &runnerId : std::as_const(m_runners)) {
-            m_models.append(new RunnerMatchesModel(runnerId, std::nullopt, this));
+            auto model = new RunnerMatchesModel(runnerId, std::nullopt, this);
+            model->setFavoritesModel(m_favoritesModel);
+            m_models.append(model);
         }
     }
     for (auto model : std::as_const(m_models)) {

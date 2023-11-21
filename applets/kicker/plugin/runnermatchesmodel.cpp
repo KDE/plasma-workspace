@@ -221,3 +221,12 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
     return false;
 }
+
+void RunnerMatchesModel::setFavoritesModel(AbstractModel *model)
+{
+    if (m_favoritesModel != model) {
+        m_favoritesModel = model;
+        clear();
+        Q_EMIT favoritesModelChanged();
+    }
+}
