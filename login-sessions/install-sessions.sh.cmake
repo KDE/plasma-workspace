@@ -34,6 +34,9 @@ if [ -x /usr/bin/systemd-sysext ]; then
   rm -rf $prefix
   ln -sf @CMAKE_INSTALL_PREFIX@/../ $prefix
 
+  # Let us pkexec our merge and unmerge
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/org.kde.plasma.systemd-sysext.policy --target-directory=/usr/share/polkit-1/actions
+
   # Make built-from-source sessions appear in login screen
   install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop --target-directory=/usr/share/xsessions
   install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop --target-directory=/usr/share/wayland-sessions
