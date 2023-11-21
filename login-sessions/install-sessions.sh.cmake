@@ -5,11 +5,13 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-set -e
+set -ex
 
 if [ "$(id -u)" != "0" ]; then
   install @CMAKE_BINARY_DIR@/prefix.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dev-prefix.sh
   install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
+  install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-merge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
+  install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-unmerge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
   exec pkexec ./$0
 fi
 
@@ -20,26 +22,22 @@ if [ -d /opt/kde-dbus-scripts/ ]; then
   rm -f /etc/dbus-1/session.d/00-plasma.conf
 fi
 
-
 # - polkit exclusively looks in the system prefix and has no facilities to change that
 #   https://gitlab.freedesktop.org/polkit/polkit/-/blob/92b910ce2273daf6a76038f6bd764fa6958d4e8e/src/polkitbackend/polkitbackendinteractiveauthority.c#L302
 # - dbus exclusively looks in the system prefix for **system** services and offers no facilities to change that
 #   https://gitlab.freedesktop.org/dbus/dbus/-/blob/9722d621497b2e7324e696f4095f56e2a9307a7e/bus/activation-helper.c#
 if [ -x /usr/bin/systemd-sysext ]; then
   mkdir -p @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/
-  install --mode=644 -D /usr/lib/os-release @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/extension-release.plasma-dev
+  install --mode=644 -D /usr/lib/os-release @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/extension-release.plasma-dev6
 
-  prefix=/var/lib/extensions/
-  mkdir -p $prefix
-  ln -sf @CMAKE_INSTALL_PREFIX@/../ $prefix/plasma-dev
+  prefix=/var/lib/extensions-plasma-dev6
+  rm -rf $prefix
+  ln -sf @CMAKE_INSTALL_PREFIX@/../ $prefix
 
   # Make built-from-source sessions appear in login screen
-  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev.desktop --target-directory=$prefix/usr/share/xsessions
-  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev.desktop --target-directory=$prefix/usr/share/wayland-sessions
-
-  systemd-sysext refresh
-  systemctl enable systemd-sysext.service
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop --target-directory=/usr/share/xsessions
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop --target-directory=/usr/share/wayland-sessions
 else # legacy compat
-  echo 'Only systemd based systems are supported. You need systemd-sysext on your system'
+  echo 'Only systemd based systems are supported. You need systemd-sysext on your system or figure things out for yourself.'
 fi
 

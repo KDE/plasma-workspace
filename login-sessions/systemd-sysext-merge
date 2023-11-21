@@ -1,0 +1,10 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+set -ex
+
+$(dirname "$0")/systemd-sysext-unmerge
+
+mkdir -p /run/extensions/
+ln -s /var/lib/extensions-plasma-dev6 /run/extensions/plasma-dev6
+systemd-sysext refresh

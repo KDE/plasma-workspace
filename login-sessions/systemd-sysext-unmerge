@@ -1,0 +1,7 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+set -ex
+
+rm -f /run/extensions/plasma-dev6
+systemd-sysext refresh
