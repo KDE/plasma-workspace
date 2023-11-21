@@ -107,6 +107,7 @@ KCM.SimpleKCM {
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                 Kirigami.FormData.label: i18n("Switching times:")
+                currentIndex: kcm.nightColorSettings.active ? kcm.nightColorSettings.mode + 1 : 0
                 model: [
                     i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
                     i18n("Sunset and sunrise at current location"),
@@ -114,21 +115,6 @@ KCM.SimpleKCM {
                     i18n("Custom times"),
                     i18n("Always on night light")
                 ]
-                Connections {
-                    target: kcm.nightColorSettings
-                    function onActiveChanged() {
-                        if (!kcm.nightColorSettings.active) {
-                            modeSwitcher.currentIndex = 0;
-                        } else {
-                            modeSwitcher.currentIndex = kcm.nightColorSettings.mode + 1;
-                        }
-                    }
-                    function onModeChanged() {
-                        if (kcm.nightColorSettings.active) {
-                            modeSwitcher.currentIndex = kcm.nightColorSettings.mode + 1;
-                        }
-                    }
-                }
                 onCurrentIndexChanged: {
                     if (currentIndex !== 0) {
                         kcm.nightColorSettings.mode = currentIndex - 1;
