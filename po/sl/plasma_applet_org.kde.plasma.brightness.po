@@ -1,0 +1,185 @@
+# SPDX-FileCopyrightText: 2023 Matjaž Jeran <matjaz.jeran@amis.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"PO-Revision-Date: 2023-11-20 09:40+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#: package/contents/ui/BrightnessItem.qml:70
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Brightness and Color"
+msgstr "Svetlost in barva"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Screen brightness at %1%"
+msgstr "Svetlost zaslona ob %1%"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Keyboard brightness at %1%"
+msgstr "Svetlost tipkovnice ob %1%"
+
+#: package/contents/ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Night Light off"
+msgctxt "Status"
+msgid "Night Light off"
+msgstr "Nočna svetloba izklopljena"
+
+#: package/contents/ui/main.qml:107
+#, fuzzy, kde-format
+#| msgid "Night Light at %1K"
+msgctxt "Status; placeholder is a temperature"
+msgid "Night Light at %1K"
+msgstr "Nočna svetloba pri %1K"
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr "Pomaknite, da prilagodite svetlost zaslona"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Middle-click to toggle Night Light"
+msgstr "S srednjim klikom preklopite nočno svetlobo"
+
+#: package/contents/ui/NightColorItem.qml:74
+#, fuzzy, kde-format
+#| msgid "Off"
+msgctxt "Night light status"
+msgid "Off"
+msgstr "Izključeno"
+
+#: package/contents/ui/NightColorItem.qml:77
+#, fuzzy, kde-format
+#| msgid "Unavailable"
+msgctxt "Night light status"
+msgid "Unavailable"
+msgstr "Ni na voljo"
+
+#: package/contents/ui/NightColorItem.qml:80
+#, fuzzy, kde-format
+#| msgid "Not enabled"
+msgctxt "Night light status"
+msgid "Not enabled"
+msgstr "Ni omogočeno"
+
+#: package/contents/ui/NightColorItem.qml:83
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "Night light status"
+msgid "Not running"
+msgstr "Ne teče"
+
+#: package/contents/ui/NightColorItem.qml:86
+#, fuzzy, kde-format
+#| msgid "On"
+msgctxt "Night light status"
+msgid "On"
+msgstr "Vklopljeno"
+
+#: package/contents/ui/NightColorItem.qml:89
+#, fuzzy, kde-format
+#| msgid "Morning Transition"
+msgctxt "Night light phase"
+msgid "Morning Transition"
+msgstr "Jutranji prehod"
+
+#: package/contents/ui/NightColorItem.qml:91
+#, fuzzy, kde-format
+#| msgid "Day"
+msgctxt "Night light phase"
+msgid "Day"
+msgstr "Dan"
+
+#: package/contents/ui/NightColorItem.qml:93
+#, fuzzy, kde-format
+#| msgid "Evening Transition"
+msgctxt "Night light phase"
+msgid "Evening Transition"
+msgstr "Večerni prehod"
+
+#: package/contents/ui/NightColorItem.qml:95
+#, fuzzy, kde-format
+#| msgid "Night"
+msgctxt "Night light phase"
+msgid "Night"
+msgstr "Noč"
+
+#: package/contents/ui/NightColorItem.qml:105
+#, fuzzy, kde-format
+#| msgid "%1K"
+msgctxt "Placeholder is screen color temperature"
+msgid "%1K"
+msgstr "%1K"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Configure…"
+msgstr "Konfiguriraj…"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Enable and Configure…"
+msgstr "Omogoči in konfiguriraj…"
+
+#: package/contents/ui/NightColorItem.qml:165
+#, fuzzy, kde-format
+#| msgid "Transition to day complete by:"
+msgctxt "Label for a time"
+msgid "Transition to day complete by:"
+msgstr "Prehod na dan končan do:"
+
+#: package/contents/ui/NightColorItem.qml:167
+#, fuzzy, kde-format
+#| msgid "Transition to night scheduled for:"
+msgctxt "Label for a time"
+msgid "Transition to night scheduled for:"
+msgstr "Prehod na noč predviden ob:"
+
+#: package/contents/ui/NightColorItem.qml:169
+#, fuzzy, kde-format
+#| msgid "Transition to night complete by:"
+msgctxt "Label for a time"
+msgid "Transition to night complete by:"
+msgstr "Prehod na noč končan do:"
+
+#: package/contents/ui/NightColorItem.qml:171
+#, fuzzy, kde-format
+#| msgid "Transition to day scheduled for:"
+msgctxt "Label for a time"
+msgid "Transition to day scheduled for:"
+msgstr "Prehod na dan predviden ob:"
+
+#: package/contents/ui/PopupDialog.qml:70
+#, kde-format
+msgid "Display Brightness"
+msgstr "Svetlost zaslona"
+
+#: package/contents/ui/PopupDialog.qml:101
+#, kde-format
+msgid "Keyboard Brightness"
+msgstr "Svetlost tipkovnice"
+
+#: package/contents/ui/PopupDialog.qml:132
+#, kde-format
+msgid "Night Light"
+msgstr "Nočna svetloba"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 01:37+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -36,76 +36,76 @@ msgstr ""
 msgid "Configure Mouse Actions Plugin"
 msgstr "മൗസ് പ്രവർത്തന പ്ലഗിൻ ക്രമീകരിക്കുക"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:207
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:210
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:213
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:228
+#: desktopview.cpp:216
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:231
+#: desktopview.cpp:219
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:234
+#: desktopview.cpp:222
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:251
+#: desktopview.cpp:248
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:252
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:258
+#: desktopview.cpp:255
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr ""
 
-#: desktopview.cpp:262
+#: desktopview.cpp:259
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "പ്ലാസ്മ"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:265
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -314,12 +314,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2002
+#: shellcorona.cpp:2005
 #, kde-format
 msgid "Add Panel"
 msgstr "പാളി ചേർക്കുക"
 
-#: shellcorona.cpp:2038
+#: shellcorona.cpp:2041
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

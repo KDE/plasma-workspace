@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-10-22 08:43+0300\n"
+"PO-Revision-Date: 2023-11-20 14:35+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -101,10 +101,9 @@ msgid "Not present"
 msgstr "לא מחוברת"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "ניהול צריכת חשמל"
+msgstr "צריכת חשמל וסוללה"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -307,11 +306,10 @@ msgid "Power Profile"
 msgstr "פרופיל צריכת חשמל"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "סוללה לא זמינה"
+msgstr "לא זמין"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -376,6 +374,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"יכול להיות שיש תמיכה בפרופילי צריכת חשמל במכשיר שלך.<nl/>כדאי לנסות להתקין "
+"את החבילה <command>power-profiles-daemon</command> בעזרת מנהל החבילות של "
+"ההפצה שלך ולהפעיל את המערכת מחדש."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"
