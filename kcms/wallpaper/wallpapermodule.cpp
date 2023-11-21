@@ -105,8 +105,6 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
         qCFatal(KCM_WALLPAPER_DEBUG) << "Could not connect to dbus service org.kde.plasmashell";
     }
 
-    connect(this, &WallpaperModule::settingsChanged, this, &KAbstractConfigModule::setNeedsSave);
-
     setButtons(Apply | Default);
 
     m_screens = qApp->screens();
@@ -164,7 +162,7 @@ void WallpaperModule::onScreenChanged()
     setWallpaperPluginConfiguration(m_loadedWallpaperplugin);
 
     setRepresentsDefaults(isDefault());
-    Q_EMIT settingsChanged(false);
+    setNeedsSave(false);
 
     if (m_loadedWallpaperplugin != m_currentWallpaperPlugin) {
         m_currentWallpaperPlugin = m_loadedWallpaperplugin;
@@ -219,7 +217,7 @@ void WallpaperModule::setWallpaperPluginConfiguration(const QString &wallpaperpl
 
     connect(m_wallpaperConfiguration, &QQmlPropertyMap::valueChanged, this, [this](const QString & /* key */, const QVariant & /* value */) {
         setRepresentsDefaults(isDefault());
-        Q_EMIT settingsChanged(m_configLoader->isSaveNeeded());
+        setNeedsSave(m_configLoader->isSaveNeeded() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
     });
 }
 
@@ -287,7 +285,7 @@ void WallpaperModule::defaults()
     m_wallpaperConfiguration->insert(QStringLiteral("Image"), m_defaultWallpaper);
 
     setRepresentsDefaults(isDefault());
-    Q_EMIT settingsChanged(m_configLoader->isSaveNeeded());
+    setNeedsSave(m_configLoader->isSaveNeeded() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
 
     Q_EMIT wallpaperConfigurationChanged();
 
@@ -396,7 +394,7 @@ void WallpaperModule::setCurrentWallpaperPlugin(const QString &wallpaperPlugin)
 
     setWallpaperPluginConfiguration(m_currentWallpaperPlugin);
 
-    setNeedsSave(needsSave() && m_loadedWallpaperplugin != m_currentWallpaperPlugin);
+    setNeedsSave(needsSave() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
 
     Q_EMIT currentWallpaperPluginChanged();
 

@@ -54,7 +54,6 @@ public:
 
 Q_SIGNALS:
     void wallpaperConfigurationChanged();
-    void settingsChanged(bool changed);
     void currentWallpaperPluginChanged();
     void selectedScreenChanged();
     void screensChanged();
