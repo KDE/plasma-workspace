@@ -29,6 +29,9 @@ public:
     QString version() const;
     QString author() const;
     QString email() const;
+    QString apiVersion() const;
+    QString unsupportedMessage() const;
+    bool isSupported() const;
     QVariant data(int role = Qt::UserRole + 1) const override;
 
     int running() const override;
@@ -68,6 +71,9 @@ public:
         RunningRole = Qt::UserRole + 10,
         LocalRole = Qt::UserRole + 11,
         ScreenshotRole = Qt::UserRole + 12,
+        ApiVersionRole = Qt::UserRole + 13,
+        IsSupportedRole = Qt::UserRole + 14,
+        UnsupportedMessageRole = Qt::UserRole + 15
     };
 
     explicit PlasmaAppletItemModel(QObject *parent = nullptr);

@@ -9,6 +9,7 @@
 #include <QFileInfo>
 #include <QMimeData>
 #include <QStandardPaths>
+#include <QVersionNumber>
 
 #include "config-workspace.h"
 #include <KAboutData>
@@ -48,6 +49,9 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     setData(version(), PlasmaAppletItemModel::VersionRole);
     setData(author(), PlasmaAppletItemModel::AuthorRole);
     setData(email(), PlasmaAppletItemModel::EmailRole);
+    setData(apiVersion(), PlasmaAppletItemModel::ApiVersionRole);
+    setData(isSupported(), PlasmaAppletItemModel::IsSupportedRole);
+    setData(unsupportedMessage(), PlasmaAppletItemModel::UnsupportedMessageRole);
     setData(0, PlasmaAppletItemModel::RunningRole);
     setData(m_local, PlasmaAppletItemModel::LocalRole);
 }
@@ -115,6 +119,46 @@ void PlasmaAppletItem::setRunning(int count)
     m_runningCount = count;
     setData(count, PlasmaAppletItemModel::RunningRole);
     emitDataChanged();
+}
+
+QString PlasmaAppletItem::apiVersion() const
+{
+    return m_info.value(QStringLiteral("X-Plasma-API-Minimum-Version"));
+}
+
+bool PlasmaAppletItem::isSupported() const
+{
+    QVersionNumber version = QVersionNumber::fromString(apiVersion());
+    if (version.majorVersion() != 6 /*PROJECT_VERSION_MAJOR*/) {
+        return false;
+    } else if (version.minorVersion() > 6 /*PROJECT_VERSION_MINOR*/) {
+        return false;
+    }
+    return true;
+}
+
+QString PlasmaAppletItem::unsupportedMessage() const
+{
+    const QString versionString = apiVersion();
+    QVersionNumber version = QVersionNumber::fromString(versionString);
+
+    if (version.isNull()) {
+        // TODO: We have to hardcode 6 for now as PROJECT_VERSION_MAJOR is still 5, change it back to PROJECT_VERSION_MAJOR with 6.0
+        return i18n("This Widget was written for an unknown older version of Plasma and is not compatible with Plasma %1. Please contact the widget's author for an updated version.",
+                    6 /*PROJECT_VERSION_MAJOR*/);
+    } else if (version.majorVersion() < 6 /*PROJECT_VERSION_MAJOR*/) {
+        return i18n("This Widget was written for Plasma %1 and is not compatible with Plasma %2. Please contact the widget's author for an updated version.",
+                    version.majorVersion(),
+                    6 /*PROJECT_VERSION_MAJOR*/);
+    } else if (version.majorVersion() > 6 /*PROJECT_VERSION_MAJOR*/) {
+        return i18n("This Widget was written for Plasma %1 and is not compatible with Plasma %2. Please update Plasma in order to use the widget.",
+                    version.majorVersion(),
+                    6 /*PROJECT_VERSION_MAJOR*/);
+    } else if (version.minorVersion() > PROJECT_VERSION_MINOR) {
+        return i18n("This Widget was written for Plasma %1 and is not compatible with the latest version of Plasma. Please update Plasma in order to use the widget.", versionString);
+    }
+
+    return QString();
 }
 
 static bool matchesKeywords(QStringView keywords, const QString &pattern)
@@ -263,6 +307,9 @@ QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
     newRoleNames[RunningRole] = "running";
     newRoleNames[LocalRole] = "local";
     newRoleNames[ScreenshotRole] = "screenshot";
+    newRoleNames[ApiVersionRole] = "apiVersion";
+    newRoleNames[IsSupportedRole] = "isSupported";
+    newRoleNames[UnsupportedMessageRole] = "unsupportedMessage";
     return newRoleNames;
 }
 
@@ -306,8 +353,13 @@ void PlasmaAppletItemModel::populateModel()
         return true;
     };
 
-    const QList<KPluginMetaData> packages =
+    QList<KPluginMetaData> packages =
         KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
+
+    // Search all packages that aren't a correct applet and put them at the end: assume they are plasma5 plasmoids
+    packages.append(KPackage::PackageLoader::self()->findPackages(QString(), QStringLiteral("plasma/plasmoids"), [](const KPluginMetaData &plugin) -> bool {
+        return plugin.value(QStringLiteral("KPackageStructure")) != QStringLiteral("Plasma/Applet");
+    }));
 
     for (const KPluginMetaData &plugin : packages) {
         appendRow(new PlasmaAppletItem(plugin));
