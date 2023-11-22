@@ -5,6 +5,7 @@
 */
 
 #include "splashwindow.h"
+#include "debug.h"
 #include "splashapp.h"
 
 #include <KConfigGroup>
@@ -72,8 +73,10 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
 void SplashWindow::setStage(int stage)
 {
     m_stage = stage;
-
-    rootObject()->setProperty("stage", stage);
+    Q_ASSERT(rootObject());
+    if (rootObject()) { // could be null if source loading failed
+        rootObject()->setProperty("stage", stage);
+    }
 }
 
 void SplashWindow::keyPressEvent(QKeyEvent *event)
@@ -110,6 +113,10 @@ void SplashWindow::setGeometry(const QRect &rect)
         }
 
         Q_ASSERT(package.isValid());
-        setSource(QUrl::fromLocalFile(package.filePath("splashmainscript")));
+        const auto url = QUrl::fromLocalFile(package.filePath("splashmainscript"));
+        qCDebug(KSPLASHQML_DEBUG) << "Loading" << url << "from" << package.path();
+        Q_ASSERT(url.isValid());
+        Q_ASSERT(!url.isEmpty());
+        setSource(url);
     }
 }
