@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2021-07-06 20:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Lokalize 21.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: logout.cpp:273
+#: logout.cpp:272
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "लॉगआउट '%1' द्वारा रद्द किया गया"

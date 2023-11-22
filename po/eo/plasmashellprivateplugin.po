@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-05-28 11:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -172,142 +172,127 @@ msgstr "Nova Seanco"
 msgid "Filters"
 msgstr "Filtriloj"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
-#, kde-format
-msgid "Select Plasmoid File"
-msgstr "Elekti Plasmoid-Dosieron"
-
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
-#, kde-format
-msgid "Installing the package %1 failed."
-msgstr "Instalado de la pako %1 malsukcesis."
-
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
-#, kde-format
-msgid "Installation Failure"
-msgstr "Fiasko de instalado"
-
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Aliereblo"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Lanĉiloj por Aplikaĵoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Astronomio"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Dato kaj Horo"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Disvolvaj Iloj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
 msgstr "Edukado"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Medio kaj Vetero"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Ekzemploj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
 msgstr "Dosiersistemo"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Amuzo kaj Ludoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Grafikaĵoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
 msgstr "Lingvo"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Mapado"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Diversaj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Plurmediaĵoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Retaj Servoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Produktiveco"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Sisteminformo"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Utilaĵoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Fenestroj kaj Taskoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Tondujo"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:133
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Taskoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:149
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "Ĉiuj Fenestraĵoj"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:153
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "Kurante"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:159
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -316,17 +301,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Neinstalebla"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:163
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
 msgid "Categories:"
 msgstr "Kategorioj:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:232
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Elŝuti Novajn Plasma-Fenestraĵojn"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:241
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instali Fenestraĵon de Loka Dosiero…"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:503
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Elekti Plasmoid-Dosieron"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Instalado de la pako %1 malsukcesis."
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#, kde-format
+msgid "Installation Failure"
+msgstr "Fiasko de instalado"

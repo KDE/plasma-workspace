@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 01:37+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-11-14 07:48+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -75,32 +75,32 @@ msgstr "Фільтр синього світла робить кольори н�
 msgid "Switching times:"
 msgstr "Моменти перемикання:"
 
-#: ui/main.qml:111
+#: ui/main.qml:112
 #, kde-format
 msgid "Always off"
 msgstr "Завжди вимкнено"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Захід і схід сонця у поточній місцевості"
 
-#: ui/main.qml:113
+#: ui/main.qml:114
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Захід і схід сонця у вказаній місцевості"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Custom times"
 msgstr "Нетипові моменти часу"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Always on night light"
 msgstr "Завжди нічні кольори"
 
-#: ui/main.qml:167
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -112,60 +112,60 @@ msgstr ""
 "GPS (якщо доступний) або надсилання даних щодо мережі до <link url='https://"
 "location.services.mozilla.com'>Служби розташування Mozilla</link>."
 
-#: ui/main.qml:186
+#: ui/main.qml:172
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Температура денних кольорів:"
 
-#: ui/main.qml:229 ui/main.qml:288
+#: ui/main.qml:215 ui/main.qml:274
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:219 ui/main.qml:278
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Холодний (без фільтра)"
 
-#: ui/main.qml:239 ui/main.qml:298
+#: ui/main.qml:225 ui/main.qml:284
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Теплий"
 
-#: ui/main.qml:245
+#: ui/main.qml:231
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Температура нічних кольорів:"
 
-#: ui/main.qml:309
+#: ui/main.qml:295
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Широта: %1°     Довгота: %2°"
 
-#: ui/main.qml:319
+#: ui/main.qml:305
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Вмикати нічні кольори о:"
 
-#: ui/main.qml:332 ui/main.qml:355
+#: ui/main.qml:318 ui/main.qml:341
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Формат вхідних даних: ГГ:ХХ"
 
-#: ui/main.qml:342
+#: ui/main.qml:328
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Вмикати денні кольори о:"
 
-#: ui/main.qml:364
+#: ui/main.qml:350
 #, kde-format
 msgid "Transition duration:"
 msgstr "Тривалість кульмінації:"
 
-#: ui/main.qml:373
+#: ui/main.qml:359
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -174,17 +174,17 @@ msgstr[1] "%1 хвилини"
 msgstr[2] "%1 хвилин"
 msgstr[3] "хвилина"
 
-#: ui/main.qml:386
+#: ui/main.qml:372
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Вхідні дані у хвилинах — мін. 1, макс. 600"
 
-#: ui/main.qml:404
+#: ui/main.qml:390
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Помилка: перекриття часів кульмінації."
 
-#: ui/main.qml:426
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

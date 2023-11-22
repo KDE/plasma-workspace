@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 01:37+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-02-28 22:39+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -72,33 +72,33 @@ msgstr "블루라이트 필터를 사용하면 화면의 색상이 더 따뜻해
 msgid "Switching times:"
 msgstr "전환 시간:"
 
-#: ui/main.qml:111
+#: ui/main.qml:112
 #, kde-format
 msgid "Always off"
 msgstr "항상 끄기"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "현재 위치의 일몰과 일출"
 
-#: ui/main.qml:113
+#: ui/main.qml:114
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "수동으로 지정한 위치의 일몰과 일출"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Custom times"
 msgstr "사용자 정의 시간"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "항상 야간 색상 사용"
 
-#: ui/main.qml:167
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,19 +110,19 @@ msgstr ""
 "url='https://location.services.mozilla.com'>Mozilla Location Service</link>"
 "로 전송하여 주기적으로 업데이트합니다."
 
-#: ui/main.qml:186
+#: ui/main.qml:172
 #, fuzzy, kde-format
 #| msgid "Day color temperature:"
 msgid "Day light temperature:"
 msgstr "주간 색온도:"
 
-#: ui/main.qml:229 ui/main.qml:288
+#: ui/main.qml:215 ui/main.qml:274
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 K"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:219 ui/main.qml:278
 #, fuzzy, kde-format
 #| msgctxt "No blue light filter activated"
 #| msgid "Cool (no filter)"
@@ -130,62 +130,62 @@ msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "차가움(필터 없음)"
 
-#: ui/main.qml:239 ui/main.qml:298
+#: ui/main.qml:225 ui/main.qml:284
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "따뜻함"
 
-#: ui/main.qml:245
+#: ui/main.qml:231
 #, fuzzy, kde-format
 #| msgid "Night color temperature:"
 msgid "Night light temperature:"
 msgstr "야간 색온도:"
 
-#: ui/main.qml:309
+#: ui/main.qml:295
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "위도: %1°   경도: %2°"
 
-#: ui/main.qml:319
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "야간 색상 시작 시간:"
 
-#: ui/main.qml:332 ui/main.qml:355
+#: ui/main.qml:318 ui/main.qml:341
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "입력 형식: HH:MM"
 
-#: ui/main.qml:342
+#: ui/main.qml:328
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "주간 색상 시작 시간:"
 
-#: ui/main.qml:364
+#: ui/main.qml:350
 #, kde-format
 msgid "Transition duration:"
 msgstr "전환 시간:"
 
-#: ui/main.qml:373
+#: ui/main.qml:359
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1분"
 
-#: ui/main.qml:386
+#: ui/main.qml:372
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "분 단위로 입력 - 최소 1, 최대 600"
 
-#: ui/main.qml:404
+#: ui/main.qml:390
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "오류: 전환 시간이 겹칩니다."
 
-#: ui/main.qml:426
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

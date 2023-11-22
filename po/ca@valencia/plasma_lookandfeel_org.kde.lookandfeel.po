@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-10-27 11:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -41,26 +41,26 @@ msgstr "Contrasenya"
 msgid "Log In"
 msgstr "Inici de sessió"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "El bloqueig de majúscules està activat"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:165
+#: contents/logout/Logout.qml:166
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Suspén"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:185
+#: contents/logout/Logout.qml:187 contents/logout/Logout.qml:198
 #, kde-format
 msgid "Restart"
 msgstr "Reinicia"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
-#: contents/logout/Logout.qml:196
+#: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Shut Down"
 msgstr "Para"
@@ -81,7 +81,7 @@ msgstr "Introduïu el nom d'usuari i la contrasenya"
 msgid "List Users"
 msgstr "Llista els usuaris"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -121,42 +121,27 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Mostra davall l'indicatiu de desbloqueig"
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Ha fallat el desbloqueig"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Sleep"
 msgstr "Suspén"
 
-#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Hiberna"
 
-#: contents/lockscreen/LockScreenUi.qml:356
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch User"
 msgstr "Canvia d'usuari"
 
-#: contents/lockscreen/LockScreenUi.qml:543
-#, kde-format
-msgid "Switch to This Session"
-msgstr "Canvia a esta sessió"
-
-#: contents/lockscreen/LockScreenUi.qml:551
-#, kde-format
-msgid "Start New Session"
-msgstr "Inicia una sessió nova"
-
-#: contents/lockscreen/LockScreenUi.qml:563
-#, kde-format
-msgid "Back"
-msgstr "Arrere"
-
-#: contents/lockscreen/LockScreenUi.qml:628
+#: contents/lockscreen/LockScreenUi.qml:487
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -203,7 +188,7 @@ msgstr "Reproduïx o fa pausa del suport"
 msgid "Next track"
 msgstr "Peça següent"
 
-#: contents/logout/Logout.qml:140
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -218,45 +203,58 @@ msgstr[1] ""
 "%1 usuaris més estan connectats. Si l'ordinador s'apaga o reinicia, estos "
 "usuaris podrien perdre la faena."
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "En reiniciar, l'ordinador presentarà la pantalla de configuració del "
 "microprogramari."
 
-#: contents/logout/Logout.qml:207
+#: contents/logout/Logout.qml:186
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgid "Log Out"
 msgstr "Ix"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:246
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Es tornarà a reiniciar en 1 segon"
 msgstr[1] "Es tornarà a reiniciar en %1 segons"
 
-#: contents/logout/Logout.qml:233
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Es tancarà d'ací a 1 segon"
 msgstr[1] "Es tancarà d'ací a %1 segons"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "La sessió es tancarà d'ací a 1 segon"
 msgstr[1] "La sessió es tancarà d'ací a %1 segons"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgid "OK"
 msgstr "D'acord"
 
-#: contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:275
 #, kde-format
 msgid "Cancel"
 msgstr "Cancel·la"
@@ -275,6 +273,15 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, de KDE"
+
+#~ msgid "Switch to This Session"
+#~ msgstr "Canvia a esta sessió"
+
+#~ msgid "Start New Session"
+#~ msgstr "Inicia una sessió nova"
+
+#~ msgid "Back"
+#~ msgstr "Arrere"
 
 #~ msgid "%1%"
 #~ msgstr "%1%"

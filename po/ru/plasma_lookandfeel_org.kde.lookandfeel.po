@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2022-10-17 12:00+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -41,26 +41,26 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Войти"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Включён режим Caps Lock"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:165
+#: contents/logout/Logout.qml:166
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ждущий режим"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:185
+#: contents/logout/Logout.qml:187 contents/logout/Logout.qml:198
 #, kde-format
 msgid "Restart"
 msgstr "Перезагрузить"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
-#: contents/logout/Logout.qml:196
+#: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Shut Down"
 msgstr "Выключить"
@@ -81,7 +81,7 @@ msgstr "Введите имя пользователя и пароль"
 msgid "List Users"
 msgstr "Список пользователей"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -121,42 +121,27 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Показывать под строкой ввода пароля"
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Не удалось разблокировать"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Sleep"
 msgstr "Ждущий режим"
 
-#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Спящий режим"
 
-#: contents/lockscreen/LockScreenUi.qml:356
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch User"
 msgstr "Переключить пользователя"
 
-#: contents/lockscreen/LockScreenUi.qml:543
-#, kde-format
-msgid "Switch to This Session"
-msgstr "Переключить в этот сеанс"
-
-#: contents/lockscreen/LockScreenUi.qml:551
-#, kde-format
-msgid "Start New Session"
-msgstr "Начать новый сеанс"
-
-#: contents/lockscreen/LockScreenUi.qml:563
-#, kde-format
-msgid "Back"
-msgstr "Назад"
-
-#: contents/lockscreen/LockScreenUi.qml:628
+#: contents/lockscreen/LockScreenUi.qml:487
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -203,7 +188,7 @@ msgstr "Начать или приостановить воспроизведе�
 msgid "Next track"
 msgstr "Следующая дорожка"
 
-#: contents/logout/Logout.qml:140
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -224,17 +209,32 @@ msgstr[3] ""
 "В системе активен сеанс работы другого пользователя. При выключении или "
 "перезагрузке компьютера он может потерять результаты своей работы."
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "При перезагрузке компьютера будет показан экран настройки прошивки."
 
-#: contents/logout/Logout.qml:207
+#: contents/logout/Logout.qml:186
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgid "Log Out"
 msgstr "Завершить сеанс"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:246
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
@@ -243,7 +243,7 @@ msgstr[1] "Перезагрузка через %1 секунды"
 msgstr[2] "Перезагрузка через %1 секунд"
 msgstr[3] "Перезагрузка через %1 секунду"
 
-#: contents/logout/Logout.qml:233
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -252,7 +252,7 @@ msgstr[1] "Выключение компьютера через %1 секунд�
 msgstr[2] "Выключение компьютера через %1 секунд"
 msgstr[3] "Выключение компьютера через %1 секунду"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -261,12 +261,12 @@ msgstr[1] "Завершение сеанса через %1 секунды"
 msgstr[2] "Завершение сеанса через %1 секунд"
 msgstr[3] "Завершение сеанса через %1 секунду"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgid "OK"
 msgstr "ОК"
 
-#: contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:275
 #, kde-format
 msgid "Cancel"
 msgstr "Отмена"
@@ -285,6 +285,15 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma"
+
+#~ msgid "Switch to This Session"
+#~ msgstr "Переключить в этот сеанс"
+
+#~ msgid "Start New Session"
+#~ msgstr "Начать новый сеанс"
+
+#~ msgid "Back"
+#~ msgstr "Назад"
 
 #~ msgid "%1%"
 #~ msgstr "%1%"

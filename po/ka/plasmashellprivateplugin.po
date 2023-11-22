@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-11-17 09:34+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -170,142 +170,127 @@ msgstr "ახალი სესია"
 msgid "Filters"
 msgstr "ფილტრები"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
-#, kde-format
-msgid "Select Plasmoid File"
-msgstr "აირჩიეთ პლაზმოიდის ფაილი"
-
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
-#, kde-format
-msgid "Installing the package %1 failed."
-msgstr "პაკეტის დაყენების შეცდომა: %1."
-
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
-#, kde-format
-msgid "Installation Failure"
-msgstr "დაყენების შეცდომა"
-
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "წვდომადობა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "აპლიკაციების გამშვებები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "ასტრონომია"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "თარიღი და დრო"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "პროგრამირების ხელსაწყოები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
 msgstr "განათლება"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "გარემო და ამინდი"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
 msgstr "მაგალითები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
 msgstr "ფაილური სისტემა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "გართობა და თამაშები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "გრაფიკა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
 msgstr "ენა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "მიბმა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "სხვადასხვა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "მულტიმედია"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "ონლაინ სერვისები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "პროდუქტიულობა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
 msgstr "ინფორმაცის სისტემის შესახებ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "ხელსაწყოები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "ფანჯრები და ამოცანები"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "გაცვლის ბაფერი"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:133
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Tasks"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:149
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "ყველა ვიჯეტი"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:153
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "გაშვებულია"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:159
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -314,17 +299,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "წაშლადი"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:163
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
 msgid "Categories:"
 msgstr "კატეგორიები:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:232
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Plasma-ის ახალი ვიჯეტების გადმოწერა"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:241
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "ვიჯეტის ლოკალური ფაილიდან დაყენება…"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:503
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "აირჩიეთ პლაზმოიდის ფაილი"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "პაკეტის დაყენების შეცდომა: %1."
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#, kde-format
+msgid "Installation Failure"
+msgstr "დაყენების შეცდომა"

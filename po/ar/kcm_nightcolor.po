@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 01:37+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2022-09-10 09:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -73,33 +73,33 @@ msgstr "مرشح الضوء الأزرق يجعل الألوان على الشا
 msgid "Switching times:"
 msgstr "وقت التبديل:"
 
-#: ui/main.qml:111
+#: ui/main.qml:112
 #, kde-format
 msgid "Always off"
 msgstr "دائما معطل"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "من غروب الشمس وشروقها في الموقع الحالي"
 
-#: ui/main.qml:113
+#: ui/main.qml:114
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "غروب الشمس وشروقها في موقع يدوي"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Custom times"
 msgstr "وقت مخصص"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "دائما على اللون الليلي"
 
-#: ui/main.qml:167
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -111,19 +111,19 @@ msgstr ""
 "إرسال معلومات الشبكة إلى  <link url=\"https://location.services.mozilla.com"
 "\">خدمة موقع موزيلا</link>."
 
-#: ui/main.qml:186
+#: ui/main.qml:172
 #, fuzzy, kde-format
 #| msgid "Day color temperature:"
 msgid "Day light temperature:"
 msgstr "حرارة اللون النهاري"
 
-#: ui/main.qml:229 ui/main.qml:288
+#: ui/main.qml:215 ui/main.qml:274
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 كلفن"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:219 ui/main.qml:278
 #, fuzzy, kde-format
 #| msgctxt "No blue light filter activated"
 #| msgid "Cool (no filter)"
@@ -131,46 +131,46 @@ msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "بارد (بدون مرشح)"
 
-#: ui/main.qml:239 ui/main.qml:298
+#: ui/main.qml:225 ui/main.qml:284
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "دافئ"
 
-#: ui/main.qml:245
+#: ui/main.qml:231
 #, fuzzy, kde-format
 #| msgid "Night color temperature:"
 msgid "Night light temperature:"
 msgstr "حرارة اللون الليلي:"
 
-#: ui/main.qml:309
+#: ui/main.qml:295
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "العرض: %1°   الطول: %2°"
 
-#: ui/main.qml:319
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "يبدأ اللون الليلي عند:"
 
-#: ui/main.qml:332 ui/main.qml:355
+#: ui/main.qml:318 ui/main.qml:341
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "تنسيق الإدخال: س س : دد"
 
-#: ui/main.qml:342
+#: ui/main.qml:328
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "يبدأ اللون النهاري عند:"
 
-#: ui/main.qml:364
+#: ui/main.qml:350
 #, kde-format
 msgid "Transition duration:"
 msgstr "مدة الانتقال:"
 
-#: ui/main.qml:373
+#: ui/main.qml:359
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -181,17 +181,17 @@ msgstr[3] "%1 دقائق"
 msgstr[4] "%1 دقيقة"
 msgstr[5] "%1 دقيقة"
 
-#: ui/main.qml:386
+#: ui/main.qml:372
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "الإدخال دقائق أقل شيء 1 و أكثر شيء 600"
 
-#: ui/main.qml:404
+#: ui/main.qml:390
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "خطأ: يتداخل الوقت الانتقالي. "
 
-#: ui/main.qml:426
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

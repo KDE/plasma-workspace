@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -38,26 +38,26 @@ msgstr "암호"
 msgid "Log In"
 msgstr "로그인"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:165
+#: contents/logout/Logout.qml:166
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "대기 모드"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:185
+#: contents/logout/Logout.qml:187 contents/logout/Logout.qml:198
 #, kde-format
 msgid "Restart"
 msgstr "다시 시작"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
-#: contents/logout/Logout.qml:196
+#: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Shut Down"
 msgstr "컴퓨터 끄기"
@@ -78,7 +78,7 @@ msgstr "사용자 이름과 암호 입력"
 msgid "List Users"
 msgstr "사용자 목록"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -118,42 +118,27 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "잠금 해제 프롬프트 아래쪽에 표시"
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
 msgid "Unlocking failed"
 msgstr "잠금 해제 실패"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Sleep"
 msgstr "절전"
 
-#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "최대 절전 모드"
 
-#: contents/lockscreen/LockScreenUi.qml:356
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch User"
 msgstr "사용자 전환"
 
-#: contents/lockscreen/LockScreenUi.qml:543
-#, kde-format
-msgid "Switch to This Session"
-msgstr "이 세션으로 전환"
-
-#: contents/lockscreen/LockScreenUi.qml:551
-#, kde-format
-msgid "Start New Session"
-msgstr "새 세션 시작하기"
-
-#: contents/lockscreen/LockScreenUi.qml:563
-#, kde-format
-msgid "Back"
-msgstr "뒤로"
-
-#: contents/lockscreen/LockScreenUi.qml:628
+#: contents/lockscreen/LockScreenUi.qml:487
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -200,7 +185,7 @@ msgstr "미디어 재생/일시 정지"
 msgid "Next track"
 msgstr "다음 트랙"
 
-#: contents/logout/Logout.qml:140
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -212,40 +197,52 @@ msgstr[0] ""
 "다른 사용자 %1명이 로그인되어 있습니다. 컴퓨터를 끄거나 다시 시작하면 다음 사"
 "용자의 작업이 손실됩니다."
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
 
-#: contents/logout/Logout.qml:207
+#: contents/logout/Logout.qml:186
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgid "Log Out"
 msgstr "로그아웃"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:246
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "%1초 후 다시 시작"
 
-#: contents/logout/Logout.qml:233
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "%1초 후 컴퓨터 끄기"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "%1초 후 로그아웃"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgid "OK"
 msgstr "확인"
 
-#: contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:275
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -264,6 +261,15 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma"
+
+#~ msgid "Switch to This Session"
+#~ msgstr "이 세션으로 전환"
+
+#~ msgid "Start New Session"
+#~ msgstr "새 세션 시작하기"
+
+#~ msgid "Back"
+#~ msgstr "뒤로"
 
 #~ msgid "%1%"
 #~ msgstr "%1%"

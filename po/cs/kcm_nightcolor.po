@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 01:37+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-11-14 13:08+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -72,32 +72,32 @@ msgstr "Filtr modré barvy způsobí, že barvy na monitoru jsou teplejší."
 msgid "Switching times:"
 msgstr "Časy přepínání:"
 
-#: ui/main.qml:111
+#: ui/main.qml:112
 #, kde-format
 msgid "Always off"
 msgstr "Vždy vypnuto"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Východ a západ slunce v současné poloze"
 
-#: ui/main.qml:113
+#: ui/main.qml:114
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Východ a západ slunce v ručně vybraném místě"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Custom times"
 msgstr "Vlastní časy"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Always on night light"
 msgstr "Vždy noční světlo"
 
-#: ui/main.qml:167
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -109,60 +109,60 @@ msgstr ""
 "nebo zasíláním síťových informací na <link url='https://location.services."
 "mozilla.com'>Služba polohy Mozilla</link>."
 
-#: ui/main.qml:186
+#: ui/main.qml:172
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Teplota denního světla:"
 
-#: ui/main.qml:229 ui/main.qml:288
+#: ui/main.qml:215 ui/main.qml:274
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:219 ui/main.qml:278
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "5Studená (bez filtru)"
 
-#: ui/main.qml:239 ui/main.qml:298
+#: ui/main.qml:225 ui/main.qml:284
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Teplá"
 
-#: ui/main.qml:245
+#: ui/main.qml:231
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Teplota nočního světla:"
 
-#: ui/main.qml:309
+#: ui/main.qml:295
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Zeměpisná šířka: %1° Zeměpisná délka: %2°"
 
-#: ui/main.qml:319
+#: ui/main.qml:305
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Spustit noční světlo v:"
 
-#: ui/main.qml:332 ui/main.qml:355
+#: ui/main.qml:318 ui/main.qml:341
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Vstupní formát: HH:MM"
 
-#: ui/main.qml:342
+#: ui/main.qml:328
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Spustit denní světlo v:"
 
-#: ui/main.qml:364
+#: ui/main.qml:350
 #, kde-format
 msgid "Transition duration:"
 msgstr "Délka přechodu"
 
-#: ui/main.qml:373
+#: ui/main.qml:359
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -170,17 +170,17 @@ msgstr[0] "%1 minuta"
 msgstr[1] "%1 minuty"
 msgstr[2] "%1 minut"
 
-#: ui/main.qml:386
+#: ui/main.qml:372
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "V minutách od 1-600"
 
-#: ui/main.qml:404
+#: ui/main.qml:390
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Chyba: Délka přechodu se překrývá."
 
-#: ui/main.qml:426
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

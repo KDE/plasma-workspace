@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 01:37+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-11-16 22:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -73,32 +73,32 @@ msgstr "Mavi ışık süzgeci, ekrandaki renkleri daha sıcak yapar."
 msgid "Switching times:"
 msgstr "Değiştirme zamanı:"
 
-#: ui/main.qml:111
+#: ui/main.qml:112
 #, kde-format
 msgid "Always off"
 msgstr "Her zaman kapalı"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Geçerli konumdaki gündoğumu ve günbatımı"
 
-#: ui/main.qml:113
+#: ui/main.qml:114
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Elle girilen konumdaki gündoğumu ve günbatımı"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Custom times"
 msgstr "Özel zamanlar"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Always on night light"
 msgstr "Her zaman açık"
 
-#: ui/main.qml:167
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,77 +110,77 @@ msgstr ""
 "\"https://location.services.mozilla.com\">Mozilla Konum Hizmeti</a>'ne "
 "gönderilerek düzenli olarak güncellenecektir."
 
-#: ui/main.qml:186
+#: ui/main.qml:172
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Gün ışığı sıcaklığı:"
 
-#: ui/main.qml:229 ui/main.qml:288
+#: ui/main.qml:215 ui/main.qml:274
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 K"
 
-#: ui/main.qml:233 ui/main.qml:292
+#: ui/main.qml:219 ui/main.qml:278
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Serin (süzgeç yok)"
 
-#: ui/main.qml:239 ui/main.qml:298
+#: ui/main.qml:225 ui/main.qml:284
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Sıcak"
 
-#: ui/main.qml:245
+#: ui/main.qml:231
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Gece ışığı sıcaklığı:"
 
-#: ui/main.qml:309
+#: ui/main.qml:295
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Enlem: %1°   Boylam: %2°"
 
-#: ui/main.qml:319
+#: ui/main.qml:305
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Gece ışığını başlatma saati:"
 
-#: ui/main.qml:332 ui/main.qml:355
+#: ui/main.qml:318 ui/main.qml:341
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Giriş biçimi: SS:DD"
 
-#: ui/main.qml:342
+#: ui/main.qml:328
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Gün ışığını başlatma saati:"
 
-#: ui/main.qml:364
+#: ui/main.qml:350
 #, kde-format
 msgid "Transition duration:"
 msgstr "Geçiş süresi:"
 
-#: ui/main.qml:373
+#: ui/main.qml:359
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 dakika"
 msgstr[1] "%1 dakika"
 
-#: ui/main.qml:386
+#: ui/main.qml:372
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Dakikalar gir - en az 1, en fazla 600"
 
-#: ui/main.qml:404
+#: ui/main.qml:390
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Hata: Geçiş zamanı örtüşüyor."
 
-#: ui/main.qml:426
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

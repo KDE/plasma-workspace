@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-08-20 06:12-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -169,142 +169,127 @@ msgstr "ਨਵਾਂ ਸ਼ੈਸ਼ਨ"
 msgid "Filters"
 msgstr "ਫਿਲਟਰ"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:39
-#, kde-format
-msgid "Select Plasmoid File"
-msgstr "ਪਲਾਜ਼ਮੋਡ ਫ਼ਾਇਲ ਚੁਣੋ"
-
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
-#, kde-format
-msgid "Installing the package %1 failed."
-msgstr "ਪੈਕੇਜ %1 ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਫ਼ੇਲ੍ਹ ਹੈ"
-
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:63
-#, kde-format
-msgid "Installation Failure"
-msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫ਼ਲ"
-
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "ਸੁਲੱਭਤਾ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚਰ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "ਤਾਰਾ ਵਿਗਿਆਨ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "ਡਿਵੈਲਪਮੈਂਟ ਟੂਲ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
 msgstr "ਸਿੱਖਿਆ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "ਵਾਤਾਵਰਨ ਅਤੇ ਮੌਸਮ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
 msgstr "ਮਿਸਾਲਾਂ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
 msgstr "ਫਾਈਲ ਸਿਸਟਮ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "ਮੌਜਾਂ ਤੇ ਖੇਡਾਂ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "ਗਰਾਫਿਕਸ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
 msgstr "ਭਾਸ਼ਾ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "ਨਕਸ਼ੇ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "ਫੁਟਕਲ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "ਮਲਟੀਮੀਡਿਆ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "ਆਨਲਾਈਨ ਸਰਵਿਸਾਂ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "ਪਰੋਡਕਟਵਿਟੀ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
 msgstr "ਸਿਸਟਮ ਜਾਣਕਾਰੀ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "ਸਹੂਲਤਾਂ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "ਵਿੰਡੋਜ਼ ਅਤੇ ਟਾਸਕਾਂ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:133
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "ਟਾਸਕ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:149
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "ਸਭ ਵਿਦਜੈਟ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:153
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "ਚੱਲ ਰਹੇ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:159
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -313,20 +298,35 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "ਹਟਾਉਣਯੋਗ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:163
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
 msgid "Categories:"
 msgstr "ਕੈਟਾਗਰੀਆਂ:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:232
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:241
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "…ਲੋਕਲ ਫਾਇਲ ਤੋਂ ਵਿਜੈਟ ਇੰਸਟਾਲ ਕਰੋ"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:503
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "ਪਲਾਜ਼ਮੋਡ ਫ਼ਾਇਲ ਚੁਣੋ"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "ਪੈਕੇਜ %1 ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਫ਼ੇਲ੍ਹ ਹੈ"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#, kde-format
+msgid "Installation Failure"
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫ਼ਲ"
 
 #~ msgid "&Execute"
 #~ msgstr "ਚਲਾਓ(&E)"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2023-11-10 23:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -42,26 +42,26 @@ msgstr "密碼"
 msgid "Log In"
 msgstr "登入"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "大寫鎖定已開啟"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:165
+#: contents/logout/Logout.qml:166
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "睡眠"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:185
+#: contents/logout/Logout.qml:187 contents/logout/Logout.qml:198
 #, kde-format
 msgid "Restart"
 msgstr "重新啟動"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
-#: contents/logout/Logout.qml:196
+#: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Shut Down"
 msgstr "關機"
@@ -82,7 +82,7 @@ msgstr "請在「使用者名稱」和「密碼」框中輸入"
 msgid "List Users"
 msgstr "列出使用者"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -122,42 +122,27 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "在解除鎖定畫面中顯示"
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
 msgid "Unlocking failed"
 msgstr "解除鎖定失敗"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Sleep"
 msgstr "睡眠"
 
-#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "休眠"
 
-#: contents/lockscreen/LockScreenUi.qml:356
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch User"
 msgstr "切換使用者"
 
-#: contents/lockscreen/LockScreenUi.qml:543
-#, kde-format
-msgid "Switch to This Session"
-msgstr "切換至此工作階段"
-
-#: contents/lockscreen/LockScreenUi.qml:551
-#, kde-format
-msgid "Start New Session"
-msgstr "開始新的作業階段"
-
-#: contents/lockscreen/LockScreenUi.qml:563
-#, kde-format
-msgid "Back"
-msgstr "返回"
-
-#: contents/lockscreen/LockScreenUi.qml:628
+#: contents/lockscreen/LockScreenUi.qml:487
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -204,7 +189,7 @@ msgstr "播放、暫停媒體"
 msgid "Next track"
 msgstr "下一個音軌"
 
-#: contents/logout/Logout.qml:140
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -216,40 +201,52 @@ msgstr[0] ""
 "%1 位其他使用者目前仍登入中，若關機或重啟電腦，那些使用者可能會遺失仍在進行的"
 "作業。"
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "重開機後電腦將進入韌體設定畫面。"
 
-#: contents/logout/Logout.qml:207
+#: contents/logout/Logout.qml:186
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgid "Log Out"
 msgstr "登出"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:246
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "%1 秒後重新啟動"
 
-#: contents/logout/Logout.qml:233
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "在 %1 秒內關機"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "在 %1 秒內登出"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgid "OK"
 msgstr "確定"
 
-#: contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:275
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -268,6 +265,15 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "由 KDE 製作的 Plasma"
+
+#~ msgid "Switch to This Session"
+#~ msgstr "切換至此工作階段"
+
+#~ msgid "Start New Session"
+#~ msgstr "開始新的作業階段"
+
+#~ msgid "Back"
+#~ msgstr "返回"
 
 #~ msgid "%1%"
 #~ msgstr "%1%"

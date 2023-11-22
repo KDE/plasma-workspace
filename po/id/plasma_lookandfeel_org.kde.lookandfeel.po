@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-22 01:36+0000\n"
 "PO-Revision-Date: 2022-06-14 16:55+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -39,26 +39,26 @@ msgstr "Kata sandi"
 msgid "Log In"
 msgstr "Masuk"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:330
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock telah nyala"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:165
+#: contents/logout/Logout.qml:166
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Tidur"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:185
+#: contents/logout/Logout.qml:187 contents/logout/Logout.qml:198
 #, kde-format
 msgid "Restart"
 msgstr "Nyalakan Ulang"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
-#: contents/logout/Logout.qml:196
+#: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Shut Down"
 msgstr "Matikan"
@@ -79,7 +79,7 @@ msgstr "Ketik nama pengguna dan kata sandi"
 msgid "List Users"
 msgstr "Daftar Pengguna"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:604
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -121,42 +121,27 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:68
+#: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Gagal membuka kunci"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Sleep"
 msgstr "Tidur"
 
-#: contents/lockscreen/LockScreenUi.qml:350 contents/logout/Logout.qml:175
+#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernasi"
 
-#: contents/lockscreen/LockScreenUi.qml:356
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch User"
 msgstr "Alihkan Pengguna"
 
-#: contents/lockscreen/LockScreenUi.qml:543
-#, kde-format
-msgid "Switch to This Session"
-msgstr "Beralih ke Sesi Ini"
-
-#: contents/lockscreen/LockScreenUi.qml:551
-#, kde-format
-msgid "Start New Session"
-msgstr "Mulai Sesi Baru"
-
-#: contents/lockscreen/LockScreenUi.qml:563
-#, kde-format
-msgid "Back"
-msgstr "Mundur"
-
-#: contents/lockscreen/LockScreenUi.qml:628
+#: contents/lockscreen/LockScreenUi.qml:487
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -203,7 +188,7 @@ msgstr "Putarkan atau Jedakan media"
 msgid "Next track"
 msgstr "Trek selanjutnya"
 
-#: contents/logout/Logout.qml:140
+#: contents/logout/Logout.qml:141
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -220,44 +205,57 @@ msgstr[1] ""
 "dinyalakan ulang, para pengguna tersebut mungkin kehilangan apa yang "
 "dikerjakannya."
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Ketika dinyalakan ulang, komputer akan memasuki layar pengesetan firmware."
 
-#: contents/logout/Logout.qml:207
+#: contents/logout/Logout.qml:186
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgid "Log Out"
 msgstr "Keluar Log"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:246
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Menyalakan ulang dalam 1 detik"
 msgstr[1] "Menyalakan ulang dalam waktu %1 detik"
 
-#: contents/logout/Logout.qml:233
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Mematikan dalam waktu 1 detik"
 msgstr[1] "Mematikan dalam waktu %1 detik"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Mengeluarkan log dalam waktu 1 detik"
 msgstr[1] "Mengeluarkan log dalam waktu %1 detik"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgid "OK"
 msgstr "Oke"
 
-#: contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:275
 #, kde-format
 msgid "Cancel"
 msgstr "Batal"
@@ -276,6 +274,15 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma dibuat oleh KDE"
+
+#~ msgid "Switch to This Session"
+#~ msgstr "Beralih ke Sesi Ini"
+
+#~ msgid "Start New Session"
+#~ msgstr "Mulai Sesi Baru"
+
+#~ msgid "Back"
+#~ msgstr "Mundur"
 
 #~ msgid "%1%"
 #~ msgstr "%1%"
