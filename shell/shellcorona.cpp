@@ -948,13 +948,7 @@ void ShellCorona::slotCyclePanelFocus()
     if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
         activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
     } else {
-        // Cancel focus on the current panel
-        // Block focus on the panel if it's not the last panel
-        if (activePanel != m_panelViews.last()) {
-            m_blockRestorePreviousWindow = true;
-        }
         activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
-        m_blockRestorePreviousWindow = false;
 
         // More than one panel and the current panel is not the last panel,
         // move focus to next panel.
@@ -979,9 +973,10 @@ void ShellCorona::slotCyclePanelFocus()
 
             if (viewIt != m_panelViews.cend()) {
                 viewIt.value()->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
-            } else {
-                restorePreviousWindow();
             }
+        } else {
+            activePanel = m_panelViews.begin().value();
+            activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
         }
     }
 }
