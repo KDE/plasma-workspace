@@ -17,6 +17,13 @@ target_link_libraries(ksplashqml
     LayerShellQt::Interface
    )
 
+ecm_qt_declare_logging_category(ksplashqml
+   HEADER debug.h
+   IDENTIFIER KSPLASHQML_DEBUG
+   CATEGORY_NAME org.kde.plasma.ksplashqml
+   DESCRIPTION "ksplashqml debug"
+)
+
 install(TARGETS ksplashqml ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES org.kde.KSplash.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
 
