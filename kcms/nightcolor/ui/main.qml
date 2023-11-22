@@ -64,10 +64,10 @@ KCM.SimpleKCM {
     Connections {
         target: root.locator
         function onLatitudeChanged() {
-            kcm.nightColorSettings.latitudeAuto = root.locator.latitude
+            kcm.nightColorSettings.latitudeAuto = Math.round(root.locator.latitude * 100) / 100
         }
         function onLongitudeChanged() {
-            kcm.nightColorSettings.longitudeAuto = root.locator.longitude
+            kcm.nightColorSettings.longitudeAuto = Math.round(root.locator.longitude * 100) / 100
         }
     }
 
