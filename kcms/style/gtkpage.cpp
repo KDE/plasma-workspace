@@ -49,7 +49,7 @@ void GtkPage::onThemeRemoved()
 
 void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
 {
-    QString themesInstallDirectoryPath(QDir::homePath() + QStringLiteral("/.themes"));
+    QString themesInstallDirectoryPath(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/themes"));
     QDir::home().mkpath(themesInstallDirectoryPath);
     KTar themeArchive(fileUrl.path());
     themeArchive.open(QIODevice::ReadOnly);
