@@ -27,7 +27,7 @@
 template<typename T>
 using ScopedPointer = QScopedPointer<T, QScopedPointerPodDeleter>;
 
-class WaylandOutputOrder : public QWaylandClientExtensionTemplate<WaylandOutputOrder>, public QtWayland::kde_output_order_v1
+class WaylandOutputOrder : public QWaylandClientExtensionTemplate<WaylandOutputOrder, &QtWayland::kde_output_order_v1::destroy>, public QtWayland::kde_output_order_v1
 {
     Q_OBJECT
 public:
