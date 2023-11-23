@@ -939,46 +939,35 @@ void ShellCorona::slotCyclePanelFocus()
         return;
     }
 
-    PanelView *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
-    if (!activePanel) {
-        // Activate the first panel and save the previous window
-        activePanel = m_panelViews.begin().value();
-    }
+    QMapIterator iterator(m_panelViews);
+    PanelView *activePanel = nullptr;
 
-    if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
-        activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
-    } else {
-        activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
-
-        // More than one panel and the current panel is not the last panel,
-        // move focus to next panel.
-        if (activePanel != m_panelViews.last()) {
-            auto viewIt = std::find_if(m_panelViews.cbegin(), m_panelViews.cend(), [activePanel](const PanelView *panel) {
-                return activePanel == panel;
-            });
-
-            if (viewIt == m_panelViews.cend()) {
-                return;
-            }
-
-            // Skip destroyed panels
-            viewIt = std::next(viewIt);
-            while (viewIt != m_panelViews.cend()) {
-                if (!viewIt.value()->containment()->destroyed()) {
-                    break;
-                }
-
-                viewIt = std::next(viewIt);
-            }
-
-            if (viewIt != m_panelViews.cend()) {
-                viewIt.value()->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
-            }
-        } else {
-            activePanel = m_panelViews.begin().value();
-            activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
+    // Find active panel first
+    while (iterator.hasNext()) {
+        iterator.next();
+        // set panel passive if its already active
+        if (iterator.value()->containment()->status() == Plasma::Types::AcceptingInputStatus) {
+            activePanel = iterator.value();
+            activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
+            break;
         }
     }
+    // If we found our active panel, get the next one and set it active
+    if (activePanel != nullptr) {
+        while (iterator.hasNext()) {
+            iterator.next();
+            if (!iterator.value()->containment()->destroyed()) {
+                activePanel = iterator.value();
+                activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
+                return;
+            }
+        }
+    }
+    // If there is no panel found, select the first value
+    // Alternatively, if there is no next panel in iterator, set the first one,
+    // so we loop from the beginning.
+    activePanel = m_panelViews.begin().value();
+    activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
 }
 
 void ShellCorona::loadDefaultLayout()
