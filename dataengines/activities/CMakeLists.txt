@@ -13,7 +13,7 @@ qt_add_dbus_interface(
 add_library(plasma_engine_activities MODULE ${activity_engine_SRCS})
 target_link_libraries(plasma_engine_activities
                       KF6::CoreAddons
-                      KF6::Plasma
+                      Plasma::Plasma
                       KF6::Plasma5Support
                       Plasma::Activities
                       KF6::I18n

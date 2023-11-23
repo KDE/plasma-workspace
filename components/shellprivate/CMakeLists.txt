@@ -17,8 +17,8 @@ target_link_libraries(plasmashellprivateplugin
         Qt::Widgets
         Qt::Quick
         Qt::Qml
-        KF6::Plasma
-        KF6::PlasmaQuick
+        Plasma::Plasma
+        Plasma::PlasmaQuick
         KF6::I18n
         KF6::NewStuffWidgets
         KF6::KIOFileWidgets

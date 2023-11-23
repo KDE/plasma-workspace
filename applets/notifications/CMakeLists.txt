@@ -23,8 +23,8 @@ target_link_libraries(org.kde.plasma.notifications
                       Qt::Quick # for QQmlParserStatus
                       KF6::ConfigWidgets # for KStandardAction
                       KF6::I18n
-                      KF6::Plasma
-                      KF6::PlasmaQuick
+                      Plasma::Plasma
+                      Plasma::PlasmaQuick
                       KF6::GlobalAccel
                       KF6::KIOGui
                       KF6::KIOWidgets # for PreviewJob

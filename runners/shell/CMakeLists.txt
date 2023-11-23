@@ -8,7 +8,7 @@ target_link_libraries(krunner_shell
     KF6::KIOGui
     KF6::I18n
     KF6::JobWidgets
-    KF6::Plasma
+    Plasma::Plasma
     KF6::Runner
     KF6::Completion
 )

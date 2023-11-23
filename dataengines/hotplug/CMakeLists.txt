@@ -14,7 +14,7 @@ set(hotplug_engine_SRCS
 kcoreaddons_add_plugin(plasma_engine_hotplug SOURCES ${hotplug_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_link_libraries(plasma_engine_hotplug
     KF6::CoreAddons
-    KF6::Plasma
+    Plasma::Plasma
     KF6::Plasma5Support
     KF6::Solid
     KF6::Service

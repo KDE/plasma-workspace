@@ -8,7 +8,7 @@ target_link_libraries(org.kde.plasma.icon
                       KF6::KIOGui # for FavIconRequestJob
                       KF6::KIOWidgets # for KRun
                       KF6::Notifications
-                      KF6::Plasma
+                      Plasma::Plasma
                       PW::LibTaskManager)
 
 plasma_install_package(package org.kde.plasma.icon)

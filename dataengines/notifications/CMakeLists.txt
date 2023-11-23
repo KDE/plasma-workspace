@@ -25,7 +25,7 @@ target_link_libraries(plasma_engine_notifications
     KF6::IconThemes
     KF6::KIOCore
     KF6::Notifications
-    KF6::Plasma
+    Plasma::Plasma
     KF6::Plasma5Support
     KF6::Service
     KF6::NotifyConfig

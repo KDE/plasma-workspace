@@ -86,8 +86,8 @@ target_link_libraries(plasmashell
  KF6::WindowSystem
  KF6::ConfigCore # Activate KRunner on the desktop
  KF6::Crash
- KF6::Plasma
- KF6::PlasmaQuick
+ Plasma::Plasma
+ Plasma::PlasmaQuick
  KF6::Solid
  KF6::Svg
  KF6::I18n

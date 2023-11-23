@@ -5,8 +5,8 @@ target_link_libraries(org.kde.plasma.systemmonitor
                       Qt::Qml
                       Qt::Quick
                       Qt::DBus
-                      KF6::Plasma
-                      KF6::PlasmaQuick
+                      Plasma::Plasma
+                      Plasma::PlasmaQuick
                       KF6::I18n
                       KF6::ConfigCore
                       KF6::ConfigGui

@@ -6,7 +6,7 @@ set_target_properties(plasma_containmentactions_switchactivity PROPERTIES
 
 target_link_libraries(plasma_containmentactions_switchactivity
                       Qt::Widgets
-                      KF6::Plasma
+                      Plasma::Plasma
                       KF6::KIOCore
                       Plasma::Activities
                       PW::KWorkspace)

@@ -14,6 +14,6 @@ set_target_properties(plasma_containmentactions_switchwindow PROPERTIES
 
 target_link_libraries(plasma_containmentactions_switchwindow
                       Qt::Widgets
-                      KF6::Plasma
+                      Plasma::Plasma
                       KF6::I18n
                       PW::LibTaskManager)

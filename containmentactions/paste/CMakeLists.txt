@@ -2,8 +2,8 @@ kcoreaddons_add_plugin(plasma_containmentactions_paste SOURCES paste.cpp INSTALL
 target_link_libraries(plasma_containmentactions_paste
     Qt::Gui
     Qt::Widgets
-    KF6::Plasma
-    KF6::PlasmaQuick
+    Plasma::Plasma
+    Plasma::PlasmaQuick
     KF6::KIOCore
 )
 

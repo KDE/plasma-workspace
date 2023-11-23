@@ -47,7 +47,7 @@ target_link_libraries(kworkspace
         KF6::ConfigCore
         KF6::Service
         KF6::Package
-        KF6::Plasma
+        Plasma::Plasma
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
                                       INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/kworkspace6>" )

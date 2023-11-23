@@ -20,8 +20,8 @@ target_link_libraries(
     KF6::I18n
     KF6::IconThemes
     KF6::XmlGui
-    KF6::PlasmaQuick
-    KF6::Plasma
+    Plasma::PlasmaQuick
+    Plasma::Plasma
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package

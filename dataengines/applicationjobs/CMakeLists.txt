@@ -12,7 +12,7 @@ target_link_libraries(plasma_engine_applicationjobs
   KF6::CoreAddons
   KF6::I18n
   KF6::KIOCore
-  KF6::Plasma
+  Plasma::Plasma
   KF6::Plasma5Support
   KF6::Service
   PW::LibNotificationManager

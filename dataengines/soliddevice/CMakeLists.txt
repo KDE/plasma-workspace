@@ -21,7 +21,7 @@ target_link_libraries(plasma_engine_soliddevice
   Qt::Network
   KF6::I18n
   KF6::KIOCore
-  KF6::Plasma
+  Plasma::Plasma
   KF6::Plasma5Support
   KF6::Solid
   KF6::CoreAddons

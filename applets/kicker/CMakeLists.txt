@@ -77,7 +77,7 @@ target_link_libraries(kickerplugin
                       KF6::KIOWidgets
                       KF6::KIOFileWidgets
                       KF6::Notifications
-                      KF6::PlasmaQuick
+                      Plasma::PlasmaQuick
                       KF6::Runner
                       KF6::Service
                       KF6::WindowSystem

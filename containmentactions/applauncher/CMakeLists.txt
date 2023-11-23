@@ -11,4 +11,4 @@ set_target_properties(plasma_containmentactions_applauncher PROPERTIES
     OUTPUT_NAME org.kde.applauncher
 )
 
-target_link_libraries(plasma_containmentactions_applauncher KF6::Plasma KF6::KIOCore KF6::KIOWidgets KF6::I18n)
+target_link_libraries(plasma_containmentactions_applauncher Plasma::Plasma KF6::KIOCore KF6::KIOWidgets KF6::I18n)

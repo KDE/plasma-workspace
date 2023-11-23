@@ -19,7 +19,7 @@ target_link_libraries(krunner
     Qt::Widgets
     KF6::KIOGui
     KF6::I18n
-    KF6::PlasmaQuick
+    Plasma::PlasmaQuick
     KF6::DBusAddons
     KF6::Crash
     KF6::Runner

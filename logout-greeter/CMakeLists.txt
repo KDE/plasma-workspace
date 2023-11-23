@@ -16,7 +16,7 @@ target_link_libraries(ksmserver-logout-greeter
     Qt::Quick
     Qt::DBus
     KF6::I18n
-    KF6::PlasmaQuick
+    Plasma::PlasmaQuick
     KF6::Package
     KF6::WindowSystem
     KF6::ConfigCore

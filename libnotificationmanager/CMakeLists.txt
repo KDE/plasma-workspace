@@ -85,7 +85,7 @@ target_link_libraries(notificationmanager
         KF6::WindowSystem
         KF6::ItemModels # KDescendantsProxyModel
         KF6::KIOFileWidgets
-        KF6::Plasma
+        Plasma::Plasma
         KF6::Screen
         KF6::Service
 )

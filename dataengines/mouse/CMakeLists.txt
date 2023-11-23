@@ -12,7 +12,7 @@ endif ()
 kcoreaddons_add_plugin(plasma_engine_mouse SOURCES ${mouse_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_link_libraries(plasma_engine_mouse
     Qt::Widgets
-    KF6::Plasma
+    Plasma::Plasma
     KF6::Plasma5Support
     KF6::WindowSystem
 )

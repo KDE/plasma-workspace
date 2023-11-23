@@ -45,8 +45,8 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Plasma::KWaylandClient
                             KF6::WindowSystem
                             KF6::Package
-                            KF6::Plasma
-                            KF6::PlasmaQuick
+                            Plasma::Plasma
+                            Plasma::PlasmaQuick
                             KF6::Svg
                             KF6::XmlGui
                             KF6::I18n

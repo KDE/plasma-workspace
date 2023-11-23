@@ -39,7 +39,7 @@ kcoreaddons_add_plugin(plasma_engine_statusnotifieritem SOURCES ${statusnotifier
 target_link_libraries(plasma_engine_statusnotifieritem
     Qt::DBus
     KF6::Service
-    KF6::Plasma
+    Plasma::Plasma
     KF6::Plasma5Support
     KF6::IconThemes
     KF6::WindowSystem

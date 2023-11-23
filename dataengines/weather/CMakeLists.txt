@@ -26,7 +26,7 @@ target_compile_definitions(plasma_engine_weather PRIVATE -DQT_DISABLE_DEPRECATED
 target_link_libraries (plasma_engine_weather
             KF6::KIOCore
             KF6::Solid
-            KF6::Plasma
+            Plasma::Plasma
             KF6::Plasma5Support
             KF6::Service
             Qt::Network

@@ -11,7 +11,7 @@ set(CMAKE_AUTOMOC TRUE)
 kcoreaddons_add_plugin(plasma_engine_places SOURCES ${places_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 
 target_link_libraries(plasma_engine_places
-    KF6::Plasma
+    Plasma::Plasma
     KF6::Plasma5Support
     KF6::KIOCore
     KF6::KIOFileWidgets

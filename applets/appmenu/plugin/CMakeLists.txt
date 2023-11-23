@@ -10,7 +10,7 @@ target_link_libraries(appmenuplugin
                       Qt::Core
                       Qt::Widgets
                       Qt::Quick
-                      KF6::Plasma
+                      Plasma::Plasma
                       KF6::WindowSystem
                       KF6::I18n
                       PW::LibTaskManager

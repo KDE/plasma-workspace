@@ -12,7 +12,7 @@ target_link_libraries(ksplashqml
     KF6::ConfigCore
     KF6::Package
     KF6::WindowSystem
-    KF6::PlasmaQuick
+    Plasma::PlasmaQuick
     PW::KWorkspace
     LayerShellQt::Interface
    )

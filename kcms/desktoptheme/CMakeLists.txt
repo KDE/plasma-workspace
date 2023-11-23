@@ -38,7 +38,7 @@ target_link_libraries(plasma-apply-desktoptheme
     KF6::CoreAddons
     KF6::KCMUtils
     KF6::I18n
-    KF6::Plasma
+    Plasma::Plasma
 )
 
 #this desktop file is installed only for retrocompatibility with sycoca

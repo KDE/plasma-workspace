@@ -6,7 +6,7 @@ set_target_properties(plasma_containmentactions_switchdesktop PROPERTIES
 
 target_link_libraries(plasma_containmentactions_switchdesktop
                         Qt::Widgets
-                        KF6::Plasma
+                        Plasma::Plasma
                         PW::LibTaskManager
                        )
 
