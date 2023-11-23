@@ -200,6 +200,24 @@ PlasmaComponents3.ItemDelegate {
                 }
             }
 
+            NightLightTimingsView {
+                id: timingsView
+
+                visible: monitor.enabled && monitor.hasSwitchingTimes
+
+                property int dayTransitionOn: monitor.scheduledTransitionStartTime
+                property int dayTransitionOff: monitor.scheduledTransitionStartTime + 6000
+                property int nightTransitionOn: monitor.scheduledTransitionStartTime
+                property int nightTransitionOff: monitor.scheduledTransitionStartTime + 6000
+
+                property bool alwaysOn: false
+                property int dayTemperature: 6500
+                property int nightTemperature: 4200
+
+                readonly property bool show24h: true // TODO: Get from user's prefernces
+                readonly property bool singleColor: monitor.hasSwitchingTimes
+            }
+
         }
     }
 
