@@ -7,8 +7,8 @@
 #include "activityengine.h"
 #include "activityservice.h"
 
-#include <kactivities/controller.h>
-#include <kactivities/info.h>
+#include <plasmaactivities/controller.h>
+#include <plasmaactivities/info.h>
 
 #include <QApplication>
 #include <QDBusServiceWatcher>

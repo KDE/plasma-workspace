@@ -23,7 +23,7 @@ target_link_libraries(plasmashellprivateplugin
         KF6::NewStuffWidgets
         KF6::KIOFileWidgets
         KF6::WindowSystem
-        KF6::Activities
+        Plasma::Activities
         KF6::TextWidgets
         KF6::Package
 )

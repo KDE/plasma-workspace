@@ -8,7 +8,7 @@
 
 #include "forwardingmodel.h"
 
-#include <KActivities/Stats/ResultModel>
+#include <PlasmaActivities/Stats/ResultModel>
 #include <KFilePlacesModel>
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>

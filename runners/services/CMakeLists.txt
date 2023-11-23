@@ -18,8 +18,8 @@ target_link_libraries(krunner_services
     KF6::JobWidgets
     KF6::Runner
     KF6::Service
-    KF6::Activities
-    KF6::ActivitiesStats
+    Plasma::Activities
+    Plasma::ActivitiesStats
 )
 
 if(BUILD_TESTING)

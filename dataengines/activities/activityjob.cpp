@@ -8,7 +8,7 @@
 
 #include <KLocalizedString>
 #include <QDebug>
-#include <kactivities/controller.h>
+#include <plasmaactivities/controller.h>
 
 #include <QDBusConnection>
 #include <QDBusMessage>

@@ -39,8 +39,8 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 #include <PlasmaQuick/SharedQmlEngine>
-#include <kactivities/consumer.h>
-#include <kactivities/controller.h>
+#include <plasmaactivities/consumer.h>
+#include <plasmaactivities/controller.h>
 #include <kdirwatch.h>
 #include <ksycoca.h>
 

@@ -7,7 +7,7 @@ target_link_libraries(krunner_recentdocuments
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::I18n
-    KF6::ActivitiesStats
+    Plasma::ActivitiesStats
     KF6::Runner
     KF6::Notifications
 )

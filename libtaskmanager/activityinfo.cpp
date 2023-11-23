@@ -6,8 +6,8 @@
 
 #include "activityinfo.h"
 
-#include <KActivities/ActivitiesModel>
-#include <KActivities/Consumer>
+#include <PlasmaActivities/ActivitiesModel>
+#include <PlasmaActivities/Consumer>
 
 namespace TaskManager
 {

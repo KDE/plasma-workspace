@@ -15,7 +15,7 @@ target_link_libraries(plasma_engine_activities
                       KF6::CoreAddons
                       KF6::Plasma
                       KF6::Plasma5Support
-                      KF6::Activities
+                      Plasma::Activities
                       KF6::I18n
                       KF6::Service
                       Qt::DBus

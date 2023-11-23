@@ -9,8 +9,8 @@
 #include <KRunner/AbstractRunner>
 #include <KService>
 
-#include <KActivities/Consumer>
-#include <KActivities/Stats/ResultWatcher>
+#include <PlasmaActivities/Consumer>
+#include <PlasmaActivities/Stats/ResultWatcher>
 #include <QMap>
 
 using namespace KActivities::Stats;

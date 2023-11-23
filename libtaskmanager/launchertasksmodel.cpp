@@ -13,8 +13,8 @@
 #include <KSycoca>
 #include <KWindowSystem>
 
-#include <KActivities/Consumer>
-#include <KActivities/ResourceInstance>
+#include <PlasmaActivities/Consumer>
+#include <PlasmaActivities/ResourceInstance>
 
 #include <KIO/ApplicationLauncherJob>
 

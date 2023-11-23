@@ -21,7 +21,7 @@ set_target_properties(plasma_containmentactions_contextmenu PROPERTIES
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt::DBus
                       Qt::Qml
-                      KF6::Activities
+                      Plasma::Activities
                       KF6::I18n
                       KF6::GlobalAccel
                       KF6::Plasma

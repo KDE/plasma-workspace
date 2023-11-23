@@ -18,7 +18,7 @@
 #include <QQmlEngine>
 #include <QTimer>
 
-#include <KActivities/ResourceInstance>
+#include <PlasmaActivities/ResourceInstance>
 #include <KApplicationTrader>
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
@@ -30,8 +30,8 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 
-#include <KActivities/Stats/Cleaning>
-#include <KActivities/Stats/Terms>
+#include <PlasmaActivities/Stats/Cleaning>
+#include <PlasmaActivities/Stats/Terms>
 #include <KWindowSystem>
 
 namespace KAStats = KActivities::Stats;

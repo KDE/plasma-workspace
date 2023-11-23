@@ -12,7 +12,7 @@
 #include <QStandardPaths>
 #include <QTemporaryDir>
 #include <QTest>
-#include <kactivities/controller.h>
+#include <plasmaactivities/controller.h>
 #include <qtestcase.h>
 
 #include "../desktopview.h"

@@ -22,8 +22,8 @@
 #include <KNotificationJobUiDelegate>
 #include <KShell>
 
-#include <KActivities/Stats/Query>
-#include <KActivities/Stats/Terms>
+#include <PlasmaActivities/Stats/Query>
+#include <PlasmaActivities/Stats/Terms>
 
 using namespace KActivities::Stats::Terms;
 

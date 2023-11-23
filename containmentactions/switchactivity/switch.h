@@ -8,8 +8,8 @@
 
 #include <plasma/containmentactions.h>
 
-#include <kactivities/consumer.h>
-#include <kactivities/controller.h>
+#include <plasmaactivities/consumer.h>
+#include <plasmaactivities/controller.h>
 
 class QAction;
 

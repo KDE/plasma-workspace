@@ -6,8 +6,8 @@
 
 #include "shellcontainmentconfig.h"
 
-#include <KActivities/Consumer>
-#include <KActivities/Info>
+#include <PlasmaActivities/Consumer>
+#include <PlasmaActivities/Info>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPackage/Package>

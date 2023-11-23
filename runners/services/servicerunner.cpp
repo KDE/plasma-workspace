@@ -20,10 +20,10 @@
 #include <QUrl>
 #include <QUrlQuery>
 
-#include <KActivities/ResourceInstance>
-#include <KActivities/Stats/Query>
-#include <KActivities/Stats/ResultSet>
-#include <KActivities/Stats/Terms>
+#include <PlasmaActivities/ResourceInstance>
+#include <PlasmaActivities/Stats/Query>
+#include <PlasmaActivities/Stats/ResultSet>
+#include <PlasmaActivities/Stats/Terms>
 #include <KApplicationTrader>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>

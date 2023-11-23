@@ -39,7 +39,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt::Test
                             Qt::Gui
                             Qt::WaylandClient
-                            KF6::Activities
+                            Plasma::Activities
                             KF6::ConfigCore
                             KF6::Service
                             Plasma::KWaylandClient

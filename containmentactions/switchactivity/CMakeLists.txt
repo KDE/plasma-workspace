@@ -8,5 +8,5 @@ target_link_libraries(plasma_containmentactions_switchactivity
                       Qt::Widgets
                       KF6::Plasma
                       KF6::KIOCore
-                      KF6::Activities
+                      Plasma::Activities
                       PW::KWorkspace)

@@ -22,7 +22,7 @@
 #include <KAuthorized>
 #include <KStartupInfo>
 #include <KX11Extras>
-#include <kactivities/controller.h>
+#include <plasmaactivities/controller.h>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
 

@@ -1,6 +1,6 @@
 
 add_subdirectory(applicationjobs)
-if (KF6Activities_FOUND)
+if (PlasmaActivities_FOUND)
     add_subdirectory(activities)
 endif ()
 add_subdirectory(apps)

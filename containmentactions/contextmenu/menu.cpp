@@ -11,7 +11,7 @@
 #include <QDBusPendingReply>
 #include <QVBoxLayout>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 #include <KAuthorized>
 #include <KGlobalAccel>
 #include <KIO/ApplicationLauncherJob>

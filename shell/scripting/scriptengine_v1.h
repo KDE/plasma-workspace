@@ -12,7 +12,7 @@
 
 #include <QFontMetrics>
 
-#include <kactivities/controller.h>
+#include <plasmaactivities/controller.h>
 
 #include "../shellcorona.h"
 #include "scriptengine.h"

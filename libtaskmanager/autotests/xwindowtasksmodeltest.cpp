@@ -8,7 +8,7 @@
 
 #include <private/qtx11extras_p.h>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 #include <KWindowInfo>
 
 #include <xcb/xcb.h>

@@ -66,8 +66,8 @@ target_link_libraries(kickerplugin
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
-                      KF6::Activities
-                      KF6::ActivitiesStats
+                      Plasma::Activities
+                      Plasma::ActivitiesStats
                       KF6::ConfigCore
                       KF6::CoreAddons
                       KF6::I18n

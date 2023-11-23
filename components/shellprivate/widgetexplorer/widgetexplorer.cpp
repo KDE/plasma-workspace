@@ -27,7 +27,7 @@
 #include <Plasma/PluginLoader>
 #include <QStandardPaths>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 
 #include <KPackage/Package>
 #include <KPackage/PackageJob>

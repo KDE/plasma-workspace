@@ -7,7 +7,7 @@
 #include <QCoreApplication>
 #include <QTimer>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 #include <KConfigGroup>
 #include <KSharedConfig>
 

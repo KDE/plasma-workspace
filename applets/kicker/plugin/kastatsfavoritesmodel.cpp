@@ -22,11 +22,11 @@
 #include <KStringHandler>
 #include <KSycoca>
 
-#include <KActivities/Consumer>
-#include <KActivities/Stats/Query>
-#include <KActivities/Stats/ResultSet>
-#include <KActivities/Stats/ResultWatcher>
-#include <KActivities/Stats/Terms>
+#include <PlasmaActivities/Consumer>
+#include <PlasmaActivities/Stats/Query>
+#include <PlasmaActivities/Stats/ResultSet>
+#include <PlasmaActivities/Stats/ResultWatcher>
+#include <PlasmaActivities/Stats/Terms>
 
 #include "config-KDECI_BUILD.h"
 

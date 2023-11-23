@@ -16,7 +16,7 @@
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
 
-#include <KActivities/ResourceInstance>
+#include <PlasmaActivities/ResourceInstance>
 #include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>

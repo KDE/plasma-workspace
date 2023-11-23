@@ -8,7 +8,7 @@
 #include "tasktools.h"
 #include "abstracttasksmodel.h"
 
-#include <KActivities/ResourceInstance>
+#include <PlasmaActivities/ResourceInstance>
 #include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KDesktopFile>

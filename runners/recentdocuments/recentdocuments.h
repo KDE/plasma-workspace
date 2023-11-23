@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <KActivities/Stats/ResultModel>
+#include <PlasmaActivities/Stats/ResultModel>
 #include <KRunner/AbstractRunner>
 #include <KRunner/Action>
 

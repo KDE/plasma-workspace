@@ -91,7 +91,7 @@ target_link_libraries(plasmashell
  KF6::Solid
  KF6::Svg
  KF6::I18n
- KF6::Activities
+ Plasma::Activities
  KF6::GlobalAccel
  KF6::CoreAddons
  KF6::DBusAddons

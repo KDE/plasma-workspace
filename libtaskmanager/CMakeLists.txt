@@ -56,7 +56,7 @@ target_link_libraries(taskmanager
         Qt::DBus
         Qt::GuiPrivate
         Qt::WaylandClient
-        KF6::Activities
+        Plasma::Activities
         KF6::ConfigCore
         KF6::I18n
         KF6::KIOCore
