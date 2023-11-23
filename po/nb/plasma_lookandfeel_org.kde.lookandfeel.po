@@ -266,9 +266,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma fra KDE"
-
-#~ msgid "Start New Session"
-#~ msgstr "Start ny økt"
-
-#~ msgid "Back"
-#~ msgstr "Tilbake"

@@ -359,9 +359,3 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgid "Display Brightness"
-#~ msgstr "Vis lysstyrke"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "Tastaturlysstyrke"

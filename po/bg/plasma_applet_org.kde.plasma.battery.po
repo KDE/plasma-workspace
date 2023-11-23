@@ -3,21 +3,21 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-20 22:55+0100\n"
+"PO-Revision-Date: 2023-11-22 10:35+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -100,10 +100,9 @@ msgid "Not present"
 msgstr "Не е налична"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Управление на енергията"
+msgstr "Захранване и батерия"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -308,11 +307,10 @@ msgid "Power Profile"
 msgstr "Енергиен профил"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Няма налични батерии"
+msgstr "Няма наличен"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -376,6 +374,10 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Възможно е устройството ви да поддържа профили на захранването.<nl/>Опитайте "
+"да инсталирате пакета <command>power-profiles-daemon</command>, като "
+"използвате мениджъра на пакети  на вашата дистрибуция и рестартирайте "
+"системата."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

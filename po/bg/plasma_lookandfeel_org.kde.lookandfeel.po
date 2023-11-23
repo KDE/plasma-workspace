@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-11-11 16:24+0100\n"
+"PO-Revision-Date: 2023-11-22 10:23+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -209,7 +209,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Инсталиране на актуализациите и рестартиране"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -220,8 +220,8 @@ msgstr "Излизане от сесия"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Инсталиране на актуализациите и рестартиране след 1 секунда"
+msgstr[1] "Инсталиране на актуализациите и рестартиране след %1 секунди"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

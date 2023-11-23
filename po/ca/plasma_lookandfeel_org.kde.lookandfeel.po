@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-27 11:41+0200\n"
+"PO-Revision-Date: 2023-11-22 11:46+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -214,7 +214,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Instal·la les actualitzacions i reinicia"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -225,8 +225,9 @@ msgstr "Surt"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "S'estan instal·lant les actualitzacions i es reiniciarà en 1 segon"
 msgstr[1] ""
+"S'estan instal·lant les actualitzacions i es reiniciarà en %1 segons"
 
 #: contents/logout/Logout.qml:247
 #, kde-format
@@ -273,34 +274,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, del KDE"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "Commuta a aquesta sessió"
-
-#~ msgid "Start New Session"
-#~ msgstr "Inicia una sessió nova"
-
-#~ msgid "Back"
-#~ msgstr "Enrere"
-
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery at %1%"
-#~ msgstr "Bateria al %1%"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "Sense ús"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "al TTY %1 (pantalla %2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"

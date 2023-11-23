@@ -1,14 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Volkan Gezer <volkangezer@gmail.com>, 2017, 2021, 2022.
 # SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# Volkan Gezer <volkangezer@gmail.com>, 2017, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-28 01:45+0300\n"
+"PO-Revision-Date: 2023-11-22 14:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -211,7 +212,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Güncellemeleri Kur ve Yeniden Başlat"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -223,7 +224,9 @@ msgstr "Oturumu Kapat"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Yazılım güncellemeleri kuruluyor ve 1 saniye içinde yeniden başlatılacak"
 msgstr[1] ""
+"Yazılım güncellemeleri kuruluyor ve %1 saniye içinde yeniden başlatılacak"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

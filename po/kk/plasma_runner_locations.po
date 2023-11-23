@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2013-06-09 05:23+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -34,17 +34,17 @@ msgstr ""
 msgid "Open %1"
 msgstr "%1 дегенді ашу"
 
-#: locationrunner.cpp:71 locationrunner.cpp:75
+#: locationrunner.cpp:72 locationrunner.cpp:76
 #, kde-format
 msgid "Launch with %1"
 msgstr "%1 дегенмен жегу"
 
-#: locationrunner.cpp:81
+#: locationrunner.cpp:82
 #, kde-format
 msgid "Go to %1"
 msgstr "%1 дегенге өту"
 
-#: locationrunner.cpp:89
+#: locationrunner.cpp:90
 #, kde-format
 msgid "Send email to %1"
 msgstr "%1 дегенге эл.пошта жіберу"

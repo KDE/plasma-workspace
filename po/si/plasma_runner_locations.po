@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2009-01-04 16:02+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -29,17 +29,17 @@ msgstr ""
 msgid "Open %1"
 msgstr "%1 විවෘත කරන්න"
 
-#: locationrunner.cpp:71 locationrunner.cpp:75
+#: locationrunner.cpp:72 locationrunner.cpp:76
 #, kde-format
 msgid "Launch with %1"
 msgstr "%1 සමඟින් අරඹන්න"
 
-#: locationrunner.cpp:81
+#: locationrunner.cpp:82
 #, kde-format
 msgid "Go to %1"
 msgstr "%1 වෙතට යන්න"
 
-#: locationrunner.cpp:89
+#: locationrunner.cpp:90
 #, kde-format
 msgid "Send email to %1"
 msgstr ""

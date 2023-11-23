@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-27 11:17+0200\n"
+"PO-Revision-Date: 2023-11-22 16:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "Bij herstarten zal de computer naar het firmware setup scherm gaan."
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Elementen voor bijwerken installeren & herstarten"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -220,7 +220,10 @@ msgstr "Afmelden"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Elementen voor bijwerken van software installeren en herstarten na 1 seconde"
 msgstr[1] ""
+"Elementen voor bijwerken van software installeren en herstarten na %1 "
+"seconden"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -31,17 +31,17 @@ msgstr ""
 msgid "Open %1"
 msgstr "%1 نى ئاچ"
 
-#: locationrunner.cpp:71 locationrunner.cpp:75
+#: locationrunner.cpp:72 locationrunner.cpp:76
 #, kde-format
 msgid "Launch with %1"
 msgstr "%1 ئىلە ئىجرا قىل"
 
-#: locationrunner.cpp:81
+#: locationrunner.cpp:82
 #, kde-format
 msgid "Go to %1"
 msgstr "%1 غا يۆتكەل"
 
-#: locationrunner.cpp:89
+#: locationrunner.cpp:90
 #, kde-format
 msgid "Send email to %1"
 msgstr ""

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-28 02:37+0200\n"
+"PO-Revision-Date: 2023-11-22 03:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -213,7 +213,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Instalar actualizaciones y reiniciar"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -224,8 +224,9 @@ msgstr "Cerrar sesión"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "Instalando actualizaciones del software y reiniciando en 1 segundo"
 msgstr[1] ""
+"Instalando actualizaciones del software y reiniciando en %1 segundos"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2016-09-04 14:52+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -169,6 +169,35 @@ msgstr "Νέα συνεδρία"
 #, kde-format
 msgid "Filters"
 msgstr "Φίλτρα"
+
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#, kde-format
+msgid ""
+"This Widget was written for an unknown older version of Plasma and is not "
+"compatible with Plasma %1. Please contact the widget's author for an updated "
+"version."
+msgstr ""
+
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"Please contact the widget's author for an updated version."
+msgstr ""
+
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"Please update Plasma in order to use the widget."
+msgstr ""
+
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with the latest "
+"version of Plasma. Please update Plasma in order to use the widget."
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
