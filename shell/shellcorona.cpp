@@ -943,26 +943,23 @@ void ShellCorona::slotCyclePanelFocus()
     PanelView *activePanel = nullptr;
 
     // Find active panel first
+    iterator.next();
     while (iterator.hasNext()) {
-        iterator.next();
         // set panel passive if its already active
         if (iterator.value()->containment()->status() == Plasma::Types::AcceptingInputStatus) {
             activePanel = iterator.value();
             activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
-            break;
+            continue;
+        }
+        iterator.next();
+        // If we found our active panel, get the next one and set it active
+        if (!iterator.value()->containment()->destroyed() && activePanel) {
+            activePanel = iterator.value();
+            activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
+            return;
         }
     }
-    // If we found our active panel, get the next one and set it active
-    if (activePanel != nullptr) {
-        while (iterator.hasNext()) {
-            iterator.next();
-            if (!iterator.value()->containment()->destroyed()) {
-                activePanel = iterator.value();
-                activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
-                return;
-            }
-        }
-    }
+
     // If there is no panel found, select the first value
     // Alternatively, if there is no next panel in iterator, set the first one,
     // so we loop from the beginning.
