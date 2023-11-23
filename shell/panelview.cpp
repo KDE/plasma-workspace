@@ -1467,6 +1467,8 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
 #ifdef HAVE_X11
         if (KWindowSystem::isPlatformX11()) {
             KX11Extras::forceActiveWindow(winId());
+        } else {
+            showTemporarily();
         }
 #endif
         if (m_layerWindow) {
