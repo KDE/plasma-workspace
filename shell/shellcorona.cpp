@@ -1205,10 +1205,6 @@ void ShellCorona::savePreviousWindow()
 
 void ShellCorona::restorePreviousWindow()
 {
-    if (m_blockRestorePreviousWindow) {
-        return;
-    }
-
 #if HAVE_X11
     if (KWindowSystem::isPlatformX11() && m_previousWId) {
         KX11Extras::forceActiveWindow(m_previousWId);

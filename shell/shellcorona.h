@@ -298,7 +298,6 @@ private:
 #if HAVE_X11
     WId m_previousWId = 0;
 #endif
-    bool m_blockRestorePreviousWindow = false;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
