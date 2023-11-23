@@ -128,39 +128,6 @@ KCM.SimpleKCM {
                 }
             }
 
-            // Inform about geolocation access in auto mode
-
-            // The system settings window likes to take over
-            // the cursor with a plain label. The TextEdit
-            // 'takes priority' over the system settings
-            // window trying to eat the mouse, allowing
-            // us to use the HoverHandler boilerplate for
-            // proper link handling
-            TextEdit {
-                Layout.maximumWidth: modeSwitcher.width
-
-                visible: modeSwitcher.currentIndex - 1 === NightColorMode.Automatic && kcm.nightColorSettings.active
-                enabled: kcm.nightColorSettings.active
-
-                textFormat: TextEdit.RichText
-                wrapMode: Text.Wrap
-                readOnly: true
-
-                color: Kirigami.Theme.textColor
-                selectedTextColor: Kirigami.Theme.highlightedTextColor
-                selectionColor: Kirigami.Theme.highlightColor
-
-                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
-                font: Kirigami.Theme.smallFont
-
-                onLinkActivated: (url) => Qt.openUrlExternally(url)
-
-                HoverHandler {
-                    acceptedButtons: Qt.NoButton
-                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-                }
-            }
-
             // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
             Item { implicitHeight: Kirigami.Units.largeSpacing }
 
@@ -286,13 +253,46 @@ KCM.SimpleKCM {
                 Item {}
             }
 
+            Item { implicitHeight: Kirigami.Units.largeSpacing }
+
             // Show current location in auto mode
             QQC2.Label {
+                Kirigami.FormData.label: i18nc("@label The coordinates for the current location", "Current location:")
+
                 visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
                     && root.doneLocating
                 enabled: kcm.nightColorSettings.active
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°", Math.round((locator?.latitude || 0) * 100)/100, Math.round((locator?.longitude || 0) * 100)/100)
+            }
+
+            // Inform about geolocation access in auto mode
+            // The system settings window likes to take over the cursor with a plain label.
+            // The TextEdit 'takes priority' over the system settings window trying to eat the mouse,
+            // allowing us to use the HoverHandler boilerplate for proper link handling
+            TextEdit {
+                Layout.maximumWidth: modeSwitcher.width
+
+                visible: modeSwitcher.currentIndex - 1 === NightColorMode.Automatic && kcm.nightColorSettings.active
+                enabled: kcm.nightColorSettings.active
+
+                textFormat: TextEdit.RichText
+                wrapMode: Text.Wrap
+                readOnly: true
+
+                color: Kirigami.Theme.textColor
+                selectedTextColor: Kirigami.Theme.highlightedTextColor
+                selectionColor: Kirigami.Theme.highlightColor
+
+                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
+                font: Kirigami.Theme.smallFont
+
+                onLinkActivated: (url) => Qt.openUrlExternally(url)
+
+                HoverHandler {
+                    acceptedButtons: Qt.NoButton
+                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                }
             }
 
             // Show time entry fields in manual timings mode
