@@ -22,7 +22,10 @@ KSvg.FrameSvgItem {
     visible: false
     width: osdItem.width + margins.left + margins.right
     height: osdItem.height + margins.top + margins.bottom
-    imagePath: "widgets/background"
+    imagePath: "dialogs/background"
+
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
     function show() {
         osd.visible = true;
@@ -34,8 +37,6 @@ KSvg.FrameSvgItem {
         width: osdItem.width
         height: osdItem.height
         anchors.centerIn: parent
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
         OsdItem {
             id: osdItem
