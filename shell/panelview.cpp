@@ -1465,7 +1465,9 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
 #ifdef HAVE_X11
-        KX11Extras::forceActiveWindow(winId());
+        if (KWindowSystem::isPlatformX11()) {
+            KX11Extras::forceActiveWindow(winId());
+        }
 #endif
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
