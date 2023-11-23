@@ -68,7 +68,7 @@ msgstr "%1%"
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
-"La bateria està configurada per a carregar només fins a %1% aproximadament."
+"La bateria està configurada per a carregar només fins al %1% aproximadament."
 
 #: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
@@ -132,22 +132,22 @@ msgstr "Gestió de l'energia"
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Bateria a %1%, no està carregant"
+msgstr "Bateria al %1%, no està carregant"
 
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Bateria a %1%, connectada però encara està descarregant"
+msgstr "Bateria al %1%, connectada però encara està descarregant"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Bateria a %1%, s'està carregant"
+msgstr "Bateria al %1%, s'està carregant"
 
 #: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Bateria a %1%"
+msgstr "Bateria al %1%"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
