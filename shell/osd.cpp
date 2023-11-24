@@ -198,8 +198,9 @@ void Osd::showProgress(const QString &icon, const int percent, const int maximum
 
     auto *rootObject = m_osdObject->rootObject();
     int value = qBound(0, percent, maximumPercent);
-    rootObject->setProperty("osdValue", value);
+    // Update max value first to prevent value from being clamped
     rootObject->setProperty("osdMaxValue", maximumPercent);
+    rootObject->setProperty("osdValue", value);
     rootObject->setProperty("osdAdditionalText", additionalText);
     rootObject->setProperty("showingProgress", true);
     rootObject->setProperty("icon", icon);
