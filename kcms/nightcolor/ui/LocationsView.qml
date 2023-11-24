@@ -12,6 +12,15 @@ import org.kde.kcmutils as KCM
 import Qt5Compat.GraphicalEffects
 
 Kirigami.FormLayout {
+    id: locationsView
+
+    property bool autoLocation
+    property double latitude
+    property double longitude
+
+    Component.onCompleted: {
+        console.log("nightcolor:", "locations view completed", autoLocation, latitude, longitude);
+    }
 
     /* Equirectangular projection maps (x, y) to (lat, long) cleanly */
     function longitudeToX(lon) {
@@ -35,7 +44,8 @@ Kirigami.FormLayout {
             Layout.maximumWidth: mapRect.width
             Layout.bottomMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignHCenter
-            text: Kirigami.Settings.tabletMode
+            text: locationsView.autoLocation ? i18n("Your location was automatically determined.")
+                : Kirigami.Settings.tabletMode
                 ? i18nc("@label:chooser Tap should be translated to mean touching using a touchscreen", "Tap to choose your location on the map.")
                 : i18nc("@label:chooser Click should be translated to mean clicking using a mouse", "Click to choose your location on the map.")
             font: Kirigami.Theme.smallFont
@@ -145,8 +155,8 @@ Kirigami.FormLayout {
                     Kirigami.Icon {
                         z: 9999
                         id: mapPin
-                        property double rawX: longitudeToX(kcm.nightColorSettings.longitudeFixed)
-                        property double rawY: latitudeToY(kcm.nightColorSettings.latitudeFixed)
+                        property double rawX: longitudeToX(locationsView.longitude)
+                        property double rawY: latitudeToY(locationsView.latitude)
                         x: rawX - (width/2)/mapRect.currentScale
                         y: rawY - (height - 4)/mapRect.currentScale
                         width: Kirigami.Units.iconSizes.medium
@@ -162,27 +172,30 @@ Kirigami.FormLayout {
                     Connections {
                         target: kcm.nightColorSettings
                         function onLatitudeFixedChanged() {
-                            mapPin.rawY = latitudeToY(kcm.nightColorSettings.latitudeFixed);
+                            mapPin.rawY = latitudeToY(locationsView.latitude);
                         }
                         function onLongitudeFixedChanged() {
-                            mapPin.rawX = longitudeToX(kcm.nightColorSettings.longitudeFixed);
+                            mapPin.rawX = longitudeToX(locationsView.longitude);
                         }
                     }
 
                     TapHandler {
                         onTapped: {
-                            let clickPos = mapImage.mapFromItem(root, eventPoint.scenePosition);
+                            if (autoLocation) {
+                                return;
+                            }
+                            let clickPos = mapImage.mapFromItem(locationsView, eventPoint.scenePosition);
                             mapPin.rawX = clickPos.x;
                             mapPin.rawY = clickPos.y;
-                            kcm.nightColorSettings.latitudeFixed = yToLatitude(mapPin.rawY);
-                            kcm.nightColorSettings.longitudeFixed = xToLongitude(mapPin.rawX);
+                            locationsView.latitude = yToLatitude(mapPin.rawY);
+                            locationsView.longitude = xToLongitude(mapPin.rawX);
                         }
                     }
 
                     WheelHandler {
                         acceptedModifiers: Qt.ControlModifier
                         onWheel: event => {
-                            let wheelPos = mapImage.mapFromItem(root, point.scenePosition);
+                            let wheelPos = mapImage.mapFromItem(locationsView, point.scenePosition);
                             var realX = wheelPos.x * mapZoom.xScale
                             var realY = wheelPos.y * mapZoom.yScale
                             let clicks = event.angleDelta.y / 120;
@@ -237,24 +250,25 @@ Kirigami.FormLayout {
             Connections {
                 target: kcm.nightColorSettings
                 function onLatitudeFixedChanged() {
-                    latitudeFixedField.backend = kcm.nightColorSettings.latitudeFixed;
+                    latitudeFixedField.backend = locationsView.latitude;
                 }
                 function onLongitudeFixedChanged() {
-                    longitudeFixedField.backend = kcm.nightColorSettings.longitudeFixed;
+                    longitudeFixedField.backend = locationsView.longitude;
                 }
             }
             NumberField {
                 id: latitudeFixedField
                 validator: DoubleValidator {bottom: -90; top: 90; decimals: 10}
-                backend: kcm.nightColorSettings.latitudeFixed
+                backend: locationsView.latitude
                 onBackendChanged: {
-                    kcm.nightColorSettings.latitudeFixed = backend;
+                    locationsView.latitude = backend;
                 }
                 KCM.SettingStateBinding {
                     configObject: kcm.nightColorSettings
                     settingName: "LatitudeFixed"
                     extraEnabledConditions: kcm.nightColorSettings.active
                 }
+                readOnly: locationsView.autoLocation
             }
 
             QQC2.Label {
@@ -263,15 +277,16 @@ Kirigami.FormLayout {
             NumberField {
                 id: longitudeFixedField
                 validator: DoubleValidator {bottom: -180; top: 180; decimals: 10}
-                backend: kcm.nightColorSettings.longitudeFixed
+                backend: locationsView.longitude
                 onBackendChanged: {
-                    kcm.nightColorSettings.longitudeFixed = backend;
+                    locationsView.longitude = backend;
                 }
                 KCM.SettingStateBinding {
                     configObject: kcm.nightColorSettings
                     settingName: "LongitudeFixed"
                     extraEnabledConditions: kcm.nightColorSettings.active
                 }
+                readOnly: autoLocation
             }
         }
     }

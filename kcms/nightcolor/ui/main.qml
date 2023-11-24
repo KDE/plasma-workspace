@@ -64,10 +64,12 @@ KCM.SimpleKCM {
     Connections {
         target: root.locator
         function onLatitudeChanged() {
-            kcm.nightColorSettings.latitudeAuto = Math.round(root.locator.latitude * 100) / 100
+            kcm.nightColorSettings.latitudeAuto = Math.round(root.locator.latitude * 100) / 100;
+            locationsView.latitude = root.locator.latitude;
         }
         function onLongitudeChanged() {
-            kcm.nightColorSettings.longitudeAuto = Math.round(root.locator.longitude * 100) / 100
+            kcm.nightColorSettings.longitudeAuto = Math.round(root.locator.longitude * 100) / 100;
+            locationsView.longitude = root.locator.longitude;
         }
     }
 
@@ -391,11 +393,16 @@ KCM.SimpleKCM {
             }
         }
 
-        // Show location chooser in manual location mode
-        LocationsFixedView {
-            visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
+        // Show location chooser in location modes
+        LocationsView {
+            id: locationsView
+
+            visible: ((kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) || kcm.nightColorSettings.mode === NightColorMode.Location) && kcm.nightColorSettings.active
             Layout.alignment: Qt.AlignHCenter
             enabled: kcm.nightColorSettings.active
+            property bool autoLocation: kcm.nightColorSettings.mode === NightColorMode.Automatic
+            property double latitude: autoLocation ? root.locator?.latitude : kcm.nightColorSettings.latitudeFixed
+            property double longitude: autoLocation ? root.locator?.longitude : kcm.nightColorSettings.longitudeFixed
         }
 
         // Show start/end times in automatic and manual location modes
