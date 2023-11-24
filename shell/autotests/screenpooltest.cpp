@@ -67,6 +67,8 @@ void ScreenPoolTest::cleanupTestCase()
     QTRY_COMPARE(QGuiApplication::screens().size(), 1);
     QTRY_VERIFY2(isClean(), qPrintable(dirtyMessage()));
 
+    delete m_screenPool;
+
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
     cg.sync();
