@@ -51,4 +51,3 @@ ecm_install_configured_files(
     DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
 
-add_subdirectory(update)
