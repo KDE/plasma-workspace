@@ -283,7 +283,7 @@ void ShellContainmentModel::remove(int contId)
             destroyAction->trigger();
         }
     }
-    load();
+    // Don't call load() there as is already triggered by destroyedChanged signal of the containemnt
 }
 
 void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int newScreen)
