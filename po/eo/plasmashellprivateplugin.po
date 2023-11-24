@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-05-28 11:26+0100\n"
+"PO-Revision-Date: 2023-11-23 20:47+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -179,6 +179,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Ĉi tiu Fenestraĵo estis skribita por nekonata pli malnova versio de Plasma "
+"kaj ne estas kongrua kun Plasma %1. Bonvolu kontakti la aŭtoron de la "
+"fenestraĵo pri ĝisdatigita versio."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
@@ -186,6 +189,9 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Ĉi tiu Fenestraĵo estis skribita por Plasma %1 kaj ne estas kongrua kun "
+"Plasma %2. Bonvolu kontakti la aŭtoron de la fenestraĵo pri ĝisdatigita "
+"versio."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
@@ -193,6 +199,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Ĉi tiu Fenestraĵo estis skribita por Plasma %1 kaj ne estas kongrua kun "
+"Plasma %2. Bonvolu kontakti la aŭtoron de la fenestraĵo pri ĝisdatigita "
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
@@ -200,6 +208,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Ĉi tiu Fenestraĵo estis skribita por Plasma %1 kaj ne estas kongrua kun la "
+"plej lasta versio de Plasma. Bonvolu ĝisdatigi Plasma por uzi la fenestraĵon."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-28 10:39+0200\n"
+"PO-Revision-Date: 2023-11-23 17:20+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -210,7 +210,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Instalar as actualizacións e reiniciar"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -222,7 +222,9 @@ msgstr "Saír"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Instalando actualizacións de soporte lóxico e reiniciando en 1 segundo"
 msgstr[1] ""
+"Instalando actualizacións de soporte lóxico e reiniciando en %1 segundos"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

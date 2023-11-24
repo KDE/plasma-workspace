@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-27 16:43+0300\n"
+"PO-Revision-Date: 2023-11-23 16:51+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -217,7 +217,7 @@ msgstr "לאחר הפעלה מחדש, המחשב ייכנס למסך הגדרת 
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "התקנת &עדכונים והפעלה מחדש"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -228,10 +228,10 @@ msgstr "יציאה"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שנייה"
+msgstr[1] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שתי שניות"
+msgstr[2] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
+msgstr[3] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

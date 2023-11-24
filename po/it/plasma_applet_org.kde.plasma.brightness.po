@@ -1,0 +1,170 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2023 Vincenzo Reale <smart2128vr@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"PO-Revision-Date: 2023-11-20 09:34+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#: package/contents/ui/BrightnessItem.qml:70
+#, kde-format
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Brightness and Color"
+msgstr "Luminosità e colore"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Screen brightness at %1%"
+msgstr "Luminosità dello schermo al %1%"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Keyboard brightness at %1%"
+msgstr "Luminosità della tastiera al %1%"
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "Status"
+msgid "Night Light off"
+msgstr "Luce notturna disattivata"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgctxt "Status; placeholder is a temperature"
+msgid "Night Light at %1K"
+msgstr "Luce notturna a %1K"
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr "Scorri per regolare la luminosità dello schermo"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Middle-click to toggle Night Light"
+msgstr "Fai clic con il tasto centrale per commutare la luce notturna"
+
+#: package/contents/ui/NightColorItem.qml:74
+#, kde-format
+msgctxt "Night light status"
+msgid "Off"
+msgstr "Disattivata"
+
+#: package/contents/ui/NightColorItem.qml:77
+#, kde-format
+msgctxt "Night light status"
+msgid "Unavailable"
+msgstr "Non disponibile"
+
+#: package/contents/ui/NightColorItem.qml:80
+#, kde-format
+msgctxt "Night light status"
+msgid "Not enabled"
+msgstr "Non abilitata"
+
+#: package/contents/ui/NightColorItem.qml:83
+#, kde-format
+msgctxt "Night light status"
+msgid "Not running"
+msgstr "Non in esecuzione"
+
+#: package/contents/ui/NightColorItem.qml:86
+#, kde-format
+msgctxt "Night light status"
+msgid "On"
+msgstr "Abilitata"
+
+#: package/contents/ui/NightColorItem.qml:89
+#, kde-format
+msgctxt "Night light phase"
+msgid "Morning Transition"
+msgstr "Transizione mattutina"
+
+#: package/contents/ui/NightColorItem.qml:91
+#, kde-format
+msgctxt "Night light phase"
+msgid "Day"
+msgstr "Giorno"
+
+#: package/contents/ui/NightColorItem.qml:93
+#, kde-format
+msgctxt "Night light phase"
+msgid "Evening Transition"
+msgstr "Transizione serale"
+
+#: package/contents/ui/NightColorItem.qml:95
+#, kde-format
+msgctxt "Night light phase"
+msgid "Night"
+msgstr "Notte"
+
+#: package/contents/ui/NightColorItem.qml:105
+#, kde-format
+msgctxt "Placeholder is screen color temperature"
+msgid "%1K"
+msgstr "%1K"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Configure…"
+msgstr "Configura…"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Enable and Configure…"
+msgstr "Abilita e configura..."
+
+#: package/contents/ui/NightColorItem.qml:165
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day complete by:"
+msgstr "Passaggio al giorno completato per le:"
+
+#: package/contents/ui/NightColorItem.qml:167
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night scheduled for:"
+msgstr "Passaggio alla notte pianificato per le:"
+
+#: package/contents/ui/NightColorItem.qml:169
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night complete by:"
+msgstr "Passaggio alla notte completato per le:"
+
+#: package/contents/ui/NightColorItem.qml:171
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day scheduled for:"
+msgstr "Passaggio al giorno pianificato per le:"
+
+#: package/contents/ui/PopupDialog.qml:70
+#, kde-format
+msgid "Display Brightness"
+msgstr "Luminosità dello schermo"
+
+#: package/contents/ui/PopupDialog.qml:101
+#, kde-format
+msgid "Keyboard Brightness"
+msgstr "Luminosità della tastiera"
+
+#: package/contents/ui/PopupDialog.qml:132
+#, kde-format
+msgid "Night Light"
+msgstr "Luce notturna"

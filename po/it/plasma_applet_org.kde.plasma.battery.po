@@ -4,14 +4,14 @@
 # Marcello Anni <marcello.anni@alice.it>, 2007, 2008, 2009, 2010, 2012.
 # Pino Toscano <toscano.pino@tiscali.it>, 2010.
 # Nicola Ruggero <nicola@nxnt.org>, 2013.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2014, 2015, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-18 09:23+0100\n"
+"PO-Revision-Date: 2023-11-20 09:25+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -103,10 +103,9 @@ msgid "Not present"
 msgstr "Assente"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Gestione energetica"
+msgstr "Alimentazione e batteria"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -320,11 +319,10 @@ msgid "Power Profile"
 msgstr "Profilo energetico"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Nessuna batteria disponibile"
+msgstr "Non disponibile"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -391,6 +389,10 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"I profili di alimentazione potrebbero essere supportati sul tuo dispositivo."
+"<nl/>Prova a installare il pacchetto <command>power-profiles-daemon</"
+"command> utilizzando il gestore pacchetti della tua distribuzione e a "
+"riavviare il sistema."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"
