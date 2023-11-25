@@ -48,7 +48,7 @@ Dependencies:
     'frameworks/kpeople': '@latest'
     'frameworks/prison': '@latest'
     'frameworks/kuserfeedback': '@stable'
-    'plasma/plasma-framework': 'kf5'
+    'plasma/libplasma': 'kf5'
     'plasma/layer-shell-qt': '@same'
     'plasma/kscreenlocker': '@same'
     'plasma/libkscreen': '@same'
@@ -56,8 +56,8 @@ Dependencies:
     'plasma/libksysguard': '@same'
     'plasma/kpipewire': '@same'
     'plasma/plasma-nano': '@same'
-    'plasma/kactivities': '@latest' # Different branch scheme due to formerly being a Framework
-    'plasma/kactivities-stats': '@latest' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities': '@latest' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities-stats': '@latest' # Different branch scheme due to formerly being a Framework
     'libraries/plasma-wayland-protocols': '@latest'
     'graphics/libkexiv2': '@latest'
 
