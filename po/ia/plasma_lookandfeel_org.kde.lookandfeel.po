@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-10-27 17:30+0200\n"
+"PO-Revision-Date: 2023-11-24 10:30+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -210,7 +210,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Installa Actualisationes & ReInitia"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -221,8 +221,9 @@ msgstr "Claude session"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "Installante actualisationes de software e reinitiante in 1 secunda"
 msgstr[1] ""
+"Installante actualisationes de software e reinitiante in %1 secundas"
 
 #: contents/logout/Logout.qml:247
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-05-28 21:17+0200\n"
+"PO-Revision-Date: 2023-11-24 10:31+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -176,6 +176,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Iste Widget esseva scribite per un version vetule incognoscite de Plasma  e "
+"non es compatibile con Plasma %1. Per favor tu continge le autor del widget "
+"per un version actualisate."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
@@ -183,6 +186,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Iste Widget esseva scribite per Plasma %1 e non es compatibile con Plasma "
+"%2. Per favor tu continge le autor del widget per un version actualisate."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
@@ -190,6 +195,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Iste Widget esseva scribite per Plasma %1 e non es compatibile con Plasma "
+"%2. Per favor tu actualisa Plasma per usar le widget."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
@@ -197,6 +204,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Iste Widget esseva scribite per Plasma %1 e non es compatibile con leultime "
+"version de Plasma . Per favor tu actualisa Plasma per usar le widget."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
