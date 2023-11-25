@@ -1499,12 +1499,6 @@ void ShellCorona::createWaitingPanels()
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
         auto rectNotify = [this, panel]() {
-            // we a re doing a qobject_cast on a thing we know is a panelview,
-            // because in mid-destruction it can become a simple QObject for a moment
-            // https://bugreports.qt.io/browse/QTBUG-118841
-            if (!qobject_cast<PanelView *>(panel)) {
-                return;
-            }
             if (!m_screenReorderInProgress && panel->containment()) {
                 Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
@@ -1532,6 +1526,9 @@ void ShellCorona::panelContainmentDestroyed(QObject *obj)
     auto *cont = static_cast<Plasma::Containment *>(obj);
     int screen = cont->screen();
     auto view = m_panelViews.take(cont);
+    // ~PanelView -> visibleChanged -> rectNotify -> "AddressSanitizer: heap-use-after-free"
+    // https://bugreports.qt.io/browse/QTBUG-118841
+    view->disconnect(this);
     delete view;
     // don't make things relayout when the application is quitting
     // NOTE: qApp->closingDown() is still false here
