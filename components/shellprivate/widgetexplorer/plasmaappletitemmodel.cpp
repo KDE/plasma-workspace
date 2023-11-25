@@ -357,9 +357,10 @@ void PlasmaAppletItemModel::populateModel()
         KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
 
     // Search all packages that aren't a correct applet and put them at the end: assume they are plasma5 plasmoids
-    packages.append(KPackage::PackageLoader::self()->findPackages(QString(), QStringLiteral("plasma/plasmoids"), [](const KPluginMetaData &plugin) -> bool {
-        return plugin.value(QStringLiteral("KPackageStructure")) != QStringLiteral("Plasma/Applet");
-    }));
+    packages.append(
+        KPackage::PackageLoader::self()->findPackages(QString(), QStringLiteral("plasma/plasmoids"), [&filter](const KPluginMetaData &plugin) -> bool {
+            return plugin.value(QStringLiteral("KPackageStructure")) != QStringLiteral("Plasma/Applet") && filter(plugin);
+        }));
 
     for (const KPluginMetaData &plugin : packages) {
         appendRow(new PlasmaAppletItem(plugin));
