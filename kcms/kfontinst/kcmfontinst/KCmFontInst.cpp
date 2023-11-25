@@ -173,6 +173,13 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     m_previewSplitter = new QSplitter(fontWidget);
     m_previewSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
 
+    connect(widget(), &QObject::destroyed, this, [this] { // this signal fires before the children destroy!
+        KConfigGroup cg(&m_config, CFG_GROUP);
+
+        cg.writeEntry(CFG_PREVIEW_SPLITTER_SIZES, m_previewSplitter->sizes());
+        cg.writeEntry(CFG_GROUP_SPLITTER_SIZES, m_groupSplitter->sizes());
+    });
+
     QWidget *fontControlWidget = new QWidget(fontWidget);
     QGridLayout *groupsLayout = new QGridLayout(groupWidget);
     QBoxLayout *mainLayout = new QBoxLayout(QBoxLayout::TopToBottom, widget()), *fontsLayout = new QBoxLayout(QBoxLayout::TopToBottom, fontWidget),
@@ -351,10 +358,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
 
 CKCmFontInst::~CKCmFontInst()
 {
-    KConfigGroup cg(&m_config, CFG_GROUP);
-
-    cg.writeEntry(CFG_PREVIEW_SPLITTER_SIZES, m_previewSplitter->sizes());
-    cg.writeEntry(CFG_GROUP_SPLITTER_SIZES, m_groupSplitter->sizes());
+    // NOTE: do not access children of widget() here; it may have been destroyed already!
     delete m_tempDir;
     partialIcon(false);
 }
