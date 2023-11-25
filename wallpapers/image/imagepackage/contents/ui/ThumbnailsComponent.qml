@@ -12,13 +12,13 @@ import QtQuick.Controls as QQC2
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.newstuff as NewStuff
-import org.kde.plasma.plasmoid
 
 Item {
     id: thumbnailsComponent
     anchors.fill: parent
 
     property alias view: wallpapersGrid.view
+    property var screenSize: Qt.size(Screen.width, Screen.height)
 
     readonly property QtObject imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
@@ -52,7 +52,7 @@ Item {
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
             if (configDialog.currentWallpaper === "org.kde.image") {
-                view.currentIndex = Qt.binding(() =>  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1));
+                wallpapersGrid.view.currentIndex = Qt.binding(() => configDialog.currentWallpaper === "org.kde.image" ?  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1) : 0);
             }
         }
 
@@ -86,12 +86,8 @@ Item {
         view.model: thumbnailsComponent.imageModel
 
         //set the size of the cell, depending on Screen resolution to respect the aspect ratio
-        view.implicitCellWidth: {
-            return Screen.width / 10 + Kirigami.Units.smallSpacing * 2
-        }
-        view.implicitCellHeight: {
-            return Screen.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
-        }
+        view.implicitCellWidth: screenSize.width / 10 + Kirigami.Units.smallSpacing * 2
+        view.implicitCellHeight: screenSize.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
 
         view.reuseItems: true
 

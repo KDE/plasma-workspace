@@ -10,10 +10,6 @@
       <label>Blur background filling</label>
       <default>false</default>
     </entry>
-    <entry name="SlideshowFoldersFirst" type="bool">
-      <label>Display folders first when on slideshow</label>
-      <default>false</default>
-    </entry>
     <entry name="Color" type="Color">
       <label>Color of the wallpaper</label>
       <default>#ffffff</default>
@@ -29,6 +25,10 @@
     <entry name="FillMode" type="int">
       <label>Sizing, cropping and positioning of the wallpaper image</label>
       <default>2</default>
+    </entry>
+    <entry name="SlideshowFoldersFirst" type="bool">
+      <label>Display folders first when on slideshow</label>
+      <default>false</default>
     </entry>
     <entry name="SlidePaths" type="StringList">
       <label>Paths used for the slideshow</label>

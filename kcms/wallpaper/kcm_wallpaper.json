@@ -1,0 +1,13 @@
+{
+   "KPlugin" : {
+      "BugReportUrl" : "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_wallpaper",
+      "Description" : "Configure the wallpaper",
+      "Icon" : "preferences-desktop-wallpaper",
+      "Name" : "Wallpaper"
+   },
+   "X-DocPath" : "kcontrol/kcm_wallpaper/index.html",
+   "X-KDE-Init-Phase" : "0",
+   "X-KDE-Keywords" : "wallpaper,desktop",
+   "X-KDE-System-Settings-Parent-Category" : "appearance",
+   "X-KDE-Weight" : 30
+}

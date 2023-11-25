@@ -89,24 +89,24 @@ KCM.GridDelegate {
             smooth: true
             pixmap: model.screenshot
             fillMode: {
-                if (cfg_FillMode == Image.Stretch) {
+                if (cfg_FillMode === Image.Stretch) {
                     return QPixmapItem.Stretch;
-                } else if (cfg_FillMode == Image.PreserveAspectFit) {
+                } else if (cfg_FillMode === Image.PreserveAspectFit) {
                     return QPixmapItem.PreserveAspectFit;
-                } else if (cfg_FillMode == Image.PreserveAspectCrop) {
+                } else if (cfg_FillMode === Image.PreserveAspectCrop) {
                     return QPixmapItem.PreserveAspectCrop;
-                } else if (cfg_FillMode == Image.Tile) {
+                } else if (cfg_FillMode === Image.Tile) {
                     return QPixmapItem.Tile;
-                } else if (cfg_FillMode == Image.TileVertically) {
+                } else if (cfg_FillMode === Image.TileVertically) {
                     return QPixmapItem.TileVertically;
-                } else if (cfg_FillMode == Image.TileHorizontally) {
+                } else if (cfg_FillMode === Image.TileHorizontally) {
                     return QPixmapItem.TileHorizontally;
                 }
                 return QPixmapItem.PreserveAspectFit;
             }
         }
         QtControls2.CheckBox {
-            visible: configDialog.currentWallpaper == "org.kde.slideshow"
+            visible: configDialog.currentWallpaper === "org.kde.slideshow"
             anchors.right: parent.right
             anchors.top: parent.top
             checked: visible ? model.checked : false
@@ -129,9 +129,11 @@ KCM.GridDelegate {
     }
 
     onClicked: {
-        if (configDialog.currentWallpaper == "org.kde.image") {
+        if (configDialog.currentWallpaper === "org.kde.image") {
             cfg_Image = model.packageName || model.path;
-            wallpaper.configuration.PreviewImage = cfg_Image;
+            if (typeof wallpaper !== "undefined") {
+                wallpaper.configuration.PreviewImage = cfg_Image;
+            }
         }
         GridView.currentIndex = index;
     }

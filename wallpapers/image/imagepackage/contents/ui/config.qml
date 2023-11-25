@@ -9,7 +9,6 @@
 import QtQuick
 import QtQuick.Controls as QtControls2
 import QtQuick.Layouts
-import org.kde.plasma.plasmoid
 import org.kde.plasma.wallpapers.image as PlasmaWallpaper
 import org.kde.kquickcontrols as KQuickControls
 import org.kde.kquickcontrolsaddons
@@ -19,6 +18,13 @@ import org.kde.kirigami as Kirigami
 
 ColumnLayout {
     id: root
+        
+    property var configDialog
+    property var wallpaperConfiguration: wallpaper.configuration
+    property var parentLayout
+    property var screen : Screen
+    property var screenSize: !!screen.geometry ? Qt.size(screen.geometry.width, screen.geometry.height):  Qt.size(screen.width, screen.height)
+    
     property alias cfg_Color: colorButton.color
     property color cfg_ColorDefault
     property string cfg_Image
@@ -43,7 +49,13 @@ ColumnLayout {
      * Emitted when the user finishes adding images using the file dialog.
      */
     signal wallpaperBrowseCompleted();
-
+    
+    onScreenChanged: function() {
+        if (thumbnailsLoader.item) {
+            thumbnailsLoader.item.screenSize = !!root.screen.geometry ? Qt.size(root.screen.geometry.width, root.screen.geometry.height):  Qt.size(root.screen.width, root.screen.height);
+        }
+    }
+    
     function saveConfig() {
         if (configDialog.currentWallpaper === "org.kde.image") {
             imageWallpaper.wallpaperModel.commitAddition();
@@ -62,7 +74,7 @@ ColumnLayout {
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
             // Lock screen configuration case
-            return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
+            return Qt.size(root.screenSize.width * root.screen.devicePixelRatio, root.screenSize.height * root.screen.devicePixelRatio)
         }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
@@ -77,24 +89,35 @@ ColumnLayout {
     }
 
     onCfg_SlidePathsChanged: {
-        imageWallpaper.slidePaths = cfg_SlidePaths
+        if (cfg_SlidePaths)
+            imageWallpaper.slidePaths = cfg_SlidePaths
     }
     onCfg_UncheckedSlidesChanged: {
-        imageWallpaper.uncheckedSlides = cfg_UncheckedSlides
+        if (cfg_UncheckedSlides)
+            imageWallpaper.uncheckedSlides = cfg_UncheckedSlides
     }
 
     onCfg_SlideshowModeChanged: {
-        imageWallpaper.slideshowMode = cfg_SlideshowMode
+        if (cfg_SlideshowMode)
+            imageWallpaper.slideshowMode = cfg_SlideshowMode
     }
 
     onCfg_SlideshowFoldersFirstChanged: {
-        imageWallpaper.slideshowFoldersFirst = cfg_SlideshowFoldersFirst
+        if (cfg_SlideshowFoldersFirst)
+            imageWallpaper.slideshowFoldersFirst = cfg_SlideshowFoldersFirst
     }
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
 
     Kirigami.FormLayout {
-        twinFormLayouts: parentLayout
+        id: formLayout
+        
+        Component.onCompleted: function() {
+            if (typeof appearanceRoot !== "undefined") {
+                twinFormLayouts.push(appearanceRoot.parentLayout);
+            }
+        }
+        
         QtControls2.ComboBox {
             id: resizeComboBox
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
@@ -200,12 +223,35 @@ ColumnLayout {
         Loader {
             id: thumbnailsLoader
             anchors.fill: parent
-            source: (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
-                ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "")
+        
+            function loadWallpaper () {
+                let source = (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
+                    ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "");
+                
+                let props = {screenSize: screenSize};
+                
+                if (configDialog.currentWallpaper == "org.kde.slideshow") {
+                    props["configuration"] = wallpaperConfiguration;
+                }
+                thumbnailsLoader.setSource(source, props);
+            }
         }
+        
+        Connections {
+            target: configDialog
+            function onCurrentWallpaperChanged() {
+                thumbnailsLoader.loadWallpaper();
+            }
+        }
+        
+        Component.onCompleted: () => {
+            thumbnailsLoader.loadWallpaper();
+        }
+        
     }
 
     Component.onDestruction: {
-        wallpaper.configuration.PreviewImage = "null";
+        if (wallpaperConfiguration)
+            wallpaperConfiguration.PreviewImage = "null";
     }
 }

@@ -16,6 +16,8 @@ import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
 
 ColumnLayout {
     id: slideshowComponent
+    property var configuration: wallpaper.configuration
+    property var screenSize: Qt.size(Screen.width, Screen.height)
 
     property int hoursIntervalValue: Math.floor(cfg_SlideInterval / 3600)
     property int minutesIntervalValue: Math.floor(cfg_SlideInterval % 3600) / 60
@@ -30,8 +32,14 @@ ColumnLayout {
     onSecondsIntervalValueChanged: secondsInterval.value = secondsIntervalValue
 
     Kirigami.FormLayout {
-        twinFormLayouts: parentLayout
-
+        id: form
+        
+        Component.onCompleted: function () {
+            if (typeof appearanceRoot !== "undefined") {
+                twinFormLayouts = appearanceRoot.parentLayout;
+            }
+        }
+    
         RowLayout {
             id: slideshowModeRow
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Order:")
@@ -68,7 +76,7 @@ ColumnLayout {
                 Component.onCompleted: setMethod();
                 function setMethod() {
                     for (var i = 0; i < model.length; i++) {
-                        if (model[i]["slideshowMode"] === wallpaper.configuration.SlideshowMode) {
+                        if (model[i]["slideshowMode"] === configuration.SlideshowMode) {
                             slideshowModeComboBox.currentIndex = i;
                             break;
                         }
@@ -249,10 +257,13 @@ ColumnLayout {
         }
 
         Loader {
-            source: "ThumbnailsComponent.qml"
             Layout.fillWidth: true
             Layout.fillHeight: true
             anchors.fill: undefined
+            
+            Component.onCompleted: () => { 
+                this.setSource("ThumbnailsComponent.qml", {"screenSize": slideshowComponent.screenSize});
+            }
         }
     }
 }
