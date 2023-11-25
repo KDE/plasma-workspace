@@ -60,8 +60,8 @@ Dependencies:
     'plasma/kpipewire': '@same'
     'plasma/plasma-nano': '@same'
     'plasma/plasma5support': '@same'
-    'plasma/kactivities': '@latest-kf6' # Different branch scheme due to formerly being a Framework
-    'plasma/kactivities-stats': '@latest-kf6' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities': '@latest-kf6' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities-stats': '@latest-kf6' # Different branch scheme due to formerly being a Framework
     'libraries/plasma-wayland-protocols': '@latest-kf6'
     'libraries/phonon': '@latest-kf6'
     'libraries/kirigami-addons': '@latest-kf6'
