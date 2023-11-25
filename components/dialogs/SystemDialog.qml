@@ -4,13 +4,12 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
-import org.kde.kirigami 2.18 as Kirigami
-import org.kde.plasma.lookandfeel 1.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import QtQuick.Templates as T
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.lookandfeel
 
 /**
  * Component to create CSD dialogs that come from the system.
@@ -27,12 +26,12 @@ Kirigami.AbstractApplicationWindow {
     /**
      * Subtitle of the dialog.
      */
-    property string subtitle: ""
+    property string subtitle
 
     /**
      * This property holds the icon used in the dialog.
      */
-    property string iconName: ""
+    property string iconName
 
     /**
      * This property holds the list of actions for this dialog.
@@ -40,27 +39,26 @@ Kirigami.AbstractApplicationWindow {
      * Each action will be rendered as a button that the user will be able
      * to click.
      */
-    property list<Kirigami.Action> actions
+    property list<T.Action> actions
 
     default property Item mainItem
 
     /**
      * This property holds the QQC2 DialogButtonBox used in the footer of the dialog.
      */
-    readonly property DialogButtonBox dialogButtonBox: contentDialog.item.dialogButtonBox
+    readonly property T.DialogButtonBox dialogButtonBox: loader.item?.dialogButtonBox ?? null
 
     /**
      * Provides dialogButtonBox.standardButtons
      *
      * Useful to be able to set it as dialogButtonBox will be null as the object gets built
      */
-    property var standardButtons: contentDialog.item?.dialogButtonBox.standardButtons
+    property int /*T.DialogButtonBox.StandardButtons*/ standardButtons: T.DialogButtonBox.NoButton
 
     /**
      * Controls whether the accept button is enabled
      */
     property bool acceptable: true
-
 
     /**
      * The layout of the action buttons in the footer of the dialog.
@@ -73,45 +71,42 @@ Kirigami.AbstractApplicationWindow {
      */
     property int /*Qt.Orientation*/ layout: actions.length > 3 ? Qt.Vertical : Qt.Horizontal
 
-    flags: contentDialog.item.flags
-    width: contentDialog.implicitWidth
-    height: contentDialog.implicitHeight
+    flags: loader.item?.flags ?? Qt.Dialog
+    width: loader.implicitWidth
+    height: loader.implicitHeight
     visible: false
-    minimumHeight: contentDialog.item.minimumHeight
-    minimumWidth: contentDialog.item.minimumWidth
+    minimumHeight: loader.item?.minimumHeight ?? Kirigami.Units.gridUnit * 10
+    minimumWidth: loader.item?.minimumWidth ?? Kirigami.Units.gridUnit * 10
 
     function present() {
-        contentDialog.item.present()
+        loader.item.present()
     }
+
     signal accept()
     signal reject()
+
     property bool accepted: false
+
     onAccept: {
         accepted = true
         close()
     }
+
     onReject: close()
 
     onVisibleChanged: {
         if (!visible && !accepted) {
             root.reject()
         }
-        width = Qt.binding(() => contentDialog.implicitWidth)
-        height = Qt.binding(() => contentDialog.implicitHeight)
-    }
-
-    Binding {
-        target: dialogButtonBox.standardButton(DialogButtonBox.Ok)
-        property: "enabled"
-        when: dialogButtonBox.standardButton(DialogButtonBox.Ok)
-        value: root.acceptable
+        width = Qt.binding(() => loader.implicitWidth)
+        height = Qt.binding(() => loader.implicitHeight)
     }
 
     Loader {
-        id: contentDialog
+        id: loader
         anchors.fill: parent
         Component.onCompleted: {
-            var component = LookAndFeel.fileUrl("systemdialogscript")
+            const component = LookAndFeel.fileUrl("systemdialogscript")
             setSource(component, {
                 window: root,
                 mainText: root.mainText,
@@ -119,20 +114,41 @@ Kirigami.AbstractApplicationWindow {
                 actions: root.actions,
                 iconName: root.iconName,
                 mainItem: root.mainItem,
-                standardButtons: root.standardButtons
+                standardButtons: root.standardButtons,
             })
         }
+
+        onItemChanged: root.__bindStandardButtons()
 
         focus: true
 
         function accept() {
-            const button = dialogButtonBox.standardButton(DialogButtonBox.Ok);
-            if (button && button.enabled) {
+            const button = root.dialogButtonBox.standardButton(T.DialogButtonBox.Ok);
+            if (root.acceptable) {
                 root.accept()
             }
         }
+
         Keys.onEnterPressed: accept()
         Keys.onReturnPressed: accept()
         Keys.onEscapePressed: root.reject()
+    }
+
+    Connections {
+        // For the lack of better declarative API
+        target: loader.item?.dialogButtonBox ?? null
+        function onChildrenChanged() {
+            root.__bindStandardButtons();
+        }
+    }
+
+    function __bindStandardButtons() {
+        const item = loader.item;
+        if (item) {
+            const button = item.dialogButtonBox.standardButton(T.DialogButtonBox.Ok);
+            if (button) {
+                button.enabled = Qt.binding(() => root.acceptable);
+            }
+        }
     }
 }

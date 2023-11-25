@@ -5,12 +5,11 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
-import org.kde.kirigami 2.18 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import QtQuick.Templates as T
+import org.kde.kirigami as Kirigami
 
 /**
  * Dialog used on desktop. Uses SSDs (as opposed to CSDs).
@@ -18,11 +17,11 @@ import org.kde.kirigami 2.18 as Kirigami
 Item {
     id: root
 
-    property alias mainItem: contentsControl.contentItem
+    property alias mainItem: contentsItem.contentItem
     property alias mainText: titleHeading.text
     property alias subtitle: subtitleLabel.text
     property alias iconName: icon.source
-    property list<Kirigami.Action> actions
+    property list<T.Action> actions
     readonly property alias dialogButtonBox: footerButtonBox
 
     property Window window
@@ -59,7 +58,7 @@ Item {
 
             Kirigami.Icon {
                 id: icon
-                visible: source
+                visible: valid
                 implicitWidth: Kirigami.Units.iconSizes.large
                 implicitHeight: Kirigami.Units.iconSizes.large
             }
@@ -78,7 +77,7 @@ Item {
                     elide: Text.ElideRight
                 }
 
-                Label {
+                QQC2.Label {
                     id: subtitleLabel
                     Layout.fillWidth: true
                     wrapMode: Text.Wrap
@@ -90,26 +89,28 @@ Item {
         }
 
         // Main content area, to be provided by the implementation
-        Control {
-            id: contentsControl
+        Kirigami.Padding {
+            id: contentsItem
 
             Layout.fillWidth: true
             Layout.fillHeight: true
-            leftPadding: 0
-            rightPadding: 0
-            bottomPadding: 0
-            topPadding: 0
         }
 
         // Footer area with buttons
-        DialogButtonBox {
+        QQC2.DialogButtonBox {
             id: footerButtonBox
 
+            visible: count > 0
+
             Layout.fillWidth: true
-            leftPadding: 0
-            rightPadding: 0
-            bottomPadding: 0
-            topPadding: 0
+
+            padding: 0
+            topPadding: undefined
+            leftPadding: undefined
+            rightPadding: undefined
+            bottomPadding: undefined
+            verticalPadding: undefined
+            horizontalPadding: undefined
 
             onAccepted: root.window.accept()
             onRejected: root.window.reject()
@@ -117,11 +118,10 @@ Item {
             Repeater {
                 model: root.actions
 
-                delegate: Button {
+                delegate: QQC2.Button {
                     action: modelData
                 }
             }
         }
     }
 }
-
