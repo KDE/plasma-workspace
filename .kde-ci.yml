@@ -51,7 +51,7 @@ Dependencies:
     'frameworks/kstatusnotifieritem': '@latest-kf6'
     'frameworks/kuserfeedback': '@latest-kf6'
     'plasma/kwayland': '@same'
-    'plasma/plasma-framework': '@same'
+    'plasma/libplasma': '@same'
     'plasma/layer-shell-qt': '@same'
     'plasma/kscreenlocker': '@same'
     'plasma/libkscreen': '@same'
