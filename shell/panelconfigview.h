@@ -57,7 +57,7 @@ class PanelConfigView : public PlasmaQuick::PopupPlasmaWindow
     Q_PROPERTY(PanelRulerView *panelRulerView READ panelRulerView CONSTANT)
 
 public:
-    PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = nullptr);
+    PanelConfigView(Plasma::Containment *interface, PanelView *panelView);
     ~PanelConfigView() override;
 
     void init();

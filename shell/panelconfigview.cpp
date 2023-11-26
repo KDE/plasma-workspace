@@ -191,7 +191,7 @@ void PanelRulerView::focusOutEvent(QFocusEvent *ev)
 }
 
 //////////////////////////////PanelConfigView
-PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
+PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView)
     : PlasmaQuick::PopupPlasmaWindow()
     , m_containment(containment)
     , m_panelView(panelView)
