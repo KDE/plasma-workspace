@@ -92,10 +92,10 @@ void KillRunner::match(KRunner::RunnerContext &context)
         // Set the relevance
         switch (m_sorting) {
         case Sort::CPU:
-            match.setRelevance((process->userUsage() + process->sysUsage()) / 100);
+            match.setRelevance((process->userUsage() + process->sysUsage()) / 100.0);
             break;
         case Sort::CPUI:
-            match.setRelevance(1 - (process->userUsage() + process->sysUsage()) / 100);
+            match.setRelevance(1.0 - (process->userUsage() + process->sysUsage()) / 100.0);
             break;
         case Sort::NONE:
             match.setRelevance(name.compare(term, Qt::CaseInsensitive) == 0 ? 1 : 9);
