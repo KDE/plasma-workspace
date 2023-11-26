@@ -36,7 +36,7 @@ public:
         return equalIndex(m_index, o.m_index) && m_path == o.m_path;
     }
 
-    QString toXml(bool disabledOnly, QTextStream &s) const;
+    QString toXml(bool disabledOnly) const;
 
     const QString &path() const
     {

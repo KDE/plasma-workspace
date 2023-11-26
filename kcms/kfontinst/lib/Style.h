@@ -32,7 +32,7 @@ public:
         return m_value == o.m_value;
     }
 
-    QString toXml(bool disabled, const QString &family, QTextStream &s) const;
+    QString toXml(bool disabled, const QString &family) const;
     FileCont::ConstIterator add(const File &f) const
     {
         return m_files.insert(f);

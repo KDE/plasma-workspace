@@ -148,12 +148,12 @@ bool CGroupListItem::addFamilies(QDomElement &elem)
 
 void CGroupListItem::save(QTextStream &str)
 {
-    str << " <" GROUP_TAG " " NAME_ATTR "=\"" << Misc::encodeText(m_name, str) << "\">" << Qt::endl;
+    str << " <" GROUP_TAG " " NAME_ATTR "=\"" << Misc::encodeText(m_name) << "\">" << Qt::endl;
     if (!m_families.isEmpty()) {
         QSet<QString>::ConstIterator it(m_families.begin()), end(m_families.end());
 
         for (; it != end; ++it) {
-            str << "  <" FAMILY_TAG ">" << Misc::encodeText(*it, str) << "</" FAMILY_TAG ">" << Qt::endl;
+            str << "  <" FAMILY_TAG ">" << Misc::encodeText(*it) << "</" FAMILY_TAG ">" << Qt::endl;
         }
     }
     str << " </" GROUP_TAG ">" << Qt::endl;

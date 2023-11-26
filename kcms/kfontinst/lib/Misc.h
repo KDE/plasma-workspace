@@ -113,6 +113,7 @@ inline KFONTINST_EXPORT QString unhide(const QString &f)
     return '.' == f[0] ? f.mid(1) : f;
 }
 extern KFONTINST_EXPORT uint qHash(const TFont &key);
+extern KFONTINST_EXPORT QString encodeText(const QString &str);
 extern KFONTINST_EXPORT QString encodeText(const QString &str, QTextStream &s);
 extern KFONTINST_EXPORT QString contractHome(QString path);
 extern KFONTINST_EXPORT QString expandHome(QString path);

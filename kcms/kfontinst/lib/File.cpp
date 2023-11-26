@@ -31,13 +31,13 @@ File::File(const QDomElement &elem, bool disabled)
     }
 }
 
-QString File::toXml(bool disabled, QTextStream &s) const
+QString File::toXml(bool disabled) const
 {
     if (!disabled || Misc::isHidden(Misc::getFile(m_path))) {
-        QString str(PATH_ATTR "=\"" + KFI::Misc::encodeText(KFI::Misc::contractHome(m_path), s) + "\"");
+        QString str(PATH_ATTR "=\"" + KFI::Misc::encodeText(KFI::Misc::contractHome(m_path)) + "\"");
 
         if (!m_foundry.isEmpty() && QString::fromLatin1("unknown") != m_foundry) {
-            str += " " FOUNDRY_ATTR "=\"" + KFI::Misc::encodeText(m_foundry, s) + "\"";
+            str += " " FOUNDRY_ATTR "=\"" + KFI::Misc::encodeText(m_foundry) + "\"";
         }
 
         if (m_index > 0) {

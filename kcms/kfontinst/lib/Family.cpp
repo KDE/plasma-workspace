@@ -37,12 +37,12 @@ Family::Family(const QDomElement &elem, bool loadStyles)
 
 void Family::toXml(bool disabled, QTextStream &s) const
 {
-    QString family(KFI::Misc::encodeText(m_name, s));
+    QString family(KFI::Misc::encodeText(m_name));
     QStringList entries;
     StyleCont::ConstIterator it(m_styles.begin()), end(m_styles.end());
 
     for (; it != end; ++it) {
-        QString entry((*it).toXml(disabled, disabled ? family : QString(), s));
+        QString entry((*it).toXml(disabled, disabled ? family : QString()));
 
         if (!entry.isEmpty()) {
             entries.append(entry);
@@ -51,7 +51,7 @@ void Family::toXml(bool disabled, QTextStream &s) const
 
     if (entries.count() > 0) {
         if (!disabled) {
-            s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(m_name, s) << "\">\n";
+            s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(m_name) << "\">\n";
         }
 
         QStringList::ConstIterator it(entries.begin()), end(entries.end());

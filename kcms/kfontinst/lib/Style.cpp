@@ -69,13 +69,13 @@ Style::Style(const QDomElement &elem, bool loadFiles)
     }
 }
 
-QString Style::toXml(bool disabled, const QString &family, QTextStream &s) const
+QString Style::toXml(bool disabled, const QString &family) const
 {
     QStringList files;
     FileCont::ConstIterator it(m_files.begin()), end(m_files.end());
 
     for (; it != end; ++it) {
-        QString f((*it).toXml(disabled, s));
+        QString f((*it).toXml(disabled));
 
         if (!f.isEmpty()) {
             files.append(f);

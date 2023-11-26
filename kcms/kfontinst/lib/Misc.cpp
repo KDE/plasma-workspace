@@ -291,7 +291,7 @@ uint qHash(const KFI::Misc::TFont &key)
 }
 
 // Taken from qdom.cpp
-QString encodeText(const QString &str, QTextStream &s)
+QString encodeText(const QString &str)
 {
     QString retval(str);
     int len = retval.length(), i = 0;
