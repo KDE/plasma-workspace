@@ -12,7 +12,6 @@
 #include "KfiConstants.h"
 #include "Misc.h"
 #include "Style.h"
-#include "XmlStrings.h"
 #include "debug.h"
 #include <KZip>
 #include <QCoreApplication>

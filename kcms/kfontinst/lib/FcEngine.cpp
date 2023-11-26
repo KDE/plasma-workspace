@@ -5,9 +5,12 @@
 
 #include "FcEngine.h"
 
+#include "Fc.h"
 #include "File.h"
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
+
 #include <QApplication>
 #include <QFile>
 #include <QFontDatabase>

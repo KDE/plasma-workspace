@@ -28,9 +28,7 @@
 #include <Plasma/PluginLoader>
 #include <qstandardpaths.h>
 
-#include "../screenpool.h"
 #include "appinterface.h"
-#include "configgroup.h"
 #include "containment.h"
 #include "panel.h"
 #include "widget.h"

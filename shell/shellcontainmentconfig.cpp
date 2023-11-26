@@ -16,7 +16,6 @@
 #include <QQuickItem>
 #include <QScreen>
 
-#include "panelview.h"
 #include "screenpool.h"
 #include "shellcorona.h"
 #include <chrono>

@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include "KfiConstants.h"
 #include "Misc.h"
 #include "kfontinst_export.h"
 #include <QUrl>

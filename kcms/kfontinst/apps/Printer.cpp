@@ -5,7 +5,9 @@
 
 #include "Printer.h"
 #include "ActionLabel.h"
+#include "Fc.h"
 #include "FcEngine.h"
+#include "KfiConstants.h"
 #include "config-fontinst.h"
 #include <KAboutData>
 #include <QApplication>

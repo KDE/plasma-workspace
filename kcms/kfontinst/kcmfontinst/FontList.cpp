@@ -5,11 +5,9 @@
 
 #include "FontList.h"
 #include "Fc.h"
-#include "FcEngine.h"
 #include "FontInstInterface.h"
 #include "GroupList.h"
 #include "KfiConstants.h"
-#include "XmlStrings.h"
 #include <KColorScheme>
 #include <KIconLoader>
 #include <KMessageBox>

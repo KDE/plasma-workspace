@@ -5,7 +5,6 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#include "../kcms-common_p.h"
 #include "../krdb/krdb.h"
 
 #include <KColorScheme>

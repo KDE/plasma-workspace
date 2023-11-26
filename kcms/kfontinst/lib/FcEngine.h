@@ -5,14 +5,11 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "KfiConstants.h"
 #include <QColor>
 #include <QFont>
 #include <QList>
 #include <QRect>
 #include <fontconfig/fontconfig.h>
-// #include "Misc.h"
-#include "Fc.h"
 
 #include "kfontinst_export.h"
 

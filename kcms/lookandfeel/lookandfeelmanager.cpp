@@ -25,7 +25,6 @@
 #include <QStyleFactory>
 
 #ifdef HAVE_XCURSOR
-#include "../cursortheme/xcursor/xcursortheme.h"
 #include <X11/Xcursor/Xcursor.h>
 #endif
 

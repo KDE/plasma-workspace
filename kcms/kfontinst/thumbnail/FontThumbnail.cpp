@@ -5,6 +5,8 @@
 
 #include "FontThumbnail.h"
 #include "KfiConstants.h"
+#include "Misc.h"
+
 #include <KPluginFactory>
 #include <KZip>
 

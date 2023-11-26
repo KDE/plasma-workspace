@@ -4,9 +4,11 @@
 */
 
 #include "FontViewPart.h"
+#include "Fc.h"
 #include "FcEngine.h"
 #include "FontInst.h"
 #include "FontInstInterface.h"
+#include "KfiConstants.h"
 #include "PreviewSelectAction.h"
 #include "config-workspace.h"
 #include <KAboutData>
