@@ -102,6 +102,7 @@ void SplashWindow::setGeometry(const QRect &rect)
 
     if (oldGeometryEmpty) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        const auto originalPackagePath = package.path();
         KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {
@@ -112,11 +113,19 @@ void SplashWindow::setGeometry(const QRect &rect)
             package.setPath(m_theme);
         }
 
-        Q_ASSERT(package.isValid());
         const auto url = QUrl::fromLocalFile(package.filePath("splashmainscript"));
         qCDebug(KSPLASHQML_DEBUG) << "Loading" << url << "from" << package.path();
-        Q_ASSERT(url.isValid());
-        Q_ASSERT(!url.isEmpty());
+        if (!package.isValid() || !url.isValid() || url.isEmpty()) {
+            qCWarning(KSPLASHQML_DEBUG) << "Failed to resolve package url" << url //
+                                        << "package.valid" << package.isValid() //
+                                        << "package.path" << package.path() //
+                                        << "originalPackagePath" << originalPackagePath //
+                                        << "packageName" << packageName //
+                                        << "theme" << m_theme;
+            Q_ASSERT(package.isValid());
+            Q_ASSERT(url.isValid());
+            Q_ASSERT(!url.isEmpty());
+        }
         setSource(url);
     }
 }
