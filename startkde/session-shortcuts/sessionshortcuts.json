@@ -20,6 +20,7 @@
         "Description[tr]": "Temel oturum eylemleri için kısayollar sağlar",
         "Description[uk]": "Надає клавіатурні скорочення для типових дій у сеансі",
         "Description[x-test]": "xxProvides shortcuts for common session actionsxx",
+        "Description[zh_CN]": "提供常见会话操作的快捷方式",
         "Description[zh_TW]": "提供快捷鍵給一般工作階段動作",
         "Name": "Session Shortcuts",
         "Name[bg]": "Клавишни комбинации на сесията",
@@ -41,6 +42,7 @@
         "Name[tr]": "Oturum Kısayolları",
         "Name[uk]": "Скорочення сеансу",
         "Name[x-test]": "xxSession Shortcutsxx",
+        "Name[zh_CN]": "会话快捷键",
         "Name[zh_TW]": "工作階段快捷鍵"
     },
     "OnlyShowIn": "KDE",

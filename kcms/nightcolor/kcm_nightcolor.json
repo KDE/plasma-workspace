@@ -19,6 +19,7 @@
         "Description[tr]": "Zamana bağlı olarak ekran rengi sıcaklığını ayarla",
         "Description[uk]": "Коригування температури кольорів екрана за часом",
         "Description[x-test]": "xxAdjust screen color temperature based on timexx",
+        "Description[zh_CN]": "根据时间调整屏幕色温",
         "FormFactors": [
             "tablet",
             "handset",
@@ -42,7 +43,8 @@
         "Name[sl]": "Nočna luč",
         "Name[tr]": "Gece Işığı",
         "Name[uk]": "Нічні кольори",
-        "Name[x-test]": "xxNight Lightxx"
+        "Name[x-test]": "xxNight Lightxx",
+        "Name[zh_CN]": "夜间颜色"
     },
     "X-DocPath": "https://userbase.kde.org/TODOX",
     "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light",

@@ -125,6 +125,7 @@
         "Description[tr]": "Güç yönetimi ayarlarını denetleyin ve pilin doluluk durumunu görün",
         "Description[uk]": "Керує параметрами керування живленням та переглядом стану заряду акумулятора",
         "Description[x-test]": "xxControl power management settings and see the power status of your batteryxx",
+        "Description[zh_CN]": "控制电源管理设置和查看电池的电量状态",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"
@@ -148,7 +149,8 @@
         "Name[sl]": "Moč in baterija",
         "Name[tr]": "Güç ve Pil",
         "Name[uk]": "Живлення і акумулятор",
-        "Name[x-test]": "xxPower and Batteryxx"
+        "Name[x-test]": "xxPower and Batteryxx",
+        "Name[zh_CN]": "电量和电池"
     },
     "Keywords": "Power Management;Battery;System;Energy;",
     "Keywords[ar]": "إدارة الطاقة;بطارية;نظام;طاقة;",
