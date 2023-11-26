@@ -284,6 +284,9 @@ void User::apply()
                 loadData(); // Reload the old data to avoid half transactions
                 Q_EMIT applyError(i18n("There was an error while saving changes"));
                 break;
+            case UserApplyJob::Error::UserFacing:
+                Q_EMIT applyError(job->errorText());
+                break;
             case UserApplyJob::Error::NoError:; // Do nothing
             }
         },
