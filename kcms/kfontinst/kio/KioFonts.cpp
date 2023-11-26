@@ -515,7 +515,7 @@ void CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
 
         styleCount += (*family).styles().count();
         for (; styleIt != styleEnd; ++styleIt) {
-            createUDSEntry(entry, folder, *family, *styleIt);
+            createUDSEntry(entry, *family, *styleIt);
             listEntry(entry);
         }
     }
@@ -554,7 +554,7 @@ bool CKioFonts::createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder f
     Family fam(getFont(url, folder));
 
     if (!fam.name().isEmpty() && 1 == fam.styles().count()) {
-        createUDSEntry(entry, folder, fam, *fam.styles().begin());
+        createUDSEntry(entry, fam, *fam.styles().begin());
         return true;
     }
 
@@ -576,7 +576,7 @@ void CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder)
     entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, QString::fromLatin1("inode/directory"));
 }
 
-bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Family &family, const Style &style)
+bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, const Family &family, const Style &style)
 {
     int size = 0;
     QString name(FC::createName(family.name(), style.value()));

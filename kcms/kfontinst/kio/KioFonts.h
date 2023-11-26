@@ -45,7 +45,7 @@ private:
     QString getGroupName(gid_t gid);
     bool createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder folder);
     void createUDSEntry(KIO::UDSEntry &entry, EFolder folder);
-    bool createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Family &family, const Style &style);
+    bool createUDSEntry(KIO::UDSEntry &entry, const Family &family, const Style &style);
     Family getFont(const QUrl &url, EFolder folder);
     KIO::WorkerResult handleResp(int resp, const QString &file, const QString &tempFile = QString(), bool destIsSystem = false);
 
