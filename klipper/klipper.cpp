@@ -598,7 +598,7 @@ void Klipper::slotClearClipboard()
 
 HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData, bool selectionMode)
 {
-    if (selectionMode && m_selectionLocklevel || !selectionMode && m_clipboardLocklevel) {
+    if ((selectionMode && m_selectionLocklevel) || (!selectionMode && m_clipboardLocklevel)) {
         return HistoryItemPtr();
     }
     Ignore lock(selectionMode ? m_selectionLocklevel : m_clipboardLocklevel);
