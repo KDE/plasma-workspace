@@ -16,7 +16,7 @@ class LookAndFeelPackage : public KPackage::PackageStructure
 public:
     using KPackage::PackageStructure::PackageStructure;
 
-    void initPackage(KPackage::Package *package)
+    void initPackage(KPackage::Package *package) override
     {
         // https://community.kde.org/Plasma/lookAndFeelPackage#
         package->setDefaultPackageRoot(QStringLiteral("plasma/look-and-feel/"));
@@ -76,7 +76,7 @@ public:
         package->setPath(DEFAULT_LOOKANDFEEL);
     }
 
-    void pathChanged(KPackage::Package *package)
+    void pathChanged(KPackage::Package *package) override
     {
         if (!package->metadata().isValid()) {
             return;
