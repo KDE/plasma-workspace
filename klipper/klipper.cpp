@@ -155,7 +155,8 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     m_saveFileTimer->setSingleShot(true);
     m_saveFileTimer->setInterval(5s);
     connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
-        QtConcurrent::run(&Klipper::saveHistory, this, false);
+        const QFuture<void> future = QtConcurrent::run(&Klipper::saveHistory, this, false);
+        // Destroying the future neither waits nor cancels the asynchronous computation
     });
     connect(m_history, &History::changed, this, [this] {
         if (m_bKeepContents) {
