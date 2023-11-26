@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2023-11-19 03:44\n"
+"PO-Revision-Date: 2023-11-25 02:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -25,7 +25,7 @@ msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com"
+msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
@@ -279,7 +279,7 @@ msgstr "文字系统"
 #: kcmfontinst/FontFilter.cpp:129
 #, kde-format
 msgid "Set Criteria"
-msgstr "筛选条件"
+msgstr "过滤条件"
 
 #: kcmfontinst/FontFilter.cpp:188
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "符号/其他"
 #: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
 #, kde-format
 msgid "Filter by %1…"
-msgstr "按 %1 进行筛选…"
+msgstr "按 %1 进行过滤…"
 
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
