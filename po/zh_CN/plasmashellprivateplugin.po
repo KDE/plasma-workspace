@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -26,7 +26,7 @@ msgstr "KDE China, Guo Yunhe, Tyson Tan"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com"
+msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
 
 #: calendar/eventdatadecorator.cpp:51
 #, kde-format
@@ -176,6 +176,8 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"此挂件是为未知的旧版 Plasma 编写的，它与 Plasma %1 不兼容。请联系挂件的作者获"
+"取新版挂件。"
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
@@ -183,6 +185,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"此挂件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请联系挂件的作者获取新版"
+"挂件。"
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
@@ -190,6 +194,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"此挂件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请升级 Plasma 桌面环境以"
+"使用此挂件。"
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
@@ -197,6 +203,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"此挂件是为 Plasma %1 编写的，它与最新版本的 Plasma 不兼容。请更换 Plasma 桌面"
+"环境以使用此挂件。"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -153,12 +153,12 @@ msgstr "解锁"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(或者在读取器上扫描您的指纹)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(或者扫描您的智能卡)"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
@@ -205,7 +205,7 @@ msgstr "重新启动时，电脑将进入固件设置界面。"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "安装更新并重启"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -216,7 +216,7 @@ msgstr "注销"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "正在安装软件更新，将在 %1 秒后重启"
 
 #: contents/logout/Logout.qml:247
 #, kde-format
@@ -260,12 +260,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma 桌面环境"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "切换到此会话"
-
-#~ msgid "Start New Session"
-#~ msgstr "启动新会话"
-
-#~ msgid "Back"
-#~ msgstr "后退"

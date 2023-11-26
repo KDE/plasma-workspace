@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-21 01:40+0000\n"
+"POT-Creation-Date: 2023-11-26 02:00+0000\n"
 "PO-Revision-Date: 2019-10-31 00:48+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "hasso@linux.ee, qiilaq69@gmail.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:926
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:930
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -39,7 +39,7 @@ msgstr ""
 "Kas paigaldada fondid isiklikuks kasutamiseks (ainult sulle) või süsteemsena "
 "(kõik kasutajad saavad kasutada)?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:929
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:933
 #, kde-format
 msgid "Where to Install"
 msgstr "Paigaldamise asukoht"
@@ -349,13 +349,13 @@ msgid "Delete"
 msgstr "Kustuta"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "Luba"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "Keela"
@@ -664,97 +664,97 @@ msgstr "Autentimine nurjus.<br><i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Ootamatu viga töötlemise käigus: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:192
+#: kcmfontinst/KCmFontInst.cpp:199
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Create New Group…"
 msgstr "Uue grupi loomine"
 
-#: kcmfontinst/KCmFontInst.cpp:194
+#: kcmfontinst/KCmFontInst.cpp:201
 #, fuzzy, kde-format
 #| msgid "Remove Group"
 msgid "Remove Group…"
 msgstr "Grupi eemaldamine"
 
-#: kcmfontinst/KCmFontInst.cpp:196
+#: kcmfontinst/KCmFontInst.cpp:203
 #, fuzzy, kde-format
 #| msgid "Enable Fonts in Group..."
 msgid "Enable Fonts in Group…"
 msgstr "Luba fondid grupis ..."
 
-#: kcmfontinst/KCmFontInst.cpp:198
+#: kcmfontinst/KCmFontInst.cpp:205
 #, fuzzy, kde-format
 #| msgid "Disable Fonts in Group..."
 msgid "Disable Fonts in Group…"
 msgstr "Keela fondid grupis ..."
 
-#: kcmfontinst/KCmFontInst.cpp:223
+#: kcmfontinst/KCmFontInst.cpp:230
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "See näitab valitud fonti eelvaatlust."
 
-#: kcmfontinst/KCmFontInst.cpp:239
+#: kcmfontinst/KCmFontInst.cpp:246
 #, fuzzy, kde-format
 #| msgid "Find Duplicates..."
 msgid "Find Duplicates…"
 msgstr "Otsi topeltfonte ..."
 
-#: kcmfontinst/KCmFontInst.cpp:239
+#: kcmfontinst/KCmFontInst.cpp:246
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "Otsi topeltfonte ..."
 
-#: kcmfontinst/KCmFontInst.cpp:241
+#: kcmfontinst/KCmFontInst.cpp:248
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Paigalda failist ..."
 
-#: kcmfontinst/KCmFontInst.cpp:241
+#: kcmfontinst/KCmFontInst.cpp:248
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr "Paigalda fondid kohalikust failist"
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:249
 #, fuzzy, kde-format
 #| msgid "Get New Fonts..."
 msgid "Get New Fonts…"
 msgstr "Hangi uusi fonte..."
 
-#: kcmfontinst/KCmFontInst.cpp:243
+#: kcmfontinst/KCmFontInst.cpp:250
 #, kde-format
 msgid "Download new fonts"
 msgstr "Laadi uusi fonte alla"
 
-#: kcmfontinst/KCmFontInst.cpp:245
+#: kcmfontinst/KCmFontInst.cpp:252
 #, fuzzy, kde-format
 #| msgid "Delete Selected Fonts..."
 msgid "Delete Selected Fonts…"
 msgstr "Kustuta valitud fondid ..."
 
-#: kcmfontinst/KCmFontInst.cpp:303
+#: kcmfontinst/KCmFontInst.cpp:310
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "Muuda eelvaatluse teksti..."
 
-#: kcmfontinst/KCmFontInst.cpp:405
+#: kcmfontinst/KCmFontInst.cpp:409
 #, kde-format
 msgid "Add Fonts"
 msgstr "Fontide lisamine"
 
-#: kcmfontinst/KCmFontInst.cpp:531
+#: kcmfontinst/KCmFontInst.cpp:535
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Trükitavate fontide nimekirja salvestamine nurjus."
 
-#: kcmfontinst/KCmFontInst.cpp:553
+#: kcmfontinst/KCmFontInst.cpp:557
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Fondiprinteri käivitamine nurjus."
 
-#: kcmfontinst/KCmFontInst.cpp:560
+#: kcmfontinst/KCmFontInst.cpp:564
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -763,60 +763,60 @@ msgstr ""
 "Pole ühtegi trükitavat fonti.\n"
 "Trükkida ei saa bitmap- ja lubatud fonte."
 
-#: kcmfontinst/KCmFontInst.cpp:562
+#: kcmfontinst/KCmFontInst.cpp:566
 #, kde-format
 msgid "Cannot Print"
 msgstr "Trükkimine pole võimalik"
 
-#: kcmfontinst/KCmFontInst.cpp:577
+#: kcmfontinst/KCmFontInst.cpp:581
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Sa ei ole valinud midagi, mida kustutada."
 
-#: kcmfontinst/KCmFontInst.cpp:577
+#: kcmfontinst/KCmFontInst.cpp:581
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Pole midagi kustutada"
 
-#: kcmfontinst/KCmFontInst.cpp:592
+#: kcmfontinst/KCmFontInst.cpp:596
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Kas tõesti kustutada </p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:595
+#: kcmfontinst/KCmFontInst.cpp:599
 #, kde-format
 msgid "Delete Font"
 msgstr "Fondi kustutamine"
 
-#: kcmfontinst/KCmFontInst.cpp:602
+#: kcmfontinst/KCmFontInst.cpp:606
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "Kas tõesti kustutada see font?"
 msgstr[1] "Kas tõesti kustutada need %1 fonti?"
 
-#: kcmfontinst/KCmFontInst.cpp:604
+#: kcmfontinst/KCmFontInst.cpp:608
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Fontide kustutamine"
 
-#: kcmfontinst/KCmFontInst.cpp:609
+#: kcmfontinst/KCmFontInst.cpp:613
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "Fontide kustutamine..."
 
-#: kcmfontinst/KCmFontInst.cpp:624
+#: kcmfontinst/KCmFontInst.cpp:628
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Sa ei ole valinud midagi, mida liigutada."
 
-#: kcmfontinst/KCmFontInst.cpp:624
+#: kcmfontinst/KCmFontInst.cpp:628
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Pole midagi liigutada"
 
-#: kcmfontinst/KCmFontInst.cpp:634
+#: kcmfontinst/KCmFontInst.cpp:638
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -825,17 +825,17 @@ msgstr ""
 "<p>Kas tõesti liigutada</p><p>'<b>%1</b>'</p><p>asukohast <i>%2</i> asukohta "
 "<i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:639
+#: kcmfontinst/KCmFontInst.cpp:643
 #, kde-format
 msgid "Move Font"
 msgstr "Fondi liigutamine"
 
-#: kcmfontinst/KCmFontInst.cpp:640 kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:644 kcmfontinst/KCmFontInst.cpp:656
 #, kde-format
 msgid "Move"
 msgstr "Liiguta"
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:649
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -847,76 +847,76 @@ msgstr[1] ""
 "<p>Kas tõesti liigutada need %1 fonti asukohast <i>%2</i> asukohta <i>%3</i>?"
 "</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:651
+#: kcmfontinst/KCmFontInst.cpp:655
 #, kde-format
 msgid "Move Fonts"
 msgstr "Fontide liigutamine"
 
-#: kcmfontinst/KCmFontInst.cpp:656
+#: kcmfontinst/KCmFontInst.cpp:660
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "Fontide liigutamine..."
 
-#: kcmfontinst/KCmFontInst.cpp:670
+#: kcmfontinst/KCmFontInst.cpp:674
 #, kde-format
 msgid "Export Group"
 msgstr "Rühma eksport"
 
-#: kcmfontinst/KCmFontInst.cpp:696
+#: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
 msgid "No files?"
 msgstr "Kas failid puuduvad?"
 
-#: kcmfontinst/KCmFontInst.cpp:699
+#: kcmfontinst/KCmFontInst.cpp:703
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "%1 avamine kirjutamiseks nurjus"
 
-#: kcmfontinst/KCmFontInst.cpp:719
+#: kcmfontinst/KCmFontInst.cpp:723
 #, kde-format
 msgid "Create New Group"
 msgstr "Uue grupi loomine"
 
-#: kcmfontinst/KCmFontInst.cpp:719
+#: kcmfontinst/KCmFontInst.cpp:723
 #, kde-format
 msgid "Name of new group:"
 msgstr "Uue grupi nimi:"
 
-#: kcmfontinst/KCmFontInst.cpp:719
+#: kcmfontinst/KCmFontInst.cpp:723
 #, kde-format
 msgid "New Group"
 msgstr "Uus grupp"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:751
 #, kde-format
 msgid "Preview Text"
 msgstr "Eelvaatluse tüüp"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:751
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Uus tekst:"
 
-#: kcmfontinst/KCmFontInst.cpp:799
+#: kcmfontinst/KCmFontInst.cpp:803
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "Fontide nimekirja uurimine..."
 
-#: kcmfontinst/KCmFontInst.cpp:858
+#: kcmfontinst/KCmFontInst.cpp:862
 #, kde-format
 msgid "No fonts"
 msgstr "Fonte pole"
 
-#: kcmfontinst/KCmFontInst.cpp:863
+#: kcmfontinst/KCmFontInst.cpp:867
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "Üks font"
 msgstr[1] "%1 fonti"
 
-#: kcmfontinst/KCmFontInst.cpp:872
+#: kcmfontinst/KCmFontInst.cpp:876
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -929,7 +929,7 @@ msgstr ""
 "lubatud:</td><td>%3</td></tr><tr><td align=\"right\">Kokku:</td><td>%4</td></"
 "tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:882
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -940,66 +940,66 @@ msgstr ""
 "\"right\">Keelatud:</td><td>%2</td></tr><tr><td align=\"right\">Kokku:</"
 "td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:959
+#: kcmfontinst/KCmFontInst.cpp:963
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "Seostatud failide otsimine..."
 
-#: kcmfontinst/KCmFontInst.cpp:963
+#: kcmfontinst/KCmFontInst.cpp:967
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "Failide uurimine..."
 
-#: kcmfontinst/KCmFontInst.cpp:964
+#: kcmfontinst/KCmFontInst.cpp:968
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "Lisafailide otsimine paigaldamiseks..."
 
-#: kcmfontinst/KCmFontInst.cpp:979
+#: kcmfontinst/KCmFontInst.cpp:983
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Fondiga %1 seotud failide otsimine"
 
-#: kcmfontinst/KCmFontInst.cpp:1007
+#: kcmfontinst/KCmFontInst.cpp:1011
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "Fontide paigaldamine..."
 
-#: kcmfontinst/KCmFontInst.cpp:1072
+#: kcmfontinst/KCmFontInst.cpp:1076
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Sa ei ole valinud midagi, mida lubada."
 
-#: kcmfontinst/KCmFontInst.cpp:1072
+#: kcmfontinst/KCmFontInst.cpp:1076
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Sa ei ole valinud midagi, mida keelata."
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1077
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Pole midagi lubada"
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1077
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Pole midagi keelata"
 
-#: kcmfontinst/KCmFontInst.cpp:1090
+#: kcmfontinst/KCmFontInst.cpp:1094
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Kas tõesti lubada</p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1092
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Kas tõesti keelata</p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1007,7 +1007,7 @@ msgid ""
 msgstr ""
 "<p>Kas tõesti lubada</p><p>'<b>%1</b>', mis sisaldub grupis '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1098
+#: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1015,31 +1015,31 @@ msgid ""
 msgstr ""
 "<p>Kas tõesti keelata</p><p>'<b>%1</b>', mis sisaldub grupis '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1106 kcmfontinst/KCmFontInst.cpp:1107
 #, kde-format
 msgid "Enable Font"
 msgstr "Fondi lubamine"
 
-#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1104
+#: kcmfontinst/KCmFontInst.cpp:1106 kcmfontinst/KCmFontInst.cpp:1108
 #, kde-format
 msgid "Disable Font"
 msgstr "Fondi keelamine"
 
-#: kcmfontinst/KCmFontInst.cpp:1109
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "Kas tõesti lubada see font?"
 msgstr[1] "Kas tõesti lubada need %1 fonti?"
 
-#: kcmfontinst/KCmFontInst.cpp:1112
+#: kcmfontinst/KCmFontInst.cpp:1116
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "Kas tõesti keelata see font?"
 msgstr[1] "Kas tõesti keelata need %1 fonti?"
 
-#: kcmfontinst/KCmFontInst.cpp:1115
+#: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1051,7 +1051,7 @@ msgstr[0] "<p>Kas tõesti lubada see font, mis sisaldub grupis '<b>%2</b>'?</p>"
 msgstr[1] ""
 "<p>Kas tõesti lubada need %1 fonti, mis sisalduvad grupis '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1124
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1064,23 +1064,23 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>Kas tõesti keelata need %1 fonti, mis sisalduvad grupis '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Fontide lubamine"
 
-#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Fontide keelamine"
 
-#: kcmfontinst/KCmFontInst.cpp:1134
+#: kcmfontinst/KCmFontInst.cpp:1138
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "Fontide lubamine..."
 
-#: kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1140
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -95,7 +95,7 @@ msgstr "自定义时间"
 #: ui/main.qml:116
 #, kde-format
 msgid "Always on night light"
-msgstr ""
+msgstr "总是使用夜间颜色"
 
 #: ui/main.qml:153
 #, kde-kuit-format
@@ -112,7 +112,7 @@ msgstr ""
 #: ui/main.qml:172
 #, kde-format
 msgid "Day light temperature:"
-msgstr ""
+msgstr "白天色温："
 
 #: ui/main.qml:215 ui/main.qml:274
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "暖色"
 #: ui/main.qml:231
 #, kde-format
 msgid "Night light temperature:"
-msgstr ""
+msgstr "夜间色温："
 
 #: ui/main.qml:295
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "纬度：%1°   经度：%2°"
 #: ui/main.qml:305
 #, kde-format
 msgid "Begin night light at:"
-msgstr ""
+msgstr "开始夜间颜色："
 
 #: ui/main.qml:318 ui/main.qml:341
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "输入格式：HH:MM"
 #: ui/main.qml:328
 #, kde-format
 msgid "Begin day light at:"
-msgstr ""
+msgstr "开始白天颜色："
 
 #: ui/main.qml:350
 #, kde-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -33,17 +33,17 @@ msgstr "显示操作："
 #: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "注销"
 
 #: contents/ui/ConfigGeneral.qml:41
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "关机"
 
 #: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "重启"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format

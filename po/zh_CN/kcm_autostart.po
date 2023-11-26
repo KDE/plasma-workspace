@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -183,7 +183,7 @@ msgstr "没有用户指定的自动启动项目"
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr ""
+msgstr "点击 <interface>添加…</interface> 按钮以添加项目"
 
 #: ui/main.qml:203
 #, kde-format

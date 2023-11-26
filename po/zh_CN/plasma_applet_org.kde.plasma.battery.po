@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -97,10 +97,9 @@ msgid "Not present"
 msgstr "不存在"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "电源管理"
+msgstr "电量和电池"
 
 #: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
 #, kde-format
@@ -204,7 +203,7 @@ msgstr "电池未充满时在图标上显示电量百分比"
 #: package/contents/ui/main.qml:320
 #, kde-format
 msgid "&Configure Energy Saving…"
-msgstr "配置节能设置(&C)…"
+msgstr "配置省电功能(&C)…"
 
 #: package/contents/ui/PowerManagementItem.qml:40
 #, kde-format
@@ -293,11 +292,10 @@ msgid "Power Profile"
 msgstr "电源配置方案"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "无可用电池"
+msgstr "不可用"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -357,25 +355,5 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "电池和亮度"
-
-#~ msgid "Brightness"
-#~ msgstr "亮度"
-
-#~ msgid "Battery"
-#~ msgstr "电池"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "滚动滑轮以调整屏幕亮度"
-
-#~ msgid "Display Brightness"
-#~ msgstr "显示器亮度"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "键盘亮度"
+"此设备可能支持电源方案。<nl/>请尝试使用本机发行版的软件包管理器安装 "
+"<command>power-profiles-daemon</command> 软件包，然后重新启动系统。"

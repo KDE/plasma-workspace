@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -24,7 +24,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "logout;log out;注销"
+msgstr "logout;log out;注销;退出;退出登录;zhuxiao;tuichu;tuichudenglu"
 
 #: sessionrunner.cpp:23
 #, kde-format
@@ -38,7 +38,9 @@ msgctxt ""
 "computer"
 msgid "shutdown;shut down;power;power off"
 msgstr ""
-"shutdown;shut down;power;power off;关机;关闭;电源关闭;关闭电源;断电;断开电源"
+"shutdown;shut down;power;power off;关机;关闭;电源;电源关闭;关闭电源;断电;断开"
+"电源;guanji;guanbi;dianyuan;dianyuanguanbi;guanbidianyuan;duandian;"
+"duankaidianyuan"
 
 #: sessionrunner.cpp:29
 #, kde-format
@@ -51,7 +53,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "restart;reboot;重启;重新启动"
+msgstr "restart;reboot;重启;重新启动;chongqi;chongxinqidong"
 
 #: sessionrunner.cpp:35
 #, kde-format
@@ -63,7 +65,7 @@ msgstr "重新启动计算机"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "lock;lock screen;锁定;锁屏"
+msgstr "lock;lock screen;锁定;锁屏;suoding;suoping"
 
 #: sessionrunner.cpp:41
 #, kde-format
@@ -76,7 +78,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "save;save session;保存;保存会话"
+msgstr "save;save session;保存;会话;保存会话;baocun;huihua;baocunhuihua"
 
 #: sessionrunner.cpp:47
 #, kde-format
@@ -89,7 +91,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "switch user;new session;切换用户;新建会话"
+msgstr "switch user;new session;切换用户;新建会话;qiehuanyonghu;xinjianhuihua"
 
 #: sessionrunner.cpp:53
 #, kde-format

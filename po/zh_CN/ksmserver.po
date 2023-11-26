@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-22 01:36+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -139,7 +139,7 @@ msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[未知]"
 
 #: server.cpp:836
 #, kde-kuit-format
@@ -149,6 +149,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"无法管理某些应用，因为系统的会话管理资源已经耗尽。以下是会话资源消耗量最大的"
+"程序：\n"
+"%1"
 
 #: server.cpp:1108
 #, kde-kuit-format
@@ -158,3 +161,5 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"无法恢复 <application>%1</application>，因为它已经损坏，而且还耗尽了系统会话"
+"恢复资源。请将此情况报告给该应用程序的开发人员。"

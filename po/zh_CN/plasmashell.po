@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-21 01:35+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -26,8 +26,7 @@ msgstr "KDE China, CoelacanthusHex, Guo Yunhe, Tyson Tan"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"kde-china@kde.org, CoelacanthusHex@kde.org, i@guoyunhe.me, tysontan@tysontan."
-"com"
+"kde-china@kde.org, CoelacanthusHex@kde.org, i@guoyunhe.me, tds00@qq.com"
 
 #: currentcontainmentactionsmodel.cpp:204
 #, kde-format
@@ -38,37 +37,37 @@ msgstr "配置鼠标操作插件"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr ""
+msgstr "KDE Plasma 6.0 Dev"
 
 #: desktopview.cpp:210
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr ""
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr ""
+msgstr "KDE Plasma 6.0 Beta 1"
 
 #: desktopview.cpp:216
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr ""
+msgstr "KDE Plasma 6.0 Beta 2"
 
 #: desktopview.cpp:219
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:222
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:248
 #, kde-format
