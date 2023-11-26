@@ -192,7 +192,7 @@ void PreviewItem::hoverLeaveEvent(QHoverEvent *event)
     m_containsMouse = false;
 
     if (m_lastWidgetUnderMouse) {
-        dispatchEnterLeave(nullptr, m_lastWidgetUnderMouse, mapToGlobal(event->pos()));
+        dispatchEnterLeave(nullptr, m_lastWidgetUnderMouse, mapToGlobal(event->position()));
         m_lastWidgetUnderMouse = nullptr;
     }
     event->ignore(); // Propagate hover event to parent
@@ -214,12 +214,12 @@ void PreviewItem::sendHoverEvent(QHoverEvent *event)
         return;
     }
 
-    QPointF pos = event->pos();
+    QPointF pos = event->position();
 
     QWidget *child = m_widget->childAt(pos.toPoint());
     QWidget *receiver = child ? child : m_widget.get();
 
-    dispatchEnterLeave(receiver, m_lastWidgetUnderMouse, mapToGlobal(event->pos()));
+    dispatchEnterLeave(receiver, m_lastWidgetUnderMouse, mapToGlobal(event->position()));
 
     m_lastWidgetUnderMouse = receiver;
 

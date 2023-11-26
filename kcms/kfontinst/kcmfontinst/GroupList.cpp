@@ -877,7 +877,7 @@ void CGroupListView::dragEnterEvent(QDragEnterEvent *event)
 void CGroupListView::dragMoveEvent(QDragMoveEvent *event)
 {
     if (event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME)) {
-        QModelIndex index(indexAt(event->pos()));
+        QModelIndex index(indexAt(event->position().toPoint()));
 
         if (index.isValid()) {
             if (COL_GROUP_NAME != index.column()) {
@@ -933,7 +933,7 @@ void CGroupListView::dropEvent(QDropEvent *event)
         QSet<QString> families;
         QByteArray encodedData(event->mimeData()->data(KFI_FONT_DRAG_MIME));
         QDataStream ds(&encodedData, QIODevice::ReadOnly);
-        QModelIndex from(selectedIndexes().last()), to(indexAt(event->pos()));
+        QModelIndex from(selectedIndexes().last()), to(indexAt(event->position().toPoint()));
 
         ds >> families;
         // Are we moving/copying, removing a font from the current group?

@@ -60,7 +60,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
     case QEvent::HoverMove: {
         QHoverEvent &he = *static_cast<QHoverEvent *>(event);
 
-        const QPointF position = item->mapToItem(this, he.posF());
+        const QPointF position = item->mapToItem(this, he.position());
 
         // This clause means that we block focus when first entering a given position
         // in the case of kickoff it's so that we can move the mouse from the bottom tabbar to the side view
