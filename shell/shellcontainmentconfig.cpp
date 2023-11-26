@@ -126,7 +126,6 @@ void ScreenPoolModel::load()
 
     QList sortedIds = unknownScreenIds.values();
     std::sort(sortedIds.begin(), sortedIds.end());
-    int i = 1;
     for (int id : sortedIds) {
         Data d;
         d.id = id;
@@ -138,7 +137,6 @@ void ScreenPoolModel::load()
         conts->load();
         m_containments.push_back(conts);
         m_screens.push_back(d);
-        i++;
     }
     endResetModel();
 }
