@@ -571,7 +571,7 @@ QString AutostartModel::makeSuggestedName(const QString &oldName)
     // check if (number) exists at the end of the oldName and increment that number
     const QRegularExpression re(QStringLiteral("_(\\d+)_"));
     QRegularExpressionMatch rmatch;
-    oldName.lastIndexOf(re, -1, &rmatch);
+    (void)oldName.lastIndexOf(re, -1, &rmatch);
     if (rmatch.hasMatch()) {
         const int currentNum = rmatch.captured(1).toInt();
         const QString number = QString::number(currentNum + 1);
