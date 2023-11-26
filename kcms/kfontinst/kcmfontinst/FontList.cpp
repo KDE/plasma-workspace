@@ -1592,15 +1592,13 @@ void CFontListView::selectionChanged(const QItemSelection &selected, const QItem
 
 QModelIndexList CFontListView::getSelectedItems()
 {
-    //
     // Go through current selection, and for any 'font' items that are selected,
     // ensure 'family' item is not...
     QModelIndexList selectedItems(selectedIndexes()), deselectList;
     QModelIndex index;
     QSet<CFontModelItem *> selectedFamilies;
-    bool en(false), dis(false);
 
-    foreach (index, selectedItems)
+    foreach (index, selectedItems) {
         if (index.isValid()) {
             QModelIndex realIndex(m_proxy->mapToSource(index));
 
@@ -1608,11 +1606,6 @@ QModelIndexList CFontListView::getSelectedItems()
                 if ((static_cast<CFontModelItem *>(realIndex.internalPointer()))->isFont()) {
                     CFontItem *font = static_cast<CFontItem *>(realIndex.internalPointer());
 
-                    if (font->isEnabled()) {
-                        en = true;
-                    } else {
-                        dis = true;
-                    }
                     if (!selectedFamilies.contains(font->parent())) {
                         selectedFamilies.insert(font->parent());
 
@@ -1620,25 +1613,15 @@ QModelIndexList CFontListView::getSelectedItems()
                             deselectList.append(m_proxy->mapFromSource(m_model->createIndex(font->parent()->rowNumber(), i, font->parent())));
                         }
                     }
-                } else {
-                    switch ((static_cast<CFamilyItem *>(realIndex.internalPointer()))->status()) {
-                    case CFamilyItem::ENABLED:
-                        en = true;
-                        break;
-                    case CFamilyItem::DISABLED:
-                        dis = true;
-                        break;
-                    case CFamilyItem::PARTIAL:
-                        en = dis = true;
-                        break;
-                    }
                 }
             }
         }
+    }
 
     if (deselectList.count()) {
-        foreach (index, deselectList)
+        foreach (index, deselectList) {
             selectionModel()->select(index, QItemSelectionModel::Deselect);
+        }
     }
 
     QModelIndexList sel;
