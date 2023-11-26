@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import base64
 import os
 import shutil
 import tempfile
@@ -10,14 +11,12 @@ import time
 import unittest
 from typing import Final
 
-import gi
+import cv2 as cv
+import numpy as np
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-
-gi.require_version("GdkPixbuf", "2.0")
-
-from gi.repository import GdkPixbuf, GLib
+from gi.repository import GLib
 
 KDE_VERSION: Final = 6
 KCM_ID: Final = "kcm_cursortheme"
@@ -89,40 +88,26 @@ class KCMCursorThemeTest(unittest.TestCase):
             saved_image_path: str = os.path.join(temp_dir, "kcm_window.png")
             self.assertTrue(self.driver.get_screenshot_as_file(saved_image_path))
 
-            pixbuf: GdkPixbuf.Pixbuf | None = GdkPixbuf.Pixbuf.new_from_file(saved_image_path)
-            self.assertIsNotNone(pixbuf)
-            self.assertGreater(pixbuf.get_width(), 0)
-            self.assertGreater(pixbuf.get_height(), 0)
-            self.assertEqual(pixbuf.get_n_channels(), 4)  # R, G, B, A
+            cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+            first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
 
-            pixel_data: bytes = pixbuf.get_pixels()  # R, G, B, A, R, G, B, A, ...
-
-        # Now scan each pixels to match the expected colors
-        i = 0
-        count = [
-            0,  # Red
-            0,  # Green
-            0,  # Blue
-            0,  # Yellow
-        ]
-        while i < len(pixel_data):
-            color = (pixel_data[i], pixel_data[i + 1], pixel_data[i + 2])  # 0~255
-            i += 4
-
-            match color:
-                case (255, 0, 0):  # Red
-                    count[0] += 1
-                case (0, 255, 0):  # Green
-                    count[1] += 1
-                case (0, 0, 255):  # Blue
-                    count[2] += 1
-                case (255, 255, 0):  # Yellow
-                    count[3] += 1
-
-            if count >= [32] * 4:
-                return
-
-        self.fail(f"Cursor preview is not loaded {count} {pixel_data}")
+        # Red
+        cv_second_image = np.zeros((16, 16, 3), dtype=np.uint8)
+        cv_second_image[:, :] = [0, 0, 255]
+        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
+        self.driver.find_image_occurrence(first_image, second_image)
+        # Green
+        cv_second_image[:, :] = [0, 255, 0]
+        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
+        self.driver.find_image_occurrence(first_image, second_image)
+        # Blue
+        cv_second_image[:, :] = [255, 0, 0]
+        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
+        self.driver.find_image_occurrence(first_image, second_image)
+        # Yellow
+        cv_second_image[:, :] = [0, 255, 255]
+        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
+        self.driver.find_image_occurrence(first_image, second_image)
 
 
 if __name__ == '__main__':
