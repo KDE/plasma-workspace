@@ -477,7 +477,7 @@ void ShellContainmentConfig::init()
 
     if (!rootObjects().isEmpty()) {
         auto *obj = qobject_cast<QWindow *>(rootObjects().first());
-        connect(obj, &QWindow::visibleChanged, this, [this, obj]() {
+        connect(obj, &QWindow::visibleChanged, this, [this] {
             deleteLater();
         });
     }
