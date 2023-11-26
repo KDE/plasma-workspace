@@ -358,6 +358,7 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
 
 KService::Ptr AppEntry::defaultAppByName(const QString &name)
 {
+    Q_UNUSED(name)
     return DefaultService::browser();
 }
 

@@ -413,6 +413,7 @@ Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
 
 QVariantList appstreamActions(const KService::Ptr &service)
 {
+    Q_UNUSED(service)
 #ifdef HAVE_APPSTREAMQT
     const KService::Ptr appStreamHandler = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/appstream"));
 
@@ -426,7 +427,6 @@ QVariantList appstreamActions(const KService::Ptr &service)
                                                            QStringLiteral("manageApplication"));
     return {appstreamAction};
 #else
-    Q_UNUSED(service)
     return {};
 #endif
 }

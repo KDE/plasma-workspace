@@ -79,6 +79,8 @@ QDBusError FprintDevice::stopEnrolling()
 
 void FprintDevice::enrollStatus(QString result, bool done)
 {
+    Q_UNUSED(done)
+
     if (result == "enroll-completed") {
         Q_EMIT enrollCompleted();
     } else if (result == "enroll-failed" || result == "enroll-data-full" || result == "enroll-disconnected" || result == "enroll-unknown-error") {

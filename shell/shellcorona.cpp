@@ -1598,6 +1598,9 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
     scriptEngine.globalObject().setProperty(QStringLiteral("applet"), scriptEngine.wrap(applet));
     scriptEngine.globalObject().setProperty(QStringLiteral("containment"), scriptEngine.wrap(containment));
     scriptEngine.evaluateScript(script, scriptFile);
+#else
+    Q_UNUSED(containment)
+    Q_UNUSED(applet)
 #endif
 }
 
@@ -1820,6 +1823,7 @@ QString ShellCorona::evaluateScript(const QString &script)
 
     return buffer;
 #else
+    Q_UNUSED(script)
     return QString();
 #endif
 }

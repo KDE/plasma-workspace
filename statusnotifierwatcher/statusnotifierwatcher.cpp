@@ -92,6 +92,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString &name)
 
 void StatusNotifierWatcher::RegisterStatusNotifierHost(const QString &service)
 {
+    Q_UNUSED(service)
 }
 
 bool StatusNotifierWatcher::IsStatusNotifierHostRegistered() const

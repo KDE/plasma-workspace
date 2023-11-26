@@ -188,6 +188,7 @@ void KSMServer::saveCurrentSessionAs(const QString &session)
 // callbacks
 void KSMServer::saveYourselfDone(KSMClient *client, bool success)
 {
+    Q_UNUSED(success)
     if (state == Idle) {
         // State saving when it's not shutdown or checkpoint. Probably
         // a shutdown was canceled and the client is finished saving

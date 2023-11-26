@@ -57,6 +57,7 @@ void LayerShell::zwlr_layer_shell_v1_get_layer_surface(Resource *resource,
     }
 
     auto layerSurface = new LayerSurface(this, surface, output, layer, scope, layerSurfaceResource);
+    Q_UNUSED(layerSurface)
 }
 
 void LayerShell::zwlr_layer_shell_v1_destroy(Resource *resource)
@@ -70,6 +71,7 @@ LayerSurface::LayerSurface(LayerShell *shell, Surface *surface, Output *output, 
     , m_layer(layer)
     , m_scope(scope)
 {
+    Q_UNUSED(shell)
     surface->m_role = this;
 }
 
