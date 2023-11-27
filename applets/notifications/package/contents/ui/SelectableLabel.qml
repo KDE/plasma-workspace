@@ -44,7 +44,7 @@ PlasmaComponents3.ScrollView {
         selectByMouse: !Kirigami.Settings.tabletMode
 
         readOnly: true
-        wrapMode: Text.Wrap
+        wrapMode: TextEdit.Wrap
         textFormat: TextEdit.RichText
 
         onLinkActivated: bodyTextContainer.linkActivated(link)

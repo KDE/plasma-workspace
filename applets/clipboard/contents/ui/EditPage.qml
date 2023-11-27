@@ -60,7 +60,7 @@ ColumnLayout {
 
         PlasmaComponents3.TextArea {
             id: textArea
-            wrapMode: Text.Wrap
+            wrapMode: TextEdit.Wrap
             textFormat: TextEdit.PlainText
 
             KeyNavigation.up: dialogItem.KeyNavigation.up
