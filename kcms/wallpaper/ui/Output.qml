@@ -144,6 +144,10 @@ Item {
             }
         }
     }
+
+    HoverHandler {
+        cursorShape: Qt.PointingHandCursor
+    }
     
     TapHandler {
         id: tapHandler
