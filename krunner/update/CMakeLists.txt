@@ -1,6 +1,6 @@
 set(krunnerglobalshortcuts_SRCS
    krunnerglobalshortcuts.cpp
- )
+)
 
 add_executable(krunnerglobalshortcuts ${krunnerglobalshortcuts_SRCS})
 
