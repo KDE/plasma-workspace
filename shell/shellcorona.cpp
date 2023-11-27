@@ -1477,6 +1477,12 @@ void ShellCorona::createWaitingPanels()
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
         auto rectNotify = [this, panel]() {
+            // we a re doing a qobject_cast on a thing we know is a panelview,
+            // because in mid-destruction it can become a simple QObject for a moment
+            // https://bugreports.qt.io/browse/QTBUG-118841
+            if (!qobject_cast<PanelView *>(panel)) {
+                return;
+            }
             if (!m_screenReorderInProgress && panel->containment()) {
                 Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
