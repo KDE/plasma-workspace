@@ -3,7 +3,7 @@ Description=KRunner
 PartOf=graphical-session.target
 
 [Service]
-ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/krunner
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/krunner --daemon
 Type=dbus
 BusName=org.kde.krunner
 TimeoutSec=5sec
