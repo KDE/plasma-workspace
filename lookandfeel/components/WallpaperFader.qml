@@ -23,6 +23,8 @@ Item {
 
     property bool alwaysShowClock: typeof config === "undefined" || typeof config.alwaysShowClock === "undefined" || config.alwaysShowClock === true
 
+    state: "on"
+
     Behavior on factor {
         NumberAnimation {
             target: wallpaperFader
