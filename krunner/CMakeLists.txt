@@ -51,3 +51,4 @@ ecm_install_configured_files(
     DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
 
+install(FILES completions/krunner.zsh RENAME _krunner DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
