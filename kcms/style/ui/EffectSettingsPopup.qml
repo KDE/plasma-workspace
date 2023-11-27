@@ -14,10 +14,12 @@ import org.kde.private.kcms.style 1.0 as Private
 Kirigami.OverlaySheet {
     id: effectSettingsPopup
 
+    readonly property int paddings: Kirigami.Units.largeSpacing * 2
+
     title: i18nc("@title:window", "Configure Icon and Toolbars")
 
-    implicitWidth: Kirigami.Units.gridUnit * 20
-    implicitHeight: Kirigami.Units.gridUnit * 11
+    implicitWidth: Math.max((formLayout.implicitWidth + paddings), Kirigami.Units.gridUnit * 20)
+    implicitHeight: Math.max((formLayout.implicitHeight + paddings), Kirigami.Units.gridUnit * 11)
 
     onOpened: {
         // can we do this automatically with "focus: true" somewhere?
