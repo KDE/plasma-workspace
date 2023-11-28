@@ -39,11 +39,6 @@ class PlasmaShell;
 }
 }
 
-enum class KlipperMode {
-    Standalone,
-    DataEngine,
-};
-
 class Klipper : public QObject
 {
     Q_OBJECT
@@ -61,7 +56,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
 public:
-    Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode = KlipperMode::Standalone);
+    Klipper(QObject *parent, const KSharedConfigPtr &config);
     ~Klipper() override;
 
     bool eventFilter(QObject *object, QEvent *event) override;
@@ -227,7 +222,6 @@ private:
     QString cycleText() const;
     KActionCollection *m_collection;
     QMenu *m_actionsPopup;
-    KlipperMode m_mode;
     QTimer *m_saveFileTimer;
     QPointer<KNotification> m_notification;
     KWayland::Client::PlasmaShell *m_plasmashell;

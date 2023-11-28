@@ -16,7 +16,7 @@ static const QString s_barcodeKey = QStringLiteral("supportsBarcodes");
 
 ClipboardEngine::ClipboardEngine(QObject *parent)
     : Plasma5Support::DataEngine(parent)
-    , m_klipper(new Klipper(this, KSharedConfig::openConfig(QStringLiteral("klipperrc")), KlipperMode::DataEngine))
+    , m_klipper(new Klipper(this, KSharedConfig::openConfig(QStringLiteral("klipperrc"))))
 {
     // TODO: use a filterproxymodel
     setModel(s_clipboardSourceName, m_klipper->history()->model());

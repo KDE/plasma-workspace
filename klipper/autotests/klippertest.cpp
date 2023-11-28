@@ -70,7 +70,7 @@ void KlipperTest::testBug465225()
 
     // Load the history file which contains faulty image data
     {
-        auto klipper = std::make_unique<Klipper>(this, klipperConfig, KlipperMode::DataEngine);
+        auto klipper = std::make_unique<Klipper>(this, klipperConfig);
         QCOMPARE(klipper->history()->model()->rowCount(), 1);
         QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
 
@@ -91,7 +91,7 @@ void KlipperTest::testBug465225()
 
     // Now load the history file again
     {
-        auto klipper = std::make_unique<Klipper>(this, klipperConfig, KlipperMode::DataEngine);
+        auto klipper = std::make_unique<Klipper>(this, klipperConfig);
         QCOMPARE(klipper->history()->model()->rowCount(), 2);
         QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
         QVERIFY(klipper->history()->first()->uuid() != klipper->history()->first()->next_uuid());

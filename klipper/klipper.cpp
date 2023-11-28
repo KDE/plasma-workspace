@@ -91,7 +91,7 @@ private:
 }
 
 // config == KGlobal::config for process, otherwise applet
-Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode)
+Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     : QObject(parent)
     , m_overflowCounter(0)
     , m_quitAction(nullptr)
@@ -99,13 +99,9 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     , m_clipboardLocklevel(0)
     , m_config(config)
     , m_pendingContentsCheck(false)
-    , m_mode(mode)
     , m_saveFileTimer(nullptr)
     , m_plasmashell(nullptr)
 {
-    if (m_mode == KlipperMode::Standalone) {
-        setenv("KSNI_NO_DBUSMENU", "1", 1);
-    }
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"),
                                                  this,
@@ -179,13 +175,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     m_configureAction->setText(i18nc("@action:inmenu", "&Configure Klipper…"));
     connect(m_configureAction, &QAction::triggered, this, &Klipper::slotConfigure);
 
-    if (KlipperMode::Standalone == m_mode) {
-        m_quitAction = m_collection->addAction(QStringLiteral("quit"));
-        m_quitAction->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
-        m_quitAction->setText(i18nc("@action:inmenu Quit Klipper", "&Quit"));
-        connect(m_quitAction, &QAction::triggered, this, &Klipper::slotQuit);
-    }
-
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
@@ -221,33 +210,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     connect(m_showOnMousePos, &QAction::triggered, this, &Klipper::slotPopupMenu);
 
     connect(history(), &History::topChanged, this, &Klipper::slotHistoryTopChanged);
-
-    if (m_mode == KlipperMode::Standalone) {
-        // system tray popup menu
-        m_actionsPopup = new QMenu;
-        m_actionsPopup->addSection(QIcon::fromTheme(QStringLiteral("klipper")),
-                                   i18nc("%1 is application display name", "%1 - Clipboard Tool", QGuiApplication::applicationDisplayName()));
-        m_actionsPopup->addAction(m_toggleURLGrabAction);
-        m_actionsPopup->addAction(m_clearHistoryAction);
-        m_actionsPopup->addAction(m_configureAction);
-        m_actionsPopup->addAction(m_repeatAction);
-        m_actionsPopup->addAction(m_showBarcodeAction);
-
-        m_actionsPopup->addSeparator();
-
-        QMenu *helpMenu = (new KHelpMenu(m_actionsPopup, KAboutData::applicationData(), false))->menu();
-        helpMenu->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
-        m_actionsPopup->addMenu(helpMenu);
-
-        Q_ASSERT(m_quitAction);
-        m_actionsPopup->addAction(m_quitAction);
-        connect(m_actionsPopup, &QMenu::aboutToShow, this, &Klipper::slotStartShowTimer);
-    }
-
-    // session manager interaction
-    if (m_mode == KlipperMode::Standalone) {
-        connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
-    }
 
     connect(this, &Klipper::passivePopup, this, [this](const QString &caption, const QString &text) {
         if (m_notification) {
@@ -969,13 +931,7 @@ void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
     vBox->addWidget(mw);
     vBox->addWidget(buttons);
     dlg->adjustSize();
-
-    if (m_mode == KlipperMode::Standalone) {
-        dlg->setModal(true);
-        dlg->exec();
-    } else if (m_mode == KlipperMode::DataEngine) {
-        dlg->open();
-    }
+    dlg->open();
 }
 
 void Klipper::slotAskClearHistory()
