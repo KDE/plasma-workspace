@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2023-08-03 11:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -120,53 +120,53 @@ msgstr "Tresna-barra nagusiko etiketa"
 msgid "Secondary toolbar label"
 msgstr "Bigarren mailako tresna-barrako etiketa"
 
-#: ui/EffectSettingsPopup.qml:17
+#: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr "Konfiguratu ikono eta tresna-barrak"
 
-#: ui/EffectSettingsPopup.qml:34
+#: ui/EffectSettingsPopup.qml:36
 #, kde-format
 msgid "Show icons:"
 msgstr "Erakutsi ikonoak:"
 
-#: ui/EffectSettingsPopup.qml:35
+#: ui/EffectSettingsPopup.qml:37
 #, kde-format
 msgid "On buttons"
 msgstr "Botoietan"
 
-#: ui/EffectSettingsPopup.qml:46
+#: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
 msgstr "Menuetan"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "Tresna-barra nagusiko etiketa:"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Text only"
 msgstr "Testua soilik"
 
-#: ui/EffectSettingsPopup.qml:62
+#: ui/EffectSettingsPopup.qml:64
 #, kde-format
 msgid "Beside icons"
 msgstr "Ikonoen alboan"
 
-#: ui/EffectSettingsPopup.qml:63
+#: ui/EffectSettingsPopup.qml:65
 #, kde-format
 msgid "Below icon"
 msgstr "Ikonoen azpian"
 
-#: ui/EffectSettingsPopup.qml:78
+#: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "Bigarren mailako tresna-barrako etiketa:"

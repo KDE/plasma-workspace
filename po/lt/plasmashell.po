@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 01:35+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2022-12-28 02:27+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -314,12 +314,12 @@ msgstr "Tvarkyti darbalaukius ir skydelius..."
 msgid "Move keyboard focus between panels"
 msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
-#: shellcorona.cpp:2005
+#: shellcorona.cpp:2011
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:2041
+#: shellcorona.cpp:2047
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

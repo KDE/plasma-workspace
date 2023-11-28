@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -123,62 +123,62 @@ msgstr "&Lokacija teksta glavne trake:"
 msgid "Secondary toolbar label"
 msgstr "Lokacija &teksta drugih traka:"
 
-#: ui/EffectSettingsPopup.qml:17
+#: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:34
+#: ui/EffectSettingsPopup.qml:36
 #, fuzzy, kde-format
 #| msgid "Show icons in menus:"
 msgid "Show icons:"
 msgstr "&Ikonice u menijima:"
 
-#: ui/EffectSettingsPopup.qml:35
+#: ui/EffectSettingsPopup.qml:37
 #, fuzzy, kde-format
 #| msgid "Radio button"
 msgid "On buttons"
 msgstr "Radio dugme"
 
-#: ui/EffectSettingsPopup.qml:46
+#: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, fuzzy, kde-format
 #| msgid "Main &toolbar text location:"
 msgid "Main toolbar label:"
 msgstr "&Lokacija teksta glavne trake:"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
 msgstr ""
 
 # @item:inlistbox Text position
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgid "Text only"
 msgstr "samo tekst"
 
 # @item:inlistbox Text position
-#: ui/EffectSettingsPopup.qml:62
+#: ui/EffectSettingsPopup.qml:64
 #, fuzzy, kde-format
 #| msgid "Text Beside Icons"
 msgid "Beside icons"
 msgstr "tekst pored ikonica"
 
 # @item:inlistbox Text position
-#: ui/EffectSettingsPopup.qml:63
+#: ui/EffectSettingsPopup.qml:65
 #, fuzzy, kde-format
 #| msgid "Text Below Icons"
 msgid "Below icon"
 msgstr "tekst ispod ikonica"
 
-#: ui/EffectSettingsPopup.qml:78
+#: ui/EffectSettingsPopup.qml:80
 #, fuzzy, kde-format
 #| msgid "Secondary toolbar text &location:"
 msgid "Secondary toolbar label:"

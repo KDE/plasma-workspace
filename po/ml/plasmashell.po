@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 01:35+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -314,12 +314,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2005
+#: shellcorona.cpp:2011
 #, kde-format
 msgid "Add Panel"
 msgstr "പാളി ചേർക്കുക"
 
-#: shellcorona.cpp:2041
+#: shellcorona.cpp:2047
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2021-08-24 02:00+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -108,54 +108,54 @@ msgstr "Texto da barra principal"
 msgid "Secondary toolbar label"
 msgstr "Texto da barra secundária"
 
-#: ui/EffectSettingsPopup.qml:17
+#: ui/EffectSettingsPopup.qml:19
 #, fuzzy, kde-format
 #| msgid "Configure Icons and Toolbars"
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr "Configurar os Ícones e Barras de Ferramentas"
 
-#: ui/EffectSettingsPopup.qml:34
+#: ui/EffectSettingsPopup.qml:36
 #, kde-format
 msgid "Show icons:"
 msgstr "Mostrar os ícones:"
 
-#: ui/EffectSettingsPopup.qml:35
+#: ui/EffectSettingsPopup.qml:37
 #, kde-format
 msgid "On buttons"
 msgstr "Nos botões"
 
-#: ui/EffectSettingsPopup.qml:46
+#: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
 msgstr "Nos menus"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "Texto da barra principal:"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
 msgstr "Nenhum"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Text only"
 msgstr "Apenas o texto"
 
-#: ui/EffectSettingsPopup.qml:62
+#: ui/EffectSettingsPopup.qml:64
 #, kde-format
 msgid "Beside icons"
 msgstr "Ao lado dos ícones"
 
-#: ui/EffectSettingsPopup.qml:63
+#: ui/EffectSettingsPopup.qml:65
 #, kde-format
 msgid "Below icon"
 msgstr "Sob os ícones"
 
-#: ui/EffectSettingsPopup.qml:78
+#: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "Texto da barra secundária:"

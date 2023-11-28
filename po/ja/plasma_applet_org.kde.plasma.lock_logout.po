@@ -125,9 +125,3 @@ msgstr "スリープ (作業状態をメモリに保存)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ハイバネート (作業状態をディスクに保存)"
-
-#~ msgid "Logout"
-#~ msgstr "ログアウト"
-
-#~ msgid "Reboot"
-#~ msgstr "再起動"

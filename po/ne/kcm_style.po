@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2007-11-01 19:58+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -118,58 +118,58 @@ msgstr ""
 msgid "Secondary toolbar label"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:17
+#: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:34
+#: ui/EffectSettingsPopup.qml:36
 #, fuzzy, kde-format
 #| msgid "Sho&w icons on buttons"
 msgid "Show icons:"
 msgstr "बटनमा प्रतिमा देखाउनुहोस्"
 
-#: ui/EffectSettingsPopup.qml:35
+#: ui/EffectSettingsPopup.qml:37
 #, fuzzy, kde-format
 #| msgid "Radio button"
 msgid "On buttons"
 msgstr "रेडियो बटन"
 
-#: ui/EffectSettingsPopup.qml:46
+#: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgid "Text only"
 msgstr "पाठ मात्र"
 
-#: ui/EffectSettingsPopup.qml:62
+#: ui/EffectSettingsPopup.qml:64
 #, fuzzy, kde-format
 #| msgid "Text Alongside Icons"
 msgid "Beside icons"
 msgstr "पाठ वरिपरि प्रतिमा"
 
-#: ui/EffectSettingsPopup.qml:63
+#: ui/EffectSettingsPopup.qml:65
 #, fuzzy, kde-format
 #| msgid "Text Under Icons"
 msgid "Below icon"
 msgstr "पाठ मुनि प्रतिमा"
 
-#: ui/EffectSettingsPopup.qml:78
+#: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr ""

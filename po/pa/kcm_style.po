@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2021-06-08 22:30-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -110,54 +110,54 @@ msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ"
 msgid "Secondary toolbar label"
 msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ"
 
-#: ui/EffectSettingsPopup.qml:17
+#: ui/EffectSettingsPopup.qml:19
 #, fuzzy, kde-format
 #| msgid "Configure Icons and Toolbars"
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
 msgstr "ਆਈਕਾਨ ਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ"
 
-#: ui/EffectSettingsPopup.qml:34
+#: ui/EffectSettingsPopup.qml:36
 #, kde-format
 msgid "Show icons:"
 msgstr "ਆਈਕਾਨ ਵੇਖਾਓ:"
 
-#: ui/EffectSettingsPopup.qml:35
+#: ui/EffectSettingsPopup.qml:37
 #, kde-format
 msgid "On buttons"
 msgstr "ਬਟਨਾਂ ਉੱਤੇ"
 
-#: ui/EffectSettingsPopup.qml:46
+#: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
 msgstr "ਮੇਨੂ ਵਿੱਚ"
 
-#: ui/EffectSettingsPopup.qml:58
+#: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
 msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ:"
 
-#: ui/EffectSettingsPopup.qml:60
+#: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: ui/EffectSettingsPopup.qml:61
+#: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Text only"
 msgstr "ਸਿਰਫ਼ ਲਿਖਤ"
 
-#: ui/EffectSettingsPopup.qml:62
+#: ui/EffectSettingsPopup.qml:64
 #, kde-format
 msgid "Beside icons"
 msgstr "ਆਈਕਾਨਾਂ ਨਾਲ"
 
-#: ui/EffectSettingsPopup.qml:63
+#: ui/EffectSettingsPopup.qml:65
 #, kde-format
 msgid "Below icon"
 msgstr "ਆਈਕਾਨ ਹੇਠਾਂ"
 
-#: ui/EffectSettingsPopup.qml:78
+#: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
 msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ:"

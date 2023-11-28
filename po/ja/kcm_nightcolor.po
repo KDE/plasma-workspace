@@ -206,7 +206,3 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "%1 に Night Color が終了しはじめます"
-
-#~ msgctxt "Night colour blue-ish"
-#~ msgid "Cool"
-#~ msgstr "冷たい"

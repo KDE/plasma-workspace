@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2023-02-04 18:54+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -427,13 +427,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Julijaus data)"
 
-#: plugin/timezonemodel.cpp:149
+#: plugin/timezonemodel.cpp:162
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Vietinė"
 
-#: plugin/timezonemodel.cpp:151
+#: plugin/timezonemodel.cpp:164
 #, kde-format
 msgid "System's local time zone"
 msgstr "Sistemos vietinė laiko juosta"

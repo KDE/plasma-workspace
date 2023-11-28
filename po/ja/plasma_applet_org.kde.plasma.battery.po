@@ -374,25 +374,3 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "バッテリと輝度"
-
-#~ msgid "Brightness"
-#~ msgstr "ディスプレイの明るさ"
-
-#~ msgid "Battery"
-#~ msgstr "バッテリ"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "スクロールしてスクリーンの明るさを調整"
-
-#~ msgid "Display Brightness"
-#~ msgstr "ディスプレイの明るさ"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "キーボードの輝度"

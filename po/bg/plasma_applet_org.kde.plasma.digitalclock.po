@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2023-11-11 16:23+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -417,13 +417,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Дата по Джулиански календар)"
 
-#: plugin/timezonemodel.cpp:149
+#: plugin/timezonemodel.cpp:162
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Местно"
 
-#: plugin/timezonemodel.cpp:151
+#: plugin/timezonemodel.cpp:164
 #, kde-format
 msgid "System's local time zone"
 msgstr "Местна часова зона на системата"

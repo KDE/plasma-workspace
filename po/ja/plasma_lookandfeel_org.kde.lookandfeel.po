@@ -262,34 +262,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma made by KDE"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "このセッションに切り替え"
-
-#~ msgid "Start New Session"
-#~ msgstr "新しいセッションを開始"
-
-#~ msgid "Back"
-#~ msgstr "戻る"
-
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery at %1%"
-#~ msgstr "バッテリー %1%"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "使用者なし"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "on TTY %1 (ディスプレイ %2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"

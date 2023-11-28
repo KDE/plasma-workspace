@@ -161,17 +161,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Log Out"
-#~ msgstr "ログアウト"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "確認なしにログアウト"
-
-#, fuzzy
-#~| msgid "Halt Without Confirmation"
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "確認なしに停止"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "確認なしにリブート"
