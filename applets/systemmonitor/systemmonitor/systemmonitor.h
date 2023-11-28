@@ -47,5 +47,4 @@ public Q_SLOTS:
 
 private:
     KSysGuard::SensorFaceController *m_sensorFaceController = nullptr;
-    QString m_pendingStartupPreset;
 };

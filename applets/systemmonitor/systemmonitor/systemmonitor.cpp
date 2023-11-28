@@ -25,14 +25,6 @@ SystemMonitor::SystemMonitor(QObject *parent, const KPluginMetaData &data, const
     : Plasma::Applet(parent, data, args)
 {
     setHasConfigurationInterface(true);
-
-    // Don't set the preset right now as we can't write on the config here because we don't have a Corona yet
-    if (args.count() == 2) {
-        const QString preset = args.at(1).toString();
-        if (!preset.isEmpty()) {
-            m_pendingStartupPreset = preset;
-        }
-    }
 }
 
 SystemMonitor::~SystemMonitor() = default;
@@ -47,15 +39,11 @@ void SystemMonitor::init()
     m_sensorFaceController = new KSysGuard::SensorFaceController(cg, qmlObject->engine().get());
     qmlObject->deleteLater();
 
-    if (!m_pendingStartupPreset.isNull()) {
-        m_sensorFaceController->loadPreset(m_pendingStartupPreset);
-    } else {
-        // NOTE: taking the pluginId from the child applet (cpu monitor, memory, whatever) is done implicitly by not embedding metadata in this applet
-        const QString preset = config().readEntry("CurrentPreset", pluginMetaData().pluginId());
-        // We have initialized our preset, subsequent calls should use the root-plugin id
-        config().writeEntry("CurrentPreset", "org.kde.plasma.systemmonitor");
-        m_sensorFaceController->loadPreset(preset);
-    }
+    // NOTE: taking the pluginId from the child applet (cpu monitor, memory, whatever) is done implicitly by not embedding metadata in this applet
+    const QString preset = config().readEntry("CurrentPreset", pluginMetaData().pluginId());
+    // We have initialized our preset, subsequent calls should use the root-plugin id
+    config().writeEntry("CurrentPreset", "org.kde.plasma.systemmonitor");
+    m_sensorFaceController->loadPreset(preset);
 }
 
 KSysGuard::SensorFaceController *SystemMonitor::faceController() const
