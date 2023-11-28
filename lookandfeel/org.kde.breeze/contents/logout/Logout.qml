@@ -45,14 +45,15 @@ Item {
 
     property real timeout: 30
     property real remainingTime: root.timeout
+
     property var currentAction: {
         switch (sdtype) {
-            case ShutdownType.ShutdownTypeReboot:
-                return root.rebootRequested;
-            case ShutdownType.ShutdownTypeHalt:
-                return root.haltRequested;
-            default:
-                return root.logoutRequested;
+        case ShutdownType.ShutdownTypeReboot:
+            return () => root.rebootRequested();
+        case ShutdownType.ShutdownTypeHalt:
+            return () => root.haltRequested();
+        default:
+            return () => root.logoutRequested();
         }
     }
 
@@ -73,7 +74,7 @@ Item {
 
     onRemainingTimeChanged: {
         if (remainingTime <= 0) {
-            root.currentAction();
+            (root.currentAction)();
         }
     }
 
@@ -164,7 +165,7 @@ Item {
                 id: suspendButton
                 iconSource: "system-suspend"
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                action: root.sleepRequested
+                onClicked: root.sleepRequested()
                 KeyNavigation.left: logoutButton
                 KeyNavigation.right: hibernateButton
                 KeyNavigation.down: okButton
@@ -174,7 +175,7 @@ Item {
                 id: hibernateButton
                 iconSource: "system-suspend-hibernate"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
-                action: root.hibernateRequested
+                onClicked: root.hibernateRequested()
                 KeyNavigation.left: suspendButton
                 KeyNavigation.right: rebootButton
                 KeyNavigation.down: okButton
@@ -185,7 +186,7 @@ Item {
                 iconSource: softwareUpdatePending ? "update-none" : "system-reboot"
                 text: softwareUpdatePending ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Restart")
                                             : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                action: root.rebootRequested
+                onClicked: root.rebootRequested()
                 KeyNavigation.left: hibernateButton
                 KeyNavigation.right: rebootWithoutUpdatesButton
                 KeyNavigation.down: okButton
@@ -196,7 +197,7 @@ Item {
                 id: rebootWithoutUpdatesButton
                 iconSource: "system-reboot"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                action: () => {
+                onClicked: {
                     root.cancelSoftwareUpdateRequested()
                     root.rebootRequested()
                 }
@@ -209,7 +210,7 @@ Item {
                 id: shutdownButton
                 iconSource: "system-shutdown"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                action: root.haltRequested
+                onClicked: root.haltRequested()
                 KeyNavigation.left: rebootWithoutUpdatesButton
                 KeyNavigation.right: logoutButton
                 KeyNavigation.down: okButton
@@ -220,7 +221,7 @@ Item {
                 id: logoutButton
                 iconSource: "system-log-out"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out")
-                action: root.logoutRequested
+                onClicked: root.logoutRequested()
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
                 KeyNavigation.down: okButton
@@ -259,11 +260,10 @@ Item {
                 id: okButton
                 implicitWidth: Kirigami.Units.gridUnit * 6
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
-                enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
-                onClicked: root.currentAction()
-                Keys.onEnterPressed: root.currentAction()
-                Keys.onReturnPressed: root.currentAction()
+                onClicked: (root.currentAction)()
+                Keys.onEnterPressed: (root.currentAction)()
+                Keys.onReturnPressed: (root.currentAction)()
                 KeyNavigation.left: cancelButton
                 KeyNavigation.right: cancelButton
                 KeyNavigation.up: suspendButton

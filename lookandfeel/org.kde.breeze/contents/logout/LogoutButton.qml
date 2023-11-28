@@ -13,8 +13,6 @@ import org.kde.breeze.components
 import "timer.js" as AutoTriggerTimer
 
 ActionButton {
-    property var action
-
     Layout.alignment: Qt.AlignTop
 
     iconSize: Kirigami.Units.iconSizes.huge
@@ -35,9 +33,5 @@ ActionButton {
 
     Keys.onPressed: {
         AutoTriggerTimer.cancelAutoTrigger();
-    }
-
-    onClicked: {
-        action()
     }
 }
