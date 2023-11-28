@@ -120,19 +120,42 @@ PlasmoidItem {
             const reason = i18n("The battery applet has enabled system-wide inhibition");
             const op1 = service.operationDescription("beginSuppressingSleep");
             op1.reason = reason;
+            op1.silent = batterymonitor.expanded; // show OSD only when the plasmoid isn't expanded since the changing switch is feedback enough
             const op2 = service.operationDescription("beginSuppressingScreenPowerManagement");
             op2.reason = reason;
 
             const job1 = service.startOperationCall(op1);
             const job2 = service.startOperationCall(op2);
+
+            job1.finished.connect(job1 => {
+                if (!job1.result) {
+                    inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
+                    inhibitionError.sendEvent();
+                }
+            });
         } else {
             const op1 = service.operationDescription("stopSuppressingSleep");
+            op1.silent = batterymonitor.expanded; // show OSD only when the plasmoid isn't expanded since the changing switch is feedback enough
             const op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
 
             const job1 = service.startOperationCall(op1);
             const job2 = service.startOperationCall(op2);
+
+            job1.finished.connect(job1 => {
+                if (!job1.result) {
+                    inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
+                    inhibitionError.sendEvent();
+                }
+            });
         }
         Logic.updateInhibitions(batterymonitor, pmSource);
+    }
+    Notification {
+        id: inhibitionError
+        componentName: "plasma_workspace"
+        eventId: "warning"
+        iconName: "speedometer"
+        title: i18n("Power Management")
     }
 
     signal activateProfileRequested(string profile)

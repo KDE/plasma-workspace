@@ -103,6 +103,14 @@ void PowerManagementJob::start()
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
         m_sleepInhibitionCookie = reply.isValid() ? reply.value() : -1;
         setResult(reply.isValid());
+        if (reply.isValid() && !parameters().value(QStringLiteral("silent")).toBool()) {
+            QDBusMessage osdMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                                 QStringLiteral("/org/kde/osdService"),
+                                                                 QStringLiteral("org.kde.osdService"),
+                                                                 QStringLiteral("powerManagementInhibitedChanged"));
+            osdMsg << true;
+            QDBusConnection::sessionBus().asyncCall(osdMsg);
+        }
         return;
     } else if (operation == QLatin1String("stopSuppressingSleep")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
@@ -113,6 +121,14 @@ void PowerManagementJob::start()
         QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
         m_sleepInhibitionCookie = reply.isValid() ? -1 : m_sleepInhibitionCookie; // reset cookie if the stop request was successful
         setResult(reply.isValid());
+        if (reply.isValid() && !parameters().value(QStringLiteral("silent")).toBool()) {
+            QDBusMessage osdMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                                 QStringLiteral("/org/kde/osdService"),
+                                                                 QStringLiteral("org.kde.osdService"),
+                                                                 QStringLiteral("powerManagementInhibitedChanged"));
+            osdMsg << false;
+            QDBusConnection::sessionBus().asyncCall(osdMsg);
+        }
         return;
     } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
         if (m_lockInhibitionCookie != -1) { // an inhibition request is already active; don't trigger another one

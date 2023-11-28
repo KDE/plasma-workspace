@@ -14,6 +14,9 @@
         <entry name="reason" type="String">
             <label>States why sleep is being inhibited</label>
         </entry>
+        <entry name="silent" type="Bool">
+            <label>Whether the OSD should be suppressed</label>
+        </entry>
     </group>
     <group name="stopSuppressingSleep">
     </group>
