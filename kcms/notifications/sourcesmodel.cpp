@@ -150,7 +150,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     case DesktopEntryRole:
         return source.desktopEntry;
     case IsDefaultRole:
-        return source.isDefault && std::all_of(source.events.cbegin(), source.events.cend(), [this](auto event) {
+        return source.isDefault && std::all_of(source.events.cbegin(), source.events.cend(), [](auto event) {
                    return event->isDefaults();
                });
     }

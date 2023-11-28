@@ -194,7 +194,7 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             QMetaObject::Connection *c = new QMetaObject::Connection();
-            *c = connect(this, &KSolidNotify::blockingAppsReady, [=](const QStringList &blockApps) {
+            *c = connect(this, &KSolidNotify::blockingAppsReady, [=, this](const QStringList &blockApps) {
                 QString errorMessage;
                 if (blockApps.isEmpty()) {
                     errorMessage = i18n("One or more files on this device are open within an application.");
