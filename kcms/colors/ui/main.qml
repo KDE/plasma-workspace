@@ -255,32 +255,34 @@ KCM.GridViewKCM {
                     Column {
                         id: listPreviewColumn
 
-                        readonly property string demoText: " <a href='#'>%2</a> <a href='#'><font color='%3'>%4</font></a>"
+                        function demoText(palette) {
+                            return " <a href='#'><font color='%1'>%2</font></a> <a href='#'><font color='%3'>%4</font></a>"
+                            .arg(palette.link)
                             .arg(i18nc("Hyperlink", "link"))
-                            .arg(model.palette.linkVisited)
-                            .arg(i18nc("Visited hyperlink", "visited"))
+                            .arg(palette.linkVisited)
+                            .arg(i18nc("Visited hyperlink", "visited"));
+                        }
 
                         anchors.fill: parent
                         anchors.margins: 1
 
                         QtControls.ItemDelegate {
                             width: parent.width
-                            text: i18n("Normal text") + listPreviewColumn.demoText
+                            text: i18n("Normal text") + listPreviewColumn.demoText(model.palette)
                             activeFocusOnTab: false
                         }
 
                         QtControls.ItemDelegate {
                             width: parent.width
                             highlighted: true
-                            // TODO use proper highlighted link color
-                            text: i18n("Highlighted text") + listPreviewColumn.demoText
+                            text: i18n("Highlighted text") + listPreviewColumn.demoText(model.selectedPalette)
                             activeFocusOnTab: false
                         }
 
                         QtControls.ItemDelegate {
                             width: parent.width
                             enabled: false
-                            text: i18n("Disabled text") + listPreviewColumn.demoText
+                            text: i18n("Disabled text") + listPreviewColumn.demoText(model.palette)
                             activeFocusOnTab: false
                         }
                     }

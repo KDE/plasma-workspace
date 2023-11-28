@@ -52,6 +52,8 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
         return item.schemeName;
     case PaletteRole:
         return item.palette;
+    case SelectedPaletteRole:
+        return item.selectedPalette;
     case DisabledText:
         return item.palette.color(QPalette::Disabled, QPalette::Text);
     case ActiveTitleBarBackgroundRole:
@@ -110,6 +112,7 @@ QHash<int, QByteArray> ColorsModel::roleNames() const
         {Qt::DisplayRole, QByteArrayLiteral("display")},
         {SchemeNameRole, QByteArrayLiteral("schemeName")},
         {PaletteRole, QByteArrayLiteral("palette")},
+        {SelectedPaletteRole, QByteArrayLiteral("selectedPalette")},
         {ActiveTitleBarBackgroundRole, QByteArrayLiteral("activeTitleBarBackground")},
         {ActiveTitleBarForegroundRole, QByteArrayLiteral("activeTitleBarForeground")},
         {DisabledText, QByteArrayLiteral("disabledText")},
@@ -193,6 +196,15 @@ void ColorsModel::load()
 
         const QPalette palette = KColorScheme::createApplicationPalette(config);
 
+        // QPalette has no "selected" state, so there's e.g. no "selected link" color.
+        const KColorScheme selectedScheme = KColorScheme(QPalette::Normal, KColorScheme::Selection, config);
+        QPalette selectedPalette = palette;
+        selectedPalette.setBrush(QPalette::Base, selectedScheme.background());
+        selectedPalette.setBrush(QPalette::Text, selectedScheme.foreground());
+        selectedPalette.setBrush(QPalette::AlternateBase, selectedScheme.background(KColorScheme::AlternateBackground));
+        selectedPalette.setBrush(QPalette::Link, selectedScheme.foreground(KColorScheme::LinkText));
+        selectedPalette.setBrush(QPalette::LinkVisited, selectedScheme.foreground(KColorScheme::VisitedText));
+
         QColor activeTitleBarBackground, activeTitleBarForeground;
         if (KColorScheme::isColorSetSupported(config, KColorScheme::Header)) {
             KColorScheme headerColorScheme(QPalette::Active, KColorScheme::Header, config);
@@ -210,6 +222,7 @@ void ColorsModel::load()
             name,
             baseName,
             palette,
+            selectedPalette,
             activeTitleBarBackground,
             activeTitleBarForeground,
             fi.isWritable(),
