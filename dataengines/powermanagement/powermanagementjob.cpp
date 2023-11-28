@@ -91,6 +91,10 @@ void PowerManagementJob::start()
         setResult(false);
         return;
     } else if (operation == QLatin1String("beginSuppressingSleep")) {
+        if (m_sleepInhibitionCookie != -1) { // an inhibition request is already active; don't trigger another one
+            setResult(true);
+            return;
+        }
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
                                                           QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
                                                           QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
@@ -107,9 +111,14 @@ void PowerManagementJob::start()
                                                           QStringLiteral("UnInhibit"));
         msg << m_sleepInhibitionCookie;
         QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
+        m_sleepInhibitionCookie = reply.isValid() ? -1 : m_sleepInhibitionCookie; // reset cookie if the stop request was successful
         setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
+        if (m_lockInhibitionCookie != -1) { // an inhibition request is already active; don't trigger another one
+            setResult(true);
+            return;
+        }
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
                                                           QStringLiteral("/ScreenSaver"),
                                                           QStringLiteral("org.freedesktop.ScreenSaver"),
@@ -126,6 +135,7 @@ void PowerManagementJob::start()
                                                           QStringLiteral("UnInhibit"));
         msg << m_lockInhibitionCookie;
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        m_lockInhibitionCookie = reply.isValid() ? -1 : m_lockInhibitionCookie; // reset cookie if the stop request was successful
         setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("setBrightness")) {
