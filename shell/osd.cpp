@@ -154,6 +154,15 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
     }
 }
 
+void Osd::powerManagementInhibitedChanged(bool inhibited)
+{
+    if (inhibited) {
+        showText(QStringLiteral("speedometer"), i18nc("power management was inhibited, keep short", "Sleep and Screen Locking Blocked"));
+    } else {
+        showText(QStringLiteral("speedometer"), i18nc("power management was uninhibited, keep short", "Sleep and Screen Locking Unblocked"));
+    }
+}
+
 void Osd::powerProfileChanged(const QString &profile)
 {
     QString icon;
