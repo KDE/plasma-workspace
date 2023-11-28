@@ -118,7 +118,7 @@ QStringList GtkThemesModel::possiblePathsToThemes()
 
     QStringList themesLocationsPaths =
         QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("themes"), QStandardPaths::LocateDirectory);
-    // TODO: Remove. See https://gitlab.gnome.org/GNOME/gtk/-/issues/6219 for when GTK plans to, and when we should, 
+    // TODO: Remove. See https://gitlab.gnome.org/GNOME/gtk/-/issues/6219 for when GTK plans to, and when we should,
     // remove it as well.
     themesLocationsPaths << QDir::homePath() + QStringLiteral("/.themes");
 
