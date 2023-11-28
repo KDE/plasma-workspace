@@ -296,7 +296,7 @@ void KCMColors::installSchemeFile(const QString &path)
 {
     KSharedConfigPtr config = KSharedConfig::openConfig(path, KConfig::SimpleConfig);
 
-    KConfigGroup group(config, "General");
+    KConfigGroup group(config, u"General"_s);
     const QString name = group.readEntry("Name");
 
     if (name.isEmpty()) {
@@ -332,7 +332,7 @@ void KCMColors::installSchemeFile(const QString &path)
 
     // Update name
     KSharedConfigPtr config2 = KSharedConfig::openConfig(newPath, KConfig::SimpleConfig);
-    KConfigGroup group2(config2, "General");
+    KConfigGroup group2(config2, u"General"_s);
     group2.writeEntry("Name", newName);
     config2->sync();
 

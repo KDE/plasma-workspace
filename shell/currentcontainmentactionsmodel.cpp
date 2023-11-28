@@ -23,12 +23,14 @@
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
+using namespace Qt::StringLiterals;
+
 CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *containment, QObject *parent)
     : QStandardItemModel(parent)
     , m_containment(containment)
     , m_tempConfigParent(QString(), KConfig::SimpleConfig)
 {
-    m_baseCfg = KConfigGroup(m_containment->corona()->config(), "ActionPlugins");
+    m_baseCfg = KConfigGroup(m_containment->corona()->config(), u"ActionPlugins"_s);
     m_baseCfg = KConfigGroup(&m_baseCfg, QString::number((int)m_containment->containmentType()));
 
     QHash<QString, Plasma::ContainmentActions *> actions = containment->containmentActions();
@@ -112,7 +114,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     m_plugins[action] = actions;
     m_plugins[action]->setContainment(m_containment);
     // empty config: the new one will ne in default state
-    KConfigGroup tempConfig(&m_tempConfigParent, "test");
+    KConfigGroup tempConfig(&m_tempConfigParent, u"test"_s);
     m_plugins[action]->restore(tempConfig);
     item->setData(m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
     m_removedTriggers.removeAll(action);
@@ -150,7 +152,7 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
             m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
             m_plugins[action]->setContainment(m_containment);
             // empty config: the new one will ne in default state
-            KConfigGroup tempConfig(&m_tempConfigParent, "test");
+            KConfigGroup tempConfig(&m_tempConfigParent, u"test"_s);
             m_plugins[action]->restore(tempConfig);
             setData(idx,
                     m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(),

@@ -34,6 +34,8 @@
 #include <KSharedConfig>
 #include <KWindowSystem>
 
+using namespace Qt::StringLiterals;
+
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
 {
@@ -85,14 +87,14 @@ void SystemTray::restoreContents(KConfigGroup &group)
         return;
     }
 
-    KConfigGroup shortcutConfig(&group, "Shortcuts");
+    KConfigGroup shortcutConfig(&group, u"Shortcuts"_s);
     QString shortcutText = shortcutConfig.readEntryUntranslated("global", QString());
     if (!shortcutText.isEmpty()) {
         setGlobalShortcut(QKeySequence(shortcutText));
     }
 
     // cache known config group ids for applets
-    KConfigGroup cg = group.group("Applets");
+    KConfigGroup cg = group.group(u"Applets"_s);
     for (const QString &group : cg.groupList()) {
         KConfigGroup appletConfig(&cg, group);
         QString plugin = appletConfig.readEntry("plugin");

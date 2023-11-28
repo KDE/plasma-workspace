@@ -649,12 +649,12 @@ CFcEngine::~CFcEngine()
 
 void CFcEngine::readConfig(KConfig &cfg)
 {
-    cfg.group(KFI_PREVIEW_GROUP).readEntry(KFI_PREVIEW_STRING_KEY, getDefaultPreviewString());
+    cfg.group(QStringLiteral(KFI_PREVIEW_GROUP)).readEntry(QStringLiteral(KFI_PREVIEW_STRING_KEY), getDefaultPreviewString());
 }
 
 void CFcEngine::writeConfig(KConfig &cfg)
 {
-    cfg.group(KFI_PREVIEW_GROUP).writeEntry(KFI_PREVIEW_STRING_KEY, m_previewString);
+    cfg.group(QStringLiteral(KFI_PREVIEW_GROUP)).writeEntry(QStringLiteral(KFI_PREVIEW_STRING_KEY), m_previewString);
 }
 
 QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd, int h)

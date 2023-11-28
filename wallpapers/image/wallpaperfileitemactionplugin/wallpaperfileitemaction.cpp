@@ -25,6 +25,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_CLASS_WITH_JSON(WallpaperFileItemAction, "wallpaperfileitemaction.json")
 
 WallpaperFileItemAction::WallpaperFileItemAction(QObject *parent, const QVariantList &)
@@ -82,10 +84,7 @@ void WallpaperFileItemAction::setAsDesktopBackground(const QString &file)
                       "}")
                       .arg(file);
 
-    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                  QStringLiteral("/PlasmaShell"),
-                                                  QStringLiteral("org.kde.PlasmaShell"),
-                                                  QStringLiteral("evaluateScript"));
+    auto message = QDBusMessage::createMethodCall(u"org.kde.plasmashell"_s, u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, u"evaluateScript"_s);
     message.setArguments(QVariantList() << QVariant(script));
     QDBusPendingCall pendingCall = QDBusConnection::sessionBus().asyncCall(message);
     auto watcher = new QDBusPendingCallWatcher(pendingCall, this);
@@ -105,8 +104,8 @@ void WallpaperFileItemAction::setAsDesktopBackground(const QString &file)
 
 void WallpaperFileItemAction::setAsLockscreenBackground(const QString &file)
 {
-    KSharedConfigPtr screenLockerConfig = KSharedConfig::openConfig(QStringLiteral("kscreenlockerrc"));
-    KConfigGroup cfgGroup = screenLockerConfig->group(QString()).group("Greeter").group("Wallpaper").group("org.kde.image").group("General");
+    KSharedConfigPtr screenLockerConfig = KSharedConfig::openConfig(u"kscreenlockerrc"_s);
+    KConfigGroup cfgGroup = screenLockerConfig->group(QString()).group(u"Greeter"_s).group(u"Wallpaper"_s).group(u"org.kde.image"_s).group(u"General"_s);
     if (screenLockerConfig->accessMode() != KConfig::ReadWrite) {
         auto errorMessage = QString(i18nd("plasma_wallpaper_org.kde.image", "An error occurred while attempting to open kscreenlockerrc config file."));
         qWarning() << errorMessage;

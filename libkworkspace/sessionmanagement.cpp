@@ -21,6 +21,8 @@
 
 #include "libkworkspace_debug.h"
 
+using namespace Qt::StringLiterals;
+
 // add a constructor with the service names and paths pre-populated
 class LogoutPromptIface : public OrgKdeLogoutPromptInterface
 {
@@ -106,7 +108,7 @@ bool SessionManagement::canLock() const
 
 bool SessionManagement::canSaveSession() const
 {
-    const KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc")), "General");
+    const KConfigGroup c(KSharedConfig::openConfig(u"ksmserverrc"_s), u"General"_s);
     return canLogout() && c.readEntry("loginMode") == QLatin1String("restoreSavedSession");
 }
 

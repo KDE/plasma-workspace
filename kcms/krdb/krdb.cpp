@@ -58,6 +58,8 @@
 
 #include <filesystem>
 
+using namespace Qt::StringLiterals;
+
 inline const char *gtkEnvVar(int version)
 {
     return 2 == version ? "GTK2_RC_FILES" : "GTK_RC_FILES";
@@ -146,7 +148,7 @@ static void applyQtColors(KSharedConfigPtr kglobalcfg, QSettings &settings, QPal
     settings.setValue(QStringLiteral("/qt/Palette/disabled"), discg);
 
     // export kwin's colors to qtrc for kstyle to use
-    KConfigGroup wmCfgGroup(kglobalcfg, "WM");
+    KConfigGroup wmCfgGroup(kglobalcfg, u"WM"_s);
 
     // active colors
     QColor clr = newPal.color(QPalette::Active, QPalette::Window);
@@ -182,7 +184,7 @@ static void applyQtColors(KSharedConfigPtr kglobalcfg, QSettings &settings, QPal
     clr = wmCfgGroup.readEntry("inactiveTitleBtnBg", clr);
     settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveTitleBtnBg"), clr.name());
 
-    KConfigGroup kdeCfgGroup(kglobalcfg, "KDE");
+    KConfigGroup kdeCfgGroup(kglobalcfg, u"KDE"_s);
     settings.setValue(QStringLiteral("/qt/KDE/contrast"), kdeCfgGroup.readEntry("contrast", 7));
 }
 
@@ -196,7 +198,7 @@ static void applyQtSettings(KSharedConfigPtr kglobalcfg, QSettings &settings)
     QFont defaultFont(QStringLiteral("Noto Sans"), 10, -1);
     defaultFont.setStyleHint(QFont::SansSerif);
 
-    const KConfigGroup configGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
+    const KConfigGroup configGroup(KSharedConfig::openConfig(), u"General"_s);
     const QString fontInfo = configGroup.readEntry(QStringLiteral("font"), QString());
     if (!fontInfo.isEmpty()) {
         defaultFont.fromString(fontInfo);
@@ -205,7 +207,7 @@ static void applyQtSettings(KSharedConfigPtr kglobalcfg, QSettings &settings)
     settings.setValue(QStringLiteral("/qt/font"), defaultFont.toString());
 
     /* export effects settings */
-    KConfigGroup kdeCfgGroup(kglobalcfg, "General");
+    KConfigGroup kdeCfgGroup(kglobalcfg, u"General"_s);
     bool effectsEnabled = kdeCfgGroup.readEntry("EffectsEnabled", false);
     bool fadeMenus = kdeCfgGroup.readEntry("EffectFadeMenu", false);
     bool fadeTooltips = kdeCfgGroup.readEntry("EffectFadeTooltip", false);
@@ -332,7 +334,7 @@ int xftDpi()
         qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
         dpi = scale * 96;
     } else {
-        KConfigGroup fontsCfg(&cfg, "General");
+        KConfigGroup fontsCfg(&cfg, u"General"_s);
         dpi = fontsCfg.readEntry(QStringLiteral("forceFontDPI"), 96);
     }
 
@@ -348,7 +350,7 @@ void runRdb(unsigned int flags)
     bool exportGtkTheme = flags & KRdbExportGtkTheme;
 
     KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-    KConfigGroup kglobals(kglobalcfg, "KDE");
+    KConfigGroup kglobals(kglobalcfg, u"KDE"_s);
     QPalette newPal = KColorScheme::createApplicationPalette(kglobalcfg);
 
     QTemporaryFile tmpFile;
@@ -357,7 +359,7 @@ void runRdb(unsigned int flags)
         exit(0);
     }
 
-    KConfigGroup generalCfgGroup(kglobalcfg, "General");
+    KConfigGroup generalCfgGroup(kglobalcfg, u"General"_s);
 
     QString gtkTheme;
     if (kglobals.hasKey("widgetStyle"))
@@ -379,13 +381,13 @@ void runRdb(unsigned int flags)
         copyFile(tmpFile, homeDir + "/.Xdefaults", true);
 
     // Export the Xcursor theme & size settings
-    KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), "Mouse");
+    KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), u"Mouse"_s);
     QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
     int cursorSize = mousecfg.readEntry("cursorSize", 24);
 
     if (KWindowSystem::isPlatformWayland()) {
         KConfig kwinConfig(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup(&kwinConfig, "Xwayland");
+        KConfigGroup xwaylandGroup(&kwinConfig, u"Xwayland"_s);
         cursorSize *= xwaylandGroup.readEntry("Scale", 1.0);
     }
 

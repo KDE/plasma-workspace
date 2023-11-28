@@ -19,6 +19,8 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMSoundThemeFactory, "kcm_soundtheme.json", registerPlugin<KCMSoundTheme>(); registerPlugin<SoundThemeData>();)
 
 constexpr QLatin1String FALLBACK_THEME = QLatin1String("freedesktop");
@@ -219,7 +221,7 @@ ThemeInfo::ThemeInfo(const QString &themeId, QObject *parent)
     KConfig config = KConfig();
     config.addConfigSources(themeInfoSources);
 
-    KConfigGroup themeGroup = config.group("Sound Theme");
+    KConfigGroup themeGroup = config.group(u"Sound Theme"_s);
     if (!themeGroup.exists()) {
         return;
     }

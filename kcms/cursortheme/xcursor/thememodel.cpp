@@ -19,6 +19,8 @@
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
 
+using namespace Qt::StringLiterals;
+
 // Check for older version
 #if !defined(XCURSOR_LIB_MAJOR) && defined(XCURSOR_MAJOR)
 #define XCURSOR_LIB_MAJOR XCURSOR_MAJOR
@@ -216,7 +218,7 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
 
         // Open the index.theme file, so we can get the list of inherited themes
         KConfig config(dir.path() + "/index.theme", KConfig::NoGlobals);
-        KConfigGroup cg(&config, "Icon Theme");
+        KConfigGroup cg(&config, u"Icon Theme"_s);
 
         // Recurse through the list of inherited themes, to check if one of them
         // is a cursor theme.

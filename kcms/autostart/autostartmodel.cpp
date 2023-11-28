@@ -33,6 +33,8 @@
 #include <KPropertiesDialog>
 #include <autostartscriptdesktopfile.h>
 
+using namespace Qt::StringLiterals;
+
 // FDO user autostart directories are
 // .config/autostart which has .desktop files executed by klaunch or systemd, some of which might be scripts
 
@@ -167,8 +169,8 @@ bool AutostartModel::usingSystemdBoot() const
     if (!haveSystemd) {
         return false;
     }
-    const KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("startkderc"));
-    const KConfigGroup generalGroup(config, "General");
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig(u"startkderc"_s);
+    const KConfigGroup generalGroup(config, u"General"_s);
     return generalGroup.readEntry("systemdBoot", true);
 }
 

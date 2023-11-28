@@ -10,6 +10,8 @@
 #include <KConfigGroup>
 #include <QDebug>
 
+using namespace Qt::StringLiterals;
+
 SchemeEditorEffects::SchemeEditorEffects(const KSharedConfigPtr &config, QPalette::ColorGroup palette, QWidget *parent)
     : QWidget(parent)
     , m_palette(palette)
@@ -66,7 +68,7 @@ void SchemeEditorEffects::updateValues()
 
     // NOTE: keep this in sync with kdelibs/kdeui/colors/kcolorscheme.cpp
     if (m_palette == QPalette::Inactive) {
-        KConfigGroup group(m_config, "ColorEffects:Inactive");
+        KConfigGroup group(m_config, u"ColorEffects:Inactive"_s);
         intensityBox->setCurrentIndex(abs(group.readEntry("IntensityEffect", 0)));
         intensitySlider->setValue(int(group.readEntry("IntensityAmount", 0.0) * 20.0) + 20);
         colorBox->setCurrentIndex(abs(group.readEntry("ColorEffect", 2)));
@@ -80,7 +82,7 @@ void SchemeEditorEffects::updateValues()
         contrastSlider->setValue(int(group.readEntry("ContrastAmount", 0.1) * 20.0));
 
     } else if (m_palette == QPalette::Disabled) {
-        KConfigGroup group(m_config, "ColorEffects:Disabled");
+        KConfigGroup group(m_config, u"ColorEffects:Disabled"_s);
         intensityBox->setCurrentIndex(group.readEntry("IntensityEffect", 2));
         intensitySlider->setValue(int(group.readEntry("IntensityAmount", 0.1) * 20.0) + 20);
         colorBox->setCurrentIndex(group.readEntry("ColorEffect", 0));

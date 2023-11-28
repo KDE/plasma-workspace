@@ -11,13 +11,15 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
     // Migrate data to state data file
     KSharedConfigPtr krunnerrc = KSharedConfig::openConfig("krunnerrc");
-    KConfigGroup stateData = krunnerrc->group("PlasmaRunnerManager");
+    KConfigGroup stateData = krunnerrc->group(u"PlasmaRunnerManager"_s);
     KSharedConfigPtr newStateLocation = KSharedConfig::openConfig("krunnerstaterc", KConfig::NoGlobals, QStandardPaths::GenericDataLocation);
     stateData.reparent(newStateLocation.data());
     stateData.sync();
@@ -26,19 +28,19 @@ int main(int argc, char **argv)
     auto consumer = new KActivities::Consumer();
     // Wait a bit for consumer to be initialized
     QObject::connect(consumer, &KActivities::Consumer::serviceStatusChanged, consumer, [consumer, newStateLocation, krunnerrc]() {
-        const QString history = krunnerrc->group("General").readEntry("history");
+        const QString history = krunnerrc->group(u"General"_s).readEntry("history");
         QStringList activities = consumer->activities();
         if (activities.isEmpty()) {
             activities.append(QStringLiteral("00000000-0000-0000-0000-000000000000"));
         }
-        KConfigGroup newHistory = newStateLocation->group("PlasmaRunnerManager").group("History");
+        KConfigGroup newHistory = newStateLocation->group(u"PlasmaRunnerManager"_s).group(u"History"_s);
         for (const QString &activity : std::as_const(activities)) {
             newHistory.writeEntry(activity, history);
         }
         newHistory.sync();
         // Delete old values
-        krunnerrc->group("General").deleteEntry("history");
-        krunnerrc->deleteGroup("PlasmaRunnerManager");
+        krunnerrc->group(u"General"_s).deleteEntry("history");
+        krunnerrc->deleteGroup(u"PlasmaRunnerManager"_s);
         krunnerrc->group(QStringLiteral("PlasmaRunnerManager")).writeEntry("migrated", true);
         krunnerrc->sync();
         qApp->exit();

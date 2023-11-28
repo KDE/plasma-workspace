@@ -50,6 +50,8 @@
 #include <X11/extensions/Xfixes.h>
 #endif
 
+using namespace Qt::StringLiterals;
+
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_lnf(new LookAndFeelManager(this))
@@ -352,7 +354,7 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
 
         // Open the index.theme file, so we can get the list of inherited themes
         KConfig config(dir.path() + QStringLiteral("/index.theme"), KConfig::NoGlobals);
-        KConfigGroup cg(&config, "Icon Theme");
+        KConfigGroup cg(&config, u"Icon Theme"_s);
 
         // Recurse through the list of inherited themes, to check if one of them
         // is a cursor theme.

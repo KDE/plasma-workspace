@@ -21,6 +21,8 @@
 #include <QIcon>
 #include <defaultservice.h>
 
+using namespace Qt::StringLiterals;
+
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
     , m_match(this)
@@ -79,7 +81,7 @@ void WebshortcutRunner::loadSyntaxes()
     m_lastKey.clear();
 
     // When we reload the syntaxes, our WebShortcut config has changed or is initialized
-    const KConfigGroup grp = KSharedConfig::openConfig(QStringLiteral("kuriikwsfilterrc"))->group("General");
+    const KConfigGroup grp = KSharedConfig::openConfig(u"kuriikwsfilterrc"_s)->group(u"General"_s);
     m_defaultKey = grp.readEntry("DefaultWebShortcut", QStringLiteral("duckduckgo"));
 }
 

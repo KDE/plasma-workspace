@@ -26,6 +26,8 @@
 
 #include <KIO/OpenFileManagerWindowJob>
 
+using namespace Qt::StringLiterals;
+
 Thumbnailer::Thumbnailer(QObject *parent)
     : QObject(parent)
 {
@@ -115,7 +117,7 @@ void Thumbnailer::generatePreview()
 
     auto maxSize = qMax(m_size.width(), m_size.height());
 
-    KConfigGroup previewSettings(KSharedConfig::openConfig(QStringLiteral("dolphinrc")), "PreviewSettings");
+    KConfigGroup previewSettings(KSharedConfig::openConfig(QStringLiteral("dolphinrc")), u"PreviewSettings"_s);
     const QStringList enabledPlugins = previewSettings.readEntry("Plugins", KIO::PreviewJob::defaultPlugins());
 
     KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize, maxSize), &enabledPlugins);

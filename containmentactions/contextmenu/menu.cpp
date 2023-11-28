@@ -29,6 +29,8 @@
 #include "kworkspace.h"
 #include <sessionmanagement.h>
 
+using namespace Qt::StringLiterals;
+
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
     , m_session(new SessionManagement(this))
@@ -250,8 +252,8 @@ void ContextMenu::runCommand()
 
 void ContextMenu::startLogout()
 {
-    KConfig config(QStringLiteral("ksmserverrc"));
-    const auto group = config.group("General");
+    KConfig config(u"ksmserverrc"_s);
+    const auto group = config.group(u"General"_s);
     switch (group.readEntry("shutdownType", int(KWorkSpace::ShutdownTypeNone))) {
     case int(KWorkSpace::ShutdownTypeHalt):
         m_session->requestShutdown();

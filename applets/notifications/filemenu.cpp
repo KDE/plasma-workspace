@@ -31,6 +31,8 @@
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/WidgetsAskUserActionHandler>
 
+using namespace Qt::StringLiterals;
+
 FileMenu::FileMenu(QObject *parent)
     : QObject(parent)
 {
@@ -164,7 +166,7 @@ void FileMenu::open(int x, int y)
         menu->addAction(moveToTrashAction);
     }
 
-    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+    KConfigGroup cg(KSharedConfig::openConfig(), u"KDE"_s);
     const bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
 
     if (itemProperties.supportsDeleting() && (!canTrash || showDeleteCommand)) {

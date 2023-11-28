@@ -44,6 +44,8 @@
 #include "previewitem.h"
 #include "styledata.h"
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>(); registerPlugin<StyleData>();)
 
 extern "C" {
@@ -285,7 +287,7 @@ void KCMStyle::save()
     // export fonts/colors settings.
     uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
     KConfig _kconfig(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-    KConfigGroup kconfig(&_kconfig, "X11");
+    KConfigGroup kconfig(&_kconfig, u"X11"_s);
     bool exportKDEColors = kconfig.readEntry("exportKDEColors", true);
     if (exportKDEColors) {
         flags |= KRdbExportColors;

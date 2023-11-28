@@ -10,6 +10,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+using namespace Qt::StringLiterals;
+
 /**
  * For Plasma 5 users, keep the existing panel floating settings.
  *
@@ -33,11 +35,11 @@ int main()
         }
 
         KConfigGroup panelConfigGroup(&views, name);
-        if (!panelConfigGroup.hasGroup("Defaults")) {
+        if (!panelConfigGroup.hasGroup(u"Defaults"_s)) {
             continue;
         }
 
-        KConfigGroup defaultConfigGroup(&panelConfigGroup, "Defaults");
+        KConfigGroup defaultConfigGroup(&panelConfigGroup, u"Defaults"_s);
         if (defaultConfigGroup.hasKey("floating")) {
             // Respect the manual setting
             continue;

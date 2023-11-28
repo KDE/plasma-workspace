@@ -40,6 +40,8 @@
 #include <abstracttasksmodel.h>
 #include <startuptasksmodel.h>
 
+using namespace Qt::StringLiterals;
+
 IconApplet::IconApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)
 {
@@ -65,14 +67,14 @@ void IconApplet::configChanged()
 
 void IconApplet::populate()
 {
-    const QString entryName = QStringLiteral("url");
+    const QString entryName = u"url"_s;
     m_url = config().readEntry(entryName, QUrl());
 
     if (!m_url.isValid()) {
         // the old applet that used a QML plugin and stored its url
         // in plasmoid.configuration.url had its entries stored in [Configuration][General]
         // so we look here as well to provide an upgrade path
-        m_url = config().group("General").readEntry(entryName, QUrl());
+        m_url = config().group(u"General"_s).readEntry(entryName, QUrl());
     }
 
     // our backing desktop file already exists? just read all the things from it

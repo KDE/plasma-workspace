@@ -29,6 +29,8 @@
 
 #include "view.h"
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     auto format = QSurfaceFormat::defaultFormat();
@@ -70,24 +72,24 @@ int main(int argc, char **argv)
     //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
     //     QGuiApplication app(argc, argv);
 
-    KAboutData aboutData(QStringLiteral("krunner"), i18n("KRunner"), QStringLiteral(PROJECT_VERSION), i18n("Run Command interface"), KAboutLicense::GPL);
+    KAboutData aboutData(u"krunner"_s, i18n("KRunner"), QStringLiteral(PROJECT_VERSION), i18n("Run Command interface"), KAboutLicense::GPL);
 
     KAboutData::setApplicationData(aboutData);
     app.setQuitOnLastWindowClosed(false);
     app.setQuitLockEnabled(false);
 
-    QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")}, i18n("Use the clipboard contents as query for KRunner"));
-    QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")}, i18n("Start KRunner in the background, don't show it."));
-    QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
-    QCommandLineOption runnerId({QStringLiteral("runner")}, i18n("Show only results from the given plugin"), QStringLiteral("runner"));
-    QCommandLineOption listOption({QStringLiteral("list")}, i18n("List available plugins"));
+    QCommandLineOption clipboardOption({u"c"_s, u"clipboard"_s}, i18n("Use the clipboard contents as query for KRunner"));
+    QCommandLineOption daemonOption({u"d"_s, u"daemon"_s}, i18n("Start KRunner in the background, don't show it."));
+    QCommandLineOption replaceOption({u"replace"_s}, i18n("Replace an existing instance"));
+    QCommandLineOption runnerId({u"runner"_s}, i18n("Show only results from the given plugin"), u"runner"_s);
+    QCommandLineOption listOption({u"list"_s}, i18n("List available plugins"));
 
     parser.addOption(clipboardOption);
     parser.addOption(daemonOption);
     parser.addOption(replaceOption);
     parser.addOption(runnerId);
     parser.addOption(listOption);
-    parser.addPositionalArgument(QStringLiteral("query"), i18n("The query to run, only used if -c is not provided"));
+    parser.addPositionalArgument(u"query"_s, i18n("The query to run, only used if -c is not provided"));
 
     aboutData.setupCommandLine(&parser);
 
@@ -106,7 +108,7 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
+    if (!KAuthorized::authorize(u"run_command"_s)) {
         return -1;
     }
 
@@ -121,7 +123,7 @@ int main(int argc, char **argv)
     PlasmaQuick::SharedQmlEngine sharedEngine;
     // It is important this to be done before the view is created, as it creates internally a framesvgitem for the background
     // that needs to use the current plasma theme
-    sharedEngine.engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
+    sharedEngine.engine()->setProperty("_kirigamiTheme", u"KirigamiPlasmaStyle"_s);
     sharedEngine.setInitializationDelayed(true);
     View view(&sharedEngine);
 

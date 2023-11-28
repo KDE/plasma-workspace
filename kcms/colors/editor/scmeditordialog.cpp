@@ -20,6 +20,8 @@
 #include <KStandardGuiItem>
 #include <KWindowSystem>
 
+using namespace Qt::StringLiterals;
+
 SchemeEditorDialog::SchemeEditorDialog(KSharedConfigPtr config, QWidget *parent)
     : QDialog(parent)
     , m_config(config)
@@ -32,7 +34,7 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     , m_filePath(path)
     , m_config(KSharedConfig::openConfig(path, KSharedConfig::SimpleConfig))
 {
-    m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
+    m_schemeName = KConfigGroup(m_config, u"General"_s).readEntry("Name");
     this->setWindowTitle(m_schemeName);
     init();
 }
@@ -157,7 +159,7 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
         KConfig *config = m_config->copyTo(newpath);
         m_config->markAsClean();
         m_config->reparseConfiguration();
-        KConfigGroup group(config, "General");
+        KConfigGroup group(config, u"General"_s);
         group.writeEntry("Name", name);
 
         // sync it and delete pointer
@@ -182,7 +184,7 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
     if (madeByUser) {
         setUnsavedChanges(true);
     }
-    KConfigGroup group(m_config, "ColorEffects:Inactive");
+    KConfigGroup group(m_config, u"ColorEffects:Inactive"_s);
     bool showInactiveTab = group.readEntry("Enable", QVariant(true)).toBool();
 
     const int idx = tabWidget->indexOf(m_inactiveTab);

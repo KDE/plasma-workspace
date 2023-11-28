@@ -82,6 +82,8 @@
 #include <chrono>
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
+
 static const int s_configSyncDelay = 10000; // 10 seconds
 
 Q_DECLARE_METATYPE(QColor)
@@ -122,13 +124,13 @@ ShellCorona::ShellCorona(QObject *parent)
 
     qDBusRegisterMetaType<QColor>();
 
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    KConfigGroup cg(KSharedConfig::openConfig(u"kdeglobals"_s), u"KDE"_s);
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
 
     // Accent color setting
     KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
-    KConfigGroup accentColorConfigGroup(globalConfig, "General");
+    KConfigGroup accentColorConfigGroup(globalConfig, u"General"_s);
     m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
 
     m_accentColorConfigWatcher = KConfigWatcher::create(globalConfig);
@@ -170,8 +172,8 @@ void ShellCorona::init()
     connect(&m_invariantsTimer, &QTimer::timeout, this, &ShellCorona::screenInvariants);
 #endif
 
-    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), "Desktop");
-    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "Desktop");
+    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), u"Desktop"_s);
+    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.kde.plasma.desktop"));
 
     new PlasmaShellAdaptor(this);
@@ -353,8 +355,8 @@ void ShellCorona::setShell(const QString &shell)
     package.setPath(shell);
     package.setAllowExternalPaths(true);
     setKPackage(package);
-    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
-    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "Desktop");
+    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), u"Desktop"_s);
+    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, shell);
 
     const QString themeGroupKey = QStringLiteral("Theme");
@@ -366,7 +368,7 @@ void ShellCorona::setShell(const QString &shell)
     themeName = plasmarc.readEntry(themeNameKey, themeName);
 
     if (themeName.isEmpty()) {
-        KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Theme");
+        KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), u"Theme"_s);
         themeName = shellCfg.readEntry(themeNameKey, "default");
     }
 
@@ -822,7 +824,7 @@ void ShellCorona::load()
     if (config()->isImmutable() || !KAuthorized::authorize(QStringLiteral("plasma/plasmashell/unlockedDesktop"))) {
         setImmutability(Plasma::Types::SystemImmutable);
     } else {
-        KConfigGroup coronaConfig(config(), "General");
+        KConfigGroup coronaConfig(config(), u"General"_s);
         setImmutability((Plasma::Types::ImmutabilityType)coronaConfig.readEntry("immutability", static_cast<int>(Plasma::Types::Mutable)));
     }
 }
@@ -1712,7 +1714,7 @@ QVariantMap ShellCorona::wallpaper(uint screenNum)
     pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
     pkg.setPath(wallpaperPlugin);
     QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
-    KConfigGroup cfg = containment->config().group("Wallpaper").group(wallpaperPlugin).group("General");
+    KConfigGroup cfg = containment->config().group(u"Wallpaper"_s).group(wallpaperPlugin).group(u"General"_s);
 
     const auto items = cfg.keyList();
     QVariantMap parameters;
@@ -1750,7 +1752,7 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
         pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
         pkg.setPath(wallpaperPlugin);
         QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
-        KConfigGroup cfg = containment->config().group("Wallpaper").group(wallpaperPlugin);
+        KConfigGroup cfg = containment->config().group(u"Wallpaper"_s).group(wallpaperPlugin);
         config = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
     } else {
         // update current wallpaper to allow animations
@@ -1955,7 +1957,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
     // newCg *HAS* to be from a KSharedConfig, because some KConfigSkeleton will need to be synced
     // this makes the configscheme work
-    KConfigGroup newCg(KSharedConfig::openConfig(oldCg.config()->name()), "Containments");
+    KConfigGroup newCg(KSharedConfig::openConfig(oldCg.config()->name()), u"Containments"_s);
     newCg = KConfigGroup(&newCg, QString::number(newContainment->id()));
 
     // this makes containment->config() work, is a separate thing from its configscheme
@@ -2671,7 +2673,7 @@ void ShellCorona::activateTaskManagerEntry(int index)
 QString ShellCorona::defaultShell()
 {
     KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
-    KConfigGroup startupConfGroup(startupConf, "Shell");
+    KConfigGroup startupConfGroup(startupConf, u"Shell"_s);
     const QString defaultValue = qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop");
     QString value = startupConfGroup.readEntry("ShellPackage", defaultValue);
 

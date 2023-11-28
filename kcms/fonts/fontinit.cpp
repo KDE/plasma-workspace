@@ -12,11 +12,13 @@
 #include <KWindowSystem>
 #include <QProcess>
 
+using namespace Qt::StringLiterals;
+
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
     KConfig cfg(QStringLiteral("kcmfonts"));
-    KConfigGroup fontsCfg(&cfg, "General");
+    KConfigGroup fontsCfg(&cfg, u"General"_s);
 
     const int dpi = xftDpi();
     if (dpi <= 0) {

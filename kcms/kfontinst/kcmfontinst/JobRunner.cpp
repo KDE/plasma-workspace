@@ -192,7 +192,7 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
     m_stack->insertWidget(PAGE_CANCEL, page);
 
-    if (KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP).readEntry(CFG_DONT_SHOW_FINISHED_MSG, false)) {
+    if (KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(QStringLiteral(CFG_GROUP)).readEntry(CFG_DONT_SHOW_FINISHED_MSG, false)) {
         m_dontShowFinishedMsg = nullptr;
     } else {
         page = new QFrame(m_stack);
@@ -586,7 +586,7 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
         break;
     case PAGE_COMPLETE: {
         if (m_dontShowFinishedMsg) {
-            KConfigGroup grp(KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP));
+            KConfigGroup grp(KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(QStringLiteral(CFG_GROUP)));
             grp.writeEntry(CFG_DONT_SHOW_FINISHED_MSG, m_dontShowFinishedMsg->isChecked());
         }
         QDialog::accept();

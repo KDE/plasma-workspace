@@ -12,6 +12,8 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_CLASS(KillRunnerConfig)
 
 KillRunnerConfig::KillRunnerConfig(QObject *parent)
@@ -33,8 +35,8 @@ void KillRunnerConfig::load()
 {
     KCModule::load();
 
-    KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    const KConfigGroup grp = cfg->group("Runners").group(KRUNNER_PLUGIN_NAME);
+    KSharedConfig::Ptr cfg = KSharedConfig::openConfig(u"krunnerrc"_s);
+    const KConfigGroup grp = cfg->group(u"Runners"_s).group(QStringLiteral(KRUNNER_PLUGIN_NAME));
 
     m_ui->useTriggerWord->setChecked(grp.readEntry(CONFIG_USE_TRIGGERWORD, true));
     m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")));
@@ -45,8 +47,8 @@ void KillRunnerConfig::save()
 {
     KCModule::save();
 
-    KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup grp = cfg->group(QStringLiteral("Runners")).group(KRUNNER_PLUGIN_NAME);
+    KSharedConfig::Ptr cfg = KSharedConfig::openConfig(u"krunnerrc"_s);
+    KConfigGroup grp = cfg->group(u"Runners"_s).group(QStringLiteral(KRUNNER_PLUGIN_NAME));
 
     grp.writeEntry(CONFIG_USE_TRIGGERWORD, m_ui->useTriggerWord->isChecked());
     grp.writeEntry(CONFIG_TRIGGERWORD, m_ui->triggerWord->text());

@@ -10,6 +10,8 @@
 #include <KWindowSystem>
 #include <QDebug>
 
+using namespace Qt::StringLiterals;
+
 namespace
 {
 bool defaultExclude()
@@ -168,7 +170,7 @@ public:
 
         // Write to KConfig to sync with krdb
         KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
-        KConfigGroup grp(config, "General");
+        KConfigGroup grp(config, u"General"_s);
 
         grp.writeEntry("XftSubPixel", KXftConfig::toStr(m_subPixel));
 

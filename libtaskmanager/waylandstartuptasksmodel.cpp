@@ -18,6 +18,8 @@
 #include <QUrl>
 #include <QtWaylandClient/QWaylandClientExtensionTemplate>
 
+using namespace Qt::StringLiterals;
+
 namespace TaskManager
 {
 
@@ -117,7 +119,7 @@ void WaylandStartupTasksModel::Private::init()
 
 void WaylandStartupTasksModel::Private::loadConfig()
 {
-    KConfigGroup feedbackConfig(configWatcher->config(), "FeedbackStyle");
+    KConfigGroup feedbackConfig(configWatcher->config(), u"FeedbackStyle"_s);
 
     if (!feedbackConfig.readEntry("TaskbarButton", true)) {
         q->beginResetModel();
@@ -127,7 +129,7 @@ void WaylandStartupTasksModel::Private::loadConfig()
         return;
     }
 
-    const KConfigGroup taskbarButtonConfig(configWatcher->config(), "TaskbarButtonSettings");
+    const KConfigGroup taskbarButtonConfig(configWatcher->config(), u"TaskbarButtonSettings"_s);
     startupTimeout = std::chrono::seconds(taskbarButtonConfig.readEntry("Timeout", 5));
 
     feedback = std::make_unique<PlasmaActivationFeedback>();

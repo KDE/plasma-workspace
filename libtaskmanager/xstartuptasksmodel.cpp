@@ -17,6 +17,8 @@
 #include <QTimer>
 #include <QUrl>
 
+using namespace Qt::StringLiterals;
+
 namespace TaskManager
 {
 class Q_DECL_HIDDEN XStartupTasksModel::Private
@@ -63,7 +65,7 @@ void XStartupTasksModel::Private::init()
 void XStartupTasksModel::Private::loadConfig()
 {
     const KConfig _c("klaunchrc");
-    KConfigGroup c(&_c, "FeedbackStyle");
+    KConfigGroup c(&_c, u"FeedbackStyle"_s);
 
     if (!c.readEntry("TaskbarButton", true)) {
         delete startupInfo;
@@ -132,7 +134,7 @@ void XStartupTasksModel::Private::loadConfig()
         });
     }
 
-    c = KConfigGroup(&_c, "TaskbarButtonSettings");
+    c = KConfigGroup(&_c, u"TaskbarButtonSettings"_s);
     startupInfo->setTimeout(c.readEntry("Timeout", 5));
 }
 

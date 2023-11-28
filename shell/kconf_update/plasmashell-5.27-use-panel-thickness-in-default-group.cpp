@@ -11,6 +11,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+using namespace Qt::StringLiterals;
+
 /**
  * plasmashellrc have 3 thickness values in "Default" "Horizontal" "Vertical"
  * groups. Only the value in the default group is preserved to avoid desync
@@ -65,7 +67,7 @@ int main()
 
         // Update the thickness in [Defaults] group
         if (thickness.has_value()) {
-            KConfigGroup defaultConfigGroup(&panelConfigGroup, "Defaults");
+            KConfigGroup defaultConfigGroup(&panelConfigGroup, u"Defaults"_s);
             defaultConfigGroup.writeEntry("thickness", thickness.value());
         }
     }

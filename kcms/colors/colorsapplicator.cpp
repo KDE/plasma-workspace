@@ -19,6 +19,8 @@
 
 #include "colorsapplicator.h"
 
+using namespace Qt::StringLiterals;
+
 float lerp(float a, float b, float f)
 {
     return (a * (1.0 - f)) + (b * f);
@@ -140,9 +142,9 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     KSharedConfigPtr config = KSharedConfig::openConfig(colorSchemePath, KConfig::SimpleConfig);
 
     const auto applyAccentToTitlebar =
-        config->group("General").readEntry("TitlebarIsAccentColored", config->group(QStringLiteral("General")).readEntry("accentActiveTitlebar", false));
-    const auto tintAccent = config->group("General").hasKey("TintFactor");
-    const auto tintFactor = config->group("General").readEntry<qreal>("TintFactor", DefaultTintFactor);
+        config->group(u"General"_s).readEntry("TitlebarIsAccentColored", config->group(u"General"_s).readEntry("accentActiveTitlebar", false));
+    const auto tintAccent = config->group(u"General"_s).hasKey("TintFactor");
+    const auto tintFactor = config->group(u"General"_s).readEntry<qreal>("TintFactor", DefaultTintFactor);
 
     const QStringList colorSetGroupList{QStringLiteral("Colors:View"),
                                         QStringLiteral("Colors:Window"),
@@ -200,7 +202,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
 
         if (item == QStringLiteral("Colors:Selection") && hasAccent) {
-            QColor accentbg = accentBackground(accent, config->group("Colors:View").readEntry<QColor>("BackgroundNormal", QColor()));
+            QColor accentbg = accentBackground(accent, config->group(u"Colors:View"_s).readEntry<QColor>("BackgroundNormal", QColor()));
             for (const auto &entry : {QStringLiteral("BackgroundNormal"), QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
             }
@@ -210,15 +212,15 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
 
         if (item == QStringLiteral("Colors:Button") && hasAccent) {
-            QColor accentbg = accentBackground(accent, config->group("Colors:Button").readEntry<QColor>("BackgroundNormal", QColor()));
+            QColor accentbg = accentBackground(accent, config->group(u"Colors:Button"_s).readEntry<QColor>("BackgroundNormal", QColor()));
             for (const auto &entry : {QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
             }
         }
 
-        if (sourceGroup.hasGroup("Inactive")) {
-            sourceGroup = sourceGroup.group("Inactive");
-            targetGroup = targetGroup.group("Inactive");
+        if (sourceGroup.hasGroup(u"Inactive"_s)) {
+            sourceGroup = sourceGroup.group(u"Inactive"_s);
+            targetGroup = targetGroup.group(u"Inactive"_s);
 
             for (const auto &entry : colorSetKeyList) {
                 if (tintAccent) {
@@ -232,7 +234,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
 
         // Header accent colouring
         if (item == QStringLiteral("Colors:Header") && hasAccent) {
-            const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
+            const auto windowBackground = config->group(u"Colors:Window"_s).readEntry<QColor>("BackgroundNormal", QColor());
             const auto accentedWindowBackground = accentBackground(accent, windowBackground);
             const auto inactiveWindowBackground = tintColor(windowBackground, accent, tintFactor);
 
@@ -241,15 +243,15 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
                 targetGroup.writeEntry("BackgroundNormal", accentedWindowBackground);
                 targetGroup.writeEntry("ForegroundNormal", accentForeground(accentedWindowBackground, true));
 
-                targetGroup = targetGroup.group("Inactive");
+                targetGroup = targetGroup.group(u"Inactive"_s);
                 targetGroup.writeEntry("BackgroundNormal", inactiveWindowBackground);
                 targetGroup.writeEntry("ForegroundNormal", accentForeground(inactiveWindowBackground, false));
             }
         }
     }
 
-    KConfigGroup groupWMTheme(config, "WM");
-    KConfigGroup groupWMOut(configOutput, "WM");
+    KConfigGroup groupWMTheme(config, u"WM"_s);
+    KConfigGroup groupWMOut(configOutput, u"WM"_s);
     KColorScheme inactiveHeaderColorScheme(QPalette::Inactive, KColorScheme::Header, config);
 
     const QStringList colorItemListWM{QStringLiteral("activeBackground"),
@@ -273,7 +275,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     }
 
     if (hasAccent && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
-        const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
+        const auto windowBackground = config->group(u"Colors:Window"_s).readEntry<QColor>("BackgroundNormal", QColor());
 
         if (tintAccent) {
             const auto tintedWindowBackground = tintColor(windowBackground, accent, tintFactor);
@@ -316,8 +318,8 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     bool applyToAlien{true};
     {
         KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-        KConfigGroup group(configOutput, "General");
-        group = KConfigGroup(&cfg, "X11");
+        KConfigGroup group(configOutput, u"General"_s);
+        group = KConfigGroup(&cfg, u"X11"_s);
         applyToAlien = group.readEntry("exportKDEColors", applyToAlien);
     }
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | (applyToAlien ? KRdbExportColors : 0));

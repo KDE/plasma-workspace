@@ -29,6 +29,8 @@
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
+using namespace Qt::StringLiterals;
+
 class WallpaperConfigModel : public PlasmaQuick::ConfigModel
 {
     Q_OBJECT
@@ -49,7 +51,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Wallpaper"));
     pkg.setPath(m_containment->wallpaperPlugin());
     KConfigGroup cfg = m_containment->config();
-    cfg = KConfigGroup(&cfg, "Wallpaper");
+    cfg = KConfigGroup(&cfg, u"Wallpaper"_s);
 
     syncWallpaperObjects();
 }
@@ -181,7 +183,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
         pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
         pkg.setPath(wallpaperPlugin);
         QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
-        KConfigGroup cfg = m_containment->config().group("Wallpaper").group(wallpaperPlugin);
+        KConfigGroup cfg = m_containment->config().group(u"Wallpaper"_s).group(wallpaperPlugin);
         m_currentWallpaperConfig = m_ownWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
     }
 

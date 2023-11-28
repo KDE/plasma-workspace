@@ -18,6 +18,8 @@
 
 #include "xcursortheme.h"
 
+using namespace Qt::StringLiterals;
+
 // Static variable holding alternative names for some cursors
 QHash<QString, QString> XCursorTheme::alternatives;
 
@@ -65,7 +67,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
 void XCursorTheme::parseIndexFile()
 {
     KConfig config(path() + "/index.theme", KConfig::NoGlobals);
-    KConfigGroup cg(&config, "Icon Theme");
+    KConfigGroup cg(&config, u"Icon Theme"_s);
 
     m_title = cg.readEntry("Name", m_title);
     m_description = cg.readEntry("Comment", m_description);

@@ -12,12 +12,14 @@
 #include <KSharedConfig>
 #include <QQmlEngine>
 
+using namespace Qt::StringLiterals;
+
 void SessionsPrivatePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.lookandfeel"));
 
     qmlRegisterSingletonType<KPackageInterface>(uri, 1, 0, "LookAndFeel", [](QQmlEngine *, QJSEngine *) {
-        KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+        KConfigGroup cg(KSharedConfig::openConfig(), u"KDE"_s);
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         const auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
         return new KPackageInterface(package);

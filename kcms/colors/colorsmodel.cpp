@@ -21,6 +21,8 @@
 
 #include "colorsapplicator.h"
 
+using namespace Qt::StringLiterals;
+
 ColorsModel::ColorsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -191,7 +193,7 @@ void ColorsModel::load()
         const QString baseName = fi.baseName();
 
         KSharedConfigPtr config = KSharedConfig::openConfig(schemeFile, KConfig::SimpleConfig);
-        KConfigGroup group(config, "General");
+        KConfigGroup group(config, u"General"_s);
         const QString name = group.readEntry("Name", baseName);
 
         const QPalette palette = KColorScheme::createApplicationPalette(config);
@@ -211,7 +213,7 @@ void ColorsModel::load()
             activeTitleBarBackground = headerColorScheme.background().color();
             activeTitleBarForeground = headerColorScheme.foreground().color();
         } else {
-            KConfigGroup wmConfig(config, QStringLiteral("WM"));
+            KConfigGroup wmConfig(config, u"WM"_s);
             activeTitleBarBackground = wmConfig.readEntry("activeBackground", palette.color(QPalette::Active, QPalette::Highlight));
             activeTitleBarForeground = wmConfig.readEntry("activeForeground", palette.color(QPalette::Active, QPalette::HighlightedText));
         }

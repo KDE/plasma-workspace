@@ -30,6 +30,8 @@
 
 #include <defaultservice.h>
 
+using namespace Qt::StringLiterals;
+
 namespace TaskManager
 {
 AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
@@ -211,8 +213,8 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
 
     if (!(appId.isEmpty() && xWindowsWMClassName.isEmpty())) {
         // Check to see if this wmClass matched a saved one ...
-        KConfigGroup grp(rulesConfig, "Mapping");
-        KConfigGroup set(rulesConfig, "Settings");
+        KConfigGroup grp(rulesConfig, u"Mapping"_s);
+        KConfigGroup set(rulesConfig, u"Settings"_s);
 
         // Evaluate MatchCommandLineFirst directives from config first.
         // Some apps have different launchers depending upon command line ...
@@ -575,7 +577,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
     }
 
     if (services.isEmpty()) {
-        KConfigGroup set(rulesConfig, "Settings");
+        KConfigGroup set(rulesConfig, u"Settings"_s);
         const QStringList &runtimes = set.readEntry("TryIgnoreRuntimes", QStringList());
 
         bool ignore = runtimes.contains(cmdLine);
@@ -625,7 +627,7 @@ QString defaultApplication(const QUrl &url)
 
         if (!command.isEmpty()) {
             if (settings.getSetting(KEMailSettings::ClientTerminal) == QLatin1String("true")) {
-                KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
+                KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
                 const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
                 command = preferredTerminal + QLatin1String(" -e ") + command;
             }
@@ -636,7 +638,7 @@ QString defaultApplication(const QUrl &url)
         const auto service = DefaultService::browser();
         return service ? service->storageId() : DefaultService::legacyBrowserExec();
     } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
-        KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
+        KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
 
         return confGroup.readPathEntry("TerminalApplication", KService::serviceByStorageId(QStringLiteral("konsole")) ? QStringLiteral("konsole") : QString());
     } else if (application.compare(QLatin1String("filemanager"), Qt::CaseInsensitive) == 0) {

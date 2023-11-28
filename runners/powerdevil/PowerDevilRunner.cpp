@@ -21,6 +21,8 @@
 
 #include <cmath>
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_CLASS_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData)
@@ -79,27 +81,27 @@ void PowerDevilRunner::match(KRunner::RunnerContext &context)
     if (screenBrightnessResults != -1) {
         KRunner::QueryMatch match(this);
         match.setCategoryRelevance(categoryRelevance);
-        match.setIconName(QStringLiteral("video-display-brightness"));
+        match.setIconName(u"video-display-brightness"_s);
         match.setText(i18n("Set Brightness to %1%", screenBrightnessResults));
         match.setData(screenBrightnessResults);
         match.setRelevance(1);
-        match.setId(QStringLiteral("BrightnessChange"));
+        match.setId(u"BrightnessChange"_s);
         matches.append(match);
     } else if (matchesRunnerKeywords({m_screenBrightness, m_dimScreen}, categoryRelevance, term)) {
         KRunner::QueryMatch match1(this);
         match1.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
-        match1.setIconName(QStringLiteral("video-display-brightness"));
+        match1.setIconName(u"video-display-brightness"_s);
         match1.setText(i18n("Dim screen totally"));
         match1.setRelevance(1);
-        match1.setId(QStringLiteral("DimTotal"));
+        match1.setId(u"DimTotal"_s);
         matches.append(match1);
 
         KRunner::QueryMatch match2(this);
         match2.setCategoryRelevance(categoryRelevance);
-        match2.setIconName(QStringLiteral("video-display-brightness"));
+        match2.setIconName(u"video-display-brightness"_s);
         match2.setText(i18n("Dim screen by half"));
         match2.setRelevance(1);
-        match2.setId(QStringLiteral("DimHalf"));
+        match2.setId(u"DimHalf"_s);
         matches.append(match2);
     } else if (matchesRunnerKeywords({m_power, m_sleep, m_suspend, m_toRam}, categoryRelevance, term)) {
         if (m_session->canSuspend()) {
@@ -125,19 +127,19 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
 
     switch ((SleepState)value) {
     case SuspendState:
-        match.setIconName(QStringLiteral("system-suspend"));
+        match.setIconName(u"system-suspend"_s);
         match.setText(i18nc("Suspend to RAM", "Sleep"));
         match.setSubtext(i18n("Suspend to RAM"));
         match.setRelevance(1);
         break;
     case HibernateState:
-        match.setIconName(QStringLiteral("system-suspend-hibernate"));
+        match.setIconName(u"system-suspend-hibernate"_s);
         match.setText(i18nc("Suspend to disk", "Hibernate"));
         match.setSubtext(i18n("Suspend to disk"));
         match.setRelevance(0.99);
         break;
     case HybridSuspendState:
-        match.setIconName(QStringLiteral("system-suspend-hybrid"));
+        match.setIconName(u"system-suspend-hybrid"_s);
         match.setText(i18nc("Suspend to both RAM and disk", "Hybrid sleep"));
         match.setSubtext(i18n("Sleep now and fall back to hibernate"));
         match.setRelevance(0.98);
@@ -145,34 +147,32 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
     }
 
     match.setData(value);
-    match.setId(QStringLiteral("Sleep"));
+    match.setId(u"Sleep"_s);
     matches.append(match);
 }
 
 void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    QDBusInterface iface(QStringLiteral("org.kde.Solid.PowerManagement"),
-                         QStringLiteral("/org/kde/Solid/PowerManagement"),
-                         QStringLiteral("org.kde.Solid.PowerManagement"));
-    QDBusInterface brightnessIface(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"));
+    QDBusInterface iface(u"org.kde.Solid.PowerManagement"_s, u"/org/kde/Solid/PowerManagement"_s, u"org.kde.Solid.PowerManagement"_s);
+    QDBusInterface brightnessIface(u"org.kde.Solid.PowerManagement"_s,
+                                   u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                   u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s);
     const QString action = match.id().remove(AbstractRunner::id() + QLatin1Char('_'));
     if (action == QLatin1String("BrightnessChange")) {
         QDBusReply<int> max = brightnessIface.call("brightnessMax");
         const int value = max.isValid() ? std::round(match.data().toInt() * max / 100.0) : match.data().toInt();
         brightnessIface.asyncCall("setBrightness", value);
     } else if (action == QLatin1String("DimTotal")) {
-        brightnessIface.asyncCall(QStringLiteral("setBrightness"), 0);
+        brightnessIface.asyncCall(u"setBrightness"_s, 0);
     } else if (action == QLatin1String("DimHalf")) {
-        QDBusReply<int> brightness = brightnessIface.asyncCall(QStringLiteral("brightness"));
-        brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
+        QDBusReply<int> brightness = brightnessIface.asyncCall(u"brightness"_s);
+        brightnessIface.asyncCall(u"setBrightness"_s, static_cast<int>(brightness / 2));
     } else if (action == QLatin1String("Sleep")) {
         switch ((SleepState)match.data().toInt()) {
         case SuspendState: {
             if (m_session->canSuspendThenHibernate()) {
-                const QDBusReply<QString> currProfile = iface.call(QStringLiteral("currentProfile"));
-                const KConfigGroup config(KConfig(QStringLiteral("powermanagementprofilesrc")).group(currProfile).group("SuspendSession"));
+                const QDBusReply<QString> currProfile = iface.call(u"currentProfile"_s);
+                const KConfigGroup config(KConfig(u"powermanagementprofilesrc"_s).group(currProfile).group(u"SuspendSession"_s));
                 if (config.readEntry<bool>("suspendThenHibernate", false)) {
                     m_session->suspendThenHibernate();
                     break;
@@ -218,9 +218,9 @@ void PowerDevilRunner::addSyntaxForKeyword(const QList<RunnerKeyword> &keywords,
 int PowerDevilRunner::matchesScreenBrightnessKeywords(const QString &query) const
 {
     const static QStringList expressions = {
-        QStringLiteral("screen brightness "),
+        u"screen brightness "_s,
         i18nc("Note this is a KRunner keyword, it should end with a space", "screen brightness "),
-        QStringLiteral("dim screen "),
+        u"dim screen "_s,
         i18nc("Note this is a KRunner keyword, it should end with a space", "dim screen "),
     };
 

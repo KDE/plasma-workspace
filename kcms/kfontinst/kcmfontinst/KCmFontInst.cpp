@@ -164,7 +164,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
 
     KIconLoader::global()->addAppDir(KFI_NAME);
 
-    KConfigGroup cg(&m_config, CFG_GROUP);
+    KConfigGroup cg(&m_config, QStringLiteral(CFG_GROUP));
 
     m_groupSplitter = new QSplitter(widget());
     m_groupSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
@@ -174,7 +174,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     m_previewSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
 
     connect(widget(), &QObject::destroyed, this, [this] { // this signal fires before the children destroy!
-        KConfigGroup cg(&m_config, CFG_GROUP);
+        KConfigGroup cg(&m_config, QStringLiteral(CFG_GROUP));
 
         cg.writeEntry(CFG_PREVIEW_SPLITTER_SIZES, m_previewSplitter->sizes());
         cg.writeEntry(CFG_GROUP_SPLITTER_SIZES, m_groupSplitter->sizes());
@@ -495,7 +495,7 @@ void CKCmFontInst::print(bool all)
 
         if (!fonts.isEmpty()) {
             CPrintDialog dlg(widget());
-            KConfigGroup cg(&m_config, CFG_GROUP);
+            KConfigGroup cg(&m_config, QStringLiteral(CFG_GROUP));
 
             if (dlg.exec(cg.readEntry(CFG_FONT_SIZE, 1))) {
                 static const int constSizes[] = {0, 12, 18, 24, 36, 48};

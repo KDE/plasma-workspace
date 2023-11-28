@@ -40,6 +40,8 @@
 #include <chrono>
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
+
 static const int MINSIZE = 10;
 
 PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
@@ -132,7 +134,7 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
     if (!containment || !screen) {
         return KConfigGroup();
     }
-    KConfigGroup views(corona->applicationConfig(), "PlasmaViews");
+    KConfigGroup views(corona->applicationConfig(), u"PlasmaViews"_s);
     views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
 
     if (containment->formFactor() == Plasma::Types::Vertical) {
@@ -149,7 +151,7 @@ KConfigGroup PanelView::panelConfigDefaults(ShellCorona *corona, Plasma::Contain
         return KConfigGroup();
     }
 
-    KConfigGroup views(corona->applicationConfig(), "PlasmaViews");
+    KConfigGroup views(corona->applicationConfig(), u"PlasmaViews"_s);
     views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
 
     return KConfigGroup(&views, QStringLiteral("Defaults"));
@@ -1398,7 +1400,7 @@ void PanelView::refreshContainment()
         // containment()->destroyed() is true only when the user deleted it
         // so the config is to be thrown away, not during shutdown
         if (containment()->destroyed()) {
-            KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
+            KConfigGroup views(m_corona->applicationConfig(), u"PlasmaViews"_s);
             for (auto grp : views.groupList()) {
                 if (grp.contains(QRegularExpression(QStringLiteral("Panel %1$").arg(QString::number(containment()->id()))))) {
                     qDebug() << "Panel" << containment()->id() << "removed by user";

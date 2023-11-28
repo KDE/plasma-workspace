@@ -39,7 +39,7 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     , m_floating(false)
 {
     KCrash::initialize();
-    qmlRegisterUncreatableType<View>("org.kde.krunner.private.view", 1, 0, "HistoryBehavior", QStringLiteral("Only for enums"));
+    qmlRegisterUncreatableType<View>("org.kde.krunner.private.view", 1, 0, "HistoryBehavior", u"Only for enums"_s);
 
     if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner = new X11WindowScreenRelativePositioner(this);
@@ -48,11 +48,11 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     // used only by screen readers
     setTitle(i18n("KRunner"));
 
-    m_config = KConfigGroup(KSharedConfig::openConfig(), "General");
-    m_stateData = KSharedConfig::openConfig(QStringLiteral("krunnerstaterc"), //
+    m_config = KConfigGroup(KSharedConfig::openConfig(), u"General"_s);
+    m_stateData = KSharedConfig::openConfig(u"krunnerstaterc"_s, //
                                             KConfig::NoGlobals,
                                             QStandardPaths::GenericDataLocation)
-                      ->group(QStringLiteral("General"));
+                      ->group(u"General"_s);
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group) {
         const QLatin1String pluginsGrp("Plugins");
@@ -70,11 +70,11 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     loadConfig();
 
     new AppAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
+    QDBusConnection::sessionBus().registerObject(u"/App"_s, this);
 
     connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
-    m_engine->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
-    m_engine->setSource(QUrl(QStringLiteral("qrc:/krunner/RunCommand.qml")));
+    m_engine->engine()->rootContext()->setContextProperty(u"runnerWindow"_s, this);
+    m_engine->setSource(QUrl(u"qrc:/krunner/RunCommand.qml"_s));
     m_engine->completeInitialization();
 
     auto screenRemoved = [this](QScreen *screen) {
@@ -185,7 +185,7 @@ void View::positionOnScreen()
         auto layerWindow = LayerShellQt::Window::get(this);
         layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
         layerWindow->setLayer(LayerShellQt::Window::LayerTop);
-        layerWindow->setScope(QStringLiteral("krunner"));
+        layerWindow->setScope(u"krunner"_s);
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         layerWindow->setMargins(margins);
         layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);

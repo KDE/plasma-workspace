@@ -6,16 +6,18 @@
 
 #include "soundthemeconfig.h"
 
-const QString DEFAULT_SOUND_THEME = QStringLiteral("ocean");
+using namespace Qt::StringLiterals;
+
+const QString DEFAULT_SOUND_THEME = u"ocean"_s;
 
 SoundThemeConfig::SoundThemeConfig(QObject *parent)
     : QObject(parent)
     , m_soundTheme(DEFAULT_SOUND_THEME)
 {
-    m_soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("kdeglobals")));
+    m_soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(u"kdeglobals"_s));
     connect(m_soundThemeWatcher.get(), &KConfigWatcher::configChanged, this, &SoundThemeConfig::kdeglobalsChanged);
 
-    const KConfigGroup soundGroup = m_soundThemeWatcher->config()->group("Sounds");
+    const KConfigGroup soundGroup = m_soundThemeWatcher->config()->group(u"Sounds"_s);
     m_soundTheme = soundGroup.readEntry("Theme", DEFAULT_SOUND_THEME);
 }
 

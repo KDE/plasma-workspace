@@ -33,6 +33,8 @@
 
 #include <private/qtx11extras_p.h>
 
+using namespace Qt::StringLiterals;
+
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
     , m_accentColor(Qt::transparent)
@@ -73,7 +75,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     // KRunner settings
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup configGroup(config, "General");
+    KConfigGroup configGroup(config, u"General"_s);
     m_activateKRunnerWhenTypingOnDesktop = configGroup.readEntry("ActivateWhenTypingOnDesktop", true);
 
     m_configWatcher = KConfigWatcher::create(config);
@@ -195,7 +197,8 @@ void DesktopView::resetAccentColor()
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
 bool DesktopView::showPreviewBanner() const
 {
-    static const bool shouldShowPreviewBanner = !KConfigGroup(KSharedConfig::openConfig("kdeglobals"), "General").readEntry("HideDesktopPreviewBanner", false);
+    static const bool shouldShowPreviewBanner =
+        !KConfigGroup(KSharedConfig::openConfig("kdeglobals"), u"General"_s).readEntry("HideDesktopPreviewBanner", false);
     return shouldShowPreviewBanner;
 }
 

@@ -23,6 +23,7 @@
 #include "debug.h"
 
 using namespace NotificationManager;
+using namespace Qt::StringLiterals;
 
 Notification::Private::Private()
 {
@@ -322,7 +323,7 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
         }
         config.addConfigSources(configSources);
 
-        KConfigGroup globalGroup(&config, "Global");
+        KConfigGroup globalGroup(&config, u"Global"_s);
 
         const QString iconName = globalGroup.readEntry("IconName");
 

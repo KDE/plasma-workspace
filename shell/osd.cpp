@@ -16,14 +16,14 @@
 #include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
 
+using namespace Qt::StringLiterals;
+
 Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     : QObject(corona)
     , m_osdUrl(corona->lookAndFeelPackage().fileUrl("osdmainscript"))
-    , m_osdConfigGroup(config, "OSD")
+    , m_osdConfigGroup(config, u"OSD"_s)
 {
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"),
-                                                 this,
-                                                 QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
+    QDBusConnection::sessionBus().registerObject(u"/org/kde/osdService"_s, this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }
 
 Osd::~Osd()
@@ -32,12 +32,12 @@ Osd::~Osd()
 
 void Osd::brightnessChanged(int percent)
 {
-    showProgress(QStringLiteral("video-display-brightness"), percent, 100);
+    showProgress(u"video-display-brightness"_s, percent, 100);
 }
 
 void Osd::keyboardBrightnessChanged(int percent)
 {
-    showProgress(QStringLiteral("input-keyboard-brightness"), percent, 100);
+    showProgress(u"input-keyboard-brightness"_s, percent, 100);
 }
 
 void Osd::volumeChanged(int percent)
@@ -49,19 +49,19 @@ void Osd::volumeChanged(int percent, int maximumPercent)
 {
     QString icon;
     if (percent <= 0) {
-        icon = QStringLiteral("audio-volume-muted");
+        icon = u"audio-volume-muted"_s;
         showText(icon, i18nc("OSD informing that the system is muted, keep short", "Audio Muted"));
         return;
     } else if (percent <= 25) {
-        icon = QStringLiteral("audio-volume-low");
+        icon = u"audio-volume-low"_s;
     } else if (percent <= 75) {
-        icon = QStringLiteral("audio-volume-medium");
+        icon = u"audio-volume-medium"_s;
     } else if (percent <= 100) {
-        icon = QStringLiteral("audio-volume-high");
+        icon = u"audio-volume-high"_s;
     } else if (percent <= 125) {
-        icon = QStringLiteral("audio-volume-high-warning");
+        icon = u"audio-volume-high-warning"_s;
     } else {
-        icon = QStringLiteral("audio-volume-high-danger");
+        icon = u"audio-volume-high-danger"_s;
     }
 
     showProgress(icon, percent, maximumPercent);
@@ -71,15 +71,15 @@ void Osd::microphoneVolumeChanged(int percent)
 {
     QString icon;
     if (percent <= 0) {
-        icon = QStringLiteral("microphone-sensitivity-muted");
+        icon = u"microphone-sensitivity-muted"_s;
         showText(icon, i18nc("OSD informing that the microphone is muted, keep short", "Microphone Muted"));
         return;
     } else if (percent <= 25) {
-        icon = QStringLiteral("microphone-sensitivity-low");
+        icon = u"microphone-sensitivity-low"_s;
     } else if (percent <= 75) {
-        icon = QStringLiteral("microphone-sensitivity-medium");
+        icon = u"microphone-sensitivity-medium"_s;
     } else {
-        icon = QStringLiteral("microphone-sensitivity-high");
+        icon = u"microphone-sensitivity-high"_s;
     }
 
     showProgress(icon, percent, 100);
@@ -97,7 +97,7 @@ void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const
 void Osd::kbdLayoutChanged(const QString &layoutName)
 {
     if (m_osdConfigGroup.readEntry("kbdLayoutChangedEnabled", true)) {
-        showText(QStringLiteral("keyboard-layout"), layoutName);
+        showText(u"keyboard-layout"_s, layoutName);
     }
 }
 
@@ -110,46 +110,46 @@ void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
 void Osd::touchpadEnabledChanged(bool touchpadEnabled)
 {
     if (touchpadEnabled) {
-        showText(QStringLiteral("input-touchpad-on"), i18nc("touchpad was enabled, keep short", "Touchpad On"));
+        showText(u"input-touchpad-on"_s, i18nc("touchpad was enabled, keep short", "Touchpad On"));
     } else {
-        showText(QStringLiteral("input-touchpad-off"), i18nc("touchpad was disabled, keep short", "Touchpad Off"));
+        showText(u"input-touchpad-off"_s, i18nc("touchpad was disabled, keep short", "Touchpad Off"));
     }
 }
 
 void Osd::wifiEnabledChanged(bool wifiEnabled)
 {
     if (wifiEnabled) {
-        showText(QStringLiteral("network-wireless-on"), i18nc("wireless lan was enabled, keep short", "Wifi On"));
+        showText(u"network-wireless-on"_s, i18nc("wireless lan was enabled, keep short", "Wifi On"));
     } else {
-        showText(QStringLiteral("network-wireless-off"), i18nc("wireless lan was disabled, keep short", "Wifi Off"));
+        showText(u"network-wireless-off"_s, i18nc("wireless lan was disabled, keep short", "Wifi Off"));
     }
 }
 
 void Osd::bluetoothEnabledChanged(bool bluetoothEnabled)
 {
     if (bluetoothEnabled) {
-        showText(QStringLiteral("preferences-system-bluetooth"), i18nc("Bluetooth was enabled, keep short", "Bluetooth On"));
+        showText(u"preferences-system-bluetooth"_s, i18nc("Bluetooth was enabled, keep short", "Bluetooth On"));
     } else {
-        showText(QStringLiteral("preferences-system-bluetooth-inactive"), i18nc("Bluetooth was disabled, keep short", "Bluetooth Off"));
+        showText(u"preferences-system-bluetooth-inactive"_s, i18nc("Bluetooth was disabled, keep short", "Bluetooth Off"));
     }
 }
 
 void Osd::wwanEnabledChanged(bool wwanEnabled)
 {
     if (wwanEnabled) {
-        showText(QStringLiteral("network-mobile-on"), i18nc("mobile internet was enabled, keep short", "Mobile Internet On"));
+        showText(u"network-mobile-on"_s, i18nc("mobile internet was enabled, keep short", "Mobile Internet On"));
     } else {
-        showText(QStringLiteral("network-mobile-off"), i18nc("mobile internet was disabled, keep short", "Mobile Internet Off"));
+        showText(u"network-mobile-off"_s, i18nc("mobile internet was disabled, keep short", "Mobile Internet Off"));
     }
 }
 
 void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
 {
     if (virtualKeyboardEnabled) {
-        showText(QStringLiteral("input-keyboard-virtual-on"),
+        showText(u"input-keyboard-virtual-on"_s,
                  i18nc("on screen keyboard was enabled because physical keyboard got unplugged, keep short", "On-Screen Keyboard Activated"));
     } else {
-        showText(QStringLiteral("input-keyboard-virtual-off"),
+        showText(u"input-keyboard-virtual-off"_s,
                  i18nc("on screen keyboard was disabled because physical keyboard was plugged in, keep short", "On-Screen Keyboard Deactivated"));
     }
 }

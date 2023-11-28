@@ -12,6 +12,8 @@
 #include <KColorButton>
 #include <KConfigGroup>
 
+using namespace Qt::StringLiterals;
+
 // BEGIN WindecoColors
 SchemeEditorColors::WindecoColors::WindecoColors(const KSharedConfigPtr &config)
 {
@@ -21,7 +23,7 @@ SchemeEditorColors::WindecoColors::WindecoColors(const KSharedConfigPtr &config)
 void SchemeEditorColors::WindecoColors::load(const KSharedConfigPtr &config)
 {
     // NOTE: keep this in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
-    KConfigGroup group(config, "WM");
+    KConfigGroup group(config, u"WM"_s);
     m_colors[ActiveBackground] = group.readEntry("activeBackground", QColor(48, 174, 232));
     m_colors[ActiveForeground] = group.readEntry("activeForeground", QColor(255, 255, 255));
     m_colors[InactiveBackground] = group.readEntry("inactiveBackground", QColor(224, 223, 222));
@@ -160,146 +162,146 @@ void SchemeEditorColors::changeColor(int row, const QColor &newColor)
         switch (row) {
         case 0:
             // View Background button
-            KConfigGroup(m_config, "Colors:View").writeEntry("BackgroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("BackgroundNormal", newColor);
             break;
         case 1:
             // View Text button
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundNormal", newColor);
             break;
         case 2:
             // Window Background Button
-            KConfigGroup(m_config, "Colors:Window").writeEntry("BackgroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("BackgroundNormal", newColor);
             break;
         case 3:
             // Window Text Button
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundNormal", newColor);
             break;
         case 4:
             // Button Background button
-            KConfigGroup(m_config, "Colors:Button").writeEntry("BackgroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("BackgroundNormal", newColor);
             break;
         case 5:
             // Button Text button
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundNormal", newColor);
             break;
         case 6:
             // Selection Background Button
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("BackgroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("BackgroundNormal", newColor);
             break;
         case 7:
             // Selection Text Button
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundNormal", newColor);
             break;
         case 8:
             // Selection Inactive Text Button
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundInactive", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundInactive", newColor);
             break;
 
         // buttons that could have varies in their place
         case 9:
             // Inactive Text Button (set all but Selection Inactive Text color)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundInactive", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundInactive", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundInactive", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundInactive", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundInactive", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundInactive", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundInactive", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundInactive", newColor);
             break;
         case 10:
             // Active Text Button (set all active text colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundActive", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundActive", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundActive", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundActive", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundActive", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundActive", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundActive", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundActive", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundActive", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundActive", newColor);
             break;
         case 11:
             // Link Text Button (set all link text colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundLink", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundLink", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundLink", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundLink", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundLink", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundLink", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundLink", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundLink", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundLink", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundLink", newColor);
             break;
         case 12:
             // Visited Text Button (set all visited text colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundVisited", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundVisited", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundVisited", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundVisited", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundVisited", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundVisited", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundVisited", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundVisited", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundVisited", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundVisited", newColor);
             break;
         case 13:
             // Negative Text Button (set all negative text colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundNegative", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundNegative", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundNegative", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundNegative", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundNegative", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundNegative", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundNegative", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundNegative", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundNegative", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundNegative", newColor);
             break;
         case 14:
             // Neutral Text Button (set all neutral text colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundNeutral", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundNeutral", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundNeutral", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundNeutral", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundNeutral", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundNeutral", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundNeutral", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundNeutral", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundNeutral", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundNeutral", newColor);
             break;
         case 15:
             // Positive Text Button (set all positive text colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("ForegroundPositive", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("ForegroundPositive", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("ForegroundPositive", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("ForegroundPositive", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundPositive", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("ForegroundPositive", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("ForegroundPositive", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("ForegroundPositive", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("ForegroundPositive", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundPositive", newColor);
             break;
 
         case 16:
             // Focus Decoration Button (set all focus decoration colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("DecorationFocus", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("DecorationFocus", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("DecorationFocus", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("DecorationFocus", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("DecorationFocus", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("DecorationFocus", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("DecorationFocus", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("DecorationFocus", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("DecorationFocus", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("DecorationFocus", newColor);
             break;
         case 17:
             // Hover Decoration Button (set all hover decoration colors)
-            KConfigGroup(m_config, "Colors:View").writeEntry("DecorationHover", newColor);
-            KConfigGroup(m_config, "Colors:Window").writeEntry("DecorationHover", newColor);
-            KConfigGroup(m_config, "Colors:Selection").writeEntry("DecorationHover", newColor);
-            KConfigGroup(m_config, "Colors:Button").writeEntry("DecorationHover", newColor);
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("DecorationHover", newColor);
+            KConfigGroup(m_config, u"Colors:View"_s).writeEntry("DecorationHover", newColor);
+            KConfigGroup(m_config, u"Colors:Window"_s).writeEntry("DecorationHover", newColor);
+            KConfigGroup(m_config, u"Colors:Selection"_s).writeEntry("DecorationHover", newColor);
+            KConfigGroup(m_config, u"Colors:Button"_s).writeEntry("DecorationHover", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("DecorationHover", newColor);
             break;
 
         case 18:
             // Tooltip Background button
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("BackgroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("BackgroundNormal", newColor);
             break;
         case 19:
             // Tooltip Text button
-            KConfigGroup(m_config, "Colors:Tooltip").writeEntry("ForegroundNormal", newColor);
+            KConfigGroup(m_config, u"Colors:Tooltip"_s).writeEntry("ForegroundNormal", newColor);
             break;
         case 20:
             // Active Title Background
-            KConfigGroup(m_config, "WM").writeEntry("activeBackground", newColor);
+            KConfigGroup(m_config, u"WM"_s).writeEntry("activeBackground", newColor);
             break;
         case 21:
             // Active Title Text
-            KConfigGroup(m_config, "WM").writeEntry("activeForeground", newColor);
+            KConfigGroup(m_config, u"WM"_s).writeEntry("activeForeground", newColor);
             break;
         case 22:
             // Active Title Secondary
-            KConfigGroup(m_config, "WM").writeEntry("activeBlend", newColor);
+            KConfigGroup(m_config, u"WM"_s).writeEntry("activeBlend", newColor);
             break;
         case 23:
             // Inactive Title Background
-            KConfigGroup(m_config, "WM").writeEntry("inactiveBackground", newColor);
+            KConfigGroup(m_config, u"WM"_s).writeEntry("inactiveBackground", newColor);
             break;
         case 24:
             // Inactive Title Text
-            KConfigGroup(m_config, "WM").writeEntry("inactiveForeground", newColor);
+            KConfigGroup(m_config, u"WM"_s).writeEntry("inactiveForeground", newColor);
             break;
         case 25:
             // Inactive Title Secondary
-            KConfigGroup(m_config, "WM").writeEntry("inactiveBlend", newColor);
+            KConfigGroup(m_config, u"WM"_s).writeEntry("inactiveBlend", newColor);
             break;
         }
         m_commonColorButtons[row]->blockSignals(true);
@@ -481,7 +483,7 @@ void SchemeEditorColors::updateFromColorSchemes()
         group.writeEntry("DecorationHover", m_colorSchemes[i].decoration(KColorScheme::HoverColor).color());
     }
 
-    KConfigGroup WMGroup(m_config, "WM");
+    KConfigGroup WMGroup(m_config, u"WM"_s);
     WMGroup.writeEntry("activeBackground", m_wmColors.color(WindecoColors::ActiveBackground));
     WMGroup.writeEntry("activeForeground", m_wmColors.color(WindecoColors::ActiveForeground));
     WMGroup.writeEntry("inactiveBackground", m_wmColors.color(WindecoColors::InactiveBackground));

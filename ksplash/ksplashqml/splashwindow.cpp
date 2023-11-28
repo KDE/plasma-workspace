@@ -25,6 +25,8 @@
 
 #include <KWindowSystem>
 
+using namespace Qt::StringLiterals;
+
 SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScreen *screen)
     : PlasmaQuick::QuickViewSharedEngine()
     , m_stage(0)
@@ -104,7 +106,7 @@ void SplashWindow::setGeometry(const QRect &rect)
     if (oldGeometryEmpty) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         const auto originalPackagePath = package.path();
-        KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+        KConfigGroup cg(KSharedConfig::openConfig(), u"KDE"_s);
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {
             package.setPath(packageName);

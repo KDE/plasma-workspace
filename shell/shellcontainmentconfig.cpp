@@ -22,6 +22,7 @@
 #include <chrono>
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 ScreenPoolModel::ScreenPoolModel(ShellCorona *corona, QObject *parent)
     : QAbstractListModel(parent)
@@ -101,7 +102,7 @@ void ScreenPoolModel::load()
         Data d;
         unknownScreenIds.remove(knownId);
         d.id = knownId;
-        if (screen->name().contains(QStringLiteral("eDP"))) {
+        if (screen->name().contains(u"eDP"_s)) {
             d.name = i18n("Internal Screen on %1", screen->name());
         } else if (screen->model().contains(screen->name())) {
             d.name = screen->model();
@@ -391,19 +392,19 @@ QString ShellContainmentModel::plasmaLocationToString(Plasma::Types::Location lo
 {
     switch (location) {
     case Plasma::Types::Floating:
-        return QStringLiteral("floating");
+        return u"floating"_s;
     case Plasma::Types::Desktop:
-        return QStringLiteral("desktop");
+        return u"desktop"_s;
     case Plasma::Types::FullScreen:
-        return QStringLiteral("Full Screen");
+        return u"Full Screen"_s;
     case Plasma::Types::TopEdge:
-        return QStringLiteral("top");
+        return u"top"_s;
     case Plasma::Types::BottomEdge:
-        return QStringLiteral("bottom");
+        return u"bottom"_s;
     case Plasma::Types::LeftEdge:
-        return QStringLiteral("left");
+        return u"left"_s;
     case Plasma::Types::RightEdge:
-        return QStringLiteral("right");
+        return u"right"_s;
     default:
         return QString("unknown");
     }
@@ -431,10 +432,10 @@ QString ShellContainmentModel::containmentPreview(Plasma::Containment *containme
 
     // If not found, try to understand the configured wallpaper for the containment, assuming is using the Image plugin
     KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("plasma-") + m_corona->shell() + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
-    KConfigGroup containmentsGroup(conf, "Containments");
+    KConfigGroup containmentsGroup(conf, u"Containments"_s);
     KConfigGroup config = containmentsGroup.group(QString::number(containment->id()));
     auto wallpaperPlugin = config.readEntry("wallpaperplugin");
-    auto wallpaperConfig = config.group("Wallpaper").group(wallpaperPlugin).group("General");
+    auto wallpaperConfig = config.group(u"Wallpaper"_s).group(wallpaperPlugin).group(u"General"_s);
 
     if (wallpaperConfig.hasKey("Image")) {
         // Trying for the wallpaper
@@ -468,10 +469,10 @@ void ShellContainmentConfig::init()
     m_model->load();
 
     auto *localizedContext = new KLocalizedContext(this);
-    localizedContext->setTranslationDomain(QStringLiteral("plasma_shell_") + m_corona->shell());
+    localizedContext->setTranslationDomain(u"plasma_shell_"_s + m_corona->shell());
 
     rootContext()->setContextObject(localizedContext);
-    rootContext()->setContextProperty(QStringLiteral("ShellContainmentModel"), m_model);
+    rootContext()->setContextProperty(u"ShellContainmentModel"_s, m_model);
     load(m_corona->kPackage().fileUrl("containmentmanagementui"));
 
     if (!rootObjects().isEmpty()) {

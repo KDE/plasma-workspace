@@ -41,6 +41,8 @@
 #include "panel.h"
 #include "widget.h"
 
+using namespace Qt::StringLiterals;
+
 namespace
 {
 template<typename T>
@@ -628,7 +630,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
 
         if (!command.isEmpty()) {
             if (false) {
-                KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
+                KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
                 const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
                 command = preferredTerminal + QLatin1String(" -e ") + command;
             }
@@ -643,7 +645,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         }
         return onlyExec(DefaultService::legacyBrowserExec());
     } else if (matches(application, QLatin1String("terminal"))) {
-        KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
+        KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
         return onlyExec(confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole")));
 
     } else if (matches(application, QLatin1String("filemanager"))) {
@@ -654,7 +656,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
 
     } else if (matches(application, QLatin1String("windowmanager"))) {
         KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
-        KConfigGroup confGroup(&cfg, "General");
+        KConfigGroup confGroup(&cfg, u"General"_s);
         return onlyExec(confGroup.readEntry("windowManager", QStringLiteral("kwin")));
 
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {

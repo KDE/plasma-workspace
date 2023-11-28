@@ -42,6 +42,8 @@
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
+using namespace Qt::StringLiterals;
+
 // TODO:
 // interactive help?
 static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosave.js"));
@@ -172,7 +174,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     QVBoxLayout *l = new QVBoxLayout(this);
     l->addWidget(m_splitter);
 
-    KConfigGroup cg(KSharedConfig::openConfig(), "InteractiveConsole");
+    KConfigGroup cg(KSharedConfig::openConfig(), u"InteractiveConsole"_s);
     restoreGeometry(cg.readEntry<QByteArray>("Geometry", QByteArray()));
 
     m_splitter->setStretchFactor(0, 10);
@@ -191,7 +193,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
 InteractiveConsole::~InteractiveConsole()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), "InteractiveConsole");
+    KConfigGroup cg(KSharedConfig::openConfig(), u"InteractiveConsole"_s);
     cg.writeEntry("Geometry", saveGeometry());
     cg.writeEntry("SplitterState", m_splitter->saveState());
 }

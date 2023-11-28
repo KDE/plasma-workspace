@@ -16,6 +16,8 @@
 
 #include <algorithm>
 
+using namespace Qt::StringLiterals;
+
 StylesModel::StylesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -152,11 +154,11 @@ void StylesModel::load()
 
     for (const QString &file : themeFiles) {
         KConfig config(file, KConfig::SimpleConfig);
-        if (!config.hasGroup("KDE") || !config.hasGroup("Misc")) {
+        if (!config.hasGroup(u"KDE"_s) || !config.hasGroup(u"Misc"_s)) {
             continue;
         }
 
-        KConfigGroup kdeGroup = config.group("KDE");
+        KConfigGroup kdeGroup = config.group(u"KDE"_s);
 
         const QString styleName = kdeGroup.readEntry("WidgetStyle", QString());
         if (styleName.isEmpty()) {
@@ -170,14 +172,14 @@ void StylesModel::load()
 
         auto &item = *it;
 
-        KConfigGroup desktopEntryGroup = config.group("Desktop Entry");
+        KConfigGroup desktopEntryGroup = config.group(u"Desktop Entry"_s);
         if (desktopEntryGroup.readEntry("Hidden", false)) {
             // Don't list hidden styles
             styleData.remove(styleName);
             continue;
         }
 
-        KConfigGroup miscGroup = config.group("Misc");
+        KConfigGroup miscGroup = config.group(u"Misc"_s);
 
         item.display = miscGroup.readEntry("Name");
         item.description = miscGroup.readEntry("Comment");

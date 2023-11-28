@@ -20,6 +20,8 @@
 #include <KDirWatch>
 #include <KPluginFactory>
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_CLASS_WITH_JSON(KTimeZoned, "ktimezoned.json")
 
 const char LOCAL_ZONE[] = "LocalZone"; // name of local time zone
@@ -56,7 +58,7 @@ void KTimeZoned::init(bool restart)
     if (restart)
         config.reparseConfiguration();
 
-    KConfigGroup group(&config, "TimeZones");
+    KConfigGroup group(&config, u"TimeZones"_s);
     m_localZone = group.readEntry(LOCAL_ZONE);
     m_zoneinfoDir = group.readEntry(ZONEINFO_DIR);
     m_zoneTab = group.readEntry(ZONE_TAB);
@@ -76,7 +78,7 @@ void KTimeZoned::init(bool restart)
     if (!m_zoneTabWatch && findZoneTab(m_zoneTab)) {
         // cache the values so we don't look it up on next startup
         KConfig config(QStringLiteral("ktimezonedrc"));
-        KConfigGroup group(&config, "TimeZones");
+        KConfigGroup group(&config, u"TimeZones"_s);
         group.writeEntry(ZONEINFO_DIR, m_zoneinfoDir);
         group.writeEntry(ZONE_TAB, m_zoneTab);
         group.sync();
@@ -100,7 +102,7 @@ void KTimeZoned::updateLocalZone()
         qDebug() << "System timezone has been changed, new timezone is" << systemTimeZone;
 
         KConfig config(QStringLiteral("ktimezonedrc"));
-        KConfigGroup group(&config, "TimeZones");
+        KConfigGroup group(&config, u"TimeZones"_s);
         m_localZone = systemTimeZone;
         group.writeEntry(LOCAL_ZONE, m_localZone);
         group.sync();

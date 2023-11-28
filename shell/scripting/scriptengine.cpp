@@ -35,6 +35,8 @@
 #include "panel.h"
 #include "widget.h"
 
+using namespace Qt::StringLiterals;
+
 namespace WorkspaceScripting
 {
 ScriptEngine::ScriptEngine(Plasma::Corona *corona, QObject *parent)
@@ -284,7 +286,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
         return scriptPaths;
     }
 
-    KConfigGroup cg(KSharedConfig::openConfig(), "Updates");
+    KConfigGroup cg(KSharedConfig::openConfig(), u"Updates"_s);
     QStringList performed = cg.readEntry("performed", QStringList());
     const QString localXdgDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 

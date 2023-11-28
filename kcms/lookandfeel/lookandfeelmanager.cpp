@@ -29,6 +29,8 @@
 #include <X11/Xcursor/Xcursor.h>
 #endif
 
+using namespace Qt::StringLiterals;
+
 namespace
 {
 // Helper methods to read or check entries from a nested group within a config
@@ -458,21 +460,21 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
 
     if (!package.filePath("layoutdefaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("layoutdefaults"));
-        KConfigGroup group(conf, "kwinrc");
+        KConfigGroup group(conf, u"kwinrc"_s);
         if (itemsToApply.testFlag(TitlebarLayout)) {
-            group = KConfigGroup(&group, "org.kde.kdecoration2");
+            group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
             setTitlebarLayout(group.readEntry("ButtonsOnLeft", QString()), group.readEntry("ButtonsOnRight", QString()));
         }
         if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
-            group = KConfigGroup(conf, "kwinrc");
-            group = KConfigGroup(&group, "Windows");
+            group = KConfigGroup(conf, u"kwinrc"_s);
+            group = KConfigGroup(&group, u"Windows"_s);
             setBorderlessMaximized(group.readEntry("BorderlessMaximizedWindows", QString()));
         }
     }
     if (!package.filePath("defaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
-        KConfigGroup group(conf, "kdeglobals");
-        group = KConfigGroup(&group, "KDE");
+        KConfigGroup group(conf, u"kdeglobals"_s);
+        group = KConfigGroup(&group, u"KDE"_s);
         if (itemsToApply.testFlag(WidgetStyle)) {
             QString widgetStyle = group.readEntry("widgetStyle", QString());
             // Some global themes refer to breeze's widgetStyle with a lowercase b.
@@ -485,8 +487,8 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
 
         if (itemsToApply.testFlag(Colors)) {
             QString colorsFile = package.filePath("colors");
-            KConfigGroup group(conf, "kdeglobals");
-            group = KConfigGroup(&group, "General");
+            KConfigGroup group(conf, u"kdeglobals"_s);
+            group = KConfigGroup(&group, u"General"_s);
             QString colorScheme = group.readEntry("ColorScheme", QString());
 
             if (!colorsFile.isEmpty()) {
@@ -504,44 +506,44 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         }
 
         if (itemsToApply.testFlag(Icons)) {
-            group = KConfigGroup(conf, "kdeglobals");
-            group = KConfigGroup(&group, "Icons");
+            group = KConfigGroup(conf, u"kdeglobals"_s);
+            group = KConfigGroup(&group, u"Icons"_s);
             setIcons(group.readEntry("Theme", QString()));
         }
 
         if (itemsToApply.testFlag(PlasmaTheme)) {
-            group = KConfigGroup(conf, "plasmarc");
-            group = KConfigGroup(&group, "Theme");
+            group = KConfigGroup(conf, u"plasmarc"_s);
+            group = KConfigGroup(&group, u"Theme"_s);
             setPlasmaTheme(group.readEntry("name", QString()));
         }
 
         if (itemsToApply.testFlag(Cursors)) {
-            group = KConfigGroup(conf, "kcminputrc");
-            group = KConfigGroup(&group, "Mouse");
+            group = KConfigGroup(conf, u"kcminputrc"_s);
+            group = KConfigGroup(&group, u"Mouse"_s);
             setCursorTheme(group.readEntry("cursorTheme", QString()));
         }
 
         if (itemsToApply.testFlag(WindowSwitcher)) {
-            group = KConfigGroup(conf, "kwinrc");
-            group = KConfigGroup(&group, "WindowSwitcher");
+            group = KConfigGroup(conf, u"kwinrc"_s);
+            group = KConfigGroup(&group, u"WindowSwitcher"_s);
             setWindowSwitcher(group.readEntry("LayoutName", QString()));
         }
 
         if (itemsToApply.testFlag(WindowPlacement)) {
-            group = KConfigGroup(conf, "kwinrc");
-            group = KConfigGroup(&group, "Windows");
+            group = KConfigGroup(conf, u"kwinrc"_s);
+            group = KConfigGroup(&group, u"Windows"_s);
             setWindowPlacement(group.readEntry("Placement", QStringLiteral("Centered")));
         }
 
         if (itemsToApply.testFlag(ShellPackage)) {
-            group = KConfigGroup(conf, "plasmashellrc");
-            group = KConfigGroup(&group, "Shell");
+            group = KConfigGroup(conf, u"plasmashellrc"_s);
+            group = KConfigGroup(&group, u"Shell"_s);
             setShellPackage(group.readEntry("ShellPackage", QString()));
         }
 
         if (itemsToApply.testFlag(WindowDecoration)) {
-            group = KConfigGroup(conf, "kwinrc");
-            group = KConfigGroup(&group, "org.kde.kdecoration2");
+            group = KConfigGroup(conf, u"kwinrc"_s);
+            group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
 
 #ifdef HAVE_BREEZE_DECO
             setWindowDecoration(group.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)),
@@ -555,15 +557,15 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         }
 
         if (itemsToApply.testFlag(Fonts)) {
-            group = KConfigGroup(conf, "kdeglobals");
-            group = KConfigGroup(&group, "General");
+            group = KConfigGroup(conf, u"kdeglobals"_s);
+            group = KConfigGroup(&group, u"General"_s);
             setGeneralFont(group.readEntry("font", QString()));
             setFixedFont(group.readEntry("fixed", QString()));
             setSmallestReadableFont(group.readEntry("smallestReadableFont", QString()));
             setToolbarFont(group.readEntry("toolBarFont", QString()));
             setMenuFont(group.readEntry("menuFont", QString()));
-            group = KConfigGroup(conf, "kdeglobals");
-            group = KConfigGroup(&group, "WM");
+            group = KConfigGroup(conf, u"kdeglobals"_s);
+            group = KConfigGroup(&group, u"WM"_s);
             setWindowTitleFont(group.readEntry("activeFont"));
             if (m_fontsChanged) {
                 Q_EMIT fontsChanged();
@@ -572,14 +574,14 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         }
 
         if (itemsToApply.testFlag(BorderSize)) {
-            group = KConfigGroup(conf, "kwinrc");
-            group = KConfigGroup(&group, "org.kde.kdecoration2");
+            group = KConfigGroup(conf, u"kwinrc"_s);
+            group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
             setBorderSize(group.readEntry("BorderSize", QString()));
         }
 
         if (itemsToApply.testFlag(SplashScreen)) {
-            group = KConfigGroup(conf, "ksplashrc");
-            group = KConfigGroup(&group, "KSplash");
+            group = KConfigGroup(conf, u"ksplashrc"_s);
+            group = KConfigGroup(&group, u"KSplash"_s);
             QString splashScreen = (group.readEntry("Theme", QString()));
             if (!splashScreen.isEmpty()) {
                 setSplashScreen(splashScreen);
@@ -612,7 +614,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             // remove all the old package to autostart
             {
                 KSharedConfigPtr oldConf = KSharedConfig::openConfig(previousPackage.filePath("defaults"));
-                group = KConfigGroup(oldConf, QStringLiteral("Autostart"));
+                group = KConfigGroup(oldConf, u"Autostart"_s);
                 const QStringList autostartServices = group.readEntry("Services", QStringList());
 
                 if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
@@ -627,7 +629,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             }
             // Set all the stuff in the new lnf to autostart
             {
-                group = KConfigGroup(conf, QStringLiteral("Autostart"));
+                group = KConfigGroup(conf, u"Autostart"_s);
                 const QStringList autostartServices = group.readEntry("Services", QStringList());
 
                 for (const QString &serviceFile : autostartServices) {
@@ -676,7 +678,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
             const QStringList styleFileList = widgetStyleDir.entryList({QStringLiteral("*.themerc")}, QDir::Files | QDir::NoDotAndDotDot);
             for (const QString &path : styleFileList) {
                 auto widgetStyleConfig = KSharedConfig::openConfig(widgetStyleDir.absoluteFilePath(path), KConfig::SimpleConfig);
-                KConfigGroup widgetStyleKDEGroup(widgetStyleConfig, "KDE");
+                KConfigGroup widgetStyleKDEGroup(widgetStyleConfig, u"KDE"_s);
                 if (widgetStyleKDEGroup.exists() && widgetStyleKDEGroup.hasKey("WidgetStyle")) {
                     if (widgetStyleKDEGroup.readEntry("WidgetStyle", "") == widgetStyle) {
                         QFile(widgetStyleDir.absoluteFilePath(path)).remove();

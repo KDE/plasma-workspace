@@ -25,6 +25,8 @@
 
 #include <algorithm>
 
+using namespace Qt::StringLiterals;
+
 static const QString s_plasmaWorkspaceNotifyRcName = QStringLiteral("plasma_workspace");
 static const QRegularExpression s_eventGroupRegExp(QStringLiteral("^Event/([^/]*)$"));
 
@@ -365,8 +367,8 @@ void SourcesModel::load()
         desktopEntries.append(service->desktopEntryName());
     }
 
-    KSharedConfig::Ptr plasmanotifyrc = KSharedConfig::openConfig(QStringLiteral("plasmanotifyrc"));
-    KConfigGroup applicationsGroup = plasmanotifyrc->group("Applications");
+    KSharedConfig::Ptr plasmanotifyrc = KSharedConfig::openConfig(u"plasmanotifyrc"_s);
+    KConfigGroup applicationsGroup = plasmanotifyrc->group(u"Applications"_s);
     const QStringList seenApps = applicationsGroup.groupList();
     for (const QString &app : seenApps) {
         if (desktopEntries.contains(app)) {

@@ -16,6 +16,8 @@
 #include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
 
+using namespace Qt::StringLiterals;
+
 class X11WindowScreenRelativePositioner;
 class ViewPrivate;
 
@@ -51,8 +53,8 @@ public:
 
     bool helpEnabled()
     {
-        const static auto metaData = KPluginMetaData(QStringLiteral("kf6/krunner/helprunner"));
-        const KConfigGroup grp = KSharedConfig::openConfig()->group("Plugins");
+        const static auto metaData = KPluginMetaData(u"kf6/krunner/helprunner"_s);
+        const KConfigGroup grp = KSharedConfig::openConfig()->group(u"Plugins"_s);
         return metaData.isEnabled(grp);
     }
     HistoryBehavior historyBehavior()
@@ -80,8 +82,8 @@ public:
     Q_SIGNAL void favoriteIdsChanged();
     void assignFavoriteIds()
     {
-        const KConfigGroup grp = m_config.parent().group("Plugins").group("Favorites");
-        m_favoriteIds = grp.readEntry("plugins", QStringList(QStringLiteral("krunner_services")));
+        const KConfigGroup grp = m_config.parent().group(u"Plugins"_s).group(u"Favorites"_s);
+        m_favoriteIds = grp.readEntry("plugins", QStringList(u"krunner_services"_s));
         Q_EMIT favoriteIdsChanged();
     }
 

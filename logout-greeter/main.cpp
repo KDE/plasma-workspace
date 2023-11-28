@@ -20,6 +20,8 @@
 
 #include <sessionmanagement.h>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char *argv[])
 {
     qunsetenv("SESSION_MANAGER");
@@ -37,7 +39,7 @@ int main(int argc, char *argv[])
     }
 
     bool windowed = false;
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), u"KDE"_s);
     QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     {
         QCommandLineParser parser;
