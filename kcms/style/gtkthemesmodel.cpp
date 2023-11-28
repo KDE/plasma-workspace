@@ -58,14 +58,15 @@ QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const auto &item = m_themes.constBegin() + index.row();
+    auto it = m_themes.constBegin();
+    std::advance(it, index.row());
 
     switch (role) {
     case Qt::DisplayRole:
     case Roles::ThemeNameRole:
-        return item.key();
+        return it.key();
     case Roles::ThemePathRole:
-        return item.value();
+        return it.value();
     default:
         return QVariant();
     }
