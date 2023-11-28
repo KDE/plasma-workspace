@@ -792,7 +792,8 @@ WaylandTasksModel::~WaylandTasksModel() = default;
 
 QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= d->windows.size()) {
+    // Note: when index is valid, its row >= 0, so casting to unsigned is safe
+    if (!index.isValid() || static_cast<size_t>(index.row()) >= d->windows.size()) {
         return QVariant();
     }
 

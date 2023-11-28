@@ -21,12 +21,12 @@ User::User(QObject *parent)
 {
 }
 
-int User::uid() const
+qulonglong User::uid() const
 {
     return mUid;
 }
 
-void User::setUid(int value)
+void User::setUid(qulonglong value)
 {
     if (mUid == value) {
         return;

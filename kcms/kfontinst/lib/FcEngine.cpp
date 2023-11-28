@@ -577,7 +577,8 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
         // the RGB32 format requires data format 0xffRRGGBB, ensure that this fourth byte really is 0xff
         // (i.e. when using NVidia proprietary driver)
         auto lData = reinterpret_cast<quint32 *>(xImage->data);
-        for (size_t iIter = 0; iIter < (xImage->bytes_per_line / 4) * xImage->height; iIter++) {
+        const size_t count = static_cast<size_t>(xImage->bytes_per_line / 4) * static_cast<size_t>(xImage->height);
+        for (size_t iIter = 0; iIter < count; iIter++) {
             lData[iIter] |= 0xff000000;
         }
     }

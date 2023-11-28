@@ -54,7 +54,7 @@ class User : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(int uid READ uid WRITE setUid NOTIFY uidChanged)
+    Q_PROPERTY(qulonglong uid READ uid WRITE setUid NOTIFY uidChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 
     Q_PROPERTY(QString realName READ realName WRITE setRealName NOTIFY realNameChanged)
@@ -80,8 +80,8 @@ class User : public QObject
 public:
     explicit User(QObject *parent = nullptr);
 
-    int uid() const;
-    void setUid(int value);
+    qulonglong uid() const;
+    void setUid(qulonglong value);
 
     QString name() const;
     QString realName() const;
@@ -129,7 +129,7 @@ Q_SIGNALS:
     void passwordSuccessfullyChanged();
 
 private:
-    int mUid = 0;
+    qulonglong mUid = 0;
     int mOriginalUid = 0;
     QString mName = QString();
     QString mOriginalName = QString();
