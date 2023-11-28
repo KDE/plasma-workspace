@@ -72,14 +72,6 @@ public:
     Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
 
     /**
-     * @brief Emits the "onPressed(mouse)" signal of a MouseArea
-     *
-     * This is needed because calling mouseArea.pressed from QML
-     * only sees the "pressed" property, not the signal
-     */
-    Q_INVOKABLE void emitPressed(QQuickItem *mouseArea, QObject /*QQuickMouseEvent*/ *mouseEvent);
-
-    /**
      * Needed to preserve keyboard navigation
      */
     Q_INVOKABLE void stackItemBefore(QQuickItem *newItem, QQuickItem *beforeItem);

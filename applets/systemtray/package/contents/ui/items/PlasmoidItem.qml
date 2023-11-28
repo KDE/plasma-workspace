@@ -57,8 +57,7 @@ AbstractItem {
             const appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
             const mouseArea = findMouseArea(appletItem)
             if (mouseArea) {
-                // HACK QML only sees the "mouseArea.pressed" property, not the signal.
-                Plasmoid.emitPressed(mouseArea, mouse);
+                mouseArea.onPressed(mouse)
             }
         }
     }
