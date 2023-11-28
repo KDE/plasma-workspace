@@ -144,18 +144,22 @@ QString PlasmaAppletItem::unsupportedMessage() const
 
     if (version.isNull()) {
         // TODO: We have to hardcode 6 for now as PROJECT_VERSION_MAJOR is still 5, change it back to PROJECT_VERSION_MAJOR with 6.0
-        return i18n("This Widget was written for an unknown older version of Plasma and is not compatible with Plasma %1. Please contact the widget's author for an updated version.",
-                    6 /*PROJECT_VERSION_MAJOR*/);
+        return i18n(
+            "This widget was written for an unknown older version of Plasma and is not compatible with Plasma %1. Please contact the author for an updated "
+            "version.",
+            6 /*PROJECT_VERSION_MAJOR*/);
     } else if (version.majorVersion() < 6 /*PROJECT_VERSION_MAJOR*/) {
-        return i18n("This Widget was written for Plasma %1 and is not compatible with Plasma %2. Please contact the widget's author for an updated version.",
+        return i18n("This widget was written for Plasma %1 and is not compatible with Plasma %2. Please contact the author for an updated version.",
                     version.majorVersion(),
                     6 /*PROJECT_VERSION_MAJOR*/);
     } else if (version.majorVersion() > 6 /*PROJECT_VERSION_MAJOR*/) {
-        return i18n("This Widget was written for Plasma %1 and is not compatible with Plasma %2. Please update Plasma in order to use the widget.",
+        return i18n("This widget was written for Plasma %1 and is not compatible with Plasma %2. Please update Plasma in order to use the widget.",
                     version.majorVersion(),
                     6 /*PROJECT_VERSION_MAJOR*/);
     } else if (version.minorVersion() > PROJECT_VERSION_MINOR) {
-        return i18n("This Widget was written for Plasma %1 and is not compatible with the latest version of Plasma. Please update Plasma in order to use the widget.", versionString);
+        return i18n(
+            "This widget was written for Plasma %1 and is not compatible with the latest version of Plasma. Please update Plasma in order to use the widget.",
+            versionString);
     }
 
     return QString();
