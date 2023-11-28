@@ -98,6 +98,7 @@ void PowerManagementJob::start()
         msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
         m_sleepInhibitionCookie = reply.isValid() ? reply.value() : -1;
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("stopSuppressingSleep")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
@@ -106,6 +107,7 @@ void PowerManagementJob::start()
                                                           QStringLiteral("UnInhibit"));
         msg << m_sleepInhibitionCookie;
         QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
@@ -115,6 +117,7 @@ void PowerManagementJob::start()
         msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
         m_lockInhibitionCookie = reply.isValid() ? reply.value() : -1;
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("stopSuppressingScreenPowerManagement")) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
@@ -123,6 +126,7 @@ void PowerManagementJob::start()
                                                           QStringLiteral("UnInhibit"));
         msg << m_lockInhibitionCookie;
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("setBrightness")) {
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
