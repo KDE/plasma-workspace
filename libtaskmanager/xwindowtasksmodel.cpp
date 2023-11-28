@@ -90,7 +90,7 @@ public:
     void dataChanged(WId window, const QList<int> &roles);
 
     KWindowInfo *windowInfo(WId window);
-    AppData appData(WId window);
+    const AppData &appData(WId window);
     QString appMenuServiceName(WId window);
     QString appMenuObjectPath(WId window);
 
@@ -448,33 +448,25 @@ KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)
     return info;
 }
 
-AppData XWindowTasksModel::Private::appData(WId window)
+const AppData &XWindowTasksModel::Private::appData(WId window)
 {
-    const auto &it = appDataCache.constFind(window);
-
-    if (it != appDataCache.constEnd()) {
+    static_assert(!std::is_trivially_copy_assignable_v<AppData>);
+    if (auto it = appDataCache.constFind(window); it != appDataCache.constEnd()) {
         return *it;
     }
 
-    const AppData &data = appDataFromUrl(windowUrl(window));
+    AppData data = appDataFromUrl(windowUrl(window));
 
     // If we weren't able to derive a launcher URL from the window meta data,
     // fall back to WM_CLASS Class string as app id. This helps with apps we
     // can't map to an URL due to existing outside the regular system
     // environment, e.g. wine clients.
     if (data.id.isEmpty() && data.url.isEmpty()) {
-        AppData dataCopy = data;
-
-        dataCopy.id = windowInfo(window)->windowClassClass();
-
-        appDataCache.insert(window, dataCopy);
-
-        return dataCopy;
+        data.id = windowInfo(window)->windowClassClass();
+        return *appDataCache.emplace(window, std::move(data));
     }
 
-    appDataCache.insert(window, data);
-
-    return data;
+    return *appDataCache.emplace(window, std::move(data));
 }
 
 QString XWindowTasksModel::Private::appMenuServiceName(WId window)

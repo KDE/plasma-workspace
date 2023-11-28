@@ -381,7 +381,7 @@ public:
     auto findWindow(PlasmaWindow *window) const;
     void addWindow(PlasmaWindow *window);
 
-    AppData appData(PlasmaWindow *window);
+    const AppData &appData(PlasmaWindow *window);
 
     QIcon icon(PlasmaWindow *window);
 
@@ -724,19 +724,14 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     });
 }
 
-AppData WaylandTasksModel::Private::appData(PlasmaWindow *window)
+const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
 {
-    const auto &it = appDataCache.constFind(window);
-
-    if (it != appDataCache.constEnd()) {
+    static_assert(!std::is_trivially_copy_assignable_v<AppData>);
+    if (auto it = appDataCache.constFind(window); it != appDataCache.constEnd()) {
         return *it;
     }
 
-    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, rulesConfig, window->resourceName));
-
-    appDataCache.insert(window, data);
-
-    return data;
+    return *appDataCache.emplace(window, appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, rulesConfig, window->resourceName)));
 }
 
 QIcon WaylandTasksModel::Private::icon(PlasmaWindow *window)
