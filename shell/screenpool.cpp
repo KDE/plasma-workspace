@@ -296,6 +296,7 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
     }
 
     if (m_orderChangedPendingSignal || newAvailableScreens != m_availableScreens) {
+        qCDebug(SCREENPOOL) << "screenOrderChanged, old order:" << m_availableScreens << "new order:" << newAvailableScreens;
         m_availableScreens = newAvailableScreens;
         Q_EMIT screenOrderChanged(m_availableScreens);
     }
