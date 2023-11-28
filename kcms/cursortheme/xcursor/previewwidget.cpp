@@ -264,6 +264,8 @@ void PreviewWidget::paint(QPainter *painter)
     if (needLayout)
         layoutItems();
 
+    painter->setRenderHint(QPainter::SmoothPixmapTransform, true);
+
     // for cursor themes we must ignore the native scaling,
     // as they will be rendered by X11/KWin, ignoring whatever Qt
     // scaling
