@@ -504,7 +504,7 @@ void CJobRunner::dbusStatus(int pid, int status)
                 setPage(PAGE_ERROR, errorString(status));
                 m_it = m_end;
             } else {
-                ItemList::ConstIterator lastPartOfCurrent(m_it), next(m_it == m_end ? m_end : m_it + 1);
+                ItemList::ConstIterator next(m_it == m_end ? m_end : m_it + 1);
 
                 // If we're installing a Type1 font, and its already installed - then we need to skip past AFM/PFM
                 if (next != m_end && Item::TYPE1_FONT == (*m_it).type && (*next).fileName == currentName

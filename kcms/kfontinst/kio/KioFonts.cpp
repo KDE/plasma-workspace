@@ -170,12 +170,10 @@ KIO::WorkerResult CKioFonts::listDir(const QUrl &url)
     QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder folder = Misc::root() ? FOLDER_SYS : getFolder(pathList);
     KIO::UDSEntry entry;
-    int size = 0;
 
     switch (folder) {
     case FOLDER_ROOT:
         qCDebug(KCM_KFONTINST_KIO) << "List root folder";
-        size = 2;
         totalSize(2);
         createUDSEntry(entry, FOLDER_SYS);
         listEntry(entry);
@@ -184,7 +182,7 @@ KIO::WorkerResult CKioFonts::listDir(const QUrl &url)
         break;
     case FOLDER_SYS:
     case FOLDER_USER:
-        size = listFolder(entry, folder);
+        listFolder(entry, folder);
         break;
     default:
         break;
@@ -502,7 +500,7 @@ KIO::WorkerResult CKioFonts::special(const QByteArray &a)
     }
 }
 
-int CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
+void CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
 {
     qCDebug(KCM_KFONTINST_KIO) << folder;
 
@@ -523,7 +521,6 @@ int CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
     }
 
     totalSize(styleCount);
-    return styleCount;
 }
 
 QString CKioFonts::getUserName(uid_t uid)

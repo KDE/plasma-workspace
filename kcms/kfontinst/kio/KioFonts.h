@@ -40,7 +40,7 @@ public:
     KIO::WorkerResult special(const QByteArray &a) override;
 
 private:
-    int listFolder(KIO::UDSEntry &entry, EFolder folder);
+    void listFolder(KIO::UDSEntry &entry, EFolder folder);
     QString getUserName(uid_t uid);
     QString getGroupName(gid_t gid);
     bool createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder folder);
