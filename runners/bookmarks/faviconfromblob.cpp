@@ -99,7 +99,7 @@ void FaviconFromBlob::cleanCacheDirectory()
 QIcon FaviconFromBlob::iconFor(const QString &url)
 {
     // qDebug() << "got url: " << url;
-    QString fileChecksum = QString::number(qChecksum(url.toLatin1(), url.toLatin1().size()));
+    QString fileChecksum = QString::number(qChecksum(url.toLatin1()));
     QFile iconFile(m_profileCacheDirectory + QDir::separator() + fileChecksum + QStringLiteral("_favicon"));
     if (iconFile.size() == 0)
         iconFile.remove();
