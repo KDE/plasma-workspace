@@ -27,17 +27,18 @@ endfunction()
 
 add_subdirectory(inputsynth)
 
-add_test(
-    NAME analogclocktest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/analogclocktest.py
-)
-set_tests_properties(analogclocktest PROPERTIES TIMEOUT 120)
+# Basic smoke tests of plasmoids
 
-add_test(
-    NAME appmenutest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/appmenutest.py
-)
-set_tests_properties(appmenutest PROPERTIES TIMEOUT 120)
+plasmoid_test(org.kde.plasma.analogclock FIND_NAMES "Analog Clock")
+plasmoid_test(org.kde.plasma.appmenu FIND_NAMES "Global Menu")
+plasmoid_test(org.kde.plasma.icon FIND_NAMES "Icon")
+plasmoid_test(org.kde.plasma.calendar FIND_NAMES "Today" "Days" "Months" "Years")
+plasmoid_test(org.kde.plasma.devicenotifier FIND_NAMES "No removable devices attached")
+plasmoid_test(org.kde.plasma.lock_logout FIND_NAMES "Lock" "Shutdown…")
+plasmoid_test(org.kde.plasma.manage-inputmethod FIND_NAMES "Input Method")
+plasmoid_test(org.kde.plasma.notifications FIND_NAMES "Do not disturb")
+
+# More elaborate tests
 
 add_test(
     NAME batterymonitortest_withdisplaydevice
@@ -54,47 +55,11 @@ add_test(
 set_tests_properties(batterymonitortest_withoutdisplaydevice PROPERTIES TIMEOUT 120 ENVIRONMENT "ENABLE_DISPLAY_DEVICE=0;POWERDEVIL_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/org_kde_powerdevil")
 
 add_test(
-    NAME calendartest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/calendartest.py
-)
-set_tests_properties(calendartest PROPERTIES TIMEOUT 120)
-
-add_test(
     NAME clipboardtest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py --failfast
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300)
-
-add_test(
-    NAME devicenotifiertest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/devicenotifiertest.py
-)
-set_tests_properties(devicenotifiertest PROPERTIES TIMEOUT 120)
-
-add_test(
-    NAME icontest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/icontest.py
-)
-set_tests_properties(icontest PROPERTIES TIMEOUT 120)
-
-add_test(
-    NAME lock_logouttest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/lock_logouttest.py
-)
-set_tests_properties(lock_logouttest PROPERTIES TIMEOUT 120)
-
-add_test(
-    NAME manage-inputmethodtest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/manage-inputmethodtest.py
-)
-set_tests_properties(manage-inputmethodtest PROPERTIES TIMEOUT 120)
-
-add_test(
-    NAME notificationstest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
-)
-set_tests_properties(notificationstest PROPERTIES TIMEOUT 120)
 
 add_test(
     NAME digitalclocktest
@@ -136,6 +101,7 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/cameraindicatortest.py
 )
 set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120)
+
 
 # KCM autotests
 add_test(
