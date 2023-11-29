@@ -108,6 +108,7 @@ Description[cs]=Změna konfigurace systémových písem vyžaduje oprávnění.
 Description[da]=Ændring af systemomfattende konfiguration af skrifttyper kræver privilegier.
 Description[de]=Zum Ändern der systemweiten Schrift-Einstellungen sind besondere Berechtigungen nötig.
 Description[en_GB]=Modifying the system-wide font configuration requires privileges.
+Description[eo]=Modifado de la sistem-ampleksa tipar-agordo postulas privilegiojn.
 Description[es]=La modificación de la configuración de los tipos de letra del sistema necesita privilegios.
 Description[et]=Süsteemsete fontide seadistuste muutmine nõuab vastavaid õigusi.
 Description[eu]=Sistema osorako letra-tipoen konfigurazioa aldatzeko pribilegioak behar dira.

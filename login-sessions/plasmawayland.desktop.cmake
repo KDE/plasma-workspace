@@ -65,6 +65,7 @@ Comment[da]=Plasma fra KDE
 Comment[de]=Plasma von KDE
 Comment[el]=Plasma από το KDE
 Comment[en_GB]=Plasma by KDE
+Comment[eo]=Plasma de KDE
 Comment[es]=Plasma, por KDE
 Comment[et]=KDE Plasma
 Comment[eu]=KDEren Plasma
