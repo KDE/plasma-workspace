@@ -58,11 +58,6 @@ PlasmoidItem {
     readonly property bool hasBatteries: batteries.count > 0 && pmSource.data["Battery"]["Has Cumulative"]
     readonly property bool kcmAuthorized: KAuthorized.authorizeControlModule("powerdevilprofilesconfig")
     readonly property bool kcmEnergyInformationAuthorized: KAuthorized.authorizeControlModule("kcm_energyinfo")
-    readonly property var profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
-    readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
-    readonly property bool isSomehowInPowerSaveMode: actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
-    readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && activeProfileHolds.length > 0
-    readonly property bool isHeldOnPowerSaveMode: isSomehowInPowerSaveMode && activeProfileHolds.length > 0
     readonly property bool isPluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
     readonly property bool isSomehowFullyCharged: (pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
                                                    // When we are using a charge threshold, the kernel
@@ -78,6 +73,14 @@ PlasmoidItem {
                                                    // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
                                                    && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged"))
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Smoothed Remaining msec"])
+
+    readonly property var profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
+    property bool isManuallyInPerformanceMode: false // to be set on power profile requested through the applet
+    property bool isManuallyInPowerSaveMode: false // to be set on power profile requested through the applet
+    readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
+    readonly property bool isSomehowInPowerSaveMode: actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
+    readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && activeProfileHolds.length > 0
+    readonly property bool isHeldOnPowerSaveMode: isSomehowInPowerSaveMode && activeProfileHolds.length > 0
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
         || Plasmoid.location === PlasmaCore.Types.RightEdge
@@ -124,7 +127,7 @@ PlasmoidItem {
             return PlasmaCore.Types.ActiveStatus;
         }
 
-        if (isSomehowInPerformanceMode || isSomehowInPowerSaveMode) {
+        if (isManuallyInPerformanceMode || isManuallyInPowerSaveMode || isHeldOnPerformanceMode || isHeldOnPowerSaveMode) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -292,7 +295,10 @@ PlasmoidItem {
                 if (!job.result) {
                     powerProfileError.text = i18n("Failed to activate %1 mode", profile);
                     powerProfileError.sendEvent();
+                    return;
                 }
+                batterymonitor.isManuallyInPerformanceMode = profile == "performance";
+                batterymonitor.isManuallyInPowerSaveMode = profile == "power-saver";
             });
         }
     }
