@@ -194,31 +194,9 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
 
 void ContainmentConfigView::applyWallpaper()
 {
-    auto iface = new QDBusInterface("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", QDBusConnection::sessionBus(), this);
-    if (!iface->isValid()) {
-        qWarning() << qPrintable(QDBusConnection::sessionBus().lastError().message());
-        QCoreApplication::instance()->quit();
-    }
-
-    QVariantMap params;
-    for (const auto &key : m_currentWallpaperConfig->keys()) {
-        if (key.endsWith("Default")) {
-            continue;
-        }
-        if (!m_currentWallpaperConfig->value(key).isNull()) {
-            params.insert(key, m_currentWallpaperConfig->value(key));
-        }
-    }
-
-    if (m_currentWallpaperPlugin == QLatin1String("org.kde.image")) {
-        params.insert("Image", m_currentWallpaperConfig->value("Image"));
-        params.remove("PreviewImage");
-    }
-
-    const QDBusReply<void> response = iface->call(QStringLiteral("setWallpaper"), m_currentWallpaperPlugin, params, uint(m_containment->screen()));
-    if (!response.isValid()) {
-        qWarning() << "failed to set wallpaper:" << response.error();
-    }
+    static_cast<KConfigPropertyMap *>(m_currentWallpaperConfig)->writeConfig();
+    m_containment->setWallpaperPlugin(m_currentWallpaperPlugin);
+    syncWallpaperObjects();
 }
 
 void ContainmentConfigView::onWallpaperChanged(uint /*screenIdx*/)
