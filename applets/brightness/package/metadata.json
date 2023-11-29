@@ -124,7 +124,8 @@
                 "Name[tr]": "Natalie Clarius",
                 "Name[uk]": "Natalie Clarius",
                 "Name[x-test]": "xxNatalie Clariusxx",
-                "Name[zh_CN]": "Natalie Clarius"
+                "Name[zh_CN]": "Natalie Clarius",
+                "Name[zh_TW]": "Natalie Clarius"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Brightness%20Control",
@@ -147,6 +148,7 @@
         "Description[uk]": "Керування яскравістю і кольором на вашому екрані та у підсвічування клавіатури",
         "Description[x-test]": "xxControl brightness and color of your screens and keyboardsxx",
         "Description[zh_CN]": "控制屏幕和键盘的亮度和颜色",
+        "Description[zh_TW]": "控制您的螢幕與鍵盤的亮度及顏色",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"
@@ -171,7 +173,8 @@
         "Name[tr]": "Parlaklık ve Renk",
         "Name[uk]": "Яскравість і колір",
         "Name[x-test]": "xxBrightness and Colorxx",
-        "Name[zh_CN]": "亮度和颜色"
+        "Name[zh_CN]": "亮度和颜色",
+        "Name[zh_TW]": "亮度與顏色"
     },
     "Keywords": "Power Management;Brightness;Color;Light;Screen;Display;Monitor;Keyboard;Night;Temperature",
     "X-Plasma-API-Minimum-Version": "6.0",
