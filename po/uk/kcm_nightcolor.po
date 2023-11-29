@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-14 07:48+0200\n"
+"PO-Revision-Date: 2023-11-29 09:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -147,11 +147,10 @@ msgid "Night light temperature:"
 msgstr "Температура нічних кольорів:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Визначити розташування"
+msgstr "Поточне розташування:"
 
 #: ui/main.qml:310
 #, kde-format
