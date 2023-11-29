@@ -25,8 +25,10 @@ MouseArea {
     property bool hasBatteries: false
     required property bool isSomehowInPerformanceMode
     required property bool isSetToPerformanceMode
+    required property bool isManuallyInPerformanceMode
     required property bool isSomehowInPowerSaveMode
     required property bool isSetToPowerSaveMode
+    required property bool isManuallyInPowerSaveMode
     required property bool isManuallyInhibited
     required property bool isSomehowFullyCharged
     required property bool isDischarging
@@ -42,9 +44,9 @@ MouseArea {
 
     property string powerModeIcon: root.isManuallyInhibited
             ? "speedometer" 
-            : root.isSomehowInPerformanceMode 
+            : root.isSomehowInPerformanceMode
             ? "battery-profile-performance-symbolic" 
-            : root.isSomehowInPowerSaveMode 
+            : root.isSomehowInPowerSaveMode
             ? "battery-profile-powersave-symbolic" 
             : Plasmoid.icon
 
@@ -84,7 +86,7 @@ MouseArea {
 
                     anchors.fill: parent
 
-                    visible: !root.isDischarging && (root.isManuallyInhibited || root.isSomehowInPerformanceMode || root.isSomehowInPowerSaveMode)
+                    visible: !root.isDischarging && (root.isManuallyInhibited || root.isManuallyInPerformanceMode || root.isHeldOnPerformanceMode || root.isManuallyInPowerSaveMode || root.isHeldOnPowerSaveMode)
                     source: root.powerModeIcon
                     active: root.containsMouse
                 }

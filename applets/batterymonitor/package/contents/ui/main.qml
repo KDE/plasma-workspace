@@ -312,8 +312,10 @@ PlasmoidItem {
         batteries: batterymonitor.batteries
         isSomehowInPerformanceMode: batterymonitor.isSomehowInPerformanceMode
         isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || batterymonitor.isManuallyInPerformanceMode
+        isManuallyInPerformanceMode: batterymonitor.isManuallyInPerformanceMode
         isSomehowInPowerSaveMode: batterymonitor.isSomehowInPowerSaveMode
         isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || batterymonitor.isManuallyInPowerSaveMode
+        isManuallyInPowerSaveMode: batterymonitor.isManuallyInPowerSaveMode
         isManuallyInhibited: batterymonitor.powermanagementDisabled
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
         isDischarging: batterymonitor.isDischarging
