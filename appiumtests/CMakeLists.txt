@@ -16,6 +16,15 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
+function(plasmoid_test ARG_PLASMOID)
+    cmake_parse_arguments(PARSE_ARGV 1 ARG "" "" "FIND_NAMES")
+    add_test(
+        NAME "test_${ARG_PLASMOID}"
+        COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/plasmoidtest.py --plasmoid "${ARG_PLASMOID}" --find-names "$<JOIN:${ARG_FIND_NAMES}, >"
+    )
+    set_tests_properties("test_${ARG_PLASMOID}" PROPERTIES TIMEOUT 120)
+endfunction()
+
 add_subdirectory(inputsynth)
 
 add_test(
