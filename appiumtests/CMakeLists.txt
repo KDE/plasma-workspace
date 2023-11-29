@@ -38,6 +38,14 @@ plasmoid_test(org.kde.plasma.lock_logout FIND_NAMES "Lock" "Shutdown…")
 plasmoid_test(org.kde.plasma.manage-inputmethod FIND_NAMES "Input Method")
 plasmoid_test(org.kde.plasma.notifications FIND_NAMES "Do not disturb")
 
+plasmoid_test(org.kde.plasma.systemmonitor FIND_NAMES "System Monitor Sensor")
+plasmoid_test(org.kde.plasma.systemmonitor.coreusage FIND_NAMES "Individual Core Usage")
+plasmoid_test(org.kde.plasma.systemmonitor.cpu FIND_NAMES "Total CPU Use")
+plasmoid_test(org.kde.plasma.systemmonitor.diskactivity FIND_NAMES "Hard Disk Activity")
+plasmoid_test(org.kde.plasma.systemmonitor.diskusage FIND_NAMES "Disk Usage")
+plasmoid_test(org.kde.plasma.systemmonitor.memory FIND_NAMES "Memory Usage")
+plasmoid_test(org.kde.plasma.systemmonitor.net FIND_NAMES "Network speed")
+
 # More elaborate tests
 
 add_test(
