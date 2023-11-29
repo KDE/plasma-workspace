@@ -142,6 +142,25 @@ void AppMenuApplet::onMenuAboutToHide()
     setCurrentIndex(-1);
 }
 
+Qt::Edges edgeFromLocation(Plasma::Types::Location location)
+{
+    switch (location) {
+    case Plasma::Types::TopEdge:
+        return Qt::TopEdge;
+    case Plasma::Types::BottomEdge:
+        return Qt::BottomEdge;
+    case Plasma::Types::LeftEdge:
+        return Qt::LeftEdge;
+    case Plasma::Types::RightEdge:
+        return Qt::RightEdge;
+    case Plasma::Types::Floating:
+    case Plasma::Types::Desktop:
+    case Plasma::Types::FullScreen:
+        break;
+    }
+    return Qt::Edges();
+}
+
 void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 {
     if (m_currentIndex == idx) {
@@ -174,8 +193,11 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         const auto &geo = ctx->window()->screen()->availableVirtualGeometry();
 
         QPoint pos = ctx->window()->mapToGlobal(ctx->mapToScene(QPointF()).toPoint());
+
+        const Qt::Edges edges = edgeFromLocation(location());
+        actionMenu->setProperty("_breeze_menu_seamless_edges", QVariant::fromValue(edges));
+
         if (location() == Plasma::Types::TopEdge) {
-            actionMenu->setProperty("_breeze_menu_is_top", true);
             pos.setY(pos.y() + ctx->height());
         }
 
