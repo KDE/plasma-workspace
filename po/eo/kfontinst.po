@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2023-01-03 20:30+0100\n"
+"PO-Revision-Date: 2023-04-16 12:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "Simbolo/alia"
 #: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Filtri per %1…"
 
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "Tiparo"
 #: kcmfontinst/FontList.cpp:556
 #, kde-format
 msgid "Status"
-msgstr ""
+msgstr "Statuso"
 
 #: kcmfontinst/FontList.cpp:570
 #, kde-format
@@ -571,12 +571,12 @@ msgstr "Ĝisdatiganta la tiparan agordon. Bonvolu atendi…"
 #: kcmfontinst/JobRunner.cpp:451
 #, kde-format
 msgid "Unable to start backend."
-msgstr ""
+msgstr "Ne eblas komenci backend."
 
 #: kcmfontinst/JobRunner.cpp:460
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr ""
+msgstr "Backend mortis, sed estis rekomencita. Bonvolu reprovi."
 
 #: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
@@ -591,7 +591,7 @@ msgstr "Fiaskis elŝuti <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
+msgstr "Sistema backend mortis. Bonvolu provi denove.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:701
 #, kde-format
@@ -622,7 +622,7 @@ msgstr "Ne eblis forigi ĉiujn dosierojn kiuj rilatas al <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr ""
+msgstr "Malsukcesis lanĉi la sisteman demonon.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, kde-format
@@ -637,7 +637,7 @@ msgstr "<i>%1</i> ne ekzistas."
 #: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
-msgstr ""
+msgstr "Permeso malakceptita.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:719
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "Aŭtentigo malsukcesis.<br><i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:723
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
-msgstr ""
+msgstr "Neatendita eraro dum prilaborado: <i>%1</i>"
 
 #: kcmfontinst/KCmFontInst.cpp:169
 #, kde-format
@@ -717,7 +717,7 @@ msgstr "Instali el Dosiero…"
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "Instali tiparojn de loka dosiero"
 
 #: kcmfontinst/KCmFontInst.cpp:252
 #, kde-format
@@ -727,7 +727,7 @@ msgstr "Ricevi Novajn Tiparojn…"
 #: kcmfontinst/KCmFontInst.cpp:253
 #, kde-format
 msgid "Download new fonts"
-msgstr ""
+msgstr "Elŝuti novajn tiparojn"
 
 #: kcmfontinst/KCmFontInst.cpp:255
 #, kde-format
@@ -949,7 +949,7 @@ msgid ""
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table><tr><tdalign=\"right\">Ebligitaj:</td><td>%1</td></tr><tr><td align="
+"<table><tr><td align=\"right\">Ebligitaj:</td><td>%1</td></tr><tr><td align="
 "\"right\">Malebligitaj:</td><td>%2</td></tr><tr><td align=\"right\">Parte "
 "ebligitaj:</td><td>%3</td></tr><tr><td align=\"right\">Totalo:</td><td>%4</"
 "td></tr></table>"
@@ -1154,7 +1154,7 @@ msgstr "48pt"
 #: kio/KioFonts.cpp:208
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr ""
+msgstr "Povas nur instali tiparojn aŭ \"%1\" aŭ \"%2\"."
 
 #: kio/KioFonts.cpp:211
 #, kde-format
@@ -1193,7 +1193,7 @@ msgstr "Elektu \"%1\" aŭ \"%2\"."
 #: kio/KioFonts.cpp:505
 #, kde-format
 msgid "No special methods supported."
-msgstr ""
+msgstr "Neniuj specialaj metodoj subtenataj."
 
 #: kio/KioFonts.cpp:579
 #, kde-format
@@ -1208,7 +1208,7 @@ msgstr "Malsukcesis lanĉi la tiparan presilon."
 #: kio/KioFonts.cpp:711
 #, kde-format
 msgid "Backend died"
-msgstr ""
+msgstr "Backend mortis"
 
 #: kio/KioFonts.cpp:714
 #, kde-format
@@ -1628,7 +1628,7 @@ msgstr "Entajpu novan ĉenon:"
 #: viewpart/kfontviewpart.rc:4
 #, kde-format
 msgid "&Main Toolbar"
-msgstr "Ĉefa ilobreto"
+msgstr "Ĉe&fa ilobreto"
 
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format

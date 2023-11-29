@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2023-03-01 15:30+0100\n"
+"PO-Revision-Date: 2023-05-25 20:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
@@ -147,8 +147,7 @@ msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"Kelkaj ŝanĝoj kiel glatigo kaj DPI influos nur poste lanĉatajn programojn.</"
-"p>"
+"Kelkaj ŝanĝoj kiel glatigo kaj DPI influos nur poste lanĉatajn programojn."
 
 #: package/contents/ui/main.qml:51
 #, kde-format
@@ -156,6 +155,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Tre grandaj tiparoj povas produkti strangajn rezultojn. Anstataŭ uzi tre "
+"grandan tiparon, konsideru ĝustigi la ĉiean ekranskalon."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -163,6 +164,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"Decimalaj tiparaj grandecoj povas kaŭzi problemojn pri teksta enpaĝigo en "
+"iuj aplikoj. Konsideru uzi nur entjerajn tipargrandojn."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -170,6 +173,8 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"La rekomendita maniero por skali la uzantinterfacon estas uzi la ĉiean "
+"ekranan skalan funkcion."
 
 #: package/contents/ui/main.qml:106
 #, kde-format
@@ -224,7 +229,7 @@ msgstr "Menuo:"
 #: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "Elekti tiparon de la menuo"
 
 #: package/contents/ui/main.qml:178
 #, kde-format
@@ -256,16 +261,21 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Pikseloj sur ekranoj estas ĝenerale vicigitaj en krado. Tial formoj de "
+"tiparoj kiuj ne kongruas kun ĉi tiu krado aspektos blokitaj kaj malĝustaj "
+"krom se <emphasis>kontraŭalias</emphasis> teknikoj estas uzataj por redukti "
+"ĉi tiun efikon. Vi ĝenerale volas teni ĉi tiun opcion ebligita krom se ĝi "
+"kaŭzas problemojn."
 
 #: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "Ekskludi gamon de kontraŭ-aliasing"
 
 #: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 p"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -291,6 +301,15 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>Sur TFT aŭ LCD-ekranoj ĉiu unuopa pikselo estas fakte kunmetita de tri "
+"aŭ kvar pli malgrandaj monokromataj lumoj. Ĉi tiuj <emphasis>subpikseloj</"
+"emphasis> povas esti ŝanĝitaj sendepende por plu plibonigi la kvaliton de "
+"montrataj tiparoj.</para> <para>La bildiga kvalito estas plibonigata nur se "
+"la elekto kongruas kun la maniero kiel la subpikseloj de via ekrano estas "
+"vicigita. Plej multaj ekranoj havas linearan ordigon de <emphasis>RGB</"
+"emphasis> subpikseloj, kelkaj havas <emphasis>BGR</emphasis> kaj iuj "
+"ekzotikaj ordigoj ne estas subtenataj de ĉi tiu funkcio.</para>Ĉi tio ne "
+"funkcias kun CRT. monitoroj."
 
 #: package/contents/ui/main.qml:329
 #, kde-format
@@ -307,6 +326,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Sugesto estas tekniko en kiu sugestoj enigitaj en tiparo estas uzataj por "
+"plibonigi la bildigan kvaliton precipe ĉe malgrandaj grandecoj. Pli forta "
+"sugesto ĝenerale kondukas al pli akraj randoj sed la malgrandaj literoj "
+"malpli proksime similos sian formon ĉe grandaj grandecoj."
 
 #: package/contents/ui/main.qml:380
 #, kde-format
@@ -324,8 +347,15 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Enigu la DPI de via ekrano ĉi tie por fari surekranajn tiparojn "
+"kongrui kun siaj fizikaj grandecoj kiam estas presitaj. Ŝanĝi ĉi tiun opcion "
+"de ĝia defaŭlta valoro konfliktos kun multaj programoj; iuj piktogramoj kaj "
+"bildoj eble ne skalas kiel atendite.</para><para>Por pligrandigi "
+"tekstograndecon, ŝanĝu la grandecon de la supraj tiparoj. Por skali ĉion, "
+"uzu la skalan glitilon sur la paĝo <interface>Vidigu & Monitoro</interface>."
+"</para>"
 
 #: package/contents/ui/main.qml:428
 #, kde-format
 msgid "Select Font"
-msgstr ""
+msgstr "Elekti Tiparon"

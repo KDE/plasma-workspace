@@ -1,5 +1,5 @@
-# translation of kcmstyle.po to Esperanto
-# Esperantaj mesaĝoj por "kdisplay"
+# translation of kcm_style.po to Esperanto
+# Esperantaj mesaĝoj por "plasma-workspace"
 # Copyright (C) 1998, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
@@ -7,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmstyle\n"
+"Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-24 03:15+0000\n"
-"PO-Revision-Date: 2023-03-01 15:30+0100\n"
+"PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -38,7 +38,7 @@ msgstr "Malsukcesis apliki elektitan stilon '%1'."
 #: package/contents/ui/EffectSettingsPopup.qml:32
 #, kde-format
 msgid "Show icons:"
-msgstr "M&ontri piktogramojn sur butonoj"
+msgstr "Montri piktogramojn:"
 
 #: package/contents/ui/EffectSettingsPopup.qml:33
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "Radiobutono"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136

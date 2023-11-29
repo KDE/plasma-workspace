@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2023-01-03 05:02+0100\n"
+"PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -111,7 +111,7 @@ msgstr ""
 #: main.cpp:216
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Etoso instalita sukcese."
 
 #: main.cpp:260
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Instalante piktogrametosojn…"
 #: main.cpp:270
 #, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instalante %1 etoson…"
+msgstr "Instalante etoson %1…"
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format

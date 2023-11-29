@@ -12,27 +12,27 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-03 13:05+0100\n"
+"PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
-"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current cursor theme"
-msgstr ""
+msgstr "Nomo de la aktuala kursora temo"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current cursor size"
-msgstr ""
+msgstr "Aktuala grandeco de kursoro"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -84,7 +84,7 @@ msgstr "Etoso instaliĝis sukcese."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Tempo en sekundoj"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -100,69 +100,69 @@ msgstr "Restarigi Kursoran Etoson"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Lanĉi Reagon"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Agordi la animaciojn luditajn dum aplikaĵo lanĉas."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Kursora komento:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Senmova"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Palpebrumante"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Resaltado"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Reago pri Taskaj Administranto:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Ebligi animacion"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Ĉesigi animaciojn post:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:124
 #: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sekundo"
+msgstr[1] "%1 sekundoj"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -178,7 +178,7 @@ msgstr "Grandeco:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "A&gordi Lanĉan Sugeston…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format
@@ -203,7 +203,7 @@ msgstr "Kursor-Etosaj Dosieroj (*.tar.gz *.tar.bz2)"
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
+msgstr "La petita grandeco '%1' ne estas disponebla, uzante %2 anstataŭe."
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -212,6 +212,9 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"Ĉi tiu ilo ebligas al vi agordi la muskursuran temon por la nuna Plasma "
+"sesio, sen hazarde agordi ĝin al unu, kiu aŭ ne disponeblas, aŭ kiu jam "
+"estas agordita."
 
 #: plasma-apply-cursortheme.cpp:67
 #, kde-format
@@ -219,17 +222,20 @@ msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"La nomo de la kursora temo, kiun vi volas agordi por via nuna Plasma sesio "
+"(pasi plenan vojon uzos nur la lastan parton de la vojo)"
 
 #: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"Montru ĉiujn disponeblajn temojn en la sistemo (kaj kiu estas la nuna temo)"
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr ""
+msgstr "Uzi specifan grandecon, anstataŭ la defaŭltan grandecon de la temo"
 
 #: plasma-apply-cursortheme.cpp:90
 #, kde-format
@@ -237,12 +243,14 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"La petita temo \"%1\" jam estas agordita kiel la temo por la nuna Plasma "
+"sesio."
 
 #: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
-msgstr ""
+msgstr "Sukcese aplikis la muskursora temo %1 al via nuna Plasma sesio"
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
@@ -259,11 +267,12 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Ne eblis trovi etoson \"%1\". La temo devus esti unu el la sekvaj opcioj: %2"
 
 #: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
-msgstr ""
+msgstr "Vi havas la jenajn muskursorajn temojn en via sistemo:"
 
 #: plasma-apply-cursortheme.cpp:126
 #, kde-format
@@ -271,7 +280,11 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Aktuala etoso por ĉi tiu Plasma-seanco)"
 
 #: xcursor/xcursortheme.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info The argument is the list of available sizes (in pixel). Example: "
+#| "¦'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#| msgid "(Available sizes: %1)"
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
