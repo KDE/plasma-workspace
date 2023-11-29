@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2021-09-27 20:36+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Erik Kjær Pedersen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "erik@binghamton.edu"
 
 #: configdialog.cpp:80
 #, fuzzy, kde-format
@@ -469,78 +479,63 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Tidsudløb for handlings-popop:"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ryd udklipsholderhistorik"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper…"
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Indstil Klipper..."
 
-#: klipper.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "&Afslut"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Udfør handling på denne udklipsholder manuelt"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Vis stregkode..."
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Næste historikelement"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Forrige historikelement"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Åbn Klipper ved musepositionen"
 
-#: klipper.cpp:229
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "Klipper - udklipsholderværktøj"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -550,59 +545,59 @@ msgstr ""
 "Du kan aktivere URL-handlinger under siden <interface>Handlinger</interface> "
 "i udklipsholder-applettens indstillingsvindue"
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Skal Klipper starte automatisk når du logger ind?"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Start Klipper automatisk?"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "Start"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "Start ikke"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil stregkode"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vil du virkelig slette hele udklipsholderhistorikken?"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&Ryd udklipsholderhistorik"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "Udklipsholderhistorik"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "op"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "nuværende"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "ned"
@@ -837,100 +832,6 @@ msgstr "Udklipsholderen er tom"
 msgid "No matches"
 msgstr "Ingen fund"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "Klipper"
-
-#: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
-msgid "Plasma cut & paste history utility"
-msgstr "KDE Klippe & klistre-historikværktøj"
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "Carsten Pfeiffer"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "Forfatter"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "Andrew Stanley-Jones"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "Oprindelig forfatter"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "Patrick Dubroy"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "Bidragyder"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "Luboš Luňák"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "Fejlretninger og optimeringer"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "Esben Mose Hansen"
-
-#: main.cpp:42
-#, kde-format
-msgid "Previous Maintainer"
-msgstr "Tidligere vedligeholder"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr "Martin Gräßlin"
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "Vedligeholder"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Erik Kjær Pedersen"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "erik@binghamton.edu"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -945,6 +846,72 @@ msgstr "Deaktivér denne popop"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annullér"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Quit Klipper"
+#~| msgid "&Quit"
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "&Afslut"
+
+#, fuzzy
+#~| msgid "Klipper - Clipboard Tool"
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "Klipper - udklipsholderværktøj"
+
+#~ msgid "Klipper"
+#~ msgstr "Klipper"
+
+#, fuzzy
+#~| msgid "KDE cut & paste history utility"
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "KDE Klippe & klistre-historikværktøj"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "Carsten Pfeiffer"
+
+#~ msgid "Author"
+#~ msgstr "Forfatter"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "Andrew Stanley-Jones"
+
+#~ msgid "Original Author"
+#~ msgstr "Oprindelig forfatter"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "Patrick Dubroy"
+
+#~ msgid "Contributor"
+#~ msgstr "Bidragyder"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "Fejlretninger og optimeringer"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "Esben Mose Hansen"
+
+#~ msgid "Previous Maintainer"
+#~ msgstr "Tidligere vedligeholder"
+
+#~ msgid "Martin Gräßlin"
+#~ msgstr "Martin Gräßlin"
+
+#~ msgid "Maintainer"
+#~ msgstr "Vedligeholder"
 
 #, fuzzy
 #~| msgid "&Edit Contents…"

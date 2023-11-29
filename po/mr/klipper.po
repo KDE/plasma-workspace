@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"संदिप शेडमाके, \n"
+"चेतन खोना"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"sandeep.shedmake@gmail.com, \n"
+"chetan@kompkin.com"
 
 #: configdialog.cpp:80
 #, fuzzy, kde-format
@@ -468,78 +482,63 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "पॉपअप क्रियेकरिता वेळेचे बंधन :"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास नष्ट करा (&L)"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "क्लिपर संयोजीत करा (&C)..."
 
-#: klipper.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "बाहेर पडा (&Q)"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "वर्तमान क्लिपबोर्ड वर क्रिया स्वत: सक्रिय करा"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "बारकोड दर्शवा (&S)..."
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "पुढील इतिहास घटक"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "मागील इतिहास घटक"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "माऊस स्थानावर क्लिपर उघडा"
 
-#: klipper.cpp:229
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "Klipper - क्लिपबोर्ड साधन"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -547,59 +546,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "प्रवेशानंतर क्लिपर आपोआप सुरु व्हायला हवे का?"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "क्लिपर आपोआप सुरु करायचे का?"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "सुरु करा"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "सुरु करू नका"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाईल बारकोड"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "क्लिपबोर्डचा पूर्ण इतिहास नष्ट करायचा का?"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास नष्ट करा (&L)"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "वर"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "वर्तमान"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "खाली"
@@ -835,105 +834,6 @@ msgstr "क्लिपबोर्ड रिकामा आहे"
 msgid "No matches"
 msgstr "<जुळवणी आढळली नाही>"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "क्लिपर"
-
-#: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
-msgid "Plasma cut & paste history utility"
-msgstr "केडीई कापा & चिकटवा इतिहास उपकार्यक्रम"
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"(c) 1998, एन्ड्र्यु स्टेनली-जोन्स\n"
-"1998-2002, कार्स्टेन फैफ्फर\n"
-"2001, पेट्रिक डुब्रोय"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "कार्स्टेन फैफ्फर"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "लेखक"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "एन्ड्र्यु स्टेनली-जोन्स"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "मूळ लेखक"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "पेट्रिक डुब्रोय"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "सहभागी"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "ल्युबोस ल्युनाक"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "बग निर्धारण व सुधारणा"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "Esben Mose Hansen"
-
-#: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "Maintainer"
-msgid "Previous Maintainer"
-msgstr "पालक"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr ""
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "पालक"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"संदिप शेडमाके, \n"
-"चेतन खोना"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"sandeep.shedmake@gmail.com, \n"
-"chetan@kompkin.com"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -948,6 +848,71 @@ msgstr "हे पॉपअप अकार्यान्वित करा"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करा (&C)"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Quit Klipper"
+#~| msgid "&Quit"
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "बाहेर पडा (&Q)"
+
+#, fuzzy
+#~| msgid "Klipper - Clipboard Tool"
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "Klipper - क्लिपबोर्ड साधन"
+
+#~ msgid "Klipper"
+#~ msgstr "क्लिपर"
+
+#, fuzzy
+#~| msgid "KDE cut & paste history utility"
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "केडीई कापा & चिकटवा इतिहास उपकार्यक्रम"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "(c) 1998, एन्ड्र्यु स्टेनली-जोन्स\n"
+#~ "1998-2002, कार्स्टेन फैफ्फर\n"
+#~ "2001, पेट्रिक डुब्रोय"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "कार्स्टेन फैफ्फर"
+
+#~ msgid "Author"
+#~ msgstr "लेखक"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "एन्ड्र्यु स्टेनली-जोन्स"
+
+#~ msgid "Original Author"
+#~ msgstr "मूळ लेखक"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "पेट्रिक डुब्रोय"
+
+#~ msgid "Contributor"
+#~ msgstr "सहभागी"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "ल्युबोस ल्युनाक"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "बग निर्धारण व सुधारणा"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "Esben Mose Hansen"
+
+#, fuzzy
+#~| msgid "Maintainer"
+#~ msgid "Previous Maintainer"
+#~ msgstr "पालक"
+
+#~ msgid "Maintainer"
+#~ msgstr "पालक"
 
 #, fuzzy
 #~| msgid "Edit Contents"

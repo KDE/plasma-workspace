@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2022-09-23 22:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -18,6 +18,20 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
+
+#: ui/DayNightView.qml:110
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr "Включение ночной цветовой схемы будет начато в %1 и завершено в %2"
+
+#: ui/DayNightView.qml:113
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr "Включение дневной цветовой схемы будет начато в %1 и завершено в %2"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -69,38 +83,82 @@ msgstr "Долгота:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Фильтр синего цвета увеличивает цветовую температуру на экране."
 
-#: ui/main.qml:109
+#: ui/main.qml:153
 #, kde-format
 msgid "Switching times:"
 msgstr "Период использования:"
 
-#: ui/main.qml:112
+#: ui/main.qml:156
 #, kde-format
 msgid "Always off"
 msgstr "Ночная схема всегда отключена"
 
-#: ui/main.qml:113
+#: ui/main.qml:157
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "От заката до рассвета в текущем местоположении"
 
-#: ui/main.qml:114
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "От заката до рассвета в заданном местоположении"
 
-#: ui/main.qml:115
+#: ui/main.qml:159
 #, kde-format
 msgid "Custom times"
 msgstr "Заданный интервал времени"
 
-#: ui/main.qml:116
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "Ночная схема всегда включена"
 
-#: ui/main.qml:153
+#: ui/main.qml:183
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
+msgstr "Дневная цветовая температура:"
+
+#: ui/main.qml:226 ui/main.qml:285
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1K"
+
+#: ui/main.qml:230 ui/main.qml:289
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Холодная (без фильтра)"
+
+#: ui/main.qml:236 ui/main.qml:295
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Теплее"
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
+msgstr "Ночная цветовая температура:"
+
+#: ui/main.qml:304
+#, fuzzy, kde-format
+#| msgid "Detect Location"
+msgctxt "@label The coordinates for the current location"
+msgid "Current location:"
+msgstr "Определить местоположение"
+
+#: ui/main.qml:310
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Широта: %1°   Долгота: %2°"
+
+#: ui/main.qml:331
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,66 +171,29 @@ msgstr ""
 "используемой сети в <link url='https://location.services.mozilla.com'>Службу "
 "определения местоположения Mozilla</link>."
 
-#: ui/main.qml:172
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
-msgid "Day light temperature:"
-msgstr "Дневная цветовая температура:"
-
-#: ui/main.qml:215 ui/main.qml:274
-#, kde-format
-msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1K"
-
-#: ui/main.qml:219 ui/main.qml:278
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
-msgctxt "Night colour blue-ish; no blue light filter activated"
-msgid "Cool (no filter)"
-msgstr "Холодная (без фильтра)"
-
-#: ui/main.qml:225 ui/main.qml:284
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Теплее"
-
-#: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
-msgid "Night light temperature:"
-msgstr "Ночная цветовая температура:"
-
-#: ui/main.qml:295
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Широта: %1°   Долгота: %2°"
-
-#: ui/main.qml:305
+#: ui/main.qml:349
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "Включение ночного цвета:"
 
-#: ui/main.qml:318 ui/main.qml:341
+#: ui/main.qml:362 ui/main.qml:385
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "(в формате ЧЧ:ММ)"
 
-#: ui/main.qml:328
+#: ui/main.qml:372
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "Включение дневного цвета:"
 
-#: ui/main.qml:350
+#: ui/main.qml:394
 #, kde-format
 msgid "Transition duration:"
 msgstr "Длительность перехода:"
 
-#: ui/main.qml:359
+#: ui/main.qml:403
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -181,35 +202,21 @@ msgstr[1] "%1 минуты"
 msgstr[2] "%1 минут"
 msgstr[3] "%1 минута"
 
-#: ui/main.qml:372
+#: ui/main.qml:416
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "(в минутах, минимум 1, максимум 600)"
 
-#: ui/main.qml:390
+#: ui/main.qml:434
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Ошибка: переходные периоды пересекаются."
 
-#: ui/main.qml:412
+#: ui/main.qml:456
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Определение местоположения…"
-
-#: ui/TimingsView.qml:32
-#, kde-format
-msgid ""
-"Color temperature begins changing to night time at %1 and is fully changed "
-"by %2"
-msgstr "Включение ночной цветовой схемы будет начато в %1 и завершено в %2"
-
-#: ui/TimingsView.qml:39
-#, kde-format
-msgid ""
-"Color temperature begins changing to day time at %1 and is fully changed by "
-"%2"
-msgstr "Включение дневной цветовой схемы будет начато в %1 и завершено в %2"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"
@@ -238,9 +245,6 @@ msgstr "Включение дневной цветовой схемы будет
 
 #~ msgid "Error: Morning is before evening."
 #~ msgstr "Ошибка: утро раньше вечера."
-
-#~ msgid "Detect Location"
-#~ msgstr "Определить местоположение"
 
 #~ msgid ""
 #~ "The device's location will be detected using GPS (if available), or by "

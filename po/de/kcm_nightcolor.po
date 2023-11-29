@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2022-09-19 22:30+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,6 +19,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.0\n"
+
+#: ui/DayNightView.qml:110
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+"Farbtemperatur wird ab %1 auf die Nachtzeit wechseln und ist bis %2 "
+"vollständig umgestellt."
+
+#: ui/DayNightView.qml:113
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"Farbtemperatur wird ab %1 auf die Tageszeit wechseln und ist bis %2 "
+"vollständig umgestellt."
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -70,38 +88,82 @@ msgstr "Längengrad:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Durch Blaulichtfilter werden die Bildschirmfarben wärmer dargestellt."
 
-#: ui/main.qml:109
+#: ui/main.qml:153
 #, kde-format
 msgid "Switching times:"
 msgstr "Umschaltzeiten:"
 
-#: ui/main.qml:112
+#: ui/main.qml:156
 #, kde-format
 msgid "Always off"
 msgstr "Immer aus"
 
-#: ui/main.qml:113
+#: ui/main.qml:157
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Sonnenunter- und -aufgang am aktuellen Standort"
 
-#: ui/main.qml:114
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Sonnenunter- und -aufgang am benutzerdefinierten Standort"
 
-#: ui/main.qml:115
+#: ui/main.qml:159
 #, kde-format
 msgid "Custom times"
 msgstr "Benutzerdefinierte Uhrzeiten"
 
-#: ui/main.qml:116
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "Nachtfarben immer an"
 
-#: ui/main.qml:153
+#: ui/main.qml:183
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
+msgstr "Farbtemperatur bei Tag:"
+
+#: ui/main.qml:226 ui/main.qml:285
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1 K"
+
+#: ui/main.qml:230 ui/main.qml:289
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Kühl (Kein Filter)"
+
+#: ui/main.qml:236 ui/main.qml:295
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Warm"
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
+msgstr "Farbtemperatur bei Nacht:"
+
+#: ui/main.qml:304
+#, fuzzy, kde-format
+#| msgid "Detect Location"
+msgctxt "@label The coordinates for the current location"
+msgid "Current location:"
+msgstr "Standort ermitteln"
+
+#: ui/main.qml:310
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Breitengrad: %1 °   Längengrad: %2 °"
+
+#: ui/main.qml:331
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,106 +175,51 @@ msgstr ""
 "durch Senden von Netzwerkinformationen an den <link url='https://location."
 "services.mozilla.com'>Mozilla Location Service</link> aktualisiert."
 
-#: ui/main.qml:172
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
-msgid "Day light temperature:"
-msgstr "Farbtemperatur bei Tag:"
-
-#: ui/main.qml:215 ui/main.qml:274
-#, kde-format
-msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1 K"
-
-#: ui/main.qml:219 ui/main.qml:278
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
-msgctxt "Night colour blue-ish; no blue light filter activated"
-msgid "Cool (no filter)"
-msgstr "Kühl (Kein Filter)"
-
-#: ui/main.qml:225 ui/main.qml:284
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Warm"
-
-#: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
-msgid "Night light temperature:"
-msgstr "Farbtemperatur bei Nacht:"
-
-#: ui/main.qml:295
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Breitengrad: %1 °   Längengrad: %2 °"
-
-#: ui/main.qml:305
+#: ui/main.qml:349
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "Nachtfarben beginnen um:"
 
-#: ui/main.qml:318 ui/main.qml:341
+#: ui/main.qml:362 ui/main.qml:385
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Eingabeformat: HH:MM"
 
-#: ui/main.qml:328
+#: ui/main.qml:372
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "Tagesfarben beginnen um:"
 
-#: ui/main.qml:350
+#: ui/main.qml:394
 #, kde-format
 msgid "Transition duration:"
 msgstr "Durchgangsdauer:"
 
-#: ui/main.qml:359
+#: ui/main.qml:403
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 Minute"
 msgstr[1] "%1 Minuten"
 
-#: ui/main.qml:372
+#: ui/main.qml:416
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Eingabe in Minuten – min. 1, max. 600"
 
 # Übergangszeiten?
-#: ui/main.qml:390
+#: ui/main.qml:434
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Fehler: Übergangszeiten überschneiden sich."
 
-#: ui/main.qml:412
+#: ui/main.qml:456
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Lokalisieren ..."
-
-#: ui/TimingsView.qml:32
-#, kde-format
-msgid ""
-"Color temperature begins changing to night time at %1 and is fully changed "
-"by %2"
-msgstr ""
-"Farbtemperatur wird ab %1 auf die Nachtzeit wechseln und ist bis %2 "
-"vollständig umgestellt."
-
-#: ui/TimingsView.qml:39
-#, kde-format
-msgid ""
-"Color temperature begins changing to day time at %1 and is fully changed by "
-"%2"
-msgstr ""
-"Farbtemperatur wird ab %1 auf die Tageszeit wechseln und ist bis %2 "
-"vollständig umgestellt."
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"
@@ -236,9 +243,6 @@ msgstr ""
 
 #~ msgid "Error: Morning is before evening."
 #~ msgstr "Fehler: Der Morgen liegt vor dem Abend."
-
-#~ msgid "Detect Location"
-#~ msgstr "Standort ermitteln"
 
 #~ msgid "Night Color begins at %1"
 #~ msgstr "Nachtfarben beginnen um %1"

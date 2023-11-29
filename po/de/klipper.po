@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-08-14 21:38+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,6 +19,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Thomas Diehl"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "thd@kde.org"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -498,67 +508,55 @@ msgstr "Symbol:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatisches Aufklappmenü für Aktionen"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Bisherigen Inhalt der Zwischenablage löschen"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Klipper einrichten ..."
 
-#: klipper.cpp:185
-#, kde-format
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "Be&enden"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Aktionen der aktuellen Zwischenablage manuell aufrufen"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Strichcode anzeigen ..."
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nächstes Element im Verlauf"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Vorheriges Element im Verlauf"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Elemente der Zwischenablage an Mausposition anzeigen"
 
-#: klipper.cpp:229
-#, kde-format
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "%1 - Verwaltung der Zwischenablage"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -568,58 +566,58 @@ msgstr ""
 "Sie können URL-Aktionen später auf der Seite <interface>Aktionen</interface> "
 "des Einrichtungsdialogs aktivieren."
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 "Soll Klipper automatisch gestartet werden, wenn Sie sich am System anmelden?"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Klipper automatisch starten?"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "Automatisch starten"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "Nicht automatisch starten"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobiler Strichcode"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Möchten Sie wirklich den gesamten Verlauf der Zwischenablage löschen?"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bisherigen Inhalt der Zwischenablage löschen"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "Verlauf der Zwischenablage"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "nach oben"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "aktuelle"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "nach unten"
@@ -865,99 +863,6 @@ msgstr "Die Zwischenablage ist leer"
 msgid "No matches"
 msgstr "Keine Übereinstimmungen"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "Klipper"
-
-#: main.cpp:29
-#, kde-format
-msgid "Plasma cut & paste history utility"
-msgstr "Plasma-Dienstprogramm für den Verlauf von Ausschneiden & Einfügen"
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"© 1998, Andrew Stanley-Jones\n"
-"1998–2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "Carsten Pfeiffer"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "Autor"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "Andrew Stanley-Jones"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "Ursprünglicher Autor"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "Patrick Dubroy"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "Mitarbeiter"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "Luboš Luňák"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "Fehlerkorrekturen und Optimierungen"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "Esben Mose Hansen"
-
-#: main.cpp:42
-#, kde-format
-msgid "Previous Maintainer"
-msgstr "Ehemaliger Betreuer"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr "Martin Gräßlin"
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "Betreuer"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Thomas Diehl"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "thd@kde.org"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -972,6 +877,65 @@ msgstr "Aufklappmenü deaktivieren"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Abbrechen"
+
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "Be&enden"
+
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "%1 - Verwaltung der Zwischenablage"
+
+#~ msgid "Klipper"
+#~ msgstr "Klipper"
+
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "Plasma-Dienstprogramm für den Verlauf von Ausschneiden & Einfügen"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "© 1998, Andrew Stanley-Jones\n"
+#~ "1998–2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "Carsten Pfeiffer"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "Andrew Stanley-Jones"
+
+#~ msgid "Original Author"
+#~ msgstr "Ursprünglicher Autor"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "Patrick Dubroy"
+
+#~ msgid "Contributor"
+#~ msgstr "Mitarbeiter"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "Fehlerkorrekturen und Optimierungen"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "Esben Mose Hansen"
+
+#~ msgid "Previous Maintainer"
+#~ msgstr "Ehemaliger Betreuer"
+
+#~ msgid "Martin Gräßlin"
+#~ msgstr "Martin Gräßlin"
+
+#~ msgid "Maintainer"
+#~ msgstr "Betreuer"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"

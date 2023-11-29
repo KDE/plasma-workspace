@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-08-26 18:51+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "lasse.liehu@gmail.com,translator@legisign.org"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiritoimintojen asetukset"
 
-#: desktopview.cpp:207
+#: desktopview.cpp:208
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Dev"
@@ -42,7 +42,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma %1 kehitysversio"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -50,7 +50,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma %1 beeta"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -58,7 +58,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma %1 beeta"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 #| msgid "KDE Plasma %1 Beta %2"
@@ -66,7 +66,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma %1 beeta %2"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -74,7 +74,7 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -82,31 +82,31 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:248
+#: desktopview.cpp:249
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 kehitysversio"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:253
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 beeta"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 beeta %2"
 
-#: desktopview.cpp:259
+#: desktopview.cpp:260
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -271,57 +271,57 @@ msgstr "%1 %2 %3-liittimessä"
 msgid "Disconnected Screen %1"
 msgstr "Irrotettu näyttö %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:196 shellcorona.cpp:198
 #, kde-format
 msgid "Show Desktop"
 msgstr "Näytä työpöytä"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Piilota työpöytä"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Näytä aktiviteettivaihto"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Pysäytä nykyinen aktiviteetti"
 
-#: shellcorona.cpp:211
+#: shellcorona.cpp:233
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Vaihtaa edelliseen aktiviteettiin"
 
-#: shellcorona.cpp:219
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Vaihtaa seuraavaan aktiviteettiin"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivoi tehtävienhallinnan kohta %1"
 
-#: shellcorona.cpp:261
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Hallitse työpöytiä ja paneeleja…"
 
-#: shellcorona.cpp:283
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Vaihda näppäimistökohdistusta paneelien välillä"
 
-#: shellcorona.cpp:2011
+#: shellcorona.cpp:2040
 #, kde-format
 msgid "Add Panel"
 msgstr "Lisää paneeli"
 
-#: shellcorona.cpp:2047
+#: shellcorona.cpp:2076
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2014-10-28 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -24,6 +24,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org"
 
 #: configdialog.cpp:80
 #, fuzzy, kde-format
@@ -474,78 +484,63 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Χρονικό όριο για αναδυόμενα μενού ενεργειών:"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Κα&θαρισμός ιστορικού προχείρου"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Διαμόρφωση Klipper..."
 
-#: klipper.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "Έ&ξοδος"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Χειροκίνητη κλήση ενέργειας στο τρέχον πρόχειρο"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Εμφάνιση Barcode..."
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Επόμενο αντικείμενο ιστορικού"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Προηγούμενο αντικείμενο ιστορικού"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Άνοιγμα του Klipper στη θέση του ποντικιού"
 
-#: klipper.cpp:229
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Εργαλείο για το πρόχειρο"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -553,59 +548,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Να ξεκινά αυτόματα το Klipper κατά τη σύνδεσή σας;"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Αυτόματη εκκίνηση Klipper;"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "Εκκίνηση"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "Να μην εκκινηθεί"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Γραμμοκώδικας για κινητά"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Κα&θαρισμός ιστορικού προχείρου"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "Ιστορικό του προχείρου"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "πάνω"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "τρέχον"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "κάτω"
@@ -844,100 +839,6 @@ msgstr "Το πρόχειρο είναι κενό"
 msgid "No matches"
 msgstr "<κανένα ταίριασμα>"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "Klipper"
-
-#: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
-msgid "Plasma cut & paste history utility"
-msgstr "Εργαλείο ιστορικού αποκοπών & αντιγραφών του KDE"
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "Carsten Pfeiffer"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "Συγγραφέας"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "Andrew Stanley-Jones"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "Αρχικός συγγραφέας"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "Patrick Dubroy"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "Συντελεστής"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "Luboš Luňák"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "Διορθώσεις σφαλμάτων και βελτιώσεις"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "Esben Mose Hansen"
-
-#: main.cpp:42
-#, kde-format
-msgid "Previous Maintainer"
-msgstr "Προηγούμενος συντηρητής"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr "Martin Gräßlin"
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "Συντηρητής"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -952,6 +853,72 @@ msgstr "Απενεργοποίηση αυτού του αναδυόμενου μ
 #, kde-format
 msgid "&Cancel"
 msgstr "&Ακύρωση"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Quit Klipper"
+#~| msgid "&Quit"
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "Έ&ξοδος"
+
+#, fuzzy
+#~| msgid "Klipper - Clipboard Tool"
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "Klipper - Εργαλείο για το πρόχειρο"
+
+#~ msgid "Klipper"
+#~ msgstr "Klipper"
+
+#, fuzzy
+#~| msgid "KDE cut & paste history utility"
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "Εργαλείο ιστορικού αποκοπών & αντιγραφών του KDE"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "Carsten Pfeiffer"
+
+#~ msgid "Author"
+#~ msgstr "Συγγραφέας"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "Andrew Stanley-Jones"
+
+#~ msgid "Original Author"
+#~ msgstr "Αρχικός συγγραφέας"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "Patrick Dubroy"
+
+#~ msgid "Contributor"
+#~ msgstr "Συντελεστής"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "Διορθώσεις σφαλμάτων και βελτιώσεις"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "Esben Mose Hansen"
+
+#~ msgid "Previous Maintainer"
+#~ msgstr "Προηγούμενος συντηρητής"
+
+#~ msgid "Martin Gräßlin"
+#~ msgstr "Martin Gräßlin"
+
+#~ msgid "Maintainer"
+#~ msgstr "Συντηρητής"
 
 #, fuzzy
 #~| msgid "Edit Contents"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2013-01-06 03:54+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,6 +22,16 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Ақсәуле Мамаева, Сайран Киккарин"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ak78@sci.kz, sairan@computer.org"
 
 #: configdialog.cpp:80
 #, fuzzy, kde-format
@@ -470,78 +480,63 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper-ді &баптау..."
 
-#: klipper.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "&Шығу"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Қолданыстағы алмасу буфер әрекетін қолмен таңдау"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Штрихкодын көрсету..."
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Журналдағы келесі жазуы"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Журналдағы алдыңғы жазуы"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper тышқан меңзеген орында ашылсын"
 
-#: klipper.cpp:229
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "Klipper-алмасу буфер құралы"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -549,59 +544,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Жүйеге кіру кезінде Klipper автоматты түрде жегілсін бе?"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Klipper автоматты түрде жегілсін бе?"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "Жегілсін"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "Жегілмесін"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "QR штрихкоды"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Алмасу буферінің журналы толығымен өшірілсін бе?"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "Алмасу буферінің журналы"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "жоғары"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "назардағы"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "төмен"
@@ -838,101 +833,6 @@ msgstr "Алмасу буфері бос"
 msgid "No matches"
 msgstr "<сәйкестіктер жоқ>"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "Klipper"
-
-#: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
-msgid "Plasma cut & paste history utility"
-msgstr "KDE қиып алып орналастыру журналы"
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "Carsten Pfeiffer"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "Авторы"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "Andrew Stanley-Jones"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "Бастапқы авторы"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "Patrick Dubroy"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "Үлес қосушы"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "Luboš Luňák"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "Қателерді түзетіп, оңтайландырған"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "Esben Mose Hansen"
-
-#: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "Maintainer"
-msgid "Previous Maintainer"
-msgstr "Жетілдірушісі"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr ""
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "Жетілдірушісі"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ақсәуле Мамаева, Сайран Киккарин"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ak78@sci.kz, sairan@computer.org"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -947,6 +847,71 @@ msgstr "Осы мәзір бұғатталсын"
 #, kde-format
 msgid "&Cancel"
 msgstr "Қ&айту"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Quit Klipper"
+#~| msgid "&Quit"
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "&Шығу"
+
+#, fuzzy
+#~| msgid "Klipper - Clipboard Tool"
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "Klipper-алмасу буфер құралы"
+
+#~ msgid "Klipper"
+#~ msgstr "Klipper"
+
+#, fuzzy
+#~| msgid "KDE cut & paste history utility"
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "KDE қиып алып орналастыру журналы"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "Carsten Pfeiffer"
+
+#~ msgid "Author"
+#~ msgstr "Авторы"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "Andrew Stanley-Jones"
+
+#~ msgid "Original Author"
+#~ msgstr "Бастапқы авторы"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "Patrick Dubroy"
+
+#~ msgid "Contributor"
+#~ msgstr "Үлес қосушы"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "Қателерді түзетіп, оңтайландырған"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "Esben Mose Hansen"
+
+#, fuzzy
+#~| msgid "Maintainer"
+#~ msgid "Previous Maintainer"
+#~ msgstr "Жетілдірушісі"
+
+#~ msgid "Maintainer"
+#~ msgstr "Жетілдірушісі"
 
 #, fuzzy
 #~| msgid "Edit Contents"

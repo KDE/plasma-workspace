@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-02-01 23:20+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr "Passwort"
 msgid "Log In"
 msgstr "Anmelden"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Feststelltaste ist aktiviert"
@@ -76,7 +76,7 @@ msgstr "Benutzername und Passwort eingeben"
 msgid "List Users"
 msgstr "Benutzer anzeigen"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -121,22 +121,22 @@ msgstr "Unter Entsperr-Aufforderung anzeigen"
 msgid "Unlocking failed"
 msgstr "Aufheben der Sperre fehlgeschlagen"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Sleep"
 msgstr "Standby-Modus"
 
-#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
+#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Switch User"
 msgstr "Benutzer wechseln"
 
-#: contents/lockscreen/LockScreenUi.qml:487
+#: contents/lockscreen/LockScreenUi.qml:492
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

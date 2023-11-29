@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -45,59 +45,59 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Fascikla iz koje se povlače tapeti."
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:123
 #, kde-format
 msgid "Positioning:"
 msgstr "Postavljanje:"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "skalirano i opsečeno"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:107
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgid "Scaled"
 msgstr "skalirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:111
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "skalirano, očuvana proporcija"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:115
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgid "Centered"
 msgstr "centrirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:119
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Tiled"
 msgstr "popločano"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Background:"
 msgstr "Pozadina:"
 
 # >> @option:radio Blur the background
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:171
 #, kde-format
 msgid "Blur"
 msgstr "Zamućena"
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:180
 #, kde-format
 msgid "Solid color"
 msgstr "Puna boja"
 
 # >> @title:window
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:191
 #, kde-format
 msgid "Select Background Color"
 msgstr "Izbor boje pozadine"
@@ -199,47 +199,47 @@ msgstr ""
 msgid "Image Files"
 msgstr "fajlovi slika"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Order:"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Random"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "A to Z"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Z to A"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:93
 #, kde-format
 msgid "Group by folders"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:105
 #, kde-format
 msgid "Change every:"
 msgstr "Menjaj svakih:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:115
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -248,7 +248,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:135
 #, fuzzy, kde-format
 #| msgid "Minutes"
 msgid "%1 minute"
@@ -258,7 +258,7 @@ msgstr[1] "minuta"
 msgstr[2] "minuta"
 msgstr[3] "minuta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:155
 #, fuzzy, kde-format
 #| msgid "Seconds"
 msgid "%1 second"
@@ -268,31 +268,31 @@ msgstr[1] "sekundi"
 msgstr[2] "sekundi"
 msgstr[3] "sekundi"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:186
 #, fuzzy, kde-format
 #| msgid "Add Folder..."
 msgid "Folders"
 msgstr "Dodaj fasciklu..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:190
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Folder"
 msgstr "Ukloni tapet"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:239
 #, fuzzy, kde-format
 #| msgid "Open Containing Folder"
 msgid "Open Folder…"
 msgstr "Otvori obuhvatajuću fasciklu"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""

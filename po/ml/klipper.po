@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -19,6 +19,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "മണിലാല്‍ കെ.എം, ഇര്‍ഷാദ് കെ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "libregeek@gmail.com,ershad92@gmail.com"
 
 #: configdialog.cpp:80
 #, fuzzy, kde-format
@@ -469,76 +479,63 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "പൊങ്ങിവരുന്ന ജാലകങ്ങള്‍ക്കുള്ള സമയക്രമം:"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "ക്ലിപ്പര്‍ സജ്ജീകരിക്കുക"
 
-#: klipper.cpp:185
-#, fuzzy, kde-format
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "പുറത്ത് കടക്കുക"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ഇപ്പോഴത്തെ ഓര്‍മ്മച്ചെപ്പില്‍ പ്രവൃത്തി തുടങ്ങുക"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ബാർകോഡ് കാണിക്കുക… (&S)"
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ചരിത്രത്തിലെ അടുത്ത ഇനം"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ചരിത്രത്തിലെ മുമ്പുള്ള ഇനം"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "മൗസ് സ്ഥാനത്ത് ക്ലിപ്പർ തുറക്കുക"
 
-#: klipper.cpp:229
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "ക്ലിപ്പര്‍ - ക്ലിപ്പ്ബോര്‍ഡ് ഉപാധി"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -548,59 +545,59 @@ msgstr ""
 "ക്ലിപ്പ്ബോർഡ് ആപ്പ്‌ലെറ്റിന്റെ ക്രമീകരണ ജാലകത്തിലെ <interface>പ്രവർത്തനങ്ങൾ</interface> "
 "താളിൽ നിങ്ങൾക്ക് പിന്നീട് URL പ്രവർത്തനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കാനാകും"
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "താങ്കള്‍ ലോഗിന്‍ ചെയ്യുമ്പോള്‍ തന്നെ ക്ലിപ്പര്‍ തുടങ്ങണോ?"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "ക്ലിപ്പര്‍ തനിയെ തുടങ്ങണോ ?"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "തുടങ്ങുക"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "തുടങ്ങണ്ട"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "മൊബൈൽ ബാർകോഡ്"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം തീര്‍ച്ച്യായും കളയുക?"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "മുകളില്‍"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "ഇപ്പോള്‍ നിലവിലുളളത്"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "താഴെ"
@@ -837,100 +834,6 @@ msgstr "ഓര്‍മ്മച്ചെപ്പ് ശൂന്യമാണ�
 msgid "No matches"
 msgstr "<ചേര്‍ച്ചയില്ല>"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "ക്ലിപ്പര്‍"
-
-#: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
-msgid "Plasma cut & paste history utility"
-msgstr "മുറിക്കല്‍ - പകര്‍ത്തല്‍ ചരിത്രം നോക്കാന്‍ കെഡിഇയിലുള്ള ഉപാധി."
-
-#: main.cpp:31
-#, fuzzy, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"(c) 1998, ആന്‍ഡ്രൂ സ്റ്റാന്‍ലി-ജോണ്‍സ്\n"
-"1998-2002, കാര്‍സ്റ്റണ്‍ ഫെയിഫര്‍\n"
-"2001, പാട്രിക്ക് ഡുബ്രോയി"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "കാര്‍സ്റ്റണ്‍ ഫെയിഫര്‍"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "രചയിതാവ്"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "ആന്‍ഡ്രൂ സ്റ്റാന്‍ലി-ജോണ്‍സ്"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "യഥാര്‍ത്ഥ രചയിതാവ്"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "പാട്രിക് ഡുബ്രോയി"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "സഹകരിച്ചവര്‍"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "ലുബോസ് ലുണാക്"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "പിശകുതിരുത്തലും മെച്ചപ്പെടുത്തലും"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "എസ്ബെന്‍ മോസ് ഹാന്‍സെന്‍"
-
-#: main.cpp:42
-#, fuzzy, kde-format
-msgid "Previous Maintainer"
-msgstr "പാലകന്‍"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr ""
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "പാലകന്‍"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "മണിലാല്‍ കെ.എം, ഇര്‍ഷാദ് കെ"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "libregeek@gmail.com,ershad92@gmail.com"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -945,6 +848,69 @@ msgstr "പൊങ്ങിവരുന്ന ഈ ജാലകത്തിനെ 
 #, kde-format
 msgid "&Cancel"
 msgstr "&റദ്ദാക്കുക"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "പുറത്ത് കടക്കുക"
+
+#, fuzzy
+#~| msgid "Klipper - Clipboard Tool"
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "ക്ലിപ്പര്‍ - ക്ലിപ്പ്ബോര്‍ഡ് ഉപാധി"
+
+#~ msgid "Klipper"
+#~ msgstr "ക്ലിപ്പര്‍"
+
+#, fuzzy
+#~| msgid "KDE cut & paste history utility"
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "മുറിക്കല്‍ - പകര്‍ത്തല്‍ ചരിത്രം നോക്കാന്‍ കെഡിഇയിലുള്ള ഉപാധി."
+
+#, fuzzy
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "(c) 1998, ആന്‍ഡ്രൂ സ്റ്റാന്‍ലി-ജോണ്‍സ്\n"
+#~ "1998-2002, കാര്‍സ്റ്റണ്‍ ഫെയിഫര്‍\n"
+#~ "2001, പാട്രിക്ക് ഡുബ്രോയി"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "കാര്‍സ്റ്റണ്‍ ഫെയിഫര്‍"
+
+#~ msgid "Author"
+#~ msgstr "രചയിതാവ്"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "ആന്‍ഡ്രൂ സ്റ്റാന്‍ലി-ജോണ്‍സ്"
+
+#~ msgid "Original Author"
+#~ msgstr "യഥാര്‍ത്ഥ രചയിതാവ്"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "പാട്രിക് ഡുബ്രോയി"
+
+#~ msgid "Contributor"
+#~ msgstr "സഹകരിച്ചവര്‍"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "ലുബോസ് ലുണാക്"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "പിശകുതിരുത്തലും മെച്ചപ്പെടുത്തലും"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "എസ്ബെന്‍ മോസ് ഹാന്‍സെന്‍"
+
+#, fuzzy
+#~ msgid "Previous Maintainer"
+#~ msgstr "പാലകന്‍"
+
+#~ msgid "Maintainer"
+#~ msgstr "പാലകന്‍"
 
 #, fuzzy
 #~| msgid "Edit Contents"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2007-09-02 12:20+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -1277,58 +1277,58 @@ msgstr "پنجره"
 msgid "Button"
 msgstr "دکمه"
 
-#: ui/main.qml:259
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "پیوند"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr ""
 
-#: ui/main.qml:268
+#: ui/main.qml:271
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Selected text"
 msgid "Highlighted text"
 msgstr "متن برگزیده"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, fuzzy, kde-format
 msgid "Disabled text"
 msgstr "دکمه عنوان غیرفعال"
 
-#: ui/main.qml:301
+#: ui/main.qml:303
 #, fuzzy, kde-format
 msgid "Edit Color Scheme…"
 msgstr "طرحواره رنگ"
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "ذخیره طرحواره رنگ"
 
-#: ui/main.qml:314
+#: ui/main.qml:316
 #, fuzzy, kde-format
 msgid "Restore Color Scheme"
 msgstr "طرحواره رنگ"
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "ذخیره طرحواره رنگ"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

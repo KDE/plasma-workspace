@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-03 23:30+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -35,67 +35,67 @@ msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 msgid "Configure Mouse Actions Plugin"
 msgstr "הגדרת תוסף פעולות עכבר"
 
-#: desktopview.cpp:207
+#: desktopview.cpp:208
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "פלזמה 6.0 למפתחים מבית KDE‏"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "פלזמה 6.0 אלפא מבית KDE‏"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "פלזמה 6.0 בטא 1 מבית KDE‏"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "פלזמה 6.0 בטא 2 מבית KDE‏"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "פלזמה 6.0 מועמדת ראשונה להפצה מבית KDE‏"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "פלזמה 6.0 מועמדת שנייה להפצה מבית KDE‏"
 
-#: desktopview.cpp:248
+#: desktopview.cpp:249
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "פלזמה מבית KDE‏ %1 למפתחים"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:253
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "פלזמה מבית KDE‏ %1 בטא"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "פלזמה מבית KDE‏ %1 בטא %2"
 
-#: desktopview.cpp:259
+#: desktopview.cpp:260
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "פלזמה מבית KDE‏ %1"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -257,57 +257,57 @@ msgstr "%1 %2 ב־%3"
 msgid "Disconnected Screen %1"
 msgstr "מסך מנותק %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:196 shellcorona.cpp:198
 #, kde-format
 msgid "Show Desktop"
 msgstr "הצגת שולחן עבודה"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Hide Desktop"
 msgstr "הסתרת שולחן עבודה"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "הצגת מחליף פעילויות"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "עצירת פעילות נוכחית"
 
-#: shellcorona.cpp:211
+#: shellcorona.cpp:233
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "מעבר לפעילות הקודמת"
 
-#: shellcorona.cpp:219
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "מעבר לפעילות הבאה"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "הפעלת רשומה %1 במנהל המשימות"
 
-#: shellcorona.cpp:261
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "ניהול שולחנות עבודה ולוחות…"
 
-#: shellcorona.cpp:283
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "העברת מיקוד המקלדת בין לוחות"
 
-#: shellcorona.cpp:2011
+#: shellcorona.cpp:2040
 #, kde-format
 msgid "Add Panel"
 msgstr "הוספת לוח"
 
-#: shellcorona.cpp:2047
+#: shellcorona.cpp:2076
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

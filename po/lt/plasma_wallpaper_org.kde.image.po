@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2022-11-18 00:42+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -47,52 +47,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalogas su darbalaukio fonais skaidrių rodymui"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:123
 #, kde-format
 msgid "Positioning:"
 msgstr "Išdėstymas:"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Pakeisto mastelio ir apkarpytas"
 
-#: imagepackage/contents/ui/config.qml:107
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgid "Scaled"
 msgstr "Pakeisto mastelio"
 
-#: imagepackage/contents/ui/config.qml:111
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Pakeisto mastelio, išlaikytų proporcijų"
 
-#: imagepackage/contents/ui/config.qml:115
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgid "Centered"
 msgstr "Centruotas"
 
-#: imagepackage/contents/ui/config.qml:119
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Tiled"
 msgstr "Išklotas"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Background:"
 msgstr "Fonas:"
 
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:171
 #, kde-format
 msgid "Blur"
 msgstr "Suliejimas"
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:180
 #, kde-format
 msgid "Solid color"
 msgstr "Vientisa spalva"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:191
 #, kde-format
 msgid "Select Background Color"
 msgstr "Pasirinkti fono spalvą"
@@ -201,47 +201,47 @@ msgstr ""
 msgid "Image Files"
 msgstr "Paveikslų failai"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Order:"
 msgstr "Tvarka:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Random"
 msgstr "Atsitiktinė"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "A to Z"
 msgstr "Nuo A iki Ž"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Z to A"
 msgstr "Nuo Ž iki A"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Modifikavimo data (iš pradžių, naujausi)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Modifikavimo data (iš pradžių, seniausi)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:93
 #, kde-format
 msgid "Group by folders"
 msgstr "Grupuoti pagal aplankus"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:105
 #, kde-format
 msgid "Change every:"
 msgstr "Keisti kas:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:115
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -250,7 +250,7 @@ msgstr[1] "%1 valandas"
 msgstr[2] "%1 valandų"
 msgstr[3] "%1 valandą"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:135
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -259,7 +259,7 @@ msgstr[1] "%1 minutes"
 msgstr[2] "%1 minučių"
 msgstr[3] "%1 minutę"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:155
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -268,29 +268,29 @@ msgstr[1] "%1 sekundes"
 msgstr[2] "%1 sekundžių"
 msgstr[3] "%1 sekundę"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:186
 #, kde-format
 msgid "Folders"
 msgstr "Aplankai"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:190
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, kde-format
 msgid "Remove Folder"
 msgstr "Šalinti aplanką"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:239
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Atverti aplanką"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Nėra sukonfigūruotų darbalaukio fono vietų"

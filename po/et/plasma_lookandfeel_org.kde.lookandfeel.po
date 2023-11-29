@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2020-10-08 15:00+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -38,7 +38,7 @@ msgstr "Parool"
 msgid "Log In"
 msgstr "Sisselogimine"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock on sees"
@@ -80,7 +80,7 @@ msgstr "Kasutajanime ja parooli kirjutamine"
 msgid "List Users"
 msgstr "Kasutajate nimekiri"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -127,24 +127,24 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "Lukustuse eemaldamine nurjus"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:291
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "Unne"
 
-#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
+#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Talveunne"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Switch User"
 msgstr "Vaheta kasutaja"
 
-#: contents/lockscreen/LockScreenUi.qml:487
+#: contents/lockscreen/LockScreenUi.qml:492
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-15 06:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
+
+#: ui/DayNightView.qml:110
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+"ფერის ტემპერატურა ღამის ფერებზე გადასვლას %1-ზე დაიწყებს და სრულად %2-ზე "
+"გადავა"
+
+#: ui/DayNightView.qml:113
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"ფერის ტემპერატურა დღის ფერებზე გადასვლას %1-ზე დაიწყებს და სრულად %2-ზე "
+"გადავა"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -68,37 +86,76 @@ msgstr "გეოლოკაციის გრძედი:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "ლურჯი სინათლის ფილტრი ეკრანის ფერებს უფრო თბილ ფერებზე გადართავს."
 
-#: ui/main.qml:109
+#: ui/main.qml:153
 #, kde-format
 msgid "Switching times:"
 msgstr "გადართვის დრო:"
 
-#: ui/main.qml:112
+#: ui/main.qml:156
 #, kde-format
 msgid "Always off"
 msgstr "ყოველთვის გამორთული"
 
-#: ui/main.qml:113
+#: ui/main.qml:157
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "დაისიდან აისამდე მიმდინარე მდებარეობაზე"
 
-#: ui/main.qml:114
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "დაისიდან აისამდე ხელით მითითებულ მდებარეობაზე"
 
-#: ui/main.qml:115
+#: ui/main.qml:159
 #, kde-format
 msgid "Custom times"
 msgstr "დროის ხელის მითითება"
 
-#: ui/main.qml:116
+#: ui/main.qml:160
 #, kde-format
 msgid "Always on night light"
 msgstr "ღამის ფერების ყოველთვის ჩართვა"
 
-#: ui/main.qml:153
+#: ui/main.qml:183
+#, kde-format
+msgid "Day light temperature:"
+msgstr "დღის ფერების ტემპერატურა:"
+
+#: ui/main.qml:226 ui/main.qml:285
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1K"
+
+#: ui/main.qml:230 ui/main.qml:289
+#, kde-format
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "გრილი (ფილტრის გარეშე)"
+
+#: ui/main.qml:236 ui/main.qml:295
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "თბილი"
+
+#: ui/main.qml:242
+#, kde-format
+msgid "Night light temperature:"
+msgstr "ღამის ფერების ტემპერატურა:"
+
+#: ui/main.qml:304
+#, kde-format
+msgctxt "@label The coordinates for the current location"
+msgid "Current location:"
+msgstr ""
+
+#: ui/main.qml:310
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "განედი: %1°  გრძედი: %2°"
+
+#: ui/main.qml:331
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,99 +167,48 @@ msgstr ""
 "ქსელის ინფორმაციის <a href=\"https://location.services.mozilla.com\">Mozilla "
 "მდებარეობის სერვისისთვის</a> გაგზავნით."
 
-#: ui/main.qml:172
-#, kde-format
-msgid "Day light temperature:"
-msgstr "დღის ფერების ტემპერატურა:"
-
-#: ui/main.qml:215 ui/main.qml:274
-#, kde-format
-msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1K"
-
-#: ui/main.qml:219 ui/main.qml:278
-#, kde-format
-msgctxt "Night colour blue-ish; no blue light filter activated"
-msgid "Cool (no filter)"
-msgstr "გრილი (ფილტრის გარეშე)"
-
-#: ui/main.qml:225 ui/main.qml:284
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "თბილი"
-
-#: ui/main.qml:231
-#, kde-format
-msgid "Night light temperature:"
-msgstr "ღამის ფერების ტემპერატურა:"
-
-#: ui/main.qml:295
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "განედი: %1°  გრძედი: %2°"
-
-#: ui/main.qml:305
+#: ui/main.qml:349
 #, kde-format
 msgid "Begin night light at:"
 msgstr "ღამის ფერების დაწყება:"
 
-#: ui/main.qml:318 ui/main.qml:341
+#: ui/main.qml:362 ui/main.qml:385
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "შეიყვანეთ დრო: სს:წწ"
 
-#: ui/main.qml:328
+#: ui/main.qml:372
 #, kde-format
 msgid "Begin day light at:"
 msgstr "დღის სინათლე იწყება:"
 
-#: ui/main.qml:350
+#: ui/main.qml:394
 #, kde-format
 msgid "Transition duration:"
 msgstr "გადასვლის დრო:"
 
-#: ui/main.qml:359
+#: ui/main.qml:403
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 წუთი"
 msgstr[1] "%1 წუთი"
 
-#: ui/main.qml:372
+#: ui/main.qml:416
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "შეიყვანეთ წუთები - მინ 1, მაქს 600"
 
-#: ui/main.qml:390
+#: ui/main.qml:434
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "შეცდომა: გადასვლის დროის გადაფარვა."
 
-#: ui/main.qml:412
+#: ui/main.qml:456
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "მდებარეობა…"
-
-#: ui/TimingsView.qml:32
-#, kde-format
-msgid ""
-"Color temperature begins changing to night time at %1 and is fully changed "
-"by %2"
-msgstr ""
-"ფერის ტემპერატურა ღამის ფერებზე გადასვლას %1-ზე დაიწყებს და სრულად %2-ზე "
-"გადავა"
-
-#: ui/TimingsView.qml:39
-#, kde-format
-msgid ""
-"Color temperature begins changing to day time at %1 and is fully changed by "
-"%2"
-msgstr ""
-"ფერის ტემპერატურა დღის ფერებზე გადასვლას %1-ზე დაიწყებს და სრულად %2-ზე "
-"გადავა"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -14,6 +14,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 19.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Victor Ibragimov"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "victor.ibragimov@gmail.com"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -454,73 +464,59 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr ""
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, fuzzy, kde-format
 #| msgid "Delete clipboard history?"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Танзимоти ҳофизаи муваққатӣ..."
 
-#: klipper.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "&Баромадан"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Намоиш додани рамзи наворӣ..."
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr ""
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Менюи ба &рӯй бароянда дар мавқеъи ҷойгиршавии нишоннамо"
 
-#: klipper.cpp:229
-#, kde-format
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr ""
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -528,58 +524,58 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr ""
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "Оғоз кардан"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr ""
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "Delete clipboard history?"
 msgid "Clear Clipboard History"
 msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr ""
@@ -803,96 +799,6 @@ msgstr ""
 msgid "No matches"
 msgstr ""
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr ""
-
-#: main.cpp:29
-#, kde-format
-msgid "Plasma cut & paste history utility"
-msgstr ""
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr ""
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "Муаллиф"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr ""
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "Муаллифи аслӣ"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr ""
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr ""
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr ""
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr ""
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr ""
-
-#: main.cpp:42
-#, kde-format
-msgid "Previous Maintainer"
-msgstr ""
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr ""
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr ""
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Victor Ibragimov"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "victor.ibragimov@gmail.com"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -907,6 +813,19 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "&Бекор кардан"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Quit Klipper"
+#~| msgid "&Quit"
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "&Баромадан"
+
+#~ msgid "Author"
+#~ msgstr "Муаллиф"
+
+#~ msgid "Original Author"
+#~ msgstr "Муаллифи аслӣ"
 
 #, fuzzy
 #~| msgid "&Edit Contents..."

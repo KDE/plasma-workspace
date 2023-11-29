@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-23 00:00+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Увійти"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Увімкнено Caps Lock"
@@ -80,7 +80,7 @@ msgstr "Введіть ім'я користувача і пароль"
 msgid "List Users"
 msgstr "Список користувачів"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -125,22 +125,22 @@ msgstr "Показувати під запитом щодо розблокува
 msgid "Unlocking failed"
 msgstr "Помилка розблокування"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Sleep"
 msgstr "Призупинити"
 
-#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
+#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Приспати"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Switch User"
 msgstr "Перемкнути користувача"
 
-#: contents/lockscreen/LockScreenUi.qml:487
+#: contents/lockscreen/LockScreenUi.qml:492
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

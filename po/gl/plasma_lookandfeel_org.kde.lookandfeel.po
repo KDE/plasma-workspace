@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-23 17:20+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -38,7 +38,7 @@ msgstr "Contrasinal"
 msgid "Log In"
 msgstr "Acceder"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:272
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "As maiúsculas están bloqueadas"
@@ -78,7 +78,7 @@ msgstr "Escriba o usuario e o contrasinal"
 msgid "List Users"
 msgstr "Listar os usuarios"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:463
+#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -123,22 +123,22 @@ msgstr "Amosar baixo o diálogo de desbloquear."
 msgid "Unlocking failed"
 msgstr "Fallou o desbloqueo"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Sleep"
 msgstr "Durmir"
 
-#: contents/lockscreen/LockScreenUi.qml:292 contents/logout/Logout.qml:176
+#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:176
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Switch User"
 msgstr "Cambiar de usuario"
 
-#: contents/lockscreen/LockScreenUi.qml:487
+#: contents/lockscreen/LockScreenUi.qml:492
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

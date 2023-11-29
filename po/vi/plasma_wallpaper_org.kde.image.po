@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2022-05-23 13:27+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -41,52 +41,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Thư mục với phông nền để từ đó hiển thị các trang trình chiếu"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:123
 #, kde-format
 msgid "Positioning:"
 msgstr "Bố trí:"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Đổi cỡ và xén cạnh"
 
-#: imagepackage/contents/ui/config.qml:107
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgid "Scaled"
 msgstr "Đổi cỡ"
 
-#: imagepackage/contents/ui/config.qml:111
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Đổi cỡ, giữ tỉ lệ"
 
-#: imagepackage/contents/ui/config.qml:115
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgid "Centered"
 msgstr "Đặt vào giữa"
 
-#: imagepackage/contents/ui/config.qml:119
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Tiled"
 msgstr "Lát gạch"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Background:"
 msgstr "Nền:"
 
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:171
 #, kde-format
 msgid "Blur"
 msgstr "Mờ"
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:180
 #, kde-format
 msgid "Solid color"
 msgstr "Đồng màu"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:191
 #, kde-format
 msgid "Select Background Color"
 msgstr "Chọn màu nền"
@@ -193,87 +193,87 @@ msgstr ""
 msgid "Image Files"
 msgstr "Tệp ảnh"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Order:"
 msgstr "Thứ tự:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Random"
 msgstr "Ngẫu nhiên"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "A to Z"
 msgstr "A đến Z"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Z to A"
 msgstr "Z đến A"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Ngày chỉnh sửa (mới nhất trước)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Ngày chỉnh sửa (cũ nhất trước)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:93
 #, kde-format
 msgid "Group by folders"
 msgstr "Nhóm theo thư mục"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:105
 #, kde-format
 msgid "Change every:"
 msgstr "Thay đổi mỗi:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:115
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 tiếng"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:135
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 phút"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:155
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 giây"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:186
 #, kde-format
 msgid "Folders"
 msgstr "Thư mục"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:190
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, kde-format
 msgid "Remove Folder"
 msgstr "Xoá thư mục"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:239
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Mở thư mục"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Chưa cấu hình địa điểm chứa phông nền nào"

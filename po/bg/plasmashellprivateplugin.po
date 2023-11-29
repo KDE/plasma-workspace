@@ -1,20 +1,20 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-05-30 22:58+0200\n"
+"PO-Revision-Date: 2023-11-28 19:46+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -176,6 +176,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Този уиджет е написан за неизвестна по-стара версия на Plasma и не е "
+"съвместим с Plasma %1. Моля, свържете се с автора на уиджета за по-"
+"актуализирана версия."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
@@ -183,6 +186,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Този уиджет е написан за Plasma %1 и не е съвместим с Plasma %2. Моля, "
+"свържете се с автора на уиджета за по-актуализирана версия."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
@@ -190,6 +195,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Този уиджет е написан за Plasma %1 и не е съвместим с Plasma %2. Моля, "
+"актуализирайте Plasma, за да можете да го използвате."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
@@ -197,6 +204,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Този уиджет е написан за Plasma %1 и не е съвместим с последната версия на "
+"Plasma . Моля, актуализирайте Plasma, за да можете да го използвате."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2022-12-18 12:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -33,76 +33,76 @@ msgstr "zepires@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurar o 'Plugin' de Acções do Rato"
 
-#: desktopview.cpp:207
+#: desktopview.cpp:208
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "Plasma"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "Plasma"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "Plasma"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "Plasma"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "Plasma"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "Plasma"
 
-#: desktopview.cpp:248
+#: desktopview.cpp:249
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "Plasma"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:253
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "Plasma"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr ""
 
-#: desktopview.cpp:259
+#: desktopview.cpp:260
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "Plasma"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -267,57 +267,57 @@ msgstr "%1 %2 no %3"
 msgid "Disconnected Screen %1"
 msgstr "Ecrã %1 Desligado"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:196 shellcorona.cpp:198
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostrar o Ecrã"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Esconder o Ecrã"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostrar o Selector de Actividades"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Parar a Actividade Actual"
 
-#: shellcorona.cpp:211
+#: shellcorona.cpp:233
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Mudar para a Actividade Anterior"
 
-#: shellcorona.cpp:219
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Mudar para a Actividade Seguinte"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activar o Item %1 do Gestor de Tarefas"
 
-#: shellcorona.cpp:261
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gerir os Ecrãs e Painéis..."
 
-#: shellcorona.cpp:283
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre painéis"
 
-#: shellcorona.cpp:2011
+#: shellcorona.cpp:2040
 #, kde-format
 msgid "Add Panel"
 msgstr "Adicionar um Painel"
 
-#: shellcorona.cpp:2047
+#: shellcorona.cpp:2076
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

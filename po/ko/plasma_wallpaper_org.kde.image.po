@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-10-08 23:54+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -39,52 +39,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "슬라이드 쇼에 사용할 그림이 있는 디렉터리 선택"
 
-#: imagepackage/contents/ui/config.qml:100
+#: imagepackage/contents/ui/config.qml:123
 #, kde-format
 msgid "Positioning:"
 msgstr "위치:"
 
-#: imagepackage/contents/ui/config.qml:103
+#: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "크기 조정 후 자르기"
 
-#: imagepackage/contents/ui/config.qml:107
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgid "Scaled"
 msgstr "크기 조정"
 
-#: imagepackage/contents/ui/config.qml:111
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "크기 조정, 비율 유지"
 
-#: imagepackage/contents/ui/config.qml:115
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgid "Centered"
 msgstr "가운데"
 
-#: imagepackage/contents/ui/config.qml:119
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Tiled"
 msgstr "바둑판식 배열"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgid "Background:"
 msgstr "배경:"
 
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:171
 #, kde-format
 msgid "Blur"
 msgstr "흐리게"
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:180
 #, kde-format
 msgid "Solid color"
 msgstr "단색"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:191
 #, kde-format
 msgid "Select Background Color"
 msgstr "배경색 선택"
@@ -185,86 +185,86 @@ msgstr ""
 msgid "Image Files"
 msgstr "그림 파일"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:37
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Order:"
 msgstr "순서:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:44
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Random"
 msgstr "무작위"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
 #, kde-format
 msgid "A to Z"
 msgstr "가나다순"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Z to A"
 msgstr "가나다 역순"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "수정한 날짜(새로운 것 먼저)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "수정한 날짜(오래된 것 먼저)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:85
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:93
 #, kde-format
 msgid "Group by folders"
 msgstr "폴더로 묶기"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:97
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:105
 #, kde-format
 msgid "Change every:"
 msgstr "그림 변경 주기:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:107
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:115
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1시간"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:127
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:135
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1분"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:147
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:155
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1초"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:178
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:186
 #, kde-format
 msgid "Folders"
 msgstr "폴더"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:182
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:190
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "추가…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
 #, kde-format
 msgid "Remove Folder"
 msgstr "폴더 삭제"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:239
 #, kde-format
 msgid "Open Folder…"
 msgstr "폴더 열기…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "배경 그림 위치를 설정하지 않았습니다"

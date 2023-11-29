@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1318,54 +1318,54 @@ msgstr "Texto da janela"
 msgid "Button"
 msgstr "Botão"
 
-#: ui/main.qml:259
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ligação"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visitada"
 
-#: ui/main.qml:268
+#: ui/main.qml:271
 #, kde-format
 msgid "Normal text"
 msgstr "Texto normal"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texto realçado"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgid "Disabled text"
 msgstr "Texto desactivado"
 
-#: ui/main.qml:301
+#: ui/main.qml:303
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Editar o Esquema de Cores…"
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Remover o Esquema de Cores"
 
-#: ui/main.qml:314
+#: ui/main.qml:316
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Repor o Esquema de Cores"
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Abrir um Esquema de Cores"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Ficheiros de Esquemas de Cores (*.colors)"

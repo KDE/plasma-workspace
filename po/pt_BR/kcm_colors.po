@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-14 14:14-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1338,54 +1338,54 @@ msgstr "Texto da janela"
 msgid "Button"
 msgstr "Botão"
 
-#: ui/main.qml:259
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "link"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visitado"
 
-#: ui/main.qml:268
+#: ui/main.qml:271
 #, kde-format
 msgid "Normal text"
 msgstr "Texto normal"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texto em destaque"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgid "Disabled text"
 msgstr "Texto desativado"
 
-#: ui/main.qml:301
+#: ui/main.qml:303
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Editar esquema de cores..."
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Remover esquema de cores"
 
-#: ui/main.qml:314
+#: ui/main.qml:316
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restaurar esquema de cores"
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Abrir esquema de cores"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Arquivos de esquema de cores (*.colors)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-22 01:36+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2022-11-11 22:21+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
+
+#: ui/DayNightView.qml:110
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut yöväriksi %2 mennessä"
+
+#: ui/DayNightView.qml:113
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut päiväväriksi %2 "
+"mennessä"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -68,38 +85,82 @@ msgstr "Pituusaste:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Sinisen valon suodatin tekee näyttöväreistä lämpimämmät."
 
-#: ui/main.qml:109
+#: ui/main.qml:153
 #, kde-format
 msgid "Switching times:"
 msgstr "Vaihtoajat:"
 
-#: ui/main.qml:112
+#: ui/main.qml:156
 #, kde-format
 msgid "Always off"
 msgstr "Aina pois käytöstä"
 
-#: ui/main.qml:113
+#: ui/main.qml:157
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Auringonlasku ja -nousu nykyisessä sijainnissa"
 
-#: ui/main.qml:114
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Auringonlaskusta ja -nousu asetetussa sijainnissa"
 
-#: ui/main.qml:115
+#: ui/main.qml:159
 #, kde-format
 msgid "Custom times"
 msgstr "Aikojen mukautus"
 
-#: ui/main.qml:116
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "Yöväri aina käytössä"
 
-#: ui/main.qml:153
+#: ui/main.qml:183
+#, fuzzy, kde-format
+#| msgid "Day color temperature:"
+msgid "Day light temperature:"
+msgstr "Päivävärin lämpötila:"
+
+#: ui/main.qml:226 ui/main.qml:285
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1 K"
+
+#: ui/main.qml:230 ui/main.qml:289
+#, fuzzy, kde-format
+#| msgctxt "No blue light filter activated"
+#| msgid "Cool (no filter)"
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Kylmä (ei suodatinta)"
+
+#: ui/main.qml:236 ui/main.qml:295
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Lämmin"
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgid "Night color temperature:"
+msgid "Night light temperature:"
+msgstr "Yövärin lämpötila:"
+
+#: ui/main.qml:304
+#, fuzzy, kde-format
+#| msgid "Detect Location"
+msgctxt "@label The coordinates for the current location"
+msgid "Current location:"
+msgstr "Tunnista sijainti"
+
+#: ui/main.qml:310
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Leveysaste: %1°  Pituusaste: %2°"
+
+#: ui/main.qml:331
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -111,105 +172,51 @@ msgstr ""
 "käytettävissä) tai lähettämällä verkkotiedot <a href=\"https://location."
 "services.mozilla.com/\">Mozillan paikannuspalveluun</a>."
 
-#: ui/main.qml:172
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
-msgid "Day light temperature:"
-msgstr "Päivävärin lämpötila:"
-
-#: ui/main.qml:215 ui/main.qml:274
-#, kde-format
-msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1 K"
-
-#: ui/main.qml:219 ui/main.qml:278
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
-msgctxt "Night colour blue-ish; no blue light filter activated"
-msgid "Cool (no filter)"
-msgstr "Kylmä (ei suodatinta)"
-
-#: ui/main.qml:225 ui/main.qml:284
-#, kde-format
-msgctxt "Night colour red-ish"
-msgid "Warm"
-msgstr "Lämmin"
-
-#: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
-msgid "Night light temperature:"
-msgstr "Yövärin lämpötila:"
-
-#: ui/main.qml:295
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Leveysaste: %1°  Pituusaste: %2°"
-
-#: ui/main.qml:305
+#: ui/main.qml:349
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "Yövärin aloitusaika:"
 
-#: ui/main.qml:318 ui/main.qml:341
+#: ui/main.qml:362 ui/main.qml:385
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Syötemuoto: TT:MM"
 
-#: ui/main.qml:328
+#: ui/main.qml:372
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "Päivävärin aloitusaika:"
 
 # Ellei transition ole astronomisessa kielessä vakiintunut muuksi kuin ”siirtymäksi”?
-#: ui/main.qml:350
+#: ui/main.qml:394
 #, kde-format
 msgid "Transition duration:"
 msgstr "Siirtymän kesto:"
 
-#: ui/main.qml:359
+#: ui/main.qml:403
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuutti"
 msgstr[1] "%1 minuuttia"
 
-#: ui/main.qml:372
+#: ui/main.qml:416
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Syöte minuutteina – väh. 1, enint. 600"
 
-#: ui/main.qml:390
+#: ui/main.qml:434
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Virhe: Siirtymäajat lomittuvat."
 
-#: ui/main.qml:412
+#: ui/main.qml:456
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Paikannetaan…"
-
-#: ui/TimingsView.qml:32
-#, kde-format
-msgid ""
-"Color temperature begins changing to night time at %1 and is fully changed "
-"by %2"
-msgstr ""
-"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut yöväriksi %2 mennessä"
-
-#: ui/TimingsView.qml:39
-#, kde-format
-msgid ""
-"Color temperature begins changing to day time at %1 and is fully changed by "
-"%2"
-msgstr ""
-"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut päiväväriksi %2 "
-"mennessä"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"
@@ -241,9 +248,6 @@ msgstr ""
 
 #~ msgid "Error: Morning is before evening."
 #~ msgstr "Virhe: Aamu on ennen iltaa."
-
-#~ msgid "Detect Location"
-#~ msgstr "Tunnista sijainti"
 
 #~ msgid ""
 #~ "The device's location will be detected using GPS (if available), or by "

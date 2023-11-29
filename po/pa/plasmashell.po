@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-08-20 06:08-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "alam yellow @gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "ਮਾਊਸ ਕਾਰਵਾਈਆਂ ਦੀ ਸੰਰਚਨਾ ਲਈ ਪਲੱਗਇਨ"
 
-#: desktopview.cpp:207
+#: desktopview.cpp:208
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Dev"
@@ -40,7 +40,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਡੇਵ"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -48,7 +48,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -56,7 +56,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 #| msgid "KDE Plasma %1 Beta %2"
@@ -64,7 +64,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ %2"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -72,7 +72,7 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -80,31 +80,31 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1"
 
-#: desktopview.cpp:248
+#: desktopview.cpp:249
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਡੇਵ"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:253
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1 ਬੀਟਾ %2"
 
-#: desktopview.cpp:259
+#: desktopview.cpp:260
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE ਪਲਾਜ਼ਮਾ %1"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -263,57 +263,57 @@ msgstr "%3 ਉੱਤੇ %1 %2"
 msgid "Disconnected Screen %1"
 msgstr "ਸਕਰੀਨ %1 ਤੋਂ ਡਿਸਕਨੈਕਟ ਹੈ"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:196 shellcorona.cpp:198
 #, kde-format
 msgid "Show Desktop"
 msgstr "ਡੈਸਕਟਾਪ ਨੂੰ ਵੇਖਾਓ"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Hide Desktop"
 msgstr "ਡੈਸਕਟਾਪ ਨੂੰ ਲੁਕਾਓ"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "ਸਰਗਰਮੀ ਸਵਿੱਚਰ ਵੇਖਾਓ"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ ਰੋਕੋ"
 
-#: shellcorona.cpp:211
+#: shellcorona.cpp:233
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "ਪਿਛਲੀ ਸਰਗਰਮੀ ਲਈ ਬਦਲੋ"
 
-#: shellcorona.cpp:219
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "ਅਗਲੀ ਸਰਗਰਮੀ ਲਈ ਬਦਲੋ"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਐਂਟਰੀ %1 ਸਰਗਰਮ ਕਰੋ"
 
-#: shellcorona.cpp:261
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "...ਡੈਸਕਟਾਪ ਅਤੇ ਪੈਨਲਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
 
-#: shellcorona.cpp:283
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "ਪੈਨਲਾਂ ਵਿਚਾਲੇ ਕੀਬੋਰਡ ਫ਼ੋਕਸ ਨੂੰ ਬਦਲੋ"
 
-#: shellcorona.cpp:2011
+#: shellcorona.cpp:2040
 #, kde-format
 msgid "Add Panel"
 msgstr "ਪੈਨਲ ਜੋੜੋ"
 
-#: shellcorona.cpp:2047
+#: shellcorona.cpp:2076
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

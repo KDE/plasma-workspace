@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-10-22 08:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -29,6 +29,16 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 23.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "צוות התרגום של KDE ישראל"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-he@kde.org"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -495,67 +505,55 @@ msgstr "סמל:"
 msgid "%1x%2 %3bpp"
 msgstr "%1×%2 %3 סיביות לפיקסלים"
 
-#: klipper.cpp:137
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "תפריט פעולות קופץ אוטומטי"
 
-#: klipper.cpp:172
+#: klipper.cpp:168
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&פינוי היסטוריית לוח הגזירים"
 
-#: klipper.cpp:179
+#: klipper.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "ה&גדרת Klipper…"
 
-#: klipper.cpp:185
-#, kde-format
-msgctxt "@action:inmenu Quit Klipper"
-msgid "&Quit"
-msgstr "י&ציאה…"
-
-#: klipper.cpp:190
+#: klipper.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "הפעלת פעולה ידנית על לוח הגזירים הנוכחי"
 
-#: klipper.cpp:197
+#: klipper.cpp:186
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ה&צגת ברקוד…"
 
-#: klipper.cpp:206
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "הפריט הבא בהיסטוריה"
 
-#: klipper.cpp:211
+#: klipper.cpp:200
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "הפריט הקודם בהיסטוריה"
 
-#: klipper.cpp:218
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "הצגת פריטי לוח גזירים במקום של העכבר"
 
-#: klipper.cpp:229
-#, kde-format
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Tool"
-msgstr "%1 - כלי ללוח העריכה"
-
-#: klipper.cpp:525
+#: klipper.cpp:487
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -565,57 +563,57 @@ msgstr ""
 "ניתן להפעיל פקודות על כתובות מאוחר יותר דרך עמוד ה<interface>פעולות</"
 "interface> בחלון הגדרות היישומונית של לוח הגזירים"
 
-#: klipper.cpp:564
+#: klipper.cpp:526
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "האם להפעיל את Klipper אוטומטית בעת הכניסה למערכת?"
 
-#: klipper.cpp:565
+#: klipper.cpp:527
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "להפעיל את Klipper אוטומטית?"
 
-#: klipper.cpp:566
+#: klipper.cpp:528
 #, kde-format
 msgid "Start"
 msgstr "להפעיל"
 
-#: klipper.cpp:567
+#: klipper.cpp:529
 #, kde-format
 msgid "Do Not Start"
 msgstr "לא להפעיל"
 
-#: klipper.cpp:937
+#: klipper.cpp:899
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ברקוד נייד"
 
-#: klipper.cpp:984
+#: klipper.cpp:940
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
 
-#: klipper.cpp:985
+#: klipper.cpp:941
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "פינוי היסטוריית לוח הגזירים"
 
-#: klipper.cpp:1001 klipper.cpp:1010
+#: klipper.cpp:957 klipper.cpp:966
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:1027
+#: klipper.cpp:983
 #, kde-format
 msgid "up"
 msgstr "למעלה"
 
-#: klipper.cpp:1034
+#: klipper.cpp:990
 #, kde-format
 msgid "current"
 msgstr "נוכחי"
 
-#: klipper.cpp:1041
+#: klipper.cpp:997
 #, kde-format
 msgid "down"
 msgstr "למטה"
@@ -851,99 +849,6 @@ msgstr "לוח הגזירים ריק"
 msgid "No matches"
 msgstr "אין לכידות"
 
-#: main.cpp:27
-#, kde-format
-msgid "Klipper"
-msgstr "Klipper"
-
-#: main.cpp:29
-#, kde-format
-msgid "Plasma cut & paste history utility"
-msgstr "כלי היסטורייה גזירה והדבקה של פלזמה"
-
-#: main.cpp:31
-#, kde-format
-msgid ""
-"(c) 1998, Andrew Stanley-Jones\n"
-"1998-2002, Carsten Pfeiffer\n"
-"2001, Patrick Dubroy"
-msgstr ""
-"(c) 1998, אנדרו סטנלי-ג׳ונס\n"
-"1998‏-2002, קרסטן פייפר\n"
-"2001, פטריק דוברוי"
-
-#: main.cpp:34
-#, kde-format
-msgid "Carsten Pfeiffer"
-msgstr "קרסטן פייפר"
-
-#: main.cpp:34
-#, kde-format
-msgid "Author"
-msgstr "מחבר"
-
-#: main.cpp:36
-#, kde-format
-msgid "Andrew Stanley-Jones"
-msgstr "אנדרו סטנלי-ג׳ונס"
-
-#: main.cpp:36
-#, kde-format
-msgid "Original Author"
-msgstr "יוצר מקורי"
-
-#: main.cpp:38
-#, kde-format
-msgid "Patrick Dubroy"
-msgstr "פטריק דוברוי"
-
-#: main.cpp:38
-#, kde-format
-msgid "Contributor"
-msgstr "תורם"
-
-#: main.cpp:40
-#, kde-format
-msgid "Luboš Luňák"
-msgstr "לובוש לוניאק"
-
-#: main.cpp:40
-#, kde-format
-msgid "Bugfixes and optimizations"
-msgstr "תיקוני באגים ושיפורי ביצועים"
-
-#: main.cpp:42
-#, kde-format
-msgid "Esben Mose Hansen"
-msgstr "אסבן מוז הנסן"
-
-#: main.cpp:42
-#, kde-format
-msgid "Previous Maintainer"
-msgstr "מתחזק קודם"
-
-#: main.cpp:44
-#, kde-format
-msgid "Martin Gräßlin"
-msgstr "מרטין גרייסלין"
-
-#: main.cpp:44
-#, kde-format
-msgid "Maintainer"
-msgstr "מתחזק"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "צוות התרגום של KDE ישראל"
-
-#: main.cpp:46
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-l10n-he@kde.org"
-
 #: popupproxy.cpp:144
 #, kde-format
 msgid "&More"
@@ -958,6 +863,65 @@ msgstr "ביטול תפריט מוקפץ זה"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"
+
+#~ msgctxt "@action:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "י&ציאה…"
+
+#~ msgctxt "%1 is application display name"
+#~ msgid "%1 - Clipboard Tool"
+#~ msgstr "%1 - כלי ללוח העריכה"
+
+#~ msgid "Klipper"
+#~ msgstr "Klipper"
+
+#~ msgid "Plasma cut & paste history utility"
+#~ msgstr "כלי היסטורייה גזירה והדבקה של פלזמה"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "(c) 1998, אנדרו סטנלי-ג׳ונס\n"
+#~ "1998‏-2002, קרסטן פייפר\n"
+#~ "2001, פטריק דוברוי"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "קרסטן פייפר"
+
+#~ msgid "Author"
+#~ msgstr "מחבר"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "אנדרו סטנלי-ג׳ונס"
+
+#~ msgid "Original Author"
+#~ msgstr "יוצר מקורי"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "פטריק דוברוי"
+
+#~ msgid "Contributor"
+#~ msgstr "תורם"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "לובוש לוניאק"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "תיקוני באגים ושיפורי ביצועים"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "אסבן מוז הנסן"
+
+#~ msgid "Previous Maintainer"
+#~ msgstr "מתחזק קודם"
+
+#~ msgid "Martin Gräßlin"
+#~ msgstr "מרטין גרייסלין"
+
+#~ msgid "Maintainer"
+#~ msgstr "מתחזק"
 
 #, fuzzy
 #~| msgid "Edit Contents"
