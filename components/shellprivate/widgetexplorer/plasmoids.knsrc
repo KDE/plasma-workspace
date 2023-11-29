@@ -56,7 +56,7 @@ Name[x-test]=xxPlasma Widgetsxx
 Name[zh_CN]=Plasma 挂件
 Name[zh_TW]=Plasma 元件
 
-Categories=Plasma 5 Plasmoid
+Categories=Plasma 6 Extensions
 StandardResource=tmp
 Uncompress=kpackage
 KPackageStructure=Plasma/Applet
