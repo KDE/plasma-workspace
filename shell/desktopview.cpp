@@ -387,24 +387,6 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
                 });
             }
         });
-        /*
-        connect(m_configView, &QQuickWindow::screenChanged, m_configView.data(), [this](const QScreen * screen) {
-            qDebug() << "screenGeometryChanged";
-            ShellCorona* shellCorona = qobject_cast<ShellCorona*> (corona());
-            int screenId = shellCorona->screenPool()->idForScreen(screen);
-            qDebug() <<  "idForScreen" << shellCorona->screenPool()->idForScreen(screen);
-            auto cont = shellCorona->containmentForScreen(screenId, containment()->activity(), QStringLiteral("default"));
-            if (!cont) {
-                qDebug() << "no cont";
-            }
-            if (cont == containment()) {
-                return;
-            }
-            if (containment()->property("wallpaperGraphicsObject").value<QObject *>()) {
-                showConfigurationInterface(cont);
-            }
-        });
-        */
     } else {
         m_configView = new PlasmaQuick::ConfigView(applet);
     }
