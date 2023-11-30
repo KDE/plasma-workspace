@@ -64,6 +64,10 @@ void RunnerModel::setFavoritesModel(AbstractModel *model)
 
         clear();
 
+        for (auto *model : std::as_const(m_models)) {
+            model->setFavoritesModel(m_favoritesModel);
+        }
+
         if (!m_query.isEmpty()) {
             m_queryTimer.start();
         }
@@ -217,11 +221,14 @@ void RunnerModel::initializeModels()
     if (m_mergeResults) {
         auto model = new RunnerMatchesModel(QString(), i18n("Search results"), this);
         model->runnerManager()->setAllowedRunners(m_runners);
+        model->setFavoritesModel(m_favoritesModel);
         model->setFavoriteIds(m_favoritePluginIds);
         m_models.append(model);
     } else {
         for (const QString &runnerId : std::as_const(m_runners)) {
-            m_models.append(new RunnerMatchesModel(runnerId, std::nullopt, this));
+            auto *model = new RunnerMatchesModel(runnerId, std::nullopt, this);
+            model->setFavoritesModel(m_favoritesModel);
+            m_models.append(model);
         }
     }
     for (auto model : std::as_const(m_models)) {

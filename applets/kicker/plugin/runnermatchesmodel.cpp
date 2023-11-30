@@ -51,6 +51,19 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
     connect(runnerManager(), &KRunner::RunnerManager::requestUpdateQueryString, this, &RunnerMatchesModel::requestUpdateQueryString);
 }
 
+AbstractModel *RunnerMatchesModel::favoritesModel() const
+{
+    return m_favoritesModel;
+}
+
+void RunnerMatchesModel::setFavoritesModel(AbstractModel *model)
+{
+    if (m_favoritesModel != model) {
+        m_favoritesModel = model;
+        Q_EMIT favoritesModelChanged();
+    }
+}
+
 QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 {
     KRunner::QueryMatch match = getQueryMatch(index);
