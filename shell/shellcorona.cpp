@@ -925,12 +925,12 @@ void ShellCorona::unload()
     // Make double sure that we do not access the members while we are in the process of deleting them.
     // Most notably destroying PanelViews may issue signals that in turn cause iteration upon the m_panelViews.
     // First clear the members, then delete them.
-    auto desktopViewForScreen = m_desktopViewForScreen;
-    m_desktopViewForScreen.clear();
+    auto desktopViewForScreen = std::move(m_desktopViewForScreen);
     qDeleteAll(desktopViewForScreen);
-    auto panelViews = m_panelViews;
-    m_panelViews.clear();
-    qDeleteAll(panelViews);
+    for (const auto panelViews = std::move(m_panelViews); auto panelView : panelViews) {
+        panelView->disconnect(this);
+        delete panelView;
+    }
 
     m_waitingPanels.clear();
     m_activityContainmentPlugins.clear();
@@ -1499,6 +1499,7 @@ void ShellCorona::createWaitingPanels()
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
         auto rectNotify = [this, panel]() {
+            Q_ASSERT(qobject_cast<PanelView *>(panel)); // https://bugreports.qt.io/browse/QTBUG-118841
             if (!m_screenReorderInProgress && panel->containment()) {
                 Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
