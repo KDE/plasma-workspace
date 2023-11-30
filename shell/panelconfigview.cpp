@@ -220,6 +220,11 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(panelView, &PanelView::lengthChanged, this, &PanelConfigView::syncGeometry);
     connect(panelView, &PanelView::geometryChanged, this, &PanelConfigView::syncGeometry);
     connect(panelView, &PanelView::thicknessChanged, this, &PanelConfigView::syncGeometry);
+    connect(m_containment->corona(), &Plasma::Corona::editModeChanged, this, [this](bool edit) {
+        if (!edit) {
+            hide();
+        }
+    });
 
     setMargin(4);
 }
@@ -335,6 +340,11 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
         && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow")
             || focusWindow == m_panelRulerView.get())) {
         return;
+    }
+    if (auto popup = qobject_cast<const PopupPlasmaWindow *>(focusWindow)) {
+        if (auto parent = popup->visualParent(); parent && parent->window() == m_panelView) {
+            return;
+        }
     }
     Q_UNUSED(ev)
     hide();
