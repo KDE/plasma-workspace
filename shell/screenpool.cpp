@@ -238,7 +238,22 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         Q_ASSERT(m_availableScreens.contains(screen));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
+#if HAVE_X11
+        // On X11 with DisplayPort connectors, sometimes the following happens:
+        // * Disconnecting the only displayport connector will actually add a *new* QScreen called "DisplayPort-0"
+        // * Then the old QScreen is renamed to ":0.0" becoming the usual fake screen
+        // * But the assumption that when there is nothing connected there is only a fake QScreen gets broken
+        // * When the connector gets connected again, ":0.0" gets removed, but this assertion fails because there was another screen in m_sizeSortedScreens
+        // * Afterwards that other "DisplayPort-0" screen gets recycled and becomes the unique QScreen
+        // * ScreenPool works anyways, because when ":0.0" gets removed, its containments get reassigned to "DisplayPort-0"
+        // * Unfortunately an extra unneded desktop containment may have been created in the meantime
+        // This doesn't happen on wayland, where that extra screen does *not* get created
+        if (!KWindowSystem::isPlatformX11()) {
+            Q_ASSERT(m_sizeSortedScreens.isEmpty());
+        }
+#else
         Q_ASSERT(m_sizeSortedScreens.isEmpty());
+#endif
         m_sizeSortedScreens.append(screen);
         m_availableScreens.removeAll(screen);
         m_fakeScreens.insert(screen);
