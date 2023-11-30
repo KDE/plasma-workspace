@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-14 10:12+0100\n"
+"PO-Revision-Date: 2023-11-29 13:46+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -152,7 +152,7 @@ msgstr "Temperatura de la llum de nit:"
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr ""
+msgstr "Emplaçament actual:"
 
 #: ui/main.qml:310
 #, kde-format
