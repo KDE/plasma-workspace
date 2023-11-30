@@ -26,14 +26,14 @@ class MockWallpaperInterface : public QObject
     Q_OBJECT
 
     Q_PROPERTY(bool loading MEMBER m_loading NOTIFY isLoadingChanged)
+    Q_PROPERTY(QColor accentColor MEMBER m_accentColor NOTIFY accentColorChanged)
 
 public:
     explicit MockWallpaperInterface(QObject *parent = nullptr)
         : QObject(parent)
     {
-        connect(this, &MockWallpaperInterface::repaintNeeded, this, [this](const QColor &color) {
+        connect(this, &MockWallpaperInterface::accentColorChanged, this, [this] {
             m_repainted = true;
-            m_accentColor = color;
         });
     }
 
@@ -43,7 +43,7 @@ public:
 
 Q_SIGNALS:
     void isLoadingChanged();
-    void repaintNeeded(const QColor &accentColor = Qt::transparent);
+    void accentColorChanged();
 };
 
 template<typename T>
@@ -180,9 +180,6 @@ void ImageFrontendTest::testLoadWallpaper()
     initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(m_wallpaperInterface.data()));
     m_view->setInitialProperties(initialProperties);
 
-    // When repaintNeeded is emitted, the transition animation has finished.
-    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::repaintNeeded);
-
     QByteArray errorMessage;
     QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),
              errorMessage.constData());
@@ -192,7 +189,8 @@ void ImageFrontendTest::testLoadWallpaper()
     QQuickItem *rootObject = m_view->rootObject();
     QVERIFY(rootObject);
 
-    // Wait loaded
+    // Wait until the transition animation has finished.
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::accentColorChanged);
     QVERIFY(m_wallpaperInterface->m_repainted || repaintSpy.wait());
     auto currentItem = evaluate<QQuickItem *>(rootObject, "currentItem");
     QVERIFY(currentItem);
@@ -249,9 +247,6 @@ void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
     initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(m_wallpaperInterface.data()));
     m_view->setInitialProperties(initialProperties);
 
-    // When repaintNeeded is emitted, the transition animation has finished.
-    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::repaintNeeded);
-
     QByteArray errorMessage;
     QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),
              errorMessage.constData());
@@ -261,7 +256,8 @@ void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
     QQuickItem *rootObject = m_view->rootObject();
     QVERIFY(rootObject);
 
-    // Wait loaded
+    // Wait until the transition animation has finished.
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::accentColorChanged);
     QVERIFY(m_wallpaperInterface->m_repainted || repaintSpy.wait());
     auto firstItem = evaluate<QQuickItem *>(rootObject, "currentItem");
     QVERIFY(firstItem);
@@ -356,7 +352,7 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
     initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(m_wallpaperInterface.data()));
     m_view->setInitialProperties(initialProperties);
 
-    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::repaintNeeded);
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::accentColorChanged);
 
     QByteArray errorMessage;
     QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),

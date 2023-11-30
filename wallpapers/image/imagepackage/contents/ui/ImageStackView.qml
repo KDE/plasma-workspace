@@ -100,7 +100,13 @@ QQC2.StackView {
 
         pendingImage.statusChanged.disconnect(replaceWhenLoaded);
         // BUG 454908: Update accent color
-        pendingImage.QQC2.StackView.onActivated.connect(() => wallpaperInterface.repaintNeeded(mediaProxy.customColor));
+        pendingImage.QQC2.StackView.onActivated.connect(() => {
+            if (Qt.colorEqual(mediaProxy.customColor, "transparent") && Qt.colorEqual(wallpaperInterface.accentColor, "transparent")) {
+                wallpaperInterface.accentColorChanged();
+            } else {
+                wallpaperInterface.accentColor = mediaProxy.customColor;
+            }
+        });
         pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
         view.replace(pendingImage, {}, QQC2.StackView.Transition);
 

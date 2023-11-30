@@ -22,7 +22,7 @@ WallpaperItem {
                 }
 
                 ScriptAction {
-                    script: root.repaintNeeded()
+                    script: root.accentColorChanged()
                 }
             }
         }
