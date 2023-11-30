@@ -280,11 +280,7 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Aktuala etoso por ĉi tiu Plasma-seanco)"
 
 #: xcursor/xcursortheme.cpp:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info The argument is the list of available sizes (in pixel). Example: "
-#| "¦'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
-#| msgid "(Available sizes: %1)"
+#, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"

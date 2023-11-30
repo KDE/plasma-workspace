@@ -20,11 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to log out of "
-#| "the ¦session"
-#| msgid "logout;log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
@@ -37,11 +33,7 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Elsalutas, finigante la nunan labortablan seancon"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the ¦computer"
-#| msgid "shutdown;shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
@@ -54,11 +46,7 @@ msgid "Turns off the computer"
 msgstr "Malŝaltas la komputilon"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to restart the "
-#| "¦computer"
-#| msgid "restart;reboot"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
@@ -83,11 +71,7 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Ŝlosas la nunajn seancojn kaj lanĉas la ekrankurtenon"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to save the "
-#| "¦desktop session"
-#| msgid "save;save session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
@@ -100,11 +84,7 @@ msgid "Saves the current session for session restoration"
 msgstr "Konservas la aktualan seancon por seanca restaŭro"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to switch user "
-#| "¦sessions"
-#| msgid "switch user;new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
