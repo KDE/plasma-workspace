@@ -346,6 +346,10 @@ void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
             return;
         }
     }
+    // Don't close if the user is directly manipulating the panel
+    if (m_panelView->mouseGrabberItem()) {
+        return;
+    }
     hide();
 }
 
