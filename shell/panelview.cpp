@@ -809,6 +809,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     if (isPanelConfig) {
         if (m_panelConfigView && m_panelConfigView->isVisible()) {
             m_panelConfigView->hide();
+            cont->corona()->setEditMode(false);
         } else if (m_panelConfigView) {
             m_panelConfigView->show();
             m_panelConfigView->requestActivate();
