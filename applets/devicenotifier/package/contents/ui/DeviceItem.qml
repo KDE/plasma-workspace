@@ -192,11 +192,11 @@ PlasmaExtras.ExpandableListItem {
         } else if (deviceItem.state == 1) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
         } else if (unmountTimer.running) {
-            // Unmounting, shown if unmount takes less than 1 second
+            // Unmounting; shown if unmount takes less than 1 second
             return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing…")
         } else {
             // Unmounting; shown if unmount takes longer than 1 second
-            return i18n("Don't unplug yet! Files are still being transferred...")
+            return i18n("Don't unplug yet! Files are still being transferred…")
         }
     }
 
