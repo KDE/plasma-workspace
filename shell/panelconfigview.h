@@ -76,7 +76,7 @@ protected:
     void keyPressEvent(QKeyEvent *ev) override;
     void showEvent(QShowEvent *ev) override;
     void hideEvent(QHideEvent *ev) override;
-    void focusOutEvent(QFocusEvent *ev) override;
+    void focusInEvent(QFocusEvent *ev) override;
 
 public Q_SLOTS:
     void showAddWidgetDialog();
@@ -91,6 +91,8 @@ Q_SIGNALS:
     void enabledBordersChanged();
 
 private:
+    void focusVisibilityCheck(QWindow *focusWindow);
+
     Plasma::Containment *m_containment;
     QPointer<PanelView> m_panelView;
     std::unique_ptr<PanelRulerView> m_panelRulerView;

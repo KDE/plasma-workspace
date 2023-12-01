@@ -332,13 +332,13 @@ void PanelConfigView::hideEvent(QHideEvent *ev)
     deleteLater();
 }
 
-void PanelConfigView::focusOutEvent(QFocusEvent *ev)
+void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
 {
-    const QWindow *focusWindow = QGuiApplication::focusWindow();
-
-    if (focusWindow
-        && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow")
-            || focusWindow == m_panelRulerView.get())) {
+    if (!focusWindow) {
+        hide();
+        return;
+    }
+    if (focusWindow == this || (m_panelRulerView && focusWindow == m_panelRulerView.get())) {
         return;
     }
     if (auto popup = qobject_cast<const PopupPlasmaWindow *>(focusWindow)) {
@@ -346,8 +346,12 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
             return;
         }
     }
-    Q_UNUSED(ev)
     hide();
+}
+
+void PanelConfigView::focusInEvent(QFocusEvent *ev)
+{
+    connect(qApp, &QGuiApplication::focusWindowChanged, this, &PanelConfigView::focusVisibilityCheck, Qt::UniqueConnection);
 }
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
