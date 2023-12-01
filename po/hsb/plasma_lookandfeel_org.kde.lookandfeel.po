@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-11-19 09:01+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -43,20 +43,20 @@ msgid "Caps Lock is on"
 msgstr "Stajne wulkopisanje je zaswěćene"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
-#: contents/logout/Logout.qml:166
+#: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Spinkać"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
-#: contents/logout/Logout.qml:187 contents/logout/Logout.qml:198
+#: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "Znowa startować"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
-#: contents/logout/Logout.qml:211
+#: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
 msgstr "Hasnyć"
@@ -129,7 +129,7 @@ msgstr "Wotamknjenje so njeje poradźiło"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:176
+#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
 msgstr "Zymski spar"
@@ -186,7 +186,7 @@ msgstr "Medij wothrawać/zastajić"
 msgid "Next track"
 msgstr "Přichodny track"
 
-#: contents/logout/Logout.qml:141
+#: contents/logout/Logout.qml:142
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -207,23 +207,23 @@ msgstr[3] ""
 "%1 dalšich wužiwarjow je tuchwilu přizjewjenych. Hdyž so kompjuter hasnje "
 "abo znowa startuje, móhli tući wužiwarjo daty zhubić."
 
-#: contents/logout/Logout.qml:155
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Po znowastarowanju póńdźe kompjuter do firmware-setupa."
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:187
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:222
+#: contents/logout/Logout.qml:223
 #, kde-format
 msgid "Log Out"
 msgstr "So wotzjewić"
 
-#: contents/logout/Logout.qml:246
+#: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
@@ -232,7 +232,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:248
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
@@ -241,7 +241,7 @@ msgstr[1] "Startuju znowa za %1 sekundźe"
 msgstr[2] "Startuju znowa za %1 sekundy"
 msgstr[3] "Startuju znowa za %1 sekundow"
 
-#: contents/logout/Logout.qml:249
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -250,7 +250,7 @@ msgstr[1] "Kompjuter so hasnje za %1 sekundźe"
 msgstr[2] "Kompjuter so hasnje za %1 sekundy"
 msgstr[3] "Kompjuter so hasnje za %1 sekundow"
 
-#: contents/logout/Logout.qml:251
+#: contents/logout/Logout.qml:252
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"

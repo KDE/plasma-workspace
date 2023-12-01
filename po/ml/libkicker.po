@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -59,7 +59,7 @@ msgstr "സമീപകാല ഫയലുകൾ മറക്കുക"
 msgid "Edit Application…"
 msgstr "പ്രയോഗം തിരുത്തുക…"
 
-#: plugin/actionlist.cpp:424
+#: plugin/actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -196,7 +196,7 @@ msgstr "കൂടെക്കൂടെ ഉപയോഗിച്ച പ്രയ�
 msgid "Power / Session"
 msgstr "ഊർജ്ജം / സെഷൻ"
 
-#: plugin/runnermodel.cpp:218
+#: plugin/runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "തിരച്ചില്‍ ഫലങ്ങള്‍"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2014-08-11 12:41+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -286,38 +286,38 @@ msgstr "Orner tofögen"
 msgid "There are no wallpaper locations configured"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, fuzzy, kde-format
 #| msgid "Download Wallpapers"
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "Achtergrundbiller daalladen"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""

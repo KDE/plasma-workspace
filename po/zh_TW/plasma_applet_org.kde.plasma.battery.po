@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-11-29 18:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -75,7 +75,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:141
 #, kde-format
 msgid "Fully Charged"
 msgstr "已充飽"
@@ -101,111 +101,111 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "不存在"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Power and Battery"
 msgstr "電源與電池"
 
-#: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:283
 #, kde-format
 msgid "Power Management"
 msgstr "電源管理"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "電量 %1%，未充電"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "電量 %1%，已接上電源但仍在放電中"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "電量 %1%，充電中"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Battery at %1%"
 msgstr "電量 %1%"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "電力供應不足以對電池進行充電"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "No Batteries Available"
 msgstr "沒有可用的電池"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "距離充飽還有 %1"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "剩餘 %1"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Not charging"
 msgstr "未充電"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "自動睡眠與螢幕鎖定已停用"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "%1 個應用程式已要求使用效能模式"
 
-#: package/contents/ui/main.qml:188
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "System is in Performance mode"
 msgstr "系統目前使用效能模式"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "%1 個應用程式已要求使用省電模式"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:199
 #, kde-format
 msgid "System is in Power Save mode"
 msgstr "系統目前使用省電模式"
 
-#: package/contents/ui/main.qml:255
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "電池小程式已開啟系統睡眠模式"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "使用%1模式失敗"
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "顯示能源資訊(&S)…"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "尚未充飽時在圖示上顯示電池百分比"
 
-#: package/contents/ui/main.qml:320
+#: package/contents/ui/main.qml:326
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "設定省電模式(&C)…"

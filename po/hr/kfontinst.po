@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontviewpart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2011-04-28 15:17+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -59,12 +59,12 @@ msgstr "Instalater pisama"
 msgid "Simple font installer"
 msgstr "Jednostavan instalater pisama"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "Učini dijalog prolaznim za X aplikaciju označenu od winId-a"
@@ -74,33 +74,33 @@ msgstr "Učini dijalog prolaznim za X aplikaciju označenu od winId-a"
 msgid "URL to install"
 msgstr "URL za instalaciju"
 
-#: apps/Printer.cpp:238
+#: apps/Printer.cpp:240
 #, kde-format
 msgid "Print"
 msgstr "Ispiši"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
 msgstr "Prekidanje…"
 
-#: apps/Printer.cpp:325
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Ispisivač pisama"
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Jednostavan ispisivač pisama"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Promijeni veličinu indeksa da bi ispisao pisma"
 
-#: apps/Printer.cpp:341
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -109,12 +109,12 @@ msgstr ""
 "Pismo za ispis, određeno kao \"Obitelj,Stil\" gdje je Stil 24-bitni "
 "decimalni broj sastavljen kao: <weight><width><slant>"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Datoteka sadrži listu pisama za ispis"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Ukloni datoteku koja sadrži listu pisama za ispis"
@@ -224,7 +224,7 @@ msgstr "Datum"
 msgid "Links To"
 msgstr "Veze prema"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "Otvori u pregledniku pisama"
@@ -314,17 +314,17 @@ msgstr "Simbol/Drugo"
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:552
 #, kde-format
 msgid "Font"
 msgstr "Pismo"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
@@ -332,7 +332,7 @@ msgid ""
 msgstr ""
 "Ovaj stupac prikazuje stanje obitelji pisama i individualnih stilova pisama."
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:675
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -345,46 +345,46 @@ msgstr ""
 "p><ul><li>Times [4]<ul><li>Regularni</li><li>Podebljano</li><li>Podebljano "
 "Ukošeno</li><li>Ukošeno</li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "…plus %1 više"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1005
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1304
 #, kde-format
 msgid "Delete"
 msgstr "Izbriši"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
 #: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "Omogući"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "Onemogući"
 
-#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "Ispiši"
 
-#: kcmfontinst/FontList.cpp:1317
+#: kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Reload"
 msgstr "Ponovo učitaj"
 
-#: kcmfontinst/FontList.cpp:1718
+#: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "Otvoriti svih %1 pisama u pregledniku pisama?"
@@ -647,7 +647,7 @@ msgstr "Nije moguće ukloniti sve datoteke pridružene <i>%1</i>"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Pokretanje sistemskog servisa nije uspjelo.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> već postoji."
@@ -1162,12 +1162,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "Moguće je instalirati samo pisma \"%1\" ili \"%2\"."
 
-#: kio/KioFonts.cpp:211
+#: kio/KioFonts.cpp:208
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1176,68 +1176,68 @@ msgstr ""
 "Ne možete izravno instalirati paket pisama.\n"
 "Molim raspakirajte %1, te zatim instalirajte pisma pojedinačno."
 
-#: kio/KioFonts.cpp:433
+#: kio/KioFonts.cpp:430
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Nije moguće kopirati pisma"
 
-#: kio/KioFonts.cpp:438
+#: kio/KioFonts.cpp:435
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Nije moguće premjestiti pisma"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:446
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Samo pisma mogu biti izbrisana."
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Moguće je samo ukloniti pisma od \"%1\" ili \"%2\"."
 
-#: kio/KioFonts.cpp:480
+#: kio/KioFonts.cpp:477
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Molim da odredite \"%1\" ili \"%2\"."
 
-#: kio/KioFonts.cpp:498
+#: kio/KioFonts.cpp:495
 #, kde-format
 msgid "No special methods supported."
 msgstr "Nisu podržane posebne metode."
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:569
 #, kde-format
 msgid "Fonts"
 msgstr "Pisma"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:698
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Pokretanje sistemskog servisa nije uspjelo"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:700
 #, kde-format
 msgid "Backend died"
 msgstr "Pozadinski sustav se ugasio"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 je bitmapsko pismo, a takva su onemogućena na vašem sustavu."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1 sadrži pismo <b>%2</b>, koje je već instalirano na vaš sustav."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 nije pismo."
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Nije moguće ukloniti sve datoteke pridružene %1"
@@ -1247,54 +1247,54 @@ msgstr "Nije moguće ukloniti sve datoteke pridružene %1"
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: lib/FcEngine.cpp:865
+#: lib/FcEngine.cpp:869
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:867
+#: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcČčĆćDdĐđEeFfGgHhIiJjKkLlMmNnOoPpRrSsŠšTtUuVvZzŽž0123456789"
 
-#: lib/FcEngine.cpp:1029
+#: lib/FcEngine.cpp:1033
 #, kde-format
 msgid "No characters found."
 msgstr "Znakovi nisu nađeni."
 
-#: lib/FcEngine.cpp:1067
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "The quick brown fox jumps over the lazy dog (šđčćž ŠĐČĆŽ)"
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCčćDđEFGHIJKLMNOPQRSšTUVWXYZž"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcčćdđefghijklmnopqrsštuvwxyzž"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1480
+#: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "GREŠKA: Nije moguće odrediti ime pisma."
 
-#: lib/FcEngine.cpp:1483
+#: lib/FcEngine.cpp:1487
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -1605,34 +1605,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML decimalni zapis"
 
-#: viewpart/FontViewPart.cpp:85
+#: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
 msgstr "Prikaži lice:"
 
-#: viewpart/FontViewPart.cpp:88
+#: viewpart/FontViewPart.cpp:90
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "Instaliranje"
 
-#: viewpart/FontViewPart.cpp:109
+#: viewpart/FontViewPart.cpp:111
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "Promijeni tekst…"
 
-#: viewpart/FontViewPart.cpp:335
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "Nije moguće očitati pismo."
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
 msgstr "Pregledni string"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Unesite novi string:"

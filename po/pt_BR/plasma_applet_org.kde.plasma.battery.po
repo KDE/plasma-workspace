@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-11-14 14:14-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -78,7 +78,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:141
 #, kde-format
 msgid "Fully Charged"
 msgstr "Completamente carregada"
@@ -104,116 +104,116 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Ausente"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Power Management"
 msgid "Power and Battery"
 msgstr "Gerenciamento de energia"
 
-#: package/contents/ui/main.qml:113 package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:283
 #, kde-format
 msgid "Power Management"
 msgstr "Gerenciamento de energia"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Bateria em %1%, não está carregando"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Bateria em %1%, conectada mas ainda descarregando"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Bateria em %1%, carregando"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Bateria em %1%"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "A fonte de energia não é potente o suficiente para carregar a bateria"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Nenhuma bateria disponível"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 até carregar completamente"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 restantes"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Not charging"
 msgstr "Não está carregando"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "A suspensão automática e bloqueio de tela estão desabilitados"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Um aplicativo solicitou a ativação do modo performance"
 msgstr[1] "%1 aplicativos solicitaram a ativação do modo performance"
 
-#: package/contents/ui/main.qml:188
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "System is in Performance mode"
 msgstr "O sistema está no modo performance"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Um aplicativo solicitou a ativação do modo economia de energia"
 msgstr[1] "%1 aplicativos solicitaram a ativação do modo economia de energia"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:199
 #, kde-format
 msgid "System is in Power Save mode"
 msgstr "O sistema está no modo economia de energia"
 
-#: package/contents/ui/main.qml:255
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "O miniaplicativo de bateria ativou a inibição a nível de sistema"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Falha ao ativar o modo %1"
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Mo&strar informações de energia..."
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "Mostrar porcentagem da bateria no ícone quando não estiver completamente "
 "carregada"
 
-#: package/contents/ui/main.qml:320
+#: package/contents/ui/main.qml:326
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Configurar a economia de energia..."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:41+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2018-09-23 13:24+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,23 +19,23 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: iconapplet.cpp:93
+#: iconapplet.cpp:95
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Klarte ikkje oppretta ikonelement-mappa «%1»"
 
 # Sjå forklaring på http://blog.broulik.de/2016/12/icon-widget-properties/
-#: iconapplet.cpp:139
+#: iconapplet.cpp:141
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Klarte ikkje kopiera .desktop-fil for ikonelementet frå «%1» til «%2»"
 
-#: iconapplet.cpp:351
+#: iconapplet.cpp:353
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Opna foreldermappa"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:568
 #, kde-format
 msgid "Properties for %1"
 msgstr "Eigenskapar for %1"

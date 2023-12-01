@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2020-06-28 17:57+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -22,17 +22,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: killrunner.cpp:28
+#: killrunner.cpp:27
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Послать сигнал SIGTERM"
 
-#: killrunner.cpp:29
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Послать сигнал SIGKILL"
 
-#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
 msgstr "завершить"
@@ -52,17 +52,17 @@ msgstr "Завершить %1"
 msgid "Process ID: %1"
 msgstr "Идентификатор процесса: %1"
 
-#: killrunner_config.cpp:23
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
 msgstr "По использованию процессора"
 
-#: killrunner_config.cpp:24
+#: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "По использованию процессора (в обратном порядке)"
 
-#: killrunner_config.cpp:25
+#: killrunner_config.cpp:27
 #, kde-format
 msgid "nothing"
 msgstr "Не сортировать"

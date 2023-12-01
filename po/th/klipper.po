@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -486,56 +486,56 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ช่วงเวลาแสดงหน้าต่างผุดของการกระทำ:"
 
-#: klipper.cpp:168
+#: klipper.cpp:169
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&ล้างประวัติของคลิปบอร์ด"
 
-#: klipper.cpp:175
+#: klipper.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&ปรับแต่งคลิปเปอร์..."
 
-#: klipper.cpp:179
+#: klipper.cpp:180
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "สั่งเรียกการกระทำบนคลิปบอร์ดปัจจุบันเอง"
 
-#: klipper.cpp:186
+#: klipper.cpp:187
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "แ&สดงบาร์โค้ด..."
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ตัวถัดไปในรายการประวัติ"
 
-#: klipper.cpp:200
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ตัวก่อนหน้านี้ในรายการประวัติ"
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "เรียกเมนูผุดที่ตำแหน่งตัวชี้ของเมาส์"
 
-#: klipper.cpp:487
+#: klipper.cpp:488
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -543,59 +543,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:526
+#: klipper.cpp:527
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "คุณต้องการให้คลิปเปอร์เริ่มทำงานอัตโนมัติเมื่อล็อกอินหรือไม่ ?"
 
-#: klipper.cpp:527
+#: klipper.cpp:528
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "จะให้คลิปเปอร์เริ่มทำงานอัตโนมัติหรือไม่ ?"
 
-#: klipper.cpp:528
+#: klipper.cpp:529
 #, kde-format
 msgid "Start"
 msgstr "เริ่ม"
 
-#: klipper.cpp:529
+#: klipper.cpp:530
 #, kde-format
 msgid "Do Not Start"
 msgstr "ไม่ให้เริ่ม"
 
-#: klipper.cpp:899
+#: klipper.cpp:900
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "บาร์โค้ดสำหรับโทรศัพท์เคลื่อนที่"
 
-#: klipper.cpp:940
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ต้องการจะลบรายการประวัติทั้งหมดในคลิปบอร์ดจริงหรือไม่ ?"
 
-#: klipper.cpp:941
+#: klipper.cpp:942
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&ล้างประวัติของคลิปบอร์ด"
 
-#: klipper.cpp:957 klipper.cpp:966
+#: klipper.cpp:958 klipper.cpp:967
 #, kde-format
 msgid "Clipboard history"
 msgstr "ขนาดของประวัติคลิปบอร์ด"
 
-#: klipper.cpp:983
+#: klipper.cpp:984
 #, kde-format
 msgid "up"
 msgstr "ขึ้น"
 
-#: klipper.cpp:990
+#: klipper.cpp:991
 #, kde-format
 msgid "current"
 msgstr "ปัจจุบัน"
 
-#: klipper.cpp:997
+#: klipper.cpp:998
 #, kde-format
 msgid "down"
 msgstr "ลง"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-07-26 21:03+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,47 +30,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "okellogg@users.sourceforge.net"
 
-#: main.cpp:73 view.cpp:49
+#: main.cpp:75 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Run Command interface"
 msgstr "Lanĉi Komand-Interfacon"
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Uzi la enhavon de la tondujo kiel demandon por KRunner"
 
-#: main.cpp:80
+#: main.cpp:82
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Komenci KRunner en la fono, ne montri ĝin."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Anstataŭigi ekzistantan instancon"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Montri rezultojn nur de la donita kromprogramo"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "List available plugins"
 msgstr "Listigi haveblajn kromprogramojn"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "La rulota demando, uzata nur se -c ne estas provizita"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

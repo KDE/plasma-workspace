@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-28 02:08+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-09-13 19:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.08.1\n"
 
-#: menu.cpp:98
+#: menu.cpp:100
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "கேரன்னரைக் காட்டு"
 
-#: menu.cpp:103
+#: menu.cpp:105
 #, kde-format
 msgid "Open Terminal"
 msgstr "முனையத்தைத் திற"
 
-#: menu.cpp:107
+#: menu.cpp:109
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "திரையைப் பூட்டு"
 
-#: menu.cpp:116
+#: menu.cpp:118
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "வெளியேறு..."
 
-#: menu.cpp:125
+#: menu.cpp:127
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr "திரை குறித்த அமைப்புகளை மாற்று…"
 
-#: menu.cpp:281
+#: menu.cpp:283
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "வலது-க்ளிக் பட்டி செருகுநிரலை அமை"
 
-#: menu.cpp:291
+#: menu.cpp:293
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[மற்ற செயல்கள்]"
 
-#: menu.cpp:294
+#: menu.cpp:296
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "பின்னணிப் பட செயல்கள்"
 
-#: menu.cpp:298
+#: menu.cpp:300
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

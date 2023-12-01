@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-10-27 11:03+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4\n"
 
-#: autostartmodel.cpp:374
+#: autostartmodel.cpp:376
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" ni absolutni spletni naslov."
 
-#: autostartmodel.cpp:377
+#: autostartmodel.cpp:379
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" ne obstaja."
 
-#: autostartmodel.cpp:380
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" ni datoteka."
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" ni berljiva."

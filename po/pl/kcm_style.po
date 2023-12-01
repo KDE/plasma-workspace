@@ -1,5 +1,5 @@
 # translation of kcmstyle.po to
-# Version: $Revision: 1665968 $
+# Version: $Revision: 1666294 $
 # translation of kcmstyle.po to Polish
 # translation of kcmstyle.po to
 # Norbert Popiołek <norbert@kde.com.pl>
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-09-17 12:58+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -29,12 +29,12 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 nie jest prawidłowym archiwum wyglądu GTK."
 
-#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#: kcmstyle.cpp:163 kcmstyle.cpp:170
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "Błąd podczas wczytywania okna ustawień tego wyglądu."
 
-#: kcmstyle.cpp:274
+#: kcmstyle.cpp:276
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Nie udało się zastosować wybranego wyglądu '%1'."

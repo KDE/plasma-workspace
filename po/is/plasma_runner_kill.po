@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-10-17 19:07+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "\n"
 "\n"
 
-#: killrunner.cpp:28
+#: killrunner.cpp:27
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Senda SIGTERM"
 
-#: killrunner.cpp:29
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Senda SIGKILL"
 
-#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
 msgstr "drepa"
@@ -51,17 +51,17 @@ msgstr "Loka %1"
 msgid "Process ID: %1"
 msgstr "Auðkenni ferlis: %1"
 
-#: killrunner_config.cpp:23
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
 msgstr "Örgjörvanotkun"
 
-#: killrunner_config.cpp:24
+#: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "öfug örgjörvanotkun"
 
-#: killrunner_config.cpp:25
+#: killrunner_config.cpp:27
 #, kde-format
 msgid "nothing"
 msgstr "ekkert"

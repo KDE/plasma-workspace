@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-07-19 14:49+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: killrunner.cpp:28
+#: killrunner.cpp:27
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Gửi SIGTERM"
 
-#: killrunner.cpp:29
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Gửi SIGKILL"
 
-#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
 msgstr "diet"
@@ -47,17 +47,17 @@ msgstr "Kết thúc %1"
 msgid "Process ID: %1"
 msgstr "Mã tiến trình: %1"
 
-#: killrunner_config.cpp:23
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
 msgstr "Lượng dùng CPU"
 
-#: killrunner_config.cpp:24
+#: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "Lượng dùng CPU đảo ngược"
 
-#: killrunner_config.cpp:25
+#: killrunner_config.cpp:27
 #, kde-format
 msgid "nothing"
 msgstr "không gì cả"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2011-09-10 17:27+0200\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: killrunner.cpp:28
+#: killrunner.cpp:27
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Αποστολή SIGTERM"
 
-#: killrunner.cpp:29
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Αποστολή SIGKILL"
 
-#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
 msgstr "τερματισμός"
@@ -50,17 +50,17 @@ msgstr "Τερματισμός %1"
 msgid "Process ID: %1"
 msgstr ""
 
-#: killrunner_config.cpp:23
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
 msgstr "Χρήση ΚΜΕ"
 
-#: killrunner_config.cpp:24
+#: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "ανεστραμμένη χρήση ΚΜΕ"
 
-#: killrunner_config.cpp:25
+#: killrunner_config.cpp:27
 #, kde-format
 msgid "nothing"
 msgstr "καμία ενέργεια"

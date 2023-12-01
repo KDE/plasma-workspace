@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:41+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2017-01-10 12:37+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: iconapplet.cpp:93
+#: iconapplet.cpp:95
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Aanmaken van map '%1' voor widget-pictogrammen is mislukt"
 
-#: iconapplet.cpp:139
+#: iconapplet.cpp:141
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Kopiëren van desktopbestand met widget-pictogram van '%1' naar '%2' is "
 "mislukt"
 
-#: iconapplet.cpp:351
+#: iconapplet.cpp:353
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Containermap openen"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:568
 #, kde-format
 msgid "Properties for %1"
 msgstr "Eigenschappen voor %1"

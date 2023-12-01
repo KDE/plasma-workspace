@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-29 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -586,12 +586,12 @@ msgstr "उपयोगकर्ता %1 को सहेजने की अ�
 msgid "There was an error while saving changes"
 msgstr "परिवर्तन सहेजते समय एक त्रुटि हुई"
 
-#: src/user.cpp:381
+#: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "छवि का आकार बदलने में विफल: अस्थायी फ़ाइल खोलना विफल रहा"
 
-#: src/user.cpp:389
+#: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "छवि का आकार बदलने में विफल: अस्थायी फ़ाइल में लिखना विफल रहा"

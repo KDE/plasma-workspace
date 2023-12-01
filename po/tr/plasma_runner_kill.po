@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-runner-kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-03-12 15:19+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: killrunner.cpp:28
+#: killrunner.cpp:27
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "SIGTERM gönder"
 
-#: killrunner.cpp:29
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "SIGKILL gönder"
 
-#: killrunner.cpp:42 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
 msgstr "öldür"
@@ -49,17 +49,17 @@ msgstr "%1 uygulamasını sonlandır"
 msgid "Process ID: %1"
 msgstr "Süreç kimliği: %1"
 
-#: killrunner_config.cpp:23
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
 msgstr "CPU kullanımı"
 
-#: killrunner_config.cpp:24
+#: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "Ters CPU kullanımı"
 
-#: killrunner_config.cpp:25
+#: killrunner_config.cpp:27
 #, kde-format
 msgid "nothing"
 msgstr "hiçbir şey"

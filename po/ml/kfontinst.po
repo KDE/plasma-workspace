@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-09-26 16:00+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -52,12 +52,12 @@ msgstr "അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍�
 msgid "Simple font installer"
 msgstr "ലളിതമായ അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍സ്റ്റോളര്‍"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2007"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "വിനിഡ് വ്യക്തമാക്കിയ X അപ്ലിക്കേഷനായി ഡയലോഗ് താത്കാലികമാക്കുന്നു"
@@ -67,32 +67,32 @@ msgstr "വിനിഡ് വ്യക്തമാക്കിയ X അപ്�
 msgid "URL to install"
 msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനുള്ള യുആര്‍എല്‍"
 
-#: apps/Printer.cpp:238
+#: apps/Printer.cpp:240
 #, kde-format
 msgid "Print"
 msgstr "അച്ചടിയ്ക്കുക"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
 msgstr "റദ്ദാക്കുന്നു…"
 
-#: apps/Printer.cpp:325
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കാന്‍"
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "ലളിതമായ അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കാനുള്ളതു്"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കുന്നതിനുള്ള വലിപ്പം"
 
-#: apps/Printer.cpp:341
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -101,12 +101,12 @@ msgstr ""
 "അച്ചടിക്കാനുള്ള ഫോണ്ട്, \"ഫാമിലി, സ്റ്റൈൽ\" എന്ന് വ്യക്തമാക്കുന്നു, ഇവിടെ സ്റ്റൈൽ ഒരു 24-ബിറ്റ് "
 "ദശാംശ സംഖ്യയാണ്: <weight><width><slant>"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍ നീക്കം ചെയ്യുക"
@@ -215,7 +215,7 @@ msgstr "തീയതി"
 msgid "Links To"
 msgstr "എവിടേക്കു് ബന്ധങ്ങളുണ്ടാക്കണം"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "അക്ഷരസഞ്ചയദര്‍ശിനിയില്‍ തുറക്കുക"
@@ -297,24 +297,24 @@ msgstr "ചിഹ്നം/മറ്റുള്ളവ"
 msgid "Filter by %1…"
 msgstr "%1 പ്രകാരം അരിക്കുക…"
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:552
 #, kde-format
 msgid "Font"
 msgstr "അക്ഷരസഞ്ചയം"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
 msgstr "അവസ്ഥ"
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
 msgstr "ഈ നിര ഫോണ്ട് കുടുംബത്തിന്റെയും വ്യക്തിഗത ഫോണ്ട് ശൈലികളുടെയും അവസ്ഥ കാണിക്കുന്നു."
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:675
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -327,44 +327,44 @@ msgstr ""
 "പ്രതിനിധീകരിക്കുന്നു. ഉദാ </p><ul><li>സമയം [4]<ul><li>പതിവ്</li> <li> ബോൾഡ് </li> "
 "<li> ബോൾഡ് ഇറ്റാലിക്</ li><li>ഇറ്റാലിക്</ li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
 #, kde-format
 msgid "…plus %1 more"
 msgstr "…കൂടാതെ %1 കൂടി"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1005
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1304
 #, kde-format
 msgid "Delete"
 msgstr "വെട്ടിമാറ്റുക"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
 #: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുക"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
 #, kde-format
 msgid "Print…"
 msgstr "അച്ചടിയ്ക്കുക…"
 
-#: kcmfontinst/FontList.cpp:1317
+#: kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Reload"
 msgstr "വീണ്ടും ലഭ്യമാക്കുക"
 
-#: kcmfontinst/FontList.cpp:1718
+#: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "എല്ലാം %1 അക്ഷരസഞ്ചങ്ങളും അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"
@@ -626,7 +626,7 @@ msgstr "<i>%1</i>മായി ബന്ധപ്പെട്ട എല്ലാ 
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "സിസ്റ്റം ഡെമൺ ആരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു. <br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> ഇതിനകം നിലവിലുണ്ട്."
@@ -1105,12 +1105,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "\"%1\" അല്ലെങ്കിൽ \"%2\" എന്നതിലേക്ക് മാത്രമേ ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയൂ."
 
-#: kio/KioFonts.cpp:211
+#: kio/KioFonts.cpp:208
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1119,57 +1119,57 @@ msgstr ""
 "അക്ഷരസഞ്ചയത്തിനുള്ള പാക്കേജ് നിങ്ങള്‍ക്കു് നേരിട്ടു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമല്ല.\n"
 "ദയവായി %1 ലഭ്യമാക്കി, ഘടകങ്ങള്‍ ഓരോന്നായി ഇന്‍സ്റ്റോള്‍ ചെയ്യുക."
 
-#: kio/KioFonts.cpp:433
+#: kio/KioFonts.cpp:430
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "ഫോണ്ടുകൾ പകർത്താൻ കഴിയില്ല"
 
-#: kio/KioFonts.cpp:438
+#: kio/KioFonts.cpp:435
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "ഫോണ്ടുകൾ നീക്കാൻ കഴിയില്ല"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:446
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "ഫോണ്ടുകൾ മാത്രം ഇല്ലാതാക്കാം."
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "\"%1\" അല്ലെങ്കിൽ \"%2\" എന്നിവയിൽ നിന്ന് മാത്രമേ ഫോണ്ടുകൾ നീക്കം ചെയ്യാൻ കഴിയൂ."
 
-#: kio/KioFonts.cpp:480
+#: kio/KioFonts.cpp:477
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "ദയവായി \"%1\" അല്ലങ്കില്‍ \"%2\" വ്യക്തമാക്കുക."
 
-#: kio/KioFonts.cpp:498
+#: kio/KioFonts.cpp:495
 #, kde-format
 msgid "No special methods supported."
 msgstr "പ്രത്യേക രീതികളൊന്നും പിന്തുണയ്ക്കുന്നില്ല."
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:569
 #, kde-format
 msgid "Fonts"
 msgstr "അക്ഷരസഞ്ചയങ്ങള്‍"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:698
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "സിസ്റ്റം ഡീമൺ ആരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:700
 #, kde-format
 msgid "Backend died"
 msgstr "ബാക്കെൻഡ് മരിച്ചു"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 ഒരു ബിറ്റ്മാപ്പ് ഫോണ്ടാണ്, ഇവ നിങ്ങളുടെ സിസ്റ്റത്തിൽ പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1177,12 +1177,12 @@ msgstr ""
 "%1 ൽ <b>%2 </b> ഫോണ്ട് അടങ്ങിയിരിക്കുന്നു , ഇത് ഇതിനകം നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇൻസ്റ്റാൾ "
 "ചെയ്തിട്ടുണ്ട്."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 ഒരു ഫോണ്ട് അല്ല."
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1 മായി ബന്ധപ്പെട്ട എല്ലാ ഫയലുകളും നീക്കം ചെയ്യാനായില്ല"
@@ -1192,54 +1192,54 @@ msgstr "%1 മായി ബന്ധപ്പെട്ട എല്ലാ ഫയ
 msgid "Unknown"
 msgstr "അപരിചിതം"
 
-#: lib/FcEngine.cpp:865
+#: lib/FcEngine.cpp:869
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "അആ"
 
-#: lib/FcEngine.cpp:867
+#: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1029
+#: lib/FcEngine.cpp:1033
 #, kde-format
 msgid "No characters found."
 msgstr "അക്ഷരങ്ങള്‍ ലഭ്യമല്ല."
 
-#: lib/FcEngine.cpp:1067
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "അആഇഈഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ"
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "അആഇഈഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "അആഇഈഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "൧൨൩൪൫൬൭൮൯.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1480
+#: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "പിശകു്: അക്ഷരസഞ്ചയത്തിന്റെ പേരു് ലഭ്യമായില്ല."
 
-#: lib/FcEngine.cpp:1483
+#: lib/FcEngine.cpp:1487
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -1549,32 +1549,32 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr ""
 
-#: viewpart/FontViewPart.cpp:85
+#: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
 msgstr ""
 
-#: viewpart/FontViewPart.cpp:88
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Install…"
 msgstr "ഇന്‍സ്റ്റാള്‍…"
 
-#: viewpart/FontViewPart.cpp:109
+#: viewpart/FontViewPart.cpp:111
 #, kde-format
 msgid "Change Text…"
 msgstr "വാചകം മാറ്റുക…"
 
-#: viewpart/FontViewPart.cpp:335
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "അക്ഷരസഞ്ചയം ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല."
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
 msgstr "കണ്ടു നോക്കുക"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
 msgstr "ദയവായി പുതിയ സ്ട്രിങ് നല്‍കുക:"

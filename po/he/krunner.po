@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-10-03 16:18+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -29,47 +29,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 
-#: main.cpp:73 view.cpp:49
+#: main.cpp:75 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Run Command interface"
 msgstr "הרצת ממשק פקודות"
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "להשתמש בתוכן לוח הגזירים כשאילתה ל־KRunner"
 
-#: main.cpp:80
+#: main.cpp:82
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "להפעיל את KRunner ברקע, לא להציג אותו."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "החלפת עותק קיים"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "להציג רק תוצאות מהתוסף שמסופק"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "List available plugins"
 msgstr "הצגת התוספים הזמינים"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "השאילתה להרצה, ייעשה שימוש רק אם לא סופק ‎-c"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-29 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-01-14 16:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -566,12 +566,12 @@ msgstr "تعذر الحصول على إذن لحفظ المستخدم %1"
 msgid "There was an error while saving changes"
 msgstr "حدث خطأ أثناء حفظ التغييرات"
 
-#: src/user.cpp:381
+#: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشل في فتح الملف المؤقت"
 
-#: src/user.cpp:389
+#: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"

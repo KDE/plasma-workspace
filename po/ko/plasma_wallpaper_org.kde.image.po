@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:54+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -269,37 +269,37 @@ msgstr "폴더 열기…"
 msgid "There are no wallpaper locations configured"
 msgstr "배경 그림 위치를 설정하지 않았습니다"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "배경 그림으로 설정"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr "바탕 화면"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr "잠금 화면"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr "둘 다"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr "Plasma 바탕 화면 배경 그림을 설정하는 중 오류 발생:<nl/>%1"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc 설정 파일을 여는 중 오류가 발생했습니다."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:40+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-09-07 10:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -28,23 +28,23 @@ msgstr "%1 के साथ खोलें"
 msgid "Open with…"
 msgstr "इसके साथ खोलें..."
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "युक्त फोल्डर खोलें"
 
-#: filemenu.cpp:129
+#: filemenu.cpp:131
 #, kde-format
 msgid "&Copy"
 msgstr "नक़ल (&C)"
 
-#: filemenu.cpp:137
+#: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "स्थान की नक़ल करें"
 
-#: filemenu.cpp:193
+#: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
 msgstr "गुण"

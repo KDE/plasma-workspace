@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-07-26 06:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,48 +28,48 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: main.cpp:73 view.cpp:49
+#: main.cpp:75 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Run Command interface"
 msgstr "ბრძანების ინტერფეისის გაშვება"
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Krunner-ის მოთხოვნისთვის ბუფერის შემცველობის გამოყენება"
 
-#: main.cpp:80
+#: main.cpp:82
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Krunner-ის ფონურად გაშვება, არ ჩვენება."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "გაშვებული ასლის ჩანაცვლება"
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "შედეგების ჩვენება მხოლოდ მითითებული დამატებიდან"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "List available plugins"
 msgstr "ხელმისაწვდომი დამატებების ჩამონათვალი"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""
 "გასაშვები მოთხოვნა. გამოიყენება მხოლოდ მაშინ, თუ \"-c\" მითითებული არაა"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

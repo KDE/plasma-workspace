@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-06 22:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 파일은 올바른 GTK 테마 압축 파일이 아닙니다."
 
-#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#: kcmstyle.cpp:163 kcmstyle.cpp:170
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "이 스타일의 설정 대화 상자를 불러오는 중 오류가 발생했습니다."
 
-#: kcmstyle.cpp:274
+#: kcmstyle.cpp:276
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "선택한 스타일 '%1'을(를) 적용할 수 없습니다."

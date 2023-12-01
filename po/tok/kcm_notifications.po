@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-01 01:41+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "o ante e wile ala pi kalama ilo"
 
-#: sourcesmodel.cpp:391
+#: sourcesmodel.cpp:393
 #, kde-format
 msgid "Other Applications"
 msgstr ""

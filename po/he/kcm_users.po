@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-29 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-10-17 15:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -566,12 +566,12 @@ msgstr "לא ניתן לקבל הרשאה לשמירת המשתמש %1"
 msgid "There was an error while saving changes"
 msgstr "אירעה שגיאה בשמירת השינויים"
 
-#: src/user.cpp:381
+#: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "שינוי גודל התמונה נכשל: פתיחת הקובץ הזמני נכשלה"
 
-#: src/user.cpp:389
+#: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "שינוי גודל התמונה נכשל: כתיבה לקובץ הזמני נכשלה"

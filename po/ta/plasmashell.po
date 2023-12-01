@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-20 15:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: currentcontainmentactionsmodel.cpp:204
+#: currentcontainmentactionsmodel.cpp:206
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "சுட்டி செயல்கள் செருகுநிரலை அமைத்தல்"
 
-#: desktopview.cpp:208
+#: desktopview.cpp:211
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Dev"
@@ -40,7 +40,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 நிரலாளர் பதிப்பு"
 
-#: desktopview.cpp:211
+#: desktopview.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -48,7 +48,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு"
 
-#: desktopview.cpp:214
+#: desktopview.cpp:217
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1 Beta"
@@ -56,7 +56,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு"
 
-#: desktopview.cpp:217
+#: desktopview.cpp:220
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 #| msgid "KDE Plasma %1 Beta %2"
@@ -64,7 +64,7 @@ msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு %2"
 
-#: desktopview.cpp:220
+#: desktopview.cpp:223
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -72,7 +72,7 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:226
 #, fuzzy, kde-format
 #| msgctxt "@label %1 is the Plasma version"
 #| msgid "KDE Plasma %1"
@@ -80,31 +80,31 @@ msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1"
 
-#: desktopview.cpp:249
+#: desktopview.cpp:252
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 நிரலாளர் பதிப்பு"
 
-#: desktopview.cpp:253
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு"
 
-#: desktopview.cpp:256
+#: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு %2"
 
-#: desktopview.cpp:260
+#: desktopview.cpp:263
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "கே.டீ.யீ. பிளாஸ்மா %1"
 
-#: desktopview.cpp:266
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -258,62 +258,62 @@ msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%3-இல் %1 %2"
 
-#: shellcontainmentconfig.cpp:133
+#: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "செருகப்படாத %1 திரை"
 
-#: shellcorona.cpp:196 shellcorona.cpp:198
+#: shellcorona.cpp:198 shellcorona.cpp:200
 #, kde-format
 msgid "Show Desktop"
 msgstr "பணிமேடையைக் காட்டு"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Hide Desktop"
 msgstr "பணிமேடையை மறை"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "செயல்பாடு மாற்றியைக் காட்டு"
 
-#: shellcorona.cpp:225
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "தற்போதைய செயல்பாட்டை நிறுத்து"
 
-#: shellcorona.cpp:233
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "முந்தைய செயல்பாட்டிற்கு தாவு"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "அடுத்த செயல்பாட்டிற்கு தாவு"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "பணி மேலாளர் பதிவு %1 -ஐ செயல்படுத்து"
 
-#: shellcorona.cpp:283
+#: shellcorona.cpp:285
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "பணிமேடைகளையும் பலகைகளையும் நிர்வகி…"
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:307
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "விசைப்பலகை குவியத்தை வேறு பலகைக்கு மாற்று"
 
-#: shellcorona.cpp:2040
+#: shellcorona.cpp:2047
 #, kde-format
 msgid "Add Panel"
 msgstr "பலகையைச் சேர்"
 
-#: shellcorona.cpp:2076
+#: shellcorona.cpp:2083
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

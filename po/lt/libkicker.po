@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-06-16 00:40+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -60,7 +60,7 @@ msgstr "Išvalyti paskiausiai naudotų failų sąrašą"
 msgid "Edit Application…"
 msgstr "Taisyti programą…"
 
-#: plugin/actionlist.cpp:424
+#: plugin/actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -197,7 +197,7 @@ msgstr "Dažniausios programos"
 msgid "Power / Session"
 msgstr "Maitinimas / seansas"
 
-#: plugin/runnermodel.cpp:218
+#: plugin/runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "Paieškos rezultatai"

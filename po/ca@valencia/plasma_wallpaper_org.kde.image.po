@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-09-15 10:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -288,31 +288,31 @@ msgstr "Obri una carpeta…"
 msgid "There are no wallpaper locations configured"
 msgstr "No s'ha configurat cap ubicació de fons de pantalla"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "Establix com a fons de pantalla"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr "Escriptori"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr "Pantalla de bloqueig"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr "Ambdós"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
@@ -320,7 +320,7 @@ msgstr ""
 "S'ha produït un error en intentar establir el fons de pantalla de Plasma:<nl/"
 ">%1"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""

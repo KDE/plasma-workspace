@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -60,7 +60,7 @@ msgstr "Forgesi Lastajn Dosierojn"
 msgid "Edit Application…"
 msgstr "Redakti Aplikon…"
 
-#: plugin/actionlist.cpp:424
+#: plugin/actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -197,7 +197,7 @@ msgstr "Ofte Uzataj Aplikoj"
 msgid "Power / Session"
 msgstr "Potenco / Seanco"
 
-#: plugin/runnermodel.cpp:218
+#: plugin/runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "Serĉrezultoj"

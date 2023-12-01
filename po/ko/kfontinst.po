@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -53,12 +53,12 @@ msgstr "글꼴 설치기"
 msgid "Simple font installer"
 msgstr "간단한 글꼴 설치기"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(c) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "대화 상자를 winid로 지정한 X 앱에 연결하기"
@@ -68,32 +68,32 @@ msgstr "대화 상자를 winid로 지정한 X 앱에 연결하기"
 msgid "URL to install"
 msgstr "설치할 URL"
 
-#: apps/Printer.cpp:238
+#: apps/Printer.cpp:240
 #, kde-format
 msgid "Print"
 msgstr "인쇄"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
 msgstr "취소 중…"
 
-#: apps/Printer.cpp:325
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "글꼴 인쇄기"
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "간단한 글꼴 인쇄기"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "글꼴을 인쇄할 크기 목록"
 
-#: apps/Printer.cpp:341
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -102,12 +102,12 @@ msgstr ""
 "인쇄할 글꼴. \"종류,스타일\"과 같은 형식이며 스타일은 <굵기><폭><기울임>으로 "
 "이루어진 24비트 숫자입니다."
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "인쇄할 글꼴 목록이 있는 파일"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "인쇄할 글꼴 목록이 있는 파일 삭제"
@@ -212,7 +212,7 @@ msgstr "날짜"
 msgid "Links To"
 msgstr "연결"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "글꼴 뷰어에서 열기"
@@ -293,24 +293,24 @@ msgstr "기호/기타"
 msgid "Filter by %1…"
 msgstr "%1(으)로 필터…"
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:552
 #, kde-format
 msgid "Font"
 msgstr "글꼴"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
 msgstr "상태"
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
 msgstr "이 열은 글꼴 종류의 상태를 보여 주며, 개별 글꼴 스타일을 보여 줍니다."
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:675
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -323,44 +323,44 @@ msgstr ""
 "p><ul><li>Times [4]<ul><li>일반</li><li>굵게</li><li>굵은 이탤릭</li><li>이탤"
 "릭</li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
 #, kde-format
 msgid "…plus %1 more"
 msgstr "…그리고 %1개 더"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1005
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1304
 #, kde-format
 msgid "Delete"
 msgstr "삭제"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
 #: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "활성화"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "비활성화"
 
-#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
 #, kde-format
 msgid "Print…"
 msgstr "인쇄…"
 
-#: kcmfontinst/FontList.cpp:1317
+#: kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Reload"
 msgstr "새로 고침"
 
-#: kcmfontinst/FontList.cpp:1718
+#: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "모든 글꼴 %1개를 글꼴 뷰어로 여시겠습니까?"
@@ -612,7 +612,7 @@ msgstr "<i>%1</i>와(과) 연관된 모든 파일을 삭제할 수 없음"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "시스템 데몬을 시작할 수 없습니다.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i>이(가) 이미 존재합니다."
@@ -1072,12 +1072,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "\"%1\"(이)나 \"%2\" 중 한 곳에만 글꼴을 설치할 수 있습니다."
 
-#: kio/KioFonts.cpp:211
+#: kio/KioFonts.cpp:208
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1086,68 +1086,68 @@ msgstr ""
 "글꼴 패키지를 곧바로 설치할 수 없습니다.\n"
 "%1의 압축을 푼 다음 구성 요소를 개별적으로 설치하십시오."
 
-#: kio/KioFonts.cpp:433
+#: kio/KioFonts.cpp:430
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "글꼴을 복사할 수 없음"
 
-#: kio/KioFonts.cpp:438
+#: kio/KioFonts.cpp:435
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "글꼴을 이동할 수 없음"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:446
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "글꼴만 삭제할 수 있습니다."
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "\"%1\"(이)나 \"%2\" 중 한 곳에서만 글꼴을 삭제할 수 있습니다."
 
-#: kio/KioFonts.cpp:480
+#: kio/KioFonts.cpp:477
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "\"%1\" 또는 \"%2\"을(를) 지정하십시오."
 
-#: kio/KioFonts.cpp:498
+#: kio/KioFonts.cpp:495
 #, kde-format
 msgid "No special methods supported."
 msgstr "특별한 방식을 지원하지 않습니다."
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:569
 #, kde-format
 msgid "Fonts"
 msgstr "글꼴"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:698
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "시스템 데몬을 시작할 수 없음"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:700
 #, kde-format
 msgid "Backend died"
 msgstr "백엔드가 종료됨"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1은(는) 비트맵 글꼴이며 시스템에서 비활성화되었습니다."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1은(는) 현재 시스템에 설치되어 있는 글꼴 <b>%2</b>을(를) 포함합니다."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1은(는) 글꼴이 아닙니다."
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1와(과) 연관된 모든 파일을 삭제할 수 없음"
@@ -1157,13 +1157,13 @@ msgstr "%1와(과) 연관된 모든 파일을 삭제할 수 없음"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: lib/FcEngine.cpp:865
+#: lib/FcEngine.cpp:869
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:867
+#: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
@@ -1172,41 +1172,41 @@ msgstr ""
 "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789가나다라마바사"
 "아자차카타파하"
 
-#: lib/FcEngine.cpp:1029
+#: lib/FcEngine.cpp:1033
 #, kde-format
 msgid "No characters found."
 msgstr "문자를 찾을 수 없습니다."
 
-#: lib/FcEngine.cpp:1067
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "키스의 고유 조건은 입술끼리 만나야 되고 특별한 요령은 필요치 않다."
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1480
+#: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "오류: 글꼴의 이름을 정할 수 없습니다."
 
-#: lib/FcEngine.cpp:1483
+#: lib/FcEngine.cpp:1487
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -1515,32 +1515,32 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML 십진수 항목"
 
-#: viewpart/FontViewPart.cpp:85
+#: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
 msgstr "모양 표시:"
 
-#: viewpart/FontViewPart.cpp:88
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Install…"
 msgstr "설치 중…"
 
-#: viewpart/FontViewPart.cpp:109
+#: viewpart/FontViewPart.cpp:111
 #, kde-format
 msgid "Change Text…"
 msgstr "텍스트 변경…"
 
-#: viewpart/FontViewPart.cpp:335
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "글꼴을 읽을 수 없습니다."
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
 msgstr "문자열 미리 보기"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
 msgstr "새로운 문자열을 입력하십시오:"

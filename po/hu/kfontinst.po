@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-10-15 11:16+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -52,12 +52,12 @@ msgstr "Betűtípus-telepítő"
 msgid "Simple font installer"
 msgstr "Egyszerű betűtípus-telepítő"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "© Craig Drummond, 2007."
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
@@ -68,32 +68,32 @@ msgstr ""
 msgid "URL to install"
 msgstr "Telepítési könyvtár"
 
-#: apps/Printer.cpp:238
+#: apps/Printer.cpp:240
 #, kde-format
 msgid "Print"
 msgstr "Nyomtatás"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
 msgstr "Megszakítás…"
 
-#: apps/Printer.cpp:325
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Betűtípus-nyomtató"
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Egyszerű betűtípus-nyomtató"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Méretindex betűtípusok nyomtatásához"
 
-#: apps/Printer.cpp:341
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -102,12 +102,12 @@ msgstr ""
 "Nyomtatandó betűtípus \"család,stílus\" formában, a stílus egy 24 bites "
 "decimális szám <vastagság><szélesség><dőlés> összetevőkkel"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "A nyomtatandó betűtípusok listáját tartalmazó fájl"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "A nyomtatandó betűtípusok listáját tartalmazó fájl törlése"
@@ -213,7 +213,7 @@ msgstr "Dátum"
 msgid "Links To"
 msgstr "Link"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "Megnyitás a betűtípus-böngészővel"
@@ -296,17 +296,17 @@ msgstr "Szimbólum/egyéb"
 msgid "Filter by %1…"
 msgstr "Szűrés e szerint: %1…"
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:552
 #, kde-format
 msgid "Font"
 msgstr "Betűtípus"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
 msgstr "Állapot"
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
@@ -314,7 +314,7 @@ msgid ""
 msgstr ""
 "Ebben az oszlopban a betűcsalád és az egyéni betűstílusok állapota látható."
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:675
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -327,44 +327,44 @@ msgstr ""
 "látható, például:</p><ul><li>Times [4]<ul><li>Normál</li><li>Félkövér</"
 "li><li>Dőlt félkövér</li><li>Dőlt</li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
 #, kde-format
 msgid "…plus %1 more"
 msgstr "…és még %1"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1005
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1304
 #, kde-format
 msgid "Delete"
 msgstr "Törlés"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
 #: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "Engedélyezés"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "Letiltás"
 
-#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
 #, kde-format
 msgid "Print…"
 msgstr "Nyomtatás…"
 
-#: kcmfontinst/FontList.cpp:1317
+#: kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Reload"
 msgstr "Újratöltés"
 
-#: kcmfontinst/FontList.cpp:1718
+#: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "Meg szeretné nyitni a betűtípus-nézegetőben mind a(z) %1 betűtípust?"
@@ -626,7 +626,7 @@ msgstr "Nem sikerült eltávolítani az ehhez kapcsolódó összes fájlt: <i>%1
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Nem sikerült elindítani a rendszerdémont.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "A(z) <i>%1</i> már létezik."
@@ -1107,12 +1107,12 @@ msgstr "36"
 msgid "48pt"
 msgstr "48"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "Csak ide telepíthetők a betűtípusok: „%1” vagy „%2”."
 
-#: kio/KioFonts.cpp:211
+#: kio/KioFonts.cpp:208
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1121,59 +1121,59 @@ msgstr ""
 "Nem lehet követlenül betűtípus-csomagot telepíteni.\n"
 "Bontsa ki a(z) %1 csomagot, majd telepítse egyesével annak összetevőit."
 
-#: kio/KioFonts.cpp:433
+#: kio/KioFonts.cpp:430
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Nem lehet másolni a betűtípusokat"
 
-#: kio/KioFonts.cpp:438
+#: kio/KioFonts.cpp:435
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Nem lehet áthelyezni a betűtípusokat"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:446
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Csak betűtípusok törölhetők."
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Csak innen távolíthatók el a betűtípusok: „%1” vagy „%2”."
 
-#: kio/KioFonts.cpp:480
+#: kio/KioFonts.cpp:477
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Válasszon egyet ezek közül: \"%1\" vagy \"%2\"."
 
-#: kio/KioFonts.cpp:498
+#: kio/KioFonts.cpp:495
 #, kde-format
 msgid "No special methods supported."
 msgstr "Speciális módszerek nem támogatottak."
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:569
 #, kde-format
 msgid "Fonts"
 msgstr "Betűtípusok"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:698
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Nem sikerült elindítani a rendszerdémont"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:700
 #, kde-format
 msgid "Backend died"
 msgstr "A háttérprogram halott"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "Nem lehet telepíteni a(z) %1 bittérképes betűtípust, mert ezek használata le "
 "van tiltva a rendszerben."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1181,12 +1181,12 @@ msgstr ""
 "%1 tartalmazza a(z) <b>%2</b> betűtípust, amely már telepítve van a "
 "rendszerén."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is not a font."
 msgstr "A(z) %1 nem betűtípus."
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Nem sikerült eltávolítani az ehhez kapcsolódó összes fájlt: %1"
@@ -1196,54 +1196,54 @@ msgstr "Nem sikerült eltávolítani az ehhez kapcsolódó összes fájlt: %1"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: lib/FcEngine.cpp:865
+#: lib/FcEngine.cpp:869
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:867
+#: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaÁáBbCcDdEeÉéFfGgHhIiÍíJjKkLlMmNnOoÓóÖöŐőPpQqRrSsTtUuÚúÜüŰűVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1029
+#: lib/FcEngine.cpp:1033
 #, kde-format
 msgid "No characters found."
 msgstr "Nem található karakter."
 
-#: lib/FcEngine.cpp:1067
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Árvíztűrő Tükörfúrógép"
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "AÁBCDEÉFGHIÍJKLMNOÓÖŐPQRSTUÚÜŰVZXYZ"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "aábcdeéfghiíjklmnoóöőpqrstuúüűvzxyz"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1480
+#: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "Hiba: egy betűtípus nevét nem sikerült meghatározni."
 
-#: lib/FcEngine.cpp:1483
+#: lib/FcEngine.cpp:1487
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -1553,32 +1553,32 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML decimális entitás"
 
-#: viewpart/FontViewPart.cpp:85
+#: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
 msgstr "Megjelenés:"
 
-#: viewpart/FontViewPart.cpp:88
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Install…"
 msgstr "Telepítés…"
 
-#: viewpart/FontViewPart.cpp:109
+#: viewpart/FontViewPart.cpp:111
 #, kde-format
 msgid "Change Text…"
 msgstr "A szöveg megváltoztatása…"
 
-#: viewpart/FontViewPart.cpp:335
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "Nem sikerült beolvasni a betűtípust."
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
 msgstr "A sztring előnézete"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Adja meg az új sztringet:"

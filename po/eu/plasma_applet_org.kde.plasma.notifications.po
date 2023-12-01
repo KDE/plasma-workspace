@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:40+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-14 23:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,23 +30,23 @@ msgstr "Ireki %1(r)ekin"
 msgid "Open with…"
 msgstr "Ireki honekin..."
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ireki hau barnean duen karpeta"
 
-#: filemenu.cpp:129
+#: filemenu.cpp:131
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopiatu"
 
-#: filemenu.cpp:137
+#: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "Kopiatu kokalekua"
 
-#: filemenu.cpp:193
+#: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
 msgstr "Propietateak"

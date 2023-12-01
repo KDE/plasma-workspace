@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-11-07 13:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: kcm_soundtheme.cpp:109
+#: kcm_soundtheme.cpp:111
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
 msgstr "FreeDesktop"
 
-#: kcm_soundtheme.cpp:110
+#: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Tema de so alternatiu de reserva de «freedesktop.org»"

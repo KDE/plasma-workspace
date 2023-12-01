@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-02-01 11:32+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -492,56 +492,56 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatikus műveletmenü időkorlátja:"
 
-#: klipper.cpp:168
+#: klipper.cpp:169
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "A műveletnapló tö&rlése"
 
-#: klipper.cpp:175
+#: klipper.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper…"
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "A Klipper &beállítása…"
 
-#: klipper.cpp:179
+#: klipper.cpp:180
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Művelet végrehajtása az aktuális vágólapon"
 
-#: klipper.cpp:186
+#: klipper.cpp:187
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vonalkód megjeleníté&se…"
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Következő előzményelem"
 
-#: klipper.cpp:200
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Előző előzményelem"
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "A Klipper megnyitása a kurzorpozíciónál"
 
-#: klipper.cpp:487
+#: klipper.cpp:488
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -551,59 +551,59 @@ msgstr ""
 "Az URL-műveleteket később is engedélyezheti a vágólap kisalkalmazás "
 "beállítóablakának <interface>Műveletek</interface> oldalán."
 
-#: klipper.cpp:526
+#: klipper.cpp:527
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Automatikusan elinduljon a program?"
 
-#: klipper.cpp:527
+#: klipper.cpp:528
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Elinduljon automatikusan a program?"
 
-#: klipper.cpp:528
+#: klipper.cpp:529
 #, kde-format
 msgid "Start"
 msgstr "Elindítás"
 
-#: klipper.cpp:529
+#: klipper.cpp:530
 #, kde-format
 msgid "Do Not Start"
 msgstr "Nem kell elindítani"
 
-#: klipper.cpp:899
+#: klipper.cpp:900
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil vonalkód"
 
-#: klipper.cpp:940
+#: klipper.cpp:941
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Biztosan törli a teljes vágólapnaplót?"
 
-#: klipper.cpp:941
+#: klipper.cpp:942
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "A műveletnapló tö&rlése"
 
-#: klipper.cpp:957 klipper.cpp:966
+#: klipper.cpp:958 klipper.cpp:967
 #, kde-format
 msgid "Clipboard history"
 msgstr "Vágólapnapló"
 
-#: klipper.cpp:983
+#: klipper.cpp:984
 #, kde-format
 msgid "up"
 msgstr "fel"
 
-#: klipper.cpp:990
+#: klipper.cpp:991
 #, kde-format
 msgid "current"
 msgstr "jelenlegi"
 
-#: klipper.cpp:997
+#: klipper.cpp:998
 #, kde-format
 msgid "down"
 msgstr "le"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-29 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-07-28 16:14+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -651,12 +651,12 @@ msgstr "Tidak bisa mendapatkan perizinan untuk menyimpan pengguna %1"
 msgid "There was an error while saving changes"
 msgstr "Ada sebuah galat selagi menyimpan perubahan"
 
-#: src/user.cpp:381
+#: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Gagal mengubah ukuran citra: pembukaan file temp gagal"
 
-#: src/user.cpp:389
+#: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Gagal mengubah ukuran citra: penulisan file temp gagal"

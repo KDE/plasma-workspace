@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-07-30 11:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -470,49 +470,49 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "செயல்முறைகளுக்கான தானாக மேல்தோன்றும் பட்டி"
 
-#: klipper.cpp:168
+#: klipper.cpp:169
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை &காலியாக்கு"
 
-#: klipper.cpp:175
+#: klipper.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&கிளிப்பரை அமை…"
 
-#: klipper.cpp:179
+#: klipper.cpp:180
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "தற்போதைய பிடிப்பின்மீது கைமுறையாக ஒரு செயலை இயக்கு"
 
-#: klipper.cpp:186
+#: klipper.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&பட்டைக்குறியீட்டை காட்டு…"
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "வரலாற்றிலுள்ள அடுத்த உருப்படி"
 
-#: klipper.cpp:200
+#: klipper.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "வரலாற்றிலுள்ள முந்தைய உருப்படி"
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "பிடிப்புப்பலகையை சுட்டிக்குறியின் இருப்பிடத்திலேயே காட்டு"
 
-#: klipper.cpp:487
+#: klipper.cpp:488
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -522,57 +522,57 @@ msgstr ""
 "முகவரிகளுக்கான செயல்களை நீங்கள் பிடிப்புப்பலகையின் அமைப்புகளில் <interface>செயல்முறைகள்</"
 "interface> என்ற பக்கத்தில் இயக்கலாம்"
 
-#: klipper.cpp:526
+#: klipper.cpp:527
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "நீங்கள் நுழையும்போது க்ளிப்பர் தானாக துவக்கப்பட வேண்டுமா?"
 
-#: klipper.cpp:527
+#: klipper.cpp:528
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "க்ளிப்பரை தானாகவே துவக்கலாமா?"
 
-#: klipper.cpp:528
+#: klipper.cpp:529
 #, kde-format
 msgid "Start"
 msgstr "துவக்கு"
 
-#: klipper.cpp:529
+#: klipper.cpp:530
 #, kde-format
 msgid "Do Not Start"
 msgstr "துவக்காதே"
 
-#: klipper.cpp:899
+#: klipper.cpp:900
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "பட்டைக்குறியீடு"
 
-#: klipper.cpp:940
+#: klipper.cpp:941
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை முழுதாக அழிக்க வேண்டுமா?"
 
-#: klipper.cpp:941
+#: klipper.cpp:942
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை காலியாக்கு"
 
-#: klipper.cpp:957 klipper.cpp:966
+#: klipper.cpp:958 klipper.cpp:967
 #, kde-format
 msgid "Clipboard history"
 msgstr "பிடிப்புப்பலகை வரலாறு"
 
-#: klipper.cpp:983
+#: klipper.cpp:984
 #, kde-format
 msgid "up"
 msgstr "மேலே"
 
-#: klipper.cpp:990
+#: klipper.cpp:991
 #, kde-format
 msgid "current"
 msgstr "தற்போதையது"
 
-#: klipper.cpp:997
+#: klipper.cpp:998
 #, kde-format
 msgid "down"
 msgstr "கீழே"

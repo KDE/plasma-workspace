@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2004-07-03 06:53+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -369,83 +369,83 @@ msgstr "Cefndir Ffenestr"
 msgid "View Positive Text against View Normal Background"
 msgstr "Cefndir Ffenestr"
 
-#: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
+#: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:78
 #, kde-format
 msgid "Varies"
 msgstr ""
 
-#: editor/scmeditorcolors.cpp:99
+#: editor/scmeditorcolors.cpp:101
 #, fuzzy, kde-format
 msgid "Normal Background"
 msgstr "Cefndir Ffenestr"
 
-#: editor/scmeditorcolors.cpp:100
+#: editor/scmeditorcolors.cpp:102
 #, fuzzy, kde-format
 #| msgid "Alternate Background in Lists"
 msgid "Alternate Background"
 msgstr "Cefndir Eilaidd mewn Rhestri"
 
-#: editor/scmeditorcolors.cpp:101
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Normal Text"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:303
 #, fuzzy, kde-format
 #| msgid "Inactive Title Text"
 msgid "Inactive Text"
 msgstr "Testun Teitl Anweithredol"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:308
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Active Text"
 msgstr "Testun Teitl Gweithredol"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:313
 #, fuzzy, kde-format
 #| msgid "Link"
 msgid "Link Text"
 msgstr "Cyswllt"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:318
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Visited Text"
 msgstr "Testun Teitl Gweithredol"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:323
 #, fuzzy, kde-format
 #| msgid "Inactive Title Text"
 msgid "Negative Text"
 msgstr "Testun Teitl Anweithredol"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:333
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Positive Text"
 msgstr "Testun Teitl Gweithredol"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr ""
@@ -676,44 +676,44 @@ msgstr "Bar Teitl Anweithredol"
 msgid "Inactive Titlebar Secondary"
 msgstr "Bar Teitl Anweithredol"
 
-#: editor/scmeditordialog.cpp:60
+#: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Options"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:63
 #, kde-format
 msgid "Colors"
 msgstr "Lliwiau"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:64
 #, fuzzy, kde-format
 #| msgid "Inactive Title Button"
 msgid "Disabled"
 msgstr "Botwm Teitl Anweithredol"
 
-#: editor/scmeditordialog.cpp:94
+#: editor/scmeditordialog.cpp:96
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:97
 #, kde-format
 msgid "Unsaved changes"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
+#: editor/scmeditordialog.cpp:117 editor/scmeditordialog.cpp:142
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Cadw cynllun lliwiau"
 
-#: editor/scmeditordialog.cpp:115
+#: editor/scmeditordialog.cpp:117
 #, fuzzy, kde-format
 #| msgid "Enter a name for the color scheme:"
 msgid "&Enter a name for the color scheme:"
 msgstr "Rhowch enw i'r cynllun lliwiau:"
 
-#: editor/scmeditordialog.cpp:139
+#: editor/scmeditordialog.cpp:141
 #, fuzzy, kde-format
 #| msgid ""
 #| "A color scheme with the name '%1' already exists.\n"
@@ -725,17 +725,17 @@ msgstr ""
 "Mae cynllun lliwiau o'r enw '%1' yn bodoli eisioes.\n"
 " A ydych am ei drosysgrifo?\n"
 
-#: editor/scmeditordialog.cpp:176
+#: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:176
+#: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:191
+#: editor/scmeditordialog.cpp:193
 #, fuzzy, kde-format
 #| msgid "Inactive window"
 msgid "Inactive"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-29 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-02-24 09:22+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -590,13 +590,13 @@ msgstr "Nincs meg a jogosultság a(z) %1 felhasználó mentéséhez"
 msgid "There was an error while saving changes"
 msgstr "Hiba történt a változtatások mentése során"
 
-#: src/user.cpp:381
+#: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "A kép átméretezése meghiúsult: nem sikerült megnyitni az átmeneti fájlt"
 
-#: src/user.cpp:389
+#: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "A kép átméretezése meghiúsult: nem sikerült írni az átmeneti fájlt"

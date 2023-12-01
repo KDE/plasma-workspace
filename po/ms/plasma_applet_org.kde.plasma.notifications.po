@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:40+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2010-05-30 19:23+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -28,23 +28,23 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: filemenu.cpp:129
+#: filemenu.cpp:131
 #, kde-format
 msgid "&Copy"
 msgstr ""
 
-#: filemenu.cpp:137
+#: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr ""
 
-#: filemenu.cpp:193
+#: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
 msgstr ""

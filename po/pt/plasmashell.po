@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-12-18 12:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -28,81 +28,81 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: currentcontainmentactionsmodel.cpp:204
+#: currentcontainmentactionsmodel.cpp:206
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurar o 'Plugin' de Acções do Rato"
 
-#: desktopview.cpp:208
+#: desktopview.cpp:211
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "Plasma"
 
-#: desktopview.cpp:211
+#: desktopview.cpp:214
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "Plasma"
 
-#: desktopview.cpp:214
+#: desktopview.cpp:217
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "Plasma"
 
-#: desktopview.cpp:217
+#: desktopview.cpp:220
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "Plasma"
 
-#: desktopview.cpp:220
+#: desktopview.cpp:223
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "Plasma"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:226
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "Plasma"
 
-#: desktopview.cpp:249
+#: desktopview.cpp:252
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "Plasma"
 
-#: desktopview.cpp:253
+#: desktopview.cpp:256
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "Plasma"
 
-#: desktopview.cpp:256
+#: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr ""
 
-#: desktopview.cpp:260
+#: desktopview.cpp:263
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "Plasma"
 
-#: desktopview.cpp:266
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -262,62 +262,62 @@ msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 no %3"
 
-#: shellcontainmentconfig.cpp:133
+#: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Ecrã %1 Desligado"
 
-#: shellcorona.cpp:196 shellcorona.cpp:198
+#: shellcorona.cpp:198 shellcorona.cpp:200
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostrar o Ecrã"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Esconder o Ecrã"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostrar o Selector de Actividades"
 
-#: shellcorona.cpp:225
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Parar a Actividade Actual"
 
-#: shellcorona.cpp:233
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Mudar para a Actividade Anterior"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Mudar para a Actividade Seguinte"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activar o Item %1 do Gestor de Tarefas"
 
-#: shellcorona.cpp:283
+#: shellcorona.cpp:285
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gerir os Ecrãs e Painéis..."
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:307
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre painéis"
 
-#: shellcorona.cpp:2040
+#: shellcorona.cpp:2047
 #, kde-format
 msgid "Add Panel"
 msgstr "Adicionar um Painel"
 
-#: shellcorona.cpp:2076
+#: shellcorona.cpp:2083
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

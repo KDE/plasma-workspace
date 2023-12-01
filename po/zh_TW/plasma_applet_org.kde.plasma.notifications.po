@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:40+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-10-20 03:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -32,23 +32,23 @@ msgstr "以 %1 開啟"
 msgid "Open with…"
 msgstr "以其他程式開啟…"
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
 
-#: filemenu.cpp:129
+#: filemenu.cpp:131
 #, kde-format
 msgid "&Copy"
 msgstr "複製(&C)"
 
-#: filemenu.cpp:137
+#: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "複製位置"
 
-#: filemenu.cpp:193
+#: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
 msgstr "屬性"

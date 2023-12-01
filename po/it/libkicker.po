@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-05-28 09:23+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr "Dimentica i file recenti"
 msgid "Edit Application…"
 msgstr "Modifica applicazione..."
 
-#: plugin/actionlist.cpp:424
+#: plugin/actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -194,7 +194,7 @@ msgstr "Applicazioni utilizzate spesso"
 msgid "Power / Session"
 msgstr "Alimentazione / Sessione"
 
-#: plugin/runnermodel.cpp:218
+#: plugin/runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "Risultati di ricerca"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2012-06-13 15:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -50,12 +50,12 @@ msgstr "កម្មវិធី​ដំឡើង​ពុម្ព​អក្
 msgid "Simple font installer"
 msgstr "កម្មវិធី​ដំឡើង​ពុម្ព​អក្សរ​ធម្មតា"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០៧ ដោយ Craig Drummond"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "បង្កើត​ប្រអប់​ X app បណ្តោះ​អាសន្ន​ដែល​បាន​បញ្ជាក់​ដោយ​ winid"
@@ -65,33 +65,33 @@ msgstr "បង្កើត​ប្រអប់​ X app បណ្តោះ​�
 msgid "URL to install"
 msgstr "URL សម្រាប់​ដំឡើង​"
 
-#: apps/Printer.cpp:238
+#: apps/Printer.cpp:240
 #, kde-format
 msgid "Print"
 msgstr "បោះពុម្ព"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
 msgstr "កំពុង​បោះបង់...​"
 
-#: apps/Printer.cpp:325
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "ម៉ាស៊ីន​បោះពុម្ព​ពុម​អក្សរ​"
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "ម៉ាស៊ីន​បោះពុម្ព​តួ​អក្សរ​សាមញ្ញ"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "លិបិក្រម​ទំហំ​សម្រាប់​បោះពុម្ព​ទំហំ"
 
-#: apps/Printer.cpp:341
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -100,12 +100,12 @@ msgstr ""
 "ពុម្ព​អក្សរ​សម្រាប់​បោះពុម្ព បាន​បញ្ជាក់​ជា​ \"រចនាប័ទ្ម​គ្រួសារ\" ​រចនាប័ទ្ម​ត្រូវ​ការ​ចំនួន​គត់ ២៤ ប៊ីត ​បាន​"
 "ចងក្រង​ជា​ ៖ <weight><width><slant>"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "ឯកសារ​ដែល​មាន​បញ្ជី​ពុម្ព​អក្សរ​សម្រាប់​បោះពុម្ព "
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "យក​ចេញ​ឯកសារ​ដែល​ផ្ទុក​បញ្ជី​ពុម្ព​អក្សរ​សម្រាប់​បោះពុម្ព"
@@ -213,7 +213,7 @@ msgstr "កាល​បរិច្ឆេទ"
 msgid "Links To"
 msgstr "តំណ​ទៅ​កាន់​"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "បើក​នៅ​ក្នុង​កម្មវិធី​មើល​ពុម្ព​អក្សរ"
@@ -295,24 +295,24 @@ msgstr "និមិត្ត​សញ្ញា/ផ្សេងៗ"
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:552
 #, kde-format
 msgid "Font"
 msgstr "ពុម្ព​អក្សរ​"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
 msgstr "ស្ថានភាព"
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
 msgstr "ជួ​ឈរ​នេះ​បង្ហាញ​ស្ថានភាព​គ្រួសារ​ពុម្ព​អក្សរ​ និង​រចនាប័ទ្ម​ពុម្ព​អក្សរ​ឯកជន ។"
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:675
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -324,46 +324,46 @@ msgstr ""
 "នៅក្នុង​វង់ដង្កៀប​ការេ ដែល​បង្ហាញ​ពី​ចំនួន​រចនាប័ទ្ម​ដែ​ល​គ្រួសារ​មាន ។ ឧ.</p><ul><li>ពេលវេលា "
 "[4]<ul><li>ធម្មតា</li><li>ដិត</li><li>ដិត​ទ្រេត</li><li>ទ្រេត</li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "...បន្ថែម​ %1 ទៀត"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1005
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1304
 #, kde-format
 msgid "Delete"
 msgstr "លុប"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
 #: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "អនុញ្ញាត"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "មិន​អនុញ្ញាត​"
 
-#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "បោះពុម្ព"
 
-#: kcmfontinst/FontList.cpp:1317
+#: kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Reload"
 msgstr "ផ្ទុក​ឡើង​វិញ"
 
-#: kcmfontinst/FontList.cpp:1718
+#: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "បើក​ពុម្ព​អក្សរ %1 ទាំងអស់​នៅ​ក្នុង​កម្មវិធី​មើល​ពុម្ព​អក្សរ​ឬ?"
@@ -622,7 +622,7 @@ msgstr "មិនអាច​យក​ឯកសារ​ទាំងអស់​
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "បានបរាជ័យ​ក្នុង​ការ​ចាប់ផ្ដើម​ដេមិន​ប្រព័ន្ធ ។<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "មាន <i>%1</i> រួច​ហើយ ។"
@@ -1101,12 +1101,12 @@ msgstr "៣៦pt"
 msgid "48pt"
 msgstr "៤៨pt"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "អាច​ដំឡើង​តែ​ពុម្ពអក្សរ​ទៅ​កាន់ \"%1\" ឬ \"%2\" ។"
 
-#: kio/KioFonts.cpp:211
+#: kio/KioFonts.cpp:208
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1115,68 +1115,68 @@ msgstr ""
 "អ្នក​មិន​អាច​ដំឡើងកញ្ចប់​ពុម្ពអក្សរ​ដោយ​ផ្ទាល់​ឡើយ ។\n"
 "សូមស្រង់​ %1 ចេញ​ ហើយ​ដំឡើង​សមាសភាគ​ផ្ទាល់​ខ្លួន ។"
 
-#: kio/KioFonts.cpp:433
+#: kio/KioFonts.cpp:430
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "មិនអាច​ចម្លង​ពុម្ពអក្សរ​បានទេ​"
 
-#: kio/KioFonts.cpp:438
+#: kio/KioFonts.cpp:435
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "មិនអាច​ផ្លាស់ទី​ពុម្ពអក្សរ​បានទេ"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:446
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "ពុម្ពអក្សរ​អាច​ត្រូវ​បានលុប ។"
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:449
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "អាច​យកតែ​ពុម្ពអក្សរ​ចេញ​ពី \"%1\" ឬ \"%2\" ។"
 
-#: kio/KioFonts.cpp:480
+#: kio/KioFonts.cpp:477
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "សូម​បញ្ជាក់ \"%1\" ឬ \"%2\" ។"
 
-#: kio/KioFonts.cpp:498
+#: kio/KioFonts.cpp:495
 #, kde-format
 msgid "No special methods supported."
 msgstr "គ្មាន​វិធីសាស្ត្រ​ដែល​បានគាំទ្រ ។"
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:569
 #, kde-format
 msgid "Fonts"
 msgstr "ពុម្ពអក្សរ​"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:698
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "បាន​បរាជ័យ​ក្នុងការ​ចាប់ផ្ដើម​ដេមិន​ប្រព័ន្ធ"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:700
 #, kde-format
 msgid "Backend died"
 msgstr "កម្មវិធី​ផ្នែកខាងក្រោយ​មិនដំណើរការ"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 គឺ​ជា​ពុម្ពអក្សរ​ផែនទី​រូបភាព ហើយ​ពួកវា​ត្រូ​វបាន​បិទ​នៅ​ក្នុង​ប្រព័ន្ធរបស់​អ្នក ។"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1 មាន​ពុម្ពអក្សរ <b>%2</b> ដែល​ត្រូវ​បានដំឡើង​រួច​ហើយ​នៅ​ក្នុង​ប្រព័ន្ធ​របស់​អ្នក ។"
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 មិនមែនជា​ពុម្ពអក្សរ ។"
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "មិនអាច​យក​ឯកសារ​ទាំងអស់​ដែល​មាន %1"
@@ -1186,54 +1186,54 @@ msgstr "មិនអាច​យក​ឯកសារ​ទាំងអស់​
 msgid "Unknown"
 msgstr "មិន​ស្គាល់"
 
-#: lib/FcEngine.cpp:865
+#: lib/FcEngine.cpp:869
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:867
+#: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1029
+#: lib/FcEngine.cpp:1033
 #, kde-format
 msgid "No characters found."
 msgstr "រក​មិន​ឃើញ​តួអក្សរ​ឡើយ ។"
 
-#: lib/FcEngine.cpp:1067
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "កញ្ជ្រោង​ត្នោតដ៏​រហ័ស លោត​រំលង​ឆ្កែ​កម្ជិល"
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1480
+#: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "កំហុស ៖ មិន​អាច​កំណត់​ឈ្មោះ​របស់​ពុម្ពអក្សរ ។"
 
-#: lib/FcEngine.cpp:1483
+#: lib/FcEngine.cpp:1487
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -1542,34 +1542,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "ធាតុ​ទសភាគ​របស់​ XML "
 
-#: viewpart/FontViewPart.cpp:85
+#: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
 msgstr "បង្ហាញ​ផ្ទៃ​មុខ ៖"
 
-#: viewpart/FontViewPart.cpp:88
+#: viewpart/FontViewPart.cpp:90
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "ដំឡើង​"
 
-#: viewpart/FontViewPart.cpp:109
+#: viewpart/FontViewPart.cpp:111
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "ផ្លាស់​ប្ដូរ​អត្ថបទ..."
 
-#: viewpart/FontViewPart.cpp:335
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "មិនអាច​អាន​ពុម្ពអក្សរ​បាន​ឡើយ ។"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
 msgstr "មើល​ខ្សែ​អក្សរ​ជាមុន"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
 msgstr "សូម​បញ្ចូល​ខ្សែ​អក្សរ​ថ្មី ៖"

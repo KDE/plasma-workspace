@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-05 23:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -269,7 +269,7 @@ msgstr "Opna tema"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Peikartema-filer (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:56
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

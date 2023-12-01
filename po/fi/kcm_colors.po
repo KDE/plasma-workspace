@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-28 18:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -373,76 +373,76 @@ msgstr "Näkymän neutraali teksti näkymän tavallista taustaa vasten"
 msgid "View Positive Text against View Normal Background"
 msgstr "Näkymän positiivinen teksti näkymän tavallista taustaa vasten"
 
-#: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
+#: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:78
 #, kde-format
 msgid "Varies"
 msgstr "Vaihtelee"
 
-#: editor/scmeditorcolors.cpp:99
+#: editor/scmeditorcolors.cpp:101
 #, kde-format
 msgid "Normal Background"
 msgstr "Tavallinen tausta"
 
-#: editor/scmeditorcolors.cpp:100
+#: editor/scmeditorcolors.cpp:102
 #, kde-format
 msgid "Alternate Background"
 msgstr "Vaihtoehtoinen tausta"
 
-#: editor/scmeditorcolors.cpp:101
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Normal Text"
 msgstr "Tavallinen teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "Passiivinen teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "Aktiivinen teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "Linkin teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "Vierailtu teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "Käänteinen teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "Neutraali teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "Positiivinen teksti"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Kohdistuskoristelu"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Osoituskoristelu"
@@ -657,42 +657,42 @@ msgstr "Passiivisen otsikkopalkin teksti"
 msgid "Inactive Titlebar Secondary"
 msgstr "Passiivisen otsikkopalkin toinen väri"
 
-#: editor/scmeditordialog.cpp:60
+#: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Options"
 msgstr "Valinnat"
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:63
 #, kde-format
 msgid "Colors"
 msgstr "Värit"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:64
 #, kde-format
 msgid "Disabled"
 msgstr "Ei käytössä"
 
-#: editor/scmeditordialog.cpp:94
+#: editor/scmeditordialog.cpp:96
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr "Muutoksia on tallentamatta. Haluatko varmasti lopettaa?"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:97
 #, kde-format
 msgid "Unsaved changes"
 msgstr "Muutoksia tallentamatta"
 
-#: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
+#: editor/scmeditordialog.cpp:117 editor/scmeditordialog.cpp:142
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Tallenna väriteema"
 
-#: editor/scmeditordialog.cpp:115
+#: editor/scmeditordialog.cpp:117
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Syötä väriteeman nimi:"
 
-#: editor/scmeditordialog.cpp:139
+#: editor/scmeditordialog.cpp:141
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -701,17 +701,17 @@ msgstr ""
 "Saman niminen väriteema on jo olemassa.\n"
 "Haluatko korvata sen?"
 
-#: editor/scmeditordialog.cpp:176
+#: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Sinulla ei ole oikeutta korvata tuota teemaa."
 
-#: editor/scmeditordialog.cpp:176
+#: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "Virhe"
 
-#: editor/scmeditordialog.cpp:191
+#: editor/scmeditordialog.cpp:193
 #, kde-format
 msgid "Inactive"
 msgstr "Passiivinen"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-29 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-02-04 19:44+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -603,12 +603,12 @@ msgstr "Nepavyko gauti leidimo įrašyti naudotoją %1"
 msgid "There was an error while saving changes"
 msgstr "Įrašant pakeitimus, įvyko klaida"
 
-#: src/user.cpp:381
+#: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko atverti laikinojo failo"
 
-#: src/user.cpp:389
+#: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko rašyti į laikinąjį failą"

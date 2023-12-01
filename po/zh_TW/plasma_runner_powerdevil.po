@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-11-29 18:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -19,90 +19,90 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: PowerDevilRunner.cpp:29
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
 msgstr "電源"
 
-#: PowerDevilRunner.cpp:30
+#: PowerDevilRunner.cpp:32
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "暫停"
 
-#: PowerDevilRunner.cpp:31
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "儲存到記憶體"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:34
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "睡眠"
 
-#: PowerDevilRunner.cpp:33
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "休眠"
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:36
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "儲存到磁碟"
 
-#: PowerDevilRunner.cpp:35
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
 msgstr "混合式睡眠"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
 msgstr "混合"
 
-#: PowerDevilRunner.cpp:37 PowerDevilRunner.cpp:38 PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:39 PowerDevilRunner.cpp:40 PowerDevilRunner.cpp:66
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "將螢幕變暗"
 
-#: PowerDevilRunner.cpp:48
+#: PowerDevilRunner.cpp:50
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
 msgstr "列出系統暫停（例如睡眠模式或休眠模式）選項，並允許它們被啟動"
 
-#: PowerDevilRunner.cpp:52
+#: PowerDevilRunner.cpp:54
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "暫停並儲存到記憶體"
 
-#: PowerDevilRunner.cpp:56
+#: PowerDevilRunner.cpp:58
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "暫停並儲存到磁碟"
 
-#: PowerDevilRunner.cpp:60
+#: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
 msgstr "現在睡眠，需要時休眠"
 
-#: PowerDevilRunner.cpp:63
+#: PowerDevilRunner.cpp:65
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
 msgstr "螢幕亮度 <百分比數值>"
 
-#: PowerDevilRunner.cpp:66
+#: PowerDevilRunner.cpp:68
 #, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
@@ -112,50 +112,50 @@ msgstr ""
 "列出螢幕亮度選項，或設定為搜尋關鍵字所定義的亮度，例如螢幕亮度 50 會將螢幕變"
 "暗至最高亮度的 50%"
 
-#: PowerDevilRunner.cpp:83
+#: PowerDevilRunner.cpp:85
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "設定亮度為 %1%"
 
-#: PowerDevilRunner.cpp:92
+#: PowerDevilRunner.cpp:94
 #, kde-format
 msgid "Dim screen totally"
 msgstr "將螢幕整個變暗"
 
-#: PowerDevilRunner.cpp:100
+#: PowerDevilRunner.cpp:102
 #, kde-format
 msgid "Dim screen by half"
 msgstr "將螢幕變暗一半"
 
-#: PowerDevilRunner.cpp:129
+#: PowerDevilRunner.cpp:131
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "睡眠"
 
-#: PowerDevilRunner.cpp:130
+#: PowerDevilRunner.cpp:132
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "暫停並儲存到記憶體"
 
-#: PowerDevilRunner.cpp:135
+#: PowerDevilRunner.cpp:137
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "休眠"
 
-#: PowerDevilRunner.cpp:136
+#: PowerDevilRunner.cpp:138
 #, kde-format
 msgid "Suspend to disk"
 msgstr "暫停並儲存到磁碟"
 
-#: PowerDevilRunner.cpp:141
+#: PowerDevilRunner.cpp:143
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
 msgstr "混合式睡眠"
 
-#: PowerDevilRunner.cpp:142
+#: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
 msgstr "現在睡眠，需要時休眠"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:40+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-20 16:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,23 +27,23 @@ msgstr "%1-ஆல் திற"
 msgid "Open with…"
 msgstr "இதனால் திற…"
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
-#: filemenu.cpp:129
+#: filemenu.cpp:131
 #, kde-format
 msgid "&Copy"
 msgstr "&நகலெடு"
 
-#: filemenu.cpp:137
+#: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "இருப்பிடத்தை நகலெடு"
 
-#: filemenu.cpp:193
+#: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
 msgstr "பண்புகள்"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-06-08 22:25-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Generator: Lokalize 20.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: autostartmodel.cpp:374
+#: autostartmodel.cpp:376
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" ਅਸਲ url ਨਹੀਂ ਹੈ।"
 
-#: autostartmodel.cpp:377
+#: autostartmodel.cpp:379
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1 ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: autostartmodel.cpp:380
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" ਫਾਈਲ ਨਹੀਂ ਹੈ।"
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" ਪੜ੍ਹਨਯੋਗ ਨਹੀਂ।"

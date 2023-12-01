@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-02 01:43+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-09-25 10:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -33,14 +33,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "montoro_mde@gva.es,sps@sastia.com,antonibella5@yahoo.com,aacid@kde.org"
 
-#: kcm.cpp:465
+#: kcm.cpp:467
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Cal tornar a iniciar la sessió de Plasma perquè estos canvis tinguen efecte."
 
-#: kcm.cpp:466
+#: kcm.cpp:468
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Ha canviat la configuració del cursor"

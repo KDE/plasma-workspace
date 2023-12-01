@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-08-31 16:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -283,39 +283,39 @@ msgstr "അറ തുറക്കുക"
 msgid "There are no wallpaper locations configured"
 msgstr "പശ്ചാത്തലചിത്ര സ്ഥാനങ്ങളൊന്നും സജ്ജമാക്കിയിട്ടില്ല"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക…"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, fuzzy, kde-kuit-format
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr "പ്ലാസ്മ പശ്ചാത്തലചിത്രം സജ്ജീകരിക്കാൻ ശ്രമിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു:\n"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, fuzzy, kde-format
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."

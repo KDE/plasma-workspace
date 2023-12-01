@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2007-11-06 12:23+0545\n"
 "Last-Translator: Shiva Pokharel <shiva@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -59,12 +59,12 @@ msgstr "फन्ट स्थापनाकर्ता"
 msgid "Simple font installer"
 msgstr "साधारण फन्ट स्थापनाकर्ता"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C)  Craig Drummond, 2007"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "winId द्वारा निर्दिष्ट गरेको एउटा एक्स अनुप्रयोगका लागि संवाद चलायमान बनाउँदछ"
@@ -74,33 +74,33 @@ msgstr "winId द्वारा निर्दिष्ट गरेको ए
 msgid "URL to install"
 msgstr "स्थापना गर्ने यूआरएल"
 
-#: apps/Printer.cpp:238
+#: apps/Printer.cpp:240
 #, kde-format
 msgid "Print"
 msgstr "मुद्रण गर्नुहोस्"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "Canceling…"
 msgstr "रद्द गर्नुहोस्"
 
-#: apps/Printer.cpp:325
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "फन्ट मुद्रक"
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "साधारण फन्ट मुद्रक"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "फन्ट मुद्रण गर्न साइज अनुक्रमणिका"
 
-#: apps/Printer.cpp:341
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -109,12 +109,12 @@ msgstr ""
 "मुद्रण गरिने फन्ट, \"Family,Style\"  निर्दिष्ट गरिएको छ जहाँ शैलीको रूपमा २४-बिट "
 "दशमलव सङ्ख्यामा निम्न किसिमले संयोजन गरिन्छ: <weight><width><slant>"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "मुद्रण गर्न फन्टको फाइल समाविष्ट गरिएको सूची"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "मुद्रण गर्न फन्टको फाइल समाविष्ट भएको सूची हटाउनुहोस्"
@@ -225,7 +225,7 @@ msgstr "मिति"
 msgid "Links To"
 msgstr "यसमा लिङ्क गर्दछ"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, fuzzy, kde-format
 #| msgid "Open in Font Viewer..."
 msgid "Open in Font Viewer"
@@ -314,24 +314,24 @@ msgstr "प्रतीक/अन्य"
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:552
 #, kde-format
 msgid "Font"
 msgstr "फन्ट"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
 msgstr "यो स्तम्भले फन्ट परिवार र व्यक्तिगत फन्ट शैलीहरूको वस्तुस्थिति देखाउँछ ।"
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:675
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -349,47 +349,47 @@ msgstr ""
 "हुन्छ। जस्तै: </p><ul><li>Times [4]<ul><li>Regular</li><li>Bold</li><li>Bold "
 "Italic</li><li>Italic</li></ul></li><ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "...र %1 अझ बढी"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1005
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1304
 #, fuzzy, kde-format
 #| msgid "Delete..."
 msgid "Delete"
 msgstr "मेट्नुहोस्..."
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
 #: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable"
 msgstr "सक्षम पार्नुहोस्"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "अक्षम पार्नुहोस्"
 
-#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "मुद्रण गर्नुहोस्"
 
-#: kcmfontinst/FontList.cpp:1317
+#: kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Reload"
 msgstr "पुन: लोड गर्नुहोस्"
 
-#: kcmfontinst/FontList.cpp:1718
+#: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "फन्ट दृश्यकर्तामा सबै %1 फन्टहरू खोल्नुहुन्छ ?"
@@ -667,7 +667,7 @@ msgstr "%1 सँग सम्बन्धित फाइलहरूका ल
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:715
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, fuzzy, kde-format
 #| msgid "<qt>A group named <b>'%1'</b> already exists!</qt>"
 msgid "<i>%1</i> already exists."
@@ -1162,12 +1162,12 @@ msgstr "३६ पीटी"
 msgid "48pt"
 msgstr "४८ पीटी"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr ""
 
-#: kio/KioFonts.cpp:211
+#: kio/KioFonts.cpp:208
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1176,24 +1176,24 @@ msgstr ""
 "तपाईँले सिधै फन्ट प्याकेज स्थापना गर्न सक्नुहुन्न ।\n"
 "कृपया %1 छोड्नुहोस्, र फरक फरक अवयवहरू स्थापना गर्नुहोस् ।"
 
-#: kio/KioFonts.cpp:433
+#: kio/KioFonts.cpp:430
 #, fuzzy, kde-format
 #| msgid "Copy Fonts"
 msgid "Cannot copy fonts"
 msgstr "फन्ट प्रतिलिपि गर्नुहोस्"
 
-#: kio/KioFonts.cpp:438
+#: kio/KioFonts.cpp:435
 #, fuzzy, kde-format
 #| msgid "Cannot Print"
 msgid "Cannot move fonts"
 msgstr "मुद्रण गर्न सकिँदैन"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:446
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr ""
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:449
 #, fuzzy, kde-format
 #| msgid ""
 #| "Sorry, you cannot rename, move, copy, or delete either \"%1\" or \"%2\"."
@@ -1202,33 +1202,33 @@ msgstr ""
 "माफ गर्नुहोस्, तपाईँले \"%1\" वा \"%2\" पुन: नामकरण गर्न, सार्न, प्रतिलिपि गर्न वा मेट्न "
 "सक्नुहुन्न ।"
 
-#: kio/KioFonts.cpp:480
+#: kio/KioFonts.cpp:477
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "कृपया, \"%1\" वा \"%2\" निर्दिष्ट गर्नुहोस् ।"
 
-#: kio/KioFonts.cpp:498
+#: kio/KioFonts.cpp:495
 #, kde-format
 msgid "No special methods supported."
 msgstr ""
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:569
 #, kde-format
 msgid "Fonts"
 msgstr "फन्टहरू"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:698
 #, fuzzy, kde-format
 #| msgid "Failed to start font printer."
 msgid "Failed to start the system daemon"
 msgstr "फन्ट मुद्रक सुरु गर्न असफल भयो ।"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:700
 #, kde-format
 msgid "Backend died"
 msgstr ""
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:702
 #, fuzzy, kde-format
 #| msgid ""
 #| "You cannot install bitmap fonts, as these have been disabled on your "
@@ -1236,7 +1236,7 @@ msgstr ""
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "तपाईँको प्रणालीमा अक्षम गरिए जस्तै, तपाईँले बिटम्याप फन्टहरु स्थापना गर्न सक्नुहुन्न ।"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:704
 #, fuzzy, kde-format
 #| msgid ""
 #| "File %1 contains the font:\n"
@@ -1249,13 +1249,13 @@ msgstr ""
 "%2\n"
 "यो नामको फन्ट पहिल्यै स्थापना गरियो ।\n"
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:706
 #, fuzzy, kde-format
 #| msgid "Could not read font."
 msgid "%1 is not a font."
 msgstr "फन्ट पढ्न सकेन ।"
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:708
 #, fuzzy, kde-format
 #| msgid "Looking for files associated with %1"
 msgid "Could not remove all files associated with %1"
@@ -1266,54 +1266,54 @@ msgstr "%1 सँग सम्बन्धित फाइलहरूका ल
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: lib/FcEngine.cpp:865
+#: lib/FcEngine.cpp:869
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:867
+#: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1029
+#: lib/FcEngine.cpp:1033
 #, kde-format
 msgid "No characters found."
 msgstr "कुनै क्यारेक्टरहरू फेला परेन ।"
 
-#: lib/FcEngine.cpp:1067
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "द्रुत खैरो स्याल अल्क्षी कुकुर माथि उफ्रन्छ"
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1480
+#: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "त्रुटि: फन्टको नाम निर्धारण गर्न सकिँदैन ।"
 
-#: lib/FcEngine.cpp:1483
+#: lib/FcEngine.cpp:1487
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -1623,34 +1623,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML दशमलव अस्तित्व"
 
-#: viewpart/FontViewPart.cpp:85
+#: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
 msgstr "मोहडा देखाउनुहोस्:"
 
-#: viewpart/FontViewPart.cpp:88
+#: viewpart/FontViewPart.cpp:90
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "स्थापना गर्दै"
 
-#: viewpart/FontViewPart.cpp:109
+#: viewpart/FontViewPart.cpp:111
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "पाठ परिवर्तन गर्नुहोस्..."
 
-#: viewpart/FontViewPart.cpp:335
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "फन्ट पढ्न सकेन ।"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
 msgstr "स्ट्रिङ पूर्वावलोकन गर्नुहोस्"
 
-#: viewpart/FontViewPart.cpp:387
+#: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
 msgstr "कृपया नयाँ स्ट्रिङ प्रविष्ट गर्नुहोस्:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-07-11 20:10+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: autostartmodel.cpp:374
+#: autostartmodel.cpp:376
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" không phải là một URL tuyệt đối."
 
-#: autostartmodel.cpp:377
+#: autostartmodel.cpp:379
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" không tồn tại."
 
-#: autostartmodel.cpp:380
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" không phải là một tệp."
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" không thể đọc được."

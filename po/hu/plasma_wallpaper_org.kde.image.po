@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -285,39 +285,39 @@ msgstr "Mappa megnyitása…"
 msgid "There are no wallpaper locations configured"
 msgstr "Nincsenek beállítva háttérkép-mappák"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "Háttérképek letöltése…"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, fuzzy, kde-kuit-format
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr "Hiba történt a Plasma háttérkép beállítása során:\n"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, fuzzy, kde-format
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."

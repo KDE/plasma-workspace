@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-21 19:42+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -509,49 +509,49 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Sprett automatisk opp handlingsmeny"
 
-#: klipper.cpp:168
+#: klipper.cpp:169
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Tøm utklippshistorikken"
 
-#: klipper.cpp:175
+#: klipper.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Set opp Klipper …"
 
-#: klipper.cpp:179
+#: klipper.cpp:180
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Start handling på utklippstavla manuelt"
 
-#: klipper.cpp:186
+#: klipper.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vis &strekkode …"
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Neste historikkelement"
 
-#: klipper.cpp:200
+#: klipper.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Førre historikkelement"
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Vis utklippstavleelement ved musepeikaren"
 
-#: klipper.cpp:487
+#: klipper.cpp:488
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -561,57 +561,57 @@ msgstr ""
 "Du kan setja opp nettadresse­handlingar seinare på sida "
 "<interface>Handlingar</interface> i innstillings­vindauget til utklippstavla."
 
-#: klipper.cpp:526
+#: klipper.cpp:527
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Skal Klipper startast automatisk når du loggar inn?"
 
-#: klipper.cpp:527
+#: klipper.cpp:528
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Automatisk start av Klipper?"
 
-#: klipper.cpp:528
+#: klipper.cpp:529
 #, kde-format
 msgid "Start"
 msgstr "Start"
 
-#: klipper.cpp:529
+#: klipper.cpp:530
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ikkje start"
 
-#: klipper.cpp:899
+#: klipper.cpp:900
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil strekkode"
 
-#: klipper.cpp:940
+#: klipper.cpp:941
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Er du sikker på at du vil tømma og sletta heile utklippshistorikken?"
 
-#: klipper.cpp:941
+#: klipper.cpp:942
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tøm utklippshistorikken"
 
-#: klipper.cpp:957 klipper.cpp:966
+#: klipper.cpp:958 klipper.cpp:967
 #, kde-format
 msgid "Clipboard history"
 msgstr "Utklippshistorikk"
 
-#: klipper.cpp:983
+#: klipper.cpp:984
 #, kde-format
 msgid "up"
 msgstr "opp"
 
-#: klipper.cpp:990
+#: klipper.cpp:991
 #, kde-format
 msgid "current"
 msgstr "gjeldande"
 
-#: klipper.cpp:997
+#: klipper.cpp:998
 #, kde-format
 msgid "down"
 msgstr "ned"
@@ -868,62 +868,3 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgctxt "@action:inmenu Quit Klipper"
-#~ msgid "&Quit"
-#~ msgstr "&Avslutt"
-
-#~ msgctxt "%1 is application display name"
-#~ msgid "%1 - Clipboard Tool"
-#~ msgstr "%1 – utklippstavleverktøy"
-
-#~ msgid "Klipper"
-#~ msgstr "Klipper"
-
-#~ msgid "Plasma cut & paste history utility"
-#~ msgstr "Plasma-verktøy for kopiering og innliming"
-
-#~ msgid ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-#~ msgstr ""
-#~ "© 1998 Andrew Stanley-Jones\n"
-#~ "© 1998–2002 Carsten Pfeiffer\n"
-#~ "© 2001 Patrick Dubroy"
-
-#~ msgid "Carsten Pfeiffer"
-#~ msgstr "Carsten Pfeiffer"
-
-#~ msgid "Author"
-#~ msgstr "Opphavsperson"
-
-#~ msgid "Andrew Stanley-Jones"
-#~ msgstr "Andrew Stanley-Jones"
-
-#~ msgid "Original Author"
-#~ msgstr "Opphavleg opphavsperson"
-
-#~ msgid "Patrick Dubroy"
-#~ msgstr "Patrick Dubroy"
-
-#~ msgid "Contributor"
-#~ msgstr "Bidragsytar"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Bugfixes and optimizations"
-#~ msgstr "Feilfiksing og optimering"
-
-#~ msgid "Esben Mose Hansen"
-#~ msgstr "Esben Mose Hansen"
-
-#~ msgid "Previous Maintainer"
-#~ msgstr "Tidlegare vedlikehaldar"
-
-#~ msgid "Martin Gräßlin"
-#~ msgstr "Martin Gräßlin"
-
-#~ msgid "Maintainer"
-#~ msgstr "Vedlikehaldar"
