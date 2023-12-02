@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:41+0000\n"
+"POT-Creation-Date: 2023-12-02 01:37+0000\n"
 "PO-Revision-Date: 2022-02-19 12:43+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.1\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:189
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 free of %2"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -34,7 +34,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Accessing…"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -42,32 +42,33 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Removing…"
 
-#: package/contents/ui/DeviceItem.qml:195
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred..."
+#: package/contents/ui/DeviceItem.qml:199
+#, fuzzy, kde-format
+#| msgid "Don't unplug yet! Files are still being transferred..."
+msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Do not unplug yet! Files are still being transferred..."
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Open in File Manager"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Mount and Open"
 msgstr "Mount and Open"
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:235
 #, kde-format
 msgid "Eject"
 msgstr "Eject"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:237
 #, kde-format
 msgid "Safely remove"
 msgstr "Safely remove"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:279
 #, kde-format
 msgid "Mount"
 msgstr "Mount"

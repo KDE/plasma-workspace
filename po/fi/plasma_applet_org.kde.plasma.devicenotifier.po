@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:41+0000\n"
+"POT-Creation-Date: 2023-12-02 01:37+0000\n"
 "PO-Revision-Date: 2022-01-27 21:24+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,13 +26,13 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: package/contents/ui/DeviceItem.qml:185
+#: package/contents/ui/DeviceItem.qml:189
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 / %2 vapaana"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:193
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -40,7 +40,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Liitetään…"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:196
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -48,32 +48,33 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Poistetaan…"
 
-#: package/contents/ui/DeviceItem.qml:195
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred..."
+#: package/contents/ui/DeviceItem.qml:199
+#, fuzzy, kde-format
+#| msgid "Don't unplug yet! Files are still being transferred..."
+msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Älä irrota laitetta vielä! Tiedostoja siirretään yhä…"
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:230
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Avaa tiedostonhallintaan"
 
-#: package/contents/ui/DeviceItem.qml:229
+#: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Mount and Open"
 msgstr "Liitä ja avaa"
 
-#: package/contents/ui/DeviceItem.qml:231
+#: package/contents/ui/DeviceItem.qml:235
 #, kde-format
 msgid "Eject"
 msgstr "Irrota"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:237
 #, kde-format
 msgid "Safely remove"
 msgstr "Poista turvallisesti"
 
-#: package/contents/ui/DeviceItem.qml:275
+#: package/contents/ui/DeviceItem.qml:279
 #, kde-format
 msgid "Mount"
 msgstr "Liitä"
