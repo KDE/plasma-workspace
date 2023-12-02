@@ -492,11 +492,21 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     }
 
     auto removeWindow = [window, this] {
-        auto it = findWindow(window);
+        // findWindow() is const, we need a non-const iterator for the "take" below.
+        auto it = std::find_if(windows.begin(), windows.end(), [window](const std::unique_ptr<PlasmaWindow> &candidate) {
+            return candidate.get() == window;
+        });
+
         if (it != windows.end()) {
             const int row = it - windows.begin();
             q->beginRemoveRows(QModelIndex(), row, row);
+
+            // "take"... don't use just erase() here as it will destroy the unique_ptr and thus
+            // the window, which will trigger QObject::destroyed handlers which might
+            // add/remove items from the model whilst we're removing rows ourselves.
+            const std::unique_ptr<PlasmaWindow> removedWindow = std::move(*it);
             windows.erase(it);
+
             transientsDemandingAttention.remove(window);
             appDataCache.remove(window);
             lastActivated.remove(window);
