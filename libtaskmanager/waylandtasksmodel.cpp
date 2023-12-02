@@ -309,15 +309,19 @@ private:
     {
         const auto old = parentWindow;
         QObject::disconnect(parentWindowUnmappedConnection);
+        QObject::disconnect(parentWindowDestroyedConnection);
 
         if (parent && !parent->wasUnmapped) {
             parentWindow = QPointer<PlasmaWindow>(parent);
             parentWindowUnmappedConnection = QObject::connect(parent, &PlasmaWindow::unmapped, this, [this] {
                 setParentWindow(nullptr);
             });
+            // QPointer nulling itself wouldn't cause the change signal to be emitted.
+            parentWindowDestroyedConnection = QObject::connect(parent, &QObject::destroyed, this, &PlasmaWindow::parentWindowChanged);
         } else {
             parentWindow = QPointer<PlasmaWindow>();
             parentWindowUnmappedConnection = QMetaObject::Connection();
+            parentWindowDestroyedConnection = QMetaObject::Connection();
         }
 
         if (parentWindow.data() != old.data()) {
@@ -326,6 +330,7 @@ private:
     }
 
     QMetaObject::Connection parentWindowUnmappedConnection;
+    QMetaObject::Connection parentWindowDestroyedConnection;
 };
 
 class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWindowManagement>, public QtWayland::org_kde_plasma_window_management
