@@ -52,7 +52,6 @@ target_link_libraries(kcm_style PRIVATE
 )
 
 install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES style_widgetstyle_default_breeze.upd style_widgetstyle_default_breeze.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(FILES gtk_themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 add_custom_command(TARGET kcm_style POST_BUILD
