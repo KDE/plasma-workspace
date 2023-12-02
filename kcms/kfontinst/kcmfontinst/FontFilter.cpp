@@ -118,7 +118,6 @@ CFontFilter::CFontFilter(QWidget *parent)
 
     m_layout = new QHBoxLayout(this);
     setLayout(m_layout);
-    m_layout->setContentsMargins(0, 0, 0, 0);
 
     m_lineEdit = new QLineEdit(this);
     m_lineEdit->setClearButtonEnabled(true);

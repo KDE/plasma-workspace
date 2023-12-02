@@ -181,38 +181,49 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     });
 
     QWidget *fontControlWidget = new QWidget(fontWidget);
-    QGridLayout *groupsLayout = new QGridLayout(groupWidget);
-    QBoxLayout *mainLayout = new QBoxLayout(QBoxLayout::TopToBottom, widget()), *fontsLayout = new QBoxLayout(QBoxLayout::TopToBottom, fontWidget),
-               *fontControlLayout = new QBoxLayout(QBoxLayout::LeftToRight, fontControlWidget);
+    auto mainLayout = new QVBoxLayout(widget());
+    auto fontsLayout = new QVBoxLayout(fontWidget);
+    auto fontControlLayout = new QHBoxLayout(fontControlWidget);
 
     mainLayout->setContentsMargins(0, 0, 0, 0);
-    groupsLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setSpacing(0);
+    fontsLayout->setSpacing(0);
     fontsLayout->setContentsMargins(0, 0, 0, 0);
-    fontControlLayout->setContentsMargins(0, 0, 0, 0);
 
     m_filter = new CFontFilter(widget());
 
     // Details - Groups...
+    auto groupsLayout = new QVBoxLayout(groupWidget);
+    groupsLayout->setSpacing(0);
+    groupsLayout->setContentsMargins({});
+
     m_groupList = new CGroupList(groupWidget);
     m_groupListView = new CGroupListView(groupWidget, m_groupList);
+    m_groupListView->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::BottomEdge}));
+    groupsLayout->addWidget(m_groupListView);
 
+    auto groupsButtonLayout = new QHBoxLayout;
+    groupsButtonLayout->setSpacing(widget()->style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing));
+    groupsButtonLayout->setContentsMargins(widget()->style()->pixelMetric(QStyle::PM_LayoutLeftMargin),
+                                           widget()->style()->pixelMetric(QStyle::PM_LayoutTopMargin),
+                                           widget()->style()->pixelMetric(QStyle::PM_LayoutRightMargin),
+                                           widget()->style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
     QPushButton *createGroup = new CPushButton(KGuiItem(QString(), "list-add", i18n("Create New Group…")), groupWidget);
+    groupsButtonLayout->addWidget(createGroup);
 
     m_deleteGroupControl = new CPushButton(KGuiItem(QString(), "list-remove", i18n("Remove Group…")), groupWidget);
+    groupsButtonLayout->addWidget(m_deleteGroupControl);
 
     m_enableGroupControl = new CPushButton(KGuiItem(QString(), "font-enable", i18n("Enable Fonts in Group…")), groupWidget);
+    groupsButtonLayout->addWidget(m_enableGroupControl);
 
     m_disableGroupControl = new CPushButton(KGuiItem(QString(), "font-disable", i18n("Disable Fonts in Group…")), groupWidget);
+    groupsButtonLayout->addWidget(m_disableGroupControl);
 
-    groupsLayout->addWidget(m_groupListView, 0, 0, 1, 5);
-    groupsLayout->addWidget(createGroup, 1, 0);
-    groupsLayout->addWidget(m_deleteGroupControl, 1, 1);
-    groupsLayout->addWidget(m_enableGroupControl, 1, 2);
-    groupsLayout->addWidget(m_disableGroupControl, 1, 3);
-    groupsLayout->addItem(new QSpacerItem(m_disableGroupControl->width(), groupsLayout->spacing(), QSizePolicy::Expanding, QSizePolicy::Fixed), 1, 4);
+    groupsLayout->addLayout(groupsButtonLayout);
 
     m_previewWidget = new QWidget(widget());
-    QBoxLayout *previewWidgetLayout = new QBoxLayout(QBoxLayout::TopToBottom, m_previewWidget);
+    auto previewWidgetLayout = new QVBoxLayout(m_previewWidget);
     previewWidgetLayout->setContentsMargins(0, 0, 0, 0);
     previewWidgetLayout->setSpacing(0);
 
@@ -254,27 +265,39 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     m_previewSplitter->addWidget(m_previewWidget);
     m_previewSplitter->setCollapsible(1, true);
 
-    QWidget *statusRow = new QWidget(widget());
-    QBoxLayout *statusRowLayout = new QBoxLayout(QBoxLayout::LeftToRight, statusRow);
-    m_statusLabel = new QLabel(statusRow);
+    m_statusLabel = new QLabel(widget());
     m_statusLabel->setAlignment(Qt::AlignVCenter | Qt::AlignRight);
-    m_listingProgress = new CProgressBar(statusRow, m_statusLabel->height());
+    m_listingProgress = new CProgressBar(widget(), m_statusLabel->height());
     m_listingProgress->setRange(0, 100);
-    statusRowLayout->addWidget(m_listingProgress);
-    statusRowLayout->addWidget(m_statusLabel);
 
     // Layout widgets...
     mainLayout->addWidget(m_filter);
+
+    auto separator = new QFrame(widget());
+    separator->setFrameShape(QFrame::HLine);
+    separator->setMaximumHeight(1);
+    mainLayout->addWidget(separator);
+
     mainLayout->addWidget(m_groupSplitter);
-    mainLayout->addWidget(statusRow);
+
+    separator = new QFrame(widget());
+    separator->setFrameShape(QFrame::HLine);
+    separator->setMaximumHeight(1);
+    mainLayout->addWidget(separator);
 
     fontControlLayout->addWidget(m_deleteFontControl);
     fontControlLayout->addStretch();
+    fontControlLayout->addWidget(m_listingProgress);
+    fontControlLayout->addWidget(m_statusLabel);
     fontControlLayout->addWidget(m_scanDuplicateFontsControl);
     fontControlLayout->addWidget(m_addFontControl);
     fontControlLayout->addWidget(m_getNewFontsControl);
 
     fontsLayout->addWidget(m_previewSplitter);
+    separator = new QFrame(widget());
+    separator->setFrameShape(QFrame::HLine);
+    separator->setMaximumHeight(1);
+    fontsLayout->addWidget(separator);
     fontsLayout->addWidget(fontControlWidget);
 
     // Set size of widgets...
