@@ -17,9 +17,8 @@ Item {
     implicitHeight: Kirigami.Units.gridUnit * 3
     implicitWidth: Kirigami.Units.gridUnit * 16
 
-    Instantiator {
+    Repeater {
         id: instantiator
-        asynchronous: true
         model: Mpris.MultiplexerModel { }
 
         RowLayout {
