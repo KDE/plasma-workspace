@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-02 01:37+0000\n"
-"PO-Revision-Date: 2022-09-02 06:55+0200\n"
+"PO-Revision-Date: 2023-12-02 22:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/ui/DeviceItem.qml:189
 #, kde-format
@@ -41,8 +41,7 @@ msgid "Removing…"
 msgstr "წაშლა…"
 
 #: package/contents/ui/DeviceItem.qml:199
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "არ გამოაერთოთ! ფაილები ჯერ კიდევ იწერება…"
 

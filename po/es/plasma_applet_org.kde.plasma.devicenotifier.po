@@ -4,7 +4,7 @@
 #
 # Jaime Robles <jaime@robles.nu>, 2007.
 # Jaime Robles <jaime@kde.org>, 2008.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2009, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-02 01:37+0000\n"
-"PO-Revision-Date: 2022-01-19 12:09+0100\n"
+"PO-Revision-Date: 2023-12-02 12:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/DeviceItem.qml:189
@@ -46,8 +46,7 @@ msgid "Removing…"
 msgstr "Extrayendo..."
 
 #: package/contents/ui/DeviceItem.qml:199
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "No lo desconecte. Todavía se están transfiriendo archivos..."
 

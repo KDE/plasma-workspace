@@ -1,0 +1,173 @@
+# Translation for plasma_applet_org.kde.plasma.brightness.po to Euskara/Basque (eu).
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# SPDX-FileCopyrightText: 2023 Iñigo Salvador Azurmendi <xalba@ni.eus>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"PO-Revision-Date: 2023-12-02 10:32+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#: package/contents/ui/BrightnessItem.qml:70
+#, kde-format
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%%1"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Brightness and Color"
+msgstr "Distira eta kolorea"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Screen brightness at %1%"
+msgstr "Pantailaren distira %%1"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Keyboard brightness at %1%"
+msgstr "Teklatuaren distira %%1"
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "Status"
+msgid "Night Light off"
+msgstr "Gaueko argia itzalita"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgctxt "Status; placeholder is a temperature"
+msgid "Night Light at %1K"
+msgstr "Gaueko argia %1K"
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr "Kiribildu pantailaren distira doitzeko"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Middle-click to toggle Night Light"
+msgstr "Erdiko-klik gaueko argia txandakatzeko"
+
+#: package/contents/ui/NightColorItem.qml:74
+#, kde-format
+msgctxt "Night light status"
+msgid "Off"
+msgstr "Itzalita"
+
+#: package/contents/ui/NightColorItem.qml:77
+#, kde-format
+msgctxt "Night light status"
+msgid "Unavailable"
+msgstr "Eskuraezina"
+
+#: package/contents/ui/NightColorItem.qml:80
+#, kde-format
+msgctxt "Night light status"
+msgid "Not enabled"
+msgstr "Ez dago gaituta"
+
+#: package/contents/ui/NightColorItem.qml:83
+#, kde-format
+msgctxt "Night light status"
+msgid "Not running"
+msgstr "Ez da ibiltzen ari"
+
+#: package/contents/ui/NightColorItem.qml:86
+#, kde-format
+msgctxt "Night light status"
+msgid "On"
+msgstr "Piztuta"
+
+#: package/contents/ui/NightColorItem.qml:89
+#, kde-format
+msgctxt "Night light phase"
+msgid "Morning Transition"
+msgstr "Goizeko trantsizioa"
+
+#: package/contents/ui/NightColorItem.qml:91
+#, kde-format
+msgctxt "Night light phase"
+msgid "Day"
+msgstr "Eguna"
+
+#: package/contents/ui/NightColorItem.qml:93
+#, kde-format
+msgctxt "Night light phase"
+msgid "Evening Transition"
+msgstr "Gaueko trantsizioa"
+
+#: package/contents/ui/NightColorItem.qml:95
+#, kde-format
+msgctxt "Night light phase"
+msgid "Night"
+msgstr "Gaua"
+
+#: package/contents/ui/NightColorItem.qml:105
+#, kde-format
+msgctxt "Placeholder is screen color temperature"
+msgid "%1K"
+msgstr "%1K"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Configure…"
+msgstr "Konfiguratu..."
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Enable and Configure…"
+msgstr "Gaitu eta konfiguratu..."
+
+#: package/contents/ui/NightColorItem.qml:165
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day complete by:"
+msgstr "Egunera iragatea osatuta:"
+
+#: package/contents/ui/NightColorItem.qml:167
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night scheduled for:"
+msgstr "Gauera iragatea programatuta:"
+
+#: package/contents/ui/NightColorItem.qml:169
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night complete by:"
+msgstr "Gauera iragatea osatuta:"
+
+#: package/contents/ui/NightColorItem.qml:171
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day scheduled for:"
+msgstr "Egunera iragatea programatuta:"
+
+#: package/contents/ui/PopupDialog.qml:70
+#, kde-format
+msgid "Display Brightness"
+msgstr "Bistaratzailearen distira"
+
+#: package/contents/ui/PopupDialog.qml:101
+#, kde-format
+msgid "Keyboard Brightness"
+msgstr "Teklatuaren distira"
+
+#: package/contents/ui/PopupDialog.qml:132
+#, kde-format
+msgid "Night Light"
+msgstr "Gaueko argia"

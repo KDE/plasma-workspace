@@ -1,21 +1,22 @@
 # translation of plasma_runner_powerdevil.po to Slovak
+# SPDX-FileCopyrightText: 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Peter Mihalik <udavac@inmail.sk>, 2009.
 # Michal Sulek <misurel@gmail.com>, 2009, 2010.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# Matej Mrenica <matejm98mthw@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-11-11 15:15+0100\n"
+"PO-Revision-Date: 2023-12-02 19:48+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: PowerDevilRunner.cpp:31
@@ -93,7 +94,7 @@ msgstr "Uspí systém na disk"
 #: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Teraz uspí a neskôr prejde do hibernácie"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -159,7 +160,7 @@ msgstr "Hybridný spánok"
 #: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Teraz uspať a neskôr prejsť do hibernácie"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-10-27 21:18+0200\n"
+"PO-Revision-Date: 2023-12-02 11:09+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
-msgstr "Teklatuaren antolamendua: %1"
+msgstr "Teklatu-antolaera: %1"
 
 #: ../sddm-theme/Login.qml:85
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "Aldatu erabiltzailea"
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Aldatu antolamendua"
+msgstr "Aldatu antolaera"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
@@ -211,7 +211,7 @@ msgstr "Berrabiatzean, ordenagailua firmwarea ezartzeko pantailan sartuko da."
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Instalatu eguneratzeak eta berrabiarazi"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
@@ -222,8 +222,8 @@ msgstr "Itxi saioa"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Software eguneratzeak instalatu eta segundo 1 barru berrabiarazten"
+msgstr[1] "Software eguneratzeak instalatu eta %1 segundo barru berrabiarazten"
 
 #: contents/logout/Logout.qml:248
 #, kde-format

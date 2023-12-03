@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-01-11 21:30+0100\n"
+"PO-Revision-Date: 2023-12-02 19:49+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
@@ -212,7 +212,7 @@ msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Inštalovať aktualizácie a reštartovať"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
@@ -223,9 +223,9 @@ msgstr "Odhlásiť sa"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Inštalácia aktualizácií softvéru a reštartovanie za 1 sekundu"
+msgstr[1] "Inštalácia aktualizácií softvéru a reštartovanie za %1 sekundy"
+msgstr[2] "Inštalácia aktualizácií softvéru a reštartovanie za %1 sekúnd"
 
 #: contents/logout/Logout.qml:248
 #, kde-format

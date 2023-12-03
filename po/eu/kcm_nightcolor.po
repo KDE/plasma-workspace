@@ -1,17 +1,16 @@
 # Translation for kcm_nightcolor.po to Euskara/Basque (eu).
-# Copyright (C) 2018, Free Software Foundation.
-# Copyright (C) 2019-2022, This file is copyright:
+# Copyright (C) 2018-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2022-09-10 14:03+0200\n"
+"PO-Revision-Date: 2023-12-02 10:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -115,16 +114,14 @@ msgid "Custom times"
 msgstr "Norberak finkatutako orduak"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "Beti gaueko kolorean"
+msgstr "Beti gaueko argiarekin"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Gaueko kolorearen tenperatura:"
+msgstr "Eguneko argiaren tenperatura:"
 
 #: ui/main.qml:226 ui/main.qml:285
 #, kde-format
@@ -133,12 +130,10 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Freskoa (iragazkirik gabe)"
+msgstr "Hotza (iragazkirik gabe)"
 
 #: ui/main.qml:236 ui/main.qml:295
 #, kde-format
@@ -147,17 +142,15 @@ msgid "Warm"
 msgstr "Epela"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Gaueko kolorearen tenperatura:"
+msgstr "Gaueko argiaren tenperatura:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Hauteman kokapena"
+msgstr "Uneko kokalekua:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -177,10 +170,9 @@ msgstr ""
 "kokapen zerbitzura</link> sareko informazioa bidaliz."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Gaueko kolorearen hasiera:"
+msgstr "Gaueko argiaren hasiera:"
 
 #: ui/main.qml:362 ui/main.qml:385
 #, kde-format
@@ -188,10 +180,9 @@ msgid "Input format: HH:MM"
 msgstr "Sarrerako formatua: HH:MM"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Eguneko kolorearen hasiera:"
+msgstr "Eguneko argiaren hasiera:"
 
 #: ui/main.qml:394
 #, kde-format
