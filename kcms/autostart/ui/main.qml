@@ -89,19 +89,14 @@ KCM.ScrollViewKCM {
         clip: true
         model: kcm.model
 
-        delegate: Kirigami.SwipeListItem {
-            id: baseListItem
+        delegate: ItemDelegate {
+            id: delegate
 
             property Unit unit: model.systemdUnit
             property bool noUnit: (unit && !kcm.model.usingSystemdBoot) || (model.source === AutostartModel.PlasmaShutdown || model.source === AutostartModel.PlasmaEnvScripts)
-            background: Rectangle {
-                color: (!noUnit && baseListItem.hovered) ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                opacity: (!baseListItem.down && baseListItem.hovered) ? 0.3 : 1
-            }
 
-            width: listView.width
-            // content item includes its own padding
-            padding: 0
+            text: model.name
+            width: ListView.view.width
 
             onClicked: {
                 if (noUnit) {
@@ -120,7 +115,6 @@ KCM.ScrollViewKCM {
                 }
             }
 
-
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
 
@@ -130,7 +124,7 @@ KCM.ScrollViewKCM {
 
                     reserveSpaceForSubtitle: true
 
-                    title: model.name
+                    title: delegate.text
                     subtitle: model.source === AutostartModel.PlasmaShutdown || model.source === AutostartModel.XdgScripts ? model.targetFileDirPath : ""
                 }
 
@@ -147,22 +141,24 @@ KCM.ScrollViewKCM {
                     }
                     color: model.systemdUnit.activeState === i18nc("@label Entry has failed (exited with an error)", "Failed") ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.disabledTextColor
                 }
-            }
 
-            actions: [
-                Kirigami.Action {
+                ToolButton {
                     text: i18nc("@action:button", "See properties")
                     icon.name: "document-properties"
-                    onTriggered: kcm.model.editApplication(model.index, root)
+                    display: Button.IconOnly
+                    onClicked: kcm.model.editApplication(model.index, root)
                     visible: model.source === AutostartModel.XdgAutoStart || model.source === AutostartModel.XdgScripts
-                },
-                Kirigami.Action {
+                }
+
+                ToolButton {
                     text: i18nc("@action:button", "Remove entry")
                     icon.name: "edit-delete-remove"
-                    onTriggered: kcm.model.removeEntry(model.index)
+                    display: Button.IconOnly
+                    onClicked: kcm.model.removeEntry(model.index)
                 }
-            ]
+            }
         }
+
         section.property: "source"
         section.delegate: Kirigami.ListSectionHeader {
             text: {
