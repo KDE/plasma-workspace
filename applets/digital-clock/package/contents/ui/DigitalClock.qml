@@ -639,7 +639,7 @@ MouseArea {
             if (displayTimezoneFormat === 0) {
                 timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"]
             } else if (displayTimezoneFormat === 1) {
-                timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone City"]);
+                timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone"]);
             } else if (displayTimezoneFormat === 2) {
                 const lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
                 const symbol = lastOffset > 0 ? '+' : '';

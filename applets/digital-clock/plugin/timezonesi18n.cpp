@@ -9,6 +9,8 @@
 #include <KCountry>
 #include <KLocalizedString>
 
+#include <unicode/localebuilder.h>
+
 #include "timezonesi18n_generated.h"
 
 TimezonesI18n::TimezonesI18n(QObject *parent)
@@ -40,9 +42,32 @@ QString TimezonesI18n::i18nCountry(QLocale::Country country)
     return countryName;
 }
 
+QString TimezonesI18n::i18nCity(const QString &timezoneId)
+{
+    if (!m_isInitialized) {
+        init();
+    }
+
+    if (!m_tzNames) {
+        return timezoneId;
+    }
+
+    icu::UnicodeString result;
+    const auto &cityName = m_tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(timezoneId.toStdString())), result);
+
+    return cityName.isBogus() ? timezoneId : QString::fromUtf16(cityName.getBuffer(), cityName.length());
+}
+
 void TimezonesI18n::init()
 {
     m_i18nContinents = TimezonesI18nData::timezoneContinentToL10nMap();
+
+    const auto locale = icu::Locale(QLocale::system().name().toLatin1());
+    UErrorCode error = U_ZERO_ERROR;
+    m_tzNames.reset(icu::TimeZoneNames::createInstance(locale, error));
+    if (!U_SUCCESS(error)) {
+        qWarning() << "failed to create timezone names:" << u_errorName(error);
+    }
 
     m_isInitialized = true;
 }

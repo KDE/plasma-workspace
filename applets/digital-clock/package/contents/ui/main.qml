@@ -75,7 +75,7 @@ PlasmoidItem {
         if (Plasmoid.configuration.displayTimezoneAsCode) {
             return dataSource.data[zone]["Timezone Abbreviation"];
         } else {
-            return TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
+            return TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone"]);
         }
     }
 
