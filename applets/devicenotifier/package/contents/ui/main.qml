@@ -17,6 +17,7 @@ import org.kde.kitemmodels 1.1 as KItemModels
 
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
+import org.kde.plasma.private.devicenotifier as DN
 
 PlasmoidItem {
     id: devicenotifier
@@ -191,40 +192,12 @@ PlasmoidItem {
         sortOrder: Qt.DescendingOrder
     }
 
-    P5Support.DataSource {
+    DN.KSolidNotify {
         id: statusSource
-        engine: "devicenotifications"
-        property string last
-        property string lastUdi
-        property string lastDescription
-        property string lastMessage
-        property string lastIcon
-        onSourceAdded: source => {
-            last = source;
-            disconnectSource(source);
-            connectSource(source);
-        }
-        onSourceRemoved: source => disconnectSource(source)
-        onDataChanged: {
-            if (last) {
-                lastUdi = data[last].udi
-                lastDescription = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Description : ""
-                lastMessage = data[last].error
-                lastIcon = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Icon : "device-notifier"
 
-                if (sdSource.isViableDevice(lastUdi)) {
-                    devicenotifier.expanded = true
-                    fullRepresentationItem.spontaneousOpen = true;
-                }
-            }
-        }
-
-        function clearMessage() {
-            last = ""
-            lastUdi = ""
-            lastDescription = ""
-            lastMessage = ""
-            lastIcon = ""
+        onLastUdiChanged: if (statusSource.lastUdi.length > 0 && sdSource.isViableDevice(statusSource.lastUdi)) {
+            devicenotifier.expanded = true
+            fullRepresentationItem.spontaneousOpen = true;
         }
     }
 

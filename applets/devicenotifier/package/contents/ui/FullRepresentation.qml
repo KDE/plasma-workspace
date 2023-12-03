@@ -93,8 +93,8 @@ PlasmaExtras.Representation {
 
         Connections {
             target: statusSource
-            function onLastChanged() {
-                if (!statusSource.last) {
+            function onLastUdiChanged() {
+                if (statusSource.lastUdi.length === 0) {
                     messageHighlightAnimator.stop()
                     messageHighlight.visible = false
                 }

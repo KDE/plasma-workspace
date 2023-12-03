@@ -26,8 +26,7 @@ PlasmaExtras.ExpandableListItem {
     readonly property int operationResult: (model["Operation result"])
 
     readonly property bool isMounted: devicenotifier.isMounted(udi)
-    readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
-    readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
+    readonly property bool hasMessage: statusSource.lastUdi === deviceItem.udi
     readonly property var types: model["Device Types"]
     readonly property bool hasStorageAccess: types && types.indexOf("Storage Access") !== -1
     readonly property bool hasPortableMediaPlayer: types && types.indexOf("Portable Media Player") !== -1
@@ -85,7 +84,7 @@ PlasmaExtras.ExpandableListItem {
         PropertyAction { target: deviceItem; property: "enabled"; value: false }
         // Reset action model to hide the arrow
         PropertyAction { target: deviceItem; property: "contextualActions"; value: [] }
-        PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon }
+        PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon || "device-notifier" }
         PropertyAction { target: deviceItem; property: "title"; value: statusSource.lastDescription }
         PropertyAction { target: deviceItem; property: "subtitle"; value: statusSource.lastMessage }
         PauseAnimation { duration: messageHighlightAnimator.duration }
@@ -161,7 +160,7 @@ PlasmaExtras.ExpandableListItem {
 
     iconEmblem: {
         if (deviceItem.hasMessage) {
-            if (deviceItem.message.solidError === 0) {
+            if (statusSource.lastErrorType === 0) {
                 return "emblem-information"
             } else {
                 return "emblem-error"
@@ -177,7 +176,7 @@ PlasmaExtras.ExpandableListItem {
 
     subtitle: {
         if (deviceItem.hasMessage) {
-            return deviceItem.message.error
+            return statusSource.lastMessage
         }
         if (deviceItem.state == 0) {
             if (!hpSource.data[udi]) {
