@@ -6,8 +6,16 @@
   <kcfgfile name="kdeglobals"/>
   <group name="General">
     <entry name="colorScheme" key="ColorScheme" type="String">
-      <label>Color scheme name</label>
+      <label>Active color scheme name</label>
       <default>BreezeLight</default>
+    </entry>
+    <entry name="lightColorScheme" key="LightColorScheme" type="String">
+      <label>Preferred light color scheme name</label>
+      <default>BreezeLight</default>
+    </entry>
+    <entry name="darkColorScheme" key="DarkColorScheme" type="String">
+      <label>Preferred ark color scheme name name</label>
+      <default>BreezeDark</default>
     </entry>
     <entry name="accentColor" key="AccentColor" type="Color">
       <label>Accent color</label>
