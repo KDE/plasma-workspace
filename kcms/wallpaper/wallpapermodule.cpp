@@ -71,6 +71,8 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
 
     qmlRegisterAnonymousType<QScreen>(uri, 1);
     qmlRegisterAnonymousType<KConfigPropertyMap>(uri, 1);
+    // Only register types once
+    [[maybe_unused]] static int configModelRegisterResult = qmlRegisterType<PlasmaQuick::ConfigModel>("org.kde.plasma.configuration", 2, 0, "ConfigModel");
 
     m_outputOrderWatcher = OutputOrderWatcher::instance(this);
     connect(m_outputOrderWatcher, &OutputOrderWatcher::outputOrderChanged, this, [this](const QStringList &outputOrder) {

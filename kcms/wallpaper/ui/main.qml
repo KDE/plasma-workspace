@@ -18,6 +18,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
 import org.kde.plasma.kcm.wallpaper
+import org.kde.plasma.configuration 2.0
 
 KCM.SimpleKCM {
     id: appearanceRoot
@@ -66,11 +67,11 @@ KCM.SimpleKCM {
                     model: kcm.wallpaperConfigModel
                     textRole: "name"
                     onActivated: {
-                        var model = kcm.wallpaperConfigModel.get(currentIndex)
-                        if (appearanceRoot.currentWallpaper === model.pluginName) {
+                        var pluginName = kcm.wallpaperConfigModel.data(kcm.wallpaperConfigModel.index(currentIndex, 0), ConfigModel.PluginNameRole)
+                        if (appearanceRoot.currentWallpaper === pluginName) {
                             return;
                         }
-                        kcm.currentWallpaper = model.pluginName
+                        kcm.currentWallpaper = pluginName
                     }
                     
                     KCM.SettingHighlighter {
@@ -136,8 +137,8 @@ KCM.SimpleKCM {
             
             function loadSourceFile() {
                 for (var i = 0; i < kcm.wallpaperConfigModel.count; ++i) {
-                    var data = kcm.wallpaperConfigModel.get(i);
-                    if (kcm.currentWallpaper === data.pluginName) {
+                    var pluginName = kcm.wallpaperConfigModel.data(kcm.wallpaperConfigModel.index(i, 0), ConfigModel.PluginNameRole)
+                    if (kcm.currentWallpaper === pluginName) {
                         wallpaperComboBox.currentIndex = i;
                         break;
                     }
