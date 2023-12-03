@@ -2,7 +2,7 @@
 # Copyright (C) 2017-2018, Free Software Foundation.
 # Copyright (C) 2019-2022, This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2022-10-09 08:44+0200\n"
+"PO-Revision-Date: 2023-12-02 11:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
-msgstr "Teklatuaren antolamendua: %1"
+msgstr "Teklatu-antolaera: %1"
 
 #: ../sddm-theme/Login.qml:85
 #, kde-format
@@ -194,7 +194,7 @@ msgstr "Atzera"
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Aldatu antolamendua"
+msgstr "Aldatu antolaera"
 
 #: contents/lockscreen/MainBlock.qml:101
 #: contents/lockscreen/NoPasswordUnlock.qml:17
