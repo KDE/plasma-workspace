@@ -13,7 +13,7 @@ import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Templates 2.3 as T
 import QtQml 2.15
 
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.colors 1.0 as Private
@@ -97,6 +97,82 @@ KCM.GridViewKCM {
         }
 
         RowLayout {
+
+//             QtControls.ComboBox {
+//                 id: schemeModeBox
+// 
+//                 model: [
+//                     i18n("Light mode"),
+//                     i18n("Dark mode"),
+//                     i18n("Dynamic switching")
+//                 ]
+//             }
+// 
+//             QtControls.ComboBox {
+//                 id: switchingTimesModeBox
+// 
+//                 model: [
+//                     i18n("Sunset and sunrise at current location"),
+//                     i18n("Sunset and sunrise at manual location"),
+//                     i18n("Custom times")
+//                 ]
+//             }
+// 
+//             QtControls.Label {
+//                 text: "18:00 - 06:00"
+//             }
+
+            QtControls.Label {
+                text: "Dark mode:"
+            }
+
+            QtControls.ComboBox {
+                id: switchingTimesModeBox
+
+                model: [
+                    i18n("Off"),
+                    i18n("Always on"),
+                    i18n("Sunset to sunrise at current location"),
+                    i18n("Sunset to sunrise at manual location"),
+                    i18n("Custom times")
+                ]
+            }
+
+            QtControls.TextField {
+                id: sunsetTime
+
+                inputMask: "00:00"
+                inputMethodHints: Qt.ImhTime
+                text: "18:00"
+
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 3
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 3
+            }
+
+            QtControls.Label {
+                text: "-"
+            }
+
+            QtControls.TextField {
+                id: sunriseTime
+
+                inputMask: "00:00"
+                inputMethodHints: Qt.ImhTime
+                text: "06:00"
+
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 3
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 3
+            }
+
+            QtControls.Button {
+                id: switchingTimesModeConfigButton
+
+                text: i18n("Configure...")
+            }
+
+        }
+
+        RowLayout {
             Layout.fillWidth: true
 
             Kirigami.SearchField {
@@ -132,6 +208,22 @@ KCM.GridViewKCM {
                     });
                 }
             }
+        }
+
+        Kirigami.NavigationTabBar {
+                id: selectionGridTabBar
+
+                Layout.fillWidth: true
+
+                actions: [
+                    Kirigami.Action {
+                        text: i18n("Scheme for light mode")
+                        checked: true
+                    },
+                    Kirigami.Action {
+                        text: i18n("Scheme for dark mode")
+                    }
+                ]
         }
     }
 

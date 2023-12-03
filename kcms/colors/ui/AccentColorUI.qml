@@ -18,13 +18,8 @@ Item {
     implicitWidth: root.width
     implicitHeight: colorList.height
 
-    // We are centering the content here if the window has more width than the content of the item.
-    // We are taking the extra width and then adding the half of it to the left side as padding.
-    // We will end up with same spacing at both the side of the item when there is excess width.
-    Item {
-        id: spacer
-        width: Math.max(Math.round((parent.width - colorList.contentWidth) / 2), 0)
-        anchors.left: parent.left
+    QQC2.Label {
+        text: "Accent color:"
     }
 
     QQC2.ComboBox {
@@ -34,9 +29,9 @@ Item {
         anchors.verticalCenterOffset: colorList.row === 1 ? 0 : Math.round(height / 2)
 
         model: [
-            i18nc("@item:inlistbox Accent color from color scheme", "Accent Color From Color Scheme"),
-            i18nc("@item:inlistbox Accent color from wallpaper", "Accent Color From Wallpaper"),
-            i18nc("@item:inlistbox User-chosen custom accent color", "Custom Accent Color")
+            i18nc("@item:inlistbox Accent color from color scheme", "From Color Scheme"),
+            i18nc("@item:inlistbox Accent color from wallpaper", "From Wallpaper"),
+            i18nc("@item:inlistbox User-chosen custom accent color", "Custom")
         ]
 
         currentIndex: {
