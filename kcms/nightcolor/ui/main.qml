@@ -193,7 +193,7 @@ KCM.SimpleKCM {
                     Layout.columnSpan: 3
                     from: kcm.maxDayTemp
                     to: kcm.minDayTemp
-                    stepSize: 100
+                    stepSize: -100
                     live: true
 
                     value: kcm.nightColorSettings.dayTemperature
@@ -252,7 +252,7 @@ KCM.SimpleKCM {
                     Layout.columnSpan: 3
                     from: kcm.maxNightTemp
                     to: kcm.minNightTemp
-                    stepSize: 100
+                    stepSize: -100
                     live: true
 
                     value: kcm.nightColorSettings.nightTemperature
