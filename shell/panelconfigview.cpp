@@ -326,6 +326,8 @@ void PanelConfigView::hideEvent(QHideEvent *ev)
 {
     PopupPlasmaWindow::hideEvent(ev);
 
+    disconnect(qApp, &QGuiApplication::focusWindowChanged, this, &PanelConfigView::focusVisibilityCheck);
+
     if (m_containment) {
         m_containment->setUserConfiguring(false);
     }
