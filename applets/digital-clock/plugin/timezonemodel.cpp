@@ -13,10 +13,6 @@
 #include <QStringMatcher>
 #include <QTimeZone>
 
-#include <unicode/localebuilder.h>
-#include <unicode/tznames.h>
-#include <unicode/unistr.h>
-
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
@@ -141,26 +137,14 @@ bool TimeZoneModel::setData(const QModelIndex &index, const QVariant &value, int
 
 void TimeZoneModel::update()
 {
-    const auto locale = icu::Locale(QLocale::system().name().toLatin1());
-    UErrorCode error = U_ZERO_ERROR;
-    const std::unique_ptr<icu::TimeZoneNames> tzNames(icu::TimeZoneNames::createInstance(locale, error));
-    if (!U_SUCCESS(error)) {
-        qWarning() << "failed to create timezone names" << u_errorName(error);
-        return;
-    }
-    icu::UnicodeString result;
-
     beginResetModel();
     m_data.clear();
 
-    QTimeZone localZone = QTimeZone(QTimeZone::systemTimeZoneId());
-    const icu::UnicodeString &localCity =
-        tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(localZone.id().data(), localZone.id().size())), result);
     TimeZoneData local;
     local.isLocalTimeZone = true;
     local.id = QStringLiteral("Local");
     local.region = i18nc("This means \"Local Timezone\"", "Local");
-    local.city = localCity.isBogus() ? QString() : QString::fromUtf16(localCity.getBuffer(), localCity.length());
+    local.city = m_timezonesI18n->i18nCity(QTimeZone::systemTimeZoneId());
     local.comment = i18n("System's local time zone");
     local.checked = false;
 
@@ -171,13 +155,12 @@ void TimeZoneModel::update()
     for (const auto &id : systemTimeZones) {
         const QTimeZone zone(id);
 
-        const icu::UnicodeString &exemplarCity = tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(id.data(), id.size())), result);
         const QString continent = m_timezonesI18n->i18nContinents(QString::fromUtf8(QByteArrayView(id).mid(0, id.indexOf('/'))));
 
         TimeZoneData newData;
         newData.isLocalTimeZone = false;
         newData.id = id;
-        newData.city = exemplarCity.isBogus() ? zone.id() : QString::fromUtf16(exemplarCity.getBuffer(), exemplarCity.length());
+        newData.city = m_timezonesI18n->i18nCity(id);
         newData.region = zone.country() == QLocale::AnyCountry ? QString() : continent + QLatin1Char('/') + m_timezonesI18n->i18nCountry(zone.country());
         newData.comment = zone.comment();
         newData.checked = false;
