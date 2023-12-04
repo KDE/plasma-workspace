@@ -1220,6 +1220,7 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
         if (panelView->containment()->lastScreen() == screenId) {
             m_waitingPanels << panelView->containment();
             it.remove();
+            panelView->disconnect(this); // https://bugreports.qt.io/browse/QTBUG-118841
             panelView->destroy();
             panelView->containment()->reactToScreenChange();
         }
@@ -1322,15 +1323,14 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
     }
 
     // Doing it here as m_panelViews might already have been modified by the step before
-    auto allPanels = m_panelViews.values();
-    m_panelViews.clear();
-    for (auto *v : allPanels) {
+    for (const auto allPanels = std::move(m_panelViews); auto v : allPanels) {
         const int screenNumber = v->containment()->lastScreen();
         if (screenNumber >= 0 && screenNumber < screens.count()) {
             v->setScreenToFollow(screens[screenNumber]);
             v->setVisible(true);
             m_panelViews[v->containment()] = v;
         } else {
+            v->disconnect(this); // https://bugreports.qt.io/browse/QTBUG-118841
             v->destroy();
             v->containment()->reactToScreenChange();
         }
@@ -1501,7 +1501,10 @@ void ShellCorona::createWaitingPanels()
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
         auto rectNotify = [this, panel]() {
-            Q_ASSERT(qobject_cast<PanelView *>(panel)); // https://bugreports.qt.io/browse/QTBUG-118841
+            if (!qobject_cast<PanelView *>(panel)) {
+                Q_ASSERT(false); // https://bugreports.qt.io/browse/QTBUG-118841
+                return;
+            }
             if (!m_screenReorderInProgress && panel->containment()) {
                 Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
@@ -2232,6 +2235,7 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
                     m_waitingPanels << containment;
                 }
                 m_panelViews.remove(containment);
+                panelView->disconnect(this); // https://bugreports.qt.io/browse/QTBUG-118841
                 panelView->destroy();
             }
         } else {
