@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-09-12 05:44+0300\n"
+"PO-Revision-Date: 2023-12-03 13:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -51,7 +51,7 @@ msgstr "Konumlandırma:"
 #: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Scaled and Cropped"
-msgstr "Ölçeklendirilmiş ve Kırpılmış"
+msgstr "Ölçeklendirilmiş ve kırpılmış"
 
 #: imagepackage/contents/ui/config.qml:130
 #, kde-format
@@ -61,7 +61,7 @@ msgstr "Ölçeklendirilmiş"
 #: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgid "Scaled, Keep Proportions"
-msgstr "Ölçeklendirilmiş, Oranları Tut"
+msgstr "Ölçeklendirilmiş, oranları koru"
 
 #: imagepackage/contents/ui/config.qml:138
 #, kde-format

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2017, 2018, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2022-09-23 22:56+0300\n"
+"PO-Revision-Date: 2023-12-03 20:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -109,14 +109,12 @@ msgid "Custom times"
 msgstr "Заданный интервал времени"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Ночная схема всегда включена"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Дневная цветовая температура:"
 
@@ -127,9 +125,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Холодная (без фильтра)"
@@ -141,17 +137,15 @@ msgid "Warm"
 msgstr "Теплее"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Ночная цветовая температура:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Определить местоположение"
+msgstr "Текущее местоположение: "
 
 #: ui/main.qml:310
 #, kde-format
@@ -172,8 +166,7 @@ msgstr ""
 "определения местоположения Mozilla</link>."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Включение ночного цвета:"
 
@@ -183,8 +176,7 @@ msgid "Input format: HH:MM"
 msgstr "(в формате ЧЧ:ММ)"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Включение дневного цвета:"
 
