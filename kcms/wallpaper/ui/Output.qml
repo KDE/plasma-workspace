@@ -6,15 +6,12 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Item {
-    
-    signal screenSelected(string screenName)
-    
     id: output
 
     // readonly property bool isSelected: root.selectedOutput === model.index
@@ -24,9 +21,11 @@ Item {
     property int yOffset
     property bool isSelected
     
-    property size outputSize: Qt.size(screen.geometry.width, screen.geometry.height)
-    property point position: Qt.point(screen.geometry.x, screen.geometry.y)
-        
+    readonly property size outputSize: Qt.size(screen.geometry.width, screen.geometry.height)
+    readonly property point position: Qt.point(screen.geometry.x, screen.geometry.y)
+
+    signal screenSelected(string screenName)
+
     x: position.x / relativeFactor + xOffset
     y:  position.y / relativeFactor + yOffset
 
@@ -113,56 +112,19 @@ Item {
         }
     }
 
-    Rectangle {
-        id: posLabel
-
-        y: 4
-        x: 4
-        width: childrenRect.width + 5
-        height: childrenRect.height + 2
-        radius: 4
-
-        opacity: model.enabled &&
-                 (tapHandler.isLongPressed || dragHandler.active) ? 0.9 : 0.0
-
-
-        color: Kirigami.Theme.disabledTextColor
-
-        Text {
-            id: posLabelText
-
-            y: 2
-            x: 2
-
-            // text: model.normalizedPosition.x + "," + model.normalizedPosition.y
-            color: "white"
-        }
-
-        Behavior on opacity {
-            PropertyAnimation {
-                duration: Kirigami.Units.longDuration
-            }
-        }
-    }
-
     HoverHandler {
         cursorShape: Qt.PointingHandCursor
     }
     
     TapHandler {
         id: tapHandler
-        property bool isLongPressed: false
         gesturePolicy: TapHandler.WithinBounds
 
         onPressedChanged: {
             if (pressed) {
                 output.screenSelected(screen.name)
-            } else {
-                isLongPressed = false;
             }
         }
-        onLongPressed: isLongPressed = true;
-        longPressThreshold: 0.3
     }
 }
 
