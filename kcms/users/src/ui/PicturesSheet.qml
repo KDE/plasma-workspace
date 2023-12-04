@@ -40,7 +40,7 @@ Kirigami.OverlaySheet {
 
     component PicturesGridLayout: GridLayout {
         rowSpacing: Kirigami.Units.smallSpacing
-        columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
+        columns: Math.floor((stackSwitcher.implicitWidth - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
         columnSpacing: Kirigami.Units.smallSpacing
 
         Layout.fillWidth: true
@@ -283,7 +283,6 @@ Kirigami.OverlaySheet {
             }
         }
     }
-
 
     readonly property MainPage mainPage: MainPage {}
     readonly property InitialsPage initialsPage: InitialsPage {}
