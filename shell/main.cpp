@@ -76,6 +76,8 @@ int main(int argc, char *argv[])
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     qputenv("QT_WAYLAND_RECONNECT", "1");
 
+    KCrash::initialize();
+
     // Quit on SIGTERM to properly save state. See systemd.kill(5).
     // https://bugs.kde.org/show_bug.cgi?id=470604
     KSignalHandler::self()->watchSignal(SIGTERM);
