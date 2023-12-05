@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-02 01:37+0000\n"
-"PO-Revision-Date: 2022-02-27 16:34+0530\n"
+"PO-Revision-Date: 2023-12-04 21:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/DeviceItem.qml:189
 #, kde-format
@@ -40,8 +40,7 @@ msgid "Removing…"
 msgstr "நீக்கப்படுகிறது…"
 
 #: package/contents/ui/DeviceItem.qml:199
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "கழற்றாதீர்கள்! கோப்புகள் இன்னும் இடமாற்றப்படுகின்றன…"
 

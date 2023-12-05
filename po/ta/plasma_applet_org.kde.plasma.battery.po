@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-12-08 21:20+0530\n"
+"PO-Revision-Date: 2023-12-04 21:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.11.90\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -98,10 +98,9 @@ msgid "Not present"
 msgstr "இல்லை"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "ஆற்றல் மேலாண்மை"
+msgstr "ஆற்றலும் மின்கலமும்"
 
 #: package/contents/ui/main.qml:116 package/contents/ui/main.qml:283
 #, kde-format
@@ -243,20 +242,16 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (தெரியாத காரணம்)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 செயலி தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது:"
+msgstr "ஒரு செயலி தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1 தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (தெரியாத காரணம்)"
+msgstr "ஒரு செயலி தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (தெரியாத காரணம்)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -274,15 +269,13 @@ msgstr "%1: தெரியாத காரணம்"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "தெரியாத செயலி: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: தெரியாத காரணம்"
+msgstr "தெரியாத செயலி: தெரியாத காரணம்"
 
 #: package/contents/ui/PowerProfileItem.qml:37
 #, kde-format
@@ -305,11 +298,10 @@ msgid "Power Profile"
 msgstr "ஆற்றல் பயன்முறை"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "மின்கலங்கள் ஏதுமில்லை"
+msgstr "கிடைக்கவில்லை"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -372,6 +364,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"உங்கள் சாதனத்தில் ஆற்றல் பயன்முறைகள் ஆதரிக்கப்படலாம்.<nl/>உங்கள் இயங்குதளத்தில் தொகுப்பு "
+"மேலாளியைக் கொண்டு <command>power-profiles-daemon</command> தனை நிறுவி கணினியை "
+"மீள்துவக்கவும்."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

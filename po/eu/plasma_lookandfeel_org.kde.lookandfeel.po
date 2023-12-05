@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-12-02 11:09+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -162,27 +162,27 @@ msgstr "(edo eskaneatu zure hatz-marka irakurgailuan)"
 msgid "(or scan your smartcard)"
 msgstr "(edo eskaneatu zure txartel-adimenduna)"
 
-#: contents/lockscreen/MediaControls.qml:60
+#: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
 msgstr "Titulurik gabe"
 
-#: contents/lockscreen/MediaControls.qml:61
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
-#: contents/lockscreen/MediaControls.qml:89
+#: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
 msgstr "Aurreko aztarna"
 
-#: contents/lockscreen/MediaControls.qml:101
+#: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Jo edo eten euskarria"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
 msgstr "Hurrengo aztarna"

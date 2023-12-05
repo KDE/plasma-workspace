@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-11-23 11:20+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: \n"
@@ -166,27 +166,27 @@ msgstr "(ou effectuer une lecture votre empreinte digitale sur le lecteur)"
 msgid "(or scan your smartcard)"
 msgstr "(ou effectuer une lecture de votre carte mémoire)"
 
-#: contents/lockscreen/MediaControls.qml:60
+#: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
 msgstr "Aucun titre"
 
-#: contents/lockscreen/MediaControls.qml:61
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
 msgstr "Aucun média en lecture"
 
-#: contents/lockscreen/MediaControls.qml:89
+#: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
 msgstr "Piste précédente"
 
-#: contents/lockscreen/MediaControls.qml:101
+#: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Lecture / pause du média"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
 msgstr "Piste suivante"

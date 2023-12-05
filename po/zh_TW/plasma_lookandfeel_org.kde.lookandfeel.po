@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-11-29 18:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -164,27 +164,27 @@ msgstr "（或是在辨識器上掃描您的指紋）"
 msgid "(or scan your smartcard)"
 msgstr "（或是掃描您的智慧卡）"
 
-#: contents/lockscreen/MediaControls.qml:60
+#: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
 msgstr "無標題"
 
-#: contents/lockscreen/MediaControls.qml:61
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
 msgstr "沒有播放任何媒體"
 
-#: contents/lockscreen/MediaControls.qml:89
+#: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
 msgstr "上一個音軌"
 
-#: contents/lockscreen/MediaControls.qml:101
+#: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
 msgstr "播放、暫停媒體"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
 msgstr "下一個音軌"

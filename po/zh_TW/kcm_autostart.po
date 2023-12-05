@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-11-10 23:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -127,75 +127,75 @@ msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "新增登出文稿…"
 
-#: ui/main.qml:119
+#: ui/main.qml:114
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr "%1 尚未被自動啟動。細節將在系統重新啟動後可用。"
 
-#: ui/main.qml:143
+#: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "尚未自動啟動"
 
-#: ui/main.qml:148 unit.cpp:30
+#: ui/main.qml:142 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "失敗"
 
-#: ui/main.qml:154
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "檢視屬性"
 
-#: ui/main.qml:160
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "移除項目"
 
-#: ui/main.qml:170
+#: ui/main.qml:166
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: ui/main.qml:173
+#: ui/main.qml:169
 #, kde-format
 msgid "Login Scripts"
 msgstr "登入文稿"
 
-#: ui/main.qml:176
+#: ui/main.qml:172
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "啟動前文稿"
 
-#: ui/main.qml:179
+#: ui/main.qml:175
 #, kde-format
 msgid "Logout Scripts"
 msgstr "登出文稿"
 
-#: ui/main.qml:187
+#: ui/main.qml:183
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "沒有使用者指定的自動啟動項目"
 
-#: ui/main.qml:188
+#: ui/main.qml:184
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "點擊下方的<interface>新增…</interface>按鈕以新增一些"
 
-#: ui/main.qml:203
+#: ui/main.qml:199
 #, kde-format
 msgid "Choose Login Script"
 msgstr "選擇登入文稿"
 
-#: ui/main.qml:223
+#: ui/main.qml:219
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "選擇登出文稿"

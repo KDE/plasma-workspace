@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-11-22 06:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -162,27 +162,27 @@ msgstr "(aŭ skanu vian fingrospuron sur la legilo)"
 msgid "(or scan your smartcard)"
 msgstr "(aŭ skanu vian inteligentan memorkarton)"
 
-#: contents/lockscreen/MediaControls.qml:60
+#: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
 msgstr "Neniu titolo"
 
-#: contents/lockscreen/MediaControls.qml:61
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
 msgstr "Neniu aŭdvidaĵo ludanta"
 
-#: contents/lockscreen/MediaControls.qml:89
+#: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
 msgstr "Antaŭa trako"
 
-#: contents/lockscreen/MediaControls.qml:101
+#: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Ludi aŭ Paŭzi aŭdvidaĵon"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
 msgstr "Sekva aŭtoveturejo"

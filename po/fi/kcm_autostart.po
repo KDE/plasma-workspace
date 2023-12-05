@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-10-07 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -135,7 +135,7 @@ msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Lisää uloskirjautumisskripti…"
 
-#: ui/main.qml:119
+#: ui/main.qml:114
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -144,57 +144,57 @@ msgstr ""
 "%1 ei ole vielä automaattikäynnistynyt. Tiedot tulevat saataville "
 "järjestelmän käynnistyttyä uudelleen."
 
-#: ui/main.qml:143
+#: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Ei vielä automaattikäynnistynyt"
 
-#: ui/main.qml:148 unit.cpp:30
+#: ui/main.qml:142 unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "Epäonnistui"
 
-#: ui/main.qml:154
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Näytä ominaisuudet"
 
-#: ui/main.qml:160
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Poista kohde"
 
-#: ui/main.qml:170
+#: ui/main.qml:166
 #, kde-format
 msgid "Applications"
 msgstr "Sovellukset"
 
-#: ui/main.qml:173
+#: ui/main.qml:169
 #, kde-format
 msgid "Login Scripts"
 msgstr "Kirjautumisskriptit"
 
-#: ui/main.qml:176
+#: ui/main.qml:172
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Käynnistystä edeltävät skriptit"
 
-#: ui/main.qml:179
+#: ui/main.qml:175
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Uloskirjautumisskriptit"
 
-#: ui/main.qml:187
+#: ui/main.qml:183
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Ei automaattisesti käynnistyviksi asetettuja kohteita"
 
-#: ui/main.qml:188
+#: ui/main.qml:184
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Click the <interface>Add…</interface> button below to add some"
@@ -202,12 +202,12 @@ msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "Niitä voi lisätä napsauttamalla alta <interface>Lisää…</interface>"
 
-#: ui/main.qml:203
+#: ui/main.qml:199
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Valitse kirjautumisskripti"
 
-#: ui/main.qml:223
+#: ui/main.qml:219
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Valitse uloskirjautumisskripti"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-05 01:35+0000\n"
 "PO-Revision-Date: 2023-11-22 10:23+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -159,27 +159,27 @@ msgstr "(или сканирайте пръстовия си отпечатък 
 msgid "(or scan your smartcard)"
 msgstr "(или сканирайте смарткартата си)"
 
-#: contents/lockscreen/MediaControls.qml:60
+#: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
 msgstr "Без заглавие"
 
-#: contents/lockscreen/MediaControls.qml:61
+#: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
 msgstr "Не се възпроизвежда медия"
 
-#: contents/lockscreen/MediaControls.qml:89
+#: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
 msgstr "Предишен запис"
 
-#: contents/lockscreen/MediaControls.qml:101
+#: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Възпроизвеждане или пауза на медия"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
 msgstr "Следваща песен"

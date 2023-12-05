@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2022-09-13 19:43+0530\n"
+"PO-Revision-Date: 2023-12-04 21:10+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -109,14 +109,12 @@ msgid "Custom times"
 msgstr "விருப்ப நேரங்கள்"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "எப்போதும் இரவு நிறத்தைப் பயன்படுத்து"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "பகலுக்கான நிறவெப்பநிலை:"
 
@@ -127,9 +125,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "நீலம் (நிறமாற்றம் இல்லாமல்)"
@@ -141,17 +137,15 @@ msgid "Warm"
 msgstr "சிவப்பு"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "இரவுக்கான நிறவெப்பநிலை:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "இருப்பிடத்தைக் கண்டுபிடி"
+msgstr "தற்போதைய இருப்பிடம்:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -171,8 +165,7 @@ msgstr ""
 "இருப்பிடம் அவ்வப்போது புதுப்பிக்கப்படும்."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "இரவு நிறத்துக்கு இந்நேரத்தில் மாறு:"
 
@@ -182,8 +175,7 @@ msgid "Input format: HH:MM"
 msgstr "உள்ளீட்டு படிவம்: மம:நிநி"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "பகல் நிறத்துக்கு இந்நேரத்தில் மாறு:"
 

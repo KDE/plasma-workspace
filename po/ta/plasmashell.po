@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-08-20 15:54+0530\n"
+"PO-Revision-Date: 2023-12-04 21:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,52 +33,40 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "சுட்டி செயல்கள் செருகுநிரலை அமைத்தல்"
 
 #: desktopview.cpp:211
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Dev"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "கே.டீ.யீ. பிளாஸ்மா %1 நிரலாளர் பதிப்பு"
+msgstr "கே.டீ.யீ. பிளாஸ்மா 6.0 நிரலாளர் பதிப்பு"
 
 #: desktopview.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு"
+msgstr "கே.டீ.யீ. பிளாஸ்மா 6.0 சோதனை பதிப்பு"
 
 #: desktopview.cpp:217
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு"
+msgstr "கே.டீ.யீ. பிளாஸ்மா 6.0 பீட்டா 1"
 
 #: desktopview.cpp:220
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
-#| msgid "KDE Plasma %1 Beta %2"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "கே.டீ.யீ. பிளாஸ்மா %1 சோதனை பதிப்பு %2"
+msgstr "கே.டீ.யீ. பிளாஸ்மா 6.0 பீட்டா 2"
 
 #: desktopview.cpp:223
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "கே.டீ.யீ. பிளாஸ்மா %1"
+msgstr "கே.டீ.யீ. பிளாஸ்மா 6.0 RC1"
 
 #: desktopview.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "கே.டீ.யீ. பிளாஸ்மா %1"
+msgstr "கே.டீ.யீ. பிளாஸ்மா 6.0 RC2"
 
 #: desktopview.cpp:252
 #, kde-format
@@ -113,12 +101,12 @@ msgstr "பிழையறிக்கைகளை பதிவு செய்�
 #: main.cpp:104
 #, kde-format
 msgid "Plasma Shell"
-msgstr ""
+msgstr "பிளாஸ்மா இடைமுகப்பு"
 
 #: main.cpp:116
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "QML JavaScript பிழைநீக்கியை இயக்கு"
 
 #: main.cpp:119
 #, kde-format
@@ -128,7 +116,7 @@ msgstr "பிளாஸ்மா முறிவடைந்தால் அத�
 #: main.cpp:122
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "குறிப்பிட்டுள்ள செருகுநிரலின் ஏற்றத்தை கட்டாயப்படுத்து"
 
 #: main.cpp:126
 #, kde-format
@@ -164,6 +152,8 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
+"OpenGL 2-ஐயும் மென்பொருள் வரைநிரலையும் பயன்படுத்த முடியாத‍தால் பிளாஸ்மாவால் துவங்க "
+"முடியவில்லை. உங்கள் வரைநிரல் சரியாக அமைக்கப்பட்டுள்ளதா என சரிபார்க்கவும்."
 
 #: osd.cpp:53
 #, kde-format
