@@ -112,6 +112,64 @@ Item {
         }
     }
 
+    states: [
+        State {
+            name: "transposed"
+            PropertyChanges {
+                target: outline
+                width: output.height
+                height: output.width
+            }
+        },
+
+        State {
+            name: "rot90"
+            extend: "transposed"
+            when: screen.orientation === 1 // Qt::PortraitOrientation
+            PropertyChanges {
+                target: outline
+                rotation: 90
+            }
+            PropertyChanges {
+                target: labelContainer
+                anchors.leftMargin: outline.orientationPanelWidth + outline.border.width
+            }
+        },
+        State {
+            name: "rot0"
+            when: screen.orientation === 2 // Qt::LandscapeOrientation
+            PropertyChanges {
+                target: labelContainer
+                anchors.bottomMargin: outline.orientationPanelWidth + outline.border.width
+            }
+        },
+        State {
+            name: "rot270"
+            extend: "transposed"
+            when: screen.orientation === 4 // Qt::InvertedPortraitOrientation
+            PropertyChanges {
+                target: outline
+                rotation: 270
+            }
+            PropertyChanges {
+                target: labelContainer
+                anchors.rightMargin: outline.orientationPanelWidth + outline.border.width
+            }
+        },
+        State {
+            name: "rot180"
+            when: screen.orientation === 8 // Qt::InvertedLandscapeOrientation
+            PropertyChanges {
+                target: outline
+                rotation: 180
+            }
+            PropertyChanges {
+                target: labelContainer
+                anchors.topMargin: outline.orientationPanelWidth + outline.border.width
+            }
+        }
+    ]
+
     HoverHandler {
         cursorShape: Qt.PointingHandCursor
     }
