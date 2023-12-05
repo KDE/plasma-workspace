@@ -67,7 +67,7 @@ ColumnLayout {
         id: inhibitionReasonsLayout
 
         Layout.fillWidth: true
-        visible: root.inhibitsLidAction || (root.inhibitions.length > 0 && !root.disabled)
+        visible: root.inhibitsLidAction || (root.inhibitions.length > 0)
 
         InhibitionHint {
             Layout.fillWidth: true
@@ -79,9 +79,7 @@ ColumnLayout {
         PlasmaComponents3.Label {
             id: inhibitionExplanation
             Layout.fillWidth: true
-            // Don't need to show the inhibitions when power management
-            // isn't enabled anyway
-            visible: root.inhibitions.length > 1 && !root.disabled
+            visible: root.inhibitions.length > 1
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
@@ -92,10 +90,7 @@ ColumnLayout {
         }
 
         Repeater {
-            // Don't need to show the inhibitions when power management
-            // is manually disabled anyway
-            visible: !root.disabled
-            model: !root.disabled ? root.inhibitions : null
+            model: root.inhibitions
 
             InhibitionHint {
                 property string icon: modelData.Icon
