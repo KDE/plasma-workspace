@@ -197,6 +197,7 @@ void ContainmentConfigView::applyWallpaper()
     static_cast<KConfigPropertyMap *>(m_currentWallpaperConfig)->writeConfig();
     m_containment->setWallpaperPlugin(m_currentWallpaperPlugin);
     syncWallpaperObjects();
+    Q_EMIT static_cast<ShellCorona *>(m_containment->corona())->wallpaperChanged(m_containment->screen());
 }
 
 void ContainmentConfigView::onWallpaperChanged(uint /*screenIdx*/)
