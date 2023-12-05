@@ -7,8 +7,6 @@
 #include "containmentconfigview.h"
 #include "config-workspace.h"
 #include "currentcontainmentactionsmodel.h"
-#include "qdbusinterface.h"
-#include "qdbusreply.h"
 #include "shellcorona.h"
 
 #include <QDBusConnection>
@@ -194,12 +192,6 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
 
 void ContainmentConfigView::applyWallpaper()
 {
-    auto iface = new QDBusInterface("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", QDBusConnection::sessionBus(), this);
-    if (!iface->isValid()) {
-        qWarning() << qPrintable(QDBusConnection::sessionBus().lastError().message());
-        QCoreApplication::instance()->quit();
-    }
-
     QVariantMap params;
     for (const auto &key : m_currentWallpaperConfig->keys()) {
         if (key.endsWith("Default")) {
@@ -215,10 +207,8 @@ void ContainmentConfigView::applyWallpaper()
         params.remove("PreviewImage");
     }
 
-    const QDBusReply<void> response = iface->call(QStringLiteral("setWallpaper"), m_currentWallpaperPlugin, params, uint(m_containment->screen()));
-    if (!response.isValid()) {
-        qWarning() << "failed to set wallpaper:" << response.error();
-    }
+    auto shell = static_cast<ShellCorona *>(m_containment->corona());
+    shell->setWallpaper(m_currentWallpaperPlugin, params, m_containment->screen());
 }
 
 void ContainmentConfigView::onWallpaperChanged(uint /*screenIdx*/)
