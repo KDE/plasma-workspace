@@ -324,7 +324,7 @@ ColumnLayout {
         enabled: visible
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.maximumHeight: results.contentHeight
+        Layout.maximumHeight: Math.max(listView.contentHeight, results.contentHeight)
         // This replaces the ColumnLayout spacing
         Layout.topMargin: Kirigami.Units.smallSpacing
 
@@ -374,7 +374,7 @@ ColumnLayout {
     PlasmaComponents3.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.maximumHeight: results.contentHeight
+        Layout.maximumHeight: listView.contentHeight
         // This replaces the ColumnLayout spacing
         Layout.topMargin: Kirigami.Units.smallSpacing
         visible: root.query.length === 0 && listView.count > 0
