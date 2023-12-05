@@ -1,18 +1,18 @@
 # Translation of plasma_applet_battery into Japanese.
+# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2007, 2008, 2009, 2010.
 # Taiki Komoda <kom@kde.gr.jp>, 2010.
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2023-02-23 18:22+0900\n"
+"PO-Revision-Date: 2023-12-03 15:44+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -36,8 +36,8 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"このバッテリーの正常性は%1%であり、交換が推奨されます。製造元へお問い合わせく"
-"ださい。"
+"このバッテリの正常性は%1%であり、交換が推奨されます。製造元へお問い合わせくだ"
+"さい。"
 
 #: package/contents/ui/BatteryItem.qml:186
 #, kde-format
@@ -133,17 +133,17 @@ msgstr "電源管理"
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "バッテリー %1%, 充電していません"
+msgstr "バッテリ %1%, 充電していません"
 
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "バッテリー %1%, 接続済 (放電中)"
+msgstr "バッテリ %1%, 接続済 (放電中)"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "バッテリー %1%, 充電中"
+msgstr "バッテリ %1%, 充電中"
 
 #: package/contents/ui/main.qml:159
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "バッテリ %1%"
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
-msgstr "供給電力はバッテリーを充電するには不十分です"
+msgstr "供給電力はバッテリを充電するには不十分です"
 
 #: package/contents/ui/main.qml:171
 #, kde-format
@@ -180,14 +180,13 @@ msgstr "充電していません"
 #: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
-msgstr "自動でのスリープと画面ロックは無効化されました"
+msgstr "自動的なスリープと画面ロックは無効化されました"
 
 #: package/contents/ui/main.qml:191
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] ""
-"%1 つのアプリケーションが パフォーマンスモードの有効化を要求しました"
+msgstr[0] "%1 つのアプリケーションがパフォーマンスモードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -213,7 +212,7 @@ msgstr "スクロールしてスクリーンの明るさを調整"
 #: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr "バッテリー アプレットがシステム全体の抑制を有効化しました"
+msgstr "バッテリ アプレットがシステム全体の抑制を有効化しました"
 
 #: package/contents/ui/main.qml:364
 #, kde-format
@@ -223,12 +222,12 @@ msgstr "%1 モードの有効化に失敗しました"
 #: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
-msgstr "充電情報を表示(&S)…"
+msgstr "電力情報を表示(&S)…"
 
 #: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "フル充電されていないときアイコンにバッテリのパーセンテージを表示する"
+msgstr "フル充電されていないときバッテリ残量を数字で表示"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -243,7 +242,7 @@ msgstr "ディスプレイの明るさ"
 #: package/contents/ui/PopupDialog.qml:146
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr "キーボードの輝度"
+msgstr "キーボードの明るさ"
 
 #: package/contents/ui/PowerManagementItem.qml:42
 #, kde-format
@@ -265,8 +264,7 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] ""
-"現在 %1 つのアプリケーションがスリープと画面ロックをブロックしています:"
+msgstr[0] "現在 %1 つのアプリケーションがスリープと画面ロックを妨げています:"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
@@ -355,7 +353,7 @@ msgstr "パフォーマンスが低下するかもしれません。"
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
-msgstr[0] "%1 つのアプリケーションが %2 のアクティベートを要求しました:"
+msgstr[0] "%1 つのアプリケーションが %2 の有効化を要求しました:"
 
 #: package/contents/ui/PowerProfileItem.qml:241
 #, kde-format
