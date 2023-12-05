@@ -100,6 +100,7 @@ KCM.ScrollViewKCM {
             property: "category"
             delegate: Kirigami.ListSectionHeader {
                 label: categoryName(section)
+                width: itemsList.width
             }
         }
 

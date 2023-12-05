@@ -161,6 +161,7 @@ KCM.ScrollViewKCM {
 
         section.property: "source"
         section.delegate: Kirigami.ListSectionHeader {
+            width: listView.width
             text: {
                 if (section == AutostartModel.XdgAutoStart){
                     return i18n("Applications");
