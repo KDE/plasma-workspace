@@ -183,8 +183,6 @@ KCMUtils.ScrollViewKCM {
         }
 
         header: ColumnLayout {
-            Layout.preferredWidth: Kirigami.Units.gridUnit * 25
-
             Kirigami.Heading {
                 Layout.fillWidth: true
                 text: i18n("Add More Timezones")
@@ -211,7 +209,7 @@ KCMUtils.ScrollViewKCM {
         ListView {
             focus: true // keyboard navigation
             activeFocusOnTab: true // keyboard navigation
-            implicitWidth: Kirigami.Units.gridUnit * 25
+            implicitWidth: Math.max(timeZonesPage.width/2, Kirigami.Units.gridUnit * 25)
 
             model: TimeZoneFilterProxy {
                 sourceModel: timeZones
