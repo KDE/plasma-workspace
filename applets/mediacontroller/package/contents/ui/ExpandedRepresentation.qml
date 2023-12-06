@@ -366,8 +366,12 @@ PlasmaExtras.Representation {
                 spacing: Kirigami.Units.smallSpacing
 
                 // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
-                enabled: playerList.count > 0 && root.track.length > 0 && expandedRepresentation.length > 0 ? true : false
-                opacity: enabled ? 1 : 0
+                function shouldBeEnabled(): bool {
+                    return playerList.count > 0 && root.track.length > 0 && expandedRepresentation.length > 0;
+                }
+
+                enabled: shouldBeEnabled()
+                opacity: shouldBeEnabled() ? 1 : 0
                 Behavior on opacity {
                     NumberAnimation { duration: Kirigami.Units.longDuration }
                 }
