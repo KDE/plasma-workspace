@@ -230,18 +230,20 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         Q_ASSERT(!m_availableScreens.contains(screen));
         m_redundantScreens.remove(screen);
     } else if (m_fakeScreens.contains(screen)) {
+        // If is in fake screens, then must be fake, this will only happen on Wayland
+        Q_ASSERT(isOutputFake(screen));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_availableScreens.contains(screen));
         m_fakeScreens.remove(screen);
     } else if (isOutputFake(screen)) {
-        // This happens when an output is recycled because it was the last one and became fake
+        // Fake but not in m_fakeScreens can only happen on X11, where the last output quietly renames itself to ":0.0" without signals
+#if HAVE_X11
+        Q_ASSERT(KWindowSystem::isPlatformX11());
+#endif
         Q_ASSERT(m_availableScreens.contains(screen));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
-        Q_ASSERT(m_sizeSortedScreens.isEmpty());
-        m_sizeSortedScreens.append(screen);
         m_availableScreens.removeAll(screen);
-        m_fakeScreens.insert(screen);
     } else if (m_availableScreens.contains(screen)) {
         // It's possible that the screen was already "removed" by handleOutputOrderChanged
         Q_ASSERT(m_availableScreens.contains(screen));
