@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-16 02:40+0000\n"
-"PO-Revision-Date: 2022-09-10 15:09+0200\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2023-11-29 18:13+0100\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -125,19 +125,19 @@ msgstr "%1K"
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr "Caldo"
+msgstr "Calda"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Freddo (nessun filtro)"
+msgstr "Fredda (nessun filtro)"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
-msgstr "Freddo"
+msgstr "Fredda"
 
 #: package/contents/ui/main.qml:245
 #, kde-format
