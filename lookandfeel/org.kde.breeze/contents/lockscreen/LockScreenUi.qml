@@ -319,120 +319,13 @@ Item {
             }
         }
 
-        Loader {
+        VirtualKeyboardLoader {
             id: inputPanel
-            state: "hidden"
-            readonly property bool keyboardActive: item?.active ?? false
-            Component {
-                id: keyboard
-                VirtualKeyboard {}
-            }
-            Component {
-                id: keyboardWayland
-                VirtualKeyboard_wayland {}
-            }
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            function showHide() {
-                state = state === "hidden" ? "visible" : "hidden";
-            }
-            Component.onCompleted: {
-                inputPanel.sourceComponent = Qt.platform.pluginName.includes("wayland") ? keyboardWayland : keyboard
-            }
 
-            onKeyboardActiveChanged: {
-                if (keyboardActive) {
-                    state = "visible";
-                } else {
-                    state = "hidden";
-                }
-            }
-
-            states: [
-                State {
-                    name: "visible"
-                    PropertyChanges {
-                        target: mainStack
-                        y: Math.min(0, lockScreenRoot.height - inputPanel.height - mainBlock.visibleBoundary)
-                    }
-                    PropertyChanges {
-                        target: inputPanel
-                        y: lockScreenRoot.height - inputPanel.height
-                    }
-                },
-                State {
-                    name: "hidden"
-                    PropertyChanges {
-                        target: mainStack
-                        y: 0
-                    }
-                    PropertyChanges {
-                        target: inputPanel
-                        y: lockScreenRoot.height - lockScreenRoot.height/4
-                    }
-                }
-            ]
-            transitions: [
-                Transition {
-                    from: "hidden"
-                    to: "visible"
-                    SequentialAnimation {
-                        ScriptAction {
-                            script: {
-                                inputPanel.item.activated = true;
-                                Qt.inputMethod.show();
-                            }
-                        }
-                        ParallelAnimation {
-                            NumberAnimation {
-                                target: mainStack
-                                property: "y"
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InOutQuad
-                            }
-                            NumberAnimation {
-                                target: inputPanel
-                                property: "y"
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.OutQuad
-                            }
-                        }
-                    }
-                },
-                Transition {
-                    from: "visible"
-                    to: "hidden"
-                    SequentialAnimation {
-                        ParallelAnimation {
-                            NumberAnimation {
-                                target: mainStack
-                                property: "y"
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InOutQuad
-                            }
-                            NumberAnimation {
-                                target: inputPanel
-                                property: "y"
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InQuad
-                            }
-                            OpacityAnimator {
-                                target: inputPanel
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InQuad
-                            }
-                        }
-                        ScriptAction {
-                            script: {
-                                inputPanel.item.activated = false;
-                                Qt.inputMethod.hide();
-                            }
-                        }
-                    }
-                }
-            ]
+            screenRoot: lockScreenRoot
+            mainStack: mainStack
+            mainBlock: mainBlock
+            passwordField: mainBlock.mainPasswordBox
         }
 
         Loader {
