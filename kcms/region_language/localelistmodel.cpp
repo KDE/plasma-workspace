@@ -51,7 +51,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
 {
     int dataIndex = index.row();
     const auto &data = m_localeData.at(dataIndex);
-    switch (role) {
+    switch (static_cast<RoleName>(role)) {
     case FlagIcon: {
         QString countryCode;
         const QStringList split = data.countryCode.split(QLatin1Char('_'));

@@ -51,7 +51,7 @@ QVariant LanguageListModel::data(const QModelIndex &index, int role) const
     if (row < 0 || row >= m_availableLanguages.size()) {
         return {};
     }
-    switch (role) {
+    switch (static_cast<Roles>(role)) {
     case NativeName:
         return languageCodeToName(m_availableLanguages.at(row));
     case LanguageCode:
@@ -77,7 +77,7 @@ QHash<int, QByteArray> LanguageListModel::roleNames() const
 QString LanguageListModel::languageCodeToName(const QString &languageCode)
 {
     const QLocale locale(languageCode);
-    const QString languageName = locale.nativeLanguageName();
+    QString languageName = locale.nativeLanguageName();
 
     if (languageName.isEmpty()) {
         return languageCode;

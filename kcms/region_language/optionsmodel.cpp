@@ -103,11 +103,14 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    switch (role) {
+    switch (static_cast<Roles>(role)) {
     case Name:
         return m_staticNames.at(row).first;
     case Subtitle: {
-        switch (row) {
+        switch (static_cast<SettingType>(row)) {
+        case Language:
+            Q_ASSERT(false); // shouldn't happen
+            return {};
         case Lang:
             if (m_settings->defaultLangValue().isEmpty() && m_settings->isDefaultSetting(SettingType::Lang)) {
                 // no Lang configured, no $LANG in env
@@ -174,7 +177,10 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
         return {}; // implicit locale
     }
     case Example: {
-        switch (row) {
+        switch (static_cast<SettingType>(row)) {
+        case Language:
+            Q_ASSERT(false); // shouldn't happen
+            return {};
         case Lang:
             return {};
         case Numeric: {

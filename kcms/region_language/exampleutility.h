@@ -22,12 +22,12 @@ class Utility
 {
     friend class ExampleUtilityTest;
 #ifdef LC_ADDRESS
-    static QString resolveFieldDescriptors(QHash<QChar, QString> map, int langInfoFormat, int lcFormat, const QLocale &locale);
+    static QString resolveFieldDescriptors(const QHash<QChar, QString> &map, int langInfoFormat, int lcFormat, const QLocale &locale);
     static QString getLocaleInfo(int langInfoFormat, int lcFormat, const QLocale &locale);
-    static QString parseLocaleFile(QString localeName, int langInfoFormat);
-    static QFileInfo findLocaleInFolder(QString localeName, QString localeDirectory);
+    static QString parseLocaleFile(const QString &localeName, int langInfoFormat);
+    static QFileInfo findLocaleInFolder(const QString &localeName, const QString &localeDirectory);
     static QString getFormatToFetch(int langInfoFormat);
-    static QStringList getLangCodeFromLocale(QLocale locale);
+    static QStringList getLangCodeFromLocale(const QLocale &locale);
     static QString replaceASCIIUnicodeSymbol(const QString &string);
 #endif
 

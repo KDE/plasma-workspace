@@ -124,7 +124,7 @@ QString Utility::phoneNumbersExample(const QLocale &locale)
 #endif
 
 #ifdef LC_ADDRESS
-QString Utility::resolveFieldDescriptors(QHash<QChar, QString> map, int langInfoFormat, int lcFormat, const QLocale &locale)
+QString Utility::resolveFieldDescriptors(const QHash<QChar, QString> &map, int langInfoFormat, int lcFormat, const QLocale &locale)
 {
     QString formatString = getLocaleInfo(langInfoFormat, lcFormat, locale);
     QString example = KMacroExpander::expandMacros(formatString, map);
@@ -151,13 +151,13 @@ QString Utility::getLocaleInfo(int langInfoFormat, int lcFormat, const QLocale &
     return localeInfo;
 }
 
-QString Utility::parseLocaleFile(QString localeName, int langInfoFormat)
+QString Utility::parseLocaleFile(const QString &localeName, int langInfoFormat)
 {
     static std::unordered_map<QString, QString> resultCache;
 
     const QString formatToFetch = getFormatToFetch(langInfoFormat);
     const auto cacheKey = formatToFetch + QStringLiteral("###") + localeName;
-    if (resultCache.count(cacheKey)) {
+    if (resultCache.contains(cacheKey)) {
         return resultCache[cacheKey];
     }
 
@@ -209,7 +209,9 @@ QString Utility::parseLocaleFile(QString localeName, int langInfoFormat)
 // Glibc store unicode char as ASCII symbol, 'T<U00FC>rkiye' for 'Türkiye'
 QString Utility::replaceASCIIUnicodeSymbol(const QString &string)
 {
-    int i = 0, literalStringStart = 0, unicodeStart = 0;
+    int i = 0;
+    int literalStringStart = 0;
+    int unicodeStart = 0;
     QString result;
     result.reserve(string.size());
     bool replacing = false;
@@ -246,7 +248,7 @@ QString Utility::replaceASCIIUnicodeSymbol(const QString &string)
     return result;
 }
 
-QFileInfo Utility::findLocaleInFolder(QString localeName, QString localeDirectory)
+QFileInfo Utility::findLocaleInFolder(const QString &localeName, const QString &localeDirectory)
 {
     QDirIterator dirIterator(localeDirectory);
     // Iterate through files in the locale directory
@@ -287,7 +289,7 @@ QString Utility::getFormatToFetch(int langInfoFormat)
     return {};
 }
 
-QStringList Utility::getLangCodeFromLocale(QLocale locale)
+QStringList Utility::getLangCodeFromLocale(const QLocale &locale)
 {
     QStringList languages;
     for (QString language : locale.uiLanguages()) {
@@ -295,7 +297,7 @@ QStringList Utility::getLangCodeFromLocale(QLocale locale)
         languages += language;
     }
     // `uiLanguages` don't offer the minimal version for some locale, such as fr_DZ.
-    if (int pos = languages.last().indexOf(QLatin1Char('_')); pos >= 0) {
+    if (auto pos = languages.last().indexOf(QLatin1Char('_')); pos >= 0) {
         languages += languages.last().left(pos);
     }
     return languages;

@@ -197,36 +197,49 @@ OptionsModel *KCMRegionAndLang::optionsModel() const
     return m_optionsModel;
 }
 
-void KCMRegionAndLang::unset(SettingType setting)
+void KCMRegionAndLang::unset(SettingType setting) const
 {
     const char *entry = nullptr;
-    if (setting == SettingType::Lang) {
+    switch (setting) {
+    case SettingType::Language:
+        Q_ASSERT(false); // shouldn't happen
+        return;
+    case SettingType::Lang:
         entry = "LANG";
         settings()->setLang(settings()->defaultLangValue());
-    } else if (setting == SettingType::Numeric) {
+        break;
+    case SettingType::Numeric:
         entry = "LC_NUMERIC";
         settings()->setNumeric(settings()->defaultNumericValue());
-    } else if (setting == SettingType::Time) {
+        break;
+    case SettingType::Time:
         entry = "LC_TIME";
         settings()->setTime(settings()->defaultTimeValue());
-    } else if (setting == SettingType::Measurement) {
+        break;
+    case SettingType::Measurement:
         entry = "LC_MEASUREMENT";
         settings()->setMeasurement(settings()->defaultMeasurementValue());
-    } else if (setting == SettingType::Currency) {
+        break;
+    case SettingType::Currency:
         entry = "LC_MONETARY";
         settings()->setMonetary(settings()->defaultMonetaryValue());
-    } else if (setting == SettingType::PaperSize) {
+        break;
+    case SettingType::PaperSize:
         entry = "LC_PAPER";
         settings()->setPaperSize(settings()->defaultPaperSizeValue());
-    } else if (setting == SettingType::Address) {
+        break;
+    case SettingType::Address:
         entry = "LC_ADDRESS";
         settings()->setAddress(settings()->defaultAddressValue());
-    } else if (setting == SettingType::NameStyle) {
+        break;
+    case SettingType::NameStyle:
         entry = "LC_NAME";
         settings()->setNameStyle(settings()->defaultNameStyleValue());
-    } else if (setting == SettingType::PhoneNumbers) {
+        break;
+    case SettingType::PhoneNumbers:
         entry = "LC_TELEPHONE";
         settings()->setPhoneNumbers(settings()->defaultPhoneNumbersValue());
+        break;
     }
 
     settings()->config()->group(QStringLiteral("Formats")).deleteEntry(entry);
@@ -251,7 +264,7 @@ std::optional<QString> KCMRegionAndLang::toGlibcLocale(const QString &lang)
 {
     static std::unordered_map<QString, QString> map = constructGlibcLocaleMap();
 
-    if (map.count(lang)) {
+    if (map.contains(lang)) {
         return map[lang];
     }
     return std::nullopt;
@@ -297,7 +310,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     for (const auto &glibcLocale : availableLocales) {
         // we want only absolute base locale code, for sr@ijekavian and en_US, we get sr and en
         auto baseLocale = glibcLocale.split('_')[0].split('@')[0];
-        if (baseLocaleMap.count(baseLocale)) {
+        if (baseLocaleMap.contains(baseLocale)) {
             baseLocaleMap[baseLocale].push_back(glibcLocale);
         } else {
             baseLocaleMap.insert({baseLocale, {glibcLocale}});
@@ -316,7 +329,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     auto plasmaLocales = KLocalizedString::availableDomainTranslations(QByteArrayLiteral("plasmashell")).values();
     for (const auto &plasmaLocale : plasmaLocales) {
         auto baseLocale = plasmaLocale.split('_')[0].split('@')[0];
-        if (baseLocaleMap.count(baseLocale)) {
+        if (baseLocaleMap.contains(baseLocale)) {
             const auto &prefixedLocales = baseLocaleMap[baseLocale];
 
             // if we have one to one match, use that. Eg. en_US to en_US
@@ -348,7 +361,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
             int i = 0;
             for (const auto &glibcLocale : prefixedLocales) {
                 auto duplicated = frequencyMap;
-                int skipBase = baseLocale.size() + 1; // we skip "sv_" part of "sv_SE", eg. compare "SE" part with "sv"
+                auto skipBase = baseLocale.size() + 1; // we skip "sv_" part of "sv_SE", eg. compare "SE" part with "sv"
                 for (QChar c : glibcLocale) {
                     if (skipBase--) {
                         continue;

@@ -33,8 +33,7 @@ void LocaleGeneratorGlibc::localesGenerate(const QStringList &list)
         Q_EMIT userHasToGenerateManually(defaultManuallyGenerateMessage());
     }
 
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-
+    auto watcher = new QDBusPendingCallWatcher(reply, this);
     QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
         if (watcher->isError()) {
             Q_EMIT userHasToGenerateManually(defaultManuallyGenerateMessage());

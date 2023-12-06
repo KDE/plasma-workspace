@@ -41,7 +41,7 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
 
 QString RegionAndLangSettings::langWithFallback() const
 {
-    const QString lang = RegionAndLangSettings::lang();
+    QString lang = RegionAndLangSettings::lang();
     if (!(isDefaultSetting(SettingType::Lang) && lang.isEmpty())) {
         if (QString envLang = qEnvironmentVariable("LANG"); !envLang.isEmpty()) {
             envLang.replace(QStringLiteral("utf8"), QStringLiteral("UTF-8"));

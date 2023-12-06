@@ -42,7 +42,7 @@ public:
 #ifdef GLIBC_LOCALE
     std::optional<QString> toGlibcLocale(const QString &lang);
 #endif
-    Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting);
+    Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting) const;
     Q_INVOKABLE void reboot();
 
 public Q_SLOTS:
