@@ -36,8 +36,8 @@ PlasmaExtras.Representation {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     readonly property var appletInterface: root
     property real rate: mpris2Model.currentPlayer?.rate ?? 1
-    property int length: mpris2Model.currentPlayer?.length ?? 0
-    property int position: mpris2Model.currentPlayer?.position ?? 0
+    property double length: mpris2Model.currentPlayer?.length ?? 0
+    property double position: mpris2Model.currentPlayer?.position ?? 0
     property bool canSeek: mpris2Model.currentPlayer?.canSeek ?? false
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
