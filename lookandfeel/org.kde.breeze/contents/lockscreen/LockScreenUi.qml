@@ -322,6 +322,8 @@ Item {
         VirtualKeyboardLoader {
             id: inputPanel
 
+            z: 1
+
             screenRoot: lockScreenRoot
             mainStack: mainStack
             mainBlock: mainBlock
@@ -329,6 +331,7 @@ Item {
         }
 
         Loader {
+            z: 2
             active: root.viewVisible
             source: "LockOsd.qml"
             anchors {
