@@ -275,13 +275,14 @@ PlasmaExtras.Representation {
                     target: root
 
                     function onExpandedChanged() {
-                        // NOTE: Don't use strict equality
-                        if (!root.expanded
-                        || (albumArt.albumArt.currentItem instanceof Image && albumArt.albumArt.currentItem.source == Qt.resolvedUrl(root.albumArt))) {
+                        if (!root.expanded) {
                             return;
+                        } else if (albumArt.albumArt.currentItem instanceof Image && albumArt.albumArt.currentItem.source.toString() === Qt.resolvedUrl(root.albumArt).toString()) {
+                            // QTBUG-119904 StackView ignores transitions when it's invisible
+                            albumArt.albumArt.currentItem.opacity = 1;
+                        } else {
+                            albumArt.loadAlbumArt();
                         }
-
-                        albumArt.loadAlbumArt();
                     }
                 }
             }

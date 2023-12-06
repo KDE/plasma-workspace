@@ -39,9 +39,6 @@ Item {
 
     property Image pendingImage: null
 
-    onWidthChanged: geometryChangeTimer.restart();
-    onHeightChanged: geometryChangeTimer.restart();
-
     function loadAlbumArt() {
         if (pendingImage !== null) {
             pendingImage.destroy();
@@ -76,13 +73,24 @@ Item {
                 exitTransitionOpacityAnimator.duration = 0;
             }
 
-            albumArt.replace(pendingImage, {}, StackView.ReplaceTransition);
             pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+            albumArt.replace(pendingImage, {}, StackView.ReplaceTransition);
             pendingImage = null;
         }
 
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
+    }
+
+    Connections {
+        enabled: root.expanded // BUG 477866
+        target: container
+        function onWidthChanged() {
+            geometryChangeTimer.restart();
+        }
+        function onHeightChanged() {
+            geometryChangeTimer.restart();
+        }
     }
 
     // Reload album art when size of container changes
