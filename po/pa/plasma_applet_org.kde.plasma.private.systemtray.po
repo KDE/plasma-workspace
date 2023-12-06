@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -69,27 +69,27 @@ msgstr "ਦਿੱਖ"
 msgid "Keyboard Shortcut"
 msgstr "ਕੀਬੋਰਡ ਦਾ ਸ਼ਾਰਟਕੱਟ"
 
-#: package/contents/ui/ConfigEntries.qml:237
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਓ"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "ਹਮੇਸ਼ਾਂ ਓਹਲੇ"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "ਬੰਦ ਹੈ"
 
-#: package/contents/ui/ConfigEntries.qml:304
+#: package/contents/ui/ConfigEntries.qml:305
 #, kde-format
 msgid "Always show all entries"
 msgstr "ਹਮੇਸ਼ਾ ਸਾਰੀਆਂ ਐਂਟਰੀਆਂ ਨੂੰ ਦਿਖਾਓ"

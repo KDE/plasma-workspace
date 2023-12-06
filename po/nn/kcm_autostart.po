@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-08-21 19:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -161,32 +161,32 @@ msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Fjern oppføring"
 
-#: ui/main.qml:166
+#: ui/main.qml:167
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: ui/main.qml:169
+#: ui/main.qml:170
 #, kde-format
 msgid "Login Scripts"
 msgstr "Skript ved innlogging"
 
-#: ui/main.qml:172
+#: ui/main.qml:173
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skript før oppstart"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Skript ved utlogging"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Ingen brukardefinerte autostart-oppføringar"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Click the <interface>Add…</interface> button below to add some"
@@ -195,12 +195,12 @@ msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 "Trykk <interface>Legg til …</interface> for å leggja til ei ny oppføring"
 
-#: ui/main.qml:199
+#: ui/main.qml:200
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Vel innloggings­skript"
 
-#: ui/main.qml:219
+#: ui/main.qml:220
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Vel skript for utlogging"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-11-02 10:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -102,34 +102,34 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Visiteu bugs.kde.org per a informar de problemes"
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Intèrpret d'ordres de Plasma"
 
-#: main.cpp:116
+#: main.cpp:118
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Habilita el depurador de JavaScript de QML"
 
-#: main.cpp:119
+#: main.cpp:121
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "No reiniciar automàticament l'intèrpret d'ordres de Plasma després d'una "
 "fallada"
 
-#: main.cpp:122
+#: main.cpp:124
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Força la càrrega del connector d'intèrpret d'ordres indicat"
 
-#: main.cpp:126
+#: main.cpp:128
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substituïx una instància existent"
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -138,22 +138,22 @@ msgstr ""
 "Activa el mode prova i especifica el fitxer en JavaScript de disposició per "
 "a definir l'entorn de prova"
 
-#: main.cpp:130
+#: main.cpp:132
 #, kde-format
 msgid "file"
 msgstr "fitxer"
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 
-#: main.cpp:216
+#: main.cpp:218
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "No s'ha pogut iniciar Plasma"
 
-#: main.cpp:217
+#: main.cpp:219
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2022-08-19 15:31-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -71,27 +71,27 @@ msgstr "Visibilidade"
 msgid "Keyboard Shortcut"
 msgstr "Atalho de teclado"
 
-#: package/contents/ui/ConfigEntries.qml:237
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Visível quando relevante"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "Sempre visível"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "Sempre oculto"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "Desativado"
 
-#: package/contents/ui/ConfigEntries.qml:304
+#: package/contents/ui/ConfigEntries.qml:305
 #, kde-format
 msgid "Always show all entries"
 msgstr "Sempre mostrar todos os elementos"

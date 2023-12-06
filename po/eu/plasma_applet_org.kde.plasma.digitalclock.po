@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-10-22 14:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -355,12 +355,12 @@ msgstr ""
 "Ezaugarri hau erabiltzeak ez du aldatzen sistema osorako ordu-eremua. "
 "Bidaiatzean, horren ordez, aldatu sistema osorako ordu-eremua."
 
-#: package/contents/ui/configTimeZones.qml:190
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Gehitu ordu-eremu gehiago"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -369,12 +369,12 @@ msgstr ""
 "Gutxienez ordu-eremu bat gaitu behar da. Tokiko zure ordu-eremua "
 "automatikoki gaitu da."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -423,13 +423,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Juliotar data)"
 
-#: plugin/timezonemodel.cpp:162
+#: plugin/timezonemodel.cpp:146
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Tokikoa"
 
-#: plugin/timezonemodel.cpp:164
+#: plugin/timezonemodel.cpp:148
 #, kde-format
 msgid "System's local time zone"
 msgstr "Sistemaren tokiko ordu-eremua"

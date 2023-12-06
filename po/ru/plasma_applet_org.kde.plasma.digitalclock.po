@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_dig_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-01-28 22:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -365,12 +365,12 @@ msgstr ""
 "пояс, используемый системой. При перемещении в другой часовой пояс следует "
 "изменить часовой пояс системы."
 
-#: package/contents/ui/configTimeZones.qml:190
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Добавление часовых поясов"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -379,12 +379,12 @@ msgstr ""
 "Должен быть выбран хотя бы один часовой пояс. Местный часовой пояс выбран "
 "автоматически."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1 %2 %3"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -433,13 +433,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Юлианская дата)"
 
-#: plugin/timezonemodel.cpp:162
+#: plugin/timezonemodel.cpp:146
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr " — местный"
 
-#: plugin/timezonemodel.cpp:164
+#: plugin/timezonemodel.cpp:148
 #, kde-format
 msgid "System's local time zone"
 msgstr "Часовой пояс системы"

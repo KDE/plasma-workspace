@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-14 15:25+0100\n"
+"PO-Revision-Date: 2023-11-29 18:13+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -130,13 +130,13 @@ msgstr "%1K"
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Freddo (nessun filtro)"
+msgstr "Fredda (nessun filtro)"
 
 #: ui/main.qml:236 ui/main.qml:295
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr "Caldo"
+msgstr "Calda"
 
 #: ui/main.qml:242
 #, kde-format
@@ -144,11 +144,10 @@ msgid "Night light temperature:"
 msgstr "Temperatura della luce notturna:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Rileva posizione"
+msgstr "Posizione corrente:"
 
 #: ui/main.qml:310
 #, kde-format

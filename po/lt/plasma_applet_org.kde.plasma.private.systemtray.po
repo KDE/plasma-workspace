@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2022-11-18 19:48+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -72,27 +72,27 @@ msgstr "Matomumas"
 msgid "Keyboard Shortcut"
 msgstr "Spartieji klavišai"
 
-#: package/contents/ui/ConfigEntries.qml:237
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Rodomas, kai aktualus"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "Visada rodomas"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "Visada slepiamas"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "Išjungtas"
 
-#: package/contents/ui/ConfigEntries.qml:304
+#: package/contents/ui/ConfigEntries.qml:305
 #, kde-format
 msgid "Always show all entries"
 msgstr "Visada rodyti visus elementus"

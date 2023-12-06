@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2021-08-13 02:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -68,27 +68,27 @@ msgstr "दृश्यता"
 msgid "Keyboard Shortcut"
 msgstr "कुंजीपटल शार्टकट"
 
-#: package/contents/ui/ConfigEntries.qml:237
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr "प्रासंगिक होने पर दिखाया गया"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "हमेशा दिखाए गए"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "हमेशा छिपा हुए"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "अक्षम"
 
-#: package/contents/ui/ConfigEntries.qml:304
+#: package/contents/ui/ConfigEntries.qml:305
 #, kde-format
 msgid "Always show all entries"
 msgstr "हमेशा सभी प्रविष्टियाँ दिखाएँ"

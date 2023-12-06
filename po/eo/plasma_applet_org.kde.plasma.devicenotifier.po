@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-02 01:37+0000\n"
-"PO-Revision-Date: 2023-01-03 14:34+0100\n"
+"PO-Revision-Date: 2023-12-05 21:46+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -43,10 +43,9 @@ msgid "Removing…"
 msgstr "Foriganta…"
 
 #: package/contents/ui/DeviceItem.qml:199
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Ankoraŭ ne malŝtopu! Dosieroj estas en transiĝo..."
+msgstr "Ankoraŭ ne malŝtopu! Dosieroj ankoraŭ estas en transiĝo…"
 
 #: package/contents/ui/DeviceItem.qml:230
 #, kde-format

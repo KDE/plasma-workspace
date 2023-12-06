@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-11-19 06:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -72,7 +72,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:142
 #, kde-format
 msgid "Fully Charged"
 msgstr "სრულად დატენილი"
@@ -98,125 +98,125 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "არ არსებობს"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Power and Battery"
 msgstr "კვება და ელემენტი"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:283
+#: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
 msgid "Power Management"
 msgstr "ენერგიის მართვა"
 
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "ელემენტის მუხტია %1%. არ იტენება"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "ელემენტის მუხტია %1%, შეერთებულია, მაგრამ მაინც იცლება"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "ელემენტის მუხტია %1%. იტენება"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%"
 msgstr "ელემენტის მუხტია %1%"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "კვების წყარო ელემენტის დასატენად საკმარისად მძლავრი არაა"
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "No Batteries Available"
 msgstr "ელემენტი ხელმიუწვდომელია"
 
-#: package/contents/ui/main.qml:173
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "სრულად დატენვამდე დარჩენილი დროა %1"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "დარჩენილია %1"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "Not charging"
 msgstr "არ იტენება"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
 msgstr[1] "%1 აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "System is in Performance mode"
 msgstr "სისტემა წარმადობის რეჟიმშია"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
 msgstr[1] "%1 აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:200
 #, kde-format
 msgid "System is in Power Save mode"
 msgstr "სისტემა ენერგიის დაზოგვის რეჟიმშია"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "ელემენტის აპლეტს აქვს სისტემის სრული კონტროლი"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "რეჟიმის ჩართვის შეცდომა: %1"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:311
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&კვების ინფორმაციის ჩვენება…"
 
-#: package/contents/ui/main.qml:314
+#: package/contents/ui/main.qml:317
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "ხატულაზე ელემენტის პროცენტულობის ჩვენება, როცა ელემენტი ბოლომდე არაა დატენილი"
 
-#: package/contents/ui/main.qml:326
+#: package/contents/ui/main.qml:329
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&ენერგიის შენახვის მორგება…"
 
-#: package/contents/ui/PowerManagementItem.qml:40
+#: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "ძილისა და ეკრანის ჩაკეტვის ხელით დაბლოკვა"
 
-#: package/contents/ui/PowerManagementItem.qml:75
+#: package/contents/ui/PowerManagementItem.qml:76
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -226,54 +226,54 @@ msgstr ""
 "თქვენი ნოუთბუქი მორგებულია, რომ არ დაიძინოს, როცა დააფარებთ თავსახურს ან "
 "როცა გარე ეკრანია მიერთებული."
 
-#: package/contents/ui/PowerManagementItem.qml:88
+#: package/contents/ui/PowerManagementItem.qml:87
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "ამჟამად %1 აპლიკაცია ბლოკავს ძილს და ეკრანის დაბლოკვას:"
 msgstr[1] "ამჟამად %1 აპლიკაცია ბლოკავს ძილს და ეკრანის დაბლოკვას:"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "ამჟამად %1 ბლოკავს ძილს და ეკრანის დაბლოკვას (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:108
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "ამჟამად %1 ბლოკავს ძილს და ეკრანის დაბლოკვას (უცნობი მიზეზით)"
 
-#: package/contents/ui/PowerManagementItem.qml:114
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "აპლიკაცია ამჟამად ძილს და ეკრანის ჩაკეტვას ბლოკავს (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr "აპლიკაცია ამჟამად ძილს და ეკრანის ჩაკეტვას ბლოკავს (მიზეზი უცნობია)"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:118
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: უცნობი მიზეზი"
 
-#: package/contents/ui/PowerManagementItem.qml:124
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "უცნობი აპლიკაცია: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:126
+#: package/contents/ui/PowerManagementItem.qml:122
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"

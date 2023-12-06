@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-07-25 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -347,12 +347,12 @@ msgstr ""
 "이 기능을 사용해도 시스템 기본 시간대를 변경하지 않습니다. 여행할 때에는 시스"
 "템 기본 시간대를 변경하십시오."
 
-#: package/contents/ui/configTimeZones.qml:190
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Add More Timezones"
 msgstr "더 많은 시간대 추가"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -361,12 +361,12 @@ msgstr ""
 "최소한 하나의 시간대를 선택해야 합니다. 현재 지역 시간대가 자동으로 선택되었"
 "습니다."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2(%3)"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -415,13 +415,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1(율리우스력 날짜)"
 
-#: plugin/timezonemodel.cpp:162
+#: plugin/timezonemodel.cpp:146
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "지역"
 
-#: plugin/timezonemodel.cpp:164
+#: plugin/timezonemodel.cpp:148
 #, kde-format
 msgid "System's local time zone"
 msgstr "시스템 지역 시간대"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-11-20 14:35+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -74,7 +74,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:142
 #, kde-format
 msgid "Fully Charged"
 msgstr "טעונה במלואה"
@@ -100,69 +100,69 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "לא מחוברת"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Power and Battery"
 msgstr "צריכת חשמל וסוללה"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:283
+#: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
 msgid "Power Management"
 msgstr "ניהול צריכת חשמל"
 
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "סוללה על %1%, לא נטענת"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "סוללה על %1%, מחוברת לחשמל אך עדיין נפרקת"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "סוללה על %1%, נטענת"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%"
 msgstr "הסוללה טעונה ב־%1%"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "המטען לא מספיק חזק כדי לטעון את הסוללה"
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "No Batteries Available"
 msgstr "סוללה לא זמינה"
 
-#: package/contents/ui/main.qml:173
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 עד לטעינה מלאה"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "נותרו %1"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "Not charging"
 msgstr "לא נטענת"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "שינה ונעילת מסך אוטומטית מושבתות"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
@@ -171,12 +171,12 @@ msgstr[1] "שני יישומים ביקשו להפעיל מצב ביצועים �
 msgstr[2] "%1 יישומים ביקשו להפעיל מצב ביצועים משופרים"
 msgstr[3] "%1 יישומים ביקשו להפעיל מצב ביצועים משופרים"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "System is in Performance mode"
 msgstr "המערכת במצב ביצועים משופרים"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -185,43 +185,43 @@ msgstr[1] "שני יישומים ביקשו להפעיל מצב חיסכון ב�
 msgstr[2] "%1 יישומים ביקשו להפעיל מצב חיסכון בחשמל"
 msgstr[3] "%1 יישומים ביקשו להפעיל מצב חיסכון בחשמל"
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:200
 #, kde-format
 msgid "System is in Power Save mode"
 msgstr "המערכת במצב חיסכון בחשמל"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "יישומון הסוללה מאפשר בלימה כלל מערכתית"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "הפעלת מצב %1 נכשלה"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:311
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "ה&צגת פרטי אנרגיה…"
 
-#: package/contents/ui/main.qml:314
+#: package/contents/ui/main.qml:317
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "הצגת אחוזי הטעונה על הסמל כשהסוללה טעונה חלקית"
 
-#: package/contents/ui/main.qml:326
+#: package/contents/ui/main.qml:329
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "הגדרת חיסכון ב&אנרגיה…"
 
-#: package/contents/ui/PowerManagementItem.qml:40
+#: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "לחסום שינה ונעילת מסך ידנית"
 
-#: package/contents/ui/PowerManagementItem.qml:75
+#: package/contents/ui/PowerManagementItem.qml:76
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -230,7 +230,7 @@ msgid ""
 msgstr ""
 "המחשב הנייד שלך מוגדר לא לישון כשהמסך הפנימי נסגר בזמן שמחובר צג חיצוני."
 
-#: package/contents/ui/PowerManagementItem.qml:88
+#: package/contents/ui/PowerManagementItem.qml:87
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -239,47 +239,47 @@ msgstr[1] "שני יישומים חוסמים כרגע שינה ונעילת מ�
 msgstr[2] "%1 יישומים חוסמים כרגע שינה ונעילת מסך:"
 msgstr[3] "%1 יישומים חוסמים כרגע שינה ונעילת מסך:"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 חוסם כרגע שינה ונעילת מסך (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:108
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 חוסם כרגע שינה ונעילת מסך (מסיבה לא ידועה)"
 
-#: package/contents/ui/PowerManagementItem.qml:114
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "יישום חוסם כרגע שינה ונעילת מסך (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr "יישום חוסם כרגע שינה ונעילת מסך (מסיבה לא ידועה)"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:118
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: סיבה לא ידועה"
 
-#: package/contents/ui/PowerManagementItem.qml:124
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "יישום לא ידוע: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:126
+#: package/contents/ui/PowerManagementItem.qml:122
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"

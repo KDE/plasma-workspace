@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-10-21 15:49+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -347,12 +347,12 @@ msgstr ""
 "L'utilizzo di questa funzionalità non modifica il fuso orario a livello di "
 "sistema. Quando viaggi, cambia invece il fuso orario di sistema."
 
-#: package/contents/ui/configTimeZones.qml:190
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Aggiungi altri fusi orari"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -361,12 +361,12 @@ msgstr ""
 "Almeno un fuso orario deve essere abilitato. Il tuo fuso orario locale è "
 "stato abilitato automaticamente."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -415,13 +415,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Data giuliana)"
 
-#: plugin/timezonemodel.cpp:162
+#: plugin/timezonemodel.cpp:146
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Locale"
 
-#: plugin/timezonemodel.cpp:164
+#: plugin/timezonemodel.cpp:148
 #, kde-format
 msgid "System's local time zone"
 msgstr "Fuso orario locale di sistema"

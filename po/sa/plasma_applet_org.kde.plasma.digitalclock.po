@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-28 01:37+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-09-21 23:25+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -349,12 +349,12 @@ msgstr ""
 "एतस्य विशेषतायाः उपयोगेन सङ्गणकतन्त्रव्यापी समयक्षेत्रं न परिवर्तते । यदा भवन्तः यात्रां "
 "कुर्वन्ति तदा तस्य स्थाने सङ्गणकतन्त्रव्यापी समयक्षेत्रं परिवर्तयन्तु ।."
 
-#: package/contents/ui/configTimeZones.qml:190
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Add More Timezones"
 msgstr "अधिकानि समयक्षेत्राणि योजयन्तु"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -362,12 +362,12 @@ msgid ""
 msgstr ""
 "न्यूनातिन्यूनम् एकः समयक्षेत्रः सक्षमः करणीयः । भवतः स्थानीयसमयक्षेत्रं स्वयमेव सक्षमम् अभवत् ।."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -416,13 +416,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Julian तिथि)"
 
-#: plugin/timezonemodel.cpp:162
+#: plugin/timezonemodel.cpp:146
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "स्थानीय"
 
-#: plugin/timezonemodel.cpp:164
+#: plugin/timezonemodel.cpp:148
 #, kde-format
 msgid "System's local time zone"
 msgstr "सङ्गणकप्रणाल्याः स्थानीयसमयक्षेत्रम्"

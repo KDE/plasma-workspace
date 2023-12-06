@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2022-12-31 16:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -107,32 +107,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:116
+#: main.cpp:118
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Enable QML Javascript debugger"
 
-#: main.cpp:119
+#: main.cpp:121
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Do not restart plasma-shell automatically after a crash"
 
-#: main.cpp:122
+#: main.cpp:124
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Force loading the given shell plugin"
 
-#: main.cpp:126
+#: main.cpp:128
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Replace an existing instance"
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -141,22 +141,22 @@ msgstr ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 
-#: main.cpp:130
+#: main.cpp:132
 #, kde-format
 msgid "file"
 msgstr "file"
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lists the available options for user feedback"
 
-#: main.cpp:216
+#: main.cpp:218
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma Failed To Start"
 
-#: main.cpp:217
+#: main.cpp:219
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

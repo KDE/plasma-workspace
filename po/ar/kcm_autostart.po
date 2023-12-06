@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2022-08-08 22:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -168,32 +168,32 @@ msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "أزِل"
 
-#: ui/main.qml:166
+#: ui/main.qml:167
 #, kde-format
 msgid "Applications"
 msgstr "التطبيقات"
 
-#: ui/main.qml:169
+#: ui/main.qml:170
 #, kde-format
 msgid "Login Scripts"
 msgstr "سكربتات الولوج"
 
-#: ui/main.qml:172
+#: ui/main.qml:173
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "سكربت ما قبل البدء"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgid "Logout Scripts"
 msgstr "سكربتات الخروج"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "لا توجد عناصر بدء آلي حددها المستخدم"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Click the <interface>Add…</interface> button below to add some"
@@ -201,12 +201,12 @@ msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "انقر على زر <interface>أضف...</interface> في الأسفل لتضيف بعضها"
 
-#: ui/main.qml:199
+#: ui/main.qml:200
 #, kde-format
 msgid "Choose Login Script"
 msgstr "اختر سكربت الولوج"
 
-#: ui/main.qml:219
+#: ui/main.qml:220
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "اختر سكربت الخروج"

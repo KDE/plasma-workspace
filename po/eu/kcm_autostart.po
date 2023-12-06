@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-06 01:39+0000\n"
 "PO-Revision-Date: 2023-10-27 21:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -161,43 +161,43 @@ msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Kendu sarrera"
 
-#: ui/main.qml:166
+#: ui/main.qml:167
 #, kde-format
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: ui/main.qml:169
+#: ui/main.qml:170
 #, kde-format
 msgid "Login Scripts"
 msgstr "Saio-hasteko gidoiak"
 
-#: ui/main.qml:172
+#: ui/main.qml:173
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Abiatu aurreko gidoiak"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Saio-ixteko gidoiak"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Ez dago erabiltzaileak abio automatikorako zehaztutako elementurik"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "Egin klik <interface>Gehitu...</interface> botoiari batzuk gehitzeko"
 
-#: ui/main.qml:199
+#: ui/main.qml:200
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Hautatu saio-asteko gidoia"
 
-#: ui/main.qml:219
+#: ui/main.qml:220
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Hautatu saio-ixteko gidoiak"
