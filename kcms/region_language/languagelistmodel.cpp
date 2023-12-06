@@ -389,6 +389,7 @@ void SelectedLanguageModel::saveLanguages()
 
 #ifdef GLIBC_LOCALE
             auto glibcLang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
+            // TODO: don't silently discard failed mappings
             if (glibcLang.has_value()) {
                 m_settings->setLang(glibcLang.value());
             }
