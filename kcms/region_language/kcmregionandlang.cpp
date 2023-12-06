@@ -304,6 +304,15 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
         }
     }
 
+    const auto addToMap = [&localeMap](const QString &plasmaLocale, const QString &glibcLocale) {
+        // We map the locale name and the plasma name to a valid locale. This gives us flexibility for resolution
+        // as we can resolve pt=>pt_PT but also pt_PT=>pt_PT.
+        // https://mail.kde.org/pipermail/kde-i18n-doc/2023-January/001340.html
+        // https://bugs.kde.org/show_bug.cgi?id=478120
+        localeMap.insert({glibcLocale, toUTF8Locale(glibcLocale)});
+        localeMap.insert({plasmaLocale, toUTF8Locale(glibcLocale)});
+    };
+
     auto plasmaLocales = KLocalizedString::availableDomainTranslations(QByteArrayLiteral("plasmashell")).values();
     for (const auto &plasmaLocale : plasmaLocales) {
         auto baseLocale = plasmaLocale.split('_')[0].split('@')[0];
@@ -313,7 +322,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
             // if we have one to one match, use that. Eg. en_US to en_US
             auto fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), plasmaLocale);
             if (fullMatch != prefixedLocales.end()) {
-                localeMap.insert({plasmaLocale, toUTF8Locale(*fullMatch)});
+                addToMap(plasmaLocale, *fullMatch);
                 continue;
             }
 
@@ -321,7 +330,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
             auto mainLocale = plasmaLocale + "_" + plasmaLocale.toUpper();
             fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), mainLocale);
             if (fullMatch != prefixedLocales.end()) {
-                localeMap.insert({plasmaLocale, toUTF8Locale(*fullMatch)});
+                addToMap(plasmaLocale, *fullMatch);
                 continue;
             }
 
@@ -356,7 +365,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
                 }
                 i++;
             }
-            localeMap.insert({plasmaLocale, toUTF8Locale(prefixedLocales[closestMatchIndex])});
+            addToMap(plasmaLocale, prefixedLocales[closestMatchIndex]);
         }
     }
     return localeMap;
