@@ -130,7 +130,6 @@ ColumnLayout {
             placeholderText: results.singleRunner ? i18nc("Textfield placeholder text, query specific KRunner plugin",
                                                     "Search '%1'…", results.singleRunnerMetaData.name)
                                                 : i18nc("Textfield placeholder text", "Search…")
-            rightPadding: 0
             background.z: -2 // The fadedTextCompletion has -1, so it appears over the background
 
             QQC2.Label {
@@ -141,6 +140,7 @@ ColumnLayout {
                 bottomPadding: parent.bottomPadding
                 width: parent.width
                 height: parent.height
+                elide: Text.ElideRight
                 opacity: 0.5
                 text: ""
                 renderType: parent.renderType
@@ -202,7 +202,7 @@ ColumnLayout {
 
             onTextChanged: {
                 root.query = queryField.text
-                if (!allowCompletion) {
+                if (!allowCompletion || !root.query ) { // Clear suggestion in case it was disabled or the query is cleared
                     fadedTextCompletion.text = ""
                 } else if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
                     fadedTextCompletion.text = runnerManager.getHistorySuggestion(text)
@@ -239,12 +239,14 @@ ColumnLayout {
                     && event.key === Qt.Key_Right
                 ) {
                     queryField.text = fadedTextCompletion.text
+                    fadedTextCompletion.text = ""
                 }
             }
             Keys.onTabPressed: event => {
                 if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
                     if (fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
                         queryField.text = fadedTextCompletion.text
+                        fadedTextCompletion.text = ""
                     } else {
                         event.accepted = false
                     }
