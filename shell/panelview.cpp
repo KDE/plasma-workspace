@@ -1626,6 +1626,7 @@ void PanelView::updateFloating()
     positionPanel();
     updateExclusiveZone();
     updateMask();
+    updateShadows();
 }
 
 #include "moc_panelview.cpp"
