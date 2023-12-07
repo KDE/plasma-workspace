@@ -209,6 +209,7 @@ KCMUtils.ScrollViewKCM {
         ListView {
             focus: true // keyboard navigation
             activeFocusOnTab: true // keyboard navigation
+            clip: true
             implicitWidth: Math.max(timeZonesPage.width/2, Kirigami.Units.gridUnit * 25)
 
             model: TimeZoneFilterProxy {
