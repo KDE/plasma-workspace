@@ -414,7 +414,7 @@ class MediaControllerTests(unittest.TestCase):
         with subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_with_encoded_url_json_path)) as player_with_encoded_url:
             wait = WebDriverWait(self.driver, 3)
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Flash Funk")))
-            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "League of Legends")))  # Album name deducted from folder name
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "League of Legends")))  # Album name deduced from folder name
             # Overflow check, 2160000000 (microsecond) > INT_MAX (2147483647)
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-36:00")))
             player_with_encoded_url.terminate()
