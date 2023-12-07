@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-07 01:42+0000\n"
 "PO-Revision-Date: 2023-07-26 18:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -105,32 +105,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Zoeken…"
 
-#: qml/RunCommand.qml:303 qml/RunCommand.qml:304 qml/RunCommand.qml:306
+#: qml/RunCommand.qml:305 qml/RunCommand.qml:306 qml/RunCommand.qml:308
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Gebruik van Help tonen"
 
-#: qml/RunCommand.qml:314
+#: qml/RunCommand.qml:316
 #, kde-format
 msgid "Pin"
 msgstr "Pin"
 
-#: qml/RunCommand.qml:315
+#: qml/RunCommand.qml:317
 #, kde-format
 msgid "Pin Search"
 msgstr "Pin zoeken"
 
-#: qml/RunCommand.qml:317
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Keep Open"
 msgstr "Open houden"
 
-#: qml/RunCommand.qml:395 qml/RunCommand.qml:400
+#: qml/RunCommand.qml:397 qml/RunCommand.qml:402
 #, kde-format
 msgid "Recent Queries"
 msgstr "Recente queries"
 
-#: qml/RunCommand.qml:398
+#: qml/RunCommand.qml:400
 #, kde-format
 msgid "Remove"
 msgstr "Verwijderen"

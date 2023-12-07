@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 02:00+0000\n"
+"POT-Creation-Date: 2023-12-07 01:42+0000\n"
 "PO-Revision-Date: 2023-03-13 22:40+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -384,13 +384,13 @@ msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "Puhelinnumerot"
 
-#: optionsmodel.cpp:114 optionsmodel.cpp:304
+#: optionsmodel.cpp:117 optionsmodel.cpp:310
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "Järjestelmän oletus"
 
-#: optionsmodel.cpp:306
+#: optionsmodel.cpp:312
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"

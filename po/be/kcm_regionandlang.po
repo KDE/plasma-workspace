@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 02:00+0000\n"
+"POT-Creation-Date: 2023-12-07 01:42+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -382,13 +382,13 @@ msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "Тэлефонныя нумары"
 
-#: optionsmodel.cpp:114 optionsmodel.cpp:304
+#: optionsmodel.cpp:117 optionsmodel.cpp:310
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "Прадвызначаная сістэмная"
 
-#: optionsmodel.cpp:306
+#: optionsmodel.cpp:312
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
