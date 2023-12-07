@@ -214,6 +214,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
         QQmlContext::PropertyPair{u"panel"_s, QVariant::fromValue(panelView)},
         QQmlContext::PropertyPair{u"configDialog"_s, QVariant::fromValue(this)},
     });
+    connect(containment, &Plasma::Containment::destroyedChanged, this, &QObject::deleteLater);
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
     connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncGeometry);
 
@@ -325,8 +326,6 @@ void PanelConfigView::showEvent(QShowEvent *ev)
 void PanelConfigView::hideEvent(QHideEvent *ev)
 {
     PopupPlasmaWindow::hideEvent(ev);
-
-    disconnect(qApp, &QGuiApplication::focusWindowChanged, this, &PanelConfigView::focusVisibilityCheck);
 
     if (m_containment) {
         m_containment->setUserConfiguring(false);
