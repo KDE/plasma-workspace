@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2023-11-22 06:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -43,20 +43,20 @@ msgstr "შესვლა"
 msgid "Caps Lock is on"
 msgstr "CapsLock ჩართულია"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ძილი"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "რესტარტი"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
@@ -68,23 +68,23 @@ msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "სხვა…"
 
-#: ../sddm-theme/Main.qml:456
+#: ../sddm-theme/Main.qml:343
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "შეიყვანეთ მომხმარებელი და პაროლი"
 
-#: ../sddm-theme/Main.qml:491
+#: ../sddm-theme/Main.qml:378
 #, kde-format
 msgid "List Users"
 msgstr "მომხმარებლების სია"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
+#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "ვირტუალური კლავიატურა"
 
-#: ../sddm-theme/Main.qml:640
+#: ../sddm-theme/Main.qml:527
 #, kde-format
 msgid "Login Failed"
 msgstr "შესვლის შეცდომა"
@@ -138,7 +138,7 @@ msgstr "პროგრამული ძილი"
 msgid "Switch User"
 msgstr "მომხმარებლის გადართვა"
 
-#: contents/lockscreen/LockScreenUi.qml:492
+#: contents/lockscreen/LockScreenUi.qml:388
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

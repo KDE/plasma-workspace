@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -43,20 +43,20 @@ msgstr "로그인"
 msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "대기 모드"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "다시 시작"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
@@ -68,23 +68,23 @@ msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "기타…"
 
-#: ../sddm-theme/Main.qml:456
+#: ../sddm-theme/Main.qml:343
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "사용자 이름과 암호 입력"
 
-#: ../sddm-theme/Main.qml:491
+#: ../sddm-theme/Main.qml:378
 #, kde-format
 msgid "List Users"
 msgstr "사용자 목록"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
+#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "가상 키보드"
 
-#: ../sddm-theme/Main.qml:640
+#: ../sddm-theme/Main.qml:527
 #, kde-format
 msgid "Login Failed"
 msgstr "로그인 실패"
@@ -138,7 +138,7 @@ msgstr "최대 절전 모드"
 msgid "Switch User"
 msgstr "사용자 전환"
 
-#: contents/lockscreen/LockScreenUi.qml:492
+#: contents/lockscreen/LockScreenUi.qml:388
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

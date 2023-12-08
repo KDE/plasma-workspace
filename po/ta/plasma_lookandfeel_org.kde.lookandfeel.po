@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
-"PO-Revision-Date: 2022-10-13 19:23+0530\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"PO-Revision-Date: 2023-12-07 21:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -42,20 +42,20 @@ msgstr "நுழை"
 msgid "Caps Lock is on"
 msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "தூங்கு"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
@@ -67,23 +67,23 @@ msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "வேறு…"
 
-#: ../sddm-theme/Main.qml:456
+#: ../sddm-theme/Main.qml:343
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "பயனர் பெயரையும் கடவுச்சொல்லையும் உள்ளிடவும்"
 
-#: ../sddm-theme/Main.qml:491
+#: ../sddm-theme/Main.qml:378
 #, kde-format
 msgid "List Users"
 msgstr "பயனர்களை பட்டியலிடு"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
+#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "மெய்நிகர் விசைப்பலகை"
 
-#: ../sddm-theme/Main.qml:640
+#: ../sddm-theme/Main.qml:527
 #, kde-format
 msgid "Login Failed"
 msgstr "நுழைவு தோல்வியடைந்தது"
@@ -137,7 +137,7 @@ msgstr "ஆழுறங்கு"
 msgid "Switch User"
 msgstr "பயனரை மாற்று"
 
-#: contents/lockscreen/LockScreenUi.qml:492
+#: contents/lockscreen/LockScreenUi.qml:388
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -152,12 +152,12 @@ msgstr "திற"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(அல்லது வருடியால் கைரேகையை வருடவும்)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(அல்லது அட்டையை வருடவும்)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "மீள்துவக்கப்படும்போது கண�
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "புதுப்பித்து மீள்துவக்கு"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
@@ -219,8 +219,8 @@ msgstr "அமர்விலிருந்து வெளியேறு"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 நொடியில் புதுப்பிப்புகளை நிறுவி மீள்துவங்கும்"
+msgstr[1] "%1 நொடிகளில் புதுப்பிப்புகளை நிறுவி மீள்துவங்கும்"
 
 #: contents/logout/Logout.qml:248
 #, kde-format

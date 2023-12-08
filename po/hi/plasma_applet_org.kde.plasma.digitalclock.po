@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -367,12 +367,12 @@ msgstr ""
 "कम से कम एक समय क्षेत्र को सक्षम करने की आवश्यकता है। आपका स्थानीय समय क्षेत्र स्वचालित "
 "रूप से सक्षम हो गया था।"
 
-#: package/contents/ui/configTimeZones.qml:234
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

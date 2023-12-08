@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"PO-Revision-Date: 2023-12-07 14:44+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#: package/contents/ui/BrightnessItem.qml:70
+#, kde-format
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Brightness and Color"
+msgstr "בהירות וצבע"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Screen brightness at %1%"
+msgstr "בהירות המסך עומדת על %1%"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Keyboard brightness at %1%"
+msgstr "בהירות המקלדת עומדת על %1%"
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "Status"
+msgid "Night Light off"
+msgstr "תאורת לילה כבויה"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgctxt "Status; placeholder is a temperature"
+msgid "Night Light at %1K"
+msgstr "תאורת לילה עומדת על %1K"
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr "גלילה תכוון את בהירות המסך"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Middle-click to toggle Night Light"
+msgstr "לחיצה אמצעית תחליף את מצב תאורת הלילה"
+
+#: package/contents/ui/NightColorItem.qml:74
+#, kde-format
+msgctxt "Night light status"
+msgid "Off"
+msgstr "כבוי"
+
+#: package/contents/ui/NightColorItem.qml:77
+#, kde-format
+msgctxt "Night light status"
+msgid "Unavailable"
+msgstr "לא זמין"
+
+#: package/contents/ui/NightColorItem.qml:80
+#, kde-format
+msgctxt "Night light status"
+msgid "Not enabled"
+msgstr "לא פעיל"
+
+#: package/contents/ui/NightColorItem.qml:83
+#, kde-format
+msgctxt "Night light status"
+msgid "Not running"
+msgstr "לא רץ"
+
+#: package/contents/ui/NightColorItem.qml:86
+#, kde-format
+msgctxt "Night light status"
+msgid "On"
+msgstr "פעיל"
+
+#: package/contents/ui/NightColorItem.qml:89
+#, kde-format
+msgctxt "Night light phase"
+msgid "Morning Transition"
+msgstr "מעבר בוקר"
+
+#: package/contents/ui/NightColorItem.qml:91
+#, kde-format
+msgctxt "Night light phase"
+msgid "Day"
+msgstr "יום"
+
+#: package/contents/ui/NightColorItem.qml:93
+#, kde-format
+msgctxt "Night light phase"
+msgid "Evening Transition"
+msgstr "מעבר ערב"
+
+#: package/contents/ui/NightColorItem.qml:95
+#, kde-format
+msgctxt "Night light phase"
+msgid "Night"
+msgstr "לילה"
+
+#: package/contents/ui/NightColorItem.qml:105
+#, kde-format
+msgctxt "Placeholder is screen color temperature"
+msgid "%1K"
+msgstr "%1K"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Configure…"
+msgstr "הגדרה…"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Enable and Configure…"
+msgstr "הפעלה והגדרה…"
+
+#: package/contents/ui/NightColorItem.qml:165
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day complete by:"
+msgstr "המעבר ליום צריך להסתיים עד:"
+
+#: package/contents/ui/NightColorItem.qml:167
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night scheduled for:"
+msgstr "המעבר ללילה מתוזמן לשעה:"
+
+#: package/contents/ui/NightColorItem.qml:169
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night complete by:"
+msgstr "המעבר ללילה צריך להסתיים עד:"
+
+#: package/contents/ui/NightColorItem.qml:171
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day scheduled for:"
+msgstr "המעבר ליום מתוזמן לשעה:"
+
+#: package/contents/ui/PopupDialog.qml:70
+#, kde-format
+msgid "Display Brightness"
+msgstr "בהירות תצוגה"
+
+#: package/contents/ui/PopupDialog.qml:101
+#, kde-format
+msgid "Keyboard Brightness"
+msgstr "בהירות מקלדת"
+
+#: package/contents/ui/PopupDialog.qml:132
+#, kde-format
+msgid "Night Light"
+msgstr "תאורת לילה"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2023-10-22 14:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -369,12 +369,12 @@ msgstr ""
 "Gutxienez ordu-eremu bat gaitu behar da. Tokiko zure ordu-eremua "
 "automatikoki gaitu da."
 
-#: package/contents/ui/configTimeZones.qml:234
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

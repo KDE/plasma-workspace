@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2021-09-07 22:06-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -42,20 +42,20 @@ msgstr "Ворид шудан"
 msgid "Caps Lock is on"
 msgstr "Тугмаи Caps Lock фаъол аст"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ба хоб равондан"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "Аз нав оғоз кардани низом"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
@@ -67,23 +67,23 @@ msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Дигар…"
 
-#: ../sddm-theme/Main.qml:456
+#: ../sddm-theme/Main.qml:343
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Номи корбар ва ниҳонвожаро ворид намоед"
 
-#: ../sddm-theme/Main.qml:491
+#: ../sddm-theme/Main.qml:378
 #, kde-format
 msgid "List Users"
 msgstr "Рӯйхати корбарон"
 
-#: ../sddm-theme/Main.qml:566 contents/lockscreen/LockScreenUi.qml:468
+#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Клавиатураи барномавӣ"
 
-#: ../sddm-theme/Main.qml:640
+#: ../sddm-theme/Main.qml:527
 #, kde-format
 msgid "Login Failed"
 msgstr "Воридшавӣ қатъ шуд"
@@ -141,7 +141,7 @@ msgstr "Дар ҳолати ҷорӣ нигоҳ доштан"
 msgid "Switch User"
 msgstr "Иваз кардани корбар"
 
-#: contents/lockscreen/LockScreenUi.qml:492
+#: contents/lockscreen/LockScreenUi.qml:388
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

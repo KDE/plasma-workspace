@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2023-10-22 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -361,12 +361,12 @@ msgstr ""
 "ஒரு நேரமண்டலமாவது இயக்கப்பட்டிருக்க வேண்டும். உங்கள் வட்டார நேரமண்டலம் தானாக "
 "இயக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/configTimeZones.qml:234
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

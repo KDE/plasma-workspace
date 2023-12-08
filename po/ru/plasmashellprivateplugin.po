@@ -10,20 +10,20 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-01-28 22:37+0300\n"
+"PO-Revision-Date: 2023-12-07 22:28+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -193,6 +193,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Этот виджет предназначен для устаревшей версии Plasma и не может работать в "
+"Plasma %1. Напомните автору виджета о необходимости подготовить обновлённую "
+"версию виджета."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
@@ -200,6 +203,9 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Этот виджет предназначен для Plasma версии %1 и не может работать в Plasma "
+"%2. Напомните автору виджета о необходимости подготовить обновлённую версию "
+"виджета."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
@@ -207,6 +213,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Этот виджет предназначен для Plasma версии %1 и не может работать в Plasma "
+"%2. Обновите используемую версию Plasma для использования этого виджета."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
@@ -214,127 +222,119 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Этот виджет предназначен для Plasma версии %1 и не может работать в "
+"актуальной версии Plasma.Обновите используемую версию Plasma для "
+"использования этого виджета."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
-#, fuzzy
-#| msgid "Visibility"
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr "Видимость"
+msgstr "Специальные возможности"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Запуск приложений"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Астрономия"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Дата и время"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Средства разработки"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Образование"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Погода"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Файловая система"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Николай Шафоростов, Альберт Валиев, Александр Яворский"
+msgstr "Игры и развлечения"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Графика"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Картография"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Прочее"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Мультимедиа"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Интернет-службы"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
-#, fuzzy
-#| msgid "Add Activity"
 msgctxt "applet category"
 msgid "Productivity"
-msgstr "Добавить комнату"
+msgstr "Офис"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Сведения о системе"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
-#, fuzzy
-#| msgid "Activities"
 msgctxt "applet category"
 msgid "Utilities"
-msgstr "Комнаты"
+msgstr "Служебные"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
-#, fuzzy
-#| msgid "Windows can cover"
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr "Допускать перекрытие окнами"
+msgstr "Окна и задачи"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Буфер обмена"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Задачи"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format

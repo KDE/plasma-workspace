@@ -2,13 +2,13 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 #
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-03-19 11:25+0530\n"
+"PO-Revision-Date: 2023-12-07 21:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: logout.cpp:273
 #, kde-format
@@ -144,7 +144,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[தெரியாதது]"
 
 #: server.cpp:836
 #, kde-kuit-format
@@ -154,6 +154,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"கணினியின் அமர்வு மேலாண்மை ஆற்றல் தீர்ந்துள்ளதால் சில செயலிகளை கையாள முடியவில்லை. அமர்வு "
+"மேலாண்மை வசதியை அதிகப்படியாக பயன்படுத்தும் மூன்று செயலிகள் பின்வருவன:\n"
+"%1"
 
 #: server.cpp:1108
 #, kde-kuit-format
@@ -163,6 +166,8 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"<application>%1</application> எனும் செயலி கணினியின் அமர்வு மீட்பு ஆற்றலை "
+"தீர்த்துள்ளதால் அதை மீட்டமைக்க முடியாது. அச்செயலியின் நிரலாளர்களிடம் இதைத் தெரிவிக்கவும்."
 
 #~ msgid "Session Management"
 #~ msgstr "அமர்வு மேலாண்மை"
