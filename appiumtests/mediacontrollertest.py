@@ -7,35 +7,28 @@
 # pylint: disable=too-many-arguments
 
 import json
-import os
-import pathlib
 import subprocess
-import sys
-import sysconfig
 import unittest
 from os import getcwd, path
 from tempfile import NamedTemporaryFile
 from time import sleep
 from typing import Final
 
+import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gio, GLib
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.interaction import POINTER_TOUCH
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from utils.GLibMainLoopThread import GLibMainLoopThread
 from utils.mediaplayer import (InvalidMpris2, Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
-if "KDECI_BUILD" not in os.environ:
-    CMAKE_INSTALL_PREFIX: Final = os.environ.get("CMAKE_INSTALL_PREFIX", os.path.join(pathlib.Path.home(), "kde", "usr"))
-    SITE_PACKAGES_DIR: Final = os.path.join(CMAKE_INSTALL_PREFIX, sysconfig.get_path("platlib")[len(sys.prefix + os.sep):])
-    for subdir in os.listdir(SITE_PACKAGES_DIR):
-        sys.path.append(os.path.join(SITE_PACKAGES_DIR, subdir))
-
-# This also initializes GLib.MainLoop as QGuiApplication creates an internal one
-# An instance can only have one GLib.MainLoop, so no need to create another one manually
-import inputsynth as IS
+gi.require_version('Gtk', '4.0')
+from gi.repository import Gtk, Gio, GLib
 
 WIDGET_ID: Final = "org.kde.plasma.mediacontroller"
 
@@ -46,6 +39,7 @@ class MediaControllerTests(unittest.TestCase):
     """
 
     driver: webdriver.Remote
+    loop_thread: GLibMainLoopThread
     mpris_interface: Mpris2 | None
     player_b: subprocess.Popen | None = None
     player_browser: subprocess.Popen | None = None
@@ -56,6 +50,9 @@ class MediaControllerTests(unittest.TestCase):
         """
         Opens the widget and initialize the webdriver
         """
+        cls.loop_thread = GLibMainLoopThread()
+        cls.loop_thread.start()
+
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("environ", {
@@ -66,9 +63,6 @@ class MediaControllerTests(unittest.TestCase):
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def setUp(self) -> None:
-        # Can't init the module in setUpClass because the nested wayland session may not be ready yet
-        IS.init_module()
-
         json_path: str = path.join(getcwd(), "resources/player_a.json")
         with open(json_path, "r", encoding="utf-8") as f:
             json_dict: dict[str, list | dict] = json.load(f)
@@ -93,6 +87,7 @@ class MediaControllerTests(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        cls.loop_thread.quit()
         cls.driver.quit()
 
     def test_track(self) -> None:
@@ -170,77 +165,66 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
 
-        IS.init_task_manager()
-        self.assertGreater(IS.get_task_count(), 0)
-
-        IS.maximize_window(0)
-        sleep(1)  # Window animation
-        wait.until(lambda _: IS.is_window_maximized(0))
-
-        # Get the geometry of the widget window
-        rect: tuple[int] = IS.get_window_rect(0)  # x,y,width,height
-        self.assertGreater(rect[2], 1, f"Invalid width {rect[2]}")
-        self.assertGreater(rect[3], 1, f"Invalid height {rect[3]}")
-
-        # Get the geometry of the virtual screen
-        screen_rect: tuple[int] = IS.get_screen_rect(0)  # x,y,width,height
-        self.assertEqual(screen_rect[0], 0)
-        self.assertEqual(screen_rect[1], 0)
-        self.assertGreater(screen_rect[2], 1, f"Invalid screen width {rect[2]}")
-        self.assertGreater(screen_rect[3], 1, f"Invalid screen height {rect[3]}")
-
-        # Get the center point
-        center_pos_x: int = screen_rect[0] + int(screen_rect[2] / 2)
-        center_pos_y: int = screen_rect[1] + int(screen_rect[3] / 2)
+        # Center point of the screen
+        geometry = Gtk.Window().get_display().get_monitors()[0].get_geometry()
+        center_pos_x: int = int(geometry.width / 2)
+        center_pos_y: int = int(geometry.height / 2)
+        self.assertGreater(center_pos_x, 1)
+        self.assertGreater(center_pos_y, 1)
 
         # Touch the window
-        IS.touch_down(center_pos_x, center_pos_y)
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).click()
+        action.perform()
 
         # Swipe right -> Position++
-        IS.touch_down(center_pos_x, center_pos_y)
-        [IS.touch_move(center_pos_x + distance, center_pos_y) for distance in range(1, center_pos_x)]
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x * 2, center_pos_y).pointer_up()
+        action.perform()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > 0)
 
         # Swipe left -> Position--
         old_position: int = self.mpris_interface.player_properties["Position"].get_int64()
-        IS.touch_down(center_pos_x, center_pos_y)
-        [IS.touch_move(center_pos_x - distance, center_pos_y) for distance in range(1, center_pos_x)]
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(0, center_pos_y).pointer_up()
+        action.perform()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() < old_position)
+
         # Swipe down: Volume--
-        IS.touch_down(center_pos_x, center_pos_y)
-        [IS.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, center_pos_y)]
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, center_pos_y * 2).pointer_up()
+        action.perform()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < 1.0)
 
         # Swipe up: Volume++
         old_volume: float = self.mpris_interface.player_properties["Volume"].get_double()
-        IS.touch_down(center_pos_x, center_pos_y)
-        [IS.touch_move(center_pos_x, center_pos_y - distance) for distance in range(1, center_pos_y)]
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, 0).pointer_up()
+        action.perform()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() > old_volume)
 
         # Swipe down and then swipe right, only volume should change
         old_volume = self.mpris_interface.player_properties["Volume"].get_double()
         old_position = self.mpris_interface.player_properties["Position"].get_int64()
-        IS.touch_down(center_pos_x, center_pos_y)
-        [IS.touch_move(center_pos_x, center_pos_y + distance) for distance in range(1, center_pos_y)]  # Swipe down
-        sleep(0.5)  # Qt may ignore some touch events if there are too many, so explicitly wait a moment
-        [IS.touch_move(center_pos_x + distance, center_pos_y + center_pos_y - 1) for distance in range(1, center_pos_x)]  # Swipe right
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, center_pos_y * 2).pause(0.5).move_to_location(center_pos_x * 2, center_pos_y * 2).pointer_up()
+        action.perform()
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < old_volume)
         self.assertEqual(old_position, self.mpris_interface.player_properties["Position"].get_int64())
 
         # Swipe right and then swipe up, only position should change
         old_volume = self.mpris_interface.player_properties["Volume"].get_double()
         old_position = self.mpris_interface.player_properties["Position"].get_int64()
-        IS.touch_down(center_pos_x, center_pos_y)
-        [IS.touch_move(center_pos_x + distance, center_pos_y) for distance in range(1, center_pos_x)]  # Swipe right
-        sleep(0.5)
-        [IS.touch_move(center_pos_x + center_pos_x - 1, center_pos_y - distance) for distance in range(1, center_pos_y)]  # Swipe up
-        IS.touch_up()
+        input_source = PointerInput(POINTER_TOUCH, "finger")
+        action = ActionBuilder(self.driver, mouse=input_source, duration=500)
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x * 2, center_pos_y).pause(0.5).move_to_location(center_pos_x * 2, 0).pointer_up()
+        action.perform()
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
         self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
 
