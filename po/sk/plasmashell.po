@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-11-11 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -98,32 +98,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Navštívte stránku bugs.kde.org pre nahlásenie problémov"
 
-#: main.cpp:106
+#: main.cpp:88
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:118
+#: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Povoliť ladič QML Javascript"
 
-#: main.cpp:121
+#: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Nespúšťať shell plasma automaticky po páde"
 
-#: main.cpp:124
+#: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Vynútiť načítanie daného pluginu shellu"
 
-#: main.cpp:128
+#: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Nahradiť existujúcu inštanciu"
 
-#: main.cpp:131
+#: main.cpp:113
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -132,22 +132,22 @@ msgstr ""
 "Povolí testovací režim a určí javascriptový súbor rozloženia na nastavenie "
 "testovacieho prostredia."
 
-#: main.cpp:132
+#: main.cpp:114
 #, kde-format
 msgid "file"
 msgstr "súbor"
 
-#: main.cpp:136
+#: main.cpp:118
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Vypíše dostupné možnosti pre používateľskú odozvu"
 
-#: main.cpp:218
+#: main.cpp:200
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma nie je možné spustiť"
 
-#: main.cpp:219
+#: main.cpp:201
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

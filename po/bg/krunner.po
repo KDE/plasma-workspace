@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-07-27 14:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -27,47 +27,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: main.cpp:75 view.cpp:49
+#: main.cpp:57 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:75
+#: main.cpp:57
 #, kde-format
 msgid "Run Command interface"
 msgstr "Изпълняване на команден интерфейс"
 
-#: main.cpp:81
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Използване на съдържанието на клипборда като заявка за KRunner"
 
-#: main.cpp:82
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Стартиране на KRunner във фонов режим без показване."
 
-#: main.cpp:83
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменяне на съществуваща инстанция"
 
-#: main.cpp:84
+#: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Показване на резултатите само за дадената приставка"
 
-#: main.cpp:85
+#: main.cpp:67
 #, kde-format
 msgid "List available plugins"
 msgstr "Показване на наличните приставки"
 
-#: main.cpp:92
+#: main.cpp:74
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Заявката за изпълнение, използвана само ако -c не е предоставена"
 
-#: main.cpp:101
+#: main.cpp:83
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

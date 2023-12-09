@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-07-26 15:40+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,47 +32,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: main.cpp:75 view.cpp:49
+#: main.cpp:57 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:75
+#: main.cpp:57
 #, kde-format
 msgid "Run Command interface"
 msgstr "Interfície d'execució ordres"
 
-#: main.cpp:81
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Usa el contingut del porta-retalls com a consulta per al KRunner"
 
-#: main.cpp:82
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Inicia el KRunner en segon pla, no el mostris."
 
-#: main.cpp:83
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substitueix una instància existent"
 
-#: main.cpp:84
+#: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Mostra només els resultats de l'executor indicat"
 
-#: main.cpp:85
+#: main.cpp:67
 #, kde-format
 msgid "List available plugins"
 msgstr "Llista els connectors disponibles"
 
-#: main.cpp:92
+#: main.cpp:74
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "La consulta a executar, només s'usa si no es proporciona «-c»"
 
-#: main.cpp:101
+#: main.cpp:83
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

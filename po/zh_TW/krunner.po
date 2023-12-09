@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-08-07 23:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -30,47 +30,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: main.cpp:75 view.cpp:49
+#: main.cpp:57 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:75
+#: main.cpp:57
 #, kde-format
 msgid "Run Command interface"
 msgstr "執行指令介面"
 
-#: main.cpp:81
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "將剪貼簿內容作為 KRunner 的查詢內容使用"
 
-#: main.cpp:82
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "背景執行 KRunner 而不顯示。"
 
-#: main.cpp:83
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "取代現存實例"
 
-#: main.cpp:84
+#: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "只顯示所選外掛程式提供的結果"
 
-#: main.cpp:85
+#: main.cpp:67
 #, kde-format
 msgid "List available plugins"
 msgstr "列出可用的外掛程式"
 
-#: main.cpp:92
+#: main.cpp:74
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "要執行的查詢內容，只能在未提供 -c 時使用"
 
-#: main.cpp:101
+#: main.cpp:83
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
