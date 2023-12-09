@@ -156,6 +156,8 @@ ColumnLayout {
         contentItem: ListView {
             id: eventsList
 
+            clip: true
+
             headerPositioning: ListView.OverlayHeader
             header: Kirigami.InlineViewHeader {
                 width: eventsList.width
