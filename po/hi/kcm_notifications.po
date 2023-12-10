@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-10 01:59+0000\n"
 "PO-Revision-Date: 2021-08-08 23:06+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -47,14 +47,14 @@ msgstr "इतिहास में दिखाएँ"
 msgid "Show notification badges"
 msgstr "सूचना के चिन्ह दिखाएं"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:164
 #, fuzzy, kde-format
 #| msgid "Configure Events…"
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "कार्यक्रम विन्यस्त करें"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:172
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not support configuring notifications on a per-"
@@ -65,12 +65,12 @@ msgid ""
 msgstr ""
 "यह अनुप्रयोग एक-एक घटना के आधार पर सूचनाओं को विन्यस्त करने का समर्थन नहीं करता है।"
 
-#: ui/ApplicationConfiguration.qml:259
+#: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:268
+#: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
 msgstr ""

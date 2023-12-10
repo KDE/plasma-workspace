@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-11-25 02:26\n"
+"PO-Revision-Date: 2023-12-09 09:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -829,62 +829,3 @@ msgstr "禁用此弹出菜单"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgctxt "@action:inmenu Quit Klipper"
-#~ msgid "&Quit"
-#~ msgstr "退出(&Q)"
-
-#~ msgctxt "%1 is application display name"
-#~ msgid "%1 - Clipboard Tool"
-#~ msgstr "%1 - 剪贴板工具"
-
-#~ msgid "Klipper"
-#~ msgstr "Klipper"
-
-#~ msgid "Plasma cut & paste history utility"
-#~ msgstr "Plasma 剪切和粘贴历史工具"
-
-#~ msgid ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-#~ msgstr ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-
-#~ msgid "Carsten Pfeiffer"
-#~ msgstr "Carsten Pfeiffer"
-
-#~ msgid "Author"
-#~ msgstr "作者"
-
-#~ msgid "Andrew Stanley-Jones"
-#~ msgstr "Andrew Stanley-Jones"
-
-#~ msgid "Original Author"
-#~ msgstr "原始作者"
-
-#~ msgid "Patrick Dubroy"
-#~ msgstr "Patrick Dubroy"
-
-#~ msgid "Contributor"
-#~ msgstr "贡献者"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Bugfixes and optimizations"
-#~ msgstr "程序缺陷修复和优化"
-
-#~ msgid "Esben Mose Hansen"
-#~ msgstr "Esben Mose Hansen"
-
-#~ msgid "Previous Maintainer"
-#~ msgstr "前任维护者"
-
-#~ msgid "Martin Gräßlin"
-#~ msgstr "Martin Gräßlin"
-
-#~ msgid "Maintainer"
-#~ msgstr "维护者"

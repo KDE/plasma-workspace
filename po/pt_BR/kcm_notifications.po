@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-10 01:59+0000\n"
 "PO-Revision-Date: 2023-02-14 10:18-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -50,14 +50,14 @@ msgstr "Mostrar no histórico"
 msgid "Show notification badges"
 msgstr "Mostrar emblemas das notificações"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:164
 #, fuzzy, kde-format
 #| msgid "Configure Events…"
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Configurar eventos..."
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:172
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not support configuring notifications on a per-"
@@ -68,12 +68,12 @@ msgid ""
 msgstr ""
 "Este aplicativo não tem suporte a configuração de notificações por evento."
 
-#: ui/ApplicationConfiguration.qml:259
+#: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:268
+#: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
 msgstr ""

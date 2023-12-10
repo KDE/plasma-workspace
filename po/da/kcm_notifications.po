@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-10 01:59+0000\n"
 "PO-Revision-Date: 2020-01-19 16:37+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -47,14 +47,14 @@ msgstr "Vis i historik"
 msgid "Show notification badges"
 msgstr "Vis bekendtgørelsesskilte"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:164
 #, fuzzy, kde-format
 #| msgid "Configure Events..."
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Indstil hændelser..."
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:172
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not support configuring notifications on a per-"
@@ -65,12 +65,12 @@ msgid ""
 msgstr ""
 "Dette program understøtter ikke at indstille bekendtgørelser pr. hændelse."
 
-#: ui/ApplicationConfiguration.qml:259
+#: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:268
+#: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
 msgstr ""

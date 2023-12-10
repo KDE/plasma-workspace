@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-10 01:59+0000\n"
 "PO-Revision-Date: 2023-10-02 22:25+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -49,13 +49,13 @@ msgstr "Mostrar en el historial"
 msgid "Show notification badges"
 msgstr "Mostrar placas de notificaciones"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:164
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Configurar eventos"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:172
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -64,12 +64,12 @@ msgstr ""
 "Esta aplicación no permite configurar notificaciones para eventos "
 "individuales"
 
-#: ui/ApplicationConfiguration.qml:259
+#: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Mostrar un mensaje en una ventana emergente"
 
-#: ui/ApplicationConfiguration.qml:268
+#: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
 msgstr "Reproducir un sonido"

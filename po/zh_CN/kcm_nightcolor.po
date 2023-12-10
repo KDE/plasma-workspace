@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-25 02:26\n"
+"PO-Revision-Date: 2023-12-09 09:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -143,7 +143,7 @@ msgstr "夜间色温："
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr ""
+msgstr "当前位置："
 
 #: ui/main.qml:310
 #, kde-format

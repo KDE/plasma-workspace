@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-10 01:59+0000\n"
 "PO-Revision-Date: 2023-08-09 06:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -48,13 +48,13 @@ msgstr "ისტორიაში ჩვენება"
 msgid "Show notification badges"
 msgstr "გაფრთხილების მხტუნარების ჩვენება"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:164
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "მოვლენების მორგება"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:172
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -62,12 +62,12 @@ msgid ""
 msgstr ""
 "ამ აპლიკაციას თითოეული მოვლენის გაფრთხილებების მორგების საშუალება არ გააჩნია"
 
-#: ui/ApplicationConfiguration.qml:259
+#: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "შეტყობინების ჩვენება მხტუნარაში"
 
-#: ui/ApplicationConfiguration.qml:268
+#: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
 msgstr "ხმის დაკვრა"

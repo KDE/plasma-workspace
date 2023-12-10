@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-10 01:59+0000\n"
 "PO-Revision-Date: 2023-09-17 13:01+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -48,25 +48,25 @@ msgstr "Pokaż w historii"
 msgid "Show notification badges"
 msgstr "Pokaż odznaki powiadomień"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:164
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Ustawienia zdarzeń"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:172
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr "Ten program nie obsługuje ustawiania powiadomień na podstawie zdarzeń"
 
-#: ui/ApplicationConfiguration.qml:259
+#: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Pokaż wiadomość w oknie wysuwnym"
 
-#: ui/ApplicationConfiguration.qml:268
+#: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
 msgstr "Odtwórz &dźwięk"
