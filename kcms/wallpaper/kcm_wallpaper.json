@@ -21,6 +21,7 @@
         "Description[tr]": "Duvar kağıdını yapılandırın",
         "Description[uk]": "Налаштовування фонового зображення",
         "Description[x-test]": "xxConfigure the wallpaperxx",
+        "Description[zh_CN]": "配置壁纸",
         "Description[zh_TW]": "設定桌布",
         "Icon": "preferences-desktop-wallpaper",
         "Name": "Wallpaper",
@@ -74,6 +75,7 @@
         "Name[uk]": "Зображення тла",
         "Name[vi]": "Phông nền",
         "Name[x-test]": "xxWallpaperxx",
+        "Name[zh_CN]": "壁纸",
         "Name[zh_TW]": "桌布"
     },
     "X-DocPath": "kcontrol/kcm_wallpaper/index.html",
