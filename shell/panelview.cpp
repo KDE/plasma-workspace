@@ -55,6 +55,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_minDrawingHeight(0)
     , m_initCompleted(false)
     , m_floating(false)
+    , m_floatingApplets(false)
     , m_alignment(Qt::AlignCenter)
     , m_corona(corona)
     , m_visibilityMode(NormalPanel)
@@ -374,6 +375,25 @@ void PanelView::setFloating(bool floating)
     updateFloating();
     updateEnabledBorders();
     updateMask();
+}
+
+bool PanelView::floatingApplets() const
+{
+    return m_floatingApplets;
+}
+
+void PanelView::setFloatingApplets(bool floatingApplets)
+{
+    if (m_floatingApplets == floatingApplets) {
+        return;
+    }
+
+    m_floatingApplets = floatingApplets;
+    if (config().isValid() && config().parent().isValid()) {
+        config().parent().writeEntry("floatingApplets", (int)floatingApplets);
+        m_corona->requestApplicationConfigSync();
+    }
+    Q_EMIT floatingAppletsChanged();
 }
 
 int PanelView::minThickness() const
@@ -782,6 +802,7 @@ void PanelView::restore()
     }
 
     setFloating((bool)config().parent().readEntry<int>("floating", true));
+    setFloating((bool)config().parent().readEntry<int>("floatingApplets", true));
     setThickness(configDefaults().readEntry("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();

@@ -128,6 +128,13 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(int minThickness READ minThickness NOTIFY minThicknessChanged)
 
+    /**
+     * When this property is set to true, the panel will always prefer the
+     * floating style for applets.
+     * @since 6.0
+     */
+    Q_PROPERTY(bool floatingApplets READ floatingApplets WRITE setFloatingApplets NOTIFY floatingAppletsChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -186,6 +193,9 @@ public:
 
     bool floating() const;
     void setFloating(bool floating);
+
+    bool floatingApplets() const;
+    void setFloatingApplets(bool floatingApplets);
 
     int minThickness() const;
 
@@ -247,6 +257,7 @@ Q_SIGNALS:
     void backgroundHintsChanged();
     void enabledBordersChanged();
     void floatingChanged();
+    void floatingAppletsChanged();
     void minThicknessChanged();
     void geometryChanged();
 
@@ -314,6 +325,7 @@ private:
     int m_minDrawingHeight;
     bool m_initCompleted;
     bool m_floating;
+    bool m_floatingApplets;
     bool m_containsMouse = false;
     bool m_fakeEventPending = false;
     bool m_touchingWindow = false;
