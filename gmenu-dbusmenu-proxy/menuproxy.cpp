@@ -269,15 +269,17 @@ void MenuProxy::onWindowAdded(WId id)
         return;
     }
 
-    KWindowInfo info(id, NET::WMWindowType);
+    if (KWindowSystem::isPlatformX11()) {
+        KWindowInfo info(id, NET::WMWindowType);
 
-    NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask | NET::ToolbarMask | NET::MenuMask | NET::DialogMask
-                                            | NET::OverrideMask | NET::TopMenuMask | NET::UtilityMask | NET::SplashMask);
+        NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask | NET::ToolbarMask | NET::MenuMask | NET::DialogMask
+                                                | NET::OverrideMask | NET::TopMenuMask | NET::UtilityMask | NET::SplashMask);
 
-    // Only top level windows typically have a menu bar, dialogs, such as settings don't
-    if (wType != NET::Normal) {
-        qCDebug(DBUSMENUPROXY) << "Ignoring window" << id << "of type" << wType;
-        return;
+        // Only top level windows typically have a menu bar, dialogs, such as settings don't
+        if (wType != NET::Normal) {
+            qCDebug(DBUSMENUPROXY) << "Ignoring window" << id << "of type" << wType;
+            return;
+        }
     }
 
     const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_gtkUniqueBusName));

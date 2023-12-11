@@ -47,22 +47,24 @@ bool MenuImporter::connectToBus()
 
 void MenuImporter::RegisterWindow(WId id, const QDBusObjectPath &path)
 {
-    KWindowInfo info(id, NET::WMWindowType, NET::WM2WindowClass);
-    NET::WindowTypes mask = NET::AllTypesMask;
-    auto type = info.windowType(mask);
-
-    // Menu can try to register, right click in gimp for example
-    if (type != NET::Unknown && (type & (NET::Menu | NET::DropdownMenu | NET::PopupMenu))) {
-        return;
-    }
-
     if (path.path().isEmpty()) // prevent bad dbusmenu usage
         return;
 
+    if (KWindowSystem::isPlatformX11()) {
+        KWindowInfo info(id, NET::WMWindowType, NET::WM2WindowClass);
+        NET::WindowTypes mask = NET::AllTypesMask;
+        auto type = info.windowType(mask);
+
+        // Menu can try to register, right click in gimp for example
+        if (type != NET::Unknown && (type & (NET::Menu | NET::DropdownMenu | NET::PopupMenu))) {
+            return;
+        }
+        QString classClass = info.windowClassClass();
+        m_windowClasses.insert(id, classClass);
+    }
+
     QString service = message().service();
 
-    QString classClass = info.windowClassClass();
-    m_windowClasses.insert(id, classClass);
     m_menuServices.insert(id, service);
     m_menuPaths.insert(id, path);
 
