@@ -100,9 +100,9 @@ PlasmaComponents.ItemDelegate {
         visible: !menuItem.ListView.isCurrentItem
         anchors {
             left: parent.left
-            leftMargin: Kirigami.Units.gridUnit / 2 - listMargins.left
+            leftMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - listMargins.left
             right: parent.right
-            rightMargin: Kirigami.Units.gridUnit / 2 - listMargins.right
+            rightMargin: Math.ceil(Kirigami.Units.gridUnit / 2)  - listMargins.right
             verticalCenter: parent.verticalCenter
         }
 
@@ -119,7 +119,7 @@ PlasmaComponents.ItemDelegate {
             right: label.right
             verticalCenter: parent.verticalCenter
             // This is here because you can't assign to it in AnchorChanges below
-            topMargin: Kirigami.Units.gridUnit / 2 - listMargins.top
+            topMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - listMargins.top
         }
         source: "DelegateToolButtons.qml"
         active: menuItem.ListView.isCurrentItem
