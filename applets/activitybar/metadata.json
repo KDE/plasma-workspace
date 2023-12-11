@@ -96,7 +96,7 @@
         "Description[uk]": "Панель з вкладками для перемикання дій",
         "Description[vi]": "Thanh thẻ để chuyển Hoạt động",
         "Description[x-test]": "xxTab bar to switch activitiesxx",
-        "Description[zh_CN]": "切换活动的标签栏",
+        "Description[zh_CN]": "切换活动的标签页栏",
         "Description[zh_TW]": "切換活動的分頁列",
         "EnabledByDefault": true,
         "FormFactors": [
