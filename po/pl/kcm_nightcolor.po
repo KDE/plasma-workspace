@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-11 13:55+0100\n"
+"PO-Revision-Date: 2023-12-10 13:26+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -112,16 +112,14 @@ msgid "Custom times"
 msgstr "Własne czasy"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "Zawsze włączone barwy nocne"
+msgstr "Zawsze przy nocnym świetle"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Temperatura barw dziennych:"
+msgstr "Temperatura światła dziennego:"
 
 #: ui/main.qml:226 ui/main.qml:285
 #, kde-format
@@ -142,17 +140,15 @@ msgid "Warm"
 msgstr "Ciepłe"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Temperatura barw nocnych:"
+msgstr "Temperatura światła nocnego:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Wykryj położenie"
+msgstr "Bieżące położenie:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -172,10 +168,9 @@ msgstr ""
 "location.services.mozilla.com'>Usługa położenia Mozilli</link>."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Wprowadź barwy nocne o:"
+msgstr "Rozpocznij światło nocne o:"
 
 #: ui/main.qml:362 ui/main.qml:385
 #, kde-format
@@ -183,10 +178,9 @@ msgid "Input format: HH:MM"
 msgstr "Zapis wejściowy: HH:MM"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Wprowadź barwy dzienne o:"
+msgstr "Rozpocznij światło dzienne o:"
 
 #: ui/main.qml:394
 #, kde-format
