@@ -41,6 +41,7 @@ include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
+include(ECMQmlModule)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus ShaderTools)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
