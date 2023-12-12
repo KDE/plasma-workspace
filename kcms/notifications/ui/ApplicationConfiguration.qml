@@ -277,7 +277,6 @@ ColumnLayout {
                             QQC2.Button {
                                 enabled: soundCheckBox.checked && model.sound
                                 icon.name: "media-playback-start"
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                                 onClicked: kcm.playSound(model.sound)
                             }
                             QQC2.TextField {
@@ -292,13 +291,11 @@ ColumnLayout {
                             QQC2.Button {
                                 enabled: soundCheckBox.checked && model.sound !== model.defaultSound
                                 icon.name: "edit-reset"
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                                 onClicked: model.sound = model.defaultSound
                             }
                             QQC2.Button {
                                 enabled: soundCheckBox.checked
                                 icon.name: "document-open-folder"
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                                 onClicked: {
                                     soundSelector.eventIndex = model.index
                                     soundSelector.open()
