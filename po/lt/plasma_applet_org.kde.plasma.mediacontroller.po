@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2023-12-12 01:38+0000\n"
 "PO-Revision-Date: 2022-12-12 20:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,65 +21,65 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:194
+#: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
 msgid "No title"
 msgstr "Nėra pavadinimo"
 
-#: package/contents/ui/AlbumArtStackView.qml:194
+#: package/contents/ui/AlbumArtStackView.qml:202
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "No media playing"
 msgstr "Nieko neatkuriama"
 
-#: package/contents/ui/ExpandedRepresentation.qml:382
-#: package/contents/ui/ExpandedRepresentation.qml:503
+#: package/contents/ui/ExpandedRepresentation.qml:383
+#: package/contents/ui/ExpandedRepresentation.qml:504
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:531
+#: package/contents/ui/ExpandedRepresentation.qml:532
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Maišyti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:555
+#: package/contents/ui/ExpandedRepresentation.qml:556
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Ankstesnis takelis"
 
-#: package/contents/ui/ExpandedRepresentation.qml:577
+#: package/contents/ui/ExpandedRepresentation.qml:578
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:577
+#: package/contents/ui/ExpandedRepresentation.qml:578
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Groti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:595
+#: package/contents/ui/ExpandedRepresentation.qml:596
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Kitas takelis"
 
-#: package/contents/ui/ExpandedRepresentation.qml:618
+#: package/contents/ui/ExpandedRepresentation.qml:619
 #, kde-format
 msgid "Repeat Track"
 msgstr "Kartoti takelį"
 
-#: package/contents/ui/ExpandedRepresentation.qml:618
+#: package/contents/ui/ExpandedRepresentation.qml:619
 #, kde-format
 msgid "Repeat"
 msgstr "Kartoti"

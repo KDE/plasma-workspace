@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# gummi <gudmundure@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2023 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-09-09 11:27+0000\n"
+"PO-Revision-Date: 2023-12-10 21:54+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,7 +43,7 @@ msgstr "Viðburðir"
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr "Verkefnalisti"
+msgstr "Verkefni"
 
 #: calendar/eventdatadecorator.cpp:57
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "Í dag"
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr "Endurstilla dagatal á daginn í dag"
+msgstr "Stilla dagatal á daginn í dag"
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
@@ -176,6 +176,8 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Þessi græja var gerð fyrir óþekkta eldri útgáfu af Plasma og virkar ekki í "
+"Plasma %1. Hafðu samband við höfund græjunnar til að fá uppfærða útgáfu."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
@@ -183,6 +185,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Þessi græja var gerð fyrir %1 og virkar ekki í %2. Hafðu samband við höfund "
+"græjunnar til að fá uppfærða útgáfu."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
@@ -190,6 +194,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Þessi græja var gerð fyrir Plasma %1 og virkar ekki í Plasma %2. Uppfærðu "
+"Plasma til að geta notað græjuna."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
@@ -197,6 +203,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Þessi græja var gerð fyrir Plasma %1 og virkar ekki í nýjustu útgáfunni af "
+"Plasma. Uppfærðu Plasma til að geta notað græjuna."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
@@ -221,7 +229,7 @@ msgstr "Dagsetning og tími"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr "Forritun"
+msgstr "Forritunarverkfæri"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
@@ -345,7 +353,7 @@ msgstr "Setja upp græju úr staðbundinni skrá..."
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:503
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr "Velja plasmíðskrá"
+msgstr "Velja græjuskrá"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:517
 #, kde-format
