@@ -60,6 +60,7 @@ find_package(PlasmaActivitiesStats ${PROJECT_VERSION} REQUIRED)
 if (BUILD_TESTING)
     include(ECMAddTests)
     find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test QuickTest)
+    find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 endif()
 
 find_package(KF6KDED CONFIG REQUIRED)
@@ -189,7 +190,6 @@ if(PipeWire_FOUND)
   find_package(Libdrm REQUIRED)
 endif()
 
-find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 find_package(Qt6WaylandClient COMPONENTS Private)
 find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
