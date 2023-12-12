@@ -33,7 +33,7 @@ PlasmaExtras.Representation {
     //  Reason: string,
     // }]
     property var inhibitions: []
-    property var manuallyInhibited: false
+    property bool manuallyInhibited
     property bool inhibitsLidAction
 
     property string inhibitionReason
@@ -57,6 +57,7 @@ PlasmaExtras.Representation {
             id: pmSwitch
 
             inhibitions: dialog.inhibitions
+            manuallyInhibited: dialog.manuallyInhibited
             inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
 

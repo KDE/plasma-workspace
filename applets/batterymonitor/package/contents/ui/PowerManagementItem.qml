@@ -31,7 +31,7 @@ ColumnLayout {
     //  Reason: string,
     // }]
     property var inhibitions: []
-    property var manuallyInhibited: false
+    property bool manuallyInhibited
     property bool inhibitsLidAction
 
     // UI to manually inhibit sleep and screen locking

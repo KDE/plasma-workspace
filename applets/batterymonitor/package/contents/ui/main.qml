@@ -98,7 +98,7 @@ PlasmoidItem {
     //  Reason: string,
     // }]
     property var inhibitions: []
-    property var manuallyInhibited: false
+    property bool manuallyInhibited: false
     readonly property var activeProfileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
     readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
 
