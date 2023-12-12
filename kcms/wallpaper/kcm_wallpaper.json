@@ -2,6 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_wallpaper",
         "Description": "Configure the wallpaper",
+        "Description[bg]": "Настройки на тапета",
         "Description[ca@valencia]": "Configura el fons de pantalla",
         "Description[ca]": "Configura el fons de pantalla",
         "Description[eo]": "Agordi la ekranfonon",
@@ -11,6 +12,7 @@
         "Description[gl]": "Configurar o fondo…",
         "Description[he]": "הגדרת תמונת הרקע",
         "Description[ia]": "Configura le tapete de papiro",
+        "Description[is]": "Grunnstilla veggfóðrið",
         "Description[it]": "Configura lo sfondo",
         "Description[ka]": "ფონური სურათის მორგება",
         "Description[nl]": "De achtergrond configureren",
@@ -28,6 +30,7 @@
         "Name": "Wallpaper",
         "Name[ar]": "الخلفية",
         "Name[az]": "Divar Kağızı",
+        "Name[bg]": "Тапет",
         "Name[bs]": "Pozadina",
         "Name[ca@valencia]": "Fons de pantalla",
         "Name[ca]": "Fons de pantalla",
