@@ -19,6 +19,8 @@ PlasmoidItem {
     Layout.minimumHeight: internalSystray ? internalSystray.Layout.minimumHeight : 0
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
+    Layout.maximumWidth: Layout.minimumWidth
+    Layout.maximumHeight: Layout.minimumHeight
 
     preferredRepresentation: fullRepresentation
     Plasmoid.status: internalSystray ? internalSystray.plasmoid.status : PlasmaCore.Types.UnknownStatus
