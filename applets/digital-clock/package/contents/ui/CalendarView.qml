@@ -94,6 +94,8 @@ PlasmaExtras.Representation {
         PlasmaExtras.PlasmoidHeading {
             Layout.fillWidth: true
             Layout.preferredHeight: monthView.viewHeader.height
+            leftInset: 0
+            rightInset: 0
 
             // Agenda view header
             // -----------------
@@ -403,6 +405,7 @@ PlasmaExtras.Representation {
         PlasmaExtras.PlasmoidHeading {
             visible: worldClocks.visible
 
+            enabledBorders: Qt.TopEdge | Qt.BottomEdge
             // Normally gets some positive/negative values from base component.
             topInset: 0
             topPadding: Kirigami.Units.smallSpacing
