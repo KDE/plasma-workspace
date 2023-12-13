@@ -1298,6 +1298,13 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
+    if (containment() && containment()->isUserConfiguring() && m_layerWindow->exclusionZone() == 0) {
+        // We set the exclusive zone to make sure the ruler does not
+        // overlap with the panel regardless of the visibility mode;
+        // this won't be updated anymore as long as we are within
+        // the panel configuration.
+        m_layerWindow->setExclusiveZone(thickness() - m_layerWindow->margins().top());
+    }
     if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
         return;
     }
@@ -1426,6 +1433,7 @@ void PanelView::refreshContainment()
             }
         }
     });
+    connect(containment(), &Plasma::Applet::userConfiguringChanged, this, &PanelView::updateExclusiveZone);
 }
 
 void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
