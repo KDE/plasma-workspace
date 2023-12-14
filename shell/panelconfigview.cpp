@@ -228,6 +228,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     });
 
     setMargin(4);
+    m_focusWindow = qApp->focusWindow();
 }
 
 PanelConfigView::~PanelConfigView()
@@ -335,6 +336,9 @@ void PanelConfigView::hideEvent(QHideEvent *ev)
 
 void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
 {
+    QWindow *oldFocusWindow = m_focusWindow;
+    m_focusWindow = focusWindow;
+
     if (!focusWindow) {
         hide();
         return;
@@ -347,6 +351,10 @@ void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
             return;
         }
     }
+    if (auto popup = qobject_cast<const PopupPlasmaWindow *>(oldFocusWindow); popup && oldFocusWindow != this) {
+        requestActivate();
+        return;
+    }
     // Don't close if the user is directly manipulating the panel
     if (m_panelView->mouseGrabberItem()) {
         return;
@@ -357,6 +365,7 @@ void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
 void PanelConfigView::focusInEvent(QFocusEvent *ev)
 {
     connect(qApp, &QGuiApplication::focusWindowChanged, this, &PanelConfigView::focusVisibilityCheck, Qt::UniqueConnection);
+    PopupPlasmaWindow::focusInEvent(ev);
 }
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)

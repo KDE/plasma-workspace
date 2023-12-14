@@ -95,6 +95,7 @@ private:
 
     Plasma::Containment *m_containment;
     QPointer<PanelView> m_panelView;
+    QPointer<QWindow> m_focusWindow;
     std::unique_ptr<PanelRulerView> m_panelRulerView;
     KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
