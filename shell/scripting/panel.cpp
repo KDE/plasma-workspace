@@ -171,6 +171,45 @@ void Panel::setAlignment(const QString &alignment)
     }
 }
 
+// NOTE: lengthMode also reads and writes directly from panelConfig() because it
+// is resolution independent
+QString Panel::lengthMode() const
+{
+    int lengthMode;
+    if (panel()) {
+        lengthMode = panel()->lengthMode();
+    } else {
+        lengthMode = panelConfig().readEntry("panelLengthMode", 0);
+    }
+
+    switch (lengthMode) {
+    case PanelView::LengthMode::FillAvailable:
+        return "fill";
+    case PanelView::LengthMode::FitContent:
+        return "fit";
+    case PanelView::LengthMode::Custom:
+        return "custom";
+    }
+
+    return "fill";
+}
+
+void Panel::setLengthMode(const QString &mode)
+{
+    PanelView::LengthMode lengthMode = PanelView::LengthMode::FillAvailable;
+    if (mode.compare("fit", Qt::CaseInsensitive) == 0) {
+        lengthMode = PanelView::LengthMode::FitContent;
+    } else if (mode.compare("custom", Qt::CaseInsensitive) == 0) {
+        lengthMode = PanelView::LengthMode::Custom;
+    }
+
+    if (panel()) {
+        panel()->setLengthMode(lengthMode);
+    } else {
+        panelConfig().writeEntry("panelLengthMode", (int)lengthMode);
+    }
+}
+
 // From now on only panelConfigDefaults should be used
 int Panel::offset() const
 {

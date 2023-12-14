@@ -38,6 +38,7 @@ class Panel : public Containment
     // panel properties
     Q_PROPERTY(QString alignment READ alignment WRITE setAlignment)
     Q_PROPERTY(int offset READ offset WRITE setOffset)
+    Q_PROPERTY(QString lengthMode READ lengthMode WRITE setLengthMode)
     Q_PROPERTY(int length READ length WRITE setLength)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength)
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength)
@@ -57,6 +58,9 @@ public:
 
     int offset() const;
     void setOffset(int pixels);
+
+    QString lengthMode() const;
+    void setLengthMode(const QString &mode);
 
     int length() const;
     void setLength(int pixels);

@@ -397,6 +397,7 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         // Basic panel setup
         panel->setLocation(panelData.property("location").toString());
         panel->setHeight(panelData.property("height").toNumber() * gridUnit());
+        panel->setLengthMode(panelData.property("lengthMode").toString());
         panel->setMaximumLength(panelData.property("maximumLength").toNumber() * gridUnit());
         panel->setMinimumLength(panelData.property("minimumLength").toNumber() * gridUnit());
         panel->setOffset(panelData.property("offset").toNumber() * gridUnit());
