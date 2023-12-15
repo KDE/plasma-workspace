@@ -13,6 +13,7 @@
 #include <QSet>
 
 #include "notifications.h"
+#include "settings.h"
 
 class QDBusServiceWatcher;
 class QTimer;
@@ -72,6 +73,7 @@ private:
 
     QStringList jobUrls() const;
     void scheduleUpdate(Job *job, int role);
+    Settings *m_settings = nullptr;
 
     QDBusServiceWatcher *m_serviceWatcher = nullptr;
     // Job -> serviceName

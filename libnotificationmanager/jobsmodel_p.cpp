@@ -38,6 +38,7 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
     : QObject(parent)
     , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_compressUpdatesTimer(new QTimer(this))
+    , m_settings(new Settings(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
@@ -193,7 +194,7 @@ void JobsModelPrivate::emitJobUrlsChanged()
 
 bool JobsModelPrivate::requiresJobTracker() const
 {
-    return false;
+    return m_settings && !m_settings->jobsInNotifications();
 }
 
 QStringList JobsModelPrivate::registeredJobContacts() const
