@@ -133,7 +133,8 @@ QQC2.StackView {
     // If we fade both at the same time you can see the background behind glimpse through
     replaceExit: Transition{
         PauseAnimation {
-            duration: replaceEnterOpacityAnimator.duration
+            // 500: The exit transition starts first and can be completed earlier than the enter transition
+            duration: replaceEnterOpacityAnimator.duration + 500
         }
     }
 
