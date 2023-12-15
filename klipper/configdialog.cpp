@@ -73,8 +73,24 @@ GeneralWidget::GeneralWidget(QWidget *parent)
 {
     QFormLayout *layout = new QFormLayout(this);
 
+    // Retain clipboard history
+    const KConfigSkeletonItem *item = KlipperSettings::self()->keepClipboardContentsItem();
+
+    m_enableHistoryCb = new QCheckBox(item->label(), this);
+    m_enableHistoryCb->setObjectName(QLatin1String("kcfg_KeepClipboardContents"));
+    layout->addRow(i18n("Clipboard history:"), m_enableHistoryCb);
+
+    // Clipboard history size
+    item = KlipperSettings::self()->maxClipItemsItem();
+    m_historySizeSb = new KPluralHandlingSpinBox(this);
+    m_historySizeSb->setObjectName(QLatin1String("kcfg_MaxClipItems"));
+    m_historySizeSb->setSuffix(ki18ncp("Number of entries", " entry", " entries"));
+    layout->addRow(item->label(), m_historySizeSb);
+
+    layout->addRow(QString(), new QLabel(this));
+
     // Synchronise selection and clipboard
-    const KConfigSkeletonItem *item = KlipperSettings::self()->syncClipboardsItem();
+    item = KlipperSettings::self()->syncClipboardsItem();
     m_syncClipboardsCb = new QCheckBox(item->label(), this);
     m_syncClipboardsCb->setObjectName(QLatin1String("kcfg_SyncClipboards"));
     layout->addRow(i18n("Selection and Clipboard:"), m_syncClipboardsCb);
@@ -96,21 +112,6 @@ When turned on this option keeps the selection and the clipboard the same, so th
 If it is turned off, the selection may still be saved in the clipboard history (subject to the options below), but it can only be pasted using the middle mouse button."),
                            hint);
     });
-
-    layout->addRow(QString(), new QLabel(this));
-
-    // Retain clipboard history
-    item = KlipperSettings::self()->keepClipboardContentsItem();
-    m_enableHistoryCb = new QCheckBox(item->label(), this);
-    m_enableHistoryCb->setObjectName(QLatin1String("kcfg_KeepClipboardContents"));
-    layout->addRow(i18n("Clipboard history:"), m_enableHistoryCb);
-
-    // Clipboard history size
-    item = KlipperSettings::self()->maxClipItemsItem();
-    m_historySizeSb = new KPluralHandlingSpinBox(this);
-    m_historySizeSb->setObjectName(QLatin1String("kcfg_MaxClipItems"));
-    m_historySizeSb->setSuffix(ki18ncp("Number of entries", " entry", " entries"));
-    layout->addRow(item->label(), m_historySizeSb);
 
     layout->addRow(QString(), new QLabel(this));
 
