@@ -6,9 +6,6 @@
     <kcfgfile name="plasmanotifyrc" />
 
     <group name="Jobs">
-        <entry name="InTaskManager" type="Bool">
-            <default>true</default>
-        </entry>
         <entry name="InNotifications" type="Bool">
             <default>true</default>
         </entry>

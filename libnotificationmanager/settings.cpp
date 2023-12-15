@@ -422,20 +422,6 @@ void Settings::resetPopupTimeout()
     setPopupTimeout(d->notificationSettings.defaultPopupTimeoutValue());
 }
 
-bool Settings::jobsInTaskManager() const
-{
-    return d->jobSettings.inTaskManager();
-}
-
-void Settings::setJobsInTaskManager(bool enable)
-{
-    if (jobsInTaskManager() == enable) {
-        return;
-    }
-    d->jobSettings.setInTaskManager(enable);
-    d->setDirty(true);
-}
-
 bool Settings::jobsInNotifications() const
 {
     return d->jobSettings.inNotifications();

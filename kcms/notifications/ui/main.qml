@@ -247,20 +247,9 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Application progress:")
-            text: i18n("Show in task manager")
-            checked: kcm.jobSettings.inTaskManager
-            onClicked: kcm.jobSettings.inTaskManager = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.jobSettings
-                settingName: "InTaskManager"
-            }
-        }
-
-        QtControls.CheckBox {
             id: applicationJobsEnabledCheck
             text: i18nc("Show application jobs in notification widget", "Show in notifications")
+            Kirigami.FormData.label: i18n("Application progress:")
             checked: kcm.jobSettings.inNotifications
             onClicked: kcm.jobSettings.inNotifications = checked
 

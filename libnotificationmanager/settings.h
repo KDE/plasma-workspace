@@ -66,10 +66,6 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     Q_PROPERTY(int popupTimeout READ popupTimeout WRITE setPopupTimeout RESET resetPopupTimeout NOTIFY settingsChanged)
 
     /**
-     * Whether to show application jobs in task manager
-     */
-    Q_PROPERTY(bool jobsInTaskManager READ jobsInTaskManager WRITE setJobsInTaskManager /*RESET resetJobsInTaskManager*/ NOTIFY settingsChanged)
-    /**
      * Whether to show application jobs as notifications
      */
     Q_PROPERTY(bool jobsInNotifications READ jobsInNotifications WRITE setJobsInNotifications /*RESET resetJobsPopup*/ NOTIFY settingsChanged)
@@ -268,9 +264,6 @@ public:
     int popupTimeout() const;
     void setPopupTimeout(int popupTimeout);
     void resetPopupTimeout();
-
-    bool jobsInTaskManager() const;
-    void setJobsInTaskManager(bool enable);
 
     bool jobsInNotifications() const;
     void setJobsInNotifications(bool enable);
