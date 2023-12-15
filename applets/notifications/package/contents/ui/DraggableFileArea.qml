@@ -43,11 +43,18 @@ Item {
 
     TapHandler {
         acceptedButtons: Qt.RightButton
+        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad // BUG 476809
         gesturePolicy: TapHandler.WithinBounds
 
         onPressedChanged: if (pressed) {
-            menuTapHandler.longPressed()
+            contextMenuTimer.start();
         }
+    }
+
+    Timer {
+        id: contextMenuTimer
+        interval: 0
+        onTriggered: menuTapHandler.longPressed()
     }
 
     DragHandler {
