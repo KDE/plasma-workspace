@@ -109,6 +109,17 @@ PlasmoidItem {
 
         Keys.forwardTo: [stack.currentItem]
 
+        function propgateBackRequestToParent() : bool {
+            if (stack.depth > 1) {
+                stack.pop();
+                return true;
+            }
+
+            return false;
+        }
+
+        property string backButtonText: stack.depth > 1 ? i18n("Go Back to Clipboard") : ""
+
         Connections {
             target: main
             function onExpandedChanged(expanded) {

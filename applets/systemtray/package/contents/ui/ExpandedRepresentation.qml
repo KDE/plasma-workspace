@@ -56,11 +56,19 @@ Item {
                 icon.name: mirrored ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
 
                 display: PlasmaComponents.AbstractButton.IconOnly
-                text: i18nc("@action:button", "Go Back")
+                text: systemTrayState.activeApplet?.fullRepresentationItem?.backButtonText || i18nc("@action:button", "Go Back");
 
                 KeyNavigation.down: hiddenItemsView.visible ? hiddenLayout : container
 
-                onClicked: systemTrayState.setActiveApplet(null)
+                PlasmaComponents.ToolTip {
+                    text: backButton.text;
+                }
+
+                onClicked: {
+                    if (!systemTrayState.activeApplet || !Plasmoid.requestBackFromActiveApplet(systemTrayState.activeApplet?.fullRepresentationItem)) {
+                        systemTrayState.setActiveApplet(null);
+                    }
+                }
             }
 
             Kirigami.Heading {

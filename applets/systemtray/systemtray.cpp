@@ -317,6 +317,31 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
     }
 }
 
+bool SystemTray::requestBackFromActiveApplet(QQuickItem *fullRepresentationItem) const
+{
+    if (!fullRepresentationItem) {
+        return false;
+    }
+
+    const QMetaObject *metaObject = fullRepresentationItem->metaObject();
+
+    const int methodIndex = metaObject->indexOfMethod("propgateBackRequestToParent()");
+    if (methodIndex < 0) {
+        // Method is not defined in the applet. Let systray handle it.
+        return false;
+    }
+
+    bool backRequestCompletedByApplet = false;
+    QMetaMethod method = metaObject->method(methodIndex);
+    const bool invoked = method.invoke(fullRepresentationItem, Q_RETURN_ARG(bool, backRequestCompletedByApplet));
+
+    if (!invoked) {
+        return false;
+    }
+
+    return backRequestCompletedByApplet;
+}
+
 QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 {
     if (!visualParent) {

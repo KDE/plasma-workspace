@@ -68,6 +68,7 @@ public:
      */
     Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
 
+    Q_INVOKABLE bool requestBackFromActiveApplet(QQuickItem *fullRepresentationItem) const;
     /**
      * Needed to preserve keyboard navigation
      */
