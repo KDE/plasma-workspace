@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2023-07-19 08:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -33,12 +33,27 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "rysin@kde.org, oneugene@ukr.net,ivanpetrouchtchak@yahoo.com"
 
-#: configdialog.cpp:80
+#: configdialog.cpp:81
+#, kde-format
+msgid "Clipboard history:"
+msgstr "Журнал буфера даних:"
+
+#: configdialog.cpp:87
+#, kde-format
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " запис"
+msgstr[1] " записи"
+msgstr[2] " записів"
+msgstr[3] " запис"
+
+#: configdialog.cpp:96
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Вибір і буфер даних:"
 
-#: configdialog.cpp:87
+#: configdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -66,54 +81,39 @@ msgstr ""
 "визначається пунктами нижче), але вставити його можна буде лише за допомогою "
 "клацання середньою кнопкою миші."
 
-#: configdialog.cpp:106
-#, kde-format
-msgid "Clipboard history:"
-msgstr "Журнал буфера даних:"
-
-#: configdialog.cpp:112
-#, kde-format
-msgctxt "Number of entries"
-msgid " entry"
-msgid_plural " entries"
-msgstr[0] " запис"
-msgstr[1] " записи"
-msgstr[2] " записів"
-msgstr[3] " запис"
-
-#: configdialog.cpp:131 configdialog.cpp:169
+#: configdialog.cpp:132 configdialog.cpp:170
 #, kde-format
 msgid "Always save in history"
 msgstr "Завжди зберігати до журналу"
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgid "Text selection:"
 msgstr "Вибір тексту:"
 
-#: configdialog.cpp:137 configdialog.cpp:175
+#: configdialog.cpp:138 configdialog.cpp:176
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Лише при явному копіюванні"
 
-#: configdialog.cpp:142
+#: configdialog.cpp:143
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr ""
 "Визначає, чи слід зберігати позначені фрагменти тексту до журналу буфера "
 "обміну даними."
 
-#: configdialog.cpp:173
+#: configdialog.cpp:174
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Нетекстовий вибір:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:181
 #, kde-format
 msgid "Never save in history"
 msgstr "Ніколи не зберігати до журналу"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:186
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -122,12 +122,12 @@ msgstr ""
 "Визначає, чи зберігатимуться у журналі буфера обміну даними нетекстові "
 "позначені елементи (зокрема зображення)."
 
-#: configdialog.cpp:259
+#: configdialog.cpp:260
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Показ контекстного меню дій:"
 
-#: configdialog.cpp:269
+#: configdialog.cpp:270
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -143,12 +143,12 @@ msgstr ""
 "або меню не буде показано для виключеного вікна, відкрити меню можна буде за "
 "допомогою клавіатурного скорочення <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:278
+#: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Виключити вікна…"
 
-#: configdialog.cpp:292
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
@@ -158,23 +158,23 @@ msgstr[1] " секунди"
 msgstr[2] " секунд"
 msgstr[3] " секунда"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:294
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Немає"
 
-#: configdialog.cpp:302
+#: configdialog.cpp:303
 #, kde-format
 msgid "Options:"
 msgstr "Параметри:"
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Виключити вікна"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:360
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -186,34 +186,34 @@ msgstr ""
 "буфера обміну даними, його <interface>команди</interface> з'являться у "
 "контекстному меню Klipper, і їх можна буде виконати."
 
-#: configdialog.cpp:368
+#: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Взірець відповідності і команди"
 
-#: configdialog.cpp:368
+#: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Опис"
 
-#: configdialog.cpp:374
+#: configdialog.cpp:375
 #, kde-format
 msgid "Add Action..."
 msgstr "Додати дію..."
 
-#: configdialog.cpp:378
+#: configdialog.cpp:379
 #, kde-format
 msgid "Edit Action..."
 msgstr "Змінити дію..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:384
 #, kde-format
 msgid "Delete Action"
 msgstr "Вилучити дію"
 
-#: configdialog.cpp:390
+#: configdialog.cpp:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -223,7 +223,7 @@ msgstr ""
 "Ці пункти дій з'являться у контекстному меню, яке можна налаштувати за "
 "допомогою сторінки <interface>Меню дій</interface>."
 
-#: configdialog.cpp:574
+#: configdialog.cpp:575
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,56 +231,56 @@ msgid ""
 "commands?"
 msgstr "Вилучити позначену дію <resource>%1</resource><nl/>і усі її команди?"
 
-#: configdialog.cpp:575
+#: configdialog.cpp:576
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Підтвердження вилучення дії"
 
-#: configdialog.cpp:604
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Загальне"
 
-#: configdialog.cpp:604
+#: configdialog.cpp:605
 #, kde-format
 msgid "General Configuration"
 msgstr "Загальне налаштування"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Меню дій"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgid "Action Menu"
 msgstr "Меню дій"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Налаштування дій"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Налаштування дій"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:610
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Скорочення"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:610
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Налаштування скорочень"
 
-#: configdialog.cpp:690
+#: configdialog.cpp:691
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -298,7 +298,7 @@ msgstr ""
 "<nl/><nl/>Якщо меню дій є небажаним для певної програми, додайте її до "
 "списку. <link>Як визначити назву, яку слід ввести</link>."
 
-#: configdialog.cpp:703
+#: configdialog.cpp:704
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

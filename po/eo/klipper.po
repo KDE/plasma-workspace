@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,12 +30,25 @@ msgstr ""
 "wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de,cfmckee@gmail.com,"
 "okellogg@users.sourceforge.net"
 
-#: configdialog.cpp:80
+#: configdialog.cpp:81
+#, kde-format
+msgid "Clipboard history:"
+msgstr "Poŝohistorio:"
+
+#: configdialog.cpp:87
+#, kde-format
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " ero"
+msgstr[1] " eroj"
+
+#: configdialog.cpp:96
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Elekto kaj Poŝo:"
 
-#: configdialog.cpp:87
+#: configdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -61,50 +74,37 @@ msgstr ""
 "povas esti konservita en la tondujo-historio (laŭ la subaj elektoj), sed ĝi "
 "povas esti algluita nur per la meza musbutono."
 
-#: configdialog.cpp:106
-#, kde-format
-msgid "Clipboard history:"
-msgstr "Poŝohistorio:"
-
-#: configdialog.cpp:112
-#, kde-format
-msgctxt "Number of entries"
-msgid " entry"
-msgid_plural " entries"
-msgstr[0] " ero"
-msgstr[1] " eroj"
-
-#: configdialog.cpp:131 configdialog.cpp:169
+#: configdialog.cpp:132 configdialog.cpp:170
 #, kde-format
 msgid "Always save in history"
 msgstr "Ĉiam konservi en la historio"
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgid "Text selection:"
 msgstr "Tekstelekto:"
 
-#: configdialog.cpp:137 configdialog.cpp:175
+#: configdialog.cpp:138 configdialog.cpp:176
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Nur kiam eksplicite kopiite"
 
-#: configdialog.cpp:142
+#: configdialog.cpp:143
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Ĉu tekstelektoj estas konservataj en la poŝohistorio."
 
-#: configdialog.cpp:173
+#: configdialog.cpp:174
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Neteksta elekto:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:181
 #, kde-format
 msgid "Never save in history"
 msgstr "Neniam konservi en la historio"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:186
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -112,12 +112,12 @@ msgid ""
 msgstr ""
 "Ĉu netekstaj elektoj (kiel bildoj) estas konservitaj en la tondujo-historio."
 
-#: configdialog.cpp:259
+#: configdialog.cpp:260
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Montri ŝprucmenuon por agoj:"
 
-#: configdialog.cpp:269
+#: configdialog.cpp:270
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -133,12 +133,12 @@ msgstr ""
 "ekskludita fenestro, tiam ĝi povas esti montrita uzante la klavkombinon "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:278
+#: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Ekskludi Fenestrojn..."
 
-#: configdialog.cpp:292
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
@@ -146,23 +146,23 @@ msgid_plural " seconds"
 msgstr[0] " sekundo"
 msgstr[1] " sekundoj"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:294
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Neniu"
 
-#: configdialog.cpp:302
+#: configdialog.cpp:303
 #, kde-format
 msgid "Options:"
 msgstr "Opcioj:"
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Ekskluzivi Fenestrojn"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:360
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -174,34 +174,34 @@ msgstr ""
 "tondujo, ĝiaj <interface>komandoj</interface> aperas en la ŝprucmenuo de "
 "Klipper kaj povas esti plenumitaj."
 
-#: configdialog.cpp:368
+#: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Kongrui ŝablonon kaj komandojn"
 
-#: configdialog.cpp:368
+#: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Priskribo"
 
-#: configdialog.cpp:374
+#: configdialog.cpp:375
 #, kde-format
 msgid "Add Action..."
 msgstr "Aldoni agon"
 
-#: configdialog.cpp:378
+#: configdialog.cpp:379
 #, kde-format
 msgid "Edit Action..."
 msgstr "Redakti Agon..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:384
 #, kde-format
 msgid "Delete Action"
 msgstr "Forigi Agon"
 
-#: configdialog.cpp:390
+#: configdialog.cpp:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -211,7 +211,7 @@ msgstr ""
 "Ĉi tiuj agoj aperas en la ŝprucmenuo kiu povas esti agordita sur la paĝo "
 "<interface>Agomenuo</interface>."
 
-#: configdialog.cpp:574
+#: configdialog.cpp:575
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -221,56 +221,56 @@ msgstr ""
 "Ĉu forigi la elektitan agon <resource>%1</resource><nl/>kaj ĉiujn ĝiajn "
 "ordonojn?"
 
-#: configdialog.cpp:575
+#: configdialog.cpp:576
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Konfirmi Forigan Agon"
 
-#: configdialog.cpp:604
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Ĝenerala"
 
-#: configdialog.cpp:604
+#: configdialog.cpp:605
 #, kde-format
 msgid "General Configuration"
 msgstr "Ĝenerala Agordo"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Agmenuo"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgid "Action Menu"
 msgstr "Agmenuo"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Agordo de agoj"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Agordo de agoj"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:610
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Fulmoklavoj"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:610
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Agordo de Fulmoklavoj"
 
-#: configdialog.cpp:690
+#: configdialog.cpp:691
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -287,7 +287,7 @@ msgstr ""
 "><nl/>Se la agmenuo aperas neatendite kiam oni uzas apartan aplikaĵon, poste "
 "aldonu ĝin al ĉi tiu listo. <link>Kiel trovi la nomon por enigi</link>."
 
-#: configdialog.cpp:703
+#: configdialog.cpp:704
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

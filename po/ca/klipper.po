@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2023-09-25 10:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -34,12 +34,25 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sps@sastia.com"
 
-#: configdialog.cpp:80
+#: configdialog.cpp:81
+#, kde-format
+msgid "Clipboard history:"
+msgstr "Historial del porta-retalls:"
+
+#: configdialog.cpp:87
+#, kde-format
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " entrada"
+msgstr[1] " entrades"
+
+#: configdialog.cpp:96
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Selecció i porta-retalls:"
 
-#: configdialog.cpp:87
+#: configdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -66,50 +79,37 @@ msgstr ""
 "en l'historial del porta-retalls (subjecte a les opcions de sota), però "
 "només es pot enganxar utilitzant el botó central del ratolí."
 
-#: configdialog.cpp:106
-#, kde-format
-msgid "Clipboard history:"
-msgstr "Historial del porta-retalls:"
-
-#: configdialog.cpp:112
-#, kde-format
-msgctxt "Number of entries"
-msgid " entry"
-msgid_plural " entries"
-msgstr[0] " entrada"
-msgstr[1] " entrades"
-
-#: configdialog.cpp:131 configdialog.cpp:169
+#: configdialog.cpp:132 configdialog.cpp:170
 #, kde-format
 msgid "Always save in history"
 msgstr "Desa sempre en l'historial"
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgid "Text selection:"
 msgstr "Selecció de text:"
 
-#: configdialog.cpp:137 configdialog.cpp:175
+#: configdialog.cpp:138 configdialog.cpp:176
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Només quan es copiï explícitament"
 
-#: configdialog.cpp:142
+#: configdialog.cpp:143
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Si les seleccions de text es desen en l'historial del porta-retalls."
 
-#: configdialog.cpp:173
+#: configdialog.cpp:174
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Selecció de no text:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:181
 #, kde-format
 msgid "Never save in history"
 msgstr "No desis mai en l'historial"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:186
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -118,12 +118,12 @@ msgstr ""
 "Si les seleccions de no text (p. ex. imatges) es desen en l'historial del "
 "porta-retalls."
 
-#: configdialog.cpp:259
+#: configdialog.cpp:260
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Mostra el menú emergent d'acció:"
 
-#: configdialog.cpp:269
+#: configdialog.cpp:270
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -139,12 +139,12 @@ msgstr ""
 "mostra per a una finestra exclosa, llavors es pot mostrar utilitzant la "
 "drecera de teclat <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:278
+#: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Exclou finestres..."
 
-#: configdialog.cpp:292
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
@@ -152,23 +152,23 @@ msgid_plural " seconds"
 msgstr[0] " segon"
 msgstr[1] " segons"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:294
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Cap"
 
-#: configdialog.cpp:302
+#: configdialog.cpp:303
 #, kde-format
 msgid "Options:"
 msgstr "Opcions:"
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Exclou finestres"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:360
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -180,34 +180,34 @@ msgstr ""
 "contingut del porta-retalls, les seves <interface>ordres</interface> "
 "apareixen en el menú emergent del Klipper i es poden executar."
 
-#: configdialog.cpp:368
+#: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Patrons de coincidència i ordres"
 
-#: configdialog.cpp:368
+#: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descripció"
 
-#: configdialog.cpp:374
+#: configdialog.cpp:375
 #, kde-format
 msgid "Add Action..."
 msgstr "Afegeix una acció..."
 
-#: configdialog.cpp:378
+#: configdialog.cpp:379
 #, kde-format
 msgid "Edit Action..."
 msgstr "Edita l'acció..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:384
 #, kde-format
 msgid "Delete Action"
 msgstr "Suprimeix l'acció"
 
-#: configdialog.cpp:390
+#: configdialog.cpp:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -217,7 +217,7 @@ msgstr ""
 "Aquestes accions apareixen en el menú emergent que es pot configurar a la "
 "pàgina <interface>Menú d'accions</interface>."
 
-#: configdialog.cpp:574
+#: configdialog.cpp:575
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -227,56 +227,56 @@ msgstr ""
 "Suprimeixo l'acció seleccionada <resource>%1</resource><nl/>i totes les "
 "seves ordres?"
 
-#: configdialog.cpp:575
+#: configdialog.cpp:576
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Confirma l'acció de supressió"
 
-#: configdialog.cpp:604
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "General"
 
-#: configdialog.cpp:604
+#: configdialog.cpp:605
 #, kde-format
 msgid "General Configuration"
 msgstr "Configuració general"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menú d'accions"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgid "Action Menu"
 msgstr "Menú d'accions"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuració de les accions"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configuració de les accions"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:610
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:610
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configuració de les dreceres"
 
-#: configdialog.cpp:690
+#: configdialog.cpp:691
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -295,7 +295,7 @@ msgstr ""
 "afegiu-la a aquesta llista. <link>Com trobar el nom a introduir</link>."
 
 # skip-rule: barb-igual
-#: configdialog.cpp:703
+#: configdialog.cpp:704
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

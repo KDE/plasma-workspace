@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-10 01:59+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2023-08-25 23:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -198,40 +198,40 @@ msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "추가 피드백"
 
-#: ui/main.qml:250
-#, kde-format
-msgid "Application progress:"
-msgstr "앱 진행 상황:"
-
-#: ui/main.qml:251 ui/main.qml:291
-#, kde-format
-msgid "Show in task manager"
-msgstr "작업 관리자에 표시"
-
-#: ui/main.qml:263
+#: ui/main.qml:251
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "알림에 표시"
 
-#: ui/main.qml:277
+#: ui/main.qml:252
+#, kde-format
+msgid "Application progress:"
+msgstr "앱 진행 상황:"
+
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "진행 중에 알림 열어 두기"
 
-#: ui/main.qml:290
+#: ui/main.qml:279
 #, kde-format
 msgid "Notification badges:"
 msgstr "알림 배지:"
 
-#: ui/main.qml:302
+#: ui/main.qml:280
+#, kde-format
+msgid "Show in task manager"
+msgstr "작업 관리자에 표시"
+
+#: ui/main.qml:291
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "앱별 설정"
 
-#: ui/main.qml:307
+#: ui/main.qml:296
 #, kde-format
 msgid "Configure…"
 msgstr "설정…"

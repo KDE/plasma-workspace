@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-10 01:59+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2022-12-31 16:58+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -206,40 +206,40 @@ msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Additional feedback"
 
-#: ui/main.qml:250
-#, kde-format
-msgid "Application progress:"
-msgstr "Application progress:"
-
-#: ui/main.qml:251 ui/main.qml:291
-#, kde-format
-msgid "Show in task manager"
-msgstr "Show in task manager"
-
-#: ui/main.qml:263
+#: ui/main.qml:251
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Show in notifications"
 
-#: ui/main.qml:277
+#: ui/main.qml:252
+#, kde-format
+msgid "Application progress:"
+msgstr "Application progress:"
+
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Keep popup open during progress"
 
-#: ui/main.qml:290
+#: ui/main.qml:279
 #, kde-format
 msgid "Notification badges:"
 msgstr "Notification badges:"
 
-#: ui/main.qml:302
+#: ui/main.qml:280
+#, kde-format
+msgid "Show in task manager"
+msgstr "Show in task manager"
+
+#: ui/main.qml:291
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "Application-specific settings"
 
-#: ui/main.qml:307
+#: ui/main.qml:296
 #, kde-format
 msgid "Configure…"
 msgstr "Configure…"

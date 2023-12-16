@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-10 01:59+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2021-06-08 22:29-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -207,41 +207,41 @@ msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr ""
 
-#: ui/main.qml:250
-#, kde-format
-msgid "Application progress:"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਤਰੱਕੀ:"
-
-#: ui/main.qml:251 ui/main.qml:291
-#, kde-format
-msgid "Show in task manager"
-msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਵੇਖਾਓ"
-
-#: ui/main.qml:263
+#: ui/main.qml:251
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/main.qml:277
+#: ui/main.qml:252
+#, kde-format
+msgid "Application progress:"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਤਰੱਕੀ:"
+
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "ਤਰੱਕੀ ਦੇ ਦੌਰਾਨ ਪੋਪਅੱਪ ਰੱਖੋ"
 
-#: ui/main.qml:290
+#: ui/main.qml:279
 #, kde-format
 msgid "Notification badges:"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬਿੱਲੇ:"
 
-#: ui/main.qml:302
+#: ui/main.qml:280
+#, kde-format
+msgid "Show in task manager"
+msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਵੇਖਾਓ"
+
+#: ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
 
-#: ui/main.qml:307
+#: ui/main.qml:296
 #, kde-format
 msgid "Configure…"
 msgstr "…ਸੰਰਚਨਾ"

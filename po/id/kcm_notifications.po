@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-10 01:59+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -214,41 +214,41 @@ msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr ""
 
-#: ui/main.qml:250
-#, kde-format
-msgid "Application progress:"
-msgstr "Progres aplikasi:"
-
-#: ui/main.qml:251 ui/main.qml:291
-#, kde-format
-msgid "Show in task manager"
-msgstr "Tampilkan dalam task manager"
-
-#: ui/main.qml:263
+#: ui/main.qml:251
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Tampilkan di dalam notifikasi"
 
-#: ui/main.qml:277
+#: ui/main.qml:252
+#, kde-format
+msgid "Application progress:"
+msgstr "Progres aplikasi:"
+
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Jaga sembulan terbuka selagi progres"
 
-#: ui/main.qml:290
+#: ui/main.qml:279
 #, kde-format
 msgid "Notification badges:"
 msgstr "Lencana notifikasi:"
 
-#: ui/main.qml:302
+#: ui/main.qml:280
+#, kde-format
+msgid "Show in task manager"
+msgstr "Tampilkan dalam task manager"
+
+#: ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "Pengaturan Aplikasi"
 
-#: ui/main.qml:307
+#: ui/main.qml:296
 #, kde-format
 msgid "Configure…"
 msgstr "Konfigurasi..."

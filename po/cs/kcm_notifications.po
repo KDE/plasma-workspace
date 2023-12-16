@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-10 01:59+0000\n"
+"POT-Creation-Date: 2023-12-16 01:38+0000\n"
 "PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -201,40 +201,40 @@ msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Další zpětná vazba"
 
-#: ui/main.qml:250
-#, kde-format
-msgid "Application progress:"
-msgstr "Průběh aplikace:"
-
-#: ui/main.qml:251 ui/main.qml:291
-#, kde-format
-msgid "Show in task manager"
-msgstr "Zobrazit ve správci úloh"
-
-#: ui/main.qml:263
+#: ui/main.qml:251
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Zobrazit v upozorněních"
 
-#: ui/main.qml:277
+#: ui/main.qml:252
+#, kde-format
+msgid "Application progress:"
+msgstr "Průběh aplikace:"
+
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Nezavírat vyskakovací okno před dokončením"
 
-#: ui/main.qml:290
+#: ui/main.qml:279
 #, kde-format
 msgid "Notification badges:"
 msgstr "Počet upozornění:"
 
-#: ui/main.qml:302
+#: ui/main.qml:280
+#, kde-format
+msgid "Show in task manager"
+msgstr "Zobrazit ve správci úloh"
+
+#: ui/main.qml:291
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "Nastavení specifická pro aplikaci"
 
-#: ui/main.qml:307
+#: ui/main.qml:296
 #, kde-format
 msgid "Configure…"
 msgstr "Nastavit…"
