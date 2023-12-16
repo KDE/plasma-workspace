@@ -136,10 +136,10 @@ KCM.ScrollViewKCM {
                         } else if (model.systemdUnit.invalid) {
                             return i18nc("@label Entry hasn't been autostarted because system hasn't been restarted", "Not autostarted yet");
                         } else {
-                            return model.systemdUnit.activeState;
+                            return model.systemdUnit.activeStateValue;
                         }
                     }
-                    color: model.systemdUnit.activeState === i18nc("@label Entry has failed (exited with an error)", "Failed") ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.disabledTextColor
+                    color: model.systemdUnit.activeState === "failed" ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.disabledTextColor
                 }
 
                 ToolButton {

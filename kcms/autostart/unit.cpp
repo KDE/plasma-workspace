@@ -88,7 +88,8 @@ void Unit::getAllCallback(QDBusPendingCallWatcher *call)
     QVariantMap properties = reply.argumentAt<0>();
     call->deleteLater();
 
-    m_activeState = STATE_MAP[properties[QStringLiteral("ActiveState")].toString()];
+    m_activeState = properties[QStringLiteral("ActiveState")].toString();
+    m_activeStateValue = STATE_MAP[m_activeState];
     m_description = properties[QStringLiteral("Description")].toString();
     qulonglong ActiveEnterTimestamp = properties[QStringLiteral("ActiveEnterTimestamp")].toULongLong();
 
@@ -123,7 +124,8 @@ void Unit::dbusPropertiesChanged(QString name, QVariantMap map, QStringList list
         setActiveEnterTimestamp(map["ActiveEnterTimestamp"].toULongLong());
     }
     if (map.contains("ActiveState")) {
-        m_activeState = STATE_MAP[map["ActiveState"].toString()];
+        m_activeState = map["ActiveState"].toString();
+        m_activeStateValue = STATE_MAP[m_activeState];
     }
 
     Q_EMIT dataChanged();

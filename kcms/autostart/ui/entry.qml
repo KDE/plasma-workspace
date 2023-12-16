@@ -55,7 +55,7 @@ KCM.SimpleKCM {
 
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label The current status (e.g. active or inactive) of a Systemd unit for an app or script that will autostart", "Status:")
-                text: entryPage.unit.activeState
+                text: entryPage.unit.activeStateValue
             }
 
             QQC2.Label {

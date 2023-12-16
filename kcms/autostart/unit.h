@@ -16,6 +16,7 @@ class Unit : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString activeState MEMBER m_activeState NOTIFY dataChanged);
+    Q_PROPERTY(QString activeStateValue MEMBER m_activeStateValue NOTIFY dataChanged);
     Q_PROPERTY(QString description MEMBER m_description NOTIFY dataChanged);
     Q_PROPERTY(QString timeActivated MEMBER m_timeActivated NOTIFY dataChanged);
     Q_PROPERTY(QString logs MEMBER m_logs NOTIFY dataChanged);
@@ -49,6 +50,7 @@ private:
     QString m_id;
     QString m_description;
     QString m_activeState;
+    QString m_activeStateValue;
     QString m_timeActivated;
     QString m_logs;
     QDBusObjectPath m_dbusObjectPath;
