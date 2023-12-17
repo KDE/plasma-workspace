@@ -355,17 +355,9 @@ msgstr[0] "Unu aplikaĵo petis aktivigon de %2:"
 msgstr[1] "%1 aplikaĵoj petis aktivigon de %2:"
 
 #: package/contents/ui/PowerProfileItem.qml:241
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: %2"
+#, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
-
-#~ msgctxt ""
-#~ "%1 is the name of the application, %2 is the reason provided by it for "
-#~ "¦activating performance mode"
-#~ msgid "%1: %2"
-#~ msgstr "%1: %2"
