@@ -1142,7 +1142,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     }
 
     return std::accumulate(m_panelViews.cbegin(), m_panelViews.cend(), QRegion(screen->geometry()), [screen](const QRegion &a, const PanelView *v) {
-        if (v->isVisible() && screen == v->screen() && v->visibilityMode() == PanelView::NormalPanel) {
+        if (v->isVisible() && screen == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             // if the panel is being moved around, we still want to calculate it from the edge
             return a - v->geometryByDistance(0);
         }
@@ -1191,6 +1191,7 @@ QRect ShellCorona::_availableScreenRect(int id) const
     r.setRight(r.right() - rightThickness);
     r.setTop(r.top() + topThickness);
     r.setBottom(r.bottom() - bottomThickness);
+    qDebug() << "-----------> RETURNING" << r << "AS SCREEN AREA AVAIL!!!";
     return r;
 }
 
