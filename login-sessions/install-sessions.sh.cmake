@@ -7,8 +7,9 @@
 set -e
 
 # Make built-from-source sessions appear in login screen
-sudo install -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop /usr/share/xsessions/
-sudo install -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop /usr/share/wayland-sessions/
+# Override mode for desktop files to 0644 == "rw-r--r--"
+sudo install -D -m 0644 @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop /usr/share/xsessions/
+sudo install -D -m 0644 @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop /usr/share/wayland-sessions/
 install @CMAKE_BINARY_DIR@/prefix.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dev-prefix.sh
 install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
 
