@@ -300,13 +300,6 @@ void Klipper::slotStartShowTimer()
 
 void Klipper::loadSettings()
 {
-    // Security bug 142882: If user has save clipboard turned off, old data should be deleted from disk
-    static bool firstrun = true;
-    if (!firstrun && m_bKeepContents != KlipperSettings::keepClipboardContents()) { // keepContents changed
-        saveHistory(!KlipperSettings::keepClipboardContents()); // save history, empty = !keep
-    }
-    firstrun = false;
-
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
     m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
@@ -510,7 +503,16 @@ void Klipper::slotConfigure()
     // Klipper settings every time that it is shown.
     dlg->setAttribute(Qt::WA_DeleteOnClose);
 
-    connect(dlg, &KConfigDialog::settingsChanged, this, &Klipper::loadSettings);
+    connect(dlg, &KConfigDialog::settingsChanged, this, [this]() {
+        const bool bKeepContents_old = m_bKeepContents; // back up old value
+        loadSettings();
+
+        // BUG: 142882
+        // Security: If user has save clipboard turned off, old data should be deleted from disk
+        if (bKeepContents_old != m_bKeepContents) { // keepContents changed
+            saveHistory(!m_bKeepContents); // save history, empty = !keep
+        }
+    });
     dlg->show();
 }
 
