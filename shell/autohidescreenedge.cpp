@@ -145,7 +145,7 @@ void WaylandAutoHideScreenEdge::activate()
 bool WaylandAutoHideScreenEdge::create()
 {
     auto waylandWindow = m_view->nativeInterface<QNativeInterface::Private::QWaylandWindow>();
-    if (!waylandWindow->surface()) {
+    if (!waylandWindow || !waylandWindow->surface()) {
         return false;
     }
 
