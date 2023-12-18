@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
 "PO-Revision-Date: 2023-10-27 16:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -140,12 +140,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "לא הופעל אוטומטית עדיין"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "נכשל"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -223,12 +217,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "נעצר"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "נכשל"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "שגיאה בקבלת תגובה מקריאת GetAll (משיכה של הכול) %1"
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "פתיחת יומן המערכת נכשלה"

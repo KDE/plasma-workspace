@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-12-09 09:24\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"PO-Revision-Date: 2023-12-17 11:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -136,12 +136,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "尚未自动启动"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "已失败"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -219,12 +213,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "正在停止"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "已失败"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "接收 GetAll 调用 %1 的回复时发生错误"
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "打开日志失败"

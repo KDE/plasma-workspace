@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
 "PO-Revision-Date: 2023-10-27 11:03+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -141,12 +141,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "Še ni samodejno zagnano"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "Neuspelo"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -224,12 +218,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "Ustavljanje"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "Neuspelo"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "Napaka je nastala ob sprejemanju odziva na klic GetAll %1"
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Neuspelo odpiranje dnevnika"

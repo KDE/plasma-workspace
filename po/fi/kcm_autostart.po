@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
 "PO-Revision-Date: 2023-10-07 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -151,12 +151,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "Ei vielä automaattikäynnistynyt"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "Epäonnistui"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -236,12 +230,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "Pysähtyy"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "Epäonnistui"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "Vastaanotettaessa vastausta GetAll-kutsuun %1 sattui virhe"
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Journaalia ei voitu avata"

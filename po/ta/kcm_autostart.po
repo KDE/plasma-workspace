@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
 "PO-Revision-Date: 2023-12-04 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -136,12 +136,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "இன்னும் தானாக துவக்கப்படவில்லை"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "தோல்வியடைந்தது"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -219,12 +213,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "நிறுத்தப்படுகிறது"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "தோல்வியடைந்தது"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr ""
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "பதிவுத்தொகுப்பை (journal தனை) திறக்க முடியவில்லை"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
 "PO-Revision-Date: 2023-10-27 21:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -143,12 +143,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "Ez da oraindik automatikoki abiatu"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "Huts egin du"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -226,12 +220,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "Geldiarazten"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "Huts egin du"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "Errorea gertatu da «GetAll» deiaren erantzuna jasotzean %1"
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Egunkaria irekitzea huts egin du"

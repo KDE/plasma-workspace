@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2023-12-18 01:59+0000\n"
 "PO-Revision-Date: 2023-10-28 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -139,12 +139,6 @@ msgctxt ""
 msgid "Not autostarted yet"
 msgstr "ჯერ ავტომატურად არ გაშვებულა"
 
-#: ui/main.qml:142 unit.cpp:30
-#, kde-format
-msgctxt "@label Entry has failed (exited with an error)"
-msgid "Failed"
-msgstr "ჩავარდა"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
@@ -222,12 +216,18 @@ msgctxt "@label Entry is being stopped"
 msgid "Stopping"
 msgstr "გაჩერება"
 
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "ჩავარდა"
+
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "შეცდომა GetAll-ის %1 ფუნქციის პასუხის მიღებისას"
 
-#: unit.cpp:153
+#: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
 msgstr "ჟურნალის გახსნის შეცდომა"

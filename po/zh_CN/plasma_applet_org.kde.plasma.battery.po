@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-12-09 09:24\n"
+"PO-Revision-Date: 2023-12-17 11:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -289,7 +289,7 @@ msgstr "性能"
 #: package/contents/ui/PowerProfileItem.qml:62
 #, kde-format
 msgid "Power Profile"
-msgstr "电源配置方案"
+msgstr "电源管理方案"
 
 #: package/contents/ui/PowerProfileItem.qml:96
 #, kde-format
@@ -355,5 +355,5 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-"此设备可能支持电源方案。<nl/>请尝试使用本机发行版的软件包管理器安装 "
+"此设备可能支持电源管理方案。<nl/>请尝试使用本机发行版的软件包管理器安装 "
 "<command>power-profiles-daemon</command> 软件包，然后重新启动系统。"

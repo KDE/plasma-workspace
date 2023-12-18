@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 16:53+0000\n"
-"PO-Revision-Date: 2021-08-08 16:15+0530\n"
+"PO-Revision-Date: 2023-12-17 16:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: freespacenotifier.cpp:93
 #, kde-format
@@ -80,4 +80,4 @@ msgstr "உங்கள் ரூட் அடைவில் இடம் க�
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
-msgstr "பொது"
+msgstr "பொதுவானவை"
