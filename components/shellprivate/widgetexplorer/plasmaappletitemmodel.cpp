@@ -18,6 +18,7 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KRuntimePlatform>
+#include <kpackage/package.h>
 
 PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     : AbstractItem()
@@ -357,17 +358,13 @@ void PlasmaAppletItemModel::populateModel()
         return true;
     };
 
-    QList<KPluginMetaData> packages =
-        KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
-
-    // Search all packages that aren't a correct applet and put them at the end: assume they are plasma5 plasmoids
-    packages.append(
-        KPackage::PackageLoader::self()->findPackages(QString(), QStringLiteral("plasma/plasmoids"), [&filter](const KPluginMetaData &plugin) -> bool {
-            return plugin.value(QStringLiteral("KPackageStructure")) != QStringLiteral("Plasma/Applet") && filter(plugin);
-        }));
-
-    for (const KPluginMetaData &plugin : packages) {
-        appendRow(new PlasmaAppletItem(plugin));
+    QList<KPackage::Package> kPackages = KPackage::PackageLoader::self()->listKPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"));
+    for (const KPackage::Package &package : kPackages) {
+        KPluginMetaData data = package.metadata();
+        qWarning() << data.name() << filter(data);
+        if (filter(data)) {
+            appendRow(new PlasmaAppletItem(data));
+        }
     }
 
     Q_EMIT modelPopulated();
