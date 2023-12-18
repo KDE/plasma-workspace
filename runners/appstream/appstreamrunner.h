@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <AppStreamQt/pool.h>
+#include <AppStreamQt5/pool.h>
 #include <KRunner/AbstractRunner>
 #include <QMutex>
 

@@ -32,7 +32,7 @@
 #include "containmentinterface.h"
 
 #ifdef HAVE_APPSTREAMQT
-#include <AppStreamQt/pool.h>
+#include <AppStreamQt5/pool.h>
 #endif
 
 namespace KAStats = KActivities::Stats;
@@ -448,10 +448,10 @@ bool handleAppstreamActions(const QString &actionId, const KService::Ptr &servic
 
     const auto components =
         appstreamPool->componentsByLaunchable(AppStream::Launchable::KindDesktopId, service->desktopEntryName() + QLatin1String(".desktop"));
-    if (components.empty()) {
+    if (components.isEmpty()) {
         return false;
     }
-    return QDesktopServices::openUrl(QUrl(QLatin1String("appstream://") + components[0].id()));
+    return QDesktopServices::openUrl(QUrl(QLatin1String("appstream://") + components.indexSafe(0)->id()));
 #else
     return false;
 #endif

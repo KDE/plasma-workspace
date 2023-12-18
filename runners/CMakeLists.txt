@@ -14,7 +14,7 @@ add_subdirectory(shell)
 add_subdirectory(webshortcuts)
 add_subdirectory(windowedwidgets)
 
-if(AppStreamQt_FOUND)
+if(AppStreamQt5_FOUND)
     add_subdirectory(appstream)
 endif()
 
