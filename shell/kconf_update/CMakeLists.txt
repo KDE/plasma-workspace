@@ -14,10 +14,3 @@ target_link_libraries(plasmashell-6.0-keep-default-floating-setting-for-plasma-5
 
 install(FILES plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
-
-add_executable(plasmashell-6.0-migrate-panel-hiding-setting)
-target_sources(plasmashell-6.0-migrate-panel-hiding-setting PRIVATE plasmashell-6.0-migrate-panel-hiding-setting.cpp)
-target_link_libraries(plasmashell-6.0-migrate-panel-hiding-setting KF6::ConfigCore)
-
-install(FILES plasmashell-6.0-migrate-panel-hiding-setting.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
-install(TARGETS plasmashell-6.0-migrate-panel-hiding-setting DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)

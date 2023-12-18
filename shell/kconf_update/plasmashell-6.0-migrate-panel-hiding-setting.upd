@@ -1,8 +1,0 @@
-# SPDX-FileCopyrightText: 2023 Akseli Lahtinen <akselmo@akselmo.dev>
-# SPDX-License-Identifier: GPL-2.0-or-later
-
-Version=6
-
-Id=plasmashell-6.0-migrate-panel-hiding-setting
-Script=plasmashell-6.0-migrate-panel-hiding-setting
-
