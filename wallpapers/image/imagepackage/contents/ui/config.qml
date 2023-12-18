@@ -16,6 +16,9 @@ import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 
+/**
+ * For proper alignment, an ancestor **MUST** have id "appearanceRoot" and property "parentLayout"
+ */
 ColumnLayout {
     id: root
         

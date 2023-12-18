@@ -14,6 +14,9 @@ import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
 
+/**
+ * For proper alignment, an ancestor **MUST** have id "appearanceRoot" and property "parentLayout"
+ */
 ColumnLayout {
     id: slideshowComponent
     property var configuration: wallpaper.configuration
