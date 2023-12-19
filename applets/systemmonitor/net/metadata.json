@@ -82,7 +82,7 @@
         "Description[id]": "Widget pemantau sistem yang menampilkan laju data unggah dan unduh",
         "Description[is]": "Kerfisvöktunargræja sem sýnir gagnahraða fyrir sóttar skrár og upphleðslur",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra la velocità di trasferimento e ricezione dei dati",
-        "Description[ja]": "ダウンロード速度とアップロード速度を表示するシステムモニタウィジェット",
+        "Description[ja]": "ダウンロード/アップロード速度を表示するウィジェット",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც გადმოწერისა და ატვირთვის სიჩქარეს გაჩვენებთ",
         "Description[ko]": "데이터 다운로드 및 업로드 전송률을 표시하는 시스템 모니터 위젯",
         "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo duomenų atsiuntimo ir išsiuntimo spartą",

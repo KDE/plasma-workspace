@@ -14,6 +14,7 @@
         "Description[ia]": "Executa resposta audibile quando dispositivos es insertate o removite",
         "Description[is]": "Spila hljóð þegar tæki eru tengd eða aftengd",
         "Description[it]": "Riproduci un riscontro acustico quando i dispositivi sono inseriti o rimossi",
+        "Description[ja]": "デバイスの接続・取り外し時に音声フィードバックを再生します",
         "Description[ka]": "მოწყობილობების შეერთება/გამოერთებისას უკუკავშირის გასაგები ხმის დაკვრა",
         "Description[ko]": "장치가 연결되거나 제거되었을 때 청각적 피드백 재생",
         "Description[nl]": "Hoorbare terugkoppeling afspelen wanneer apparaten ingeplugd of verwijderd worden",
