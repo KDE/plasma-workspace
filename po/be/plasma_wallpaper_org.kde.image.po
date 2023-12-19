@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-19 01:35+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -45,52 +45,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог са шпалерамі для паказу слайдаў"
 
-#: imagepackage/contents/ui/config.qml:123
+#: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Positioning:"
 msgstr "Становішча:"
 
-#: imagepackage/contents/ui/config.qml:126
+#: imagepackage/contents/ui/config.qml:129
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Маштабавана і абрэзана"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:133
 #, kde-format
 msgid "Scaled"
 msgstr "Маштабавана"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:137
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Маштабавана, прапорцыі захаваныя"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Centered"
 msgstr "Па цэнтры"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:145
 #, kde-format
 msgid "Tiled"
 msgstr "Скампанавана"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:173
 #, kde-format
 msgid "Background:"
 msgstr "Фон:"
 
-#: imagepackage/contents/ui/config.qml:171
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Blur"
 msgstr "Размыццё"
 
-#: imagepackage/contents/ui/config.qml:180
+#: imagepackage/contents/ui/config.qml:183
 #, kde-format
 msgid "Solid color"
 msgstr "Суцэльны колер"
 
-#: imagepackage/contents/ui/config.qml:191
+#: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgid "Select Background Color"
 msgstr "Абраць колер фону"
@@ -195,47 +195,47 @@ msgstr ""
 msgid "Image Files"
 msgstr "Файлы выяў"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
 msgid "Order:"
 msgstr "Парадак:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:55
 #, kde-format
 msgid "Random"
 msgstr "Выпадкова"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
 #, kde-format
 msgid "A to Z"
 msgstr "А - Я"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
 #, kde-format
 msgid "Z to A"
 msgstr "Я - А"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Дата змены (спачатку навейшыя)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Дата змены (спачатку старэйшыя)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:93
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:96
 #, kde-format
 msgid "Group by folders"
 msgstr "Групаваць па каталогах"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:105
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
 msgid "Change every:"
 msgstr "Змяняць кожныя:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:115
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:118
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -244,7 +244,7 @@ msgstr[1] "%1 гадзіны"
 msgstr[2] "%1 гадзін"
 msgstr[3] "%1 гадзіны"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:135
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:138
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -253,7 +253,7 @@ msgstr[1] "%1 хвіліны"
 msgstr[2] "%1 хвіліны"
 msgstr[3] "%1 хвілін"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:155
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:158
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -262,29 +262,29 @@ msgstr[1] "%1 секунды"
 msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунды"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:186
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:189
 #, kde-format
 msgid "Folders"
 msgstr "Каталогі"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:190
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:193
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
 msgid "Remove Folder"
 msgstr "Выдаліць каталог"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:239
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:242
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Адкрыць каталог"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Размяшчэнні шпалер не наладжаныя"

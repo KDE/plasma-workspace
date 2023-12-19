@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-19 01:35+0000\n"
 "PO-Revision-Date: 2022-06-22 16:27-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -44,52 +44,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Pasta com o papel de parede a mostrar como slide"
 
-#: imagepackage/contents/ui/config.qml:123
+#: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Positioning:"
 msgstr "Posicionamento:"
 
-#: imagepackage/contents/ui/config.qml:126
+#: imagepackage/contents/ui/config.qml:129
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Escalonado e recortado"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:133
 #, kde-format
 msgid "Scaled"
 msgstr "Escalonado"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:137
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Escalonado, manter proporções"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Centered"
 msgstr "Centralizado"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:145
 #, kde-format
 msgid "Tiled"
 msgstr "Ladrilhado"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:173
 #, kde-format
 msgid "Background:"
 msgstr "Plano de fundo:"
 
-#: imagepackage/contents/ui/config.qml:171
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Blur"
 msgstr "Borrado"
 
-#: imagepackage/contents/ui/config.qml:180
+#: imagepackage/contents/ui/config.qml:183
 #, kde-format
 msgid "Solid color"
 msgstr "Cor sólida"
 
-#: imagepackage/contents/ui/config.qml:191
+#: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgid "Select Background Color"
 msgstr "Selecionar cor de fundo"
@@ -201,90 +201,90 @@ msgstr ""
 msgid "Image Files"
 msgstr "Arquivos de imagem"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
 msgid "Order:"
 msgstr "Ordem:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:55
 #, kde-format
 msgid "Random"
 msgstr "Aleatório"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:56
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
 #, kde-format
 msgid "A to Z"
 msgstr "De A para Z"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
 #, kde-format
 msgid "Z to A"
 msgstr "De Z para A"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Data de modificação (recentes primeiro)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Data de modificação (antigos primeiro)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:93
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:96
 #, kde-format
 msgid "Group by folders"
 msgstr "Agrupar por pastas"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:105
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
 msgid "Change every:"
 msgstr "Alterar a cada:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:115
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:118
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 hora"
 msgstr[1] "%1 horas"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:135
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:138
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuto"
 msgstr[1] "%1 minutos"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:155
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:158
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 segundo"
 msgstr[1] "%1 segundos"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:186
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:189
 #, kde-format
 msgid "Folders"
 msgstr "Pastas"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:190
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:193
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:228
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
 msgid "Remove Folder"
 msgstr "Remover pasta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:239
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:242
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Abrir pasta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Nenhum local de papel de parede está configurado"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2023-12-19 01:35+0000\n"
 "PO-Revision-Date: 2023-10-20 09:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,45 +32,45 @@ msgid "Calendar"
 msgstr "Calendari"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:423
+#: package/contents/ui/CalendarView.qml:426
 #, kde-format
 msgid "Time Zones"
 msgstr "Zones horàries"
 
-#: package/contents/ui/CalendarView.qml:140
+#: package/contents/ui/CalendarView.qml:142
 #, kde-format
 msgid "Events"
 msgstr "Esdeveniments"
 
-#: package/contents/ui/CalendarView.qml:148
+#: package/contents/ui/CalendarView.qml:150
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Afegeix…"
 
-#: package/contents/ui/CalendarView.qml:152
+#: package/contents/ui/CalendarView.qml:154
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Afegeix un esdeveniment nou"
 
-#: package/contents/ui/CalendarView.qml:384
+#: package/contents/ui/CalendarView.qml:386
 #, kde-format
 msgid "No events for today"
 msgstr "Avui no hi ha cap esdeveniment"
 
-#: package/contents/ui/CalendarView.qml:385
+#: package/contents/ui/CalendarView.qml:387
 #, kde-format
 msgid "No events for this day"
 msgstr "Sense esdeveniments per a aquest dia"
 
-#: package/contents/ui/CalendarView.qml:433
+#: package/contents/ui/CalendarView.qml:436
 #, kde-format
 msgid "Switch…"
 msgstr "Canvia…"
 
-#: package/contents/ui/CalendarView.qml:434
 #: package/contents/ui/CalendarView.qml:437
+#: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Canvia a una altra zona horària"

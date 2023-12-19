@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2023-12-19 01:35+0000\n"
 "PO-Revision-Date: 2023-12-10 21:37+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -29,45 +29,45 @@ msgid "Calendar"
 msgstr "Dagatal"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:423
+#: package/contents/ui/CalendarView.qml:426
 #, kde-format
 msgid "Time Zones"
 msgstr "Tímabelti"
 
-#: package/contents/ui/CalendarView.qml:140
+#: package/contents/ui/CalendarView.qml:142
 #, kde-format
 msgid "Events"
 msgstr "Viðburðir"
 
-#: package/contents/ui/CalendarView.qml:148
+#: package/contents/ui/CalendarView.qml:150
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Bæta við…"
 
-#: package/contents/ui/CalendarView.qml:152
+#: package/contents/ui/CalendarView.qml:154
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Bæta við nýjum viðburði"
 
-#: package/contents/ui/CalendarView.qml:384
+#: package/contents/ui/CalendarView.qml:386
 #, kde-format
 msgid "No events for today"
 msgstr "Engir viðburðir í dag"
 
-#: package/contents/ui/CalendarView.qml:385
+#: package/contents/ui/CalendarView.qml:387
 #, kde-format
 msgid "No events for this day"
 msgstr "Engir viðburðir á þessum degi"
 
-#: package/contents/ui/CalendarView.qml:433
+#: package/contents/ui/CalendarView.qml:436
 #, kde-format
 msgid "Switch…"
 msgstr "Skipta…"
 
-#: package/contents/ui/CalendarView.qml:434
 #: package/contents/ui/CalendarView.qml:437
+#: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Skipta yfir á annað tímabelti"
