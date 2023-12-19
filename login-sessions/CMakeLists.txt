@@ -25,3 +25,4 @@ configure_file(startplasma-dev.sh.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasma-
 configure_file(plasmax11-dev.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmax11-dev6.desktop)
 configure_file(plasmawayland-dev.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland-dev6.desktop)
 configure_file(install-sessions.sh.cmake ${CMAKE_CURRENT_BINARY_DIR}/install-sessions.sh)
+configure_file(dev-system-services.sh ${CMAKE_CURRENT_BINARY_DIR}/dev-system-services.sh COPYONLY)
