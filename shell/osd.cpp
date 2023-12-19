@@ -154,6 +154,15 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
     }
 }
 
+void Osd::acPluggedInChanged(bool pluggedIn)
+{
+    if (pluggedIn) {
+        showText(u"battery-full-charging"_s, i18nc("charger was plugged in, keep short", "AC plugged in"));
+    } else {
+        showText(u"battery-full"_s, i18nc("charger was plugged out, keep short", "AC unplugged"));
+    }
+}
+
 bool Osd::init()
 {
     if (!m_osdConfigGroup.readEntry("Enabled", true)) {
