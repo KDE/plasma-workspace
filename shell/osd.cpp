@@ -15,6 +15,7 @@
 
 #include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
+#include <qstringliteral.h>
 
 using namespace Qt::StringLiterals;
 
@@ -156,10 +157,11 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
 
 void Osd::acAdapterStateChanged(bool pluggedIn, int percent)
 {
+    QString percentageString = percent == -1 ? QStringLiteral("good") : QString("%1").arg(percent / 10 * 10, 3, 10, QLatin1Char('0')); // e.g. 87 -> 080
     if (pluggedIn) {
-        showText(u"battery-full-charging"_s, i18nc("charger was plugged in, keep short", "AC plugged in"));
+        showText(QString("battery-%1-charging").arg(percentageString), i18nc("charger was plugged in, keep short", "AC plugged in"));
     } else {
-        showText(u"battery-full"_s, i18nc("charger was plugged out, keep short", "AC unplugged"));
+        showText(QString("battery-%1").arg(percentageString), i18nc("charger was plugged out, keep short", "AC unplugged"));
     }
 }
 
