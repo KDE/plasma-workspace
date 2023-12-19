@@ -883,7 +883,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateEnabledBorders();
     // don't setGeometry() to make really sure we aren't doing a resize loop
-    if (m_screenToFollow) {
+    if (m_screenToFollow && containment()) {
         // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
         const QPoint pos = geometryByDistance(m_distance).topLeft();
         setPosition(pos);
