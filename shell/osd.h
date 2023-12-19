@@ -43,7 +43,7 @@ public Q_SLOTS:
     void bluetoothEnabledChanged(bool bluetoothEnabled);
     void wwanEnabledChanged(bool wwanEnabled);
     void virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled);
-    void acPluggedInChanged(bool pluggedIn);
+    void acAdapterStateChanged(bool pluggedIn, const int percent);
     void showText(const QString &icon, const QString &text);
 
 Q_SIGNALS:

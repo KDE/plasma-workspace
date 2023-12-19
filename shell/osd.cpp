@@ -154,7 +154,7 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
     }
 }
 
-void Osd::acPluggedInChanged(bool pluggedIn)
+void Osd::acAdapterStateChanged(bool pluggedIn, int percent)
 {
     if (pluggedIn) {
         showText(u"battery-full-charging"_s, i18nc("charger was plugged in, keep short", "AC plugged in"));
