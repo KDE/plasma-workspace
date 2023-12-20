@@ -13,8 +13,8 @@ import org.kde.plasma.extras as PlasmaExtras
 import org.kde.pipewire.monitor as Monitor
 
 PlasmaComponents.Page {
-    implicitWidth: Kirigami.Units.gridUnit * 12
-    implicitHeight: Kirigami.Units.gridUnit * 12
+    implicitWidth: root.switchWidth
+    implicitHeight: root.switchHeight
 
     PlasmaComponents.ScrollView {
         anchors.fill: parent
