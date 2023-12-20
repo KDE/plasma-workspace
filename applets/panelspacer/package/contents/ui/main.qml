@@ -79,15 +79,15 @@ PlasmoidItem {
             }
         }
         sizeHints[0] *= 2; sizeHints[sizeHints.length - 1] *= 2
-        let containment = Plasmoid.containment
+        let containment = Plasmoid.containmentItem
         let opt = (root.horizontal ? containment.width : containment.height) / expandingSpacers - sizeHints[thisSpacerIndex] / 2 - sizeHints[thisSpacerIndex + 1] / 2
         return Math.max(opt, 0)
     }
 
     Rectangle {
         anchors.fill: parent
-        color: Kirigami.Theme.highlightColor
-        opacity: Plasmoid.containment.corona?.editMode ? 1 : 0
+        color:  Kirigami.Theme.highlightColor
+        opacity: Plasmoid.containment.corona?.editMode ? 1 : 0.2
         visible: Plasmoid.containment.corona?.editMode || animator.running
 
         Behavior on opacity {

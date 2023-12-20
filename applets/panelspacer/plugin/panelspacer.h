@@ -19,7 +19,7 @@ class PanelSpacer;
 class PanelSpacer : public Plasma::Applet
 {
     Q_OBJECT
-    Q_PROPERTY(PlasmaQuick::AppletQuickItem *containment READ containmentGraphicObject CONSTANT)
+    Q_PROPERTY(PlasmaQuick::AppletQuickItem *containmentItem READ containmentGraphicObject CONSTANT)
 
 public:
     PanelSpacer(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
