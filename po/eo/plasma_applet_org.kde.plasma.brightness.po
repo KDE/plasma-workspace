@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-20 01:35+0000\n"
 "PO-Revision-Date: 2023-11-21 20:58+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -60,6 +60,13 @@ msgstr "Rulumu por alĝustigi ekranbrilecon"
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Mezklaku por baskuligi Noktolumon"
+
+#: package/contents/ui/main.qml:258
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu"
+msgid "Configure Night Light…"
+msgstr "Agordi…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-20 01:35+0000\n"
 "PO-Revision-Date: 2023-11-20 10:03+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -57,6 +57,13 @@ msgstr "Faites défiler pour ajuster la luminosité de l'écran"
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Effectuer un clic central pour basculer vers la lumière de nuit"
+
+#: package/contents/ui/main.qml:258
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu"
+msgid "Configure Night Light…"
+msgstr "Configurer…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format

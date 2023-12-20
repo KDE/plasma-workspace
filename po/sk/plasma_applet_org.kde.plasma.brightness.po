@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.brightness\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-20 01:35+0000\n"
 "PO-Revision-Date: 2023-12-09 09:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -57,6 +57,13 @@ msgstr "Kolieskom myši upravíte jas obrazovky"
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr ""
+
+#: package/contents/ui/main.qml:258
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu"
+msgid "Configure Night Light…"
+msgstr "Nastaviť..."
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format

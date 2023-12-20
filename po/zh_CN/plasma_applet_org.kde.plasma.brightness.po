@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-20 01:35+0000\n"
 "PO-Revision-Date: 2023-12-17 11:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -60,6 +60,13 @@ msgstr "滚动滑轮以调整屏幕亮度"
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "中键点击开关夜间颜色"
+
+#: package/contents/ui/main.qml:258
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu"
+msgid "Configure Night Light…"
+msgstr "配置…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format

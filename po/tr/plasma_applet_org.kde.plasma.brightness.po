@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2023-12-20 01:35+0000\n"
 "PO-Revision-Date: 2023-11-19 17:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -59,6 +59,13 @@ msgstr "Ekran parlaklığını ayarlamak için sar"
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Gece Işığı'nı açmak/kapatmak için orta tıkla"
+
+#: package/contents/ui/main.qml:258
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu"
+msgid "Configure Night Light…"
+msgstr "Yapılandır…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format
