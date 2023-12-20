@@ -11,8 +11,10 @@ import org.kde.kirigami 2.20 as Kirigami
 
 InputPanel {
     id: inputPanel
-    property bool activated: false
-    active: activated && Qt.inputMethod.visible
+
+    // This property exists for compatibility with wayland counterpart. It does nothing here.
+    property bool activated
+
     width: parent.width
 
     states: [
