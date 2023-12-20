@@ -247,8 +247,11 @@ void PanelConfigView::init()
             m_panelRulerView->setMainItem(ruler);
             m_panelRulerView->syncPanelLocation();
         }
-        setWidth(mainItem()->implicitWidth() + leftPadding() + rightPadding());
-        setHeight(mainItem()->implicitHeight() + topPadding() + bottomPadding());
+        auto syncSize = [this] {
+            resize(mainItem()->implicitWidth() + leftPadding() + rightPadding(), mainItem()->implicitHeight() + topPadding() + bottomPadding());
+        };
+        connect(mainItem(), &QQuickItem::implicitWidthChanged, this, syncSize);
+        syncSize();
         mainItem()->setVisible(true);
     }
     syncGeometry();
