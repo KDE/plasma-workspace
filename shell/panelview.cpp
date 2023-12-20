@@ -528,11 +528,6 @@ void PanelView::positionPanel()
         break;
     }
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-    const QPoint pos = geometryByDistance(m_distance).topLeft();
-    setPosition(pos);
-    Q_EMIT geometryChanged();
-
     if (m_layerWindow) {
         LayerShellQt::Window::Anchors anchors;
 
@@ -598,6 +593,11 @@ void PanelView::positionPanel()
         updateMask();
         requestUpdate();
     }
+
+    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+    const QPoint pos = geometryByDistance(m_distance).topLeft();
+    setPosition(pos);
+    Q_EMIT geometryChanged();
 
     KWindowEffects::slideWindow(this, slideLocation, -1);
 }
