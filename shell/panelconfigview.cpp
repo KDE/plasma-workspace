@@ -123,19 +123,33 @@ void PanelRulerView::syncPanelLocation()
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         LayerShellQt::Window::Anchors anchors;
 
+        QMargins margins;
         switch (m_containment->location()) {
         case Plasma::Types::TopEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            // Non center aligned panels won't set reserved areas, the ruler would cover it
+            if (m_panelView->alignment() != Qt::AlignCenter) {
+                margins.setTop(m_panelView->height());
+            }
             break;
         case Plasma::Types::LeftEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            if (m_panelView->alignment() != Qt::AlignCenter) {
+                margins.setLeft(m_panelView->width());
+            }
             break;
         case Plasma::Types::RightEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorRight);
+            if (m_panelView->alignment() != Qt::AlignCenter) {
+                margins.setRight(m_panelView->width());
+            }
             break;
         case Plasma::Types::BottomEdge:
         default:
             anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+            if (m_panelView->alignment() != Qt::AlignCenter) {
+                margins.setBottom(m_panelView->height());
+            }
             break;
         }
 
@@ -163,6 +177,7 @@ void PanelRulerView::syncPanelLocation()
             }
         }
 
+        m_layerWindow->setMargins(margins);
         m_layerWindow->setAnchors(anchors);
 
         requestUpdate();
