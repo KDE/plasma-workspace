@@ -86,6 +86,8 @@ void TaskFilterProxyModel::setVirtualDesktop(const QVariant &desktop)
 
 QRect TaskFilterProxyModel::screenGeometry() const
 {
+    qDebug() << "panel:"
+             << "screen geometry" << d->screenGeometry;
     return d->screenGeometry;
 }
 
@@ -104,6 +106,8 @@ void TaskFilterProxyModel::setScreenGeometry(const QRect &geometry)
 
 QRect TaskFilterProxyModel::regionGeometry() const
 {
+    qDebug() << "panel:"
+             << "region geometry" << d->regionGeometry;
     return d->regionGeometry;
 }
 
@@ -354,8 +358,12 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
     // Filter by screen.
     if (d->filterByScreen && d->screenGeometry.isValid()) {
         const QRect &screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
+        qDebug() << "panel:"
+                 << "filter by screen geometry" << screenGeometry;
 
         if (screenGeometry.isValid() && screenGeometry != d->screenGeometry) {
+            qDebug() << "panel:"
+                     << "mismatching screen geometry" << d->screenGeometry;
             return false;
         }
     }
@@ -363,6 +371,8 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
     // Filter by region
     if (d->filterByRegion != RegionFilterMode::Mode::Disabled && d->regionGeometry.isValid()) {
         QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
+        qDebug() << "panel:"
+                 << "filter by region" << windowGeometry;
 
 #if HAVE_X11
         if (static const bool isX11 = KWindowSystem::isPlatformX11(); isX11 && windowGeometry.isValid()) {
@@ -385,6 +395,8 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
             break;
         }
         case RegionFilterMode::Mode::Intersect: {
+            qDebug() << "panel:"
+                     << "filter by region intersect" << d->regionGeometry.intersects(windowGeometry) << d->regionGeometry << windowGeometry;
             if (!d->regionGeometry.intersects(windowGeometry)) {
                 return false;
             }
