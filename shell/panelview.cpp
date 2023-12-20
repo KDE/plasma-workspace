@@ -552,35 +552,49 @@ void PanelView::positionPanel()
             break;
         }
 
+        QMargins margins((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
+                         (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness),
+                         (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
+                         (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+
         if (formFactor() == Plasma::Types::Horizontal) {
             switch (m_alignment) {
             case Qt::AlignLeft:
                 anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+                if (m_lengthMode == PanelView::LengthMode::Custom) {
+                    margins.setLeft(margins.left() + m_offset);
+                }
                 break;
             case Qt::AlignCenter:
                 break;
             case Qt::AlignRight:
                 anchors.setFlag(LayerShellQt::Window::AnchorRight);
+                if (m_lengthMode == PanelView::LengthMode::Custom) {
+                    margins.setRight(margins.right() + m_offset);
+                }
                 break;
             }
         } else {
             switch (m_alignment) {
             case Qt::AlignLeft:
                 anchors.setFlag(LayerShellQt::Window::AnchorTop);
+                if (m_lengthMode == PanelView::LengthMode::Custom) {
+                    margins.setTop(margins.top() + m_offset);
+                }
                 break;
             case Qt::AlignCenter:
                 break;
             case Qt::AlignRight:
                 anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+                if (m_lengthMode == PanelView::LengthMode::Custom) {
+                    margins.setBottom(margins.bottom() + m_offset);
+                }
                 break;
             }
         }
 
         m_layerWindow->setAnchors(anchors);
-        m_layerWindow->setMargins(QMargins((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
-                                           (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness),
-                                           (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
-                                           (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness)));
+        m_layerWindow->setMargins(margins);
         updateMask();
         requestUpdate();
     }
@@ -758,7 +772,9 @@ void PanelView::restore()
     // is safe to directly write during plasma startup, as there can be
     // resolution changes
     m_offset = readConfigValueWithFallBack("offset", m_offset);
-    if (m_alignment != Qt::AlignCenter) {
+    if (m_alignment == Qt::AlignCenter) {
+        m_offset = 0;
+    } else {
         m_offset = qMax(0, m_offset);
     }
 
