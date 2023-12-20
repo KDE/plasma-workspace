@@ -16,7 +16,9 @@ add_subdirectory(kicker)
 add_subdirectory(mediacontroller)
 add_subdirectory(panelspacer)
 
-plasma_install_package(cameraindicator org.kde.plasma.cameraindicator)
+if(TARGET K::KPipeWire)
+    plasma_install_package(cameraindicator org.kde.plasma.cameraindicator)
+endif()
 plasma_install_package(clipboard org.kde.plasma.clipboard)
 
 add_subdirectory(notifications)
