@@ -569,6 +569,10 @@ void PanelView::positionPanel()
                 }
                 break;
             }
+            if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+                anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+                anchors.setFlag(LayerShellQt::Window::AnchorRight);
+            }
         } else {
             switch (m_alignment) {
             case Qt::AlignLeft:
@@ -585,6 +589,10 @@ void PanelView::positionPanel()
                     margins.setBottom(margins.bottom() + m_offset);
                 }
                 break;
+            }
+            if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+                anchors.setFlag(LayerShellQt::Window::AnchorTop);
+                anchors.setFlag(LayerShellQt::Window::AnchorBottom);
             }
         }
 
@@ -686,7 +694,7 @@ void PanelView::resizePanel()
         } else {
             s = QSize(m_screenToFollow->size().width(), totalThickness());
         }
-        setMinimumSize(s);
+        setMinimumSize(QSize(totalThickness(), totalThickness()));
         setMaximumSize(s);
         resize(s);
         return;
