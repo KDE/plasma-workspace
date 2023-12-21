@@ -13,7 +13,7 @@ kcoreaddons_add_plugin(plasma_engine_mouse SOURCES ${mouse_engine_SRCS} INSTALL_
 target_link_libraries(plasma_engine_mouse
     Qt::Widgets
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::WindowSystem
 )
 

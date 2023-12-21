@@ -13,7 +13,7 @@ add_library(plasma_engine_apps MODULE ${apps_engine_SRCS})
 
 target_link_libraries(plasma_engine_apps
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::Service
     KF6::KIOCore
     KF6::KIOWidgets

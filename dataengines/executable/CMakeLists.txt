@@ -7,7 +7,7 @@ kcoreaddons_add_plugin(plasma_engine_executable SOURCES ${executable_engine_SRCS
 
 target_link_libraries(plasma_engine_executable
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::Service
     KF6::CoreAddons
 )

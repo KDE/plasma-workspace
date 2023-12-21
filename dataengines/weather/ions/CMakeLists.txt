@@ -11,7 +11,7 @@ ecm_qt_declare_logging_category(ionlib_SRCS
 
 add_library (weather_ion SHARED ${ionlib_SRCS})
 generate_export_header(weather_ion BASE_NAME ion)
-target_link_libraries (weather_ion PRIVATE KF6::I18n PUBLIC Qt::Core Plasma::Plasma KF6::Plasma5Support)
+target_link_libraries (weather_ion PRIVATE KF6::I18n PUBLIC Qt::Core Plasma::Plasma Plasma::Plasma5Support)
 
 set_target_properties(weather_ion PROPERTIES
    VERSION 7.0.0

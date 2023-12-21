@@ -40,7 +40,7 @@ target_link_libraries(plasma_engine_statusnotifieritem
     Qt::DBus
     KF6::Service
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::IconThemes
     KF6::WindowSystem
     dbusmenuqt

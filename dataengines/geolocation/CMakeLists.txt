@@ -8,7 +8,7 @@ target_link_libraries(plasma-geolocation-interface
         Qt::Core
         Qt::Network
         Plasma::Plasma
-        KF6::Plasma5Support
+        Plasma::Plasma5Support
     PRIVATE
         KF6::KIOCore
 )
@@ -28,7 +28,7 @@ generate_export_header(plasma_engine_geolocation EXPORT_FILE_NAME "geolocation_e
 target_link_libraries(plasma_engine_geolocation
     plasma-geolocation-interface
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::CoreAddons
     KF6::KIOCore
     KF6::NetworkManagerQt

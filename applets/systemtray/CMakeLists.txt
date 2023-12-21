@@ -45,7 +45,7 @@ target_link_libraries(systemtraymodel_static
     KF6::I18n
     KF6::ItemModels
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     Plasma::PlasmaQuick
     KF6::IconThemes
     KF6::WindowSystem

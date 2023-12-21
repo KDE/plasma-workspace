@@ -15,7 +15,7 @@ kcoreaddons_add_plugin(plasma_engine_hotplug SOURCES ${hotplug_engine_SRCS} INST
 target_link_libraries(plasma_engine_hotplug
     KF6::CoreAddons
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::Solid
     KF6::Service
     KF6::KIOCore

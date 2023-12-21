@@ -26,7 +26,7 @@ target_link_libraries(plasma_engine_notifications
     KF6::KIOCore
     KF6::Notifications
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::Service
     KF6::NotifyConfig
     PW::LibNotificationManager

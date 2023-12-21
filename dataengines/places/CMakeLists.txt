@@ -12,7 +12,7 @@ kcoreaddons_add_plugin(plasma_engine_places SOURCES ${places_engine_SRCS} INSTAL
 
 target_link_libraries(plasma_engine_places
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::KIOCore
     KF6::KIOFileWidgets
     KF6::Solid

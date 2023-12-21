@@ -22,7 +22,7 @@ target_link_libraries(plasma_engine_soliddevice
   KF6::I18n
   KF6::KIOCore
   Plasma::Plasma
-  KF6::Plasma5Support
+  Plasma::Plasma5Support
   KF6::Solid
   KF6::CoreAddons
   KF6::Notifications

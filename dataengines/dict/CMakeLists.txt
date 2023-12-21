@@ -9,7 +9,7 @@ add_library(plasma_engine_dict MODULE ${dict_engine_SRCS})
 
 target_link_libraries (plasma_engine_dict
   Plasma::Plasma
-  KF6::Plasma5Support
+  Plasma::Plasma5Support
   KF6::Service
   KF6::I18n
   Qt::Network

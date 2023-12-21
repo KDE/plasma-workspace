@@ -17,7 +17,7 @@ kcoreaddons_add_plugin(plasma_engine_powermanagement SOURCES ${powermanagement_e
 target_link_libraries(plasma_engine_powermanagement
     KF6::Solid
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::IdleTime
     KF6::CoreAddons
     KF6::I18n

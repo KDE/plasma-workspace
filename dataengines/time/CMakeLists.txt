@@ -23,7 +23,7 @@ target_link_libraries(plasma_engine_time
     Qt::DBus
     KF6::Solid
     Plasma::Plasma
-    KF6::Plasma5Support
+    Plasma::Plasma5Support
     KF6::I18n
     KF6::Service
 )
