@@ -62,11 +62,10 @@ msgid "Middle-click to toggle Night Light"
 msgstr "Mezklaku por baskuligi Noktolumon"
 
 #: package/contents/ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr "Agordi…"
+msgstr "Agordi Noktlumon…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format

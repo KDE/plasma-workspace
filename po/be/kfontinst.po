@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-21 02:00+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -32,7 +32,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "symbol@akeeri.tk, nashtlumach@gmail.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:930
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:953
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -41,7 +41,7 @@ msgstr ""
 "Хочаце ўсталяваць шрыфт(ы) для асабістага карыстання (даступна толькі вам) "
 "або для ўсёй сістэмы (даступна ўсім карыстальнікам)?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:933
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
 msgid "Where to Install"
 msgstr "Месца ўсталявання"
@@ -287,17 +287,17 @@ msgstr "Размяшчэнне файла"
 msgid "Writing System"
 msgstr "Сістэма пісьма"
 
-#: kcmfontinst/FontFilter.cpp:129
+#: kcmfontinst/FontFilter.cpp:128
 #, kde-format
 msgid "Set Criteria"
 msgstr "Вызначыць крытэрыі"
 
-#: kcmfontinst/FontFilter.cpp:188
+#: kcmfontinst/FontFilter.cpp:187
 #, kde-format
 msgid "Symbol/Other"
 msgstr "Сімвал/іншае"
 
-#: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
+#: kcmfontinst/FontFilter.cpp:265 kcmfontinst/FontFilter.cpp:333
 #, kde-format
 msgid "Filter by %1…"
 msgstr "Фільтраванне - \"%1\""
@@ -348,13 +348,13 @@ msgid "Delete"
 msgstr "Выдаліць"
 
 #: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1107 kcmfontinst/KCmFontInst.cpp:1131
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1154
 #, kde-format
 msgid "Enable"
 msgstr "Уключыць"
 
 #: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1108 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Disable"
 msgstr "Адключыць"
@@ -659,87 +659,87 @@ msgstr "Не ўдалося выканаць аўтэнтыфікацыю.<br><i
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Падчас апрацоўвання адбылася памылка: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:199
+#: kcmfontinst/KCmFontInst.cpp:211
 #, kde-format
 msgid "Create New Group…"
 msgstr "Стварыць новую групу…"
 
-#: kcmfontinst/KCmFontInst.cpp:201
+#: kcmfontinst/KCmFontInst.cpp:214
 #, kde-format
 msgid "Remove Group…"
 msgstr "Выдаліць групу…"
 
-#: kcmfontinst/KCmFontInst.cpp:203
+#: kcmfontinst/KCmFontInst.cpp:217
 #, kde-format
 msgid "Enable Fonts in Group…"
 msgstr "Уключыць шрыфты ў групе…"
 
-#: kcmfontinst/KCmFontInst.cpp:205
+#: kcmfontinst/KCmFontInst.cpp:220
 #, kde-format
 msgid "Disable Fonts in Group…"
 msgstr "Адключыць шрыфты ў групе…"
 
-#: kcmfontinst/KCmFontInst.cpp:230
+#: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Папярэдні прагляд абранага шрыфту."
 
-#: kcmfontinst/KCmFontInst.cpp:246
+#: kcmfontinst/KCmFontInst.cpp:257
 #, kde-format
 msgid "Find Duplicates…"
 msgstr "Пошук дублікатаў…"
 
-#: kcmfontinst/KCmFontInst.cpp:246
+#: kcmfontinst/KCmFontInst.cpp:257
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
 msgstr "Сканаваць на наяўнасць дублікатаў шрыфтоў…"
 
-#: kcmfontinst/KCmFontInst.cpp:248
+#: kcmfontinst/KCmFontInst.cpp:259
 #, kde-format
 msgid "Install from File…"
 msgstr "Усталяваць з файла…"
 
-#: kcmfontinst/KCmFontInst.cpp:248
+#: kcmfontinst/KCmFontInst.cpp:259
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr "Усталяваць шрыфты з лакальнага файла"
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Get New Fonts…"
 msgstr "Атрымаць новыя шрыфты…"
 
-#: kcmfontinst/KCmFontInst.cpp:250
+#: kcmfontinst/KCmFontInst.cpp:261
 #, kde-format
 msgid "Download new fonts"
 msgstr "Спампаваць новыя шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:252
+#: kcmfontinst/KCmFontInst.cpp:263
 #, kde-format
 msgid "Delete Selected Fonts…"
 msgstr "Выдаліць абраныя шрыфты…"
 
-#: kcmfontinst/KCmFontInst.cpp:310
+#: kcmfontinst/KCmFontInst.cpp:333
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "Змяніць тэкст папярэдняга прагляду…"
 
-#: kcmfontinst/KCmFontInst.cpp:409
+#: kcmfontinst/KCmFontInst.cpp:432
 #, kde-format
 msgid "Add Fonts"
 msgstr "Дадаць шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:535
+#: kcmfontinst/KCmFontInst.cpp:558
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Не ўдалося захаваць спіс шрыфтоў для друкавання."
 
-#: kcmfontinst/KCmFontInst.cpp:557
+#: kcmfontinst/KCmFontInst.cpp:580
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Не ўдалося запусціць сродак друкавання шрыфтоў."
 
-#: kcmfontinst/KCmFontInst.cpp:564
+#: kcmfontinst/KCmFontInst.cpp:587
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -748,32 +748,32 @@ msgstr ""
 "Няма шрыфтоў для друкавання. Вы можаце друкаваць толькі ўключаныя шрыфты "
 "(растравыя нельга)."
 
-#: kcmfontinst/KCmFontInst.cpp:566
+#: kcmfontinst/KCmFontInst.cpp:589
 #, kde-format
 msgid "Cannot Print"
 msgstr "Немагчыма надрукаваць"
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Вы нічога не абралі для выдалення."
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Няма чаго выдаляць"
 
-#: kcmfontinst/KCmFontInst.cpp:596
+#: kcmfontinst/KCmFontInst.cpp:619
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Сапраўды хочаце выдаліць</p><p>\"<b>%1</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:599
+#: kcmfontinst/KCmFontInst.cpp:622
 #, kde-format
 msgid "Delete Font"
 msgstr "Выдаліць шрыфт"
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:629
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
@@ -782,27 +782,27 @@ msgstr[1] "Сапраўды хочаце выдаліць %1 шрыфты?"
 msgstr[2] "Сапраўды хочаце выдаліць %1 шрыфтоў?"
 msgstr[3] "Сапраўды хочаце выдаліць %1 шрыфты?"
 
-#: kcmfontinst/KCmFontInst.cpp:608
+#: kcmfontinst/KCmFontInst.cpp:631
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Выдаліць шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:613
+#: kcmfontinst/KCmFontInst.cpp:636
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "Выдаленне шрыфту(оў)…"
 
-#: kcmfontinst/KCmFontInst.cpp:628
+#: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Вы нічога не абралі для перамяшчэння."
 
-#: kcmfontinst/KCmFontInst.cpp:628
+#: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Няма чаго перамяшчаць"
 
-#: kcmfontinst/KCmFontInst.cpp:638
+#: kcmfontinst/KCmFontInst.cpp:661
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -811,17 +811,17 @@ msgstr ""
 "<p>Сапраўды хочаце перамясціць</p><p>\"<b>%1</b>\"</p><p>з <i>%2</i> у <i>"
 "%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:643
+#: kcmfontinst/KCmFontInst.cpp:666
 #, kde-format
 msgid "Move Font"
 msgstr "Перамясціць шрыфт"
 
-#: kcmfontinst/KCmFontInst.cpp:644 kcmfontinst/KCmFontInst.cpp:656
+#: kcmfontinst/KCmFontInst.cpp:667 kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Move"
 msgstr "Перамясціць"
 
-#: kcmfontinst/KCmFontInst.cpp:649
+#: kcmfontinst/KCmFontInst.cpp:672
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -836,67 +836,67 @@ msgstr[2] ""
 msgstr[3] ""
 "<p>Сапраўды хочаце перамясціць %1 шрыфты з <i>%2</i> у <i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:655
+#: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
 msgid "Move Fonts"
 msgstr "Перамясціць шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:683
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "Перамяшчэнне шрыфту(оў)…"
 
-#: kcmfontinst/KCmFontInst.cpp:674
+#: kcmfontinst/KCmFontInst.cpp:697
 #, kde-format
 msgid "Export Group"
 msgstr "Экспартаваць групу"
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:723
 #, kde-format
 msgid "No files?"
 msgstr "Няма файлаў?"
 
-#: kcmfontinst/KCmFontInst.cpp:703
+#: kcmfontinst/KCmFontInst.cpp:726
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "Не ўдалося адкрыць %1 для запісу"
 
-#: kcmfontinst/KCmFontInst.cpp:723
+#: kcmfontinst/KCmFontInst.cpp:746
 #, kde-format
 msgid "Create New Group"
 msgstr "Стварыць новую групу"
 
-#: kcmfontinst/KCmFontInst.cpp:723
+#: kcmfontinst/KCmFontInst.cpp:746
 #, kde-format
 msgid "Name of new group:"
 msgstr "Назва новай групы:"
 
-#: kcmfontinst/KCmFontInst.cpp:723
+#: kcmfontinst/KCmFontInst.cpp:746
 #, kde-format
 msgid "New Group"
 msgstr "Новая група"
 
-#: kcmfontinst/KCmFontInst.cpp:751
+#: kcmfontinst/KCmFontInst.cpp:774
 #, kde-format
 msgid "Preview Text"
 msgstr "Папярэдні прагляд тэксту"
 
-#: kcmfontinst/KCmFontInst.cpp:751
+#: kcmfontinst/KCmFontInst.cpp:774
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Увядзіце новы тэкст:"
 
-#: kcmfontinst/KCmFontInst.cpp:803
+#: kcmfontinst/KCmFontInst.cpp:826
 #, kde-format
 msgid "Scanning font list…"
 msgstr "Сканаванне спіса шрыфтоў…"
 
-#: kcmfontinst/KCmFontInst.cpp:862
+#: kcmfontinst/KCmFontInst.cpp:885
 #, kde-format
 msgid "No fonts"
 msgstr "Няма шрыфтоў"
 
-#: kcmfontinst/KCmFontInst.cpp:867
+#: kcmfontinst/KCmFontInst.cpp:890
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
@@ -905,7 +905,7 @@ msgstr[1] "%1 шрыфты"
 msgstr[2] "%1 шрыфтоў"
 msgstr[3] "%1 шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:876
+#: kcmfontinst/KCmFontInst.cpp:899
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -918,7 +918,7 @@ msgstr ""
 "ўключана:</td><td>%3</td></tr><tr><td align=\"right\">Агулам:</td><td>%4</"
 "td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:886
+#: kcmfontinst/KCmFontInst.cpp:909
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -929,62 +929,62 @@ msgstr ""
 "\"right\">Адключана:</td><td>%2</td></tr><tr><td align=\"right\">Агулам:</"
 "td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:963
+#: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "Пошук асацыяваных файлаў…"
 
-#: kcmfontinst/KCmFontInst.cpp:967
+#: kcmfontinst/KCmFontInst.cpp:990
 #, kde-format
 msgid "Scanning Files…"
 msgstr "Сканаванне файлаў…"
 
-#: kcmfontinst/KCmFontInst.cpp:968
+#: kcmfontinst/KCmFontInst.cpp:991
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "Пошук дадатковых файлаў для ўсталявання…"
 
-#: kcmfontinst/KCmFontInst.cpp:983
+#: kcmfontinst/KCmFontInst.cpp:1006
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Пошук файлаў, асацыяваных з %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1011
+#: kcmfontinst/KCmFontInst.cpp:1034
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "Усталяванне шрыфту(оў)…"
 
-#: kcmfontinst/KCmFontInst.cpp:1076
+#: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Вы нічога не абралі для ўключэння."
 
-#: kcmfontinst/KCmFontInst.cpp:1076
+#: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Вы нічога не абралі для адключэння."
 
-#: kcmfontinst/KCmFontInst.cpp:1077
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Няма чаго ўключаць"
 
-#: kcmfontinst/KCmFontInst.cpp:1077
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Няма чаго адключаць"
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Сапраўды хочаце ўключыць</p><p>\"<b>%1</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1096
+#: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Сапраўды хочаце адключыць</p><p>\"<b>%1</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1098
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -993,7 +993,7 @@ msgstr ""
 "<p>Сапраўды хочаце ўключыць</p><p>\"<b>%1</b>\", які знаходзіцца ў групе "
 "\"<b>%2</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1125
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1002,17 +1002,17 @@ msgstr ""
 "<p>Сапраўды хочаце адключыць</p><p>\"<b>%1</b>\", які знаходзіцца ў групе "
 "\"<b>%2</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1106 kcmfontinst/KCmFontInst.cpp:1107
+#: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1130
 #, kde-format
 msgid "Enable Font"
 msgstr "Уключыць шрыфт"
 
-#: kcmfontinst/KCmFontInst.cpp:1106 kcmfontinst/KCmFontInst.cpp:1108
+#: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Disable Font"
 msgstr "Адключыць шрыфт"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
@@ -1021,7 +1021,7 @@ msgstr[1] "Сапраўды хочаце ўключыць гэтыя %1 шрыф
 msgstr[2] "Сапраўды хочаце ўключыць гэтыя %1 шрыфтоў?"
 msgstr[3] "Сапраўды хочаце ўключыць гэтыя %1 шрыфты?"
 
-#: kcmfontinst/KCmFontInst.cpp:1116
+#: kcmfontinst/KCmFontInst.cpp:1139
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
@@ -1030,7 +1030,7 @@ msgstr[1] "Сапраўды хочаце адключыць гэтыя %1 шры
 msgstr[2] "Сапраўды хочаце адключыць гэтых %1 шрыфтоў?"
 msgstr[3] "Сапраўды хочаце адключыць гэтыя %1 шрыфты?"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1051,7 +1051,7 @@ msgstr[3] ""
 "<p>Сапраўды хочаце ўключыць гэтыя %1 шрыфты, якія знаходзяцца ў групе \"<b>"
 "%2</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1124
+#: kcmfontinst/KCmFontInst.cpp:1147
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1072,22 +1072,22 @@ msgstr[3] ""
 "<p>Сапраўды хочаце адключыць гэтыя %1 шрыфты, якія знаходзяцца ў групе \"<b>"
 "%2</b>\"?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
+#: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1154
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Уключыць шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Адключыць шрыфты"
 
-#: kcmfontinst/KCmFontInst.cpp:1138
+#: kcmfontinst/KCmFontInst.cpp:1161
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "Уключэнне шрыфту(оў)…"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1163
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "Адключэнне шрыфту(оў)…"

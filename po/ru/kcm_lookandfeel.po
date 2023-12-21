@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-01-28 22:41+0300\n"
+"PO-Revision-Date: 2023-12-20 21:40+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -128,7 +128,7 @@ msgstr "Отмена"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Загрузить новые оформления…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -220,10 +220,9 @@ msgid "Window Decoration Style"
 msgstr "Оформление окон"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "Оформление окон"
+msgstr "Размер оформления"
 
 #: ui/MoreOptions.qml:62
 #, kde-format

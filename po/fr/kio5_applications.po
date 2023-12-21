@@ -6,7 +6,7 @@
 # Delafond <gerard@delafond.org>, 2003.
 # aminesay <aminesay@yahoo.fr>, 2007.
 # Jean-Jacques Finazzi <mrjay01@users.sourceforge.net>, 2009.
-# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
 #
 msgid ""
 msgstr ""

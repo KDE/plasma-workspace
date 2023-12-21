@@ -4,13 +4,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2012, 2015, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-02-18 11:19+0100\n"
+"PO-Revision-Date: 2023-12-20 23:16+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kiszel Kristóf,Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ulysses@fsf.hu,tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #: colors.cpp:272
 #, kde-format
@@ -79,12 +79,14 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"A háttérkép cseréje vagy az alapértelmezett színre váltás előtt használt "
+"egyéni kiemelőszín"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "A háttérkép kiemelőszínje legyen-e alkalmazva"
 
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
@@ -857,20 +859,19 @@ msgstr "A rendezett oszlopok árnyékolása l&istákban"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "Ablakok címsávjainak színezése &kiemelőszínnel"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
-#, fuzzy, kde-format
-#| msgid "Invalid accent color "
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Érvénytelen kiemelőszín "
+msgstr "Összes szín árnyalása a kiemelőszínnel"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Színárnyalat erőssége:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -1243,24 +1244,22 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (jelenlegi színséma)"
 
 #: ui/AccentColorUI.qml:37
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Színséma visszaállítása"
+msgstr "Kiemelőszín a színsémából"
 
 #: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Kiemelőszín a háttérképből"
 
 #: ui/AccentColorUI.qml:39
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Egyéni kiemelőszín kiválasztása"
+msgstr "Egyéni kiemelőszín"
 
 #: ui/AccentColorUI.qml:164
 #, kde-format
@@ -1298,7 +1297,7 @@ msgstr "Telepítés fájlból…"
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Új letöltése…"
 
 #: ui/main.qml:192
 #, kde-format

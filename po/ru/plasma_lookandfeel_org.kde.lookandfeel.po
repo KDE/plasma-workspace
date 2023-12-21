@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
 # Sidlovsky Yaroslav <zawertun@gmail.com>, 2019.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2022-10-17 12:00+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2023-12-20 21:46+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -156,12 +156,12 @@ msgstr "Разблокировать"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(или приложите палец к считывателю отпечатков)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(или используйте смарт-карту)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -218,7 +218,7 @@ msgstr "При перезагрузке компьютера будет пока
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Установить обновления и перезагрузить"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
@@ -229,10 +229,10 @@ msgstr "Завершить сеанс"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Установка обновлений и перезагрузка через %1 секунду"
+msgstr[1] "Установка обновлений и перезагрузка через %1 секунды"
+msgstr[2] "Установка обновлений и перезагрузка через %1 секунд"
+msgstr[3] "Установка обновлений и перезагрузка через одну секунду"
 
 #: contents/logout/Logout.qml:248
 #, kde-format

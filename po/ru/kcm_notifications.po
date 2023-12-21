@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-01-18 10:20+0300\n"
+"PO-Revision-Date: 2023-12-20 21:35+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -49,31 +49,27 @@ msgid "Show notification badges"
 msgstr "Показывать счётчик уведомлений"
 
 #: ui/ApplicationConfiguration.qml:164
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Настроить события..."
+msgstr "Настройка событий"
 
 #: ui/ApplicationConfiguration.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Это приложение не поддерживает уведомления, основанные на событиях."
+msgstr "Это приложение не поддерживает уведомления, основанные на событиях"
 
 #: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Показать сообщение во всплывающем окне"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Воспроизводить звук"
 
 #: ui/main.qml:41
 #, kde-format
@@ -266,16 +262,12 @@ msgid "System Services"
 msgstr "Системные службы"
 
 #: ui/SourcesPage.qml:148
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Не найдено приложений или событий, соответствующих запросу "
+msgstr "Не найдено приложений или событий, соответствующих запросу"
 
 #: ui/SourcesPage.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"

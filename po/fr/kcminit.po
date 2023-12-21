@@ -4,7 +4,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # sebo <tetsuo3@free.fr>, 2007.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008, 2011.
-# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
 #
 msgid ""
 msgstr ""

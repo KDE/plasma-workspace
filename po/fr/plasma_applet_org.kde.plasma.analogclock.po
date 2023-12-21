@@ -2,8 +2,8 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Bruno Patri <bruno.patri@gmail.com>, 2007, 2008, 2013.
-# xavier <ktranslator31@yahoo.fr>, 2013.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2022.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2022.
 #
 msgid ""
 msgstr ""

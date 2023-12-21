@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Mickael Sibelle <kimael@gmail.com>, 2008.
 # Mickaël Sibelle <kimael@gmail.com>, 2009.
-# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 #
 msgid ""
