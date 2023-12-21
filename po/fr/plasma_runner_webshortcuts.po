@@ -5,8 +5,8 @@
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Amine Say <aminesay@yahoo.fr>, 2008.
 # Joëlle Cornavin <jcornavin@laposte.net>, 2010.
-# xavier <ktranslator31@yahoo.fr>, 2013.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021.
 #
 msgid ""
 msgstr ""

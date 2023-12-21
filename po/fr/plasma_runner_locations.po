@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Amine Say <aminesay@yahoo.fr>, 2008.
-# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
 #
 msgid ""
 msgstr ""

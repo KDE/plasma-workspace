@@ -1,8 +1,8 @@
 # translation of plasma_runner_kill.po to
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# xavier <ktranslator31@yahoo.fr>, 2013.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020.
 #
 msgid ""
 msgstr ""
