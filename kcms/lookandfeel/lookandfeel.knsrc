@@ -51,7 +51,7 @@ Name[x-test]=xxGlobal Themesxx
 Name[zh_CN]=全局主题
 Name[zh_TW]=全域主題
 
-Categories=121
+Categories=Global Themes (Plasma 6)
 StandardResource=tmp
 Uncompress=kpackage
 KPackageStructure=Plasma/LookAndFeel

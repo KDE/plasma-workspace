@@ -50,7 +50,7 @@ Name[x-test]=xxWallpaper Pluginsxx
 Name[zh_CN]=壁纸插件
 Name[zh_TW]=桌布外掛程式
 
-Categories=Plasma Wallpaper Plugin
+Categories=Plasma Wallpaper Plugin6
 StandardResource=tmp
 Uncompress=kpackage
 KPackageStructure=Plasma/Wallpaper
