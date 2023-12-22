@@ -1306,7 +1306,7 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
-    if (containment() && containment()->isUserConfiguring() && m_layerWindow->exclusionZone() == 0) {
+    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == 0) {
         // We set the exclusive zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode;
         // this won't be updated anymore as long as we are within
