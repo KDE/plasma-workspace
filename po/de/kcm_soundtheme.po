@@ -4,20 +4,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2023.
 #
 # Automatically generated, 2023.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-08-14 21:40+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-12-18 16:09+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -34,7 +35,7 @@ msgstr "Standard-Klangdesign von freedesktop.org"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "Benachrichtigungsklänge aktivieren"
 
 #: ui/main.qml:90
 #, kde-format
@@ -64,11 +65,9 @@ msgstr "Klang „%1“ probehören"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "Den Demonstrationsklang des Designs „%1“ probehören"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Preview sound \"%1\""
+#, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "Klang „%1“ probehören"
+msgstr "Das Probehören schlug fehl: %1"

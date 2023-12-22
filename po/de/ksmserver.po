@@ -4,20 +4,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2012, 2013, 2014, 2016, 2020.
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2017, 2018, 2019, 2020.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-03-29 20:17+0200\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2023-12-18 16:13+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: logout.cpp:273
 #, kde-format
@@ -146,7 +147,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[unbekannt]"
 
 #: server.cpp:836
 #, kde-kuit-format

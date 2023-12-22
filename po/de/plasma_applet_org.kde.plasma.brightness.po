@@ -71,19 +71,19 @@ msgstr ""
 #, kde-format
 msgctxt "Night light status"
 msgid "Off"
-msgstr ""
+msgstr "Aus"
 
 #: package/contents/ui/NightColorItem.qml:77
 #, kde-format
 msgctxt "Night light status"
 msgid "Unavailable"
-msgstr ""
+msgstr "Nicht verfügbar"
 
 #: package/contents/ui/NightColorItem.qml:80
 #, kde-format
 msgctxt "Night light status"
 msgid "Not enabled"
-msgstr ""
+msgstr "Nicht aktiviert"
 
 #: package/contents/ui/NightColorItem.qml:83
 #, kde-format
@@ -95,47 +95,47 @@ msgstr ""
 #, kde-format
 msgctxt "Night light status"
 msgid "On"
-msgstr ""
+msgstr "An"
 
 #: package/contents/ui/NightColorItem.qml:89
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr ""
+msgstr "Morgendlicher Übergang"
 
 #: package/contents/ui/NightColorItem.qml:91
 #, kde-format
 msgctxt "Night light phase"
 msgid "Day"
-msgstr ""
+msgstr "Tag"
 
 #: package/contents/ui/NightColorItem.qml:93
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr ""
+msgstr "Abendlicher Übergang"
 
 #: package/contents/ui/NightColorItem.qml:95
 #, kde-format
 msgctxt "Night light phase"
 msgid "Night"
-msgstr ""
+msgstr "Nacht"
 
 #: package/contents/ui/NightColorItem.qml:105
 #, kde-format
 msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
-msgstr ""
+msgstr "%1 K"
 
 #: package/contents/ui/NightColorItem.qml:139
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Einrichten …"
 
 #: package/contents/ui/NightColorItem.qml:139
 #, kde-format
 msgid "Enable and Configure…"
-msgstr ""
+msgstr "Aktivieren und einrichten …"
 
 #: package/contents/ui/NightColorItem.qml:165
 #, kde-format
@@ -164,14 +164,14 @@ msgstr ""
 #: package/contents/ui/PopupDialog.qml:70
 #, kde-format
 msgid "Display Brightness"
-msgstr ""
+msgstr "Bildschirmhelligkeit"
 
 #: package/contents/ui/PopupDialog.qml:101
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr ""
+msgstr "Tastaturbeleuchtung"
 
 #: package/contents/ui/PopupDialog.qml:132
 #, kde-format
 msgid "Night Light"
-msgstr ""
+msgstr "Nachtlicht"
