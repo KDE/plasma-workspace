@@ -1191,7 +1191,6 @@ QRect ShellCorona::_availableScreenRect(int id) const
     r.setRight(r.right() - rightThickness);
     r.setTop(r.top() + topThickness);
     r.setBottom(r.bottom() - bottomThickness);
-    qDebug() << "-----------> RETURNING" << r << "AS SCREEN AREA AVAIL!!!";
     return r;
 }
 
