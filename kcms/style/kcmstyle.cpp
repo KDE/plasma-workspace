@@ -182,7 +182,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         }
     }
 
-    typedef QWidget *(*factoryRoutine)(QWidget * parent);
+    typedef QWidget *(*factoryRoutine)(QWidget *parent);
 
     // Get the factory, and make the widget.
     factoryRoutine factory = (factoryRoutine)(allocPtr); // Grmbl. So here I am on my

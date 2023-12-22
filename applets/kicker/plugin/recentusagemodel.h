@@ -8,8 +8,8 @@
 
 #include "forwardingmodel.h"
 
-#include <PlasmaActivities/Stats/ResultModel>
 #include <KFilePlacesModel>
+#include <PlasmaActivities/Stats/ResultModel>
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
 

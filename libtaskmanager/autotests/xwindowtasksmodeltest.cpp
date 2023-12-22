@@ -8,8 +8,8 @@
 
 #include <private/qtx11extras_p.h>
 
-#include <PlasmaActivities/Consumer>
 #include <KWindowInfo>
+#include <PlasmaActivities/Consumer>
 
 #include <xcb/xcb.h>
 #include <xcb/xproto.h>

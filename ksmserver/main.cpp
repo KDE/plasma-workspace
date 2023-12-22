@@ -19,8 +19,8 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRuntimePlatform>
-#include <KSharedConfig>
 #include <KSelectionOwner>
+#include <KSharedConfig>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kdbusservice.h>

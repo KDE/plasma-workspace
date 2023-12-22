@@ -1442,7 +1442,7 @@ void CFcEngine::getSizes()
 #if (FREETYPE_MAJOR * 10000 + FREETYPE_MINOR * 100 + FREETYPE_PATCH) >= 20105
                         double px = face->available_sizes[size].y_ppem >> 6;
 #else
-                        double px = face->available_sizes[size].width;
+                    double px = face->available_sizes[size].width;
 #endif
 #ifdef KFI_FC_DEBUG
                         qDebug() << "px: " << px;

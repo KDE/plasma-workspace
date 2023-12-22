@@ -202,7 +202,8 @@ KIO::WorkerResult CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobF
     EFolder folder(getFolder(pathList));
 
     if (!Misc::root() && FOLDER_ROOT == folder) {
-        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("Can only install fonts to either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
+        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED,
+                                       i18n("Can only install fonts to either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
     } else if (Misc::isPackage(url.fileName())) {
         return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED,
                                        i18n("You cannot install a fonts package directly.\n"
@@ -446,7 +447,9 @@ KIO::WorkerResult CKioFonts::del(const QUrl &url, bool isFile)
         return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("Only fonts may be deleted."));
     }
     if (!Misc::root() && FOLDER_ROOT == folder) {
-        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
+        return KIO::WorkerResult::fail(
+            KIO::ERR_WORKER_DEFINED,
+            i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
     }
     if (!name.isEmpty()) {
         return handleResp(m_interface->uninstall(name, Misc::root() || FOLDER_SYS == folder), name);
@@ -474,7 +477,8 @@ KIO::WorkerResult CKioFonts::stat(const QUrl &url)
         } else if (FOLDER_SYS == folder || FOLDER_USER == folder) {
             createUDSEntry(entry, folder);
         } else {
-            return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("Please specify \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
+            return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED,
+                                           i18n("Please specify \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
         }
         break;
     default:
@@ -701,7 +705,8 @@ KIO::WorkerResult CKioFonts::handleResp(int resp, const QString &file, const QSt
     case FontInst::STATUS_BITMAPS_DISABLED:
         return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("%1 is a bitmap font, and these have been disabled on your system.", file));
     case FontInst::STATUS_ALREADY_INSTALLED:
-        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("%1 contains the font <b>%2</b>, which is already installed on your system.", file, FC::getName(tempFile)));
+        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED,
+                                       i18n("%1 contains the font <b>%2</b>, which is already installed on your system.", file, FC::getName(tempFile)));
     case FontInst::STATUS_NOT_FONT_FILE:
         return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("%1 is not a font.", file));
     case FontInst::STATUS_PARTIAL_DELETE:

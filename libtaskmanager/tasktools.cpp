@@ -8,7 +8,6 @@
 #include "tasktools.h"
 #include "abstracttasksmodel.h"
 
-#include <PlasmaActivities/ResourceInstance>
 #include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -16,6 +15,7 @@
 #include <KNotificationJobUiDelegate>
 #include <KProcessList>
 #include <KWindowSystem>
+#include <PlasmaActivities/ResourceInstance>
 #include <kemailsettings.h>
 
 #include <KIO/ApplicationLauncherJob>

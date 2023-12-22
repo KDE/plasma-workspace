@@ -8,8 +8,8 @@
 #include "keyboardlayout.h"
 #include "virtualkeyboard.h"
 
-#include <QQmlEngine>
 #include <QDBusPendingReply>
+#include <QQmlEngine>
 
 // register type for Keyboards.KWinVirtualKeyboard.forceActivate();
 Q_DECLARE_METATYPE(QDBusPendingReply<>)

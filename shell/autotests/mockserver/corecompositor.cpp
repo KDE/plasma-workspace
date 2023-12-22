@@ -52,7 +52,7 @@ CoreCompositor::CoreCompositor()
 CoreCompositor::~CoreCompositor()
 {
     auto global = m_globals.begin();
-    while(global != m_globals.end()) {
+    while (global != m_globals.end()) {
         delete *global;
         global = m_globals.erase(global);
     }

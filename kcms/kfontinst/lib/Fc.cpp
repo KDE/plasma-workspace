@@ -93,8 +93,8 @@ int weight(int w)
         return FC_WEIGHT_MEDIUM;
     }
 #else
-    if (w < (FC_WEIGHT_REGULAR + FC_WEIGHT_DEMIBOLD) / 2)
-        return FC_WEIGHT_REGULAR;
+        if (w < (FC_WEIGHT_REGULAR + FC_WEIGHT_DEMIBOLD) / 2)
+            return FC_WEIGHT_REGULAR;
 #endif
 
     if (w < (FC_WEIGHT_DEMIBOLD + FC_WEIGHT_BOLD) / 2) {
@@ -166,7 +166,7 @@ int slant(int s)
 
     return FC_SLANT_OBLIQUE;
 #else
-    return FC_SLANT_ITALIC;
+        return FC_SLANT_ITALIC;
 #endif
 }
 
@@ -313,7 +313,7 @@ quint32 createStyleVal(const QString &name)
 #ifdef KFI_FC_NO_WIDTHS
                               KFI_NULL_SETTING
 #else
-                              KFI_FC_WIDTH_NORMAL
+                                  KFI_FC_WIDTH_NORMAL
 #endif
                               ,
                               FC_SLANT_ROMAN);
@@ -324,7 +324,7 @@ quint32 createStyleVal(const QString &name)
 #ifdef KFI_FC_NO_WIDTHS
                               KFI_NULL_SETTING
 #else
-                              strToWidth(style, style)
+                                  strToWidth(style, style)
 #endif
                               ,
                               strToSlant(style));
@@ -421,7 +421,7 @@ void getDetails(FcPattern *pat, QString &family, quint32 &styleVal, int &index, 
 #ifdef KFI_FC_NO_WIDTHS
             KFI_NULL_SETTING,
 #else
-            getFcInt(pat, FC_WIDTH, 0, KFI_NULL_SETTING),
+                getFcInt(pat, FC_WIDTH, 0, KFI_NULL_SETTING),
 #endif
         slant = getFcInt(pat, FC_SLANT, 0, KFI_NULL_SETTING);
 

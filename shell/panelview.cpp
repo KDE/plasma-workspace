@@ -700,8 +700,9 @@ void PanelView::resizePanel()
         return;
     } else if (m_lengthMode == PanelView::LengthMode::FitContent) {
         if (formFactor() == Plasma::Types::Vertical) {
-            s = QSize(totalThickness(),
-                      std::max(totalThickness(), std::min(m_screenToFollow->size().height(), m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding)));
+            s = QSize(
+                totalThickness(),
+                std::max(totalThickness(), std::min(m_screenToFollow->size().height(), m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding)));
         } else {
             s = QSize(std::max(totalThickness(), std::min(m_screenToFollow->size().width(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
                       totalThickness());

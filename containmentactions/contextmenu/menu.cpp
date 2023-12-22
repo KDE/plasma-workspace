@@ -11,13 +11,13 @@
 #include <QDBusPendingReply>
 #include <QVBoxLayout>
 
-#include <PlasmaActivities/Consumer>
 #include <KAuthorized>
 #include <KGlobalAccel>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KService>
 #include <KTerminalLauncherJob>
+#include <PlasmaActivities/Consumer>
 #include <QDebug>
 #include <QIcon>
 #include <QQmlListProperty>

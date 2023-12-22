@@ -295,7 +295,6 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
     QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
     connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=, this](QMenu *menu) {
-
         m_menu = m_importer->menu();
         if (m_menu.isNull() || menu != m_menu) {
             return;

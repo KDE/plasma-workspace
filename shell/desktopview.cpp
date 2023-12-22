@@ -23,9 +23,9 @@
 #include <KAuthorized>
 #include <KStartupInfo>
 #include <KX11Extras>
-#include <plasmaactivities/controller.h>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
+#include <plasmaactivities/controller.h>
 
 #include <KPackage/Package>
 

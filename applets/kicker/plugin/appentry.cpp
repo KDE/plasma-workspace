@@ -16,7 +16,6 @@
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
 
-#include <PlasmaActivities/ResourceInstance>
 #include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
@@ -27,6 +26,7 @@
 #include <KShell>
 #include <KSycoca>
 #include <KWindowSystem>
+#include <PlasmaActivities/ResourceInstance>
 
 #include <defaultservice.h>
 

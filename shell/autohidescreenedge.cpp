@@ -15,9 +15,9 @@
 #include <KWindowSystem>
 
 #include <QDebug>
+#include <QWindow>
 #include <QtWaylandClient/QWaylandClientExtension>
 #include <QtWaylandClient/QtWaylandClientVersion>
-#include <QWindow>
 #include <qpa/qplatformwindow_p.h>
 
 #if HAVE_X11

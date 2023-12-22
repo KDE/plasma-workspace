@@ -20,10 +20,6 @@
 #include <QUrl>
 #include <QUrlQuery>
 
-#include <PlasmaActivities/ResourceInstance>
-#include <PlasmaActivities/Stats/Query>
-#include <PlasmaActivities/Stats/ResultSet>
-#include <PlasmaActivities/Stats/Terms>
 #include <KApplicationTrader>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
@@ -31,6 +27,10 @@
 #include <KShell>
 #include <KStringHandler>
 #include <KSycoca>
+#include <PlasmaActivities/ResourceInstance>
+#include <PlasmaActivities/Stats/Query>
+#include <PlasmaActivities/Stats/ResultSet>
+#include <PlasmaActivities/Stats/Terms>
 
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/DesktopExecParser>

@@ -97,14 +97,14 @@ int main(int argc, char **argv)
                         QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(model->selectedScheme()));
 
                     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
-                                                      QStringLiteral("/org/kde/KWin/BlendChanges"),
-                                                      QStringLiteral("org.kde.KWin.BlendChanges"),
-                                                      QStringLiteral("start"));
+                                                              QStringLiteral("/org/kde/KWin/BlendChanges"),
+                                                              QStringLiteral("org.kde.KWin.BlendChanges"),
+                                                              QStringLiteral("start"));
                     msg << 300;
                     // This is deliberately blocking so that we ensure Kwin has processed the
                     // animation start event before we potentially trigger client side changes
                     QDBusConnection::sessionBus().call(msg);
-                    
+
                     applyScheme(path, settings->config());
                     settings->save();
                     notifyKcmChange(GlobalChangeType::PaletteChanged);

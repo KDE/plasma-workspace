@@ -1153,7 +1153,7 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                        enable ? i18n("Enable Fonts") : i18n("Disable Fonts"),
                        enable ? KGuiItem(i18n("Enable"), "font-enable", i18n("Enable Fonts"))
                               : KGuiItem(i18n("Disable"), "font-disable", i18n("Disable Fonts")));
-            // clang-format on
+        // clang-format on
     }
 
     if (doIt) {

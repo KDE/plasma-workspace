@@ -23,10 +23,10 @@
 #include <KPropertiesDialog>
 #include <KProtocolInfo>
 
+#include <KIO/DesktopExecParser>
 #include <PlasmaActivities/Stats/Cleaning>
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/Terms>
-#include <KIO/DesktopExecParser>
 
 #include "containmentinterface.h"
 

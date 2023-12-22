@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <PlasmaActivities/Stats/ResultModel>
 #include <KRunner/AbstractRunner>
 #include <KRunner/Action>
+#include <PlasmaActivities/Stats/ResultModel>
 
 using namespace KActivities::Stats;
 

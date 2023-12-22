@@ -6,11 +6,11 @@
 
 #include "shellcontainmentconfig.h"
 
-#include <PlasmaActivities/Consumer>
-#include <PlasmaActivities/Info>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPackage/Package>
+#include <PlasmaActivities/Consumer>
+#include <PlasmaActivities/Info>
 
 #include <QQmlContext>
 #include <QQuickItem>
