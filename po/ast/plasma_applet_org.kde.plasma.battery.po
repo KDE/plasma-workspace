@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-10-29 22:38+0100\n"
+"PO-Revision-Date: 2023-12-12 00:57+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
-"Language-Team: \n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -96,10 +96,9 @@ msgid "Not present"
 msgstr ""
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Xestión d'enerxía"
+msgstr "Enerxía ya batería"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
