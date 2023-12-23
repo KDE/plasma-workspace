@@ -463,10 +463,14 @@ class InvalidMpris2(Mpris2):
 
 
 player: Mpris2
+loopThread: GLibMainLoopThread
 
 
 def __on_terminate(signal, frame) -> None:
     player.quit()
+    loopThread.quit()
+    if loopThread.is_alive():
+        loopThread.join(timeout=10)
     sys.exit(0)
 
 
