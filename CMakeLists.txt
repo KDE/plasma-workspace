@@ -382,6 +382,11 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 # locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
 ecm_query_qt(QtBinariesDir QT_INSTALL_BINS)
+# in case of cross-compiling use a hard-coded target path because no querying is possible
+if (CMAKE_CROSSCOMPILING)
+    set(QtBinariesDir "/usr/bin")
+endif()
+message(STATUS "qdbus path for generated service files: ${QtBinariesDir}")
 
 if(KF6DocTools_FOUND)
   add_subdirectory(doc)
