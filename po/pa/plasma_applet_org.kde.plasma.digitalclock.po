@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2015, 2016, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2022-01-03 11:34-0800\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 22:11-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "…ਜੋੜੋ"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "ਨਵਾਂ ਈਵੈਂਟ ਜੋੜੋ"
 
 #: package/contents/ui/CalendarView.qml:386
 #, kde-format
@@ -97,22 +97,21 @@ msgid "Always below time"
 msgstr "ਹਮੇਸ਼ਾ ਸਮੇਂ ਦੇ ਹੇਠਾਂ"
 
 #: package/contents/ui/configAppearance.qml:70
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "ਸਕਿੰਟ ਵੇਖਾਓ"
+msgstr "ਸਕਿੰਟ ਵੇਖਾਓ:"
 
 #: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "ਕਦੇ ਨਹੀਂ"
 
 #: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "ਟੂਲ-ਟਿੱਪ ਵਿੱਚ ਹੀ"
 
 #: package/contents/ui/configAppearance.qml:74
 #: package/contents/ui/configAppearance.qml:94
@@ -203,29 +202,25 @@ msgid "Custom"
 msgstr "ਕਸਟਮ"
 
 #: package/contents/ui/configAppearance.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">ਸਮਾਂ ਫਾਰਮੈਟ ਦਸਤਾਵੇਜ਼</a>"
 
 #: package/contents/ui/configAppearance.qml:229
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "ਸਮਾਂ ਵੇਖਾਓ:"
+msgstr "ਲਿਖਤ ਵੇਖਾਓ:"
 
 #: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "ਆਟੋਮੈਟਿਕ"
 
 #: package/contents/ui/configAppearance.qml:235
 #, kde-format
@@ -238,25 +233,25 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr ""
+msgstr "ਖੁਦ"
 
 #: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "…ਸਟਾਈਲ ਚੁਣੋ"
 
 #: package/contents/ui/configAppearance.qml:267
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1pt %2"
 
 #: package/contents/ui/configAppearance.qml:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "ਫ਼ੋਂਟ ਚੁਣੋ"
 
 #: package/contents/ui/configCalendar.qml:38
 #, kde-format
@@ -300,21 +295,19 @@ msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:105
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "…ਲੋਕਲ ਟਾਈਮ ਖੇਤਰ ਲਈ ਬਦਲੋ"
+msgstr "…ਪੂਰੇ ਸਿਸਟਮ ਲਈ ਸਮਾਂ ਖੇਤਰ ਲਈ ਬਦਲੋ"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Remove this time zone"
-msgstr "ਇਹ ਸਮਾਂ ਖੇਤਰ ਹਟਾਓ"
+msgstr "ਇਸ ਸਮੇਂ ਖੇਤਰ ਨੂੰ ਹਟਾਓ"
 
 #: package/contents/ui/configTimeZones.qml:127
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "ਸਿਸਟਮ ਦਾ ਲੋਕਲ ਟਾਈਮ ਖੇਤਰ"
+msgstr "ਪੂਰੇ ਸਿਸਟਮਲਈ ਸਮਾਂ ਖੇਤਰ"
 
 #: package/contents/ui/configTimeZones.qml:127
 #, kde-format
@@ -377,26 +370,24 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ"
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Adjust Date and Time…"
-msgstr "…ਤਾਰੀਖ ਤੇ ਵੇਲੇ ਨੂੰ ਦਰੁਸਤ ਕਰੋ"
+msgstr "…ਤਾਰੀਖ ਅਤੇ ਸਮੇਂ ਨੂੰ ਦਰੁਸਤ ਕਰੋ"
 
 #: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Set Time Format…"
-msgstr "…ਵੇਲਾ ਫਾਰਮੈਟ ਦਿਓ"
+msgstr "…ਸਮਾਂ ਫਾਰਮੈਟ ਦਿਓ"
 
 #: package/contents/ui/Tooltip.qml:31
-#, fuzzy, kde-format
-#| msgctxt "Reset calendar to today"
-#| msgid "Today"
+#, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr "ਅੱਜ"
+msgstr "ਅੱਜ %1 ਹੈ"
 
 #: package/contents/ui/Tooltip.qml:133
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

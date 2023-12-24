@@ -1,28 +1,31 @@
-# SPDX-FileCopyrightText: 2023 Xavier Besnard <xavier.besnard@kde.org>
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2023 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-09-28 07:49+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: fr\n"
-"Language: fr\n"
+"PO-Revision-Date: 2023-12-22 19:54-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
-msgstr "Plasma en mode fenêtre"
+msgstr "ਪਲਾਜ਼ਮਾ ਵਿੰਡੋਡ"
 
 #: main.cpp:46
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "Activer le débogueur pour QML Javascript"
+msgstr ""
 
 #: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
@@ -30,25 +33,23 @@ msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr ""
-"Permet au plasmoïde de rester en vie dans la zone de notifications, même "
-"lorsque la fenêtre est fermée."
 
 #: main.cpp:51
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "Forcer le chargement du module externe de shell fourni"
+msgstr ""
 
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr "L'applet à ouvrir."
+msgstr "ਖੋਲ੍ਹਣ ਲਈ ਐਪਲਿਟ ਹੈ।"
 
 #: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr "Arguments à passer au plasmoïde."
+msgstr ""
 
 #: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
-msgstr "Fermer %1"
+msgstr "%1 ਬੰਦ ਕਰੋ"

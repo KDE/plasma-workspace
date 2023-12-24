@@ -1,5 +1,5 @@
 # Vincent Pinon <vpinon@kde.org>, 2017.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+# Xavier Besnard <xavier.besnard@kde.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_applauncher\n"

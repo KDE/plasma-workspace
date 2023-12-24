@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Joëlle Cornavin <jcornavi@club-internet.fr>, 2009.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015, 2016.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020.
 #
 msgid ""
 msgstr ""

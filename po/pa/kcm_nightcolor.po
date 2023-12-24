@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# A S Alam <alam.yellow@gmail.com>, 2019, 2021, 2022.
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023 A S Alam <alam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2022-11-19 05:51-0800\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:50-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -105,14 +105,12 @@ msgid "Custom times"
 msgstr "ਪਸੰਦੀਦਾ ਵੇਲੇ"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਹਮੇਸ਼ਾ ਚਾਲੂ"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "ਦਿਨ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
 
@@ -123,9 +121,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "ਠੰਢਾ (ਕੋਈ ਫਿਲਟਰ ਨਹੀਂ)"
@@ -137,17 +133,15 @@ msgid "Warm"
 msgstr "ਨਿੱਘਾ"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "ਟਿਕਾਣਾ ਖੋਜੋ"
+msgstr "ਮੌਜੂਦਾ ਟਿਕਾਣਾ:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -167,8 +161,7 @@ msgstr ""
 "ਕੇ ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ।"
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਸ਼ੁਰੂ ਕਰੋ:"
 

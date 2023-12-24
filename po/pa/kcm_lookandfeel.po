@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2015, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-06-11 09:40-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:51-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -25,7 +25,7 @@ msgstr "ਅ ਸ ਆਲਮ"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alam.yellow@gmail.com"
+msgstr "aalam@punlinux.org"
 
 #: kcm.cpp:467
 #, kde-format
@@ -98,23 +98,22 @@ msgstr "ਗਲੋਬਲ ਦਿੱਖ ਤੇ ਛੋਹ"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਓ"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਥੀਮ ਨੂੰ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਓ"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
@@ -122,7 +121,7 @@ msgstr "ਰੱਦ ਕਰੋ"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -135,11 +134,10 @@ msgid "Preview Theme"
 msgstr "ਥੀਮ ਦੀ ਝਲਕ"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "ਥੀਮ ਦੀ ਝਲਕ"
+msgstr "ਥੀਮ ਨੂੰ ਹਟਾਓ"
 
 #: ui/main.qml:141
 #, kde-format
@@ -207,16 +205,14 @@ msgid "Application Style"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ"
 
 #: ui/MoreOptions.qml:60
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "ਵਿੰਡੋ ਸਜਾਵਟ"
+msgstr "ਵਿੰਡੋ ਸਜਾਵਟ ਸਟਾਈਲ"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "ਵਿੰਡੋ ਸਜਾਵਟ"
+msgstr "ਵਿੰਡੋ ਸਜਾਵਟ ਆਕਾਰ"
 
 #: ui/MoreOptions.qml:62
 #, kde-format
@@ -270,18 +266,15 @@ msgid "• Appearance settings"
 msgstr "• ਦਿੱਖ ਸੈਟਿੰਗਾਂ"
 
 #: ui/SimpleOptions.qml:45
-#, fuzzy, kde-format
-#| msgid "Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "ਡੈਸਕਟਾਪ ਖਾਕਾ"
+msgstr "ਡੈਸਕਟਾਪ ਅਤੇ ਵਿੰਡੋ ਖਾਕਾ"
 
 #: ui/SimpleOptions.qml:52
-#, fuzzy, kde-format
-#| msgctxt "List item"
-#| msgid "• Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "• ਡੈਸਕਟਾਪ ਖਾਕਾ"
+msgstr "• ਡੈਸਕਟਾਪ ਅਤੇ ਵਿੰਡੋ ਖਾਕਾ"
 
 #: ui/SimpleOptions.qml:70
 #, kde-format

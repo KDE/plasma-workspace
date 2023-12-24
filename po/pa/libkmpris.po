@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 A S Alam <aalam@satluj.org>
+# SPDX-FileCopyrightText: 2023 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 22:05-0600\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"PO-Revision-Date: 2023-12-22 22:02-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -17,13 +17,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: contents/ui/main.qml:71
+#: multiplexermodel.cpp:71
 #, kde-format
-msgid "Switch to activity %1"
-msgstr "%1 ਸਰਗਰਮੀ ਉੱਤੇ ਜਾਓ"
-
-#: contents/ui/main.qml:91
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Activities…"
-msgstr "…ਸਰਗਰਮੀਆਂ ਦੀ ਸੰਰਚਨਾ(&C)"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "ਆਪਣੇ-ਆਪ ਪਲੇਅਰ ਚੁਣੋ"

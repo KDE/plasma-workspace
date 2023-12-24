@@ -1,5 +1,5 @@
 # translation of kcmicons.po to Français
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
 # Ludovic Grossard <grossard@kde.org>, 2002,2003.
 # Gilles CAULIER <caulier.gilles@free.fr>, 2003.
 # Matthieu Robin <kde@macolu.org>, 2004.

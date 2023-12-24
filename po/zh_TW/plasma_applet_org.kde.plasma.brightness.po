@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:35+0000\n"
-"PO-Revision-Date: 2023-11-29 18:44+0900\n"
+"PO-Revision-Date: 2023-12-24 06:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
@@ -61,11 +61,10 @@ msgid "Middle-click to toggle Night Light"
 msgstr "按中鍵切換夜光模式"
 
 #: package/contents/ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr "設定…"
+msgstr "設定夜光…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format

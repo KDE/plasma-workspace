@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Aman Alam <aalam@users.sf.net>, 2013, 2014, 2015, 2016.
-# A S Alam <aalam.yellow@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2023 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2021-06-08 22:49-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 22:13-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -121,16 +121,13 @@ msgid "Automatically enabled when in Touch Mode"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
+msgstr "ਪੈਨਲ ਆਈਕਾਨ ਫਾਸਲਾ:"
 
 #: package/contents/ui/ConfigGeneral.qml:52
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "ਛੋਟਾ"
@@ -139,13 +136,13 @@ msgstr "ਛੋਟਾ"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "ਸਧਾਰਨ"
 
 #: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "ਵੱਡਾ"
 
 #: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
@@ -157,7 +154,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "ਪਿੱਛੇ ਜਾਓ"
 
 #: package/contents/ui/ExpandedRepresentation.qml:74
 #, kde-format
@@ -177,7 +174,7 @@ msgstr "ਖੁੱਲਾ ਰੱਖੋ"
 #: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
-msgstr ""
+msgstr "ਸਿਸਟਮ ਟਰੇ ਨੂੰ ਫੈਲਾਓ"
 
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format

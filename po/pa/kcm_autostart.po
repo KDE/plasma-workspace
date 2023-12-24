@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Amanpreet Singh <aalam@users.sf.net>, 2008.
-# A S Alam <aalam@users.sf.net>, 2008, 2010, 2020, 2021.
+# SPDX-FileCopyrightText: 2008, 2010, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2021-06-08 22:25-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:53-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: autostartmodel.cpp:376
@@ -41,21 +41,19 @@ msgid "\"%1\" is not readable."
 msgstr "\"%1\" ਪੜ੍ਹਨਯੋਗ ਨਹੀਂ।"
 
 #: ui/entry.qml:52
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "ਨਾਂ"
+msgstr "ਨਾਂ:"
 
 #: ui/entry.qml:57
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "ਹਾਲਤ"
+msgstr "ਹਾਲਤ:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -63,20 +61,19 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "ਆਖਰੀ ਵਾਰ ਸਰਗਰਮੀ ਸੀ:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "ਰੋਕੋ"
 
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr "ਸਟਾਰਟਅੱਪ"
+msgstr "ਸ਼ੁਰੂ"
 
 #: ui/entry.qml:105
 #, kde-format
@@ -87,12 +84,12 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "ਤਾਜ਼ਾ ਕਰੋ"
 
 #: ui/main.qml:33
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "ਚੱਲਣਯੋਗ ਬਣਾਓ"
 
 #: ui/main.qml:53
 #, kde-format
@@ -105,29 +102,25 @@ msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "…ਐਪਲੀਕੇਸ਼ਨ ਜੋੜੋ"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "…ਲਾਗਇਨ ਸਕ੍ਰਿਪਟ ਜੋੜੋ"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "…ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟ ਜੋੜੋ"
@@ -144,21 +137,19 @@ msgstr ""
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "ਹਾਲੇ ਕੋਈ ਆਟੋ-ਸਟਾਰਟ ਨਹੀਂ ਹੈ"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
+msgstr "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਵੇਖੋ"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "ਹਟਾਓ"
+msgstr "ਐੰਟਰੀ ਹਟਾਓ"
 
 #: ui/main.qml:167
 #, kde-format
@@ -205,32 +196,31 @@ msgstr "ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟ ਚੁਣੋ"
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "ਚੱਲ ਰਿਹਾ ਹੈ"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "ਸਟਾਰਟਅੱਪ"
+msgstr "ਸ਼ੁਰੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "ਰੋਕਿਆ ਜਾ ਰਿਹਾ ਹੈ"
 
 #: unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "ਅਸਫ਼ਲ ਹੈ"
 
 #: unit.cpp:83
 #, kde-format

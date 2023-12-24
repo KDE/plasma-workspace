@@ -1,7 +1,7 @@
 # translation of kcmstyle.po to Français
 # translation of kcmstyle.po to
 # traduction de kcmstyle.po en Français
-# SPDX-FileCopyrightText: 2020, 2021, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
+# SPDX-FileCopyrightText: 2020, 2021, 2023 Xavier Besnard <xavier.besnard@kde.org>
 # Gérard Delafond <gerard@delafond.org>, 2002, 2004.
 # CAULIER Gilles <caulier.gilles@free.fr>, 2003.
 # Robert Jacolin <rjacolin@ifrance.com>, 2003.

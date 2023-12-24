@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# A S Alam <alam.yellow@gmail.com>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 A S Alam <alam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2021-06-08 22:29-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:50-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm.cpp:73
 #, kde-format
@@ -48,11 +48,10 @@ msgid "Show notification badges"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬਿੱਲੇ ਵੇਖਾਓ"
 
 #: ui/ApplicationConfiguration.qml:164
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "…ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
+msgstr "ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
 
 #: ui/ApplicationConfiguration.qml:172
 #, kde-format
@@ -69,7 +68,7 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "ਆਵਾਜ਼ ਚਲਾਓ"
 
 #: ui/main.qml:41
 #, kde-format
@@ -91,39 +90,34 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "ਇਸ ਵੇਲੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਪਲਾਜ਼ਮਾ ਵਲੋਂ ਨਹੀਂ ਦਿੱਤੇ ਜਾ ਰਹੇ ਹਨ।"
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ:"
+msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "ਸਮਰੱਥ:"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "ਜਦੋਂ ਸਕਰੀਨਾਂ ਨੂੰ ਮਿੱਰਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਤਾਂ ਸਮਰੱਥ ਕਰੋ"
+msgstr "ਜਦੋਂ ਸਕਰੀਨਾਂ ਨੂੰ ਮਿੱਰਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "ਸਕਰੀਨ ਸਾਂਝੀ ਕਰਨ ਦੌਰਾਨ ਸਮਰੱਥ ਕਰੋ"
+msgstr "ਸਕਰੀਨ ਸਾਂਝੀ ਕਰਨ ਦੌਰਾਨ"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ:"
 
 #: ui/main.qml:103
 #, kde-format
@@ -159,21 +153,19 @@ msgstr "ਘੱਟ ਤਰਜੀਹ ਨੋਟੀਫਿਕੇਸ਼ਨ:"
 #: ui/main.qml:135
 #, kde-format
 msgid "Show popup"
-msgstr "ਪੋਪਅੱਪ ਵੇਖਾਓ"
+msgstr "ਪੌਪਅੱਪ ਵੇਖਾਓ"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "ਪੋਪਅੱਪ:"
+msgstr "ਪੌਪਅੱਪ"
 
 #: ui/main.qml:170
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ:"
+msgstr "ਟਿਕਾਣਾ: "
 
 #: ui/main.qml:171
 #, fuzzy, kde-format
@@ -205,7 +197,7 @@ msgstr "ਇਸ ਦੇ ਬਾਦ ਲੁਕਾਓ:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "ਵਧੀਕ ਫੀਡਬੈਂਕ"
 
 #: ui/main.qml:251
 #, kde-format
@@ -235,11 +227,10 @@ msgid "Show in task manager"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਵੇਖਾਓ"
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
+msgstr "ਖਾਸ ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
 
 #: ui/main.qml:296
 #, kde-format
@@ -267,8 +258,7 @@ msgid "System Services"
 msgstr "ਸਿਸਟਮ ਸੇਵਾਵਾਂ"
 
 #: ui/SourcesPage.qml:148
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
 msgstr "ਤੁਹਾਡੇ ਖੋਜ ਸ਼ਬਦ ਨਾਲ ਮਿਲਦੀ ਕੋਈ ਐਪਲੀਕੇਸ਼ਨ ਜਾਂ ਈਵੈਂਟ ਹੈ"
 
