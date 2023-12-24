@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Guillaume Pujol <guill.p@gmail.com>, 2009.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021.
 #
 msgid ""
 msgstr ""

@@ -4,7 +4,7 @@
 # Joëlle Cornavin <jcorn@free.fr>, 2012.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015.
 # Simon Depiets <sdepiets@gmail.com>, 2018.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020.
 #
 msgid ""
 msgstr ""
