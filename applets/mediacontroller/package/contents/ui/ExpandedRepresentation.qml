@@ -46,8 +46,8 @@ PlasmaExtras.Representation {
     property bool disablePositionUpdate: false
     property bool keyPressed: false
 
-    KeyNavigation.down: playerSelector.count ? playerSelector.currentItem : (seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down)
-    KeyNavigation.up: seekSlider.KeyNavigation.down
+    KeyNavigation.tab: playerSelector.count ? playerSelector.currentItem : (seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down)
+    KeyNavigation.down: KeyNavigation.tab
 
     onPositionChanged: {
         // we don't want to interrupt the user dragging the slider
@@ -402,7 +402,8 @@ PlasmaExtras.Representation {
                     value: 0
                     visible: canSeek
 
-                    KeyNavigation.up: playerSelector.currentItem
+                    KeyNavigation.backtab: playerSelector.currentItem
+                    KeyNavigation.up: KeyNavigation.backtab
                     KeyNavigation.down: playPauseButton.enabled ? playPauseButton : (playPauseButton.KeyNavigation.left.enabled ? playPauseButton.KeyNavigation.left : playPauseButton.KeyNavigation.right)
                     Keys.onLeftPressed: {
                         seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
