@@ -72,6 +72,8 @@ public:
 
     PanelRulerView *panelRulerView();
 
+    Q_INVOKABLE QScreen *screenFromWindow(QWindow *window) const;
+
     friend class PanelRulerView;
 
 protected:
@@ -91,6 +93,7 @@ Q_SIGNALS:
     void visibilityModeChanged();
     void opacityModeChanged();
     void enabledBordersChanged();
+    void screenToFollowChanged();
 
 private:
     void focusVisibilityCheck(QWindow *focusWindow);

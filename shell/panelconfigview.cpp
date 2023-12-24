@@ -423,4 +423,9 @@ PanelRulerView *PanelConfigView::panelRulerView()
     return m_panelRulerView.get();
 }
 
+QScreen *PanelConfigView::screenFromWindow(QWindow *window) const
+{
+    return window ? window->screen() : nullptr;
+}
+
 #include "moc_panelconfigview.cpp"
