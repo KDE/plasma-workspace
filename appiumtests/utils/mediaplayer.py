@@ -126,7 +126,7 @@ class Mpris2:
         self.__player_reg_id = 0
         self.__connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
-        GLibMainLoopThread.process_events()  # Otherwise flaky
+        self.__connection.flush_sync(None)  # Otherwise flaky
         logging.info("Player exit")
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:

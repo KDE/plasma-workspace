@@ -221,7 +221,7 @@ class OrgFreedesktopUPower:
         self.__device_reg_id_map = {}
         self.__connection.unregister_object(self.__upower_reg_id)
         self.__upower_reg_id = 0
-        GLibMainLoopThread.process_events()  # Otherwise flaky
+        self.__connection.flush_sync(None)  # Otherwise flaky
 
     def set_upower_property(self, property_name: str, value: GLib.Variant) -> None:
         self.upower_properties[property_name] = value
