@@ -172,10 +172,10 @@ class MediaControllerTests(unittest.TestCase):
         self.assertGreater(center_pos_x, 1)
         self.assertGreater(center_pos_y, 1)
 
-        # Touch the window
+        # Touch the window, and wait a moment to make sure the widget is ready
         input_source = PointerInput(POINTER_TOUCH, "finger")
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
-        action.pointer_action.move_to_location(center_pos_x, center_pos_y).click()
+        action.pointer_action.move_to_location(center_pos_x, center_pos_y).click().pause(0.5)
         action.perform()
 
         # Swipe right -> Position++
