@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-02-17 10:48+0300\n"
+"PO-Revision-Date: 2023-12-24 17:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -112,10 +112,9 @@ msgid "Not present"
 msgstr "Отсутствует"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Управление питанием"
+msgstr "Управление питанием и батарея"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -332,11 +331,10 @@ msgid "Power Profile"
 msgstr "Профиль энергопотребления:"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Нет данных о батареях"
+msgstr "Недоступно"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -405,6 +403,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Ваше устройство может поддерживать работу с использованием различных "
+"профилей энергопотребления.<nl/> Попытайтесь установить пакет <command>power-"
+"profiles-daemon</command> и перезагрузите систему."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

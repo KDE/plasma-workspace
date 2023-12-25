@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2023-12-03 20:55+0300\n"
+"PO-Revision-Date: 2023-12-24 18:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -140,6 +140,8 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"Приложение «%1» ещё ни разу не было запущено автоматически. Подробные "
+"сведения станут доступы после перезагрузки системы."
 
 #: ui/main.qml:137
 #, kde-format
@@ -234,7 +236,7 @@ msgstr "Запуск завершился ошибкой"
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "Ошибка при получении ответа на запрос GetAll %1"
 
 #: unit.cpp:155
 #, kde-format

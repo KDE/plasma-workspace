@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-01-18 10:25+0300\n"
+"PO-Revision-Date: 2023-12-24 18:21+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -262,10 +262,9 @@ msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунду"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Размер:"
+msgstr "Размер: %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -279,10 +278,9 @@ msgid "&Install from File…"
 msgstr "&Установить из файла..."
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "З&агрузить наборы курсоров..."
+msgstr "З&агрузить наборы курсоров…"
 
 #: ui/main.qml:161
 #, kde-format
