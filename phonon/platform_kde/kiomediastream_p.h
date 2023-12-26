@@ -10,7 +10,7 @@
 
 #include <QUrl>
 
-#include <KIO/Job>
+#include <KIO/TransferJob>
 
 namespace Phonon
 {

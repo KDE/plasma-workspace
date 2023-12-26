@@ -275,3 +275,5 @@ void ColorsModel::removeItemsPendingDeletion()
         }
     }
 }
+
+#include "moc_colorsmodel.cpp"

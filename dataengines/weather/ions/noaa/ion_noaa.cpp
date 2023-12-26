@@ -10,7 +10,7 @@
 
 #include "ion_noaadebug.h"
 
-#include <KIO/Job>
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KUnitConversion/Converter>
 

@@ -27,6 +27,8 @@
 #include <QVBoxLayout>
 
 #include <KConfigGroup>
+#include <KIO/TransferJob>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KPluginFactory>
 #include <KSharedConfig>
@@ -37,7 +39,6 @@
 #include <KTextEditor/View>
 #include <KToolBar>
 #include <KX11Extras>
-#include <klocalizedstring.h>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>

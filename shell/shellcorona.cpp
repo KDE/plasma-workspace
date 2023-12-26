@@ -39,10 +39,10 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 #include <PlasmaQuick/SharedQmlEngine>
-#include <plasmaactivities/consumer.h>
-#include <plasmaactivities/controller.h>
 #include <kdirwatch.h>
 #include <ksycoca.h>
+#include <plasmaactivities/consumer.h>
+#include <plasmaactivities/controller.h>
 
 #include <KPackage/PackageLoader>
 
@@ -1364,7 +1364,7 @@ void ShellCorona::addOutput(QScreen *screen)
     }
     Q_ASSERT(!screen->geometry().isNull());
 #ifndef NDEBUG
-    connect(screen, &QScreen::geometryChanged, &m_invariantsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
+    connect(screen, &QScreen::geometryChanged, &m_invariantsTimer, qOverload<>(&QTimer::start), Qt::UniqueConnection);
 #endif
     int insertPosition = m_screenPool->idForScreen(screen);
     Q_ASSERT(insertPosition >= 0);

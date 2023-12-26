@@ -8,9 +8,9 @@
 
 #include "ion_envcan.h"
 
-#include "ion_envcandebug.h"
+// #include "ion_envcandebug.h"
 
-#include <KIO/Job>
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KUnitConversion/Converter>
 

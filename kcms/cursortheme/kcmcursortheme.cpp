@@ -11,7 +11,6 @@
 #include "kcmcursortheme.h"
 
 #include "../kcms-common_p.h"
-#include "krdb.h"
 
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"
@@ -21,7 +20,7 @@
 
 #include <KIO/CopyJob>
 #include <KIO/DeleteJob>
-#include <KIO/Job>
+#include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 #include <KLocalizedString>
 #include <KMessageBox>

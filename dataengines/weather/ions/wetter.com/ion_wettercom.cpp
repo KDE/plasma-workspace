@@ -17,7 +17,7 @@
 
 #include "ion_wettercomdebug.h"
 
-#include <KIO/Job>
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KUnitConversion/Converter>
 

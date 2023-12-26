@@ -114,3 +114,5 @@ bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &sourc
 
     return true;
 }
+
+#include "moc_filterproxymodel.cpp"

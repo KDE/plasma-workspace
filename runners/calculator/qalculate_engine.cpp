@@ -16,8 +16,9 @@
 #include <QDebug>
 #include <QFile>
 #include <QMutex>
+#include <QUrl>
 
-#include <KIO/Job>
+#include <KIO/FileCopyJob>
 #include <KLocalizedString>
 
 constexpr int evaluationTimeout = 10000;
