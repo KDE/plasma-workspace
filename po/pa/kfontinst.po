@@ -2,7 +2,7 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# A S Alam <aalam@users.sf.net>, 2007, 2008, 2009, 2010, 2011, 2021.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2021, 2023 A S Alam <aalam@users.sf.net>
 # AP S Alam <aalam@users.sf.net>, 2007.
 # ASB <aalam@users.sf.net>, 2007, 2012.
 msgid ""
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2021-06-08 22:40-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-24 09:43-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
@@ -29,7 +29,7 @@ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "aalam@users.sf.net"
+msgstr "aalam@punlinux.org"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:953
 #, kde-format
@@ -38,7 +38,7 @@ msgid ""
 "or system-wide (available to all users)?"
 msgstr ""
 "ਕੀ ਤੁਸੀਂ ਫੋਂਟ ਨਿੱਜੀ ਵਰਤੋਂ ਲਈ ਇੰਸਟਾਲ ਕਰਨੇ ਚਾਹੁੰਦੇ ਹੋ (ਕੇਵਲ ਤੁਸੀਂ ਹੀ ਵਰਤਣੇ ਹਨ) ਜਾਂ ਸਿਸਟਮ ਲਈ (ਸਭ "
-"ਯੂਜ਼ਰਾਂ ਲਈ)?"
+"ਵਰਤੋਂਕਾਰਾਂ ਲਈ)?"
 
 #: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
@@ -113,17 +113,14 @@ msgid "Remove file containing list of fonts to print"
 msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਈਲ ਹਟਾਓ"
 
 #: apps/Viewer.cpp:46
-#, fuzzy, kde-format
-#| msgid "Open font in font viewer?"
-#| msgid_plural "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "ਕੀ ਫੋਂਟ ਫੋਂਟ ਦਰਸ਼ਕ ਵਿੱਚ ਖੋਲ੍ਹਣਾ ਹੈ?"
+msgstr "ਮੌਜੂਦਾ ਫ਼ੋਂਟ ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: apps/Viewer.cpp:47
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "ਫੋਂਟ ਸੈਂਪਲ ਛਾਪੋ"
+msgstr "ਫੋਂਟ ਝਲਕ ਨੂੰ ਛਾਪੋ"
 
 #: apps/Viewer.cpp:64
 #, kde-format
@@ -647,10 +644,9 @@ msgid "Enable Fonts in Group…"
 msgstr "ਗਰੁੱਪ ਫੋਂਟ ਸਮਰੱਥ ਕਰੋ…"
 
 #: kcmfontinst/KCmFontInst.cpp:220
-#, fuzzy, kde-format
-#| msgid "Disable Fonts"
+#, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "ਫੋਂਟ ਆਯੋਗ ਕਰੋ"
+msgstr "…ਗਰੁੱਪ ਵਿੱਚ ਫ਼ੋਂਟ ਨੂੰ ਸਮਰੱਥ ਕਰੋ"
 
 #: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
@@ -693,10 +689,9 @@ msgid "Delete Selected Fonts…"
 msgstr "…ਚੁਣੇ ਗਏ ਫ਼ੋਂਟ ਹਟਾਓ"
 
 #: kcmfontinst/KCmFontInst.cpp:333
-#, fuzzy, kde-format
-#| msgid "Change Preview Text..."
+#, kde-format
 msgid "Change Preview Text…"
-msgstr "ਝਲਕ ਪਾਠ ਬਦਲੋ..."
+msgstr "…ਲਿਖਤ ਝਲਕ ਨੂੰ ਬਦਲੋ"
 
 #: kcmfontinst/KCmFontInst.cpp:432
 #, kde-format
@@ -775,12 +770,13 @@ msgid "Nothing to Move"
 msgstr "ਭੇਜਣ ਲਈ ਕੁਝ ਨਹੀਂ ਹੈ"
 
 #: kcmfontinst/KCmFontInst.cpp:661
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
-msgstr "<p>ਕੀ ਤੁਸੀਂ </p><p><b>%1</b>' ਨੂੰ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?</p>"
+msgstr ""
+"<p>ਕੀ ਤੁਸੀਂ </p><p>'<b>%1</b>'</p><p>ਨੂੰ <i>%2</i> ਤੋਂ <i>%3</i> ਲਈ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?</"
+"p>"
 
 #: kcmfontinst/KCmFontInst.cpp:666
 #, kde-format
@@ -887,10 +883,9 @@ msgid ""
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:986
-#, fuzzy, kde-format
-#| msgid "Looking for any associated files..."
+#, kde-format
 msgid "Looking for any associated files…"
-msgstr "ਕਿਸੇ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਲਈ ਖੋਜ ਜਾਰੀ ਹੈ..."
+msgstr "ਕਿਸੇ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਲਈ ਖੋਜ ਜਾਰੀ ਹੈ…"
 
 #: kcmfontinst/KCmFontInst.cpp:990
 #, kde-format
@@ -898,10 +893,9 @@ msgid "Scanning Files…"
 msgstr "…ਫਾਇਲਾਂ ਦੀ ਜਾਂਚ ਜਾਰੀ"
 
 #: kcmfontinst/KCmFontInst.cpp:991
-#, fuzzy, kde-format
-#| msgid "Looking for additional files to install..."
+#, kde-format
 msgid "Looking for additional files to install…"
-msgstr "ਹੋਰ ਫਾਈਲਾਂ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਖੋਜ ਜਾਰੀ..."
+msgstr "ਹੋਰ ਫਾਈਲਾਂ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਖੋਜ ਜਾਰੀ…"
 
 #: kcmfontinst/KCmFontInst.cpp:1006
 #, kde-format
@@ -1066,7 +1060,7 @@ msgstr "48pt"
 #: kio/KioFonts.cpp:205
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr ""
+msgstr "ਸਿਰਫ਼ \"%1\" ਜਾਂ \"%2\" ਤੋਂ ਫੋਂਟ ਹੀ ਇੰਸਟਾਲ ਕੀਤੇ ਜਾ ਸਕਦੇ ਹਨ।"
 
 #: kio/KioFonts.cpp:208
 #, kde-format

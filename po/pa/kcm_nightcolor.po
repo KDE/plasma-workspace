@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-12-22 21:50-0600\n"
+"PO-Revision-Date: 2023-12-24 09:36-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -171,8 +171,7 @@ msgid "Input format: HH:MM"
 msgstr "ਇਨਪੁਟ ਫਾਰਮੈਟ: HH:MM"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "ਦਿਨ ਦੇ ਰੰਗ ਸ਼ੁਰੂ ਕਰੋ:"
 

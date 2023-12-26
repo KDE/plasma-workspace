@@ -2,28 +2,28 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# A S Alam <aalam@users.sf.net>, 2007, 2008, 2010, 2011, 2020, 2021.
+# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh <aalam@users.sf.net>, 2008, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2021-06-08 22:25-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-24 09:34-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current cursor theme"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਥੀਮ ਦਾ ਨਾਂ ਹੈ"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
@@ -40,7 +40,7 @@ msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰ�
 #: kcmcursortheme.cpp:379
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
 #: kcmcursortheme.cpp:390
 #, fuzzy, kde-format
@@ -74,14 +74,14 @@ msgstr "ਥੀਮ ਉੱਤੇ ਲਿਖਣਾ ਹੈ?"
 #: kcmcursortheme.cpp:465
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ।"
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "ਸਮਾਂ-ਸਮਾਪਤੀ ਸਕਿੰਟਾਂ ਵਿੱਚ"
 
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
@@ -150,7 +150,7 @@ msgstr ""
 #: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr ""
+msgstr "(ਇਸ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਮੌਜੂਦਾ ਥੀਮ)"
 
 #: ui/Delegate.qml:44
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "ਕਰਸਰ ਥੀਮ ਬਹਾਲ ਕਰੋ"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "ਫੀਡਬੈਕ ਚਲਾਓ"
 
 #: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
@@ -178,25 +178,25 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "ਕਰਸਰ ਫੀਡਬੈਕ:"
 
 #: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "ਕੋਈ ਨਹੀਂ"
 
 #: ui/LaunchFeedbackDialog.qml:58
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "ਸਥਿਰ"
 
 #: ui/LaunchFeedbackDialog.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "ਝਪਕਣਾ"
 
 #: ui/LaunchFeedbackDialog.qml:76
 #, kde-format
@@ -208,38 +208,37 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਫੀਡਬੈਕ:"
 
 #: ui/LaunchFeedbackDialog.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "ਐਨੀਮੇਸ਼ਨ ਸਮਰੱਥ ਕਰੋ"
 
 #: ui/LaunchFeedbackDialog.qml:112
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "ਇਸ ਦੇ ਬਾਅਦ ਐਨੀਮੇਸ਼ਨ ਰੋਕੋ:"
 
 #: ui/LaunchFeedbackDialog.qml:126 ui/LaunchFeedbackDialog.qml:138
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ਸਕਿੰਟ"
+msgstr[1] "%1 ਸਕਿੰਟ"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "ਆਕਾਰ:"
+msgstr "ਆਕਾਰ: %1"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "ਫੀਡਬੈਕ ਚਲਾਉਣ ਦੀ ਸੰਰਚਨਾ(&C)…"
 
 #: ui/main.qml:111
 #, kde-format
@@ -247,10 +246,9 @@ msgid "&Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ(&I)"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "…ਨਵਾਂ ਥੀਮ ਲਵੋ"
+msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ(&G)…"
 
 #: ui/main.qml:161
 #, kde-format
@@ -260,7 +258,7 @@ msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 #: ui/main.qml:163
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "ਕਰਸਰ ਥੀਮ ਫਾਇਲਾਂ (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:58
 #, kde-format

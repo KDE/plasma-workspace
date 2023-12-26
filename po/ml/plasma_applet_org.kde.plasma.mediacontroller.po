@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-12 01:38+0000\n"
+"POT-Creation-Date: 2023-12-26 01:34+0000\n"
 "PO-Revision-Date: 2021-02-18 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -31,53 +31,53 @@ msgid "No media playing"
 msgstr "മീഡിയ പ്ലേ ചെയ്യുന്നില്ല"
 
 #: package/contents/ui/ExpandedRepresentation.qml:383
-#: package/contents/ui/ExpandedRepresentation.qml:504
+#: package/contents/ui/ExpandedRepresentation.qml:505
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:532
+#: package/contents/ui/ExpandedRepresentation.qml:533
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "കലർത്തുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:556
+#: package/contents/ui/ExpandedRepresentation.qml:557
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "മുൻപത്തെ ട്രാക്ക്"
 
-#: package/contents/ui/ExpandedRepresentation.qml:578
+#: package/contents/ui/ExpandedRepresentation.qml:579
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "താത്കാലികമായി നിർത്തുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:578
+#: package/contents/ui/ExpandedRepresentation.qml:579
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "പ്ലേ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:596
+#: package/contents/ui/ExpandedRepresentation.qml:597
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "അടുത്ത ട്രാക്ക്"
 
-#: package/contents/ui/ExpandedRepresentation.qml:619
+#: package/contents/ui/ExpandedRepresentation.qml:620
 #, kde-format
 msgid "Repeat Track"
 msgstr "ട്രാക്ക് ആവർത്തിക്കുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:619
+#: package/contents/ui/ExpandedRepresentation.qml:620
 #, kde-format
 msgid "Repeat"
 msgstr "ആവർത്തിക്കുക"

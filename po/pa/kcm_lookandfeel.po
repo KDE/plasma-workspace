@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 21:51-0600\n"
+"PO-Revision-Date: 2023-12-24 09:35-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -180,7 +180,7 @@ msgstr "ਡੈਸਕਟਾਪ ਖਾਕਾ"
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "ਟਾਈਟਲ-ਬਾਰ ਬਟਨ ਲੇਆਉਟ"
 
 #: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
 #, kde-format

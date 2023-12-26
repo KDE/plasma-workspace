@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Punjabi
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
-# A S Alam <aalam@users.sf.net>, 2007, 2008, 2009, 2010, 2011, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
 # ASB <aalam@users.sf.net>, 2007.
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009, 2012.
 msgid ""
@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2021-06-08 22:25-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-24 09:32-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
@@ -505,7 +505,7 @@ msgstr "ਪੂਰਤੀ"
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "ਹੈੱਡਰ"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -1205,10 +1205,9 @@ msgid "You have the following color schemes on your system:"
 msgstr ""
 
 #: plasma-apply-colorscheme.cpp:159
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "ਮੌਜੂਦਾ ਰੰਗ ਸਕੀਮ ਸੰਭਾਲੋ"
+msgstr "* %1 (ਮੌਜੂਦਾ ਰੰਗ ਸਕੀਮ)"
 
 #: ui/AccentColorUI.qml:37
 #, fuzzy, kde-format
@@ -1264,7 +1263,7 @@ msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ…"
 
 #: ui/main.qml:192
 #, kde-format

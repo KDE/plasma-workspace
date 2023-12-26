@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-07 01:42+0000\n"
-"PO-Revision-Date: 2023-12-22 21:48-0600\n"
+"PO-Revision-Date: 2023-12-24 09:38-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -225,6 +225,8 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"<command>localectl</command> ਟੂਲ ਵਰਤ ਕੇ ਸਿਸਟਮ ਦੇ ਮੌਜੂਦ ਲੋਕੇਲ ਲੱਭੇ ਨਹੀਂ ਜਾ ਸਕੇ। ਇਸ ਬਾਰੇ "
+"ਬੱਗ ਦੀ ਜਾਣਕਾਰੀ <link>https://bugs.kde.org</link> ਦਿਓ।"
 
 #: languagelistmodel.cpp:87
 #, kde-format
@@ -493,6 +495,9 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"ਲੋਕੇਲ ਤੇ ਭਾਸ਼ਾ ਸਹਿਯੋਗ ਫਾਇਲਾਂ ਨੂੰ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ, ਪਰ ਭਾਸ਼ਾ ਦੇ ਨਾਲ ਸੰਬੰਧਿਤ ਫੋਂਟਾਂ ਨੂੰ ਆਪਣੇ-ਆਪ "
+"ਇੰਸਟਾਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਕਿਆ ਹੈ। ਜੇ ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਨੂੰ ਦਿਖਾਉਣ ਲਈ ਲਈ ਖਾਸ ਕਿਸਮ ਦੇ ਫ਼ੋਂਟ ਚਾਹੀਦੇ ਹਨ "
+"ਤਾਂ ਤੁਹਾਨੂੰ ਉਹ ਪਤਾ ਕਰਨੇ ਪੈਣਗੇ ਅਤੇ ਖੁਦ ਇੰਸਟਾਲ ਕਰਨੇ ਪੈਣਗੇ।"
 
 #: ui/main.qml:75
 #, kde-format
