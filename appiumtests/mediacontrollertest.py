@@ -231,6 +231,7 @@ class MediaControllerTests(unittest.TestCase):
     def _cleanup_multiplexer(self) -> None:
         if self.player_b:
             self.player_b.kill()
+            self.player_b.wait()
             self.player_b = None
 
     def test_multiplexer(self) -> None:
@@ -309,6 +310,7 @@ class MediaControllerTests(unittest.TestCase):
 
         # Close B -> A
         self.player_b.terminate()
+        self.player_b.wait(10)
         self.player_b = None
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
@@ -322,9 +324,11 @@ class MediaControllerTests(unittest.TestCase):
         """
         if self.player_browser:
             self.player_browser.terminate()
+            self.player_browser.wait(10)
             self.player_browser = None
         if self.player_plasma_browser_integration:
             self.player_plasma_browser_integration.terminate()
+            self.player_plasma_browser_integration.wait(10)
             self.player_plasma_browser_integration = None
 
     def test_filter_plasma_browser_integration(self) -> None:
@@ -402,6 +406,7 @@ class MediaControllerTests(unittest.TestCase):
             # Overflow check, 2160000000 (microsecond) > INT_MAX (2147483647)
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-36:00")))
             player_with_encoded_url.terminate()
+            player_with_encoded_url.wait(10)
 
 
 if __name__ == '__main__':
