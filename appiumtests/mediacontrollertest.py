@@ -183,6 +183,7 @@ class MediaControllerTests(unittest.TestCase):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x * 2, center_pos_y).pointer_up()
         action.perform()
+        self.mpris_interface.connection.flush_sync(None)
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > 0)
 
         # Swipe left -> Position--
@@ -191,6 +192,7 @@ class MediaControllerTests(unittest.TestCase):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(0, center_pos_y).pointer_up()
         action.perform()
+        self.mpris_interface.connection.flush_sync(None)
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() < old_position)
 
         # Swipe down: Volume--
@@ -198,6 +200,7 @@ class MediaControllerTests(unittest.TestCase):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, center_pos_y * 2).pointer_up()
         action.perform()
+        self.mpris_interface.connection.flush_sync(None)
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < 1.0)
 
         # Swipe up: Volume++
@@ -206,6 +209,7 @@ class MediaControllerTests(unittest.TestCase):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, 0).pointer_up()
         action.perform()
+        self.mpris_interface.connection.flush_sync(None)
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() > old_volume)
 
         # Swipe down and then swipe right, only volume should change
@@ -215,6 +219,7 @@ class MediaControllerTests(unittest.TestCase):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, center_pos_y * 2).pause(0.5).move_to_location(center_pos_x * 2, center_pos_y * 2).pointer_up()
         action.perform()
+        self.mpris_interface.connection.flush_sync(None)
         wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < old_volume)
         self.assertEqual(old_position, self.mpris_interface.player_properties["Position"].get_int64())
 
@@ -225,6 +230,7 @@ class MediaControllerTests(unittest.TestCase):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x * 2, center_pos_y).pause(0.5).move_to_location(center_pos_x * 2, 0).pointer_up()
         action.perform()
+        self.mpris_interface.connection.flush_sync(None)
         wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
         self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
 

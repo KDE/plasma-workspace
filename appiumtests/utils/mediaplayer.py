@@ -97,7 +97,7 @@ class Mpris2:
     PLAYER_IFACE: Final = GLib.Variant('s', "org.mpris.MediaPlayer2.Player")
     APP_INTERFACE: Final = f"org.mpris.MediaPlayer2.appiumtest.instance{str(getpid())}"
 
-    __connection: Gio.DBusConnection | None = None
+    connection: Gio.DBusConnection | None = None
 
     def __init__(self, metadata: list[dict[str, GLib.Variant]], base_properties: dict[str, GLib.Variant], player_properties: dict[str, GLib.Variant], current_index: int) -> None:
         self.metadata: list[dict[str, GLib.Variant]] = metadata
@@ -117,23 +117,23 @@ class Mpris2:
         self.__base_reg_id: int = 0
 
     def quit(self) -> None:
-        if self.__connection is None:
+        if self.connection is None:
             return
         Gio.bus_unown_name(self.__owner_id)
-        self.__connection.unregister_object(self.__prop_reg_id)
+        self.connection.unregister_object(self.__prop_reg_id)
         self.__prop_reg_id = 0
-        self.__connection.unregister_object(self.__player_reg_id)
+        self.connection.unregister_object(self.__player_reg_id)
         self.__player_reg_id = 0
-        self.__connection.unregister_object(self.__base_reg_id)
+        self.connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
-        self.__connection.flush_sync(None)  # Otherwise flaky
+        self.connection.flush_sync(None)  # Otherwise flaky
         logging.info("Player exit")
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:
         """
         Interface is ready, now register objects.
         """
-        self.__connection = connection
+        self.connection = connection
 
         with open("../libkmpris/dbus/org.freedesktop.DBus.Properties.xml", encoding="utf-8") as handler:
             properties_introspection_xml: str = '\n'.join(handler.readlines())
