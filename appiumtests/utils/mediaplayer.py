@@ -119,13 +119,13 @@ class Mpris2:
     def quit(self) -> None:
         if self.connection is None:
             return
-        Gio.bus_unown_name(self.__owner_id)
         self.connection.unregister_object(self.__prop_reg_id)
         self.__prop_reg_id = 0
         self.connection.unregister_object(self.__player_reg_id)
         self.__player_reg_id = 0
         self.connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
+        Gio.bus_unown_name(self.__owner_id)
         self.connection.flush_sync(None)  # Otherwise flaky
         logging.info("Player exit")
 

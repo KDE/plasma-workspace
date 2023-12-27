@@ -213,7 +213,6 @@ class OrgFreedesktopUPower:
         assert self.__owner_id > 0
 
     def quit(self) -> None:
-        Gio.bus_unown_name(self.__owner_id)
         if self.__enable_display_device:
             self.__connection.unregister_object(self.__display_device_reg_id)
             self.__display_device_reg_id = 0
@@ -221,6 +220,7 @@ class OrgFreedesktopUPower:
         self.__device_reg_id_map = {}
         self.__connection.unregister_object(self.__upower_reg_id)
         self.__upower_reg_id = 0
+        Gio.bus_unown_name(self.__owner_id)
         self.__connection.flush_sync(None)  # Otherwise flaky
 
     def set_upower_property(self, property_name: str, value: GLib.Variant) -> None:
