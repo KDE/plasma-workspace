@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 22:13-0600\n"
+"PO-Revision-Date: 2023-12-26 07:15-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -72,12 +72,12 @@ msgstr "ਕੀਬੋਰਡ ਦਾ ਸ਼ਾਰਟਕੱਟ"
 #: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
-msgstr ""
+msgstr "ਜਦੋਂ ਢੁੱਕਵਾਂ ਹੋਵੇ ਉਦੋਂ ਵਿਖਾਇਆ ਜਾਂਦਾ ਹੈ"
 
 #: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
-msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਓ"
+msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਇਆ ਜਾਂਦਾ ਹੈ"
 
 #: package/contents/ui/ConfigEntries.qml:240
 #, kde-format

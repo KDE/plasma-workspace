@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 02:19+0000\n"
-"PO-Revision-Date: 2023-12-21 07:47+0100\n"
+"PO-Revision-Date: 2023-12-26 17:22+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -147,10 +147,7 @@ msgstr ""
 "indított alkalmazásokra lesznek érvényesek."
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
@@ -165,6 +162,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"A tizedes betűméretek egyes alkalmazásokban szövegelrendezési problémákat "
+"okozhatnak. Fontolja meg, hogy csak egész szám betűméreteket használjon."
 
 #: ui/main.qml:91
 #, kde-format

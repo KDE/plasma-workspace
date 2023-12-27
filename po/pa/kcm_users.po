@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 22:01-0600\n"
+"PO-Revision-Date: 2023-12-26 08:57-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -92,7 +92,7 @@ msgstr "ਪਾਸਵਰਡ ਮਿਲਦੇ ਹੋਣੇ ਚਾਹੀਦੇ ਹ�
 #: src/ui/ChangeWalletPassword.qml:16
 #, kde-format
 msgid "Change Wallet Password?"
-msgstr "ਵਾਲਿਟ ਪਾਸਵਰਡ ਬਦਲਣਾ ਹੈ?"
+msgstr "ਵਾਲਟ ਪਾਸਵਰਡ ਬਦਲਣਾ ਹੈ?"
 
 #: src/ui/ChangeWalletPassword.qml:25
 #, kde-kuit-format
@@ -101,6 +101,8 @@ msgid ""
 "Now that you have changed your login password, you may also want to change "
 "the password on your default KWallet to match it."
 msgstr ""
+"ਹੁਣ ਤੁਸੀਂ ਆਪਣਾ ਲਾਗਇਨ ਪਾਸਵਰਡ ਬਦਲ ਲਿਆ ਹੈ ਤਾਂ ਤੁਸੀਂ ਆਪਣੇ ਮੂਲ ਕੇ-ਵਾਲਟ ਲਈ ਵੀ ਪਾਸਵਰਡ ਨੂੰ ਮਿਲਦੇ "
+"ਪਾਸਵਰਡ ਲਈ ਬਦਲ ਸਕਦੇ ਹੋ।"
 
 #: src/ui/ChangeWalletPassword.qml:30
 #, kde-format
@@ -116,6 +118,10 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
+"ਕੇ-ਵਾਲਟ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਅਤੇ ਹੋਰ ਇੰਕ੍ਰਿਪਟ ਕੀਤੇ ਸੋਤਾਂ ਲਈ ਤੁਹਾਡੇ ਪਾਸਵਰਡ ਸੰਭਾਲਣ ਲਈ ਪਾਸਵਰਡ ਮੈਨੇਜਰ "
+"ਹੈ। ਇਹ ਇਸ ਦੇ ਖੁਦ ਆਪਣੇ ਪਾਸਵਰਡ ਨਾਲ ਲਾਕ ਹੁੰਦਾ ਹੈ, ਜੋ ਤੁਹਾਡੇ ਲਾਗਇਨ ਪਾਸਵਰਡ ਤੋਂ ਵੱਖਰਾ ਹੁੰਦਾ ਹੈ। ਜੇ "
+"ਦੋਵੇਂ ਪਾਸਵਰਡ ਮਿਲਦੇ ਹੋਣ ਤਾਂ ਇਹ ਲਾਗਇਨ ਹੋਣ ਉੱਤੇ ਆਪਣੇ-ਆਪ ਅਣ-ਲਾਕ ਹੋ ਜਾਂਦਾ ਹੈ ਤਾਂ ਕਿ ਤੁਹਾਨੂੰ ਕੇ-ਵਾਲਟ "
+"ਲਈ ਖੁਦ ਪਾਸਵਰਡ ਨਹੀਂ ਭਰਨਾ ਪੈਂਦਾ ਹੈ।"
 
 #: src/ui/ChangeWalletPassword.qml:56
 #, kde-format
@@ -503,7 +509,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "ਵਰਤੋਂਕਾਰ ਅਵਤਾਰ ਥਾਂ ਆਈਕਾਨ"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format
@@ -558,12 +564,12 @@ msgstr "ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਦੌਰਾਨ ਗਲਤੀ
 #: src/user.cpp:384
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
-msgstr ""
+msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਖੋਲ੍ਹਣ ਲਈ ਫੇਲ੍ਹ"
 
 #: src/user.cpp:392
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
-msgstr ""
+msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਲਿਖਣ ਲਈ ਫੇਲ੍ਹ"
 
 #: src/usermodel.cpp:147
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2023-12-22 22:11-0600\n"
+"PO-Revision-Date: 2023-12-26 08:17-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -292,7 +292,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "ਓਹਲੇ ਕਰੋ ਜਦੋਂ ਇਹ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ ਦਾ ਸ਼ਹਿਰ ਹੋਵੇ"
 
 #: package/contents/ui/configTimeZones.qml:105
 #, kde-format

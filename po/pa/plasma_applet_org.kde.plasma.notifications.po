@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 22:13-0600\n"
+"PO-Revision-Date: 2023-12-26 08:13-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -308,20 +308,19 @@ msgstr[0] "%1 ਨਾ-ਪੜ੍ਹਿਆ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 msgstr[1] "%1 ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "%1 ਤੱਕ ਤੰਗ ਨਾ ਕਰੋ"
+msgstr "%1 ਤੱਕ ਤੰਗ ਨਾ ਕਰੋ; ਹੁਣੇ ਬੰਦ ਕਰਨ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ ਸਰਗਰਮ ਹੈ; ਬੰਦ ਕਰਨ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ ਵਿੱਚ ਜਾਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ ਕਰੋ"
 
 #: package/contents/ui/main.qml:229
 #, kde-format

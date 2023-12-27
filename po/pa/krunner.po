@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2023-12-24 09:50-0600\n"
+"PO-Revision-Date: 2023-12-26 08:31-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -55,7 +55,7 @@ msgstr "ਮੌਜੂਦਾ ਮੌਕੇ ਨੂੰ ਬਦਲੋ"
 #: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "ਦਿੱਤੀ ਪਲੱਗਇਨ ਤੋਂ ਹੀ ਨਤੀਜੇ ਵੇਖਾਓ"
 
 #: main.cpp:67
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "ਚਲਾਉਣ ਲਈ ਕਿਉਰੀ, ਜੇ -c ਨਾ ਦਿੱਤਾ
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "ਮੌਜੂਦ ਕੇ-ਰਨਰ ਪਲੱਗਇਨ, pluginId"
 
 #: qml/RunCommand.qml:100
 #, kde-format

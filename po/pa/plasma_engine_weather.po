@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2023-12-22 22:14-0600\n"
+"PO-Revision-Date: 2023-12-26 07:15-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -1145,20 +1145,16 @@ msgid "Thunderstorm with Rain"
 msgstr ""
 
 #: envcan_i18n.dat:84
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr "ਹੌਲੀ ਮੀਂਹ ਫੁਹਾਰ"
+msgstr "ਹੌਲੀ ਮੀਂਹ ਫੁਹਾਰ ਨਾਲ ਗਰਜ਼-ਤੂਫ਼ਾਨ"
 
 #: envcan_i18n.dat:85
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr "ਭਾਰੀ ਮੀਂਹ ਫੁਹਾਰਾਂ"
+msgstr "ਭਾਰੀ ਮੀਂਹ ਫੁਹਾਰਾਂ ਨਾਲ ਗਰਜ਼-ਤੂਫ਼ਾਨ"
 
 #: envcan_i18n.dat:86
 #, kde-format
@@ -1176,7 +1172,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Tornado"
-msgstr ""
+msgstr "ਟਾਰਨੈਡੋ"
 
 #: envcan_i18n.dat:89
 #, kde-format

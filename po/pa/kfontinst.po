@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2023-12-24 09:43-0600\n"
+"PO-Revision-Date: 2023-12-26 08:53-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -596,7 +596,7 @@ msgstr "<i>%1</i> ਨਾਲ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਨੂੰ ਹ�
 #: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr ""
+msgstr "ਸਿਸਟਮ ਡੈਮਨ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ।<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
 #, kde-format
@@ -626,7 +626,7 @@ msgstr "ਪਰਮਾਣਿਕਤਾ ਫੇਲ੍ਹ ਹੋਈ।<br><i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
-msgstr ""
+msgstr "ਕਾਰਵਾਈ ਦੌਰਾਨ ਅਚਾਨਕ ਗਲਤੀ ਆਈ: <i>%1</i>"
 
 #: kcmfontinst/KCmFontInst.cpp:211
 #, kde-format
@@ -641,7 +641,7 @@ msgstr "…ਗਰੁੱਪ ਹਟਾਓ"
 #: kcmfontinst/KCmFontInst.cpp:217
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "ਗਰੁੱਪ ਫੋਂਟ ਸਮਰੱਥ ਕਰੋ…"
+msgstr "ਗਰੁੱਪ ਫ਼ੋਂਟ ਸਮਰੱਥ ਕਰੋ…"
 
 #: kcmfontinst/KCmFontInst.cpp:220
 #, kde-format
@@ -696,7 +696,7 @@ msgstr "…ਲਿਖਤ ਝਲਕ ਨੂੰ ਬਦਲੋ"
 #: kcmfontinst/KCmFontInst.cpp:432
 #, kde-format
 msgid "Add Fonts"
-msgstr "ਫੋਂਟ ਜੋੜੋ"
+msgstr "ਫ਼ੋਂਟ ਜੋੜੋ"
 
 #: kcmfontinst/KCmFontInst.cpp:558
 #, kde-format
@@ -789,14 +789,13 @@ msgid "Move"
 msgstr "ਭੇਜੋ"
 
 #: kcmfontinst/KCmFontInst.cpp:672
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] "<p>ਕੀ ਤੁਸੀਂ </p><p><b>%1</b>' ਨੂੰ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?</p>"
-msgstr[1] "<p>ਕੀ ਤੁਸੀਂ </p><p><b>%1</b>' ਨੂੰ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?</p>"
+msgstr[0] "<p>ਕੀ ਤੁਸੀਂ ਇਸ ਫ਼ੋਂਟ ਨੂੰ <i>%2</i> ਤੋਂ <i>%3</i> ਵਿੱਚ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?</p>"
+msgstr[1] "<p>ਕੀ ਤੁਸੀਂ ਇਹ %1 ਫ਼ੋਂਟਾਂ ਨੂੰ <i>%2</i> ਤੋਂ <i>%3</i> ਵਿੱਚ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
@@ -873,6 +872,9 @@ msgid ""
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
+"<table><tr><td align=\"right\">ਸਮਰੱਥ:</td><td>%1</td></tr><tr><td align="
+"\"right\">ਅਸਮਰੱ::</td><td>%2</td></tr><tr><td align=\"right\">ਅਧੂਰੇ ਰੂਪ ਵਿੱਚ ਸਮਰੱਥ:"
+"</td><td>%3</td></tr><tr><td align=\"right\">ਕੁੱਲ:</td><td>%4</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:909
 #, kde-format
@@ -881,6 +883,9 @@ msgid ""
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
+"<table><tr><td align=\"right\">ਸਮਰੱਥ:</td><td>%1</td></tr><tr><td align="
+"\"right\">ਅਸਮਰੱਥ:</td><td>%2</td></tr><tr><td align=\"right\">ਕੁੱਲ:</td><td>%3</"
+"td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format

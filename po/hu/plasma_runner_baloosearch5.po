@@ -3,20 +3,21 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017.
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2019-12-01 18:47+0100\n"
-"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"PO-Revision-Date: 2023-12-26 17:42+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.03.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: baloosearchrunner.cpp:60
 #, kde-format
@@ -24,62 +25,54 @@ msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
 #: baloosearchrunner.cpp:82
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
-msgstr "Hang"
+msgstr "Hangok"
 
 #: baloosearchrunner.cpp:83
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "Kép"
+msgstr "Képek"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "Videó"
+msgstr "Videók"
 
 #: baloosearchrunner.cpp:85
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
-msgstr "Táblázat"
+msgstr "Táblázatok"
 
 #: baloosearchrunner.cpp:86
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
-msgstr "Bemutató"
+msgstr "Bemutatók"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Mappa"
+msgstr "Mappák"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "Dokumentum"
+msgstr "Dokumentumok"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
-msgstr "Archívum"
+msgstr "Archívumok"
 
 #: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Texts"
-msgstr ""
+msgstr "Szövegek"
 
 #: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Fájlok"
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Keresés fájlokban, e-mailekben és névjegyekben"

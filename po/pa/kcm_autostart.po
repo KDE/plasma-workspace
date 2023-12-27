@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2023-12-22 21:53-0600\n"
+"PO-Revision-Date: 2023-12-26 09:02-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -78,7 +78,7 @@ msgstr "ਸ਼ੁਰੂ"
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "ਲਾਗ ਲੋਡ ਕਰਨ ਲਈ ਅਸਮਰ਼ਥ ਹੈ। ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
 #: ui/entry.qml:109
 #, kde-format
@@ -94,12 +94,12 @@ msgstr "ਚੱਲਣਯੋਗ ਬਣਾਓ"
 #: ui/main.qml:53
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
-msgstr ""
+msgstr "ਲਾਗ-ਆਉਟ ਸਮੇਂ ਚਲਾਉਣ ਲਈ '%1' ਫਾਇਲ ਚੱਲਣਯੋਗ ਚਾਹੀਦੀ ਹੈ।"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr ""
+msgstr "ਲਾਗ-ਇਨ ਸਮੇਂ ਚਲਾਉਣ ਲਈ '%1' ਫਾਇਲ ਚੱਲਣਯੋਗ ਚਾਹੀਦੀ ਹੈ।"
 
 #: ui/main.qml:66
 #, kde-format
@@ -180,7 +180,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr ""
+msgstr "ਕੁਝ ਜੋੜਨ ਲਈ <interface>…ਜੋੜੋ</interface> ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ"
 
 #: ui/main.qml:200
 #, kde-format
@@ -230,7 +230,7 @@ msgstr ""
 #: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "ਜਰਨਲ ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ ਫੇਲ੍ਹ ਹੈ"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

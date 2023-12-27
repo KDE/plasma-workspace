@@ -3,20 +3,21 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2021-09-30 13:45+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-26 17:31+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -26,7 +27,7 @@ msgstr "Kiszel Kristóf"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kiszel.kristof@gmail.com"
+msgstr "ulysses@fsf.hu"
 
 #: kcm.cpp:467
 #, kde-format
@@ -104,36 +105,35 @@ msgstr "Globális megjelenés és működés"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Végleges törlés"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Biztosan végleg törölni szeretné ezt a témát?"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Végleges törlés"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Új letöltése…"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Contains Desktop layout"
-msgstr "A Plasma asztal elrendezésének visszaállítása"
+msgstr "Asztali elrendezést tartalmaz"
 
 #: ui/main.qml:117
 #, kde-format
@@ -141,11 +141,10 @@ msgid "Preview Theme"
 msgstr "Előnézet"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Előnézet"
+msgstr "Eltávolítás"
 
 #: ui/main.qml:141
 #, kde-format
@@ -153,43 +152,42 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "Alkalmazza a(z) %1 témát?"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "Alkalmazni kívántak kiválasztása…"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
+msgstr "Kevesebb lehetőség megjelenítése…"
 
 #: ui/main.qml:176
 #, kde-format
 msgid "Apply"
-msgstr ""
+msgstr "Alkalmaz"
 
 #: ui/main.qml:188
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "Elrendezésbeállítások:"
 
 #: ui/MoreOptions.qml:27
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Desktop layout"
-msgstr "A Plasma asztal elrendezésének visszaállítása"
+msgstr "Asztali elrendezés"
 
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "Címsor gombok elrendezése"
 
 #: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
 #, kde-format
@@ -197,11 +195,13 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
+"Az asztali elrendezés alkalmazása lecseréli az asztalok, panelek, dokkok és "
+"elemek jelenlegi beállításait"
 
 #: ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "Megjelenítési beállítások:"
 
 #: ui/MoreOptions.qml:58
 #, kde-format
@@ -211,17 +211,17 @@ msgstr "Színek"
 #: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
-msgstr ""
+msgstr "Alkalmazásstílus"
 
 #: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decoration Style"
-msgstr ""
+msgstr "Ablakdekoráció stílusa"
 
 #: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decoration Size"
-msgstr ""
+msgstr "Ablakdekoráció mérete"
 
 #: ui/MoreOptions.qml:62
 #, kde-format
@@ -231,7 +231,7 @@ msgstr "Ikonok"
 #: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
-msgstr ""
+msgstr "Plasma stílus"
 
 #: ui/MoreOptions.qml:64
 #, kde-format
@@ -246,46 +246,44 @@ msgstr "Betűkészletek"
 #: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "Feladatváltó"
 
 #: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
+msgstr "Nyitóképernyő"
 
 #: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
-msgstr ""
+msgstr "Zárképernyő"
 
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr ""
+msgstr "Ez a globális téma a következőket tartalmazza:"
 
 #: ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "Megjelenítési beállítások"
 
 #: ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "• Megjelenítési beállítások"
 
 #: ui/SimpleOptions.qml:45
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "A Plasma asztal elrendezésének visszaállítása"
+msgstr "Asztal- és ablakelrendezés"
 
 #: ui/SimpleOptions.qml:52
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "A Plasma asztal elrendezésének visszaállítása"
+msgstr "• Asztal- és ablakelrendezés"
 
 #: ui/SimpleOptions.qml:70
 #, kde-format
@@ -293,6 +291,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+"Ez a globális téma nem biztosít semmilyen alkalmazható beállítást. Kérjük, "
+"lépjen kapcsolatba a globális téma karbantartójával, mivel lehet, hogy a "
+"téma sérült."
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Új globális témák letöltése…"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-24 09:34-0600\n"
+"PO-Revision-Date: 2023-12-26 08:59-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -43,10 +43,9 @@ msgid "Unable to create a temporary file."
 msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
 #: kcmcursortheme.cpp:390
-#, fuzzy, kde-format
-#| msgid "Unable to find the cursor theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "ਕਰਸਰ ਥੀਮ ਅਕਾਇਵ %1 ਲੱਭਣ ਤੋਂ ਅਸਫਲ।"
+msgstr "ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਡਾਊਨਲੋਡ ਤੋਂ ਅਸਮਰੱਥ ਹੈ: %1"
 
 #: kcmcursortheme.cpp:421
 #, kde-format
@@ -56,7 +55,7 @@ msgstr "ਇਹ ਫਾਇਲ਼ ਠੀਕ ਆਈਕਾਨ ਥੀਮ ਅਕਾਈਵ 
 #: kcmcursortheme.cpp:428
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr ""
+msgstr "'icons' ਫੋਲਡਰ ਬਣਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
 
 #: kcmcursortheme.cpp:437
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:35+0000\n"
-"PO-Revision-Date: 2023-12-22 22:19-0600\n"
+"PO-Revision-Date: 2023-12-26 08:28-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -53,18 +53,18 @@ msgstr "ਰਾਤ ਦੇ ਰੰਗ %1K ਉੱਤੇ ਹਨ"
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "ਸਕਰੀਨ ਚਮਕ ਨੂੰ ਅਡਜੱਸਟ ਕਰਨ ਲਈ ਸਕਰੋਲ ਕਰੋ"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Middle-click to toggle Night Light"
-msgstr ""
+msgstr "ਰਾਤ ਦੀ ਰੌਸ਼ਨੀ ਬਦਲਣ ਲਈ ਅੱਧਾ-ਕਲਿੱਕ ਕਰੋ"
 
 #: package/contents/ui/main.qml:258
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr ""
+msgstr "ਰਾਤ ਦੇ ਰੰਗ ਦੀ ਸੰਰਚਨਾ…"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "ਨਾ-ਉਪਲੱਬਧ"
 #, kde-format
 msgctxt "Night light status"
 msgid "Not enabled"
-msgstr ""
+msgstr "ਸਮਰੱਥ ਨਹੀਂ ਹੈ"
 
 #: package/contents/ui/NightColorItem.qml:83
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "ਚਾਲੂ"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr ""
+msgstr "ਸਵੇਰ ਦਾ ਤਬਾਦਲਾ"
 
 #: package/contents/ui/NightColorItem.qml:91
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "ਦਿਨ"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr ""
+msgstr "ਆਥਣ ਲਈ ਤਬਾਦਲਾ"
 
 #: package/contents/ui/NightColorItem.qml:95
 #, kde-format
@@ -134,43 +134,43 @@ msgstr "…ਸੰਰਚਨਾ"
 #: package/contents/ui/NightColorItem.qml:139
 #, kde-format
 msgid "Enable and Configure…"
-msgstr ""
+msgstr "ਸਮਰੱਥ ਅਤੇ ਸੰਰਚਨਾ…"
 
 #: package/contents/ui/NightColorItem.qml:165
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
-msgstr ""
+msgstr "ਦਿਨ ਲਈ ਤਬਦੀਲੀ ਪੂਰੀ ਹੁੰਦੀ ਹੈ:"
 
 #: package/contents/ui/NightColorItem.qml:167
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
-msgstr ""
+msgstr "ਰਾਤ ਦੇ ਸਮੇਂ ਲਈ ਤਬਦੀਲੀ:"
 
 #: package/contents/ui/NightColorItem.qml:169
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
-msgstr ""
+msgstr "ਰਾਤ ਲਈ ਤਬਦੀਲੀ ਪੂਰੀ ਹੁੰਦੀ ਹੈ:"
 
 #: package/contents/ui/NightColorItem.qml:171
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
-msgstr ""
+msgstr "ਦਿਨ ਦੇ ਸਮੇਂ ਲਈ ਤਬਦੀਲੀ:"
 
 #: package/contents/ui/PopupDialog.qml:70
 #, kde-format
 msgid "Display Brightness"
-msgstr ""
+msgstr "ਡਿਸਪਲੇਅ ਚਮਕ"
 
 #: package/contents/ui/PopupDialog.qml:101
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr ""
+msgstr "ਕੀਬੋਰਡ ਚਮਕ"
 
 #: package/contents/ui/PopupDialog.qml:132
 #, kde-format
 msgid "Night Light"
-msgstr ""
+msgstr "ਰਾਤ ਦੇ ਰੰਗ"

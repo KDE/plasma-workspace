@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:34+0000\n"
-"PO-Revision-Date: 2023-12-22 22:12-0600\n"
+"PO-Revision-Date: 2023-12-26 08:15-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -80,15 +80,16 @@ msgid "Repeat"
 msgstr "ਦੁਹਰਾਓ"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
+msgstr ""
+"%1 (%2) ਵਲੋਂ\n"
+"ਰੋਕਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ\n"
+"ਵਾਲੀਅਮ ਅਨੁਕੂਲ ਕਰਨ ਲਈ ਸਕਰੋਲ ਕਰੋ"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -98,28 +99,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1 ਵਲੋਂ\n"
+"ਰੋਕਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ\n"
+"ਵਾਲੀਅਮ ਅਨੁਕੂਲ ਕਰਨ ਲਈ ਸਕਰੋਲ ਕਰੋ"
 
 #: package/contents/ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
+msgstr ""
+"%1 (ਵਿਰਾਮ ਹੈ, %2) ਵਲੋਂ\n"
+"ਰੋਕਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ\n"
+"ਵਾਲੀਅਮ ਅਨੁਕੂਲ ਕਰਨ ਲਈ ਸਕਰੋਲ ਕਰੋ"
 
 #: package/contents/ui/main.qml:61
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "%1 ਵਲੋਂ (ਵਿਰਾਮ ਹੈ, %2)"
+msgstr ""
+" ਵਿਰਾਮ ਹੈ (%1)\n"
+"ਰੋਕਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ\n"
+"ਵਾਲੀਅਮ ਅਨੁਕੂਲ ਕਰਨ ਲਈ ਸਕਰੋਲ ਕਰੋ"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
