@@ -92,6 +92,7 @@ Comment[nb]=Kjør plasmoider som enkle programmer
 Comment[nds]=Plasma-Lüttprogrammen as eenfach Programmen utföhren
 Comment[nl]=Plasmoids uitvoeren als eenvoudige toepassingen
 Comment[nn]=Køyr skjermelement som enkle program
+Comment[pa]=ਪਲਾਜ਼ਮੋਡ ਨੂੰ ਸਰਲ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਜੋਂ ਚਲਾਓ
 Comment[pl]=Uruchamia Plazmoidy jako proste aplikacje
 Comment[pt]=Executar os plasmóides como aplicações simples
 Comment[pt_BR]=Executa os plasmoides como aplicativos simples
