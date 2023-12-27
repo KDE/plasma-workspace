@@ -51,12 +51,6 @@ CoreCompositor::CoreCompositor()
 
 CoreCompositor::~CoreCompositor()
 {
-    auto global = m_globals.begin();
-    while(global != m_globals.end()) {
-        delete *global;
-        global = m_globals.erase(global);
-    }
-
     wl_display_destroy_clients(m_display);
 
     m_running = false;
