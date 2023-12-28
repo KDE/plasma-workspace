@@ -73,6 +73,7 @@ public:
     struct WarningInfo {
         QString type;
         int priority;
+        QString headline;
         QString description;
         QDateTime timestamp;
     };

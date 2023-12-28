@@ -480,15 +480,8 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
         for (const QVariant &warningElement : warningData) {
             QMap warningMap = warningElement.toMap();
 
-            QString warningDesc = warningMap[QStringLiteral("description")].toString();
-
-            // This loop adds line breaks because the weather widget doesn't seem to do that which completly ruins the layout
-            // Should be removed if the weather widget is ever fixed
-            for (int i = 1; i <= (warningDesc.size() / 50); i++) {
-                warningDesc.insert(i * 50, QChar::LineFeed);
-            }
-
-            warning->description = warningDesc;
+            warning->headline = warningMap[QStringLiteral("headline")].toString();
+            warning->description = warningMap[QStringLiteral("description")].toString();
             warning->priority = warningMap[QStringLiteral("level")].toInt();
             warning->type = warningMap[QStringLiteral("event")].toString();
             warning->timestamp = QDateTime::fromMSecsSinceEpoch(warningMap[QStringLiteral("start")].toLongLong());
@@ -655,7 +648,7 @@ void DWDIon::updateWeather(const QString &source)
         const QString number = QString::number(k);
 
         data.insert(QStringLiteral("Warning Priority ") + number, warning->priority);
-        data.insert(QStringLiteral("Warning Description ") + number, warning->description);
+        data.insert(QStringLiteral("Warning Description ") + number, QStringLiteral("<p><b>%1</b></p>%2").arg(warning->headline, warning->description));
         data.insert(QStringLiteral("Warning Timestamp ") + number, warning->timestamp.toString(QStringLiteral("dd.MM.yyyy")));
 
         ++k;
