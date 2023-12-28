@@ -130,7 +130,7 @@ ListView {
         infiniteList.updateDecadeOverview(offset);
     }
 
-    function modulo(a:int, n: int) { // always keep the 'a' between [1, n]
+    function modulo(a:int, n: int): int { // always keep the 'a' between [1, n]
         return ((((a - 1) % n) + n) % n) + 1;
     }
 
