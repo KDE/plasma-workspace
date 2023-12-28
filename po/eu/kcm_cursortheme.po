@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-28 01:34+0000\n"
 "PO-Revision-Date: 2023-08-03 11:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -34,34 +34,34 @@ msgstr "Uneko kurtsore-gaiaren izena"
 msgid "Current cursor size"
 msgstr "Kurtsorearen uneko neurria"
 
-#: kcmcursortheme.cpp:305
+#: kcmcursortheme.cpp:304
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Plasma saioa berrabiarazi behar duzu aldaketa hauek indarrean jartzeko."
 
-#: kcmcursortheme.cpp:379
+#: kcmcursortheme.cpp:378
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ezin da aldi baterako fitxategi bat sortu."
 
-#: kcmcursortheme.cpp:390
+#: kcmcursortheme.cpp:389
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ezin da jaitsi ikono-gai artxiboa: %1"
 
-#: kcmcursortheme.cpp:421
+#: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fitxategia ez da ikono-gai artxibo erabilgarria."
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Huts egin du 'icons' karpeta sortzean."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -70,12 +70,12 @@ msgstr ""
 "%1 izeneko gaia lehendik ere badago zure ikono-gaien karpetan. Ordeztu nahi "
 "duzu?"
 
-#: kcmcursortheme.cpp:441
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Gaia gainidatzi?"
 
-#: kcmcursortheme.cpp:465
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Gaia ondo instalatu da."

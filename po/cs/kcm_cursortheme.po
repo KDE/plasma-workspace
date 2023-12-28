@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-28 01:34+0000\n"
 "PO-Revision-Date: 2023-06-14 14:52+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -32,33 +32,33 @@ msgstr "Uložit aktuálního motivu kurzorů"
 msgid "Current cursor size"
 msgstr "Současná velikost kurzoru"
 
-#: kcmcursortheme.cpp:305
+#: kcmcursortheme.cpp:304
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Pro provedení změn musíte restartovat sezení Plasma."
 
-#: kcmcursortheme.cpp:379
+#: kcmcursortheme.cpp:378
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nelze vytvořit dočasný soubor."
 
-#: kcmcursortheme.cpp:390
+#: kcmcursortheme.cpp:389
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nelze stáhnout archiv motivu s ikonami: %1"
 
-#: kcmcursortheme.cpp:421
+#: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tento soubor není platný archiv motivu s ikonami."
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Nelze vytvořit složku 'ikony'."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -67,12 +67,12 @@ msgstr ""
 "Motiv s názvem %1 již existuje ve vaší složce s motivy. Přejete si ji "
 "nahradit touto?"
 
-#: kcmcursortheme.cpp:441
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Přepsat motiv?"
 
-#: kcmcursortheme.cpp:465
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Motiv byl úspěšně nainstalován."

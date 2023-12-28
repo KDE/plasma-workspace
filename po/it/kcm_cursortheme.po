@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-28 01:34+0000\n"
 "PO-Revision-Date: 2023-08-03 20:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Nome del tema di puntatori del mouse attuale"
 msgid "Current cursor size"
 msgstr "Dimensioni attuali del cursore"
 
-#: kcmcursortheme.cpp:305
+#: kcmcursortheme.cpp:304
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -40,27 +40,27 @@ msgstr ""
 "Affinché queste modifiche abbiano effetto devi riavviare la sessione di "
 "Plasma."
 
-#: kcmcursortheme.cpp:379
+#: kcmcursortheme.cpp:378
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Impossibile creare un file temporaneo."
 
-#: kcmcursortheme.cpp:390
+#: kcmcursortheme.cpp:389
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Impossibile scaricare l'archivio del tema di icone: %1"
 
-#: kcmcursortheme.cpp:421
+#: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Il file non è un archivio valido di tema di icone."
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Impossibile creare la cartella «icons»."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Esiste già un tema chiamato %1 nella tua cartella dei temi. Voi sostituirlo "
 "con questo?"
 
-#: kcmcursortheme.cpp:441
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Sovrascrivo il tema?"
 
-#: kcmcursortheme.cpp:465
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema installato correttamente."

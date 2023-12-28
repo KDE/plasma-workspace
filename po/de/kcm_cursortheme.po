@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2023-12-28 01:34+0000\n"
 "PO-Revision-Date: 2023-08-13 16:25+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Name des aktuellen Mauszeiger-Designs"
 msgid "Current cursor size"
 msgstr "Aktuelle Zeigergröße"
 
-#: kcmcursortheme.cpp:305
+#: kcmcursortheme.cpp:304
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -36,27 +36,27 @@ msgstr ""
 "Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen wirksam "
 "werden."
 
-#: kcmcursortheme.cpp:379
+#: kcmcursortheme.cpp:378
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Es kann keine temporäre Datei erstellt werden."
 
-#: kcmcursortheme.cpp:390
+#: kcmcursortheme.cpp:389
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Das Archiv für das Symboldesign %1 kann nicht heruntergeladen werden."
 
-#: kcmcursortheme.cpp:421
+#: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Die Datei ist kein gültiges Symboldesign-Archiv."
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Der Ordner „Symbole“ lässt sich nicht erzeugen."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +65,12 @@ msgstr ""
 "Ein Design namens %1 existiert bereits im Ordner für Symboldesigns. Möchten "
 "Sie es überschreiben?"
 
-#: kcmcursortheme.cpp:441
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Design überschreiben?"
 
-#: kcmcursortheme.cpp:465
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Das Design wurde erfolgreich installiert."
