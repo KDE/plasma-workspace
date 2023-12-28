@@ -447,15 +447,15 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
             QString cond = dayMap[QStringLiteral("icon")].toString();
 
             forecast->period = QDateTime::fromString(period, QStringLiteral("yyyy-MM-dd"));
-            forecast->tempHigh = parseNumber(dayMap[QStringLiteral("temperatureMax")].toInt());
-            forecast->tempLow = parseNumber(dayMap[QStringLiteral("temperatureMin")].toInt());
+            forecast->tempHigh = parseNumber(dayMap[QStringLiteral("temperatureMax")]);
+            forecast->tempLow = parseNumber(dayMap[QStringLiteral("temperatureMin")]);
             forecast->iconName = getWeatherIcon(dayIcons(), cond);
             ;
 
             if (dayNumber == 0) {
                 // These alternative measurements are used, when the stations doesn't have it's own measurements, uses forecast data from the current day
-                weatherData.windSpeedAlt = parseNumber(dayMap[QStringLiteral("windSpeed")].toInt());
-                weatherData.gustSpeedAlt = parseNumber(dayMap[QStringLiteral("windGust")].toInt());
+                weatherData.windSpeedAlt = parseNumber(dayMap[QStringLiteral("windSpeed")]);
+                weatherData.gustSpeedAlt = parseNumber(dayMap[QStringLiteral("windGust")]);
                 QString windDirection = roundWindDirections(dayMap[QStringLiteral("windDirection")].toInt());
                 weatherData.windDirectionAlt = getWindDirectionIcon(windIcons(), windDirection);
             }
@@ -515,41 +515,26 @@ void DWDIon::parseMeasureData(const QString source, QJsonDocument doc)
     QVariantMap weatherMap = doc.object().toVariantMap();
 
     if (!weatherMap.isEmpty()) {
-        bool windIconValid = false;
-        bool tempValid = false;
-        bool humidityValid = false;
-        bool pressureValid = false;
-        bool windSpeedValid = false;
-        bool gustSpeedValid = false;
-        bool dewpointValid = false;
-
         QDateTime time = QDateTime::fromMSecsSinceEpoch(weatherMap[QStringLiteral("time")].toLongLong());
-        QString condIconNumber = weatherMap[QStringLiteral("icon")].toString();
-        int windDirection = weatherMap[QStringLiteral("winddirection")].toInt(&windIconValid);
-        float temp = parseNumber(weatherMap[QStringLiteral("temperature")].toInt(&tempValid));
-        float humidity = parseNumber(weatherMap[QStringLiteral("humidity")].toInt(&humidityValid));
-        float pressure = parseNumber(weatherMap[QStringLiteral("pressure")].toInt(&pressureValid));
-        float windSpeed = parseNumber(weatherMap[QStringLiteral("meanwind")].toInt(&windSpeedValid));
-        float gustSpeed = parseNumber(weatherMap[QStringLiteral("maxwind")].toInt(&gustSpeedValid));
-        float dewpoint = parseNumber(weatherMap[QStringLiteral("dewpoint")].toInt(&dewpointValid));
-
-        if (condIconNumber != QLatin1String(""))
-            weatherData.conditionIcon = getWeatherIcon(dayIcons(), condIconNumber);
-        if (windIconValid)
-            weatherData.windDirection = getWindDirectionIcon(windIcons(), roundWindDirections(windDirection));
-        if (tempValid)
-            weatherData.temperature = temp;
-        if (humidityValid)
-            weatherData.humidity = humidity;
-        if (pressureValid)
-            weatherData.pressure = pressure;
-        if (windSpeedValid)
-            weatherData.windSpeed = windSpeed;
-        if (gustSpeedValid)
-            weatherData.gustSpeed = gustSpeed;
-        if (dewpointValid)
-            weatherData.dewpoint = dewpoint;
         weatherData.observationDateTime = time;
+
+        QString condIconNumber = weatherMap[QStringLiteral("icon")].toString();
+        if (condIconNumber != QLatin1String("")) {
+            weatherData.conditionIcon = getWeatherIcon(dayIcons(), condIconNumber);
+        }
+
+        bool windIconValid = false;
+        const int windDirection = weatherMap[QStringLiteral("winddirection")].toInt(&windIconValid);
+        if (windIconValid) {
+            weatherData.windDirection = getWindDirectionIcon(windIcons(), roundWindDirections(windDirection));
+        }
+
+        weatherData.temperature = parseNumber(weatherMap[QStringLiteral("temperature")]);
+        weatherData.humidity = parseNumber(weatherMap[QStringLiteral("humidity")]);
+        weatherData.pressure = parseNumber(weatherMap[QStringLiteral("pressure")]);
+        weatherData.windSpeed = parseNumber(weatherMap[QStringLiteral("meanwind")]);
+        weatherData.gustSpeed = parseNumber(weatherMap[QStringLiteral("maxwind")]);
+        weatherData.dewpoint = parseNumber(weatherMap[QStringLiteral("dewpoint")]);
     }
 
     weatherData.isMeasureDataPending = false;
@@ -691,11 +676,18 @@ void DWDIon::updateWeather(const QString &source)
 /*
  * Helper methods
  */
-
-// e.g. DWD API int 17 equals 1.7
-float DWDIon::parseNumber(int number)
+float DWDIon::parseNumber(QVariant number)
 {
-    return ((float)number) / 10;
+    bool isValid = false;
+    const int intValue = number.toInt(&isValid);
+    if (!isValid) {
+        return NAN;
+    }
+    if (intValue == 0x7fff) { // DWD uses 32767 to mark an error value
+        return NAN;
+    }
+    // e.g. DWD API int 17 equals 1.7
+    return static_cast<float>(intValue) / 10;
 }
 
 QString DWDIon::roundWindDirections(int windDirection)

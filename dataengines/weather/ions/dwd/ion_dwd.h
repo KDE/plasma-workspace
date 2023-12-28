@@ -132,7 +132,7 @@ private:
     QString camelCaseString(const QString text);
     QString extractString(QByteArray array, int start, int length);
     QString roundWindDirections(int windDirection);
-    float parseNumber(int number);
+    float parseNumber(QVariant number);
 
 private:
     // Key dicts
