@@ -3,13 +3,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2008.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2019, 2020.
-# Kristof Kiszel <ulysses@fsf.hu>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2022-02-01 10:46+0100\n"
+"PO-Revision-Date: 2023-12-28 11:08+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,16 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: sessionrunner.cpp:20
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "kijelentkezés"
+msgstr "kijelentkezés;kilépés"
 
 #: sessionrunner.cpp:23
 #, kde-format
@@ -34,14 +33,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Kijelentkezik az aktív munkamenetből"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr "shut down"
+msgstr "leállít;leállítás;kikapcs;kikapcsolás"
 
 #: sessionrunner.cpp:29
 #, kde-format
@@ -49,14 +46,12 @@ msgid "Turns off the computer"
 msgstr "Kikapcsolja a számítógépet"
 
 #: sessionrunner.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "restart"
+msgstr "újraindít;újraindítás"
 
 #: sessionrunner.cpp:35
 #, kde-format
@@ -64,12 +59,11 @@ msgid "Reboots the computer"
 msgstr "Újraindítja a számítógépet"
 
 #: sessionrunner.cpp:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Képernyőzárolás"
+msgstr "lezár;képernyőzár"
 
 #: sessionrunner.cpp:41
 #, kde-format
@@ -77,27 +71,25 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Zárolja az aktuális munkamenetet és elindítja a képernyővédőt"
 
 #: sessionrunner.cpp:44
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "új munkamenet"
+msgstr "mentés;munkamenet mentése"
 
 #: sessionrunner.cpp:47
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Menti az aktuális munkamenetet a visszaállításhoz"
 
 #: sessionrunner.cpp:50
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "váltás más felhasználóra"
+msgstr "felhasználóváltás;új munkamenet"
 
 #: sessionrunner.cpp:53
 #, kde-format
@@ -105,9 +97,7 @@ msgid "Starts a new session as a different user"
 msgstr "Elindít egy új munkamenetet más felhasználónévvel"
 
 #: sessionrunner.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "munkamenetek"
@@ -118,12 +108,10 @@ msgid "Lists all sessions"
 msgstr "Az összes munkamenet listázása"
 
 #: sessionrunner.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "switch"
+msgstr "váltás"
 
 #: sessionrunner.cpp:62
 #, kde-format
@@ -138,35 +126,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Kijelentkezés"
 
 #: sessionrunner.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "shut down"
+msgstr "Leállítás"
 
 #: sessionrunner.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "restart"
+msgstr "Újraindítás"
 
 #: sessionrunner.cpp:103
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Zárolás"
 
 #: sessionrunner.cpp:110
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "új munkamenet"
+msgstr "Munkamenet mentése"
 
 #: sessionrunner.cpp:151
 #, kde-format
@@ -182,12 +165,16 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>Új asztali munkamenet indítására készül.</p><p>A jelenlegi munkamenet "
+"rejtve lesz, és egy bejelentkező képernyő jelenik meg.</p><p>A munkamenetek "
+"között az alábbi módokon válthat:</p><ul><li>Ctrl+Alt+F{munkamenetszám}</"
+"li><li>Plasma keresés (írja be: „%1”)</li><li>Plasma elemek (például az "
+"alkalmazásindító)</li></ul>"
 
 #: sessionrunner.cpp:246
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Új munkamenet"
+msgstr "Új asztali munkamenet"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

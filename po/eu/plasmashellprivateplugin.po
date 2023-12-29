@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-12-02 11:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -172,7 +172,7 @@ msgstr "Saio berria"
 msgid "Filters"
 msgstr "Iragazkiak"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -183,7 +183,7 @@ msgstr ""
 "da Plasma %1(r)ekin bateragarria. Mesedez, jar zaitez trepeta-egilearekin "
 "harremanean bertsio eguneratu baterako."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -193,7 +193,7 @@ msgstr ""
 "bateragarria. Mesedez, jar zaitez trepeta-egilearekin harremanean bertsio "
 "eguneratu baterako."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "Trepeta hori Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
 "bateragarria. Mesedez, eguneratu Plasma trepeta erabili ahal izateko."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

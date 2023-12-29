@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-12-10 21:54+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -169,7 +169,7 @@ msgstr "Ný seta"
 msgid "Filters"
 msgstr "Síur"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -179,7 +179,7 @@ msgstr ""
 "Þessi græja var gerð fyrir óþekkta eldri útgáfu af Plasma og virkar ekki í "
 "Plasma %1. Hafðu samband við höfund græjunnar til að fá uppfærða útgáfu."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -188,7 +188,7 @@ msgstr ""
 "Þessi græja var gerð fyrir %1 og virkar ekki í %2. Hafðu samband við höfund "
 "græjunnar til að fá uppfærða útgáfu."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -197,7 +197,7 @@ msgstr ""
 "Þessi græja var gerð fyrir Plasma %1 og virkar ekki í Plasma %2. Uppfærðu "
 "Plasma til að geta notað græjuna."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

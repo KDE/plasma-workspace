@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-21 02:00+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -637,7 +637,7 @@ msgstr "<i>%1</i> غا چېتىشلىق بولغان بارلىق ھۆججەتل
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "سىستېما مۇئەككىلىنى باشلىيالمىدى. <br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> مەۋجۇت."
@@ -1110,12 +1110,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:205
+#: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "خەت نۇسخىلىرىنى \"%1\" ياكى \"%2\" غا ئورنىتالمىدى."
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1124,57 +1124,57 @@ msgstr ""
 "سىز خەت نۇسخا بوغچىسىنى بىۋاسىتە ئورنىتالمايسىز.\n"
 "%1 نى يېشىپ ئىچىدىكى ئايرىم بۆلەكلەرنى ئورنىتىڭ."
 
-#: kio/KioFonts.cpp:430
+#: kio/KioFonts.cpp:431
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "خەت نۇسخىسىنى كۆچۈرگىلى بولمىدى"
 
-#: kio/KioFonts.cpp:435
+#: kio/KioFonts.cpp:436
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "خەت نۇسخىلىرىنى يۆتكىگىلى بولمىدى"
 
-#: kio/KioFonts.cpp:446
+#: kio/KioFonts.cpp:447
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "خەت نۇسخىلىرىنىلا ئۆچۈرۈلىدۇ."
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "خەت نۇسخىلىرىنى \"%1\" ياكى \"%2\" دىن چىقىرىۋېتەلمىدى."
 
-#: kio/KioFonts.cpp:477
+#: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "« %1» ياكى « %2» نى بېكىتىڭ."
 
-#: kio/KioFonts.cpp:495
+#: kio/KioFonts.cpp:499
 #, kde-format
 msgid "No special methods supported."
 msgstr "ئالاھىدە ئۇسۇلنى قوللىمايدۇ."
 
-#: kio/KioFonts.cpp:569
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "خەت نۇسخىلىرى"
 
-#: kio/KioFonts.cpp:698
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "سىستېما مۇئەككىلىنى قوزغىتالمىدى"
 
-#: kio/KioFonts.cpp:700
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "ئارقا ئۇچ ئۆلدى"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 چېكىتلىك خەت نۇسخىسى بولۇپ سىستېمىڭىزدا چەكلەنگەن."
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1182,12 +1182,12 @@ msgstr ""
 "%1 نىڭ تەركىبىدە <b>%2</b> دېگەن خەت نۇسخىسى بار، بۇ خەت نۇسخىسى "
 "سىستېمىڭىزغا ئاللىقاچان ئورنىتىلغان."
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 خەت نۇسخىسى ئەمەس."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1 غا مۇناسىۋەتلىك ھەممە ھۆججەتنى چىقىرىۋېتەلمەيدۇ"

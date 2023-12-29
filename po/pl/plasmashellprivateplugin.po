@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-12-10 14:07+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -172,7 +172,7 @@ msgstr "Nowa sesja"
 msgid "Filters"
 msgstr "Filtry"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -183,7 +183,7 @@ msgstr ""
 "i nie jest on zgodny z Plazmą %1. Zalecamy napisanie do jego autora z prośbą "
 "o uaktualnienie do nowej wersji Plazmy."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -193,7 +193,7 @@ msgstr ""
 "Plazmą %2. Zalecamy napisanie do jego autora z prośbą o uaktualnienie do "
 "nowej wersji Plazmy."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "Ten element interfejsu został napisany dla Plazmy %1 i nie jest on zgodny z "
 "Plazmą %2. Uaktualnij swoją Plazmę, aby móc go używać."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

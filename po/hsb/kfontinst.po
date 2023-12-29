@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-21 02:00+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2008-11-16 18:23+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -636,7 +636,7 @@ msgstr ""
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
 #, fuzzy, kde-format
 #| msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgid "<i>%1</i> already exists."
@@ -1168,35 +1168,35 @@ msgstr ""
 msgid "48pt"
 msgstr ""
 
-#: kio/KioFonts.cpp:205
+#: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr ""
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
 "Please extract %1, and install the components individually."
 msgstr ""
 
-#: kio/KioFonts.cpp:430
+#: kio/KioFonts.cpp:431
 #, fuzzy, kde-format
 msgid "Cannot copy fonts"
 msgstr "Pisma přidać"
 
-#: kio/KioFonts.cpp:435
+#: kio/KioFonts.cpp:436
 #, fuzzy, kde-format
 #| msgid "Cannot Print"
 msgid "Cannot move fonts"
 msgstr "Njemóžu ćišćeć"
 
-#: kio/KioFonts.cpp:446
+#: kio/KioFonts.cpp:447
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr ""
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:452
 #, fuzzy, kde-format
 #| msgid ""
 #| "Sorry, you cannot rename, move, copy, or delete either \"%1\" or \"%2\"."
@@ -1205,49 +1205,49 @@ msgstr ""
 " \"%1\" abo \"%2\" njemóžeće ani přemjenować, přesunyć, kopěrować abo "
 "wušmórnyć."
 
-#: kio/KioFonts.cpp:477
+#: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Prošu podajće \"%1\"abo \"%2\"."
 
-#: kio/KioFonts.cpp:495
+#: kio/KioFonts.cpp:499
 #, kde-format
 msgid "No special methods supported."
 msgstr ""
 
-#: kio/KioFonts.cpp:569
+#: kio/KioFonts.cpp:573
 #, fuzzy, kde-format
 msgid "Fonts"
 msgstr "Pisma přidać"
 
-#: kio/KioFonts.cpp:698
+#: kio/KioFonts.cpp:702
 #, fuzzy, kde-format
 #| msgid "Failed to start font printer."
 msgid "Failed to start the system daemon"
 msgstr "Njemóžach ćišćak za pisma startować."
 
-#: kio/KioFonts.cpp:700
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr ""
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:711
 #, fuzzy, kde-format
 msgid "%1 is not a font."
 msgstr "Njejsym móhł \"%1\"wočinić."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr ""

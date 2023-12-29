@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-21 02:00+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2010-01-28 23:29+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -614,7 +614,7 @@ msgstr "<i>%1</i> ಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಕ�
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಡೀಮನ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ವಿಫಲವಾಗಿದೆ.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>'%1'</i>ಈಗಾಗಲೆ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ."
@@ -1121,12 +1121,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:205
+#: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು \"%1\" ಅಥವಾ \"%2\" ಗೆ ಮಾತ್ರ ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯ."
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1135,70 +1135,70 @@ msgstr ""
 "ನೀವು ಅಕ್ಷರಶೈಲಿಯ ಪ್ಯಾಕೇಜನ್ನು ನೇರವಾಗಿ ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.\n"
 "ದಯವಿಟ್ಟು %1 ಅನ್ನು ಹೊರತೆಗೆಯಿರಿ, ನಂತರ ಅದರ ಅಂಗಗಳನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಅನುಸ್ಥಾಪಿಸಿ."
 
-#: kio/KioFonts.cpp:430
+#: kio/KioFonts.cpp:431
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ನಕಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
 
-#: kio/KioFonts.cpp:435
+#: kio/KioFonts.cpp:436
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ವರ್ಗಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
 
-#: kio/KioFonts.cpp:446
+#: kio/KioFonts.cpp:447
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಮಾತ್ರ ಅಳಿಸಬಹುದು."
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "\"%1\" ಅಥವಾ \"%2\" ಇಂದ ಮಾತ್ರ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ತೆಗೆದು ಹಾಕಲು ಸಾಧ್ಯ."
 
-#: kio/KioFonts.cpp:477
+#: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "\"%1\" ಹಾಗು \"%2\" ರಲ್ಲಿ ಯಾವುದೆಂದು ಸೂಚಿಸಿ."
 
-#: kio/KioFonts.cpp:495
+#: kio/KioFonts.cpp:499
 #, kde-format
 msgid "No special methods supported."
 msgstr "ವಿಶೇಷ ವಿಧಾನಗಳನ್ನು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ."
 
-#: kio/KioFonts.cpp:569
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳು"
 
-#: kio/KioFonts.cpp:698
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಡೀಮನ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
 
-#: kio/KioFonts.cpp:700
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "ಬ್ಯಾಕೆಂಡ್ ಕೊನೆಗೊಂಡಿದೆ"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "%1 ಒಂದು ಬಿಟ್ ಮ್ಯಾಪ್ ಅಕ್ಷರಶೈಲಿಯಾಗಿದೆ, ಹಾಗು ನಿಮ್ಮ ಗಣಕದಲ್ಲಿ ಇವುಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ."
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 "%1 ರಲ್ಲಿ <b>%2</b> ಅಕ್ಷರಶೈಲಿಯಿದೆ, ಇದನ್ನು ಈಗಾಗಲೆ ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 ಅಕ್ಷರಶೈಲಿಯಲ್ಲ."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1ಗೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಕಡತಗಳನ್ನು ತೆಗೆದು ಹಾಕಲು ಸಾಧ್ಯವಿಲ್ಲ"

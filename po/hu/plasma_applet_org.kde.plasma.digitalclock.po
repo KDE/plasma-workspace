@@ -3,20 +3,21 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2021-10-15 11:16+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-28 11:27+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -49,7 +50,7 @@ msgstr "Hozzáadás…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Új esemény hozzáadása"
 
 #: package/contents/ui/CalendarView.qml:386
 #, kde-format
@@ -98,22 +99,21 @@ msgid "Always below time"
 msgstr "Mindig az idő alatt"
 
 #: package/contents/ui/configAppearance.qml:70
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Másodpercek megjelenítése"
+msgstr "Másodpercek megjelenítése:"
 
 #: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Soha"
 
 #: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Csak a buboréksúgóban"
 
 #: package/contents/ui/configAppearance.qml:74
 #: package/contents/ui/configAppearance.qml:94
@@ -204,29 +204,25 @@ msgid "Custom"
 msgstr "Egyéni"
 
 #: package/contents/ui/configAppearance.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Az időformátum dokumentációja</a>"
 
 #: package/contents/ui/configAppearance.qml:229
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Időformátum:"
+msgstr "Szövegmegjelenítés:"
 
 #: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatikus"
 
 #: package/contents/ui/configAppearance.qml:235
 #, kde-format
@@ -234,34 +230,32 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"A szöveg a rendszer betűtípusát használja, és kitölti a rendelkezése álló "
+"helyet."
 
 #: package/contents/ui/configAppearance.qml:244
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is a country name associated with a particular time zone in a zone "
-#| "selection dialog"
-#| msgid "Vanuatu"
+#, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr "Vanuatu"
+msgstr "Kézi"
 
 #: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Stílus kiválasztása…"
 
 #: package/contents/ui/configAppearance.qml:267
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1pt %2"
 
 #: package/contents/ui/configAppearance.qml:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Válasszon betűkészletet"
 
 #: package/contents/ui/configCalendar.qml:38
 #, kde-format
@@ -289,6 +283,8 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
+"Tipp: ha gyakran utazik, adja hozzá az otthoni időzónáját ehhez a listához. "
+"Csak akkor fog megjelenni, ha módosítja a rendszer időzónáját valami másra."
 
 #: package/contents/ui/configTimeZones.qml:78
 #, kde-format
@@ -302,13 +298,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Rejtett, míg ez a helyi időzóna városa"
 
 #: package/contents/ui/configTimeZones.qml:105
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Váltás helyi időzónára…"
+msgstr "Rendszerszintű időzóna módosítása…"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
@@ -316,10 +311,9 @@ msgid "Remove this time zone"
 msgstr "Időzóna eltávolítása"
 
 #: package/contents/ui/configTimeZones.qml:127
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "A rendszer helyi időzónája"
+msgstr "Rendszerszintű időzóna"
 
 #: package/contents/ui/configTimeZones.qml:127
 #, kde-format
@@ -347,17 +341,13 @@ msgstr ""
 "Megjelenített időzónák közti váltás az óra kisalkalmazás feletti görgetéssel"
 
 #: package/contents/ui/configTimeZones.qml:166
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Másik időzóna beállítása az órában nem módosítja a rendszer helyi "
-"időzónáját. Ha utazik, állítsa át inkább a helyi időzónát."
+"A funkció használata nem változtatja meg a rendszerszintű időzónát. Ha "
+"utazik, inkább állítsa át azt."
 
 #: package/contents/ui/configTimeZones.qml:188
 #, kde-format
@@ -399,18 +389,16 @@ msgid "Set Time Format…"
 msgstr "Időformátum beállítása…"
 
 #: package/contents/ui/Tooltip.qml:31
-#, fuzzy, kde-format
-#| msgctxt "Reset calendar to today"
-#| msgid "Today"
+#, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr "Ma"
+msgstr "Ma %1 van"
 
 #: package/contents/ui/Tooltip.qml:133
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

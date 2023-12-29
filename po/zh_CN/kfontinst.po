@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-21 02:00+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-12-23 07:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -611,7 +611,7 @@ msgstr "无法移除所有 <b>%1</b> 的关联文件"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "启动系统守护进程失败。<br><b>%1</b>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<b>%1</b> 已经存在。"
@@ -1069,12 +1069,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:205
+#: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "无法将字体安装到“%1”或“%2”。"
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1083,68 +1083,68 @@ msgstr ""
 "您无法直接安装字体包。\n"
 "请解压 %1，然后逐个安装解压出来的字体文件。"
 
-#: kio/KioFonts.cpp:430
+#: kio/KioFonts.cpp:431
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "无法复制字体"
 
-#: kio/KioFonts.cpp:435
+#: kio/KioFonts.cpp:436
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "无法移动字体"
 
-#: kio/KioFonts.cpp:446
+#: kio/KioFonts.cpp:447
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "只能删除字体。"
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "只能从“%1”或“%2”移除字体。"
 
-#: kio/KioFonts.cpp:477
+#: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "请指定“%1”或“%2”。"
 
-#: kio/KioFonts.cpp:495
+#: kio/KioFonts.cpp:499
 #, kde-format
 msgid "No special methods supported."
 msgstr "不支持的特殊方式。"
 
-#: kio/KioFonts.cpp:569
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "字体"
 
-#: kio/KioFonts.cpp:698
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "启动系统守护进程失败。"
 
-#: kio/KioFonts.cpp:700
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "后端程序停止工作"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 是一款点阵字体，这种字体在您的系统上已被禁用。"
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1 中包含字体：<b>%2</b>，后者已被安装到了系统。"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 并非字体文件。"
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "无法移除所有 %1 的关联文件"

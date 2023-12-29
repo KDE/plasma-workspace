@@ -3,13 +3,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2009.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2019, 2020.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2021-12-29 17:50+0100\n"
+"PO-Revision-Date: 2023-12-28 11:10+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "energia"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -59,13 +59,13 @@ msgstr "lemezre"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "hibrid alvás"
 
 #: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "hibrid"
 
 #: PowerDevilRunner.cpp:39 PowerDevilRunner.cpp:40 PowerDevilRunner.cpp:66
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "Felfüggeszti a rendszert lemezre"
 #: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Altatás most, és visszaváltás hibernálásra"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -156,12 +156,12 @@ msgstr "Felfüggesztés lemezre"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Hibrid alvás"
 
 #: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Altatás most, és visszaváltás hibernálásra"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

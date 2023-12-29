@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontviewpart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-21 02:00+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2011-04-28 15:17+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -647,7 +647,7 @@ msgstr "Nije moguće ukloniti sve datoteke pridružene <i>%1</i>"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Pokretanje sistemskog servisa nije uspjelo.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:711
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> već postoji."
@@ -1162,12 +1162,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:205
+#: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "Moguće je instalirati samo pisma \"%1\" ili \"%2\"."
 
-#: kio/KioFonts.cpp:208
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1176,68 +1176,68 @@ msgstr ""
 "Ne možete izravno instalirati paket pisama.\n"
 "Molim raspakirajte %1, te zatim instalirajte pisma pojedinačno."
 
-#: kio/KioFonts.cpp:430
+#: kio/KioFonts.cpp:431
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Nije moguće kopirati pisma"
 
-#: kio/KioFonts.cpp:435
+#: kio/KioFonts.cpp:436
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Nije moguće premjestiti pisma"
 
-#: kio/KioFonts.cpp:446
+#: kio/KioFonts.cpp:447
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Samo pisma mogu biti izbrisana."
 
-#: kio/KioFonts.cpp:449
+#: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Moguće je samo ukloniti pisma od \"%1\" ili \"%2\"."
 
-#: kio/KioFonts.cpp:477
+#: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Molim da odredite \"%1\" ili \"%2\"."
 
-#: kio/KioFonts.cpp:495
+#: kio/KioFonts.cpp:499
 #, kde-format
 msgid "No special methods supported."
 msgstr "Nisu podržane posebne metode."
 
-#: kio/KioFonts.cpp:569
+#: kio/KioFonts.cpp:573
 #, kde-format
 msgid "Fonts"
 msgstr "Pisma"
 
-#: kio/KioFonts.cpp:698
+#: kio/KioFonts.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Pokretanje sistemskog servisa nije uspjelo"
 
-#: kio/KioFonts.cpp:700
+#: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
 msgstr "Pozadinski sustav se ugasio"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 je bitmapsko pismo, a takva su onemogućena na vašem sustavu."
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1 sadrži pismo <b>%2</b>, koje je već instalirano na vaš sustav."
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 nije pismo."
 
-#: kio/KioFonts.cpp:708
+#: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Nije moguće ukloniti sve datoteke pridružene %1"

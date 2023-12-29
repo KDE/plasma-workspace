@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-23 16:51+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -174,7 +174,7 @@ msgstr "הפעלה חדשה"
 msgid "Filters"
 msgstr "מסננים"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -184,7 +184,7 @@ msgstr ""
 "היישומון הזה נכתב לגרסה ישנה יותר ולא ידועה של פלזמה ואין נתמך בפלזמה %1. נא "
 "ליצור קשר עם יוצרי היישומון לאספקת גרסה עדכנית."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -193,7 +193,7 @@ msgstr ""
 "היישומון נכתב לפלזמה %1 ואינו נתמך בפלזמה %2. נא ליצור קשר עם יוצרי היישומון "
 "לאספקת גרסה עדכנית"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "היישומון הזה נכתב לפלזמה %1 ואינו נתמך בפלזמה %2. נא לעדכן את פלזמה כדי "
 "להשתמש ביישומון."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

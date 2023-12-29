@@ -4,20 +4,21 @@
 # Tamas Szanto <tszanto@interware.hu>, 2009.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2021-09-28 14:27+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-28 11:19+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -34,19 +35,17 @@ msgstr "Műveletek megjelenítése:"
 #: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Kijelentkezés"
 
 #: contents/ui/ConfigGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut Down"
 msgstr "Leállítás"
 
 #: contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "Újraindítás…"
+msgstr "Újraindítás"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format

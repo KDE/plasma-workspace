@@ -3,21 +3,21 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2019, 2020.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2021-09-27 11:11+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-28 11:17+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -68,22 +68,19 @@ msgid "Notifications On"
 msgstr "Értesítések be"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link Address"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Hivatkozás címének másolása"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Másolás"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Összes kijelölése"
@@ -124,11 +121,10 @@ msgid "Until manually disabled"
 msgstr "Kikapcsolásig"
 
 #: package/contents/ui/FullRepresentation.qml:204
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Automatikus elrejtés"
+msgstr "Automatikusan véget ér: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
@@ -246,12 +242,10 @@ msgid "%1/s"
 msgstr "%1/s"
 
 #: package/contents/ui/JobItem.qml:164
-#, fuzzy, kde-format
-#| msgctxt "Row description, e.g. Source"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1:"
+msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:178
 #, kde-format
@@ -299,17 +293,14 @@ msgstr[1] "%1 futó feladat"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgctxt "Number of jobs and the speed at which they are downloading"
-#| msgid "%1 running job (%2/s)"
-#| msgid_plural "%1 running jobs (%2/s)"
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 futó feladat (%2/s)"
-msgstr[1] "%1 futó feladat (%2/s)"
+msgstr[0] "%1 futó feladat (%2%)"
+msgstr[1] "%1 futó feladat (%2%)"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -319,20 +310,19 @@ msgstr[0] "%1 új értesítés"
 msgstr[1] "%1 új értesítés"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Ne zavarjanak eddig: %1"
+msgstr "Ne zavarjanak eddig: %1; középső gombbal azonnal kilép"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Ne zavarjanak mód aktív; középső gombbal kilép"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Középső gombbal lépjen be a ne zavarjanak módba"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
@@ -348,7 +338,7 @@ msgstr "&Eseményértesítések és műveletek beállítása…"
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "Épp most"
 
 #: package/contents/ui/NotificationHeader.qml:126
 #, kde-format

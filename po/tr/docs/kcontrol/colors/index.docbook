@@ -418,7 +418,7 @@
 ></listitem>
       <listitem
 ><para
->Renklendir &mdash; kaydırıcı değeri arttıkça yoğunluğun daha yavaş değişmesi ve rengin (ton ve kroma) daha hızlı değişmesi dışında solmaya benzer. </para
+>Renklendir &mdash; kaydırıcı değeri arttıkça yoğunluğun daha yavaş değişmesi ve rengin (ton ve kroma) daha tez değişmesi dışında solmaya benzer. </para
 ></listitem>
     </itemizedlist>
   </sect4>
@@ -428,7 +428,7 @@
 >Karşıtlık</title>
 
     <para
->Karşıtlık efektleri, arka plan rengini başvuru rengi olarak kullanarak metne uygulanmaları ve doygunluk gidermenin kullanılamaması dışında renk efektlerine benzer. Solgunlaştır, &quot;soluklaşan&quot; metin üretirken; Renklendir, arka planla daha hızlı eşleşecek şekilde renk değiştiren ve daha uzun süre daha yüksek karşıtlık yoğunluğunu koruyan metin üretir (&quot;daha uzun&quot;, kaydırıcıda daha yüksek ayarlar anlamına gelir). Karşıtlık efektleri için kaydırıcıdaki en düşük ayar herhangi bir değişiklik oluşturmazken en yüksek ayar, metnin tümüyle arka planda kaybolmasına neden olur.</para>
+>Karşıtlık efektleri, arka plan rengini başvuru rengi olarak kullanarak metne uygulanmaları ve doygunluk gidermenin kullanılamaması dışında renk efektlerine benzer. Solgunlaştır, &quot;soluklaşan&quot; metin üretirken; Renklendir, arka planla daha tez eşleşecek şekilde renk değiştiren ve daha uzun süre daha yüksek karşıtlık yoğunluğunu koruyan metin üretir (&quot;daha uzun&quot;, kaydırıcıda daha yüksek ayarlar anlamına gelir). Karşıtlık efektleri için kaydırıcıdaki en düşük ayar herhangi bir değişiklik oluşturmazken en yüksek ayar, metnin tümüyle arka planda kaybolmasına neden olur.</para>
   </sect4>
 
 </sect3>

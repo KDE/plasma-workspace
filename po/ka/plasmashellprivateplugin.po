@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-23 06:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -170,7 +170,7 @@ msgstr "ახალი სესია"
 msgid "Filters"
 msgstr "ფილტრები"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -180,7 +180,7 @@ msgstr ""
 "ვიჯეტი დაწერილია Plasma-ის უცნობი, ძველი ვერსიისთვის და Plasma %1-სთან "
 "თავსებადი არაა. ვიჯეტის განახლებული ვერსიისთვის დაუკავშირდით ავტორს."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -189,7 +189,7 @@ msgstr ""
 "ვიჯეტი დაწერილია Plasma %1-სთვს და Plasma %2-სთან თავსებადი არაა. ვიჯეტის "
 "განახლებული ვერსიისთვის ავტორს დაუკავშირდით."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -198,7 +198,7 @@ msgstr ""
 "ვიჯეტი დაწერილია Plasma %1-სთვის და Plasma %2-თან თავსებადი არაა. იმისთვის "
 "რომ ვიჯეტი გამოიყენოთ, განაახლეთ Plasma."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

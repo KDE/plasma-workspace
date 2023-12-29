@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2022-02-07 11:02+0100\n"
+"PO-Revision-Date: 2023-12-28 11:14+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -117,10 +117,9 @@ msgid "Scale with Panel width"
 msgstr "Méretezés a panelszélességgel"
 
 #: package/contents/ui/ConfigGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Automatically enabled when in tablet mode"
+#, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr "Automatikus bekapcsolás tablet módban"
+msgstr "Automatikus bekapcsolás Érintés módban"
 
 #: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
@@ -147,18 +146,16 @@ msgid "Large"
 msgstr "Nagy"
 
 #: package/contents/ui/ConfigGeneral.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a combobox when tablet mode is on"
-#| msgid "Automatically set to Large when in tablet mode"
+#, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "Automatikus nagy méret tablet módban"
+msgstr "Automatikus nagyra állítás Érintés módban"
 
 #: package/contents/ui/ExpandedRepresentation.qml:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Vissza"
 
 #: package/contents/ui/ExpandedRepresentation.qml:74
 #, kde-format

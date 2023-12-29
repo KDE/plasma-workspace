@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"POT-Creation-Date: 2023-12-29 01:38+0000\n"
 "PO-Revision-Date: 2023-12-25 21:41+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -170,7 +170,7 @@ msgstr "Új munkamenet"
 msgid "Filters"
 msgstr "Szűrők"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:147
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -180,7 +180,7 @@ msgstr ""
 "Ez az elem ismeretlen Plasma verzióhoz készült, nem kompatibilis a Plasma %1 "
 "verzióval. Lépjen kapcsolatba az elem szerzőjével egy frissített verzióért."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -189,7 +189,7 @@ msgstr ""
 "Ez az elem a Plasma %1 verziójához készült, és nem kompatibilis a Plasma %2 "
 "verzióval. Lépjen kapcsolatba az elem szerzőjével egy frissített verzióért."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -198,7 +198,7 @@ msgstr ""
 "Ez az elem a Plasma %1 verziójához készült, és nem kompatibilis a Plasma %2 "
 "verzióval. Frissítse a Plasmát az elem használatához."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

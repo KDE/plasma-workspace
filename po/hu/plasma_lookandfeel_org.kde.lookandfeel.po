@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2020, 2021.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2021-12-29 17:50+0100\n"
+"PO-Revision-Date: 2023-12-28 11:13+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -96,30 +96,28 @@ msgid "Desktop Session: %1"
 msgstr "Asztali munkamenet: %1"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "Óra"
+msgstr "Óra:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Maradjon látható a feloldóképernyő eltűnésekor"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media Controls"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "Médiavezérlők"
+msgstr "Médiavezérlők:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Megjelenítés a feloldóképernyőn"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
@@ -156,17 +154,17 @@ msgstr "Feloldás"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(vagy használja az ujjlenyomatolvasót)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(vagy használja intelligens kártyáját)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Nincs cím"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
@@ -212,7 +210,7 @@ msgstr "Újraindításkor a számítógép a firmware-telepítő képernyőre fo
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Frissítés és újraindítás"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
@@ -223,8 +221,8 @@ msgstr "Kijelentkezés"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Szoftverfrissítések telepítése és újraindítás 1 másodperc múlva"
+msgstr[1] "Szoftverfrissítések telepítése és újraindítás %1 másodperc múlva"
 
 #: contents/logout/Logout.qml:248
 #, kde-format
