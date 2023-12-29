@@ -58,23 +58,14 @@ int main(int argc, char *argv[])
     SchemeEditorDialog dialog(path);
     dialog.setShowApplyOverwriteButton(parser.isSet(overwriteOption));
 
-    // FIXME doesn't work :(
     const QString attachHandle = parser.value(attachOption);
     if (!attachHandle.isEmpty()) {
-        // TODO wayland: once we have foreign surface support
-        const QString x11Prefix = QStringLiteral("x11:");
-
-        if (attachHandle.startsWith(x11Prefix)) {
-            bool ok = false;
-            WId winId = attachHandle.mid(x11Prefix.length()).toLong(&ok, 0);
-            if (ok) {
-                dialog.setModal(true);
-                dialog.setAttribute(Qt::WA_NativeWindow, true);
-                KWindowSystem::setMainWindow(dialog.windowHandle(), winId);
-                QObject::connect(&dialog, &QDialog::finished, &app, &QApplication::quit);
-            }
-        }
+        dialog.setModal(true);
+        dialog.setAttribute(Qt::WA_NativeWindow, true);
     }
+
+    KWindowSystem::setMainWindow(dialog.windowHandle(), attachHandle);
+    QObject::connect(&dialog, &QDialog::finished, &app, &QApplication::quit);
 
     dialog.show();
 

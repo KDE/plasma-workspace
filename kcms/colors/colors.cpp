@@ -30,6 +30,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KWaylandExtras>
 #include <KWindowSystem>
 
 #include <KIO/DeleteJob>
@@ -333,7 +334,10 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
     QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
+    // TODO use CommandLauncherJob.
     m_editDialogProcess = new QProcess(this);
+    m_editDialogProcess->setProcessChannelMode(QProcess::ForwardedChannels);
+    m_editDialogProcess->setProgram(QStringLiteral("kcolorschemeeditor"));
     connect(m_editDialogProcess, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode);
         Q_UNUSED(exitStatus);
@@ -362,6 +366,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         args << QStringLiteral("--overwrite");
     }
 
+    bool waitForXdgForeign = false;
     if (ctx && ctx->window()) {
         // QQuickWidget, used for embedding QML KCMs, renders everything into an offscreen window
         // Qt is able to resolve this on its own when setting transient parents in-process.
@@ -369,13 +374,35 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         // we need to resolve the actual window we end up showing in.
         if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(ctx->window())) {
             if (KWindowSystem::isPlatformX11()) {
-                // TODO wayland: once we have foreign surface support
-                args << QStringLiteral("--attach") << u"x11:" + QString::number(actualWindow->winId());
+                args << QStringLiteral("--attach") << QString::number(actualWindow->winId());
+            } else if (KWindowSystem::isPlatformWayland()) {
+                KWaylandExtras::exportWindow(actualWindow);
+                connect(
+                    KWaylandExtras::self(),
+                    &KWaylandExtras::windowExported,
+                    this,
+                    [this, actualWindow](QWindow *window, const QString &handle) {
+                        if (window != actualWindow) {
+                            return;
+                        }
+
+                        QStringList args = m_editDialogProcess->arguments();
+                        args << QStringLiteral("--attach") << handle;
+                        m_editDialogProcess->setArguments(args);
+                        m_editDialogProcess->start();
+                    },
+                    Qt::SingleShotConnection);
+
+                waitForXdgForeign = true;
             }
         }
     }
 
-    m_editDialogProcess->start(QStringLiteral("kcolorschemeeditor"), args);
+    m_editDialogProcess->setArguments(args);
+
+    if (!waitForXdgForeign) {
+        m_editDialogProcess->start();
+    }
 }
 
 bool KCMColors::isSaveNeeded() const
