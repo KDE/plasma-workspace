@@ -222,8 +222,8 @@ PlasmoidItem {
     compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
-        isHeldOnPerformanceMode: batterymonitor.isHeldOnPerformanceMode
-        isHeldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
+        isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || batterymonitor.isManuallyInPerformanceMode
+        isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || batterymonitor.isManuallyInPowerSaveMode
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
     }
 

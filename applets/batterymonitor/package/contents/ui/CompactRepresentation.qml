@@ -22,8 +22,8 @@ MouseArea {
     property real brightnessError: 0
     property QtObject batteries
     property bool hasBatteries: false
-    required property bool isHeldOnPerformanceMode
-    required property bool isHeldOnPowerSaveMode
+    required property bool isSetToPerformanceMode
+    required property bool isSetToPowerSaveMode
     required property bool isSomehowFullyCharged
 
     activeFocusOnTab: true
@@ -74,8 +74,8 @@ MouseArea {
 
                     anchors.fill: parent
 
-                    visible: batteryContainer.pluggedIn && (root.isHeldOnPowerSaveMode || root.isHeldOnPerformanceMode)
-                    source: root.isHeldOnPerformanceMode
+                    visible: batteryContainer.pluggedIn && (root.isSetToPerformanceMode || root.isSetToPowerSaveMode)
+                    source: root.isSetToPerformanceMode
                         ? "battery-profile-performance-symbolic"
                         : "battery-profile-powersave-symbolic"
                     active: root.containsMouse
