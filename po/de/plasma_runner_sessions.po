@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2018, 2020.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011.
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: sessionrunner.cpp:23
 #, kde-format
