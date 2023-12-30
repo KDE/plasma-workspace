@@ -4,7 +4,6 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2012, 2013, 2014, 2016, 2020.
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2017, 2018, 2019, 2020.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"

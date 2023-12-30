@@ -3,14 +3,14 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2020, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 #
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-18 16:06+0100\n"
+"PO-Revision-Date: 2023-12-21 18:41+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -391,13 +391,13 @@ msgstr "Benutzer"
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Neuen hinzufügen"
+msgstr "Neu hinzufügen"
 
 #: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Drücken Sie die Leertaste, um das Benutzerprofil zu ändern"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -517,7 +517,7 @@ msgstr "Zurück"
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr "Initialien"
+msgstr "Initialen"
 
 #: src/ui/PicturesSheet.qml:129
 #, kde-format
@@ -535,13 +535,13 @@ msgstr "Ein Bild auswählen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Platzhaltersymbol"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Platzhaltersymbol für Benutzeravatar"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

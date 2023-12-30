@@ -1,8 +1,8 @@
+# SPDX-FileCopyrightText: 2010, 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008.
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2013, 2014, 2015, 2017, 2020, 2021.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Markus Slopianka <markus.s@kdemail.net>, 2010.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2010, 2023.
 # Frederik Schwarzer <schwarzer@kde.org>, 2012, 2022, 2023.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2023-12-18 01:45+0100\n"
+"PO-Revision-Date: 2023-12-21 18:37+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -110,13 +110,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr "Hinzufügen ..."
+msgstr "Hinzufügen …"
 
 #: ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
-msgstr "Anwendung hinzufügen ..."
+msgstr "Anwendung hinzufügen …"
 
 #: ui/main.qml:74
 #, kde-format
@@ -203,32 +203,31 @@ msgstr "Abmeldungs-Skript auswählen"
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "Wird ausgeführt"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "Nicht gestartet"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "Anmeldung"
+msgstr "Wird gestartet"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "Wird angehalten"
 
 #: unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "Fehlgeschlagen"
 
 #: unit.cpp:83
 #, kde-format

@@ -1,7 +1,7 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2018, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2017, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"

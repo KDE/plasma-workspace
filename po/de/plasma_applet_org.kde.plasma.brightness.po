@@ -2,6 +2,7 @@
 # German translation for plasma-workspace.
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Automatically generated, 2023.
 #
 msgid ""
@@ -9,47 +10,48 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:35+0000\n"
-"PO-Revision-Date: 2023-11-19 19:24+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-21 18:46+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Brightness and Color"
-msgstr ""
+msgstr "Helligkeit und Farbe"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Screen brightness at %1%"
-msgstr ""
+msgstr "Bildschirmhelligkeit ist bei %1 %"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Keyboard brightness at %1%"
-msgstr ""
+msgstr "Tastaturbeleuchtung ist bei %1 %"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
-msgstr ""
+msgstr "Nachtlicht aus"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
-msgstr ""
+msgstr "Nachtlicht ist bei %1 K"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
@@ -65,7 +67,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr ""
+msgstr "Nachtlicht einrichten …"
 
 #: package/contents/ui/NightColorItem.qml:74
 #, kde-format
@@ -89,7 +91,7 @@ msgstr "Nicht aktiviert"
 #, kde-format
 msgctxt "Night light status"
 msgid "Not running"
-msgstr ""
+msgstr "Nicht gestartet"
 
 #: package/contents/ui/NightColorItem.qml:86
 #, kde-format
