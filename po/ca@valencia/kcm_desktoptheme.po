@@ -45,7 +45,7 @@ msgstr "El tema s'ha instal·lat correctament."
 #: kcm.cpp:149 kcm.cpp:155
 #, kde-format
 msgid "Theme installation failed."
-msgstr "Ha fallat la instal·lació del tema."
+msgstr "No s'ha pogut instal·lar el tema."
 
 #: kcm.cpp:257
 #, kde-format

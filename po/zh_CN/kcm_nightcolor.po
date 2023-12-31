@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-16 02:40+0000\n"
-"PO-Revision-Date: 2023-12-23 08:05\n"
+"PO-Revision-Date: 2023-12-30 13:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -66,7 +66,7 @@ msgstr "经度："
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "蓝光滤镜让屏幕颜色更暖。"
+msgstr "夜间颜色功能可以滤除蓝光，使屏幕显示的颜色偏暖。"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -81,7 +81,7 @@ msgstr "总是关闭"
 #: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "从当前地理位置的日落到日出"
+msgstr "当前地理位置的日落到日出"
 
 #: package/contents/ui/main.qml:113
 #, kde-format
@@ -106,9 +106,8 @@ msgid ""
 "or by sending network information to <link url='https://location.services."
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
-"将使用 GPS 对设备进行持续定位 (如果 GPS 可用)，或者通过发送网络信息到 <link "
-"url='https://location.services.mozilla.com'>Mozilla 位置服务</link>进行持续定"
-"位。"
+"系统将定期通过 GPS (如果可用)、或者发送信息到 <link url='https://location."
+"services.mozilla.com'>Mozilla 定位服务</link>以对设备进行持续定位。"
 
 #: package/contents/ui/main.qml:186
 #, kde-format
@@ -125,19 +124,19 @@ msgstr "%1K"
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr "暖色"
+msgstr "暖"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "冷色 (无滤镜)"
+msgstr "冷 (不滤除蓝光)"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
-msgstr "冷色"
+msgstr "冷"
 
 #: package/contents/ui/main.qml:245
 #, kde-format
@@ -152,7 +151,7 @@ msgstr "纬度：%1°   经度：%2°"
 #: package/contents/ui/main.qml:319
 #, kde-format
 msgid "Begin night color at:"
-msgstr "开始夜间颜色："
+msgstr "夜间颜色开始时间："
 
 #: package/contents/ui/main.qml:332 package/contents/ui/main.qml:355
 #, kde-format
@@ -162,7 +161,7 @@ msgstr "输入格式：HH:MM"
 #: package/contents/ui/main.qml:342
 #, kde-format
 msgid "Begin day color at:"
-msgstr "开始日间颜色："
+msgstr "日间颜色开始时间："
 
 #: package/contents/ui/main.qml:364
 #, kde-format
@@ -196,11 +195,11 @@ msgstr "正在定位…"
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "从 %1 开始切换为夜间色温，到 %2 切换完成"
+msgstr "%1 开始逐渐过渡到夜间色温，%2 切换完成"
 
 #: package/contents/ui/TimingsView.qml:39
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "从 %1 开始切换为日间色温，到 %2 切换完成"
+msgstr "%1 开始逐渐过渡到日间色温，%2 切换完成"
