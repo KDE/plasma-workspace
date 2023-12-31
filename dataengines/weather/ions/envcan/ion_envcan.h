@@ -29,8 +29,7 @@ public:
     // WeatherEvent can have more than one, especially in Canada, eh? :)
     struct WeatherEvent {
         QString url;
-        QString type;
-        QString priority;
+        int priority;
         QString description;
         QString timestamp;
     };
@@ -88,7 +87,6 @@ public:
     QString windDirection;
     QString windDegrees;
 
-    QList<WeatherData::WeatherEvent *> watches;
     QList<WeatherData::WeatherEvent *> warnings;
 
     float normalHigh;

@@ -81,17 +81,12 @@
  *     probability: chance of conditions to happen, optional
  *     TODO: this should be rather a QVariantList if possible
  *
- * Data about warning/watches:
- * "Total Warnings Issued": int, number of warnings, there should be matching "Watch * "+number data, TODO: what is a warning exactly?
- * "Total Watches Issued": int, number of watches, there should be matching "Watch * "+number data, TODO: what is a watch exactly?
+ * Data about warnings:
+ * "Total Warnings Issued": int, number of warnings, there should be matching "Watch * "+number data
  * "Warning Description " + number, string, free text string, optional
  * "Warning Info " + number, string, free text string, optional
  * "Warning Priority " + number, string, free text string, optional TODO: get standardized enum
  * "Warning Timestamp " + number, string, free text string, optional TODO: get standardized datetime
- * "Watch Description " + number, string, free text string, optional
- * "Watch Info " + number, string, free text string, optional
- * "Watch Priority " + number, string, free text string, optional TODO: get standardized enum
- * "Watch Timestamp " + number, string, free text string, optional TODO: get standardized datetime
  *
  * Data about the data:
  * "Temperature Unit": int, kunitconversion enum number for the unit with all temperature values, required if temperatures are given

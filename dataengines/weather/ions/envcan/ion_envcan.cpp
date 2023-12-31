@@ -63,9 +63,6 @@ void EnvCanadaIon::deleteForecasts()
         qDeleteAll(item.warnings);
         item.warnings.clear();
 
-        qDeleteAll(item.watches);
-        item.watches.clear();
-
         qDeleteAll(item.forecasts);
         item.forecasts.clear();
     }
@@ -81,7 +78,7 @@ void EnvCanadaIon::reset()
 
 EnvCanadaIon::~EnvCanadaIon()
 {
-    // Destroy each watch/warning stored in a QList
+    // Destroy each warning stored in a QList
     deleteForecasts();
 }
 
@@ -665,7 +662,6 @@ void EnvCanadaIon::parseWeatherSite(WeatherData &data, QXmlStreamReader &xml)
             } else if (elementName == QLatin1String("warnings")) {
                 // Cleanup warning list on update
                 data.warnings.clear();
-                data.watches.clear();
                 parseWarnings(data, xml);
             } else if (elementName == QLatin1String("currentConditions")) {
                 parseConditions(data, xml);
@@ -958,12 +954,21 @@ void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
 
 void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader &xml)
 {
-    WeatherData::WeatherEvent *watch = new WeatherData::WeatherEvent;
     WeatherData::WeatherEvent *warning = new WeatherData::WeatherEvent;
 
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("warnings"));
     QString eventURL = xml.attributes().value(QStringLiteral("url")).toString();
-    int flag = 0;
+
+    // envcan provides three type of events: 'warning', 'watch' and 'advisory'
+    const auto mapToPriority = [](const QString &type) {
+        if (type == QLatin1String("warning")) {
+            return 3;
+        } else if (type == QLatin1String("watch")) {
+            return 2;
+        } else {
+            return 1;
+        }
+    };
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -976,40 +981,16 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader &xml)
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("dateTime")) {
-                if (flag == 1) {
-                    parseDateTime(data, xml, watch);
-                }
-                if (flag == 2) {
-                    parseDateTime(data, xml, warning);
-                }
-
+                parseDateTime(data, xml, warning);
                 if (!warning->timestamp.isEmpty() && !warning->url.isEmpty()) {
                     data.warnings.append(warning);
                     warning = new WeatherData::WeatherEvent;
                 }
-                if (!watch->timestamp.isEmpty() && !watch->url.isEmpty()) {
-                    data.watches.append(watch);
-                    watch = new WeatherData::WeatherEvent;
-                }
-
             } else if (elementName == QLatin1String("event")) {
                 // Append new event to list.
-                QString eventType = xml.attributes().value(QStringLiteral("type")).toString();
-                if (eventType == QLatin1String("watch")) {
-                    watch->url = eventURL;
-                    watch->type = eventType;
-                    watch->priority = xml.attributes().value(QStringLiteral("priority")).toString();
-                    watch->description = xml.attributes().value(QStringLiteral("description")).toString();
-                    flag = 1;
-                }
-
-                if (eventType == QLatin1String("warning")) {
-                    warning->url = eventURL;
-                    warning->type = eventType;
-                    warning->priority = xml.attributes().value(QStringLiteral("priority")).toString();
-                    warning->description = xml.attributes().value(QStringLiteral("description")).toString();
-                    flag = 2;
-                }
+                warning->url = eventURL;
+                warning->description = xml.attributes().value(QStringLiteral("description")).toString();
+                warning->priority = mapToPriority(xml.attributes().value(QStringLiteral("type")).toString());
             } else {
                 if (xml.name() != QLatin1String("dateTime")) {
                     parseUnknownElement(xml);
@@ -1017,7 +998,6 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader &xml)
             }
         }
     }
-    delete watch;
     delete warning;
 }
 
@@ -1500,22 +1480,6 @@ void EnvCanadaIon::updateWeather(const QString &source)
     }
     if (!weatherData.UVRating.isEmpty()) {
         data.insert(QStringLiteral("UV Rating"), weatherData.UVRating);
-    }
-
-    const QList<WeatherData::WeatherEvent *> &watches = weatherData.watches;
-
-    // Set number of forecasts per day/night supported
-    data.insert(QStringLiteral("Total Watches Issued"), watches.size());
-
-    // Check if we have warnings or watches
-    for (int i = 0; i < watches.size(); ++i) {
-        const WeatherData::WeatherEvent *watch = watches.at(i);
-        const QString number = QString::number(i);
-
-        data.insert(QStringLiteral("Watch Priority ") + number, watch->priority);
-        data.insert(QStringLiteral("Watch Description ") + number, watch->description);
-        data.insert(QStringLiteral("Watch Info ") + number, watch->url);
-        data.insert(QStringLiteral("Watch Timestamp ") + number, watch->timestamp);
     }
 
     const QList<WeatherData::WeatherEvent *> &warnings = weatherData.warnings;
