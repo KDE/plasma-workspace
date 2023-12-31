@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-12-23 07:59\n"
+"PO-Revision-Date: 2023-12-30 13:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -209,7 +209,7 @@ msgstr "配置省电功能(&C)…"
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
-msgstr "禁止自动锁屏和睡眠"
+msgstr "阻止自动锁屏和睡眠"
 
 #: package/contents/ui/PowerManagementItem.qml:76
 #, kde-format

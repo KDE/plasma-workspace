@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-12-23 07:59\n"
+"PO-Revision-Date: 2023-12-30 13:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -22,14 +22,14 @@ msgstr ""
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "从 %1 开始切换为夜间色温，到 %2 切换完成"
+msgstr "%1 开始逐渐过渡到夜间色温，%2 切换完成"
 
 #: ui/DayNightView.qml:113
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "从 %1 开始切换为日间色温，到 %2 切换完成"
+msgstr "%1 开始逐渐过渡到日间色温，%2 切换完成"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "经度："
 #: ui/main.qml:98
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "蓝光滤镜让屏幕颜色更暖。"
+msgstr "夜间颜色功能可以滤除蓝光，使屏幕显示的颜色偏暖。"
 
 #: ui/main.qml:153
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "总是关闭"
 #: ui/main.qml:157
 #, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "从当前地理位置的日落到日出"
+msgstr "当前地理位置的日落到日出"
 
 #: ui/main.qml:158
 #, kde-format
@@ -126,13 +126,13 @@ msgstr "%1K"
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "冷色 (无滤镜)"
+msgstr "冷 (不滤除蓝光)"
 
 #: ui/main.qml:236 ui/main.qml:295
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr "暖色"
+msgstr "暖"
 
 #: ui/main.qml:242
 #, kde-format
@@ -158,9 +158,8 @@ msgid ""
 "or by sending network information to <link url='https://location.services."
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
-"将使用 GPS 对设备进行持续定位 (如果 GPS 可用)，或者通过发送网络信息到 <link "
-"url='https://location.services.mozilla.com'>Mozilla 位置服务</link>进行持续定"
-"位。"
+"系统将定期通过 GPS (如果可用)、或者发送信息到 <link url='https://location."
+"services.mozilla.com'>Mozilla 定位服务</link>以对设备进行持续定位。"
 
 #: ui/main.qml:349
 #, kde-format

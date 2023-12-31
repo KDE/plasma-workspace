@@ -1,21 +1,21 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-30 13:38\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2023-12-30 11:55+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_soundtheme.pot\n"
-"X-Crowdin-File-ID: 44549\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -26,13 +26,13 @@ msgstr "FreeDesktop"
 #: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr "来自 freedesktop.org 的备用声音主题"
+msgstr "Tartalék hangtéma a freedesktop.org-tól"
 
 #: ui/main.qml:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr "启用通知声音"
+msgstr "Értesítési hangok bekapcsolása"
 
 #: ui/main.qml:90
 #, kde-format
@@ -41,7 +41,8 @@ msgctxt ""
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] "基于：%2"
+msgstr[0] "A következő alapján: %2"
+msgstr[1] "A következők alapján: %2"
 
 #: ui/main.qml:101
 #, kde-format
@@ -49,21 +50,21 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr "试听声音："
+msgstr "Hangok előnézete:"
 
 #: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr "试听声音“%1”"
+msgstr "A(z) „%1” előnézete"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr "试听主题“%1”的演示声音"
+msgstr "A(z) „%1” téma demóhangjának előnézete"
 
 #: ui/main.qml:162
 #, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "预览声音失败：%1"
+msgstr "A hang előnézete nem sikerült: %1"

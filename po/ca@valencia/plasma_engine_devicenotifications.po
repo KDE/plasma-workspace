@@ -60,7 +60,7 @@ msgstr "No s'ha pogut muntar este dispositiu atés que està ocupat."
 #: ksolidnotify.cpp:200
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Un o més fitxers d'este dispositiu estan oberts a una aplicació."
+msgstr "Un o més fitxers d'este dispositiu estan oberts en una aplicació."
 
 #: ksolidnotify.cpp:202
 #, kde-format

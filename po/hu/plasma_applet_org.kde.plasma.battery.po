@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2007.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019, 2020, 2022.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2022-02-18 11:19+0100\n"
+"PO-Revision-Date: 2023-12-30 11:39+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -49,7 +49,7 @@ msgstr "Hátralévő idő:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Becslés…"
 
 #: package/contents/ui/BatteryItem.qml:203
 #, kde-format
@@ -101,10 +101,9 @@ msgid "Not present"
 msgstr "Nincs jelen"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Energiakezelés"
+msgstr "Energia és akkumulátor"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -164,32 +163,28 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatikus felfüggesztés és képernyőzárolás kikapcsolva"
 
 #: package/contents/ui/main.qml:188
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Egy alkalmazás a(z) %2 aktiválását kérte:"
-msgstr[1] "%1 alkalmazás a(z) %2 aktiválását kérte:"
+msgstr[0] "Egy alkalmazás a Teljesítmény mód aktiválását kérte"
+msgstr[1] "%1 alkalmazás a Teljesítmény mód aktiválását kérte"
 
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "A rendszer Teljesítmény módban van"
 
 #: package/contents/ui/main.qml:196
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Egy alkalmazás a(z) %2 aktiválását kérte:"
-msgstr[1] "%1 alkalmazás a(z) %2 aktiválását kérte:"
+msgstr[0] "Egy alkalmazás az Energiatakarékos mód aktiválását kérte"
+msgstr[1] "%1 alkalmazás az Energiatakarékos mód aktiválását kérte"
 
 #: package/contents/ui/main.qml:200
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "A rendszer Energiatakarékos módban van"
 
 #: package/contents/ui/main.qml:260
 #, kde-format
@@ -207,10 +202,9 @@ msgid "&Show Energy Information…"
 msgstr "&Energiakezelési jellemzők megjelenítése…"
 
 #: package/contents/ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Százalékos érték megjelenítése az ikonon"
+msgstr "Százalékos érték megjelenítése az ikonon, ha nincs teljesen feltöltve"
 
 #: package/contents/ui/main.qml:329
 #, kde-format
@@ -252,21 +246,17 @@ msgstr ""
 "%1 alkalmazás blokkolja a felfüggesztést és képernyőzárolást (ismeretlen ok)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 alkalmazás blokkolja a felfüggesztést és képernyőzárolást:"
+msgstr "Egy alkalmazás blokkolja a felfüggesztést és képernyőzárolást (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"%1 alkalmazás blokkolja a felfüggesztést és képernyőzárolást (ismeretlen ok)"
+"Egy alkalmazás blokkolja a felfüggesztést és képernyőzárolást (ismeretlen ok)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -284,15 +274,13 @@ msgstr "%1: ismeretlen ok"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Ismeretlen alkalmazás: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:122
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: ismeretlen ok"
+msgstr "Ismeretlen alkalmazás: ismeretlen ok"
 
 #: package/contents/ui/PowerProfileItem.qml:37
 #, kde-format
@@ -315,11 +303,10 @@ msgid "Power Profile"
 msgstr "Energiakezelési profil"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Nincsenek akkumulátorok"
+msgstr "Nem érhető el"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -386,6 +373,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"A készüléke támogathatja az energiakezelési profilokat.<nl/>Próbálja "
+"telepíteni a <command>power-profiles-daemon</command> csomagot a "
+"disztribúciója csomagkezelőjével, és indítsa újra a rendszert."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

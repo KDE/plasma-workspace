@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:34+0000\n"
-"PO-Revision-Date: 2023-12-23 07:59\n"
+"PO-Revision-Date: 2023-12-30 13:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -90,7 +90,7 @@ msgid ""
 msgstr ""
 "艺人 %1 (%2)\n"
 "中键单击以暂停\n"
-"滚动滑轮以调节音量"
+"滚动鼠标滚轮以调节音量"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -102,7 +102,7 @@ msgid ""
 msgstr ""
 "%1\n"
 "中键单击以暂停\n"
-"滚动滑轮以调节音量"
+"滚动鼠标滚轮以调节音量"
 
 #: package/contents/ui/main.qml:60
 #, kde-format
@@ -114,7 +114,7 @@ msgid ""
 msgstr ""
 "艺人 %1 (已暂停，%2)\n"
 "中键单击以播放\n"
-"滚动滑轮以调节音量"
+"滚动鼠标滚轮以调节音量"
 
 #: package/contents/ui/main.qml:61
 #, kde-format
@@ -126,7 +126,7 @@ msgid ""
 msgstr ""
 "已暂停 (%1)\n"
 "中键单击以播放\n"
-"滚动滑轮以调节音量"
+"滚动鼠标滚轮以调节音量"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
