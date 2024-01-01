@@ -288,24 +288,82 @@ ContainmentItem {
 
                 // Draws a line between the applet dialog and the panel
                 KSvg.SvgItem {
+                    id: separator
                     // Only draw for popups of panel applets, not desktop applets
                     visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
-                        .includes(Plasmoid.location) && dialog.margin == 0
+                        .includes(Plasmoid.location) && !dialog.margin
                     anchors {
-                        top: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : parent.top
-                        left: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : parent.left
-                        right: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : parent.right
-                        bottom: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : parent.bottom
-                        topMargin: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : -dialog.topPadding
-                        leftMargin: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : -dialog.leftPadding
-                        rightMargin: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -dialog.rightPadding
-                        bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -dialog.bottomPadding
+                        topMargin: -dialog.topMargin
+                        leftMargin: -dialog.leftMargin
+                        rightMargin: -dialog.rightMargin
+                        bottomMargin: -dialog.bottomMargin
                     }
-                    height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? 1 : undefined
-                    width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                     z: 999 /* Draw the line on top of the applet */
                     elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                     imagePath: "widgets/line"
+                    // Use states instead of bindings to work around https://bugreports.qt.io/browse/QTBUG-120464
+                    states: [
+                        State {
+                            when: Plasmoid.location === PlasmaCore.Types.TopEdge
+                            AnchorChanges {
+                                target: separator
+                                anchors {
+                                    top: separator.parent.top
+                                    left: separator.parent.left
+                                    right: separator.parent.right
+                                }
+                            }
+                            PropertyChanges {
+                                target: separator
+                                height: 1
+                            }
+                        },
+                        State {
+                            when: Plasmoid.location === PlasmaCore.Types.LeftEdge
+                            AnchorChanges {
+                                target: separator
+                                anchors {
+                                    left: separator.parent.left
+                                    top: separator.parent.top
+                                    bottom: separator.parent.bottom
+                                }
+                            }
+                            PropertyChanges {
+                                target: separator
+                                width: 1
+                            }
+                        },
+                        State {
+                            when: Plasmoid.location === PlasmaCore.Types.RightEdge
+                            AnchorChanges {
+                                target: separator
+                                anchors {
+                                    top: separator.parent.top
+                                    right: separator.parent.right
+                                    bottom: separator.parent.bottom
+                                }
+                            }
+                            PropertyChanges {
+                                target: separator
+                                width: 1
+                            }
+                        },
+                        State {
+                            when: Plasmoid.location === PlasmaCore.Types.BottomEdge
+                            AnchorChanges {
+                                target: separator
+                                anchors {
+                                    left: separator.parent.left
+                                    right: separator.parent.right
+                                    bottom: separator.parent.bottom
+                                }
+                            }
+                            PropertyChanges {
+                                target: separator
+                                height: 1
+                            }
+                        }
+                    ]
                 }
 
                 LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
