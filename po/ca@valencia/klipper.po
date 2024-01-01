@@ -71,8 +71,8 @@ msgstr ""
 "esta és la <emphasis>selecció</emphasis>. Es pot apegar utilitzant el botó "
 "del mig del ratolí.<nl/><nl/>Si la selecció es copia explícitament "
 "utilitzant l'acció <interface>Copia</interface> o <interface>Retalla</"
-"interface>, es guarda al <emphasis>porta-retalls</emphasis>. Es pot apegar "
-"utilitzant l'acció <interface>Apega</interface>. <nl/><nl/>Quan se "
+"interface>, es guarda a dins del <emphasis>porta-retalls</emphasis>. Es pot "
+"apegar utilitzant l'acció <interface>Apega</interface>. <nl/><nl/>Quan se "
 "selecciona, esta opció manté iguals la selecció i el porta-retalls de manera "
 "que qualsevol selecció està immediatament disponible per a apegar de totes "
 "les maneres. Si no se selecciona, la selecció encara es pot guardar en "
@@ -676,9 +676,9 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"El contingut seleccionat amb el cursor es copia automàticament al porta-"
-"retalls, de manera que es pot apegar amb una acció Apega o amb un clic del "
-"mig.<br/><a href=\"1\">Més quant a la selecció i el porta-retalls</a>."
+"El contingut seleccionat amb el cursor es copia automàticament a dins del "
+"porta-retalls, de manera que es pot apegar amb una acció Apega o amb un clic "
+"del mig.<br/><a href=\"1\">Més quant a la selecció i el porta-retalls</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -694,9 +694,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
-"El contingut seleccionat amb el cursor però no copiat explícitament al porta-"
-"retalls no s'emmagatzema automàticament en l'historial del porta-retalls, i "
-"només es pot apegar utilitzant un clic del mig."
+"El contingut seleccionat amb el cursor però no copiat explícitament a dins "
+"del porta-retalls no s'emmagatzema automàticament en l'historial del porta-"
+"retalls, i només es pot apegar utilitzant un clic del mig."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -803,8 +803,8 @@ msgid ""
 msgstr ""
 "Elimina qualsevol espai en blanc inicial i final del text seleccionat abans "
 "de realitzar una acció. Per exemple, açò assegura que un URL apegat en un "
-"navegador s'interpreta com s'esperava. El text guardat al porta-retalls no "
-"està afectat."
+"navegador s'interpreta com s'esperava. El text guardat a dins del porta-"
+"retalls no està afectat."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -878,62 +878,3 @@ msgstr "Desactiva este emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgctxt "@action:inmenu Quit Klipper"
-#~ msgid "&Quit"
-#~ msgstr "I&x"
-
-#~ msgctxt "%1 is application display name"
-#~ msgid "%1 - Clipboard Tool"
-#~ msgstr "%1 - Eina de porta-retalls"
-
-#~ msgid "Klipper"
-#~ msgstr "Klipper"
-
-#~ msgid "Plasma cut & paste history utility"
-#~ msgstr "Utilitat de l'historial per a retallar i apegar de Plasma"
-
-#~ msgid ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-#~ msgstr ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-
-#~ msgid "Carsten Pfeiffer"
-#~ msgstr "Carsten Pfeiffer"
-
-#~ msgid "Author"
-#~ msgstr "Autoria"
-
-#~ msgid "Andrew Stanley-Jones"
-#~ msgstr "Andrew Stanley-Jones"
-
-#~ msgid "Original Author"
-#~ msgstr "Autor original"
-
-#~ msgid "Patrick Dubroy"
-#~ msgstr "Patrick Dubroy"
-
-#~ msgid "Contributor"
-#~ msgstr "Col·laborador"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Bugfixes and optimizations"
-#~ msgstr "Correccions d'errors i optimitzacions"
-
-#~ msgid "Esben Mose Hansen"
-#~ msgstr "Esben Mose Hansen"
-
-#~ msgid "Previous Maintainer"
-#~ msgstr "Mantenidor anterior"
-
-#~ msgid "Martin Gräßlin"
-#~ msgstr "Martin Gräßlin"
-
-#~ msgid "Maintainer"
-#~ msgstr "Mantenidor"
