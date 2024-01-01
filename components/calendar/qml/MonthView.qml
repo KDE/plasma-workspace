@@ -268,16 +268,13 @@ Item {
 
         WheelHandler {
             acceptedDevices: PointerDevice.Mouse
+            orientation: Qt.Vertical
             parent: swipeView.currentItem
             onWheel: wheel => {
-                if (wheel.angleDelta.y === 0) {
-                    wheel.accepted = false;
-                    return;
-                }
                 // magic number 15 for common "one scroll"
                 // See https://doc.qt.io/qt-6/qml-qtquick-wheelhandler.html#rotation-prop
                 while(rotation >= 15) {
-                    rotation -= 15;;
+                    rotation -= 15;
                     root.previousView();
                 }
                 while(rotation <= -15) {
