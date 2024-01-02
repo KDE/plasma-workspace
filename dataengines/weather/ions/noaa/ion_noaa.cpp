@@ -160,15 +160,47 @@ bool NOAAIon::updateIonSource(const QString &source)
     return true;
 }
 
-// Parses city list and gets the correct city based on ID number
-void NOAAIon::getXMLSetup() const
+KJob *NOAAIon::apiRequestJob(const QUrl &url, const QString &source)
 {
-    const QUrl url(QStringLiteral("https://www.weather.gov/data/current_obs/index.xml"));
+    KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
 
-    KIO::TransferJob *getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
+    m_jobData.insert(getJob, QByteArray());
+    if (!source.isEmpty()) {
+        m_jobList.insert(getJob, source);
+    }
 
-    connect(getJob, &KIO::TransferJob::data, this, &NOAAIon::setup_slotDataArrived);
+    qCDebug(IONENGINE_NOAA) << "Requesting URL:" << url;
+
+    connect(getJob, &KIO::TransferJob::data, this, [this](KIO::Job *job, const QByteArray &data) {
+        if (data.isEmpty() || !m_jobData.contains(job)) {
+            return;
+        }
+        m_jobData[job].append(data);
+    });
+
+    return getJob;
+}
+
+// Parses city list and gets the correct city based on ID number
+void NOAAIon::getXMLSetup()
+{
+    auto getJob = apiRequestJob(QUrl(QStringLiteral("https://www.weather.gov/data/current_obs/index.xml")), {});
     connect(getJob, &KJob::result, this, &NOAAIon::setup_slotJobFinished);
+}
+
+void NOAAIon::setup_slotJobFinished(KJob *job)
+{
+    QXmlStreamReader reader = QXmlStreamReader(m_jobData.value(job));
+    if (!reader.atEnd()) {
+        const bool success = readXMLSetup(reader);
+        setInitialized(success);
+    }
+
+    m_jobData.remove(job);
+
+    for (const QString &source : std::as_const(m_sourcesToReset)) {
+        updateSourceEvent(source);
+    }
 }
 
 // Gets specific city XML data
@@ -191,34 +223,8 @@ void NOAAIon::getXMLData(const QString &source)
         return;
     }
 
-    KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
-    m_jobXml.insert(getJob, new QXmlStreamReader);
-    m_jobList.insert(getJob, source);
-
-    connect(getJob, &KIO::TransferJob::data, this, &NOAAIon::slotDataArrived);
+    auto getJob = apiRequestJob(url, source);
     connect(getJob, &KJob::result, this, &NOAAIon::slotJobFinished);
-}
-
-void NOAAIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
-{
-    Q_UNUSED(job)
-
-    if (data.isEmpty()) {
-        return;
-    }
-
-    // Send to xml.
-    m_xmlSetup.addData(data);
-}
-
-void NOAAIon::slotDataArrived(KIO::Job *job, const QByteArray &data)
-{
-    if (data.isEmpty() || !m_jobXml.contains(job)) {
-        return;
-    }
-
-    // Send to xml.
-    m_jobXml[job]->addData(data);
 }
 
 void NOAAIon::slotJobFinished(KJob *job)
@@ -226,28 +232,15 @@ void NOAAIon::slotJobFinished(KJob *job)
     // Dual use method, if we're fetching location data to parse we need to do this first
     const QString source(m_jobList.value(job));
     removeAllData(source);
-    QXmlStreamReader *reader = m_jobXml.value(job);
-    if (reader) {
-        readXMLData(m_jobList[job], *reader);
-    }
+
+    QXmlStreamReader reader = QXmlStreamReader(m_jobData.value(job));
+    readXMLData(source, reader);
 
     // Now that we have the longitude and latitude, fetch the seven day forecast.
-    getForecast(m_jobList[job]);
+    getForecast(source);
 
     m_jobList.remove(job);
-    m_jobXml.remove(job);
-    delete reader;
-}
-
-void NOAAIon::setup_slotJobFinished(KJob *job)
-{
-    Q_UNUSED(job)
-    const bool success = readXMLSetup();
-    setInitialized(success);
-
-    for (const QString &source : std::as_const(m_sourcesToReset)) {
-        updateSourceEvent(source);
-    }
+    m_jobData.remove(job);
 }
 
 void NOAAIon::parseFloat(float &value, const QString &string)
@@ -277,19 +270,19 @@ void NOAAIon::parseDouble(double &value, QXmlStreamReader &xml)
     }
 }
 
-void NOAAIon::parseStationID()
+void NOAAIon::parseStationID(QXmlStreamReader &xml)
 {
     QString state;
     QString stationName;
     QString stationID;
     QString xmlurl;
 
-    while (!m_xmlSetup.atEnd()) {
-        m_xmlSetup.readNext();
+    while (!xml.atEnd()) {
+        xml.readNext();
 
-        const auto elementName = m_xmlSetup.name();
+        const auto elementName = xml.name();
 
-        if (m_xmlSetup.isEndElement() && elementName == QLatin1String("station")) {
+        if (xml.isEndElement() && elementName == QLatin1String("station")) {
             if (!xmlurl.isEmpty()) {
                 NOAAIon::XMLMapInfo info;
                 info.stateName = state;
@@ -303,56 +296,56 @@ void NOAAIon::parseStationID()
             break;
         }
 
-        if (m_xmlSetup.isStartElement()) {
+        if (xml.isStartElement()) {
             if (elementName == QLatin1String("station_id")) {
-                stationID = m_xmlSetup.readElementText();
+                stationID = xml.readElementText();
             } else if (elementName == QLatin1String("state")) {
-                state = m_xmlSetup.readElementText();
+                state = xml.readElementText();
             } else if (elementName == QLatin1String("station_name")) {
-                stationName = m_xmlSetup.readElementText();
+                stationName = xml.readElementText();
             } else if (elementName == QLatin1String("xml_url")) {
-                xmlurl = m_xmlSetup.readElementText().replace(QStringLiteral("http://"), QStringLiteral("http://www."));
+                xmlurl = xml.readElementText().replace(QStringLiteral("http://"), QStringLiteral("http://www."));
             } else {
-                parseUnknownElement(m_xmlSetup);
+                parseUnknownElement(xml);
             }
         }
     }
 }
 
-void NOAAIon::parseStationList()
+void NOAAIon::parseStationList(QXmlStreamReader &xml)
 {
-    while (!m_xmlSetup.atEnd()) {
-        m_xmlSetup.readNext();
+    while (!xml.atEnd()) {
+        xml.readNext();
 
-        if (m_xmlSetup.isEndElement()) {
+        if (xml.isEndElement()) {
             break;
         }
 
-        if (m_xmlSetup.isStartElement()) {
-            if (m_xmlSetup.name() == QLatin1String("station")) {
-                parseStationID();
+        if (xml.isStartElement()) {
+            if (xml.name() == QLatin1String("station")) {
+                parseStationID(xml);
             } else {
-                parseUnknownElement(m_xmlSetup);
+                parseUnknownElement(xml);
             }
         }
     }
 }
 
 // Parse the city list and store into a QMap
-bool NOAAIon::readXMLSetup()
+bool NOAAIon::readXMLSetup(QXmlStreamReader &xml)
 {
     bool success = false;
-    while (!m_xmlSetup.atEnd()) {
-        m_xmlSetup.readNext();
+    while (!xml.atEnd()) {
+        xml.readNext();
 
-        if (m_xmlSetup.isStartElement()) {
-            if (m_xmlSetup.name() == QLatin1String("wx_station_index")) {
-                parseStationList();
+        if (xml.isStartElement()) {
+            if (xml.name() == QLatin1String("wx_station_index")) {
+                parseStationList(xml);
                 success = true;
             }
         }
     }
-    return (!m_xmlSetup.error() && success);
+    return (!xml.error() && success);
 }
 
 void NOAAIon::parseWeatherSite(WeatherData &data, QXmlStreamReader &xml)
@@ -770,37 +763,22 @@ void NOAAIon::getForecast(const QString &source)
                                  "ndfdBrowserClientByDay.php?lat=")
                    + QString::number(lat) + QLatin1String("&lon=") + QString::number(lon) + QLatin1String("&format=24+hourly&numDays=7"));
 
-    KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
-    m_jobXml.insert(getJob, new QXmlStreamReader);
-    m_jobList.insert(getJob, source);
-
-    connect(getJob, &KIO::TransferJob::data, this, &NOAAIon::forecast_slotDataArrived);
+    auto getJob = apiRequestJob(url, source);
     connect(getJob, &KJob::result, this, &NOAAIon::forecast_slotJobFinished);
-}
-
-void NOAAIon::forecast_slotDataArrived(KIO::Job *job, const QByteArray &data)
-{
-    if (data.isEmpty() || !m_jobXml.contains(job)) {
-        return;
-    }
-
-    // Send to xml.
-    m_jobXml[job]->addData(data);
 }
 
 void NOAAIon::forecast_slotJobFinished(KJob *job)
 {
-    QXmlStreamReader *reader = m_jobXml.value(job);
+    QXmlStreamReader reader = QXmlStreamReader(m_jobData.value(job));
     const QString source = m_jobList.value(job);
 
-    if (reader) {
-        readForecast(source, *reader);
+    if (!reader.atEnd()) {
+        readForecast(source, reader);
         updateWeather(source);
     }
 
     m_jobList.remove(job);
-    delete m_jobXml[job];
-    m_jobXml.remove(job);
+    m_jobData.remove(job);
 
     if (m_sourcesToReset.contains(source)) {
         m_sourcesToReset.removeAll(source);

@@ -90,13 +90,8 @@ protected: // IonInterface API
     void reset() override;
 
 private Q_SLOTS:
-    void setup_slotDataArrived(KIO::Job *, const QByteArray &);
     void setup_slotJobFinished(KJob *);
-
-    void slotDataArrived(KIO::Job *, const QByteArray &);
     void slotJobFinished(KJob *);
-
-    void forecast_slotDataArrived(KIO::Job *, const QByteArray &);
     void forecast_slotJobFinished(KJob *);
 
 private:
@@ -112,9 +107,12 @@ private:
     // bool night(const QString& source);
     IonInterface::ConditionIcons getConditionIcon(const QString &weather, bool isDayTime) const;
 
+    // Helper to make an API request
+    KJob *apiRequestJob(const QUrl &url, const QString &source);
+
     // Load and Parse the place XML listing
-    void getXMLSetup() const;
-    bool readXMLSetup();
+    void getXMLSetup();
+    bool readXMLSetup(QXmlStreamReader &xml);
 
     // Load and parse the specific place(s)
     void getXMLData(const QString &source);
@@ -132,8 +130,8 @@ private:
 
     // Parse weather XML data
     void parseWeatherSite(WeatherData &data, QXmlStreamReader &xml);
-    void parseStationID();
-    void parseStationList();
+    void parseStationID(QXmlStreamReader &xml);
+    void parseStationList(QXmlStreamReader &xml);
 
     void parseFloat(float &value, const QString &string);
     void parseFloat(float &value, QXmlStreamReader &xml);
@@ -154,9 +152,8 @@ private:
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs
-    QHash<KJob *, QXmlStreamReader *> m_jobXml;
+    QHash<KJob *, QByteArray> m_jobData;
     QHash<KJob *, QString> m_jobList;
-    QXmlStreamReader m_xmlSetup;
 
     // bool emitWhenSetup;
     QStringList m_sourcesToReset;
