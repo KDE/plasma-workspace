@@ -197,9 +197,10 @@ protected:
     // void classBegin() override;
     void componentComplete() override;
     void mousePressEvent(QMouseEvent *event) override;
-    void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
-    void mouseUngrabEvent() override;
+
+    void touchEvent(QTouchEvent *event) override;
+    void touchUngrabEvent() override;
 
 private Q_SLOTS:
     void appletAdded(Plasma::Applet *applet);
@@ -207,6 +208,9 @@ private Q_SLOTS:
 
 private:
     AppletContainer *createContainerForApplet(PlasmaQuick::AppletQuickItem *appletItem);
+
+    void handleMoveEvent(const QPointF &scenePosition);
+    void handleReleaseEvent(const QPointF &scenePosition);
 
     QString m_configKey;
     QString m_fallbackConfigKey;
@@ -236,8 +240,8 @@ private:
     QSizeF m_savedSize;
     QRectF m_geometryBeforeResolutionChange;
 
-    QPointF m_mouseDownPosition = QPoint(-1, -1);
-    bool m_mouseDownWasEditMode = false;
+    QPointF m_touchDownPosition = QPoint(-1, -1);
+    bool m_touchDownWasEditMode = false;
     bool m_editMode = false;
     bool m_relayoutLock = false;
 };

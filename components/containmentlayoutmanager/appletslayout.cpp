@@ -30,6 +30,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
 
     setFlags(QQuickItem::ItemIsFocusScope);
     setAcceptedMouseButtons(Qt::LeftButton);
+    setAcceptTouchEvents(true);
 
     m_saveLayoutTimer = new QTimer(this);
     m_saveLayoutTimer->setSingleShot(true);
@@ -400,6 +401,9 @@ void AppletsLayout::setEventManagerToFilter(QQuickItem *item)
     }
 
     m_eventManagerToFilter = item;
+    if (m_eventManagerToFilter) {
+        m_eventManagerToFilter->setAcceptTouchEvents(true);
+    }
     setFiltersChildMouseEvents(m_eventManagerToFilter);
     Q_EMIT eventManagerToFilterChanged();
 }
@@ -582,26 +586,14 @@ bool AppletsLayout::childMouseEventFilter(QQuickItem *item, QEvent *event)
     }
 
     switch (event->type()) {
-    case QEvent::MouseButtonPress: {
-        QMouseEvent *me = static_cast<QMouseEvent *>(event);
-        if (me->buttons() & Qt::LeftButton) {
-            mousePressEvent(me);
-        }
+    case QEvent::TouchBegin:
+    case QEvent::TouchUpdate:
+    case QEvent::TouchCancel:
+    case QEvent::TouchEnd: {
+        touchEvent(static_cast<QTouchEvent *>(event));
         break;
     }
-    case QEvent::MouseMove: {
-        QMouseEvent *me = static_cast<QMouseEvent *>(event);
-        mouseMoveEvent(me);
-        break;
-    }
-    case QEvent::MouseButtonRelease: {
-        QMouseEvent *me = static_cast<QMouseEvent *>(event);
-        mouseReleaseEvent(me);
-        break;
-    }
-    case QEvent::UngrabMouse:
-        mouseUngrabEvent();
-        break;
+
     default:
         break;
     }
@@ -611,73 +603,66 @@ bool AppletsLayout::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
 void AppletsLayout::mousePressEvent(QMouseEvent *event)
 {
-    forceActiveFocus(Qt::MouseFocusReason);
-
-    // Only accept synthesized events i.e. touch events, because we only want
-    // to support press-and-hold. Click-and-hold is weird. See 457979.
-    if (!(event->source() == Qt::MouseEventSynthesizedBySystem || event->source() == Qt::MouseEventSynthesizedByQt)) {
-        const auto children = childItems();
-        // If any container is in edit mode, accept the press event so we can
-        // cancel the edit mode. If not, don't accept the event so it can be
-        // passed on to other parts.
-        if (std::none_of(children.begin(), children.end(), [](QQuickItem *child) {
-                auto container = qobject_cast<ItemContainer *>(child);
-                return container ? container->editMode() : false;
-            })) {
-            event->setAccepted(false);
-        }
-        return;
-    }
-
-    if (!m_editMode && m_editModeCondition == AppletsLayout::Manual) {
-        return;
-    }
-
-    if (!m_editMode && m_editModeCondition == AppletsLayout::AfterPressAndHold) {
-        m_pressAndHoldTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
-    }
-
-    m_mouseDownWasEditMode = m_editMode;
-    m_mouseDownPosition = event->scenePosition();
-}
-
-void AppletsLayout::mouseMoveEvent(QMouseEvent *event)
-{
-    if (!m_editMode && m_editModeCondition == AppletsLayout::Manual) {
-        return;
-    }
-
-    if (!m_editMode && QPointF(event->scenePosition() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
-        m_pressAndHoldTimer->stop();
+    // If any container is in edit mode, accept the press event so we can
+    // cancel the edit mode. If not, don't accept the event so it can be
+    // passed on to other parts.
+    if (const auto children = childItems(); std::none_of(children.begin(), children.end(), [](QQuickItem *child) {
+            auto container = qobject_cast<ItemContainer *>(child);
+            return container ? container->editMode() : false;
+        })) {
+        event->setAccepted(false);
     }
 }
 
 void AppletsLayout::mouseReleaseEvent(QMouseEvent *event)
 {
-    if (m_editMode
-        && m_mouseDownWasEditMode
-        // By only accepting synthetyzed events, this makes the
-        // close by tapping in any empty area only work with real
-        // touch events, as we want a different behavior between desktop
-        // and tablet mode
-        && (event->source() == Qt::MouseEventSynthesizedBySystem || event->source() == Qt::MouseEventSynthesizedByQt)
-        && QPointF(event->scenePosition() - m_mouseDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
-        setEditMode(false);
-    }
-
-    m_pressAndHoldTimer->stop();
-
-    if (!m_editMode) {
-        for (auto *child : childItems()) {
-            ItemContainer *item = qobject_cast<ItemContainer *>(child);
-            if (item && item != m_placeHolder) {
-                item->setEditMode(false);
-            }
-        }
-    }
+    handleReleaseEvent(event->scenePosition());
 }
 
-void AppletsLayout::mouseUngrabEvent()
+void AppletsLayout::touchEvent(QTouchEvent *event)
+{
+    const auto &point = *(event->points().cbegin());
+
+    switch (point.state()) {
+    case QEventPoint::State::Pressed: {
+        if (!m_editMode) {
+            if (m_editModeCondition == AppletsLayout::Manual) {
+                break;
+            } else if (m_editModeCondition == AppletsLayout::AfterPressAndHold) {
+                m_pressAndHoldTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
+            }
+        }
+        forceActiveFocus(Qt::MouseFocusReason);
+        m_touchDownWasEditMode = m_editMode;
+        m_touchDownPosition = point.scenePosition();
+        break;
+    }
+
+    case QEventPoint::State::Updated: {
+        if (m_editMode) {
+            break;
+        }
+        if (m_editModeCondition == AppletsLayout::Manual) {
+            break;
+        } else if (QPointF(point.scenePosition() - m_touchDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+            m_pressAndHoldTimer->stop();
+        }
+        break;
+    }
+
+    case QEventPoint::State::Released: {
+        handleReleaseEvent(point.scenePosition());
+        break;
+    }
+
+    default:
+        break;
+    }
+
+    return QQuickItem::touchEvent(event); // Ignore the event
+}
+
+void AppletsLayout::touchUngrabEvent()
 {
     m_pressAndHoldTimer->stop();
 }
@@ -800,6 +785,27 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
     appletItem->setVisible(true);
 
     return container;
+}
+
+void AppletsLayout::handleReleaseEvent(const QPointF &scenePosition)
+{
+    if (m_editMode && m_touchDownWasEditMode
+        && QPointF(scenePosition - m_touchDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
+        setEditMode(false);
+    }
+
+    m_pressAndHoldTimer->stop();
+
+    if (m_editMode) {
+        return;
+    }
+
+    // Click any empty area to exit the edit mode
+    for (const auto children = childItems(); auto *child : children) {
+        if (ItemContainer *item = qobject_cast<ItemContainer *>(child); item && item != m_placeHolder) {
+            item->setEditMode(false);
+        }
+    }
 }
 
 #include "moc_appletslayout.cpp"
