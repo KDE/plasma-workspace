@@ -14,6 +14,7 @@
 #include <QSqlQuery>
 #include <QSqlRecord>
 #include <sstream>
+#include <thread>
 
 FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent)
     : QObject(parent)
@@ -43,19 +44,26 @@ void FetchSqlite::teardown()
 
 static QSqlDatabase openDbConnection(const QString &databaseFile)
 {
+    // create a thread unique connection name based on the DB filename and
+    // thread id
+    QString connection = databaseFile + "-";
+    std::stringstream s;
+    s << std::this_thread::get_id();
+    connection += QString::fromStdString(s.str());
+
     // Try to reuse the previous connection
-    auto db = QSqlDatabase::database(databaseFile);
+    auto db = QSqlDatabase::database(connection);
     if (db.isValid()) {
-        qCDebug(RUNNER_BOOKMARKS) << "Reusing connection" << databaseFile;
+        qCDebug(RUNNER_BOOKMARKS) << "Reusing connection" << connection;
         return db;
     }
 
     // Otherwise, create, configure and open a new one
-    db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), databaseFile);
+    db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connection);
     db.setHostName(QStringLiteral("localhost"));
     db.setDatabaseName(databaseFile);
     db.open();
-    qCDebug(RUNNER_BOOKMARKS) << "Opened connection" << databaseFile;
+    qCDebug(RUNNER_BOOKMARKS) << "Opened connection" << connection;
 
     return db;
 }
