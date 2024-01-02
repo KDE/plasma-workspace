@@ -7,7 +7,10 @@
 #include <chrono>
 
 #include <KDirNotify>
+#include <KIO/CopyJob>
+#include <KIO/FileCopyJob>
 #include <KIO/FileUndoManager>
+#include <KIO/StatJob>
 #include <QDesktopServices>
 #include <QProcess>
 #include <QSignalSpy>

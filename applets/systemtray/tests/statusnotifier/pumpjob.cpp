@@ -8,6 +8,8 @@
 
 #include <QDebug>
 
+#include <KIO/Global>
+#include <KIO/JobTracker>
 #include <KJobTrackerInterface>
 #include <KLocalizedString>
 #include <QStringList>
