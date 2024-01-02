@@ -14,8 +14,13 @@
 #include <KLocalizedString>
 #include <KUnitConversion/Converter>
 
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QLocale>
 #include <QTimeZone>
+
+using namespace Qt::StringLiterals;
 
 WeatherData::WeatherData()
     : stationLatitude(qQNaN())
@@ -236,8 +241,10 @@ void NOAAIon::slotJobFinished(KJob *job)
     QXmlStreamReader reader = QXmlStreamReader(m_jobData.value(job));
     readXMLData(source, reader);
 
-    // Now that we have the longitude and latitude, fetch the seven day forecast.
+    // Now that we have the longitude and latitude, fetch the seven day forecast
+    // and the alerts
     getForecast(source);
+    getAlerts(source);
 
     m_jobList.remove(job);
     m_jobData.remove(job);
@@ -623,6 +630,16 @@ void NOAAIon::updateWeather(const QString &source)
         ++i;
     }
 
+    data.insert(u"Total Warnings Issued"_s, weatherData.alerts.size());
+    int alertNum = 0;
+    for (const WeatherData::Alert &alert : weatherData.alerts) {
+        // TODO: Add a Headline parameter to the engine and the applet
+        data.insert(u"Warning Description %1"_s.arg(alertNum), u"<p><b>%1</b></p>%2"_s.arg(alert.headline, alert.description));
+        data.insert(u"Warning Timestamp %1"_s.arg(alertNum), QLocale().toString(alert.startTime, QLocale::ShortFormat));
+        data.insert(u"Warning Priority %1"_s.arg(alertNum), alert.priority);
+        ++alertNum;
+    }
+
     data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short)", "Data from NOAA National\302\240Weather\302\240Service"));
 
     setData(source, data);
@@ -866,6 +883,170 @@ void NOAAIon::readForecast(const QString &source, QXmlStreamReader &xml)
     }
 
     weatherData.isForecastsDataPending = false;
+}
+
+void NOAAIon::getCountyID(const QString &source)
+{
+    const double lat = m_weatherData[source].stationLatitude;
+    const double lon = m_weatherData[source].stationLongitude;
+    if (qIsNaN(lat) || qIsNaN(lon)) {
+        return;
+    }
+
+    const QUrl url(QStringLiteral("https://api.weather.gov/points/%1,%2").arg(lat).arg(lon));
+
+    auto getJob = apiRequestJob(url, source);
+    connect(getJob, &KJob::result, this, &NOAAIon::county_slotJobFinished);
+}
+
+void NOAAIon::county_slotJobFinished(KJob *job)
+{
+    const QString source = m_jobList.value(job);
+
+    if (!job->error()) {
+        QJsonDocument doc = QJsonDocument::fromJson(m_jobData.value(job));
+        if (!doc.isEmpty()) {
+            readCountyID(source, doc);
+        }
+    } else {
+        qCWarning(IONENGINE_NOAA) << "Error getting coordinates info" << job->errorText();
+    }
+
+    m_jobList.remove(job);
+    m_jobData.remove(job);
+}
+
+void NOAAIon::readCountyID(const QString &source, const QJsonDocument &doc)
+{
+    if (doc.isEmpty()) {
+        return;
+    }
+
+    const auto properties = doc[QStringLiteral("properties")];
+    if (!properties.isObject()) {
+        return;
+    }
+
+    const QString countyUrl = properties[QStringLiteral("county")].toString();
+    const QString countyID = countyUrl.split(QLatin1Char('/')).last();
+    m_weatherData[source].countyID = countyID;
+
+    getAlerts(source);
+}
+
+void NOAAIon::getAlerts(const QString &source)
+{
+    // We get the alerts by county because it includes all the events.
+    // Using the forecast zone would miss some of them, and the lat/lon point
+    // corresponds to the weather station, not necessarily the user location
+    const QString countyID = m_weatherData[source].countyID;
+    if (countyID.isEmpty()) {
+        getCountyID(source);
+        return;
+    }
+
+    const QUrl url(QStringLiteral("https://api.weather.gov/alerts/active?zone=%1").arg(countyID));
+
+    auto getJob = apiRequestJob(url, source);
+    connect(getJob, &KJob::result, this, &NOAAIon::alerts_slotJobFinished);
+}
+
+void NOAAIon::alerts_slotJobFinished(KJob *job)
+{
+    const QString source = m_jobList.value(job);
+
+    if (!job->error()) {
+        QJsonDocument doc = QJsonDocument::fromJson(m_jobData.value(job));
+        if (!doc.isEmpty()) {
+            readAlerts(source, doc);
+        }
+    } else {
+        qCWarning(IONENGINE_NOAA) << "Error getting alerts info" << job->errorText();
+    }
+
+    m_jobList.remove(job);
+    m_jobData.remove(job);
+}
+
+// Helpers to parse warnings
+int mapSeverity(const QString &severity)
+{
+    if (severity == "Extreme"_L1) {
+        return 4;
+    } else if (severity == "Severe"_L1) {
+        return 3;
+    } else if (severity == "Moderate"_L1) {
+        return 2;
+    } else if (severity == "Minor"_L1) {
+        return 1;
+    } else { // severity: "Unknown"
+        return 0;
+    }
+};
+
+QString formatAlertDescription(QString description)
+{
+    /* -- Example of an alert's description --
+    * WHAT...Minor flooding is occurring and minor flooding is forecast.\n
+    \n
+    * WHERE...Santee River near Jamestown.\n
+    \n
+    * WHEN...Until further notice.\n
+    \n
+    * IMPACTS...At 12.0 feet, several dirt logging roads are impassable.\n
+    \n
+    * ADDITIONAL DETAILS...\n
+    - At 930 PM EST Tuesday, the stage was 11.4 feet.\n
+    - Forecast...The river is expected to rise to a crest of 11.7\n
+    feet Thursday evening.\n
+    - Flood stage is 10.0 feet.\n
+    */
+    description.replace("* "_L1, "<b>"_L1);
+    description.replace("..."_L1, ":</b> "_L1);
+    description.replace("\n\n"_L1, "<br/>"_L1);
+    description.replace("\n-"_L1, "<br/>-"_L1);
+    return description;
+}
+
+void NOAAIon::readAlerts(const QString &source, const QJsonDocument &doc)
+{
+    if (doc.isEmpty()) {
+        return;
+    }
+
+    auto &alerts = m_weatherData[source].alerts;
+    alerts.clear();
+
+    const auto features = doc[u"features"_s].toArray();
+    qCDebug(IONENGINE_NOAA) << u"Received %1 alert/s"_s.arg(features.count());
+
+    for (const auto &alertInfo : features) {
+        const auto properties = alertInfo[u"properties"_s];
+        if (!properties.isObject()) {
+            continue;
+        }
+
+        auto alert = WeatherData::Alert();
+        alert.startTime = QDateTime::fromString(properties[u"onset"_s].toString(), Qt::ISODate);
+        alert.endTime = QDateTime::fromString(properties[u"ends"_s].toString(), Qt::ISODate);
+        alert.priority = mapSeverity(properties[u"severity"_s].toString());
+        alert.headline = properties[u"parameters"_s][u"NWSheadline"_s][0].toString();
+        alert.description = formatAlertDescription(properties[u"description"_s].toString());
+
+        alerts << alert;
+    }
+
+    // Sort by higher priority and the lower start time
+    std::sort(alerts.begin(), alerts.end(), [](auto a, auto b) {
+        if (a.priority != b.priority) {
+            return a.priority > b.priority;
+        }
+        return a.startTime < b.startTime;
+    });
+
+    updateWeather(source);
+    forceImmediateUpdateOfAllVisualizations();
+    Q_EMIT forceUpdate(this, source);
 }
 
 void NOAAIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)

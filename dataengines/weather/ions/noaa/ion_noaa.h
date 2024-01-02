@@ -31,6 +31,7 @@ public:
     double stationLatitude;
     double stationLongitude;
     QString stateName;
+    QString countyID;
 
     // Current observation information.
     QString observationTime;
@@ -60,6 +61,16 @@ public:
         QString high;
     };
     QList<Forecast> forecasts;
+
+    struct Alert {
+        QString headline;
+        QString description;
+        QString infoUrl;
+        int priority;
+        QDateTime startTime;
+        QDateTime endTime;
+    };
+    QList<Alert> alerts;
 
     bool isForecastsDataPending = false;
 
@@ -93,6 +104,8 @@ private Q_SLOTS:
     void setup_slotJobFinished(KJob *);
     void slotJobFinished(KJob *);
     void forecast_slotJobFinished(KJob *);
+    void county_slotJobFinished(KJob *);
+    void alerts_slotJobFinished(KJob *);
 
 private:
     void updateWeather(const QString &source);
@@ -121,6 +134,12 @@ private:
     // Load and parse upcoming forecast for the next N days
     void getForecast(const QString &source);
     void readForecast(const QString &source, QXmlStreamReader &xml);
+
+    // Methods to get alerts. We need the county ID first
+    void getCountyID(const QString &source);
+    void readCountyID(const QString &source, const QJsonDocument &doc);
+    void getAlerts(const QString &source);
+    void readAlerts(const QString &source, const QJsonDocument &doc);
 
     // Check if place specified is valid or not
     QStringList validate(const QString &source) const;
