@@ -1,0 +1,53 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Emir SARI <emir_sari@icloud.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-01-01 16:05+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.01.85\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "Oturum Yönetimi"
+
+#: main.cpp:38
+#, kde-format
+msgid "Log Out"
+msgstr "Oturumu Kapat"
+
+#: main.cpp:44
+#, kde-format
+msgid "Shut Down"
+msgstr "Kapat"
+
+#: main.cpp:50
+#, kde-format
+msgid "Reboot"
+msgstr "Yeniden Başlat"
+
+#: main.cpp:58
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Onay Olmadan Oturumu Kapat"
+
+#: main.cpp:64
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "Onay Olmadan Kapat"
+
+#: main.cpp:70
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Onay Olmadan Yeniden Başlat"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2020, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2023-12-26 07:14-0600\n"
+"PO-Revision-Date: 2024-01-01 09:47-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -23,50 +23,42 @@ msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
 #: baloosearchrunner.cpp:82
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
 msgstr "ਆਡੀਓ"
 
 #: baloosearchrunner.cpp:83
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
 msgstr "ਚਿੱਤਰ"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "ਵੀਡਿਓ"
+msgstr "ਵੀਡੀਓ"
 
 #: baloosearchrunner.cpp:85
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
 msgstr "ਸਪਰੈਡਸ਼ੀਟ"
 
 #: baloosearchrunner.cpp:86
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
-msgstr "ਪੇਸ਼ਕਾਰੀ"
+msgstr "ਪੇਸ਼ਕਾਰੀਆਂ"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
 msgstr "ਫੋਲਡਰ"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
 msgstr "ਦਸਤਾਵੇਜ਼"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
 msgstr "ਅਕਾਇਵ"
 
