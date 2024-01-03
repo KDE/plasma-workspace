@@ -297,21 +297,17 @@ void DWDIon::setup_slotJobFinished(KJob *job)
 
 void DWDIon::measure_slotJobFinished(KJob *job)
 {
-    if (!job->error()) {
-        const QString source(m_measureJobList.value(job));
+    const QString source(m_measureJobList.value(job));
+    const QByteArray &jsonData = m_measureJobJSON.value(job);
+
+    if (!job->error() && !jsonData.isEmpty()) {
         setData(source, Data());
-
-        QJsonDocument doc = QJsonDocument::fromJson(m_measureJobJSON.value(job));
-
-        // Not all stations have current measurements
-        if (!doc.isEmpty()) {
-            parseMeasureData(source, doc);
-        } else {
-            m_weatherData[source].isMeasureDataPending = false;
-            updateWeather(source);
-        }
+        QJsonDocument doc = QJsonDocument::fromJson(jsonData);
+        parseMeasureData(source, doc);
     } else {
-        qCWarning(IONENGINE_dwd) << "error during measurement" << job->errorText();
+        qCWarning(IONENGINE_dwd) << "no measurements received" << job->errorText();
+        m_weatherData[source].isMeasureDataPending = false;
+        updateWeather(source);
     }
 
     m_measureJobList.remove(job);
