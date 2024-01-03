@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-25 21:52+0100\n"
-"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"PO-Revision-Date: 2024-01-02 13:17+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
@@ -216,117 +216,117 @@ msgstr "Ujjlenyomat regisztrálása"
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a jobb mutatóujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a jobb középső ujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a jobb gyűrűsujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a jobb kisujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a jobb hüvelykujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a bal mutatóujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a bal gyűrűsujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a bal gyűrűsujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a bal kisujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Nyomja a bal hüvelykujját többször az ujjlenyomat-érzékelőhöz."
 
 #: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a jobb mutatóujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a jobb középső ujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a jobb gyűrűsujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a jobb kisujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a jobb hüvelykujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a bal mutatóujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a bal középső ujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a bal gyűrűsujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a bal kisujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Húzza át többször a bal hüvelykujját az ujjlenyomat-érzékelőn."
 
 #: src/ui/FingerprintDialog.qml:167
 #, kde-format
@@ -368,7 +368,7 @@ msgstr "Új hozzáadása"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Nyomja meg a Szóközt a felhasználói profil szerkesztéséhez."
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -506,13 +506,13 @@ msgstr "Válasszon képet"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Helykitöltő ikon"
 
 #: src/ui/PicturesSheet.qml:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Felhasználói profilkép helykitöltő ikonja"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-07 01:42+0000\n"
-"PO-Revision-Date: 2023-12-26 17:40+0100\n"
-"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"PO-Revision-Date: 2024-01-02 14:43+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
@@ -51,163 +51,163 @@ msgstr "A/4"
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr ""
+msgstr "Saját kézbe"
 
 #: exampleutility.cpp:65
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Minta Kft."
 
 #: exampleutility.cpp:66
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Fejlesztési Osztály"
 
 #: exampleutility.cpp:67
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Fejlesztőépület"
 
 #: exampleutility.cpp:68
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr ""
+msgstr "Fő utca"
 
 #: exampleutility.cpp:69
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr ""
+msgstr "1."
 
 #: exampleutility.cpp:71
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:72
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "2. szoba"
 
 #: exampleutility.cpp:73
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr ""
+msgstr "3. emelet"
 
 #: exampleutility.cpp:75
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "Belváros"
 
 #: exampleutility.cpp:76
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "1222"
 
 #: exampleutility.cpp:77
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
-msgstr ""
+msgstr "Város"
 
 #: exampleutility.cpp:78
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr ""
+msgstr "Megye"
 
 #: exampleutility.cpp:91
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "Vezetéknév"
 
 #: exampleutility.cpp:92
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "VEZETÉKNÉV"
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "Keresztnév"
 
 #: exampleutility.cpp:94
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "K"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "Keresztnév"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "Egyéb név"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "További név"
 
 #: exampleutility.cpp:98
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr ""
+msgstr "T"
 
 #: exampleutility.cpp:99
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
-msgstr ""
+msgstr "Foglalkozás"
 
 #: exampleutility.cpp:100
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr ""
+msgstr "Doktor"
 
 #: exampleutility.cpp:101
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: exampleutility.cpp:103
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:119
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:133
 #, kde-format
@@ -215,7 +215,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Nem található példa ehhez a területi beállításhoz"
 
 #: kcmregionandlang.cpp:116
 #, kde-kuit-format
@@ -225,12 +225,15 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Nem sikerült megtalálni a rendszer elérhető területi beállításait a "
+"<command>localectl</command> eszközzel. Kérjük, küldjön hibajelentést erről "
+"a <link>https://bugs.kde.org</link>-on."
 
 #: languagelistmodel.cpp:87
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: languagelistmodel.cpp:93
 #, kde-format
@@ -238,66 +241,66 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr ""
+msgstr "%1 (brazil)"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr ""
+msgstr "A „check-language-support” végrehajtható fájl nem található"
 
 #: localegeneratorubuntu.cpp:52
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr ""
+msgstr "a check-language-support sikertelen, kimenet: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "Nem sikerült minden hiányzó csomagot megoldani: %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
-msgstr ""
+msgstr "Nem sikerült telepíteni a következőket: %1"
 
 #: localegenhelper/localegenhelper.cpp:43
 #, kde-format
 msgid "Another process is already running, please retry later"
-msgstr ""
+msgstr "Egy másik folyamat már fut, próbálja újra később"
 
 #: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr ""
+msgstr "Helyi beállítófájl szerkesztése nem engedélyezett"
 
 #: localegenhelper/localegenhelper.cpp:113
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
-msgstr ""
+msgstr "Nem lehet megnyitni a „/etc/locale.gen” fájlt"
 
 #: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr ""
+msgstr "A „locale-gen” végrehajtható fájl nem található"
 
 #: localegenhelper/localegenhelper.cpp:159
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Ismeretlen"
 
 #: localelistmodel.cpp:33
 #, kde-format
 msgid "Default for System"
-msgstr ""
+msgstr "Rendszer alapértelmezése"
 
 #: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezés"
 
 #: localelistmodel.cpp:78
 #, kde-format
@@ -305,21 +308,21 @@ msgctxt ""
 "the first is language name, the second is the country name, like 'English "
 "(America)'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: localelistmodel.cpp:161
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
-msgstr ""
+msgstr "Rendszer alapértelmezése (C)"
 
 #: localelistmodel.cpp:164
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
-msgstr ""
+msgstr "%1 alapértelmezése"
 
 #: optionsmodel.cpp:23
 #, kde-format
@@ -367,7 +370,7 @@ msgstr "Cím"
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "Névstílus"
 
 #: optionsmodel.cpp:32
 #, kde-format
@@ -395,7 +398,7 @@ msgstr " (standard %1 formátum)"
 #: regionandlangsettingsbase.kcfg:42
 #, kde-format
 msgid "Inherit Language"
-msgstr ""
+msgstr "Nyelv öröklése"
 
 #: ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format
@@ -409,47 +412,52 @@ msgid ""
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
+"Bármely más nyelv az angol alá helyezése nem kívánt működést okozhat egyes "
+"alkalmazásokban. Ha angolul szeretné használni a rendszerét, távolítsa el az "
+"összes többi nyelvet."
 
 #: ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr ""
+msgstr "A(z) „%1” nyelv nem támogatott"
 
 #: ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
+"Adja hozzá a nyelveket abban a sorrendben, ahogyan azokat az alkalmazásokban "
+"látni szeretné."
 
 #: ui/AdvancedLanguageSelectPage.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
-msgstr ""
+msgstr "Nyelvváltás"
 
 #: ui/AdvancedLanguageSelectPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
-msgstr ""
+msgstr "Nyelvváltás"
 
 #: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
-msgstr ""
+msgstr "Mozgatás legfelülre"
 
 #: ui/AdvancedLanguageSelectPage.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
-msgstr ""
+msgstr "Nincs beállítva nyelv"
 
 #: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
 #, kde-format
@@ -461,13 +469,13 @@ msgstr "Nyelvek hozzáadása"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr ""
+msgstr "Hozzáadás…"
 
 #: ui/main.qml:32
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr ""
+msgstr "A változtatások a következő bejelentkezéskor lépnek érvénybe."
 
 #: ui/main.qml:38
 #, kde-format
@@ -481,6 +489,8 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
+"Területi beállítások és nyelvi fájlok előállítása; ne kapcsolja ki a "
+"számítógépet."
 
 #: ui/main.qml:61
 #, kde-format
@@ -491,6 +501,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"A területi beállítások és a nyelvi fájlok előállításra kerültek, de a "
+"nyelvspecifikus betűkészletek nem telepíthetők automatikusan. Ha a nyelve "
+"specializált betűkészletet használ a helyes megjelenéshez, Önnek kell "
+"megkeresnie és telepítenie azokat."
 
 #: ui/main.qml:75
 #, kde-format
@@ -499,6 +513,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"A szükséges területi beállítások és nyelvi fájlok telepítésre kerültek. Most "
+"már kikapcsolhatja a számítógépet."
 
 #: ui/main.qml:153
 #, kde-format

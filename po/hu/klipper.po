@@ -3,22 +3,22 @@
 # Arpad Biro <biro_arpad@yahoo.com>, 2004.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
-# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2024 Kiszel Kristóf <kiszel.kristof@gmail.com>
 # Kristof Kiszel <ulysses@fsf.hu>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2022-02-01 11:32+0100\n"
-"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"PO-Revision-Date: 2024-01-02 11:58+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,19 +28,15 @@ msgstr "Kiszel Kristóf,Bíró Árpád,Szántó Tamás"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ulysses@kubuntu.org,biro_arpad@yahoo.com,tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #: configdialog.cpp:81
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Vágólapnapló"
+msgstr "Vágólapnapló:"
 
 #: configdialog.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "NUmber of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
@@ -119,10 +115,9 @@ msgstr ""
 "előzményeibe."
 
 #: configdialog.cpp:260
-#, fuzzy, kde-format
-#| msgid "Automatic action popup time:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Automatikus műveletmenü időkorlátja:"
+msgstr "Műveletmenü megjelenítése:"
 
 #: configdialog.cpp:270
 #, kde-kuit-format
@@ -134,11 +129,16 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Ha egy szöveg illeszkedik a vágólap előzményei között kijelölt vagy "
+"kiválasztott műveletmintára, automatikusan megjelenik egy felugró menü az "
+"alkalmazható műveletekkel. Ha az automatikus menü itt ki van kapcsolva, vagy "
+"nem jelenik meg egy kizárt ablaknél, a(z) <shortcut>%1</shortcut> "
+"billentyűparancs használatával  jeleníthető meg."
 
 #: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Ablakok kizárása…"
 
 #: configdialog.cpp:293
 #, kde-format
@@ -155,16 +155,14 @@ msgid "None"
 msgstr "Nincs"
 
 #: configdialog.cpp:303
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Műveletek"
+msgstr "Opciók:"
 
 #: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Ablakok kizárása"
 
 #: configdialog.cpp:360
 #, kde-kuit-format
@@ -174,16 +172,18 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Ha egy <interface>illesztési minta</interface> illeszkedik a vágólap "
+"tartalmára, a <interface>parancsai</interface> megjelennek a Klipper felugró "
+"menüjében, és végrehajthatóak."
 
 #: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Mintaillesztés és parancsok"
 
 #: configdialog.cpp:369
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Leírás"
@@ -210,6 +210,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Ezek a műveletek jelennek meg a felugró menüben, amely a "
+"<interface>Műveletmenü</interface> oldalon állítható be."
 
 #: configdialog.cpp:575
 #, kde-kuit-format
@@ -218,12 +220,13 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Törli a kiválasztott <resource>%1</resource> műveletet, és az összes, ahhoz "
+"tartozó parancsot?"
 
 #: configdialog.cpp:576
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Művelet törlése"
+msgstr "Művelettörlés megerősítése"
 
 #: configdialog.cpp:605
 #, kde-format
@@ -237,26 +240,21 @@ msgid "General Configuration"
 msgstr "Általános beállítások"
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Műveletek"
+msgstr "Műveletmenü"
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Műveletek"
+msgstr "Műveletmenü"
 
 #: configdialog.cpp:607
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
-msgstr "A műveletek beállítása"
+msgstr "Műveletek beállítása"
 
 #: configdialog.cpp:607
 #, kde-format
@@ -285,6 +283,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"A felugró menü nem jelenik meg automatikusan ezekhez az ablakokhoz, még ha "
+"be is van kapcsolva. Ez azért van, mert például egy webböngésző kiemelheti "
+"az URL-t a címsávban gépelés közben, így a menü minden egyes "
+"billentyűlenyomásra megjelenne.<nl/><nl/>Ha a műveletmenü váratlanul "
+"megjelenik egy bizonyos alkalmazás használata során, adja hozzá ehhez a "
+"listához. <link>Hogyan található meg a beírandó név</link>."
 
 #: configdialog.cpp:704
 #, kde-kuit-format
@@ -296,6 +300,11 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Az itt megadandó név a kizárandó ablak WM_CLASS neve. Egy ablak WM_CLASS "
+"nevének megkereséséhez egy másik terminálban ablakban adja ki a következő "
+"parancsot:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/"
+">és kattintson a kizárni kívánt ablakra. Az egyenlőségjel után megjelenő "
+"első név az, amelyet meg kell adnia."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -320,7 +329,7 @@ msgstr "Parancs"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Kimenet"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -341,16 +350,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Egy művelet akkor lép hatályba, ha az <interface>illesztési minta</"
+"interface> illeszkedik a vágólap tartalmára. Ha ez megtörténik, a művelet "
+"<interface>parancsai</interface> megjelennek a Klipper felugró menüjében; ha "
+"ezek közül valamelyiket kiválasztja, a parancs végrehajtásra kerül."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Adjon meg egy mintát a vágólapra való illesztéshez"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Illesztési minta:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -360,11 +373,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"Az illesztési minta egy reguláris kifejezés. További információkért lásd a "
+"témához kapcsolódó <link url=\"https://en.wikipedia.org/wiki/"
+"Regular_expression\">Wikipédia bejegyzést</link>."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Adja meg a művelet leírását"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -374,7 +390,7 @@ msgstr "Leírás:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Hozzáadás az automatikus felugró menühöz"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -386,52 +402,51 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"A találathoz tartozó parancs bekerül az automatikus felugró menübe, ha az be "
+"van kapcsolva a <interface>Műveletmenü</interface> oldalon. Ha ki van "
+"kapcsolva, az automatikus felugró menüben ugyan nem jelenik meg, de a(z) "
+"<shortcut>%1</shortcut> billentyűparanccsal aktivált felugró menüben igen."
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Parancs hozzáadása"
+msgstr "Parancs hozzáadása…"
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Parancs hozzáadása"
+msgstr "Parancs szerkesztése…"
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Parancs törlése"
+msgstr "Parancs törlése…"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Törli a kijelölt <resource>%1</resource> parancsot?"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Parancstörlés megerősítése"
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Művelet tulajdonságai"
+msgstr "Parancs tulajdonságai"
 
 #: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Adja meg a parancsot és az argumentumait"
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Parancs"
+msgstr "Parancs:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -442,43 +457,45 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"A <placeholder>&#37;s</placeholder> a parancsban ki lesz cserélve a vágólap "
+"teljes tartalmára. A <placeholder>&#37;0</placeholder> és "
+"<placeholder>&#37;9</placeholder> közötti helykitöltők az illesztési "
+"mintában szereplő megfelelő szövegekkel lesznek helyettesítve."
 
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Adja meg a parancs leírását"
 
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "A parancs kimenete:"
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Vágólap cseréje"
+msgstr "Jelenlegi vágólaptartalom cseréje"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "Hozzáadás a vágólaphoz"
+msgstr "Hozzáfűzés a vágólaphoz"
 
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Mi történik a végrehajtott parancs standard kimenetével."
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "A parancs alapértelmezett ikonjának visszaállítása"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Ikon:"
 
 #: historyimageitem.cpp:36
 #, kde-format
@@ -486,60 +503,52 @@ msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3 bpp"
 
 #: klipper.cpp:133
-#, fuzzy, kde-format
-#| msgid "Automatic action popup time:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Automatikus műveletmenü időkorlátja:"
+msgstr "Automatikus felugró műveletmenü"
 
 #: klipper.cpp:169
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "A műveletnapló tö&rlése"
+msgstr "Vágólapnapló tör&lése"
 
 #: klipper.cpp:176
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "A Klipper &beállítása…"
 
 #: klipper.cpp:180
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "Művelet végrehajtása az aktuális vágólapon"
+msgstr "Művelet végrehajtása saját kezűleg az aktuális vágólapon"
 
 #: klipper.cpp:187
-#, fuzzy, kde-format
-#| msgid "&Show Barcode…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vonalkód megjeleníté&se…"
 
 #: klipper.cpp:196
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Következő előzményelem"
 
 #: klipper.cpp:201
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Előző előzményelem"
 
 #: klipper.cpp:208
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr "A Klipper megnyitása a kurzorpozíciónál"
+msgstr "Vágólapelemek megjelenítése a kurzorpozíciónál"
 
 #: klipper.cpp:488
 #, kde-kuit-format
@@ -577,16 +586,14 @@ msgid "Mobile Barcode"
 msgstr "Mobil vonalkód"
 
 #: klipper.cpp:941
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Biztosan törli a teljes vágólapnaplót?"
+msgstr "Biztosan törölni szeretné a vágólap összes előzményét?"
 
 #: klipper.cpp:942
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "A műveletnapló tö&rlése"
+msgstr "Vágólapnapló törlése"
 
 #: klipper.cpp:958 klipper.cpp:967
 #, kde-format
@@ -616,10 +623,9 @@ msgstr "Klipper verzió"
 
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Save the clipboard history across desktop sessions"
+#, kde-format
 msgid "Save history across desktop sessions"
-msgstr "A vágólap előzményeinek mentése az asztali munkamenetek között"
+msgstr "Előzmények mentése az asztali munkamenetek között"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -719,10 +725,9 @@ msgstr "Grafikus reguláriskifejezés-szerkesztő használata"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Kijelölés mellőzése"
+msgstr "Kiválasztáskor azonnal"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -730,6 +735,8 @@ msgstr "Kijelölés mellőzése"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"Az alkalmazandó műveletek felugró menüjének megjelenítése, amint a "
+"kiválasztás megtörtént."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -739,24 +746,21 @@ msgstr "Nincsenek műveletek a WM_CLASS-hoz"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Automatic action popup time:"
+#, kde-format
 msgid "Automatic action menu time:"
 msgstr "Automatikus műveletmenü időkorlátja:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Display the automatic action popup for this time."
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Az automatikus műveletmenü megjelenítése ennyi ideig."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "A vágólapnapló mérete:"
+msgstr "Napló mérete:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
@@ -772,72 +776,60 @@ msgstr "Üres bejegyzés egy művelet faeleme változásainak jelzésére"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Üres helyek eltávolítása művelet végrehajtásakor"
+msgstr "Üres helyek eltávolítása a kiválasztásból"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove white space from the start and end of clipboard text before "
-#| "performing an action. For example, this ensures that the URL pasted in a "
-#| "browser is interpreted as expected.<br/><br/>The text saved on the "
-#| "clipboard is not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
 "performing an action. For example, this ensures that a URL pasted in a "
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
-"Üres helyek eltávolítása a vágólap szövegeinek elejéről és végéről művelet "
+"Üres helyek eltávolítása a kijelölt szöveg elejéről és végéről művelet "
 "végrehajtása előtt. Például URL-cím másolásakor ez segít abban, hogy a "
-"böngésző megfelelően értelmezze azt.<br/><br/>A vágólapra mentett szöveget "
-"nem érinti."
+"böngésző megfelelően értelmezze azt. A vágólapra mentett szöveget nem érinti."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Műveletek engedélyezése naplóbeli elemeken"
+msgstr "Az előzményekből kiválasztott elemhez"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "A szövegkijelölés mentésre kerüljön-e a vágólap előzményeibe."
+msgstr ""
+"Az alkalmazandó műveletek felugró menüjének megjelenítése, ha egy bejegyzés "
+"kiválasztása került az előzményekből."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "MIME-típus alapú műveletek bekapcsolása"
+msgstr "MIME-műveletek felvétele"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
-#, fuzzy, kde-format
-#| msgid ""
-#| "If this option is set, and a file name or URL is selected, include "
-#| "applications that can handle its MIME type in the actions popup."
+#, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
-"Ha ez az opció be van állítva, és fájlnevet vagy URL-t választanak ki, a "
-"műveletmenü tartalmazza a MIME-típust kezelő alkalmazásokat is."
+"Ha fájlnevet vagy URL-t választanak ki, a műveletmenü tartalmazza a MIME-"
+"típust kezelő alkalmazásokat is."
 
 #: klipperpopup.cpp:108
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "A vágólap tartalma"
+msgstr "%1 - vágólapelemek"
 
 #: klipperpopup.cpp:112
 #, kde-format
@@ -845,10 +837,9 @@ msgid "Search…"
 msgstr "Keresés…"
 
 #: klipperpopup.cpp:170
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "Reguláris kifejezés:"
+msgstr "Érvénytelen reguláris kifejezés, %1"
 
 #: klipperpopup.cpp:175
 #, kde-format

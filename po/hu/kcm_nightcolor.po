@@ -1,57 +1,57 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2019, 2020, 2022.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2022-01-24 13:39+0100\n"
-"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"PO-Revision-Date: 2024-01-02 13:37+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/DayNightView.qml:110
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "Az éjszakai mód változásának kezdete: %1, teljes változás: %2"
+msgstr ""
+"A színhőmérséklet változásának kezdete éjszakára: %1, teljes változás: %2"
 
 #: ui/DayNightView.qml:113
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "Az éjszakai mód változásának kezdete: %1, teljes változás: %2"
+msgstr ""
+"A színhőmérséklet változásának kezdete nappalra: %1, teljes változás: %2"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Érintse meg a hely kiválasztásához a térképen."
 
 #: ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Kattintson a hely kiválasztásához a térképen."
 
 #: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Nagyítás"
 
 #: ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -62,71 +62,62 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"A TUBS / Wikipedia Commons <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA</link> szerint elérhető <link url='https://commons."
+"wikimedia.org/wiki/File:World_location_map_(equirectangular_180)."
+"svg'>világtérképe</link> alapján."
 
 #: ui/LocationsFixedView.qml:235
-#, fuzzy, kde-format
-#| msgid "Latitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Szélesség:"
 
 #: ui/LocationsFixedView.qml:261
-#, fuzzy, kde-format
-#| msgid "Longitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Hosszúság:"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Az Éjszakai mód melegebb színeket állít be a kijelzőn, hogy kímélje a szemét "
-"az Ön által megadott időtartamban."
+msgstr "A kékfényszűrő melegebbé teszi a képernyő színeit."
 
 #: ui/main.qml:153
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Aktiválás:"
+msgstr "Váltási idők:"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Mindig ki"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Napnyugtától napkeltéig, helyi idő szerint"
+msgstr "Napnyugta és napkelte az aktuális helyen"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Napnyugtától napkeltéig, egyéni helyszín ideje szerint"
+msgstr "Napnyugta és napkelte kézzel megadott helyen"
 
 #: ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Egyéni időpontban"
+msgstr "Egyéni időpontok"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night light"
-msgstr "Mindig bekapcsolva"
+msgstr "Éjszakai fény mindig bekapcsolva"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Éjszakai mód hőmérséklete:"
+msgstr "Nappali fényhőmérséklet:"
 
 #: ui/main.qml:226 ui/main.qml:285
 #, kde-format
@@ -138,7 +129,7 @@ msgstr "%1 K"
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Hűvös (szűrő nélkül)"
 
 #: ui/main.qml:236 ui/main.qml:295
 #, kde-format
@@ -147,17 +138,15 @@ msgid "Warm"
 msgstr "Meleg"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Éjszakai mód hőmérséklete:"
+msgstr "Éjszakai fényhőmérséklet:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Helymeghatározás:"
+msgstr "Jelenlegi hely:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -179,7 +168,7 @@ msgstr ""
 #: ui/main.qml:349
 #, kde-format
 msgid "Begin night light at:"
-msgstr ""
+msgstr "Éjszakai fény kezdete:"
 
 #: ui/main.qml:362 ui/main.qml:385
 #, kde-format
@@ -189,7 +178,7 @@ msgstr "Formátum: ÓÓ:PP"
 #: ui/main.qml:372
 #, kde-format
 msgid "Begin day light at:"
-msgstr ""
+msgstr "Nappali fény kezdete:"
 
 #: ui/main.qml:394
 #, kde-format
@@ -214,11 +203,10 @@ msgid "Error: Transition time overlaps."
 msgstr "Hiba: az átmeneti idők átfedésben vannak."
 
 #: ui/main.qml:456
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr "Hely alapú"
+msgstr "Helymeghatározás…"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"
