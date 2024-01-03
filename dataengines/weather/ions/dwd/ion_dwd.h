@@ -94,13 +94,8 @@ protected: // IonInterface API
     void reset() override;
 
 private Q_SLOTS:
-    void setup_slotDataArrived(KIO::Job *, const QByteArray &);
     void setup_slotJobFinished(KJob *);
-
-    void measure_slotDataArrived(KIO::Job *, const QByteArray &);
     void measure_slotJobFinished(KJob *);
-
-    void forecast_slotDataArrived(KIO::Job *, const QByteArray &);
     void forecast_slotJobFinished(KJob *);
 
 private:
@@ -112,6 +107,8 @@ private:
     QMap<QString, ConditionIcons> const &dayIcons() const;
     QMap<QString, ConditionIcons> const &nightIcons() const;
     QMap<QString, WindDirections> const &windIcons() const;
+
+    KJob *requestAPIJob(const QString &source, const QUrl &url);
 
     void findPlace(const QString &searchText);
     void parseStationData(const QByteArray &data);
@@ -141,14 +138,8 @@ private:
     // Weather information
     QHash<QString, WeatherData> m_weatherData;
 
-    QHash<KJob *, QByteArray> m_searchJobData;
-    QHash<KJob *, QString> m_searchJobList;
-
-    QHash<KJob *, QByteArray> m_forecastJobJSON;
-    QHash<KJob *, QString> m_forecastJobList;
-
-    QHash<KJob *, QByteArray> m_measureJobJSON;
-    QHash<KJob *, QString> m_measureJobList;
+    QHash<KJob *, std::shared_ptr<QByteArray>> m_jobData;
+    QHash<KJob *, QString> m_jobList;
 
     QStringList m_sourcesToReset;
 };
