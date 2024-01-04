@@ -51,11 +51,15 @@ private:
 QMutex QalculateLock::s_ctrlLock;
 QMutex QalculateLock::s_evalLock;
 
+// This mutex protects construction and destruction of the global calculator
+// instance CALCULATOR
+QMutex s_initMutex;
 QAtomicInt QalculateEngine::s_counter;
 
 QalculateEngine::QalculateEngine(QObject *parent)
     : QObject(parent)
 {
+    QMutexLocker lock(&s_initMutex);
     s_counter.ref();
     if (!CALCULATOR) {
         new Calculator();
@@ -69,6 +73,7 @@ QalculateEngine::QalculateEngine(QObject *parent)
 
 QalculateEngine::~QalculateEngine()
 {
+    QMutexLocker lock(&s_initMutex);
     if (s_counter.deref()) {
         delete CALCULATOR;
         CALCULATOR = nullptr;
