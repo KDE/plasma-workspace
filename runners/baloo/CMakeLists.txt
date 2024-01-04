@@ -26,7 +26,7 @@ install(
 )
 
 ecm_generate_dbus_service_file(NAME org.kde.runners.baloo
-    EXECUTABLE ${KDE_INSTALL_SYSTEMDUSERUNITDIR_FULL_LIBEXECDIR}/baloorunner
+    EXECUTABLE ${KDE_INSTALL_FULL_LIBEXECDIR}/baloorunner
     SYSTEMD_SERVICE plasma-baloorunner.service
     DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
 )
