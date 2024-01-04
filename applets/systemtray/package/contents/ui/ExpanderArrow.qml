@@ -24,6 +24,7 @@ PlasmaCore.ToolTipArea {
     Accessible.name: i18n("Expand System Tray")
     Accessible.description: i18n("Show all the items in the system tray in a popup")
     Accessible.role: Accessible.Button
+    Accessible.onPressAction: systemTrayState.expanded = !systemTrayState.expanded
 
     Keys.onPressed: event => {
         switch (event.key) {
