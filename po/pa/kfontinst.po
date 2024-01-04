@@ -2,7 +2,7 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2021, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2021, 2023, 2024 A S Alam <aalam@users.sf.net>
 # AP S Alam <aalam@users.sf.net>, 2007.
 # ASB <aalam@users.sf.net>, 2007, 2012.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2023-12-26 08:53-0600\n"
+"PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -105,12 +105,12 @@ msgstr ""
 #: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
-msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਈਲ"
+msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਇਲ"
 
 #: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
-msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਈਲ ਹਟਾਓ"
+msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਇਲ ਹਟਾਓ"
 
 #: apps/Viewer.cpp:46
 #, kde-format
@@ -165,7 +165,7 @@ msgstr "ਕੋਈ ਡੁਪਲੀਕੇਟ ਫੋਂਟ ਨਹੀਂ ਲੱਭ�
 #: kcmfontinst/DuplicatesDialog.cpp:104
 #, kde-format
 msgid "Delete Marked Files"
-msgstr "ਨਿਸ਼ਾਨਬੱਧ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਹਟਾਓ"
+msgstr "ਨਿਸ਼ਾਨਬੱਧ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਹਟਾਓ"
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
 #, kde-format
@@ -196,7 +196,7 @@ msgstr "ਫੋਂਟ ਸਕੈਨ ਰੱਦ ਕਰਨਾ?"
 #: kcmfontinst/DuplicatesDialog.cpp:382
 #, kde-format
 msgid "Font/File"
-msgstr "ਫੋਂਟ/ਫਾਈਲ"
+msgstr "ਫੋਂਟ/ਫਾਇਲ"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -263,17 +263,17 @@ msgstr "FontConfig ਮੇਲ"
 #: kcmfontinst/FontFilter.cpp:111
 #, kde-format
 msgid "File Type"
-msgstr "ਫਾਈਲ ਕਿਸਮ"
+msgstr "ਫਾਇਲ ਕਿਸਮ"
 
 #: kcmfontinst/FontFilter.cpp:113
 #, kde-format
 msgid "File Name"
-msgstr "ਫਾਈਲ ਨਾਂ"
+msgstr "ਫਾਇਲ ਨਾਂ"
 
 #: kcmfontinst/FontFilter.cpp:115
 #, kde-format
 msgid "File Location"
-msgstr "ਫਾਈਲ ਟਿਕਾਣਾ"
+msgstr "ਫਾਇਲ ਟਿਕਾਣਾ"
 
 #: kcmfontinst/FontFilter.cpp:117
 #, kde-format
@@ -591,7 +591,7 @@ msgstr "<i>%1</i> ਫੋਂਟ ਨਹੀਂ ਹੈ।"
 #: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "<i>%1</i> ਨਾਲ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
+msgstr "<i>%1</i> ਨਾਲ ਸਬੰਧਿਤ ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
 
 #: kcmfontinst/JobRunner.cpp:706
 #, kde-format
@@ -890,7 +890,7 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format
 msgid "Looking for any associated files…"
-msgstr "ਕਿਸੇ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਲਈ ਖੋਜ ਜਾਰੀ ਹੈ…"
+msgstr "ਕਿਸੇ ਸਬੰਧਿਤ ਫਾਇਲਾਂ ਲਈ ਖੋਜ ਜਾਰੀ ਹੈ…"
 
 #: kcmfontinst/KCmFontInst.cpp:990
 #, kde-format
@@ -900,12 +900,12 @@ msgstr "…ਫਾਇਲਾਂ ਦੀ ਜਾਂਚ ਜਾਰੀ"
 #: kcmfontinst/KCmFontInst.cpp:991
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr "ਹੋਰ ਫਾਈਲਾਂ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਖੋਜ ਜਾਰੀ…"
+msgstr "ਹੋਰ ਫਾਇਲਾਂ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਖੋਜ ਜਾਰੀ…"
 
 #: kcmfontinst/KCmFontInst.cpp:1006
 #, kde-format
 msgid "Looking for files associated with %1"
-msgstr "%1 ਨਾਲ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਦੀ ਖੋਜ ਜਾਰੀ ਹੈ"
+msgstr "%1 ਨਾਲ ਸਬੰਧਿਤ ਫਾਇਲਾਂ ਦੀ ਖੋਜ ਜਾਰੀ ਹੈ"
 
 #: kcmfontinst/KCmFontInst.cpp:1034
 #, kde-format
@@ -1140,7 +1140,7 @@ msgstr "%1 ਫੋਂਟ ਨਹੀਂ ਹੈ।"
 #: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
-msgstr "%1 ਨਾਲ ਸਬੰਧਿਤ ਫਾਈਲਾਂ ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
+msgstr "%1 ਨਾਲ ਸਬੰਧਿਤ ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:107
 #, kde-format

@@ -2,7 +2,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2012, 2013, 2014, 2015, 2016.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 22:08-0600\n"
+"PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -296,7 +296,7 @@ msgstr "ਕਾਰਗੁਜ਼ਾਰੀ"
 #: package/contents/ui/PowerProfileItem.qml:62
 #, kde-format
 msgid "Power Profile"
-msgstr "ਪਾਵਰ ਪਰੋਫਾਈਲ"
+msgstr "ਪਾਵਰ ਪਰੋਫਾਇਲ"
 
 #: package/contents/ui/PowerProfileItem.qml:96
 #, kde-format

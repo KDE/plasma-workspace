@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2024-01-01 23:02+0300\n"
+"PO-Revision-Date: 2024-01-03 22:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
-msgstr "Klavye düzeni: %1"
+msgstr "Klavye yerleşimi: %1"
 
 #: ../sddm-theme/Login.qml:85
 #, kde-format
@@ -143,7 +143,7 @@ msgstr "Kullanıcı Değiştir"
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Düzeni değiştir"
+msgstr "Yerleşimi değiştir"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
