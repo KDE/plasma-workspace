@@ -53,12 +53,9 @@ inline QColor accentForeground(const QColor &accent, const bool &isActive)
 {
     auto c = QColor(Qt::white);
 
-    // Calculate contrast ratio
-    // https://www.accessibility-developer-guide.com/knowledge/colours-and-contrast/how-to-calculate/#the-formula
-    const auto contrastRatio = (accent.lightness() + 0.05) / (QColor(Qt::white).lightness() + 0.05);
     // The visual presentation of text and images of text has a contrast ratio of at least 4.5
     // https://www.w3.org/TR/WCAG/#contrast-minimum
-    if (contrastRatio > 0.45) {
+    if (KColorUtils::contrastRatio(accent, QColor(Qt::white)) < 4.5) {
         // light bg
         c = QColor(Qt::black);
     } else {
