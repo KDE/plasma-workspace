@@ -852,7 +852,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             m_appletConfigView->requestActivate();
             return;
         } else if (m_appletConfigView) {
-            delete m_appletConfigView;
+            m_appletConfigView->deleteLater(); // BUG 476968
         }
         m_appletConfigView = new PlasmaQuick::ConfigView(applet);
         m_appletConfigView->init();
