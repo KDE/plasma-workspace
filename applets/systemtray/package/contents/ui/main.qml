@@ -191,7 +191,7 @@ ContainmentItem {
                 }
 
                 add: Transition {
-                    enabled: itemSize > 0
+                    enabled: itemSize > 0 && Component.status == Component.Ready
 
                     NumberAnimation {
                         property: "scale"
@@ -205,6 +205,7 @@ ContainmentItem {
                 displaced: Transition {
                     //ensure scale value returns to 1.0
                     //https://doc.qt.io/qt-5/qml-qtquick-viewtransition.html#handling-interrupted-animations
+                    enabled: Component.status == Component.Ready
                     NumberAnimation {
                         property: "scale"
                         to: 1
