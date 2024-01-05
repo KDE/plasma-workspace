@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-08-10 22:24+0300\n"
+"PO-Revision-Date: 2024-01-04 20:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.85\n"
 
 #: kcm.cpp:73
 #, kde-format
@@ -98,7 +98,7 @@ msgstr "Bildirimler şu anda Plasma tarafından sağlanmıyor."
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Rahatsız Etmeyin kipi"
+msgstr "Rahatsız Etmeyin Kipi"
 
 #: ui/main.qml:68
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Klavye kısayolu:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr "Görünürlük koşulları"
+msgstr "Görünürlük Koşulları"
 
 #: ui/main.qml:108
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "Açılır pencere göster"
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Açılır pencereler"
+msgstr "Açılır Pencereler"
 
 #: ui/main.qml:170
 #, kde-format
@@ -200,7 +200,7 @@ msgstr "Şundan sonra gizle:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr "Ek geri bildirim"
+msgstr "Ek Geri Bildirim"
 
 #: ui/main.qml:251
 #, kde-format
@@ -233,7 +233,7 @@ msgstr "Görev yöneticisinde göster"
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Uygulamaya özel ayarlar"
+msgstr "Uygulamaya Özel Ayarlar"
 
 #: ui/main.qml:296
 #, kde-format

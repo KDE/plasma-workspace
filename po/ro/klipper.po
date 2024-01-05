@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-05 01:35+0000\n"
 "PO-Revision-Date: 2022-12-29 17:31+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -541,7 +541,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Arată elementele la poziția mausului"
 
-#: klipper.cpp:488
+#: klipper.cpp:494
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -551,57 +551,57 @@ msgstr ""
 "Puteți activa mai târziu acțiunile de URL pe pagina <interface>Acțiuni</"
 "interface> a ferestrei de configurare a miniaplicației Clipboard."
 
-#: klipper.cpp:527
+#: klipper.cpp:542
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Configurați Klipper să pornească automat la autentificare?"
 
-#: klipper.cpp:528
+#: klipper.cpp:543
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Pornire automată Klipper"
 
-#: klipper.cpp:529
+#: klipper.cpp:544
 #, kde-format
 msgid "Start"
 msgstr "Pornește"
 
-#: klipper.cpp:530
+#: klipper.cpp:545
 #, kde-format
 msgid "Do Not Start"
 msgstr "Nu porni"
 
-#: klipper.cpp:900
+#: klipper.cpp:915
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Cod de bare pentru mobil"
 
-#: klipper.cpp:941
+#: klipper.cpp:956
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
 
-#: klipper.cpp:942
+#: klipper.cpp:957
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Curăță istoricul clipboard-ului"
 
-#: klipper.cpp:958 klipper.cpp:967
+#: klipper.cpp:973 klipper.cpp:982
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istoric clipboard"
 
-#: klipper.cpp:984
+#: klipper.cpp:999
 #, kde-format
 msgid "up"
 msgstr "sus"
 
-#: klipper.cpp:991
+#: klipper.cpp:1006
 #, kde-format
 msgid "current"
 msgstr "curent"
 
-#: klipper.cpp:998
+#: klipper.cpp:1013
 #, kde-format
 msgid "down"
 msgstr "jos"

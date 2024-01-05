@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-05 01:35+0000\n"
 "PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -550,7 +550,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Montri Tondujajn Erojn ĉe Muspozicio"
 
-#: klipper.cpp:488
+#: klipper.cpp:494
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -560,57 +560,57 @@ msgstr ""
 "Vi povas ebligi URL-agojn poste en la paĝo <interface>Agoj</interface> de la "
 "agorda fenestro de la apleto Clipboard."
 
-#: klipper.cpp:527
+#: klipper.cpp:542
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Ĉu Klipper lanĉiĝu aŭtomate ĉe la lanĉo de KDE?"
 
-#: klipper.cpp:528
+#: klipper.cpp:543
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Ĉu aŭtomate lanĉi Klipper?"
 
-#: klipper.cpp:529
+#: klipper.cpp:544
 #, kde-format
 msgid "Start"
 msgstr "Lanĉi"
 
-#: klipper.cpp:530
+#: klipper.cpp:545
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ne lanĉi"
 
-#: klipper.cpp:900
+#: klipper.cpp:915
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Poŝtelefono Strekokodo"
 
-#: klipper.cpp:941
+#: klipper.cpp:956
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ĉu vi vere volas viŝi kaj forigi la kompletan poŝohistorion?"
 
-#: klipper.cpp:942
+#: klipper.cpp:957
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Forviŝi Poŝohistorion"
 
-#: klipper.cpp:958 klipper.cpp:967
+#: klipper.cpp:973 klipper.cpp:982
 #, kde-format
 msgid "Clipboard history"
 msgstr "Poŝa historio"
 
-#: klipper.cpp:984
+#: klipper.cpp:999
 #, kde-format
 msgid "up"
 msgstr "supra"
 
-#: klipper.cpp:991
+#: klipper.cpp:1006
 #, kde-format
 msgid "current"
 msgstr "aktuala"
 
-#: klipper.cpp:998
+#: klipper.cpp:1013
 #, kde-format
 msgid "down"
 msgstr "malsupra"

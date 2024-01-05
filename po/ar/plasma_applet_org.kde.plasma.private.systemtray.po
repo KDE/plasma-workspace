@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-01-05 01:35+0000\n"
 "PO-Revision-Date: 2022-08-08 21:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -182,12 +182,12 @@ msgstr "وسع صينية النظام"
 msgid "Show all the items in the system tray in a popup"
 msgstr "أظهر كل عناصر صينية النظام في منبثقة"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "أغلق المنبثقة"
 
-#: package/contents/ui/ExpanderArrow.qml:38
+#: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "أظهر الأيقونات المخفية"

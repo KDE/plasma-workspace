@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-05 01:35+0000\n"
 "PO-Revision-Date: 2023-07-31 11:32+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -555,7 +555,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra gli elementi degli appunti alla posizione del mouse"
 
-#: klipper.cpp:488
+#: klipper.cpp:494
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -566,58 +566,58 @@ msgstr ""
 "<interface>Azioni</interface> della finestra di configurazione dell'applet "
 "degli appunti"
 
-#: klipper.cpp:527
+#: klipper.cpp:542
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Vuoi avviare Klipper automaticamente quando accedi al computer?"
 
-#: klipper.cpp:528
+#: klipper.cpp:543
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Avviare Klipper automaticamente?"
 
-#: klipper.cpp:529
+#: klipper.cpp:544
 #, kde-format
 msgid "Start"
 msgstr "Avvia"
 
-#: klipper.cpp:530
+#: klipper.cpp:545
 #, kde-format
 msgid "Do Not Start"
 msgstr "Non avviare"
 
-#: klipper.cpp:900
+#: klipper.cpp:915
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Codice a barre per cellulari"
 
-#: klipper.cpp:941
+#: klipper.cpp:956
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: klipper.cpp:942
+#: klipper.cpp:957
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: klipper.cpp:958 klipper.cpp:967
+#: klipper.cpp:973 klipper.cpp:982
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:984
+#: klipper.cpp:999
 #, kde-format
 msgid "up"
 msgstr "su"
 
-#: klipper.cpp:991
+#: klipper.cpp:1006
 #, kde-format
 msgid "current"
 msgstr "corrente"
 
-#: klipper.cpp:998
+#: klipper.cpp:1013
 #, kde-format
 msgid "down"
 msgstr "giù"
