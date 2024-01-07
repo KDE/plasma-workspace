@@ -2,7 +2,7 @@
 # translation of kfontinst.po to
 # Copyright (C) 2003, 2007, 2008 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 # Görkem Çetin <gorkem@kde.org>, 2003.
 # Serdar Soytetir <tulliana@gmail.com>, 2007.
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009, 2011, 2012.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2023-12-27 13:06+0300\n"
+"PO-Revision-Date: 2024-01-07 00:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2113,7 +2113,7 @@ msgstr "CJK Uyumluluk Biçimleri"
 
 #: viewpart/UnicodeBlocks.h:139
 msgid "Small Form Variants"
-msgstr "Küçük Biçimli Şekiller"
+msgstr "Küçük Biçimli Varyantlar"
 
 #: viewpart/UnicodeBlocks.h:140
 msgid "Arabic Presentation Forms-B"

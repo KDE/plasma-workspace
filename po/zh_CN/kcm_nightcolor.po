@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-12-30 13:38\n"
+"PO-Revision-Date: 2024-01-06 03:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -79,7 +79,7 @@ msgstr "经度："
 #: ui/main.qml:98
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "夜间颜色功能可以滤除蓝光，使屏幕显示的颜色偏暖。"
+msgstr "夜间颜色功能可以滤除蓝光，使屏幕以偏暖的颜色显示内容。"
 
 #: ui/main.qml:153
 #, kde-format
