@@ -14,6 +14,9 @@ RowLayout {
     id: toolButtonsLayout
     visible: menuItem.ListView.isCurrentItem
 
+    // https://bugreports.qt.io/browse/QTBUG-108821
+    readonly property bool hovered: actionToolButton.hovered || barcodeToolButton.hovered || editToolButton.hovered || deleteToolButton.hovered
+
     PlasmaComponents3.ToolButton {
         id: actionToolButton
         // TODO: only show for items supporting actions?
