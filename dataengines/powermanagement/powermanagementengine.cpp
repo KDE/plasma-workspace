@@ -358,7 +358,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         createAsyncDBusMethodCallAndCallback<bool>(this,
                                                    QStringLiteral("org.freedesktop.PowerManagement"),
                                                    QStringLiteral("/org/freedesktop/PowerManagement"),
-                                                   QStringLiteral("org.freedesktop.PowerManagement"),
+                                                   QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
                                                    QStringLiteral("HasInhibit"),
                                                    [this](const bool &replyValue) {
                                                        hasInhibitionChanged(replyValue);
