@@ -57,7 +57,7 @@ AbstractItem {
             const appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
             const mouseArea = findMouseArea(appletItem)
             if (mouseArea) {
-                mouseArea.onPressed(mouse)
+                mouseArea.pressed(mouse)
             }
         }
     }

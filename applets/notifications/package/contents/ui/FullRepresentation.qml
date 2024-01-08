@@ -264,7 +264,7 @@ PlasmaExtras.Representation {
                     // TODO would be nice to stay inside the current group when deleting an item
                 }
             }
-            Keys.onEnterPressed: event => { Keys.onReturnPressed(event) }
+            Keys.onEnterPressed: event => { Keys.returnPressed(event) }
             Keys.onReturnPressed: {
                 // Trigger default action, if any
                 var idx = historyModel.index(currentIndex, 0);

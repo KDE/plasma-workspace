@@ -259,7 +259,7 @@ Item {
 
         KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
         KeyNavigation.tab: viewHeader.tabButton
-        Keys.onLeftPressed: event => { Keys.onUpPressed(event) }
+        Keys.onLeftPressed: event => { Keys.upPressed(event) }
         Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
 
         onCurrentIndexChanged: if (currentIndex > 1) {
@@ -290,10 +290,10 @@ Item {
 
            function handleUpPress(event) {
                 if(root.showDigitalClockHeader) {
-                    root.Keys.onUpPressed(event);
+                    root.Keys.upPressed(event);
                     return;
                 }
-                swipeView.Keys.onUpPressed(event);
+                swipeView.Keys.upPressed(event);
             }
 
            backend: calendarBackend

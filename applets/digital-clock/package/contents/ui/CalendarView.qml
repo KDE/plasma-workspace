@@ -54,7 +54,7 @@ PlasmaExtras.Representation {
 
     property bool debug: false
 
-    Keys.onDownPressed: monthView.Keys.onDownPressed(event);
+    Keys.onDownPressed: monthView.Keys.downPressed(event);
 
     Connections {
         target: root
@@ -250,7 +250,7 @@ PlasmaExtras.Representation {
                     currentIndex: -1
 
                     KeyNavigation.down: switchTimeZoneButton.visible ? switchTimeZoneButton : clocksList
-                    Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
+                    Keys.onRightPressed: switchTimeZoneButton.Keys.rightPressed(event);
 
                     onCurrentIndexChanged: if (!activeFocus) {
                         currentIndex = -1;
@@ -439,7 +439,7 @@ PlasmaExtras.Representation {
 
                     Accessible.description: i18n("Switch to another timezone")
                     KeyNavigation.down: clocksList
-                    Keys.onRightPressed: monthView.Keys.onDownPressed(event)
+                    Keys.onRightPressed: monthView.Keys.downPressed(event)
 
                     onClicked: KCMLauncher.openSystemSettings("kcm_clock")
 
@@ -472,7 +472,7 @@ PlasmaExtras.Representation {
                     currentIndex = -1;
                 }
 
-                Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
+                Keys.onRightPressed: switchTimeZoneButton.Keys.rightPressed(event);
 
                 // Can't use KeyNavigation.tab since the focus won't go to config button, instead it will be redirected to somewhere else because of
                 // some existing code. Since now the header was in this file and this was not a problem. Now the header is also implicitly
