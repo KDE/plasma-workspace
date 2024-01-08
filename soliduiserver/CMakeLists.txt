@@ -1,5 +1,5 @@
 ########### next target ###############
-add_definitions(-DTRANSLATION_DOMAIN=\"soliduiserver5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"soliduiserver\")
 
 kcoreaddons_add_plugin(soliduiserver SOURCES soliduiserver.cpp soliduiserver.h INSTALL_NAMESPACE "kf6/kded")
 target_link_libraries(soliduiserver
