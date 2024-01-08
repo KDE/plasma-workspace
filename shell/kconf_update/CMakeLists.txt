@@ -12,5 +12,9 @@ add_executable(plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
 target_sources(plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels PRIVATE plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.cpp)
 target_link_libraries(plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels KF6::ConfigCore)
 
+add_executable(plasmashell-6.0-keep-custom-position-of-panels)
+target_sources(plasmashell-6.0-keep-custom-position-of-panels PRIVATE plasmashell-6.0-keep-custom-position-of-panels.cpp)
+target_link_libraries(plasmashell-6.0-keep-custom-position-of-panels KF6::ConfigCore)
+
 install(FILES plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
