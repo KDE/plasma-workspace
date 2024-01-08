@@ -529,28 +529,28 @@ void PanelView::positionPanel()
     }
 
     if (m_layerWindow) {
+        QMargins margins;
         LayerShellQt::Window::Anchors anchors;
 
         switch (containment()->location()) {
         case Plasma::Types::TopEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            margins.setTop((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
             break;
         case Plasma::Types::LeftEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            margins.setLeft((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
             break;
         case Plasma::Types::RightEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorRight);
+            margins.setRight((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
             break;
         case Plasma::Types::BottomEdge:
         default:
             anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+            margins.setBottom((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
             break;
         }
-
-        QMargins margins((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
-                         (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness),
-                         (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness),
-                         (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
 
         if (formFactor() == Plasma::Types::Horizontal) {
             switch (m_alignment) {
