@@ -1307,12 +1307,30 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
+    auto exclusiveMargin = [this] {
+        switch (location()) {
+        case Plasma::Types::TopEdge:
+            return m_layerWindow->margins().top();
+            break;
+        case Plasma::Types::LeftEdge:
+            return m_layerWindow->margins().left();
+            break;
+        case Plasma::Types::RightEdge:
+            return m_layerWindow->margins().right();
+            break;
+        case Plasma::Types::BottomEdge:
+        default:
+            return m_layerWindow->margins().bottom();
+            break;
+        }
+    };
+
     if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == 0) {
         // We set the exclusive zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode;
         // this won't be updated anymore as long as we are within
         // the panel configuration.
-        m_layerWindow->setExclusiveZone(thickness() - m_layerWindow->margins().top());
+        m_layerWindow->setExclusiveZone(thickness() - exclusiveMargin());
     }
     if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
         return;
@@ -1321,7 +1339,7 @@ void PanelView::updateExclusiveZone()
     if (KWindowSystem::isPlatformWayland()) {
         switch (m_visibilityMode) {
         case NormalPanel:
-            m_layerWindow->setExclusiveZone(thickness() - m_layerWindow->margins().top());
+            m_layerWindow->setExclusiveZone(thickness() - exclusiveMargin());
             break;
         case AutoHide:
         case DodgeWindows:
