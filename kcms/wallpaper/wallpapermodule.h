@@ -26,6 +26,7 @@ class WallpaperModule : public KQuickConfigModule
     Q_PROPERTY(QQmlPropertyMap *configuration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
 
     Q_PROPERTY(QString currentWallpaper READ currentWallpaperPlugin WRITE setCurrentWallpaperPlugin NOTIFY currentWallpaperPluginChanged)
+    Q_PROPERTY(bool allScreens READ allScreens WRITE setAllScreens NOTIFY allScreensChanged)
     Q_PROPERTY(QString wallpaperPluginSource READ wallpaperPluginSource NOTIFY currentWallpaperPluginChanged)
     Q_PROPERTY(PlasmaQuick::ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
 
@@ -48,6 +49,9 @@ public:
     QString currentWallpaperPlugin() const;
     void setCurrentWallpaperPlugin(const QString &wallpaperPlugin);
 
+    bool allScreens() const;
+    void setAllScreens(const bool allScreens);
+
     void load() override;
     void save() override;
     void defaults() override;
@@ -57,6 +61,7 @@ Q_SIGNALS:
     void currentWallpaperPluginChanged();
     void selectedScreenChanged();
     void screensChanged();
+    void allScreensChanged();
     void settingsSaved();
 
 public Q_SLOTS:
@@ -83,6 +88,7 @@ private:
     QString m_containmentIdx;
     QString m_defaultWallpaper;
     QList<QScreen *> m_screens;
+    bool m_allScreens = false;
 };
 
 #endif // WALLPAPERMODULE_H

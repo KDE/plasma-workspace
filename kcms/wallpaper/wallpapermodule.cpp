@@ -309,10 +309,22 @@ void WallpaperModule::save()
         return;
     }
 
-    int screenId = screenIdFromName(m_selectedScreen->name());
-    if (screenId == -1) {
-        qCWarning(KCM_WALLPAPER_DEBUG) << "Screen not found";
-        return;
+    QList<uint> screenIds;
+
+    if (m_allScreens) {
+        uint idx = 0;
+        const auto outputOrder = m_outputOrderWatcher->outputOrder();
+        for (const auto &output : outputOrder) {
+            screenIds.append(idx);
+            ++idx;
+        }
+    } else {
+        int screenId = screenIdFromName(m_selectedScreen->name());
+        if (screenId == -1) {
+            qCWarning(KCM_WALLPAPER_DEBUG) << "Screen not found";
+            return;
+        }
+        screenIds.append(uint(screenId));
     }
 
     QVariantMap params;
@@ -324,9 +336,11 @@ void WallpaperModule::save()
         params.remove(QStringLiteral("PreviewImage"));
     }
 
-    const QDBusReply<void> response = iface->call(QStringLiteral("setWallpaper"), m_currentWallpaperPlugin, params, uint(screenId));
-    if (!response.isValid()) {
-        qCWarning(KCM_WALLPAPER_DEBUG) << "failed to set wallpaper:" << response.error();
+    for (const uint screenId : screenIds) {
+        const QDBusReply<void> response = iface->call(QStringLiteral("setWallpaper"), m_currentWallpaperPlugin, params, screenId);
+        if (!response.isValid()) {
+            qCWarning(KCM_WALLPAPER_DEBUG) << "failed to set wallpaper:" << response.error();
+        }
     }
 
     setRepresentsDefaults(isDefault());
@@ -341,6 +355,20 @@ QQmlPropertyMap *WallpaperModule::wallpaperConfiguration() const
 QString WallpaperModule::currentWallpaperPlugin() const
 {
     return m_currentWallpaperPlugin;
+}
+
+bool WallpaperModule::allScreens() const
+{
+    return m_allScreens;
+}
+
+void WallpaperModule::setAllScreens(const bool allScreens)
+{
+    if (allScreens != m_allScreens) {
+        m_allScreens = allScreens;
+        setNeedsSave(m_allScreens || m_configLoader->isSaveNeeded() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
+        Q_EMIT allScreensChanged();
+    }
 }
 
 QList<QScreen *> WallpaperModule::screens() const

@@ -29,6 +29,23 @@ KCM.SimpleKCM {
     
     implicitWidth: Kirigami.Units.gridUnit * 15
     implicitHeight: Kirigami.Units.gridUnit * 30
+
+    actions: [
+        Kirigami.Action {
+            id: allScreensAction
+            text: i18nc("@option:check Set the wallpaper for all screens","Set for all screens")
+            visible: kcm.screens.length > 1
+            checkable: true
+            checked: kcm.allScreens
+            onTriggered: kcm.allScreens = checked
+            displayComponent: QQC2.Switch {
+                text: allScreensAction.text
+                checked: allScreensAction.checked
+                visible: allScreensAction.visible
+                onToggled: allScreensAction.trigger()
+            }
+        }
+    ]
     
     function onConfigurationChanged() {
         for (var key in kcm.configuration) {
@@ -43,7 +60,7 @@ KCM.SimpleKCM {
         anchors.fill: parent
         
         ScreenView {
-            visible: kcm.screens.length > 1
+            visible: !kcm.allScreens && kcm.screens.length > 1
             
             Layout.fillWidth: true;
             implicitHeight: Kirigami.Units.gridUnit * 10
