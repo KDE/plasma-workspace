@@ -1,4 +1,5 @@
 # Translation of kcminput into Japanese.
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Taiki Komoda <kom@kde.gr.jp>, 2003, 2004.
@@ -7,21 +8,20 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
 # 百武 朋大 <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2007, 2011, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-28 01:34+0000\n"
-"PO-Revision-Date: 2023-02-23 15:41+0900\n"
+"PO-Revision-Date: 2024-01-09 16:09+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -62,7 +62,7 @@ msgstr "このファイルは有効なアイコンテーマのアーカイブで
 #: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr "'icons'フォルダーの作成に失敗しました。"
+msgstr "'icons' フォルダーの作成に失敗しました。"
 
 #: kcmcursortheme.cpp:436
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "タイムアウト (秒)"
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
+msgstr "要求されたサイズ '%1' は利用できません。代わりに '%2' を使用します。"
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -235,10 +235,9 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 秒後"
 
 #: ui/main.qml:58 ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "サイズ:"
+msgstr "サイズ: %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -252,10 +251,9 @@ msgid "&Install from File…"
 msgstr "ファイルからインストール(&I)..."
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "新しいカーソルを取得(&G)..."
+msgstr "新規入手(&G)..."
 
 #: ui/main.qml:161
 #, kde-format
