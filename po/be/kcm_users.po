@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -586,22 +586,22 @@ msgstr ""
 "і выдачы правоў адміністратара праграмам, якія іх запытваюць.<nl/><nl/"
 ">Уваход у сістэму з дапамогай адбітка пальца пакуль не падтрымліваецца."
 
-#: src/user.cpp:280
+#: src/user.cpp:291
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Не ўдалося атрымаць дазвол на захаванне карыстальніка %1"
 
-#: src/user.cpp:285
+#: src/user.cpp:296
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Падчас захавання зменаў адбылася памылка"
 
-#: src/user.cpp:384
+#: src/user.cpp:395
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Не ўдалося змяніць памер выявы: не ўдалося адкрыць часовы файл"
 
-#: src/user.cpp:392
+#: src/user.cpp:403
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Не ўдалося змяніць памер выявы: не ўдалося запісаць у часовы файл"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2022-12-29 17:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -640,23 +640,23 @@ msgstr ""
 "linie de comandă care le solicită.<nl/><nl/>Autentificarea în sistem cu "
 "amprenta încă nu este susținută."
 
-#: src/user.cpp:280
+#: src/user.cpp:291
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Nu s-a putut obține permisiunea de a salva utilizatorul %1"
 
-#: src/user.cpp:285
+#: src/user.cpp:296
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "A intervenit o eroare la salvarea modificărilor"
 
-#: src/user.cpp:384
+#: src/user.cpp:395
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Redimensionarea imaginii a eșuat: deschiderea fișierului temporar a eșuat"
 
-#: src/user.cpp:392
+#: src/user.cpp:403
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

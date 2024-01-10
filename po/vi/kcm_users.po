@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -618,22 +618,22 @@ msgstr ""
 "quyền quản trị viên cho các ứng dụng và chương trình dòng lệnh có yêu cầu."
 "<nl/><nl/>Việc dùng dấu vân tay để đăng nhập vào hệ thống chưa được hỗ trợ."
 
-#: src/user.cpp:280
+#: src/user.cpp:291
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Không được cho phép lưu người dùng %1"
 
-#: src/user.cpp:285
+#: src/user.cpp:296
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Đã có lỗi khi lưu các thay đổi"
 
-#: src/user.cpp:384
+#: src/user.cpp:395
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Đổi cỡ ảnh thất bại: mở tệp tạm thất bại"
 
-#: src/user.cpp:392
+#: src/user.cpp:403
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Đổi cỡ ảnh thất bại: ghi vào tệp tạm thất bại"

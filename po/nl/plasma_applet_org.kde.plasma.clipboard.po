@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-05-26 11:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -71,22 +71,22 @@ msgstr ""
 "Er is niet genoeg ruimte om de QR-code te tonen. Probeer dit applet een "
 "andere grootte te geven."
 
-#: contents/ui/DelegateToolButtons.qml:23
+#: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
 msgid "Invoke action"
 msgstr "Actie aanroepen"
 
-#: contents/ui/DelegateToolButtons.qml:38
+#: contents/ui/DelegateToolButtons.qml:41
 #, kde-format
 msgid "Show QR code"
 msgstr "QR-code tonen"
 
-#: contents/ui/DelegateToolButtons.qml:54
+#: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
 msgid "Edit contents"
 msgstr "Inhoud bewerken"
 
-#: contents/ui/DelegateToolButtons.qml:68
+#: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
 msgstr "Uit geschiedenis verwijderen"

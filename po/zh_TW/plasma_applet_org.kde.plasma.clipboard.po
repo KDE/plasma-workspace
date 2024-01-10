@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-08-07 23:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -72,22 +72,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "沒有足夠空間可以顯示 QR 碼。請嘗試調整這個小程式的大小。"
 
-#: contents/ui/DelegateToolButtons.qml:23
+#: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
 msgid "Invoke action"
 msgstr "請求活動"
 
-#: contents/ui/DelegateToolButtons.qml:38
+#: contents/ui/DelegateToolButtons.qml:41
 #, kde-format
 msgid "Show QR code"
 msgstr "顯示 QR 碼"
 
-#: contents/ui/DelegateToolButtons.qml:54
+#: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
 msgid "Edit contents"
 msgstr "編輯內容"
 
-#: contents/ui/DelegateToolButtons.qml:68
+#: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
 msgstr "從歷史紀錄中移除"

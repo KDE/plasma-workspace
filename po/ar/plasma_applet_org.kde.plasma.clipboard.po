@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-06-01 09:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -71,22 +71,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "لا توجد مساحة كافية لعرض رمز كيو أر. حاول تغيير حجم التطبيق."
 
-#: contents/ui/DelegateToolButtons.qml:23
+#: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
 msgid "Invoke action"
 msgstr "استدعِ إجراء"
 
-#: contents/ui/DelegateToolButtons.qml:38
+#: contents/ui/DelegateToolButtons.qml:41
 #, kde-format
 msgid "Show QR code"
 msgstr "أظهر باركود"
 
-#: contents/ui/DelegateToolButtons.qml:54
+#: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
 msgid "Edit contents"
 msgstr "حرّر المحتويات"
 
-#: contents/ui/DelegateToolButtons.qml:68
+#: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
 msgstr "أزل من التّأريخ"

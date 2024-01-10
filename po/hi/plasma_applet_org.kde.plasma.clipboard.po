@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2021-10-11 12:06+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -69,22 +69,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/DelegateToolButtons.qml:23
+#: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
 msgid "Invoke action"
 msgstr "क्रिया शुरू करें"
 
-#: contents/ui/DelegateToolButtons.qml:38
+#: contents/ui/DelegateToolButtons.qml:41
 #, kde-format
 msgid "Show QR code"
 msgstr "क्यूआर कोड दिखाएँ"
 
-#: contents/ui/DelegateToolButtons.qml:54
+#: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
 msgid "Edit contents"
 msgstr "विषय-वस्तु का संपादन करें"
 
-#: contents/ui/DelegateToolButtons.qml:68
+#: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
 msgstr "इतिहास सूची से हटाएँ"

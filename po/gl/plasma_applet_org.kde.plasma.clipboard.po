@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-05-29 08:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -72,22 +72,22 @@ msgstr ""
 "Non hai espazo dabondo para amosar o código QR. Probe a cambiar o tamaño do "
 "trebello."
 
-#: contents/ui/DelegateToolButtons.qml:23
+#: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
 msgid "Invoke action"
 msgstr "Invocar unha acción"
 
-#: contents/ui/DelegateToolButtons.qml:38
+#: contents/ui/DelegateToolButtons.qml:41
 #, kde-format
 msgid "Show QR code"
 msgstr "Amosar o código QR"
 
-#: contents/ui/DelegateToolButtons.qml:54
+#: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
 msgid "Edit contents"
 msgstr "Editar o contido"
 
-#: contents/ui/DelegateToolButtons.qml:68
+#: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
 msgstr "Retirar do historial"

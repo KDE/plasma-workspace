@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-11-11 14:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -557,23 +557,23 @@ msgstr ""
 "ktoré ich vyžadujú.<nl/><nl/>Prihlásenie do systému pomocou odtlačku prsta "
 "zatiaľ nie je podporované."
 
-#: src/user.cpp:280
+#: src/user.cpp:291
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Nepodarilo sa získať oprávnenia na uloženie používateľa %1"
 
-#: src/user.cpp:285
+#: src/user.cpp:296
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Nastala chyba pri ukladaní zmien"
 
-#: src/user.cpp:384
+#: src/user.cpp:395
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Nepodarilo sa zmeniť veľkosť obrázka: otvorenie dočasného súboru zlyhalo"
 
-#: src/user.cpp:392
+#: src/user.cpp:403
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Nepodarilo sa zmeniť veľkosť obrázka: zápis do dočasného súboru zlyhal"

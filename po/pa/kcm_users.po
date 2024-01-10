@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-12-26 08:57-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -551,22 +551,22 @@ msgid ""
 "fingerprint is not yet supported."
 msgstr ""
 
-#: src/user.cpp:280
+#: src/user.cpp:291
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "ਸੰਭਾਲੇ ਹੋਏ ਵਰਤੋਂਕਾਰ %1 ਲਈ ਇਜਾਜ਼ਤ ਲਈ ਨਹੀਂ ਜਾ ਸਕੀ"
 
-#: src/user.cpp:285
+#: src/user.cpp:296
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: src/user.cpp:384
+#: src/user.cpp:395
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਖੋਲ੍ਹਣ ਲਈ ਫੇਲ੍ਹ"
 
-#: src/user.cpp:392
+#: src/user.cpp:403
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਲਿਖਣ ਲਈ ਫੇਲ੍ਹ"

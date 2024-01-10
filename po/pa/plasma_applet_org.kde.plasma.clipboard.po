@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2024-01-10 01:35+0000\n"
 "PO-Revision-Date: 2023-12-26 08:18-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -69,22 +69,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "QR ਕੋਡ ਦਿਖਾਉਣ ਲਈ ਲੋੜੀਂਦੀ ਥਾਂ ਨਹੀਂ ਹੈ। ਇਸ ਐਪਲਿਟ ਨੂੰ ਮੁੜ-ਆਕਾਰ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: contents/ui/DelegateToolButtons.qml:23
+#: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
 msgid "Invoke action"
 msgstr "ਸ਼ਾਮਲ ਕਾਰਵਾਈ"
 
-#: contents/ui/DelegateToolButtons.qml:38
+#: contents/ui/DelegateToolButtons.qml:41
 #, kde-format
 msgid "Show QR code"
 msgstr "QR ਕੋਡ ਦਿਖਾਉ"
 
-#: contents/ui/DelegateToolButtons.qml:54
+#: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
 msgid "Edit contents"
 msgstr "ਸਮੱਗਰੀ ਸੋਧ"
 
-#: contents/ui/DelegateToolButtons.qml:68
+#: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
 msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
