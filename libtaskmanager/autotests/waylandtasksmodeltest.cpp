@@ -6,6 +6,7 @@
 
 #define QT_FORCE_ASSERTS 1
 
+#include <QProcess>
 #include <qpa/qplatformnativeinterface.h>
 
 #include <wayland-client-core.h>
@@ -14,6 +15,7 @@
 #include "waylandtasksmodel.h"
 
 using namespace TaskManager;
+using namespace Qt::StringLiterals;
 
 class WaylandTasksModelTest : public QObject
 {
@@ -31,6 +33,9 @@ private Q_SLOTS:
     void test_modelDataFromDesktopFile();
 
     void test_request();
+
+    // plasmashell runs out of file descriptors when emacs visits lots of files
+    void test_bug478831();
 
 private:
     WaylandTasksModel m_model;
@@ -133,6 +138,48 @@ void WaylandTasksModelTest::test_modelDataFromDesktopFile()
 void WaylandTasksModelTest::test_request()
 {
     TestUtils::testRequest(m_model);
+}
+
+void WaylandTasksModelTest::test_bug478831()
+{
+    QProcess lsof;
+    lsof.setProgram(u"lsof"_s);
+    lsof.setArguments({u"-p"_s, QString::number(getpid())});
+    lsof.setReadChannel(QProcess::StandardOutput);
+    lsof.start(QIODeviceBase::ReadOnly);
+    lsof.waitForFinished();
+    const QByteArray fdCountBeforeBA = lsof.readAllStandardOutput();
+    const int fdCountBefore = fdCountBeforeBA.count('\n');
+
+    QSignalSpy rowsInsertedSpy(&m_model, &AbstractWindowTasksModel::rowsInserted);
+
+    QProcess gtkWindow;
+    gtkWindow.setProgram(u"python3"_s);
+    QProcessEnvironment newEnv = QProcessEnvironment::systemEnvironment();
+    newEnv.insert(u"GDK_BACKEND"_s, u"x11"_s);
+    newEnv.insert(u"NO_AT_BRIDGE"_s, u"1"_s); // Otherwise following tests will fail
+    gtkWindow.setProcessEnvironment(newEnv);
+    gtkWindow.setArguments({QFINDTESTDATA(u"data/windows/bug478831.py"_s)});
+    gtkWindow.start(QIODeviceBase::ReadOnly);
+
+    if (rowsInsertedSpy.empty()) {
+        QVERIFY(rowsInsertedSpy.wait());
+    }
+    const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"flash"_s);
+    QCOMPARE(results.size(), 1);
+    QTest::qWait(10000);
+
+    lsof.start(QIODeviceBase::ReadOnly);
+    lsof.waitForFinished();
+    const QByteArray fdCountAfterBA = lsof.readAllStandardOutput();
+    const int fdCountAfter = fdCountAfterBA.count('\n');
+
+    gtkWindow.terminate();
+    gtkWindow.waitForFinished();
+    qDebug() << fdCountBefore << fdCountAfter << getpid();
+    QVERIFY(fdCountBefore > 10);
+    QVERIFY(fdCountAfter > 10);
+    QVERIFY(fdCountAfter - fdCountBefore < 10);
 }
 
 QTEST_MAIN(WaylandTasksModelTest)

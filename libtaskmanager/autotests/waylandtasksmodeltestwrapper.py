@@ -6,7 +6,6 @@
 import os
 import subprocess
 import sys
-import time
 
 if __name__ == '__main__':
     assert len(sys.argv) >= 2, f"Missing waylandtasksmodeltest argument {len(sys.argv)}"
@@ -14,7 +13,7 @@ if __name__ == '__main__':
 
     environ = os.environ.copy()
     environ["KWIN_WAYLAND_NO_PERMISSION_CHECKS"] = "1"
-    kwin_process = subprocess.Popen(["kwin_wayland", "--virtual", "--no-lockscreen", "--no-global-shortcuts", "--no-kactivities", "--exit-with-session", test_executable_path], env=environ)
+    kwin_process = subprocess.Popen(["kwin_wayland", "--virtual", "--no-lockscreen", "--no-global-shortcuts", "--no-kactivities", "--xwayland", "--exit-with-session", test_executable_path], env=environ)
 
     result: int = 1
     try:
