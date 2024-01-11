@@ -240,7 +240,7 @@ Kirigami.OverlaySheet {
                     QQC2.ToolTip.visible: hovered || activeFocus
 
                     onClicked: {
-                        colourRectangle.grabToImage(function(result) {
+                        grabToImage(function(result) {
                             const uri = kcm.plonkImageInTempfile(result.image)
                             if (uri != "") {
                                 usersDetailPage.oldImage = usersDetailPage.user.face
@@ -269,7 +269,7 @@ Kirigami.OverlaySheet {
                     Accessible.description: i18nc("@info:whatsthis", "User avatar placeholder icon")
 
                     onClicked: {
-                        colourRectangle.grabToImage(function(result) {
+                        grabToImage(function(result) {
                             const uri = kcm.plonkImageInTempfile(result.image)
                             if (uri != "") {
                                 usersDetailPage.oldImage = usersDetailPage.user.face
