@@ -123,6 +123,9 @@ protected:
         get_icon(pipeFds[1]);
         ::close(pipeFds[1]);
         auto readIcon = [uuid = uuid](int fd) {
+            auto closeGuard = qScopeGuard([fd]() {
+                ::close(fd);
+            });
             pollfd pollFd;
             pollFd.fd = fd;
             pollFd.events = POLLIN;
