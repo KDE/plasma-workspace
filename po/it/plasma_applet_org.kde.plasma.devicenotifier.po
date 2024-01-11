@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-03 11:59+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 liberi di %2"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -34,7 +34,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Accesso in corso…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -42,38 +42,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Rimozione in corso…"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Non scollegare! I file sono ancora in fase di trasferimento..."
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Apri nel gestore dei file"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "Monta e apri"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "Espelli"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "Rimuovi in sicurezza"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "Monta"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "Rimuovi tutto"
@@ -93,41 +93,131 @@ msgstr "Nessun dispositivo rimovibile collegato"
 msgid "No disks available"
 msgstr "Nessun disco disponibile"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Dispositivo più recente"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nessun dispositivo disponibile"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configura i dispositivi rimovibili…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispositivi rimovibili"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispositivi non rimovibili"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "Tutti i dispositivi"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostra finestra a comparsa quando viene collegato un nuovo dispositivo"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "Fai clic per montare il dispositivo."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "È ora possibile rimuovere in modo sicuro il dispositivo."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "Fai clic per espellere il disco."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device as it is busy."
+msgstr "Fai clic per montare il dispositivo."
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Impossibile rimuovere il disco.\n"
+"Uno o più file su questo disco sono aperti da un'applicazione."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Impossibile rimuovere il disco.\n"
+"Uno o più file su questo disco sono aperti da un'applicazione."
+msgstr[1] ""
+"Impossibile rimuovere il disco.\n"
+"Uno o più file su questo disco sono aperti da un'applicazione."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device."
+msgstr "Fai clic per montare il dispositivo."
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Fai clic per rimuovere in modo sicuro il dispositivo."
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "Fai clic per espellere il disco."
 
 #~ msgid "Show:"
 #~ msgstr "Mostra:"
@@ -156,9 +246,6 @@ msgstr "Mostra finestra a comparsa quando viene collegato un nuovo dispositivo"
 #~ "Fai clic sul pulsante di espulsione presente su tali volumi per rimuovere "
 #~ "in modo sicuro il dispositivo."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "È ora possibile rimuovere in modo sicuro il dispositivo."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "Il dispositivo è attualmente inaccessibile."
 
@@ -169,15 +256,6 @@ msgstr "Mostra finestra a comparsa quando viene collegato un nuovo dispositivo"
 
 #~ msgid "Click to access this device from other applications."
 #~ msgstr "Fai clic per accedere al dispositivo da altre applicazioni."
-
-#~ msgid "Click to eject this disc."
-#~ msgstr "Fai clic per espellere il disco."
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "Fai clic per rimuovere in modo sicuro il dispositivo."
-
-#~ msgid "Click to mount this device."
-#~ msgstr "Fai clic per montare il dispositivo."
 
 #~ msgid "Available Devices"
 #~ msgstr "Dispositivi disponibili"
@@ -210,13 +288,6 @@ msgstr "Mostra finestra a comparsa quando viene collegato un nuovo dispositivo"
 #~ msgstr ""
 #~ "Impossibile smontare il dispositivo.\n"
 #~ "Uno o più file su questo dispositivo sono aperti da un'applicazione."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "Impossibile rimuovere il disco.\n"
-#~ "Uno o più file su questo disco sono aperti da un'applicazione."
 
 #~ msgid "Cannot mount the disc."
 #~ msgstr "Impossibile montare il disco."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-10 21:36+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -21,13 +21,13 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 laust af %2"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -35,7 +35,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Fæ aðgang…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -43,38 +43,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Fjarlægi..."
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Ekki taka strax úr sambandi! Það er enn verið að flytja skrár..."
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Opna í skráastjóra"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "Tengja og opna"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "Henda út"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "Fjarlæga á öruggan máta"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "Tengja í skráakerfið"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "Fjarlægja allt"
@@ -94,52 +94,140 @@ msgstr "Engin útskiptanleg tæki tengd"
 msgid "No disks available"
 msgstr "Engir diskar tiltækir"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Nýlegasta tæki"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "Engin tæki tiltæk"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Stilla útskiptanleg tæki…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "Útskiptanleg tæki"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Ekki-útskiptanleg tæki"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "Öll tæki"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Birta sprettglugga þegar ný tæki eru tengd"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to mount this device."
+msgstr "1 aðgerð fyrir þetta tæki"
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "1 aðgerð fyrir þetta tæki"
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to eject this disc."
+msgstr "1 aðgerð fyrir þetta tæki"
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "Síðasta tengda tæki: %1"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Get ekki spýtt út disknum.\n"
+"Ein eða fleiri skrár á disknum eru opnar í forritum."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not unmount the device.\n"
+#| "One or more files on this device are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Get ekki aftengt tækið.\n"
+"Ein eða fleiri skrár á þessu tæki eru opnar í forritum."
+msgstr[1] ""
+"Get ekki aftengt tækið.\n"
+"Ein eða fleiri skrár á þessu tæki eru opnar í forritum."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "Síðasta tengda tæki: %1"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Síðasta tengda tæki: %1"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Could not eject this disc."
+msgstr "1 aðgerð fyrir þetta tæki"
 
 #, fuzzy
 #~| msgid "General"
 #~ msgid "General"
 #~ msgstr "Almennt"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "1 aðgerð fyrir þetta tæki"
 
 #, fuzzy
 #~| msgid "1 action for this device"
@@ -152,19 +240,7 @@ msgstr "Birta sprettglugga þegar ný tæki eru tengd"
 #, fuzzy
 #~| msgid "1 action for this device"
 #~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to eject this disc."
-#~ msgstr "1 aðgerð fyrir þetta tæki"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
 #~ msgid "Click to safely remove this device."
-#~ msgstr "1 aðgerð fyrir þetta tæki"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to mount this device."
 #~ msgstr "1 aðgerð fyrir þetta tæki"
 
 #, fuzzy
@@ -172,29 +248,6 @@ msgstr "Birta sprettglugga þegar ný tæki eru tengd"
 #~ msgctxt "Hide a device"
 #~ msgid "Hide %1"
 #~ msgstr "Fela "
-
-#, fuzzy
-#~| msgid ""
-#~| "Could not unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "Get ekki aftengt tækið.\n"
-#~ "Ein eða fleiri skrár á þessu tæki eru opnar í forritum."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "Get ekki spýtt út disknum.\n"
-#~ "Ein eða fleiri skrár á disknum eru opnar í forritum."
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "Síðasta tengda tæki: %1"
 
 #~ msgid "Cannot mount the disc."
 #~ msgstr "Get ekki tengt diskinn."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-09 18:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 "X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "剩餘 %1，共 %2"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -37,7 +37,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "存取中…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -45,38 +45,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "移除中…"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "請還不要拔！檔案還在傳輸…"
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "在檔案管理員開啟"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "掛載並開啟"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "退出"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "安全地移除"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "掛載"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "全部移除"
@@ -96,41 +96,119 @@ msgstr "沒有插入可移除裝置"
 msgid "No disks available"
 msgstr "沒有可用硬碟"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "上次插入的裝置"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "沒有可用裝置"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "設定可移除裝置…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "可移除裝置"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "不可移除裝置"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "所有裝置"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "當新裝置插入時顯示彈出式通知"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgid "You are not authorized to mount this device."
+msgstr "目前可以安全地移除此裝置。"
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "目前可以安全地移除此裝置。"
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "點擊以退出碟片。"
+
+#: plugin/ksolidnotify.cpp:211
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are open within an application."
+msgstr "點擊以從其它應用程式存取此裝置。"
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "點擊以從其它應用程式存取此裝置。"
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Could not mount this device."
+msgstr "點擊以安全地移除此裝置。"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "點擊以安全地移除此裝置。"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "點擊以退出碟片。"
 
 #~ msgid "Show:"
 #~ msgstr "顯示："
@@ -156,21 +234,9 @@ msgstr "當新裝置插入時顯示彈出式通知"
 #~ "目前無法<b>安全地</b>移除此裝置：可能還有應用程式正在使用此裝置的某些部"
 #~ "份。對該部份點擊退出鍵可以安全地移除此裝置。"
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "目前可以安全地移除此裝置。"
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "此裝置目前無法存取。"
 
 #~ msgid "1 action for this device"
 #~ msgid_plural "%1 actions for this device"
 #~ msgstr[0] "此裝置的 %1 個動作"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr "點擊以從其它應用程式存取此裝置。"
-
-#~ msgid "Click to eject this disc."
-#~ msgstr "點擊以退出碟片。"
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "點擊以安全地移除此裝置。"

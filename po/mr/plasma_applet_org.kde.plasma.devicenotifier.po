@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2014-10-28 10:25+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -27,7 +27,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 मोकळे"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -39,7 +39,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "वापरत आहे..."
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -51,38 +51,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "काढून टाकत आहे..."
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -105,47 +105,137 @@ msgstr "फक्त न-काढता येणारी साधने"
 msgid "No disks available"
 msgstr "कोणतीही साधने उपलब्ध नाहीत"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "शेवटचे जोडलेले साधन"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "कोणतीही साधने उपलब्ध नाहीत"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "फक्त न-काढता येणारी साधने"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "फक्त काढता येणारी साधने"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "फक्त न-काढता येणारी साधने"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "सर्व साधने"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "साधन जोडले नाही"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "हे साधन जुळवणी करण्याकरिता क्लिक करा."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "हे साधन बाहेर काढण्याकरिता सुरक्षित आहे."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "ही डिस्क बाहेर काढण्याकरिता क्लिक करा."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "शेवटचे जोडलेले साधन: %1"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"डिस्क बाहेर काढू शकत नाही.\n"
+"अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot unmount the device.\n"
+#| "One or more files on this device are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"साधन unmount करू शकत नाही.\n"
+"अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
+msgstr[1] ""
+"साधन unmount करू शकत नाही.\n"
+"अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "शेवटचे जोडलेले साधन: %1"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "शेवटचे जोडलेले साधन: %1"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "ही डिस्क बाहेर काढण्याकरिता क्लिक करा."
 
 #~ msgid "General"
 #~ msgstr "साधारण"
@@ -170,9 +260,6 @@ msgstr "साधन जोडले नाही"
 #~ "शक्यता आहे. ते साधन सुरक्षितरित्या बाहेर काढण्याकरिता \"बाहेर काढा\" बटनावर क्लिक "
 #~ "करा."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "हे साधन बाहेर काढण्याकरिता सुरक्षित आहे."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "हे साधन सध्या वापरता येत नाही."
 
@@ -184,40 +271,11 @@ msgstr "साधन जोडले नाही"
 #~ msgid "Click to access this device from other applications."
 #~ msgstr "हे साधन इतर अनुप्रयोगातून वापरण्याकरिता क्लिक करा."
 
-#~ msgid "Click to eject this disc."
-#~ msgstr "ही डिस्क बाहेर काढण्याकरिता क्लिक करा."
-
 #~ msgid "Click to safely remove this device."
 #~ msgstr "हे साधन सुरक्षितरित्या बाहेर काढण्याकरिता क्लिक करा."
 
-#~ msgid "Click to mount this device."
-#~ msgstr "हे साधन जुळवणी करण्याकरिता क्लिक करा."
-
 #~ msgid "Available Devices"
 #~ msgstr "उपलब्ध साधने"
-
-#, fuzzy
-#~| msgid ""
-#~| "Cannot unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "साधन unmount करू शकत नाही.\n"
-#~ "अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "डिस्क बाहेर काढू शकत नाही.\n"
-#~ "अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "शेवटचे जोडलेले साधन: %1"
 
 #, fuzzy
 #~| msgid "<font color=\"%1\">Devices recently plugged in:</font>"

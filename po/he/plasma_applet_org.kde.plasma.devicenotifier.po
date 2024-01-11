@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-02 21:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -21,13 +21,13 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 פנויים מתוך %2"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -35,7 +35,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "מתבצעת גישה…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -43,38 +43,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "מתבצעת הסרה…"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "לא לנתק עדיין! קבצים מועברים כרגע…"
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "פתיחת מנהל הקבצים"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "עיגון ופתיחה"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "שליפה"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "הסרה בבטחה"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "עיגון"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "להסיר הכול"
@@ -94,41 +94,122 @@ msgstr "אין התקנים נתיקים מחוברים"
 msgid "No disks available"
 msgstr "אין כוננים זמינים"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "ההתקן העדכני ביותר"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "אין התקנים זמינים"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "הגדרת התקנים נתיקים…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "התקנים נתיקים"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "התקנים קבועים"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "כל ההתקנים"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "הצגת חלונית קופצת עם חיבור התקן חדש"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgid "You are not authorized to mount this device."
+msgstr "בטוח להסיר ההתקן."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "בטוח להסיר ההתקן."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "לחץ על מנת להוציא את התקליטור."
+
+#: plugin/ksolidnotify.cpp:211
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are open within an application."
+msgstr "לחץ כדי לגשת להתקן מיישומים אחרים."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "לחץ כדי לגשת להתקן מיישומים אחרים."
+msgstr[1] "לחץ כדי לגשת להתקן מיישומים אחרים."
+msgstr[2] "לחץ כדי לגשת להתקן מיישומים אחרים."
+msgstr[3] "לחץ כדי לגשת להתקן מיישומים אחרים."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Could not mount this device."
+msgstr "לחץ כדי להסיר ההתקן בבטחה."
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "לחץ כדי להסיר ההתקן בבטחה."
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "לחץ על מנת להוציא את התקליטור."
 
 #~ msgid "General"
 #~ msgstr "כללי"
@@ -152,9 +233,6 @@ msgstr "הצגת חלונית קופצת עם חיבור התקן חדש"
 #~ "חלקים אחרים בהתקן. לחץ על לחצן ההסרה של החלקים האחרים כדי להסיר בבטחה את "
 #~ "ההתקן."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "בטוח להסיר ההתקן."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "ההתקן כרגע לא זמין."
 
@@ -162,12 +240,3 @@ msgstr "הצגת חלונית קופצת עם חיבור התקן חדש"
 #~ msgid_plural "%1 actions for this device"
 #~ msgstr[0] "פעולה אחת עבור התקן זה"
 #~ msgstr[1] "%1 פעולות עבור התקן זה"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr "לחץ כדי לגשת להתקן מיישומים אחרים."
-
-#~ msgid "Click to eject this disc."
-#~ msgstr "לחץ על מנת להוציא את התקליטור."
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "לחץ כדי להסיר ההתקן בבטחה."

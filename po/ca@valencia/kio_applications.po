@@ -1,4 +1,4 @@
-# Translation of kio5_applications.po to Catalan (Valencian)
+# Translation of kio_applications.po to Catalan (Valencian)
 # Copyright (C) 2003-2008 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.

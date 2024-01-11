@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2010-01-31 23:41+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
 "2;\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -27,7 +27,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 се слободни"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -35,7 +35,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -43,38 +43,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -97,58 +97,146 @@ msgstr "Само неподвижни уреди"
 msgid "No disks available"
 msgstr "Нема приклучени уреди."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Most Recent Device"
 msgstr "Последен приклучен уред: %1"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Само неподвижни уреди"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Само подвижни уреди"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Само неподвижни уреди"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Сите уреди"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "Нема приклучени уреди"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "You are not authorized to mount this device."
+msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "You are not authorized to eject this disc."
+msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "Последен приклучен уред: %1"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Не можам да го извадам дискот.\n"
+"Една или повеќе датотеки на дискот се отворени во некоја апликација."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not unmount the device.\n"
+#| "One or more files on this device are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Не можев да го одмонтирам уредот.\n"
+"Една или повеќе датотеки на уредот се отворени во некоја апликација."
+msgstr[1] ""
+"Не можев да го одмонтирам уредот.\n"
+"Една или повеќе датотеки на уредот се отворени во некоја апликација."
+msgstr[2] ""
+"Не можев да го одмонтирам уредот.\n"
+"Една или повеќе датотеки на уредот се отворени во некоја апликација."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "Последен приклучен уред: %1"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Последен приклучен уред: %1"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Could not eject this disc."
+msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
 
 #, fuzzy
 #~| msgctxt "General options page"
 #~| msgid "General"
 #~ msgid "General"
 #~ msgstr "Општо"
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
 
 #, fuzzy
 #~| msgid "1 action for this device"
@@ -164,17 +252,7 @@ msgstr "Нема приклучени уреди"
 
 #, fuzzy
 #~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to eject this disc."
-#~ msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
 #~ msgid "Click to safely remove this device."
-#~ msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to mount this device."
 #~ msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
 
 #, fuzzy
@@ -207,29 +285,6 @@ msgstr "Нема приклучени уреди"
 #~ "Device is plugged in and the volume is not mounted for access yet. The "
 #~ "device can be safely removed."
 #~ msgstr "Уредот е приклучен, но сѐ уште не е монтиран за пристап."
-
-#, fuzzy
-#~| msgid ""
-#~| "Could not unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "Не можев да го одмонтирам уредот.\n"
-#~ "Една или повеќе датотеки на уредот се отворени во некоја апликација."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "Не можам да го извадам дискот.\n"
-#~ "Една или повеќе датотеки на дискот се отворени во некоја апликација."
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "Последен приклучен уред: %1"
 
 #~ msgid "Cannot mount the disc."
 #~ msgstr "Не можам да го монтирам дискот."

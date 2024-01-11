@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-04 21:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%2-இல் %1 காலி"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -31,7 +31,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "அணுகப்படுகிறது…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -39,38 +39,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "நீக்கப்படுகிறது…"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "கழற்றாதீர்கள்! கோப்புகள் இன்னும் இடமாற்றப்படுகின்றன…"
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "கோப்பு மேலாளரில் திற"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "ஏற்றி திற"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "வெளியேற்று"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "பத்திரமாக நீக்கு"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "ஏற்று"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "அனைத்தையும் நீக்கு"
@@ -90,47 +90,138 @@ msgstr "கழற்றக்கூடிய சாதனங்கள் ஏத�
 msgid "No disks available"
 msgstr "வட்டுகள் ஏதுமில்லை"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "மிக சமீபமான சாதனம்"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "எந்த சாதனமும் இல்லை"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "கழற்றக்கூடிய சாதனங்களை அமை…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "கழற்றக்கூடிய சாதனங்கள்"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "கழற்ற முடியாத சாதனங்கள்"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "அனைத்து சாதனங்கள்"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "புதிய சாதனம் செருகப்படும்போது தெரித்தெழும் பட்டியை காட்டு"
 
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "இக்கருவிக்கான 1 செயல்"
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to mount this device."
+msgstr "இக்கருவிக்கான 1 செயல்"
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "இக்கருவிக்கான 1 செயல்"
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to eject this disc."
+msgstr "இக்கருவிக்கான 1 செயல்"
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Could not mount this device as it is busy."
+msgstr "இக்கருவிக்கான 1 செயல்"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"தட்டினை வெளிக்கிட இயலவில்லை.\n"
+"ஒரு பயன்பாட்டினுள் இத்தட்டிலுள்ள ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகள் திறக்கப்பட்டுள்ளன."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot unmount the device.\n"
+#| "One or more files on this device are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"கருவியை இறக்க இயலவில்லை.\n"
+"ஒரு பயன்பாட்டினுள் இக்கருவியிலுள்ள ஒன்றி அல்லது அதற்கு மேற்பட்ட கோப்புகள் திறக்கப்பட்டுள்ளன."
+msgstr[1] ""
+"கருவியை இறக்க இயலவில்லை.\n"
+"ஒரு பயன்பாட்டினுள் இக்கருவியிலுள்ள ஒன்றி அல்லது அதற்கு மேற்பட்ட கோப்புகள் திறக்கப்பட்டுள்ளன."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Could not mount this device."
+msgstr "இக்கருவிக்கான 1 செயல்"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "இக்கருவிக்கான 1 செயல்"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Could not eject this disc."
+msgstr "இக்கருவிக்கான 1 செயல்"
 
 #, fuzzy
 #~| msgid "1 action for this device"
@@ -139,43 +230,6 @@ msgstr "புதிய சாதனம் செருகப்படும்�
 #~ msgid_plural "%1 actions for this device"
 #~ msgstr[0] "இக்கருவிக்கான 1 செயல்"
 #~ msgstr[1] "இக்கருவிக்கான 1 செயல்"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to eject this disc."
-#~ msgstr "இக்கருவிக்கான 1 செயல்"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to safely remove this device."
-#~ msgstr "இக்கருவிக்கான 1 செயல்"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to mount this device."
-#~ msgstr "இக்கருவிக்கான 1 செயல்"
-
-#, fuzzy
-#~| msgid ""
-#~| "Cannot unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "கருவியை இறக்க இயலவில்லை.\n"
-#~ "ஒரு பயன்பாட்டினுள் இக்கருவியிலுள்ள ஒன்றி அல்லது அதற்கு மேற்பட்ட கோப்புகள் "
-#~ "திறக்கப்பட்டுள்ளன."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "தட்டினை வெளிக்கிட இயலவில்லை.\n"
-#~ "ஒரு பயன்பாட்டினுள் இத்தட்டிலுள்ள ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகள் திறக்கப்பட்டுள்ளன."
 
 #, fuzzy
 #~| msgid "<font color=\"white\">Recently plugged devices:</font>"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-02 11:12+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -21,13 +21,13 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1/%2 erabili gabe"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -35,7 +35,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Atzitzen..."
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -43,39 +43,39 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Kentzen..."
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 "Oraindik ez deskonektatu! Fitxategiak transferitzen ari dira oraindik..."
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Ireki fitxategi-kudeatzailean"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "Muntatu eta ireki"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "Egotzi"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "Kendu arriskurik gabe"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "Muntatu"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "Kendu guztiak"
@@ -95,41 +95,131 @@ msgstr "Ez dago konektatuta gailu eramangarririk"
 msgid "No disks available"
 msgstr "Ez dago disko erabilgarririk"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Konektatutako azken gailua"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "Ez dago gailu eskuragarririk"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Konfiguratu gailu aldagarriak..."
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "Gailu aldagarriak"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Gailu ez-aldagarriak"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "Gailu guztiak"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Erakutsi laster-leihoa gailu berria konektatzen denean"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "Klikatu gailu hau muntatzeko."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Une honetan segurua da gailu hau kentzea."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "Egin klik disko hau kanporatzeko."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "Konektatutako azken gailua: %1"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Ezin da diskoa kanporatu.\n"
+"Gailu honetako fitxategi bat edo gehiago aplikazio batean irekita dago."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not unmount the device.\n"
+#| "One or more files on this device are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Gailua ezin desmuntatu.\n"
+"Gailu honetako fitxategi bat edo gehiago aplikazio batek irekita dauzka."
+msgstr[1] ""
+"Gailua ezin desmuntatu.\n"
+"Gailu honetako fitxategi bat edo gehiago aplikazio batek irekita dauzka."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "Konektatutako azken gailua: %1"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Konektatutako azken gailua: %1"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "Egin klik disko hau kanporatzeko."
 
 #~ msgid "Show:"
 #~ msgstr "Erakutsi:"
@@ -157,9 +247,6 @@ msgstr "Erakutsi laster-leihoa gailu berria konektatzen denean"
 #~ "honetako beste bolumen batzuk atzitzen egon daitezke. Egin klik beste "
 #~ "bolumen hauen egotzi botoian gailu hau era seguruan kentzeko."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "Une honetan segurua da gailu hau kentzea."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "Gailu hau une honetan ezin da atzitu."
 
@@ -171,14 +258,8 @@ msgstr "Erakutsi laster-leihoa gailu berria konektatzen denean"
 #~ msgid "Click to access this device from other applications."
 #~ msgstr "Egin klik gailu hau beste aplikazioetatik atzitzeko."
 
-#~ msgid "Click to eject this disc."
-#~ msgstr "Egin klik disko hau kanporatzeko."
-
 #~ msgid "Click to safely remove this device."
 #~ msgstr "Egin klik gailu hau era seguruan kentzeko."
-
-#~ msgid "Click to mount this device."
-#~ msgstr "Klikatu gailu hau muntatzeko."
 
 #~ msgid "Available Devices"
 #~ msgstr "Gailu eskuragarriak"
@@ -213,29 +294,6 @@ msgstr "Erakutsi laster-leihoa gailu berria konektatzen denean"
 #~ "device can be safely removed."
 #~ msgstr ""
 #~ "Gailua entxufatuta dago, baino oraindik ez dago atzitzeko muntatuta."
-
-#, fuzzy
-#~| msgid ""
-#~| "Could not unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "Gailua ezin desmuntatu.\n"
-#~ "Gailu honetako fitxategi bat edo gehiago aplikazio batek irekita dauzka."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "Ezin da diskoa kanporatu.\n"
-#~ "Gailu honetako fitxategi bat edo gehiago aplikazio batean irekita dago."
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "Konektatutako azken gailua: %1"
 
 #~ msgid "Cannot mount the disc."
 #~ msgstr "Diskoa ezin muntatu."

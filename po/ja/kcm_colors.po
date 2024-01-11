@@ -1,4 +1,5 @@
 # Translation of kcmcolors into Japanese.
+# SPDX-FileCopyrightText: 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Shinsaku Nakagawa <shinsaku@users.sourceforge.jp>, 2004.
@@ -10,21 +11,20 @@
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2015, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-02-23 18:18+0900\n"
+"PO-Revision-Date: 2023-12-29 15:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -850,7 +850,7 @@ msgstr "無効のコントラストの強さ"
 #: editor/scmeditoroptions.ui:17
 #, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "非アクティブなウィンドウの色効果を適用する(&E)"
+msgstr "非アクティブなウィンドウに効果を適用する(&E)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
@@ -1221,7 +1221,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr "アクセントカラー %1 の適用に成功しました。"
+msgstr "アクセントカラー %1 の適用に成功しました"
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format
@@ -1239,25 +1239,22 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (現在のカラースキーム)"
 
 #: ui/AccentColorUI.qml:37
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "色スキームをインポート"
+msgstr "アクセントカラーをカラースキームから抽出"
 
 #: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "アクセントカラーを壁紙から抽出"
 
 #: ui/AccentColorUI.qml:39
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "共通色"
+msgstr "カスタムアクセントカラー"
 
 #: ui/AccentColorUI.qml:164
 #, kde-format
@@ -1295,7 +1292,7 @@ msgstr "ファイルからインストール..."
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "新規入手..."
 
 #: ui/main.qml:192
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-22 22:09-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%2 ਚੋਂ %1 ਖਾਲੀ"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -33,7 +33,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "…ਮਾਊੰਟ ਕਰਨਾ"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -41,38 +41,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "…ਹਟਾਉਣਾ"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "ਹਾਲੇ ਅਣ-ਪਲੱਗ ਨਾ ਕਰੋ! ਫਾਇਲਾਂ ਨੂੰ ਹਾਲੇ ਵੀ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ…"
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "ਮਾਊਂਟ ਕਰੋ ਤੇ ਖੋਲ੍ਹੋ"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "ਕੱਢੋ"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "ਸਹੀ ਸਲਾਮਤੀ ਹਟਾਓ"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "ਮਾਊਂਟ ਕਰੋ"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "ਸਭ ਹਟਾਓ"
@@ -92,41 +92,131 @@ msgstr "ਕੋਈ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ ਅਟੈਚ ਨ�
 msgid "No disks available"
 msgstr "ਕੋਈ ਡਿਸਕ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "ਸਭ ਤੋਂ ਤਾਜ਼ਾ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "ਕੋਈ ਡਿਵਾਈਸ ਉਪਲੱਬਧ ਨਹੀਂ"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "…ਨਾ-ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸਾਂ ਦੀ ਸੰਰਚਨਾ"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "ਨਾ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "ਸਭ ਡਿਵਾਈਸ"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ ਜਾਵੇ ਤਾਂ ਪੋਪਅੱਪ ਵੇਖਾਓ"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "ਇਹ ਜੰਤਰ ਮਾਊਂਟ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਹਟਾਉਣਾ ਸੁਰੱਖਿਅਤ ਹੈ।"
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "ਇਹ ਡਿਸਕ ਬਾਹਰ ਕੱਢਣ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "ਹੁਣੇ ਪਲੱਗ ਲਾਏ ਜੰਤਰ: %1"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot eject the disc.\n"
+#| "One or more files on this disc are open within an application."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"ਡਿਸਕ ਬਾਹਰ ਨਹੀਂ ਕੱਢੀ ਜਾ ਸਕਦੀ।\n"
+"ਇਸ ਡਿਸਕ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not unmount the device.\n"
+#| "One or more files on this device are open within an application."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"ਜੰਤਰ ਅਣ-ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।\n"
+"ਇਸ ਜੰਤਰ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
+msgstr[1] ""
+"ਜੰਤਰ ਅਣ-ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।\n"
+"ਇਸ ਜੰਤਰ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "ਹੁਣੇ ਪਲੱਗ ਲਾਏ ਜੰਤਰ: %1"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "ਹੁਣੇ ਪਲੱਗ ਲਾਏ ਜੰਤਰ: %1"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "ਇਹ ਡਿਸਕ ਬਾਹਰ ਕੱਢਣ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
 
 #~ msgid "Show:"
 #~ msgstr "ਵੇਖਾਓ:"
@@ -152,9 +242,6 @@ msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ �
 #~ "ਇਹ ਜੰਤਰ ਹਾਲੇ ਹਟਾਉਣ ਲਈ <b>ਸੁਰੱਖਿਅਤ ਨਹੀਂ</b> ਹੈ: ਐਪਲੀਕੇਸ਼ਨਾਂ ਇਸ ਜੰਤਰ ਉੱਤੇ ਹੋਰ ਵਾਲੀਅਮ ਨੂੰ "
 #~ "ਵਰਤ ਰਹੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਇਹ ਜੰਤਰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਹਟਾਉਣ ਲਈ ਬਾਹਰ ਕੱਢੋ ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਹਟਾਉਣਾ ਸੁਰੱਖਿਅਤ ਹੈ।"
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਵਰਤੋਂ ਯੋਗ ਨਹੀਂ ਹੈ।"
 
@@ -166,14 +253,8 @@ msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ �
 #~ msgid "Click to access this device from other applications."
 #~ msgstr "ਹੋਰ ਐਪਲੀਕੇਸ਼ਨ ਤੋਂ ਇਹ ਜੰਤਰ ਵਰਤਣ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
 
-#~ msgid "Click to eject this disc."
-#~ msgstr "ਇਹ ਡਿਸਕ ਬਾਹਰ ਕੱਢਣ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
-
 #~ msgid "Click to safely remove this device."
 #~ msgstr "ਇਹ ਜੰਤਰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
-
-#~ msgid "Click to mount this device."
-#~ msgstr "ਇਹ ਜੰਤਰ ਮਾਊਂਟ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
 
 #~ msgid "Available Devices"
 #~ msgstr "ਉਪਲੱਬਧ ਜੰਤਰ"
@@ -207,29 +288,6 @@ msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ �
 #~ "Device is plugged in and the volume is not mounted for access yet. The "
 #~ "device can be safely removed."
 #~ msgstr "ਜੰਤਰ ਦਾ ਪਲੱਗ ਤਾਂ ਲੱਗਾ ਹੈ, ਪਰ ਵਰਤਣ ਲਈ ਹਾਲੇ ਮਾਊਂਟ ਨਹੀਂ ਹੈ।"
-
-#, fuzzy
-#~| msgid ""
-#~| "Could not unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "ਜੰਤਰ ਅਣ-ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।\n"
-#~ "ਇਸ ਜੰਤਰ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "ਡਿਸਕ ਬਾਹਰ ਨਹੀਂ ਕੱਢੀ ਜਾ ਸਕਦੀ।\n"
-#~ "ਇਸ ਡਿਸਕ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "ਹੁਣੇ ਪਲੱਗ ਲਾਏ ਜੰਤਰ: %1"
 
 #~ msgid "Cannot mount the disc."
 #~ msgstr "ਡਿਸਕ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।"

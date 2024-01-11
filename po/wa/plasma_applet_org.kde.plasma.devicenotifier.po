@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2010-05-11 19:09+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -25,7 +25,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 libe"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, fuzzy, kde-format
 #| msgid "Unmounting..."
 msgctxt ""
@@ -34,7 +34,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Dji dismonte..."
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, fuzzy, kde-format
 #| msgid "Unmounting..."
 msgctxt ""
@@ -43,39 +43,39 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Dji dismonte..."
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, fuzzy, kde-format
 #| msgid "Mounting..."
 msgid "Mount"
 msgstr "Dji monte..."
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -98,51 +98,126 @@ msgstr "Seulmint les éndjins nén bodjåves"
 msgid "No disks available"
 msgstr "I gn a pont d' éndjin."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "Most recent device: %1"
 msgid "Most Recent Device"
 msgstr "Li tot dierin éndjin : %1"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "I gn a pont d' éndjin"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Seulmint les éndjins nén bodjåves"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Seulmint les éndjins bodjåves"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Seulmint les éndjins nén bodjåves"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Tos les éndjins"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "You are not authorized to mount this device."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "You are not authorized to eject this disc."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Could not mount this device as it is busy."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are open within an application."
+msgstr "Clitchîz po k' d' ôtes programes moussexhe dins cist éndjin."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "Clitchîz po k' d' ôtes programes moussexhe dins cist éndjin."
+msgstr[1] "Clitchîz po k' d' ôtes programes moussexhe dins cist éndjin."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Could not mount this device."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Could not eject this disc."
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
 
 #, fuzzy
 #~| msgid "1 action for this device"
@@ -151,24 +226,6 @@ msgstr ""
 #~ msgid_plural "%1 actions for this device"
 #~ msgstr[0] "1 accion po cist éndjin"
 #~ msgstr[1] "1 accion po cist éndjin"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr "Clitchîz po k' d' ôtes programes moussexhe dins cist éndjin."
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to eject this disc."
-#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to safely remove this device."
-#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to mount this device."
-#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
 
 #~ msgid "Available Devices"
 #~ msgstr "Éndjins k' i gn a "

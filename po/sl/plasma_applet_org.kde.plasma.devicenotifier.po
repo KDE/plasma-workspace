@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2023-12-02 08:30+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -23,13 +23,13 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 neporabljeno od %2"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -37,7 +37,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Dostopanje…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -45,38 +45,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Odstranjevanje…"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Ne odklapljajte še! Datoteke se še prenašajo…"
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Odpri v upravljalniku datotek"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "Priključi in odpri"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "Izvrzi"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "Varno odklopi"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "Priklopi"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "Odstrani vse"
@@ -96,41 +96,123 @@ msgstr "Ni priklopljene nobene odstranljive naprave"
 msgid "No disks available"
 msgstr "Na voljo ni nobenega diska"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Najnovejša naprava"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "Na voljo ni nobene naprave"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Nastavi odstranljive naprave…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "Odstranljive naprave"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Neodstranljive naprave"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "Vse naprave"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Odpri pojavno okno, ko je priklopljena nova naprava"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "Kliknite, da priklopite to napravo."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "To napravo lahko trenutno varno odstranite."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "Kliknite, da izvržete ta disk."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device as it is busy."
+msgstr "Kliknite, da priklopite to napravo."
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are open within an application."
+msgstr "Kliknite, da omogočite dostop do naprave iz drugih programov."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "Kliknite, da omogočite dostop do naprave iz drugih programov."
+msgstr[1] "Kliknite, da omogočite dostop do naprave iz drugih programov."
+msgstr[2] "Kliknite, da omogočite dostop do naprave iz drugih programov."
+msgstr[3] "Kliknite, da omogočite dostop do naprave iz drugih programov."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device."
+msgstr "Kliknite, da priklopite to napravo."
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Kliknite, da varno odstranite to napravo."
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "Kliknite, da izvržete ta disk."
 
 #~ msgid "Show:"
 #~ msgstr "Prikaži:"
@@ -157,9 +239,6 @@ msgstr "Odpri pojavno okno, ko je priklopljena nova naprava"
 #~ "njej morda dostopajo programi. Za varno odstranitev naprave kliknite gumb "
 #~ "za izmet na teh nosilcih."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "To napravo lahko trenutno varno odstranite."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "Ta naprava trenutno ni dostopna."
 
@@ -169,18 +248,6 @@ msgstr "Odpri pojavno okno, ko je priklopljena nova naprava"
 #~ msgstr[1] "%1 dejanji za to napravo"
 #~ msgstr[2] "%1 dejanja za to napravo"
 #~ msgstr[3] "%1 dejanj za to napravo"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr "Kliknite, da omogočite dostop do naprave iz drugih programov."
-
-#~ msgid "Click to eject this disc."
-#~ msgstr "Kliknite, da izvržete ta disk."
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "Kliknite, da varno odstranite to napravo."
-
-#~ msgid "Click to mount this device."
-#~ msgstr "Kliknite, da priklopite to napravo."
 
 #~ msgid "Available Devices"
 #~ msgstr "Razpoložljive naprave"

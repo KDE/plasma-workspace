@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2022-11-18 01:29+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -22,13 +22,13 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.1\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 laisva iš %2"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -36,7 +36,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Prijungiama…"
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -44,39 +44,39 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Atjungiama…"
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, fuzzy, kde-format
 #| msgid "Don't unplug yet! Files are still being transferred..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Kol kas neatjunkite! Failai yra vis dar perkeliami..."
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Atverti failų tvarkytuvėje"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "Prijungti ir atverti"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "Išstumti"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "Saugiai pašalinti"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "Prijungti"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "Pašalinti visus"
@@ -96,41 +96,128 @@ msgstr "Nėra prijungta jokių keičiamųjų įrenginių"
 msgid "No disks available"
 msgstr "Nėra prieinamų diskų"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Paskiausiai prijungtas įrenginys"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nėra prieinamų įrenginių"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Konfigūruoti keičiamuosius įrenginius…"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "Keičiamieji įrenginiai"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nekeičiamieji įrenginiai"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "Visi įrenginiai"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Įkišus naują įrenginį, rodyti iškylantįjį langą"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "Spragtelėkite, kad prijungti šį įrenginį."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Dabar saugu pašalinti šį įrenginį."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "Spustelėkite, norėdami išstumti šį diską."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device as it is busy."
+msgstr "Spragtelėkite, kad prijungti šį įrenginį."
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Spustelėkite, norėdami gauti prieigą prie šio įrenginio iš kitų programų."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Spustelėkite, norėdami gauti prieigą prie šio įrenginio iš kitų programų."
+msgstr[1] ""
+"Spustelėkite, norėdami gauti prieigą prie šio įrenginio iš kitų programų."
+msgstr[2] ""
+"Spustelėkite, norėdami gauti prieigą prie šio įrenginio iš kitų programų."
+msgstr[3] ""
+"Spustelėkite, norėdami gauti prieigą prie šio įrenginio iš kitų programų."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device."
+msgstr "Spragtelėkite, kad prijungti šį įrenginį."
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Spustelėkite, norėdami saugiai pašalinti šį įrenginį."
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "Spustelėkite, norėdami išstumti šį diską."
 
 #~ msgid "Show:"
 #~ msgstr "Rodyti:"
@@ -158,9 +245,6 @@ msgstr "Įkišus naują įrenginį, rodyti iškylantįjį langą"
 #~ "programos naudoja ktius šio įrenginio tomus. Spustelėkite išstūmimo "
 #~ "mygtuką šalia tų kitų tomų, norėdami saugiai pašalinti šį įrenginį."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "Dabar saugu pašalinti šį įrenginį."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "Šiuo metu šis įrenginys nėra prieinamas."
 
@@ -170,16 +254,3 @@ msgstr "Įkišus naują įrenginį, rodyti iškylantįjį langą"
 #~ msgstr[1] "%1 veiksmai šiam įrenginiui"
 #~ msgstr[2] "%1 veiksmų šiam įrenginiui"
 #~ msgstr[3] "%1 veiksmas šiam įrenginiui"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr ""
-#~ "Spustelėkite, norėdami gauti prieigą prie šio įrenginio iš kitų programų."
-
-#~ msgid "Click to eject this disc."
-#~ msgstr "Spustelėkite, norėdami išstumti šį diską."
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "Spustelėkite, norėdami saugiai pašalinti šį įrenginį."
-
-#~ msgid "Click to mount this device."
-#~ msgstr "Spragtelėkite, kad prijungti šį įrenginį."

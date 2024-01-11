@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2009-11-09 22:59+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1  free"
@@ -25,7 +25,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 නි‍ද‍හ‍ස්‍"
 
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -33,7 +33,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -41,38 +41,38 @@ msgctxt ""
 msgid "Removing…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -96,51 +96,127 @@ msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙ�
 msgid "No disks available"
 msgstr "කි‍සි‍ඳු‍ මෙවලමක් අ‍මු‍ණා‍ නො‍මැ‍ත‍"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Most Recent Device"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Non Removable Devices"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "කි‍සි‍ඳු‍ මෙවලමක් අ‍මු‍ණා‍ නො‍මැ‍ත‍"
 
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to mount this device."
+msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to eject this disc."
+msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
+
+#: plugin/ksolidnotify.cpp:242
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:244
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Could not eject this disc."
+msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
 
 #, fuzzy
 #~| msgid "1 action for this device"
@@ -153,25 +229,8 @@ msgstr "කි‍සි‍ඳු‍ මෙවලමක් අ‍මු‍ණා�
 #, fuzzy
 #~| msgid "1 action for this device"
 #~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to eject this disc."
-#~ msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
 #~ msgid "Click to safely remove this device."
 #~ msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
-
-#, fuzzy
-#~| msgid "1 action for this device"
-#~| msgid_plural "%1 actions for this device"
-#~ msgid "Click to mount this device."
-#~ msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
 #, fuzzy
 #~| msgid "No devices plugged in"

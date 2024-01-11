@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2024-01-11 00:38+0000\n"
 "PO-Revision-Date: 2022-01-19 17:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,14 +19,14 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: package/contents/ui/DeviceItem.qml:189
+#: package/contents/ui/DeviceItem.qml:188
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 حرّة من %2"
 
 # يجري هنا أفضل لأن يَصِل قصيرة والنص صغير
-#: package/contents/ui/DeviceItem.qml:193
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -35,7 +35,7 @@ msgid "Accessing…"
 msgstr "يَصِل..."
 
 # هنا للتناسق مع يجري الوصول فقط
-#: package/contents/ui/DeviceItem.qml:196
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -43,39 +43,39 @@ msgctxt ""
 msgid "Removing…"
 msgstr "يفصل..."
 
-#: package/contents/ui/DeviceItem.qml:199
+#: package/contents/ui/DeviceItem.qml:198
 #, fuzzy, kde-format
 #| msgid "Don't unplug yet! Files are still being transferred..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "لا تفصله! ما زالت الملفات تنقل..."
 
-#: package/contents/ui/DeviceItem.qml:230
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Open in File Manager"
 msgstr "افتح في مدير الملفّات"
 
-#: package/contents/ui/DeviceItem.qml:233
+#: package/contents/ui/DeviceItem.qml:232
 #, kde-format
 msgid "Mount and Open"
 msgstr "ضم وافتح"
 
-#: package/contents/ui/DeviceItem.qml:235
+#: package/contents/ui/DeviceItem.qml:234
 #, kde-format
 msgid "Eject"
 msgstr "أخرِج"
 
-#: package/contents/ui/DeviceItem.qml:237
+#: package/contents/ui/DeviceItem.qml:236
 #, kde-format
 msgid "Safely remove"
 msgstr "أزِل بأمان"
 
-#: package/contents/ui/DeviceItem.qml:279
+#: package/contents/ui/DeviceItem.qml:278
 #, kde-format
 msgid "Mount"
 msgstr "ضمّ"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Remove All"
 msgstr "أزِل الكل"
@@ -95,41 +95,125 @@ msgstr "لم توصل أي أجهزة منفصلة"
 msgid "No disks available"
 msgstr "لا يوجد أقراص"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Most Recent Device"
 msgstr "آخر جهاز حديث"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
 msgstr "لا أجهزة متوفّرة"
 
-#: package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:207
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "اضبط الأجهزة المنفصلة"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Removable Devices"
 msgstr "الأجهزة المنفصلة"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "الأجهزة غير المنفصلة"
 
-#: package/contents/ui/main.qml:290
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "All Devices"
 msgstr "كلّ الأجهزة"
 
-#: package/contents/ui/main.qml:307
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "افتح منبثقة عند وصل جهاز جديد"
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:190
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:191
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:198
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "You are not authorized to mount this device."
+msgstr "انقر لضمّ الجهاز."
+
+#: plugin/ksolidnotify.cpp:201
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "إزالة هذا الجهاز آمنة الآن."
+
+#: plugin/ksolidnotify.cpp:204
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "You are not authorized to eject this disc."
+msgstr "انقر لإخراج القرص هذا."
+
+#: plugin/ksolidnotify.cpp:211
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device as it is busy."
+msgstr "انقر لضمّ الجهاز."
+
+#: plugin/ksolidnotify.cpp:242
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are open within an application."
+msgstr "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+
+#: plugin/ksolidnotify.cpp:244
+#, fuzzy, kde-format
+#| msgid "Click to access this device from other applications."
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr[1] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr[2] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr[3] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr[4] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr[5] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+
+#: plugin/ksolidnotify.cpp:247
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: plugin/ksolidnotify.cpp:265
+#, fuzzy, kde-format
+#| msgid "Click to mount this device."
+msgid "Could not mount this device."
+msgstr "انقر لضمّ الجهاز."
+
+#: plugin/ksolidnotify.cpp:268
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "انقر لإزالة الجهاز هذا بأمان."
+
+#: plugin/ksolidnotify.cpp:271
+#, fuzzy, kde-format
+#| msgid "Click to eject this disc."
+msgid "Could not eject this disc."
+msgstr "انقر لإخراج القرص هذا."
 
 #~ msgid "General"
 #~ msgstr "عامّ"
@@ -152,9 +236,6 @@ msgstr "افتح منبثقة عند وصل جهاز جديد"
 #~ "إزالة هذا الجهاز حاليًّا <b>غير آمن</b>: قد تكون هناك تطبيقات تصل إلى أجزاء "
 #~ "أخرى من هذا الجهاز. انقر زر الإخراج لهذه الأجزاء لإزالة الجهاز هذا بأمان."
 
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "إزالة هذا الجهاز آمنة الآن."
-
 #~ msgid "This device is not currently accessible."
 #~ msgstr "هذا الجهاز قابل للوصول حاليًا."
 
@@ -166,18 +247,6 @@ msgstr "افتح منبثقة عند وصل جهاز جديد"
 #~ msgstr[3] "%1 إجراءات لهذا الجهاز"
 #~ msgstr[4] "%1 إجراء لهذا الجهاز"
 #~ msgstr[5] "%1 إجراء لهذا الجهاز"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
-
-#~ msgid "Click to eject this disc."
-#~ msgstr "انقر لإخراج القرص هذا."
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "انقر لإزالة الجهاز هذا بأمان."
-
-#~ msgid "Click to mount this device."
-#~ msgstr "انقر لضمّ الجهاز."
 
 #~ msgid "Available Devices"
 #~ msgstr "الأجهزة المتوفّرة"
