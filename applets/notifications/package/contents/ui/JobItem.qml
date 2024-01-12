@@ -60,7 +60,7 @@ ColumnLayout {
     signal openUrl(string url)
     signal fileActionInvoked(QtObject action)
 
-    spacing: 0
+    spacing: Kirigami.Units.smallSpacing
 
     Notifications.FileInfo {
         id: fileInfo
