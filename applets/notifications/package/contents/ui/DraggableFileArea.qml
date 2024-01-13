@@ -41,12 +41,11 @@ Item {
         onLongPressed: area.contextMenuRequested(point.position)
     }
 
-    TapHandler {
+    MouseArea {
         acceptedButtons: Qt.RightButton
-        gesturePolicy: TapHandler.WithinBounds
-
-        onPressedChanged: if (pressed) {
-            menuTapHandler.longPressed()
+        anchors.fill: parent
+        onPressed: (mouse) => {
+            area.contextMenuRequested(Qt.point(mouse.x, mouse.y))
         }
     }
 
