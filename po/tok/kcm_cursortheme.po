@@ -1,58 +1,59 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Janet Blackquill <uhhadd@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-28 01:34+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-01-11 15:56-0500\n"
+"Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
+"Language-Team: C <kde-i18n-doc@kde.org>\n"
 "Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.11.70\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current cursor theme"
-msgstr ""
+msgstr "nimi pi nasin sitelen luka"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current cursor size"
-msgstr ""
+msgstr "suli pi sitelen luka"
 
 #: kcmcursortheme.cpp:304
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
-msgstr ""
+msgstr "ilo Plasma li open sin la ante sina li kama lon."
 
 #: kcmcursortheme.cpp:378
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "mi ken ala lon e lipu pi tenpo lili."
 
 #: kcmcursortheme.cpp:389
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr ""
+msgstr "mi ken ala kama jo e poki pi sitelen lili tan ni: %1"
 
 #: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr ""
+msgstr "lipu ni li poki pi sitelen lili ala."
 
 #: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr ""
+msgstr "mi ken ala lon e poki 'icons'."
 
 #: kcmcursortheme.cpp:436
 #, kde-format
@@ -60,16 +61,18 @@ msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr ""
+"nasin '%1' ante li lon poki nasin pi sitelen lili. sina wile ala wile weka e "
+"ona la sina ken awen e nasin sina?"
 
 #: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
-msgstr ""
+msgstr "o weka ala weka e nasin?"
 
 #: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "mi kama jo e nasin pi sitelen lili."
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
@@ -81,7 +84,7 @@ msgstr ""
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
+msgstr "suli wile '%1' li lon ala. ni la mi o kepeken '%2'."
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -226,7 +229,7 @@ msgstr[1] ""
 #: ui/main.qml:58 ui/main.qml:92
 #, kde-format
 msgid "Size: %1"
-msgstr ""
+msgstr "suli: %1"
 
 #: ui/main.qml:100
 #, kde-format
@@ -242,7 +245,7 @@ msgstr ""
 #: ui/main.qml:117
 #, kde-format
 msgid "&Get New…"
-msgstr ""
+msgstr "o kama &jo…"
 
 #: ui/main.qml:161
 #, kde-format

@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Janet Blackquill <uhhadd@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-22 02:06+0000\n"
-"PO-Revision-Date: 2022-07-08 04:45+0000\n"
-"Last-Translator: Weblate Admin <admin@example.com>\n"
-"Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
-"ilo-kde/ilo-pi-lipu-sin-lon-ilo-alasa/tok/>\n"
+"PO-Revision-Date: 2024-01-11 18:41-0500\n"
+"Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
+"Language-Team: C <kde-i18n-doc@kde.org>\n"
 "Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Lokalize 22.11.70\n"
 
 #: recentdocuments.cpp:34
 #, kde-format
@@ -30,3 +28,4 @@ msgstr "o open e poki pi jo lipu ni"
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr ""
+"o alasa e lipu. lipu li kepeken lon tenpo pini lili. nimi ona li sama :q:."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2023-12-02 22:14+0100\n"
+"PO-Revision-Date: 2024-01-12 04:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -130,43 +130,43 @@ msgstr "ახალი მოწყობილობის შეერთე�
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "მოწყობილობის სტატუსი"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "ახლა შესაძლებელია მოწყობილობის უსაფრთხოდ გამოერთება"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "ახლა შესაძლებელია მოწყობილობის უსაფრთხოდ გამოერთება."
 
 #: plugin/ksolidnotify.cpp:198
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "ამ მოწყობილობის მისამაგრებლად საჭირო ავტორიზაცია არ გაგაჩნიათ."
 
 #: plugin/ksolidnotify.cpp:201
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "ამ მოწყობილობის მოხსნის ავტორიზაცია არ გაგაჩნიათ."
 
 #: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "დისკის გამოსაღებლად ავტორიზაცია არ გაგაჩნიათ."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "მოწყობილობის მიმაგრების შეცდომა. ის დაკავებულია."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
+msgstr "აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
@@ -174,27 +174,28 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი: \"%2\"."
 msgstr[1] ""
+"აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი: \"%2\"."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "მოწყობილობის მიმაგრების შეცდომა."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "მოწყობილობების უსაფრთხოდ გამოსაძრობად აქ დააწკაპუნეთ"
+msgstr "მოწყობილობის მოხსნის შეცდომა."
 
 #: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "დისკის გამოღების შეცდომა."

@@ -4,13 +4,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2014, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2023-12-28 11:19+0100\n"
+"PO-Revision-Date: 2024-01-12 21:41+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -132,84 +132,76 @@ msgstr "Felugró ablak új eszköz csatlakoztatásakor"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Eszközállapot"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Az eszköz biztonságosan eltávolítható"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Az eszköz most már biztonságosan eltávolítható."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Kattintson az eszköz csatolásához."
+msgstr "Nincs jogosultsága az eszköz csatolásához."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Az eszköz biztonságosan eltávolítható."
+msgstr "Nincs jogosultsága az eszköz eltávolításához."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Kattintson a lemez kiadásához."
+msgstr "Nincs jogosultsága a lemez kiadásához."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Kattintson az eszköz csatolásához."
+msgstr "Nem lehet csatlakoztatni az eszközt, mivel foglalt."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Kattintson, hogy az eszköz egyén alkalmazásokból is elérhető legyen."
+msgstr "Egy vagy több fájl az eszközről meg van nyitva egy alkalmazásban."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
-"Kattintson, hogy az eszköz egyén alkalmazásokból is elérhető legyen."
+"Egy vagy több fájl az eszközről meg van nyitva a(z) „%2” alkalmazásban."
 msgstr[1] ""
-"Kattintson, hogy az eszköz egyén alkalmazásokból is elérhető legyen."
+"Egy vagy több fájl az eszközről meg van nyitva a következő alkalmazásokban: "
+"%2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Kattintson az eszköz csatolásához."
+msgstr "Nem lehet csatolni az eszközt."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Kattintson az eszköz biztonságos eltávolításához."
+msgstr "Nem lehet leválasztani az eszközt."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Kattintson a lemez kiadásához."
+msgstr "Nem lehet kiadni a lemezt."
 
 #~ msgid "Show:"
 #~ msgstr "Megjelenítés:"

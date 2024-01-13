@@ -8,58 +8,59 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 16:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-01-09 16:57-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
-msgstr ""
+msgstr "o lukin kepeken ilo Filelight"
 
 #: freespacenotifier.cpp:99
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "o lukin kepeken ilo poki"
 
 #: freespacenotifier.cpp:106
 #, kde-format
 msgid "Configure Warning…"
-msgstr ""
+msgstr "o ante lawa e toki kalama"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9
 #, kde-format
 msgid "Minimum free space before user starts being notified."
-msgstr ""
+msgstr "poki pi kepeken ala li lili ni la mi toki kalama."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:15
 #, kde-format
 msgid "Is the free space notification enabled."
-msgstr ""
+msgstr "mi toki ala toki kalama."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
 #: freespacenotifier_prefs_base.ui:17
 #, kde-format
 msgid "Enable low disk space warning"
-msgstr ""
+msgstr "poki pi kepeken ala li lili la mi o toki kalama"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
 #: freespacenotifier_prefs_base.ui:27
 #, kde-format
 msgid "Warn when free space is below:"
-msgstr ""
+msgstr "o kalama lon lili ni:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
 #: freespacenotifier_prefs_base.ui:37
 #, kde-format
 msgid " MiB"
-msgstr ""
+msgstr " MiB"
 
 #: module.cpp:37
 #, kde-format
@@ -67,6 +68,8 @@ msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
+"poki tomo sina li jo pi lili ike e poki pi ken kepeken. poki pi ken kepeken "
+"li %1 MiB taso. (%2%)"
 
 #: module.cpp:45
 #, kde-format
@@ -74,9 +77,11 @@ msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
+"poki open sina li jo pi lili ike e poki pi ken kepeken. poki pi ken kepeken "
+"li %1 MiB taso. (%2%)"
 
 #: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
-msgstr ""
+msgstr "lawa ilo"

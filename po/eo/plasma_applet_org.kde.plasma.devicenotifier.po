@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2023-12-05 21:46+0100\n"
+"PO-Revision-Date: 2024-01-11 07:32+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -132,43 +132,44 @@ msgstr "Montri ŝprucfenestron kiam nova aparato estas enŝtopata."
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Aparata Statuso"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Aparato povas nun esti sekure forigita"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "La aparato povas nun esti sekure forigita."
 
 #: plugin/ksolidnotify.cpp:198
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "Vi ne estas rajtigita kroĉi ĉi tiun aparaton."
 
 #: plugin/ksolidnotify.cpp:201
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "Vi ne estas rajtigita demeti ĉi tiun aparaton."
 
 #: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "Vi ne estas rajtigita elĵeti ĉi tiun diskon."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "Ne eblis kroĉi ĉi tiun aparaton ĉar ĝi estas okupita."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
+"Unu aŭ pluraj dosieroj sur ĉi tiu aparato estas malfermitaj en aplikaĵo."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
@@ -176,27 +177,30 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"Unu aŭ pluraj dosieroj sur ĉi tiu aparato estas malfermitaj en aplikaĵo "
+"\"%2\"."
 msgstr[1] ""
+"Unu aŭ pluraj dosieroj sur ĉi tiu aparato estas malfermitaj en sekvaj "
+"aplikaĵoj: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "Ne eblis kroĉi ci aparaton."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Klaku por demeti tiun ĉi aparaton."
+msgstr "Ne eblis forigi tiun ĉi aparaton."
 
 #: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "Ne eblis elĵeti ĉi tiun diskon."

@@ -1,9 +1,9 @@
 # Translation of plasma_applet_org.kde.plasma.devicenotifier.po to Catalan (Valencian)
-# Copyright (C) 2007-2023 This_file_is_part_of_KDE
+# Copyright (C) 2007-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2018, 2020.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2023-12-02 10:52+0100\n"
+"PO-Revision-Date: 2024-01-11 15:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -135,43 +135,43 @@ msgstr "Mostra un missatge emergent quan es connecte un dispositiu nou"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Estat del dispositiu"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Ara es pot extraure amb seguretat un dispositiu"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Ara es pot extraure amb seguretat este dispositiu."
 
 #: plugin/ksolidnotify.cpp:198
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "No esteu autoritzat a muntar este dispositiu."
 
 #: plugin/ksolidnotify.cpp:201
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "No esteu autoritzat a extraure este dispositiu."
 
 #: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "No esteu autoritzat a expulsar este disc."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "No s'ha pogut muntar este dispositiu atés que està ocupat."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
+msgstr "Un o més fitxers d'este dispositiu estan oberts en una aplicació."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
@@ -179,27 +179,29 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"Un o més fitxers d'este dispositiu estan oberts en l'aplicació «%2»."
 msgstr[1] ""
+"Un o més fitxers d'este dispositiu estan oberts en les aplicacions següents: "
+"%2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "No s'ha pogut muntar este dispositiu."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Cliqueu per a extraure amb seguretat tots els dispositius"
+msgstr "No s'ha pogut extraure este dispositiu."
 
 #: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "No s'ha pogut expulsar este disc."

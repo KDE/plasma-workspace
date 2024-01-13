@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2023, 2024.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2023-12-20 21:39+0300\n"
+"PO-Revision-Date: 2024-01-11 10:29+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -74,7 +74,7 @@ msgstr "Поисковый запрос. Не используется, если
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Доступные модули KRunner, идентификатор модуля"
 
 #: qml/RunCommand.qml:100
 #, kde-format

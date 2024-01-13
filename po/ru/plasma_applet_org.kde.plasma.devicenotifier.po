@@ -7,13 +7,13 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2009, 2011.
 # Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2014, 2015, 2016, 2019.
 # Yuri Efremov <yur.arh@gmail.com>, 2012.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2022-01-20 10:11+0300\n"
+"PO-Revision-Date: 2024-01-11 10:32+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -39,7 +39,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr "Подключение..."
+msgstr "Подключение…"
 
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
@@ -47,11 +47,10 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr "Отключение..."
+msgstr "Отключение…"
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Не отключайте оборудование, выполняется передача файлов…"
 
@@ -140,98 +139,82 @@ msgstr "Открывать всплывающее окно при подключ
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Состояние устройства"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Устройство может быть безопасно извлечено"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Устройство может быть безопасно извлечено."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Подключить устройство"
+msgstr "У вас нет прав на подключение этого устройства."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Теперь можно извлечь носитель без риска потери данных."
+msgstr "У вас нет прав на отключение этого устройства."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Извлечь диск"
+msgstr "У вас нет прав на извлечение диска из этого устройства."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Последнее подключённое устройство: %1"
+msgstr "Не удалось подключить следующее устройство, поскольку оно занято."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid ""
-#| "Cannot eject the disc.\n"
-#| "One or more files on this disc are open within an application."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
-"Невозможно извлечь диск.\n"
-"Один или несколько файлов на диске открыты в приложениях."
+msgstr "Один или несколько файлов на этом носителе открыты в приложениях."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not unmount the device.\n"
-#| "One or more files on this device are open within an application."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
-"Невозможно отключить устройство.\n"
-"Один или несколько файлов на устройстве открыты в приложениях."
+"Один или несколько файлов на этом устройстве открыты в следующих "
+"приложениях: %2."
 msgstr[1] ""
-"Невозможно отключить устройство.\n"
-"Один или несколько файлов на устройстве открыты в приложениях."
+"Один или несколько файлов на этом устройстве открыты в приложении «%2»."
 msgstr[2] ""
-"Невозможно отключить устройство.\n"
-"Один или несколько файлов на устройстве открыты в приложениях."
+"Один или несколько файлов на этом устройстве открыты в следующих "
+"приложениях: %2."
 msgstr[3] ""
-"Невозможно отключить устройство.\n"
-"Один или несколько файлов на устройстве открыты в приложениях."
+"Один или несколько файлов на этом устройстве открыты в следующих "
+"приложениях: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Последнее подключённое устройство: %1"
+msgstr "Не удалось подключить это устройство."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Последнее подключённое устройство: %1"
+msgstr "Не удалось отключить это устройство."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Извлечь диск"
+msgstr "Не удалось извлечь диск."
 
 #~ msgid "Show:"
 #~ msgstr "Показывать:"

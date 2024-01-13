@@ -11,17 +11,17 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2023-12-02 08:30+0100\n"
+"PO-Revision-Date: 2024-01-11 09:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -135,84 +135,79 @@ msgstr "Odpri pojavno okno, ko je priklopljena nova naprava"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Stanje naprave"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Napravo je zdaj mogoče varno odstraniti"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "To napravo je zdaj mogoče varno odstraniti."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Kliknite, da priklopite to napravo."
+msgstr "Niste pooblaščeni za priklop te naprave."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "To napravo lahko trenutno varno odstranite."
+msgstr "Niste pooblaščeni za odstranitev te naprave."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Kliknite, da izvržete ta disk."
+msgstr "Niste pooblaščeni za izvrženje tega diska."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Kliknite, da priklopite to napravo."
+msgstr "Te naprave ni bilo mogoče priklopiti, ker je zasedena."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Kliknite, da omogočite dostop do naprave iz drugih programov."
+msgstr "Ena ali več datotek v tej napravi je odprtih v aplikaciji."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "Kliknite, da omogočite dostop do naprave iz drugih programov."
-msgstr[1] "Kliknite, da omogočite dostop do naprave iz drugih programov."
-msgstr[2] "Kliknite, da omogočite dostop do naprave iz drugih programov."
-msgstr[3] "Kliknite, da omogočite dostop do naprave iz drugih programov."
+msgstr[0] ""
+"Ena ali več datotek v tej napravi je odprtih v naslednji aplikaciji: %2."
+msgstr[1] ""
+"Ena ali več datotek v tej napravi je odprtih v naslednjih aplikacijah: %2."
+msgstr[2] ""
+"Ena ali več datotek v tej napravi je odprtih v naslednjih aplikacijah: %2."
+msgstr[3] ""
+"Ena ali več datotek v tej napravi je odprtih v naslednjih aplikacijah: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Kliknite, da priklopite to napravo."
+msgstr "Te naprave ni bilo mogoče priklopiti."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Kliknite, da varno odstranite to napravo."
+msgstr "Te naprave ni bilo mogoče odstraniti."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Kliknite, da izvržete ta disk."
+msgstr "Tega diska ni bilo mogoče izvreči."
 
 #~ msgid "Show:"
 #~ msgstr "Prikaži:"

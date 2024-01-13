@@ -1,17 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 Janet Blackquill <uhhadd@gmail.com>
+# Janet Blackquill <uhhadd@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2022-07-08 04:45+0000\n"
-"Last-Translator: Weblate Admin <admin@example.com>\n"
-"Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
-"ilo-kde/lawa-pi-sinpin-sitelen/tok/>\n"
+"PO-Revision-Date: 2024-01-11 15:10-0500\n"
+"Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Lokalize 22.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,58 +34,58 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr ""
+msgstr "o lukin e sitelen"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "ilo li pana e sitelen tan poki lipu ni."
 
 #: imagepackage/contents/ui/config.qml:126
 #, kde-format
 msgid "Positioning:"
-msgstr ""
+msgstr "nasin lon:"
 
 #: imagepackage/contents/ui/config.qml:129
 #, kde-format
 msgid "Scaled and Cropped"
-msgstr ""
+msgstr "o suli. o weka selo."
 
 #: imagepackage/contents/ui/config.qml:133
 #, kde-format
 msgid "Scaled"
-msgstr ""
+msgstr "o suli."
 
 #: imagepackage/contents/ui/config.qml:137
 #, kde-format
 msgid "Scaled, Keep Proportions"
-msgstr ""
+msgstr "o suli. o awen e leko."
 
 #: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Centered"
-msgstr ""
+msgstr "o insa."
 
 #: imagepackage/contents/ui/config.qml:145
 #, kde-format
 msgid "Tiled"
-msgstr ""
+msgstr "o mute."
 
 #: imagepackage/contents/ui/config.qml:173
 #, kde-format
 msgid "Background:"
-msgstr ""
+msgstr "monsi:"
 
 #: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Blur"
-msgstr ""
+msgstr "o ko e lukin sitelen"
 
 #: imagepackage/contents/ui/config.qml:183
 #, kde-format
 msgid "Solid color"
-msgstr ""
+msgstr "kule wan"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
@@ -96,29 +95,29 @@ msgstr "o pana e kule sinpin pi wile sina"
 #: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr ""
+msgstr "o lukin e sitelen lon monsi"
 
 #: imagepackage/contents/ui/main.qml:40
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr ""
+msgstr "o lukin e sitelen poka lon monsi"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
 #, kde-format
 msgid "Images"
-msgstr ""
+msgstr "sitelen"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "o pana…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr ""
+msgstr "o kama jo…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -128,18 +127,18 @@ msgstr "o open e poki pi jo lipu ni"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:37
 #, kde-format
 msgid "Restore wallpaper"
-msgstr ""
+msgstr "o sin e sitelen monsi"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:42
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr ""
+msgstr "o weka e sitelen monsi"
 
 #: plasma-apply-wallpaperimage.cpp:29
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
-msgstr ""
+msgstr "ilo ni li ken e ni: sina pana e sitelen lon monsi pi ilo Plasma sina."
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -159,7 +158,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "mi ken ala ante e monsi pi ilo Plasma tan ni:\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
@@ -223,7 +222,7 @@ msgstr ""
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
 msgid "Change every:"
-msgstr ""
+msgstr "o ante lon sike:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:118
 #, kde-format

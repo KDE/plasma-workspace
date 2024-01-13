@@ -8,183 +8,184 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-05 01:35+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-01-11 14:47-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "open"
 
 #: package/contents/config/config.qml:18
 #, kde-format
 msgid "Entries"
-msgstr ""
+msgstr "sitelen"
 
 #: package/contents/ui/ConfigEntries.qml:33
 #, kde-format
 msgid "Application Status"
-msgstr ""
+msgstr "pilin ilo"
 
 #: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Communications"
-msgstr ""
+msgstr "toki ilo"
 
 #: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "System Services"
-msgstr ""
+msgstr "ilo lawa"
 
 #: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Hardware Control"
-msgstr ""
+msgstr "lawa pi ilo sijelo"
 
 #: package/contents/ui/ConfigEntries.qml:42
 #, kde-format
 msgid "Miscellaneous"
-msgstr ""
+msgstr "ijo ante"
 
 #: package/contents/ui/ConfigEntries.qml:74
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
-msgstr ""
+msgstr "sitelen"
 
 #: package/contents/ui/ConfigEntries.qml:80
 #, kde-format
 msgid "Visibility"
-msgstr ""
+msgstr "nasin lukin"
 
 #: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Keyboard Shortcut"
-msgstr ""
+msgstr "nasin nena"
 
 #: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
-msgstr ""
+msgstr "lukin lon wile"
 
 #: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
-msgstr ""
+msgstr "lukin lon ale"
 
 #: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
-msgstr ""
+msgstr "lukin lon ala"
 
 #: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
-msgstr ""
+msgstr "pali ala"
 
 #: package/contents/ui/ConfigEntries.qml:305
 #, kde-format
 msgid "Always show all entries"
-msgstr ""
+msgstr "o lukin e ijo ale"
 
 #: package/contents/ui/ConfigGeneral.qml:24
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "suli sitelen:"
 
 #: package/contents/ui/ConfigGeneral.qml:26
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "lili"
 
 #: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "suli pi sinpin palisa"
 
 #: package/contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "suli pi supa palisa"
 
 #: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr ""
+msgstr "pali lon nasin luka"
 
 #: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr ""
+msgstr "suli kon lon poka sitelen:"
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "lili"
 
 #: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "meso"
 
 #: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "suli"
 
 #: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "o suli e kon lon nasin luka"
 
 #: package/contents/ui/ExpandedRepresentation.qml:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "o tawa"
 
 #: package/contents/ui/ExpandedRepresentation.qml:74
 #, kde-format
 msgid "Status and Notifications"
-msgstr ""
+msgstr "lon en kalama ilo"
 
 #: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
-msgstr ""
+msgstr "pali ante"
 
 #: package/contents/ui/ExpandedRepresentation.qml:234
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "o awen"
 
 #: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
-msgstr ""
+msgstr "o suli e poki pi sitelen lili"
 
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
-msgstr ""
+msgstr "o lukin e sitelen lili ale lon lupa"
 
 #: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
-msgstr ""
+msgstr "o lukin ala e lupa"
 
 #: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
-msgstr ""
+msgstr "o lukin e sitelen lili len"
