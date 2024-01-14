@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2022-11-18 00:54+0200\n"
+"PO-Revision-Date: 2024-01-13 14:18+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: baloosearchrunner.cpp:60
 #, kde-format
@@ -26,63 +26,54 @@ msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
 #: baloosearchrunner.cpp:82
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
-msgstr "Garso įrašas"
+msgstr "Garso įrašai"
 
 #: baloosearchrunner.cpp:83
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "Paveikslas"
+msgstr "Paveikslai"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "Vaizdo įrašas"
+msgstr "Vaizdo įrašai"
 
 #: baloosearchrunner.cpp:85
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
-msgstr "Skaičiuoklė"
+msgstr "Skaičiuoklės"
 
 #: baloosearchrunner.cpp:86
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
-msgstr "Pateiktis"
+msgstr "Pateiktys"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Aplankas"
+msgstr "Aplankai"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "Dokumentas"
+msgstr "Dokumentai"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
-msgstr "Archyvas"
+msgstr "Archyvai"
 
 #: baloosearchrunner.cpp:90
-#, fuzzy, kde-format
-#| msgid "Text"
+#, kde-format
 msgid "Texts"
-msgstr "Tekstas"
+msgstr "Tekstai"
 
 #: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Failai"
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Ieškoti failuose, el. laiškuose ir kontaktuose"

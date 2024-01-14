@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2022-11-18 02:02+0200\n"
+"PO-Revision-Date: 2024-01-13 15:09+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -113,16 +113,14 @@ msgid "Custom times"
 msgstr "Tinkinti laikai"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "Visada įjungta naktinė spalva"
+msgstr "Visada įjungta naktinė šviesa"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Dieninės spalvos temperatūra:"
+msgstr "Dieninės šviesos temperatūra:"
 
 #: ui/main.qml:226 ui/main.qml:285
 #, kde-format
@@ -131,9 +129,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Šalta (jokio filtro)"
@@ -145,17 +141,15 @@ msgid "Warm"
 msgstr "Šilta"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Naktinės spalvos temperatūra:"
+msgstr "Naktinės šviesos temperatūra:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Aptikti vietą"
+msgstr "Dabartinė vieta:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -176,10 +170,9 @@ msgstr ""
 "Service)</link>."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Pradėti naktinę spalvą ties:"
+msgstr "Pradėti naktinę šviesą ties:"
 
 #: ui/main.qml:362 ui/main.qml:385
 #, kde-format
@@ -187,10 +180,9 @@ msgid "Input format: HH:MM"
 msgstr "Įvesties formatas: VV:MM"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Pradėti dieninę spalvą ties:"
+msgstr "Pradėti dieninę šviesą ties:"
 
 #: ui/main.qml:394
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2020-04-29 13:29+0300\n"
+"PO-Revision-Date: 2024-01-13 16:06+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "\"%1\" atsisakė atsijungimo"
+msgstr "„%1“ atsisakė atsijungimo"
 
 #: main.cpp:67
 #, kde-format
@@ -41,6 +41,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Nėra rašymo prieigos prie $HOME katalogo (%1). Jeigu tai yra padaryta tyčia, "
+"nustatykite savo aplinkoje <envar>KDE_HOME_READONLY=1</envar>."
 
 #: main.cpp:82
 #, kde-format
@@ -143,7 +145,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[nežinoma]"
 
 #: server.cpp:836
 #, kde-kuit-format
@@ -153,6 +155,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Nepavyko tvarkyti tam tikrų programų, nes yra išeikvoti sistemos seanso "
+"valdymo ištekliai. Štai trys didžiausi seanso išteklių vartotojai:\n"
+"%1"
 
 #: server.cpp:1108
 #, kde-kuit-format
@@ -162,6 +167,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Nepavyko atkurti <application>%1</application> vykdomojo, nes jis sugadintas "
+"ir išeikvojo sistemos seanso atkūrimo išteklius. Prašome pranešti apie tai "
+"programos kūrėjams."
 
 #~ msgid "Session Management"
 #~ msgstr "Seanso valdymas"

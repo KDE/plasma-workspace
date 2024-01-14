@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2022-11-18 20:58+0200\n"
+"PO-Revision-Date: 2024-01-13 14:32+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: autostartmodel.cpp:376
 #, kde-format
@@ -42,21 +42,19 @@ msgid "\"%1\" is not readable."
 msgstr "„%1“ yra neskaitomas."
 
 #: ui/entry.qml:52
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "Pavadinimas"
+msgstr "Pavadinimas:"
 
 #: ui/entry.qml:57
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "Būsena"
+msgstr "Būsena:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -64,31 +62,30 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "Paskutinį kartą aktyvuota:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "Stabdyti"
 
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr "Paleidimo metu"
+msgstr "Paleisti"
 
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "Nepavyko įkelti žurnalų. Pabandykite įkelti iš naujo."
 
 #: ui/entry.qml:109
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "Įkelti iš naujo"
 
 #: ui/main.qml:33
 #, kde-format
@@ -109,29 +106,25 @@ msgstr ""
 "vykdomasis."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Pridėti…"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Pridėti programą…"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Pridėti prisijungimo scenarijų…"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Pridėti atsijungimo scenarijų…"
@@ -142,27 +135,27 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"%1 nebuvo kol kas automatiškai paleista. Išsamesnė informacija bus prieinama "
+"po to, kai paleisite sistemą iš naujo."
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "Kol kas nebuvo automatiškai paleista"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "Savybės"
+msgstr "Rodyti savybes"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "Šalinti"
+msgstr "Šalinti įrašą"
 
 #: ui/main.qml:167
 #, kde-format
@@ -190,13 +183,11 @@ msgid "No user-specified autostart items"
 msgstr "Nėra jokių naudotojo apibrėžtų automatinio paleidimo elementų"
 
 #: ui/main.qml:185
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Click the <interface>Add…</interface> button below to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
-"Norėdami pridėti, žemiau spustelėkite mygtuką <interface>Pridėti…</interface>"
+"Norėdami juos pridėti, spustelėkite mygtuką <interface>Pridėti…</interface>"
 
 #: ui/main.qml:200
 #, kde-format
@@ -212,42 +203,41 @@ msgstr "Pasirinkti atsijungimo scenarijų"
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "Vykdoma"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "Nevykdoma"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "Paleidimo metu"
+msgstr "Paleidžiama"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "Stabdoma"
 
 #: unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "Patyrė nesėkmę"
 
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "Klaida gaunant GetAll iškvietos %1 atsaką"
 
 #: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "Nepavyko atverti žurnalo"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

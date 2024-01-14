@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-03 01:39+0000\n"
-"PO-Revision-Date: 2020-12-16 20:10+0200\n"
+"PO-Revision-Date: 2024-01-13 14:17+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: calculatorrunner.cpp:28
 #, kde-format
@@ -36,7 +36,7 @@ msgstr ""
 #: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "Įvesti bendrinę matematinę funkciją"
 
 #: calculatorrunner.cpp:140
 #, kde-format
