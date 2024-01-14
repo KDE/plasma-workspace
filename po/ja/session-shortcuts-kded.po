@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
-"PO-Revision-Date: 2023-07-18 21:31-0700\n"
+"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-01-03 23:35-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -14,34 +14,37 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: devicenotifications.cpp:275
+#: main.cpp:32
 #, kde-format
-msgid "%1 has been plugged in."
+msgid "Session Management"
 msgstr ""
 
-#: devicenotifications.cpp:275
+#: main.cpp:38
 #, kde-format
-msgid "A USB device has been plugged in."
+msgid "Log Out"
 msgstr ""
 
-#: devicenotifications.cpp:278
+#: main.cpp:44
 #, kde-format
-msgctxt "@title:notifications"
-msgid "USB Device Detected"
+msgid "Shut Down"
 msgstr ""
 
-#: devicenotifications.cpp:295
+#: main.cpp:50
 #, kde-format
-msgid "%1 has been unplugged."
+msgid "Reboot"
 msgstr ""
 
-#: devicenotifications.cpp:295
+#: main.cpp:58
 #, kde-format
-msgid "A USB device has been unplugged."
+msgid "Log Out Without Confirmation"
 msgstr ""
 
-#: devicenotifications.cpp:298
+#: main.cpp:64
 #, kde-format
-msgctxt "@title:notifications"
-msgid "USB Device Removed"
+msgid "Shut Down Without Confirmation"
+msgstr ""
+
+#: main.cpp:70
+#, kde-format
+msgid "Reboot Without Confirmation"
 msgstr ""
