@@ -489,25 +489,6 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         return;
     }
 
-    // Handle transient.
-    if (PlasmaWindow *leader = window->parentWindow.data()) {
-        transients.insert(window, leader);
-
-        // Update demands attention state for leader.
-        if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
-            transientsDemandingAttention.insert(leader, window);
-            dataChanged(leader, QVector<int>{IsDemandingAttention});
-        }
-    } else {
-        const int count = windows.size();
-
-        q->beginInsertRows(QModelIndex(), count, count);
-
-        windows.emplace_back(window);
-
-        q->endInsertRows();
-    }
-
     auto removeWindow = [window, this] {
         auto it = findWindow(window);
         if (it != windows.end()) {
@@ -559,6 +540,16 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window,
                           QList<int>{Qt::DecorationRole, AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance});
     });
+
+    if (window->windowState & PlasmaWindow::state::state_active) {
+        PlasmaWindow *effectiveActive = window;
+        while (effectiveActive->parentWindow) {
+            effectiveActive = effectiveActive->parentWindow;
+        }
+
+        lastActivated[effectiveActive] = QTime::currentTime();
+        activeWindow = effectiveActive;
+    }
 
     QObject::connect(window, &PlasmaWindow::activeChanged, q, [window, this] {
         const bool active = window->windowState & PlasmaWindow::state::state_active;
@@ -725,6 +716,25 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     QObject::connect(window, &PlasmaWindow::activitiesChanged, q, [window, this] {
         this->dataChanged(window, Activities);
     });
+
+    // Handle transient.
+    if (PlasmaWindow *leader = window->parentWindow.data()) {
+        transients.insert(window, leader);
+
+        // Update demands attention state for leader.
+        if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
+            transientsDemandingAttention.insert(leader, window);
+            dataChanged(leader, QVector<int>{IsDemandingAttention});
+        }
+    } else {
+        const int count = windows.size();
+
+        q->beginInsertRows(QModelIndex(), count, count);
+
+        windows.emplace_back(window);
+
+        q->endInsertRows();
+    }
 }
 
 const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
