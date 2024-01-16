@@ -139,7 +139,8 @@ ColumnLayout {
     RowLayout {
         id: progressRow
         Layout.fillWidth: true
-        spacing: Kirigami.Units.smallSpacing
+        // We want largeSpacing between the progress bar and the label
+        spacing: Kirigami.Units.largeSpacing
 
         PlasmaComponents3.ProgressBar {
             id: progressBar
@@ -163,7 +164,6 @@ ColumnLayout {
             // BUG: 451807
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", jobItem.percentage || "0")
             textFormat: Text.PlainText
-            Layout.leftMargin: Kirigami.Units.smallSpacing
         }
     }
 
