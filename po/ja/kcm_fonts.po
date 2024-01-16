@@ -1,4 +1,5 @@
 # Translation of kcmfonts into Japanese.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2004.
@@ -13,78 +14,71 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2021-09-26 21:31+0900\n"
-"Last-Translator: Ryunosuke Toda <toda.ryunosuke@gmail.com>\n"
+"PO-Revision-Date: 2024-01-14 22:41+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force font DPI:"
+#, kde-format
 msgid "Force font DPI Wayland"
-msgstr "フォントの DPI を指定:"
+msgstr "Wayland でフォントの DPI を指定"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force font DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "フォントの DPI を指定:"
+msgstr "X11 でフォントの DPI を指定"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgid "General font"
-msgstr "一般:"
+msgstr "一般フォント"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Fixed width:"
+#, kde-format
 msgid "Fixed width font"
-msgstr "等幅:"
+msgstr "等幅フォント"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small:"
+#, kde-format
 msgid "Small font"
-msgstr "最小:"
+msgstr "最小フォント"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgid "Toolbar:"
+#, kde-format
 msgid "Tool bar font"
-msgstr "ツールバー:"
+msgstr "ツールバーフォント"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "メニューフォント"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Window title:"
+#, kde-format
 msgid "Window title font"
-msgstr "ウィンドウタイトル:"
+msgstr "ウィンドウタイトルフォント"
 
 #: kxftconfig.cpp:458
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr ""
+msgstr "ベンダーのデフォルト"
 
 #: kxftconfig.cpp:460
 #, kde-format
@@ -116,7 +110,7 @@ msgstr "垂直 BGR"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr ""
+msgstr "ベンダーのデフォルト"
 
 #: kxftconfig.cpp:498
 #, kde-format
@@ -145,25 +139,21 @@ msgstr "完全に"
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you configure the system fonts."
-msgstr ""
+msgstr "このモジュールでシステムフォントを設定できます。"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "すべてのフォントを調整(&A)…"
+msgstr "グローバルスケールを調整…"
 
 #: package/contents/ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
-#| "started applications.</p>"
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"<p>アンチエイリアスや DPI などの一部の設定変更は、これ以降に起動されるアプリ"
-"ケーションにのみ反映されます。</p>"
+"アンチエイリアスや DPI などの一部の設定変更は、これ以降に起動されるアプリケー"
+"ションにのみ反映されます。"
 
 #: package/contents/ui/main.qml:51
 #, kde-format
@@ -171,6 +161,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"非常に大きいフォントを設定すると、表示が崩れる可能性があります。代わりに、ス"
+"クリーンのグローバルスケールを変更することを検討してください。"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -178,6 +170,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"小数付きのフォントサイズを設定すると、いくつかのアプリケーションでレイアウト"
+"が崩れる可能性があります。整数のフォントサイズの使用を検討してください。"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -185,6 +179,8 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"ユーザインターフェースの大きさを変更する方法としては、グローバルスケール機能"
+"の使用が推奨されます。"
 
 #: package/contents/ui/main.qml:106
 #, kde-format
@@ -343,4 +339,4 @@ msgstr ""
 #: package/contents/ui/main.qml:428
 #, kde-format
 msgid "Select Font"
-msgstr ""
+msgstr "フォントを選択"
