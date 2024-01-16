@@ -165,42 +165,40 @@ ColumnLayout {
             textFormat: Text.PlainText
             Layout.leftMargin: Kirigami.Units.smallSpacing
         }
+    }
 
-        RowLayout {
-            spacing: 0
+    RowLayout {
+        id: jobActionsRow
+        Layout.fillWidth: true
 
-            PlasmaComponents3.ToolButton {
-                id: suspendButton
-                icon.name: "media-playback-pause"
-                onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
-                                                                                                    : jobItem.suspendJobClicked()
+        spacing: Kirigami.Units.smallSpacing
 
-                PlasmaComponents3.ToolTip {
-                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
-                }
-            }
+        PlasmaComponents3.Button {
+            id: expandButton
 
-            PlasmaComponents3.ToolButton {
-                id: killButton
-                icon.name: "media-playback-stop"
-                onClicked: jobItem.killJobClicked()
+            icon.name: checked ? "collapse-symbolic" : "expand-symbolic"
+            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Hides/expands item details", "Details")
+            checkable: true
+            enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
+        }
 
-                PlasmaComponents3.ToolTip {
-                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
-                }
-            }
+        Item { Layout.fillWidth: true }
 
-            PlasmaComponents3.ToolButton {
-                id: expandButton
-                icon.name: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
-                checkable: true
-                enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
+        PlasmaComponents3.Button {
+            id: suspendButton
 
-                PlasmaComponents3.ToolTip {
-                    text: expandButton.checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
-                                  : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
-                }
-            }
+            icon.name: "media-playback-pause"
+            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
+            onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
+                                                                                                : jobItem.suspendJobClicked()
+        }
+
+        PlasmaComponents3.Button {
+            id: killButton
+
+            icon.name: "media-playback-stop"
+            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
+            onClicked: jobItem.killJobClicked()
         }
     }
 
@@ -216,7 +214,7 @@ ColumnLayout {
     }
 
     Row {
-        id: jobActionsRow
+        id: fileActionsRow
         Layout.fillWidth: true
         spacing: Kirigami.Units.smallSpacing
         // We want the actions to be right-aligned but Row also reverses
@@ -256,7 +254,7 @@ ColumnLayout {
 
         PlasmaComponents3.Button {
             id: openButton
-            width: Math.min(implicitWidth, jobItem.width - otherFileActionsButton.width - jobActionsRow.spacing)
+            width: Math.min(implicitWidth, jobItem.width - otherFileActionsButton.width - fileActionsRow.spacing)
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
             onClicked: jobItem.openUrl(jobItem.url)
@@ -312,6 +310,10 @@ ColumnLayout {
             when: jobItem.jobState === NotificationManager.Notifications.JobStateStopped
             PropertyChanges {
                 target: progressRow
+                visible: false
+            }
+            PropertyChanges {
+                target: jobActionsRow
                 visible: false
             }
             PropertyChanges {
