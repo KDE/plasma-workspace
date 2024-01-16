@@ -1,35 +1,37 @@
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-07-30 09:42-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-01-14 12:21+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
-msgstr ""
+msgstr "FreeDesktop"
 
 #: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr ""
+msgstr "freedesktop.org のフォールバックサウンドテーマ"
 
 #: ui/main.qml:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "通知音を有効化"
 
 #: ui/main.qml:90
 #, kde-format
@@ -38,8 +40,8 @@ msgctxt ""
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "元のテーマ: %2"
+msgstr[1] "元のテーマ: %2"
 
 #: ui/main.qml:101
 #, kde-format
@@ -47,21 +49,21 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr ""
+msgstr "試聴:"
 
 #: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr ""
+msgstr "サウンド \"%1\" を試聴"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "テーマ \"%1\" のデモサウンドを試聴"
 
 #: ui/main.qml:162
 #, kde-format
 msgid "Failed to preview sound: %1"
-msgstr ""
+msgstr "サウンドの試聴に失敗しました: %1"
