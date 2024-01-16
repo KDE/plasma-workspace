@@ -197,8 +197,7 @@ void DesktopView::resetAccentColor()
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
 bool DesktopView::showPreviewBanner() const
 {
-    static const bool shouldShowPreviewBanner =
-        !KConfigGroup(KSharedConfig::openConfig("kdeglobals"), u"General"_s).readEntry("HideDesktopPreviewBanner", false);
+    static const bool shouldShowPreviewBanner = !KConfigGroup(KSharedConfig::openConfig(), u"General"_s).readEntry("HideDesktopPreviewBanner", false);
     return shouldShowPreviewBanner;
 }
 
