@@ -668,9 +668,6 @@ QRect PanelView::geometryByDistance(int distance) const
     default:
         r.moveBottom(screenGeometry.bottom() - distance - (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
     }
-
-    r = r.intersected(screenGeometry);
-
     return r;
 }
 
