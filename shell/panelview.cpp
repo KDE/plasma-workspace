@@ -1213,8 +1213,6 @@ void PanelView::updateMask()
         setMask(QRegion());
     } else {
         QRegion mask;
-        QRect screenPanelRect = geometryByDistance(m_distance).intersected(screen()->geometry());
-        screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
 
         QQuickItem *rootObject = this->rootObject();
         if (rootObject) {
@@ -1224,7 +1222,6 @@ void PanelView::updateMask()
                 mask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
             }
         }
-        mask = mask.intersected(screenPanelRect);
         KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
         KWindowEffects::enableBackgroundContrast(this,
                                                  m_theme.backgroundContrastEnabled(),
@@ -1234,6 +1231,8 @@ void PanelView::updateMask()
                                                  mask);
 
         if (KWindowSystem::isPlatformX11() && KX11Extras::compositingActive()) {
+            QRect screenPanelRect = geometryByDistance(m_distance).intersected(screen()->geometry());
+            screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
             setMask(screenPanelRect);
         } else {
             setMask(mask);
