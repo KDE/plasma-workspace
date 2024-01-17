@@ -836,7 +836,7 @@ msgstr[1] ""
 #: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
 msgid "Move Fonts"
-msgstr "Mou cap les fonts"
+msgstr "Mou les fonts"
 
 #: kcmfontinst/KCmFontInst.cpp:683
 #, kde-format
@@ -1132,7 +1132,7 @@ msgstr "No es poden copiar les fonts"
 #: kio/KioFonts.cpp:436
 #, kde-format
 msgid "Cannot move fonts"
-msgstr "No es poden moure cap les fonts"
+msgstr "No es poden moure les fonts"
 
 #: kio/KioFonts.cpp:447
 #, kde-format
