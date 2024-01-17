@@ -1233,8 +1233,8 @@ void PanelView::updateMask()
                                                  m_theme.backgroundSaturation(),
                                                  mask);
 
-        if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
-            setMask(QRegion(screenPanelRect));
+        if (KWindowSystem::isPlatformX11() && KX11Extras::compositingActive()) {
+            setMask(screenPanelRect);
         } else {
             setMask(mask);
         }
