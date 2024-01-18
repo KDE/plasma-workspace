@@ -67,8 +67,6 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("_context")
                       << QStringLiteral("_open_terminal")
                       << QStringLiteral("_run_command")
-                      << QStringLiteral("add widgets")
-                      << QStringLiteral("_add panel")
                       << QStringLiteral("manage activities")
                       << QStringLiteral("remove")
                       << QStringLiteral("edit mode")
@@ -77,6 +75,8 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("_logout")
                       << QStringLiteral("_sep3")
                       << QStringLiteral("_wallpaper");
+        disabled.insert(QStringLiteral("add widgets"));
+        disabled.insert(QStringLiteral("add panel"));
         disabled.insert(QStringLiteral("configure shortcuts"));
         disabled.insert(QStringLiteral("_open_terminal"));
         disabled.insert(QStringLiteral("_run_command"));
