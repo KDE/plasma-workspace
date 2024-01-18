@@ -141,6 +141,8 @@ public:
 
     Q_INVOKABLE QVariantMap wallpaper(uint screenNum = 0);
 
+    Q_INVOKABLE void showAddPanelContextMenu(const QPoint pos);
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
