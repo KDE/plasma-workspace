@@ -57,10 +57,17 @@ KCM.GridViewKCM {
             text: i18n("Configure Icons and Toolbars")
             icon.name: "configure-toolbars" // proper icon?
             checkable: true
-            checked: Boolean(effectSettingsPopupLoader.item?.opened)
+            checked: effectSettingsPopupLoader.popupOpen
             onTriggered: {
-                effectSettingsPopupLoader.active = true;
-                effectSettingsPopupLoader.item.open();
+                if (effectSettingsPopupLoader.popupOpen) {
+                    effectSettingsPopupLoader.item.close()
+                    // We don't set the Loader to inactive here since that would
+                    // happen before the popup has closed; instead we use a
+                    // Connections object in the Loader itself to handle it
+                } else {
+                    effectSettingsPopupLoader.active = true;
+                    effectSettingsPopupLoader.item.open();
+                }
             }
         },
         Kirigami.Action {
@@ -114,9 +121,20 @@ KCM.GridViewKCM {
 
     Loader {
         id: effectSettingsPopupLoader
+
+        readonly property bool popupOpen: Boolean(effectSettingsPopupLoader.item?.opened)
+
         active: false
         sourceComponent: EffectSettingsPopup {
             parent: root
+        }
+
+        Connections {
+            enabled: effectSettingsPopupLoader.active
+            target: effectSettingsPopupLoader.item
+            function onClosed() {
+                effectSettingsPopupLoader.active = false;
+            }
         }
     }
 }
