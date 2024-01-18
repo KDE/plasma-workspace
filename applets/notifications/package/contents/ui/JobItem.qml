@@ -93,7 +93,7 @@ ColumnLayout {
 
             Drag.dragType: Drag.Automatic
             Drag.mimeData: {
-                "text/uri-list": jobItem.url ?? ""
+                "text/uri-list": [jobItem.url ?? ""]
             }
 
             Behavior on opacity {

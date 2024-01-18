@@ -115,7 +115,7 @@ Item {
 
             Drag.dragType: Drag.Automatic
             Drag.mimeData: {
-                "text/uri-list": thumbnailer.url,
+                "text/uri-list": [thumbnailer.url],
             }
         }
 
