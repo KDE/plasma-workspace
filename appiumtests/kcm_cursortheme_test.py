@@ -109,6 +109,10 @@ class KCMCursorThemeTest(unittest.TestCase):
         second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
         self.driver.find_image_occurrence(first_image, second_image)
 
+    def test_2_launch_feedback_dialog(self) -> None:
+        self.driver.find_element(AppiumBy.NAME, "&Configure Launch Feedback…").click()
+        self.driver.find_element(AppiumBy.NAME, "Blinking")
+
 
 if __name__ == '__main__':
     unittest.main()

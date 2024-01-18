@@ -19,6 +19,8 @@ import org.kde.private.kcm_cursortheme 1.0
 KCM.GridViewKCM {
     id: root
 
+    property LaunchFeedbackDialog launchFeedbackDialog: null as LaunchFeedbackDialog
+
     view.model: kcm.cursorsModel
     view.delegate: Delegate {}
     view.currentIndex: kcm.cursorThemeIndex(kcm.cursorThemeSettings.cursorTheme);
@@ -100,11 +102,14 @@ KCM.GridViewKCM {
             text: i18nc("@action:button", "&Configure Launch Feedback…")
             icon.name: "preferences-desktop-launch-feedback"
             onTriggered: {
-                const component = Qt.createComponent("LaunchFeedbackDialog.qml");
-                component.incubateObject(root, {
-                    "parent": root,
-                });
-                component.destroy();
+                if (root.launchFeedbackDialog === null) {
+                    const component = Qt.createComponent("LaunchFeedbackDialog.qml");
+                    root.launchFeedbackDialog = component.createObject(root, {
+                        "parent": root,
+                    });
+                    component.destroy();
+                }
+                root.launchFeedbackDialog.open();
             }
         },
         Kirigami.Action {
