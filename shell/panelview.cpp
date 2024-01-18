@@ -1321,12 +1321,16 @@ void PanelView::updateExclusiveZone()
         }
     };
 
-    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == 0) {
+    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == QSize()) {
         // We set the exclusive zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode;
         // this won't be updated anymore as long as we are within
         // the panel configuration.
-        m_layerWindow->setExclusiveZone(thickness() - exclusiveMargin());
+        if (containment()->formFactor() == Plasma::Types::Vertical) {
+            m_layerWindow->setExclusiveZone(QSize(thickness() - exclusiveMargin(), 0));
+        } else {
+            m_layerWindow->setExclusiveZone(QSize(0, thickness() - exclusiveMargin()));
+        }
     }
     if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
         return;
@@ -1335,12 +1339,16 @@ void PanelView::updateExclusiveZone()
     if (KWindowSystem::isPlatformWayland()) {
         switch (m_visibilityMode) {
         case NormalPanel:
-            m_layerWindow->setExclusiveZone(thickness() - exclusiveMargin());
+            if (containment()->formFactor() == Plasma::Types::Vertical) {
+                m_layerWindow->setExclusiveZone(QSize(thickness() - exclusiveMargin(), 0));
+            } else {
+                m_layerWindow->setExclusiveZone(QSize(0, thickness() - exclusiveMargin()));
+            }
             break;
         case AutoHide:
         case DodgeWindows:
         case WindowsGoBelow:
-            m_layerWindow->setExclusiveZone(0);
+            m_layerWindow->setExclusiveZone(QSize());
             break;
         }
         requestUpdate();

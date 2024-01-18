@@ -68,7 +68,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     if (KWindowSystem::isPlatformWayland() && !m_windowed) {
         if (auto w = LayerShellQt::Window::get(this)) {
             w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
-            w->setExclusiveZone(-1);
+            w->setExclusiveZone(QSize(-1, -1));
             w->setLayer(LayerShellQt::Window::LayerOverlay);
         }
     }
