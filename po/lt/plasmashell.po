@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:46+0000\n"
+"POT-Creation-Date: 2024-01-19 00:38+0000\n"
 "PO-Revision-Date: 2024-01-13 13:24+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -310,7 +310,7 @@ msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:2083
+#: shellcorona.cpp:2089
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

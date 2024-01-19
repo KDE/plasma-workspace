@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:46+0000\n"
+"POT-Creation-Date: 2024-01-19 00:38+0000\n"
 "PO-Revision-Date: 2023-11-11 16:24+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -306,7 +306,7 @@ msgstr "Преместване на фокуса на клавиатурата �
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:2083
+#: shellcorona.cpp:2089
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -343,7 +343,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgctxt "@label %1 version string"
-#~ msgid "Plasma %1 Development Build"
-#~ msgstr "Plasma %1 Development Build"

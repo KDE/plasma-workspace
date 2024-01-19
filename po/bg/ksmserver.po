@@ -171,24 +171,3 @@ msgstr ""
 "Не е възможно да се възстанови приложението <application>%1</application>, "
 "защото е повредено и е изчерпало ресурсите за възстановяване на сесиите на "
 "системата. Моля, докладвайте за това на разработчиците на приложението."
-
-#~ msgid "Session Management"
-#~ msgstr "Управление на сесиите"
-
-#~ msgid "Log Out"
-#~ msgstr "Изход"
-
-#~ msgid "Shut Down"
-#~ msgstr "Изключване"
-
-#~ msgid "Reboot"
-#~ msgstr "Рестартиране"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Изход без потвърждение"
-
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Изключване без потвърждение"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Рестартиране без потвърждение"

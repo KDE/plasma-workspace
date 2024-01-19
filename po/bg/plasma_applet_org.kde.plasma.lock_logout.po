@@ -120,9 +120,3 @@ msgstr "Приспиване (в паметта)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Хибернация (записване на диск)"
-
-#~ msgid "Logout"
-#~ msgstr "Излизане от сесия"
-
-#~ msgid "Reboot"
-#~ msgstr "Рестартиране"

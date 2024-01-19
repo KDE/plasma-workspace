@@ -144,6 +144,3 @@ msgstr "Стоп"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Изход"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Автоматично избиране на медийно устройство"

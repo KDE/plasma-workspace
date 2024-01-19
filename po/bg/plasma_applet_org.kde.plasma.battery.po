@@ -378,25 +378,3 @@ msgstr ""
 "да инсталирате пакета <command>power-profiles-daemon</command>, като "
 "използвате мениджъра на пакети  на вашата дистрибуция и рестартирайте "
 "системата."
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "Батерия и Яркост на екрана"
-
-#~ msgid "Brightness"
-#~ msgstr "Яркост"
-
-#~ msgid "Battery"
-#~ msgstr "Батерия"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "Скролиране за регулиране на яркостта на екрана"
-
-#~ msgid "Display Brightness"
-#~ msgstr "Яркост на екрана"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "Яркост на клавиатурата"

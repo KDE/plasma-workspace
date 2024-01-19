@@ -206,7 +206,3 @@ msgstr "Грешка: Времето за преход се припокрива
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Позициониране..."
-
-#~ msgctxt "Night colour blue-ish"
-#~ msgid "Cool"
-#~ msgstr "Студено"

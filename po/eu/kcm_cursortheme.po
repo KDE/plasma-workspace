@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-28 01:34+0000\n"
+"POT-Creation-Date: 2024-01-19 00:38+0000\n"
 "PO-Revision-Date: 2023-08-03 11:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -182,94 +182,94 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr "Abiarazte lekukotza"
 
-#: ui/LaunchFeedbackDialog.qml:27
+#: ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr "Konfiguratu, aplikazio bat abiarazi bitartean jotzen den animazioa."
 
-#: ui/LaunchFeedbackDialog.qml:48
+#: ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "Kurtsorearen lekukotza:"
 
-#: ui/LaunchFeedbackDialog.qml:49
+#: ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: ui/LaunchFeedbackDialog.qml:58
+#: ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "Estatikoa"
 
-#: ui/LaunchFeedbackDialog.qml:67
+#: ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "Keinuka"
 
-#: ui/LaunchFeedbackDialog.qml:76
+#: ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "Punpaka"
 
-#: ui/LaunchFeedbackDialog.qml:91
+#: ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "Ataza kudeatzailearen lekukotza:"
 
-#: ui/LaunchFeedbackDialog.qml:93
+#: ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "Gaitu animazioa"
 
-#: ui/LaunchFeedbackDialog.qml:112
+#: ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "Igarotakoan gelditu animazioak:"
 
-#: ui/LaunchFeedbackDialog.qml:126 ui/LaunchFeedbackDialog.qml:138
+#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "segundo %1"
 msgstr[1] "%1 segundo"
 
-#: ui/main.qml:58 ui/main.qml:92
+#: ui/main.qml:60 ui/main.qml:94
 #, kde-format
 msgid "Size: %1"
 msgstr "Neurria: %1"
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfiguratu abiarazte lekukotza..."
 
-#: ui/main.qml:111
+#: ui/main.qml:116
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalatu fitxategitik..."
 
-#: ui/main.qml:117
+#: ui/main.qml:122
 #, kde-format
 msgid "&Get New…"
 msgstr "Es&kuratu ... berria"
 
-#: ui/main.qml:161
+#: ui/main.qml:166
 #, kde-format
 msgid "Open Theme"
 msgstr "Ireki gaia"
 
-#: ui/main.qml:163
+#: ui/main.qml:168
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kurtsore-gai fitxategiak (*.tar.gz *.tar.bz2)"
