@@ -1219,6 +1219,9 @@ void PanelView::updateMask()
                 mask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
             }
         }
+        // We use mask for graphical effect which tightly  covers the panel
+        // For the input region (QWindow::mask) screenPanelRect includes area around the floating
+        // panel in order to respect Fitt's law
         KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
         KWindowEffects::enableBackgroundContrast(this,
                                                  m_theme.backgroundContrastEnabled(),
@@ -1227,7 +1230,7 @@ void PanelView::updateMask()
                                                  m_theme.backgroundSaturation(),
                                                  mask);
 
-        if (KWindowSystem::isPlatformX11() && KX11Extras::compositingActive()) {
+        if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
             QRect screenPanelRect = geometryByDistance(m_distance).intersected(screen()->geometry());
             screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
             setMask(screenPanelRect);
