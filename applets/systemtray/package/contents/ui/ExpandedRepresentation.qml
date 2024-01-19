@@ -19,10 +19,7 @@ Item {
     id: popup
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 24
-    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
-
     Layout.minimumHeight: Kirigami.Units.gridUnit * 24
-    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
     property alias hiddenLayout: hiddenItemsView.layout
     property alias plasmoidContainer: container
