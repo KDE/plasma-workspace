@@ -12,7 +12,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kscreenlocker 1.0 as ScreenLocker
 
@@ -92,17 +92,16 @@ Item {
         id: sessionManagement
     }
 
+    KeyboardIndicator.KeyState {
+        id: capsLockState
+        key: Qt.Key_CapsLock
+    }
+
     Connections {
         target: sessionManagement
         function onAboutToSuspend() {
             root.clearPassword();
         }
-    }
-
-    P5Support.DataSource {
-        id: keystateSource
-        engine: "keystate"
-        connectedSources: "Caps Lock"
     }
 
     RejectPasswordAnimation {
@@ -273,7 +272,7 @@ Item {
 
                 notificationMessage: {
                     const parts = [];
-                    if (keystateSource.data["Caps Lock"]["Locked"]) {
+                    if (capsLockState.locked) {
                         parts.push(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on"));
                     }
                     if (root.notification) {

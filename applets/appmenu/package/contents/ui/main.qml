@@ -14,7 +14,7 @@ import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
 import org.kde.kirigami 2.5 as Kirigami
@@ -100,13 +100,6 @@ PlasmoidItem {
             }
         }
 
-        // So we can show mnemonic underlines only while Alt is pressed
-        P5Support.DataSource {
-            id: keystateSource
-            engine: "keystate"
-            connectedSources: ["Alt"]
-        }
-
         PlasmaComponents3.ToolButton {
             id: noMenuPlaceholder
             visible: buttonRepeater.count === 0
@@ -126,13 +119,19 @@ PlasmoidItem {
                 Layout.fillHeight: !root.vertical
                 text: activeMenu
                 // TODO: Alt and other modifiers might be unavailable on Wayland
-                Kirigami.MnemonicData.active: keystateSource.data.Alt !== undefined && keystateSource.data.Alt.Pressed
+                Kirigami.MnemonicData.active: altState.pressed
 
                 down: pressed || Plasmoid.currentIndex === index
                 visible: text !== "" && model.activeActions.visible
 
                 menuIsOpen: Plasmoid.currentIndex !== -1
                 onActivated: Plasmoid.trigger(this, index)
+
+                // So we can show mnemonic underlines only while Alt is pressed
+                KeyboardIndicator.KeyState {
+                    id: altState
+                    key: Qt.Key_Alt
+                }
             }
         }
         Item {
