@@ -63,7 +63,7 @@ Q_SIGNALS:
     void lastDescriptionChanged();
     void lastIconChanged();
 
-    void blockingAppsReady(const QStringList &apps);
+    void blockingAppsReady(const QMap<unsigned, QString> &apps);
 
 private Q_SLOTS:
     void onDeviceAdded(const QString &udi);

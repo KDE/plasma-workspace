@@ -31,6 +31,8 @@
 KSolidNotify::KSolidNotify(QObject *parent)
     : QObject(parent)
 {
+    qRegisterMetaType<QMap<unsigned, QString>>();
+
     Solid::Predicate p(Solid::DeviceInterface::StorageAccess);
     p |= Solid::Predicate(Solid::DeviceInterface::OpticalDrive);
     p |= Solid::Predicate(Solid::DeviceInterface::PortableMediaPlayer);
@@ -150,20 +152,18 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
         p->deleteLater();
     });
     connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [p, this](int, QProcess::ExitStatus) {
-        QStringList blockApps;
+        QMap<unsigned, QString> blockApps;
         const QString out = QString::fromLatin1(p->readAll());
         const auto pidList = QStringView(out).split(QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts);
         KSysGuard::Processes procs;
         for (const QStringView pidStr : pidList) {
-            int pid = pidStr.toInt();
+            unsigned pid = pidStr.toUInt();
             if (!pid) {
                 continue;
             }
             procs.updateOrAddProcess(pid);
             KSysGuard::Process *proc = procs.getProcess(pid);
-            if (!blockApps.contains(proc->name())) {
-                blockApps << proc->name();
-            }
+            blockApps[pid] = proc->name();
         }
         Q_EMIT blockingAppsReady(blockApps);
         p->deleteLater();
@@ -236,15 +236,20 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             QMetaObject::Connection *c = new QMetaObject::Connection();
-            *c = connect(this, &KSolidNotify::blockingAppsReady, [c, error, errorData, udi, icon, this](const QStringList &blockApps) {
+            *c = connect(this, &KSolidNotify::blockingAppsReady, [c, error, errorData, udi, icon, this](const QMap<unsigned, QString> &blockApps) {
                 QString errorMessage;
                 if (blockApps.isEmpty()) {
                     errorMessage = i18n("One or more files on this device are open within an application.");
                 } else {
+                    QString appList = blockApps.cbegin().value() + QLatin1Char('(') + QString::number(blockApps.cbegin().key()) + QLatin1Char(')');
+                    for (auto it = std::next(blockApps.cbegin()); it != blockApps.cend(); it = std::next(it)) {
+                        appList += i18nc("separator in list of apps blocking device unmount", ", ") + it.value() + QLatin1Char('(') + QString::number(it.key())
+                            + QLatin1Char(')');
+                    }
                     errorMessage = i18np("One or more files on this device are opened in application \"%2\".",
                                          "One or more files on this device are opened in following applications: %2.",
                                          blockApps.size(),
-                                         blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+                                         appList);
                 }
                 notify(error, errorMessage, errorData.toString(), udi, icon);
                 disconnect(*c);
