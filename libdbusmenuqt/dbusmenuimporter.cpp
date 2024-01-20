@@ -70,10 +70,10 @@ public:
     DBusMenuImporter *q;
 
     DBusMenuInterface *m_interface;
-    QMenu *m_menu;
+    QMenu *m_menu = nullptr;
     using ActionForId = QMap<int, QAction *>;
     ActionForId m_actionForId;
-    QTimer *m_pendingLayoutUpdateTimer;
+    QTimer m_pendingLayoutUpdateTimer;
 
     QSet<int> m_idsRefreshedByAboutToShow;
     QSet<int> m_pendingLayoutUpdates;
@@ -267,11 +267,9 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
 
     d->q = this;
     d->m_interface = new DBusMenuInterface(service, path, QDBusConnection::sessionBus(), this);
-    d->m_menu = nullptr;
 
-    d->m_pendingLayoutUpdateTimer = new QTimer(this);
-    d->m_pendingLayoutUpdateTimer->setSingleShot(true);
-    connect(d->m_pendingLayoutUpdateTimer, &QTimer::timeout, this, &DBusMenuImporter::processPendingLayoutUpdates);
+    d->m_pendingLayoutUpdateTimer.setSingleShot(true);
+    connect(&d->m_pendingLayoutUpdateTimer, &QTimer::timeout, this, &DBusMenuImporter::processPendingLayoutUpdates);
 
     connect(d->m_interface, &DBusMenuInterface::LayoutUpdated, this, &DBusMenuImporter::slotLayoutUpdated);
     connect(d->m_interface, &DBusMenuInterface::ItemActivationRequested, this, &DBusMenuImporter::slotItemActivationRequested);
@@ -301,8 +299,8 @@ void DBusMenuImporter::slotLayoutUpdated(uint revision, int parentId)
         return;
     }
     d->m_pendingLayoutUpdates << parentId;
-    if (!d->m_pendingLayoutUpdateTimer->isActive()) {
-        d->m_pendingLayoutUpdateTimer->start();
+    if (!d->m_pendingLayoutUpdateTimer.isActive()) {
+        d->m_pendingLayoutUpdateTimer.start();
     }
 }
 
