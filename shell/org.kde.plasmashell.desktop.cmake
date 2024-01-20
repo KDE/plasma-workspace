@@ -35,6 +35,7 @@ Name[ja]=Plasma デスクトップワークスペース
 Name[ka]=Plasma Desktop Workspace
 Name[ko]=Plasma 데스크톱 작업 공간
 Name[lt]=Plasma darbalaukio darbo sritis
+Name[lv]=„Plasma“ darbvirsma
 Name[ml]=പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് പണിയിടം
 Name[nb]=Arbeidsrom for Plasma skrivebord
 Name[nds]=Plasma-Schriefdischarbeitrebeet

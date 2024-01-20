@@ -87,6 +87,7 @@ Comment[ja]=Plasma by KDE
 Comment[ka]=Plasma, KDE-სგან
 Comment[ko]=KDE Plasma
 Comment[lt]=Plasma pagal KDE
+Comment[lv]=KDE veidotā „Plasma“
 Comment[ml]=കെഡിഇയുടെ പ്ലാസ്മ
 Comment[nb]=Plasma av KDE
 Comment[nds]=Plasma vun KDE

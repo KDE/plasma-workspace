@@ -30,6 +30,7 @@ Name[ja]=フォントインストーラ
 Name[ka]=ფონტმყენებელი
 Name[ko]=글꼴 설치기
 Name[lt]=Šriftų diegimo programa
+Name[lv]=Fontu instalētājs
 Name[ml]=അക്ഷരസഞ്ചയ ഇൻസ്റ്റാളർ
 Name[nl]=Lettertype-installatie
 Name[nn]=Skrift­installering
@@ -82,6 +83,7 @@ Name[ja]=システムフォントを管理します。
 Name[ka]=სისტემური ფონტების მართვა.
 Name[ko]=시스템 전역 글꼴을 관리합니다.
 Name[lt]=Tvarkyti sistemos masto šriftus.
+Name[lv]=Pārvaldīt sistēmas fontus
 Name[ml]=സിസ്റ്റമാകമാനം ഫോണ്ടുകൾ നിയന്ത്രിക്കുക.
 Name[nl]=Beheer van systeembrede lettertypen.
 Name[nn]=Handsam skrifter for heile systemet.
@@ -131,6 +133,7 @@ Description[ja]=システムフォントの設定の変更には特権が必要�
 Description[ka]=სისტემური ფონტების მართვას დამატებითი წვდომები ესაჭიროება.
 Description[ko]=시스템 전역 글꼴 설정을 수정하려면 권한이 필요합니다.
 Description[lt]=Norint modifikuoti sistemos masto šriftų konfigūraciją, reikia tam tikrų teisių.
+Description[lv]=Sistēmas fontu konfigurācijas pārvaldībai ir nepieciešamas attiecīgas atļaujas.
 Description[ml]=സിസ്റ്റം-വൈഡ് അക്ഷരസഞ്ചയ ക്രമീകരണം പരിഷ്ക്കരിക്കുന്നതിന് പ്രത്യേകാവകാശങ്ങൾ ആവശ്യമാണ്.
 Description[nl]=Wijzigen van de systeembrede lettertypen vereist rechten.
 Description[nn]=Du treng utvida løyve for å kunna endra innstillingane for skriftene på heile systemet.
