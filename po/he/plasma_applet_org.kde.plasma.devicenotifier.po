@@ -4,13 +4,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2023-12-02 21:28+0200\n"
+"PO-Revision-Date: 2024-01-12 22:00+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -133,83 +133,79 @@ msgstr "הצגת חלונית קופצת עם חיבור התקן חדש"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "מצב מכשיר"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "אפשר להתקין כעת התקן בבטחה"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "אפשר להסיר כעת את ההתקן בבטחה."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "בטוח להסיר ההתקן."
+msgstr "אסור לך לעגן את ההתקן הזה."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "בטוח להסיר ההתקן."
+msgstr "אסור לך להסיר את ההתקן הזה.."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "לחץ על מנת להוציא את התקליטור."
+msgstr "אסור לך לשלוף את התקליטור הזה."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "לא ניתן לעגן את ההתקן הזה כיוון שהוא עסוק."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "לחץ כדי לגשת להתקן מיישומים אחרים."
+msgstr "קובץ אחד או יותר פתוחים ביישום כלשהו."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "לחץ כדי לגשת להתקן מיישומים אחרים."
-msgstr[1] "לחץ כדי לגשת להתקן מיישומים אחרים."
-msgstr[2] "לחץ כדי לגשת להתקן מיישומים אחרים."
-msgstr[3] "לחץ כדי לגשת להתקן מיישומים אחרים."
+msgstr[0] "קובץ אחד או יותר בהתקן הזה פתוחים ביישום „%2”."
+msgstr[1] "קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2."
+msgstr[2] ""
+"קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2.לחץ כדי לגשת להתקן "
+"מיישומים אחרים."
+msgstr[3] ""
+"קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2.לחץ כדי לגשת להתקן "
+"מיישומים אחרים."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "לחץ כדי להסיר ההתקן בבטחה."
+msgstr "לא ניתן לעגן את ההתקן הזה."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "לחץ כדי להסיר ההתקן בבטחה."
+msgstr "לא ניתן להסיר את ההתקן הזה."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "לחץ על מנת להוציא את התקליטור."
+msgstr "לא ניתן לשלוף את התקליטור הזה."
 
 #~ msgid "General"
 #~ msgstr "כללי"

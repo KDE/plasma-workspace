@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2020, 2021, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2023-12-22 22:15-0600\n"
+"PO-Revision-Date: 2024-01-19 17:26-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -103,7 +103,7 @@ msgstr "ਘੜੀ:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "ਜਦੋਂ ਅਣ-ਲਾਕ ਕਰਨ ਵੀ ਪਰਾਊਂਟ ਅਲੋਪ ਹੋ ਜਾਵੇ ਤਾਂ ਦਿਖਾਈ ਦਿੰਦਾ ਰੱਖੋ"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "ਮੀਡਿਆ ਕੰਟਰੋਲ:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "ਅਣ-ਲਾਕ ਪਰਾਊਂਟ ਦੇ ਹੇਠਾਂ ਵੇਖਾਓ"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "(ਜਾਂ ਰੀਡਰ ਉੱਤੇ ਆਪਣੇ ਫਿੰਗਰਪਰ�
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(ਜਾਂ ਆਪਣਾ ਸਮਾਰਟ ਕਾਰਡ ਸਕੈਨ ਕਰੋ)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -219,8 +219,8 @@ msgstr "ਲਾਗ ਆਉਟ"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ਸਾਫਟਵੇਅਰ ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ ਅਤੇ 1 ਸਕਿੰਟ ਵਿੱਚ ਮੁੜ-ਚਾਲੂ ਹੋਵੇਗਾ"
+msgstr[1] "ਸਾਫਟਵੇਅਰ ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ ਅਤੇ %1 ਸਕਿੰਟਾਂ ਵਿੱਚ ਮੁੜ-ਚਾਲੂ ਹੋਵੇਗਾ"
 
 #: contents/logout/Logout.qml:248
 #, kde-format

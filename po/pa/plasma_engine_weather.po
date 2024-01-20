@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2009, 2010, 2011, 2014, 2016, 2020, 2022, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2014, 2016, 2020, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:39+0000\n"
-"PO-Revision-Date: 2023-12-26 07:15-0600\n"
+"POT-Creation-Date: 2024-01-20 00:38+0000\n"
+"PO-Revision-Date: 2024-01-19 17:31-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -283,7 +283,7 @@ msgstr "ਖਿੜਿਆ ਦਿਨ"
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr ""
+msgstr "ਕਦੇ ਕਦੇ ਧੁੱਪ"
 
 #: bbcukmet_i18n.dat:45
 #, kde-format
@@ -302,7 +302,7 @@ msgstr "ਤੂਫਾਨ"
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery shower"
-msgstr ""
+msgstr "ਤੂਫ਼ਾਨੀ ਫੁਹਾਰਾਂ"
 
 #: bbcukmet_i18n.dat:48
 #, kde-format
@@ -350,7 +350,7 @@ msgstr "ਬੱਦਲਵਾਈ"
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with hail"
-msgstr ""
+msgstr "ਗੜ੍ਹਿਆਂ ਨਾਲ ਬੱਦਲਵਾਈ"
 
 #: bbcukmet_i18n.dat:56
 #, kde-format
@@ -578,7 +578,7 @@ msgstr "ਖਿੜਿਆ ਦਿਨ"
 #, kde-format
 msgctxt "weather forecast"
 msgid "sunny intervals"
-msgstr ""
+msgstr "ਕਦੇ ਕਦੇ ਧੁੱਪ"
 
 #: bbcukmet_i18n.dat:94
 #, kde-format
@@ -674,7 +674,7 @@ msgstr "ਬੱਦਲਵਾਈ"
 #, kde-format
 msgctxt "weather condition"
 msgid "Decreasing Cloud"
-msgstr ""
+msgstr "ਬੱਦਲ ਘੱਟ ਰਹੇ ਹਨ"
 
 #: envcan_i18n.dat:6
 #, kde-format
@@ -686,7 +686,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Drifting Snow"
-msgstr ""
+msgstr "ਡਰਿਫਟ ਬਰਫ਼ਬਾਰੀ"
 
 #: envcan_i18n.dat:8 noaa_i18n.dat:13
 #, kde-format
@@ -704,7 +704,7 @@ msgstr "ਘੱਟਾ"
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Devils"
-msgstr ""
+msgstr "ਮਿੱਟੀ ਦੇ ਤੂਫ਼ਾਨ"
 
 #: envcan_i18n.dat:11 noaa_i18n.dat:27
 #, kde-format
@@ -752,7 +752,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Hail"
-msgstr ""
+msgstr "ਗੜ੍ਹੇ"
 
 #: envcan_i18n.dat:19 noaa_i18n.dat:44
 #, kde-format
@@ -2818,7 +2818,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
 msgstr ""
 
-#: ions/noaa/ion_noaa.cpp:633
+#: ions/noaa/ion_noaa.cpp:643
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
@@ -4405,7 +4405,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Windy"
-msgstr ""
+msgstr "ਤੇਜ਼ ਹਵਾ"
 
 #: noaa_i18n.dat:265
 #, kde-format
@@ -4473,19 +4473,19 @@ msgstr "ਬਰਫ਼ ਪੈਣ ਦੀ ਸੰਭਾਵਨਾ"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow/Sleet"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ/ਬਰਫ਼ ਵਾਲੇ ਮੀਂਹ ਪੈਣ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:277
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet Likely"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ/ਬਰਫ਼ ਵਾਲੇ ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:278
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ/ਬਰਫ਼ ਵਾਲਾ ਮੀਂਹ"
 
 #: noaa_i18n.dat:279
 #, fuzzy, kde-format
@@ -4505,13 +4505,13 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet Likely"
-msgstr ""
+msgstr "ਮੀਂਹ/ਬਰਫ਼ ਵਾਲੇ ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:282
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet"
-msgstr ""
+msgstr "ਮੀਂਹ/ਬਰਫ਼ ਵਾਲਾ ਮੀਂਹ"
 
 #: noaa_i18n.dat:283
 #, fuzzy, kde-format
@@ -4621,7 +4621,7 @@ msgstr "ਮੀਂਹ/ਬਰਫ਼ ਦੀ ਸੰਭਾਵਨਾ"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow Likely"
-msgstr ""
+msgstr "ਮੀਂਹ/ਬਰਫ਼ਬਾਰੀ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:300
 #, kde-format
@@ -4702,24 +4702,22 @@ msgid "Snow Showers"
 msgstr "ਬਰਫ਼ ਫੁਹਾਰਾਂ"
 
 #: noaa_i18n.dat:314
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr "ਹਲਕਾ ਮੀਂਹ"
+msgstr "ਹਲਕੀ ਬੂੰਦਾਬਾਂਦੀ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:315
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Drizzle"
-msgstr ""
+msgstr "ਹਲਕੀ ਬੂੰਦਾਬਾਂਦੀ"
 
 #: noaa_i18n.dat:316
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle Likely"
-msgstr ""
+msgstr "ਬੂੰਦਾਬਾਂਦੀ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:318
 #, fuzzy, kde-format
@@ -4739,7 +4737,7 @@ msgstr "ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ ਹੈ"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Likely"
-msgstr ""
+msgstr "ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:322
 #, kde-format
@@ -4748,18 +4746,16 @@ msgid "Heavy Rain"
 msgstr "ਭਾਰੀ ਮੀਂਹ"
 
 #: noaa_i18n.dat:323
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr "ਛਿੱਟੇ ਪੈਣ ਦੀ ਸੰਭਾਵਨਾ"
+msgstr "ਹਲਕੇ ਛਿੱਟੇ ਪੈਣ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:324
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain Showers"
-msgstr ""
+msgstr "ਛਿੱਟੇ ਪੈਣ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:325
 #, kde-format
@@ -4771,19 +4767,19 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Showers"
-msgstr ""
+msgstr "ਛਿੱਟੇ ਪੈਣੇ"
 
 #: noaa_i18n.dat:327
 #, kde-format
 msgctxt "weather forecast"
 msgid "Sleet"
-msgstr ""
+msgstr "ਬਰਫ਼ ਵਾਲਾ ਮੀਂਹ"
 
 #: noaa_i18n.dat:329
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Fog"
-msgstr ""
+msgstr "ਜਮਾਉ ਮੀਂਹ"
 
 #: noaa_i18n.dat:330
 #, kde-format
@@ -4873,13 +4869,13 @@ msgstr "ਕਦੇ-ਕਦਾਈ ਧੁੱਪ"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing Clouds"
-msgstr ""
+msgstr "ਬੱਦਲ ਵੱਧ ਰਹੇ ਹਨ"
 
 #: noaa_i18n.dat:349
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Cloudy"
-msgstr ""
+msgstr "ਬੱਦਲ ਬਣ ਰਹੇ ਹਨ"
 
 #: noaa_i18n.dat:351
 #, kde-format
@@ -4897,7 +4893,7 @@ msgstr "ਬਾਅਦ ਵਿੱਚ ਸਾਫ਼ "
 #, kde-format
 msgctxt "weather forecast"
 msgid "Decreasing Clouds"
-msgstr ""
+msgstr "ਬੱਦਲ ਘੱਟ ਰਹੇ ਹਨ"
 
 #: noaa_i18n.dat:354
 #, kde-format

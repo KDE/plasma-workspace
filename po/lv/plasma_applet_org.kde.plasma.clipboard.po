@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 01:35+0000\n"
-"PO-Revision-Date: 2019-12-07 11:55+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-17 14:32+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/ui/BarcodePage.qml:23
 #, kde-format
@@ -45,10 +46,9 @@ msgid "Code 93"
 msgstr "Kods 93"
 
 #: contents/ui/BarcodePage.qml:28
-#, fuzzy, kde-format
-#| msgid "Code 39"
+#, kde-format
 msgid "Code 128"
-msgstr "Kods 39"
+msgstr "Kods 128"
 
 #: contents/ui/BarcodePage.qml:44
 #, kde-format
@@ -56,22 +56,20 @@ msgid "Return to Clipboard"
 msgstr "Atgriezties uz starpliktuvi"
 
 #: contents/ui/BarcodePage.qml:79
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
+#, kde-format
 msgid "Change the QR code type"
-msgstr "Mainīt svītrkoda tipu"
+msgstr "Mainīt kvadrātkoda tipu"
 
 #: contents/ui/BarcodePage.qml:136
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
+#, kde-format
 msgid "Creating QR code failed"
-msgstr "Neizdevās izveidot svītrkodu"
+msgstr "Neizdevās izveidot kvadrātkodu"
 
 #: contents/ui/BarcodePage.qml:147
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
+msgstr "Nepietiek vietas kvadrātkoda parādīšanai. Mainiet sīklietotnes izmēru"
 
 #: contents/ui/DelegateToolButtons.qml:26
 #, kde-format
@@ -79,10 +77,9 @@ msgid "Invoke action"
 msgstr "Izsaukt darbību"
 
 #: contents/ui/DelegateToolButtons.qml:41
-#, fuzzy, kde-format
-#| msgid "Show barcode"
+#, kde-format
 msgid "Show QR code"
-msgstr "Rādīt svītrkodu"
+msgstr "Rādīt kvadrātkodu"
 
 #: contents/ui/DelegateToolButtons.qml:57
 #, kde-format
@@ -92,19 +89,19 @@ msgstr "Rediģēt saturu"
 #: contents/ui/DelegateToolButtons.qml:71
 #, kde-format
 msgid "Remove from history"
-msgstr "Aizvākt no vēstures"
+msgstr "Dzēst no vēstures"
 
 #: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Saglabāt"
 
 #: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: contents/ui/main.qml:30
 #, kde-format
@@ -117,21 +114,19 @@ msgid "Clipboard is empty"
 msgstr "Starpliktuve ir tukša"
 
 #: contents/ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Clear history"
+#, kde-format
 msgid "Clear History"
 msgstr "Notīrīt vēsturi"
 
 #: contents/ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "Configure Clipboard..."
+#, kde-format
 msgid "Configure Clipboard…"
 msgstr "Konfigurēt starpliktuvi..."
 
 #: contents/ui/Menu.qml:134
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "Nav atbilstību"
 
 #: contents/ui/UrlItemDelegate.qml:106
 #, kde-format

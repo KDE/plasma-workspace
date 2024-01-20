@@ -5,36 +5,37 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2011-07-07 23:06+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-17 13:53+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "Atslēgšanos atcēla '%1'"
+msgstr "Izrakstīšanos atcēla „%1“"
 
 #: main.cpp:67
 #, kde-format
 msgid "$HOME not set!"
-msgstr ""
+msgstr "$HOME nav iestatīts!"
 
 #: main.cpp:71 main.cpp:80
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr ""
+msgstr "$HOME mape (%1) nepastāv."
 
 #: main.cpp:74
 #, kde-kuit-format
@@ -43,36 +44,38 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Nav rakstīšanas piekļuves $HOME mapei (%1). Ja tas tā ir ar nolūku, savā "
+"vidē iestatiet  <envar>KDE_HOME_READONLY=1</envar>."
 
 #: main.cpp:82
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr ""
+msgstr "Nav lasīšanas piekļuves $HOME mapei (%1)."
 
 #: main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr ""
+msgstr "$HOME mapei (%1) nav vietas uz diska."
 
 #: main.cpp:90
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
+msgstr "Rakstīšana $HOME mapē (%2) neizdevās ar kļūdu „%1“"
 
 #: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
-msgstr ""
+msgstr "Nav „%1“ rakstīšanas piekļuves."
 
 #: main.cpp:106 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
-msgstr ""
+msgstr "Nav „%1“ lasīšanas piekļuves."
 
 #: main.cpp:116 main.cpp:130
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
-msgstr ""
+msgstr "Pagaidu mapei (%1) nav vietas uz diska."
 
 #: main.cpp:119 main.cpp:133
 #, kde-format
@@ -80,6 +83,8 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
+"Rakstīšana pagaidu mapē (%2) neizdevās ar\n"
+"    kļūdu „%1“"
 
 #: main.cpp:150
 #, kde-format
@@ -87,6 +92,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Konstatēta instalācijas problēma,\n"
+"mēģinot palaist „Plasma“:"
 
 #: main.cpp:153
 #, kde-format
@@ -95,28 +102,28 @@ msgid ""
 "\n"
 "Plasma is unable to start.\n"
 msgstr ""
+"\n"
+"\n"
+"„Plasma“ nevar palaist.\n"
 
 #: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr ""
+msgstr "„Plasma“ darbavietas instalācijas problēma!"
 
 #: main.cpp:194
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"Uzticamais KDE sesiju pārvaldnieks, kas darbojas ar standarta X11R6\n"
+"Uzticamais „Plasma“ sesijas pārvaldnieks, kas darbojas ar standarta X11R6\n"
 "sesiju vadības protokolu (XSMP)."
 
 #: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Ja iespējams, atjauno iepriekšējo sesiju"
+msgstr "Atjauno saglabāto lietotāja sesiju, ja tāda ir pieejama"
 
 #: main.cpp:201
 #, kde-format
@@ -126,7 +133,7 @@ msgstr "Atļaut arī attālinātus savienojumus"
 #: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
-msgstr ""
+msgstr "Sesiju palaiž slēgtā režīmā"
 
 #: main.cpp:208
 #, kde-format
@@ -134,12 +141,14 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"Palaiž bez slēgšanas ekrāna atbalsta. Nepieciešams tikai tad, ja ekrāna "
+"slēgšanu nodrošina cits komponents."
 
 #: server.cpp:813
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[nezināms]"
 
 #: server.cpp:836
 #, kde-kuit-format
@@ -149,6 +158,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Atsevišķas programmas neizdodas pārvaldīt, jo sistēmas sesijas vadībai "
+"trūkst resursu. Šie ir trīs lielākie sistēmas resursu patērētāji:\n"
+"%1"
 
 #: server.cpp:1108
 #, kde-kuit-format
@@ -158,6 +170,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Neizdodas atjaunot <application>%1</application> , jo tā nedarbojas un ir "
+"iztērējusi sistēmas sesijas atjaunošanas resursus. Ziņojiet par to "
+"programmas izstrādātājiem."
 
 #, fuzzy
 #~| msgid "The KDE Session Manager"

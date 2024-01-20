@@ -2,8 +2,9 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 # Oskars <osk@one.lv>, 2007.
-# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2009.
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2009, 2024.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Einars Sprugis <einars8@gmail.com>, 2011.
@@ -12,26 +13,26 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2011-07-06 01:41+0300\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-19 18:25+0200\n"
+"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"Language-Team: \n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Oskars, Viesturs Zariņš"
+msgstr "Oskars, Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "osk@one.lv, viesturs.zarins@mii.lu.lv"
+msgstr "osk@one.lv, viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:953
 #, kde-format
@@ -65,7 +66,7 @@ msgstr "(C) Craig Drummond, 2007"
 #: apps/Installer.cpp:118 apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "Padara dialogu par winid norādītās X programmas izcelošu logu "
+msgstr "Padara dialogu par „winid“ norādītās X programmas izcelošu logu"
 
 #: apps/Installer.cpp:120
 #, kde-format
@@ -78,8 +79,7 @@ msgid "Print"
 msgstr "Drukāt"
 
 #: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
-#, fuzzy, kde-format
-#| msgid "Canceling..."
+#, kde-format
 msgid "Canceling…"
 msgstr "Atceļ..."
 
@@ -96,7 +96,7 @@ msgstr "Vienkāršs fontu drukātājs"
 #: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
-msgstr "Fontu izdrukāšanas izmēru saraksts"
+msgstr "Fontu izdrukāšanas izmēru rādītājs"
 
 #: apps/Printer.cpp:343
 #, kde-format
@@ -104,30 +104,28 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
-"Izdrukājamais fonts, norādīts kā \"Saime.Stils\", kur stils ir 24-bitu "
+"Izdrukājamais fonts, norādīts kā „Saime,Stils“, kur stils ir 24-bitu "
 "decimāls skaitlis, kas sastāv no: <svars><platums><slīpums>"
 
 #: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
-msgstr "Fails, kas satur sarakstu ar drukājamajiem fontiem"
+msgstr "Datne, kas satur sarakstu ar drukājamajiem fontiem"
 
 #: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
-msgstr "Izdzēst failu, kas satur sarakstu ar drukājamajiem fontiem"
+msgstr "Izdzēst datni, kas satur sarakstu ar drukājamajiem fontiem"
 
 #: apps/Viewer.cpp:46
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "Atvērt %1 fontus apskatei?"
+msgstr "Atvērt eksistējošu fonta datni"
 
 #: apps/Viewer.cpp:47
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "Drukāt fontu paraugus"
+msgstr "Drukāt fonta priekšskatījumu"
 
 #: apps/Viewer.cpp:64
 #, kde-format
@@ -142,28 +140,27 @@ msgstr "Atveramā URL"
 #: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
-msgstr "Fontu caurlūkotājs"
+msgstr "Fontu pārlūkotājs"
 
 #: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
-msgstr "Vienkāršais fontu caurlūkotājs"
+msgstr "Vienkāršais fontu pārlūkotājs"
 
 #: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004–2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:47
 #, kde-format
 msgid "Duplicate Fonts"
-msgstr "Dbulējošies fonti"
+msgstr "Dublējošies fonti"
 
 #: kcmfontinst/DuplicatesDialog.cpp:77
-#, fuzzy, kde-format
-#| msgid "Scanning for duplicate fonts. Please wait..."
+#, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Meklē dublējošos fontus. Lūdzu uzgaidiet..."
+msgstr "Meklē dublējošos fontus. Uzgaidiet..."
 
 #: kcmfontinst/DuplicatesDialog.cpp:96
 #, kde-format
@@ -173,15 +170,15 @@ msgstr "Nav atrast vienādi fonti."
 #: kcmfontinst/DuplicatesDialog.cpp:104
 #, kde-format
 msgid "Delete Marked Files"
-msgstr "Dzēst iezīmētos failus"
+msgstr "Dzēst iezīmētās datnes"
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
 #, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
 msgstr[0] "Atrasts %1 vienāds fonts."
-msgstr[1] "Atrasts %1 vienāds fonts."
-msgstr[2] "Atrasts %1 vienāds fonts."
+msgstr[1] "Atrasti %1 vienādi fonti."
+msgstr[2] "Atrasti %1 vienādi fonti."
 
 #: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
@@ -205,7 +202,7 @@ msgstr "Pārtraukt fontu skenēšanu?"
 #: kcmfontinst/DuplicatesDialog.cpp:382
 #, kde-format
 msgid "Font/File"
-msgstr "Fonti/Fails"
+msgstr "Fonti/Datne"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -225,7 +222,7 @@ msgstr "Saitē uz"
 #: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
 #, kde-format
 msgid "Open in Font Viewer"
-msgstr "Atvērt fontu skatītājā"
+msgstr "Atvērt fontu pārlūkotājā"
 
 #: kcmfontinst/DuplicatesDialog.cpp:401
 #, kde-format
@@ -243,13 +240,12 @@ msgid "Mark for Deletion"
 msgstr "Atzīmēt dzēšanai"
 
 #: kcmfontinst/DuplicatesDialog.cpp:502
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Atvērt %1 fontus apskatei?"
-msgstr[1] "Atvērt %1 fontus apskatei?"
-msgstr[2] "Atvērt %1 fontus apskatei?"
+msgstr[0] "Atvērt %1 fontu fontu pārlūkotājā?"
+msgstr[1] "Atvērt %1 fontus fontu pārlūkotājā?"
+msgstr[2] "Atvērt %1 fontu fontu pārlūkotājā?"
 
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
@@ -269,24 +265,22 @@ msgstr "Lietuve"
 #: kcmfontinst/FontFilter.cpp:109
 #, kde-format
 msgid "FontConfig Match"
-msgstr "FontConfig atbilstība"
+msgstr "„FontConfig“ atbilstība"
 
 #: kcmfontinst/FontFilter.cpp:111
-#, fuzzy, kde-format
-#| msgid "Preview Type"
+#, kde-format
 msgid "File Type"
-msgstr "Priekšapskates tips"
+msgstr "Datnes tips"
 
 #: kcmfontinst/FontFilter.cpp:113
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgid "File Name"
-msgstr "Fails"
+msgstr "Datnes nosaukums"
 
 #: kcmfontinst/FontFilter.cpp:115
 #, kde-format
 msgid "File Location"
-msgstr "Faila atrašanās vieta"
+msgstr "Datnes atrašanās vieta"
 
 #: kcmfontinst/FontFilter.cpp:117
 #, kde-format
@@ -306,7 +300,7 @@ msgstr "Simbols/cits"
 #: kcmfontinst/FontFilter.cpp:265 kcmfontinst/FontFilter.cpp:333
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Filtrēt pēc %1..."
 
 #: kcmfontinst/FontList.cpp:552
 #, kde-format
@@ -316,14 +310,14 @@ msgstr "Fonts"
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Status"
-msgstr ""
+msgstr "Statuss"
 
 #: kcmfontinst/FontList.cpp:568
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
-msgstr "Šī kolonna rāda fonta saimes statusu un individuālu fontu stilus."
+msgstr "Šī kolonna rāda fonta saimes statusu un atsevišķu fontu stilus."
 
 #: kcmfontinst/FontList.cpp:675
 #, kde-format
@@ -334,15 +328,14 @@ msgid ""
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
 "<p>Šis saraksts parāda instalētos fontus. Fonti ir sagrupēti pēc saimes. "
-"Skaitlis kvadrātiekavās norāda saimē pieejamo stilu skaitu, piem., </"
+"Skaitlis kvadrātiekavās norāda saimē pieejamo stilu skaitu, piemēram, </"
 "p><ul><li>Times [4]<ul><li>Normāls</li><li>Trekns</li><li>Trekns slīpraksts</"
 "li><li>Slīpraksts</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
-#, fuzzy, kde-format
-#| msgid "...plus %1 more"
+#, kde-format
 msgid "…plus %1 more"
-msgstr "... un vēl par %1 vairāk"
+msgstr "...un vēl par %1 vairāk"
 
 #: kcmfontinst/FontList.cpp:1005
 #, kde-format
@@ -364,13 +357,12 @@ msgstr "Ieslēgt"
 #: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Disable"
-msgstr "Atslēgt"
+msgstr "Izslēgt"
 
 #: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
-#, fuzzy, kde-format
-#| msgid "Print"
+#, kde-format
 msgid "Print…"
-msgstr "Drukāt"
+msgstr "Drukāt..."
 
 #: kcmfontinst/FontList.cpp:1315
 #, kde-format
@@ -380,7 +372,7 @@ msgstr "Pārlādēt"
 #: kcmfontinst/FontList.cpp:1699
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
-msgstr "Atvērt %1 fontus apskatei?"
+msgstr "Atvērt visus %1 fontus fontu pārlūkotājā?"
 
 #: kcmfontinst/GroupList.cpp:59
 #, kde-format
@@ -413,23 +405,23 @@ msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
-"<p>Vai tiešām vēlaties izdzēst '<b>%1</b>'?</p><p><i>Tiks izdzēsta tikai "
-"grupa, nevis paši fonti.</i></p>"
+"<p>Vai tiešām vēlaties noņemt „<b>%1</b>“?</p><p><i>Tiks izdzēsta tikai "
+"grupa, bet ne paši fonti.</i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
 #, kde-format
 msgid "Remove Group"
-msgstr "Izdzēst grupu"
+msgstr "Noņemt grupu"
 
 #: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
 #, kde-format
 msgid "Remove"
-msgstr "Izdzēst"
+msgstr "Noņemt"
 
 #: kcmfontinst/GroupList.cpp:540
 #, kde-format
 msgid "Remove group"
-msgstr "Izdzēst grupu"
+msgstr "Noņemt grupu"
 
 #: kcmfontinst/GroupList.cpp:586
 #, kde-format
@@ -442,12 +434,12 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>Fontu grupas</h3><p>Ši saraksts rāda jūsu datorā pieejamās fontu grupas. "
-"Ir divi galvenie fontu grupu tipi: :<ul><li><b>Standarta</b> speciālas fontu "
-"pārvaldnieka grupas.<ul>%1</ul></li><li><b>Pielāgotas</b> ir jūsu izveidotas "
-"grupas. Lai pievienotu fontu saimi kādai no grupām, vienkārši ievelciet to "
-"no fontu saraksta. Fontu no grupas var izņemt, ievelkot to grupā \"Visi fonti"
-"\".</li></ul></p>"
+"<h3>Fontu grupas</h3><p>Šis saraksts rāda jūsu datorā pieejamās fontu "
+"grupas. Ir divi galvenie fontu grupu tipi: :<ul><li><b>Standarta</b> ir "
+"speciālas fontu pārvaldnieka izmantotas grupas.<ul>%1</ul></"
+"li><li><b>Pielāgotas</b> ir jūsu izveidotas grupas. Lai pievienotu fontu "
+"saimi kādai no grupām, vienkārši ievelciet to no fontu saraksta. Fontu no "
+"grupas var izņemt, ievelkot to grupā „Visi fonti“.</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:594
 #, kde-format
@@ -457,8 +449,8 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Visi fonti</i> satur visus sistēmā instalētos fontus.</"
-"li><li><i>Neklasificēti</i> satur visus fontus, kas vēl nav ievietoti kādā  "
-"\"Pielāgotā\" grupā.</li>"
+"li><li><i>Neklasificēti</i> satur visus fontus, kas vēl nav ievietoti kādā "
+"„Pielāgotā“ grupā.</li>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -470,34 +462,31 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
-"<li><i>Visi fonti</i> satur visus sitēmā instalētos fontus, gan \"Sistēmas"
-"\", gan \"Personīgos\".</li><li><i>Sistēmas</i> satur visus fontus, kas "
-"instalēti bāzes sistēmā - pieejami visiem sistēmas lietotājiem.</"
-"li><li><i>Personīgie</i> satur jūsu personīgos fontus.</"
-"li><li><i>Neklasificēti</i> satur visus fontus, kas vēl nav ievietoti kādā "
-"\"Pielāgotā\" grupā.</li>"
+"<li><i>Visi fonti</i> satur visus sistēmā instalētos fontus, gan „Sistēmas“, "
+"gan „Personīgos“.<li><li><i>Sistēmas</i> fonti ir visi fonti, kas instalēti "
+"bāzes sistēmā — pieejami visiem sistēmas lietotājiem.</li><li><i>Personīgie</"
+"i> fonti ir jūsu personīgie fonti.</li><li><i>Neklasificētie</i> fonti ir "
+"visi pārējie fonti, kas nav ievietoti nevienā „Pielāgotā“ grupā.</li>"
 
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Grupa <b>'%1'</b> jau eksistē!</qt>"
+msgstr "<qt>Grupa ar nosaukumu <b>„%1“</b> jau eksistē!</qt>"
 
 #: kcmfontinst/GroupList.cpp:792
-#, fuzzy, kde-format
-#| msgid "Rename..."
+#, kde-format
 msgid "Rename…"
 msgstr "Pārdēvēt..."
 
 #: kcmfontinst/GroupList.cpp:801
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
 msgstr "Eksportēt..."
 
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr "Pievienot \"%1\"."
+msgstr "Pievienot „%1“."
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
@@ -535,8 +524,8 @@ msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
-"<h3>Pabeigts</h3><p>Ņemiet vērā ka būs nepieciešams pārstartēt visas "
-"palaistās programmas, lai tām būtu pieejamas veiktās izmaiņas.</p>"
+"<h3>Pabeigts</h3><p>Ņemiet vērā ka, lai izmaiņas stātos spēkā, būs "
+"jāpārstartē visas palaistās programmas.</p>"
 
 #: kcmfontinst/JobRunner.cpp:208
 #, kde-format
@@ -556,7 +545,7 @@ msgstr "Atinstalē"
 #: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Enabling"
-msgstr "Iespējo"
+msgstr "Ieslēdz"
 
 #: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
 #, kde-format
@@ -576,23 +565,22 @@ msgstr "Izņemt"
 #: kcmfontinst/JobRunner.cpp:338
 #, kde-format
 msgid "Disabling"
-msgstr "Atslēdz"
+msgstr "Izslēdz"
 
 #: kcmfontinst/JobRunner.cpp:376
-#, fuzzy, kde-format
-#| msgid "Updating font configuration. Please wait..."
+#, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "Atjauno fontu konfigurāciju. Lūdzu uzgaidiet..."
+msgstr "Atjauno fontu konfigurāciju. Uzgaidiet..."
 
 #: kcmfontinst/JobRunner.cpp:448
 #, kde-format
 msgid "Unable to start backend."
-msgstr "Neizdevās palaist aizmuguri."
+msgstr "Neizdevās palaist aizmugursistēmu."
 
 #: kcmfontinst/JobRunner.cpp:457
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr "Aizmugure avarēja, bet tika pārstartēta. Lūdzu mēģiniet vēlreiz."
+msgstr "Aizmugursistēma avarēja, bet tika pārstartēta. Mēģiniet vēlreiz."
 
 #: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
 #, kde-format
@@ -607,20 +595,21 @@ msgstr "Neizdevās lejupielādēt <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr "Sistēmas aizmugure avarēja. Lūdzu mēģiniet vēlreiz.<br><i>%1</i>"
+msgstr "Sistēmas aizmugursistēma avarēja. Mēģiniet vēlreiz.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr "<i>%1</i> ir bitkaršu fonts, un jūsu sistēmā tie ir atslēgti."
+msgstr ""
+"<i>%1</i> ir bitkaršu fonts, bet jūsu sistēmā to izmantošana ir izslēgta."
 
 #: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
-msgstr "<i>%1</i> satur fontu <b>%2</b>, kurš jau ir instalēts jūsu sistēmā."
+msgstr "<i>%1</i> satur fontu <b>%2</b>, kas jau ir instalēts jūsu sistēmā."
 
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
@@ -630,7 +619,7 @@ msgstr "<i>%1</i> nav fonts."
 #: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "Neizdevās izņemt visus failus, kas saitīti ar <i>%1</i>"
+msgstr "Neizdevās noņemt visas datnes, kas ir saistītas ar <i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:706
 #, kde-format
@@ -665,80 +654,70 @@ msgstr "Autentificēšanās neveiksmīga.<br><i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "Negaidīta kļūda apstrādājot: <i>%1</i>"
+msgstr "Negaidīta kļūda, apstrādājot: <i>%1</i>"
 
 #: kcmfontinst/KCmFontInst.cpp:211
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Create New Group…"
-msgstr "Izveidot jaunu grupu"
+msgstr "Izveidot jaunu grupu..."
 
 #: kcmfontinst/KCmFontInst.cpp:214
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgid "Remove Group…"
-msgstr "Izdzēst grupu"
+msgstr "Noņemt grupu..."
 
 #: kcmfontinst/KCmFontInst.cpp:217
-#, fuzzy, kde-format
-#| msgid "Enable Fonts"
+#, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Ieslēgt fontus"
+msgstr "Ieslēgt fontus grupā..."
 
 #: kcmfontinst/KCmFontInst.cpp:220
-#, fuzzy, kde-format
-#| msgid "Disable Fonts"
+#, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Atslēgt fontus"
+msgstr "Izslēgt fontus grupā..."
 
 #: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "This displays a preview of the selected font."
-msgstr "Šis rāda izvēlētā fonta priekšskatījumu."
+msgstr "Šī iespēja rāda izvēlētā fonta priekšskatījumu."
 
 #: kcmfontinst/KCmFontInst.cpp:257
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Find Duplicates…"
-msgstr "Meklēt vienādus fontus..."
+msgstr "Atrast dublējošos fontus..."
 
 #: kcmfontinst/KCmFontInst.cpp:257
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Meklēt vienādus fontus..."
+msgstr "Meklēt dublējošos fontus..."
 
 #: kcmfontinst/KCmFontInst.cpp:259
-#, fuzzy, kde-format
-#| msgid "Install..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Instalēt..."
+msgstr "Instalēt no datnes..."
 
 #: kcmfontinst/KCmFontInst.cpp:259
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "Instalēt fontus no lokālas datnes"
 
 #: kcmfontinst/KCmFontInst.cpp:260
-#, fuzzy, kde-format
-#| msgid "Delete Fonts"
+#, kde-format
 msgid "Get New Fonts…"
-msgstr "Dzēst fontus"
+msgstr "Iegūt jaunus fontus..."
 
 #: kcmfontinst/KCmFontInst.cpp:261
 #, kde-format
 msgid "Download new fonts"
-msgstr ""
+msgstr "Lejupielādēt jaunus fontus"
 
 #: kcmfontinst/KCmFontInst.cpp:263
-#, fuzzy, kde-format
-#| msgid "Delete all selected fonts"
+#, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Dzēst visus izvēlētos fontus"
+msgstr "Dzēst atlasītos fontus..."
 
 #: kcmfontinst/KCmFontInst.cpp:333
-#, fuzzy, kde-format
-#| msgid "Change Preview Text..."
+#, kde-format
 msgid "Change Preview Text…"
 msgstr "Mainīt priekšskatījuma tekstu..."
 
@@ -750,7 +729,7 @@ msgstr "Pievienot fontus"
 #: kcmfontinst/KCmFontInst.cpp:558
 #, kde-format
 msgid "Failed to save list of fonts to print."
-msgstr "Neizdevās saglabāt sarakstu ar fontiem ko izdrukāt."
+msgstr "Neizdevās saglabāt sarakstu ar fontiem drukāšanai."
 
 #: kcmfontinst/KCmFontInst.cpp:580
 #, kde-format
@@ -764,7 +743,7 @@ msgid ""
 "You can only print non-bitmap and enabled fonts."
 msgstr ""
 "Nav drukājamu fontu.\n"
-"Jūs varat izdrukāt tikai ne bitkartes un ieslēgtus fontus."
+"Varat izdrukāt tikai ieslēgtus fontus, kas nav bitkartes fonti."
 
 #: kcmfontinst/KCmFontInst.cpp:589
 #, kde-format
@@ -774,17 +753,17 @@ msgstr "Nevar izdrukāt"
 #: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "You did not select anything to delete."
-msgstr "Jūs neizvēlējāties neko ko dzēst."
+msgstr "Neatlasījāt neko, ko dzēst."
 
 #: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "Nothing to Delete"
-msgstr "Nav ko dzēst"
+msgstr "Nav, ko dzēst"
 
 #: kcmfontinst/KCmFontInst.cpp:619
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Vai tiešām vēlaties dzēst</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Vai tiešām vēlaties dzēst</p><p>„<b>%1</b>“?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:622
 #, kde-format
@@ -805,28 +784,28 @@ msgid "Delete Fonts"
 msgstr "Dzēst fontus"
 
 #: kcmfontinst/KCmFontInst.cpp:636
-#, fuzzy, kde-format
-#| msgid "Deleting font(s)..."
+#, kde-format
 msgid "Deleting font(s)…"
 msgstr "Dzēš fontu(s)..."
 
 #: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "You did not select anything to move."
-msgstr "Jūs neizvēlējāties neko no pārvietot."
+msgstr "Neatlasījāt neko, ko pārvietot."
 
 #: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "Nothing to Move"
-msgstr "Nav ko pārvietot"
+msgstr "Nav, ko pārvietot"
 
 #: kcmfontinst/KCmFontInst.cpp:661
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
-msgstr "<p>Vai tiešām vēlaties pārvietot</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<p>Vai tiešām vēlaties pārvietot</p><p>„<b>%1</b>“</p><p>no <i>%2</i> uz <i>"
+"%3</i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:666
 #, kde-format
@@ -839,26 +818,17 @@ msgid "Move"
 msgstr "Pārvietot"
 
 #: kcmfontinst/KCmFontInst.cpp:672
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Do you really want to enable this font contained within group '<b>%2</"
-#| "b>'?</p>"
-#| msgid_plural ""
-#| "<p>Do you really want to enable these %1 fonts contained within group '<b>"
-#| "%2</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] ""
-"<p>Vai tiešām vēlaties ieslēgt šo %1 fontu, kas atrodas grupā '<b>%2</b>'?</"
-"p>"
+"<p>Vai tiešām vēlaties pārvietot %1 fontu no <i>%2</i> uz <i>%3</i>?</p>"
 msgstr[1] ""
-"<p>Vai tiešām vēlaties ieslēgt šos %1 fontus, kas atrodas grupā '<b>%2</b>'?"
-"</p>"
+"<p>Vai tiešām vēlaties pārvietot %1 fontus no <i>%2</i> uz <i>%3</i>?</p>"
 msgstr[2] ""
-"<p>Vai tiešām vēlaties ieslēgt šos %1 fontu, kas atrodas grupā '<b>%2</b>'?</"
-"p>"
+"<p>Vai tiešām vēlaties pārvietot %1 fontu no <i>%2</i> uz <i>%3</i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
@@ -866,10 +836,9 @@ msgid "Move Fonts"
 msgstr "Pārvietot fontus"
 
 #: kcmfontinst/KCmFontInst.cpp:683
-#, fuzzy, kde-format
-#| msgid "Moving font(s)..."
+#, kde-format
 msgid "Moving font(s)…"
-msgstr "Pārvietot fontu(s)..."
+msgstr "Pārvieto fontu(s)..."
 
 #: kcmfontinst/KCmFontInst.cpp:697
 #, kde-format
@@ -879,12 +848,12 @@ msgstr "Eksportēt grupu"
 #: kcmfontinst/KCmFontInst.cpp:723
 #, kde-format
 msgid "No files?"
-msgstr "Nav failu?"
+msgstr "Nav datņu?"
 
 #: kcmfontinst/KCmFontInst.cpp:726
 #, kde-format
 msgid "Failed to open %1 for writing"
-msgstr "Neizdevās atvērt %1 rakstīšanai"
+msgstr "Neizdevās atvērt „%1“ rakstīšanai"
 
 #: kcmfontinst/KCmFontInst.cpp:746
 #, kde-format
@@ -892,10 +861,9 @@ msgid "Create New Group"
 msgstr "Izveidot jaunu grupu"
 
 #: kcmfontinst/KCmFontInst.cpp:746
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Name of new group:"
-msgstr "Izveidot jaunu grupu"
+msgstr "Jaunās grupas nosaukums:"
 
 #: kcmfontinst/KCmFontInst.cpp:746
 #, kde-format
@@ -905,16 +873,15 @@ msgstr "Jauna grupa"
 #: kcmfontinst/KCmFontInst.cpp:774
 #, kde-format
 msgid "Preview Text"
-msgstr "Priekšapskates teksts"
+msgstr "Priekšskatījuma teksts"
 
 #: kcmfontinst/KCmFontInst.cpp:774
 #, kde-format
 msgid "Please enter new text:"
-msgstr "Lūdzu ievadiet jaunu tekstu:"
+msgstr "Ievadiet jaunu tekstu:"
 
 #: kcmfontinst/KCmFontInst.cpp:826
-#, fuzzy, kde-format
-#| msgid "Scanning font list..."
+#, kde-format
 msgid "Scanning font list…"
 msgstr "Skenē fontu sarakstu..."
 
@@ -932,94 +899,83 @@ msgstr[1] "%1 fonti"
 msgstr[2] "%1 fontu"
 
 #: kcmfontinst/KCmFontInst.cpp:899
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
-#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
-#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table><tr><td>Ieslēgtie fonti:</td><td>%1</td></tr><tr><td>Atslēgtie fonti:"
-"</td><td>%2</td></tr><tr><td>Daļēji ieslēgtie fonti:</td><td>%3</td></"
-"tr><tr><td>Kopā fonti:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Ieslēgti:</td><td>%1</td></tr><tr><td align="
+"\"right\">Izslēgti:</td><td>%2</td></tr><tr><td align=\"right\">Daļēji "
+"ieslēgti:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</"
+"td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:909
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
-#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
-#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
-"<table><tr><td>Ieslēgtie fonti:</td><td>%1</td></tr><tr><td>Atslēgtie fonti:"
-"</td><td>%2</td></tr><tr><td>Daļēji ieslēgtie fonti:</td><td>%3</td></"
-"tr><tr><td>Kopā fonti:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Ieslēgti:</td><td>%1</td></tr><tr><td align="
+"\"right\">Izslēgti:</td><td>%2</td></tr><tr><td align=\"right\">Kopā:</"
+"td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:986
-#, fuzzy, kde-format
-#| msgid "Looking for any associated files..."
+#, kde-format
 msgid "Looking for any associated files…"
-msgstr "Tiek meklēti asociētie faili..."
+msgstr "Meklē saistītās datnes..."
 
 #: kcmfontinst/KCmFontInst.cpp:990
-#, fuzzy, kde-format
-#| msgid "Scanning Files..."
+#, kde-format
 msgid "Scanning Files…"
-msgstr "Skenē failus..."
+msgstr "Skenē datnes..."
 
 #: kcmfontinst/KCmFontInst.cpp:991
-#, fuzzy, kde-format
-#| msgid "Looking for additional files to install..."
+#, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Tiek meklēti papildus instalējamie faili..."
+msgstr "Meklē papildu instalējamas datnes..."
 
 #: kcmfontinst/KCmFontInst.cpp:1006
 #, kde-format
 msgid "Looking for files associated with %1"
-msgstr "Tiek meklēti ar %1 asociētie faili"
+msgstr "Meklē ar „%1“ saistītas datnes"
 
 #: kcmfontinst/KCmFontInst.cpp:1034
-#, fuzzy, kde-format
-#| msgid "Installing font(s)..."
+#, kde-format
 msgid "Installing font(s)…"
 msgstr "Instalē fontu(s)..."
 
 #: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid "You did not select anything to enable."
-msgstr "Nekas nav izvēlēts ieslēgšanai."
+msgstr "Nekas nav atlasīts ieslēgšanai."
 
 #: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid "You did not select anything to disable."
-msgstr "Nekas nav izvēlēts atslēgšanai."
+msgstr "Nekas nav atlasīts izslēgšanai."
 
 #: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "Nothing to Enable"
-msgstr "Nav ko ieslēgt"
+msgstr "Nav nekā, ko ieslēgt"
 
 #: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "Nothing to Disable"
-msgstr "Nav ko atslēgt"
+msgstr "Nav nekā, ko izslēgt"
 
 #: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Vai tiešām vēlaties ieslēgt</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Vai tiešām vēlaties ieslēgt</p><p>„<b>%1</b>“?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Vai tiešām vēlaties atslēgt</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Vai tiešām vēlaties izslēgt</p><p>„<b>%1</b>“?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
@@ -1027,8 +983,8 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Vai tiešām vēlaties ieslēgt</p><p>'<b>%1</b>', kas atrodas grupā '<b>%2</"
-"b>'?</p>"
+"<p>Vai tiešām vēlaties ieslēgt</p><p>„<b>%1</b>“, kas atrodas grupā „<b>%2</"
+"b>“?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1125
 #, kde-format
@@ -1036,8 +992,8 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Vai tiešām vēlaties atslēgt</p><p>'<b>%1</b>', kas atrodas grupā '<b>%2</"
-"b>'?</p>"
+"<p>Vai tiešām vēlaties izslēgt</p><p>„<b>%1</b>“, kas atrodas grupā „<b>%2</"
+"b>“?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1130
 #, kde-format
@@ -1047,7 +1003,7 @@ msgstr "Ieslēgt fontu"
 #: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Disable Font"
-msgstr "Atslēgt fontu"
+msgstr "Izslēgt fontu"
 
 #: kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
@@ -1055,15 +1011,15 @@ msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "Vai tiešām vēlaties ieslēgt šo %1 fontu?"
 msgstr[1] "Vai tiešām vēlaties ieslēgt šos %1 fontus?"
-msgstr[2] "Vai tiešām vēlaties ieslēgt šos %1 fontu?"
+msgstr[2] "Vai tiešām vēlaties ieslēgt šos %1 fontus?"
 
 #: kcmfontinst/KCmFontInst.cpp:1139
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "Vai tiešām vēlaties atslēgt šo %1 fontu?"
-msgstr[1] "Vai tiešām vēlaties atslēgt šos %1 fontus?"
-msgstr[2] "Vai tiešām vēlaties atslēgt šos %1 fontu?"
+msgstr[0] "Vai tiešām vēlaties izslēgt šo %1 fontu?"
+msgstr[1] "Vai tiešām vēlaties izslēgt šos %1 fontus?"
+msgstr[2] "Vai tiešām vēlaties izslēgt šos %1 fontus?"
 
 #: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
@@ -1074,13 +1030,13 @@ msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>Vai tiešām vēlaties ieslēgt šo %1 fontu, kas atrodas grupā '<b>%2</b>'?</"
+"<p>Vai tiešām vēlaties ieslēgt šo %1 fontu, kas atrodas grupā „<b>%2</b>“?</"
 "p>"
 msgstr[1] ""
-"<p>Vai tiešām vēlaties ieslēgt šos %1 fontus, kas atrodas grupā '<b>%2</b>'?"
+"<p>Vai tiešām vēlaties ieslēgt šos %1 fontus, kas atrodas grupā „<b>%2</b>“?"
 "</p>"
 msgstr[2] ""
-"<p>Vai tiešām vēlaties ieslēgt šos %1 fontu, kas atrodas grupā '<b>%2</b>'?</"
+"<p>Vai tiešām vēlaties ieslēgt šos %1 fontu, kas atrodas grupā „<b>%2</b>“?</"
 "p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1147
@@ -1092,14 +1048,14 @@ msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>Vai tiešām vēlaties atslēgt šo %1 fontu, kas atrodas grupā '<b>%2</b>'?</"
+"<p>Vai tiešām vēlaties izslēgt šo %1 fontu, kas atrodas grupā „<b>%2</b>“?</"
 "p>"
 msgstr[1] ""
-"<p>Vai tiešām vēlaties atslēgt šos %1 fontus, kas atrodas grupā '<b>%2</b>'?"
+"<p>Vai tiešām vēlaties izslēgt šos %1 fontus, kas atrodas grupā „<b>%2</b>“?"
 "</p>"
 msgstr[2] ""
-"<p>Vai tiešām vēlaties atslēgt šos %1 fontu, kas atrodas grupā '<b>%2</b>'?</"
-"p>"
+"<p>Vai tiešām vēlaties izslēgt šos %1 fontus, kas atrodas grupā „<b>%2</b>“?"
+"</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1154
 #, kde-format
@@ -1109,19 +1065,17 @@ msgstr "Ieslēgt fontus"
 #: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Disable Fonts"
-msgstr "Atslēgt fontus"
+msgstr "Izslēgt fontus"
 
 #: kcmfontinst/KCmFontInst.cpp:1161
-#, fuzzy, kde-format
-#| msgid "Enabling font(s)..."
+#, kde-format
 msgid "Enabling font(s)…"
 msgstr "Ieslēdz fontu(s)..."
 
 #: kcmfontinst/KCmFontInst.cpp:1163
-#, fuzzy, kde-format
-#| msgid "Disabling font(s)..."
+#, kde-format
 msgid "Disabling font(s)…"
-msgstr "Atslēdz fontu(s)..."
+msgstr "Izslēdz fontu(s)..."
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1166,7 +1120,7 @@ msgstr "48pt"
 #: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr "Var instalēt fontus tikai no \"%1\" vai \"%2\"."
+msgstr "Fontus var instalēt tikai no „%1“ vai „%2“."
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1175,12 +1129,12 @@ msgid ""
 "Please extract %1, and install the components individually."
 msgstr ""
 "Nevar tieši instalēt fontu pakotni.\n"
-"Lūdzu vispirms atpakojiet %1 un tad instalējiet katru komponenti atsevišķi"
+"Vispirms atspiediet „%1“ un tad instalējiet katru komponenti atsevišķi."
 
 #: kio/KioFonts.cpp:431
 #, kde-format
 msgid "Cannot copy fonts"
-msgstr "Nevar mokopēt fontus"
+msgstr "Nevar nokopēt fontus"
 
 #: kio/KioFonts.cpp:436
 #, kde-format
@@ -1195,17 +1149,17 @@ msgstr "Dzēst var tikai fontus."
 #: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
-msgstr "Var izdzēst fontus tikai no \"%1\" vai \"%2\"."
+msgstr "Var izdzēst fontus tikai no „%1“ vai „%2“."
 
 #: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
-msgstr "Lūdzu, norādiet \"%1\" vai \"%2\"."
+msgstr "Precizējiet „%1“ vai „%2“."
 
 #: kio/KioFonts.cpp:499
 #, kde-format
 msgid "No special methods supported."
-msgstr "Nav atbalstītu speciālu metožu."
+msgstr "Neatbalsta speciālas metodes."
 
 #: kio/KioFonts.cpp:573
 #, kde-format
@@ -1220,18 +1174,18 @@ msgstr "Neizdevās palaist sistēmas dēmonu"
 #: kio/KioFonts.cpp:704
 #, kde-format
 msgid "Backend died"
-msgstr "Baizmugure avarēja"
+msgstr "Aizmugursistēma avarēja"
 
 #: kio/KioFonts.cpp:706
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
-msgstr "%1 ir bitkartes fonts un jūsu sistēmā tie ir atslēgti."
+msgstr "„%1“ ir bitkartes fonts, bet jūsu sistēmā to lietošana ir izslēgta."
 
 #: kio/KioFonts.cpp:709
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
-msgstr "%1 satur fontu <b>%2</b>. Fonts ar šādu nosaukumu jau ir instalēts."
+msgstr "„%1“ satur fontu <b>%2</b>, tomēr tas sistēmā jau ir instalēts."
 
 #: kio/KioFonts.cpp:711
 #, kde-format
@@ -1241,7 +1195,7 @@ msgstr "%1 nav fonts."
 #: kio/KioFonts.cpp:713
 #, kde-format
 msgid "Could not remove all files associated with %1"
-msgstr "Neizdevās izņemt visus ar %1 asociētos failus"
+msgstr "Neizdevās izņemt visas ar „%1“ saistītās datnes"
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:107
 #, kde-format
@@ -1270,7 +1224,7 @@ msgstr "Rakstzīmes nav atrastas."
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr "Glāžšķūņa ŗūķēļī aŗ šķērēm griež šķiņķi"
+msgstr "Muļķa hipiji turpat brīvi mēģina nogaršot celofāna žņaudzējčūsku"
 
 #: lib/FcEngine.cpp:1076
 #, kde-format
@@ -1293,7 +1247,7 @@ msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 #: lib/FcEngine.cpp:1484
 #, kde-format
 msgid "ERROR: Could not determine font's name."
-msgstr "Kļūda: neizdevās noteikt fonta nosaukumu."
+msgstr "KĻŪDA: neizdevās noteikt fonta nosaukumu."
 
 #: lib/FcEngine.cpp:1487
 #, kde-format
@@ -1305,11 +1259,11 @@ msgstr[2] "%2 [%1 pikseļu]"
 
 #: lib/KfiConstants.h:22
 msgid "Personal"
-msgstr "Personīgi"
+msgstr "Personīgie"
 
 #: lib/KfiConstants.h:23
 msgid "System"
-msgstr "Sistēma"
+msgstr "Sistēmas"
 
 #: lib/KfiConstants.h:24
 msgid "All"
@@ -1349,11 +1303,11 @@ msgstr "Vidējs"
 
 #: lib/KfiConstants.h:81
 msgid "Demi Bold"
-msgstr "Demi treknraksts"
+msgstr "Nedaudz treknraksts"
 
 #: lib/KfiConstants.h:82
 msgid "Semi Bold"
-msgstr "Semi treknraksts"
+msgstr "Pa pusei treknraksts"
 
 #: lib/KfiConstants.h:83
 msgid "Bold"
@@ -1425,7 +1379,7 @@ msgstr "Vienādatstarpju"
 
 #: lib/KfiConstants.h:104
 msgid "Charcell"
-msgstr ""
+msgstr "Rakstzīmes šūnas"
 
 #: lib/KfiConstants.h:105
 msgid "Proportional"
@@ -1604,22 +1558,20 @@ msgstr "UTF-8"
 #: viewpart/CharTip.cpp:184
 #, kde-format
 msgid "XML Decimal Entity"
-msgstr "XML decimālā entīte"
+msgstr "XML decimālā vienība"
 
 #: viewpart/FontViewPart.cpp:87
 #, kde-format
 msgid "Show Face:"
-msgstr "Rādīt seju:"
+msgstr "Rādīt burtveidolu:"
 
 #: viewpart/FontViewPart.cpp:90
-#, fuzzy, kde-format
-#| msgid "Installing"
+#, kde-format
 msgid "Install…"
-msgstr "Instalē"
+msgstr "Instalēt..."
 
 #: viewpart/FontViewPart.cpp:111
-#, fuzzy, kde-format
-#| msgid "Change Text..."
+#, kde-format
 msgid "Change Text…"
 msgstr "Mainīt tekstu..."
 
@@ -1631,28 +1583,28 @@ msgstr "Nevar nolasīt fontu."
 #: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Preview String"
-msgstr "Priekšapskates teksts"
+msgstr "Priekšskatījuma teksts"
 
 #: viewpart/FontViewPart.cpp:389
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Lūdzu ievadiet jaunu rindu:"
+msgstr "Ievadiet jaunu rindu:"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
 #, kde-format
 msgid "&Main Toolbar"
-msgstr "&Galvenā rīkjosla "
+msgstr "&Galvenā rīkjosla"
 
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
-msgstr "Priekšapskates tips"
+msgstr "Priekšskatījuma tips"
 
 #: viewpart/PreviewSelectAction.cpp:31
 #, kde-format
 msgid "Standard Preview"
-msgstr "Standarta priekšapskate"
+msgstr "Standarta priekšskatījums"
 
 #: viewpart/PreviewSelectAction.cpp:32
 #, kde-format
@@ -1675,7 +1627,7 @@ msgstr "Latīņu pamata"
 
 #: viewpart/UnicodeBlocks.h:18
 msgid "Latin-1 Supplement"
-msgstr "Latin-1 atbalsta"
+msgstr "Latin-1 papildu"
 
 #: viewpart/UnicodeBlocks.h:19
 msgid "Latin Extended-A"
@@ -1707,7 +1659,7 @@ msgstr "Kirilica"
 
 #: viewpart/UnicodeBlocks.h:26
 msgid "Cyrillic Supplement"
-msgstr "Krilicas atbalsta"
+msgstr "Kirilicas atbalsta"
 
 #: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
 msgid "Armenian"
@@ -1727,7 +1679,7 @@ msgstr "Sīriešu"
 
 #: viewpart/UnicodeBlocks.h:31
 msgid "Arabic Supplement"
-msgstr "Arābu paplildinājums"
+msgstr "Arābu papildinājums"
 
 #: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
 msgid "Thaana"
@@ -1735,11 +1687,11 @@ msgstr "Tāna"
 
 #: viewpart/UnicodeBlocks.h:33
 msgid "NKo"
-msgstr "NKo"
+msgstr "N’Ko raksts"
 
 #: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "Dēvanāgarī"
 
 #: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
 msgid "Bengali"
@@ -1747,19 +1699,19 @@ msgstr "Bengāļu"
 
 #: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
 msgid "Gurmukhi"
-msgstr "Gurmuku"
+msgstr "Gurmukhī"
 
 #: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
 msgid "Gujarati"
-msgstr "Gurjatu"
+msgstr "Gudžaratu raksts"
 
 #: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
 msgid "Oriya"
-msgstr "Oriju"
+msgstr "Oriju raksts"
 
 #: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
 msgid "Tamil"
-msgstr "Tamilu"
+msgstr "Tamilu raksts"
 
 #: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
 msgid "Telugu"
@@ -1767,23 +1719,23 @@ msgstr "Telugu"
 
 #: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
 msgid "Kannada"
-msgstr "Kannadu"
+msgstr "Kannada"
 
 #: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
 msgid "Malayalam"
-msgstr "Malajaliešu"
+msgstr "Malajalama"
 
 #: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
 msgid "Sinhala"
-msgstr "Sinhāliešu"
+msgstr "Singāļu raksts"
 
 #: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
 msgid "Thai"
-msgstr "Taizemiešu"
+msgstr "Taju raksts"
 
 #: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
 msgid "Lao"
-msgstr "Laosiešu"
+msgstr "Laosiešu raksts"
 
 #: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
 msgid "Tibetan"
@@ -1791,7 +1743,7 @@ msgstr "Tibetiešu"
 
 #: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
 msgid "Myanmar"
-msgstr "Mjanmiešu"
+msgstr "Birmiešu raksts"
 
 #: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
 msgid "Georgian"
@@ -1799,67 +1751,67 @@ msgstr "Gruzīnu"
 
 #: viewpart/UnicodeBlocks.h:49
 msgid "Hangul Jamo"
-msgstr ""
+msgstr "Hangila čamo"
 
 #: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
 msgid "Ethiopic"
-msgstr "Etiopiešu"
+msgstr "Etiopiešu raksts"
 
 #: viewpart/UnicodeBlocks.h:51
 msgid "Ethiopic Supplement"
-msgstr "Etiopiešu papildinājums"
+msgstr "Etiopiešu raksta papildinājums"
 
 #: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
 msgid "Cherokee"
-msgstr "Šerokī"
+msgstr "Čiroku raksts"
 
 #: viewpart/UnicodeBlocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "Apvienotie Kanādas aborigēnu zilbju"
+msgstr "Vienotais Kanādas aborigēnu sillabārijs"
 
 #: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
 msgid "Ogham"
-msgstr ""
+msgstr "Ogams"
 
 #: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
 msgid "Runic"
-msgstr "Rūnas"
+msgstr "Rūnu raksts"
 
 #: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
 msgid "Tagalog"
-msgstr "Tagalogu"
+msgstr "Baibajins"
 
 #: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
 msgid "Hanunoo"
-msgstr ""
+msgstr "Hanunuo"
 
 #: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
 msgid "Buhid"
-msgstr ""
+msgstr "Buhidu raksts"
 
 #: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
 msgid "Tagbanwa"
-msgstr ""
+msgstr "Tagbanvu raksts"
 
 #: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
 msgid "Khmer"
-msgstr "Khmeru"
+msgstr "Khmeru raksts"
 
 #: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
 msgid "Mongolian"
-msgstr "Mongoļu"
+msgstr "Mongoļu raksts"
 
 #: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
 msgid "Limbu"
-msgstr "Limbu"
+msgstr "Limbu raksts"
 
 #: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
 msgid "Tai Le"
-msgstr "Tai Le"
+msgstr "Tai Le raksts"
 
 #: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
 msgid "New Tai Lue"
-msgstr "Jaunais Tai Lue"
+msgstr "Jaunais taili raksts"
 
 #: viewpart/UnicodeBlocks.h:65
 msgid "Khmer Symbols"
@@ -1867,11 +1819,11 @@ msgstr "Khmeru simboli"
 
 #: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
 msgid "Buginese"
-msgstr ""
+msgstr "Bugu raksts"
 
 #: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
 msgid "Balinese"
-msgstr "Baliešu"
+msgstr "Baliešu raksts"
 
 #: viewpart/UnicodeBlocks.h:68
 msgid "Phonetic Extensions"
@@ -1899,7 +1851,7 @@ msgstr "Pamata pieturzīmes"
 
 #: viewpart/UnicodeBlocks.h:74
 msgid "Superscripts and Subscripts"
-msgstr "Augš un apakšraksti"
+msgstr "Augšraksti un apakšraksti"
 
 #: viewpart/UnicodeBlocks.h:75
 msgid "Currency Symbols"
@@ -1919,11 +1871,11 @@ msgstr "Skaitļu formas"
 
 #: viewpart/UnicodeBlocks.h:79
 msgid "Arrows"
-msgstr "Bultiņas"
+msgstr "Bultas"
 
 #: viewpart/UnicodeBlocks.h:80
 msgid "Mathematical Operators"
-msgstr "Matematiskie operatori"
+msgstr "Matemātiskie simboli"
 
 #: viewpart/UnicodeBlocks.h:81
 msgid "Miscellaneous Technical"
@@ -1939,11 +1891,11 @@ msgstr "Optiskā rakstzīmju atpazīšana"
 
 #: viewpart/UnicodeBlocks.h:84
 msgid "Enclosed Alphanumerics"
-msgstr "Apvikltie burti un cipari"
+msgstr "Apvilktie burti un cipari"
 
 #: viewpart/UnicodeBlocks.h:85
 msgid "Box Drawing"
-msgstr "Kastu bildes"
+msgstr "Kvadrāta rakstzīmes"
 
 #: viewpart/UnicodeBlocks.h:86
 msgid "Block Elements"
@@ -1967,7 +1919,7 @@ msgstr "Dažādi matemātiskie simboli A"
 
 #: viewpart/UnicodeBlocks.h:91
 msgid "Supplemental Arrows-A"
-msgstr "Papildus bultas A"
+msgstr "Papildu bultas A"
 
 #: viewpart/UnicodeBlocks.h:92
 msgid "Braille Patterns"
@@ -1991,15 +1943,15 @@ msgstr "Dažādi simboli un bultas"
 
 #: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
 msgid "Glagolitic"
-msgstr ""
+msgstr "Glagolica"
 
 #: viewpart/UnicodeBlocks.h:98
 msgid "Latin Extended-C"
-msgstr "Latīnu paplašinātais-C"
+msgstr "Latīņu paplašinātais C raksts"
 
 #: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
 msgid "Coptic"
-msgstr "Koptu"
+msgstr "Koptu alfabēts"
 
 #: viewpart/UnicodeBlocks.h:100
 msgid "Georgian Supplement"
@@ -2007,15 +1959,15 @@ msgstr "Gruzīnu papildinājums"
 
 #: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
 msgid "Tifinagh"
-msgstr ""
+msgstr "Tifinags"
 
 #: viewpart/UnicodeBlocks.h:102
 msgid "Ethiopic Extended"
-msgstr "Etiopiešu paplašinātais"
+msgstr "Etiopiešu paplašinātais raksts"
 
 #: viewpart/UnicodeBlocks.h:103
 msgid "Supplemental Punctuation"
-msgstr "Papildus pieturzīmes"
+msgstr "Papildu pieturzīmes"
 
 #: viewpart/UnicodeBlocks.h:104
 msgid "CJK Radicals Supplement"
@@ -2023,7 +1975,7 @@ msgstr "CJK sakņu papildinājums"
 
 #: viewpart/UnicodeBlocks.h:105
 msgid "Kangxi Radicals"
-msgstr "Kangxi saknes"
+msgstr "Kansi saknes"
 
 #: viewpart/UnicodeBlocks.h:106
 msgid "Ideographic Description Characters"
@@ -2047,11 +1999,11 @@ msgstr "Bopomofo"
 
 #: viewpart/UnicodeBlocks.h:111
 msgid "Hangul Compatibility Jamo"
-msgstr "Hangulas savietojams ar džamo"
+msgstr "Ar hangilu savietojams čamo"
 
 #: viewpart/UnicodeBlocks.h:112
 msgid "Kanbun"
-msgstr ""
+msgstr "Kanbuns"
 
 #: viewpart/UnicodeBlocks.h:113
 msgid "Bopomofo Extended"
@@ -2075,23 +2027,23 @@ msgstr "CJK savietojamība"
 
 #: viewpart/UnicodeBlocks.h:118
 msgid "CJK Unified Ideographs Extension A"
-msgstr "CJK unificētie ideogrāfi paplašinājums A"
+msgstr "CJK unificētie ideogrāfiskie paplašinājums A"
 
 #: viewpart/UnicodeBlocks.h:119
 msgid "Yijing Hexagram Symbols"
-msgstr "Yijing sešstūra simboli"
+msgstr "Jidzjin sešstūra simboli"
 
 #: viewpart/UnicodeBlocks.h:120
 msgid "CJK Unified Ideographs"
-msgstr "CJK unificētie ideogrāfi"
+msgstr "CJK unificētie ideogrāfiskie raksti"
 
 #: viewpart/UnicodeBlocks.h:121
 msgid "Yi Syllables"
-msgstr "Yi zilbes"
+msgstr "Ji zilbes"
 
 #: viewpart/UnicodeBlocks.h:122
 msgid "Yi Radicals"
-msgstr "Yi saknes"
+msgstr "Ji saknes"
 
 #: viewpart/UnicodeBlocks.h:123
 msgid "Modifier Tone Letters"
@@ -2103,15 +2055,15 @@ msgstr "Latīņu paplašinātais-D"
 
 #: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
 msgid "Syloti Nagri"
-msgstr ""
+msgstr "Siloti Nagri"
 
 #: viewpart/UnicodeBlocks.h:126
 msgid "Phags-pa"
-msgstr ""
+msgstr "Mongoļu kvadrātraksts"
 
 #: viewpart/UnicodeBlocks.h:127
 msgid "Hangul Syllables"
-msgstr "Hangul zilbes"
+msgstr "Hangila zilbes"
 
 #: viewpart/UnicodeBlocks.h:128
 msgid "High Surrogates"
@@ -2131,7 +2083,7 @@ msgstr "Vieta privātiem simboliem"
 
 #: viewpart/UnicodeBlocks.h:132
 msgid "CJK Compatibility Ideographs"
-msgstr "CJK savietojamības ideogrāfi"
+msgstr "CJK savietojamības ideogrāfiskie raksti"
 
 #: viewpart/UnicodeBlocks.h:133
 msgid "Alphabetic Presentation Forms"
@@ -2175,71 +2127,71 @@ msgstr "Speciālie"
 
 #: viewpart/UnicodeBlocks.h:143
 msgid "Linear B Syllabary"
-msgstr ""
+msgstr "Lineārais B sillabārijs"
 
 #: viewpart/UnicodeBlocks.h:144
 msgid "Linear B Ideograms"
-msgstr ""
+msgstr "Lineārās B ideogrammas"
 
 #: viewpart/UnicodeBlocks.h:145
 msgid "Aegean Numbers"
-msgstr ""
+msgstr "Egejas cipari"
 
 #: viewpart/UnicodeBlocks.h:146
 msgid "Ancient Greek Numbers"
-msgstr "Seno grieķu skaitļi"
+msgstr "Sengrieķu cipari"
 
 #: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
 msgid "Old Italic"
-msgstr ""
+msgstr "Senitāļu"
 
 #: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
 msgid "Gothic"
-msgstr "Gotu"
+msgstr "Gotu alfabēts"
 
 #: viewpart/UnicodeBlocks.h:149 viewpart/UnicodeScripts.h:79
 msgid "Ugaritic"
-msgstr ""
+msgstr "Ugarītu raksts"
 
 #: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
 msgid "Old Persian"
-msgstr ""
+msgstr "Senpersiešu ķīļraksts"
 
 #: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
 msgid "Deseret"
-msgstr ""
+msgstr "Dezeretas alfabēts"
 
 #: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
 msgid "Shavian"
-msgstr ""
+msgstr "Šoviešu alfabēts"
 
 #: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
 msgid "Osmanya"
-msgstr "Osmāņu"
+msgstr "Osmana raksts"
 
 #: viewpart/UnicodeBlocks.h:154
 msgid "Cypriot Syllabary"
-msgstr ""
+msgstr "Kipriešu sillabārijs"
 
 #: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
 msgid "Phoenician"
-msgstr ""
+msgstr "Feniķiešu alfabēts"
 
 #: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:47
 msgid "Kharoshthi"
-msgstr ""
+msgstr "Kharošthi"
 
 #: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
 msgid "Cuneiform"
-msgstr ""
+msgstr "Ķīļraksts"
 
 #: viewpart/UnicodeBlocks.h:158
 msgid "Cuneiform Numbers and Punctuation"
-msgstr ""
+msgstr "Ķīļraksta cipari un pieturzīmes"
 
 #: viewpart/UnicodeBlocks.h:159
 msgid "Byzantine Musical Symbols"
-msgstr "Bizantijas laika notis"
+msgstr "Bizantijas mūzikas simboli"
 
 #: viewpart/UnicodeBlocks.h:160
 msgid "Musical Symbols"
@@ -2247,19 +2199,19 @@ msgstr "Mūzikas simboli"
 
 #: viewpart/UnicodeBlocks.h:161
 msgid "Ancient Greek Musical Notation"
-msgstr "Seno grieķu notis"
+msgstr "Sengrieķu mūzikas pieraksts"
 
 #: viewpart/UnicodeBlocks.h:162
 msgid "Tai Xuan Jing Symbols"
-msgstr ""
+msgstr "Taisuandzjin simboli"
 
 #: viewpart/UnicodeBlocks.h:163
 msgid "Counting Rod Numerals"
-msgstr ""
+msgstr "Skaitāmo kociņu cipari"
 
 #: viewpart/UnicodeBlocks.h:164
 msgid "Mathematical Alphanumeric Symbols"
-msgstr "Matemātiski alafanumeriskie simboli"
+msgstr "Matemātiski alfanumeriskie simboli"
 
 #: viewpart/UnicodeBlocks.h:165
 msgid "CJK Unified Ideographs Extension B"
@@ -2267,11 +2219,11 @@ msgstr "CJK unificētie ideogrāfi paplašinājums B"
 
 #: viewpart/UnicodeBlocks.h:166
 msgid "CJK Compatibility Ideographs Supplement"
-msgstr "CJK savietojamības ideogrāfu pielikums"
+msgstr "CJK savietojamības ideogrāfisko zīmju pielikums"
 
 #: viewpart/UnicodeBlocks.h:167
 msgid "Tags"
-msgstr "Tagi"
+msgstr "Birkas"
 
 #: viewpart/UnicodeBlocks.h:168
 msgid "Variation Selectors Supplement"
@@ -2287,7 +2239,7 @@ msgstr "Papildus privātas lietošanas lauks-B"
 
 #: viewpart/UnicodeScripts.h:20
 msgid "Braille"
-msgstr "Brails"
+msgstr "Braila raksts"
 
 #: viewpart/UnicodeScripts.h:23
 msgid "Canadian Aboriginal"
@@ -2295,27 +2247,27 @@ msgstr "Kanādas aborigēnu"
 
 #: viewpart/UnicodeScripts.h:25
 msgid "Common"
-msgstr "Kopējie"
+msgstr "Nenoteiktai rakstībai"
 
 #: viewpart/UnicodeScripts.h:28
 msgid "Cypriot"
-msgstr "Kipras"
+msgstr "Kipriešu"
 
 #: viewpart/UnicodeScripts.h:36
 msgid "Greek"
-msgstr "Grieķu"
+msgstr "Grieķu alfabēts"
 
 #: viewpart/UnicodeScripts.h:39
 msgid "Han"
-msgstr "Han"
+msgstr "Ķīniešu raksts (Han)"
 
 #: viewpart/UnicodeScripts.h:40
 msgid "Hangul"
-msgstr ""
+msgstr "Hangils"
 
 #: viewpart/UnicodeScripts.h:44
 msgid "Inherited"
-msgstr "Mantotie"
+msgstr "Pārmantotā rakstība"
 
 #: viewpart/UnicodeScripts.h:50
 msgid "Latin"
@@ -2323,19 +2275,19 @@ msgstr "Latīņu"
 
 #: viewpart/UnicodeScripts.h:52
 msgid "Linear B"
-msgstr ""
+msgstr "Lineārais B raksts"
 
 #: viewpart/UnicodeScripts.h:57
 msgid "Nko"
-msgstr ""
+msgstr "N’Ko raksts"
 
 #: viewpart/UnicodeScripts.h:63
 msgid "Phags Pa"
-msgstr ""
+msgstr "Mongoļu kvadrātraksts"
 
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
-msgstr "Yi"
+msgstr "Ji raksts"
 
 #, fuzzy
 #~| msgid "KDE Font Installer"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-01-20 00:38+0000\n"
 "PO-Revision-Date: 2017-01-14 19:23+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -156,24 +156,24 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:62
+#: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:74
+#: package/contents/ui/ExpandedRepresentation.qml:71
 #, fuzzy, kde-format
 #| msgid "Status & Notifications"
 msgid "Status and Notifications"
 msgstr "Stanje i obaveštenja"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: package/contents/ui/ExpandedRepresentation.qml:137
 #, kde-format
 msgid "More actions"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:234
+#: package/contents/ui/ExpandedRepresentation.qml:231
 #, kde-format
 msgid "Keep Open"
 msgstr ""

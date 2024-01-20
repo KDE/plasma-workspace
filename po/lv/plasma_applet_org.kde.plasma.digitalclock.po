@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Māris Nartišs <maris.kde@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2023-12-14 15:27+0200\n"
-"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-18 22:44+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -32,7 +33,7 @@ msgstr "Kalendārs"
 #: package/contents/ui/CalendarView.qml:426
 #, kde-format
 msgid "Time Zones"
-msgstr "Laika zonas"
+msgstr "Laika joslas"
 
 #: package/contents/ui/CalendarView.qml:142
 #, kde-format
@@ -70,7 +71,7 @@ msgstr "Pārslēgt..."
 #: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch to another timezone"
-msgstr "Pārslēgt uz citu laika zonu"
+msgstr "Pārslēgt uz citu laika joslu"
 
 #: package/contents/ui/configAppearance.qml:48
 #, kde-format
@@ -123,32 +124,32 @@ msgstr "Vienmēr"
 #: package/contents/ui/configAppearance.qml:84
 #, kde-format
 msgid "Show time zone:"
-msgstr "Rādīt laika zonu:"
+msgstr "Rādīt laika joslu:"
 
 #: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Tikai, ja atšķiras no vietējās laika zonas"
+msgstr "Tikai, ja atšķiras no vietējās laika joslas"
 
 #: package/contents/ui/configAppearance.qml:103
 #, kde-format
 msgid "Display time zone as:"
-msgstr "Rādīt laika zonu kā:"
+msgstr "Rādīt laika joslu kā:"
 
 #: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Code"
-msgstr "Kods"
+msgstr "Kodu"
 
 #: package/contents/ui/configAppearance.qml:109
 #, kde-format
 msgid "City"
-msgstr "Pilsēta"
+msgstr "Pilsētu"
 
 #: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Offset from UTC time"
-msgstr "Atšķirība no UTC laika"
+msgstr "Atšķirību no UTC laika"
 
 #: package/contents/ui/configAppearance.qml:122
 #, kde-format
@@ -164,7 +165,7 @@ msgstr "12 stundu"
 #: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "Use Region Defaults"
-msgstr "Izmantot reģiona noklusējumu"
+msgstr "Izmantot reģiona noklusējumus"
 
 #: package/contents/ui/configAppearance.qml:129
 #, kde-format
@@ -184,12 +185,12 @@ msgstr "Datuma formāts:"
 #: package/contents/ui/configAppearance.qml:155
 #, kde-format
 msgid "Long Date"
-msgstr "Garš datums"
+msgstr "Garais datums"
 
 #: package/contents/ui/configAppearance.qml:160
 #, kde-format
 msgid "Short Date"
-msgstr "Īss datums"
+msgstr "Īsais datums"
 
 #: package/contents/ui/configAppearance.qml:165
 #, kde-format
@@ -234,7 +235,7 @@ msgstr "Teksts izmantos sistēmas fontu un aizpildīs visu pieejamo vietu."
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr "Manuāls"
+msgstr "Manuāla"
 
 #: package/contents/ui/configAppearance.qml:254
 #, kde-format
@@ -246,7 +247,7 @@ msgstr "Izvēlēties stilu..."
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr "%1pt %2"
+msgstr "%1 pt %2"
 
 #: package/contents/ui/configAppearance.qml:274
 #, kde-format
@@ -257,7 +258,7 @@ msgstr "Izvēlēties fontu"
 #: package/contents/ui/configCalendar.qml:38
 #, kde-format
 msgid "General:"
-msgstr "Vispārējs:"
+msgstr "Vispārīgi:"
 
 #: package/contents/ui/configCalendar.qml:39
 #, kde-format
@@ -280,11 +281,14 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
+"Padoms: ja bieži ceļojat, šim sarakstam pievienojat savu mājas laika joslu. "
+"Tā parādīsies tikai tad, ja mainīsies visas sistēmas laika josla uz kādu "
+"citu."
 
 #: package/contents/ui/configTimeZones.qml:78
 #, kde-format
 msgid "Clock is currently using this time zone"
-msgstr "Šobrīd pulkstenis izmanto šo laika zonu"
+msgstr "Šobrīd pulkstenis izmanto šo laika joslu"
 
 #: package/contents/ui/configTimeZones.qml:80
 #, kde-format
@@ -293,27 +297,27 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr "Paslēpta tikmēr, kamēr šī ir lokālās laika zonas pilsēta"
+msgstr "Paslēpta tikmēr, kamēr šī pilsēta atrodas vietējā laika joslā"
 
 #: package/contents/ui/configTimeZones.qml:105
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Pārslēgt sistēmas laika zonu..."
+msgstr "Mainīt sistēmas laika joslu..."
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Remove this time zone"
-msgstr "Noņemt šo laika zonu"
+msgstr "Noņemt šo laika joslu"
 
 #: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Sistēmas laika zona"
+msgstr "Sistēmas laika josla"
 
 #: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Additional Time Zones"
-msgstr "Papildu laika zonas"
+msgstr "Papildu laika joslas"
 
 #: package/contents/ui/configTimeZones.qml:140
 #, kde-format
@@ -321,18 +325,18 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
-"Pievienojiet papildus laika zonas, ko rādīt pulksteņa paskaidrē un uz kurām "
-"viegli varēs pārslēgt pulksteni"
+"Pievienojiet papildu laika joslas, ko rādīt pulksteņa paskaidrē un uz kurām "
+"ātri pārslēgt pulksteni, kad vajadzīgs"
 
 #: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid "Add Time Zones…"
-msgstr "Pievienot laika zonas..."
+msgstr "Pievienot laika joslas..."
 
 #: package/contents/ui/configTimeZones.qml:159
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
-msgstr "Pārslēgt laika zonas ritinot peles ritenīti virs pulksteņa"
+msgstr "Pārslēgt laika joslas ritinot peles ritenīti virs pulksteņa"
 
 #: package/contents/ui/configTimeZones.qml:166
 #, kde-format
@@ -340,14 +344,13 @@ msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Citas laika zonas attēlošana pulkstenī nemainīs sistēmas laika zonu, citas "
-"programmas joprojām izmantos sistēmas laika zonu. Ja vēlaties mainīt laika "
-"zonu visā sistēmā, izmantojiet sistēmas laika zonas pārslēgšanas iespēju."
+"Šīs iespējas izmantošana nemainīs sistēmas laika joslu. Ja ceļojat, tad tā "
+"vietā mainiet sistēmas laika joslu."
 
 #: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Add More Timezones"
-msgstr "Pievienot vēl laika zonas"
+msgstr "Pievienot papildu laika joslas"
 
 #: package/contents/ui/configTimeZones.qml:199
 #, kde-format
@@ -355,8 +358,8 @@ msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
 "automatically."
 msgstr ""
-"Vismaz vienai laika zonai jābūt iespējotai. Jūsu vietējā laika zona tika "
-"iespējota automātiski."
+"Jābūt ieslēgtai vismaz vienai laika joslai. Jūsu lokālā laika josla ir "
+"ieslēgta automātiski."
 
 #: package/contents/ui/configTimeZones.qml:235
 #, kde-format
@@ -410,7 +413,7 @@ msgstr "%1 (UNIX laiks)"
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
-msgstr "%1 (Juliāna datums)"
+msgstr "%1 (datums pēc Jūlija kalendāra)"
 
 #: plugin/timezonemodel.cpp:146
 #, kde-format
@@ -421,4 +424,4 @@ msgstr "Vietējā"
 #: plugin/timezonemodel.cpp:148
 #, kde-format
 msgid "System's local time zone"
-msgstr "Sistēmas vietējā laika zona"
+msgstr "Sistēmas vietējā laika josla"

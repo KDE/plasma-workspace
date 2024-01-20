@@ -4,489 +4,457 @@
 #
 # Einars Sprugis <einars8@gmail.com>, 2011.
 # Maris Nartiss <maris.kde@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2012-01-07 08:38+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
-"Language-Team: Latvian\n"
+"PO-Revision-Date: 2024-01-17 15:22+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: fileinfo.cpp:170
 #, kde-format
 msgid "Open with %1"
-msgstr ""
+msgstr "Atvērt ar %1"
 
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr ""
+msgstr "Atvērt ar..."
 
 #: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Atvērt saturošo mapi"
 
 #: filemenu.cpp:131
 #, kde-format
 msgid "&Copy"
-msgstr ""
+msgstr "&Kopēt"
 
 #: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
-msgstr ""
+msgstr "Kopēt atrašanās vietu"
 
 #: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Īpašības"
 
 #: globalshortcuts.cpp:23
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr ""
+msgstr "Ies./izsl. netraucēšanas režīmu"
 
 #: globalshortcuts.cpp:42
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
-msgstr "Paziņojumi"
+msgstr "Paziņojumi izslēgti"
 
 #: globalshortcuts.cpp:43
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
-msgstr "Paziņojumi"
+msgstr "Paziņojumi ieslēgti"
 
 #: package/contents/ui/EditContextMenu.qml:32
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
-msgstr ""
+msgstr "Kopēt saites adresi"
 
 #: package/contents/ui/EditContextMenu.qml:44
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr ""
+msgstr "Kopēt"
 
 #: package/contents/ui/EditContextMenu.qml:61
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr ""
+msgstr "Atlasīt visu"
 
 #: package/contents/ui/FullRepresentation.qml:69
 #, kde-format
 msgid "Do not disturb"
-msgstr ""
+msgstr "Netraucēt"
 
 #: package/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "For 1 hour"
-msgstr ""
+msgstr "1 stundu"
 
 #: package/contents/ui/FullRepresentation.qml:116
 #, kde-format
 msgid "For 4 hours"
-msgstr ""
+msgstr "4 stundas"
 
 #: package/contents/ui/FullRepresentation.qml:125
 #, kde-format
 msgid "Until this evening"
-msgstr ""
+msgstr "Līdz vakaram"
 
 #: package/contents/ui/FullRepresentation.qml:135
 #, kde-format
 msgid "Until tomorrow morning"
-msgstr ""
+msgstr "Līdz rītdienas rītam"
 
 #: package/contents/ui/FullRepresentation.qml:147
 #, kde-format
 msgid "Until Monday"
-msgstr ""
+msgstr "Līdz pirmdienai"
 
 #: package/contents/ui/FullRepresentation.qml:154
 #, kde-format
 msgid "Until manually disabled"
-msgstr ""
+msgstr "Līdz manuāli izslēdzu"
 
 #: package/contents/ui/FullRepresentation.qml:204
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Automātiski paslēpt"
+msgstr "Automātiski beidzas: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
-msgstr ""
+msgstr "Kamēr %1 ir aktīvs (%2)"
 
 #: package/contents/ui/FullRepresentation.qml:218
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
-msgstr ""
+msgstr "Kamēr %1 ir aktīvs"
 
 #: package/contents/ui/FullRepresentation.qml:224
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
-msgstr ""
+msgstr "Ekrāni ir spoguļoti"
 
 #: package/contents/ui/FullRepresentation.qml:432
 #, kde-format
 msgid "Close Group"
-msgstr ""
+msgstr "Aizvērt grupu"
 
 #: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
-msgstr ""
+msgstr "Rādīt mazāk"
 
 #: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
-msgstr ""
+msgstr "Rādīt par %1 vairāk"
 
 #: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgid "No unread notifications"
-msgstr "Paziņojumi"
+msgstr "Nav nelasītu paziņojumu"
 
 #: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Notifications and jobs"
+#, kde-format
 msgid "Notification service not available"
-msgstr "Paziņojumi un darbi"
+msgstr "Paziņojumu serviss nav pieejams"
 
 #: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
-msgstr ""
+msgstr "Šobrīd paziņojumus sniedz „%1“ izstrādātais „%2“"
 
 #: package/contents/ui/JobDetails.qml:34
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: package/contents/ui/JobDetails.qml:105
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
-msgstr ""
+msgstr "%2 no %1"
 
 #: package/contents/ui/JobDetails.qml:109
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] "%2 / %1 fails"
-msgstr[1] "%2 / %1 faili"
-msgstr[2] "%2 / %1 failu"
+msgstr[0] "%2 no %1 datnes"
+msgstr[1] "%2 no %1 datnēm"
+msgstr[2] "%2 no %1 datnēm"
 
 #: package/contents/ui/JobDetails.qml:112
-#, fuzzy, kde-format
-#| msgid "%2 / 1 folder"
-#| msgid_plural "%2 / %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
-msgstr[0] "%2 / %1 mape"
-msgstr[1] "%2 / %1 mapes"
-msgstr[2] "%2 / %1 mapju"
+msgstr[0] "%2 no %1 mapes"
+msgstr[1] "%2 no %1 mapēm"
+msgstr[2] "%2 no %1 mapēm"
 
 #: package/contents/ui/JobDetails.qml:115
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 / %1 fails"
-msgstr[1] "%2 / %1 faili"
-msgstr[2] "%2 / %1 failu"
+msgstr[0] "%2 no %1 vienuma"
+msgstr[1] "%2 no %1 vienumiem"
+msgstr[2] "%2 no %1 vienumiem"
 
 #: package/contents/ui/JobDetails.qml:123
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
+#, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] "%2 / %1 fails"
-msgstr[1] "%2 / %1 faili"
-msgstr[2] "%2 / %1 failu"
+msgstr[0] "%1 datne"
+msgstr[1] "%1 datnes"
+msgstr[2] "%1 datņu"
 
 #: package/contents/ui/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgid "%2 / 1 folder"
-#| msgid_plural "%2 / %1 folders"
+#, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
-msgstr[0] "%2 / %1 mape"
-msgstr[1] "%2 / %1 mapes"
-msgstr[2] "%2 / %1 mapju"
+msgstr[0] "%1 mape"
+msgstr[1] "%1 mapes"
+msgstr[2] "%1 mapju"
 
 #: package/contents/ui/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 vienums"
+msgstr[1] "%1 vienumi"
+msgstr[2] "%1 vienumu"
 
 #: package/contents/ui/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"
 
 #: package/contents/ui/JobItem.qml:164
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:178
-#, fuzzy, kde-format
-#| msgid "Paused"
+#, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
-msgstr "Pauzēts"
+msgstr "Pauzēt"
 
 #: package/contents/ui/JobItem.qml:188
-#, fuzzy, kde-format
-#| msgid "Cancel job"
+#, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
-msgstr "Atcelt darbu"
+msgstr "Atcelt"
 
 #: package/contents/ui/JobItem.qml:199
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
-msgstr ""
+msgstr "Slēpt informāciju"
 
 #: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
-msgstr ""
+msgstr "Rādīt informāciju"
 
 #: package/contents/ui/JobItem.qml:232
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
-msgstr ""
+msgstr "Vairāk iespēju..."
 
 #: package/contents/ui/JobItem.qml:260
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgid "Open"
 msgstr "Atvērt"
 
 #: package/contents/ui/main.qml:63
-#, fuzzy, kde-format
-#| msgid "no running jobs"
+#, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
-msgstr[0] "nav palaistu darbu"
-msgstr[1] "nav palaistu darbu"
-msgstr[2] "nav palaistu darbu"
+msgstr[0] "%1 palaists uzdevums"
+msgstr[1] "%1 palaisti uzdevumi"
+msgstr[2] "%1 palaistu uzdevumu"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgctxt "Number of jobs and the speed at which they are downloading"
-#| msgid "%1 running job (%2/s)"
-#| msgid_plural "%1 running jobs (%2/s)"
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 palaists darbs (%2/s)"
-msgstr[1] "%1 palaisti darbi (%2/s)"
-msgstr[2] "%1 palaistu darbu (%2/s)"
+msgstr[0] "%1 palaists uzdevums (%2%)"
+msgstr[1] "%1 palaisti uzdevumi (%2%)"
+msgstr[2] "%1 palaistu uzdevumu (%2%)"
 
 #: package/contents/ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "%1 notification"
-#| msgid_plural "%1 notifications"
+#, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
-msgstr[0] "%1 paziņojums"
-msgstr[1] "%1 paziņojumi"
-msgstr[2] "%1 paziņojumu"
+msgstr[0] "%1 neizlasīts paziņojums"
+msgstr[1] "%1 neizlasīti paziņojumi"
+msgstr[2] "%1 neizlasītu paziņojumu"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr ""
+msgstr "Netraucēt līdz %1. Spiediet peles vidējo pogu, lai no tā izietu uzreiz"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
+"Netraucēšanas režīms ir aktīvs. Spiediet peles vidējo pogu, lai no tā izietu "
+"uzreiz"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Spiediet peles vidējo pogu, lai ieslēgtu netraucēšanas režīmu"
 
 #: package/contents/ui/main.qml:229
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgid "Clear All Notifications"
-msgstr "Paziņojumi"
+msgstr "Notīrīt visus paziņojumus"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr ""
+msgstr "&Konfigurēt notikumu paziņojumus un darbības..."
 
 #: package/contents/ui/NotificationHeader.qml:120
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "Tikko"
 
 #: package/contents/ui/NotificationHeader.qml:126
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pirms %1 min."
+msgstr[1] "Pirms %1 min."
+msgstr[2] "Pirms %1 min."
 
 #: package/contents/ui/NotificationHeader.qml:160
-#, fuzzy, kde-format
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] "%1 (%2 atlikuši)"
-msgstr[1] "%1 (%2 atlikuši)"
-msgstr[2] "%1 (%2 atlikuši)"
+msgstr[0] "Atlikusi %1 s"
+msgstr[1] "Atlikušas %1 s"
+msgstr[2] "Atlikušas %1 s"
 
 #: package/contents/ui/NotificationHeader.qml:164
-#, fuzzy, kde-format
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
-msgstr[0] "%1 (%2 atlikuši)"
-msgstr[1] "%1 (%2 atlikuši)"
-msgstr[2] "%1 (%2 atlikuši)"
+msgstr[0] "Atlikusi %1 min."
+msgstr[1] "Atlikušas %1 min."
+msgstr[2] "Atlikušas %1 min."
 
 #: package/contents/ui/NotificationHeader.qml:169
-#, fuzzy, kde-format
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
-msgstr[0] "%1 (%2 atlikuši)"
-msgstr[1] "%1 (%2 atlikuši)"
-msgstr[2] "%1 (%2 atlikuši)"
+msgstr[0] "Atlikusi %1 st."
+msgstr[1] "Atlikušas %1 st."
+msgstr[2] "Atlikušas %1 st."
 
 #: package/contents/ui/NotificationHeader.qml:189
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Konfigurēt"
 
 #: package/contents/ui/NotificationHeader.qml:206
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
-msgstr ""
+msgstr "Atjaunot"
 
 #: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgid "Minimize"
-msgstr ""
+msgstr "Minimizēt"
 
 #: package/contents/ui/NotificationHeader.qml:230
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Aizvērt"
 
 #: package/contents/ui/NotificationItem.qml:186
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the name of the job, can be things like Copying, deleting, moving"
-#| msgid "%1 [Paused]"
+#, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
-msgstr "%1 [Pauzēts]"
+msgstr "%1 (pauzēts)"
 
 #: package/contents/ui/NotificationItem.qml:191
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
+#, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
-msgstr "%1 [Pabeigts]"
+msgstr "%1 (kļūda)"
 
 #: package/contents/ui/NotificationItem.qml:193
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
+#, kde-format
 msgid "Job Failed"
-msgstr "%1 [Pabeigts]"
+msgstr "Uzdevumu izpildīt neizdevās"
 
 #: package/contents/ui/NotificationItem.qml:197
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
+#, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
-msgstr "%1 [Pabeigts]"
+msgstr "%1 (pabeigts)"
 
 #: package/contents/ui/NotificationItem.qml:199
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
+#, kde-format
 msgid "Job Finished"
-msgstr "%1 [Pabeigts]"
+msgstr "Uzdevums ir pabeigts"
 
 #: package/contents/ui/NotificationItem.qml:346
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
-msgstr ""
+msgstr "Atbildēt"
 
 #: package/contents/ui/NotificationReplyField.qml:36
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr ""
+msgstr "Ievadiet atbildi..."
 
 #: package/contents/ui/NotificationReplyField.qml:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Nosūtīt"
 
 #, fuzzy
 #~| msgid "Resume job"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-24 09:35-0600\n"
+"PO-Revision-Date: 2024-01-19 17:50-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -188,6 +188,8 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
+"ਡੈਸਕਟਾਪ ਲੇਆਉਟ ਨੂੰ ਲਾਗੂ ਕਰਨ ਨਾਲ ਡੈਸਕਟਾਪਾਂ, ਪੈਨਲਾਂ, ਡੌਕ ਅਤੇ ਵਿਜੈੱਟ ਦੀ ਤੁਹਾਡੀ ਮੌਜੂਦਾ ਸੰਰਚਨਾ ਨੂੰ "
+"ਬਦਲਿਆ ਜਾਂਦਾ ਹੈ।"
 
 #: ui/MoreOptions.qml:54
 #, kde-format

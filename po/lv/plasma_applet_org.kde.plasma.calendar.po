@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Māris Nartišs <maris.kde@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-12-14 15:36+0200\n"
-"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-17 14:25+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr "Vispārēji"
+msgstr "Pamata"
 
 #: package/contents/ui/configGeneral.qml:20
 #, kde-format
@@ -37,7 +38,7 @@ msgstr "Rādīt nedēļu numurus"
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
-msgstr "Kompakta versija:"
+msgstr "Kompaktā versija:"
 
 #: package/contents/ui/configGeneral.qml:33
 #, kde-format

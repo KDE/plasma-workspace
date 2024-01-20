@@ -1,8 +1,9 @@
 # translation of kcmcolors.po to Latvian
 # Copyright (C) 2007, 2008, 2010 Free Software Foundation, Inc.
 #
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 # Aleksejs Zosims <locale@aleksejs.id.lv>, 2007.
-# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2010.
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2010, 2024.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
@@ -11,72 +12,69 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2011-07-07 23:19+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2024-01-19 17:45+0200\n"
+"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"Language-Team: \n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Aleksejs Zosims, Viesturs Zariņš"
+msgstr "Aleksejs Zosims, Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "locale@aleksejs.id.lv, viesturs.zarins@mii.lu.lv"
+msgstr ""
+"locale@aleksejs.id.lv, viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
 #: colors.cpp:272
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Neizdevās izveidot pagaidu datni."
 
 #: colors.cpp:285
-#, fuzzy, kde-format
-#| msgid "&Enter a name for the color scheme:"
+#, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "Ievadi&et krāsu shēmas vārdu:"
+msgstr "Neizdevās lejupielādēt krāsu shēmu: %1"
 
 #: colors.cpp:303
-#, fuzzy, kde-format
-#| msgid "Import a color scheme from a file"
+#, kde-format
 msgid "This file is not a color scheme file."
-msgstr "Importēt krāsu shēmu no faila"
+msgstr "Šī datne nav krāsu shēmas datne."
 
 #: colors.cpp:322
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr ""
+msgstr "Neizdevās izveidot „color-scheme“ datu mapi."
 
 #: colors.cpp:329
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr ""
+msgstr "Neizdevās krāsu shēmu iekopēt „color-scheme“ datu mapē."
 
 #: colors.cpp:346
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
+msgstr "Krāsu shēma ir veiksmīgi ieinstalēta."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Color scheme name"
-msgstr "Saglabāt krāsu shēmu"
+msgstr "Krāsu shēmas nosaukums"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Accent color"
-msgstr "Neaktīva krāsa"
+msgstr "Akcenta krāsa"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -85,54 +83,54 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Pēdējā izmantotā akcenta krāsa pirms lietotājs pārslēdzās uz ekrāntapetes "
+"ģenerētu krāsu vai noklusējuma krāsu"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Vai ir jāpiemēro akcenta krāsa no darbvirsmas tapetes"
 
 #: editor/kcolorschemeeditor.cpp:21
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "KColorSchemeEditor"
-msgstr "Saglabāt krāsu shēmu"
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "Saglabāt ši brīža krāsu shēmu"
+msgstr "Rīks krāsu shēmu rediģēšanai un veidošanai"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "Rīka izveidotājs"
 
 #: editor/kcolorschemeeditor.cpp:26
 #, kde-format
 msgid "Jeremy Whiting"
-msgstr "Džeremijs Vitings (Jeremy Whiting)"
+msgstr "Jeremy Whiting"
 
 #: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM kods (izmantots arī te)"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Matthew Woehlke"
-msgstr "Metjū Volke (Matthew Woehlke)"
+msgstr "Matthew Woehlke"
 
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "Rediģējamā vai par pamatu izmantojamā shēma"
 
 #: editor/kcolorschemeeditor.cpp:33
 #, kde-format
@@ -140,17 +138,19 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"Parādīt „Piemērot“ pogu, kas izmaiņās saglabā bez vaicāšanas (atšķirībā no "
+"„Saglabāt kā“ pogas)"
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
-msgstr ""
+msgstr "Logu padara caurspīdīgu citam programmas logam, ko nosaka rokturis"
 
 #: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr ""
+msgstr "Shēma nav atrasta, atgriežas pie pašreizējās.\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -161,9 +161,7 @@ msgstr "Loga teksts uz loga fona"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
 msgstr "Loga teksts"
@@ -180,13 +178,13 @@ msgstr "Pogas teksts uz pogas fona"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Push Button"
-msgstr "Spiežampoga"
+msgstr "Spiežama poga"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Iezīmēts normāls teksts uz iezīmēta normāla fona"
+msgstr "Iezīmēts normāls teksts uz iezīmējama normāla fona"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -207,9 +205,7 @@ msgstr "Iezīmēts saites teksts uz iezīmēta normāla fona"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection3)
 #. i18n: ectx: property (text), widget (QLabel, labelView3)
 #: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "link"
 msgstr "saite"
@@ -225,9 +221,7 @@ msgstr "Iezīmēts apmeklēts teksts uz iezīmēta normāla fona"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection4)
 #. i18n: ectx: property (text), widget (QLabel, labelView4)
 #: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
 msgstr "apmeklēta"
@@ -316,14 +310,12 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "Skata normāls teksts uz skata normāla fona"
+msgstr "Normāls teksts uz normāla fona"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
 #: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
 msgstr "Normāls teksts"
@@ -332,43 +324,43 @@ msgstr "Normāls teksts"
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "Skata saites teksts uz skata normāla fona"
+msgstr "Saites teksts uz Normāla fona"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "Skata apmeklēta saite uz skata normāla fona"
+msgstr "Apmeklēta saite uz normāla fona"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "Skata aktīvs teksts uz skata normāla fona"
+msgstr "Aktīvs teksts uz normāla fona"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "Skata neaktīvs teksts uz skata normāla fona"
+msgstr "Neaktīvs teksts uz normāla fona"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "Skata negatīvs teksts uz normāla fona"
+msgstr "Negatīvs teksts uz normāla fona"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "Skata neitrāls teksts uz skata normāla fona"
+msgstr "Neitrāls teksts uz normāla fona"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "Skata pozitīvs teksts uz skata normāla fona"
+msgstr "Pozitīvs teksts uz normāla fona"
 
 #: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:78
 #, kde-format
@@ -400,7 +392,7 @@ msgstr "Neaktīvā teksts"
 #: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
-msgstr "Aktīvā teksts"
+msgstr "Aktīvs teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:313
@@ -412,13 +404,13 @@ msgstr "Saites teksts"
 #: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
-msgstr "Apmeklētā teksts"
+msgstr "Apmeklēts teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
-msgstr "Negatīvā teksts"
+msgstr "Negatīvs teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:328
@@ -430,7 +422,7 @@ msgstr "Neitrāls teksts"
 #: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
-msgstr "Pozitīvā teksts"
+msgstr "Pozitīvs teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:338
@@ -442,7 +434,7 @@ msgstr "Fokusa noformējums"
 #: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
-msgstr "Karāšanās noformējums"
+msgstr "Noformējums zem peles kursora"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: editor/scmeditorcolors.ui:23
@@ -483,9 +475,7 @@ msgstr "Logs"
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgctxt "color-sets"
 msgid "Button"
 msgstr "Poga"
@@ -496,7 +486,7 @@ msgstr "Poga"
 #, kde-format
 msgctxt "color-sets"
 msgid "Selection"
-msgstr "Iezīmētais"
+msgstr "Atlase"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -512,7 +502,7 @@ msgstr "Paskaidre"
 #, kde-format
 msgctxt "color-sets"
 msgid "Complementary"
-msgstr ""
+msgstr "Papildu"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -520,7 +510,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "Galvene"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -592,19 +582,19 @@ msgstr "Pogas teksts"
 #: editor/scmeditorcolors.ui:288
 #, kde-format
 msgid "Selection Background"
-msgstr "Iezīmētā fons"
+msgstr "Atlases fons"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:293
 #, kde-format
 msgid "Selection Text"
-msgstr "Iezīmētā teksts"
+msgstr "Atlases teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:298
 #, kde-format
 msgid "Selection Inactive Text"
-msgstr "Iezīmētā neaktīvs teksts"
+msgstr "Atlases neaktīvs teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:348
@@ -622,42 +612,42 @@ msgstr "Paskaidres teksts"
 #: editor/scmeditorcolors.ui:358
 #, kde-format
 msgid "Active Titlebar"
-msgstr "Aktīvā virsrakstjosla"
+msgstr "Aktīva virsrakstjosla"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:363
 #, kde-format
 msgid "Active Titlebar Text"
-msgstr "Aktīvās virsrakstjoslas teksts"
+msgstr "Aktīvas virsrakstjoslas teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:368
 #, kde-format
 msgid "Active Titlebar Secondary"
-msgstr "Aktīvās virsrakstjoslas sekundārais"
+msgstr "Aktīvas virsrakstjoslas sekundārais"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:373
 #, kde-format
 msgid "Inactive Titlebar"
-msgstr "Neaktīvā virsrakstjosla"
+msgstr "Neaktīva virsrakstjosla"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:378
 #, kde-format
 msgid "Inactive Titlebar Text"
-msgstr "Neaktīvās virsrakstjoslas teksts"
+msgstr "Neaktīvas virsrakstjoslas teksts"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:383
 #, kde-format
 msgid "Inactive Titlebar Secondary"
-msgstr "Neaktīvās virsrakstjoslas sekundārais"
+msgstr "Neaktīvas virsrakstjoslas sekundārais"
 
 #: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Options"
-msgstr "Opcijas"
+msgstr "Iespējas"
 
 #: editor/scmeditordialog.cpp:63
 #, kde-format
@@ -665,21 +655,19 @@ msgid "Colors"
 msgstr "Krāsas"
 
 #: editor/scmeditordialog.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled"
-msgstr "Atslēgts"
+msgstr "Izslēgts"
 
 #: editor/scmeditordialog.cpp:96
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
-msgstr ""
+msgstr "Ir nesaglabātas izmaiņas. Vai tiešām vēlaties iziet?"
 
 #: editor/scmeditordialog.cpp:97
 #, kde-format
 msgid "Unsaved changes"
-msgstr ""
+msgstr "Nesaglabātas izmaiņas"
 
 #: editor/scmeditordialog.cpp:117 editor/scmeditordialog.cpp:142
 #, kde-format
@@ -689,7 +677,7 @@ msgstr "Saglabāt krāsu shēmu"
 #: editor/scmeditordialog.cpp:117
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "Ievadi&et krāsu shēmas vārdu:"
+msgstr "&Ievadiet krāsu shēmas nosaukumu:"
 
 #: editor/scmeditordialog.cpp:141
 #, kde-format
@@ -697,8 +685,8 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"Krāsu shēma ar tādu nosaukumu jau eksistē.\n"
-"Vai jūs vēlaties to pārrakstīt?"
+"Krāsu shēma ar šādu nosaukumu jau pastāv.\n"
+"Vai vēlaties to pārrakstīt?"
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -711,9 +699,7 @@ msgid "Error"
 msgstr "Kļūda"
 
 #: editor/scmeditordialog.cpp:193
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on inactive elements"
-#| msgid "Inactive"
+#, kde-format
 msgid "Inactive"
 msgstr "Neaktīvs"
 
@@ -733,7 +719,7 @@ msgstr "Intensitāte:"
 #: editor/scmeditoreffects.ui:37
 #, kde-format
 msgid "Disabled color effect type"
-msgstr "Atslēgts krāsu efekta veids"
+msgstr "Izslēgts krāsu efekta veids"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:41
@@ -744,33 +730,30 @@ msgstr "Neviens"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:46
-#, fuzzy, kde-format
-#| msgid "Desaturate"
+#, kde-format
 msgctxt "disabled color effect"
 msgid "Desaturate"
-msgstr "Padarīt blāvu"
+msgstr "Noņemt piesātinājumu"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:51
-#, fuzzy, kde-format
-#| msgid "Fade"
+#, kde-format
 msgctxt "disabled color effect"
 msgid "Fade"
-msgstr "Izbalināt"
+msgstr "Samazināt krāsu efektu"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:56
-#, fuzzy, kde-format
-#| msgid "Tint"
+#, kde-format
 msgctxt "disabled color effect"
 msgid "Tint"
-msgstr "Tonēt"
+msgstr "Iekrāsot"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:64
 #, kde-format
 msgid "Disabled intensity effect type"
-msgstr "Atslēgts intensitātes efekta veids"
+msgstr "Izslēgts intensitātes efekta veids"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:68
@@ -781,24 +764,21 @@ msgstr "Neviens"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:73
-#, fuzzy, kde-format
-#| msgid "Shade"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Shade"
 msgstr "Ieēnot"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:78
-#, fuzzy, kde-format
-#| msgid "Darken"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Darken"
 msgstr "Padarīt tumšāku"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:83
-#, fuzzy, kde-format
-#| msgid "Lighten"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Lighten"
 msgstr "Padarīt gaišāku"
@@ -813,25 +793,25 @@ msgstr "Kontrasts:"
 #: editor/scmeditoreffects.ui:120
 #, kde-format
 msgid "Disabled color effect amount"
-msgstr "Atslēgts krāsu efekta apjoms"
+msgstr "Izslēgts krāsu efekta apjoms"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
 #: editor/scmeditoreffects.ui:139
 #, kde-format
 msgid "Disabled intensity effect amount"
-msgstr "Atslēgts intensitātes efekta apjoms"
+msgstr "Izslēgts intensitātes efekta apjoms"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
 #, kde-format
 msgid "Disabled color"
-msgstr "Atslēgta krāsa"
+msgstr "Izslēgta krāsa"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
 #, kde-format
 msgid "Disabled contrast type"
-msgstr "Atslēgts kontrasta veids"
+msgstr "Izslēgts kontrasta veids"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -842,16 +822,14 @@ msgstr "Neviens"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:190
-#, fuzzy, kde-format
-#| msgid "Fade"
+#, kde-format
 msgctxt "disabled contrast"
 msgid "Fade"
-msgstr "Izbalināt"
+msgstr "Samazināt krāsu efektu"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:195
-#, fuzzy, kde-format
-#| msgid "Tint"
+#, kde-format
 msgctxt "disabled contrast"
 msgid "Tint"
 msgstr "Tonēt"
@@ -860,51 +838,49 @@ msgstr "Tonēt"
 #: editor/scmeditoreffects.ui:222
 #, kde-format
 msgid "Disabled contrast amount"
-msgstr "Atslēgts kontrasta apjoms"
+msgstr "Izslēgts kontrasta apjoms"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
-#, fuzzy, kde-format
-#| msgid "Apply inactive window color &effects"
+#, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "Pielietot neaktīvu logu krāsu &efektus"
+msgstr "&Pielietot efektus neaktīviem logiem"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr ""
+msgstr "&Neaktīvām atlasēm izmantot atšķirīgas krāsas"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "&Iekrāsot sarakstos kārtošanas kolonnu"
+msgstr "&Sarakstos iekrāsot kārtošanas kolonnu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "&Logiem un virsrakstjoslām pielietot akcenta krāsu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Neaktīva krāsa"
+msgstr "Visas krāsas iekrāsot ar akcenta krāsu"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Iekrāsojuma stiprums:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Ietvaru ēnošanas un izgaismošanas (\"3D\") efekti"
+msgstr "Ietvaru ēnošanas un izgaismošanas („3D“) efekti"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
@@ -999,7 +975,7 @@ msgstr "aktīvs"
 #: editor/setpreview.ui:109
 #, kde-format
 msgid "Inactive Text on Normal Background"
-msgstr "Nekatīvs teksts uz normāla fona"
+msgstr "Neaktīvs teksts uz normāla fona"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore1)
@@ -1061,7 +1037,7 @@ msgstr "pozitīvs"
 #: editor/setpreview.ui:170
 #, kde-format
 msgid "Hover on Normal Background"
-msgstr "Zem kursora teksts uz normāla fona"
+msgstr "Teksts zem kursora uz normāla fona"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore8)
@@ -1080,8 +1056,8 @@ msgid ""
 "configured at this time)"
 msgstr ""
 "Saites teksts uz saites fona\n"
-"(Piezīme: Saites fons tiek atvasināts no saites teksta un to šobrīd nevar "
-"atsevišķi konfigurēt)"
+"(Piezīme: saites fons tiek atvasināts no saites teksta un to šobrīd nevar "
+"konfigurēt atsevišķi)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
 #: editor/setpreview.ui:233
@@ -1092,8 +1068,8 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "Apmeklēts teksts uz apmeklēta fona\n"
-"(Piezīme: Apmeklēts fons tiek atvasināts no apmeklēta teksta un to šobrīd "
-"nevar atsevišķi konfigurēt)"
+"(Piezīme: apmeklēts fons tiek atvasināts no apmeklēta teksta un to šobrīd "
+"nevar konfigurēt atsevišķi)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
 #: editor/setpreview.ui:250
@@ -1104,14 +1080,14 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "Aktīvs teksts uz aktīva fona\n"
-"(Piezīme: Aktīvs fons tiek atvasināts no aktīva teksta un to šobrīd nevar "
-"atsevišķi konfigurēt)"
+"(Piezīme: aktīvs fons tiek atvasināts no aktīva teksta un to šobrīd nevar "
+"konfigurēt atsevišķi)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
 #, kde-format
 msgid "Inactive Text on Alternate Background"
-msgstr "Nekatīvs teksts uz alternatīva fona"
+msgstr "Neaktīvs teksts uz alternatīva fona"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelBack1)
@@ -1129,9 +1105,9 @@ msgid ""
 "(Note: Negative Background is derived from Negative Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Negatīvs teksts teksts uz negatīva fona\n"
-"(Piezīme: Negatīvs fons tiek atvasināts no negatīva teksta un to šobrīd "
-"nevar atsevišķi konfigurēt)"
+"Negatīvs teksts uz negatīva fona\n"
+"(Piezīme: negatīvs fons tiek atvasināts no negatīva teksta un to šobrīd "
+"nevar konfigurēt atsevišķi)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
 #: editor/setpreview.ui:300
@@ -1142,8 +1118,8 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "Neitrāls teksts uz neitrāla fona\n"
-"(Piezīme: Neitrāls fons tiek atvasināts no netriāla teksta un to šobrīd "
-"nevar atsevišķi konfigurēt)"
+"(Piezīme: neitrāls fons tiek atvasināts no neitrāla teksta un to šobrīd "
+"nevar konfigurēt atsevišķi)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317
@@ -1154,8 +1130,8 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "Pozitīvs teksts uz pozitīva fona\n"
-"(Piezīme: Pozitīvs fons tiek atvasināts no pozitīva teksta un to šobrīd "
-"nevar atsevišķi konfigurēt)"
+"(Piezīme: pozitīvs fons tiek atvasināts no pozitīva teksta un to šobrīd "
+"nevar konfigurēt atsevišķi)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
@@ -1178,6 +1154,8 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Šis rīks ļauj iestatīt šīs „Plasma“ sesijas krāsu shēmu, to nejauši "
+"neiestatot uz nepieejamu vai jau iestatītu krāsu shēmu."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1185,13 +1163,15 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Krāsu shēmas nosaukums, kuru vēlaties iestatīt šai „Plasma“ sesijai (norādot "
+"pilnu ceļu, vērā tiks ņemta tika šī ceļa beigu daļa)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
-msgstr ""
+msgstr "Parādīt visas sistēmā pieejamās krāsu shēmas (un pašreizējo motīvu)"
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1200,6 +1180,10 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"Norādāmās akcenta krāsas nosaukums. Atbalstīti ir SVG krāsu nosaukumi "
+"(https://www.w3.org/TR/SVG11/types.html#ColorKeywords) un heksadecimālie "
+"kodi. Heksadecimālos kodus ievietojiet pēdiņās, ja pastāv čaulas "
+"paplašināšanas iespējamība"
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1207,25 +1191,26 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Pieprasītais motīvs „%1“ jau ir iestatīts kā motīvs šai „Plasma“ sesijai."
 
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
+msgstr "Šai „Plasma“ sesijai ir veiksmīgi piemērota krāsu shēma „%1“"
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
-msgstr ""
+msgstr "Nevar atrast motīvu „%1“. Motīvam ir jābūt kādam no šiem: %2"
 
 #: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr ""
+msgstr "Programma neatbalsta tukšu krāsu shēmas nosaukumu."
 
 #: plasma-apply-colorscheme.cpp:124
 #, kde-format
@@ -1233,172 +1218,148 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"Datne „%1“, kuru mēģināt iestatīt par shēmu, nav identificēta kā krāsu shēma."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "Veiksmīgi piemērota akcenta krāsa %1"
 
 #: plasma-apply-colorscheme.cpp:149
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Invalid accent color "
-msgstr "Neaktīva krāsa"
+msgstr "Nederīga akcenta krāsa "
 
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "Sistēmā ir šīs krāsu shēmas:"
 
 #: plasma-apply-colorscheme.cpp:159
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "Saglabāt ši brīža krāsu shēmu"
+msgstr "* %1 (šī krāsu shēma)"
 
 #: ui/AccentColorUI.qml:37
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Importēt krāsu shēmu"
+msgstr "Akcenta krāsa no krāsu shēmas"
 
 #: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Akcenta shēma no darbvirsmas tapetes"
 
 #: ui/AccentColorUI.qml:39
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Neaktīva krāsa"
+msgstr "Pielāgota akcenta krāsa"
 
 #: ui/AccentColorUI.qml:164
 #, kde-format
 msgid "Choose custom accent color"
-msgstr ""
+msgstr "Izvēlieties pielāgoto akcenta krāsu"
 
 #: ui/main.qml:87
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
+msgstr "Krāsu shēma „%1“ nav instalēta. Tās vietā izvēlēts noklusējuma motīvs."
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
+#, kde-format
 msgid "All Schemes"
-msgstr "A&ugšupielādēt shēmu..."
+msgstr "Visas shēmas"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "&Scheme"
+#, kde-format
 msgid "Light Schemes"
-msgstr "&Shēma"
+msgstr "Gaišās shēmas"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Save Scheme..."
+#, kde-format
 msgid "Dark Schemes"
-msgstr "Saglabāt shēmu..."
+msgstr "Tumšās shēmas"
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instalēt no datnes..."
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Iegūt jaunas..."
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "Window Text"
+#, kde-format
 msgid "Window Title"
-msgstr "Loga teksts"
+msgstr "Loga virsraksts"
 
 #: ui/main.qml:214
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgid "Window text"
 msgstr "Loga teksts"
 
 #: ui/main.qml:221
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgid "Button"
 msgstr "Poga"
 
 #: ui/main.qml:261
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "saite"
 
 #: ui/main.qml:263
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "apmeklēta"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgid "Normal text"
 msgstr "Normāls teksts"
 
 #: ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "Visited Text"
+#, kde-format
 msgid "Highlighted text"
-msgstr "Apmeklētā teksts"
+msgstr "Izcelts teksts"
 
 #: ui/main.qml:285
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled text"
-msgstr "Atslēgts"
+msgstr "Neaktuāls teksts"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
-msgstr "A&ugšupielādēt shēmu..."
+msgstr "Rediģēt krāsu shēmu..."
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Remove Color Scheme"
-msgstr "Saglabāt krāsu shēmu"
+msgstr "Noņemt krāsu shēmu"
 
 #: ui/main.qml:316
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgid "Restore Color Scheme"
-msgstr "Importēt krāsu shēmu"
+msgstr "Atjaunot krāsu shēmu"
 
 #: ui/main.qml:360
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Open Color Scheme"
-msgstr "Saglabāt krāsu shēmu"
+msgstr "Atvērt krāsu shēmu"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "Krāsu shēmas datnes (*.colors)"
 
 #, fuzzy
 #~| msgid "Get &New Schemes..."

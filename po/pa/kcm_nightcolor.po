@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023 A S Alam <alam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 A S Alam <alam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-12-24 09:36-0600\n"
+"PO-Revision-Date: 2024-01-19 17:48-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -61,6 +61,10 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"<link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>ਸੰਸਾਰ ਟਿਕਾਣਾ ਨਕਸ਼ਾ</link> ਨੂੰ  "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link> ਰਾਹੀਂ ਸੋਧਿਆ ਗਿਆ"
 
 #: ui/LocationsFixedView.qml:235
 #, kde-format

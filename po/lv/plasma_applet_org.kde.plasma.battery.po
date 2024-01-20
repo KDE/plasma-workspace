@@ -6,19 +6,20 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008, 2009, 2010.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-12-14 18:22+0200\n"
-"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-17 14:22+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -34,8 +35,8 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"Baterijas veselībai ir vairs tikai %1% un to vajadzētu nomainīt. Sazinieties "
-"ar ražotāju."
+"Baterijas veselība ir vairs tikai %1%, tāpēc to vajadzētu nomainīt. "
+"Sazinieties ar ražotāju."
 
 #: package/contents/ui/BatteryItem.qml:185
 #, kde-format
@@ -67,7 +68,7 @@ msgstr "%1%"
 #: package/contents/ui/BatteryItem.qml:223
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr "Baterija ir konfigurēta uzlādēties aptuveni līdz %1%."
+msgstr "Baterija ir konfigurēta uzlādēties līdz aptuveni %1%."
 
 #: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
@@ -115,22 +116,23 @@ msgstr "Jaudas pārvaldība"
 #: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Baterija ir %1%, nelādē"
+msgstr "Baterijas līmenis ir %1%, nelādē"
 
 #: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Baterija ir %1%, iesprausta, bet joprojām izlādējas"
+msgstr ""
+"Baterijas līmenis ir %1%, pievienota elektrotīklam, bet joprojām izlādējas"
 
 #: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Baterija ir %1%, lādē"
+msgstr "Baterijas līmenis ir %1%, lādē"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Baterija ir %1%"
+msgstr "Baterijas līmenis ir %1%"
 
 #: package/contents/ui/main.qml:164
 #, kde-format
@@ -193,7 +195,7 @@ msgstr "Sistēma ir energotaupības režīmā"
 #: package/contents/ui/main.qml:260
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr ""
+msgstr "Baterijas sīklietotne neļauj sistēmai iemigt un slēgt ekrānu"
 
 #: package/contents/ui/main.qml:299
 #, kde-format
@@ -299,7 +301,7 @@ msgstr "Balansēta"
 #: package/contents/ui/PowerProfileItem.qml:45
 #, kde-format
 msgid "Performance"
-msgstr "Veiktspēja"
+msgstr "Jauda"
 
 #: package/contents/ui/PowerProfileItem.qml:62
 #, kde-format
@@ -318,17 +320,19 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
+"Jaudas režīms ir izslēgts, lai samazinātu karstuma ģenerēšanu, jo ierīce ir "
+"konstatējusi, ka jūs, iespējams, to turat klēpī."
 
 #: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
-msgstr ""
+msgstr "Jaudas režīms nav pieejams, jo dators ir pārāk karsts."
 
 #: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid "Performance mode is unavailable."
-msgstr "Veiktspējas režīms nav pieejams."
+msgstr "Jaudas režīms nav pieejams."
 
 #: package/contents/ui/PowerProfileItem.qml:207
 #, kde-format
@@ -336,25 +340,26 @@ msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
 "has detected that it may be sitting on your lap."
 msgstr ""
+"Veiktspēja var tikt samazināta, lai dators nesakarstu, jo tas ir "
+"konstatējis, ka jūs, iespējams, to lietojat klēpī."
 
 #: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
-msgstr ""
+msgstr "Veiktspēja var tikt samazināta, jo dators ir pārāk karsts."
 
 #: package/contents/ui/PowerProfileItem.qml:211
-#, fuzzy, kde-format
-#| msgid "Power management is disabled"
+#, kde-format
 msgid "Performance may be reduced."
-msgstr "Energokontrole ir izslēgta"
+msgstr "Veiktspēja var būt samazināta."
 
 #: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 programma pieprasa aktivēt %2:"
+msgstr[1] "%1 programmas pieprasa aktivēt %2:"
+msgstr[2] "%1 programmu pieprasa aktivēt %2:"
 
 #: package/contents/ui/PowerProfileItem.qml:240
 #, kde-format
@@ -371,6 +376,10 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Jūsu ierīce varētu atbalstīt jaudas profilus.<nl/>Mēģiniet instalēt "
+"<command>power-profiles-daemon</command> pakotni no savas operētājsistēmas "
+"pakotņu pārvaldnieka un pārstartējiet sistēmu.<command>power-profiles-"
+"daemon</command> "
 
 #, fuzzy
 #~| msgctxt "overlay on the battery, needs to be really tiny"

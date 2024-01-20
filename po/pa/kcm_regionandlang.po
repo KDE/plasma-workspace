@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 A S Alam <aalam@satluj.org>
+# SPDX-FileCopyrightText: 2023, 2024 A S Alam <aalam@satluj.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-07 01:42+0000\n"
-"PO-Revision-Date: 2023-12-24 09:38-0600\n"
+"PO-Revision-Date: 2024-01-19 17:47-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -129,49 +129,49 @@ msgstr "ਰਾਜ"
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "ਪਰਿਵਾਰਿਕ ਨਾਂ"
 
 #: exampleutility.cpp:92
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "ਪਰਿਵਾਰਿਕ ਨਾਂ"
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "ਨਾਂ ਦਾ ਪਹਿਲਾਂ ਹਿੱਸਾ"
 
 #: exampleutility.cpp:94
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "ਨਾਂ ਦਾ ਪਹਿਲਾਂ ਹਿੱਸਾ"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "ਹੋਰ ਕੋਈ ਨਾਂ"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "ਵਾਧੂ ਨਾਂ"
 
 #: exampleutility.cpp:98
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #: exampleutility.cpp:99
 #, kde-format

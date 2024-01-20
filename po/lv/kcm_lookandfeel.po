@@ -1,0 +1,294 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"PO-Revision-Date: 2024-01-18 10:20+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Toms Trasūns"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toms.trasuns@posteo.net"
+
+#: kcm.cpp:467
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Lai izmaiņas stātos spēkā, pārstartējiet „Plasma“ sesiju."
+
+#: kcm.cpp:468
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Ir izmainīti kursora iestatījumi"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Globālā motīva rīks"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Komandrindas rīks, lai piemērotu globālā motīva pakotnes izskata un "
+"uzvedības izmainīšanai."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Autortiesības 2017, Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Uzturētājs"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Saraksts ar pieejamajām globālā motīva pakotnēm"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Piemērot globālā motīva pakotni. Tā var būt pakotnes nosaukums vai pilns "
+"ceļš uz instalētu pakotni. Norādot pilnu ceļi, šis rīks pārliecināsies, ka "
+"tā tiešām ir globālā motīva pakotne un centīsies to piemērot"
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "pakotnes nosaukums"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Atiestatīt „Plasma“ darbvirsmas izkārtojumu"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Globālais izskats un uzvedība"
+
+#: ui/main.qml:62
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Permanently"
+msgstr "Neatsaucami dzēst"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to permanently delete this theme?"
+msgstr "Vai tiešām vēlaties neatsaucami dzēst šo motīvu?"
+
+#: ui/main.qml:67
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Permanently"
+msgstr "Neatsaucami dzēst"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Get New…"
+msgstr "Iegūt jaunus..."
+
+#: ui/main.qml:103
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "Satur darbvirsmas izkārtojumu"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Preview Theme"
+msgstr "Tēmas priekšskatījums"
+
+#: ui/main.qml:125
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Theme"
+msgstr "Noņemt tēmu"
+
+#: ui/main.qml:141
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "Piemērot „%1“?"
+
+#: ui/main.qml:159
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "Izvēlieties, ko piemērot..."
+
+#: ui/main.qml:159
+#, kde-format
+msgid "Show fewer options…"
+msgstr "Rādīt mazāk iespēju..."
+
+#: ui/main.qml:176
+#, kde-format
+msgid "Apply"
+msgstr "Piemērot"
+
+#: ui/main.qml:188
+#, kde-format
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: ui/MoreOptions.qml:23
+#, kde-format
+msgid "Layout settings:"
+msgstr "Izkārtojuma iestatījumi:"
+
+#: ui/MoreOptions.qml:27
+#, kde-format
+msgid "Desktop layout"
+msgstr "Darbvirsmas izkārtojums"
+
+#: ui/MoreOptions.qml:32
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr "Virsrakstjoslas pogu izkārtojums"
+
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#, kde-format
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"Darbvirsmas izkārtojuma piemērošana aizvieto pašreizējo darbvirsmu, paneļu, "
+"peldošo paneļu un logdaļu konfigurāciju."
+
+#: ui/MoreOptions.qml:54
+#, kde-format
+msgid "Appearance settings:"
+msgstr "Izskata iestatījumi:"
+
+#: ui/MoreOptions.qml:58
+#, kde-format
+msgid "Colors"
+msgstr "Krāsas"
+
+#: ui/MoreOptions.qml:59
+#, kde-format
+msgid "Application Style"
+msgstr "Programmas stils"
+
+#: ui/MoreOptions.qml:60
+#, kde-format
+msgid "Window Decoration Style"
+msgstr "Loga noformējuma stils"
+
+#: ui/MoreOptions.qml:61
+#, kde-format
+msgid "Window Decoration Size"
+msgstr "Loga noformējuma izmērs"
+
+#: ui/MoreOptions.qml:62
+#, kde-format
+msgid "Icons"
+msgstr "Ikonas"
+
+#: ui/MoreOptions.qml:63
+#, kde-format
+msgid "Plasma Style"
+msgstr "„Plasma“ stils"
+
+#: ui/MoreOptions.qml:64
+#, kde-format
+msgid "Cursors"
+msgstr "Kursori"
+
+#: ui/MoreOptions.qml:65
+#, kde-format
+msgid "Fonts"
+msgstr "Fonti"
+
+#: ui/MoreOptions.qml:66
+#, kde-format
+msgid "Task Switcher"
+msgstr "Uzdevumu pārslēdzējs"
+
+#: ui/MoreOptions.qml:67
+#, kde-format
+msgid "Splash Screen"
+msgstr "Ielādēšanās ekrāns"
+
+#: ui/MoreOptions.qml:68
+#, kde-format
+msgid "Lock Screen"
+msgstr "Bloķēšanas ekrāns"
+
+#: ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "Šis globālais motīvs vēlas izmainīt:"
+
+#: ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "Izskata iestatījumus"
+
+#: ui/SimpleOptions.qml:39
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• Izskata iestatījumi"
+
+#: ui/SimpleOptions.qml:45
+#, kde-format
+msgid "Desktop and window layout"
+msgstr "Darbvirsmas un logu izkārtojumu"
+
+#: ui/SimpleOptions.qml:52
+#, kde-format
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• Darbvirsma un logu izkārtojums"
+
+#: ui/SimpleOptions.qml:70
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"Šis globālais motīvs nepiedāvā nekādus piemērojamus iestatījumus. "
+"Sazinieties ar tā uzturētāju, jo, iespējams, motīvs nedarbojas."

@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 A S Alam <aalam@punlinux.org>
+# SPDX-FileCopyrightText: 2023, 2024 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-24 09:39-0600\n"
+"PO-Revision-Date: 2024-01-19 17:46-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -62,7 +62,7 @@ msgstr "\"%1\" ਸਾਊਂਡ ਦੀ ਝਲਕ"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "\"%1\" ਥੀਮ ਲਈ ਡੈਮੋ ਆਵਾਜ਼ ਦੀ ਝਲਕ"
 
 #: ui/main.qml:162
 #, kde-format

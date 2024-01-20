@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-01-20 00:38+0000\n"
 "PO-Revision-Date: 2022-11-18 19:48+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -153,23 +153,23 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatiškai nustatoma į didelius, kai esama lietimo veiksenoje"
 
-#: package/contents/ui/ExpandedRepresentation.qml:62
+#: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Grįžti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:74
+#: package/contents/ui/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Būsena ir pranešimai"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: package/contents/ui/ExpandedRepresentation.qml:137
 #, kde-format
 msgid "More actions"
 msgstr "Daugiau veiksmų"
 
-#: package/contents/ui/ExpandedRepresentation.qml:234
+#: package/contents/ui/ExpandedRepresentation.qml:231
 #, kde-format
 msgid "Keep Open"
 msgstr "Palikti atvertą"

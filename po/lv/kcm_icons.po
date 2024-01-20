@@ -4,19 +4,20 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2013.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-14 01:59+0000\n"
-"PO-Revision-Date: 2013-06-11 08:31+0300\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
-"Language-Team: Latvian\n"
+"PO-Revision-Date: 2024-01-15 23:19+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -24,23 +25,22 @@ msgstr ""
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Pašreizējā ikonu motīva nosaukums"
 
 #: main.cpp:150
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Neizdodas izveidot pagaidu datni."
 
 #: main.cpp:161
-#, fuzzy, kde-format
-#| msgid "Unable to find the icon theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Nevar atrast ikonas tēmas arhīvu %1."
+msgstr "Nespēj lejupielādēt ikonu motīva arhīvu: %1"
 
 #: main.cpp:175
 #, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr "Fails nav derīgs tēmas arhīvs."
+msgstr "Datne nav derīgs ikonu motīva arhīvs."
 
 #: main.cpp:180
 #, kde-format
@@ -48,60 +48,53 @@ msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr ""
-"Gadījās problēma tēmas instalācijas procesā, bet lielākā daļa no tēmas tika "
+"Gadījās problēma motīva instalācijas procesā, bet lielākā daļa no motīva ir "
 "instalēta"
 
 #: main.cpp:184
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Motīvs ir veiksmīgi ieinstalēts"
 
 #: main.cpp:228
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "Instalē ikonu tēmas"
+msgstr "Instalē ikonu motīvus..."
 
 #: main.cpp:238
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instalē ikonu tēmas"
+msgstr "Instalē motīvu „%1“..."
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid "Install Theme File..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Instalēt tēmas failu..."
+msgstr "Instalē no datnes..."
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Get New…"
-msgstr "Ielādēt jaunas tēmas..."
+msgstr "Iegūt jaunus..."
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Remove Icon Theme"
-msgstr "Izdzēst tēmu"
+msgstr "Noņemt ikonu motīvu"
 
 #: ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Icon Theme"
-msgstr "Izdzēst tēmu"
+msgstr "Atjaunot ikonu motīvu"
 
 #: ui/main.qml:245
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "Izdzēst tēmu"
+msgstr "Atvērt motīvu"
 
 #: ui/main.qml:247
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Motīvu datnes (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Main Toolbar"
 #~ msgstr "Galvenā rīkjosla"

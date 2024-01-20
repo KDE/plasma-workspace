@@ -4,82 +4,70 @@
 # Aleksejs Zosims <locale@aleksejs.id.lv>, 2007.
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008, 2010.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 02:19+0000\n"
-"PO-Revision-Date: 2010-01-30 18:57+0200\n"
-"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-18 21:07+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Uzspiest fontu izšķirtspēju DPI:"
+msgstr "Piespiest X11 lietot noteiktu fonta DPI"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "Pamata"
+msgstr "Pamata fonts"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Fiksēta platuma"
+msgstr "Fiksēta platuma fonts"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "Mazs"
+msgstr "Mazs fonts"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Rīkjosla"
+msgstr "Rīkjoslas fonts"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "Izvēļņu fonts"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "Loga virsraksts"
+msgstr "Loga virsraksta fonts"
 
 #: kxftconfig.cpp:454
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "Sistēmas iestatījumi"
+msgstr "Izplatītāja noklusējums"
 
 #: kxftconfig.cpp:456
 #, kde-format
@@ -108,19 +96,16 @@ msgid "Vertical BGR"
 msgstr "Vertikālais BGR"
 
 #: kxftconfig.cpp:492
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "Sistēmas iestatījumi"
+msgstr "Izplatītāja noklusējums"
 
 #: kxftconfig.cpp:494
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
-msgstr "Vidējs"
+msgstr "Vidēja"
 
 #: kxftconfig.cpp:496
 #, kde-format
@@ -129,18 +114,16 @@ msgid "None"
 msgstr "Nav"
 
 #: kxftconfig.cpp:498
-#, fuzzy, kde-format
-#| msgid "Slight"
+#, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
-msgstr "Daļējs"
+msgstr "Daļēja"
 
 #: kxftconfig.cpp:500
-#, fuzzy, kde-format
-#| msgid "Full"
+#, kde-format
 msgctxt "full hinting"
 msgid "Full"
-msgstr "Pilns"
+msgstr "Pilna"
 
 #: ui/FontWidget.qml:32
 #, kde-format
@@ -148,25 +131,21 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:23
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "R&egulēt visus fontus..."
+msgstr "Koriģēt globālo mērogošanu..."
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Some changes such as anti-aliasing will only affect newly started "
-#| "applications.</p>"
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"<p>Jūs esat izmainījuši izgludināšanas iestatījumus. Šīs izmaiņas "
-"ietekmēstikai no jauna palaistas programmas.</p>"
+"Jūs esat izmainījuši izgludināšanas iestatījumus. Šīs izmaiņas spēkā stāsies "
+"no jauna palaistās programmās."
 
 #: ui/main.qml:48
 #, kde-format
@@ -174,6 +153,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Ļoti lieli fonti var radīt dīvainus rezultātus. Apdomājiet, vai ļoti lielu "
+"fontu vietā nevēlaties pielāgot kopējo ekrāna mērogojumu."
 
 #: ui/main.qml:69
 #, kde-format
@@ -181,6 +162,9 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"Fontu izmēri, kas nav veselos skaitļos, atsevišķās programmās var radīt "
+"teksta noformējuma problēmas. Apdomājiet, vai nevēlaties izmantot fonta "
+"izmēru veselos skaitļos."
 
 #: ui/main.qml:91
 #, kde-format
@@ -188,107 +172,83 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"Ieteicamais lietotāja saskarnes mērogošanas veids ir globālā ekrāna "
+"mērogošana."
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "R&egulēt visus fontus..."
+msgstr "&Pielāgot visus fontus..."
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Pamata"
+msgstr "Pamata:"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Select general font"
-msgstr "Pamata"
+msgstr "Atlasiet pamata fontu"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "Fiksēta platuma"
+msgstr "Fiksēts platums:"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "Fiksēta platuma"
+msgstr "Atlasiet fiksēta platuma fontu"
 
 #: ui/main.qml:140
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "Mazs"
+msgstr "Mazs:"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Select small font"
-msgstr "Mazs"
+msgstr "Atlasiet mazu fontu"
 
 #: ui/main.qml:152
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "Rīkjosla"
+msgstr "Rīkjosla:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "Rīkjosla"
+msgstr "Atlasiet fontu rīkjoslai"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "Izvēlne"
+msgstr "Izvēlne:"
 
 #: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "Atlasiet fontu izvēlnei"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "Loga virsraksts"
+msgstr "Loga virsraksts:"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Select window title font"
-msgstr "Loga virsraksts"
+msgstr "Atlasiet fontu loga virsrakstam"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Use a&nti-aliasing:"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "Izma&ntot izgludināšanu fontiem:"
+msgstr "Nogludināšana:"
 
 #: ui/main.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
-msgstr "Ieslēgts"
+msgstr "Ieslēgt"
 
 #: ui/main.qml:200
 #, kde-kuit-format
@@ -300,29 +260,32 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Parasti pikseļi ekrānā tiek iekrāsoti kā rūtiņas, tāpēc tādi fonti, kas "
+"neizlīdzinās pa rūtiņām, izskatās kantaini un nepareizi, ja netiek "
+"izmantotas <emphasis>izlīdzināšanas</emphasis> tehnikas, kas šo efektu "
+"samazina. Parasti ir vēlams šīs iespējas atstāt ieslēgtas, izņemot, ja to "
+"dēļ rodas kādas problēmas."
 
 #: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "Izlaist diapazonu nogludināšanai"
 
 #: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 pt"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " uz "
+msgstr "līdz"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "&Use sub-pixel rendering:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "Lietot s&ubpikseļu pārzīmēšanu:"
+msgstr "Apakšpikseļu atveidošana:"
 
 #: ui/main.qml:321
 #, kde-kuit-format
@@ -337,13 +300,20 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>TFT un LCD ekrānos katru pikseli patiesībā veido trīs mazākas "
+"vienkrāsainas gaismas. Šie <emphasis>apakšpikseļi</emphasis> var tikt "
+"neatkarīgi mainīti, lai vēl uzlabotu parādīto fontu attēlošanas kvalitāti.</"
+"para> <para>Attēlošanas kvalitāte uzlabojas tikai tad, ja atlase atbilst "
+"veidam, kā displejā ir izvietoti apakšpikseļi. Lielākajai daļai displeju "
+"<emphasis>RGB</emphasis> apakšpikseļi ir lineāri izvietoti, bet citiem ir "
+"<emphasis>BGR</emphasis> vai vēl citi eksotiski izkārtojumi, kas šo iespēju "
+"neatbalsta.</para>Tāpat arī šī iespēja nedarbojas ar CRT monitoriem."
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Hinting style: "
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Minēšanas stils:"
+msgstr "Norādīšana:"
 
 #: ui/main.qml:367
 #, kde-kuit-format
@@ -354,12 +324,15 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Norādīšana ir tehnika, kurā fontā ievietotās norādes tiek izmantotas, lai "
+"uzlabotu atveidošanas kvalitāti, īpaši maziem fontiem. Stingrāka norādīšana "
+"parasti noved pie asākām malām, tomēr mazi burti mazāk precīzi atbildīs "
+"savām formām lielā izmērā."
 
 #: ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI:"
-msgstr "Uzspiest fontu izšķirtspēju DPI:"
+msgstr "Piespiedu fontu DPI:"
 
 #: ui/main.qml:408
 #, kde-kuit-format
@@ -372,11 +345,18 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Šeit ievadiet sava ekrāna DPI vērtību, lai pārliecinātos, ka ekrānā "
+"redzamie fonti atbilst savam fiziskajam izmēram, kad tiek izdrukāti. Mainot "
+"šo iespēju no noklusējuma vērtības, radīsies konflikti ar daudzām programmām "
+"— dažas ikonas un attēli var sliktāk mērogoties nekā sagaidīts.</"
+"para><para>Lai palielinātu teksta izmēru, mainiet norādīto fontu izmēru. Lai "
+"mērogotu visu, izmantojiet mērogošanas slīdni <interface>Displeja un "
+"monitora</interface> lapā.</para>"
 
 #: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
-msgstr ""
+msgstr "Atlasiet fontu"
 
 #, fuzzy
 #~| msgid "Force fonts DPI:"

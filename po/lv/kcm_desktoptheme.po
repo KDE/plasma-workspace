@@ -6,53 +6,53 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2008, 2010.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2011-07-07 23:11+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2024-01-18 21:05+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "Ielādēt jaunu tēmu..."
+msgstr "Aktīvā „Plasma“ stila nosaukums"
 
 #: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Neizdevās izveidot pagaidu datni."
 
 #: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr ""
+msgstr "Neizdevās lejupielādēt motīvu: %1"
 
 #: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Motīvs ir veiksmīgi instalēts."
 
 #: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
-msgstr ""
+msgstr "Motīva instalēšana neizdevās."
 
 #: kcm.cpp:262
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "Motīva noņemšana neizdevās: %1"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -61,6 +61,8 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"Šis rīks ļauj iestatīt šīs „Plasma“ sesijas motīvu, to nejaušo neiestatot uz "
+"nepieejamu vai jau iestatītu motīvu."
 
 #: plasma-apply-desktoptheme.cpp:35
 #, kde-format
@@ -68,12 +70,14 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Tēmas, kuru vēlaties pielietot šai „Plasma“ sesijai, nosaukums (norādot "
+"pilnu ceļu, vērā tiks ņemt tikai šī ceļa beigu daļa)"
 
 #: plasma-apply-desktoptheme.cpp:36
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "Parādīt visus sistēmā pieejamos motīvus (un šobrīd aktīvo motīvu)"
 
 #: plasma-apply-desktoptheme.cpp:49
 #, kde-format
@@ -81,90 +85,84 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Pieprasītais motīvs „%1“ jau ir iestatīts kā motīvs šai „Plasma“ sesijai."
 
 #: plasma-apply-desktoptheme.cpp:65
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "Šīs „Plasma“ sesijas motīvs ir iestatīts uz „%1“"
 
 #: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
-msgstr ""
+msgstr "Nevar atrast motīvu „%1“. Motīvam ir jābūt kādam no šiem: %2"
 
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
+msgstr "Sistēmā ir instalēti šie „Plasma“ motīvi:"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Available themes"
+#, kde-format
 msgid "All Themes"
-msgstr "Pieejamās tēmas"
+msgstr "Visi motīvi"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "Light Themes"
-msgstr "Tēma"
+msgstr "Gaišie motīvi"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
-msgstr ""
+msgstr "Tumšie motīvi"
 
 #: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "Saderīgi ar krāsu shēmām"
 
 #: ui/main.qml:97
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instalēt no datnes..."
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Iegūt jaunus..."
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
+#, kde-format
 msgid "Follows color scheme"
-msgstr "Krāsu shēma"
+msgstr "Ievēro krāsu shēmu"
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "Edit Theme…"
-msgstr "Tēma"
+msgstr "Rediģēt motīvu..."
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
-msgstr "Noņemt tēmu"
+msgstr "Noņemt motīvu"
 
 #: ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Theme"
-msgstr "Noņemt tēmu"
+msgstr "Atjaunot motīvu"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "Tēma"
+msgstr "Atvērt motīvu"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Motīvu datnes (*.zip *.tar.gz *.tar.bz2)"
 
 #, fuzzy
 #~| msgid "Get New Themes..."

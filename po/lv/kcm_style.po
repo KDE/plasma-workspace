@@ -6,41 +6,42 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008, 2009.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2011-07-08 13:00+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-18 20:47+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 nav derīga GTK motīva arhīvs."
 
 #: kcmstyle.cpp:163 kcmstyle.cpp:170
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr "Kļūme, ielādējot konfigurācijas vidi šim stilam."
+msgstr "Kļūme, ielādējot konfigurācijas logu šim stilam."
 
 #: kcmstyle.cpp:276
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
+msgstr "Neizdevās piemērot izvēlēto stilu „%1“."
 
 #: styleconfdialog.cpp:21
 #, kde-format
 msgid "Configure %1"
-msgstr "Konfigurēt %1"
+msgstr "Konfigurēt „%1“"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_1)
 #: stylepreview.ui:33
@@ -50,17 +51,15 @@ msgstr "1. cilne"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Push Button"
 msgstr "Poga"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgid "Combo box"
-msgstr "Izkrītošā izvēlne"
+msgstr "Kombinētā izvēlne"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:96
@@ -79,7 +78,7 @@ msgstr "Radio poga"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
@@ -89,154 +88,134 @@ msgstr "2. cilne"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Application style"
-msgstr "&Lietotnes"
+msgstr "Programmas stils"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons on buttons"
 msgstr "Rādīt ikonas uz pogām:"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "Rādīt ikonas uz pogām:"
+msgstr "Rādīt ikonas izvēlnēs"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "Gavenās rīkjoslas teksts:"
+msgstr "Galvenais rīkjoslas teksts"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "Sekundārais rīkjoslas teksts:"
+msgstr "Sekundārais rīkjoslas teksts"
 
 #: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon and Toolbars"
-msgstr ""
+msgstr "Konfigurēt ikonas un rīkjoslas"
 
 #: ui/EffectSettingsPopup.qml:36
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons:"
-msgstr "Rādīt ikonas izvēlnēs:"
+msgstr "Rādīt ikonas:"
 
 #: ui/EffectSettingsPopup.qml:37
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgid "On buttons"
-msgstr "Radio poga"
+msgstr "Uz pogām"
 
 #: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
-msgstr ""
+msgstr "Izvēlnēs"
 
 #: ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label:"
-msgstr "Gavenās rīkjoslas teksts:"
+msgstr "Galvenais rīkjoslas teksts:"
 
 #: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nav"
 
 #: ui/EffectSettingsPopup.qml:63
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
 msgstr "Tikai teksts"
 
 #: ui/EffectSettingsPopup.qml:64
-#, fuzzy, kde-format
-#| msgid "Text Beside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "Teksts blakus ikonām"
+msgstr "Pie ikonām"
 
 #: ui/EffectSettingsPopup.qml:65
-#, fuzzy, kde-format
-#| msgid "Text Below Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "Teksts zem ikonām"
+msgstr "Zem ikonām"
 
 #: ui/EffectSettingsPopup.qml:80
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label:"
 msgstr "Sekundārais rīkjoslas teksts:"
 
 #: ui/GtkStylePage.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "&Lietotnes"
+msgstr "GNOME/GTK programmu stils"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "GTK motīvs:"
 
 #: ui/GtkStylePage.qml:68
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "Priekšskatījums"
+msgstr "Priekšskatījums..."
 
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instalēt no datnes..."
 
 #: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "&Lietotnes"
+msgstr "Iegūt jaunus GNOME/GTK programmu stilus..."
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "Atlasīt GTK motīvu arhīvu"
 
 #: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "GTK motīvu arhīvs (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "Konfigurēt ikonas un rīkjoslas"
 
 #: ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Kon&figurēt..."
+msgstr "Konfigurēt GNOME/GTK programmu stilu..."
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure Style…"
-msgstr "Kon&figurēt..."
+msgstr "Konfigurēt stilu..."
 
 #, fuzzy
 #~| msgid ""

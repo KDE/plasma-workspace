@@ -1,15 +1,16 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # marisn, 2023.
 # Māris Nartišs <maris.kde@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 02:16+0000\n"
-"PO-Revision-Date: 2023-12-14 14:43+0200\n"
-"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-17 14:02+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: abstractnotificationsmodel.cpp:315
 #, kde-format
@@ -30,9 +31,9 @@ msgstr "%1 no %2"
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
 msgid_plural "%2 of %1 files to %3"
-msgstr[0] "%2 no %1 datnes uz %3"
-msgstr[1] "%2 no %1 datnēm uz %3"
-msgstr[2] "%2 no %1 datnēm uz %3"
+msgstr[0] "%2. no %1 datnes uz %3"
+msgstr[1] "%2. no %1 datnēm uz %3"
+msgstr[2] "%2. no %1 datnēm uz %3"
 
 #: job_p.cpp:186 job_p.cpp:216 job_p.cpp:232
 #, kde-format
@@ -48,9 +49,9 @@ msgstr[2] "%1 datņu uz %2"
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] "%2 no %1 datnes"
-msgstr[1] "%2 no %1 datnēm"
-msgstr[2] "%2 no %1 datnēm"
+msgstr[0] "%2 datni no %1"
+msgstr[1] "%2 datnes no %1"
+msgstr[2] "%2 datņu no %1"
 
 #: job_p.cpp:196 job_p.cpp:226 job_p.cpp:236
 #, kde-format
@@ -59,16 +60,16 @@ msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 datni"
 msgstr[1] "%1 datnes"
-msgstr[2] "%1 datnes"
+msgstr[2] "%1 datņu"
 
 #: job_p.cpp:201
 #, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 no %1 vienuma"
-msgstr[1] "%2 no %1 vienumiem"
-msgstr[2] "%2 no %1 vienumiem"
+msgstr[0] "%2 vienums no %1"
+msgstr[1] "%2 vienumi no %1"
+msgstr[2] "%2 vienumu no %1"
 
 #: job_p.cpp:204 job_p.cpp:224
 #, kde-format
@@ -109,4 +110,4 @@ msgstr "%1 no %2"
 #: jobsmodel_p.cpp:477
 #, kde-format
 msgid "Application closed unexpectedly."
-msgstr "Programma aizvērās negaidīti."
+msgstr "Programma negaidīti aizvērās."

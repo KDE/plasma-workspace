@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2009-12-05 23:06+0200\n"
-"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-18 09:42+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -31,32 +32,32 @@ msgstr "Sūtīt SIGKILL"
 #: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
-msgstr "Nokaut"
+msgstr "nobeigt"
 
 #: killrunner.cpp:48
 #, kde-format
 msgid "Terminate running applications whose names match the query."
-msgstr "Nokauj darbojošās programmas, kuru nosaukumi atbilst vaicājumam."
+msgstr "Nobeigt darbojošās programmas, kuru nosaukumi atbilst vaicājumam."
 
 #: killrunner.cpp:85
 #, kde-format
 msgid "Terminate %1"
-msgstr "Nokaut %1"
+msgstr "Nobeigt %1"
 
 #: killrunner.cpp:86
 #, kde-format
 msgid "Process ID: %1"
-msgstr ""
+msgstr "Procesa ID: %1"
 
 #: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
-msgstr "CPU izmantošana"
+msgstr "CPU noslodze"
 
 #: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
-msgstr "Invertēta CPU izmantošana"
+msgstr "Invertēta CPU noslodze"
 
 #: killrunner_config.cpp:27
 #, kde-format
@@ -67,7 +68,7 @@ msgstr "nekas"
 #: killrunner_config.ui:30
 #, kde-format
 msgid "Kill Applications Config"
-msgstr "Programmu nokaušanas konfigurācija"
+msgstr "Programmu nobeigšanas konfigurācija"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
 #: killrunner_config.ui:39
@@ -91,7 +92,7 @@ msgstr "&Kārtot pēc"
 #: killrunner_config.ui:82
 #, kde-format
 msgid "It is not sure, that this will take effect"
-msgstr "Nav garantijas, ka šis iedarbosies"
+msgstr "Šī darbība var nebūt sekmīga"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

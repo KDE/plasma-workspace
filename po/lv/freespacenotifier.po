@@ -3,47 +3,44 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 16:53+0000\n"
-"PO-Revision-Date: 2010-07-08 11:35+0300\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
-"Language-Team: Latvian\n"
+"PO-Revision-Date: 2024-01-15 16:26+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: freespacenotifier.cpp:93
 #, kde-format
 msgid "Open in Filelight"
-msgstr ""
+msgstr "Atvērt programmā „Filelight“"
 
 #: freespacenotifier.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "Opens a file manager like dolphin"
-#| msgid "Open File Manager"
+#, kde-format
 msgid "Open in File Manager"
-msgstr "Atvērt failu pārvaldnieku"
+msgstr "Atvērt datņu pārvaldniekā"
 
 #: freespacenotifier.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "Allows the user to configure the warning notification being shown"
-#| msgid "Configure Warning"
+#, kde-format
 msgid "Configure Warning…"
-msgstr "Konfigurēt brīdinājumu"
+msgstr "Konfigurēt brīdinājumu..."
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9
 #, kde-format
 msgid "Minimum free space before user starts being notified."
 msgstr ""
-"Minimālās brīvās vietas daudzums pēc kura pārsniegšanas ir jābrīdina "
+"Minimālās brīvās vietas daudzums, pēc kura pārsniegšanas ir jābrīdina "
 "lietotājs."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
@@ -56,7 +53,7 @@ msgstr "Brīvās vietas ziņošana ir ieslēgta."
 #: freespacenotifier_prefs_base.ui:17
 #, kde-format
 msgid "Enable low disk space warning"
-msgstr "Ieslēgt brīvās vietas brīdinājumu"
+msgstr "Ieslēgt mazas brīvās vietas brīdinājumu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
 #: freespacenotifier_prefs_base.ui:27
@@ -76,6 +73,8 @@ msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
+"Jūsu „Mājas“ mapē sāk trūkt diska vietas. Brīvā vieta šobrīd ir: %1 MiB "
+"(%2%)."
 
 #: module.cpp:45
 #, kde-format
@@ -83,12 +82,14 @@ msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
+"Jūsu saknes nodalījumā sāk trūkt diska vietas. Brīvā vieta šobrīd ir: %1 MiB "
+"(%2%)."
 
 #: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
-msgstr "Vispārēji"
+msgstr "Vispārīgi"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

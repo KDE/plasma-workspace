@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 A S Alam <aalam@punlinux.org>
+# SPDX-FileCopyrightText: 2023, 2024 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-12-22 19:54-0600\n"
+"PO-Revision-Date: 2024-01-19 17:21-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -25,7 +25,7 @@ msgstr "ਪਲਾਜ਼ਮਾ ਵਿੰਡੋਡ"
 #: main.cpp:46
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "QML ਜਾਵਾ-ਸਕਰਿਪਟ ਡੀਬੱਗਰ ਸਮਰੱਥ ਕਰੋ"
 
 #: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
@@ -37,7 +37,7 @@ msgstr ""
 #: main.cpp:51
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "ਦਿੱਤੀ ਸ਼ੈਲ ਪਲੱਗਇਨ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਮਜ਼ਬੂਰ ਕਰਦਾ ਹੈ"
 
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format

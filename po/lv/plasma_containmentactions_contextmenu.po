@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2009-12-05 22:11+0200\n"
-"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-18 20:26+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -22,23 +23,21 @@ msgstr ""
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
-msgstr ""
+msgstr "Rādīt „KRunner“"
 
 #: menu.cpp:105
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "Atvērt termināli"
 
 #: menu.cpp:109
-#, fuzzy, kde-format
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Slēgt ekrānu"
 
 #: menu.cpp:118
-#, fuzzy, kde-format
-#| msgid "Leave..."
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Pamest..."
@@ -47,32 +46,28 @@ msgstr "Pamest..."
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
-msgstr ""
+msgstr "Konfigurēt displeja iestatījumus..."
 
 #: menu.cpp:283
-#, fuzzy, kde-format
-#| msgid "Configure Contextual Menu Plugin"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Konfigurēt konteksta izvēlnes spraudni"
 
 #: menu.cpp:293
-#, fuzzy, kde-format
-#| msgid "[Other Actions]"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Citas darbības]"
 
 #: menu.cpp:296
-#, fuzzy, kde-format
-#| msgid "Wallpaper Actions"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
-msgstr "Ekrāntapetes darbības"
+msgstr "Darbvirsmas tapetes darbības"
 
 #: menu.cpp:300
-#, fuzzy, kde-format
-#| msgid "[Separator]"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Atdalītājs]"

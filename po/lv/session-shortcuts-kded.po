@@ -1,0 +1,54 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-01-18 19:05+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "Sesijas pārvaldība"
+
+#: main.cpp:38
+#, kde-format
+msgid "Log Out"
+msgstr "Izrakstīties"
+
+#: main.cpp:44
+#, kde-format
+msgid "Shut Down"
+msgstr "Izslēgt"
+
+#: main.cpp:50
+#, kde-format
+msgid "Reboot"
+msgstr "Pārstartēt"
+
+#: main.cpp:58
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Izrakstīties bez apstiprināšanas"
+
+#: main.cpp:64
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "Izslēgt bez apstiprināšanas"
+
+#: main.cpp:70
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Pārstartēt bez apstiprināšanas"

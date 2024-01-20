@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2019-11-10 12:37+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-17 13:56+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -44,30 +45,25 @@ msgid "Add to Panel (Widget)"
 msgstr "Pievienot panelim (logdaļa)"
 
 #: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "Nesenie dokumenti"
+msgstr "Nesenās datnes"
 
 #: plugin/actionlist.cpp:314
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Forget Recent Files"
-msgstr "Aizmirst nesenos dokumentus"
+msgstr "Aizmirst nesenās datnes"
 
 #: plugin/actionlist.cpp:392
-#, fuzzy, kde-format
-#| msgid "Edit Application..."
+#, kde-format
 msgid "Edit Application…"
 msgstr "Rediģēt programmu..."
 
 #: plugin/actionlist.cpp:425
-#, fuzzy, kde-format
-#| msgctxt "@action opens a software center with the application"
-#| msgid "Uninstall or Manage Add-Ons..."
+#, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr "Pārvaldīt paplašinājums..."
+msgstr "Atinstalēt vai pārvaldīt  pielikumus..."
 
 #: plugin/appentry.cpp:294
 #, kde-format
@@ -101,17 +97,17 @@ msgstr "Šajā apakšizvēlnē padarīt programmas redzamas"
 #: plugin/appsmodel.cpp:163
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "Padarīt redzamas programmas iekš '%1'"
+msgstr "Padarīt redzamas programmas izvēlnē „%1“"
 
 #: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
-msgstr "Rādīt iekš KRunner"
+msgstr "Rādīt „KRunner“"
 
 #: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr "Meklē, rēķini vai darbini komandu"
+msgstr "Meklējiet, rēķiniet vai palaidiet komandu"
 
 #: plugin/computermodel.cpp:148
 #, kde-format
@@ -128,12 +124,12 @@ msgstr "Iecienītās"
 #: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
-msgstr "Nesen lietotie"
+msgstr "Nesen lietotās"
 
 #: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Datnes"
 
 #: plugin/recentusagemodel.cpp:237
 #, kde-format
@@ -143,13 +139,12 @@ msgstr "Aizmirst programmu"
 #: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Atvērt saturošo mapi"
 
 #: plugin/recentusagemodel.cpp:334
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget File"
-msgstr "Aizmirst visu"
+msgstr "Aizmirst datni"
 
 #: plugin/recentusagemodel.cpp:471
 #, kde-format
@@ -162,10 +157,9 @@ msgid "Forget All Applications"
 msgstr "Aizmirst visas programmas"
 
 #: plugin/recentusagemodel.cpp:476
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget All Files"
-msgstr "Aizmirst visu"
+msgstr "Aizmirst visas datnes"
 
 #: plugin/rootmodel.cpp:92
 #, kde-format
@@ -180,13 +174,12 @@ msgstr "Visas programmas"
 #: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "Šim nav jābūt redzamam! Lietojiet KICKER_FAVORITES_MODEL"
 
 #: plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Often Used Documents"
+#, kde-format
 msgid "Often Used Files"
-msgstr "Biežāk lietotie dokumenti"
+msgstr "Biežāk lietotās datnes"
 
 #: plugin/rootmodel.cpp:408
 #, kde-format
@@ -216,7 +209,7 @@ msgstr "Slēgt"
 #: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
-msgstr "Atteikties"
+msgstr "Izrakstīties"
 
 #: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
@@ -232,7 +225,7 @@ msgstr "Pārslēgt lietotāju"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Aizmigt"
+msgstr "Iesnaudināt"
 
 #: plugin/systementry.cpp:209
 #, kde-format
@@ -277,12 +270,12 @@ msgstr "Sākt paralēlu sesiju kā citam lietotājam"
 #: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Iemidzina uz RAM"
+msgstr "Iesnaudina uz RAM"
 
 #: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
-msgstr "Iemidzina uz disku"
+msgstr "Iesnaudina uz disku"
 
 #: plugin/systementry.cpp:266
 #, kde-format

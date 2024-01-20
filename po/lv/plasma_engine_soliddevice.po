@@ -4,19 +4,20 @@
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2010, 2012, 2019.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2010.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-29 01:56+0000\n"
-"PO-Revision-Date: 2019-12-07 14:17+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-17 16:34+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -89,11 +90,11 @@ msgstr "Mazais"
 
 #: soliddeviceengine.cpp:142
 msgid "Device"
-msgstr "Iekārta"
+msgstr "Ierīce"
 
 #: soliddeviceengine.cpp:150
 msgid "Storage Access"
-msgstr "Glabāšanas piekļuve"
+msgstr "Krātuves piekļuve"
 
 #: soliddeviceengine.cpp:151 soliddeviceengine.cpp:505
 #: soliddeviceengine.cpp:606
@@ -102,11 +103,11 @@ msgstr "Pieejama"
 
 #: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
 msgid "File Path"
-msgstr "Faila ceļš"
+msgstr "Datnes ceļš"
 
 #: soliddeviceengine.cpp:167
 msgid "Storage Drive"
-msgstr "Galbāšanas iekārta"
+msgstr "Krātuves ierīce"
 
 #: soliddeviceengine.cpp:170
 msgid "Ide"
@@ -138,7 +139,7 @@ msgstr "Cietais disks"
 
 #: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"
-msgstr "Cdrom iekārta"
+msgstr "CD-ROM dzinis"
 
 #: soliddeviceengine.cpp:173
 msgid "Floppy"
@@ -150,15 +151,15 @@ msgstr "Lenšu iekārta"
 
 #: soliddeviceengine.cpp:174
 msgid "Compact Flash"
-msgstr "Compact Flash"
+msgstr "„Compact Flash“"
 
 #: soliddeviceengine.cpp:174
 msgid "Memory Stick"
-msgstr "Memory Stick"
+msgstr "„Memory Stick“"
 
 #: soliddeviceengine.cpp:175
 msgid "Smart Media"
-msgstr "Smart Media"
+msgstr "„Smart Media“"
 
 #: soliddeviceengine.cpp:175
 msgid "SdMmc"
@@ -184,7 +185,7 @@ msgstr "Noņemams"
 #: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
 #: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Hotpluggable"
-msgstr "Karsti nomaināms"
+msgstr "Karsti pievienojams"
 
 #: soliddeviceengine.cpp:202
 msgid "Optical Drive"
@@ -272,7 +273,7 @@ msgstr "Rakstīšanas ātrumi"
 
 #: soliddeviceengine.cpp:273
 msgid "Storage Volume"
-msgstr "Glabāšanas sējums"
+msgstr "Krātuves sējums"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -287,12 +288,12 @@ msgstr "Nelietots"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "File System"
-msgstr "Failu sistēma"
+msgstr "Datņu sistēma"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Partition Table"
-msgstr "Partīciju tabula"
+msgstr "Nodalījumu tabula"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -319,11 +320,11 @@ msgstr "Ignorēts"
 
 #: soliddeviceengine.cpp:285
 msgid "File System Type"
-msgstr "Failu sistēmas tips"
+msgstr "Datņu sistēmas tips"
 
 #: soliddeviceengine.cpp:286
 msgid "Label"
-msgstr "Birka"
+msgstr "Etiķete"
 
 #: soliddeviceengine.cpp:287
 msgid "UUID"
@@ -471,7 +472,7 @@ msgstr "Atbalstītie draiveri"
 
 #: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
-msgstr "Pārnēsājams mēdiju atskaņotājs"
+msgstr "Pārnēsājams multivides atskaņotājs"
 
 #: soliddeviceengine.cpp:383
 msgid "Battery"
@@ -499,11 +500,11 @@ msgstr "Peles baterija"
 
 #: soliddeviceengine.cpp:388
 msgid "Keyboard Battery"
-msgstr "Klaviatūras baterija"
+msgstr "Tastatūras baterija"
 
 #: soliddeviceengine.cpp:388
 msgid "Keyboard Mouse Battery"
-msgstr "Klaviatūras peles baterija"
+msgstr "Tastatūras peles baterija"
 
 #: soliddeviceengine.cpp:389
 msgid "Camera Battery"
@@ -519,11 +520,11 @@ msgstr "Monitora baterija"
 
 #: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
-msgstr ""
+msgstr "Spēļu ievades ierīces baterija"
 
 #: soliddeviceengine.cpp:390
 msgid "Bluetooth Battery"
-msgstr "Bluetooth baterija"
+msgstr "„Bluetooth“ baterija"
 
 #: soliddeviceengine.cpp:393
 msgid "Not Charging"
@@ -531,7 +532,7 @@ msgstr "Nelādē"
 
 #: soliddeviceengine.cpp:393
 msgid "Charging"
-msgstr "Lādējās"
+msgstr "Lādējas"
 
 #: soliddeviceengine.cpp:393
 msgid "Discharging"
@@ -576,26 +577,24 @@ msgstr "Izmērs"
 #: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Datņu sistēma nereaģē"
 
 #: soliddeviceengine.cpp:533
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "„%1“ piemontētā datņu sistēma nereaģē"
 
 #: soliddeviceengine.cpp:551
 msgid "Free Space"
-msgstr "Brīvā telpa"
+msgstr "Brīvā vieta"
 
 #: soliddeviceengine.cpp:552
 msgid "Free Space Text"
-msgstr "Brīvās telpas teksts"
+msgstr "Brīvās vietas teksts"
 
 #: soliddeviceengine.cpp:554
-#, fuzzy
-#| msgid "Size"
 msgid "Size Text"
-msgstr "Izmērs"
+msgstr "Izmēra teksts"
 
 #: soliddeviceengine.cpp:580
 msgid "Temperature"
