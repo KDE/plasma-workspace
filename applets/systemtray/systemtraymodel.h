@@ -10,6 +10,7 @@
 #include <QConcatenateTablesProxyModel>
 #include <QList>
 #include <QPointer>
+#include <qqmlregistration.h>
 
 #include <KPluginMetaData>
 #include <Plasma/Plasma>
@@ -102,10 +103,13 @@ private:
 
 /**
  * @brief Data model for Status Notifier Items (SNI).
+ * @note This model is exported to QML for plasma-mobile
  */
 class StatusNotifierModel : public BaseModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
 public:
     enum class Role {
         DataEngineSource = static_cast<int>(BaseModel::BaseRole::LastBaseRole) + 100,
@@ -127,23 +131,26 @@ public:
         WindowId,
     };
 
-    StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+    explicit StatusNotifierModel(QObject *parent = nullptr);
+    explicit StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
+
+    struct Item {
+        QString source;
+        Plasma5Support::Service *service = nullptr;
+    };
 
 public Q_SLOTS:
     void addSource(const QString &source);
     void removeSource(const QString &source);
     void dataUpdated(const QString &sourceName);
 
-public:
-    struct Item {
-        QString source;
-        Plasma5Support::Service *service = nullptr;
-    };
+private:
     int indexOfSource(const QString &source) const;
+    void init();
 
     StatusNotifierItemHost *m_sniHost = nullptr;
     QList<Item> m_items;

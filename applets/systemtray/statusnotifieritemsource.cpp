@@ -360,7 +360,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         }
 
         // Menu
-        if (!m_menuImporter) {
+        if (qobject_cast<QApplication *>(QCoreApplication::instance()) && !m_menuImporter) {
             QString menuObjectPath = properties[QStringLiteral("Menu")].value<QDBusObjectPath>().path();
             if (!menuObjectPath.isEmpty()) {
                 if (menuObjectPath == QLatin1String("/NO_DBUSMENU")) {

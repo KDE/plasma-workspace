@@ -7,12 +7,10 @@ include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 set(systemtray_SRCS
     dbusserviceobserver.cpp
     plasmoidregistry.cpp
-    sortedsystemtraymodel.cpp
     statusnotifieritemjob.cpp
     statusnotifieritemhost.cpp
     statusnotifieritemservice.cpp
     statusnotifieritemsource.cpp
-    systemtraymodel.cpp
     systemtraysettings.cpp
     systemtraytypes.cpp
 )
@@ -35,27 +33,41 @@ ecm_qt_declare_logging_category(systemtray_SRCS HEADER debug.h
                                             DESCRIPTION "plasma applet systemtray"
                                             EXPORT PLASMAWORKSPACE
                                         )
-add_library(systemtraymodel_static STATIC ${systemtray_SRCS})
-target_link_libraries(systemtraymodel_static
-    Qt::Gui
-    Qt${QT_VERSION_MAJOR}::GuiPrivate
-    Qt::Quick
-    Qt::DBus
-    KF6::XmlGui
-    KF6::I18n
-    KF6::ItemModels
-    Plasma::Plasma
-    Plasma::Plasma5Support
-    Plasma::PlasmaQuick
-    KF6::IconThemes
-    KF6::WindowSystem
-    dbusmenuqt)
+add_library(systemtray_static STATIC ${systemtray_SRCS})
+target_link_libraries(systemtray_static
+    PUBLIC
+        Qt::DBus
+        Qt::Gui
+        Qt${QT_VERSION_MAJOR}::GuiPrivate
+        Qt::Quick
+        KF6::ConfigCore
+        KF6::IconThemes
+        KF6::I18n
+        KF6::ItemModels
+        KF6::WindowSystem
+        KF6::XmlGui
+        Plasma::Plasma
+        Plasma::Plasma5Support
+        Plasma::PlasmaQuick
+        dbusmenuqt
+)
 
+set_property(TARGET systemtray_static PROPERTY POSITION_INDEPENDENT_CODE ON)
+
+add_library(systemtraymodel_static STATIC systemtraymodel.cpp sortedsystemtraymodel.cpp)
+target_link_libraries(systemtraymodel_static PUBLIC systemtray_static)
 set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
 
 target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
+
+ecm_add_qml_module(systemtrayplugin URI org.kde.plasma.private.systemtray GENERATE_PLUGIN_SOURCE)
+target_sources(systemtrayplugin PRIVATE systemtraymodel.cpp)
+target_link_libraries(systemtrayplugin PRIVATE systemtray_static)
+ecm_finalize_qml_module(systemtrayplugin)
+
+install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 
 add_subdirectory(container)
 if(BUILD_TESTING)

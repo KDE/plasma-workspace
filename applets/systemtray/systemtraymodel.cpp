@@ -23,11 +23,13 @@
 BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent)
     : QAbstractListModel(parent)
     , m_settings(settings)
-    , m_showAllItems(m_settings->isShowAllItems())
-    , m_shownItems(m_settings->shownItems())
-    , m_hiddenItems(m_settings->hiddenItems())
+    , m_showAllItems(m_settings ? m_settings->isShowAllItems() : true)
+    , m_shownItems(m_settings ? m_settings->shownItems() : decltype(m_shownItems){})
+    , m_hiddenItems(m_settings ? m_settings->hiddenItems() : decltype(m_hiddenItems){})
 {
-    connect(m_settings, &SystemTraySettings::configurationChanged, this, &BaseModel::onConfigurationChanged);
+    if (m_settings) {
+        connect(m_settings, &SystemTraySettings::configurationChanged, this, &BaseModel::onConfigurationChanged);
+    }
 }
 
 QHash<int, QByteArray> BaseModel::roleNames() const
@@ -229,17 +231,16 @@ int PlasmoidModel::indexOfPluginId(const QString &pluginId) const
     return -1;
 }
 
+StatusNotifierModel::StatusNotifierModel(QObject *parent)
+    : BaseModel(nullptr, parent)
+{
+    init();
+}
+
 StatusNotifierModel::StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent)
     : BaseModel(settings, parent)
 {
-    m_sniHost = StatusNotifierItemHost::self();
-
-    connect(m_sniHost, &StatusNotifierItemHost::itemAdded, this, &StatusNotifierModel::addSource);
-    connect(m_sniHost, &StatusNotifierItemHost::itemRemoved, this, &StatusNotifierModel::removeSource);
-
-    for (auto service : m_sniHost->services()) {
-        addSource(service);
-    }
+    init();
 }
 
 static Plasma::Types::ItemStatus extractStatus(const StatusNotifierItemSource *sniData)
@@ -434,6 +435,18 @@ int StatusNotifierModel::indexOfSource(const QString &source) const
         }
     }
     return -1;
+}
+
+void StatusNotifierModel::init()
+{
+    m_sniHost = StatusNotifierItemHost::self();
+
+    connect(m_sniHost, &StatusNotifierItemHost::itemAdded, this, &StatusNotifierModel::addSource);
+    connect(m_sniHost, &StatusNotifierItemHost::itemRemoved, this, &StatusNotifierModel::removeSource);
+
+    for (const QStringList services = m_sniHost->services(); const QString &service : services) {
+        addSource(service);
+    }
 }
 
 SystemTrayModel::SystemTrayModel(QObject *parent)
