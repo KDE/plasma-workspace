@@ -111,6 +111,8 @@ Item {
             bottomPadding: 0
             topPadding: 0
 
+            visible: count > 0
+
             onAccepted: root.window.accept()
             onRejected: root.window.reject()
 
