@@ -364,34 +364,35 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
     if (d->filterByRegion != RegionFilterMode::Mode::Disabled && d->regionGeometry.isValid()) {
         QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
 
+        QRect regionGeometry = d->regionGeometry;
 #if HAVE_X11
         if (static const bool isX11 = KWindowSystem::isPlatformX11(); isX11 && windowGeometry.isValid()) {
+            // On X11, in regionGeometry, the original point of the topLeft position belongs to the device coordinate system
+            // but the size belongs to the logical coordinate system (which means the reported size is already divided by DPR)
+            // Converting regionGeometry to device coordinate system is better than converting windowGeometry to logical
+            // coordinate system because the window may span multiple screens, while the region is always on one screen.
             const double devicePixelRatio = qGuiApp->devicePixelRatio();
-            const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
-            const QPoint screenTopLeft = screenGeometry.topLeft();
-            // AbstractTasksModel::Geometry returns a size that belongs to the device coordinate system
-            const QPoint windowTopLeft =
-                screenTopLeft + QPoint(windowGeometry.x() - screenTopLeft.x(), windowGeometry.y() - screenTopLeft.y()) / devicePixelRatio;
-            windowGeometry = QRect(windowTopLeft, windowGeometry.size() / devicePixelRatio);
+            const QPoint screenTopLeft = d->screenGeometry.topLeft();
+            const QPoint regionTopLeft =
+                screenTopLeft + QPoint(regionGeometry.x() - screenTopLeft.x(), regionGeometry.y() - screenTopLeft.y()) * devicePixelRatio;
+            regionGeometry = QRect(regionTopLeft, regionGeometry.size() * devicePixelRatio);
         }
 #endif
-        // On X11, in regionGeometry, the original point of the topLeft position belongs to the device coordinate system
-        // but the size belongs to the logical coordinate system (which means the reported size is already divided by DPR)
         switch (d->filterByRegion) {
         case RegionFilterMode::Mode::Inside: {
-            if (!d->regionGeometry.contains(windowGeometry)) {
+            if (!regionGeometry.contains(windowGeometry)) {
                 return false;
             }
             break;
         }
         case RegionFilterMode::Mode::Intersect: {
-            if (!d->regionGeometry.intersects(windowGeometry)) {
+            if (!regionGeometry.intersects(windowGeometry)) {
                 return false;
             }
             break;
         }
         case RegionFilterMode::Mode::Outside: {
-            if (d->regionGeometry.contains(windowGeometry)) {
+            if (regionGeometry.contains(windowGeometry)) {
                 return false;
             }
             break;
