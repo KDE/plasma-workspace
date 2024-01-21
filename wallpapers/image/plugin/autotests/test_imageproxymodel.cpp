@@ -279,7 +279,9 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
                          KIO::HideProgressInfo | KIO::Overwrite);
     job->start();
 
-    QVERIFY(m_countSpy->wait());
+    if (m_countSpy->empty()) {
+        QVERIFY(m_countSpy->wait());
+    }
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
 
