@@ -186,8 +186,6 @@ void CursorThemeConfig::updateSizeComboBox()
     // refill the combo box and adopt its icon size
     int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
     QModelIndex selected = m_themeProxyModel->index(row, 0);
-    int maxIconWidth = 0;
-    int maxIconHeight = 0;
     if (selected.isValid()) {
         const CursorTheme *theme = m_themeProxyModel->theme(selected);
         const QList<int> sizes = theme->availableSizes();
@@ -199,21 +197,9 @@ void CursorThemeConfig::updateSizeComboBox()
 
             // insert the items
             m_pixmap = theme->createIcon(0);
-            if (m_pixmap.width() > maxIconWidth) {
-                maxIconWidth = m_pixmap.width();
-            }
-            if (m_pixmap.height() > maxIconHeight) {
-                maxIconHeight = m_pixmap.height();
-            }
 
             foreach (i, sizes) {
                 m_pixmap = theme->createIcon(i);
-                if (m_pixmap.width() > maxIconWidth) {
-                    maxIconWidth = m_pixmap.width();
-                }
-                if (m_pixmap.height() > maxIconHeight) {
-                    maxIconHeight = m_pixmap.height();
-                }
                 QStandardItem *item = new QStandardItem(QIcon(m_pixmap), QString::number(i));
                 item->setData(i);
                 m_sizesModel->appendRow(item);
