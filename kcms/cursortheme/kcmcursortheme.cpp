@@ -279,6 +279,19 @@ int CursorThemeConfig::cursorSizeFromIndex(int index)
     return m_sizesModel->item(index)->data().toInt();
 }
 
+QSize CursorThemeConfig::iconSizeFromIndex(int index)
+{
+    if (index < 0 || index >= m_sizesModel->rowCount()) {
+        return QSize();
+    }
+
+    const auto availableSizes = m_sizesModel->item(index)->icon().availableSizes();
+    if (availableSizes.isEmpty()) {
+        return QSize();
+    }
+    return availableSizes.first();
+}
+
 int CursorThemeConfig::cursorThemeIndex(const QString &cursorTheme) const
 {
     auto results = m_themeProxyModel->findIndex(cursorTheme);

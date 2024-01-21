@@ -74,6 +74,7 @@ public:
 
     Q_INVOKABLE int cursorSizeIndex(int cursorSize) const;
     Q_INVOKABLE int cursorSizeFromIndex(int index);
+    Q_INVOKABLE QSize iconSizeFromIndex(int index);
     Q_INVOKABLE int cursorThemeIndex(const QString &cursorTheme) const;
     Q_INVOKABLE QString cursorThemeFromIndex(int index) const;
 

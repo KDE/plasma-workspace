@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kwindowsystem 1.0 // for isPlatformWayland
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcmutils as KCM
 
@@ -97,9 +98,13 @@ KCM.GridViewKCM {
                         Kirigami.Icon {
                             source: model.decoration
                             smooth: true
-                            Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
-                            Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
+                            // On wayland the cursor size is logical pixels, and on X11 it's physical pixels.
+                            property real devicePixelRatio: KWindowSystem.isPlatformWayland ? 1 : Screen.devicePixelRatio
+                            property size iconSize: kcm.iconSizeFromIndex(index)
+                            Layout.preferredWidth: iconSize.width / devicePixelRatio
+                            Layout.preferredHeight: iconSize.height / devicePixelRatio
                             visible: valid && sizeComboDelegate.size > 0
+                            roundToIconSize: false
                         }
 
                         QtControls.Label {
