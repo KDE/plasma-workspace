@@ -118,6 +118,17 @@ void FingerprintModel::setDialogState(DialogState dialogState)
     Q_EMIT dialogStateChanged();
 }
 
+void FingerprintModel::setCurrentFinger(const QString &finger)
+{
+    m_currentFinger = finger;
+    Q_EMIT currentFingerChanged();
+}
+
+QString FingerprintModel::currentFinger() const
+{
+    return m_currentFinger;
+}
+
 void FingerprintModel::switchUser(QString username)
 {
     m_username = username;

@@ -43,7 +43,7 @@ Item {
     }
     
     Connections {
-        target: fingerprintModel
+        target: kcm.fingerprintModel
         function onScanSuccess() {
             iconColorAnimation.to = Kirigami.Theme.highlightColor
             iconColorAnimation.start();
@@ -84,7 +84,7 @@ Item {
         layer.samples: 40
         anchors.centerIn: parent
         
-        property int rawAngle: fingerprintModel.enrollProgress * 360
+        property int rawAngle: kcm.fingerprintModel.enrollProgress * 360
         property int renderedAngle: 0
         NumberAnimation on renderedAngle {
             id: elapsedAngleAnimation

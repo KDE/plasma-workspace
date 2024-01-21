@@ -75,6 +75,7 @@ class FingerprintModel : public QObject
     Q_PROPERTY(bool currentlyEnrolling READ currentlyEnrolling NOTIFY currentlyEnrollingChanged)
     Q_PROPERTY(double enrollProgress READ enrollProgress NOTIFY enrollProgressChanged)
     Q_PROPERTY(DialogState dialogState READ dialogState WRITE setDialogState NOTIFY dialogStateChanged)
+    Q_PROPERTY(QString currentFinger READ currentFinger WRITE setCurrentFinger NOTIFY currentFingerChanged)
 
 public:
     explicit FingerprintModel(QObject *parent = nullptr);
@@ -123,6 +124,8 @@ public:
     void setEnrollStage(int stage);
     DialogState dialogState();
     void setDialogState(DialogState dialogState);
+    QString currentFinger() const;
+    void setCurrentFinger(const QString &finger);
 
 public Q_SLOTS:
     void handleEnrollCompleted();
@@ -138,6 +141,7 @@ Q_SIGNALS:
     void currentlyEnrollingChanged();
     void enrollProgressChanged();
     void dialogStateChanged();
+    void currentFingerChanged();
 
     void scanComplete();
     void scanSuccess();
@@ -146,6 +150,7 @@ Q_SIGNALS:
 private:
     QString m_username; // set to "" if it is the currently logged in user
     QString m_currentError, m_enrollFeedback;
+    QString m_currentFinger;
 
     DialogState m_dialogState = DialogState::FingerprintList;
 

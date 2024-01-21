@@ -9,7 +9,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.kcmutils as KCM
 import org.kde.plasma.kcm.users 1.0 as UsersKCM
@@ -219,7 +219,7 @@ KCM.SimpleKCM {
             text: i18n("Configure Fingerprint Authentication…")
             icon.name: "fingerprint-gui"
 
-            property Kirigami.OverlaySheet dialog: null
+            property Kirigami.Dialog dialog: null
 
             onClicked: {
                 if (kcm.fingerprintModel.currentlyEnrolling) {
@@ -229,6 +229,11 @@ KCM.SimpleKCM {
 
                 if (fingerprintButton.dialog === null) {
                     const component = Qt.createComponent("FingerprintDialog.qml");
+
+                    if (component.status === Component.Error) {
+                        console.warn(component.errorString())
+                    }
+
                     component.incubateObject(usersDetailPage, {
                         focus: true,
                     });
