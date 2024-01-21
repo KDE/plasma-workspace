@@ -246,6 +246,7 @@ KCM.SimpleKCM {
             visible: kcm.fingerprintModel.deviceFound
 
             text: xi18nc("@info", "Fingerprints can be used in place of a password when unlocking the screen and providing administrator permissions to applications and command-line programs that request them.<nl/><nl/>Logging into the system with your fingerprint is not yet supported.")
+            textFormat: Text.PlainText
 
             font: Kirigami.Theme.smallFont
             wrapMode: Text.Wrap

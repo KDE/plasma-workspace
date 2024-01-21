@@ -47,6 +47,7 @@ KCM.ScrollViewKCM {
             wrapMode: Text.Wrap
             Layout.fillWidth: true
             text: i18n("Add languages in the order you want to see them in your applications.")
+            textFormat: Text.PlainText
         }
     }
 
@@ -75,6 +76,7 @@ KCM.ScrollViewKCM {
                         Layout.alignment: Qt.AlignLeft
                         Layout.fillWidth: true
                         text: model.display
+                        textFormat: Text.PlainText
 
                         color: listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate) ? listItem.activeTextColor : listItem.textColor;
                     }
@@ -189,20 +191,24 @@ KCM.ScrollViewKCM {
             Layout.alignment: Qt.AlignHCenter
             QQC2.Label {
                 text: languageListModel.numberExample
+                textFormat: Text.PlainText
             }
             QQC2.Label {
                 text: languageListModel.currencyExample
+                textFormat: Text.PlainText
             }
         }
 
         QQC2.Label {
             Layout.alignment: Qt.AlignHCenter
             text: languageListModel.metric
+            textFormat: Text.PlainText
         }
 
         QQC2.Label {
             Layout.alignment: Qt.AlignHCenter
             text: languageListModel.timeExample
+            textFormat: Text.PlainText
         }
     }
 }

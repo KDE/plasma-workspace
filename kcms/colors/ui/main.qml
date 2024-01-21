@@ -190,6 +190,7 @@ KCM.GridViewKCM {
                     verticalAlignment: Text.AlignVCenter
                     color: (model.accentActiveTitlebar && root.accentColor) ? kcm.accentForeground(kcm.accentBackground(root.accentColor, model.palette.window), true) : model.activeTitleBarForeground
                     text: i18n("Window Title")
+                    textFormat: Text.PlainText
                     elide: Text.ElideRight
                 }
             }
@@ -212,6 +213,7 @@ KCM.GridViewKCM {
                         Layout.fillHeight: true
                         verticalAlignment: Text.AlignVCenter
                         text: i18n("Window text")
+                        textFormat: Text.PlainText
                         elide: Text.ElideRight
                         color: model.palette.windowText
                     }

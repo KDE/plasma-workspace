@@ -23,6 +23,7 @@ Kirigami.OverlaySheet {
         QQC2.Label {
             Layout.fillWidth: true
             text: i18nc("@info:usagetip", "Configure the animations played while an application is launching.")
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
 

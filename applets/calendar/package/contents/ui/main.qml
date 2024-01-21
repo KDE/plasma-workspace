@@ -73,6 +73,7 @@ PlasmoidItem {
                     var d = new Date(dataSource.data.Local.DateTime);
                     return Qt.formatDate(d, "MMM");
                 }
+                textFormat: Text.PlainText
                 visible: parent.width > Kirigami.Units.gridUnit * 3
             }
 
@@ -100,6 +101,7 @@ PlasmoidItem {
 
                     return Qt.formatDate(d, format)
                 }
+                textFormat: Text.PlainText
             }
         }
     }

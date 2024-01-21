@@ -263,6 +263,7 @@ KCM.ScrollViewKCM {
                         QQC2.Label {
                             color: Kirigami.Theme.disabledTextColor
                             text: model.localeName
+                            textFormat: Text.PlainText
                         }
                     }
 

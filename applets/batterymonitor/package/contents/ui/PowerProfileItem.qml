@@ -88,12 +88,14 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: true
                     elide: Text.ElideRight
                     text: root.text
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaComponents3.Label {
                     id: activeProfileLabel
                     Layout.alignment: Qt.AlignRight
                     text: !root.profilesAvailable ? i18nc("Power profile", "Not available") : activeProfileData ? activeProfileData.label : ""
+                    textFormat: Text.PlainText
                     enabled: root.profilesAvailable
                 }
             }
@@ -257,6 +259,7 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Label {
                     text: xi18n("Power profiles may be supported on your device.<nl/>Try installing the <command>power-profiles-daemon</command> package using your distribution's package manager and restarting the system.")
+                    textFormat: Text.PlainText
                     enabled: false
                     font: Kirigami.Theme.smallFont
                     wrapMode: Text.Wrap

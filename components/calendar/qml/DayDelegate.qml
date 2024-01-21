@@ -166,6 +166,7 @@ PlasmaComponents3.AbstractButton {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: model.label || dayNumber
+            textFormat: Text.PlainText
             opacity: isCurrent ? 1.0 : 0.5
             wrapMode: Text.NoWrap
             elide: Text.ElideRight

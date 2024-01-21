@@ -134,6 +134,7 @@ ColumnLayout {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: i18n("Creating QR code failed")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth === 0 && barcodeItem.implicitHeight === 0
         }
@@ -145,6 +146,7 @@ ColumnLayout {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: i18n("There is not enough space to display the QR code. Try resizing this applet.")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth > barcodeItem.width || barcodeItem.implicitHeight > barcodeItem.height
         }

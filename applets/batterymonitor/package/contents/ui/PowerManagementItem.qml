@@ -87,6 +87,7 @@ ColumnLayout {
             text: i18np("%1 application is currently blocking sleep and screen locking:",
                         "%1 applications are currently blocking sleep and screen locking:",
                         root.inhibitions.length)
+            textFormat: Text.PlainText
         }
 
         Repeater {

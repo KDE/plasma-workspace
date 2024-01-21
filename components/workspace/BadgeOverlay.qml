@@ -25,6 +25,7 @@ Rectangle {
         id: label
         anchors.centerIn: parent
         font.pixelSize: Math.max(icon.height / 4, Kirigami.Theme.smallFont.pixelSize * 0.8)
+        textFormat: Text.PlainText
     }
 
     layer.enabled: true

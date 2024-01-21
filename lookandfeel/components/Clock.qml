@@ -16,6 +16,7 @@ ColumnLayout {
 
     PlasmaComponents3.Label {
         text: Qt.formatTime(timeSource.data["Local"]["DateTime"], Qt.locale(), Locale.ShortFormat)
+        textFormat: Text.PlainText
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 48
@@ -23,6 +24,7 @@ ColumnLayout {
     }
     PlasmaComponents3.Label {
         text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.locale(), Locale.LongFormat)
+        textFormat: Text.PlainText
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 24

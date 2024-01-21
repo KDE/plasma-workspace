@@ -51,16 +51,19 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label The name of a Systemd unit for an app or script that will autostart", "Name:")
                 text: entryPage.unit.description
+                textFormat: Text.PlainText
             }
 
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label The current status (e.g. active or inactive) of a Systemd unit for an app or script that will autostart", "Status:")
                 text: entryPage.unit.activeStateValue
+                textFormat: Text.PlainText
             }
 
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label A date and time follows this text, making a sentence like 'Last activated on: August 7th 11 PM 2023'", "Last activated on:")
                 text: entryPage.unit.timeActivated
+                textFormat: Text.PlainText
             }
         }
 
@@ -94,6 +97,7 @@ KCM.SimpleKCM {
             Kirigami.Theme.colorSet: Kirigami.Theme.View
             Kirigami.Theme.inherit: false
         }
+        textFormat: Text.StyledText
     }
     Kirigami.PlaceholderMessage {
         anchors.centerIn: parent
@@ -109,7 +113,7 @@ KCM.SimpleKCM {
             text: i18nc("@action:button Refresh entry logs when it failed to load", "Refresh")
             onTriggered: entryPage.unit.reloadLogs()
         }
-          
+
     }
 
     Timer {

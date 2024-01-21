@@ -38,6 +38,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
             text: i18n("Automatically enabled when in Touch Mode")
+            textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont
         }
 
@@ -81,6 +82,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
             text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
+            textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont
         }
     }

@@ -96,6 +96,7 @@ KCM.SimpleKCM {
 
             Layout.maximumWidth: Math.round(root.width - (Kirigami.Units.gridUnit * 2))
             text: i18n("The blue light filter makes the colors on the screen warmer.")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
 
@@ -224,16 +225,19 @@ KCM.SimpleKCM {
                 }
                 QQC2.Label {
                     text: i18nc("Color temperature in Kelvin", "%1K", tempSliderDay.value)
+                    textFormat: Text.PlainText
                 }
                 //row 2
                 QQC2.Label {
                     text: i18nc("Night colour blue-ish; no blue light filter activated", "Cool (no filter)")
+                    textFormat: Text.PlainText
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
                     text: i18nc("Night colour red-ish", "Warm")
+                    textFormat: Text.PlainText
                 }
                 Item {}
             }
@@ -283,16 +287,19 @@ KCM.SimpleKCM {
                 }
                 QQC2.Label {
                     text: i18nc("Color temperature in Kelvin", "%1K", tempSliderNight.value)
+                    textFormat: Text.PlainText
                 }
                 //row 2
                 QQC2.Label {
                     text: i18nc("Night colour blue-ish; no blue light filter activated", "Cool (no filter)")
+                    textFormat: Text.PlainText
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
                     text: i18nc("Night colour red-ish", "Warm")
+                    textFormat: Text.PlainText
                 }
                 Item {}
             }
@@ -308,6 +315,7 @@ KCM.SimpleKCM {
                 enabled: kcm.nightColorSettings.active
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°", Math.round((locator?.latitude || 0) * 100)/100, Math.round((locator?.longitude || 0) * 100)/100)
+                textFormat: Text.PlainText
             }
 
             // Inform about geolocation access in auto mode
@@ -432,6 +440,7 @@ KCM.SimpleKCM {
                 }
                 font.italic: true
                 text: i18n("Error: Transition time overlaps.")
+                textFormat: Text.PlainText
             }
         }
 

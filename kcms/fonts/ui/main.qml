@@ -246,6 +246,7 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                     horizontalAlignment: Text.AlignHCenter
                     text: i18n("to")
+                    textFormat: Text.PlainText
                     enabled: excludeCheckBox.checked
                 }
 
@@ -295,6 +296,7 @@ KCM.SimpleKCM {
                             Kirigami.Heading {
                                 id: subPixelComboText
                                 text: model.display
+                                textFormat: Text.PlainText
                                 level: 5
                             }
                             Image {
@@ -342,6 +344,7 @@ KCM.SimpleKCM {
                             Kirigami.Heading {
                                 id: hintingComboText
                                 text: model.display
+                                textFormat: Text.PlainText
                                 level: 5
                             }
                             Image {

@@ -121,6 +121,7 @@ SimpleKCM {
                 wrapMode: Text.WordWrap
                 level: 3
                 text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
+                textFormat: Text.PlainText
             }
             Item {
                 Kirigami.FormData.isSection: true
@@ -132,6 +133,7 @@ SimpleKCM {
                 wrapMode: Text.WordWrap
 
                 text: i18n("The following information will be sent:")
+                textFormat: Text.PlainText
                 visible: statisticsModeSlider.value != 0 // This is "disabled"
             }
             ColumnLayout {
@@ -141,6 +143,7 @@ SimpleKCM {
                     delegate: QQC2.Label {
                         visible: modelData.mode <= statisticsModeSlider.currentMode
                         text: "· " + modelData.description
+                        textFormat: Text.PlainText
                         Layout.fillWidth: true
 
                         MouseArea {

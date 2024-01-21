@@ -52,6 +52,7 @@ RowLayout {
         id: batteryLabel
         font.pointSize: root.fontSize
         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "%1%", root.percent)
+        textFormat: Text.PlainText
         Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Battery at %1%", root.percent)
         Layout.alignment: Qt.AlignVCenter
     }

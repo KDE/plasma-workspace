@@ -69,6 +69,7 @@ Item {
 
                 level: 1
                 text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
+                textFormat: Text.PlainText
             }
 
             Repeater {

@@ -95,6 +95,7 @@ Item {
         styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
+        textFormat: Text.PlainText
         wrapMode: Text.WordWrap
         font.underline: root.activeFocus
     }

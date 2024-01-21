@@ -65,6 +65,7 @@ Item {
                 objectName: "monthHeader"
 
                 text: root.swipeView.currentIndex > 0 || monthViewRoot.selectedYear !== today.getFullYear() ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2", monthViewRoot.selectedMonth, monthViewRoot.selectedYear.toString()) : monthViewRoot.selectedMonth
+                textFormat: Text.PlainText
                 level: root.isDigitalClock ? 1 : 2
                 elide: Text.ElideRight
                 font.capitalization: Font.Capitalize

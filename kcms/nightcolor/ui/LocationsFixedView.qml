@@ -38,6 +38,7 @@ Kirigami.FormLayout {
             text: Kirigami.Settings.tabletMode
                 ? i18nc("@label:chooser Tap should be translated to mean touching using a touchscreen", "Tap to choose your location on the map.")
                 : i18nc("@label:chooser Click should be translated to mean clicking using a mouse", "Click to choose your location on the map.")
+            textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont
         }
 
@@ -233,6 +234,7 @@ Kirigami.FormLayout {
 
             QQC2.Label {
                 text: i18nc("@label: textbox", "Latitude:")
+                textFormat: Text.PlainText
             }
             Connections {
                 target: kcm.nightColorSettings
@@ -259,6 +261,7 @@ Kirigami.FormLayout {
 
             QQC2.Label {
                 text: i18nc("@label: textbox", "Longitude:")
+                textFormat: Text.PlainText
             }
             NumberField {
                 id: longitudeFixedField

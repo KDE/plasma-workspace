@@ -142,6 +142,7 @@ Item {
                          "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.",
                          "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
                          sessionsModel.count - 1)
+            textFormat: Text.PlainText
             visible: sessionsModel.count > 1
         }
 
@@ -154,6 +155,7 @@ Item {
             wrapMode: Text.WordWrap
             font.italic: true
             text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter the firmware setup screen.")
+            textFormat: Text.PlainText
             visible: rebootToFirmwareSetup
         }
 
@@ -252,6 +254,7 @@ Item {
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Logging out in 1 second", "Logging out in %1 seconds", root.remainingTime);
                 }
             }
+            textFormat: Text.PlainText
         }
 
         RowLayout {

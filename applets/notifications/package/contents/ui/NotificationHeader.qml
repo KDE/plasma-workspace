@@ -105,6 +105,7 @@ RowLayout {
         opacity: 0.9
         wrapMode: Text.NoWrap
         text: generateRemainingText() || agoText
+        textFormat: Text.PlainText
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime())

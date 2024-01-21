@@ -515,6 +515,7 @@ MouseArea {
                 minimumPixelSize: 1
 
                 text: Qt.formatTime(main.getCurrentTime(), Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
+                textFormat: Text.PlainText
 
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
@@ -533,6 +534,7 @@ MouseArea {
                 visible: text.length > 0
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+                textFormat: Text.PlainText
             }
         }
 
@@ -551,6 +553,7 @@ MouseArea {
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
+            textFormat: Text.PlainText
         }
     }
     /*
@@ -567,6 +570,7 @@ MouseArea {
         minimumPixelSize: 1
 
         visible: false
+        textFormat: Text.PlainText
     }
 
     // To measure Label.height for maximum-sized font in VerticalFit mode
@@ -583,6 +587,7 @@ MouseArea {
         fontSizeMode: Text.VerticalFit
 
         visible: false
+        textFormat: Text.PlainText
     }
 
     FontMetrics {

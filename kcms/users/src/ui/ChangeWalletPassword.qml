@@ -23,6 +23,7 @@ Kirigami.OverlaySheet {
         QQC2.Label {
             Layout.fillWidth: true
             text: xi18nc("@info", "Now that you have changed your login password, you may also want to change the password on your default KWallet to match it.")
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
 
@@ -38,6 +39,7 @@ Kirigami.OverlaySheet {
             Layout.fillWidth: true
             visible: false
             text: i18n("KWallet is a password manager that stores your passwords for wireless networks and other encrypted resources. It is locked with its own password which differs from your login password. If the two passwords match, it can be unlocked at login automatically so you don't have to enter the KWallet password yourself.")
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
 

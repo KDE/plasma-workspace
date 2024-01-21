@@ -44,6 +44,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: root.showLayoutInfo
             text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets")
+            textFormat: Text.PlainText
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
             font: Kirigami.Theme.smallFont

@@ -62,12 +62,14 @@ PlasmaComponents3.ItemDelegate {
                     id: title
                     Layout.fillWidth: true
                     text: root.text
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaComponents3.Label {
                     id: percent
                     Layout.alignment: Qt.AlignRight
                     text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
+                    textFormat: Text.PlainText
                 }
             }
 

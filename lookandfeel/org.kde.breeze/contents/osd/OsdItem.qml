@@ -86,6 +86,7 @@ RowLayout {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         text: formatPercent(progressBar.value)
+        textFormat: Text.PlainText
         wrapMode: Text.NoWrap
         visible: root.showingProgress
         // Display a subtle visual indication that the volume might be

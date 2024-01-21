@@ -143,6 +143,7 @@ ColumnLayout {
                 elide: Text.ElideRight
                 opacity: 0.5
                 text: ""
+                textFormat: Text.PlainText
                 renderType: parent.renderType
                 color: parent.color
                 focus: false

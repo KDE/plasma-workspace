@@ -96,6 +96,7 @@ Item {
                     var u = modelData.split("/");
                     return decodeURIComponent(u[u.length - 1]);
                 }
+                textFormat: Text.PlainText
             }
         }
     }
@@ -104,6 +105,7 @@ Item {
         visible: additionalItems > 0
         opacity: 0.6
         text: i18nc("Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
+        textFormat: Text.PlainText
         anchors {
             left: previewList.right
             right: parent.right

@@ -106,6 +106,7 @@ KCM.GridViewKCM {
                             Layout.alignment: Qt.AlignRight
                             color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                             text: i18n("Size: %1", model[sizeCombo.textRole])
+                            textFormat: Text.PlainText
                             elide: Text.ElideRight
                         }
                     }

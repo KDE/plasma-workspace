@@ -43,6 +43,7 @@ Kirigami.OverlaySheet {
     header: Kirigami.Heading {
         level: 2
         text: i18n("Configure Fingerprints")
+        textFormat: Text.PlainText
     }
 
     footer: Kirigami.ActionToolBar {
@@ -101,6 +102,7 @@ Kirigami.OverlaySheet {
             Kirigami.Heading {
                 level: 2
                 text: i18n("Enrolling Fingerprint")
+                textFormat: Text.PlainText
                 Layout.alignment: Qt.AlignHCenter
                 visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
             }
@@ -154,6 +156,7 @@ Kirigami.OverlaySheet {
                     }
                     return ""
                 }
+                textFormat: Text.PlainText
 
                 Layout.alignment: Qt.AlignHCenter
                 wrapMode: Text.Wrap
@@ -165,6 +168,7 @@ Kirigami.OverlaySheet {
             Kirigami.Heading {
                 level: 2
                 text: i18n("Finger Enrolled")
+                textFormat: Text.PlainText
                 Layout.alignment: Qt.AlignHCenter
                 visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
             }
@@ -179,6 +183,7 @@ Kirigami.OverlaySheet {
 
             QQC2.Label {
                 text: fingerprintModel.enrollFeedback
+                textFormat: Text.PlainText
                 wrapMode: Text.Wrap
                 Layout.maximumWidth: parent.width
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
@@ -195,6 +200,7 @@ Kirigami.OverlaySheet {
             Kirigami.Heading {
                 level: 2
                 text: i18n("Pick a finger to enroll")
+                textFormat: Text.PlainText
                 Layout.alignment: Qt.AlignHCenter
             }
 
@@ -303,6 +309,7 @@ Kirigami.OverlaySheet {
                             Layout.fillWidth: true
                             elide: Text.ElideRight
                             text: finger.friendlyName
+                            textFormat: Text.PlainText
                         }
                     }
                     actions: [

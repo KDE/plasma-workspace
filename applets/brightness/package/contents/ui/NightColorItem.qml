@@ -20,7 +20,7 @@ import org.kde.plasma.private.brightnesscontrolplugin
 
 PlasmaComponents3.ItemDelegate {
     id: root
-    
+
     background.visible: highlighted
     highlighted: activeFocus
     hoverEnabled: false
@@ -62,6 +62,7 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: title
                     text: root.text
+                    textFormat: Text.PlainText
 
                     elide: Text.ElideRight
                     Layout.fillWidth: true
@@ -95,7 +96,8 @@ PlasmaComponents3.ItemDelegate {
                             return i18nc("Night light phase", "Night");
                         }
                     }
-                    
+                    textFormat: Text.PlainText
+
                     enabled: false
                 }
 
@@ -103,6 +105,7 @@ PlasmaComponents3.ItemDelegate {
                     id: currentTemp
                     visible: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightColorInhibitor.Inhibited
                     text: i18nc("Placeholder is screen color temperature", "%1K", monitor.currentTemperature)
+                    textFormat: Text.PlainText
 
                     horizontalAlignment: Text.AlignRight
                 }
@@ -171,6 +174,7 @@ PlasmaComponents3.ItemDelegate {
                             return i18nc("Label for a time", "Transition to day scheduled for:");
                         }
                     }
+                    textFormat: Text.PlainText
 
                     enabled: false
                     font: Kirigami.Theme.smallFont
@@ -187,6 +191,7 @@ PlasmaComponents3.ItemDelegate {
                             return new Date(monitor.scheduledTransitionStartTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
                         }
                     }
+                    textFormat: Text.PlainText
 
                     enabled: false
                     font: Kirigami.Theme.smallFont

@@ -72,18 +72,21 @@ KCM.ScrollViewKCM {
             }
             Kirigami.Heading {
                 text: i18nc("Name of the system tray entry", "Entry")
+                textFormat: Text.PlainText
                 level: 2
                 elide: Text.ElideRight
                 Layout.fillWidth: true
             }
             Kirigami.Heading {
                 text: i18n("Visibility")
+                textFormat: Text.PlainText
                 level: 2
                 Layout.preferredWidth: itemsList.visibilityColumnWidth
                 Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
             }
             Kirigami.Heading {
                 text: i18n("Keyboard Shortcut")
+                textFormat: Text.PlainText
                 level: 2
                 Layout.preferredWidth: itemsList.keySequenceColumnWidth
                 Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
@@ -137,6 +140,7 @@ KCM.ScrollViewKCM {
                     QQC2.Label {
                         Layout.fillWidth: true
                         text: model.display
+                        textFormat: Text.PlainText
                         elide: Text.ElideRight
 
                         QQC2.ToolTip {

@@ -27,6 +27,7 @@ RowLayout {
         id: label
         Layout.fillWidth: true
         font: Kirigami.Theme.smallFont
+        textFormat: Text.PlainText
         wrapMode: Text.WordWrap
         elide: Text.ElideRight
         maximumLineCount: 4

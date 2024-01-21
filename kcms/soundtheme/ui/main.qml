@@ -73,12 +73,14 @@ KCM.GridViewKCM {
 
             Kirigami.Heading {
                 text: theme.name
+                textFormat: Text.PlainText
                 level: 3
                 elide: Text.ElideRight
                 Layout.fillWidth: true
             }
             QQC2.Label {
                 text: theme.comment
+                textFormat: Text.PlainText
                 opacity: 0.6
                 wrapMode: Text.WordWrap
                 Layout.fillWidth: true
@@ -89,6 +91,7 @@ KCM.GridViewKCM {
                 text: i18ncp("%2 is a theme name or a list of theme names that the current theme inherits from",
                              "Based on: %2", "Based on: %2", theme.inherits.length,
                             theme.inherits.map(themeId => kcm.nameFor(themeId)).join(', '))
+                textFormat: Text.PlainText
                 wrapMode: Text.WordWrap
                 Layout.fillWidth: true
             }
@@ -99,6 +102,7 @@ KCM.GridViewKCM {
                 id: preview
                 QQC2.Label {
                     text: i18nc("@label Precedes a list of buttons which can be clicked to preview the theme's sounds. Keep it short", "Preview sounds:")
+                    textFormat: Text.PlainText
                 }
                 Repeater {
                     model: [

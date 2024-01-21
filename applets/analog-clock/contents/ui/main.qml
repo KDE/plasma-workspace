@@ -229,6 +229,7 @@ PlasmoidItem {
                 x: timezoneBg.margins.left
                 y: timezoneBg.margins.top
                 text: dataSource.data["Local"]["Timezone"]
+                textFormat: Text.PlainText
             }
         }
     }

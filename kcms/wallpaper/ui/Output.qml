@@ -20,7 +20,7 @@ Item {
     property int xOffset
     property int yOffset
     property bool isSelected
-    
+
     readonly property size outputSize: Qt.size(screen.geometry.width, screen.geometry.height)
     readonly property point position: Qt.point(screen.geometry.x, screen.geometry.y)
 
@@ -95,6 +95,7 @@ Item {
                 Layout.maximumHeight: labelContainer.height - resolutionLabel.implicitHeight
 
                 text: screen.name
+                textFormat: Text.PlainText
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
                 elide: Text.ElideRight
@@ -105,6 +106,7 @@ Item {
                 Layout.fillWidth: true
 
                 text: "(" + outputSize.width + "x" + outputSize.height +  ")"
+                textFormat: Text.PlainText
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
                 elide: Text.ElideRight
@@ -173,7 +175,7 @@ Item {
     HoverHandler {
         cursorShape: Qt.PointingHandCursor
     }
-    
+
     TapHandler {
         id: tapHandler
         gesturePolicy: TapHandler.WithinBounds

@@ -174,6 +174,7 @@ PlasmaCore.ToolTipArea {
             verticalAlignment: Text.AlignTop
             horizontalAlignment: Text.AlignHCenter
             elide: Text.ElideRight
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
             maximumLineCount: 3
 

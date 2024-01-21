@@ -233,6 +233,7 @@ SimpleKCM {
 
         QQC2.Label {
             text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
+            textFormat: Text.PlainText
             Layout.fillWidth: true
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
@@ -265,6 +266,7 @@ SimpleKCM {
         QQC2.Label {
             visible: manualFontAndSizeRadioButton.checked
             text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
+            textFormat: Text.PlainText
             font: fontDialog.fontChosen
         }
     }

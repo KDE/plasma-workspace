@@ -17,6 +17,7 @@ ColumnLayout {
     Kirigami.Heading {
         Layout.fillWidth: true
         text: i18n("The following will be applied by this Global Theme:")
+        textFormat: Text.PlainText
         level: 2
         wrapMode: Text.WordWrap
     }
@@ -37,6 +38,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: root.hasAppearance && !root.hasLayout
             text: i18nc("List item", "• Appearance settings")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
 
@@ -50,6 +52,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: root.hasLayout && !root.hasAppearance
             text: i18nc("List item", "• Desktop and window layout")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
 
@@ -57,6 +60,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: root.showLayoutInfo
             text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets")
+            textFormat: Text.PlainText
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
             font: Kirigami.Theme.smallFont
@@ -68,6 +72,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: !root.hasAppearance && !root.hasLayout
             text: i18n("This Global Theme does not provide any applicable settings. Please contact the maintainer of this Global Theme as it might be broken.")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
     }

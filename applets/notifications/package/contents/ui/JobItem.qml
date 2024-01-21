@@ -162,6 +162,7 @@ ColumnLayout {
             // the || "0" is a workaround for the fact that 0 as number is falsey, and is wrongly considered a missing argument
             // BUG: 451807
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", jobItem.percentage || "0")
+            textFormat: Text.PlainText
             Layout.leftMargin: Kirigami.Units.smallSpacing
         }
 

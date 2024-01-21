@@ -95,6 +95,7 @@ Kirigami.OverlaySheet {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 text: kcm.initializeString(user.displayPrimaryName)
+                textFormat: Text.PlainText
                 Accessible.ignored: true
             }
         }
@@ -157,6 +158,7 @@ Kirigami.OverlaySheet {
                         }
                         QQC2.Label {
                             text: openButton.text
+                            textFormat: Text.PlainText
 
                             Layout.fillWidth: true
                             Layout.maximumWidth: Kirigami.Units.gridUnit * 5

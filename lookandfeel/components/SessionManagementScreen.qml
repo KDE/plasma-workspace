@@ -105,6 +105,7 @@ FocusScope {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             font.italic: true
 

@@ -40,6 +40,7 @@ KCMUtils.ScrollViewKCM {
         QQC2.Label {
             Layout.fillWidth: true
             text: i18n("Tip: if you travel frequently, add your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
     }
@@ -164,6 +165,7 @@ KCMUtils.ScrollViewKCM {
             Layout.leftMargin: Kirigami.Units.largeSpacing * 2
             Layout.rightMargin: Kirigami.Units.largeSpacing * 2
             text: i18n("Using this feature does not change the systemwide time zone. When you travel, switch the systemwide time zone instead.")
+            textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont
             wrapMode: Text.Wrap
         }
@@ -186,6 +188,7 @@ KCMUtils.ScrollViewKCM {
             Kirigami.Heading {
                 Layout.fillWidth: true
                 text: i18n("Add More Timezones")
+                textFormat: Text.PlainText
                 wrapMode: Text.Wrap
             }
             Kirigami.SearchField {

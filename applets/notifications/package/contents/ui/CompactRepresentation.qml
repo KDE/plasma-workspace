@@ -82,6 +82,7 @@ MouseArea {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: compactRoot.unreadCount || ""
+            textFormat: Text.PlainText
             renderType: Text.QtRendering
             visible: false
         }

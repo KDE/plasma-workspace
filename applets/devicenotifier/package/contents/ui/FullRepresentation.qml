@@ -167,6 +167,7 @@ PlasmaExtras.Representation {
                         level: 3
                         opacity: 0.6
                         text: section
+                        textFormat: Text.PlainText
                     }
                 }
             }

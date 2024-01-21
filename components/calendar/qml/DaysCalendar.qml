@@ -62,6 +62,7 @@ Item {
                 verticalAlignment: Text.AlignVCenter
                 opacity: 0.4
                 text: modelData
+                textFormat: Text.PlainText
                 font.pixelSize: Math.max(Kirigami.Theme.smallFont.pixelSize, daysCalendar.cellHeight / 3)
             }
         }
@@ -91,6 +92,7 @@ Item {
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
                 text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((calendarBackend.firstDayOfWeek + index) % days.count), Locale.ShortFormat)
+                textFormat: Text.PlainText
                 font.pixelSize: Math.max(Kirigami.Theme.smallFont.pixelSize, daysCalendar.cellHeight / 3)
                 opacity: 0.4
                 horizontalAlignment: Text.AlignHCenter

@@ -88,11 +88,13 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: true
                     elide: Text.ElideRight
                     text: root.text
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaComponents3.Label {
                     id: isPowerSupplyLabel
                     text: Logic.stringForBatteryState(root.battery, pmSource)
+                    textFormat: Text.PlainText
                     // For non-power supply batteries only show label for known-good states
                     visible: root.isPowerSupply || ["Discharging", "FullyCharged", "Charging"].includes(root.battery.State)
                     enabled: false
@@ -103,6 +105,7 @@ PlasmaComponents3.ItemDelegate {
                     horizontalAlignment: Text.AlignRight
                     visible: root.isPresent
                     text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
+                    textFormat: Text.PlainText
                 }
             }
 
@@ -147,6 +150,7 @@ PlasmaComponents3.ItemDelegate {
                     horizontalAlignment: Text.AlignLeft
                     Layout.fillWidth: true
                     font: Kirigami.Theme.smallFont
+                    textFormat: Text.PlainText
                     wrapMode: Text.WordWrap
                     enabled: false
                 }
@@ -156,6 +160,7 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: false
                     font: Kirigami.Theme.smallFont
                     enabled: false
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaComponents3.Label {
@@ -165,6 +170,7 @@ PlasmaComponents3.ItemDelegate {
                     text: root.isBroken && typeof root.battery.Capacity !== "undefined"
                         ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
                         : ""
+                    textFormat: Text.PlainText
                     font: Kirigami.Theme.smallFont
                     color: Kirigami.Theme.neutralTextColor
                     visible: root.isBroken

@@ -393,6 +393,7 @@ PlasmaExtras.Representation {
                     opacity: 0.9
                     font: Kirigami.Theme.smallFont
                     color: Kirigami.Theme.textColor
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaComponents3.Slider { // Slider
@@ -507,6 +508,7 @@ PlasmaExtras.Representation {
                     opacity: 0.9
                     font: Kirigami.Theme.smallFont
                     color: Kirigami.Theme.textColor
+                    textFormat: Text.PlainText
                 }
             }
 

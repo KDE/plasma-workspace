@@ -110,6 +110,7 @@ PlasmaExtras.Representation {
                     Layout.fillWidth: true
 
                     text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaComponents3.Label {
@@ -121,6 +122,7 @@ PlasmaExtras.Representation {
 
                     font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     text: monthView.currentDateAuxilliaryText
+                    textFormat: Text.PlainText
                 }
 
                 RowLayout {
@@ -140,6 +142,7 @@ PlasmaExtras.Representation {
                         level: 2
 
                         text: i18n("Events")
+                        textFormat: Text.PlainText
                         maximumLineCount: 1
                         elide: Text.ElideRight
                     }
@@ -335,6 +338,7 @@ PlasmaExtras.Representation {
                                 text: startsToday || startedYesterdayLessThan12HoursAgo
                                         ? Qt.formatTime(modelData.startDateTime)
                                         : agenda.formatDateWithoutYear(modelData.startDateTime)
+                                textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
                                 visible: eventItem.hasTime
                             }
@@ -352,6 +356,7 @@ PlasmaExtras.Representation {
                                 text: endsToday || endsTomorrowInLessThan12Hours
                                         ? Qt.formatTime(modelData.endDateTime)
                                         : agenda.formatDateWithoutYear(modelData.endDateTime)
+                                textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
                                 opacity: 0.7
 
@@ -367,6 +372,7 @@ PlasmaExtras.Representation {
 
                                 elide: Text.ElideRight
                                 text: modelData.title
+                                textFormat: Text.PlainText
                                 verticalAlignment: Text.AlignVCenter
                                 maximumLineCount: 2
                                 wrapMode: Text.Wrap
@@ -424,6 +430,7 @@ PlasmaExtras.Representation {
                     level: 2
 
                     text: i18n("Time Zones")
+                    textFormat: Text.PlainText
                     maximumLineCount: 1
                     elide: Text.ElideRight
                     Accessible.ignored: true
@@ -520,6 +527,7 @@ PlasmaExtras.Representation {
                         PlasmaComponents3.Label {
                             Layout.fillWidth: true
                             text: root.nameForZone(modelData)
+                            textFormat: Text.PlainText
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             maximumLineCount: 1
                             elide: Text.ElideRight
@@ -528,6 +536,7 @@ PlasmaExtras.Representation {
                         PlasmaComponents3.Label {
                             horizontalAlignment: Qt.AlignRight
                             text: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
+                            textFormat: Text.PlainText
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             elide: Text.ElideRight
                             maximumLineCount: 1

@@ -116,6 +116,7 @@ Item {
 
         width: constrainText ? parent.width : undefined
         text: wrapper.name
+        textFormat: Text.PlainText
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         wrapMode: Text.WordWrap

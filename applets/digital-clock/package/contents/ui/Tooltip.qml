@@ -58,6 +58,7 @@ Item {
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
             text: clocks.visible ? Qt.formatDate(tzDate, Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
+            textFormat: Text.PlainText
         }
 
         PlasmaComponents3.Label {
@@ -75,6 +76,7 @@ Item {
                         .arg(Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString)))
                 }
             }
+            textFormat: Text.PlainText
             opacity: 0.6
             visible: !clocks.visible
         }
@@ -84,6 +86,7 @@ Item {
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             text: root.fullRepresentationItem ? root.fullRepresentationItem.monthView.todayAuxilliaryText : ""
+            textFormat: Text.PlainText
             opacity: 0.6
             visible: !clocks.visible && text.length > 0
         }
@@ -135,6 +138,7 @@ Item {
                             return timeForZone(modelData, Plasmoid.configuration.showSeconds > 0);
                         }
                     }
+                    textFormat: Text.PlainText
                     font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
                     wrapMode: Text.NoWrap
                     elide: Text.ElideNone

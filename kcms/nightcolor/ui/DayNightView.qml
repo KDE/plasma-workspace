@@ -145,6 +145,7 @@ ColumnLayout {
                     }
                     return `${index % 12}`
                 }
+                textFormat: Text.PlainText
                 color: Kirigami.Theme.textColor
             }
         }

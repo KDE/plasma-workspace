@@ -201,6 +201,7 @@ ColumnLayout {
                         QQC2.Label {
                             Layout.fillWidth: true
                             text: model.display
+                            textFormat: Text.PlainText
                             elide: Text.ElideRight
                         }
 
@@ -253,6 +254,7 @@ ColumnLayout {
                             level: 5
                             opacity: 0.7
                             text: model.comment
+                            textFormat: Text.PlainText
                             wrapMode: Text.WordWrap
                         }
 

@@ -123,6 +123,7 @@ SessionManagementScreen {
 
         visible: authenticator.authenticatorTypes & kind
         text: label
+        textFormat: Text.PlainText
         horizontalAlignment: Text.AlignHCenter
         Layout.fillWidth: true
 
