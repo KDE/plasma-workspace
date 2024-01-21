@@ -1142,9 +1142,9 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     }
 
     return std::accumulate(m_panelViews.cbegin(), m_panelViews.cend(), QRegion(screen->geometry()), [screen](const QRegion &a, const PanelView *v) {
-        if (v->isVisible() && screen == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && screen == v->screen()) {
             // if the panel is being moved around, we still want to calculate it from the edge
-            return a - v->geometryByDistance(0);
+            return a - v->availableScreenRegionReserving();
         }
         return a;
     });
@@ -1169,19 +1169,19 @@ QRect ShellCorona::_availableScreenRect(int id) const
     int topThickness, leftThickness, rightThickness, bottomThickness;
     topThickness = leftThickness = rightThickness = bottomThickness = 0;
     for (PanelView *v : m_panelViews) {
-        if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && v->screen() == screen) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                leftThickness = qMax(leftThickness, v->totalThickness());
+                leftThickness = qMax(leftThickness, v->availableScreenSpaceAmountReserving());
                 break;
             case Plasma::Types::RightEdge:
-                rightThickness = qMax(rightThickness, v->totalThickness());
+                rightThickness = qMax(rightThickness, v->availableScreenSpaceAmountReserving());
                 break;
             case Plasma::Types::TopEdge:
-                topThickness = qMax(topThickness, v->totalThickness());
+                topThickness = qMax(topThickness, v->availableScreenSpaceAmountReserving());
                 break;
             case Plasma::Types::BottomEdge:
-                bottomThickness = qMax(bottomThickness, v->totalThickness());
+                bottomThickness = qMax(bottomThickness, v->availableScreenSpaceAmountReserving());
             default:
                 break;
             }

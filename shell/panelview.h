@@ -170,6 +170,8 @@ public:
     int thickness() const;
     void setThickness(int thickness);
     int totalThickness() const;
+    int availableScreenSpaceAmountReserving() const;
+    QRegion availableScreenRegionReserving() const;
 
     int length() const;
     void setLength(int value);

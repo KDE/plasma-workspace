@@ -259,6 +259,32 @@ int PanelView::totalThickness() const
     }
 }
 
+int PanelView::availableScreenSpaceAmountReserving() const
+{
+    if (m_panelConfigView && m_panelConfigView->isVisible()) {
+        // 36 creates a bit of margin below the settings window and compensates
+        // for the margin between the panel and the config view and a possible
+        // ruler.
+        return totalThickness() + m_panelConfigView->height() + 36;
+    } else if (visibilityMode() != PanelView::AutoHide) {
+        // 8 adds a bit of a margin between the panel and the toolbox.
+        return totalThickness() + 8;
+    } else {
+        return 0;
+    }
+}
+
+QRegion PanelView::availableScreenRegionReserving() const
+{
+    if (m_panelConfigView && m_panelConfigView->isVisible()) {
+        return QRegion(geometryByDistance(0)) | QRegion(m_panelConfigView->geometry());
+    } else if (visibilityMode() != PanelView::AutoHide) {
+        return QRegion(geometryByDistance(0));
+    } else {
+        return QRect();
+    }
+}
+
 void PanelView::setThickness(int value)
 {
     if (value < minThickness()) {
@@ -846,6 +872,10 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             configView->show();
             configView->requestActivate();
         }
+        connect(m_panelConfigView, &PanelConfigView::visibilityChanged, this, [&]() {
+            Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
+        });
+        Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     } else {
         if (m_appletConfigView && m_appletConfigView->applet() == applet) {
             m_appletConfigView->show();
