@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 02:29+0000\n"
+"POT-Creation-Date: 2024-01-22 03:08+0000\n"
 "PO-Revision-Date: 2008-03-02 16:20+0100\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -225,35 +225,35 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:60 ui/main.qml:94
+#: ui/main.qml:65 ui/main.qml:108
 #, kde-format
 msgid "Size: %1"
 msgstr ""
 
-#: ui/main.qml:102
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:136
 #, kde-format
 msgid "&Install from File…"
 msgstr ""
 
-#: ui/main.qml:122
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "&Get New…"
 msgstr "Ser dirbî were nivîsîn?"
 
-#: ui/main.qml:166
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "Open Theme"
 msgstr "Ser dirbî were nivîsîn?"
 
-#: ui/main.qml:168
+#: ui/main.qml:188
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

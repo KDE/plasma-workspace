@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 03:08+0000\n"
 "PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -204,12 +204,12 @@ msgstr "GTK-Etosa Arkivo (*.tar.xz *.tar.gz *.tar.bz2)"
 msgid "Configure Icons and Toolbars"
 msgstr "Agordi Piktogramojn kaj Ilbretojn"
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Agordi GNOME/GTK Aplikaĵstilon…"
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure Style…"
 msgstr "Agordi Stilon…"

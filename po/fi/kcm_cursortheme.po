@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 02:29+0000\n"
+"POT-Creation-Date: 2024-01-22 03:08+0000\n"
 "PO-Revision-Date: 2023-08-26 18:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -249,33 +249,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekunti"
 msgstr[1] "%1 sekuntia"
 
-#: ui/main.qml:60 ui/main.qml:94
+#: ui/main.qml:65 ui/main.qml:108
 #, kde-format
 msgid "Size: %1"
 msgstr "Koko: %1"
 
-#: ui/main.qml:102
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Aseta käynnistyksen palaute…"
 
-#: ui/main.qml:116
+#: ui/main.qml:136
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Asenna tiedostosta…"
 
-#: ui/main.qml:122
+#: ui/main.qml:142
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hae uusia…"
 
-#: ui/main.qml:166
+#: ui/main.qml:186
 #, kde-format
 msgid "Open Theme"
 msgstr "Avaa teema"
 
-#: ui/main.qml:168
+#: ui/main.qml:188
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Osoitinteematiedostot (*.tar.gz *.tar.bz2)"

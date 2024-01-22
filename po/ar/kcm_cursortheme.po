@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 02:29+0000\n"
+"POT-Creation-Date: 2024-01-22 03:08+0000\n"
 "PO-Revision-Date: 2023-01-07 17:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -244,35 +244,35 @@ msgstr[3] "%1 ثواني"
 msgstr[4] "%1 ثانية"
 msgstr[5] "%1 ثانية"
 
-#: ui/main.qml:60 ui/main.qml:94
+#: ui/main.qml:65 ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "الحجم:"
 
-#: ui/main.qml:102
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "ا&ضبط التنبيه المرئي للبدء التطبيقات…"
 
-#: ui/main.qml:116
+#: ui/main.qml:136
 #, kde-format
 msgid "&Install from File…"
 msgstr "&ثبت من ملف..."
 
-#: ui/main.qml:122
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors…"
 msgid "&Get New…"
 msgstr "احصل على مؤشرات جديدة..."
 
-#: ui/main.qml:166
+#: ui/main.qml:186
 #, kde-format
 msgid "Open Theme"
 msgstr "افتح سمة"
 
-#: ui/main.qml:168
+#: ui/main.qml:188
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ملفات سمة المؤشر (*.tar.gz *.tar.bz2)"

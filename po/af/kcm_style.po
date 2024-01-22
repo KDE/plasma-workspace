@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 03:08+0000\n"
 "PO-Revision-Date: 2005-06-30 11:29+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -214,13 +214,13 @@ msgstr ""
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Stel op..."
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"

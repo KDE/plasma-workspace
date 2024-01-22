@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 03:08+0000\n"
 "PO-Revision-Date: 2023-09-09 09:55+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -209,12 +209,12 @@ msgstr "GTK-þemasafn (*.tar.xz *.tar.gz *.tar.bz2)"
 msgid "Configure Icons and Toolbars"
 msgstr "Grunnstilla tákn og tækjastikur"
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Grunnstilla stíl GNOME/GTK-forrita..."
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure Style…"
 msgstr "Grunnstilla stíl..."
