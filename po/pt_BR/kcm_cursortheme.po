@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:38+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2023-02-14 10:18-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -245,35 +245,35 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 segundo"
 msgstr[1] "%1 segundos"
 
-#: ui/main.qml:60 ui/main.qml:94
+#: ui/main.qml:65 ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "Tamanho:"
 
-#: ui/main.qml:102
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:136
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalar a partir do arquivo..."
 
-#: ui/main.qml:122
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors…"
 msgid "&Get New…"
 msgstr "&Baixar novos cursores..."
 
-#: ui/main.qml:166
+#: ui/main.qml:186
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir tema"
 
-#: ui/main.qml:168
+#: ui/main.qml:188
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Arquivos de temas de cursor (*.tar.gz *.tar.bz2)"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2023-08-07 23:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -207,12 +207,12 @@ msgstr "GTK 主題封存檔 (*.tar.xz *.tar.gz *.tar.bz2)"
 msgid "Configure Icons and Toolbars"
 msgstr "設定圖示及工具列"
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "設定 GNOME/GTK 應用程式樣式…"
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure Style…"
 msgstr "設定樣式…"

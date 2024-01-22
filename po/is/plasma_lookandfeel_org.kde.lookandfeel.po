@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2023-12-10 21:40+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -38,53 +38,53 @@ msgstr "Lykilorð"
 msgid "Log In"
 msgstr "Skrá inn"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Kveikt er á hástafalás (CapsLock)"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Svæfa"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "Endurræsa"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
 msgstr "Slökkva á tölvunni"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:233
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Annað…"
 
-#: ../sddm-theme/Main.qml:343
+#: ../sddm-theme/Main.qml:342
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Sláðu inn notandanafn og lykilorð"
 
-#: ../sddm-theme/Main.qml:378
+#: ../sddm-theme/Main.qml:377
 #, kde-format
 msgid "List Users"
 msgstr "Telja upp notendur"
 
-#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
+#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Sýndarlyklaborð"
 
-#: ../sddm-theme/Main.qml:527
+#: ../sddm-theme/Main.qml:526
 #, kde-format
 msgid "Login Failed"
 msgstr "Innskráning mistókst"
@@ -123,22 +123,22 @@ msgstr "Sýna undir aflæsingarkvaðningu"
 msgid "Unlocking failed"
 msgstr "Aflæsing tókst ekki"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:290
 #, kde-format
 msgid "Sleep"
 msgstr "Svæfa"
 
-#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
 msgstr "Leggja í dvala"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Switch User"
 msgstr "Skipta um notanda"
 
-#: contents/lockscreen/LockScreenUi.qml:388
+#: contents/lockscreen/LockScreenUi.qml:387
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

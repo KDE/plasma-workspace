@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:38+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2012-01-12 16:57+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -233,38 +233,38 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:60 ui/main.qml:94
+#: ui/main.qml:65 ui/main.qml:108
 #, fuzzy, kde-format
 #| msgctxt "@label:listbox cursor size"
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "اندازه:"
 
-#: ui/main.qml:102
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Install From File..."
 msgid "&Install from File…"
 msgstr "نصب از روی پرونده..."
 
-#: ui/main.qml:122
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "Get New Theme..."
 msgid "&Get New…"
 msgstr "دریافت چهره‌ی جدید..."
 
-#: ui/main.qml:166
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "حذف چهره"
 
-#: ui/main.qml:168
+#: ui/main.qml:188
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

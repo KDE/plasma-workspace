@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -33,53 +33,53 @@ msgstr "രഹസ്യവാക്ക്"
 msgid "Log In"
 msgstr "അകത്ത് കടക്കുക "
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "ക്യാപ്‌സ് ലോക്ക് ഓണാണ്"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "സ്ലീപ്"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "പുനരാരംഭിക്കുക"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
 msgstr "ഷട്ട് ഡൌൺ"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:233
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "മറ്റുള്ളവ…"
 
-#: ../sddm-theme/Main.qml:343
+#: ../sddm-theme/Main.qml:342
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "ഉപയോക്തൃനാമവും രഹസ്യവാക്കും ടൈപ്പുചെയ്യുക"
 
-#: ../sddm-theme/Main.qml:378
+#: ../sddm-theme/Main.qml:377
 #, kde-format
 msgid "List Users"
 msgstr "ഉപയോക്താക്കളെ പട്ടികപ്പെടുത്തുക"
 
-#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
+#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "വെർച്വൽ കീബോർഡ്"
 
-#: ../sddm-theme/Main.qml:527
+#: ../sddm-theme/Main.qml:526
 #, kde-format
 msgid "Login Failed"
 msgstr "അകത്ത്കടക്കുന്നത് പരാജയപ്പെട്ടു"
@@ -120,24 +120,24 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "പൂട്ടുതുറക്കുന്നത് പരാജയപ്പെട്ടു"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:290
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "സ്ലീപ്"
 
-#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: contents/lockscreen/LockScreenUi.qml:388
+#: contents/lockscreen/LockScreenUi.qml:387
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

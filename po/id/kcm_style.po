@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2022-08-19 20:36+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -204,12 +204,12 @@ msgstr "Arsip Tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 msgid "Configure Icons and Toolbars"
 msgstr "Konfigurasikan Ikon dan Bilah Alat"
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Konfigurasikan Gaya Aplikasi GNOME/GTK..."
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure Style…"
 msgstr "Konfigurasi Gaya...."

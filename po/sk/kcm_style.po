@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2023-08-06 11:28+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -207,12 +207,12 @@ msgstr "Archív GTK témy (*.tar.xz *.tar.gz *.tar.bz2)"
 msgid "Configure Icons and Toolbars"
 msgstr "Nastaviť ikony a panely nástrojov"
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Nastaviť štýl GNOME/GTK aplikácií..."
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure Style…"
 msgstr "Nastaviť štýl..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2020-10-08 15:00+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -38,31 +38,31 @@ msgstr "Parool"
 msgid "Log In"
 msgstr "Sisselogimine"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock on sees"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Unne"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "Taaskäivita"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
 msgstr "Seiska"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:233
 #, fuzzy, kde-format
 #| msgctxt "For switching to a username and password prompt"
 #| msgid "Other..."
@@ -70,23 +70,23 @@ msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Muu ..."
 
-#: ../sddm-theme/Main.qml:343
+#: ../sddm-theme/Main.qml:342
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Kasutajanime ja parooli kirjutamine"
 
-#: ../sddm-theme/Main.qml:378
+#: ../sddm-theme/Main.qml:377
 #, kde-format
 msgid "List Users"
 msgstr "Kasutajate nimekiri"
 
-#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
+#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuaalne klaviatuur"
 
-#: ../sddm-theme/Main.qml:527
+#: ../sddm-theme/Main.qml:526
 #, kde-format
 msgid "Login Failed"
 msgstr "Sisselogimine nurjus"
@@ -127,24 +127,24 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "Lukustuse eemaldamine nurjus"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:290
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "Unne"
 
-#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
 msgstr "Talveunne"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Switch User"
 msgstr "Vaheta kasutaja"
 
-#: contents/lockscreen/LockScreenUi.qml:388
+#: contents/lockscreen/LockScreenUi.qml:387
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2023-12-20 21:46+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -41,53 +41,53 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Войти"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Включён режим Caps Lock"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ждущий режим"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "Перезагрузить"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
 msgstr "Выключить"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:233
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Другое..."
 
-#: ../sddm-theme/Main.qml:343
+#: ../sddm-theme/Main.qml:342
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Введите имя пользователя и пароль"
 
-#: ../sddm-theme/Main.qml:378
+#: ../sddm-theme/Main.qml:377
 #, kde-format
 msgid "List Users"
 msgstr "Список пользователей"
 
-#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
+#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Виртуальная клавиатура"
 
-#: ../sddm-theme/Main.qml:527
+#: ../sddm-theme/Main.qml:526
 #, kde-format
 msgid "Login Failed"
 msgstr "Не удалось войти в систему"
@@ -126,22 +126,22 @@ msgstr "Показывать под строкой ввода пароля"
 msgid "Unlocking failed"
 msgstr "Не удалось разблокировать"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:290
 #, kde-format
 msgid "Sleep"
 msgstr "Ждущий режим"
 
-#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
 msgstr "Спящий режим"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Switch User"
 msgstr "Переключить пользователя"
 
-#: contents/lockscreen/LockScreenUi.qml:388
+#: contents/lockscreen/LockScreenUi.qml:387
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

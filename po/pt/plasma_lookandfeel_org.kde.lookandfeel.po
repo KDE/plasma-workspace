@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2022-10-11 17:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -33,53 +33,53 @@ msgstr "Senha"
 msgid "Log In"
 msgstr "Ligar"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "O Caps Lock está ligado"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
 #: contents/logout/Logout.qml:167
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Suspender"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
 #, kde-format
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
 #: contents/logout/Logout.qml:212
 #, kde-format
 msgid "Shut Down"
 msgstr "Desligar"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:233
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Outro…"
 
-#: ../sddm-theme/Main.qml:343
+#: ../sddm-theme/Main.qml:342
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Escreva o Utilizador e Senha"
 
-#: ../sddm-theme/Main.qml:378
+#: ../sddm-theme/Main.qml:377
 #, kde-format
 msgid "List Users"
 msgstr "Listar os Utilizadores"
 
-#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
+#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Teclado Virtual"
 
-#: ../sddm-theme/Main.qml:527
+#: ../sddm-theme/Main.qml:526
 #, kde-format
 msgid "Login Failed"
 msgstr "Autenticação sem Sucesso"
@@ -118,22 +118,22 @@ msgstr "Mostrar sob a mensagem de desbloqueio"
 msgid "Unlocking failed"
 msgstr "O desbloqueio foi mal-sucedido"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:290
 #, kde-format
 msgid "Sleep"
 msgstr "Suspender"
 
-#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Switch User"
 msgstr "Mudar de Utilizador"
 
-#: contents/lockscreen/LockScreenUi.qml:388
+#: contents/lockscreen/LockScreenUi.qml:387
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

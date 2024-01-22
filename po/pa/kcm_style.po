@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-22 00:38+0000\n"
 "PO-Revision-Date: 2023-12-24 09:40-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -201,12 +201,12 @@ msgstr "GTK ਥੀਮ ਅਕਾਇਵ (*.tar.xz *.tar.gz *.tar.bz2)"
 msgid "Configure Icons and Toolbars"
 msgstr "ਆਈਕਾਨ ਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ"
 
-#: ui/main.qml:68
+#: ui/main.qml:75
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
 
-#: ui/main.qml:101
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure Style…"
 msgstr "…ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"

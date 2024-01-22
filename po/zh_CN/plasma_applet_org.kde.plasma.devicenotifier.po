@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:38+0000\n"
-"PO-Revision-Date: 2024-01-13 05:59\n"
+"PO-Revision-Date: 2024-01-21 14:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -173,7 +173,7 @@ msgstr "此设备中有文件正在被其他应用程序打开。"
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "此设备中有文件正在被以下其他应用程序打开：%2.。"
+msgstr[0] "此设备中有文件正在被以下其他应用程序打开：%2。"
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
