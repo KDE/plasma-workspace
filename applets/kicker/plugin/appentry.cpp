@@ -155,6 +155,9 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
             }
         } else {
             m_service = KService::serviceByStorageId(id);
+            init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
+            m_icon = QString();
+            Q_EMIT owner->layoutChanged();
         }
         if (!m_service) {
             m_service = new KService(QString());
