@@ -884,6 +884,8 @@ void ShellCorona::screenInvariants() const
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
+    if (m_showingAlternatives != nullptr && m_showingAlternatives == applet)
+        return;
     const QUrl alternativesQML = kPackage().fileUrl("appletalternativesui");
     if (alternativesQML.isEmpty()) {
         return;
@@ -904,16 +906,19 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
         delete qmlObj;
         return;
     }
-    connect(applet, &Plasma::Applet::destroyedChanged, qmlObj, [qmlObj](bool destroyed) {
+    m_showingAlternatives = applet;
+    connect(applet, &Plasma::Applet::destroyedChanged, qmlObj, [qmlObj, this](bool destroyed) {
         if (!destroyed) {
             return;
         }
+        m_showingAlternatives = nullptr;
         qmlObj->deleteLater();
     });
-    connect(dialog, &QQuickWindow::visibleChanged, qmlObj, [qmlObj](bool visible) {
+    connect(dialog, &QQuickWindow::visibleChanged, qmlObj, [qmlObj, this](bool visible) {
         if (visible) {
             return;
         }
+        m_showingAlternatives = nullptr;
         qmlObj->deleteLater();
     });
 }

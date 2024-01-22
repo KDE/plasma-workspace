@@ -315,6 +315,7 @@ private:
     bool m_closingDown : 1;
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
+    Plasma::Applet *m_showingAlternatives = nullptr;
 
     StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
