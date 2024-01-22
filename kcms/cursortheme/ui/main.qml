@@ -57,9 +57,7 @@ KCM.GridViewKCM {
                 id: sizeCombo
 
                 property int maxContentWidth: implicitContentWidth
-                implicitWidth: Math.max(
-                    implicitBackgroundWidth + leftInset + rightInset, 
-                    (popup.visible ? maxContentWidth : implicitContentWidth) + leftPadding + rightPadding)
+                popup.width: Math.max(availableWidth, maxContentWidth)
 
                 model: kcm.sizesModel
                 textRole: "display"
@@ -75,15 +73,6 @@ KCM.GridViewKCM {
                 configObject: kcm.cursorThemeSettings
                     settingName: "cursorSize"
                     extraEnabledConditions: kcm.canResize
-                }
-
-                property int maxSize: {
-                    var max = -1;
-                    for (let i = 0, len = model.rowCount(); i < len; ++i) {
-                        const size = parseInt(model.data(model.index(i,0), Qt.DisplayRole))
-                        max = Math.max(max, size);
-                    }
-                    return max;
                 }
 
                 delegate: QtControls.ItemDelegate {
@@ -119,7 +108,7 @@ KCM.GridViewKCM {
                         target: sizeCombo
                         property: "maxContentWidth"
                         value: implicitWidth
-                        when: sizeComboDelegate.size == sizeCombo.maxSize
+                        when: index == sizeCombo.count - 1
                     }
                 }
             }
