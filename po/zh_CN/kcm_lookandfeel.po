@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-21 14:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -184,69 +184,69 @@ msgstr "桌面布局"
 msgid "Titlebar Buttons layout"
 msgstr "标题栏按钮布局"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr "应用桌面布局将替换当前桌面、面板、停靠区和挂件的配置"
 
-#: ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "外观设置："
 
-#: ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "颜色"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "应用程序视觉风格"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "窗口装饰风格"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "窗口装饰大小"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "图标"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma 视觉风格"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "光标"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "字体"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "任务切换器"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "欢迎屏幕"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "锁屏"
@@ -256,29 +256,29 @@ msgstr "锁屏"
 msgid "The following will be applied by this Global Theme:"
 msgstr "此全局主题将应用以下配置："
 
-#: ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "外观设置"
 
-#: ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• 外观设置"
 
-#: ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:47
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "桌面和窗口布局"
 
-#: ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:54
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• 桌面和窗口布局"
 
-#: ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

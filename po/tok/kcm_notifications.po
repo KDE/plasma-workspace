@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -62,12 +62,12 @@ msgid ""
 "basis"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:261
+#: ui/ApplicationConfiguration.qml:263
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:270
+#: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
 msgstr ""

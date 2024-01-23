@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-20 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-21 14:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -59,37 +59,37 @@ msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "项目"
 
-#: package/contents/ui/ConfigEntries.qml:80
+#: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
 msgid "Visibility"
 msgstr "可见性"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:88
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "键盘快捷键"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Shown when relevant"
 msgstr "相关时显示"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always shown"
 msgstr "总是显示"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Always hidden"
 msgstr "总是隐藏"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:245
 #, kde-format
 msgid "Disabled"
 msgstr "已禁用"
 
-#: package/contents/ui/ConfigEntries.qml:305
+#: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
 msgstr "总是显示所有项目"
@@ -120,31 +120,31 @@ msgstr "按面板宽度缩放"
 msgid "Automatically enabled when in Touch Mode"
 msgstr "在触摸模式下自动启用"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "面板图标间距："
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "标准"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -161,12 +161,12 @@ msgstr "返回"
 msgid "Status and Notifications"
 msgstr "状态和通知"
 
-#: package/contents/ui/ExpandedRepresentation.qml:137
+#: package/contents/ui/ExpandedRepresentation.qml:138
 #, kde-format
 msgid "More actions"
 msgstr "更多操作"
 
-#: package/contents/ui/ExpandedRepresentation.qml:231
+#: package/contents/ui/ExpandedRepresentation.qml:232
 #, kde-format
 msgid "Keep Open"
 msgstr "保持打开"

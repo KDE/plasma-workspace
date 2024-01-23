@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-03 12:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -188,7 +188,7 @@ msgstr "Labortabla aranĝo"
 msgid "Titlebar Buttons layout"
 msgstr "Aranĝo de Titolbretaj Butonoj"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -197,62 +197,62 @@ msgstr ""
 "Aplikado de labortabla aranĝo anstataŭigas vian nunan agordon de "
 "labortabloj, paneloj, dokoj kaj fenestraĵoj"
 
-#: ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Aspektaj agordoj:"
 
-#: ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "Koloroj"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "Aplika Stilo"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Stilo de Fenestraj Dekoracioj"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Grandeco de Fenestraj Dekoracioj"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "Piktogramoj"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma Stilo"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "Kurseroj"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "Tiparoj"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "Taskŝanĝilo"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "Ŝprucekrano"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "Ŝlosi Ekranon"
@@ -262,29 +262,29 @@ msgstr "Ŝlosi Ekranon"
 msgid "The following will be applied by this Global Theme:"
 msgstr "La jenaj estos aplikataj de ĉi tiu Ĉiea Etoso:"
 
-#: ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "Aspektaj agordoj"
 
-#: ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Aperaj agordoj"
 
-#: ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:47
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Labortablo kaj fenestra aranĝo"
 
-#: ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:54
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Labortablo kaj fenestra aranĝo"
 
-#: ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

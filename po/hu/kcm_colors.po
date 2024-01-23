@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-20 23:16+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1304,64 +1304,64 @@ msgstr "Új letöltése…"
 msgid "Window Title"
 msgstr "Ablakcím"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr "Ablakszöveg"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "Gomb"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "hivatkozás"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "látogatott"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr "Normál szöveg"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr "Kiemelt szöveg"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, kde-format
 msgid "Disabled text"
 msgstr "Letiltott szöveg"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Színséma szerkesztése…"
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Színséma eltávolítása"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Színséma visszaállítása"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Színséma megnyitása"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Színsémafájlok (*.colors)"

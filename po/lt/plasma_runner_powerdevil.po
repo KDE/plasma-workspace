@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2024-01-13 14:14+0200\n"
+"PO-Revision-Date: 2024-01-23 00:34+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -60,13 +60,15 @@ msgstr "į diską"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr "mišrus miegas;misrus miegas"
+msgstr ""
+"mišrus miegas;misrus miegas;hibridinis miegas;hibrido miegas;mišrus "
+"pristabdymas;misrus pristabdymas;hibridinis pristabdymas"
 
 #: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr "mišrus;misrus"
+msgstr "mišrus;misrus;hibridinis;hibrido"
 
 #: PowerDevilRunner.cpp:39 PowerDevilRunner.cpp:40 PowerDevilRunner.cpp:66
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-02 19:43+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -46,12 +46,12 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Kliknutím vyberte svoju polohu na mape."
 
-#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
+#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
 #, kde-format
 msgid "Zoom in"
 msgstr "Priblížiť"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:223
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -65,13 +65,13 @@ msgstr ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:236
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Zemepisná šírka:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:263
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
@@ -82,76 +82,76 @@ msgstr "Zemepisná dĺžka:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Vďaka filtru modrého svetla sú farby na obrazovke teplejšie."
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Switching times:"
 msgstr "Čas prepnutí:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgid "Always off"
 msgstr "Vždy vypnuté"
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Východ a západ slnka na aktuálnom mieste"
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Východ a západ slnka na ručne nastavenom mieste"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Custom times"
 msgstr "Vlastné časy"
 
-#: ui/main.qml:160
+#: ui/main.qml:161
 #, kde-format
 msgid "Always on night light"
 msgstr "Vždy používať nočnú farbu"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Teplota dennej farby:"
 
-#: ui/main.qml:226 ui/main.qml:285
+#: ui/main.qml:227 ui/main.qml:289
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:230 ui/main.qml:289
+#: ui/main.qml:232 ui/main.qml:294
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Studená (žiadny filter)"
 
-#: ui/main.qml:236 ui/main.qml:295
+#: ui/main.qml:239 ui/main.qml:301
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Teplá"
 
-#: ui/main.qml:242
+#: ui/main.qml:246
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Teplota nočnej farby: "
 
-#: ui/main.qml:304
+#: ui/main.qml:311
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Aktuálna poloha:"
 
-#: ui/main.qml:310
+#: ui/main.qml:317
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Zemepisná šírka: %1°   Zemepisná dĺžka: %2°"
 
-#: ui/main.qml:331
+#: ui/main.qml:339
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -164,27 +164,27 @@ msgstr ""
 "url='https://location.services.mozilla.com'>Lokalizačné služby Mozilla</"
 "link>."
 
-#: ui/main.qml:349
+#: ui/main.qml:357
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Spustiť nočnú farbu o:"
 
-#: ui/main.qml:362 ui/main.qml:385
+#: ui/main.qml:370 ui/main.qml:393
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Vstupný formát: HH:MM"
 
-#: ui/main.qml:372
+#: ui/main.qml:380
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Spustiť dennú farbu o:"
 
-#: ui/main.qml:394
+#: ui/main.qml:402
 #, kde-format
 msgid "Transition duration:"
 msgstr "Trvanie prechodu:"
 
-#: ui/main.qml:403
+#: ui/main.qml:411
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -192,17 +192,17 @@ msgstr[0] "%1 minúta"
 msgstr[1] "%1 minúty"
 msgstr[2] "%1 minút"
 
-#: ui/main.qml:416
+#: ui/main.qml:424
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Zadajte minúty - min. 1, max. 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:442
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Chyba: Čas prechodu sa prekrýva."
 
-#: ui/main.qml:456
+#: ui/main.qml:465
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

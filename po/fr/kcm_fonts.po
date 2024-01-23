@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-04-10 10:30+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -290,7 +290,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr "Exclure la plage de l'anticrénelage"
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
@@ -300,13 +300,13 @@ msgstr "%1 pt"
 msgid "to"
 msgstr "à"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Rendu par sous-pixellisation :"
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -331,13 +331,13 @@ msgstr ""
 "cette fonctionnalité.</para> Ceci ne fonctionne pas avec des moniteurs à "
 "écran cathodique."
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Optimisation du rendu :"
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -352,12 +352,12 @@ msgstr ""
 "forte conduit en général à des contours plus tranchés mais les petites "
 "lettres ne ressembleront beaucoup moins à leurs formes en grande taille."
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forcer le PPP de la police :"
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -377,7 +377,7 @@ msgstr ""
 "dessus. Pour tout mettre à l'échelle, veuillez utiliser le curseur de mise à "
 "l'échelle sur la page <interface>Affichage & Écran</interface>.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr "Sélectionner une police"

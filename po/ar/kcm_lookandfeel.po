@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-17 21:11+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -187,7 +187,7 @@ msgstr "تخطيط سطح مكتب"
 msgid "Titlebar Buttons layout"
 msgstr "تخطيط أزرار شريط العنوان"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -196,62 +196,62 @@ msgstr ""
 "تطبيق تخطيط سطح المكتب سيستبدل إعدادات سطح المكتب الحالية واللوحات و تطبيقات "
 "الصغيرة والمراسي."
 
-#: ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "إعدادات المظهر:"
 
-#: ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "الألوان"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "نمط التطبيق"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "نمط زخارف النوافذ"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "حجم زخارف النوافذ"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "الأيقونات"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "نمط بلازما"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "المؤشرات"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "الخطوط"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "مبدّل المهام"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "شاشة البدء"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "قفل الشّاشة"
@@ -261,29 +261,29 @@ msgstr "قفل الشّاشة"
 msgid "The following will be applied by this Global Theme:"
 msgstr "ستطبق الأشياء التالية بواسطة السمة الشاملة:"
 
-#: ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "إعدادات المظهر"
 
-#: ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• إعدادات المظهر"
 
-#: ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:47
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "تخطيط سطح مكتب والنوافذ"
 
-#: ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:54
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• تخطيط سطح مكتب والنوافذ"
 
-#: ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 22:35+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1313,64 +1313,64 @@ msgstr "Загрузить…"
 msgid "Window Title"
 msgstr "Заголовок окна"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr "Текст в окне"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "Кнопка"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ссылка"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посещённая ссылка"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr "Обычный текст"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr "Подсвеченный текст"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, kde-format
 msgid "Disabled text"
 msgstr "Недоступный текст"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Изменить цветовую схему..."
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Удалить цветовую схему"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Восстановить цветовую схему"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Открыть цветовую схему"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлы цветовых схем (*.colors)"

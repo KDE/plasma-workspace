@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit\n"
@@ -1287,64 +1287,64 @@ msgstr "नवीनं प्राप्नुत…"
 msgid "Window Title"
 msgstr "गवाक्ष शीर्षकम्"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr "गवाक्ष पाठ्य"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "गण्ड"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "सम्बन्ध"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "भ्रमणं कृतवान्"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr "सामान्यः पाठ्यः"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr "प्रकाशितः पाठ्यः"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, kde-format
 msgid "Disabled text"
 msgstr "अक्षमः पाठ्यः"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "रङ्ग योजना सम्पादयतु…"
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "रङ्ग योजनां निष्कासयन्तु"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "वर्ण योजना पुनर्स्थापित कुर्वन्तु"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "रङ्ग योजना उद्घाटयतु"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "रङ्ग योजना सञ्चिकाः (*.colors)"

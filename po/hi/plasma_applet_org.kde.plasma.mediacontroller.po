@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-26 01:34+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2021-07-06 19:02+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -29,53 +29,53 @@ msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
 
 #: package/contents/ui/ExpandedRepresentation.qml:383
-#: package/contents/ui/ExpandedRepresentation.qml:505
+#: package/contents/ui/ExpandedRepresentation.qml:506
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:533
+#: package/contents/ui/ExpandedRepresentation.qml:535
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "फेंटें"
 
-#: package/contents/ui/ExpandedRepresentation.qml:557
+#: package/contents/ui/ExpandedRepresentation.qml:559
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "पिछले गीत पर जाएँ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:579
+#: package/contents/ui/ExpandedRepresentation.qml:581
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "ठहराएँ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:579
+#: package/contents/ui/ExpandedRepresentation.qml:581
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "बजाएँ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:597
+#: package/contents/ui/ExpandedRepresentation.qml:599
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "अगले गीत पर जाएँ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:620
+#: package/contents/ui/ExpandedRepresentation.qml:622
 #, kde-format
 msgid "Repeat Track"
 msgstr "गीत दोहराएँ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:620
+#: package/contents/ui/ExpandedRepresentation.qml:622
 #, kde-format
 msgid "Repeat"
 msgstr "दोहराएँ"

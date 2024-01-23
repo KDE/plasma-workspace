@@ -1,4 +1,4 @@
-# Translation of soliduiserver5 to Northern Sami
+# Translation of soliduiserver to Northern Sami
 #
 # Børre Gaup <boerre@skolelinux.no>, 2007.
 msgid ""

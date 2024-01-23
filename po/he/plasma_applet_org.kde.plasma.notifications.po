@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-22 08:53+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,7 +31,7 @@ msgstr "פתיחה עם %1"
 msgid "Open with…"
 msgstr "פתיחה עם…"
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:269
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
@@ -261,37 +261,37 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:178
+#: package/contents/ui/JobItem.qml:179
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "מושהה"
 
-#: package/contents/ui/JobItem.qml:188
+#: package/contents/ui/JobItem.qml:189
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "הסתרת פרטים"
 
-#: package/contents/ui/JobItem.qml:200
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "הצגת פרטים"
 
-#: package/contents/ui/JobItem.qml:232
+#: package/contents/ui/JobItem.qml:233
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "אפשרויות נוספות…"
 
-#: package/contents/ui/JobItem.qml:260
+#: package/contents/ui/JobItem.qml:261
 #, kde-format
 msgid "Open"
 msgstr "פתיחה"
@@ -354,13 +354,13 @@ msgstr "פינוי כל ההתראות"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "ה&גדרת התראות ופעולות אירועים…"
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:121
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "ממש עכשיו"
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:127
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -370,7 +370,7 @@ msgstr[1] "לפני שתי דקות"
 msgstr[2] "לפני %1 דקות"
 msgstr[3] "לפני %1 דקות"
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:161
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -380,7 +380,7 @@ msgstr[1] "נותרו שתי שניות"
 msgstr[2] "נותרו %1 שניות"
 msgstr[3] "נותרו %1 שניות"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:165
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -390,7 +390,7 @@ msgstr[1] "נותרו שתי דקות"
 msgstr[2] "נותרו %1 דקות"
 msgstr[3] "נותרו %1 דקות"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:170
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -400,23 +400,23 @@ msgstr[1] "נותרו שעתיים"
 msgstr[2] "נותרו %1 שעות"
 msgstr[3] "נותרו %1 שעות"
 
-#: package/contents/ui/NotificationHeader.qml:189
+#: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
 msgstr "הגדרה"
 
-#: package/contents/ui/NotificationHeader.qml:206
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "שחזור"
 
-#: package/contents/ui/NotificationHeader.qml:207
+#: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
 msgstr "מזעור"
 
-#: package/contents/ui/NotificationHeader.qml:230
+#: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
 msgstr "סגירה"

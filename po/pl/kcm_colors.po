@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1666294 $
+# Version: $Revision: 1670826 $
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-09-17 12:57+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -1311,64 +1311,64 @@ msgstr "Pobierz nowe…"
 msgid "Window Title"
 msgstr "Tytuł okna"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr "Tekst okna"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "Przycisk"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "odnośnik"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "odwiedzony"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr "Zwykły tekst"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr "Podświetlony tekst"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, kde-format
 msgid "Disabled text"
 msgstr "Wyłączony tekst"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Edytuj zestaw kolorów..."
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Usuń zestaw kolorów"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Przywróć zestaw kolorów"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Otwórz zestaw kolorów"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Pliki zestawu kolorów (*.colors)"

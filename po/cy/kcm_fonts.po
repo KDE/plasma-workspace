@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2004-07-03 07:04+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr ""
@@ -288,13 +288,13 @@ msgstr ""
 msgid "to"
 msgstr "i "
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, fuzzy, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "&Defnyddio awgrymu is-bicsel:"
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -308,14 +308,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Arddull awgrymu:"
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -325,12 +325,12 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr ""
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -342,7 +342,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr ""

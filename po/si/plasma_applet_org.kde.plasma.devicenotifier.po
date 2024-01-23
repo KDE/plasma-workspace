@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2009-11-09 22:59+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -84,13 +84,13 @@ msgstr ""
 msgid "Click to safely remove all devices"
 msgstr "මෙම මෙවලමට ක්‍රියාවක් ඇත"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "No removable devices attached"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "No disks available"

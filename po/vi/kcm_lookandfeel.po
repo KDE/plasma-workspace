@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-08-09 21:46+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -189,7 +189,7 @@ msgstr "Bố cục bàn làm việc"
 msgid "Titlebar Buttons layout"
 msgstr "Bố cục các nút ở thanh tiêu đề"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -198,64 +198,64 @@ msgstr ""
 "Việc áp dụng một bố cục bàn làm việc sẽ thay thế cấu hình hiện tại của các "
 "bàn làm việc, các bảng, các giá, và các phụ kiện"
 
-#: ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Thiết lập diện mạo:"
 
-#: ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "Màu"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "Kiểu cách ứng dụng"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:61
 #, fuzzy, kde-format
 #| msgid "Window Decorations"
 msgid "Window Decoration Style"
 msgstr "Trang trí cửa sổ"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:62
 #, fuzzy, kde-format
 #| msgid "Window Decorations"
 msgid "Window Decoration Size"
 msgstr "Trang trí cửa sổ"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "Biểu tượng"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Kiểu cách Plasma"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "Con trỏ"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "Phông chữ"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "Trình chuyển tác vụ"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "Màn hình khởi động"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "Màn hình khoá"
@@ -265,29 +265,29 @@ msgstr "Màn hình khoá"
 msgid "The following will be applied by this Global Theme:"
 msgstr "Với chủ đề toàn cục này, các thứ sau sẽ được áp dụng:"
 
-#: ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "Thiết lập diện mạo"
 
-#: ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Thiết lập diện mạo"
 
-#: ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:47
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Bố cục bàn làm việc và cửa sổ"
 
-#: ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:54
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Bố cục bàn làm việc và cửa sổ"
 
-#: ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,7 +44,7 @@ msgid "Caps Lock is on"
 msgstr "CapsLock uključen"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:167
+#: contents/logout/Logout.qml:169
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -52,13 +52,13 @@ msgstr ""
 
 # rewrite-msgid: /Restart/Reset/
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
 #, kde-format
 msgid "Restart"
 msgstr "Resetuj"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:214
 #, fuzzy, kde-format
 #| msgid "Shutdown"
 msgid "Shut Down"
@@ -132,7 +132,7 @@ msgstr "Otključavanje propalo"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
 #, kde-format
 msgid "Hibernate"
 msgstr ""
@@ -154,12 +154,12 @@ msgstr "Prebaci raspored"
 msgid "Unlock"
 msgstr "Otključaj"
 
-#: contents/lockscreen/MainBlock.qml:155
+#: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr ""
 
-#: contents/lockscreen/MainBlock.qml:159
+#: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
 msgstr ""
@@ -202,23 +202,23 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: contents/logout/Logout.qml:156
+#: contents/logout/Logout.qml:157
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
-#: contents/logout/Logout.qml:187
+#: contents/logout/Logout.qml:189
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:223
+#: contents/logout/Logout.qml:225
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
@@ -228,7 +228,7 @@ msgstr[2] ""
 msgstr[3] ""
 
 # rewrite-msgid: /Reboot/Reset/
-#: contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:250
 #, fuzzy, kde-format
 #| msgid "Reboot in 1 second"
 #| msgid_plural "Reboot in %1 seconds"
@@ -239,7 +239,7 @@ msgstr[1] "Resetovanje za %1 sekunde"
 msgstr[2] "Resetovanje za %1 sekundi"
 msgstr[3] "Resetovanje za 1 sekundu"
 
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:252
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -248,7 +248,7 @@ msgstr[1] "Gašenje za %1 sekunde"
 msgstr[2] "Gašenje za %1 sekundi"
 msgstr[3] "Gašenje za 1 sekundu"
 
-#: contents/logout/Logout.qml:252
+#: contents/logout/Logout.qml:254
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -257,12 +257,12 @@ msgstr[1] "Odjavljivanje za %1 sekunde"
 msgstr[2] "Odjavljivanje za %1 sekundi"
 msgstr[3] "Odjavljivanje za 1 sekundu"
 
-#: contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:266
 #, kde-format
 msgid "OK"
 msgstr "U redu"
 
-#: contents/logout/Logout.qml:275
+#: contents/logout/Logout.qml:278
 #, kde-format
 msgid "Cancel"
 msgstr "Odustani"

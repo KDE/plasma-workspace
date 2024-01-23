@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-07-25 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr "QR 코드 종류 변경"
 msgid "Creating QR code failed"
 msgstr "QR 코드 생성 실패"
 
-#: contents/ui/BarcodePage.qml:147
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -127,7 +127,7 @@ msgstr "클립보드 설정…"
 msgid "No matches"
 msgstr "검색 결과 없음"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

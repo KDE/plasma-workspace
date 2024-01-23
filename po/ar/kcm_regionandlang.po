@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-05-15 18:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -298,7 +298,7 @@ msgstr "مجهول"
 msgid "Default for System"
 msgstr "المبدئي للنظام"
 
-#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
+#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:271
 #, kde-format
 msgid "Default"
 msgstr "المبدئيّ"
@@ -428,43 +428,43 @@ msgstr "اللغة \"%1\" غير مدعومة"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "أضف اللغات بالترتيب الذي تريد عرضه في تطبيقاتك"
 
-#: ui/AdvancedLanguageSelectPage.qml:85
+#: ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "غيّر اللغة"
 
-#: ui/AdvancedLanguageSelectPage.qml:89
+#: ui/AdvancedLanguageSelectPage.qml:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "غيّر اللغة"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "انقل للأعلى"
 
-#: ui/AdvancedLanguageSelectPage.qml:106
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "أزل"
 
-#: ui/AdvancedLanguageSelectPage.qml:119
+#: ui/AdvancedLanguageSelectPage.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "لم تُضبط أي لغة"
 
-#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
+#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "أضِف لغات"
 
-#: ui/AdvancedLanguageSelectPage.qml:178
+#: ui/AdvancedLanguageSelectPage.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

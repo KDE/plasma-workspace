@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-19 17:40+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/BatteryItem.qml:105
+#: package/contents/ui/BatteryItem.qml:107
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:166
+#: package/contents/ui/BatteryItem.qml:171
 #, kde-format
 msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
@@ -32,34 +32,34 @@ msgstr ""
 "Le sanitate de iste  batteria es solmente al %1% e debera esser  "
 "reimplaciate. Continge le constructor."
 
-#: package/contents/ui/BatteryItem.qml:185
+#: package/contents/ui/BatteryItem.qml:191
 #, kde-format
 msgid "Time To Full:"
 msgstr "Tempore al plen:"
 
-#: package/contents/ui/BatteryItem.qml:186
+#: package/contents/ui/BatteryItem.qml:192
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Tempore remanente:"
 
-#: package/contents/ui/BatteryItem.qml:191
+#: package/contents/ui/BatteryItem.qml:197
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr "Estimante..."
 
-#: package/contents/ui/BatteryItem.qml:203
+#: package/contents/ui/BatteryItem.qml:209
 #, kde-format
 msgid "Battery Health:"
 msgstr "Sanitate de Batteria:"
 
-#: package/contents/ui/BatteryItem.qml:209
+#: package/contents/ui/BatteryItem.qml:215
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:223
+#: package/contents/ui/BatteryItem.qml:229
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batteria es configurate per cargar usque %1% approximativemente."
@@ -232,23 +232,23 @@ msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "%1 es currentemente blocante somno e bloco de schermo:"
 msgstr[1] "%1 applicationes impedi somno e bloco de schermo:"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 es currentemente blocante somno e bloco de schermo (%2):"
 
-#: package/contents/ui/PowerManagementItem.qml:108
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr ""
 "%1 es currentemente blocante somno e bloco de schermo (motivation incognite):"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "Un application es currentemente blocante somno e bloco de schermo (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -257,25 +257,25 @@ msgstr ""
 "Un application es currentemente blocante somno e bloco de schermo "
 "(motivation incognite):"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:118
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: motivation incognite"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Application Incognite: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:123
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
@@ -301,13 +301,13 @@ msgstr "Prestation"
 msgid "Power Profile"
 msgstr "Profilo de energia"
 
-#: package/contents/ui/PowerProfileItem.qml:96
+#: package/contents/ui/PowerProfileItem.qml:97
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "Non disponibile"
 
-#: package/contents/ui/PowerProfileItem.qml:190
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -316,7 +316,7 @@ msgstr ""
 "Modo de prestation ha essite dishabilitate per reducer generation de calor "
 "proque le computator ha relevate que illo pote seder sur tu gremio."
 
-#: package/contents/ui/PowerProfileItem.qml:192
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
@@ -324,12 +324,12 @@ msgstr ""
 "Modo de prestation non  es disponibile proque le computator es executante "
 "troppo calide."
 
-#: package/contents/ui/PowerProfileItem.qml:194
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Modo de prestation non es disponibile."
 
-#: package/contents/ui/PowerProfileItem.qml:207
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -338,26 +338,26 @@ msgstr ""
 "Prestation pote esser bassate per reducer generation de calor proque le "
 "computator ha relevate que illo pote seder su tu gremio.  "
 
-#: package/contents/ui/PowerProfileItem.qml:209
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr ""
 "Prestation pote esser  reducite proque le computator es executante troppo "
 "calide."
 
-#: package/contents/ui/PowerProfileItem.qml:211
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Rendimento pote esser reducite."
 
-#: package/contents/ui/PowerProfileItem.qml:222
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "Un application ha requirite activar %2:"
 msgstr[1] "%1 applicationes ha requirite activar %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:240
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "
@@ -365,7 +365,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:259
+#: package/contents/ui/PowerProfileItem.qml:261
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "

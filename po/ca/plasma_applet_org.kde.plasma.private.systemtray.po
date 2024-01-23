@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-20 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-07-25 12:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -62,37 +62,37 @@ msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Entrada"
 
-#: package/contents/ui/ConfigEntries.qml:80
+#: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
 msgid "Visibility"
 msgstr "Visibilitat"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:88
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Drecera de teclat"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Mostra quan sigui rellevant"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always shown"
 msgstr "Mostra sempre"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Always hidden"
 msgstr "Sempre ocult"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:245
 #, kde-format
 msgid "Disabled"
 msgstr "Desactivat"
 
-#: package/contents/ui/ConfigEntries.qml:305
+#: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
 msgstr "Mostra sempre totes les entrades"
@@ -123,31 +123,31 @@ msgstr "Escala amb l'amplada del plafó"
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Activat automàticament en el mode tàctil"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Espaiat de les icones del plafó:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Petit"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Gran"
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -164,12 +164,12 @@ msgstr "Retrocedeix"
 msgid "Status and Notifications"
 msgstr "Estat i notificacions"
 
-#: package/contents/ui/ExpandedRepresentation.qml:137
+#: package/contents/ui/ExpandedRepresentation.qml:138
 #, kde-format
 msgid "More actions"
 msgstr "Més accions"
 
-#: package/contents/ui/ExpandedRepresentation.qml:231
+#: package/contents/ui/ExpandedRepresentation.qml:232
 #, kde-format
 msgid "Keep Open"
 msgstr "Mantén obert"

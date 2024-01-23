@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-05 09:50+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -106,12 +106,12 @@ msgstr ""
 "Nu u uw aanmeldwachtwoord hebt gewijzigd, wilt u misschien ook het "
 "wachtwoord van uw standaard KWallet wijzigen om het overeen te laten komen."
 
-#: src/ui/ChangeWalletPassword.qml:30
+#: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
 msgid "What is KWallet?"
 msgstr "Wat is KWallet?"
 
-#: src/ui/ChangeWalletPassword.qml:40
+#: src/ui/ChangeWalletPassword.qml:41
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -126,12 +126,12 @@ msgstr ""
 "twee wachtwoorden gelijk zijn, kan het automatisch ontgrendeld worden bij "
 "aanmelden zodat u het wachtwoord van KWallet niet zelf hoeft in te voeren."
 
-#: src/ui/ChangeWalletPassword.qml:56
+#: src/ui/ChangeWalletPassword.qml:58
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "Wachtwoord van portefeuille wijzigen"
 
-#: src/ui/ChangeWalletPassword.qml:65
+#: src/ui/ChangeWalletPassword.qml:67
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "Ongewijzigd laten"
@@ -186,169 +186,169 @@ msgstr "Aanmaken"
 msgid "Configure Fingerprints"
 msgstr "Vingerafdrukken configureren"
 
-#: src/ui/FingerprintDialog.qml:55
+#: src/ui/FingerprintDialog.qml:56
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Alles wissen"
 
-#: src/ui/FingerprintDialog.qml:62
+#: src/ui/FingerprintDialog.qml:63
 #, kde-format
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/ui/FingerprintDialog.qml:71
+#: src/ui/FingerprintDialog.qml:72
 #, kde-format
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/ui/FingerprintDialog.qml:79
+#: src/ui/FingerprintDialog.qml:80
 #, kde-format
 msgid "Done"
 msgstr "Gereed"
 
-#: src/ui/FingerprintDialog.qml:103
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Vingerafdruk invoeren"
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw rechter wijsvinger op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw rechter middelvinger op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw rechter ringvinger op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw rechter pink op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw rechter duim op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw linker wijsvinger op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw linker middelvinger op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw linker ringvinger op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw linker pink op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Druk herhaaldelijk uw linker duim op de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw rechter wijsvinger over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw rechter middelvinger over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw rechter ringvinger over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw rechter pink over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw rechter duim over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:144
+#: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw linker wijsvinger over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw linker middelvinger over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw linker ringvinger over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw linker pink over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:154
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "Veeg herhaaldelijk uw linker duim over de vingerprintsensor."
 
-#: src/ui/FingerprintDialog.qml:167
+#: src/ui/FingerprintDialog.qml:170
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Vinger ingevoerd"
 
-#: src/ui/FingerprintDialog.qml:197
+#: src/ui/FingerprintDialog.qml:202
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Een vinger kiezen om in te voeren"
 
-#: src/ui/FingerprintDialog.qml:315
+#: src/ui/FingerprintDialog.qml:322
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Vinger opnieuw invoeren"
 
-#: src/ui/FingerprintDialog.qml:322
+#: src/ui/FingerprintDialog.qml:329
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Vingerafdruk verwijderen"
 
-#: src/ui/FingerprintDialog.qml:331
+#: src/ui/FingerprintDialog.qml:338
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Geen vingerafdruk toegevoegd"
@@ -490,25 +490,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr "Initialen"
 
-#: src/ui/PicturesSheet.qml:129
+#: src/ui/PicturesSheet.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Bestand kiezen…"
 
-#: src/ui/PicturesSheet.qml:134
+#: src/ui/PicturesSheet.qml:135
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Een afbeelding kiezen"
 
-#: src/ui/PicturesSheet.qml:181
+#: src/ui/PicturesSheet.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Plaatshouderpictogram"
 
-#: src/ui/PicturesSheet.qml:269
+#: src/ui/PicturesSheet.qml:271
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

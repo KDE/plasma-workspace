@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-29 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-02 11:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -72,63 +72,63 @@ msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: calendar/qml/MonthViewHeader.qml:113
+#: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Days"
 msgstr "Egunak"
 
-#: calendar/qml/MonthViewHeader.qml:119
+#: calendar/qml/MonthViewHeader.qml:120
 #, kde-format
 msgid "Months"
 msgstr "Hilabeteak"
 
-#: calendar/qml/MonthViewHeader.qml:125
+#: calendar/qml/MonthViewHeader.qml:126
 #, kde-format
 msgid "Years"
 msgstr "Urteak"
 
-#: calendar/qml/MonthViewHeader.qml:163
+#: calendar/qml/MonthViewHeader.qml:164
 #, kde-format
 msgid "Previous Month"
 msgstr "Aurreko hilabetea"
 
-#: calendar/qml/MonthViewHeader.qml:165
+#: calendar/qml/MonthViewHeader.qml:166
 #, kde-format
 msgid "Previous Year"
 msgstr "Aurreko urtea"
 
-#: calendar/qml/MonthViewHeader.qml:167
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Previous Decade"
 msgstr "Aurreko hamarkada"
 
-#: calendar/qml/MonthViewHeader.qml:184
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Gaur"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Ekarri egutegia gaurko egunera"
 
-#: calendar/qml/MonthViewHeader.qml:196
+#: calendar/qml/MonthViewHeader.qml:197
 #, kde-format
 msgid "Next Month"
 msgstr "Hurrengo hilabetea"
 
-#: calendar/qml/MonthViewHeader.qml:198
+#: calendar/qml/MonthViewHeader.qml:199
 #, kde-format
 msgid "Next Year"
 msgstr "Hurrengo urtea"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Next Decade"
 msgstr "Hurrengo hamarkada"
 
-#: calendar/qml/MonthViewHeader.qml:256
+#: calendar/qml/MonthViewHeader.qml:257
 #, kde-format
 msgid "Keep Open"
 msgstr "Eduki irekita"

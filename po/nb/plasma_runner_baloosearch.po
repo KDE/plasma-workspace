@@ -1,4 +1,4 @@
-# Translation of plasma_runner_baloosearch5 to Norwegian Bokmål
+# Translation of plasma_runner_baloosearch to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2014.
 msgid ""

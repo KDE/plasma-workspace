@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2004-09-19 18:09+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -175,55 +175,55 @@ msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:46
+#: ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:56
+#: ui/LaunchFeedbackDialog.qml:57
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:65
+#: ui/LaunchFeedbackDialog.qml:66
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:74
+#: ui/LaunchFeedbackDialog.qml:75
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:89
+#: ui/LaunchFeedbackDialog.qml:90
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:91
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:110
+#: ui/LaunchFeedbackDialog.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -235,31 +235,31 @@ msgstr[1] ""
 msgid "Size: %1"
 msgstr ""
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Install from File…"
 msgstr "Staliañ ar c'hiz nevez ..."
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Get New…"
 msgstr "Staliañ ar c'hiz nevez ..."
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Lemel ar c'hiz"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

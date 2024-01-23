@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-11 21:48+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -81,12 +81,12 @@ msgstr "Премахване на всички"
 msgid "Click to safely remove all devices"
 msgstr "Щракнете, за да премахнете безопасно всички устройства"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Няма свързани сменяеми устройства"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
 msgstr "Няма налични дискове"

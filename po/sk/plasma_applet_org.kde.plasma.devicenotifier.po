@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-02 19:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -84,12 +84,12 @@ msgstr "Odpojiť všetky"
 msgid "Click to safely remove all devices"
 msgstr "Kliknutím bezpečne odstránite všetky zariadenia"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Nie sú pripojené žiadne vymeniteľné zariadenia"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
 msgstr "Nie sú dostupné žiadne disky"

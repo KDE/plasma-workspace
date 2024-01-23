@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-28 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -65,7 +65,7 @@ msgstr "QR-kód típusának módosítása"
 msgid "Creating QR code failed"
 msgstr "Nem sikerült létrehozni a QR-kódot"
 
-#: contents/ui/BarcodePage.qml:147
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -130,7 +130,7 @@ msgstr "Vágólap beállítása…"
 msgid "No matches"
 msgstr "Nincs találat"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

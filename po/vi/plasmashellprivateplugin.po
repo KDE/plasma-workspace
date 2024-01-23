@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-29 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-05-23 14:19+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -70,63 +70,63 @@ msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:113
+#: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Days"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:119
+#: calendar/qml/MonthViewHeader.qml:120
 #, kde-format
 msgid "Months"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:125
+#: calendar/qml/MonthViewHeader.qml:126
 #, kde-format
 msgid "Years"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:163
+#: calendar/qml/MonthViewHeader.qml:164
 #, kde-format
 msgid "Previous Month"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:165
+#: calendar/qml/MonthViewHeader.qml:166
 #, kde-format
 msgid "Previous Year"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:167
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Previous Decade"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:184
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Reset calendar to today"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:196
+#: calendar/qml/MonthViewHeader.qml:197
 #, kde-format
 msgid "Next Month"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:198
+#: calendar/qml/MonthViewHeader.qml:199
 #, kde-format
 msgid "Next Year"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Next Decade"
 msgstr ""
 
-#: calendar/qml/MonthViewHeader.qml:256
+#: calendar/qml/MonthViewHeader.qml:257
 #, kde-format
 msgid "Keep Open"
 msgstr ""

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-03 11:11+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: \n"
@@ -97,12 +97,12 @@ msgstr "Tout supprimer"
 msgid "Click to safely remove all devices"
 msgstr "Cliquez pour retirer l'ensemble des périphériques en toute sécurité"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Aucun périphérique amovible branché"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
 msgstr "Aucun disque disponible"

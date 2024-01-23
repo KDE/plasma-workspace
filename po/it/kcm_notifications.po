@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-01 22:55+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -62,12 +62,12 @@ msgstr ""
 "Questa applicazione non supporta la configurazione delle notifiche per ogni "
 "singolo evento"
 
-#: ui/ApplicationConfiguration.qml:261
+#: ui/ApplicationConfiguration.qml:263
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Mostra un messaggio in una finestra a comparsa"
 
-#: ui/ApplicationConfiguration.qml:270
+#: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
 msgstr "Riproduci un suono"

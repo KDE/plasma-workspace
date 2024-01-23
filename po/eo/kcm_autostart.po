@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-27 07:10+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -46,7 +46,7 @@ msgctxt ""
 msgid "Name:"
 msgstr "Nomo:"
 
-#: ui/entry.qml:57
+#: ui/entry.qml:58
 #, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
@@ -54,7 +54,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Statuso:"
 
-#: ui/entry.qml:62
+#: ui/entry.qml:64
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -62,24 +62,24 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr "Laste aktivita je:"
 
-#: ui/entry.qml:71
+#: ui/entry.qml:74
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
 msgstr "Halti"
 
-#: ui/entry.qml:71
+#: ui/entry.qml:74
 #, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "Komenci"
 
-#: ui/entry.qml:105
+#: ui/entry.qml:109
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr "Ne eblas ŝargi protokolojn. Provu refreŝigi."
 
-#: ui/entry.qml:109
+#: ui/entry.qml:113
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"

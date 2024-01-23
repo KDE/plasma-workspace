@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2021-05-26 09:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -66,18 +66,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Вилучити додатки або керувати ними…"
 
-#: plugin/appentry.cpp:294
+#: plugin/appentry.cpp:297
 #, kde-format
 msgid "Hide Application"
 msgstr "Приховати програму"
 
-#: plugin/appentry.cpp:353
+#: plugin/appentry.cpp:356
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:355
+#: plugin/appentry.cpp:358
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

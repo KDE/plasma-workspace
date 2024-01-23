@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-08-09 08:42+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -183,55 +183,55 @@ msgstr ""
 "Конфигуриране на анимациите, които се възпроизвеждат по време на "
 "стартирането на дадено приложение."
 
-#: ui/LaunchFeedbackDialog.qml:46
+#: ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "Курсор обратна връзка"
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "Без"
 
-#: ui/LaunchFeedbackDialog.qml:56
+#: ui/LaunchFeedbackDialog.qml:57
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "Статична икона"
 
-#: ui/LaunchFeedbackDialog.qml:65
+#: ui/LaunchFeedbackDialog.qml:66
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "Мигаща икона"
 
-#: ui/LaunchFeedbackDialog.qml:74
+#: ui/LaunchFeedbackDialog.qml:75
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "Подскачаща икона"
 
-#: ui/LaunchFeedbackDialog.qml:89
+#: ui/LaunchFeedbackDialog.qml:90
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "Диспечер на задачи обратна връзка:"
 
-#: ui/LaunchFeedbackDialog.qml:91
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "Активиране на анимация"
 
-#: ui/LaunchFeedbackDialog.qml:110
+#: ui/LaunchFeedbackDialog.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "Спиране на анимациите след:"
 
-#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -243,28 +243,28 @@ msgstr[1] "%1 секунди"
 msgid "Size: %1"
 msgstr "Размер: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Конфигуриране на обратна връзка…"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "&Install from File…"
 msgstr "Инсталиране от файл…"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgid "&Get New…"
 msgstr "&Изтегляне на нови…"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Open Theme"
 msgstr "Отваряне на тема"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Тематични файлове на курсора  (*.tar.gz *.tar.bz2)"

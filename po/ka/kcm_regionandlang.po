@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-03-17 05:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -297,7 +297,7 @@ msgstr "უცნობი"
 msgid "Default for System"
 msgstr "ნაგულისხმები სისტემისთვის"
 
-#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
+#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:271
 #, kde-format
 msgid "Default"
 msgstr "სტანდარტული"
@@ -427,43 +427,43 @@ msgstr "ენა %1 მხარდაუჭერელია"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "დაამატეთ ენები მიმდევრობით, რომლითაც მათი აპლიკაციებში ხილვა გნებავთ."
 
-#: ui/AdvancedLanguageSelectPage.qml:85
+#: ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "ენის შეცვლა"
 
-#: ui/AdvancedLanguageSelectPage.qml:89
+#: ui/AdvancedLanguageSelectPage.qml:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "ენის შეცვლა"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "ზემოთ ატანა"
 
-#: ui/AdvancedLanguageSelectPage.qml:106
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "წაშლა"
 
-#: ui/AdvancedLanguageSelectPage.qml:119
+#: ui/AdvancedLanguageSelectPage.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "მორგებული ენის გარეშე"
 
-#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
+#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "ენების დამატება"
 
-#: ui/AdvancedLanguageSelectPage.qml:178
+#: ui/AdvancedLanguageSelectPage.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

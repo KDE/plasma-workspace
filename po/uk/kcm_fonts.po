@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-04-09 16:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -273,7 +273,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr "Виключити діапазон зі згладжування"
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 пт"
@@ -283,13 +283,13 @@ msgstr "%1 пт"
 msgid "to"
 msgstr "до"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Субпіксельне згладжування:"
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -314,13 +314,13 @@ msgstr ""
 "не передбачено.</para>Цей параметр не працює для моніторів з електронно-"
 "променевими трубками."
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Гінтинґ:"
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -334,12 +334,12 @@ msgstr ""
 "розмірів. Жорсткіший гінтинґ, зазвичай, призводить до різкіших країв, хоча "
 "малі літери при цьому стають менше схожими на свої більші аналоги."
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Задати роздільність шрифтів:"
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -358,7 +358,7 @@ msgstr ""
 "вище. Для масштабування усього скористайтеся повзунком на сторінці "
 "<interface>Показ зображення і монітор</interface>.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr "Вибір шрифту"

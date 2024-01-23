@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-20 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-01 14:50+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -66,37 +66,37 @@ msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Entrée"
 
-#: package/contents/ui/ConfigEntries.qml:80
+#: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:88
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Raccourcis clavier"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Affiché si pertinent"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always shown"
 msgstr "Toujours affiché"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Always hidden"
 msgstr "Toujours masqué"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:245
 #, kde-format
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: package/contents/ui/ConfigEntries.qml:305
+#: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
 msgstr "Toujours afficher toutes les entrées"
@@ -127,31 +127,31 @@ msgstr "Ajuster à la largeur du panneau"
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Automatiquement activé lorsqu'en mode « Tablette »"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Espacement des icônes du panneau :"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Petit"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:61
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grand"
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -168,12 +168,12 @@ msgstr "Revenir en arrière"
 msgid "Status and Notifications"
 msgstr "État et notifications"
 
-#: package/contents/ui/ExpandedRepresentation.qml:137
+#: package/contents/ui/ExpandedRepresentation.qml:138
 #, kde-format
 msgid "More actions"
 msgstr "Plus d'actions"
 
-#: package/contents/ui/ExpandedRepresentation.qml:231
+#: package/contents/ui/ExpandedRepresentation.qml:232
 #, kde-format
 msgid "Keep Open"
 msgstr "Laisser ouvert"

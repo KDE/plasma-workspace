@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-08-06 15:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -181,55 +181,55 @@ msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr "ஏதாவதொரு செயலி துவக்கப்படும்போது காட்டப்படும் அசைவூட்டங்களை அமையுங்கள்."
 
-#: ui/LaunchFeedbackDialog.qml:46
+#: ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "சுட்டிக்குறி பின்னூட்டம்:"
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: ui/LaunchFeedbackDialog.qml:56
+#: ui/LaunchFeedbackDialog.qml:57
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "நகராத‍து"
 
-#: ui/LaunchFeedbackDialog.qml:65
+#: ui/LaunchFeedbackDialog.qml:66
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "மின்னுவது"
 
-#: ui/LaunchFeedbackDialog.qml:74
+#: ui/LaunchFeedbackDialog.qml:75
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "துள்ளுவது"
 
-#: ui/LaunchFeedbackDialog.qml:89
+#: ui/LaunchFeedbackDialog.qml:90
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "பணி மேலாளரிலுள்ள பின்னூட்டம்:"
 
-#: ui/LaunchFeedbackDialog.qml:91
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "அசைவூட்டத்தை இயக்கு"
 
-#: ui/LaunchFeedbackDialog.qml:110
+#: ui/LaunchFeedbackDialog.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "இவ்வளவு நேரங்கழித்து அசைவூட்டங்களை நிறுத்து:"
 
-#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -241,28 +241,28 @@ msgstr[1] "%1 நொடிகள்"
 msgid "Size: %1"
 msgstr "அளவு: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&தொடக்க பின்னூட்டத்தை அமை…"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "&Install from File…"
 msgstr "கோப்பிலிருந்து &நிறுவு…"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgid "&Get New…"
 msgstr "&புதியவற்றை பெறு…"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Open Theme"
 msgstr "திட்டமுறையை திற"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "சுட்டிக்குறி திட்டமுறை கோப்புகள் (*.tar.gz *.tar.bz2)"

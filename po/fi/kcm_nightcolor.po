@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-11-11 22:21+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -49,12 +49,12 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Napsauta sijaintiasi kartalla."
 
-#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
+#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
 #, kde-format
 msgid "Zoom in"
 msgstr "Lähennä"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:223
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -68,13 +68,13 @@ msgstr ""
 "link>, TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:236
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Leveysaste:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:263
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
@@ -85,50 +85,50 @@ msgstr "Pituusaste:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Sinisen valon suodatin tekee näyttöväreistä lämpimämmät."
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Switching times:"
 msgstr "Vaihtoajat:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgid "Always off"
 msgstr "Aina pois käytöstä"
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Auringonlasku ja -nousu nykyisessä sijainnissa"
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Auringonlaskusta ja -nousu asetetussa sijainnissa"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Custom times"
 msgstr "Aikojen mukautus"
 
-#: ui/main.qml:160
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Always on night color"
 msgid "Always on night light"
 msgstr "Yöväri aina käytössä"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, fuzzy, kde-format
 #| msgid "Day color temperature:"
 msgid "Day light temperature:"
 msgstr "Päivävärin lämpötila:"
 
-#: ui/main.qml:226 ui/main.qml:285
+#: ui/main.qml:227 ui/main.qml:289
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 K"
 
-#: ui/main.qml:230 ui/main.qml:289
+#: ui/main.qml:232 ui/main.qml:294
 #, fuzzy, kde-format
 #| msgctxt "No blue light filter activated"
 #| msgid "Cool (no filter)"
@@ -136,31 +136,31 @@ msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Kylmä (ei suodatinta)"
 
-#: ui/main.qml:236 ui/main.qml:295
+#: ui/main.qml:239 ui/main.qml:301
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Lämmin"
 
-#: ui/main.qml:242
+#: ui/main.qml:246
 #, fuzzy, kde-format
 #| msgid "Night color temperature:"
 msgid "Night light temperature:"
 msgstr "Yövärin lämpötila:"
 
-#: ui/main.qml:304
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "Detect Location"
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Tunnista sijainti"
 
-#: ui/main.qml:310
+#: ui/main.qml:317
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Leveysaste: %1°  Pituusaste: %2°"
 
-#: ui/main.qml:331
+#: ui/main.qml:339
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -172,47 +172,47 @@ msgstr ""
 "käytettävissä) tai lähettämällä verkkotiedot <a href=\"https://location."
 "services.mozilla.com/\">Mozillan paikannuspalveluun</a>."
 
-#: ui/main.qml:349
+#: ui/main.qml:357
 #, fuzzy, kde-format
 #| msgid "Begin night color at:"
 msgid "Begin night light at:"
 msgstr "Yövärin aloitusaika:"
 
-#: ui/main.qml:362 ui/main.qml:385
+#: ui/main.qml:370 ui/main.qml:393
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Syötemuoto: TT:MM"
 
-#: ui/main.qml:372
+#: ui/main.qml:380
 #, fuzzy, kde-format
 #| msgid "Begin day color at:"
 msgid "Begin day light at:"
 msgstr "Päivävärin aloitusaika:"
 
 # Ellei transition ole astronomisessa kielessä vakiintunut muuksi kuin ”siirtymäksi”?
-#: ui/main.qml:394
+#: ui/main.qml:402
 #, kde-format
 msgid "Transition duration:"
 msgstr "Siirtymän kesto:"
 
-#: ui/main.qml:403
+#: ui/main.qml:411
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuutti"
 msgstr[1] "%1 minuuttia"
 
-#: ui/main.qml:416
+#: ui/main.qml:424
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Syöte minuutteina – väh. 1, enint. 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:442
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Virhe: Siirtymäajat lomittuvat."
 
-#: ui/main.qml:456
+#: ui/main.qml:465
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

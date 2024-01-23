@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2014-02-16 23:02+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1310,21 +1310,21 @@ msgstr ""
 msgid "Window Title"
 msgstr "Finstertext"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Finstertext"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Knoop"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1332,7 +1332,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "Link"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1340,51 +1340,51 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "opropen"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Normaal Text"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Opropen Link"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Utmaakt"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Schema &hoochladen..."
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Klöörschema sekern"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Klöörschema importeren"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Klöörschema sekern"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

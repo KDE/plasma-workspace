@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:269
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
@@ -282,7 +282,7 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:178
+#: package/contents/ui/JobItem.qml:179
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is job name, eg. 'Copying'"
 #| msgid "%1 (Paused)"
@@ -290,32 +290,32 @@ msgctxt "Pause running job"
 msgid "Pause"
 msgstr "%1 (паузирано)"
 
-#: package/contents/ui/JobItem.qml:188
+#: package/contents/ui/JobItem.qml:189
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "Сакриј детаље"
 
-#: package/contents/ui/JobItem.qml:200
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Прикажи детаље"
 
-#: package/contents/ui/JobItem.qml:232
+#: package/contents/ui/JobItem.qml:233
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, fuzzy, kde-format
 #| msgid "More Options..."
 msgid "More Options…"
 msgstr "Више опција..."
 
-#: package/contents/ui/JobItem.qml:260
+#: package/contents/ui/JobItem.qml:261
 #, fuzzy, kde-format
 #| msgid "Open..."
 msgid "Open"
@@ -385,13 +385,13 @@ msgstr "Очисти обавјештења"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Подеси обавјештења и радње догађаја..."
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:121
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:127
 #, fuzzy, kde-format
 #| msgctxt "minutes ago, keep short"
 #| msgid "%1 min ago"
@@ -404,7 +404,7 @@ msgstr[1] "пре %1 мин."
 msgstr[2] "пре %1 мин."
 msgstr[3] "пре %1 мин."
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:161
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completion"
 #| msgid "%1 (%2 remaining)"
@@ -416,7 +416,7 @@ msgstr[1] "%1 (још %2)"
 msgstr[2] "%1 (још %2)"
 msgstr[3] "%1 (још %2)"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:165
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completion"
 #| msgid "%1 (%2 remaining)"
@@ -428,7 +428,7 @@ msgstr[1] "%1 (још %2)"
 msgstr[2] "%1 (још %2)"
 msgstr[3] "%1 (још %2)"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:170
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completion"
 #| msgid "%1 (%2 remaining)"
@@ -440,23 +440,23 @@ msgstr[1] "%1 (још %2)"
 msgstr[2] "%1 (још %2)"
 msgstr[3] "%1 (још %2)"
 
-#: package/contents/ui/NotificationHeader.qml:189
+#: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:206
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:207
+#: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:230
+#: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
 msgstr ""

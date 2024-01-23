@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-22 03:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -45,20 +45,20 @@ msgid "Caps Lock is on"
 msgstr "El bloqueo de mayúsculas está activado"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:167
+#: contents/logout/Logout.qml:169
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Reposo"
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
 #, kde-format
 msgid "Restart"
 msgstr "Reiniciar"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:214
 #, kde-format
 msgid "Shut Down"
 msgstr "Apagar"
@@ -130,7 +130,7 @@ msgstr "Desbloqueo fallido"
 msgid "Sleep"
 msgstr "Reposo"
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernar"
@@ -152,12 +152,12 @@ msgstr "Cambiar distribución"
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: contents/lockscreen/MainBlock.qml:155
+#: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(o escanee su huella digital en el lector)"
 
-#: contents/lockscreen/MainBlock.qml:159
+#: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
 msgstr "(o escanee su tarjeta inteligente)"
@@ -202,25 +202,25 @@ msgstr[1] ""
 "%1 usuarios han iniciado sesión. Si apaga el equipo o lo reinicia, dichos "
 "usuarios pueden perder su trabajo."
 
-#: contents/logout/Logout.qml:156
+#: contents/logout/Logout.qml:157
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Cuando reinicie el equipo, entrará en la pantalla de configuración del "
 "firmware."
 
-#: contents/logout/Logout.qml:187
+#: contents/logout/Logout.qml:189
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr "Instalar actualizaciones y reiniciar"
 
-#: contents/logout/Logout.qml:223
+#: contents/logout/Logout.qml:225
 #, kde-format
 msgid "Log Out"
 msgstr "Cerrar sesión"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
@@ -228,33 +228,33 @@ msgstr[0] "Instalando actualizaciones del software y reiniciando en 1 segundo"
 msgstr[1] ""
 "Instalando actualizaciones del software y reiniciando en %1 segundos"
 
-#: contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Reinicio en 1 segundo"
 msgstr[1] "Reinicio en %1 segundos"
 
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:252
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Apagado en 1 segundo"
 msgstr[1] "Apagado en %1 segundos"
 
-#: contents/logout/Logout.qml:252
+#: contents/logout/Logout.qml:254
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Cierre de sesión en 1 segundo"
 msgstr[1] "Cierre de sesión en %1 segundos"
 
-#: contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:266
 #, kde-format
 msgid "OK"
 msgstr "Aceptar"
 
-#: contents/logout/Logout.qml:275
+#: contents/logout/Logout.qml:278
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"

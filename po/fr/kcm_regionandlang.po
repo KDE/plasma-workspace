@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-02-14 21:31+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -298,7 +298,7 @@ msgstr "Inconnu"
 msgid "Default for System"
 msgstr "Valeur par défaut du système"
 
-#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
+#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:271
 #, kde-format
 msgid "Default"
 msgstr "Par défaut"
@@ -431,43 +431,43 @@ msgstr ""
 "Ajouter des langues dans l'ordre dans lequel vous voulez les voir dans vos "
 "applications."
 
-#: ui/AdvancedLanguageSelectPage.qml:85
+#: ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Changer de langue"
 
-#: ui/AdvancedLanguageSelectPage.qml:89
+#: ui/AdvancedLanguageSelectPage.qml:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Changer de langue"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Déplacer vers le haut"
 
-#: ui/AdvancedLanguageSelectPage.qml:106
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Supprimer"
 
-#: ui/AdvancedLanguageSelectPage.qml:119
+#: ui/AdvancedLanguageSelectPage.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Aucune langue configurée"
 
-#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
+#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Ajouter des langues"
 
-#: ui/AdvancedLanguageSelectPage.qml:178
+#: ui/AdvancedLanguageSelectPage.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

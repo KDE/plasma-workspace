@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-17 14:40+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -85,12 +85,12 @@ msgstr "Noņemt visus"
 msgid "Click to safely remove all devices"
 msgstr "Spiediet, lai droši izņemtu visas iekārtas"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Noņemamas ierīces nav pievienotas"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
 msgstr "Nav pieejamu disku"

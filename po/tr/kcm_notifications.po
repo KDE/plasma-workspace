@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-04 20:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -62,12 +62,12 @@ msgid ""
 msgstr ""
 "Bu uygulama, bildirimlerin olay bazında yapılandırılmasını desteklemiyor."
 
-#: ui/ApplicationConfiguration.qml:261
+#: ui/ApplicationConfiguration.qml:263
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "İletiyi bir açılır pencerede göster"
 
-#: ui/ApplicationConfiguration.qml:270
+#: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
 msgstr "Bir ses çal"

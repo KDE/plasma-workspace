@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -60,12 +60,12 @@ msgid ""
 "basis"
 msgstr "Tato aplikace nepodporuje nastavení upozornění podle událostí"
 
-#: ui/ApplicationConfiguration.qml:261
+#: ui/ApplicationConfiguration.qml:263
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Zobrazit zprávu ve vyskakovacím okně"
 
-#: ui/ApplicationConfiguration.qml:270
+#: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
 msgstr "Přehrát zvuk"

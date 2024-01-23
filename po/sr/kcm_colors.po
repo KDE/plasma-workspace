@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1354,21 +1354,21 @@ msgstr ""
 msgid "Window Title"
 msgstr "Текст прозора"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Текст прозора"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "дугме"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1376,7 +1376,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "веза"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1384,52 +1384,52 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посећено"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Обичан текст"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "текст посећеног"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Искључено"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "Get &New Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Добави &нову шему"
 
 # >> @title:window
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Уписивање шеме боја"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Увези шему боја"
 
 # >> @title:window
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Уписивање шеме боја"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

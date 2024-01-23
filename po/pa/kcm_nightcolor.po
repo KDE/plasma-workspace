@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 17:48-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -47,12 +47,12 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "ਨਕਸ਼ੇ ਉੱਤੇ ਆਪਣਾ ਟਿਕਾਣਾ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
 
-#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
+#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
 #, kde-format
 msgid "Zoom in"
 msgstr "ਜ਼ੂਮ ਇਨ"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:223
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -66,13 +66,13 @@ msgstr ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link> ਰਾਹੀਂ ਸੋਧਿਆ ਗਿਆ"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:236
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "ਵਿਥਕਾਰ:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:263
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
@@ -83,76 +83,76 @@ msgstr "ਲੰਬਕਾਰ:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "ਨੀਲੀ ਰੋਸ਼ਨੀ ਦੇ ਫਿਲਟਰ ਸਕਰੀਨ ਦੇ ਰੰਗਾਂ ਨੂੰ ਨਿੱਘਾ ਬਣਾਉਂਦੇ ਹਨ।"
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Switching times:"
 msgstr "ਬਦਲਣ ਦੇ ਵੇਲੇ:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgid "Always off"
 msgstr "ਹਮੇਸ਼ਾ ਬੰਦ"
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "ਮੌਜੂਦਾ ਟਿਕਾਣੇ ਮੁਤਾਬਕ ਸੂਰਜ-ਛਿਪਣ ਅਤੇ ਸੂਰਜ-ਚੜ੍ਹਨ"
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "ਖੁਦ ਚੁਣੇ ਟਿਕਾਣੇ ਮੁਤਾਬਕ ਸੂਰਜ-ਛਿਪਣ ਤੋਂ ਸੂਰਜ-ਚੜ੍ਹਨ"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Custom times"
 msgstr "ਪਸੰਦੀਦਾ ਵੇਲੇ"
 
-#: ui/main.qml:160
+#: ui/main.qml:161
 #, kde-format
 msgid "Always on night light"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਹਮੇਸ਼ਾ ਚਾਲੂ"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "Day light temperature:"
 msgstr "ਦਿਨ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
 
-#: ui/main.qml:226 ui/main.qml:285
+#: ui/main.qml:227 ui/main.qml:289
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:230 ui/main.qml:289
+#: ui/main.qml:232 ui/main.qml:294
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "ਠੰਢਾ (ਕੋਈ ਫਿਲਟਰ ਨਹੀਂ)"
 
-#: ui/main.qml:236 ui/main.qml:295
+#: ui/main.qml:239 ui/main.qml:301
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "ਨਿੱਘਾ"
 
-#: ui/main.qml:242
+#: ui/main.qml:246
 #, kde-format
 msgid "Night light temperature:"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
 
-#: ui/main.qml:304
+#: ui/main.qml:311
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "ਮੌਜੂਦਾ ਟਿਕਾਣਾ:"
 
-#: ui/main.qml:310
+#: ui/main.qml:317
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "ਵਿਥਕਾਰ: %1° ਲੰਬਕਾਰ: %2°"
 
-#: ui/main.qml:331
+#: ui/main.qml:339
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -164,44 +164,44 @@ msgstr ""
 "services.mozilla.com'>Mozilla ਟਿਕਾਣਾ ਸੇਵਾ</link> ਨੂੰ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ ਨਿਯਮਤ ਰੂਪ ਭੇਜ "
 "ਕੇ ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ।"
 
-#: ui/main.qml:349
+#: ui/main.qml:357
 #, kde-format
 msgid "Begin night light at:"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਸ਼ੁਰੂ ਕਰੋ:"
 
-#: ui/main.qml:362 ui/main.qml:385
+#: ui/main.qml:370 ui/main.qml:393
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "ਇਨਪੁਟ ਫਾਰਮੈਟ: HH:MM"
 
-#: ui/main.qml:372
+#: ui/main.qml:380
 #, kde-format
 msgid "Begin day light at:"
 msgstr "ਦਿਨ ਦੇ ਰੰਗ ਸ਼ੁਰੂ ਕਰੋ:"
 
-#: ui/main.qml:394
+#: ui/main.qml:402
 #, kde-format
 msgid "Transition duration:"
 msgstr "ਬਦਲਾਅ ਅੰਤਰਾਲ:"
 
-#: ui/main.qml:403
+#: ui/main.qml:411
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 ਮਿੰਟ"
 msgstr[1] "%1 ਮਿੰਟ"
 
-#: ui/main.qml:416
+#: ui/main.qml:424
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "ਇਨਪੁੱਟ ਮਿੰਟ - ਘੱਟੋ-ਘੱਟ 1, ਵੱਧ ਤੋਂ ਵੱਧ 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:442
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "ਗ਼ਲਤੀ: ਬਦਲਾਅ ਸਮੇਂ ਇੱਕ ਦੂਜੇ ਉੱਤੇ ਹਨ।"
 
-#: ui/main.qml:456
+#: ui/main.qml:465
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -1312,70 +1312,70 @@ msgstr ""
 msgid "Window Title"
 msgstr ""
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr ""
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr ""
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ligam"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr ""
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr ""
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Desactivat"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "&Save..."
 msgid "Edit Color Scheme…"
 msgstr "&Enregistrar..."
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "&Save..."
 msgid "Remove Color Scheme"
 msgstr "&Enregistrar..."
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "&Save..."
 msgid "Restore Color Scheme"
 msgstr "&Enregistrar..."
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, fuzzy, kde-format
 #| msgid "&Save..."
 msgid "Open Color Scheme"
 msgstr "&Enregistrar..."
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 17:52-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -52,12 +52,12 @@ msgstr ""
 msgid "Plasma"
 msgstr "ਪਲਾਜ਼ਮਾ"
 
-#: ui/main.qml:134
+#: ui/main.qml:135
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "ਹੇਠ ਦਿੱਤੀ ਜਾਣਕਾਰੀ ਭੇਜੀ ਜਾਵੇਗੀ:"
 
-#: ui/main.qml:179
+#: ui/main.qml:182
 #, kde-format
 msgid "View sent data:"
 msgstr "ਭੇਜਿਆ ਡਾਟਾ ਵੇਖੋ:"

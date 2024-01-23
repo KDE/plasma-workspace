@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-16 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-09-17 13:01+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -61,12 +61,12 @@ msgid ""
 "basis"
 msgstr "Ten program nie obsługuje ustawiania powiadomień na podstawie zdarzeń"
 
-#: ui/ApplicationConfiguration.qml:261
+#: ui/ApplicationConfiguration.qml:263
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Pokaż wiadomość w oknie wysuwnym"
 
-#: ui/ApplicationConfiguration.qml:270
+#: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
 msgstr "Odtwórz &dźwięk"

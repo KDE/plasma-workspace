@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-08-09 08:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -187,7 +187,7 @@ msgstr "Оформление на работния плот"
 msgid "Titlebar Buttons layout"
 msgstr "Оформление на бутоните на заглавната лента"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -196,62 +196,62 @@ msgstr ""
 "Прилагането на оформление на работен плот замества текущата конфигурация на "
 "работните плотове, панелите и уиджетите."
 
-#: ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Настройки на външен вид:"
 
-#: ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "Цветове"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "Стил на приложения"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Стил на декорации на прозорци"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Размер на декорации на прозорци"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "Икони"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Стил на Plasma"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "Курсори"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "Шрифтове"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "Превключване на задачи"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "Начален екран"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "Заключване на екрана"
@@ -261,29 +261,29 @@ msgstr "Заключване на екрана"
 msgid "The following will be applied by this Global Theme:"
 msgstr "Следните настройки ще се приложат от тази глобална тема:"
 
-#: ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "Настройки на външен вид"
 
-#: ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Настройки на външен вид"
 
-#: ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:47
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Оформление на работния плот и прозорците"
 
-#: ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:54
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Оформление на работния плот и прозорците"
 
-#: ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

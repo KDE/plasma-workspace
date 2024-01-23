@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2008-12-21 16:09+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -1357,75 +1357,75 @@ msgstr ""
 msgid "Window Title"
 msgstr "Текст во прозорец"
 
-#: ui/main.qml:214
+#: ui/main.qml:215
 #, fuzzy, kde-format
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Текст во прозорец"
 
-#: ui/main.qml:221
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgid "Button"
 msgid "Button"
 msgstr "Копче"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "врска"
 
-#: ui/main.qml:263
+#: ui/main.qml:265
 #, fuzzy, kde-format
 #| msgid "visited"
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посетено"
 
-#: ui/main.qml:271
+#: ui/main.qml:273
 #, fuzzy, kde-format
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Нормален текст"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Текст за посетени"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Оневозможено"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Внесување шема..."
 
-#: ui/main.qml:309
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Зачувување шема со бои"
 
-#: ui/main.qml:316
+#: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Внесување шема со бои"
 
-#: ui/main.qml:360
+#: ui/main.qml:362
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Зачувување шема со бои"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

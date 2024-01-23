@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-11 23:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -49,7 +49,7 @@ msgctxt ""
 msgid "Name:"
 msgstr "Ad:"
 
-#: ui/entry.qml:57
+#: ui/entry.qml:58
 #, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
@@ -57,7 +57,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Durum:"
 
-#: ui/entry.qml:62
+#: ui/entry.qml:64
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -65,24 +65,24 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr "Son etkinleştirme:"
 
-#: ui/entry.qml:71
+#: ui/entry.qml:74
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
 msgstr "Durdur"
 
-#: ui/entry.qml:71
+#: ui/entry.qml:74
 #, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "Başlat"
 
-#: ui/entry.qml:105
+#: ui/entry.qml:109
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr "Günlükler yüklenemiyor. Yenilemeyi deneyin."
 
-#: ui/entry.qml:109
+#: ui/entry.qml:113
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"

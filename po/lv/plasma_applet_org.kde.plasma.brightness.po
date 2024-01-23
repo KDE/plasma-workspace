@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-20 01:35+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-17 14:24+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: package/contents/ui/BrightnessItem.qml:70
+#: package/contents/ui/BrightnessItem.qml:71
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -68,95 +68,95 @@ msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
 msgstr "Konfigurēt nakts gaismu..."
 
-#: package/contents/ui/NightColorItem.qml:74
+#: package/contents/ui/NightColorItem.qml:75
 #, kde-format
 msgctxt "Night light status"
 msgid "Off"
 msgstr "Izslēgta"
 
-#: package/contents/ui/NightColorItem.qml:77
+#: package/contents/ui/NightColorItem.qml:78
 #, kde-format
 msgctxt "Night light status"
 msgid "Unavailable"
 msgstr "Nav pieejama"
 
-#: package/contents/ui/NightColorItem.qml:80
+#: package/contents/ui/NightColorItem.qml:81
 #, kde-format
 msgctxt "Night light status"
 msgid "Not enabled"
 msgstr "Nav ieslēgta"
 
-#: package/contents/ui/NightColorItem.qml:83
+#: package/contents/ui/NightColorItem.qml:84
 #, kde-format
 msgctxt "Night light status"
 msgid "Not running"
 msgstr "Nav palaista"
 
-#: package/contents/ui/NightColorItem.qml:86
+#: package/contents/ui/NightColorItem.qml:87
 #, kde-format
 msgctxt "Night light status"
 msgid "On"
 msgstr "Ieslēgta"
 
-#: package/contents/ui/NightColorItem.qml:89
+#: package/contents/ui/NightColorItem.qml:90
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
 msgstr "Rīta pāreja"
 
-#: package/contents/ui/NightColorItem.qml:91
+#: package/contents/ui/NightColorItem.qml:92
 #, kde-format
 msgctxt "Night light phase"
 msgid "Day"
 msgstr "Diena"
 
-#: package/contents/ui/NightColorItem.qml:93
+#: package/contents/ui/NightColorItem.qml:94
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
 msgstr "Vakara pāreja"
 
-#: package/contents/ui/NightColorItem.qml:95
+#: package/contents/ui/NightColorItem.qml:96
 #, kde-format
 msgctxt "Night light phase"
 msgid "Night"
 msgstr "Nakts"
 
-#: package/contents/ui/NightColorItem.qml:105
+#: package/contents/ui/NightColorItem.qml:107
 #, kde-format
 msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
 msgstr "%1K"
 
-#: package/contents/ui/NightColorItem.qml:139
+#: package/contents/ui/NightColorItem.qml:142
 #, kde-format
 msgid "Configure…"
 msgstr "Konfigurēt..."
 
-#: package/contents/ui/NightColorItem.qml:139
+#: package/contents/ui/NightColorItem.qml:142
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "Ieslēgt un konfigurēt..."
 
-#: package/contents/ui/NightColorItem.qml:165
+#: package/contents/ui/NightColorItem.qml:168
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "Pāreja uz dienu ir pabeigta:"
 
-#: package/contents/ui/NightColorItem.qml:167
+#: package/contents/ui/NightColorItem.qml:170
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "Pāreja uz nakti ir ieplānota:"
 
-#: package/contents/ui/NightColorItem.qml:169
+#: package/contents/ui/NightColorItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "Pāreja uz nakti ir pabeigta:"
 
-#: package/contents/ui/NightColorItem.qml:171
+#: package/contents/ui/NightColorItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2021-09-07 22:06-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -43,20 +43,20 @@ msgid "Caps Lock is on"
 msgstr "Тугмаи Caps Lock фаъол аст"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:167
+#: contents/logout/Logout.qml:169
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ба хоб равондан"
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
 #, kde-format
 msgid "Restart"
 msgstr "Аз нав оғоз кардани низом"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:214
 #, kde-format
 msgid "Shut Down"
 msgstr "Хомӯш кардани низом"
@@ -131,7 +131,7 @@ msgstr "Кушодани қулф қатъ шуд"
 msgid "Sleep"
 msgstr "Ба хоб равондан"
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:177
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
 #, kde-format
 msgid "Hibernate"
 msgstr "Дар ҳолати ҷорӣ нигоҳ доштан"
@@ -153,12 +153,12 @@ msgstr "Иваз кардани тарҳбандӣ"
 msgid "Unlock"
 msgstr "Кушодани қулф"
 
-#: contents/lockscreen/MainBlock.qml:155
+#: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr ""
 
-#: contents/lockscreen/MainBlock.qml:159
+#: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
 msgstr ""
@@ -205,58 +205,58 @@ msgstr[1] ""
 "хомӯш кунед ё аз нав оғоз намоед, фаъолиятии ҷории он корбарон метавонад "
 "қатъ карда шавад."
 
-#: contents/logout/Logout.qml:156
+#: contents/logout/Logout.qml:157
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Вақте ки низом аз нав оғоз карда мешавад, компютер ба экрани танзимоти "
 "миёнафзор ворид карда мешавад."
 
-#: contents/logout/Logout.qml:187
+#: contents/logout/Logout.qml:189
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:223
+#: contents/logout/Logout.qml:225
 #, kde-format
 msgid "Log Out"
 msgstr "Баромадан аз низом"
 
-#: contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:249
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Баъд аз 1 сония низом аз нав оғоз карда мешавад"
 msgstr[1] "Баъд аз %1 сония низом аз нав оғоз карда мешавад"
 
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:252
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Баъд аз 1 сония низом хомӯш карда мешавад"
 msgstr[1] "Баъд аз %1 сония низом хомӯш карда мешавад"
 
-#: contents/logout/Logout.qml:252
+#: contents/logout/Logout.qml:254
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Баъд аз 1 сония низом хориҷ карда мешавад"
 msgstr[1] "Баъд аз %1 сония низом хориҷ карда мешавад"
 
-#: contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:266
 #, kde-format
 msgid "OK"
 msgstr "ХУБ"
 
-#: contents/logout/Logout.qml:275
+#: contents/logout/Logout.qml:278
 #, kde-format
 msgid "Cancel"
 msgstr "Бекор кардан"

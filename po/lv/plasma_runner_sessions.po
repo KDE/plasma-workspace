@@ -173,7 +173,7 @@ msgstr ""
 "ierakstīšanās ekrāns un pašreizējā sesija tiks paslēpta.</p><p>Starp "
 "darbvirsmas sesijām varat pārslēgties, izmantojot:</p><ul><li>Ctrl+Alt"
 "+F{sesiju numuri}</li><li>„Plasma“ meklētāju (rakstiet „%1“)</li><li>Plasma "
-"logdaļas (piemēram, programmu palaidēju)</li></ul"
+"logdaļas (piemēram, programmu palaidēju)</li></ul>"
 
 #: sessionrunner.cpp:246
 #, kde-format

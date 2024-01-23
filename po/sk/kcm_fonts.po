@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-04-16 18:34+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr "Vynechať rozsah z vyhladzovania"
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 bod"
@@ -285,13 +285,13 @@ msgstr "%1 bod"
 msgid "to"
 msgstr " do "
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Typ sub-pixelového vykresľovania: "
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -314,13 +314,13 @@ msgstr ""
 "objednávky nie sú touto funkciou podporované. </para> Toto nefunguje s CRT "
 "monitormi."
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Štýl hintingu: "
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -334,12 +334,12 @@ msgstr ""
 "náznaky zvyčajne vedú k ostrejším okrajom, ale malé písmená sa pri veľkých "
 "veľkostiach menej podobajú svojmu tvaru."
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Vynútiť DPI písiem:"
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -358,7 +358,7 @@ msgstr ""
 "posúvač zmeny mierky na stránke <interface>Zobrazenie a monitor</interface>."
 "</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr "Vybrať písmo"

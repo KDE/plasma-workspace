@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-09-27 17:14+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -192,7 +192,7 @@ msgstr "Tataletak Desktop"
 msgid "Titlebar Buttons layout"
 msgstr ""
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
 #, fuzzy, kde-format
 #| msgid ""
 #| "Applying a Desktop layout replaces your current configuration of "
@@ -204,64 +204,64 @@ msgstr ""
 "Menerapkan tataletak Desktop menggantikan konfigurasi desktop, panel, dan "
 "widget Anda saat ini"
 
-#: ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Pengaturan penampilan:"
 
-#: ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "Warna"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "Gaya Aplikasi"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:61
 #, fuzzy, kde-format
 #| msgid "Window Decorations"
 msgid "Window Decoration Style"
 msgstr "Dekorasi Jendela"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:62
 #, fuzzy, kde-format
 #| msgid "Window Decorations"
 msgid "Window Decoration Size"
 msgstr "Dekorasi Jendela"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "Ikon"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Gaya Plasma"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "Kursor"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "Font"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "Pengalih Tugas"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "Layar Splash"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "Layar Penguncian"
@@ -271,24 +271,24 @@ msgstr "Layar Penguncian"
 msgid "The following will be applied by this Global Theme:"
 msgstr "Hal-hal berikut akan diterapkan oleh Tema Global ini:"
 
-#: ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "Pengaturan penampilan"
 
-#: ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Pengaturan penampilan"
 
-#: ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:47
 #, fuzzy, kde-format
 #| msgid "Desktop layout"
 msgid "Desktop and window layout"
 msgstr "Tataletak Desktop"
 
-#: ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:54
 #, fuzzy, kde-format
 #| msgctxt "List item"
 #| msgid "• Desktop layout"
@@ -296,7 +296,7 @@ msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Tataletak Desktop"
 
-#: ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

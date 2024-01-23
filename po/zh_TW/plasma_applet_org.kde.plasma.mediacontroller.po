@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-26 01:34+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-20 03:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -33,52 +33,52 @@ msgid "No media playing"
 msgstr "沒有播放任何媒體"
 
 #: package/contents/ui/ExpandedRepresentation.qml:383
-#: package/contents/ui/ExpandedRepresentation.qml:505
+#: package/contents/ui/ExpandedRepresentation.qml:506
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:533
+#: package/contents/ui/ExpandedRepresentation.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "隨機播放"
 
-#: package/contents/ui/ExpandedRepresentation.qml:557
+#: package/contents/ui/ExpandedRepresentation.qml:559
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "前一軌"
 
-#: package/contents/ui/ExpandedRepresentation.qml:579
+#: package/contents/ui/ExpandedRepresentation.qml:581
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "暫停"
 
-#: package/contents/ui/ExpandedRepresentation.qml:579
+#: package/contents/ui/ExpandedRepresentation.qml:581
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "播放"
 
-#: package/contents/ui/ExpandedRepresentation.qml:597
+#: package/contents/ui/ExpandedRepresentation.qml:599
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "下一軌"
 
-#: package/contents/ui/ExpandedRepresentation.qml:620
+#: package/contents/ui/ExpandedRepresentation.qml:622
 #, kde-format
 msgid "Repeat Track"
 msgstr "下一軌"
 
-#: package/contents/ui/ExpandedRepresentation.qml:620
+#: package/contents/ui/ExpandedRepresentation.qml:622
 #, kde-format
 msgid "Repeat"
 msgstr "重複播放"

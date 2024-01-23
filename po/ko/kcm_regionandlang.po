@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-02-28 23:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -297,7 +297,7 @@ msgstr "알 수 없음"
 msgid "Default for System"
 msgstr "시스템 기본값"
 
-#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
+#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:271
 #, kde-format
 msgid "Default"
 msgstr "기본값"
@@ -426,43 +426,43 @@ msgstr "\"%1\" 언어는 지원하지 않음"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "앱에서 사용할 순서대로 언어를 추가하십시오."
 
-#: ui/AdvancedLanguageSelectPage.qml:85
+#: ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "언어 변경"
 
-#: ui/AdvancedLanguageSelectPage.qml:89
+#: ui/AdvancedLanguageSelectPage.qml:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "언어 변경"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "맨 위로 이동"
 
-#: ui/AdvancedLanguageSelectPage.qml:106
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "삭제"
 
-#: ui/AdvancedLanguageSelectPage.qml:119
+#: ui/AdvancedLanguageSelectPage.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "설정한 언어 없음"
 
-#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
+#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "언어 추가"
 
-#: ui/AdvancedLanguageSelectPage.qml:178
+#: ui/AdvancedLanguageSelectPage.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-15 18:52+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -55,12 +55,12 @@ msgstr ""
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:134
+#: ui/main.qml:135
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Nosūtīta tiks šāda informācija:"
 
-#: ui/main.qml:179
+#: ui/main.qml:182
 #, kde-format
 msgid "View sent data:"
 msgstr "Aplūkot nosūtītos datus:"

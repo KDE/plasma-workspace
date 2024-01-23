@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2022-10-18 13:15+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -266,7 +266,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr "Bu aralıqda olanlar hamarlanmasın"
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
@@ -276,13 +276,13 @@ msgstr "%1 pt"
 msgid "to"
 msgstr "-"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Alt-piksel görüntülənməsi:"
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -305,13 +305,13 @@ msgstr ""
 "bəzi ekzotik sıralamalar bu funksiya tərəfindən dəstəklənmir. </para>Bu CRT "
 "monitorlarda işləmir."
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Kölgələmə üsulu:"
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -326,12 +326,12 @@ msgstr ""
 "əmələ gətirir, ancaq kiçik hərflər özlərinin böyük boydakı şəkillərinə daha "
 "az bənzəyəcəkdir."
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Başqa məcburi DPI:"
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -350,7 +350,7 @@ msgstr ""
 "dəyişin. Hər şeyin miqyasını dəyişmək üçün <interface>Ekran və Monitor</"
 "interface> səhifəsində miqyaslama çubuğundan istifadə edin.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr "Şrift seçimi"

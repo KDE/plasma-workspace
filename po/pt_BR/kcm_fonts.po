@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 14:11-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr "Excluir faixa do anti-aliasing"
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
@@ -287,13 +287,13 @@ msgstr "%1 pt"
 msgid "to"
 msgstr " até "
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Renderização de subpixel:"
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +316,13 @@ msgstr ""
 "ordens exóticas não são suportadas por este recurso. </para> Isto não "
 "funciona com monitores CRT."
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -336,12 +336,12 @@ msgstr ""
 "pequenos. Sugestões mais fortes geralmente levam a bordas mais nítidas, mas "
 "as letras pequenas se parecem menos com sua forma em tamanhos grandes."
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forçar DPI das fontes:"
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -359,7 +359,7 @@ msgstr ""
 "altere o tamanho das fontes acima. Para escalar tudo, use o controle "
 "deslizante de escala na página <interface>Tela e monitor</interface>.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr "Selecionar fonte"

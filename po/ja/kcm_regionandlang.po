@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:42+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-21 19:58+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -296,7 +296,7 @@ msgstr "未知"
 msgid "Default for System"
 msgstr "システムのデフォルト"
 
-#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:270
+#: localelistmodel.cpp:33 localelistmodel.cpp:82 ui/main.qml:271
 #, kde-format
 msgid "Default"
 msgstr "デフォルト"
@@ -425,43 +425,43 @@ msgstr "言語 \"%1\" はサポートされていません。"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "言語を優先度が高い順に追加してください。"
 
-#: ui/AdvancedLanguageSelectPage.qml:85
+#: ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "言語を変更する"
 
-#: ui/AdvancedLanguageSelectPage.qml:89
+#: ui/AdvancedLanguageSelectPage.qml:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "言語を変更する"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "一番上に移動"
 
-#: ui/AdvancedLanguageSelectPage.qml:106
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "削除"
 
-#: ui/AdvancedLanguageSelectPage.qml:119
+#: ui/AdvancedLanguageSelectPage.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "設定された言語はありません"
 
-#: ui/AdvancedLanguageSelectPage.qml:150 ui/AdvancedLanguageSelectPage.qml:161
+#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "言語を追加"
 
-#: ui/AdvancedLanguageSelectPage.qml:178
+#: ui/AdvancedLanguageSelectPage.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-29 01:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-15 18:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -72,63 +72,63 @@ msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2年 %1"
 
-#: calendar/qml/MonthViewHeader.qml:113
+#: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Days"
 msgstr "日"
 
-#: calendar/qml/MonthViewHeader.qml:119
+#: calendar/qml/MonthViewHeader.qml:120
 #, kde-format
 msgid "Months"
 msgstr "月"
 
-#: calendar/qml/MonthViewHeader.qml:125
+#: calendar/qml/MonthViewHeader.qml:126
 #, kde-format
 msgid "Years"
 msgstr "年"
 
-#: calendar/qml/MonthViewHeader.qml:163
+#: calendar/qml/MonthViewHeader.qml:164
 #, kde-format
 msgid "Previous Month"
 msgstr "上個月"
 
-#: calendar/qml/MonthViewHeader.qml:165
+#: calendar/qml/MonthViewHeader.qml:166
 #, kde-format
 msgid "Previous Year"
 msgstr "前一年"
 
-#: calendar/qml/MonthViewHeader.qml:167
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Previous Decade"
 msgstr "前一個十年"
 
-#: calendar/qml/MonthViewHeader.qml:184
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "今天"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "重設行事曆到今天"
 
-#: calendar/qml/MonthViewHeader.qml:196
+#: calendar/qml/MonthViewHeader.qml:197
 #, kde-format
 msgid "Next Month"
 msgstr "下個月"
 
-#: calendar/qml/MonthViewHeader.qml:198
+#: calendar/qml/MonthViewHeader.qml:199
 #, kde-format
 msgid "Next Year"
 msgstr "下一年"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Next Decade"
 msgstr "下一個十年"
 
-#: calendar/qml/MonthViewHeader.qml:256
+#: calendar/qml/MonthViewHeader.qml:257
 #, kde-format
 msgid "Keep Open"
 msgstr "保持開啟"

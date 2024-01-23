@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Otvoriť s %1"
 msgid "Open with…"
 msgstr "Otvoriť s..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:268
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:269
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
@@ -255,37 +255,37 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:178
+#: package/contents/ui/JobItem.qml:179
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pozastaviť"
 
-#: package/contents/ui/JobItem.qml:188
+#: package/contents/ui/JobItem.qml:189
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "Skryť podrobnosti"
 
-#: package/contents/ui/JobItem.qml:200
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Zobraziť podrobnosti"
 
-#: package/contents/ui/JobItem.qml:232
+#: package/contents/ui/JobItem.qml:233
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "Viac možností..."
 
-#: package/contents/ui/JobItem.qml:260
+#: package/contents/ui/JobItem.qml:261
 #, kde-format
 msgid "Open"
 msgstr "Otvoriť"
@@ -345,13 +345,13 @@ msgstr "Vymazať všetky oznámenia"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Nastaviť pripomienky a akcie udalostí..."
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:121
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Práve teraz"
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:127
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -360,7 +360,7 @@ msgstr[0] "Pred %1 minútou"
 msgstr[1] "Pred %1 minútami"
 msgstr[2] "Pred %1 minútami"
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:161
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -369,7 +369,7 @@ msgstr[0] "Zostáva %1 sekunda"
 msgstr[1] "Zostávajú %1 sekundy"
 msgstr[2] "Zostáva %1 sekúnd"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:165
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -378,7 +378,7 @@ msgstr[0] "Zostáva %1 minúta"
 msgstr[1] "Zostávajú %1 minúty"
 msgstr[2] "Zostáva %1 minút"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:170
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -387,23 +387,23 @@ msgstr[0] "Zostáva %1 hodina"
 msgstr[1] "Zostávajú %1 hodiny"
 msgstr[2] "Zostáva %1 hodín"
 
-#: package/contents/ui/NotificationHeader.qml:189
+#: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
 msgstr "Nastaviť"
 
-#: package/contents/ui/NotificationHeader.qml:206
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Obnoviť"
 
-#: package/contents/ui/NotificationHeader.qml:207
+#: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
 msgstr "Minimalizovať"
 
-#: package/contents/ui/NotificationHeader.qml:230
+#: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
 msgstr "Zatvoriť"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-27 11:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,7 +49,7 @@ msgctxt ""
 msgid "Name:"
 msgstr "Nom:"
 
-#: ui/entry.qml:57
+#: ui/entry.qml:58
 #, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
@@ -57,7 +57,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Estat:"
 
-#: ui/entry.qml:62
+#: ui/entry.qml:64
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -65,24 +65,24 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr "Darrera activació el:"
 
-#: ui/entry.qml:71
+#: ui/entry.qml:74
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
 msgstr "Atura"
 
-#: ui/entry.qml:71
+#: ui/entry.qml:74
 #, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "Inicia"
 
-#: ui/entry.qml:105
+#: ui/entry.qml:109
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr "No s'han pogut activar els registres. Intenteu actualitzar."
 
-#: ui/entry.qml:109
+#: ui/entry.qml:113
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-21 14:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -50,12 +50,12 @@ msgstr ""
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:134
+#: ui/main.qml:135
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "将发送以下信息："
 
-#: ui/main.qml:179
+#: ui/main.qml:182
 #, kde-format
 msgid "View sent data:"
 msgstr "查看已发送数据："

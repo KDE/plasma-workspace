@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2021-09-09 12:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -270,7 +270,7 @@ msgstr ""
 msgid "Exclude range from anti-aliasing"
 msgstr "ആന്റി-ഏലിയാസിംഗിൽ നിന്നുള്ള ശ്രേണി ഒഴിവാക്കുക"
 
-#: ui/main.qml:233 ui/main.qml:256
+#: ui/main.qml:233 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
@@ -280,13 +280,13 @@ msgstr "%1 pt"
 msgid "to"
 msgstr "മുതൽ"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "ഉപ പിക്സൽ റെൻഡറിംഗ്:"
 
-#: ui/main.qml:321
+#: ui/main.qml:323
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -308,13 +308,13 @@ msgstr ""
 "<emphasis>ബിജിആർ</emphasis> ഉണ്ട്, കൂടാതെ ചില അസാധാരണ ഓർഡറുകൾക്ക് ഈ സവിശേഷത "
 "പിന്തുണയ്ക്കുന്നില്ല.</para>ഇത് സിആർടി മോണിറ്ററുകളിൽ പ്രവർത്തിക്കുന്നതല്ല."
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "ഹിന്റിങ് രീതി:"
 
-#: ui/main.qml:367
+#: ui/main.qml:370
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -328,12 +328,12 @@ msgstr ""
 "മൂർച്ചയുള്ള അരികുകളിലേക്ക് നയിക്കുന്നു, പക്ഷെ ചെറിയ അക്ഷരങ്ങൾ വലിയ വലുപ്പത്തിലെ അവയുടെ ആകൃതിയോട് "
 "സാമ്യം കുറവായിരിക്കും."
 
-#: ui/main.qml:380
+#: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
 msgstr "അക്ഷരസഞ്ചയങ്ങളുടെ ഡിപിഐ നിര്‍ബന്ധമായാക്കേണ്ടതു്:"
 
-#: ui/main.qml:408
+#: ui/main.qml:411
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -345,7 +345,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgid "Select Font"
 msgstr "അക്ഷരസഞ്ചയം തിരഞ്ഞെടുക്കുക"

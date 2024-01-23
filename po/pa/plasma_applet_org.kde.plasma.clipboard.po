@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-26 08:18-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr "QR ਕੋਡ ਕਿਸਮ ਬਦਲੋ"
 msgid "Creating QR code failed"
 msgstr "QR ਕੋਡ ਬਣਾਉਣ ਲਈ ਅਸਫ਼ਲ"
 
-#: contents/ui/BarcodePage.qml:147
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -126,7 +126,7 @@ msgstr "…ਕਲਿੱਪਬੋਰਡ ਦੀ ਸੰਰਚਨਾ"
 msgid "No matches"
 msgstr "ਕੋਈ ਮੇਲ ਨਹੀਂ"
 
-#: contents/ui/UrlItemDelegate.qml:106
+#: contents/ui/UrlItemDelegate.qml:107
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

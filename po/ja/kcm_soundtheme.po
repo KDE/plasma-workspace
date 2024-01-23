@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-14 12:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 23.08.4\n"
@@ -33,17 +33,16 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "通知音を有効化"
 
-#: ui/main.qml:90
-#, kde-format
+#: ui/main.qml:92
+#, fuzzy, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
 msgstr[0] "元のテーマ: %2"
-msgstr[1] "元のテーマ: %2"
 
-#: ui/main.qml:101
+#: ui/main.qml:104
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -51,19 +50,19 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "試聴:"
 
-#: ui/main.qml:115
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "サウンド \"%1\" を試聴"
 
-#: ui/main.qml:137
+#: ui/main.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "テーマ \"%1\" のデモサウンドを試聴"
 
-#: ui/main.qml:162
+#: ui/main.qml:166
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "サウンドの試聴に失敗しました: %1"

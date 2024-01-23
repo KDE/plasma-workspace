@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-13 14:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -193,55 +193,55 @@ msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr "Konfigūruoti programų paleidimo metu atvaizduojamas animacijas."
 
-#: ui/LaunchFeedbackDialog.qml:46
+#: ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "Žymeklio grįžtamasis ryšys:"
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "Nėra"
 
-#: ui/LaunchFeedbackDialog.qml:56
+#: ui/LaunchFeedbackDialog.qml:57
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "Statinis"
 
-#: ui/LaunchFeedbackDialog.qml:65
+#: ui/LaunchFeedbackDialog.qml:66
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "Mirkčiojantis"
 
-#: ui/LaunchFeedbackDialog.qml:74
+#: ui/LaunchFeedbackDialog.qml:75
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "Šokinėjantis"
 
-#: ui/LaunchFeedbackDialog.qml:89
+#: ui/LaunchFeedbackDialog.qml:90
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "Užduočių tvarkytuvės grįžtamasis ryšys:"
 
-#: ui/LaunchFeedbackDialog.qml:91
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "Įjungti animacijas"
 
-#: ui/LaunchFeedbackDialog.qml:110
+#: ui/LaunchFeedbackDialog.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "Stabdyti animacijas po:"
 
-#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -255,28 +255,28 @@ msgstr[3] "%1 sekundė"
 msgid "Size: %1"
 msgstr "Dydis: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigūruoti paleidimo grįžtamąjį ryšį…"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "&Install from File…"
 msgstr "Į&diegti iš failo…"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgid "&Get New…"
 msgstr "&Gauti naują…"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Open Theme"
 msgstr "Atverti apipavidalinimą"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Žymeklio apipavidalinimo failai (*.tar.gz *.tar.bz2)"

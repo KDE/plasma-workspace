@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:38+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -82,12 +82,12 @@ msgstr "എല്ലാം നീക്കം ചെയ്യുക"
 msgid "Click to safely remove all devices"
 msgstr "എല്ലാ ഉപകരണങ്ങളും സുരക്ഷിതമായി നീക്കംചെയ്യാൻ ക്ലിക്കുചെയ്യുക"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No removable devices attached"
 msgstr "നീക്കംചെയ്യാവുന്ന ഉപകരണങ്ങളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല"
 
-#: package/contents/ui/FullRepresentation.qml:185
+#: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
 msgstr "ഡിസ്കുകളൊന്നും ലഭ്യമല്ല"

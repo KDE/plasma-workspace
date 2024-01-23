@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -106,12 +106,12 @@ msgstr ""
 "Giờ bạn đã đổi mật khẩu đăng nhập, bạn có thể cũng sẽ muốn đổi mật khẩu ở "
 "KWallet mặc định của mình để khớp với nó."
 
-#: src/ui/ChangeWalletPassword.qml:30
+#: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
 msgid "What is KWallet?"
 msgstr "KWallet là cái gì?"
 
-#: src/ui/ChangeWalletPassword.qml:40
+#: src/ui/ChangeWalletPassword.qml:41
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -126,12 +126,12 @@ msgstr ""
 "thể được tự động mở khoá khi đăng nhập để bạn không cần phải tự mình nhập "
 "mật khẩu KWallet nữa."
 
-#: src/ui/ChangeWalletPassword.qml:56
+#: src/ui/ChangeWalletPassword.qml:58
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "Đổi mật khẩu của ví"
 
-#: src/ui/ChangeWalletPassword.qml:65
+#: src/ui/ChangeWalletPassword.qml:67
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "Giữ nguyên"
@@ -186,33 +186,33 @@ msgstr "Tạo"
 msgid "Configure Fingerprints"
 msgstr "Cấu hình dấu vân tay"
 
-#: src/ui/FingerprintDialog.qml:55
+#: src/ui/FingerprintDialog.qml:56
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Xoá hết"
 
-#: src/ui/FingerprintDialog.qml:62
+#: src/ui/FingerprintDialog.qml:63
 #, kde-format
 msgid "Add"
 msgstr "Thêm"
 
-#: src/ui/FingerprintDialog.qml:71
+#: src/ui/FingerprintDialog.qml:72
 #, kde-format
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: src/ui/FingerprintDialog.qml:79
+#: src/ui/FingerprintDialog.qml:80
 #, kde-format
 msgid "Done"
 msgstr "Xong"
 
-#: src/ui/FingerprintDialog.qml:103
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Thêm dấu vân tay"
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:114
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -221,7 +221,7 @@ msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:116
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -230,7 +230,7 @@ msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -239,7 +239,7 @@ msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:120
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -248,21 +248,12 @@ msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: src/ui/FingerprintDialog.qml:120
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
-
 #: src/ui/FingerprintDialog.qml:122
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:124
@@ -271,7 +262,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
+"Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:126
@@ -280,7 +271,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
+"Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:128
@@ -289,7 +280,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
+"Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:130
@@ -297,16 +288,16 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:132
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:136
@@ -315,7 +306,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:138
@@ -324,7 +315,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:140
@@ -333,7 +324,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:142
@@ -341,7 +332,8 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:144
@@ -349,8 +341,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:146
@@ -359,7 +350,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:148
@@ -368,7 +359,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:150
@@ -377,7 +368,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
 #: src/ui/FingerprintDialog.qml:152
@@ -385,30 +376,39 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 #| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
+
+#: src/ui/FingerprintDialog.qml:154
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: src/ui/FingerprintDialog.qml:167
+#: src/ui/FingerprintDialog.qml:170
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Dấu vân tay đã được thêm"
 
-#: src/ui/FingerprintDialog.qml:197
+#: src/ui/FingerprintDialog.qml:202
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Chọn một ngón tay để thêm dấu vân"
 
-#: src/ui/FingerprintDialog.qml:315
+#: src/ui/FingerprintDialog.qml:322
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Thêm lại dấu vân tay"
 
-#: src/ui/FingerprintDialog.qml:322
+#: src/ui/FingerprintDialog.qml:329
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Xoá dấu vân tay"
 
-#: src/ui/FingerprintDialog.qml:331
+#: src/ui/FingerprintDialog.qml:338
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Không thêm dấu vân tay nào"
@@ -551,25 +551,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:129
+#: src/ui/PicturesSheet.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Chọn tệp…"
 
-#: src/ui/PicturesSheet.qml:134
+#: src/ui/PicturesSheet.qml:135
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Chọn một ảnh"
 
-#: src/ui/PicturesSheet.qml:181
+#: src/ui/PicturesSheet.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:269
+#: src/ui/PicturesSheet.qml:271
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
