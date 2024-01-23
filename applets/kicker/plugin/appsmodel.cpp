@@ -44,6 +44,17 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
     if (!m_entryPath.isEmpty()) {
         componentComplete();
     }
+
+    if (m_entryPath.isEmpty()) {
+        m_changeTimer = new QTimer(this);
+        m_changeTimer->setSingleShot(true);
+        m_changeTimer->setInterval(100ms);
+        connect(m_changeTimer, SIGNAL(timeout()), this, SLOT(refresh()));
+
+        connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
+            m_changeTimer->start();
+        });
+    }
 }
 
 AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntriesOnDestruction, QObject *parent)
@@ -550,15 +561,6 @@ void AppsModel::refreshInternal()
         if (m_sorted) {
             sortEntries(m_entryList);
         }
-
-        m_changeTimer = new QTimer(this);
-        m_changeTimer->setSingleShot(true);
-        m_changeTimer->setInterval(100ms);
-        connect(m_changeTimer, SIGNAL(timeout()), this, SLOT(refresh()));
-
-        connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
-            m_changeTimer->start();
-        });
     } else {
         KServiceGroup::Ptr group = KServiceGroup::group(m_entryPath);
         processServiceGroup(group);
