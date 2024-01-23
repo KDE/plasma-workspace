@@ -149,7 +149,7 @@ private:
 
     void determineBackgroundType(KPackage::Package *package);
     void determineProviderType();
-    void processSource(KPackage::Package *package = nullptr);
+    void processSource(KPackage::Package *package = nullptr, bool doesBlockSignal = false);
 
     QUrl findPreferredImageInPackage(KPackage::Package &package);
     void updateModelImage(KPackage::Package *package, bool doesBlockSignal = false);

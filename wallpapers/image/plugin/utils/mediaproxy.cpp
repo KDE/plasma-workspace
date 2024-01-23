@@ -196,7 +196,7 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
 
     if (m_providerType == Provider::Type::Package) {
         // In case light and dark variants have different formats
-        processSource();
+        processSource(nullptr, true /* Immediately change the wallpaper */);
     }
 
     Q_EMIT colorSchemeChanged();
@@ -316,7 +316,7 @@ void MediaProxy::determineProviderType()
     }
 }
 
-void MediaProxy::processSource(KPackage::Package *package)
+void MediaProxy::processSource(KPackage::Package *package, bool doesBlockSignal)
 {
     if (!m_ready) {
         return;
@@ -330,10 +330,10 @@ void MediaProxy::processSource(KPackage::Package *package)
         KPackage::Package _package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
         _package.setPath(m_source.toLocalFile());
         determineBackgroundType(&_package);
-        updateModelImage(&_package);
+        updateModelImage(&_package, doesBlockSignal);
     } else {
         determineBackgroundType(package);
-        updateModelImage(package);
+        updateModelImage(package, doesBlockSignal);
     }
 }
 
