@@ -27,6 +27,7 @@
 #include <kwindowsystem.h>
 
 #include <Plasma/Containment>
+#include <PlasmaQuick/AppletPopup>
 #include <PlasmaQuick/AppletQuickItem>
 
 #include <LayerShellQt/Window>
@@ -1065,8 +1066,19 @@ bool PanelView::event(QEvent *e)
          * on the mouse edge, forward the click in the containment boundaries
          */
 
-    case QEvent::MouseMove:
     case QEvent::MouseButtonPress:
+        if (containment()) {
+            for (auto applet : containment()->applets()) {
+                auto appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
+                if (appletItem->fullRepresentation()) {
+                    auto appletPopup = qobject_cast<PlasmaQuick::AppletPopup *>(appletItem->fullRepresentationItem()->window());
+                    if (appletPopup && appletPopup->hideOnWindowDeactivate()) {
+                        appletItem->setExpanded(false);
+                    }
+                }
+            }
+        }
+    case QEvent::MouseMove:
     case QEvent::MouseButtonRelease: {
         QMouseEvent *me = static_cast<QMouseEvent *>(e);
 
