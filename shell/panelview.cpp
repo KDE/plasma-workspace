@@ -1231,7 +1231,7 @@ void PanelView::updateMask()
                                                  mask);
 
         if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
-            QRect screenPanelRect = geometryByDistance(m_distance).intersected(screen()->geometry());
+            QRect screenPanelRect = geometry().intersected(screen()->geometry());
             screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
             setMask(screenPanelRect);
         } else {
