@@ -427,7 +427,6 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
             });
         } else {
             KSycoca::self()->ensureCacheValid();
-            m_refilterOnDatabaseChange = false; // We have a direct connection, so onDatabaseChange will be called before this scope ends
         }
     });
     connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
