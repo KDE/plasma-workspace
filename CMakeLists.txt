@@ -7,6 +7,7 @@ list(GET VERSION_LIST 0 PROJECT_VERSION_MAJOR)
 list(GET VERSION_LIST 1 PROJECT_VERSION_MINOR)
 list(GET VERSION_LIST 2 PROJECT_VERSION_PATCH)
 
+set(PROJECT_DEP_VERSION "6.0.80")
 set(QT_MIN_VERSION "6.6.0")
 set(KF6_MIN_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
@@ -50,12 +51,12 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     CoreAddons KIO Prison Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
                     OPTIONAL_COMPONENTS DocTools)
-find_package(Plasma5Support ${PROJECT_VERSION} REQUIRED)
-find_package(Plasma ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaQuick ${PROJECT_VERSION} REQUIRED)
-find_package(KWayland ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaActivities ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaActivitiesStats ${PROJECT_VERSION} REQUIRED)
+find_package(Plasma5Support ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(KWayland ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
 
 if (BUILD_TESTING)
     include(ECMAddTests)
@@ -127,7 +128,7 @@ set_package_properties(Canberra PROPERTIES
     PURPOSE "Needed to preview notification sounds"
     TYPE REQUIRED)
 
-find_package(Breeze ${PROJECT_VERSION} CONFIG)
+find_package(Breeze ${PROJECT_DEP_VERSION} CONFIG)
 set_package_properties(Breeze PROPERTIES
                        TYPE OPTIONAL
                        PURPOSE "For setting the default window decoration plugin")
