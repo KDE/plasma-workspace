@@ -21,6 +21,7 @@ void messageBox(const QString &text);
 
 void createConfigDirectory();
 void runStartupConfig();
+void runKconfUpdate();
 void setupCursor(bool wayland);
 std::optional<QProcessEnvironment> getSystemdEnvironment();
 void importSystemdEnvrionment();

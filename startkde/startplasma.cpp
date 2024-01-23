@@ -189,6 +189,11 @@ void runStartupConfig()
     }
 }
 
+void runKconfUpdate()
+{
+    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF6 "/kconf_update"));
+}
+
 void setupCursor(bool wayland)
 {
 #ifdef XCURSOR_PATH

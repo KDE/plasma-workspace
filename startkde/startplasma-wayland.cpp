@@ -53,6 +53,7 @@ int main(int argc, char **argv)
             qCWarning(PLASMA_STARTUP) << "not a reply org.freedesktop.locale1" << resultMessage;
         }
     }
+    runKconfUpdate();
     runEnvironmentScripts();
 
     if (!qEnvironmentVariableIsSet("DBUS_SESSION_BUS_ADDRESS")) {
