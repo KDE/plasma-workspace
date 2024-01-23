@@ -1,4 +1,4 @@
-# Translation of soliduiserver5 to Norwegian Nynorsk
+# Translation of soliduiserver to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2007, 2008.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008.

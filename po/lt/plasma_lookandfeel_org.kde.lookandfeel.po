@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2022-11-18 01:15+0200\n"
+"PO-Revision-Date: 2024-01-23 00:38+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -155,12 +155,12 @@ msgstr "Atrakinti"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(arba nuskenuokite skaitytuvu savo piršto atspaudą)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(arba nuskenuokite savo lustinę kortelę)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -219,7 +219,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Įdiegti atnaujinimus ir paleisti iš naujo"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
@@ -231,9 +231,17 @@ msgstr "Atsijungti"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Įdiegiami programinės įrangos atnaujinimai ir po 1 sekundės kompiuteris "
+"paleidžiamas iš naujo"
 msgstr[1] ""
+"Įdiegiami programinės įrangos atnaujinimai ir po %1 sekundžių kompiuteris "
+"paleidžiamas iš naujo"
 msgstr[2] ""
+"Įdiegiami programinės įrangos atnaujinimai ir po %1 sekundžių kompiuteris "
+"paleidžiamas iš naujo"
 msgstr[3] ""
+"Įdiegiami programinės įrangos atnaujinimai ir po %1 sekundės kompiuteris "
+"paleidžiamas iš naujo"
 
 #: contents/logout/Logout.qml:248
 #, kde-format

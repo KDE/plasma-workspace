@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2022-12-28 02:47+0200\n"
+"PO-Revision-Date: 2024-01-23 00:51+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: kcm.cpp:73
 #, kde-format
@@ -50,33 +50,29 @@ msgid "Show notification badges"
 msgstr "Rodyti pranešimų ženklelius"
 
 #: ui/ApplicationConfiguration.qml:164
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Konfigūruoti įvykius…"
+msgstr "Konfigūruoti įvykius"
 
 #: ui/ApplicationConfiguration.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
 "Ši programa nepalaiko pranešimų konfigūravimo kiekvieno atskiro įvykio "
-"pagrindu."
+"pagrindu"
 
 #: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Rodyti žinutę iškylančiajame lange"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Atkurti garsą"
 
 #: ui/main.qml:41
 #, kde-format
@@ -269,22 +265,18 @@ msgid "System Services"
 msgstr "Sistemos tarnybos"
 
 #: ui/SourcesPage.qml:148
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Nei viena programa ar įvykis neatitinka jūsų paieškos užklausos."
+msgstr "Nei viena programa ar įvykis neatitinka jūsų paieškos užklausos"
 
 #: ui/SourcesPage.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Pasirinkite programą iš sąrašo, norėdami konfigūruoti jos pranešimų "
-"nuostatas ir elgseną."
+"nuostatas ir elgseną"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Konfigūruoti pranešimus"

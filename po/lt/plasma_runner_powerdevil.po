@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-11-18 00:54+0200\n"
+"PO-Revision-Date: 2024-01-23 00:36+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "maitinimas"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -61,12 +61,14 @@ msgstr "į diską"
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
 msgstr ""
+"mišrus miegas;misrus miegas;hibridinis miegas;hibrido miegas;mišrus "
+"pristabdymas;misrus pristabdymas;hibridinis pristabdymas"
 
 #: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "mišrus;misrus;hibridinis;hibrido"
 
 #: PowerDevilRunner.cpp:39 PowerDevilRunner.cpp:40 PowerDevilRunner.cpp:66
 #, kde-format
@@ -96,7 +98,7 @@ msgstr "Pristabdo sistemą į diską"
 #: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Pristabdo dabar ir pereina prie užmigdymo"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -157,12 +159,12 @@ msgstr "Pristabdyti į diską"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Mišrus miegas"
 
 #: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Pristabdyti dabar ir pereiti prie užmigdymo"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

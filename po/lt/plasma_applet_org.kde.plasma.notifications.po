@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2021-06-16 00:31+0300\n"
+"PO-Revision-Date: 2024-01-23 00:40+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -73,22 +73,19 @@ msgid "Notifications On"
 msgstr "Pranešimai įjungti"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link Address"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Kopijuoti nuorodos adresą"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Kopijuoti"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Žymėti viską"
@@ -132,7 +129,7 @@ msgstr "Kol nebus išjungta rankiniu būdu"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Automatiškai pasibaigs: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
@@ -262,12 +259,10 @@ msgid "%1/s"
 msgstr "%1/sek."
 
 #: package/contents/ui/JobItem.qml:164
-#, fuzzy, kde-format
-#| msgctxt "Row description, e.g. Source"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1:"
+msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:178
 #, kde-format
@@ -317,18 +312,16 @@ msgstr[3] "%1 vykdoma užduotis"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "%1 running job"
-#| msgid_plural "%1 running jobs"
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 vykdoma užduotis"
-msgstr[1] "%1 vykdomos užduotys"
-msgstr[2] "%1 vykdomų užduočių"
-msgstr[3] "%1 vykdoma užduotis"
+msgstr[0] "%1 vykdoma užduotis (%2%)"
+msgstr[1] "%1 vykdomos užduotys (%2%)"
+msgstr[2] "%1 vykdomų užduočių (%2%)"
+msgstr[3] "%1 vykdoma užduotis (%2%)"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -340,20 +333,24 @@ msgstr[2] "%1 neskaitytų pranešimų"
 msgstr[3] "%1 neskaitytas pranešimas"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Netrukdyti iki %1"
+msgstr ""
+"Netrukdyti iki %1; spustelėkite viduriniuoju pelės mygtuku norėdami dabar "
+"išeiti"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
+"Netrukdymo veiksena yra aktyvi; spustelėkite viduriniuoju pelės mygtuku "
+"norėdami išeiti"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
+"Spustelėkite viduriniuoju pelės mygtuku norėdami įjungti netrukdymo veikseną"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
@@ -366,9 +363,7 @@ msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfigūruoti pranešimus apie įvykius ir veiksmus…"
 
 #: package/contents/ui/NotificationHeader.qml:120
-#, fuzzy, kde-format
-#| msgctxt "notification was just added, keep short"
-#| msgid "Just now"
+#, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Ką tik"

@@ -1,4 +1,4 @@
-# Translation of kio5_applications to Northern Sami
+# Translation of kio_applications to Northern Sami
 #
 # Børre Gaup <boerre@skolelinux.no>, 2004, 2005.
 msgid ""

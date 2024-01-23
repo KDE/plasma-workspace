@@ -1,4 +1,4 @@
-# Translation of kio5_applications to Norwegian Bokmål
+# Translation of kio_applications to Norwegian Bokmål
 #
 # Knut Yrvin <knut.yrvin@gmail.com>, 2003, 2005.
 # Knut Erik Hollund <khollund@responze.net>, 2003.

@@ -74,7 +74,6 @@ msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
 msgstr[0] ""
-msgstr[1] ""
 
 #: contents/ui/main.qml:25
 #, kde-format
