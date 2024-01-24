@@ -40,10 +40,7 @@ Kirigami.OverlaySheet {
         EnrollComplete
     }
 
-    header: Kirigami.Heading {
-        level: 2
-        text: i18n("Configure Fingerprints")
-    }
+    title: i18n("Configure Fingerprints")
 
     footer: Kirigami.ActionToolBar {
         flat: false
