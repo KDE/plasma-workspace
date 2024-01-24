@@ -421,6 +421,7 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     });
 
     connect(this, &KRunner::AbstractRunner::prepare, this, [this]() {
+        m_matching = true;
         if (m_services.isEmpty()) {
             m_services = KApplicationTrader::query([](const KService::Ptr &service) {
                 return !service->noDisplay();
@@ -430,8 +431,7 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
         }
     });
     connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
-        // After the first match session, we can check for updates instead of always regenerating the services
-        m_refilterOnDatabaseChange = true;
+        m_matching = false;
     });
 }
 
@@ -441,10 +441,13 @@ void ServiceRunner::init()
 
     //  connect to the thread-local singleton here
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
-        if (m_refilterOnDatabaseChange) {
+        if (m_matching) {
             m_services = KApplicationTrader::query([](const KService::Ptr &service) {
                 return !service->noDisplay();
             });
+        } else {
+            // Invalidate for the next match session
+            m_services.clear();
         }
     });
 }
