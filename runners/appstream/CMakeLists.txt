@@ -12,4 +12,4 @@ ecm_qt_declare_logging_category(krunner_appstream
     DESCRIPTION "krunner appstream"
     EXPORT PLASMAWORKSPACE
 )
-target_link_libraries(krunner_appstream PUBLIC Qt::Gui KF6::Runner KF6::I18n KF6::Service AppStreamQt)
+target_link_libraries(krunner_appstream PUBLIC Qt::Gui KF6::Runner KF6::I18n KF6::Service KF6::KIOGui KF6::JobWidgets AppStreamQt)
