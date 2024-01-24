@@ -48,5 +48,5 @@ private:
     const ResultWatcher m_kactivitiesWatcher;
     const KActivities::Consumer m_activitiesConsuer;
     QList<KService::Ptr> m_services;
-    bool m_refilterOnDatabaseChange = false;
+    bool m_matching = false;
 };
