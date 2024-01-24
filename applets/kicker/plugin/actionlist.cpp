@@ -147,11 +147,11 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
     }
 
     if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-        if (!ContainmentInterface::hasLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-            QVariantMap addToTaskManagerAction =
-                Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("pin"), QStringLiteral("addToTaskManager"));
-            actionList << addToTaskManagerAction;
-        }
+        QVariantMap addToTaskManagerAction = Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("pin"), QStringLiteral("addToTaskManager"));
+        addToTaskManagerAction[QStringLiteral("checkable")] = true;
+        addToTaskManagerAction[QStringLiteral("checked")] =
+            ContainmentInterface::hasLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+        actionList << addToTaskManagerAction;
     } else if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
         QVariantMap addToPanelAction = Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("list-add"), QStringLiteral("addToPanel"));
         actionList << addToPanelAction;
@@ -178,7 +178,11 @@ bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, 
         return true;
     } else if (actionId == QLatin1String("addToTaskManager")) {
         if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+            if (ContainmentInterface::hasLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+                ContainmentInterface::removeLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+            } else {
+                ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+            }
         }
         return true;
     }

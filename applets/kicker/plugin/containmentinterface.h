@@ -38,6 +38,8 @@ public:
 
     static Q_INVOKABLE void addLauncher(QObject *appletInterface, Target target, const QString &entryPath);
 
+    static Q_INVOKABLE void removeLauncher(QObject *appletInterface, Target target, const QString &entryPath);
+
     static Q_INVOKABLE QObject *screenContainment(QObject *appletInterface);
     static Q_INVOKABLE bool screenContainmentMutable(QObject *appletInterface);
     static Q_INVOKABLE void ensureMutable(Plasma::Containment *containment);

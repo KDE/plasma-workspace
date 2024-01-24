@@ -201,6 +201,40 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
     }
 }
 
+void ContainmentInterface::removeLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
+{
+    // Only the task manager supports toggle-able launches
+    if (target != TaskManager) {
+        return;
+    }
+    if (!appletInterface) {
+        return;
+    }
+
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    Plasma::Containment *containment = applet->containment();
+
+    if (!containment) {
+        return;
+    }
+
+    if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
+        auto *taskManager = findTaskManagerApplet(containment);
+
+        if (!taskManager) {
+            return;
+        }
+
+        auto *taskManagerQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(taskManager);
+
+        if (!taskManagerQuickItem) {
+            return;
+        }
+
+        QMetaObject::invokeMethod(taskManagerQuickItem, "removeLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+    }
+}
+
 QObject *ContainmentInterface::screenContainment(QObject *appletInterface)
 {
     if (!appletInterface) {
