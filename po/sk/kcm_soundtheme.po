@@ -1,18 +1,19 @@
 # translation of kcm_soundtheme.po to Slovak
 # SPDX-FileCopyrightText: 2023 Roman Paholík <wizzardsk@gmail.com>
+# SPDX-FileCopyrightText: 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-09 09:38+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"PO-Revision-Date: 2024-01-23 22:19+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: kcm_soundtheme.cpp:111
@@ -30,7 +31,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "Povoliť zvuky notifikácií"
 
 #: ui/main.qml:90
 #, kde-format
@@ -49,7 +50,7 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr ""
+msgstr "Ukážka zvukov:"
 
 #: ui/main.qml:115
 #, kde-format
