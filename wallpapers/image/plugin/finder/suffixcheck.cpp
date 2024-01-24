@@ -14,8 +14,8 @@
 
 namespace
 {
-QStringList s_suffixes;
-std::once_flag s_onceFlag;
+constinit QStringList s_suffixes;
+constinit std::once_flag s_onceFlag;
 
 void fillSuffixes()
 {
