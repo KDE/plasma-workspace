@@ -17,7 +17,9 @@
 #include <QTimer>
 
 #include <KApplicationTrader>
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
+#include <KNotificationJobUiDelegate>
 #include <KSycoca>
 
 #include "debug.h"
@@ -128,8 +130,10 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
 void InstallerRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
     const QUrl appstreamUrl = match.data().toUrl();
-    if (!QDesktopServices::openUrl(appstreamUrl))
-        qCWarning(RUNNER_APPSTREAM) << "couldn't open" << appstreamUrl;
+
+    auto job = new KIO::OpenUrlJob(appstreamUrl);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->start();
 }
 
 void InstallerRunner::init()
