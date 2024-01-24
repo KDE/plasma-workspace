@@ -4,7 +4,7 @@ Exec=someprefix_systemsettings
 Icon=preferences-system
 Type=Application
 X-DocPath=systemsettings/index.html
-X-KDE-StartupNotify=true
+StartupNotify=true
 OnlyShowIn=KDE;
 
 GenericName=System Settings ServiceRunnerTest

@@ -3,7 +3,7 @@ Exec=virtthings
 Icon=preferences-system
 Type=Application
 X-DocPath=systemsettings/index.html
-X-KDE-StartupNotify=true
+StartupNotify=true
 OnlyShowIn=KDE;
 
 GenericName=VirtThings ServiceRunnerTest

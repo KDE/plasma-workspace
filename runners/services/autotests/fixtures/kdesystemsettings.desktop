@@ -2,7 +2,7 @@
 Exec=systemsettings
 Icon=preferences-system
 Type=Application
-X-KDE-StartupNotify=true
+StartupNotify=true
 NotShowIn=KDE;
 
 GenericName=KDE System Settings ServiceRunnerTest

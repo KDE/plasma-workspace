@@ -8,5 +8,5 @@ Terminal=false
 Categories=Qt;KDE;System;TerminalEmulator;DummyCategory;
 Comment=A drop-down terminal emulator based on KDE Konsole technology.
 X-DBUS-StartupType=Unique
-X-KDE-StartupNotify=false
+StartupNotify=false
 X-DBUS-ServiceName=org.kde.yakuake
