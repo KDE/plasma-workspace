@@ -117,6 +117,20 @@ SessionManagement::State SessionManagement::state() const
     return SessionBackend::self()->state();
 }
 
+void SessionManagement::requestLogoutPrompt()
+{
+    if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
+        std::cout << "show logout prompt " << std::endl;
+        return;
+    }
+
+    // Don't bother to check for whether the user normally wants confirmation or
+    // not; if this function was invoked, it means they do want to see the logout
+    // prompt right now
+    LogoutPromptIface iface;
+    iface.promptAll().waitForFinished();
+}
+
 void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
 {
     if (!canShutdown()) {

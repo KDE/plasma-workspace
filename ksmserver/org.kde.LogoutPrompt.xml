@@ -4,5 +4,6 @@
     <method name="promptLogout"/>
     <method name="promptShutDown"/>
     <method name="promptReboot"/>
+    <method name="promptAll"/>
 </interface>
 </node>

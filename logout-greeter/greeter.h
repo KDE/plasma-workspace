@@ -37,6 +37,7 @@ public Q_SLOTS:
     void promptLogout();
     void promptShutDown();
     void promptReboot();
+    void promptAll();
 
 private:
     void adoptScreen(QScreen *screen);

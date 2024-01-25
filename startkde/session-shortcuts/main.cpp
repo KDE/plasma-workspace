@@ -33,10 +33,20 @@ SessionShortcutsModule::SessionShortcutsModule(QObject *parent, const KPluginMet
     actionCollection->setComponentName(QStringLiteral("ksmserver")); // for migration purposes
     QAction *a;
 
-    // "With confirmation" actions
+    // "Just show the logout dialog with all options" action
+    // TODO: change ID to "Show Logout Prompt" and migrate settings
     a = actionCollection->addAction(QStringLiteral("Log Out"));
-    a->setText(i18n("Log Out"));
+    a->setText(i18nc("@action", "Show Logout Prompt"));
     KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << (Qt::ALT | Qt::CTRL | Qt::Key_Delete));
+    connect(a, &QAction::triggered, this, [sessionManagement]() {
+        sessionManagement->requestLogoutPrompt();
+    });
+
+    // "With confirmation" actions
+    // TODO: change ID to "Log Out" and migrate settings
+    a = actionCollection->addAction(QStringLiteral("LogOut"));
+    a->setText(i18n("Log Out"));
+    KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
     connect(a, &QAction::triggered, this, [sessionManagement]() {
         sessionManagement->requestLogout(SessionManagement::ConfirmationMode::ForcePrompt);
     });

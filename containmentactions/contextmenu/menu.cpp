@@ -117,11 +117,7 @@ void ContextMenu::restore(const KConfigGroup &config)
 
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave…"), this);
         m_logoutAction->setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
-        m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Log Out")).value(0));
-        m_logoutAction->setEnabled(m_session->canLogout());
-        connect(m_session, &SessionManagement::canLogoutChanged, this, [this]() {
-            m_logoutAction->setEnabled(m_session->canLogout());
-        });
+        m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Show Logout Prompt")).value(0));
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
         m_configureDisplaysAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Configure Display Settings…"), this);
@@ -254,15 +250,19 @@ void ContextMenu::startLogout()
 {
     KConfig config(u"ksmserverrc"_s);
     const auto group = config.group(u"General"_s);
-    switch (group.readEntry("shutdownType", int(KWorkSpace::ShutdownTypeNone))) {
+    switch (group.readEntry("shutdownType", int(KWorkSpace::ShutdownTypeDefault))) {
     case int(KWorkSpace::ShutdownTypeHalt):
         m_session->requestShutdown();
         break;
     case int(KWorkSpace::ShutdownTypeReboot):
         m_session->requestReboot();
         break;
-    default:
+    case int(KWorkSpace::ShutdownTypeLogout):
         m_session->requestLogout();
+        break;
+    case int(KWorkSpace::ShutdownTypeDefault):
+    default:
+        m_session->requestLogoutPrompt();
         break;
     }
 }

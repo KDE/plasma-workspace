@@ -56,7 +56,7 @@ void Greeter::init()
 void Greeter::enableWindowed()
 {
     m_windowed = true;
-    promptLogout();
+    promptAll();
 }
 
 void Greeter::adoptScreen(QScreen *screen)
@@ -131,5 +131,14 @@ void Greeter::promptReboot()
         return;
     }
     m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    init();
+}
+
+void Greeter::promptAll()
+{
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeDefault;
     init();
 }
