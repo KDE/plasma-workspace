@@ -286,7 +286,7 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    StatusNotifierModel::Item item = m_items[index.row()];
+    const StatusNotifierModel::Item &item = m_items[index.row()];
     StatusNotifierItemSource *sniData = m_sniHost->itemForService(item.source);
 
     if (role <= Qt::UserRole) {
