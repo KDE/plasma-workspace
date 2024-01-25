@@ -59,7 +59,7 @@ KCM.SimpleKCM {
                 && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("@title:group", "Do Not Disturb mode")
             Kirigami.FormData.isSection: true
         }
@@ -99,7 +99,7 @@ KCM.SimpleKCM {
             onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("@title:group", "Visibility conditions")
             Kirigami.FormData.isSection: true
         }
@@ -160,7 +160,7 @@ KCM.SimpleKCM {
             buttons: [positionCloseToWidget, positionCustomPosition]
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("@title:group As in: 'notification popups'", "Popups")
             Kirigami.FormData.isSection: true
         }
@@ -241,7 +241,7 @@ KCM.SimpleKCM {
             }
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("@title:group", "Additional feedback")
             Kirigami.FormData.isSection: true
         }
@@ -287,7 +287,7 @@ KCM.SimpleKCM {
             }
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("@title:group", "Application-specific settings")
             Kirigami.FormData.isSection: true
         }
