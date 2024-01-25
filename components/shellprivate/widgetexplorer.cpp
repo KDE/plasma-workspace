@@ -519,7 +519,10 @@ void WidgetExplorer::openWidgetFile()
         auto job = KPackage::PackageJob::install(QStringLiteral("Plasma/Applet"), packageFilePath);
         connect(job, &KJob::result, [packageFilePath](KJob *job) {
             if (job->error()) {
-                KMessageBox::error(nullptr, i18n("Installing the package %1 failed.", packageFilePath), i18n("Installation Failure"));
+                KMessageBox::error(
+                    nullptr,
+                    i18nc("%1 is the name of an applet, %2 is an error message", "Installing the package %1 failed: %2.", packageFilePath, job->errorString()),
+                    i18n("Installation Failure"));
             }
         });
     });
