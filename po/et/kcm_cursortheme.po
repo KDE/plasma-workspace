@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-25 00:38+0000\n"
 "PO-Revision-Date: 2020-09-26 10:21+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -33,33 +33,33 @@ msgstr "Aktiivse kursoriteema nimi"
 msgid "Current cursor size"
 msgstr "Praegune kursorisuurus"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Muudatuste rakendamiseks tuleb Plasma seanss uuesti käivitada."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ajutise faili loomine nurjus."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ikooniteema arhiivi allalaadimine nurjus: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fail ei ole korrektne ikooniteema arhiiv."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Kataloogi 'icons' loomine nurjus."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -67,12 +67,12 @@ msgid ""
 msgstr ""
 "Teema nimega %1 on ikooniteemade kataloogis juba olemas. Kas asendada see?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Kas kirjutada teema üle?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teema paigaldati edukalt."
@@ -231,36 +231,36 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "Suurus:"
 
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:131
 #, fuzzy, kde-format
 #| msgid "&Install from File..."
 msgid "&Install from File…"
 msgstr "Pa&igalda failist ..."
 
-#: ui/main.qml:143
+#: ui/main.qml:137
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors..."
 msgid "&Get New…"
 msgstr "Han&gi uusi kursoreid ..."
 
-#: ui/main.qml:187
+#: ui/main.qml:181
 #, kde-format
 msgid "Open Theme"
 msgstr "Teema avamine"
 
-#: ui/main.qml:189
+#: ui/main.qml:183
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kursoriteema failid (*.tar.gz *.tar.bz2)"

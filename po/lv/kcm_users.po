@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-25 00:38+0000\n"
 "PO-Revision-Date: 2024-01-16 15:04+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -182,38 +182,38 @@ msgstr "Apstipriniet paroli:"
 msgid "Create"
 msgstr "Izveidot"
 
-#: src/ui/FingerprintDialog.qml:45
+#: src/ui/FingerprintDialog.qml:43
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Konfigurēt pirkstu nospiedumus"
 
-#: src/ui/FingerprintDialog.qml:56
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Notīrīt visus"
 
-#: src/ui/FingerprintDialog.qml:63
+#: src/ui/FingerprintDialog.qml:59
 #, kde-format
 msgid "Add"
 msgstr "Pievienot"
 
-#: src/ui/FingerprintDialog.qml:72
+#: src/ui/FingerprintDialog.qml:68
 #, kde-format
 msgid "Cancel"
 msgstr "Atcelt"
 
-#: src/ui/FingerprintDialog.qml:80
+#: src/ui/FingerprintDialog.qml:76
 #, kde-format
 msgid "Done"
 msgstr "Gatavs"
 
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:100
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Reģistrē pirkstu nospiedumu"
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:110
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
@@ -221,7 +221,7 @@ msgstr ""
 "Vairākkārt uzspiediet labās rokas rādītājpirkstu uz pirkstu nospiedumu "
 "sensora."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
@@ -229,14 +229,14 @@ msgstr ""
 "Vairākkārt uzspiediet labās rokas vidējo pirkstu uz pirkstu nospieduma "
 "sensora."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr ""
 "Vairākkārt uzspiediet labās rokas zeltnesi uz pirkstu nospiedumu sensora."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
@@ -244,12 +244,12 @@ msgstr ""
 "Vairākkārt uzspiediet labās rokas mazo pirkstiņu uz pirkstu nospiedumu "
 "sensora."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Vairākkārt uzspiediet labās rokas īkšķi uz pirkstu nospiedumu sensora."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
@@ -257,7 +257,7 @@ msgstr ""
 "Vairākkārt uzspiediet kreisās rokas rādītājpirkstu uz pirkstu nospiedumu "
 "sensora."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
@@ -265,14 +265,14 @@ msgstr ""
 "Vairākkārt uzspiediet kreisās rokas vidējo pirkstu uz pirkstu nospieduma "
 "sensora."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr ""
 "Vairākkārt uzspiediet kreisās rokas zeltnesi uz pirkstu nospiedumu sensora."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
@@ -280,13 +280,13 @@ msgstr ""
 "Vairākkārt uzspiediet kreisās rokas mazo pirkstiņu uz pirkstu nospiedumu "
 "sensora."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Vairākkārt uzspiediet kreisās rokas īkšķi uz pirkstu nospiedumu sensora."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -294,7 +294,7 @@ msgstr ""
 "Vairākkārt pārvelciet labās rokas rādītājpirkstu pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
@@ -302,14 +302,14 @@ msgstr ""
 "Vairākkārt pārvelciet labās rokas vidējo pirkstu pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
 "Vairākkārt pārvelciet labās rokas zeltnesi pāri pirkstu nospiedumu sensoram."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
@@ -317,13 +317,13 @@ msgstr ""
 "Vairākkārt pārvelciet labās rokas mazo pirkstiņu pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:144
+#: src/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Vairākkārt pārvelciet labās rokas īkšķi pāri pirkstu nospiedumu sensoram."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
@@ -331,7 +331,7 @@ msgstr ""
 "Vairākkārt pārvelciet kreisās rokas rādītājpirkstu pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:144
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
@@ -339,7 +339,7 @@ msgstr ""
 "Vairākkārt pārvelciet kreisās rokas vidējo pirkstu pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
@@ -347,7 +347,7 @@ msgstr ""
 "Vairākkārt pārvelciet kreisās rokas zeltnesi pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
@@ -355,33 +355,33 @@ msgstr ""
 "Vairākkārt pārvelciet kreisās rokas mazo pirkstiņu pāri pirkstu nospiedumu "
 "sensoram."
 
-#: src/ui/FingerprintDialog.qml:154
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Vairākkārt pārvelciet kreisās rokas īkšķi pāri pirkstu nospiedumu sensoram."
 
-#: src/ui/FingerprintDialog.qml:170
+#: src/ui/FingerprintDialog.qml:166
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Pirksts ir reģistrēts"
 
-#: src/ui/FingerprintDialog.qml:202
+#: src/ui/FingerprintDialog.qml:198
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Izvēlieties pirkstu, kuru reģistrēt"
 
-#: src/ui/FingerprintDialog.qml:322
+#: src/ui/FingerprintDialog.qml:318
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Atkārtoti reģistrēt pirkstu"
 
-#: src/ui/FingerprintDialog.qml:329
+#: src/ui/FingerprintDialog.qml:325
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Dzēst pirkstu nospiedumu"
 
-#: src/ui/FingerprintDialog.qml:338
+#: src/ui/FingerprintDialog.qml:334
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nav pievienotu pirkstu nospiedumu"

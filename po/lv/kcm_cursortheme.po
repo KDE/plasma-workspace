@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-25 00:38+0000\n"
 "PO-Revision-Date: 2024-01-15 18:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -34,33 +34,33 @@ msgstr "Aktīvā kursora motīva nosaukums"
 msgid "Current cursor size"
 msgstr "Aktīvā kursora lielums"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "„Plasma“ sesija ir jāpārstartē, lai izmaiņas stātos spēkā."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Neizdodas izveidot pagaidu datni."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Neizdodas lejupielādēt ikonu motīva arhīvu: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Datne nav derīgs ikonu motīva arhīvs."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Neizdodas izveidot ikonu mapi („icons“)."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgid ""
 msgstr ""
 "Motīvu mapē jau atrodas motīvs ar nosaukumu „%1“. Vai vēlaties to aizvietot?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Pārrakstīt motīvu?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Motīvs ir veiksmīgi instalēts."
@@ -238,33 +238,33 @@ msgstr[0] "%1 sekundes"
 msgstr[1] "%1 sekundēm"
 msgstr[2] "%1 sekundēm"
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, kde-format
 msgid "Size: %1"
 msgstr "Izmērs: %1"
 
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigurēt palaišanas animāciju..."
 
-#: ui/main.qml:137
+#: ui/main.qml:131
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalēt no datnes..."
 
-#: ui/main.qml:143
+#: ui/main.qml:137
 #, kde-format
 msgid "&Get New…"
 msgstr "&Iegūt jaunu..."
 
-#: ui/main.qml:187
+#: ui/main.qml:181
 #, kde-format
 msgid "Open Theme"
 msgstr "Atvērt motīvu"
 
-#: ui/main.qml:189
+#: ui/main.qml:183
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kursora motīvu datnes (*.tar.gz *.tar.bz2)"

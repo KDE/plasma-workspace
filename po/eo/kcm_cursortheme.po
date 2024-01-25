@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-25 00:38+0000\n"
 "PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -34,33 +34,33 @@ msgstr "Nomo de la aktuala kursora temo"
 msgid "Current cursor size"
 msgstr "Aktuala grandeco de kursoro"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "La Plasma-seanco devas esti relanĉata por ke tiuj ŝanĝoj efektiviĝu."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne eblas krei provizoran dosieron."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ne eblas elŝuti la kursoretosan arkivon: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "La dosiero ne estas valida kursoretosa arkivo."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Malsukcesis kreado de 'icons' dosierujo."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Etoso kun la nomo %1 jam ekzistas en via piktogrametosa dosierujo. Ĉu vi "
 "volas anstataŭigi ĝin per ĉi tiun?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Anstataŭigi la etoson?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Etoso instaliĝis sukcese."
@@ -242,33 +242,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekundo"
 msgstr[1] "%1 sekundoj"
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, kde-format
 msgid "Size: %1"
 msgstr "Grandeco: %1"
 
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "A&gordi Lanĉan Sugeston…"
 
-#: ui/main.qml:137
+#: ui/main.qml:131
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instali el Dosiero…"
 
-#: ui/main.qml:143
+#: ui/main.qml:137
 #, kde-format
 msgid "&Get New…"
 msgstr "&Ricevi Novon…"
 
-#: ui/main.qml:187
+#: ui/main.qml:181
 #, kde-format
 msgid "Open Theme"
 msgstr "Malfermi Etoson"
 
-#: ui/main.qml:189
+#: ui/main.qml:183
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kursor-Etosaj Dosieroj (*.tar.gz *.tar.bz2)"
