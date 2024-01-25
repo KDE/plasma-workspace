@@ -50,6 +50,10 @@ void BaseModel::onConfigurationChanged()
     m_shownItems = m_settings->shownItems();
     m_hiddenItems = m_settings->hiddenItems();
 
+    if (rowCount() == 0) {
+        return; // Avoid assertion
+    }
+
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {static_cast<int>(BaseModel::BaseRole::EffectiveStatus)});
 }
 
