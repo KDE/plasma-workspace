@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2023-08-09 08:42+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -31,45 +31,45 @@ msgstr "Име на текущата тема на курсора"
 msgid "Current cursor size"
 msgstr "Текущ размер на курсора"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Трябва да рестартирате сесията, за да влязат в сила тези промени."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не може да се създаде временен файл."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не може да се изтегли архивът с теми на иконите: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Файлът не е валиден архив на тема на икони."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Създаването на папка  \"икони\" е неуспешно."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "Вече има тема с име \"%1\". Искате ли да бъде презаписана?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Презапис на тема?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Темата е инсталирана успешно."
@@ -238,33 +238,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 секунда"
 msgstr[1] "%1 секунди"
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, kde-format
 msgid "Size: %1"
 msgstr "Размер: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Конфигуриране на обратна връзка…"
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, kde-format
 msgid "&Install from File…"
 msgstr "Инсталиране от файл…"
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, kde-format
 msgid "&Get New…"
 msgstr "&Изтегляне на нови…"
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, kde-format
 msgid "Open Theme"
 msgstr "Отваряне на тема"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Тематични файлове на курсора  (*.tar.gz *.tar.bz2)"

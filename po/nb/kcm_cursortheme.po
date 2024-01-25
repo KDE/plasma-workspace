@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2015-04-30 23:00+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -37,33 +37,33 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kan ikke opprette midlertidig fil."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr ""
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fila er ikke et gyldig ikontema-arkiv."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -72,12 +72,12 @@ msgstr ""
 "Det finnes allerede et tema som heter %1 i ikondrakt-mappa. Vil du erstatte "
 "det med dette?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Vil du overskrive temaet?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema vellykket installert."
@@ -234,33 +234,33 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, fuzzy, kde-format
 msgid "Size: %1"
 msgstr "Størrelse:"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, kde-format
 msgid "&Install from File…"
 msgstr ""
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, kde-format
 msgid "&Get New…"
 msgstr ""
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, kde-format
 msgid "Open Theme"
 msgstr "Åpne tema"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

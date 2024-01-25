@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2023-12-26 08:59-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -31,33 +31,33 @@ msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਥੀਮ ਦਾ ਨਾਂ ਹੈ"
 msgid "Current cursor size"
 msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਆਕਾਰ"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਡਾਊਨਲੋਡ ਤੋਂ ਅਸਮਰੱਥ ਹੈ: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ਇਹ ਫਾਇਲ਼ ਠੀਕ ਆਈਕਾਨ ਥੀਮ ਅਕਾਈਵ ਨਹੀਂ ਹੈ।"
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' ਫੋਲਡਰ ਬਣਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +65,12 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਡੇ ਆਈਕਾਨ ਥੀਮ ਫੋਲਡਰ ਵਿੱਚ ਥੀਮ %1 ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਤਬਦੀਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ਥੀਮ ਉੱਤੇ ਲਿਖਣਾ ਹੈ?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ।"
@@ -228,33 +228,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 ਸਕਿੰਟ"
 msgstr[1] "%1 ਸਕਿੰਟ"
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, kde-format
 msgid "Size: %1"
 msgstr "ਆਕਾਰ: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "ਫੀਡਬੈਕ ਚਲਾਉਣ ਦੀ ਸੰਰਚਨਾ(&C)…"
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, kde-format
 msgid "&Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ(&I)"
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, kde-format
 msgid "&Get New…"
 msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ(&G)…"
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, kde-format
 msgid "Open Theme"
 msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ਕਰਸਰ ਥੀਮ ਫਾਇਲਾਂ (*.tar.gz *.tar.bz2)"

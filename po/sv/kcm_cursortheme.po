@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2022-03-17 18:06+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -29,33 +29,33 @@ msgstr "Namn på aktuellt markörtema"
 msgid "Current cursor size"
 msgstr "Aktuell markörstorlek"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Plasma-sessionen måste startas om för att ändringarna ska verkställas."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kan inte skapa en tillfällig fil."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kan inte ladda ner arkivet för ikontemat: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Filen är inte ett giltigt arkiv för ikonteman."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Misslyckades skapa katalogen 'icons'."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -64,12 +64,12 @@ msgstr ""
 "Ett tema med namn %1 finns redan i din katalog för ikonteman. Vill du "
 "ersätta det med det här temat?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Skriv över tema?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema installerat med lyckat resultat."
@@ -239,35 +239,35 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "Storlek:"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Installera från fil…"
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors…"
 msgid "&Get New…"
 msgstr "&Hämta nya pekare…"
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, kde-format
 msgid "Open Theme"
 msgstr "Öppna tema"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Muspekartema-filer (*.tar.gz *.tar.bz2)"

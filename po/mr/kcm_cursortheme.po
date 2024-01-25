@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2014-10-28 15:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -31,36 +31,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "या बदलांचा प्रभाव लागू करण्याकरिता तुम्हाला केडीई पुन्हाप्रारंभ करावे लागेल."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "कर्सर शैली संग्रह %1 शोधण्यास अपयशी."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "फाईल %1 वैध कर्सर शैली संग्रह नुरूप दृश्यास्पद आढळून येत नाही."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "%1 नावाची शैली अगोदरच तुमच्या चिन्ह शैली संचयीकेत अस्तित्वात आहे. तुम्हाला ती खोडून टाकून "
 "ही ठेवायची आहे का?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "शैली खोडून पुन्हा लिहायची का?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
@@ -233,38 +233,38 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, fuzzy, kde-format
 #| msgctxt "@label:listbox cursor size"
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "आकार :"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, fuzzy, kde-format
 #| msgid "Install From File..."
 msgid "&Install from File…"
 msgstr "फाईलवरून प्रतिष्ठापीत करा..."
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Get New Theme..."
 msgid "&Get New…"
 msgstr "नवीन शैली प्राप्त करा..."
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "शैली काढून टाका"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

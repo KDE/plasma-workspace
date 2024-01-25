@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2023-08-03 17:30+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -29,34 +29,34 @@ msgstr "Nomine del thema de cursor currente"
 msgid "Current cursor size"
 msgstr "Grandor de cursor currente"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Tu debe re-initiar le session de Plasma pro applicar iste modificationes."
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Incapace a crear un file temporari."
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Incapace a discargar le archivo de thema de icone: %1."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Le file non es un valide archivo de thema de icone."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Falleva a crear le dossier  'icones'"
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +65,12 @@ msgstr ""
 "Un thema appellate %1 ja existe in tu dossier de thema de icone. Tu vole "
 "reimplaciar lo con isto?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Super scriber le thema?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Thema installate con successo."
@@ -242,33 +242,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 secunda"
 msgstr[1] "%1 secundas"
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, kde-format
 msgid "Size: %1"
 msgstr "Dimension: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Configura Retorno (Feedback) de Lancear"
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Installa ex file …"
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, kde-format
 msgid "&Get New…"
 msgstr "&Obtene Nove…"
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, kde-format
 msgid "Open Theme"
 msgstr "Aperi thema"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Files de Thema de Cursor (*.tar.gz *.tar.bz2)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-22 03:08+0000\n"
+"POT-Creation-Date: 2024-01-25 02:23+0000\n"
 "PO-Revision-Date: 2022-03-29 20:38+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -31,34 +31,34 @@ msgstr "वर्तमान संकेतक प्रसंग का न�
 msgid "Current cursor size"
 msgstr "वर्तमान संकेतक आकार"
 
-#: kcmcursortheme.cpp:304
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "परिवर्तनों को प्रभाव में लाने के लिए आपको प्लाज़्मा सत्र को फिर से प्रारंभ करना होगा।"
 
-#: kcmcursortheme.cpp:378
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "अस्थायी फ़ाइल बनाने में अक्षम ।"
 
-#: kcmcursortheme.cpp:389
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "संकेतक प्रसंग संग्रह %1 डाउनलोड करने में अक्षम ।"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "फ़ाइल एक वैध संकेतक प्रसंग संग्रह नहीं है।"
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "प्रतीक फ़ोल्डर बनाने में विफल ।"
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -67,12 +67,12 @@ msgstr ""
 "एक प्रसंग %1 नाम से प्रतीक प्रसंग फ़ोल्डर में पहले से ही उपलब्ध है. क्या आप उसे इससे बदलना "
 "चाहते हैं?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "प्रसंग मिटाकर लिखें?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "प्रसंग सफलतापूर्वक स्थापित।"
@@ -237,35 +237,35 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:65 ui/main.qml:108
+#: ui/main.qml:64 ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "आकार :"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:130
 #, kde-format
 msgid "&Install from File…"
 msgstr "फाइल से संस्थापित करें... (&I)"
 
-#: ui/main.qml:142
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors…"
 msgid "&Get New…"
 msgstr "नए संकेतक प्राप्त करें... (&G)"
 
-#: ui/main.qml:186
+#: ui/main.qml:180
 #, kde-format
 msgid "Open Theme"
 msgstr "प्रसंग खोलें"
 
-#: ui/main.qml:188
+#: ui/main.qml:182
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "संकेतक प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"
