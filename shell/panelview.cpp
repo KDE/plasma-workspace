@@ -1047,7 +1047,6 @@ void PanelView::adaptToScreen()
     }
 
     integrateScreen();
-    showTemporarily();
     restore();
 }
 
