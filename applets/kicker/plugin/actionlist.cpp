@@ -147,8 +147,11 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
     }
 
     if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-        QVariantMap addToTaskManagerAction = Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("pin"), QStringLiteral("addToTaskManager"));
-        actionList << addToTaskManagerAction;
+        if (!ContainmentInterface::hasLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+            QVariantMap addToTaskManagerAction =
+                Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("pin"), QStringLiteral("addToTaskManager"));
+            actionList << addToTaskManagerAction;
+        }
     } else if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
         QVariantMap addToPanelAction = Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("list-add"), QStringLiteral("addToPanel"));
         actionList << addToPanelAction;

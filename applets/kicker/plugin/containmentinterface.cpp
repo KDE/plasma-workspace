@@ -81,13 +81,49 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
                 return false;
             }
 
-            QVariant ret;
-            QMetaObject::invokeMethod(taskManagerQuickItem, "hasLauncher", Q_RETURN_ARG(QVariant, ret), Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
-            return !ret.toBool();
+            return taskManagerQuickItem->property("supportsLaunchers").toBool();
         }
 
         break;
     }
+    }
+
+    return false;
+}
+
+bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
+{
+    // Only the task manager supports toggle-able launchers
+    if (target != TaskManager) {
+        return false;
+    }
+    if (!appletInterface) {
+        return false;
+    }
+
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    Plasma::Containment *containment = applet->containment();
+
+    if (!containment) {
+        return false;
+    }
+
+    if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
+        auto *taskManager = findTaskManagerApplet(containment);
+
+        if (!taskManager) {
+            return false;
+        }
+
+        auto *taskManagerQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(taskManager);
+
+        if (!taskManagerQuickItem) {
+            return false;
+        }
+
+        QVariant ret;
+        QMetaObject::invokeMethod(taskManagerQuickItem, "hasLauncher", Q_RETURN_ARG(QVariant, ret), Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+        return ret.toBool();
     }
 
     return false;
