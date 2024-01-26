@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-30 01:42+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2022-03-13 22:13+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: appstreamrunner.cpp:30
+#: appstreamrunner.cpp:32
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Lihat komponen yang non terinstal sesuai dengan :q:"
 
-#: appstreamrunner.cpp:120
+#: appstreamrunner.cpp:122
 #, kde-format
 msgid "Get %1…"
 msgstr "Dapatkan %1..."
