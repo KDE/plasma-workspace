@@ -531,24 +531,29 @@ void PanelView::positionPanel()
     if (m_layerWindow) {
         QMargins margins;
         LayerShellQt::Window::Anchors anchors;
+        LayerShellQt::Window::Anchor edge;
 
         switch (containment()->location()) {
         case Plasma::Types::TopEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorTop);
             margins.setTop((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+            edge = LayerShellQt::Window::AnchorTop;
             break;
         case Plasma::Types::LeftEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorLeft);
             margins.setLeft((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
+            edge = LayerShellQt::Window::AnchorLeft;
             break;
         case Plasma::Types::RightEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorRight);
             margins.setRight((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
+            edge = LayerShellQt::Window::AnchorRight;
             break;
         case Plasma::Types::BottomEdge:
         default:
             anchors.setFlag(LayerShellQt::Window::AnchorBottom);
             margins.setBottom((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+            edge = LayerShellQt::Window::AnchorBottom;
             break;
         }
 
@@ -597,7 +602,9 @@ void PanelView::positionPanel()
         }
 
         m_layerWindow->setAnchors(anchors);
+        m_layerWindow->setExclusiveEdge(edge);
         m_layerWindow->setMargins(margins);
+
         updateMask();
         requestUpdate();
     }
