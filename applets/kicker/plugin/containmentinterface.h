@@ -34,6 +34,8 @@ public:
 
     static Q_INVOKABLE bool mayAddLauncher(QObject *appletInterface, Target target, const QString &entryPath = QString());
 
+    static Q_INVOKABLE bool hasLauncher(QObject *appletInterface, Target target, const QString &entryPath = QString());
+
     static Q_INVOKABLE void addLauncher(QObject *appletInterface, Target target, const QString &entryPath);
 
     static Q_INVOKABLE QObject *screenContainment(QObject *appletInterface);
