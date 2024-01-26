@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
+[Global]
+Name=Run Commands
+IconName=application-x-executable-script
+
+[Event/aboutToRunCommand]
+Name=Confirm before running a command
+Sound=dialog-warning
+Action=Popup

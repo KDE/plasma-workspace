@@ -6,9 +6,13 @@
 
 #pragma once
 
+#include <QPointer>
+
 #include <KProcess>
 #include <Plasma5Support/DataContainer>
 #include <Plasma5Support/DataEngine>
+
+class KNotification;
 
 class ExecutableContainer : public Plasma5Support::DataContainer
 {
@@ -17,12 +21,14 @@ public:
     explicit ExecutableContainer(const QString &command, QObject *parent = nullptr);
     ~ExecutableContainer() override;
 
-protected Q_SLOTS:
-    void finished(int exitCode, QProcess::ExitStatus exitStatus);
-    void exec();
-
 private:
-    KProcess *m_process;
+    void finished(int exitCode, QProcess::ExitStatus exitStatus);
+    void aboutToExec();
+    void exec();
+    void deny();
+
+    KProcess *m_process = nullptr;
+    QPointer<KNotification> m_notification;
 };
 
 class ExecutableEngine : public Plasma5Support::DataEngine

@@ -5,22 +5,26 @@
 */
 
 #include "executable.h"
-#include <QDebug>
+
+#include <KLocalizedString>
+#include <KNotification>
+
+using namespace Qt::StringLiterals;
+
 ExecutableContainer::ExecutableContainer(const QString &command, QObject *parent)
     : Plasma5Support::DataContainer(parent)
-    , m_process(nullptr)
 {
     setObjectName(command);
-    connect(this, &Plasma5Support::DataContainer::updateRequested, this, &ExecutableContainer::exec);
-    exec();
+    connect(this, &Plasma5Support::DataContainer::updateRequested, this, &ExecutableContainer::aboutToExec);
+    aboutToExec();
 }
 
 ExecutableContainer::~ExecutableContainer()
 {
     if (m_process) {
-        disconnect(m_process, nullptr, this, nullptr);
+        m_process->disconnect(this);
+        delete m_process;
     }
-    delete m_process;
 }
 
 void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus)
@@ -32,19 +36,53 @@ void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus
     checkForUpdate();
 }
 
+void ExecutableContainer::aboutToExec()
+{
+    if (qEnvironmentVariableIsSet("PLASMA_DATAENGINE_DISABLE_COMMANDS")) {
+        return;
+    }
+
+    if (qEnvironmentVariableIntValue("PLASMA_DATAENGINE_ALWAYS_ALLOW_COMMANDS") == 1) {
+        exec();
+        return;
+    }
+
+    if (m_process && m_process->state() != QProcess::NotRunning) {
+        return;
+    }
+
+    if (m_notification) [[unlikely]] {
+        m_notification->close(); // Auto-delete is on
+    }
+
+    m_notification = KNotification::event(u"aboutToRunCommand"_s, i18nc("@title", "A widget is trying to run a command"), objectName(), u"dialog-warning"_s);
+    m_notification->setComponentName(u"plasma_dataengine_executable"_s);
+
+    KNotificationAction *allowAction = m_notification->addAction(i18nc("@action:button", "Allow"));
+    connect(allowAction, &KNotificationAction::activated, this, &ExecutableContainer::exec);
+    KNotificationAction *denyAction = m_notification->addAction(i18nc("@action:button", "Deny"));
+    connect(denyAction, &KNotificationAction::activated, this, &ExecutableContainer::deny);
+
+    m_notification->sendEvent();
+}
+
 void ExecutableContainer::exec()
 {
     if (!m_process) {
         m_process = new KProcess();
-        connect(m_process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(finished(int, QProcess::ExitStatus)));
+        connect(m_process, &QProcess::finished, this, &ExecutableContainer::finished);
         m_process->setOutputChannelMode(KProcess::SeparateChannels);
         m_process->setShellCommand(objectName());
     }
 
-    if (m_process->state() == QProcess::NotRunning) {
-        m_process->start();
-    } else {
-        qDebug() << "Process" << objectName() << "already running. Pid:" << m_process->processId();
+    m_process->start();
+}
+
+void ExecutableContainer::deny()
+{
+    if (m_process) {
+        delete m_process;
+        m_process = nullptr;
     }
 }
 
