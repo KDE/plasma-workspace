@@ -63,6 +63,7 @@ public:
         QString summary;
         float tempHigh;
         float tempLow;
+        int precipitation;
         float windSpeed;
         QString windDirection;
     };

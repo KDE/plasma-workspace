@@ -626,7 +626,8 @@ void NOAAIon::updateWeather(const QString &source)
         // Get the short day name for the forecast
         data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
                     QStringLiteral("%1|%2|%3|%4|%5|%6")
-                        .arg(forecast.day, iconName, i18nc("weather forecast", forecast.summary.toUtf8().data()), forecast.high, forecast.low, QString()));
+                        .arg(forecast.day, iconName, i18nc("weather forecast", forecast.summary.toUtf8().data()), forecast.high, forecast.low)
+                        .arg(forecast.precipitation));
         ++i;
     }
 
@@ -861,6 +862,30 @@ void NOAAIon::readForecast(const QString &source, QXmlStreamReader &xml)
                     if (xml.name() == QLatin1String("value")) {
                         forecasts[i].low = xml.readElementText();
                         // qCDebug(IONENGINE_NOAA) << forecasts[i].low;
+                        i++;
+                    }
+                }
+            } else if (xml.name() == QLatin1String("probability-of-precipitation")) {
+                // Precipitation is usually provided in 12-hour periods instead of 24.
+                int periodHours = xml.attributes().value(QStringLiteral("type")).split(QLatin1Char(' '))[0].toInt();
+                if (!periodHours) {
+                    periodHours = 24;
+                }
+
+                int i = 0;
+                int hours = 0;
+                while (!(xml.isEndElement() && xml.name() == QLatin1String("weather")) && i < forecasts.count()) {
+                    xml.readNext();
+                    if (xml.name() != QLatin1String("value")) {
+                        continue;
+                    }
+
+                    const int probability = xml.readElementText().toInt();
+                    forecasts[i].precipitation = qMax(probability, forecasts[i].precipitation);
+                    hours += periodHours;
+
+                    if (hours >= 24) {
+                        hours = 0;
                         i++;
                     }
                 }

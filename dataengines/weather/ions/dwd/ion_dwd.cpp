@@ -445,6 +445,7 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
             forecast->period = QDateTime::fromString(period, QStringLiteral("yyyy-MM-dd"));
             forecast->tempHigh = parseNumber(dayMap[QStringLiteral("temperatureMax")]);
             forecast->tempLow = parseNumber(dayMap[QStringLiteral("temperatureMin")]);
+            forecast->precipitation = dayMap[QStringLiteral("precipitation")].toInt();
             forecast->iconName = getWeatherIcon(dayIcons(), cond);
             ;
 
@@ -613,8 +614,11 @@ void DWDIon::updateWeather(const QString &source)
 
     int dayNumber = 0;
     for (const WeatherData::ForecastInfo *dayForecast : weatherData.forecasts) {
-        if (dayNumber > 0) {
-            QString period = dayForecast->period.toString(QStringLiteral("dddd"));
+        QString period;
+        if (dayNumber == 0) {
+            period = i18nc("Short for Today", "Today");
+        } else {
+            period = dayForecast->period.toString(QStringLiteral("dddd"));
 
             period.replace(QStringLiteral("Saturday"), i18nc("Short for Saturday", "Sat"));
             period.replace(QStringLiteral("Sunday"), i18nc("Short for Sunday", "Sun"));
@@ -623,23 +627,15 @@ void DWDIon::updateWeather(const QString &source)
             period.replace(QStringLiteral("Wednesday"), i18nc("Short for Wednesday", "Wed"));
             period.replace(QStringLiteral("Thursday"), i18nc("Short for Thursday", "Thu"));
             period.replace(QStringLiteral("Friday"), i18nc("Short for Friday", "Fri"));
-
-            data.insert(QStringLiteral("Short Forecast Day %1").arg(dayNumber),
-                        QStringLiteral("%1|%2|%3|%4|%5|%6")
-                            .arg(period, dayForecast->iconName, QLatin1String(""))
-                            .arg(dayForecast->tempHigh)
-                            .arg(dayForecast->tempLow)
-                            .arg(QLatin1String("")));
-            dayNumber++;
-        } else {
-            data.insert(QStringLiteral("Short Forecast Day %1").arg(dayNumber),
-                        QStringLiteral("%1|%2|%3|%4|%5|%6")
-                            .arg(i18nc("Short for Today", "Today"), dayForecast->iconName, QLatin1String(""))
-                            .arg(dayForecast->tempHigh)
-                            .arg(dayForecast->tempLow)
-                            .arg(QLatin1String("")));
-            dayNumber++;
         }
+
+        data.insert(QStringLiteral("Short Forecast Day %1").arg(dayNumber),
+                    QStringLiteral("%1|%2|%3|%4|%5|%6")
+                        .arg(period, dayForecast->iconName, QLatin1String(""))
+                        .arg(dayForecast->tempHigh)
+                        .arg(dayForecast->tempLow)
+                        .arg(dayForecast->precipitation));
+        dayNumber++;
     }
 
     int k = 0;

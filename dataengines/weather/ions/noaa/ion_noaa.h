@@ -59,6 +59,7 @@ public:
         QString summary;
         QString low;
         QString high;
+        int precipitation = 0;
     };
     QList<Forecast> forecasts;
 
