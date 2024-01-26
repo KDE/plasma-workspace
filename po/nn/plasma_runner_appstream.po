@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-30 01:42+0000\n"
+"POT-Creation-Date: 2024-01-26 00:38+0000\n"
 "PO-Revision-Date: 2021-09-18 20:11+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: appstreamrunner.cpp:30
+#: appstreamrunner.cpp:32
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Ser etter ikkje-installerte komponentar ifølgje :q:"
 
-#: appstreamrunner.cpp:120
+#: appstreamrunner.cpp:122
 #, kde-format
 msgid "Get %1…"
 msgstr "Hent %1 …"

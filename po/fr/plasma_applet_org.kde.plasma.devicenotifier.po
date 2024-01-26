@@ -8,7 +8,7 @@
 # Guillaume Pujol <guill.p@gmail.com>, 2010.
 # Joëlle Cornavin <jcorn@free.fr>, 2012, 2013.
 # Anne-Marie Mahfouf <annma@kde.org>, 2013.
-# Xavier Besnard <xavier.besnard@kde.org>, 2013.
+# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2016.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -20,15 +20,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-12-03 11:11+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
+"PO-Revision-Date: 2024-01-23 10:54+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -146,85 +146,78 @@ msgstr "Afficher un menu contextuel lorsqu'un nouveau périphérique est branch�
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "État de périphérique"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Ce périphérique peut désormais être retiré en toute sécurité."
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Ce périphérique peut désormais être retiré en toute sécurité."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Cliquez pour monter ce périphérique."
+msgstr "Vous n'êtes pas autorisé à monter ce périphérique."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
-"Il est actuellement possible de retirer ce périphérique en toute sécurité."
+msgstr "Vous n'êtes pas autorisé à retirer ce périphérique."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Cliquez pour éjecter ce disque."
+msgstr "Vous n'êtes pas autorisé à démonter ce disque."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Cliquez pour monter ce périphérique."
+msgstr "Impossible de monter ce périphérique car il est occupé."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Cliquez pour accéder à ce périphérique depuis d'autres applications."
+msgstr ""
+"Un ou plusieurs fichiers de ce périphérique sont ouverts par une application."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
-"Cliquez pour accéder à ce périphérique depuis d'autres applications."
+"Un ou plusieurs fichiers sur ce périphérique sont ouverts par l'application "
+"« %2 »."
 msgstr[1] ""
-"Cliquez pour accéder à ce périphérique depuis d'autres applications."
+"Un ou plusieurs fichiers de ce périphérique sont ouverts dans les "
+"applications suivantes : %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Cliquez pour monter ce périphérique."
+msgstr "Impossible de monter ce périphérique."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Cliquez pour retirer ce périphérique en toute sécurité."
+msgstr "Impossible de retirer ce périphérique."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Cliquez pour éjecter ce disque."
+msgstr "Impossible de démonter ce disque."
 
 #~ msgid "Show:"
 #~ msgstr "Afficher :"

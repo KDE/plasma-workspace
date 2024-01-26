@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-30 01:42+0000\n"
+"POT-Creation-Date: 2024-01-26 00:38+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,12 +21,12 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_appstream.po\n"
 "X-Crowdin-File-ID: 8862\n"
 
-#: appstreamrunner.cpp:30
+#: appstreamrunner.cpp:32
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Пошук неўсталяваных кампанентаў у адпаведнасці з :q:"
 
-#: appstreamrunner.cpp:120
+#: appstreamrunner.cpp:122
 #, kde-format
 msgid "Get %1…"
 msgstr "Атрымаць %1…"
