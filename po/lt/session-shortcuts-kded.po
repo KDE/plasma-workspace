@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-01 01:36+0000\n"
-"PO-Revision-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-01-26 14:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,38 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: main.cpp:32
 #, kde-format
 msgid "Session Management"
-msgstr ""
+msgstr "Seanso tvarkytuvė"
 
 #: main.cpp:38
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Atsijungti"
 
 #: main.cpp:44
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Išjungti"
 
 #: main.cpp:50
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Paleisti iš naujo"
 
 #: main.cpp:58
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr ""
+msgstr "Atsijungti be patvirtinimo"
 
 #: main.cpp:64
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr ""
+msgstr "Išjungti be patvirtinimo"
 
 #: main.cpp:70
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr ""
+msgstr "Paleisti iš naujo be patvirtinimo"

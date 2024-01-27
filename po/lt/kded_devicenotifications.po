@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:58+0000\n"
-"PO-Revision-Date: 2023-08-19 01:58+0000\n"
+"PO-Revision-Date: 2024-01-26 14:40+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,35 +17,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: devicenotifications.cpp:275
 #, kde-format
 msgid "%1 has been plugged in."
-msgstr ""
+msgstr "Įkištas %1."
 
 #: devicenotifications.cpp:275
 #, kde-format
 msgid "A USB device has been plugged in."
-msgstr ""
+msgstr "Įkištas USB įrenginys."
 
 #: devicenotifications.cpp:278
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
-msgstr ""
+msgstr "Aptiktas USB įrenginys"
 
 #: devicenotifications.cpp:295
 #, kde-format
 msgid "%1 has been unplugged."
-msgstr ""
+msgstr "%1 ištrauktas."
 
 #: devicenotifications.cpp:295
 #, kde-format
 msgid "A USB device has been unplugged."
-msgstr ""
+msgstr "USB įrenginys ištrauktas."
 
 #: devicenotifications.cpp:298
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr ""
+msgstr "USB įrenginys pašalintas"

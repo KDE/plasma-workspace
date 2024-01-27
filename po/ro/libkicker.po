@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-27 00:38+0000\n"
 "PO-Revision-Date: 2021-07-25 14:01+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -33,32 +33,32 @@ msgstr "Proprietăți"
 msgid "Add to Desktop"
 msgstr "Adaugă la birou"
 
-#: plugin/actionlist.cpp:150
+#: plugin/actionlist.cpp:152
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fixează la gestionarul de sarcini"
 
-#: plugin/actionlist.cpp:153
+#: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Adaugă la panou (control grafic)"
 
-#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Fișiere recente"
 
-#: plugin/actionlist.cpp:314
+#: plugin/actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Uită fișierele recente"
 
-#: plugin/actionlist.cpp:392
+#: plugin/actionlist.cpp:395
 #, kde-format
 msgid "Edit Application…"
 msgstr "Modifică aplicația…"
 
-#: plugin/actionlist.cpp:425
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

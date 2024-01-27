@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-27 00:38+0000\n"
 "PO-Revision-Date: 2023-10-04 15:19+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -34,32 +34,32 @@ msgstr "מאפיינים"
 msgid "Add to Desktop"
 msgstr "הוספה לשולחן העבודה"
 
-#: plugin/actionlist.cpp:150
+#: plugin/actionlist.cpp:152
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "הצמדה למנהל המשימות"
 
-#: plugin/actionlist.cpp:153
+#: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "הוספה ללוח (יישומון)"
 
-#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "קבצים אחרונים"
 
-#: plugin/actionlist.cpp:314
+#: plugin/actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "פינוי הקבצים האחרונים"
 
-#: plugin/actionlist.cpp:392
+#: plugin/actionlist.cpp:395
 #, kde-format
 msgid "Edit Application…"
 msgstr "עריכת יישום…"
 
-#: plugin/actionlist.cpp:425
+#: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

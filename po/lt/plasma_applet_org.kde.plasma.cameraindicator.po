@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2024-01-26 14:28+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,72 +17,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: contents/ui/FullRepresentation.qml:40
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
-msgstr ""
+msgstr "Aktyvi"
 
 #: contents/ui/FullRepresentation.qml:45
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
-msgstr ""
+msgstr "Neveikli"
 
 #: contents/ui/FullRepresentation.qml:47
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
-msgstr ""
+msgstr "Klaida"
 
 #: contents/ui/FullRepresentation.qml:49
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
-msgstr ""
+msgstr "Kuriama"
 
 #: contents/ui/FullRepresentation.qml:51
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
-msgstr ""
+msgstr "Pristabdyta"
 
 #: contents/ui/FullRepresentation.qml:53
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
-msgstr ""
+msgstr "Nežinoma"
 
 #: contents/ui/FullRepresentation.qml:69
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
-msgstr ""
+msgstr "Yra naudojama %1"
 
 #: contents/ui/main.qml:21
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
-msgstr ""
+msgstr "Kameros indikatorius yra neprieinamas"
 
 #: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Yra naudojama kamera"
+msgstr[1] "Yra naudojamos %1 kameros"
+msgstr[2] "Yra naudojama %1 kamerų"
+msgstr[3] "Yra naudojama %1 kamera"
 
 #: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"
-msgstr ""
+msgstr "Nenaudojama jokia kamera"
