@@ -45,7 +45,7 @@ ConfigModel {
             icon: model.decoration
             source: model.configUi
             includeMargins: false
-            visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(model.pluginPath) > -1
+            visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(model.pluginId) > -1
         }
 
         onObjectAdded: (index, object) => configModel.appendCategory(object)
