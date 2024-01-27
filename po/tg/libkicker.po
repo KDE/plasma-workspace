@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 02:30+0000\n"
+"POT-Creation-Date: 2024-01-27 02:26+0000\n"
 "PO-Revision-Date: 2020-09-21 13:33+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -32,33 +32,33 @@ msgstr "Хусусиятҳо"
 msgid "Add to Desktop"
 msgstr "Илова кардан ба мизи корӣ"
 
-#: plugin/actionlist.cpp:150
+#: plugin/actionlist.cpp:152
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Васл кардан ба мудири вазифаҳо"
 
-#: plugin/actionlist.cpp:153
+#: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Илова кардан ба лавҳа (Виҷет)"
 
-#: plugin/actionlist.cpp:304 plugin/rootmodel.cpp:399
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Файлҳои охирин"
 
-#: plugin/actionlist.cpp:314
+#: plugin/actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Пок кардани рӯйхати файлҳои охирин"
 
-#: plugin/actionlist.cpp:392
+#: plugin/actionlist.cpp:395
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Таҳрир кардани барнома..."
 
-#: plugin/actionlist.cpp:425
+#: plugin/actionlist.cpp:428
 #, fuzzy, kde-format
 #| msgctxt "@action opens a software center with the application"
 #| msgid "Uninstall or Manage Add-Ons..."
@@ -83,19 +83,19 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
 #: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
 #: plugin/recentusagemodel.cpp:215
 #, kde-format
 msgid "Applications"
 msgstr "Барномаҳо"
 
-#: plugin/appsmodel.cpp:154
+#: plugin/appsmodel.cpp:165
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Намоён кардани барномаҳо дар зерфеҳрист"
 
-#: plugin/appsmodel.cpp:163
+#: plugin/appsmodel.cpp:174
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Намоён кардани барномаҳо дар '%1'"
