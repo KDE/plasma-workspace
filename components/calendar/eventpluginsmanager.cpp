@@ -45,7 +45,7 @@ public:
     {
         m_roles.insert(Qt::EditRole, QByteArrayLiteral("checked"));
         m_roles.insert(Qt::UserRole, QByteArrayLiteral("configUi"));
-        m_roles.insert(Qt::UserRole + 1, QByteArrayLiteral("pluginPath"));
+        m_roles.insert(Qt::UserRole + 1, QByteArrayLiteral("pluginId"));
     }
 
     // make these two available to the manager
@@ -110,14 +110,14 @@ public:
         }
 
         bool enabled = value.toBool();
-        const QString pluginPath = d->availablePlugins.keys().at(index.row());
+        const QString pluginId = d->availablePlugins.keys().at(index.row());
 
         if (enabled) {
-            if (!d->enabledPlugins.contains(pluginPath)) {
-                d->enabledPlugins << pluginPath;
+            if (!d->enabledPlugins.contains(pluginId)) {
+                d->enabledPlugins << pluginId;
             }
         } else {
-            d->enabledPlugins.removeOne(pluginPath);
+            d->enabledPlugins.removeOne(pluginId);
         }
 
         Q_EMIT dataChanged(index, index);
@@ -140,7 +140,7 @@ EventPluginsManagerPrivate::EventPluginsManagerPrivate()
 {
     const auto plugins = KPluginMetaData::findPlugins(QStringLiteral("plasmacalendarplugins"));
     for (const KPluginMetaData &plugin : plugins) {
-        availablePlugins.insert(plugin.fileName(),
+        availablePlugins.insert(plugin.pluginId(),
                                 {plugin.name(), plugin.description(), plugin.iconName(), plugin.value(QStringLiteral("X-KDE-PlasmaCalendar-ConfigUi"))});
     }
 }
@@ -177,9 +177,9 @@ void EventPluginsManager::setEnabledPlugins(QStringList &pluginsList)
     // and unload those plugins that are not in the pluginsList
     auto i = d->plugins.begin();
     while (i != d->plugins.end()) {
-        const QString pluginPath = (*i)->property("pluginPath").toString();
-        if (pluginsList.contains(pluginPath)) {
-            pluginsList.removeAll(pluginPath);
+        const QString pluginId = (*i)->property("pluginId").toString();
+        if (pluginsList.contains(pluginId)) {
+            pluginsList.removeAll(pluginId);
             ++i;
         } else {
             (*i)->deleteLater();
@@ -188,8 +188,8 @@ void EventPluginsManager::setEnabledPlugins(QStringList &pluginsList)
     }
 
     // Now load all the plugins left in pluginsList
-    for (const QString &pluginPath : std::as_const(pluginsList)) {
-        loadPlugin(pluginPath);
+    for (const QString &pluginId : std::as_const(pluginsList)) {
+        loadPlugin(pluginId);
     }
 
     d->model->endResetModel();
@@ -201,12 +201,12 @@ QStringList EventPluginsManager::enabledPlugins() const
     return d->enabledPlugins;
 }
 
-void EventPluginsManager::loadPlugin(const QString &absolutePath)
+void EventPluginsManager::loadPlugin(const QString &pluginId)
 {
-    QPluginLoader loader(absolutePath);
+    QPluginLoader loader("plasmacalendarplugins/" + pluginId);
 
     if (!loader.load()) {
-        qWarning() << "Could not create Plasma Calendar Plugin: " << absolutePath;
+        qWarning() << "Could not create Plasma Calendar Plugin: " << pluginId;
         qWarning() << loader.errorString();
         return;
     }
@@ -216,7 +216,7 @@ void EventPluginsManager::loadPlugin(const QString &absolutePath)
         CalendarEvents::CalendarEventsPlugin *eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(obj);
         if (eventsPlugin) {
             qDebug() << "Loading Calendar plugin" << eventsPlugin;
-            eventsPlugin->setProperty("pluginPath", absolutePath);
+            eventsPlugin->setProperty("pluginId", pluginId);
             d->plugins << eventsPlugin;
 
             // Connect the relay signals

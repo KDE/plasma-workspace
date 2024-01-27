@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Nicolas Fella <nicolas.fella@gmx.de>
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Version=6
+
+Id=migrate-calendar-plugins
+Script=migrate-calendar-to-plugin-id.py
