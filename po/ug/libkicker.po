@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-27 00:38+0000\n"
+"POT-Creation-Date: 2024-01-28 00:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -81,19 +81,19 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr ""
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:97
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
 #: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
 #: plugin/recentusagemodel.cpp:215
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "پروگراممىلار"
 
-#: plugin/appsmodel.cpp:154
+#: plugin/appsmodel.cpp:165
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr ""
 
-#: plugin/appsmodel.cpp:163
+#: plugin/appsmodel.cpp:174
 #, fuzzy, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "پروگراممىلار"
