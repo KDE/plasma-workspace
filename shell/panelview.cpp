@@ -22,6 +22,7 @@
 #include <QRegularExpression>
 #include <QScreen>
 
+#include <KLocalizedString>
 #include <KX11Extras>
 #include <kwindoweffects.h>
 #include <kwindowsystem.h>
@@ -109,6 +110,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout, this, &PanelView::updateExclusiveZone);
+
+    connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::updateEditModeLabel);
 
     // Register enums
     qmlRegisterUncreatableMetaObject(PanelView::staticMetaObject, "org.kde.plasma.shell.panel", 0, 1, "Global", QStringLiteral("Error: only enums"));
@@ -849,6 +852,8 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             configView->init();
             configView->show();
             configView->requestActivate();
+            connect(m_panelConfigView, &PanelConfigView::visibleChanged, this, &PanelView::updateEditModeLabel);
+            updateEditModeLabel();
         }
     } else {
         if (m_appletConfigView && m_appletConfigView->applet() == applet) {
@@ -983,11 +988,26 @@ void PanelView::integrateScreen()
     }
 }
 
+void PanelView::updateEditModeLabel()
+{
+    bool editMode = containment()->corona()->isEditMode();
+    QAction *action = containment()->internalAction("configure");
+    if (!action) {
+        return;
+    }
+    if (m_panelConfigView && m_panelConfigView->isVisible() && editMode) {
+        action->setText(i18nc("@action:inmenu", "Hide Panel Configuration"));
+    } else {
+        action->setText(i18nc("@action:inmenu", "Show Panel Configuration"));
+    }
+}
+
 void PanelView::showEvent(QShowEvent *event)
 {
     PlasmaQuick::ContainmentView::showEvent(event);
 
     integrateScreen();
+    updateEditModeLabel();
 }
 
 void PanelView::setScreenToFollow(QScreen *screen)

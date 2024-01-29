@@ -277,6 +277,7 @@ private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
     void resizePanel();
     void integrateScreen();
+    void updateEditModeLabel();
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
