@@ -17,7 +17,6 @@
 #include <KSycoca>
 
 #include <clocale>
-#include <optional>
 #include <sys/types.h>
 #include <unistd.h>
 

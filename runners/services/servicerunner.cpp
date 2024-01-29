@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2006 Aaron Seigo <aseigo@kde.org>
     SPDX-FileCopyrightText: 2014 Vishesh Handa <vhanda@kde.org>
     SPDX-FileCopyrightText: 2016-2020 Harald Sitter <sitter@kde.org>
-    SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
+    SPDX-FileCopyrightText: 2022-2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -114,27 +114,24 @@ private:
         return ret;
     }
 
-    qreal increaseMatchRelavance(const KService::Ptr &service, const QStringList &strList, const QString &category)
+    enum class Category { Name, GenericName, Comment };
+    qreal increaseMatchRelavance(const QString &serviceProperty, const QStringList &strList, Category category)
     {
         // Increment the relevance based on all the words (other than the first) of the query list
         qreal relevanceIncrement = 0;
 
         for (int i = 1; i < strList.size(); ++i) {
             const auto &str = strList.at(i);
-            if (category == QLatin1String("Name")) {
-                if (service->name().contains(str, Qt::CaseInsensitive)) {
+            if (category == Category::Name) {
+                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
-            } else if (category == QLatin1String("GenericName")) {
-                if (service->genericName().contains(str, Qt::CaseInsensitive)) {
+            } else if (category == Category::GenericName) {
+                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
-            } else if (category == QLatin1String("Exec")) {
-                if (service->exec().contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            } else if (category == QLatin1String("Comment")) {
-                if (service->comment().contains(str, Qt::CaseInsensitive)) {
+            } else if (category == Category::Comment) {
+                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
             }
@@ -249,15 +246,13 @@ private:
 
             const QString id = service->storageId();
             const QString name = service->name();
-            const QString exec = service->exec();
 
             KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
             qreal relevance(0.6);
 
-            // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
-            // chances are the user doesn't want that app.
+            // If the term was < 3 chars and NOT at the beginning of the App's name, then chances are the user doesn't want that app
             if (weightedTermLength < 3) {
-                if (name.startsWith(query, Qt::CaseInsensitive) || exec.startsWith(query, Qt::CaseInsensitive)) {
+                if (name.startsWith(query, Qt::CaseInsensitive)) {
                     relevance = 0.9;
                 } else {
                     continue;
@@ -265,25 +260,22 @@ private:
             } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
                 relevance = 1;
                 categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-            } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
+            } else if (const int idx = name.indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.8;
-                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
-
-                if (name.startsWith(queryList[0], Qt::CaseInsensitive)) {
+                relevance += increaseMatchRelavance(name, queryList, Category::Name);
+                if (idx == 0) {
                     relevance += 0.1;
                 }
-            } else if (service->genericName().contains(queryList[0], Qt::CaseInsensitive)) {
+            } else if (const int idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.65;
-                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("GenericName"));
-
-                if (service->genericName().startsWith(queryList[0], Qt::CaseInsensitive)) {
+                relevance += increaseMatchRelavance(service->genericName(), queryList, Category::GenericName);
+                if (idx == 0) {
                     relevance += 0.05;
                 }
-            } else if (service->comment().contains(queryList[0], Qt::CaseInsensitive)) {
+            } else if (const int idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.5;
-                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Comment"));
-
-                if (service->comment().startsWith(queryList[0], Qt::CaseInsensitive)) {
+                relevance += increaseMatchRelavance(service->comment(), queryList, Category::Comment);
+                if (idx == 0) {
                     relevance += 0.05;
                 }
             }
@@ -296,14 +288,15 @@ private:
                 relevance += .09;
             }
 
-            qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
-            match.setRelevance(relevance);
-
             if (const auto foundIt = m_runner->m_favourites.constFind(service->desktopEntryName()); foundIt != m_runner->m_favourites.cend()) {
                 if (foundIt->isGlobal || foundIt->linkedActivities.contains(m_currentActivity)) {
-                    match.setRelevance(match.relevance() + 0.3);
+                    qCDebug(RUNNER_SERVICES) << "entry is a favorite" << id << match.subtext() << relevance;
+                    relevance *= 1.25; // Give favorites a relative boost,
                 }
             }
+
+            qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
+            match.setRelevance(relevance);
 
             matches << match;
         }
