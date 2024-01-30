@@ -252,3 +252,37 @@ Plasma::Applet *ContainmentInterface::findTaskManagerApplet(Plasma::Containment 
     });
     return found != applets.cend() ? *found : nullptr;
 }
+
+int ContainmentInterface::getIconItemSize(QObject *appletInterface)
+{
+    if (!appletInterface) {
+        return -1;
+    }
+
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    Plasma::Containment *containment = applet->containment();
+
+    if (!containment) {
+        return -1;
+    }
+
+    if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
+        auto *taskManager = findTaskManagerApplet(containment);
+
+        if (!taskManager) {
+            return -1;
+        }
+
+        auto *taskManagerQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(taskManager);
+
+        if (!taskManagerQuickItem) {
+            return -1;
+        }
+
+        QVariant retVal;
+        if (QMetaObject::invokeMethod(taskManagerQuickItem, "getIconItemSize", qReturnArg(retVal))) {
+            return retVal.toInt();
+        }
+    }
+    return -1;
+}

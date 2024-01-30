@@ -44,6 +44,8 @@ public:
     static Q_INVOKABLE bool screenContainmentMutable(QObject *appletInterface);
     static Q_INVOKABLE void ensureMutable(Plasma::Containment *containment);
 
+    static Q_INVOKABLE int getIconItemSize(QObject *appletInterface);
+
 private:
     template<class UnaryPredicate>
     static QQuickItem *findPlasmaGraphicObjectChildIf(const Plasma::Applet *applet, UnaryPredicate predicate);
