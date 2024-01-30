@@ -92,20 +92,9 @@ Item {
 
             QQC2.Label {
                 Layout.fillWidth: true
-                Layout.maximumHeight: labelContainer.height - resolutionLabel.implicitHeight
+                Layout.maximumHeight: labelContainer.height
 
-                text: screen.name
-                textFormat: Text.PlainText
-                wrapMode: Text.Wrap
-                horizontalAlignment: Text.AlignHCenter
-                elide: Text.ElideRight
-            }
-
-            QQC2.Label {
-                id: resolutionLabel
-                Layout.fillWidth: true
-
-                text: "(" + outputSize.width + "x" + outputSize.height +  ")"
+                text: screen.model
                 textFormat: Text.PlainText
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
