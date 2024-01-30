@@ -360,7 +360,19 @@ void PlasmaAppletItemModel::populateModel()
     QList<KPluginMetaData> packages =
         KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
 
-    // Search all packages that aren't a correct applet and put them at the end: assume they are plasma5 plasmoids
+    // NOTE: Those 2 extra searches are for pure retrocompatibility, to list old plasmoids
+    // Just to give the user the possibility to remove them.
+    // Eventually after a year or two, this code can be removed to drop this transition support
+
+    // Search all of those that have a desktop file metadata, those are plasma 5 plasmoids
+    QList<KPackage::Package> kPackages = KPackage::PackageLoader::self()->listKPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"));
+    for (const KPackage::Package &package : kPackages) {
+        KPluginMetaData data = package.metadata();
+        if (package.filePath("metadata").endsWith(QStringLiteral("metadata.desktop")) && filter(data)) {
+            appendRow(new PlasmaAppletItem(data));
+        }
+    }
+    // Search all packages that have json metadata but not a correct Plasma/Applet and put them at the end: assume they are plasma5 plasmoids
     packages.append(
         KPackage::PackageLoader::self()->findPackages(QString(), QStringLiteral("plasma/plasmoids"), [&filter](const KPluginMetaData &plugin) -> bool {
             return plugin.value(QStringLiteral("KPackageStructure")) != QStringLiteral("Plasma/Applet") && filter(plugin);
