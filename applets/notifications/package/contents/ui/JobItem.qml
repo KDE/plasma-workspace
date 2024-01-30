@@ -139,6 +139,8 @@ ColumnLayout {
     RowLayout {
         id: progressRow
         Layout.fillWidth: true
+        // Even when indeterminate, we want to reserve the height for the text, otherwise it's too tightly spaced
+        Layout.minimumHeight: progressText.implicitHeight
         // We want largeSpacing between the progress bar and the label
         spacing: Kirigami.Units.largeSpacing
 
