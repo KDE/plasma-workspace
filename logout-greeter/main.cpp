@@ -33,11 +33,6 @@ int main(int argc, char *argv[])
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
 
-    // If we're already shutting down we don't need another prompt
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.Shutdown")) {
-        return 0;
-    }
-
     bool windowed = false;
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), u"KDE"_s);
     QString packageName = cg.readEntry("LookAndFeelPackage", QString());

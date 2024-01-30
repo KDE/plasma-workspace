@@ -44,6 +44,13 @@ void Greeter::setupWaylandIntegration()
 
 void Greeter::init()
 {
+    // If we're already shutting down we don't need another prompt,
+    // just reply to the dbus message and exit
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.Shutdown")) {
+        QApplication::quit();
+        return;
+    }
+
     setupWaylandIntegration();
     const auto screens = qApp->screens();
     for (QScreen *screen : screens) {
