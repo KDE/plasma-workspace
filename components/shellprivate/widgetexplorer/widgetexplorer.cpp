@@ -528,7 +528,15 @@ void WidgetExplorer::uninstall(const QString &pluginName)
 {
     static const QString packageRoot =
         QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
-    KPackage::PackageJob::uninstall(QStringLiteral("Plasma/Applet"), pluginName, packageRoot);
+    KPackage::PackageJob *job = KPackage::PackageJob::uninstall(QStringLiteral("Plasma/Applet"), pluginName, packageRoot);
+    // This removes folders of packages that are *not* valid so the package job can't uninstall them
+    // This is a bit dangerous so eventually we can drop this when we drop support for uninstalling plasma5 plasmoids
+    if (!job->package().isValid() && !pluginName.isEmpty()) {
+        QDir dir(packageRoot + "/" + pluginName);
+        if (dir.exists()) {
+            dir.removeRecursively();
+        }
+    }
 
     // FIXME: moreefficient way rather a linear scan?
     for (int i = 0; i < d->itemModel.rowCount(); ++i) {
