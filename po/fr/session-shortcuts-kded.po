@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2024-01-02 09:24+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -19,32 +19,38 @@ msgstr ""
 msgid "Session Management"
 msgstr "Gestion de sessions"
 
-#: main.cpp:38
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr ""
+
+#: main.cpp:48
 #, kde-format
 msgid "Log Out"
 msgstr "Se déconnecter"
 
-#: main.cpp:44
+#: main.cpp:54
 #, kde-format
 msgid "Shut Down"
 msgstr "Éteindre"
 
-#: main.cpp:50
+#: main.cpp:60
 #, kde-format
 msgid "Reboot"
 msgstr "Redémarrer"
 
-#: main.cpp:58
+#: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Se déconnecter sans confirmation"
 
-#: main.cpp:64
+#: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Éteindre sans confirmation"
 
-#: main.cpp:70
+#: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Redémarrer sans confirmation"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2024-01-01 16:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -22,32 +22,38 @@ msgstr ""
 msgid "Session Management"
 msgstr "Oturum Yönetimi"
 
-#: main.cpp:38
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr ""
+
+#: main.cpp:48
 #, kde-format
 msgid "Log Out"
 msgstr "Oturumu Kapat"
 
-#: main.cpp:44
+#: main.cpp:54
 #, kde-format
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: main.cpp:50
+#: main.cpp:60
 #, kde-format
 msgid "Reboot"
 msgstr "Yeniden Başlat"
 
-#: main.cpp:58
+#: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Onay Olmadan Oturumu Kapat"
 
-#: main.cpp:64
+#: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Onay Olmadan Kapat"
 
-#: main.cpp:70
+#: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Onay Olmadan Yeniden Başlat"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2024-01-02 02:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -23,32 +23,38 @@ msgstr ""
 msgid "Session Management"
 msgstr "სესიების მართვა"
 
-#: main.cpp:38
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr ""
+
+#: main.cpp:48
 #, kde-format
 msgid "Log Out"
 msgstr "გასვლა"
 
-#: main.cpp:44
+#: main.cpp:54
 #, kde-format
 msgid "Shut Down"
 msgstr "გამორთვა"
 
-#: main.cpp:50
+#: main.cpp:60
 #, kde-format
 msgid "Reboot"
 msgstr "გადატვირთვა"
 
-#: main.cpp:58
+#: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "გასვლა დადასტურების გარეშე"
 
-#: main.cpp:64
+#: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "გამორთვა დადასტურების გარეშე"
 
-#: main.cpp:70
+#: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "გადატვირთვა დადასტურების გარეშე"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -44,20 +44,20 @@ msgid "Caps Lock is on"
 msgstr "Grootschriev-Rast is an"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:169
+#: contents/logout/Logout.qml:200
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
 msgid "Restart"
 msgstr ""
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:214
+#: contents/logout/Logout.qml:251
 #, fuzzy, kde-format
 #| msgid "Shut down"
 msgid "Shut Down"
@@ -133,7 +133,7 @@ msgstr "Oplsuten is fehlslaan"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
 #, kde-format
 msgid "Hibernate"
 msgstr ""
@@ -192,7 +192,38 @@ msgstr ""
 msgid "Next track"
 msgstr ""
 
-#: contents/logout/Logout.qml:142
+#: contents/logout/Logout.qml:151
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/logout/Logout.qml:152
+#, fuzzy, kde-format
+#| msgid "In %1 seconds"
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "In %1 Sekunnen"
+msgstr[1] "In %1 Sekunnen"
+
+#: contents/logout/Logout.qml:154
+#, fuzzy, kde-format
+#| msgid "In %1 seconds"
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "In %1 Sekunnen"
+msgstr[1] "In %1 Sekunnen"
+
+#: contents/logout/Logout.qml:157
+#, fuzzy, kde-format
+#| msgid "Shutting down"
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Bi to utmaken"
+msgstr[1] "Bi to utmaken"
+
+#: contents/logout/Logout.qml:172
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -203,61 +234,60 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:187
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
-#: contents/logout/Logout.qml:189
+#: contents/logout/Logout.qml:201
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:211
+#, kde-format
+msgid "Hibernate Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:223
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
+#, kde-format
+msgid "Restart Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:252
+#, fuzzy, kde-format
+#| msgid "Shut down"
+msgid "Shut Down Now"
+msgstr "Utmaken"
+
+#: contents/logout/Logout.qml:262
 #, fuzzy, kde-format
 #| msgctxt "Button to log out of the desktop session"
 #| msgid "Log out"
 msgid "Log Out"
 msgstr "Afmellen"
 
-#: contents/logout/Logout.qml:249
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:263
 #, fuzzy, kde-format
-#| msgid "In %1 seconds"
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "In %1 Sekunnen"
-msgstr[1] "In %1 Sekunnen"
+#| msgctxt "Button to log out of the desktop session"
+#| msgid "Log out"
+msgid "Log Out Now"
+msgstr "Afmellen"
 
-#: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shutting down"
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "Bi to utmaken"
-msgstr[1] "Bi to utmaken"
-
-#: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgid "In %1 seconds"
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "In %1 Sekunnen"
-msgstr[1] "In %1 Sekunnen"
-
-#: contents/logout/Logout.qml:266
-#, kde-format
-msgid "OK"
-msgstr ""
-
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:273
 #, kde-format
 msgid "Cancel"
 msgstr "Afbreken"

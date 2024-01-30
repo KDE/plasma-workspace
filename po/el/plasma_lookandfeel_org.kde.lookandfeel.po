@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2017-03-24 14:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -44,20 +44,20 @@ msgid "Caps Lock is on"
 msgstr "Το Caps Lock είναι ενεργό"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:169
+#: contents/logout/Logout.qml:200
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:214
+#: contents/logout/Logout.qml:251
 #, fuzzy, kde-format
 #| msgid "Shut down"
 msgid "Shut Down"
@@ -131,7 +131,7 @@ msgstr "Αποτυχία ξεκλειδώματος"
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
 #, kde-format
 msgid "Hibernate"
 msgstr ""
@@ -188,7 +188,37 @@ msgstr ""
 msgid "Next track"
 msgstr ""
 
-#: contents/logout/Logout.qml:142
+#: contents/logout/Logout.qml:151
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/logout/Logout.qml:152
+#, fuzzy, kde-format
+#| msgid "Reboot in 1 second"
+#| msgid_plural "Reboot in %1 seconds"
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο"
+msgstr[1] "Επανεκκίνηση σε %1 δευτερόλεπτα"
+
+#: contents/logout/Logout.qml:154
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Αποσύνδεση σε 1 δευτερόλεπτο"
+msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα"
+
+#: contents/logout/Logout.qml:157
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Τερματισμός σε 1 δευτερόλεπτο"
+msgstr[1] "Τερματισμός σε %1 δευτερόλεπτα"
+
+#: contents/logout/Logout.qml:172
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -199,60 +229,61 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:187
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
-#: contents/logout/Logout.qml:189
+#: contents/logout/Logout.qml:201
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:211
+#, kde-format
+msgid "Hibernate Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:223
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "Restart Now"
+msgstr "Επανεκκίνηση"
+
+#: contents/logout/Logout.qml:252
+#, fuzzy, kde-format
+#| msgid "Shut down"
+msgid "Shut Down Now"
+msgstr "Τερματισμός"
+
+#: contents/logout/Logout.qml:262
 #, fuzzy, kde-format
 #| msgctxt "Button to log out of the desktop session"
 #| msgid "Log out"
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: contents/logout/Logout.qml:249
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:263
 #, fuzzy, kde-format
-#| msgid "Reboot in 1 second"
-#| msgid_plural "Reboot in %1 seconds"
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο"
-msgstr[1] "Επανεκκίνηση σε %1 δευτερόλεπτα"
+#| msgctxt "Button to log out of the desktop session"
+#| msgid "Log out"
+msgid "Log Out Now"
+msgstr "Αποσύνδεση"
 
-#: contents/logout/Logout.qml:252
-#, kde-format
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "Τερματισμός σε 1 δευτερόλεπτο"
-msgstr[1] "Τερματισμός σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:254
-#, kde-format
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "Αποσύνδεση σε 1 δευτερόλεπτο"
-msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:266
-#, kde-format
-msgid "OK"
-msgstr "Εντάξει"
-
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:273
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -272,6 +303,9 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma από το KDE"
+
+#~ msgid "OK"
+#~ msgstr "Εντάξει"
 
 #, fuzzy
 #~| msgid "Switch Session"

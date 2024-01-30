@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 17:19-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -22,32 +22,38 @@ msgstr ""
 msgid "Session Management"
 msgstr "ਸ਼ੈਸ਼ਨ ਇੰਤਜ਼ਾਮ"
 
-#: main.cpp:38
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr ""
+
+#: main.cpp:48
 #, kde-format
 msgid "Log Out"
 msgstr "ਲਾਗ ਆਉਟ"
 
-#: main.cpp:44
+#: main.cpp:54
 #, kde-format
 msgid "Shut Down"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: main.cpp:50
+#: main.cpp:60
 #, kde-format
 msgid "Reboot"
 msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
-#: main.cpp:58
+#: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "ਬਿਨਾਂ ਪੁੱਛੇ ਲਾਗ ਆਉਟ ਕਰੋ"
 
-#: main.cpp:64
+#: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "ਬਿਨਾਂ ਪੁੱਛੇ ਬੰਦ ਕਰੋ"
 
-#: main.cpp:70
+#: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "ਬਿਨਾਂ ਪੁੱਛੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -48,20 +48,20 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock уключаны"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:169
+#: contents/logout/Logout.qml:200
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Прыпыніць у RAM"
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
 msgid "Restart"
 msgstr "Перазапусціць"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:214
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Shut Down"
 msgstr "Выключыць"
@@ -132,7 +132,7 @@ msgstr "Не ўдалося разблакаваць"
 msgid "Sleep"
 msgstr "Прыпыніць у RAM"
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
 #, kde-format
 msgid "Hibernate"
 msgstr "Перавесці ў рэжым сну"
@@ -189,7 +189,43 @@ msgstr "Прайграць або прыпыніць"
 msgid "Next track"
 msgstr "Наступная кампазіцыя"
 
-#: contents/logout/Logout.qml:142
+#: contents/logout/Logout.qml:151
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: contents/logout/Logout.qml:152
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Перазапуск праз %1 секунду"
+msgstr[1] "Перазапуск праз %1 секунды"
+msgstr[2] "Перазапуск праз %1 секунд"
+msgstr[3] "Перазапуск праз %1 секунды"
+
+#: contents/logout/Logout.qml:154
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Выхад праз %1 секунду"
+msgstr[1] "Выхад праз %1 секунды"
+msgstr[2] "Выхад праз %1 секунд"
+msgstr[3] "Выхад праз %1 секунды"
+
+#: contents/logout/Logout.qml:157
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Выключэнне праз %1 секунду"
+msgstr[1] "Выключэнне праз %1 секунды"
+msgstr[2] "Выключэнне праз %1 секунд"
+msgstr[3] "Выключэнне праз %1 секунды"
+
+#: contents/logout/Logout.qml:172
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -210,64 +246,61 @@ msgstr[3] ""
 "Зараз працуюць яшчэ %1 карыстальнікі. Калі выключыць або перазапусціць "
 "камп'ютар, гэтыя карыстальнікі можа страціць даныя."
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:187
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Пасля перазапуску камп'ютара адкрыецца праграма кіравання прашыўкай."
 
-#: contents/logout/Logout.qml:189
+#: contents/logout/Logout.qml:201
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep Now"
+msgstr "Прыпыніць у RAM"
+
+#: contents/logout/Logout.qml:211
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "Hibernate Now"
+msgstr "Перавесці ў рэжым сну"
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:223
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "Restart Now"
+msgstr "Перазапусціць"
+
+#: contents/logout/Logout.qml:252
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut Down Now"
+msgstr "Выключыць"
+
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgid "Log Out"
 msgstr "Выхад"
 
-#: contents/logout/Logout.qml:249
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+#: contents/logout/Logout.qml:263
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log Out Now"
+msgstr "Выхад"
 
-#: contents/logout/Logout.qml:250
-#, kde-format
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "Перазапуск праз %1 секунду"
-msgstr[1] "Перазапуск праз %1 секунды"
-msgstr[2] "Перазапуск праз %1 секунд"
-msgstr[3] "Перазапуск праз %1 секунды"
-
-#: contents/logout/Logout.qml:252
-#, kde-format
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "Выключэнне праз %1 секунду"
-msgstr[1] "Выключэнне праз %1 секунды"
-msgstr[2] "Выключэнне праз %1 секунд"
-msgstr[3] "Выключэнне праз %1 секунды"
-
-#: contents/logout/Logout.qml:254
-#, kde-format
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "Выхад праз %1 секунду"
-msgstr[1] "Выхад праз %1 секунды"
-msgstr[2] "Выхад праз %1 секунд"
-msgstr[3] "Выхад праз %1 секунды"
-
-#: contents/logout/Logout.qml:266
-#, kde-format
-msgid "OK"
-msgstr "Добра"
-
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:273
 #, kde-format
 msgid "Cancel"
 msgstr "Скасаваць"
@@ -286,6 +319,9 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma ад KDE"
+
+#~ msgid "OK"
+#~ msgstr "Добра"
 
 #~ msgid "Switch to This Session"
 #~ msgstr "Пераключыцца на гэты сеанс"

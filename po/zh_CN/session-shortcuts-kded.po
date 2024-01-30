@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2024-01-21 14:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,32 +23,38 @@ msgstr ""
 msgid "Session Management"
 msgstr "会话管理"
 
-#: main.cpp:38
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr ""
+
+#: main.cpp:48
 #, kde-format
 msgid "Log Out"
 msgstr "注销"
 
-#: main.cpp:44
+#: main.cpp:54
 #, kde-format
 msgid "Shut Down"
 msgstr "关机"
 
-#: main.cpp:50
+#: main.cpp:60
 #, kde-format
 msgid "Reboot"
 msgstr "重启"
 
-#: main.cpp:58
+#: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "注销 (无需确认)"
 
-#: main.cpp:64
+#: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "关机 (无需确认)"
 
-#: main.cpp:70
+#: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "重启 (无需确认)"

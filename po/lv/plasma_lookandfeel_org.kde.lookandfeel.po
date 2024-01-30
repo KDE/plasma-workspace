@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2024-01-18 20:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -44,20 +44,20 @@ msgid "Caps Lock is on"
 msgstr "Ir ieslēgts „Caps Lock“"
 
 #: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:169
+#: contents/logout/Logout.qml:200
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Iesnaudināt"
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:190 contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
 msgid "Restart"
 msgstr "Pārstartēt"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:214
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Shut Down"
 msgstr "Izslēgt"
@@ -128,7 +128,7 @@ msgstr "Atslēgšana neizdevās"
 msgid "Sleep"
 msgstr "Iesnaudināt"
 
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:179
+#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernēt"
@@ -185,7 +185,42 @@ msgstr "Atskaņot vai pauzēt multimediju"
 msgid "Next track"
 msgstr "Nākamais celiņš"
 
-#: contents/logout/Logout.qml:142
+#: contents/logout/Logout.qml:151
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] ""
+"Instalē programmatūras atjauninājumus un pārstartējas pēc %1 sekundes"
+msgstr[1] ""
+"Instalē programmatūras atjauninājumus un pārstartējas pēc %1 sekundēm"
+msgstr[2] ""
+"Instalē programmatūras atjauninājumus un pārstartējas pēc %1 sekundēm"
+
+#: contents/logout/Logout.qml:152
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Pārstartē pēc %1 sekundes"
+msgstr[1] "Pārstartē pēc %1 sekundēm"
+msgstr[2] "Pārstartē pēc %1 sekundēm"
+
+#: contents/logout/Logout.qml:154
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Izrakstās pēc %1 sekundes"
+msgstr[1] "Izrakstās pēc %1 sekundēm"
+msgstr[2] "Izrakstās pēc %1 sekundēm"
+
+#: contents/logout/Logout.qml:157
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Izslēdz pēc %1 sekundes"
+msgstr[1] "Izslēdz pēc %1 sekundēm"
+msgstr[2] "Izslēdz pēc %1 sekundēm"
+
+#: contents/logout/Logout.qml:172
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -203,65 +238,65 @@ msgstr[2] ""
 "Sistēmā ir ierakstījušies %1 citi lietotāji. Ja datoru izslēgsiet vai "
 "pārstartēsiet, šie lietotāji var pazaudēt savu iesākto darbu."
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:187
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Pēc pārstartēšanas dators ieslēgsies aparatūrprogrammatūras iestatīšanas "
 "ekrānā."
 
-#: contents/logout/Logout.qml:189
+#: contents/logout/Logout.qml:201
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep Now"
+msgstr "Iesnaudināt"
+
+#: contents/logout/Logout.qml:211
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "Hibernate Now"
+msgstr "Hibernēt"
+
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr "Instalēt atjauninājumus un pārstartēt"
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:223
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart"
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart Now"
+msgstr "Instalēt atjauninājumus un pārstartēt"
+
+#: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "Restart Now"
+msgstr "Pārstartēt"
+
+#: contents/logout/Logout.qml:252
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut Down Now"
+msgstr "Izslēgt"
+
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgid "Log Out"
 msgstr "Izrakstīsies"
 
-#: contents/logout/Logout.qml:249
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-"Instalē programmatūras atjauninājumus un pārstartējas pēc %1 sekundes"
-msgstr[1] ""
-"Instalē programmatūras atjauninājumus un pārstartējas pēc %1 sekundēm"
-msgstr[2] ""
-"Instalē programmatūras atjauninājumus un pārstartējas pēc %1 sekundēm"
+#: contents/logout/Logout.qml:263
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log Out Now"
+msgstr "Izrakstīsies"
 
-#: contents/logout/Logout.qml:250
-#, kde-format
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "Pārstartē pēc %1 sekundes"
-msgstr[1] "Pārstartē pēc %1 sekundēm"
-msgstr[2] "Pārstartē pēc %1 sekundēm"
-
-#: contents/logout/Logout.qml:252
-#, kde-format
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "Izslēdz pēc %1 sekundes"
-msgstr[1] "Izslēdz pēc %1 sekundēm"
-msgstr[2] "Izslēdz pēc %1 sekundēm"
-
-#: contents/logout/Logout.qml:254
-#, kde-format
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "Izrakstās pēc %1 sekundes"
-msgstr[1] "Izrakstās pēc %1 sekundēm"
-msgstr[2] "Izrakstās pēc %1 sekundēm"
-
-#: contents/logout/Logout.qml:266
-#, kde-format
-msgid "OK"
-msgstr "Labi"
-
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:273
 #, kde-format
 msgid "Cancel"
 msgstr "Atcelt"
@@ -280,3 +315,6 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE veidotā „Plasma“"
+
+#~ msgid "OK"
+#~ msgstr "Labi"

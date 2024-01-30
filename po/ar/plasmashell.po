@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
 "PO-Revision-Date: 2023-07-06 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -259,6 +259,18 @@ msgctxt ""
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
 msgstr "عُطّلت لوحة المفاتيح على الشّاشة"
+
+#: panelview.cpp:999
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Panel Configuration"
+msgstr ""
+
+#: panelview.cpp:1001
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Panel Configuration"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
