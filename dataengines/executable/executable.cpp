@@ -34,6 +34,10 @@ void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus
 
 void ExecutableContainer::exec()
 {
+    if (qEnvironmentVariableIsSet("PLASMA_DATAENGINE_DISABLE_COMMANDS")) {
+        return;
+    }
+
     if (!m_process) {
         m_process = new KProcess();
         connect(m_process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(finished(int, QProcess::ExitStatus)));
