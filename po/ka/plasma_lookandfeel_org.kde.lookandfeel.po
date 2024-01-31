@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-22 06:51+0100\n"
+"PO-Revision-Date: 2024-01-30 06:18+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -54,7 +54,7 @@ msgstr "ძილი"
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
 msgid "Restart"
-msgstr "რესტარტი"
+msgstr "გადატვირთვა"
 
 #: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
 #: contents/logout/Logout.qml:251
@@ -235,18 +235,15 @@ msgstr ""
 "გადატვირთვის შემდეგ კომპიუტერი მიკროკოდის მორგების ეკრანზე გადაირთვება."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "ძილი"
+msgstr "ძილი ახლავე"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "პროგრამული ძილი"
+msgstr "პროგრამული ძილი ახლავე"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -255,24 +252,20 @@ msgid "Install Updates & Restart"
 msgstr "განახლებების დაყენება და გადატვირთვა"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "განახლებების დაყენება და გადატვირთვა"
+msgstr "განახლებების დაყენება და გადატვირთვა ახლავე"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "რესტარტი"
+msgstr "გადატვირთვა ახლავე"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "გამორთვა"
+msgstr "ახლავე გამორთვა"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -280,10 +273,9 @@ msgid "Log Out"
 msgstr "გასვლა"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "გასვლა"
+msgstr "გასვლა ახლავე"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

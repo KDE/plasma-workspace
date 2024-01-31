@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-01 11:57+0200\n"
+"PO-Revision-Date: 2024-01-30 23:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -27,7 +27,7 @@ msgstr "Керування сеансами"
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr ""
+msgstr "Показати запит щодо виходу"
 
 #: main.cpp:48
 #, kde-format

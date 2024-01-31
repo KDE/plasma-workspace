@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-03-04 18:19+0200\n"
+"PO-Revision-Date: 2023-12-11 18:32+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -107,8 +107,7 @@ msgid "Not present"
 msgstr "Ei ole"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
 msgstr "Virranhallinta"
 
@@ -313,11 +312,10 @@ msgid "Power Profile"
 msgstr "Virranhallintaprofiili"
 
 #: package/contents/ui/PowerProfileItem.qml:97
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Ei akkuja"
+msgstr "Ei käytettävissä"
 
 #: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
@@ -382,6 +380,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Laitteesi ei ehkä tue virranhallintaprofiileja.<nl/>Kokeile asentaa "
+"<command>power-profiles-daemon</command>-paketti jakelusi paketinhallinnalla "
+"ja käynnistää järjestelmä uudelleen."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

@@ -1,7 +1,7 @@
 # Translation for session-shortcuts-kded.po to Euskara/Basque (eu).
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-01 10:08+0100\n"
+"PO-Revision-Date: 2024-01-30 19:21+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -29,7 +29,7 @@ msgstr "Saio-kudeaketa"
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr ""
+msgstr "Erakutsi saioa ixteko gonbita"
 
 #: main.cpp:48
 #, kde-format

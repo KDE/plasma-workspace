@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-03 22:07+0300\n"
+"PO-Revision-Date: 2024-01-30 16:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -239,18 +239,15 @@ msgstr ""
 "girecektir."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Uyut"
+msgstr "Şimdi Uyut"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Hazırda Beklet"
+msgstr "Şimdi Hazırda Beklet"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -259,24 +256,20 @@ msgid "Install Updates & Restart"
 msgstr "Güncellemeleri Kur ve Yeniden Başlat"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Güncellemeleri Kur ve Yeniden Başlat"
+msgstr "Şimdi Kur ve Yeniden Başlat"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Yeniden Başlat"
+msgstr "Şimdi Yeniden Başlat"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Kapat"
+msgstr "Şimdi Kapat"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -284,10 +277,9 @@ msgid "Log Out"
 msgstr "Oturumu Kapat"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Oturumu Kapat"
+msgstr "Şimdi Oturumu Kapat"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

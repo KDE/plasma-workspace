@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: session-shortcuts-kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-01 14:14+0100\n"
+"PO-Revision-Date: 2024-01-30 18:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +28,7 @@ msgstr "Gestión de la sesión"
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr ""
+msgstr "Mostrar mensaje de cierre de sesión"
 
 #: main.cpp:48
 #, kde-format

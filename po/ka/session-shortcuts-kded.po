@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-02 02:07+0100\n"
+"PO-Revision-Date: 2024-01-30 06:20+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -27,7 +27,7 @@ msgstr "სესიების მართვა"
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr ""
+msgstr "გასვლის კითხვის დადასტურება"
 
 #: main.cpp:48
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2014, 2020, 2021, 2022, 2023.
+# Giovanni Sora <g.sora@tiscali.it>, 2014, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-24 10:30+0100\n"
+"PO-Revision-Date: 2024-01-30 08:31+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -236,18 +236,15 @@ msgstr ""
 "del firmware."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Dormi"
+msgstr "Dormi Nunc"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Hiberna"
+msgstr "Hiberna Nunc"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -256,24 +253,20 @@ msgid "Install Updates & Restart"
 msgstr "Installa Actualisationes & ReInitia"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Installa Actualisationes & ReInitia"
+msgstr "Installa Actualisationes & ReInitia Nunc"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Re-Initia"
+msgstr "Re-Initia nunc"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Arresto (shut down)"
+msgstr "Stoppa (shut down) Nunc"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -281,10 +274,9 @@ msgid "Log Out"
 msgstr "Claude session"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Claude session"
+msgstr "Claude session Nunc"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

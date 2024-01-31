@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-04-02 17:10+0300\n"
+"PO-Revision-Date: 2023-11-22 21:36+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -156,7 +156,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[tuntematon]"
 
 #: server.cpp:836
 #, kde-kuit-format
@@ -166,6 +166,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Joitakin sovelluksia ei voitu hallita, koska järjestelmän hallintaresurssit "
+"ovat lopussa. Niitä kuluttavat eniten seuraavat kolme:\n"
+"%1"
 
 #: server.cpp:1108
 #, kde-kuit-format
@@ -175,6 +178,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Sovellusta <application>%1</application> ei voitu palauttaa, koska se on "
+"rikki ja kuluttanut järjestelmän palautusresurssit loppuun. Ilmoita "
+"ongelmasta sovelluksen kehittäjille."
 
 #~ msgid "Session Management"
 #~ msgstr "Istunnonhallinta"

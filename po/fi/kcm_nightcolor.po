@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@iki.fi>, 2020, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-11-11 22:21+0200\n"
+"PO-Revision-Date: 2023-12-11 18:31+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -111,14 +111,12 @@ msgid "Custom times"
 msgstr "Aikojen mukautus"
 
 #: ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Yöväri aina käytössä"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Päivävärin lämpötila:"
 
@@ -129,12 +127,10 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:232 ui/main.qml:294
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Kylmä (ei suodatinta)"
+msgstr "Viileä (ei suodatinta)"
 
 #: ui/main.qml:239 ui/main.qml:301
 #, kde-format
@@ -143,17 +139,15 @@ msgid "Warm"
 msgstr "Lämmin"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Yövärin lämpötila:"
 
 #: ui/main.qml:311
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Tunnista sijainti"
+msgstr "Nykyinen sijainti:"
 
 #: ui/main.qml:317
 #, kde-format
@@ -173,8 +167,7 @@ msgstr ""
 "services.mozilla.com/\">Mozillan paikannuspalveluun</a>."
 
 #: ui/main.qml:357
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Yövärin aloitusaika:"
 
@@ -184,8 +177,7 @@ msgid "Input format: HH:MM"
 msgstr "Syötemuoto: TT:MM"
 
 #: ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Päivävärin aloitusaika:"
 
