@@ -35,6 +35,7 @@ public:
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
+    Q_INVOKABLE QVariantList actionList(int row) override;
     Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
     Q_INVOKABLE QString labelForRow(int row) override;

@@ -18,6 +18,7 @@
 #include <KLocalizedString>
 #include <KSycoca>
 #include <chrono>
+#include <qcontainerfwd.h>
 
 using namespace std::chrono_literals;
 
@@ -157,27 +158,6 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
         return entry->hasActions() || (appsModel && !appsModel->hiddenEntries().isEmpty());
-    } else if (role == Kicker::ActionListRole) {
-        QVariantList actionList = entry->actions();
-
-        if (!m_hiddenEntries.isEmpty()) {
-            actionList << Kicker::createSeparatorActionItem();
-            QVariantMap unhideSiblingApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in this Submenu"),
-                                                                                   QStringLiteral("view-visible"),
-                                                                                   QStringLiteral("unhideSiblingApplications"));
-            actionList << unhideSiblingApplicationsAction;
-        }
-
-        const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
-
-        if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
-            QVariantMap unhideChildApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()),
-                                                                                 QStringLiteral("view-visible"),
-                                                                                 QStringLiteral("unhideChildApplications"));
-            actionList << unhideChildApplicationsAction;
-        }
-
-        return actionList;
     } else if (role == Kicker::GroupRole) {
         return entry->group();
     }
@@ -193,6 +173,35 @@ QModelIndex AppsModel::index(int row, int column, const QModelIndex &parent) con
 int AppsModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : m_entryList.count();
+}
+
+QVariantList AppsModel::actionList(int row)
+{
+    if (row < 0 || row >= m_entryList.count()) {
+        return QVariantList();
+    }
+
+    AbstractEntry *entry = m_entryList.at(row);
+
+    QVariantList actionList = entry->actions();
+
+    if (!m_hiddenEntries.isEmpty()) {
+        actionList << Kicker::createSeparatorActionItem();
+        QVariantMap unhideSiblingApplicationsAction =
+            Kicker::createActionItem(i18n("Unhide Applications in this Submenu"), QStringLiteral("view-visible"), QStringLiteral("unhideSiblingApplications"));
+        actionList << unhideSiblingApplicationsAction;
+    }
+
+    const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
+
+    if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
+        QVariantMap unhideChildApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()),
+                                                                             QStringLiteral("view-visible"),
+                                                                             QStringLiteral("unhideChildApplications"));
+        actionList << unhideChildApplicationsAction;
+    }
+
+    return actionList;
 }
 
 bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argument)

@@ -33,6 +33,7 @@
 #include <KWindowSystem>
 #include <PlasmaActivities/Stats/Cleaning>
 #include <PlasmaActivities/Stats/Terms>
+#include <qcontainerfwd.h>
 
 namespace KAStats = KActivities::Stats;
 
@@ -217,30 +218,6 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
         return service->storageId();
     } else if (role == Kicker::HasActionListRole) {
         return true;
-    } else if (role == Kicker::ActionListRole) {
-        QVariantList actionList;
-
-        const QVariantList &jumpList = Kicker::jumpListActions(service);
-        if (!jumpList.isEmpty()) {
-            actionList << jumpList;
-        }
-
-        const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
-        if (!recentDocuments.isEmpty()) {
-            actionList << recentDocuments;
-        }
-
-        if (!actionList.isEmpty()) {
-            actionList << Kicker::createSeparatorActionItem();
-        }
-
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
-        actionList << forgetAction;
-
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
-        actionList << forgetAllAction;
-
-        return actionList;
     }
 
     return QVariant();
@@ -321,8 +298,56 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
         return url;
     } else if (role == Kicker::HasActionListRole) {
         return true;
-    } else if (role == Kicker::ActionListRole) {
-        auto fileItem = getFileItem();
+    }
+
+    return QVariant();
+}
+
+QVariantList RecentUsageModel::actionList(int row)
+{
+    const QString &resource = resourceAt(row);
+    if (resource.startsWith(QLatin1String("applications:"))) {
+        QVariantList actionList;
+        const QString storageId = resource.section(QLatin1Char(':'), 1);
+        KService::Ptr service = KService::serviceByStorageId(storageId);
+        QStringList allowedTypes({QLatin1String("Service"), QLatin1String("Application")});
+        if (!service || !allowedTypes.contains(service->property<QString>(QLatin1String("Type"))) || service->exec().isEmpty()) {
+            return QVariantList();
+        }
+
+        const QVariantList &jumpList = Kicker::jumpListActions(service);
+        if (!jumpList.isEmpty()) {
+            actionList << jumpList;
+        }
+
+        const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
+        if (!recentDocuments.isEmpty()) {
+            actionList << recentDocuments;
+        }
+
+        if (!actionList.isEmpty()) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
+
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
+        actionList << forgetAction;
+
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
+        actionList << forgetAllAction;
+
+        return actionList;
+    } else {
+        const QString &mimeType = rowValueAt(row, ResultModel::MimeType).toString();
+        KFileItem fileItem;
+        QUrl url(resource);
+        if (!url.isValid()) {
+            return QVariantList();
+        }
+        if (mimeType.simplified().isEmpty()) {
+            fileItem = KFileItem(url, KFileItem::SkipMimeTypeFromContent);
+        } else {
+            fileItem = KFileItem(url, mimeType);
+        }
         QVariantList actionList = Kicker::createActionListForFileItem(fileItem);
 
         actionList << Kicker::createSeparatorActionItem();
@@ -339,8 +364,6 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
 
         return actionList;
     }
-
-    return QVariant();
 }
 
 bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant &argument)

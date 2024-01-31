@@ -415,9 +415,23 @@ public:
              : role == Kicker::FavoriteIdRole ? entry->id()
              : role == Kicker::UrlRole ? entry->url()
              : role == Kicker::HasActionListRole ? entry->hasActions()
-             : role == Kicker::ActionListRole ? entry->actions()
              : QVariant();
         // clang-format on
+    }
+
+    QVariantList actionList(int row)
+    {
+        if (row < 0 || row >= m_items.count()) {
+            return QVariantList();
+        }
+
+        const QString item = m_items[row].value();
+        if (!m_itemEntries.contains(item)) {
+            return QVariantList();
+        }
+
+        const auto entry = m_itemEntries[item];
+        return entry->actions();
     }
 
     bool trigger(int row, const QString &actionId, const QVariant &argument)
@@ -542,6 +556,15 @@ void KAStatsFavoritesModel::initForClient(const QString &clientId)
 QString KAStatsFavoritesModel::description() const
 {
     return i18n("Favorites");
+}
+
+QVariantList KAStatsFavoritesModel::actionList(int row)
+{
+    if (!d) {
+        return QVariantList();
+    }
+
+    return d->actionList(row);
 }
 
 bool KAStatsFavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)

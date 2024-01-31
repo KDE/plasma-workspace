@@ -174,6 +174,12 @@ QModelIndex PlaceholderModel::sourceIndexToIndex(const QModelIndex &sourceIndex)
         index(sourceRowToRow(sourceRow), sourceColumn, QModelIndex());
 }
 
+QVariantList PlaceholderModel::actionList(int row)
+{
+    Q_UNUSED(row);
+    return QVariantList();
+}
+
 bool PlaceholderModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     if (m_isTriggerInhibited)

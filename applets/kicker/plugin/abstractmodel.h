@@ -44,6 +44,7 @@ public:
     int iconSize() const;
     void setIconSize(int size);
 
+    Q_INVOKABLE virtual QVariantList actionList(int row) = 0;
     Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) = 0;
 
     Q_INVOKABLE virtual void refresh();

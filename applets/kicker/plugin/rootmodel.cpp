@@ -75,7 +75,7 @@ QVariant RootModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (role == Kicker::HasActionListRole || role == Kicker::ActionListRole) {
+    if (role == Kicker::HasActionListRole) {
         const AbstractEntry *entry = m_entryList.at(index.row());
 
         if (entry->type() == AbstractEntry::GroupType) {
@@ -85,18 +85,36 @@ QVariant RootModel::data(const QModelIndex &index, int role) const
             if (model == m_recentAppsModel || model == m_recentDocsModel) {
                 if (role == Kicker::HasActionListRole) {
                     return true;
-                } else if (role == Kicker::ActionListRole) {
-                    QVariantList actionList;
-                    actionList << model->actions();
-                    actionList << Kicker::createSeparatorActionItem();
-                    actionList << Kicker::createActionItem(i18n("Hide %1", group->name()), QStringLiteral("view-hidden"), QStringLiteral("hideCategory"));
-                    return actionList;
                 }
             }
         }
     }
 
     return AppsModel::data(index, role);
+}
+
+Q_INVOKABLE QVariantList RootModel::actionList(int row)
+{
+    if (row < 0 || row >= m_entryList.count()) {
+        return QVariantList();
+    }
+
+    const AbstractEntry *entry = m_entryList.at(row);
+
+    if (entry->type() == AbstractEntry::GroupType) {
+        const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+        AbstractModel *model = group->childModel();
+
+        if (model == m_recentAppsModel || model == m_recentDocsModel) {
+            QVariantList actionList;
+            actionList << model->actions();
+            actionList << Kicker::createSeparatorActionItem();
+            actionList << Kicker::createActionItem(i18n("Hide %1", group->name()), QStringLiteral("view-hidden"), QStringLiteral("hideCategory"));
+            return actionList;
+        }
+    }
+
+    return QVariantList();
 }
 
 bool RootModel::trigger(int row, const QString &actionId, const QVariant &argument)

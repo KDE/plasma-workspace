@@ -36,6 +36,7 @@ public:
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
+    Q_INVOKABLE QVariantList actionList(int row);
     Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
     QString name() const

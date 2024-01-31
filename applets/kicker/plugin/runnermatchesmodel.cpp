@@ -21,6 +21,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <Plasma/Plasma>
+#include <qcontainerfwd.h>
 
 RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent)
     : KRunner::ResultsModel(KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group(QStringLiteral("Plugins")),
@@ -95,97 +96,105 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return match.runner()->id() == QLatin1String("krunner_services") || !match.runner()->findChildren<QAction *>().isEmpty();
     } else if (role == Kicker::IsMultilineTextRole) {
         return match.isMultiLine();
-    } else if (role == Kicker::ActionListRole) {
-        QVariantList actionList;
-        const auto actions = match.actions();
-        for (auto action : actions) {
-            QVariantMap item = Kicker::createActionItem(action.text(), //
-                                                        action.iconSource(),
-                                                        QStringLiteral("runnerAction"),
-                                                        QVariant::fromValue(action));
-
-            actionList << item;
-        }
-
-        // Only try to get a KService for matches from the services and systemsettings runner. Assuming
-        // that any other runner returns something we want to turn into a KService is
-        // unsafe, e.g. files from the Baloo runner might match a storageId just by
-        // accident, creating a dangerous false positive.
-        if (match.runner()->id() != QLatin1String("krunner_services") && match.runner()->id() != QLatin1String("krunner_systemsettings")) {
-            return actionList;
-        }
-
-        QUrl dataUrl(match.data().toUrl());
-        if (dataUrl.isEmpty() && !match.urls().isEmpty()) {
-            // needed for systemsettigs runner
-            dataUrl = match.urls().constFirst();
-        }
-        if (dataUrl.scheme() != QLatin1String("applications")) {
-            return actionList;
-        }
-
-        // Don't offer jump list actions on a jump list action.
-        const QString actionName = QUrlQuery(dataUrl).queryItemValue(QStringLiteral("action"));
-        if (!actionName.isEmpty()) {
-            return actionList;
-        }
-
-        const KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
-        if (service) {
-            if (!actionList.isEmpty()) {
-                actionList << Kicker::createSeparatorActionItem();
-            }
-
-            const QVariantList &jumpListActions = Kicker::jumpListActions(service);
-            if (!jumpListActions.isEmpty()) {
-                actionList << jumpListActions << Kicker::createSeparatorActionItem();
-            }
-
-            QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
-
-            bool systemImmutable = false;
-            if (appletInterface) {
-                systemImmutable = (appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable);
-            }
-
-            const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, service);
-            bool needsSeparator = false;
-            if (!systemImmutable && !addLauncherActions.isEmpty()) {
-                actionList << addLauncherActions;
-                needsSeparator = true;
-            }
-
-            const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
-            if (!recentDocuments.isEmpty()) {
-                actionList << recentDocuments;
-                needsSeparator = false;
-            }
-
-            if (needsSeparator) {
-                actionList << Kicker::createSeparatorActionItem();
-            }
-
-            const QVariantList &additionalActions = Kicker::additionalAppActions(service);
-            if (!additionalActions.isEmpty()) {
-                actionList << additionalActions << Kicker::createSeparatorActionItem();
-            }
-
-            // Don't allow adding launchers, editing, hiding, or uninstalling applications
-            // when system is immutable.
-            if (systemImmutable) {
-                return actionList;
-            }
-
-            if (service->isApplication()) {
-                actionList << Kicker::editApplicationAction(service);
-                actionList << Kicker::appstreamActions(service);
-            }
-        }
-
-        return actionList;
     }
 
     return QVariant();
+}
+
+QVariantList RunnerMatchesModel::actionList(int row)
+{
+    KRunner::QueryMatch match = getQueryMatch(index(row, 0, QModelIndex()));
+    if (!match.isValid()) {
+        return QVariantList();
+    }
+
+    QVariantList actionList;
+    const auto actions = match.actions();
+    for (auto action : actions) {
+        QVariantMap item = Kicker::createActionItem(action.text(), //
+                                                    action.iconSource(),
+                                                    QStringLiteral("runnerAction"),
+                                                    QVariant::fromValue(action));
+
+        actionList << item;
+    }
+
+    // Only try to get a KService for matches from the services and systemsettings runner. Assuming
+    // that any other runner returns something we want to turn into a KService is
+    // unsafe, e.g. files from the Baloo runner might match a storageId just by
+    // accident, creating a dangerous false positive.
+    if (match.runner()->id() != QLatin1String("krunner_services") && match.runner()->id() != QLatin1String("krunner_systemsettings")) {
+        return actionList;
+    }
+
+    QUrl dataUrl(match.data().toUrl());
+    if (dataUrl.isEmpty() && !match.urls().isEmpty()) {
+        // needed for systemsettigs runner
+        dataUrl = match.urls().constFirst();
+    }
+    if (dataUrl.scheme() != QLatin1String("applications")) {
+        return actionList;
+    }
+
+    // Don't offer jump list actions on a jump list action.
+    const QString actionName = QUrlQuery(dataUrl).queryItemValue(QStringLiteral("action"));
+    if (!actionName.isEmpty()) {
+        return actionList;
+    }
+
+    const KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
+    if (service) {
+        if (!actionList.isEmpty()) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
+
+        const QVariantList &jumpListActions = Kicker::jumpListActions(service);
+        if (!jumpListActions.isEmpty()) {
+            actionList << jumpListActions << Kicker::createSeparatorActionItem();
+        }
+
+        QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
+
+        bool systemImmutable = false;
+        if (appletInterface) {
+            systemImmutable = (appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable);
+        }
+
+        const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, service);
+        bool needsSeparator = false;
+        if (!systemImmutable && !addLauncherActions.isEmpty()) {
+            actionList << addLauncherActions;
+            needsSeparator = true;
+        }
+
+        const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
+        if (!recentDocuments.isEmpty()) {
+            actionList << recentDocuments;
+            needsSeparator = false;
+        }
+
+        if (needsSeparator) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
+
+        const QVariantList &additionalActions = Kicker::additionalAppActions(service);
+        if (!additionalActions.isEmpty()) {
+            actionList << additionalActions << Kicker::createSeparatorActionItem();
+        }
+
+        // Don't allow adding launchers, editing, hiding, or uninstalling applications
+        // when system is immutable.
+        if (systemImmutable) {
+            return actionList;
+        }
+
+        if (service->isApplication()) {
+            actionList << Kicker::editApplicationAction(service);
+            actionList << Kicker::appstreamActions(service);
+        }
+    }
+
+    return actionList;
 }
 
 bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVariant &argument)

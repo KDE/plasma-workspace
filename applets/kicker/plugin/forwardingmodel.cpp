@@ -113,6 +113,21 @@ QModelIndex ForwardingModel::indexToSourceIndex(const QModelIndex &index) const
     return m_sourceModel->index(index.row(), index.column(), index.parent().isValid() ? indexToSourceIndex(index.parent()) : QModelIndex());
 }
 
+QVariantList ForwardingModel::actionList(int row)
+{
+    if (!m_sourceModel) {
+        return QVariantList();
+    }
+
+    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (!abstractModel) {
+        return QVariantList();
+    }
+
+    return abstractModel->actionList(row);
+}
+
 bool ForwardingModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     if (!m_sourceModel) {

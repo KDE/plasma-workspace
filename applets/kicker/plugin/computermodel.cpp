@@ -105,6 +105,12 @@ int RunCommandModel::rowCount(const QModelIndex &parent) const
     return parent.isValid() ? 0 : (KAuthorized::authorize(QStringLiteral("run_command")) ? 1 : 0);
 }
 
+QVariantList RunCommandModel::actionList(int row)
+{
+    Q_UNUSED(row)
+    return QVariantList();
+}
+
 Q_INVOKABLE bool RunCommandModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     Q_UNUSED(actionId)
@@ -228,6 +234,12 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
     }
 
     return QVariant();
+}
+
+QVariantList ComputerModel::actionList(int row)
+{
+    Q_UNUSED(row)
+    return QVariantList();
 }
 
 bool ComputerModel::trigger(int row, const QString &actionId, const QVariant &argument)

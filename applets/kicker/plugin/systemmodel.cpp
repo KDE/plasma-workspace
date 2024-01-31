@@ -51,8 +51,6 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return entry->id();
     } else if (role == Kicker::HasActionListRole) {
         return entry->hasActions();
-    } else if (role == Kicker::ActionListRole) {
-        return entry->actions();
     } else if (role == Kicker::DisabledRole) {
         return !entry->isValid();
     }
@@ -63,6 +61,16 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
 int SystemModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : m_entries.count();
+}
+
+Q_INVOKABLE QVariantList SystemModel::actionList(int row)
+{
+    if (row < 0 || row >= m_entries.count()) {
+        return QVariantList();
+    }
+
+    AbstractEntry *entry = m_entries.at(row);
+    return entry->actions();
 }
 
 bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argument)

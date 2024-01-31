@@ -71,11 +71,19 @@ QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
         return entry->url();
     } else if (role == Kicker::HasActionListRole) {
         return entry->hasActions();
-    } else if (role == Kicker::ActionListRole) {
-        return entry->actions();
     }
 
     return QVariant();
+}
+
+QVariantList SimpleFavoritesModel::actionList(int row)
+{
+    if (row < 0 || row >= m_entryList.count()) {
+        return QVariantList();
+    }
+
+    AbstractEntry *entry = m_entryList.at(row);
+    return entry->actions();
 }
 
 int SimpleFavoritesModel::rowCount(const QModelIndex &parent) const

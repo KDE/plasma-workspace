@@ -24,7 +24,6 @@ enum {
     IsParentRole,
     HasChildrenRole,
     HasActionListRole,
-    ActionListRole,
     UrlRole,
     DisabledRole,
     IsMultilineTextRole,
