@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2023-06-27 15:58+0300\n"
+"PO-Revision-Date: 2023-12-11 18:34+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -178,6 +178,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Sovelma on kirjoitettu tuntemattomalle vanhalle Plasma-versiolle eikä ole "
+"yhteensopiva Plasma-version %1 kanssa. Ota yhteyttä sovelman tekijään ja "
+"pyydä päivitetty versio."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
@@ -185,6 +188,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
+"version %2 kanssa. Ota yhteyttä sovelman tekijään ja pyydä päivitetty versio."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
@@ -192,6 +197,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
+"version %2 kanssa. Päivitä Plasma, jotta sovelmaa voisi käyttää."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
@@ -199,6 +206,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
+"version  kanssa. Päivitä Plasma, jotta sovelmaa voisi käyttää."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"

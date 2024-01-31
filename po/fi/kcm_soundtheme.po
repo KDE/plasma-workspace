@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-08-26 18:48+0300\n"
+"PO-Revision-Date: 2023-12-11 18:31+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -32,7 +32,7 @@ msgstr "Varaääniteema freedesktop.orgista"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "Käytä ilmoitusääniä"
 
 #: ui/main.qml:90
 #, kde-format
@@ -65,8 +65,6 @@ msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Kokeile teeman ”%1” demoääntä"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Preview sound \"%1\""
+#, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "Kokeile ääntä ”%1”"
+msgstr "Äänen kokeilu epäonnistui: %1"

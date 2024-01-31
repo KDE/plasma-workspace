@@ -44,7 +44,7 @@ msgstr[1] "%1 files to %2"
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] " %2 of %1 file "
+msgstr[0] "%2 of %1 file "
 msgstr[1] "%2 of %1 files"
 
 #: job_p.cpp:196 job_p.cpp:226 job_p.cpp:236

@@ -197,7 +197,7 @@ msgstr "%2 of %1"
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] " %2 of %1 file "
+msgstr[0] "%2 of %1 file "
 msgstr[1] "%2 of %1 files"
 
 #: package/contents/ui/JobDetails.qml:112
