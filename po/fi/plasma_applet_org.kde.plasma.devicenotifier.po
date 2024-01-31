@@ -4,7 +4,7 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2012, 2018, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2011.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2016.
 #
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/DeviceItem.qml:185
 #, kde-format
