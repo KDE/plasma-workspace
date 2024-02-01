@@ -65,8 +65,8 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            Kirigami.FormData.label: i18nc("Enable Do Not Disturb mode when screens are mirrored", "Enable:")
-            text: i18nc("Enable Do Not Disturb mode when screens are mirrored", "When screens are mirrored")
+            Kirigami.FormData.label: i18nc("Automatically enable Do Not Disturb mode when screens are mirrored", "Enable automatically:")
+            text: i18nc("Automatically enable Do Not Disturb mode when screens are mirrored", "When screens are mirrored")
             checked: kcm.dndSettings.whenScreensMirrored
             onClicked: kcm.dndSettings.whenScreensMirrored = checked
 
@@ -78,7 +78,7 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            text: i18nc("Enable Do Not Disturb mode during screen sharing", "During screen sharing")
+            text: i18nc("Automatically enable Do Not Disturb mode during screen sharing", "During screen sharing")
             checked: kcm.dndSettings.whenScreenSharing
             onClicked: kcm.dndSettings.whenScreenSharing = checked
             // Only applicable to Wayland where we can control who can cast the screen
@@ -93,7 +93,7 @@ KCM.SimpleKCM {
 
 
         KQuickControls.KeySequenceItem {
-            Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Keyboard shortcut:")
+            Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Manually toggle with shortcut:")
             enabled: root.notificationsAvailable
             keySequence: kcm.toggleDoNotDisturbShortcut
             onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
