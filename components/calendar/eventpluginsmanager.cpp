@@ -88,11 +88,7 @@ public:
         case Qt::DecorationRole:
             return metadata.icon;
         case Qt::UserRole: {
-            // The currentPlugin path contains the full path including
-            // the plugin filename, so it needs to be cut off from the last '/'
-            const QStringView prefix = QStringView(currentPlugin).left(currentPlugin.lastIndexOf(QDir::separator()));
-            const QString qmlFilePath = metadata.configUi;
-            return QStringLiteral("%1%2%3").arg(prefix, QDir::separator(), qmlFilePath);
+            return metadata.configUi;
         }
         case Qt::UserRole + 1:
             return currentPlugin;
@@ -140,8 +136,10 @@ EventPluginsManagerPrivate::EventPluginsManagerPrivate()
 {
     const auto plugins = KPluginMetaData::findPlugins(QStringLiteral("plasmacalendarplugins"));
     for (const KPluginMetaData &plugin : plugins) {
-        availablePlugins.insert(plugin.pluginId(),
-                                {plugin.name(), plugin.description(), plugin.iconName(), plugin.value(QStringLiteral("X-KDE-PlasmaCalendar-ConfigUi"))});
+        const QString prefix = plugin.fileName().left(plugin.fileName().lastIndexOf(QLatin1Char('/')));
+        const QString configName = plugin.value(QStringLiteral("X-KDE-PlasmaCalendar-ConfigUi"));
+
+        availablePlugins.insert(plugin.pluginId(), {plugin.name(), plugin.description(), plugin.iconName(), prefix + QLatin1Char('/') + configName});
     }
 }
 
