@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-13 13:24+0200\n"
+"PO-Revision-Date: 2024-01-31 22:22+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -248,13 +248,13 @@ msgstr "Ekraninė klaviatūra išjungta"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Slėpti skydelio konfigūraciją"
 
 #: panelview.cpp:1001
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Rodyti skydelio konfigūraciją"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

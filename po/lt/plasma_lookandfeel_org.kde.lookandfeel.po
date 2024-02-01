@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-13 14:23+0200\n"
+"PO-Revision-Date: 2024-01-31 12:03+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -155,12 +155,12 @@ msgstr "Atrakinti"
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr "(arba nuskenuokite skaitytuvu savo piršto atspaudą)"
+msgstr "(arba nuskenuokite skaitytuvu piršto atspaudą)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr "(arba nuskenuokite savo lustinę kortelę)"
+msgstr "(arba nuskenuokite lustinę kortelę)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -260,18 +260,15 @@ msgstr ""
 "sąrankos ekraną."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Pristabdyti"
+msgstr "Pristabdyti dabar"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Užmigdyti"
+msgstr "Užmigdyti dabar"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -280,24 +277,20 @@ msgid "Install Updates & Restart"
 msgstr "Įdiegti atnaujinimus ir paleisti iš naujo"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Įdiegti atnaujinimus ir paleisti iš naujo"
+msgstr "Įdiegti atnaujinimus ir paleisti iš naujo dabar"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Paleisti iš naujo"
+msgstr "Paleisti iš naujo dabar"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Išjungti"
+msgstr "Išjungti dabar"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -305,10 +298,9 @@ msgid "Log Out"
 msgstr "Atsijungti"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Atsijungti"
+msgstr "Atsijungti dabar"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
