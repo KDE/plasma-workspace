@@ -13,3 +13,11 @@ fi
 
 
 startplasma$@
+
+if [ ! -z  "$XDG_RUNTIME_DIR" ]; then
+    cd @KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR@
+    for i in *; do
+        rm -r $XDG_RUNTIME_DIR/systemd/user.control/$i
+    done
+    systemctl --user daemon-reload
+fi
