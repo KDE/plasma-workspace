@@ -50,10 +50,15 @@ KCM.GridViewKCM {
     view.currentIndex: kcm.currentIndex
 
     header: Kirigami.InlineMessage {
-        id: errorMesage
+        id: errorMessage
         Layout.fillWidth: true
-        type: Kirigami.MessageType.Error
         showCloseButton: true
+
+        function display(errorText, errorType) {
+            text = errorText
+            type = errorType ?? Kirigami.MessageType.Error;
+            visible = true;
+        }
     }
 
     view.delegate: KCM.GridDelegate {
@@ -160,16 +165,25 @@ KCM.GridViewKCM {
         display: QQC2.AbstractButton.IconOnly
         down: isPlaying  // We just want the visual cue, not the checked state
         onClicked: {
-            if (!isPlaying) {
-                const result = kcm.playSound(themeId, sounds);
-                if (result !== 0) {
-                    errorMesage.text = i18n("Failed to preview sound: %1", kcm.errorString(result));
-                    errorMesage.visible = true;
-                } else {
-                    errorMesage.visible = false;
-                }
-            } else {
+            if (isPlaying) {
                 kcm.cancelSound();
+                return;
+            }
+
+            const result = kcm.playSound(themeId, sounds);
+
+            switch (result) {
+            case 0: /* CA_ERROR_SUCCESS */
+                errorMessage.visible = false;
+                break;
+            case -9: /* CA_ERROR_NOTFOUND */
+                errorMessage.display(i18nc("%1 is a sound theme name. %2 is a sound name",
+                                           "The %1 theme doesn't include the sound '%2'",
+                                           kcm.nameFor(themeId), sounds[0]),
+                                     Kirigami.MessageType.Information);
+                break;
+            default:
+                errorMessage.display(i18n("Failed to preview sound: %1", kcm.errorString(result)));
             }
         }
 
