@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-02 00:39+0000\n"
 "PO-Revision-Date: 2010-05-30 19:23+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -240,36 +240,30 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:164
+#: package/contents/ui/JobItem.qml:167
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:179
+#: package/contents/ui/JobItem.qml:182
+#, kde-format
+msgctxt "Hides/expands item details"
+msgid "Details"
+msgstr ""
+
+#: package/contents/ui/JobItem.qml:193
 #, fuzzy, kde-format
 #| msgid "Pause job"
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Jeda tugas"
 
-#: package/contents/ui/JobItem.qml:189
+#: package/contents/ui/JobItem.qml:202
 #, fuzzy, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Batal tugas"
-
-#: package/contents/ui/JobItem.qml:200
-#, kde-format
-msgctxt "A button tooltip; hides item details"
-msgid "Hide Details"
-msgstr ""
-
-#: package/contents/ui/JobItem.qml:201
-#, kde-format
-msgctxt "A button tooltip; expands the item to show details"
-msgid "Show Details"
-msgstr ""
 
 #: package/contents/ui/JobItem.qml:233
 #: package/contents/ui/ThumbnailStrip.qml:169

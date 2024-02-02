@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-02 00:39+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -274,7 +274,7 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:164
+#: package/contents/ui/JobItem.qml:167
 #, fuzzy, kde-format
 #| msgctxt "placeholder is row description, such as Source or Destination"
 #| msgid "%1:"
@@ -282,7 +282,15 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:179
+#: package/contents/ui/JobItem.qml:182
+#, fuzzy, kde-format
+#| msgctxt "A button tooltip; hides item details"
+#| msgid "Hide Details"
+msgctxt "Hides/expands item details"
+msgid "Details"
+msgstr "Сакриј детаље"
+
+#: package/contents/ui/JobItem.qml:193
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is job name, eg. 'Copying'"
 #| msgid "%1 (Paused)"
@@ -290,23 +298,11 @@ msgctxt "Pause running job"
 msgid "Pause"
 msgstr "%1 (паузирано)"
 
-#: package/contents/ui/JobItem.qml:189
+#: package/contents/ui/JobItem.qml:202
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr ""
-
-#: package/contents/ui/JobItem.qml:200
-#, kde-format
-msgctxt "A button tooltip; hides item details"
-msgid "Hide Details"
-msgstr "Сакриј детаље"
-
-#: package/contents/ui/JobItem.qml:201
-#, kde-format
-msgctxt "A button tooltip; expands the item to show details"
-msgid "Show Details"
-msgstr "Прикажи детаље"
 
 #: package/contents/ui/JobItem.qml:233
 #: package/contents/ui/ThumbnailStrip.qml:169
@@ -512,6 +508,10 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Send"
 msgstr ""
+
+#~ msgctxt "A button tooltip; expands the item to show details"
+#~ msgid "Show Details"
+#~ msgstr "Прикажи детаље"
 
 #, fuzzy
 #~| msgid "History"

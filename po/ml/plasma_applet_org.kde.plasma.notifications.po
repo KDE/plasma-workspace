@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-02 00:39+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -244,7 +244,7 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:164
+#: package/contents/ui/JobItem.qml:167
 #, fuzzy, kde-format
 #| msgctxt "Row description, e.g. Source"
 #| msgid "%1:"
@@ -252,29 +252,25 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:179
+#: package/contents/ui/JobItem.qml:182
+#, fuzzy, kde-format
+#| msgctxt "A button tooltip; hides item details"
+#| msgid "Hide Details"
+msgctxt "Hides/expands item details"
+msgid "Details"
+msgstr "വിശദാംശങ്ങൾ മറയ്ക്കുക"
+
+#: package/contents/ui/JobItem.qml:193
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "താൽക്കാലികമായി നിർത്തുക"
 
-#: package/contents/ui/JobItem.qml:189
+#: package/contents/ui/JobItem.qml:202
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
-
-#: package/contents/ui/JobItem.qml:200
-#, kde-format
-msgctxt "A button tooltip; hides item details"
-msgid "Hide Details"
-msgstr "വിശദാംശങ്ങൾ മറയ്ക്കുക"
-
-#: package/contents/ui/JobItem.qml:201
-#, kde-format
-msgctxt "A button tooltip; expands the item to show details"
-msgid "Show Details"
-msgstr "വിശദാംശങ്ങൾ കാണിക്കുക"
 
 #: package/contents/ui/JobItem.qml:233
 #: package/contents/ui/ThumbnailStrip.qml:169
@@ -446,6 +442,10 @@ msgstr "ഒരു മറുപടി ടൈപ്പുചെയ്യുക…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "അയയ്ക്കുക"
+
+#~ msgctxt "A button tooltip; expands the item to show details"
+#~ msgid "Show Details"
+#~ msgstr "വിശദാംശങ്ങൾ കാണിക്കുക"
 
 #~ msgctxt "Do not disturb until date"
 #~ msgid "Until %1"

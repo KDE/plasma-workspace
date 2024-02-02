@@ -1,56 +1,60 @@
-# SPDX-FileCopyrightText: 2024 Xavier Besnard <xavier.besnard@kde.org>
+# German translations for plasma-workspace package
+# German translation for plasma-workspace.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Automatically generated, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-31 21:21+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
-"Language: fr\n"
+"PO-Revision-Date: 2024-01-30 08:38+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: main.cpp:32
 #, kde-format
 msgid "Session Management"
-msgstr "Gestion de sessions"
+msgstr ""
 
 #: main.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr "Afficher la demande de déconnexion"
+msgstr ""
 
 #: main.cpp:48
 #, kde-format
 msgid "Log Out"
-msgstr "Se déconnecter"
+msgstr ""
 
 #: main.cpp:54
 #, kde-format
 msgid "Shut Down"
-msgstr "Éteindre"
+msgstr ""
 
 #: main.cpp:60
 #, kde-format
 msgid "Reboot"
-msgstr "Redémarrer"
+msgstr ""
 
 #: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "Se déconnecter sans confirmation"
+msgstr ""
 
 #: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Éteindre sans confirmation"
+msgstr ""
 
 #: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "Redémarrer sans confirmation"
+msgstr ""
