@@ -32,7 +32,7 @@ class PanelRulerView : public PlasmaQuick::PlasmaWindow
     Q_OBJECT
 
 public:
-    PanelRulerView(Plasma::Containment *interface, PanelView *panelView, PanelConfigView *mainConfigView, QWindow *parent = nullptr);
+    PanelRulerView(Plasma::Containment *interface, PanelView *panelView, PanelConfigView *mainConfigView);
     ~PanelRulerView() override;
 
     void syncPanelLocation();

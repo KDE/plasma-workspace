@@ -40,8 +40,8 @@
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
-PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *panelView, PanelConfigView *mainConfigView, QWindow *parent)
-    : PlasmaWindow(parent)
+PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *panelView, PanelConfigView *mainConfigView)
+    : PlasmaWindow()
     , m_containment(containment)
     , m_panelView(panelView)
     , m_mainConfigView(mainConfigView)
