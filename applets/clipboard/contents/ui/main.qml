@@ -47,7 +47,7 @@ PlasmoidItem {
             // because only the active applet can hide itself
             if (main.hideOnWindowDeactivate)
                 main.expanded = false;
-            Plasmoid.status = PlasmaCore.Types.PassiveStatus;
+            Plasmoid.status = PlasmaCore.Types.HiddenStatus;
         } else {
             Plasmoid.status = PlasmaCore.Types.ActiveStatus
         }
