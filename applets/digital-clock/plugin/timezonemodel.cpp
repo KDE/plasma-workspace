@@ -56,6 +56,7 @@ void TimeZoneFilterProxy::setOnlyShowChecked(const bool show)
     }
     m_onlyShowChecked = show;
     Q_EMIT onlyShowCheckedChanged();
+    invalidateFilter();
 }
 
 //=============================================================================
