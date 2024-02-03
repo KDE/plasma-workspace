@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2020-05-16 20:20+0300\n"
+"PO-Revision-Date: 2024-02-03 01:46+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: killrunner.cpp:27
 #, kde-format
@@ -38,7 +38,7 @@ msgstr "kill"
 #: killrunner.cpp:48
 #, kde-format
 msgid "Terminate running applications whose names match the query."
-msgstr "Nutraukti veikiančias programas, kurių vardas atitinka užklausą."
+msgstr "Nutraukti veikiančias programas, kurių pavadinimas atitinka užklausą."
 
 #: killrunner.cpp:85
 #, kde-format
@@ -75,13 +75,13 @@ msgstr "Nutraukti programų konfigūravimą"
 #: killrunner_config.ui:39
 #, kde-format
 msgid "&Use trigger word"
-msgstr "&Naudoti iššaukiantį žodį"
+msgstr "&Naudoti žodį-paleidiklį"
 
 #. i18n: ectx: property (text), widget (QLabel, label_trigger)
 #: killrunner_config.ui:51
 #, kde-format
 msgid "&Trigger word:"
-msgstr "&Iššaukiantis žodis:"
+msgstr "Ž&odis-paleidiklis:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_sorting)
 #: killrunner_config.ui:72

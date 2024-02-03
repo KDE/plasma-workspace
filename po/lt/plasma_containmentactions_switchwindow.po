@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2019-06-06 13:14+0000\n"
+"PO-Revision-Date: 2024-02-03 01:50+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. i18n: ectx: property (text), widget (QRadioButton, flatButton)
 #: config.ui:16
@@ -42,7 +42,7 @@ msgstr "Rodyti tik dabartinio darbalaukio langus"
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
-msgstr "Konfigūruoti langų perjungimo priedą"
+msgstr "Konfigūruoti langų perjungimo įskiepį"
 
 #: switch.cpp:155
 #, kde-format
