@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-03 00:39+0000\n"
 "PO-Revision-Date: 2022-12-31 16:58+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -106,27 +106,31 @@ msgstr "Do Not Disturb mode"
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-msgid "Enable:"
-msgstr "Enable:"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr ""
 
 #: ui/main.qml:69
-#, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#| msgid "When screens are mirrored"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "When screens are mirrored"
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "Enable Do Not Disturb mode during screen sharing"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode during screen sharing"
+#| msgid "During screen sharing"
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "During screen sharing"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-msgid "Keyboard shortcut:"
-msgstr "Keyboard shortcut:"
+msgid "Manually toggle with shortcut:"
+msgstr ""
 
 #: ui/main.qml:103
 #, kde-format
@@ -281,6 +285,14 @@ msgid ""
 msgstr ""
 "Select an application from the list to configure its notification settings "
 "and behaviour."
+
+#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#~ msgid "Enable:"
+#~ msgstr "Enable:"
+
+#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+#~ msgid "Keyboard shortcut:"
+#~ msgstr "Keyboard shortcut:"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Configure Notifications"

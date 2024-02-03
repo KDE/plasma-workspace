@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-03 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 16:04+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -104,27 +104,31 @@ msgstr "Chế độ \"Đừng làm phiền\""
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-msgid "Enable:"
-msgstr "Bật:"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr ""
 
 #: ui/main.qml:69
-#, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#| msgid "When screens are mirrored"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Khi các màn hình được phản chiếu"
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "Enable Do Not Disturb mode during screen sharing"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode during screen sharing"
+#| msgid "During screen sharing"
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Trong khi chia sẻ màn hình"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-msgid "Keyboard shortcut:"
-msgstr "Phím tắt:"
+msgid "Manually toggle with shortcut:"
+msgstr ""
 
 #: ui/main.qml:103
 #, kde-format
@@ -278,6 +282,14 @@ msgid ""
 msgstr ""
 "Chọn một ứng dụng trong danh sách để cấu hình các thiết lập và ứng xử của nó "
 "với thông báo."
+
+#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#~ msgid "Enable:"
+#~ msgstr "Bật:"
+
+#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+#~ msgid "Keyboard shortcut:"
+#~ msgstr "Phím tắt:"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Cấu hình thông báo"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-03 00:39+0000\n"
 "PO-Revision-Date: 2023-09-09 09:55+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -103,27 +103,31 @@ msgstr "Stillingin 'Ekki ónáða':"
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-msgid "Enable:"
-msgstr "Virkja:"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr ""
 
 #: ui/main.qml:69
-#, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#| msgid "When screens are mirrored"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Þegar skjáir eru speglaðir"
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "Enable Do Not Disturb mode during screen sharing"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode during screen sharing"
+#| msgid "During screen sharing"
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Þegar skjár er samnýttur"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-msgid "Keyboard shortcut:"
-msgstr "Flýtilykill:"
+msgid "Manually toggle with shortcut:"
+msgstr ""
 
 #: ui/main.qml:103
 #, kde-format
@@ -272,6 +276,14 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Veldu forrit af listanum til að grunnstilla tilkynningar og hegðun."
+
+#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#~ msgid "Enable:"
+#~ msgstr "Virkja:"
+
+#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+#~ msgid "Keyboard shortcut:"
+#~ msgstr "Flýtilykill:"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Grunnstilla tilkynningar"

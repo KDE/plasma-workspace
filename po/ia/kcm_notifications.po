@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-09 22:26+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -103,27 +103,31 @@ msgstr "Modo de non disturbar:"
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-msgid "Enable:"
-msgstr "Habilita:"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr ""
 
 #: ui/main.qml:69
-#, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#| msgid "When screens are mirrored"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Quando schermos es reflectite"
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "Enable Do Not Disturb mode during screen sharing"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode during screen sharing"
+#| msgid "During screen sharing"
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Quando schermo es compartite"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-msgid "Keyboard shortcut:"
-msgstr "Via Breve de Claviero:"
+msgid "Manually toggle with shortcut:"
+msgstr ""
 
 #: ui/main.qml:103
 #, kde-format
@@ -274,6 +278,14 @@ msgid ""
 msgstr ""
 "Selige un application ab le lista per configurar su preferentias de "
 "notification e comportamento"
+
+#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#~ msgid "Enable:"
+#~ msgstr "Habilita:"
+
+#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+#~ msgid "Keyboard shortcut:"
+#~ msgstr "Via Breve de Claviero:"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Configura notificationes "

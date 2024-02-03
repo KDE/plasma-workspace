@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-22 06:38+0100\n"
+"PO-Revision-Date: 2024-02-02 22:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -238,18 +238,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Rekomencinte, la komputilo eniros la ekranon de agordo de firmware."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Dormi"
+msgstr "Dormi Nun"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Pasivumigi"
+msgstr "Pasivumigi Nun"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -258,24 +255,20 @@ msgid "Install Updates & Restart"
 msgstr "Instali Ĝisdatigojn & Rekomenci"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Instali Ĝisdatigojn & Rekomenci"
+msgstr "Instali Ĝisdatigojn & Rekomenci Nun"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Rekomenci"
+msgstr "Rekomenci Nun"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Fermi sistemon"
+msgstr "Sistemfermi Nun"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -283,10 +276,9 @@ msgid "Log Out"
 msgstr "Elsaluti"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Elsaluti"
+msgstr "Elsaluti Nun"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -306,38 +298,4 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
-msgstr "Plasmo farita de KDE"
-
-#~ msgid "OK"
-#~ msgstr "bone"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "Ŝanĝi al Ĉi tiu Seanco"
-
-#~ msgid "Start New Session"
-#~ msgstr "Komenci Novan Seancon"
-
-#~ msgid "Back"
-#~ msgstr "Reen"
-
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery at %1%"
-#~ msgstr "Baterio ĉe %1%"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "Neuzata"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "ĉe TTY %1 (Ekrano %2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"
+msgstr "Plasma farita de KDE"

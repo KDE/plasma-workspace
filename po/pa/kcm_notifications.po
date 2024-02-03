@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 17:47-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -97,27 +97,31 @@ msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ"
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-msgid "Enable:"
-msgstr "ਸਮਰੱਥ:"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr ""
 
 #: ui/main.qml:69
-#, kde-format
-msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#| msgid "When screens are mirrored"
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "ਜਦੋਂ ਸਕਰੀਨਾਂ ਨੂੰ ਮਿੱਰਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "Enable Do Not Disturb mode during screen sharing"
+#, fuzzy, kde-format
+#| msgctxt "Enable Do Not Disturb mode during screen sharing"
+#| msgid "During screen sharing"
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "ਸਕਰੀਨ ਸਾਂਝੀ ਕਰਨ ਦੌਰਾਨ"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-msgid "Keyboard shortcut:"
-msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ:"
+msgid "Manually toggle with shortcut:"
+msgstr ""
 
 #: ui/main.qml:103
 #, kde-format
@@ -267,6 +271,14 @@ msgid ""
 "and behavior"
 msgstr ""
 "ਸੂਚੀ ਵਿੱਚੋਂ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਚੁਣੋ, ਜਿਸ ਦੀਆਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ ਅਤੇ ਰਵੱਈਏ ਦੀ ਸੰਰਚਨਾ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ"
+
+#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+#~ msgid "Enable:"
+#~ msgstr "ਸਮਰੱਥ:"
+
+#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+#~ msgid "Keyboard shortcut:"
+#~ msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ:"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "ਸੂਚਨਾਵਾਂ ਲਈ ਸੰਰਚਨਾ"
