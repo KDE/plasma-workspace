@@ -73,6 +73,11 @@ KCM.SimpleKCM {
                     text: model.display
                     checked: model.checked
 
+                    Accessible.onPressAction: {
+                        toggle();
+                        clicked();
+                    }
+
                     onClicked: {
                         //needed for model's setData to be called
                         model.checked = checked;

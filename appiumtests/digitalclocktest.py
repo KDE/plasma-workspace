@@ -13,7 +13,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from dateutil.relativedelta import relativedelta
-from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -117,7 +117,15 @@ class DigitalClockTests(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Calendar").click()
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Available Plugins:")))
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Holidays")))
+        # Enable the plugin (BUG 480668)
+        plugin_checkbox: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Holidays")))
+        plugin_checkbox.click()
+        # Switch back to Appearance so there will only be one "Holidays" match
+        self.driver.find_element(AppiumBy.NAME, "Appearance").click()
+        wait.until_not(lambda _: plugin_checkbox.is_displayed())
+        # Switch to the calendar plugin
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Holidays"))).click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Search")))
 
     def test_2_config_dialog_3_timezones(self) -> None:
         """
