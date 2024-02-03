@@ -201,7 +201,7 @@ QStringList EventPluginsManager::enabledPlugins() const
 
 void EventPluginsManager::loadPlugin(const QString &pluginId)
 {
-    QPluginLoader loader("plasmacalendarplugins/" + pluginId);
+    QPluginLoader loader("plasmacalendarplugins/" + QDir::cleanPath(pluginId));
 
     if (!loader.load()) {
         qWarning() << "Could not create Plasma Calendar Plugin: " << pluginId;
