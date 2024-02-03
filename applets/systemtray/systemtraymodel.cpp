@@ -63,14 +63,12 @@ Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Pl
         return Plasma::Types::ItemStatus::HiddenStatus;
     }
 
-    if (status == Plasma::Types::ItemStatus::HiddenStatus) {
-        return Plasma::Types::ItemStatus::HiddenStatus;
-    }
-
     bool forcedShown = m_showAllItems || m_shownItems.contains(itemId);
     bool forcedHidden = m_hiddenItems.contains(itemId);
 
-    if (forcedShown || (!forcedHidden && status != Plasma::Types::ItemStatus::PassiveStatus)) {
+    if (!forcedShown && status == Plasma::Types::ItemStatus::HiddenStatus) {
+        return Plasma::Types::ItemStatus::HiddenStatus;
+    } else if (forcedShown || (!forcedHidden && status != Plasma::Types::ItemStatus::PassiveStatus)) {
         return Plasma::Types::ItemStatus::ActiveStatus;
     } else {
         return Plasma::Types::ItemStatus::PassiveStatus;
