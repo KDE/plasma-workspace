@@ -28,11 +28,11 @@ PlasmaExtras.ExpandableListItem {
     readonly property bool isMounted: devicenotifier.isMounted(udi)
     readonly property bool hasMessage: statusSource.lastUdi === deviceItem.udi
     readonly property var types: model["Device Types"]
-    readonly property bool hasStorageAccess: types && types.indexOf("Storage Access") !== -1
-    readonly property bool hasPortableMediaPlayer: types && types.indexOf("Portable Media Player") !== -1
+    readonly property bool hasStorageAccess: !!types && types.indexOf("Storage Access") !== -1
+    readonly property bool hasPortableMediaPlayer: !!types && types.indexOf("Portable Media Player") !== -1
     readonly property var supportedProtocols: model["Supported Protocols"]
-    readonly property bool supportsMTP: supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
-    readonly property bool supportsAFC: supportedProtocols && supportedProtocols.includes("afc")
+    readonly property bool supportsMTP: !!supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
+    readonly property bool supportsAFC: !!supportedProtocols && supportedProtocols.includes("afc")
 
     readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
