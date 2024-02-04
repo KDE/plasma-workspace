@@ -34,6 +34,10 @@ ContainmentItem {
     readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
     readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns === 1
 
+    function requestHide() {
+        dialog.requestHide();
+    }
+
     MouseArea {
         anchors.fill: parent
 

@@ -36,6 +36,8 @@ PlasmoidItem {
         }
     }
 
+    onRequestedHide: internalSystray && internalSystray.requestHide()
+
     Component.onCompleted: {
         root.internalSystray = Plasmoid.internalSystray;
 

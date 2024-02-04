@@ -1091,6 +1091,13 @@ bool PanelView::event(QEvent *e)
          * on the mouse edge, forward the click in the containment boundaries
          */
 
+    case QEvent::MouseButtonPress:
+        if (containment()) {
+            for (auto applet : containment()->applets()) {
+                auto appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
+                Q_EMIT appletItem->requestedHide();
+            }
+        }
     case QEvent::MouseMove:
     case QEvent::MouseButtonPress:
     case QEvent::MouseButtonRelease: {
