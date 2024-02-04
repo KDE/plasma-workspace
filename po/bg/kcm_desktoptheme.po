@@ -161,6 +161,3 @@ msgstr "Отваряне на тема"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема ((*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Get New Plasma Styles…"
-#~ msgstr "Изтегляне на нови стилове…"

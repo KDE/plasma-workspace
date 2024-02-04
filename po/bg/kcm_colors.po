@@ -1365,6 +1365,3 @@ msgstr "Отваряне на цветова схема"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлове с цветна схема (*.colors)"
-
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "Изтегляне на нови цветови схеми…"

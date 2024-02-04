@@ -343,7 +343,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgctxt "@label %1 version string"
-#~ msgid "Plasma %1 Development Build"
-#~ msgstr "Plasma %1 Development Build"
