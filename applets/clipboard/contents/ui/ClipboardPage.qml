@@ -130,7 +130,7 @@ Menu {
     model: KItemModels.KSortFilterProxyModel {
         sourceModel: clipboardSource.models.clipboard
         filterRoleName: "DisplayRole"
-        filterRegularExpression: RegExp(filter.text)
+        filterRegularExpression: RegExp(filter.text, "i")
     }
     supportsBarcodes: {
         try {
