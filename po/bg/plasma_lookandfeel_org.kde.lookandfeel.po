@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-22 10:23+0100\n"
+"PO-Revision-Date: 2024-02-03 15:42+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -234,18 +234,15 @@ msgstr ""
 "Когато се рестартира, компютърът ще влезе в екрана за настройка на фърмуера."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Приспиване"
+msgstr "Моментално приспиване"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Хибернация"
+msgstr "Моментална хибернация"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -254,24 +251,20 @@ msgid "Install Updates & Restart"
 msgstr "Инсталиране на актуализациите и рестартиране"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Инсталиране на актуализациите и рестартиране"
+msgstr "Инсталиране на актуализациите и рестартиране сега"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Рестартиране"
+msgstr "Моментално рестартиране"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Изключване"
+msgstr "Моментално изключване"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -279,10 +272,9 @@ msgid "Log Out"
 msgstr "Излизане от сесия"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Излизане от сесия"
+msgstr "Излизане от сесия сега"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -303,6 +295,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Сесия на Plasma"
-
-#~ msgid "OK"
-#~ msgstr "Добре"

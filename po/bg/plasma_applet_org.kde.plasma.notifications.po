@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2023-08-17 21:30+0200\n"
+"PO-Revision-Date: 2024-02-03 15:36+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -246,12 +246,10 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:182
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "Скриване на подробности"
+msgstr "Подробности"
 
 #: package/contents/ui/JobItem.qml:193
 #, kde-format
@@ -434,7 +432,3 @@ msgstr "Въвеждане на отговор…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Изпращане"
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "Показване на детайли"
