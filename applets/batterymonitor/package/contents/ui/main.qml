@@ -326,7 +326,7 @@ PlasmoidItem {
 
     PlasmaCore.Action {
         id: configureAction
-        text: i18n("&Configure Energy Saving…")
+        text: i18n("&Configure Power Management…")
         icon.name: "configure"
         shortcut: "alt+d, s"
         onTriggered: {
