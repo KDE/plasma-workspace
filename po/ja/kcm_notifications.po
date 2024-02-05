@@ -281,11 +281,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "リストからアプリケーションを選択して通知設定と動作を設定します。"
-
-#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#~ msgid "Enable:"
-#~ msgstr "有効:"
-
-#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-#~ msgid "Keyboard shortcut:"
-#~ msgstr "キーボードショートカット:"

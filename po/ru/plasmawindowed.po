@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2023-12-05 16:11+0300\n"
+"PO-Revision-Date: 2024-02-04 19:10+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
-msgstr ""
+msgstr "Plasma в окне"
 
 #: main.cpp:46
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "Включить отладчик QML Javascript."
 
 #: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
@@ -38,17 +38,17 @@ msgstr ""
 #: main.cpp:51
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "Принудительный запуск указанного модуля."
 
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr ""
+msgstr "Открываемый виджет."
 
 #: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr ""
+msgstr "Аргументы, передаваемые в виджет."
 
 #: plasmawindowedview.cpp:120
 #, kde-format

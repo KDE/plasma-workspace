@@ -423,7 +423,3 @@ msgstr "返信を入力…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "送信"
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "詳細を表示"
