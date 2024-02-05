@@ -107,6 +107,10 @@ QQC2.StackView {
                 wallpaperInterface.accentColor = mediaProxy.customColor;
             }
         });
+
+        // onRemoved only fires when all transitions end. If a user switches wallpaper quickly this adds up
+        // Given it's such a heavy item, try to cleanup as early as possible
+        pendingImage.QQC2.StackView.onDeactivated.connect(pendingImage.destroy);
         pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
         view.replace(pendingImage, {}, QQC2.StackView.Transition);
 
