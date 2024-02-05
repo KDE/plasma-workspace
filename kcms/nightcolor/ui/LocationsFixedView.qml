@@ -145,9 +145,8 @@ Kirigami.FormLayout {
 
                     Kirigami.Icon {
                         z: 9999
-                        id: mapPin
-                        property double rawX: longitudeToX(kcm.nightColorSettings.longitudeFixed)
-                        property double rawY: latitudeToY(kcm.nightColorSettings.latitudeFixed)
+                        readonly property double rawX: longitudeToX(kcm.nightColorSettings.longitudeFixed)
+                        readonly property double rawY: latitudeToY(kcm.nightColorSettings.latitudeFixed)
                         x: rawX - (width/2)/mapRect.currentScale
                         y: rawY - (height - 4)/mapRect.currentScale
                         width: Kirigami.Units.iconSizes.medium
@@ -160,23 +159,11 @@ Kirigami.FormLayout {
                         }
                     }
 
-                    Connections {
-                        target: kcm.nightColorSettings
-                        function onLatitudeFixedChanged() {
-                            mapPin.rawY = latitudeToY(kcm.nightColorSettings.latitudeFixed);
-                        }
-                        function onLongitudeFixedChanged() {
-                            mapPin.rawX = longitudeToX(kcm.nightColorSettings.longitudeFixed);
-                        }
-                    }
-
                     TapHandler {
-                        onTapped: {
+                        onTapped: eventPoint => {
                             let clickPos = mapImage.mapFromItem(root, eventPoint.scenePosition);
-                            mapPin.rawX = clickPos.x;
-                            mapPin.rawY = clickPos.y;
-                            kcm.nightColorSettings.latitudeFixed = yToLatitude(mapPin.rawY);
-                            kcm.nightColorSettings.longitudeFixed = xToLongitude(mapPin.rawX);
+                            kcm.nightColorSettings.longitudeFixed = xToLongitude(clickPos.x);
+                            kcm.nightColorSettings.latitudeFixed = yToLatitude(clickPos.y);
                         }
                     }
 
