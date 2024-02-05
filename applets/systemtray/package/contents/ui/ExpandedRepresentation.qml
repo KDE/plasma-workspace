@@ -49,6 +49,7 @@ Item {
         // Header content layout
         RowLayout {
             id: trayHeading
+            Layout.fillWidth: true
 
             PlasmaComponents.ToolButton {
                 id: backButton
@@ -69,6 +70,7 @@ Item {
 
                 level: 1
                 text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
+                elide: Text.ElideRight
             }
 
             Repeater {
