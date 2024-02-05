@@ -72,6 +72,8 @@ public:
 
     PanelRulerView *panelRulerView();
 
+    friend class PanelRulerView;
+
 protected:
     void keyPressEvent(QKeyEvent *ev) override;
     void showEvent(QShowEvent *ev) override;

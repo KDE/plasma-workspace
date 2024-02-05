@@ -178,17 +178,14 @@ void PanelRulerView::showEvent(QShowEvent *ev)
 
 void PanelRulerView::focusOutEvent(QFocusEvent *ev)
 {
-    const QWindow *focusWindow = QGuiApplication::focusWindow();
+    QWindow *focusWindow = QGuiApplication::focusWindow();
 
     if (focusWindow
         && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow") || focusWindow == m_mainConfigView)) {
         return;
     }
 
-    m_mainConfigView->hide();
-    hide();
-
-    PlasmaWindow::focusOutEvent(ev);
+    m_mainConfigView->focusVisibilityCheck(focusWindow);
 }
 
 //////////////////////////////PanelConfigView
