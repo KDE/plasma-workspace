@@ -159,8 +159,8 @@ Kirigami.FormLayout {
                     }
 
                     TapHandler {
-                        onTapped: eventPoint => {
-                            let clickPos = mapImage.mapFromItem(root, eventPoint.scenePosition);
+                        onTapped: event => {
+                            const clickPos = event.position;
                             kcm.nightColorSettings.longitudeFixed = xToLongitude(clickPos.x);
                             kcm.nightColorSettings.latitudeFixed = yToLatitude(clickPos.y);
                         }
