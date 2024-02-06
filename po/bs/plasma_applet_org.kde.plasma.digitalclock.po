@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-06 00:39+0000\n"
 "PO-Revision-Date: 2015-02-05 00:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -430,13 +430,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr ""
 
-#: plugin/timezonemodel.cpp:146
+#: plugin/timezonemodel.cpp:147
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Lokalno"
 
-#: plugin/timezonemodel.cpp:148
+#: plugin/timezonemodel.cpp:149
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "System's local time zone"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-06 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 13:27+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -35,7 +35,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Увімкнути звуки сповіщення"
 
-#: ui/main.qml:92
+#: ui/main.qml:97
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -47,7 +47,7 @@ msgstr[1] "Засновано на: %2"
 msgstr[2] "Засновано на: %2"
 msgstr[3] "Засновано на: %2"
 
-#: ui/main.qml:104
+#: ui/main.qml:109
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -55,19 +55,25 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "Прослухати звуки:"
 
-#: ui/main.qml:119
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Прослухати звук «%1»"
 
-#: ui/main.qml:141
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Прослухати демонстраційний звук для теми «%1»"
 
-#: ui/main.qml:166
+#: ui/main.qml:181
+#, kde-format
+msgctxt "%1 is a sound theme name. %2 is a sound name"
+msgid "The %1 theme doesn't include the sound '%2'"
+msgstr ""
+
+#: ui/main.qml:186
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Не вдалося прослухати звук: %1"

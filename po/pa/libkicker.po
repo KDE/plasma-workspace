@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-28 00:39+0000\n"
-"PO-Revision-Date: 2024-01-03 14:01-0600\n"
+"PO-Revision-Date: 2024-02-05 07:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -173,7 +173,7 @@ msgstr "ਸਭ ਐਪਲੀਕੇਸ਼ਨ"
 #: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "ਇਹ ਦਿਖਾਈ ਨਹੀਂ ਦੇਵੇਗਾ! ਛੱਡੋ ਪਰ੍ਹਾ"
 
 #: plugin/rootmodel.cpp:399
 #, kde-format

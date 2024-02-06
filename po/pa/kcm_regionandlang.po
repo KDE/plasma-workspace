@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 17:47-0600\n"
+"PO-Revision-Date: 2024-02-05 07:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -57,7 +57,7 @@ msgstr "c/o"
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "ਭਾਸ਼ਾ ਕਾਰਪੋਰੇਸ਼ਨ"
 
 #: exampleutility.cpp:66
 #, kde-format
@@ -69,7 +69,7 @@ msgstr "ਵਿਕਾਸ ਵਿਭਾਗ"
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "ਪੰਜਾਬੀ-ਇਮਾਰਤ"
 
 #: exampleutility.cpp:68
 #, kde-format
@@ -258,7 +258,7 @@ msgstr "check-language-support ਫ਼ੇਲ੍ਹ ਹੈ, ਆਉਟਪੁੱਟ: %1
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "ਸਭ ਗ਼ੈਰ-ਮੌਜੂਦ ਪੈਕੇਜ ਹੱਲ਼ ਹੋਣ ਲਈ ਅਸਫ਼ਲ! %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format

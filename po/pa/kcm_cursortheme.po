@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2024-01-28 18:22-0600\n"
+"PO-Revision-Date: 2024-02-05 07:32-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -111,7 +111,7 @@ msgstr ""
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr ""
+msgstr "ਥੀਮ ਦੇ ਮੂਲ ਆਕਾਰ ਦੀ ਬਜਾਏ ਖਾਸ ਆਕਾਰ ਨੂੰ ਵਰਤੋਂ"
 
 #: plasma-apply-cursortheme.cpp:90
 #, kde-format
@@ -124,15 +124,15 @@ msgstr ""
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
-msgstr ""
+msgstr "ਮਾਊਸ ਕਰਸਰ ਥੀਮ %1 ਨੂੰ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਕਾਮਯਾਬੀ ਨਾਲ ਲਾਗੂ ਕੀਤਾ"
 
 #: plasma-apply-cursortheme.cpp:103
-#, fuzzy, kde-format
-#| msgid "You have to restart KDE for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
 "theme to display correctly."
-msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ KDE ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
+msgstr ""
+"ਤੁਹਾਡੇ ਨਵੇਂ ਲਾਗੂ ਕੀਤੇ ਕਰਸਰ ਥੀਮ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
 #: plasma-apply-cursortheme.cpp:113
 #, kde-format

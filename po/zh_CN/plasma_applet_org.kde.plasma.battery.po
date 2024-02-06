@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-01-21 14:11\n"
+"PO-Revision-Date: 2024-02-05 11:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -217,7 +217,7 @@ msgctxt "Minimize the length of this string as much as possible"
 msgid ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
-msgstr "此笔记本电脑已配置为在外接屏幕时不会因为合上内建的屏幕而睡眠。"
+msgstr "此笔记本已配置为在外接显示器时合上盖子不睡眠。"
 
 #: package/contents/ui/PowerManagementItem.qml:87
 #, kde-format

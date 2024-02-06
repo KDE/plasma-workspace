@@ -6,13 +6,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-29 18:29+0900\n"
+"PO-Revision-Date: 2024-02-05 17:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -231,18 +231,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "重開機後電腦將進入韌體設定畫面。"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "睡眠"
+msgstr "立即睡眠"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "休眠"
+msgstr "立即休眠"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -251,24 +248,20 @@ msgid "Install Updates & Restart"
 msgstr "安裝更新後重新啟動"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "安裝更新後重新啟動"
+msgstr "立即安裝更新並重新啟動"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "重新啟動"
+msgstr "立即重新啟動"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "關機"
+msgstr "立即關機"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -276,10 +269,9 @@ msgid "Log Out"
 msgstr "登出"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "登出"
+msgstr "立即登出"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

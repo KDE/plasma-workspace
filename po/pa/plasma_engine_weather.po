@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-03 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 17:31-0600\n"
+"PO-Revision-Date: 2024-02-05 07:43-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -2582,13 +2582,13 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing drizzle"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ ਜਾਂ ਜਮਾਉ ਬੂੰਦਾਬਾਂਦੀ"
 
 #: envcan_i18n.dat:323
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing rain"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ ਜਾਂ ਜਮਾਉ ਮੀਂਹ"
 
 #: envcan_i18n.dat:324
 #, kde-format
@@ -2600,7 +2600,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or rain"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ ਜਾਂ ਮੀਂਹ"
 
 #: envcan_i18n.dat:326
 #, kde-format

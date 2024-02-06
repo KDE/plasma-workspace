@@ -6,13 +6,13 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2023-10-20 03:17+0900\n"
+"PO-Revision-Date: 2024-02-05 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -245,12 +245,10 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:182
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "隱藏詳情"
+msgstr "詳細資料"
 
 #: package/contents/ui/JobItem.qml:193
 #, kde-format

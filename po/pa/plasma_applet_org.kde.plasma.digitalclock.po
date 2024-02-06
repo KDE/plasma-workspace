@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-06 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 17:38-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -406,13 +406,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (ਜੂਲੀਅਨ ਤਾਰੀਖ)"
 
-#: plugin/timezonemodel.cpp:146
+#: plugin/timezonemodel.cpp:147
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "ਲੋਕਲ"
 
-#: plugin/timezonemodel.cpp:148
+#: plugin/timezonemodel.cpp:149
 #, kde-format
 msgid "System's local time zone"
 msgstr "ਸਿਸਟਮ ਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ"

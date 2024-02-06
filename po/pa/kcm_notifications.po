@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-03 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 17:47-0600\n"
+"PO-Revision-Date: 2024-02-05 07:30-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -58,7 +58,7 @@ msgstr "ਈਵੈਟਾਂ ਦੀ ਸੰਰਚਨਾ"
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr ""
+msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਹਰ-ਈਵੈਂਟ ਦੇ ਆਧਾਰ ਉੱਤੇ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ ਦੀ ਸੰਰਚਨਾ ਲਈ ਸਹਾਇਕ ਨਹੀਂ ਹੈ"
 
 #: ui/ApplicationConfiguration.qml:263
 #, kde-format
@@ -77,6 +77,8 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
+"ਨੋਟੀਫਿਕੇਸ਼ਨ ਵਿਖਾਉਣ ਲਈ ਚਾਹੀਦਾ 'ਨੋਟੀਫਿਕੇਸ਼ਨ' ਵਿਜੈਟ ਲੱਭਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ ਹੈ। ਯਕੀਨੀ ਬਣਾਓ ਕਿ "
+"ਤੁਹਾਡੀ ਸਿਸਟਮ ਟਰੇ ਵਿੱਚ ਜਾਂ ਇਕੱਲੇ ਵਿਜੈਟ ਵਜੋਂ ਸਮਰੱਥ ਹੈ।"
 
 #: ui/main.qml:52
 #, kde-format
@@ -99,20 +101,16 @@ msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕਰੋ:"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "ਜਦੋਂ ਸਕਰੀਨਾਂ ਨੂੰ ਮਿੱਰਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "ਸਕਰੀਨ ਸਾਂਝੀ ਕਰਨ ਦੌਰਾਨ"
@@ -121,7 +119,7 @@ msgstr "ਸਕਰੀਨ ਸਾਂਝੀ ਕਰਨ ਦੌਰਾਨ"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "ਸ਼ਾਰਟਕੱਟ ਨਾਲ ਖੁਦ ਬਦਲੋ:"
 
 #: ui/main.qml:103
 #, kde-format

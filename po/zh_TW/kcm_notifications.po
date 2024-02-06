@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # pan93412 <pan93412@gmail.com>, 2019, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-03 00:39+0000\n"
-"PO-Revision-Date: 2023-08-17 21:54+0900\n"
+"PO-Revision-Date: 2024-02-05 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: kcm.cpp:73
 #, kde-format
@@ -104,20 +104,16 @@ msgstr "請勿打擾模式"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "自動啟用："
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "鏡像螢幕時啟用"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "分享螢幕時啟用"
@@ -126,7 +122,7 @@ msgstr "分享螢幕時啟用"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "手動以快捷鍵切換："
 
 #: ui/main.qml:103
 #, kde-format

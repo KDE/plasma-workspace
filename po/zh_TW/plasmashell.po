@@ -4,13 +4,13 @@
 # Franklin, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
-# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-29 16:44+0900\n"
+"PO-Revision-Date: 2024-02-05 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -244,13 +244,13 @@ msgstr "螢幕上的虛擬鍵盤關閉"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "隱藏面板設定"
 
 #: panelview.cpp:1001
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "顯示面板設定"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

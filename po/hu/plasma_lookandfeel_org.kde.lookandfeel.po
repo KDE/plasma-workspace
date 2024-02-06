@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2020, 2021.
-# SPDX-FileCopyrightText: 2021, 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-12-28 11:13+0100\n"
+"PO-Revision-Date: 2024-02-05 22:54+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -235,18 +235,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Újraindításkor a számítógép a firmware-telepítő képernyőre fog lépni."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Alvó állapot"
+msgstr "Alvó állapot most"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Hibernálás"
+msgstr "Hibernálás most"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -255,24 +252,20 @@ msgid "Install Updates & Restart"
 msgstr "Frissítés és újraindítás"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Frissítés és újraindítás"
+msgstr "Frissítés és újraindítás most"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Újraindítás"
+msgstr "Újraindítás most"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Leállítás"
+msgstr "Leállítás most"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -280,10 +273,9 @@ msgid "Log Out"
 msgstr "Kijelentkezés"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Kijelentkezés"
+msgstr "Kijelentkezés most"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

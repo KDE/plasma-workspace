@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Amanpreet Singh <aalam@users.sf.net>, 2008.
-# SPDX-FileCopyrightText: 2009, 2011, 2020, 2022, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2009, 2011, 2020, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-12-26 07:13-0600\n"
+"PO-Revision-Date: 2024-02-05 07:49-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -164,6 +164,10 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>ਤੁਸੀਂ ਨਵੇਂ ਡੈਸਕਟਾਪ ਸ਼ੈਸ਼ਨ ਵਿੱਚ ਜਾ ਰਹੇ ਹੋ।</p><p>ਲਾਗਇਨ ਸਕਰੀਨ ਦਿਖਾਈ ਜਾਵੇਗੀ ਅਤੇ ਮੌਜੂਦਾ ਸ਼ੈਸ਼ਨ "
+"ਨੂੰ ਲੁਕਾਇਆ ਜਾਵੇਗਾ।</p><p>ਤੁਸੀਂ ਸ਼ੈਸ਼ਨਾਂ ਵਿੱਚ ਤਬਦੀਲ ਕਰਨ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ:</p><ul><li>Ctrl+Alt"
+"+F{ਸ਼ੈਸ਼ਨ ਦਾ ਨੰਬਰ}</li><li>ਪਲਾਜ਼ਮਾ ਖੋਜ (ਲਿਖੋ '%1')</li><li>ਪਲਾਜ਼ਮਾ ਵਿਜੈਟ (ਜਿਵੇਂ ਕਿ "
+"ਐਪਲੀਕੇਸ਼ਨ ਨੰਬਰ)</li></ul>"
 
 #: sessionrunner.cpp:246
 #, kde-format

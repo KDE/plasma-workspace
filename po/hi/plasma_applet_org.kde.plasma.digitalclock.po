@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-06 00:39+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -423,13 +423,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (जूलियन दिनांक)"
 
-#: plugin/timezonemodel.cpp:146
+#: plugin/timezonemodel.cpp:147
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "स्थानीय"
 
-#: plugin/timezonemodel.cpp:148
+#: plugin/timezonemodel.cpp:149
 #, kde-format
 msgid "System's local time zone"
 msgstr "तंत्र का स्थानीय समय क्षेत्र"

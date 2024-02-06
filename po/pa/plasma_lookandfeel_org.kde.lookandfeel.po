@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 17:26-0600\n"
+"PO-Revision-Date: 2024-02-05 07:44-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -233,18 +233,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "ਜਦੋਂ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਤਾਂ ਕੰਪਿਊਟਰ ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਉੱਤੇ ਜਾਵੇਗਾ।"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "ਸਲੀਪ"
+msgstr "ਹੁਣੇ ਸਲੀਪ ਕਰੋ"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "ਹਾਈਬਰਨੇਟ"
+msgstr "ਹੁਣੇ ਹਾਈਬਰਨੇਟ"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -253,24 +250,20 @@ msgid "Install Updates & Restart"
 msgstr "ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+msgstr "ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕਰਕੇ ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+msgstr "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "ਬੰਦ ਕਰੋ"
+msgstr "ਹੁਣੇ ਬੰਦ ਕਰੋ"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -278,10 +271,9 @@ msgid "Log Out"
 msgstr "ਲਾਗ ਆਉਟ"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "ਲਾਗ ਆਉਟ"
+msgstr "ਹੁਣੇ ਲਾਗ ਆਉਟ"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

@@ -1,9 +1,9 @@
 # Translation of kcm_notifications.po to Catalan (Valencian)
-# Copyright (C) 2019-2023 This_file_is_part_of_KDE
+# Copyright (C) 2019-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021, 2022, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-03 00:39+0000\n"
-"PO-Revision-Date: 2023-08-09 09:44+0200\n"
+"PO-Revision-Date: 2024-02-03 09:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -111,20 +111,16 @@ msgstr "Mode no destorbar"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Activa automàticament:"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Quan les pantalles s'emmirallen"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "En compartir la pantalla"
@@ -133,7 +129,7 @@ msgstr "En compartir la pantalla"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "Canvia manualment amb una drecera:"
 
 #: ui/main.qml:103
 #, kde-format
@@ -284,11 +280,3 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu configuració "
 "de notificacions i el comportament"
-
-#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#~ msgid "Enable:"
-#~ msgstr "Actiu:"
-
-#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-#~ msgid "Keyboard shortcut:"
-#~ msgstr "Drecera del teclat:"

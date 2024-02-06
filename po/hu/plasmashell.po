@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
-# SPDX-FileCopyrightText: 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-12-25 21:42+0100\n"
+"PO-Revision-Date: 2024-02-05 22:55+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -246,13 +246,13 @@ msgstr "Képernyő-billentyűzet deaktiválva"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Panelbeállító felület elrejtése"
 
 #: panelview.cpp:1001
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Panelbeállító felület megjelenítése"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

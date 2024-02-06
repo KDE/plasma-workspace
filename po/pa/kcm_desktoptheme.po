@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Amanpreet Singh <aalam@users.sf.net>, 2008.
-# SPDX-FileCopyrightText: 2008, 2010, 2018, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2008, 2010, 2018, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2023-12-26 08:59-0600\n"
+"PO-Revision-Date: 2024-02-05 07:38-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -58,6 +58,8 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"ਇਹ ਟੂਲ ਤੁਹਾਨੂੰ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਥੀਮ ਸੈੱਟ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਬਿਨਾਂ ਗਲਤੀ ਨਾਲ ਅਜਿਹੀ "
+"ਸੈਟਿੰਗ ਕਰਨ ਦੇ, ਜੋ ਮੌਜੂਦ ਨਾ ਹੋਵੇ ਜਾਂ ਜੋ ਪਹਿਲਾਂ ਹੀ ਸੈੱਟ ਹੋਵੇ।"
 
 #: plasma-apply-desktoptheme.cpp:35
 #, kde-format
@@ -70,14 +72,14 @@ msgstr ""
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "ਸਿਸਟਮ ਉੱਤੇ ਮੌਜੂਦ ਸਭ ਥੀਮ ਵੇਖਾਓ (ਅਤੇ ਜੋ ਵੀ ਮੌਜੂਦਾ ਥੀਮ ਹੈ)"
 
 #: plasma-apply-desktoptheme.cpp:49
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
-msgstr ""
+msgstr "ਮੰਗਿਆ ਥੀਮ \"%1\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਥੀਮ ਵਜੋਂ ਸੈੱਟ ਹੈ।"
 
 #: plasma-apply-desktoptheme.cpp:65
 #, kde-format

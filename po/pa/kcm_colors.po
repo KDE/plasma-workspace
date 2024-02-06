@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-01-28 18:22-0600\n"
+"PO-Revision-Date: 2024-02-05 07:36-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -52,7 +52,7 @@ msgstr "'color-scheme' ਡਾਟਾ ਫੋਲਡਰ ਬਣਾਉਣ ਲਈ ਫ�
 #: colors.cpp:329
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr ""
+msgstr "ਰੰਗ ਸਕੀਮ ਨੂੰ 'color-scheme' ਡਾਟਾ ਫੋਲਡਰ ਵਿੱਚ ਕਾਪੀ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
 
 #: colors.cpp:346
 #, kde-format
@@ -132,6 +132,7 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"'ਲਾਗੂ ਕਰੋ' ਬਟਨ ਵੇਖਾਉਂਦਾ ਹੈ, ਜੋ ਕਿ ਬਿਨਾਂ ਪੁੱਛੇ ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਦਾ ਹੈ ('ਇੰਝ ਸੰਭਾਲੋ' ਬਟਨ ਦੀ ਬਜਾਏ)"
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format

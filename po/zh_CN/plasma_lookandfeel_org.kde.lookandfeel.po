@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-21 14:11\n"
+"PO-Revision-Date: 2024-02-05 11:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -226,18 +226,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "重新启动时，电脑将进入固件设置界面。"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "睡眠"
+msgstr "立即睡眠"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "休眠"
+msgstr "立即休眠"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -246,24 +243,20 @@ msgid "Install Updates & Restart"
 msgstr "安装更新并重启"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "安装更新并重启"
+msgstr "安装更新并立即重启"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "重启"
+msgstr "立即重新启动"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "关机"
+msgstr "立即关机"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -271,10 +264,9 @@ msgid "Log Out"
 msgstr "注销"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "注销"
+msgstr "立即注销"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -295,6 +287,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma 桌面环境"
-
-#~ msgid "OK"
-#~ msgstr "确定"

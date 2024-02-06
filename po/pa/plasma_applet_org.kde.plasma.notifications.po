@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020, 2021, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2023-12-26 08:13-0600\n"
+"PO-Revision-Date: 2024-02-05 07:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -246,12 +246,10 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:182
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "ਵੇਰਵੇ ਲੁਕਾਓ"
+msgstr "ਵੇਰਵੇ"
 
 #: package/contents/ui/JobItem.qml:193
 #, kde-format
