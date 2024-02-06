@@ -1516,11 +1516,15 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
+        if (isActive()) {
+            m_corona->restorePreviousWindow();
+        }
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
         }
     } else if (status == Plasma::Types::AcceptingInputStatus) {
+        m_corona->savePreviousWindow();
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
 
         if (KWindowSystem::isPlatformX11()) {
@@ -1533,8 +1537,6 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
             requestUpdate();
         }
-
-        m_corona->savePreviousWindow();
 
         const auto nextItem = rootObject()->nextItemInFocusChain();
         if (nextItem) {
