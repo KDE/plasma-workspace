@@ -32,5 +32,5 @@ int main(int argc, char **argv)
     // set to delete on close
     auto console = new InteractiveConsole(mode);
     console->show();
-    app.exec();
+    return app.exec();
 }
