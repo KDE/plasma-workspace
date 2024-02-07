@@ -16,14 +16,14 @@ namespace ColorCorrect
 CompositorAdaptor::CompositorAdaptor(QObject *parent)
     : QObject(parent)
 {
-    m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
-                                 QStringLiteral("/ColorCorrect"),
-                                 QStringLiteral("org.kde.kwin.ColorCorrect"),
+    m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin.NightLight"),
+                                 QStringLiteral("/org/kde/KWin/NightLight"),
+                                 QStringLiteral("org.kde.KWin.NightLight"),
                                  QDBusConnection::sessionBus(),
                                  this);
 
-    const bool connected = m_iface->connection().connect(QStringLiteral("org.kde.KWin"),
-                                                         QStringLiteral("/ColorCorrect"),
+    const bool connected = m_iface->connection().connect(QStringLiteral("org.kde.KWin.NightLight"),
+                                                         QStringLiteral("/org/kde/KWin/NightLight"),
                                                          QStringLiteral("org.freedesktop.DBus.Properties"),
                                                          QStringLiteral("PropertiesChanged"),
                                                          this,
@@ -33,11 +33,11 @@ CompositorAdaptor::CompositorAdaptor(QObject *parent)
         return;
     }
 
-    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
-                                                          QStringLiteral("/ColorCorrect"),
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin.NightLight"),
+                                                          QStringLiteral("/org/kde/KWin/NightLight"),
                                                           QStringLiteral("org.freedesktop.DBus.Properties"),
                                                           QStringLiteral("GetAll"));
-    message.setArguments({"org.kde.kwin.ColorCorrect"});
+    message.setArguments({"org.kde.KWin.NightLight"});
 
     QDBusPendingReply<QVariantMap> properties = m_iface->connection().asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(properties, this);
@@ -105,7 +105,7 @@ void CompositorAdaptor::handlePropertiesChanged(const QString &interfaceName, co
 
 void CompositorAdaptor::sendAutoLocationUpdate(double latitude, double longitude)
 {
-    m_iface->call(QStringLiteral("nightColorAutoLocationUpdate"), latitude, longitude);
+    m_iface->call(QStringLiteral("setLocation"), latitude, longitude);
 }
 
 void CompositorAdaptor::preview(int temperature)
