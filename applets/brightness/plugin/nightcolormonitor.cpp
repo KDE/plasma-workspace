@@ -15,9 +15,9 @@
 #include <qtypes.h>
 #include <qvariant.h>
 
-static const QString s_serviceName = QStringLiteral("org.kde.NightColor");
-static const QString s_nightColorPath = QStringLiteral("/ColorCorrect");
-static const QString s_nightColorInterface = QStringLiteral("org.kde.kwin.ColorCorrect");
+static const QString s_serviceName = QStringLiteral("org.kde.KWin.NightLight");
+static const QString s_nightColorPath = QStringLiteral("/org/kde/KWin/NightLight");
+static const QString s_nightColorInterface = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_propertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
 
 NightColorMonitorPrivate::NightColorMonitorPrivate(QObject *parent)
