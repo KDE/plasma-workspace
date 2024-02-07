@@ -34,8 +34,6 @@ int main(int argc, char **argv)
                                             QStringLiteral("edit_clipboard"),
                                             QStringLiteral("clear-history"),
                                             QStringLiteral("manage activities"),
-                                            QStringLiteral("next activity"),
-                                            QStringLiteral("previous activity"),
                                             QStringLiteral("repeat_action"),
                                             QStringLiteral("show dashboard"),
                                             QStringLiteral("show-barcode"),
