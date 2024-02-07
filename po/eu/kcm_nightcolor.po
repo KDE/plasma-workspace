@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2023-12-02 10:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr "Klik egin mapan zure kokalekua hautatzeko."
 msgid "Zoom in"
 msgstr "Zooma gerturatu"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:210
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -71,13 +71,13 @@ msgstr ""
 "File:World_location_map_(equirectangular_180).svg'>Munduko kokapen mapatik</"
 "link> aldatua"
 
-#: ui/LocationsFixedView.qml:236
+#: ui/LocationsFixedView.qml:223
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitudea:"
 
-#: ui/LocationsFixedView.qml:263
+#: ui/LocationsFixedView.qml:250
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

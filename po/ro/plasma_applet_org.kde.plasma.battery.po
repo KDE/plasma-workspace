@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2022-12-29 17:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -213,8 +213,9 @@ msgstr ""
 "Arată procentajul acumulatorului pe pictogramă când nu e încărcat complet"
 
 #: package/contents/ui/main.qml:329
-#, kde-format
-msgid "&Configure Energy Saving…"
+#, fuzzy, kde-format
+#| msgid "&Configure Energy Saving…"
+msgid "&Configure Power Management…"
 msgstr "&Configurează economisirea energiei…"
 
 #: package/contents/ui/PowerManagementItem.qml:41

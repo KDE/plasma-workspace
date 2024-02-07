@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2022-09-10 09:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -51,7 +51,7 @@ msgstr "انقر لاختيار موقعك على الخريطة."
 msgid "Zoom in"
 msgstr "قرّب"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:210
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -65,13 +65,13 @@ msgstr ""
 "بواسطة TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:236
+#: ui/LocationsFixedView.qml:223
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "خط العرض:"
 
-#: ui/LocationsFixedView.qml:263
+#: ui/LocationsFixedView.qml:250
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

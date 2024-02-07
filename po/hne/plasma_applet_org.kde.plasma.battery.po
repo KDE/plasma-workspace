@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2009-01-28 15:25+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -228,7 +228,7 @@ msgstr ""
 #: package/contents/ui/main.qml:329
 #, fuzzy, kde-format
 #| msgid "More..."
-msgid "&Configure Energy Saving…"
+msgid "&Configure Power Management…"
 msgstr "जादा..."
 
 #: package/contents/ui/PowerManagementItem.qml:41

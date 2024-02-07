@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2023-11-29 14:06+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -53,7 +53,7 @@ msgstr "יש ללחוץ כדי לבחור את המקום שלך במפה."
 msgid "Zoom in"
 msgstr "התקרבות"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:210
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -67,13 +67,13 @@ msgstr ""
 "TUBS / ויקישיתוף / <link url='https://creativecommons.org/licenses/by-"
 "sa/3.0'>קריאייטיב קומונס ייחוס-שיתוף דומה 3.0</link>"
 
-#: ui/LocationsFixedView.qml:236
+#: ui/LocationsFixedView.qml:223
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "קו רוחב:"
 
-#: ui/LocationsFixedView.qml:263
+#: ui/LocationsFixedView.qml:250
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

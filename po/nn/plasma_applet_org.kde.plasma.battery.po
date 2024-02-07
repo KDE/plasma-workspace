@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2023-02-22 21:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -209,8 +209,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Vis batteriprosent på ikonet viss ikkje fullada"
 
 #: package/contents/ui/main.qml:329
-#, kde-format
-msgid "&Configure Energy Saving…"
+#, fuzzy, kde-format
+#| msgid "&Configure Energy Saving…"
+msgid "&Configure Power Management…"
 msgstr "&Set opp straumsparing …"
 
 # Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).

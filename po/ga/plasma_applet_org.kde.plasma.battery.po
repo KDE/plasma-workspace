@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-base/plasma_applet_battery.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2007-07-23 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -234,10 +234,13 @@ msgstr "Taispeáin eolas fao&in lucht"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Tais&peáin céatadán"
 
+# correct unlenited here
 #: package/contents/ui/main.qml:329
-#, kde-format
-msgid "&Configure Energy Saving…"
-msgstr ""
+#, fuzzy, kde-format
+#| msgctxt "tooltip on the config button in the popup"
+#| msgid "Configure Power Management..."
+msgid "&Configure Power Management…"
+msgstr "Cumraigh Bainisteoireacht Cumhachta..."
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format

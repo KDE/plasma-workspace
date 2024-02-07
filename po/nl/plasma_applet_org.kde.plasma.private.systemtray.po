@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2022-07-25 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -149,23 +149,23 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatisch instellen op groot wanneer in aanraakmodus"
 
-#: package/contents/ui/ExpandedRepresentation.qml:59
+#: package/contents/ui/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Ga terug"
 
-#: package/contents/ui/ExpandedRepresentation.qml:71
+#: package/contents/ui/ExpandedRepresentation.qml:72
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Status en meldingen"
 
-#: package/contents/ui/ExpandedRepresentation.qml:138
+#: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Meer acties"
 
-#: package/contents/ui/ExpandedRepresentation.qml:232
+#: package/contents/ui/ExpandedRepresentation.qml:234
 #, kde-format
 msgid "Keep Open"
 msgstr "Open houden"

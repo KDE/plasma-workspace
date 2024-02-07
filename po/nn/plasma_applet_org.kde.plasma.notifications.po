@@ -436,7 +436,3 @@ msgstr "Skriv svar …"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Send"
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "Vis detaljar"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2023-11-14 13:08+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Klikni na svoji polohu na mapě."
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:210
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -64,13 +64,13 @@ msgstr ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:236
+#: ui/LocationsFixedView.qml:223
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Zeměpisná šířka:"
 
-#: ui/LocationsFixedView.qml:263
+#: ui/LocationsFixedView.qml:250
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

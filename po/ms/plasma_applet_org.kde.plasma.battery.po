@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-07 00:38+0000\n"
 "PO-Revision-Date: 2010-06-21 20:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -229,9 +229,10 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 
 #: package/contents/ui/main.qml:329
-#, kde-format
-msgid "&Configure Energy Saving…"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Power Management"
+msgid "&Configure Power Management…"
+msgstr "Pengurusan Kuasa"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
