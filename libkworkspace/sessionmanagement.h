@@ -86,10 +86,9 @@ public Q_SLOTS:
     void requestLogout(ConfirmationMode = ConfirmationMode::Default);
 
     /**
-     * ...And this one will always show the prompt with all options, irrespective
-     * of whether it's ordinarily configured to appear or not
+     * Shows "leave" prompt with all options.
      */
-    void requestLogoutPrompt();
+    void requestLeave();
 
     void suspend();
     void hybridSuspend();

@@ -39,7 +39,7 @@ SessionShortcutsModule::SessionShortcutsModule(QObject *parent, const KPluginMet
     a->setText(i18nc("@action", "Show Logout Prompt"));
     KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << (Qt::ALT | Qt::CTRL | Qt::Key_Delete));
     connect(a, &QAction::triggered, this, [sessionManagement]() {
-        sessionManagement->requestLogoutPrompt();
+        sessionManagement->requestLeave();
     });
 
     // "With confirmation" actions

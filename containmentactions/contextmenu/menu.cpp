@@ -262,7 +262,7 @@ void ContextMenu::startLogout()
         break;
     case int(KWorkSpace::ShutdownTypeDefault):
     default:
-        m_session->requestLogoutPrompt();
+        m_session->requestLeave();
         break;
     }
 }
