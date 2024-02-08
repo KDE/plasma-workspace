@@ -194,7 +194,7 @@ void ContainmentConfigView::applyWallpaper()
 {
     QVariantMap params;
     for (const auto &key : m_currentWallpaperConfig->keys()) {
-        if (key.endsWith("Default")) {
+        if (key.endsWith(QLatin1String("Default"))) {
             continue;
         }
         if (!m_currentWallpaperConfig->value(key).isNull()) {
