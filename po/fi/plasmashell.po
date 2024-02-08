@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017, 2022.
-# Tommi Nieminen <translator@legisign.org>, 2018, 2020, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2020, 2022, 2023, 2024.
 #
 # Larso, 2014.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-11-22 21:40+0200\n"
+"PO-Revision-Date: 2024-02-02 13:09+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -247,13 +247,13 @@ msgstr "Näyttönäppäimistö pois"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Piilota paneelin asetukset"
 
 #: panelview.cpp:1001
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Näytä paneelin asetukset"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

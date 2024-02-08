@@ -4,7 +4,7 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2011.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2016.
 #
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-12-11 18:32+0200\n"
+"PO-Revision-Date: 2024-02-02 13:08+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -138,92 +138,74 @@ msgstr "Avaa ponnahdusikkuna, kun uusi laite kytketään"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Laitteen tila"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Laitteen voi nyt turvallisesti irrottaa"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Tämän laitteen voi nyt turvallisesti irrottaa."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Liitä tämä laite napsauttamalla tästä"
+msgstr "Sinulla ei ole käyttöoikeutta tämän laitteen liittämiseen."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Tämän laitteen poistaminen on nyt turvallista"
+msgstr "Sinulla ei ole käyttöoikeutta tämän laitteen irrottamiseen."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Poista levy asemasta napsauttamalla tästä"
+msgstr "Sinulla ei ole käyttöoikeutta tämän levyn poistamiseen."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Viimeksi liitetty laite: %1"
+msgstr "Laitetta ei voitu liittää, koska se on varattu."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid ""
-#| "Cannot eject the disc.\n"
-#| "One or more files on this disc are open within an application."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
-"Ei voitu poistaa levyä asemasta.\n"
-"Yksi tai useampia tiedostoja levyltä on auki jossain ohjelmassa."
+msgstr "Yksi tai useampi laitteen tiedosto on avoinna jossakin sovelluksessa."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not unmount the device.\n"
-#| "One or more files on this device are open within an application."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-"Laitetta ei voitu irrottaa.\n"
-"Yksi tai useampia laitteen tiedostoista on auki jossakin sovelluksessa."
+msgstr[0] "Yksi tai useampi laitteen tiedosto on avoinna sovelluksessa ”%2”."
 msgstr[1] ""
-"Laitetta ei voitu irrottaa.\n"
-"Yksi tai useampia laitteen tiedostoista on auki jossakin sovelluksessa."
+"Yksi tai useampi laitteen tiedosto on avoinna seuraavissa sovelluksissa: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Viimeksi liitetty laite: %1"
+msgstr "Tätä laitetta ei voitu liittää."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Viimeksi liitetty laite: %1"
+msgstr "Tätä laitetta ei voitu irrottaa."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Poista levy asemasta napsauttamalla tästä"
+msgstr "Tätä levyä ei voitu poistaa."
 
 #~ msgid "Show:"
 #~ msgstr "Näytä:"

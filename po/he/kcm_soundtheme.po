@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-11-07 15:50+0200\n"
+"PO-Revision-Date: 2024-02-07 08:16+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "השמעת צליל ההדגמה לערכת העיצוב „%1”"
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "ערכת הנושא %1 לא כוללת את הצליל ‚%2’"
 
 #: ui/main.qml:186
 #, kde-format

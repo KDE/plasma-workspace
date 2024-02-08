@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2024-02-04 19:10+0300\n"
+"PO-Revision-Date: 2024-02-07 10:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -33,7 +33,7 @@ msgstr "Включить отладчик QML Javascript."
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
-msgstr ""
+msgstr "Сворачивание виджетов в область уведомлений даже при закрытии окна."
 
 #: main.cpp:51
 #, kde-format

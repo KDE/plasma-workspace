@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Alexander Yavorsky <kekcuha@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-12-24 17:11+0300\n"
+"PO-Revision-Date: 2024-02-07 09:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "Прослушать демонстрационный звук из оф
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "Звуковое оформление «%1» не содержит звук «%2»"
 
 #: ui/main.qml:186
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-11-19 15:05+0100\n"
+"PO-Revision-Date: 2024-02-07 14:52+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -204,10 +204,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Percentage batterij tonen op pictogram indien niet volledig geladen"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "Energiebesparing configureren…"
+msgstr "Energiebeheer &configureren…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format

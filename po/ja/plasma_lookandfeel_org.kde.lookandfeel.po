@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 23:29+0900\n"
+"PO-Revision-Date: 2024-02-05 00:22+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -228,18 +228,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "再起動すると、コンピュータはファームウェア設定画面に入ります。"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "スリープ"
+msgstr "今すぐスリープ"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "ハイバネート"
+msgstr "今すぐハイバネート"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -251,19 +248,17 @@ msgstr "更新をインストールして再起動"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "今すぐ更新をインストールして再起動"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "再起動"
+msgstr "今すぐ再起動"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "シャットダウン"
+msgstr "今すぐシャットダウン"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -271,10 +266,9 @@ msgid "Log Out"
 msgstr "ログアウト"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "ログアウト"
+msgstr "今すぐログアウト"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

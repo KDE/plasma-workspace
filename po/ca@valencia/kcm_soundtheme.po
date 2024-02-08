@@ -1,15 +1,15 @@
 # Translation of kcm_soundtheme.po to Catalan (Valencian)
-# Copyright (C) 2023 This_file_is_part_of_KDE
+# Copyright (C) 2023-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-11-07 13:27+0100\n"
+"PO-Revision-Date: 2024-02-06 15:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -70,7 +70,7 @@ msgstr "Presentació preliminar del so de mostra per al tema «%1»"
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "El tema %1 no inclou el so «%2»"
 
 #: ui/main.qml:186
 #, kde-format

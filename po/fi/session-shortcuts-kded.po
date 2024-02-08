@@ -1,0 +1,59 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Tommi Nieminen <translator@legisign.org>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"PO-Revision-Date: 2024-02-02 13:09+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "Istunnonhallinta"
+
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr "Näytä uloskirjautumiskehote"
+
+#: main.cpp:48
+#, kde-format
+msgid "Log Out"
+msgstr "Kirjaudu ulos"
+
+#: main.cpp:54
+#, kde-format
+msgid "Shut Down"
+msgstr "Sammuta"
+
+#: main.cpp:60
+#, kde-format
+msgid "Reboot"
+msgstr "Käynnistä uudelleen"
+
+#: main.cpp:68
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Kirjaudu kyselemättä ulos"
+
+#: main.cpp:74
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "Sammuta kyselemättä"
+
+#: main.cpp:80
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Käynnistä kyselemättä uudelleen"

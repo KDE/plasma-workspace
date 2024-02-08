@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-11-19 06:37+0100\n"
+"PO-Revision-Date: 2024-02-07 04:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -206,10 +206,9 @@ msgstr ""
 "ხატულაზე ელემენტის პროცენტულობის ჩვენება, როცა ელემენტი ბოლომდე არაა დატენილი"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&ენერგიის შენახვის მორგება…"
+msgstr "&ენერგიის მართვის მორგება…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format

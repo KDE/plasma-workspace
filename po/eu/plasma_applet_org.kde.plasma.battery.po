@@ -1,24 +1,24 @@
 # Translation for plasma_applet_org.kde.plasma_battery.po to Euskara/Basque (eu).
-# Copyright (C) 2007-2023 This file is copyright:
+# Copyright (C) 2007-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # marcos <marcos@euskalgnu.org>, 2007, 2010.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-12-02 11:04+0100\n"
+"PO-Revision-Date: 2024-02-07 21:12+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: package/contents/ui/BatteryItem.qml:107
@@ -210,10 +210,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Erakutsi bateriaren ehunekoa ikonoan, osorik kargatu gabe dagoenean"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Konfiguratu energia aurreztea..."
+msgstr "&Konfiguratu energia-kudeaketa..."
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
