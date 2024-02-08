@@ -123,6 +123,9 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
     char *ptr;
     char *end;
 
+    if (arg.currentType() != QDBusArgument::StructureType) {
+        return QImage();
+    }
     arg.beginStructure();
     arg >> width >> height >> rowStride >> hasAlpha >> bitsPerSample >> channels >> pixels;
     arg.endStructure();
