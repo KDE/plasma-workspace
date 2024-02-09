@@ -158,10 +158,10 @@ Item {
                 asynchronous: true
                 cache: false
 
-                StackView.onRemoved: {
-                    source = ""; // HACK: Reduce memory usage
-                    destroy();
-                }
+                // onRemoved only fires when all transitions end. If a user switches songs quickly this adds up
+                // Given it's such a heavy item, try to cleanup as early as possible
+                StackView.onDeactivated: destroy()
+                StackView.onRemoved: destroy()
             }
         }
 
