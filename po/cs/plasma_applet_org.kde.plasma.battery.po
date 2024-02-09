@@ -102,10 +102,9 @@ msgid "Not present"
 msgstr "Není přítomna"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Správa napájení"
+msgstr ""
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -211,10 +210,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Zobrazovat ikonu procent baterie pokud není plně nabitá"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "Na&stavit šetření energie…"
+msgstr ""
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
@@ -307,11 +305,10 @@ msgid "Power Profile"
 msgstr "Profil napájení"
 
 #: package/contents/ui/PowerProfileItem.qml:97
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Nejsou dostupné žádné baterie"
+msgstr ""
 
 #: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
@@ -375,25 +372,3 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "Baterie a Jas"
-
-#~ msgid "Brightness"
-#~ msgstr "Jas"
-
-#~ msgid "Battery"
-#~ msgstr "Baterie"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "Rolujte pro upravení jasu obrazovky"
-
-#~ msgid "Display Brightness"
-#~ msgstr "Jas obrazovky"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "Jas klávesnice"

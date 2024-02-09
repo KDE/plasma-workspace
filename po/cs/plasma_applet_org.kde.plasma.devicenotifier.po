@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
 "PO-Revision-Date: 2021-06-02 16:29+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -134,43 +134,44 @@ msgstr "Zobrazit vyskakovací okno pokud je připojeno nové zařízení"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Stav zařízení"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Zařízení může být nyní bezpečně odebráno"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Toto zařízení může být nyní bezpečně odebráno."
 
 #: plugin/ksolidnotify.cpp:198
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "Nemáte oprávnění odpojit toto zařízení."
 
 #: plugin/ksolidnotify.cpp:201
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "Nemáte oprávnění odstranit toto zařízení."
 
 #: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "Nemáte oprávnění vysunout tento disk."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "Nelze připojit toto zařízení protože se používá."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
+"Jeden nebo více souborů z toho zařízení je používáno některou aplikací."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
@@ -178,28 +179,32 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"Jeden nebo více souborů z toho zařízení je používáno aplikací \"%2\"."
 msgstr[1] ""
+"Jeden nebo více souborů z toho zařízení je používáno těmito aplikacemi "
+"\"%2\"."
 msgstr[2] ""
+"Jeden nebo více souborů z toho zařízení je používáno těmito aplikacemi "
+"\"%2\"."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "Nepovedlo se připojit toto zařízení."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Klikněte pro bezpečné odebrání všech zařízení"
+msgstr "Nelze odpojit  toto zařízení."
 
 #: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "Nelze odpojit tento disk."

@@ -243,18 +243,15 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Při restartu počítač vstoupí do obrazovky pro nastavení firmwaru."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Uspat"
+msgstr ""
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Hibernovat"
+msgstr ""
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -269,16 +266,14 @@ msgid "Install Updates & Restart Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Restartovat"
+msgstr "Restartovat nyní"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Vypnout"
+msgstr ""
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -286,10 +281,9 @@ msgid "Log Out"
 msgstr "Odhlásit se"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Odhlásit se"
+msgstr ""
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -310,15 +304,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma byla vytvořena v rámci projektu KDE"
-
-#~ msgid "OK"
-#~ msgstr "OK"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "Přepnout do tohoto sezení"
-
-#~ msgid "Start New Session"
-#~ msgstr "Začít nové sezení"
-
-#~ msgid "Back"
-#~ msgstr "Zpět"

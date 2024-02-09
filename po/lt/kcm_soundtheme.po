@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2024-01-26 14:51+0200\n"
+"PO-Revision-Date: 2024-02-09 00:25+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -72,7 +72,7 @@ msgstr "Perklausyti demonstracinį „%1“ rinkinio garsą"
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "Rinkinyje %1 nėra garso, pavadinimu „%2“"
 
 #: ui/main.qml:186
 #, kde-format

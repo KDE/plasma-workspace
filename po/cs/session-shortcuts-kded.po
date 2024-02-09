@@ -1,0 +1,59 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vit@pelcak.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"PO-Revision-Date: 2024-01-19 15:59+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "Správa sezení"
+
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Log Out"
+msgstr "Odhlásit se"
+
+#: main.cpp:54
+#, kde-format
+msgid "Shut Down"
+msgstr "Vypnout"
+
+#: main.cpp:60
+#, kde-format
+msgid "Reboot"
+msgstr "Restartovat"
+
+#: main.cpp:68
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Odhlásit se bez potvrzení"
+
+#: main.cpp:74
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "Vypnout bez potvrzení"
+
+#: main.cpp:80
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Restartovat bez potvrzení"
