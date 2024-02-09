@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-02-09 02:34+0000\n"
 "PO-Revision-Date: 2023-11-29 13:46+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr "Feu clic per a escollir el vostre emplaçament en el mapa."
 msgid "Zoom in"
 msgstr "Acosta"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -73,13 +73,13 @@ msgstr ""
 "link> per TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitud:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:248
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

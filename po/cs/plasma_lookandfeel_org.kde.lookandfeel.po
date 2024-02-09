@@ -277,12 +277,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma byla vytvořena v rámci projektu KDE"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "Přepnout do tohoto sezení"
-
-#~ msgid "Start New Session"
-#~ msgstr "Začít nové sezení"
-
-#~ msgid "Back"
-#~ msgstr "Zpět"

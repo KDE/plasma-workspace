@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-02-09 02:34+0000\n"
 "PO-Revision-Date: 2023-11-29 09:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr "Клацніть, щоб вибрати ваше розташуванн�
 msgid "Zoom in"
 msgstr "Збільшити"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -71,13 +71,13 @@ msgstr ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Широта:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:248
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

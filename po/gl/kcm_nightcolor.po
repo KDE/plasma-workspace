@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-02-09 02:34+0000\n"
 "PO-Revision-Date: 2023-12-03 09:51+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -54,7 +54,7 @@ msgstr "Prema para escoller a súa localización no mapa."
 msgid "Zoom in"
 msgstr "Achegar"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -68,13 +68,13 @@ msgstr ""
 "link> de TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitude:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:248
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

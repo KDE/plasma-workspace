@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-02-09 02:34+0000\n"
 "PO-Revision-Date: 2023-12-18 16:11+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "Klicken, um Ihren Standort auf der Karte auszuwählen."
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -72,13 +72,13 @@ msgstr ""
 "geändert durch TUBS / Wikimedia Commons / <link url='https://creativecommons."
 "org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Breitengrad:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:248
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

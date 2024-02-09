@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2024-02-09 02:34+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Zoom in"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -64,14 +64,14 @@ msgid ""
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:222
 #, fuzzy, kde-format
 #| msgid "Latitude:"
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Garis lintang:"
 
-#: ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:248
 #, fuzzy, kde-format
 #| msgid "Longitude:"
 msgctxt "@label: textbox"
