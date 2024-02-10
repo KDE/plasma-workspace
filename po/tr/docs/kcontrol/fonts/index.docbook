@@ -215,8 +215,8 @@
 > değiştirerek ayarlayabilirsiniz. <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
 >Ekran sunumu</ulink
 > için <guilabel
->Yazıtipi DPI'sini zorla</guilabel
->'mak da olanaklıdır. Bu ayarların ne anlama geldiğini bilmiyorsanız değiştirmemeniz en iyisidir.</para>
+>Yazıtipi DPI’sini zorla</guilabel
+>’mak da olanaklıdır. Bu ayarların ne anlama geldiğini bilmiyorsanız değiştirmemeniz en iyisidir.</para>
 
 <note
 ><para
@@ -227,16 +227,16 @@
 
 <sect2 id="fonts-dpi">
 <title
->Yazıtipi DPI'si</title>
+>Yazıtipi DPI’si</title>
 
 <para
 ><guilabel
 >Force fonts DPI:</guilabel
 > ayarı, size bu ayar <guilabel
 >Devre Dışı</guilabel
-> olduğunda öntanımlı olarak kullanılandan farklı bir DPI önerir. X sunucunuzun hangi DPI'ye ayarlı olduğunu bir uçbirim penceresinde <userinput
+> olduğunda öntanımlı olarak kullanılandan farklı bir DPI önerir. X sunucunuzun hangi DPI’ye ayarlı olduğunu bir uçbirim penceresinde <userinput
 >xdpyinfo | grep resolution</userinput
-> yazarak denetleyebilir ve ardından açılır kutuyu kullanarak DPI'yı değiştirebilirsiniz. Bu yalnızca yeni başlatılan uygulamalara uygulanır.</para>
+> yazarak denetleyebilir ve ardından açılır kutuyu kullanarak DPI’yı değiştirebilirsiniz. Bu yalnızca yeni başlatılan uygulamalara uygulanır.</para>
 </sect2>
 
 </sect1>

@@ -212,7 +212,7 @@
   <para
 >İlk başta görüntülenen <guilabel
 >Ana Renkler</guilabel
-> kümesi, özünde Plasma'nın kullandığı gibi bir &quot;küme&quot; değildir (sonraki bölüme bakın); ancak şemayı tümüyle düzenlemeyi kolay kılan bir sayıda renk rolleri sunar. Yeni bir renk şeması oluştururken öncelikle bu renkleri değiştirirsiniz ve gerekise diğer renklere geçersiniz.</para>
+> kümesi, özünde Plasma’nın kullandığı gibi bir &quot;küme&quot; değildir (sonraki bölüme bakın); ancak şemayı tümüyle düzenlemeyi kolay kılan bir sayıda renk rolleri sunar. Yeni bir renk şeması oluştururken öncelikle bu renkleri değiştirirsiniz ve gerekise diğer renklere geçersiniz.</para>
 
   <para
 ><guilabel
@@ -221,7 +221,7 @@
 >tüm</emphasis
 > kümelerdeki renkleri değiştirir. (bir istisna olarak, &quot;Etkin Olmayan Metin&quot; tüm kümeler için renkleri değiştirir; <emphasis
 >yalnızca</emphasis
-> Seçim'e dokunmaz; bunun için ayrı olarak Seçim kümesinde Etkin Olmayan Metin için &quot;Seçim Etkin Olmayan Metin&quot; vardır). Bazı roller <guilabel
+> Seçim’e dokunmaz; bunun için ayrı olarak Seçim kümesinde Etkin Olmayan Metin için &quot;Seçim Etkin Olmayan Metin&quot; vardır). Bazı roller <guilabel
 >Ana Renkler</guilabel
 > altında görünür bile olmayabilir ve yalnızca ilgili küme seçilerek değişirilebilir (gerekirse).</para>
 
@@ -279,7 +279,7 @@
 >Renk Rolleri</title>
 
     <para
->Her renk kümesi, diğer tüm kümelerde bulunan bir dizi rolden oluşur. Belirgin Normal Metin ve Normal Arka Plan'a ek olarak, bu roller aşağıdaki gibidir:</para>
+>Her renk kümesi, diğer tüm kümelerde bulunan bir dizi rolden oluşur. Belirgin Normal Metin ve Normal Arka Plan’a ek olarak, bu roller aşağıdaki gibidir:</para>
 
     <itemizedlist>
       <listitem
@@ -351,7 +351,7 @@
     <itemizedlist>
       <listitem
 ><para
->Etkin Başlık Çubuğu &mdash; etkin pencere (yani, giriş odaklı pencere) için başlık çubuğu arka planını, kenarlıklarını ve/veya dekorasyonlarını çizmek için kullanılır. Tüm pencere dekorasyonları bunu aynı şekilde kullanmaz ve hatta bazıları başlık çubuğunu çizmek için Pencere kümesindeki Normal Arka Plan'ı kullanabilir. </para
+>Etkin Başlık Çubuğu &mdash; etkin pencere (yani, giriş odaklı pencere) için başlık çubuğu arka planını, kenarlıklarını ve/veya dekorasyonlarını çizmek için kullanılır. Tüm pencere dekorasyonları bunu aynı şekilde kullanmaz ve hatta bazıları başlık çubuğunu çizmek için Pencere kümesindeki Normal Arka Plan’ı kullanabilir. </para
 ></listitem>
       <listitem
 ><para

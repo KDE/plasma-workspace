@@ -1,7 +1,7 @@
 # Translation of ksmserver to Korean.
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Sae-keun Kim <segni@susekorea.net>, 2001.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2012, 2014, 2016, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2012, 2014, 2016, 2019, 2020, 2023, 2024 Shinjo Park <kde@peremen.name>
 # Copyright (C) 2007-2008 This file is part of KDE
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-04-22 00:13+0200\n"
+"PO-Revision-Date: 2024-02-09 19:40+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: logout.cpp:273
 #, kde-format
@@ -145,7 +145,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[알 수 없음]"
 
 #: server.cpp:836
 #, kde-kuit-format
@@ -155,6 +155,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"시스템 세션 관리 자원이 소진되어서 일부 앱을 관리할 수 없습니다. 세션 자원을 "
+"사용하는 상위 앱 중 3개입니다.\n"
+"%1"
 
 #: server.cpp:1108
 #, kde-kuit-format
@@ -164,6 +167,8 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"<application>%1</application> 앱이 깨졌으며 시스템의 세션 복원 자원을 소진시"
+"켰기 때문에 복원할 수 없습니다. 앱 개발자에게 문의하십시오."
 
 #~ msgid "Session Management"
 #~ msgstr "세션 관리"

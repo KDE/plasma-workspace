@@ -127,7 +127,7 @@
 </itemizedlist>
 
 <para
->Bir Global Tema uygulayarak, yukarıdakilerin hepsini birlikte değiştirebilirsiniz. Renk şeması veya pencere dekorasyonu gibi yalnızca Global Tema'nın bazı bileşenlerini de uygulayabilirsiniz. Bir Global Tema uygularken hangi bileşenlerin değiştirileceğini seçebilir veya diğer Sistem Ayarları alt bölümlerini kullanarak tek tek bileşenleri uygulayabilirsiniz. </para>
+>Bir Global Tema uygulayarak, yukarıdakilerin hepsini birlikte değiştirebilirsiniz. Renk şeması veya pencere dekorasyonu gibi yalnızca Global Tema’nın bazı bileşenlerini de uygulayabilirsiniz. Bir Global Tema uygularken hangi bileşenlerin değiştirileceğini seçebilir veya diğer Sistem Ayarları alt bölümlerini kullanarak tek tek bileşenleri uygulayabilirsiniz. </para>
 
 <sect2 id="globaltheme-manage">
 <title
@@ -165,7 +165,7 @@
 >Bir tema küçük görselinin üzerine geldiğinizde görünen görsel simgesine tıklayarak her temanın önizlemesini görebilirsiniz. </para>
 
 <para
->Bir Global Tema'ya tıkladığınızda, temanın hangi bileşenlerini uygulamak istediğinizi soran bir iletişim kutusu açılacaktır. Çeşitli görünüş ayarları ve masaüstü yerleşimi arasından seçim yapabilirsiniz. <screenshot>
+>Bir Global Tema’ya tıkladığınızda, temanın hangi bileşenlerini uygulamak istediğinizi soran bir iletişim kutusu açılacaktır. Çeşitli görünüş ayarları ve masaüstü yerleşimi arasından seçim yapabilirsiniz. <screenshot>
     <screeninfo
 >Global Tema bileşeni seçici ekran görüntüsü</screeninfo>
     <mediaobject>
@@ -201,7 +201,7 @@
 >Yeni Global Temalar Al...</guilabel
 > düğmesiyle, üçüncü taraf sağlayıcılar tarafından yeni Global Temalar kurabilirsiniz. Bu temalara erişmek için internete bağlı olmanız gerekir. İletişim kutusundaki temalardan birinde <guibutton
 >Kur</guibutton
->'a tıklamak, seçili Global Tema'yı yükler ve iletişim kutusunu kapattıktan sonra yeni temanız hemen kullanılabilir. <screenshot>
+>’a tıklamak, seçili Global Tema’yı yükler ve iletişim kutusunu kapattıktan sonra yeni temanız hemen kullanılabilir. <screenshot>
   <screeninfo
 >Yeni Global Temalar Al...</screeninfo>
     <mediaobject>
@@ -217,10 +217,10 @@
 </para>
 
 <para
->Kurulu bir Global Tema'yı kaldırmak için bir tema küçük görselinin üzerine geldiğinizde görünen çöp kutusu simgesinin bulunduğu düğmeyi tıklayın. Yalnızca kendi indirdiğiniz Global Temaları kaldırabileceğinizi unutmayın. </para>
+>Kurulu bir Global Tema’yı kaldırmak için bir tema küçük görselinin üzerine geldiğinizde görünen çöp kutusu simgesinin bulunduğu düğmeyi tıklayın. Yalnızca kendi indirdiğiniz Global Temaları kaldırabileceğinizi unutmayın. </para>
 
 <para
->Kendi temanızı oluşturmak isterseniz çeşitli bileşenler hakkında ayrıntılı bilgiyi <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>Kendi temanızı oluşturmak isterseniz çeşitli bileşenler hakkında ayrıntılı bilgiyi <ulink url="https://develop.kde.org/docs/plasma/"
 >buradan</ulink
 > alabilirsiniz. </para>
 

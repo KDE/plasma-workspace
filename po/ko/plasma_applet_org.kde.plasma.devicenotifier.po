@@ -1,14 +1,14 @@
 # Translation of plasma_applet_devicenotifier to Korean.
 # Copyright (C) 2007-2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2012, 2014, 2015, 2016, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2012, 2014, 2015, 2016, 2019, 2020, 2021, 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-02-20 22:29+0100\n"
+"PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -41,10 +41,9 @@ msgid "Removing…"
 msgstr "제거하는 중…"
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "아직 연결을 해제하지 마십시오! 파일 전송 중입니다..."
+msgstr "아직 연결을 해제하지 마십시오! 파일 전송 중입니다…"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
@@ -131,81 +130,72 @@ msgstr "새 장치가 연결되었을 때 팝업 표시"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "장치 상태"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "이제 장치를 안전하게 제거할 수 있음"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
-
-#: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
-msgid "You are not authorized to mount this device."
-msgstr "이 장치를 마운트하려면 누르십시오."
-
-#: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
-msgctxt "Remove is less technical for unmount"
-msgid "You are not authorized to remove this device."
 msgstr "이제 장치를 안전하게 제거할 수 있습니다."
 
+#: plugin/ksolidnotify.cpp:198
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "이 장치를 마운트할 권한이 없습니다."
+
+#: plugin/ksolidnotify.cpp:201
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "이 장치를 제거할 권한이 없습니다."
+
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "이 디스크를 꺼내려면 누르십시오."
+msgstr "이 디스크를 꺼낼 권한이 없습니다."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "이 장치를 마운트하려면 누르십시오."
+msgstr "장치가 사용 중이므로 마운트할 수 없습니다."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "다른 프로그램에서 장치를 사용하려면 누르십시오."
+msgstr "이 장치에 있는 하나 이상의 파일이 다른 앱에서 열려 있습니다."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "다른 프로그램에서 장치를 사용하려면 누르십시오."
+msgstr[0] "이 장치에 있는 하나 이상의 파일이 다음 앱에서 열려 있습니다: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "이 장치를 마운트하려면 누르십시오."
+msgstr "이 장치를 마운트할 수 없습니다."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "이 장치를 안전하게 제거하려면 누르십시오."
+msgstr "이 장치를 제거할 수 없습니다."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "이 디스크를 꺼내려면 누르십시오."
+msgstr "이 디스크를 꺼낼 수 없습니다."
 
 #~ msgid "Show:"
 #~ msgstr "표시:"

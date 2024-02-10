@@ -150,9 +150,9 @@
 <para
 >&klipper;, pano içeriği üzerinde belirli düzenli ifadeyle eşleşip eşleşmediğine göre çeşitli eylemler gerçekleştirebilir. Örneğin, <quote
 >http://</quote
-> ile başlayan herhangi bir pano içeriği Firefox'a veya &konqueror;'a açılacak &URL;'ler olarak aktarılabilir. Ek olarak, içerik bir yolla eşleşiyorsa dosyanın türüne bağlı olarak benzer eylemler gerçekeştirilebilir; &eg;, eğer bir <acronym
+> ile başlayan herhangi bir pano içeriği Firefox’a veya &konqueror;’a açılacak &URL;’ler olarak aktarılabilir. Ek olarak, içerik bir yolla eşleşiyorsa dosyanın türüne bağlı olarak benzer eylemler gerçekeştirilebilir; &eg;, eğer bir <acronym
 >PDF</acronym
-> dosyasına giden bir yol panoya kopyalanırsa dosya &okular;'da görüntülenebilir.</para>
+> dosyasına giden bir yol panoya kopyalanırsa dosya &okular;’da görüntülenebilir.</para>
 
 <para
 >Bu özelliği kullanmak için bir &URL; veya yol seçin. &klipper;'ın listesinde eşleşen bir düzenli ifade varsa seçiminiz için programları gösteren bir menü görüntülenir. Bir program seçmek için fare veya imleç düğmelerini kullanın ve &klipper; seçimin işaret ettiği adresi açarak bu programı çalıştırır.</para>
@@ -454,7 +454,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->Seçilirse açılır menüde seçili bir dosya adı veya URL'nin &MIME; türünü kabul edebilen uygulamaları içerin.</para>
+>Seçilirse açılır menüde seçili bir dosya adı veya URL’nin &MIME; türünü kabul edebilen uygulamaları içerin.</para>
 </listitem>
 </varlistentry>
 </variablelist>

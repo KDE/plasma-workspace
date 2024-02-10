@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Shinjo Park <kde@peremen.name>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-08-06 22:36+0200\n"
+"PO-Revision-Date: 2024-02-09 19:39+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "freedesktop.org의 폴백 소리 테마"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "알림 소리 활성화"
 
 #: ui/main.qml:97
 #, kde-format
@@ -70,8 +70,6 @@ msgid "The %1 theme doesn't include the sound '%2'"
 msgstr ""
 
 #: ui/main.qml:186
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Preview sound \"%1\""
+#, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "\"%1\" 소리 미리 듣기"
+msgstr "소리를 미리 들을 수 없음: %1"

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-02-28 23:51+0100\n"
+"PO-Revision-Date: 2024-02-09 19:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -153,12 +153,12 @@ msgstr "잠금 해제"
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(또는 인식기에 지문 스캔)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(또는 스마트카드 스캔)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "다음 트랙"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 다시 시작"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -227,42 +227,37 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "대기 모드"
+msgstr "지금 대기 모드로 전환"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "최대 절전 모드"
+msgstr "지금 최대 절전 모드로 전환"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "업데이트 설치 후 다시 시작"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "업데이트 설치 후 지금 다시 시작"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "다시 시작"
+msgstr "지금 다시 시작"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "컴퓨터 끄기"
+msgstr "지금 컴퓨터 끄기"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -270,10 +265,9 @@ msgid "Log Out"
 msgstr "로그아웃"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "로그아웃"
+msgstr "지금 로그아웃"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

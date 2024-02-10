@@ -110,9 +110,9 @@
 
 <sect2 id="migration">
 <title
->&kde; Çalışma Alanları 4'den göç</title>
+>&kde; Çalışma Alanları 4’den göç</title>
 <para
->Kişisel otomatik başlatma ayarlarınızı &kde; Çalışma Alanları 4'ten aktarmak için:</para>
+>Kişisel otomatik başlatma ayarlarınızı &kde; Çalışma Alanları 4’ten aktarmak için:</para>
 <simplelist>
 <member
 >Masaüstü dosyalarını <filename class="directory"

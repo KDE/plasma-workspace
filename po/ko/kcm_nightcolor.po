@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-02-28 22:39+0100\n"
+"PO-Revision-Date: 2024-02-09 19:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -107,16 +107,14 @@ msgid "Custom times"
 msgstr "사용자 정의 시간"
 
 #: ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "항상 야간 색상 사용"
+msgstr "항상 야간 조명 사용"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "주간 색온도:"
+msgstr "주간 조명 색온도:"
 
 #: ui/main.qml:227 ui/main.qml:289
 #, kde-format
@@ -125,9 +123,7 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:232 ui/main.qml:294
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "차가움(필터 없음)"
@@ -139,17 +135,15 @@ msgid "Warm"
 msgstr "따뜻함"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "야간 색온도:"
+msgstr "야간 조명 색온도:"
 
 #: ui/main.qml:311
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "위치 감지"
+msgstr "현재 위치:"
 
 #: ui/main.qml:317
 #, kde-format
@@ -169,10 +163,9 @@ msgstr ""
 "로 전송하여 주기적으로 업데이트합니다."
 
 #: ui/main.qml:357
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "야간 색상 시작 시간:"
+msgstr "야간 조명 시작 시간:"
 
 #: ui/main.qml:370 ui/main.qml:393
 #, kde-format
@@ -180,10 +173,9 @@ msgid "Input format: HH:MM"
 msgstr "입력 형식: HH:MM"
 
 #: ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "주간 색상 시작 시간:"
+msgstr "주간 조명 시작 시간:"
 
 #: ui/main.qml:402
 #, kde-format
