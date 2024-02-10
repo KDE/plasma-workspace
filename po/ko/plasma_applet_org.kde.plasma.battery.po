@@ -1,14 +1,14 @@
 # Translation of plasma_applet_battery to Korean.
 # Copyright (C) 2007, 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2023-02-28 23:45+0100\n"
+"PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -99,10 +99,9 @@ msgid "Not present"
 msgstr "없음"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "전원 관리"
+msgstr "전원과 배터리"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -297,11 +296,10 @@ msgid "Power Profile"
 msgstr "전원 프로필"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "배터리 없음"
+msgstr "사용할 수 없음"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -363,6 +361,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"현재 장치에서 전원 프로필을 지원할 수도 있습니다.<nl/>배포판 패키지 관리자에"
+"서 <command>power-profiles-daemon</command> 패키지를 설치한 다음 시스템을 다"
+"시 시작해 보십시오."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

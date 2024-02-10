@@ -1,0 +1,53 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024 Shinjo Park <kde@peremen.name>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-02-09 19:44+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "세션 관리"
+
+#: main.cpp:38
+#, kde-format
+msgid "Log Out"
+msgstr "로그아웃"
+
+#: main.cpp:44
+#, kde-format
+msgid "Shut Down"
+msgstr "컴퓨터 끄기"
+
+#: main.cpp:50
+#, kde-format
+msgid "Reboot"
+msgstr "다시 시작"
+
+#: main.cpp:58
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "확인하지 않고 로그아웃"
+
+#: main.cpp:64
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "확인하지 않고 끄기"
+
+#: main.cpp:70
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "확인하지 않고 다시 시작"

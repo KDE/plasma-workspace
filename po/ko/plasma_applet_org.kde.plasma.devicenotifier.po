@@ -1,14 +1,14 @@
 # Translation of plasma_applet_devicenotifier to Korean.
 # Copyright (C) 2007-2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2012, 2014, 2015, 2016, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2012, 2014, 2015, 2016, 2019, 2020, 2021, 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-02 01:37+0000\n"
-"PO-Revision-Date: 2022-02-20 22:29+0100\n"
+"PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/ui/DeviceItem.qml:189
 #, kde-format
@@ -41,10 +41,9 @@ msgid "Removing…"
 msgstr "제거하는 중…"
 
 #: package/contents/ui/DeviceItem.qml:199
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "아직 연결을 해제하지 마십시오! 파일 전송 중입니다..."
+msgstr "아직 연결을 해제하지 마십시오! 파일 전송 중입니다…"
 
 #: package/contents/ui/DeviceItem.qml:230
 #, kde-format

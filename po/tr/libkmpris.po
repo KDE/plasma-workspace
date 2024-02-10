@@ -15,64 +15,64 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: kded/mprisservice.cpp:105
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
-msgstr ""
+msgstr "Ortam Denetleyicisi"
 
 #: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr ""
+msgstr "Ortamı Çal/Oynat-Duraklat"
 
 #: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr ""
+msgstr "Sonraki Ortam"
 
 #: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr ""
+msgstr "Önceki Ortam"
 
 #: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr ""
+msgstr "Ortamı Durdur"
 
 #: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr ""
+msgstr "Ortamı Duraklat"
 
 #: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr ""
+msgstr "Ortam Çal/Oynat"
 
 #: kded/mprisservice.cpp:120
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr ""
+msgstr "Ortam Sesini Aç"
 
 #: kded/mprisservice.cpp:121
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr ""
+msgstr "Ortam Sesini Kıs"
 
 #: multiplexermodel.cpp:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr "Kendiliğinden Oynatıcı Seç"
+msgstr "Kendiliğinden Çalar/Oynatıcı Seç"

@@ -1,14 +1,14 @@
 # Translation of kcm_autostart to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2023-08-25 23:19+0200\n"
+"PO-Revision-Date: 2024-02-09 19:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: autostartmodel.cpp:376
 #, kde-format
@@ -106,22 +106,19 @@ msgid "Add…"
 msgstr "추가…"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "앱 추가…"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "로그인 스크립트 추가…"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "로그아웃 스크립트 추가…"
@@ -180,9 +177,7 @@ msgid "No user-specified autostart items"
 msgstr "사용자 정의 자동 시작 항목 없음"
 
 #: ui/main.qml:185
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Click the <interface>Add…</interface> button below to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "<interface>추가…</interface>를 클릭해서 추가하십시오"
