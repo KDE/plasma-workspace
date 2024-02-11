@@ -4,14 +4,14 @@
 # Marcello Anni <marcello.anni@alice.it>, 2007, 2008, 2009, 2010, 2012.
 # Pino Toscano <toscano.pino@tiscali.it>, 2010.
 # Nicola Ruggero <nicola@nxnt.org>, 2013.
-# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-11-20 09:25+0100\n"
+"PO-Revision-Date: 2024-02-09 01:48+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -218,10 +218,9 @@ msgstr ""
 "carica"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Configura il risparmio energetico..."
+msgstr "&Configura la gestione energetica…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format

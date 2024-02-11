@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2024-01-17 21:07+0400\n"
+"PO-Revision-Date: 2024-02-10 17:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -27,27 +27,27 @@ msgstr "فري دسكتوب"
 #: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr ""
+msgstr "سمة صوتية احتياطية من freedesktop.org"
 
 #: ui/main.qml:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "مكن الإشعارات الصوتية"
 
 #: ui/main.qml:97
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] "بناءً على:"
-msgstr[1] "بناءً على:"
-msgstr[2] "بناءً على:"
-msgstr[3] "بناءً على:"
-msgstr[4] "بناءً على:"
-msgstr[5] "بناءً على:"
+msgstr[0] "بناءً على: %2"
+msgstr[1] "بناءً على: %2"
+msgstr[2] "بناءً على: %2"
+msgstr[3] "بناءً على: %2"
+msgstr[4] "بناءً على: %2"
+msgstr[5] "بناءً على: %2"
 
 #: ui/main.qml:109
 #, kde-format
@@ -55,27 +55,27 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr ""
+msgstr "عاين الصوت:"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr ""
+msgstr "عاين صوت \"%1\""
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "عاين الصوت التجريبي لسمة \"%1\""
 
 #: ui/main.qml:181
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "سمة %1 لا تحوي صوت '%2'"
 
 #: ui/main.qml:186
 #, kde-format
 msgid "Failed to preview sound: %1"
-msgstr ""
+msgstr "فشل في معاينة الصوت: %1"

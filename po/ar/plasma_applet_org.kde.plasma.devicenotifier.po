@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2017.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-01-19 17:38+0400\n"
+"PO-Revision-Date: 2024-02-10 22:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -44,10 +44,9 @@ msgid "Removing…"
 msgstr "يفصل..."
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "لا تفصله! ما زالت الملفات تنقل..."
+msgstr "لا تفصله! ما زالت الملفات تنقل…"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
@@ -134,86 +133,77 @@ msgstr "افتح منبثقة عند وصل جهاز جديد"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "حالة الأجهزة"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "يمكن إزالة جهاز الآن بأمان."
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "يمكن إزالة هذا الجهاز الآن بأمان."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "انقر لضمّ الجهاز."
+msgstr "لست مستوثقًا لضمّ هذا الجهاز."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "إزالة هذا الجهاز آمنة الآن."
+msgstr "لست مستوثقًا لإزالة هذا الجهاز."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "انقر لإخراج القرص هذا."
+msgstr "لست مستوثقًا لإخراج هذا القرص."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "انقر لضمّ الجهاز."
+msgstr "تعذّر ضمّ هذا الجهاز فهو مشغول."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في تطبيق آخر."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
-msgstr[1] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
-msgstr[2] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
-msgstr[3] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
-msgstr[4] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
-msgstr[5] "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+msgstr[0] "لا تطبيقات تستخدم أيّ ملفّ في الجهاز."
+msgstr[1] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيق \"%2\"."
+msgstr[2] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيق \"%2\"."
+msgstr[3] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
+msgstr[4] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
+msgstr[5] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr "، "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "انقر لضمّ الجهاز."
+msgstr "تعذّر ضمّ هذا الجهاز."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "انقر لإزالة الجهاز هذا بأمان."
+msgstr "تعذّرت إزالة هذا الجهاز."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "انقر لإخراج القرص هذا."
+msgstr "تعذّر إخراج هذا القرص."
 
 #~ msgid "General"
 #~ msgstr "عامّ"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2024-01-17 21:08+0400\n"
+"PO-Revision-Date: 2024-02-10 20:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -34,6 +34,8 @@ msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr ""
+"يجعل البلازمويد يبقى على قيد الحياة في منطقة الإشعارات، حتى عندما تكون "
+"النافذة مغلقة."
 
 #: main.cpp:51
 #, kde-format
@@ -43,12 +45,12 @@ msgstr "أجبِر تحميل ملحقة الصّدفة المعطاة"
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr ""
+msgstr "الأداة التي ستفتح"
 
 #: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr ""
+msgstr "معطيات لتمريرها إلى للبلازمويد."
 
 #: plasmawindowedview.cpp:120
 #, kde-format

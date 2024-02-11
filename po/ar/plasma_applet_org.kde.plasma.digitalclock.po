@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-01-26 12:27+0400\n"
+"PO-Revision-Date: 2024-02-10 19:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -204,15 +204,12 @@ msgid "Custom"
 msgstr "مخصّص"
 
 #: package/contents/ui/configAppearance.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">توثيق تنسيق الوقت</a>"
 
 #: package/contents/ui/configAppearance.qml:229
@@ -279,18 +276,13 @@ msgid "Available Plugins:"
 msgstr "الملحقات المتوفّرة:"
 
 #: package/contents/ui/configTimeZones.qml:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"نصيحة: إذا كنت تسافر بشكل متكرر، فأضف إدخالًا آخر للمنطقة الزمنية لمنزلك إلى "
-"هذه القائمة. لن تظهر إلا عند تغيير المنطقة الزمنية على مستوى النظام إلى شيء "
-"آخر."
+"نصيحة: إذا كنت تسافر بشكل متكرر، فأضف المنطقة الزمنية لمنزلك إلى هذه "
+"القائمة. لن تظهر إلا عند تغيير المنطقة الزمنية على مستوى النظام إلى شيء آخر."
 
 #: package/contents/ui/configTimeZones.qml:79
 #, kde-format

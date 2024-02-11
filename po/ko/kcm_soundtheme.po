@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 19:39+0100\n"
+"PO-Revision-Date: 2024-02-10 22:57+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -67,7 +67,7 @@ msgstr "\"%1\" 테마의 데모 소리 미리 듣기"
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "%1 테마에 '%2' 소리가 없음"
 
 #: ui/main.qml:186
 #, kde-format
