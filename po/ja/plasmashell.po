@@ -1,14 +1,14 @@
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2016, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2023-04-07 23:52-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-02-09 21:47+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Fuminobu TAKEYAMA"
+msgstr "Fuminobu TAKEYAMA, Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ftake@geeko.jp"
+msgstr "ftake@geeko.jp, ryuichi_ya220@outlook.jp"
 
 #: currentcontainmentactionsmodel.cpp:205
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "クラッシュ後に plasma-shell を自動的に再起動しない"
 #: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "与えられたシェルプラグインの読み込みを強制する"
 
 #: main.cpp:111
 #, kde-format
@@ -65,11 +65,13 @@ msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
 "to be specified"
 msgstr ""
+"plasmashell をスタンドアロンのアプリケーションとして読み込みます。shell-"
+"plugin オプションを指定する必要があります。"
 
 #: main.cpp:113
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "既存のインスタンスを置換"
 
 #: main.cpp:116
 #, kde-format
@@ -77,16 +79,18 @@ msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
+"テスト環境を設定するためにテストモードを有効化してレイアウト javascript を指"
+"定"
 
 #: main.cpp:117
 #, kde-format
 msgid "file"
-msgstr ""
+msgstr "ファイル"
 
 #: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "ユーザフィードバックのために利用可能なオプションをリスト"
 
 #: main.cpp:221
 #, kde-format
@@ -100,8 +104,8 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"OpenGL 2 もソフトウェアによるフォールバックも使用できないため、Plasma を起動"
-"できません。\n"
+"OpenGL 2 とソフトウェアによるフォールバックのいずれも使用できないため、"
+"Plasma を起動できません。\n"
 "グラフィックドライバが正しく設定されているか確認してください。"
 
 #: osd.cpp:54
@@ -273,7 +277,7 @@ msgstr "使用中のソフトウェアレンダラ"
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "レンダリングの質が低下している可能性があります"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format

@@ -1,4 +1,5 @@
 # Translation of kcm_autostart into Japanese.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2008.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015.
@@ -8,8 +9,8 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2015-05-22 22:12-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-02-09 02:48+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -18,114 +19,112 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: autostartmodel.cpp:322
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr ""
+msgstr "\"%1\" は絶対的な URL ではありません。"
 
 #: autostartmodel.cpp:325
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr ""
+msgstr "\"%1\" は存在しません。"
 
 #: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr ""
+msgstr "\"%1\" はファイルではありません。"
 
 #: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr ""
+msgstr "\"%1\" は読み取り不可能です。"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "実行可能にする"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
+"ログアウト時に実行するためには '%1' が実行可能ファイルである必要があります。"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
+"ログイン時に実行するためには '%1' が実行可能ファイルである必要があります。"
 
 #: package/contents/ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "&Properties..."
+#, kde-format
 msgid "Properties"
-msgstr "プロパティ(&P)..."
+msgstr "プロパティ"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgid "Remove"
-msgstr "削除(&R)"
+msgstr "削除"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "アプリケーション"
 
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "ログインスクリプト"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr ""
+msgstr "起動前のスクリプト"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
-msgstr ""
+msgstr "ログアウトスクリプト"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "ユーザによって設定された自動起動アイテムはありません"
 
 #: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
-msgstr ""
+msgstr "<interface>追加…</interface>ボタンを押して追加できます"
 
 #: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Choose Login Script"
-msgstr "スクリプトを追加..."
+msgstr "ログインスクリプトを選択"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "ログアウトスクリプトを選択"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "追加..."
 
 #: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
-msgstr ""
+msgstr "アプリケーションを追加..."
 
 #: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Login Script…"
-msgstr "スクリプトを追加..."
+msgstr "ログインスクリプトを追加..."
 
 #: package/contents/ui/main.qml:210
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Logout Script…"
-msgstr "スクリプトを追加..."
+msgstr "ログアウトスクリプトを追加…"
