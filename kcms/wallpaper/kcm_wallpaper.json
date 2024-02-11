@@ -2,6 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_wallpaper",
         "Description": "Configure the wallpaper",
+        "Description[ar]": "اضبط خلفية الشاشة",
         "Description[bg]": "Настройки на тапета",
         "Description[ca@valencia]": "Configura el fons de pantalla",
         "Description[ca]": "Configura el fons de pantalla",

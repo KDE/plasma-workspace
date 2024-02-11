@@ -5,6 +5,7 @@
             {
                 "Email": "qydwhotmail@gmail.com",
                 "Name": "Fushan Wen",
+                "Name[ar]": "فيوشان وين",
                 "Name[ast]": "Fushan Wen",
                 "Name[bg]": "Fushan Wen",
                 "Name[ca@valencia]": "Fushan Wen",
@@ -42,6 +43,7 @@
             }
         ],
         "Description": "Shows whether any camera is currently used by an app",
+        "Description[ar]": "يوضح ما إذا كان التطبيق يستخدم أي كاميرا حاليًا",
         "Description[bg]": "Показва дали камерата се използва от някое приложение",
         "Description[ca@valencia]": "Mostra si una aplicació utilitza actualment qualsevol càmera",
         "Description[ca]": "Mostra si una aplicació utilitza actualment qualsevol càmera",
@@ -79,6 +81,7 @@
         "Id": "org.kde.plasma.cameraindicator",
         "License": "GPL-2.0+",
         "Name": "Camera Indicator",
+        "Name[ar]": "مؤشر الكاميرا",
         "Name[bg]": "Индикатор на камерата",
         "Name[ca@valencia]": "Indicador de càmera",
         "Name[ca]": "Indicador de càmera",

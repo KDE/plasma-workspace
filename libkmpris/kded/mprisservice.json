@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Controls media players using global keyboard shortcuts",
+        "Description[ar]": "يتحكم بالمشغلات الصوتية باستخدام اختصارات لوحة المفاتيح العامة",
         "Description[bg]": "Управление на медиен плеър с глобалните клавишни комбинации",
         "Description[ca@valencia]": "Controla els reproductors multimèdia utilitzant les dreceres de teclat globals",
         "Description[ca]": "Controla els reproductors multimèdia usant les dreceres de teclat globals",
@@ -33,6 +34,7 @@
         "Description[zh_CN]": "使用全局键盘快捷键控制媒体播放器",
         "Description[zh_TW]": "使用全域鍵盤快捷鍵控制媒體播放器",
         "Name": "Media Controller",
+        "Name[ar]": "محتكم الوسائط",
         "Name[bg]": "Медиен контролер",
         "Name[ca@valencia]": "Controlador multimèdia",
         "Name[ca]": "Controlador multimèdia",
