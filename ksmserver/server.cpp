@@ -1075,7 +1075,7 @@ void KSMServer::tryRestore()
     };
     QList<RestartEntry> entries;
     entries.reserve(appsToStart);
-    for (int i = 0; i < appsToStart; i++) {
+    for (int i = 1; i <= appsToStart; i++) {
         const auto n = QString::number(i);
         const auto entry = entries.emplace_back(RestartEntry{
             .clientId = config.readEntry(QLatin1String("clientId") + n, QString()),
