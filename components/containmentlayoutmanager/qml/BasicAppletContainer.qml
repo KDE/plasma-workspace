@@ -267,7 +267,7 @@ ContainmentLayoutManager.AppletContainer {
     }
     configurationRequiredComponent: PlasmaComponents.Button {
         anchors.centerIn: parent
-        text: i18n("Configure…")
+        text: i18nd("plasmashellprivateplugin", "Configure…")
         icon.name: "configure"
         visible: applet.plasmoid.configurationRequired
         onClicked: applet.plasmoid.internalAction("configure").trigger();
