@@ -365,6 +365,10 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
         QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
 
         QRect regionGeometry = d->regionGeometry;
+        // Shrink by 1 to avoid false positives caused by rounding errors
+        // Since QWindow reports its geometry in ints, using QRectF doesn't help
+        // This supports dodge-windows panels between two screens, which is only supported on wayland, so we don't need to worry about X11
+        regionGeometry -= QMargins(1, 1, 1, 1);
 #if HAVE_X11
         if (static const bool isX11 = KWindowSystem::isPlatformX11(); isX11 && windowGeometry.isValid()) {
             // On X11, in regionGeometry, the original point of the topLeft position belongs to the device coordinate system
