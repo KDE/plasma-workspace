@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-13 02:10+0000\n"
-"PO-Revision-Date: 2020-05-12 20:15-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-02-08 03:22+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,35 +14,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:9
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "外観"
 
 #: package/contents/config/config.qml:14
 #, kde-format
 msgid "%1 Details"
-msgstr ""
+msgstr "%1 の詳細"
 
 #: package/contents/config/config.qml:20
 #, kde-format
 msgid "Sensors Details"
-msgstr ""
+msgstr "センサーの詳細"
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "System Monitor"
-msgstr ""
+msgstr "システムモニタ"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
 msgctxt "Sensor name: value"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"
-msgstr ""
+msgstr "システムモニタを開く..."

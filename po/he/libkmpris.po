@@ -1,21 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-09 00:39+0000\n"
-"PO-Revision-Date: 2023-10-04 22:33+0300\n"
-"Last-Translator: \n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-02-09 15:21+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -23,55 +22,55 @@ msgstr ""
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
-msgstr ""
+msgstr "פקד מדיה"
 
 #: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr ""
+msgstr "הפעלת/השהיית ניגון מדיה"
 
 #: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr ""
+msgstr "נגינת המדיה הבאה"
 
 #: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr ""
+msgstr "נגינת המדיה הקודמת"
 
 #: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr ""
+msgstr "עצירת נגינת המדיה"
 
 #: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr ""
+msgstr "השהיית נגינת המדיה"
 
 #: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr ""
+msgstr "הפעלת ניגון מדיה"
 
 #: kded/mprisservice.cpp:120
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr ""
+msgstr "הגברת עוצמת שמע של מדיה"
 
 #: kded/mprisservice.cpp:121
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr ""
+msgstr "הנמכת עוצמת שמע של מדיה"
 
 #: multiplexermodel.cpp:71
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2024-02-04 09:32+0100\n"
+"PO-Revision-Date: 2024-02-11 12:13+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -326,7 +326,7 @@ msgstr "W trybie nieprzeszkadzania; naciśnij środkowy, aby wyjść z niego"
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr "Środkowy przechodzi w tryb nieprzeszkadzania"
+msgstr "Kliknij środkowym, aby przejść w tryb nieprzeszkadzania"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
@@ -358,9 +358,9 @@ msgstr[2] "%1 minut temu"
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] "Pozostała %1s"
-msgstr[1] "Pozostały %1s"
-msgstr[2] "Pozostało %1s"
+msgstr[0] "Pozostała %1 s"
+msgstr[1] "Pozostały %1 s"
+msgstr[2] "Pozostało %1 s"
 
 #: package/contents/ui/NotificationHeader.qml:165
 #, kde-format

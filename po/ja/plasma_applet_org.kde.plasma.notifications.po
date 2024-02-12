@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2023-02-23 18:26+0900\n"
+"PO-Revision-Date: 2024-02-09 02:52+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "プロパティ"
 #: globalshortcuts.cpp:23
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "マナーモードを切り替え"
+msgstr "マナーモードをオン/オフ"
 
 #: globalshortcuts.cpp:42
 #, kde-format
@@ -67,22 +67,19 @@ msgid "Notifications On"
 msgstr "通知オン"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link Address"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "リンクアドレスをコピー"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "コピー"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "すべて選択"
@@ -244,12 +241,10 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:182
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "詳細を隠す"
+msgstr "詳細"
 
 #: package/contents/ui/JobItem.qml:193
 #, kde-format
@@ -301,17 +296,17 @@ msgstr[0] "未読の通知 %1 件"
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "%1 までマナーモード - 中クリックで今すぐ終了"
+msgstr "%1 までマナーモード - 中クリックして今すぐ終了"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr "マナーモードが有効です - 中クリックで終了"
+msgstr "マナーモードが有効です - 中クリックして終了"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr "中クリックでマナーモードをオン"
+msgstr "中クリックしてマナーモードをオン"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
@@ -327,7 +322,7 @@ msgstr "イベント通知とアクションを設定(&C)…"
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr "ちょうど今"
+msgstr "たった今"
 
 #: package/contents/ui/NotificationHeader.qml:127
 #, kde-format

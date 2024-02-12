@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-09 00:39+0000\n"
-"PO-Revision-Date: 2023-12-28 11:29+0100\n"
+"PO-Revision-Date: 2024-02-11 20:36+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -21,55 +21,55 @@ msgstr ""
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
-msgstr ""
+msgstr "Médiavezérlő"
 
 #: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr ""
+msgstr "Lejátszás indítása/szüneteltetése"
 
 #: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr ""
+msgstr "Következő"
 
 #: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr ""
+msgstr "Előző"
 
 #: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr ""
+msgstr "Leállítás"
 
 #: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr ""
+msgstr "Szünet"
 
 #: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr ""
+msgstr "Lejátszás"
 
 #: kded/mprisservice.cpp:120
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr ""
+msgstr "Hangerő növelése"
 
 #: kded/mprisservice.cpp:121
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr ""
+msgstr "Hangerő csökkentése"
 
 #: multiplexermodel.cpp:71
 #, kde-format
