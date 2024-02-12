@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-14 02:27+0000\n"
-"PO-Revision-Date: 2022-12-10 11:36+0100\n"
+"PO-Revision-Date: 2024-02-11 12:13+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "W trybie nieprzeszkadzania; naciśnij środkowy, aby wyjść z niego"
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr "Środkowy przechodzi w tryb nieprzeszkadzania"
+msgstr "Kliknij środkowym, aby przejść w tryb nieprzeszkadzania"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -361,9 +361,9 @@ msgstr[2] "%1 minut temu"
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] "Pozostała %1s"
-msgstr[1] "Pozostały %1s"
-msgstr[2] "Pozostało %1s"
+msgstr[0] "Pozostała %1 s"
+msgstr[1] "Pozostały %1 s"
+msgstr[2] "Pozostało %1 s"
 
 #: package/contents/ui/NotificationHeader.qml:165
 #, kde-format
