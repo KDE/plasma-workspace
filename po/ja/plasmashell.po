@@ -1,14 +1,14 @@
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2016, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 02:30+0000\n"
-"PO-Revision-Date: 2023-04-07 23:52-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-02-09 21:47+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Fuminobu TAKEYAMA"
+msgstr "Fuminobu TAKEYAMA, Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ftake@geeko.jp"
+msgstr "ftake@geeko.jp, ryuichi_ya220@outlook.jp"
 
 #: currentcontainmentactionsmodel.cpp:206
 #, kde-format
@@ -35,79 +35,70 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "マウスアクションプラグインを設定"
 
 #: desktopview.cpp:211
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma 6.0 Dev"
 
 #: desktopview.cpp:214
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:217
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma 6.0 Beta 1"
 
 #: desktopview.cpp:220
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma 6.0 Beta 2"
 
 #: desktopview.cpp:223
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:226
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:252
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma %1 Dev"
 
 #: desktopview.cpp:256
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma %1 Beta"
 
 #: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Beta %2"
 
 #: desktopview.cpp:263
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Plasma シェル"
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "bugs.kde.org で問題を報告してください"
 
 #: main.cpp:88
 #, kde-format
@@ -127,12 +118,12 @@ msgstr "クラッシュ後に plasma-shell を自動的に再起動しない"
 #: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "与えられたシェルプラグインの読み込みを強制する"
 
 #: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "既存のインスタンスを置換"
 
 #: main.cpp:113
 #, kde-format
@@ -140,16 +131,18 @@ msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
+"テスト環境を設定するためにテストモードを有効化してレイアウト javascript を指"
+"定"
 
 #: main.cpp:114
 #, kde-format
 msgid "file"
-msgstr ""
+msgstr "ファイル"
 
 #: main.cpp:118
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "ユーザフィードバックのために利用可能なオプションをリスト"
 
 #: main.cpp:200
 #, kde-format
@@ -163,8 +156,8 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"OpenGL 2 もソフトウェアによるフォールバックも使用できないため、Plasma を起動"
-"できません。\n"
+"OpenGL 2 とソフトウェアによるフォールバックのいずれも使用できないため、"
+"Plasma を起動できません。\n"
 "グラフィックドライバが正しく設定されているか確認してください。"
 
 #: osd.cpp:53
@@ -336,7 +329,7 @@ msgstr "使用中のソフトウェアレンダラ"
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "レンダリングの質が低下している可能性があります"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format

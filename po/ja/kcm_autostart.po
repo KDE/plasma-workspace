@@ -1,4 +1,5 @@
 # Translation of kcm_autostart into Japanese.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2008.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015.
@@ -8,8 +9,8 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:59+0000\n"
-"PO-Revision-Date: 2015-05-22 22:12-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-02-09 02:48+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -18,33 +19,34 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: autostartmodel.cpp:376
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr ""
+msgstr "\"%1\" は絶対的な URL ではありません。"
 
 #: autostartmodel.cpp:379
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr ""
+msgstr "\"%1\" は存在しません。"
 
 #: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr ""
+msgstr "\"%1\" はファイルではありません。"
 
 #: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr ""
+msgstr "\"%1\" は読み取り不可能です。"
 
 #: ui/entry.qml:52
 #, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr ""
+msgstr "名前:"
 
 #: ui/entry.qml:57
 #, kde-format
@@ -52,7 +54,7 @@ msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr ""
+msgstr "状態:"
 
 #: ui/entry.qml:62
 #, kde-format
@@ -60,178 +62,175 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "最後のアクティベート:"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "停止"
 
 #: ui/entry.qml:71
 #, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr ""
+msgstr "開始"
 
 #: ui/entry.qml:105
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "ログを読み込めませんでした。再読み込みしてください。"
 
 #: ui/entry.qml:109
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "再読み込み"
 
 #: ui/main.qml:33
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "実行可能にする"
 
 #: ui/main.qml:53
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
+"ログアウト時に実行するためには '%1' が実行可能ファイルである必要があります。"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
+"ログイン時に実行するためには '%1' が実行可能ファイルである必要があります。"
 
 #: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "追加..."
 
 #: ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
-msgstr ""
+msgstr "アプリケーションを追加..."
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
-msgstr "スクリプトを追加..."
+msgstr "ログインスクリプトを追加..."
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
-msgstr "スクリプトを追加..."
+msgstr "ログアウトスクリプトを追加…"
 
 #: ui/main.qml:114
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
-msgstr ""
+msgstr "%1 はまだ自動起動されていません。詳細は再起動後に利用可能になります。"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "まだ自動起動されていません"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "プロパティ(&P)..."
+msgstr "プロパティを表示"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "削除(&R)"
+msgstr "エントリを削除"
 
 #: ui/main.qml:167
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "アプリケーション"
 
 #: ui/main.qml:170
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "ログインスクリプト"
 
 #: ui/main.qml:173
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr ""
+msgstr "起動前のスクリプト"
 
 #: ui/main.qml:176
 #, kde-format
 msgid "Logout Scripts"
-msgstr ""
+msgstr "ログアウトスクリプト"
 
 #: ui/main.qml:184
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "ユーザによって設定された自動起動アイテムはありません"
 
 #: ui/main.qml:185
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
-msgstr ""
+msgstr "<interface>追加…</interface>ボタンを押して追加できます"
 
 #: ui/main.qml:200
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Choose Login Script"
-msgstr "スクリプトを追加..."
+msgstr "ログインスクリプトを選択"
 
 #: ui/main.qml:220
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "ログアウトスクリプトを選択"
 
 #: unit.cpp:26
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "実行中"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "停止中"
 
 #: unit.cpp:28
 #, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr ""
+msgstr "起動時"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "停止時"
 
 #: unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "失敗"
 
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "GetAll コール %1 からの返信の受信中にエラーが発生しました"
 
 #: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "ジャーナルを開けませんでした"
