@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-02-13 02:29+0000\n"
 "PO-Revision-Date: 2024-02-03 01:52+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -21,54 +21,54 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 "X-Generator: Lokalize 1.1\n"
 
-#: menu.cpp:100
+#: menu.cpp:102
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Rodyti KRunner"
 
-#: menu.cpp:105
+#: menu.cpp:107
 #, kde-format
 msgid "Open Terminal"
 msgstr "Atverti terminalą"
 
-#: menu.cpp:109
+#: menu.cpp:111
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Užrakinti ekraną"
 
-#: menu.cpp:118
+#: menu.cpp:120
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Išeiti…"
 
-#: menu.cpp:127
+#: menu.cpp:129
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr "Konfigūruoti ekrano nuostatas…"
 
-#: menu.cpp:283
+#: menu.cpp:285
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Konfigūruoti kontekstinio meniu įskiepį"
 
-#: menu.cpp:293
+#: menu.cpp:295
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Kiti veiksmai]"
 
-#: menu.cpp:296
+#: menu.cpp:298
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Darbalaukio fono veiksmai"
 
-#: menu.cpp:300
+#: menu.cpp:302
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
