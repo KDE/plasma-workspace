@@ -75,7 +75,6 @@ Item {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
         }
-        isMask: true
         width: iconSize
         height: iconSize
 
