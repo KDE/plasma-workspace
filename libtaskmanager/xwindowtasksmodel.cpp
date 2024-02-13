@@ -809,7 +809,7 @@ void XWindowTasksModel::requestMove(const QModelIndex &index)
     const QRect &geom = info->geometry();
 
     NETRootInfo ri(X11Info::connection(), NET::WMMoveResize);
-    ri.moveResizeRequest(window, geom.center().x(), geom.center().y(), NET::Move);
+    ri.moveResizeRequest(window, geom.center().x(), geom.center().y(), NET::Move, XCB_BUTTON_INDEX_ANY);
 }
 
 void XWindowTasksModel::requestResize(const QModelIndex &index)
@@ -835,7 +835,7 @@ void XWindowTasksModel::requestResize(const QModelIndex &index)
     const QRect &geom = info->geometry();
 
     NETRootInfo ri(X11Info::connection(), NET::WMMoveResize);
-    ri.moveResizeRequest(window, geom.bottomRight().x(), geom.bottomRight().y(), NET::BottomRight);
+    ri.moveResizeRequest(window, geom.bottomRight().x(), geom.bottomRight().y(), NET::BottomRight, XCB_BUTTON_INDEX_ANY);
 }
 
 void XWindowTasksModel::requestToggleMinimized(const QModelIndex &index)
