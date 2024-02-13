@@ -105,7 +105,7 @@ msgstr "%1%"
 #: contents/components/Battery.qml:54
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Bateria a %1%"
+msgstr "Bateria al %1%"
 
 #: contents/components/UserList.qml:71
 #, kde-format
