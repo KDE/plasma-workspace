@@ -1,11 +1,11 @@
 # Translation of plasma_wallpaper_image into Japanese.
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2007.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2007, 2008, 2009.
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 #
 msgid ""
@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2023-04-07 23:43-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-02-11 05:38+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,8 +36,7 @@ msgid "Your emails"
 msgstr "ybando@k6.dion.ne.jp,ryuichi_ya220@outlook.jp"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "画像を開く"
@@ -46,7 +45,7 @@ msgstr "画像を開く"
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "スライドショーで表示する壁紙が含まれるディレクトリ"
 
 #: imagepackage/contents/ui/config.qml:126
 #, kde-format
@@ -92,7 +91,7 @@ msgstr "ぼかし"
 #: imagepackage/contents/ui/config.qml:183
 #, kde-format
 msgid "Solid color"
-msgstr ""
+msgstr "単色"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
@@ -110,23 +109,21 @@ msgid "Next Wallpaper Image"
 msgstr "次の壁紙画像"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "画像ファイル"
+msgstr "画像"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "追加..."
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "新しい壁紙を取得..."
+msgstr "新規入手..."
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -260,7 +257,7 @@ msgstr "フォルダ"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "追加..."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
@@ -268,10 +265,9 @@ msgid "Remove Folder"
 msgstr "フォルダを削除"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:242
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "フォルダを開く"
+msgstr "フォルダを開く..."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
@@ -306,9 +302,9 @@ msgstr "両方"
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr ""
+msgstr "壁紙の設定中にエラーが発生しました:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr ""
+msgstr "kscreenlockerrc の設定ファイルを開く際にエラーが発生しました。"

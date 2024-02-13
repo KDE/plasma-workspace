@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-13 00:39+0000\n"
 "PO-Revision-Date: 2023-01-05 13:34+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: menu.cpp:100
+#: menu.cpp:102
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Zobrazit KRunner"
 
-#: menu.cpp:105
+#: menu.cpp:107
 #, kde-format
 msgid "Open Terminal"
 msgstr "Otevřít terminál"
 
-#: menu.cpp:109
+#: menu.cpp:111
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Uzamknout obrazovku"
 
-#: menu.cpp:118
+#: menu.cpp:120
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Opustit…"
 
-#: menu.cpp:123
+#: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr "Nastavit možnosti obrazovky..."
 
-#: menu.cpp:283
+#: menu.cpp:285
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Nastavit modul kontextové nabídky"
 
-#: menu.cpp:293
+#: menu.cpp:295
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Ostatní činnosti]"
 
-#: menu.cpp:296
+#: menu.cpp:298
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Činnosti tapet"
 
-#: menu.cpp:300
+#: menu.cpp:302
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
