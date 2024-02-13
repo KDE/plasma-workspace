@@ -59,6 +59,7 @@ QMimeData *HistoryURLItem::mimeData() const
     QMimeData *data = new QMimeData();
     data->setUrls(m_urls);
     KUrlMimeData::setMetaData(m_metaData, data);
+    KUrlMimeData::exportUrlsToPortal(data);
     data->setData(QStringLiteral("application/x-kde-cutselection"), QByteArray(m_cut ? "1" : "0"));
     return data;
 }
