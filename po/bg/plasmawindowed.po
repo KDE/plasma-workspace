@@ -1,0 +1,57 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"PO-Revision-Date: 2024-02-13 11:48+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: main.cpp:44 plasmawindowedcorona.cpp:103
+#, kde-format
+msgid "Plasma Windowed"
+msgstr "Plasma Windowed"
+
+#: main.cpp:46
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Активиране на QML Javascript debugger"
+
+#: main.cpp:49 plasmawindowedcorona.cpp:105
+#, kde-format
+msgid ""
+"Makes the plasmoid stay alive in the Notification Area, even when the window "
+"is closed."
+msgstr ""
+"Кара плазмоида да остане активен в зоната за известия, дори когато "
+"прозорецът е затворен."
+
+#: main.cpp:51
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Принудително зареждане на дадената приставка на обвивката"
+
+#: main.cpp:55 plasmawindowedcorona.cpp:106
+#, kde-format
+msgid "The applet to open."
+msgstr "Аплетът за отваряне."
+
+#: main.cpp:56 plasmawindowedcorona.cpp:107
+#, kde-format
+msgid "Arguments to pass to the plasmoid."
+msgstr "Аргументи за предаване към плазмоида."
+
+#: plasmawindowedview.cpp:120
+#, kde-format
+msgid "Close %1"
+msgstr "Затваряне на %1"

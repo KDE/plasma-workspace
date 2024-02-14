@@ -1,0 +1,53 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-02-13 11:49+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "Управление на сесиите"
+
+#: main.cpp:38
+#, kde-format
+msgid "Log Out"
+msgstr "Излизане от сесия"
+
+#: main.cpp:44
+#, kde-format
+msgid "Shut Down"
+msgstr "Изключване"
+
+#: main.cpp:50
+#, kde-format
+msgid "Reboot"
+msgstr "Рестартиране"
+
+#: main.cpp:58
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Изход без потвърждение"
+
+#: main.cpp:64
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "Изключване без потвърждение"
+
+#: main.cpp:70
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Рестартиране без потвърждение"

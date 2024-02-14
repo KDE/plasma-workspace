@@ -1,22 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Tommi Nieminen <translator@legisign.org>, 2023.
-# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2024-02-07 23:00+0200\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: 2024-02-13 11:00+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -27,13 +26,13 @@ msgstr "FreeDesktop"
 #: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr "Varaääniteema osoitteesta freedesktop.org"
+msgstr "Резервна звукова тема от freedesktop.org"
 
 #: ui/main.qml:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr "Käytä ilmoitusääniä"
+msgstr "Активиране на звуков сигнал при известяване"
 
 #: ui/main.qml:90
 #, kde-format
@@ -42,8 +41,8 @@ msgctxt ""
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] "Perustuu: %2"
-msgstr[1] "Perustuu: %2"
+msgstr[0] "Базиран на: %2"
+msgstr[1] "Базирани на: %2"
 
 #: ui/main.qml:101
 #, kde-format
@@ -51,21 +50,21 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it short"
 msgid "Preview sounds:"
-msgstr "Kokeile ääniä:"
+msgstr "Звукови сигнали:"
 
 #: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr "Kokeile ääntä ”%1”"
+msgstr "Звуков сигнал \"%1\""
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr "Kokeile teeman ”%1” demoääntä"
+msgstr "Прослушване на примерен звуков сигнал за тема \"%1\""
 
 #: ui/main.qml:162
 #, kde-format
 msgid "Failed to preview sound: %1"
-msgstr "Äänen kokeilu epäonnistui: %1"
+msgstr "Неуспешно прослушване на звуков сигнал %1"

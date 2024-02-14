@@ -1,0 +1,50 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"PO-Revision-Date: 2024-02-13 11:03+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: devicenotifications.cpp:275
+#, kde-format
+msgid "%1 has been plugged in."
+msgstr "Устройство %1 е включено."
+
+#: devicenotifications.cpp:275
+#, kde-format
+msgid "A USB device has been plugged in."
+msgstr "Включено е USB устройство."
+
+#: devicenotifications.cpp:278
+#, kde-format
+msgctxt "@title:notifications"
+msgid "USB Device Detected"
+msgstr "Открито е USB устройство"
+
+#: devicenotifications.cpp:295
+#, kde-format
+msgid "%1 has been unplugged."
+msgstr "Устройство %1 е изключено."
+
+#: devicenotifications.cpp:295
+#, kde-format
+msgid "A USB device has been unplugged."
+msgstr "USB устройство е изключено."
+
+#: devicenotifications.cpp:298
+#, kde-format
+msgctxt "@title:notifications"
+msgid "USB Device Removed"
+msgstr "USB устройство e премахнато"

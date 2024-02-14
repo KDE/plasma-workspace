@@ -1,21 +1,23 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
+# SPDX-FileCopyrightText: 2024 Lasse Liehu <lasse.liehu@iki.fi>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-08-26 18:47+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-14 00:39+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcm.cpp:73
 #, kde-format
@@ -89,7 +91,7 @@ msgstr "Ilmoitukset tarjoaa tällä hetkellä Plasman sijaan ”%1 %2”."
 #: ui/main.qml:56
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
-msgstr "Ilmoituksia ei tällä hetkellä tarjoa Plasma."
+msgstr "Plasma ei tällä hetkellä toimita ilmoituksia."
 
 #: ui/main.qml:63
 #, kde-format
@@ -107,13 +109,13 @@ msgstr "Käytä:"
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Kun näytöt on peilattu"
+msgstr "Kun näytöt on peilattuna"
 
 #: ui/main.qml:81
 #, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Näyttöä jaettaessa"
+msgstr "Näytön jakamisen aikana"
 
 #: ui/main.qml:96
 #, kde-format
