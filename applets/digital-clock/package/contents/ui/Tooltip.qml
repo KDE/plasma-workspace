@@ -76,7 +76,6 @@ Item {
                         .arg(Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString)))
                 }
             }
-            textFormat: Text.PlainText
             opacity: 0.6
             visible: !clocks.visible
         }
