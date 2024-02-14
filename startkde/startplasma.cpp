@@ -6,6 +6,8 @@
 
 #include <config-startplasma.h>
 
+#include <ranges>
+
 #include <QDir>
 #include <QEventLoop>
 #include <QProcess>
@@ -37,6 +39,8 @@
 #include "../config-workspace.h"
 #include "../kcms/lookandfeel/lookandfeelmanager.h"
 #include "debug.h"
+
+using namespace Qt::StringLiterals;
 
 QTextStream out(stderr);
 
@@ -102,23 +106,25 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
     return p.exitCode();
 }
 
-bool isShellVariable(const QByteArray &name)
+template<typename T>
+concept ViewType = std::same_as<QByteArrayView, T> || std::same_as<QStringView, T>;
+inline bool isShellVariable(ViewType auto name)
 {
-    return name == "_" || name == "SHELL" || name.startsWith("SHLVL");
+    return name == "_"_L1 || name == "SHELL"_L1 || name.startsWith("SHLVL"_L1);
 }
 
-bool isSessionVariable(const QByteArray &name)
+inline bool isSessionVariable(QStringView name)
 {
     // Check is variable is specific to session.
-    return name == "DISPLAY" || name == "XAUTHORITY" || //
-        name == "WAYLAND_DISPLAY" || name == "WAYLAND_SOCKET" || //
-        name.startsWith("XDG_");
+    return name == "DISPLAY"_L1 || name == "XAUTHORITY"_L1 || //
+        name == "WAYLAND_DISPLAY"_L1 || name == "WAYLAND_SOCKET"_L1 || //
+        name.startsWith("XDG_"_L1);
 }
 
-void setEnvironmentVariable(const QByteArray &name, const QByteArray &value)
+void setEnvironmentVariable(QByteArrayView name, QByteArrayView value)
 {
-    if (qgetenv(name) != value) {
-        qputenv(name, value);
+    if (qgetenv(name.constData()) != value) {
+        qputenv(name.constData(), value);
     }
 }
 
@@ -138,20 +144,18 @@ void sourceFiles(const QStringList &files)
     p.start(QStringLiteral("/bin/sh"), filteredFiles);
     p.waitForFinished(-1);
 
-    const auto fullEnv = p.readAllStandardOutput();
-    auto envs = fullEnv.split('\0');
-
-    for (auto &env : envs) {
+    const QByteArray fullEnv = p.readAllStandardOutput();
+    for (const QByteArrayView env : std::views::split(fullEnv, '\0')) {
         const int idx = env.indexOf('=');
         if (Q_UNLIKELY(idx <= 0)) {
             continue;
         }
 
-        const auto name = env.left(idx);
+        const auto name = env.sliced(0, idx);
         if (isShellVariable(name)) {
             continue;
         }
-        setEnvironmentVariable(name, env.mid(idx + 1));
+        setEnvironmentVariable(name, env.sliced(idx + 1));
     }
 }
 
@@ -254,10 +258,10 @@ void importSystemdEnvrionment()
         return;
     }
 
-    for (auto &nameStr : environment.value().keys()) {
-        const auto name = nameStr.toLocal8Bit();
-        if (!isShellVariable(name) && !isSessionVariable(name)) {
-            setEnvironmentVariable(name, environment.value().value(nameStr).toLocal8Bit());
+    const auto keys = environment.value().keys();
+    for (const QString &nameStr : keys) {
+        if (!isShellVariable(QStringView(nameStr)) && !isSessionVariable(nameStr)) {
+            setEnvironmentVariable(nameStr.toLocal8Bit(), environment.value().value(nameStr).toLocal8Bit());
         }
     }
 }
@@ -426,10 +430,10 @@ static void dropSessionVarsFromSystemdEnvironment()
     }
 
     QStringList varsToDrop;
-    for (auto &nameStr : environment.value().keys()) {
+    const auto keys = environment.value().keys();
+    for (const QString &nameStr : keys) {
         // If it's set in this process, it'll be overwritten by the following UpdateLaunchEnvJob
-        const auto name = nameStr.toLocal8Bit();
-        if (!qEnvironmentVariableIsSet(name) && isSessionVariable(name)) {
+        if (!qEnvironmentVariableIsSet(nameStr.toLocal8Bit()) && isSessionVariable(nameStr)) {
             varsToDrop.append(nameStr);
         }
     }
@@ -454,8 +458,9 @@ bool syncDBusEnvironment()
     // Shell variables are filtered out of things we explicitly load, but they
     // still might have been inherited from the parent process
     QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
-    for (auto &name : environment.keys()) {
-        if (isShellVariable(name.toLocal8Bit())) {
+    const auto keys = environment.keys();
+    for (const QString &name : keys) {
+        if (isShellVariable(QStringView(name))) {
             environment.remove(name);
         }
     }
