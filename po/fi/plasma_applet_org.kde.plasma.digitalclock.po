@@ -1,7 +1,8 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2024 Lasse Liehu <lasse.liehu@gmail.com>
 # Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # Larso, 2014.
 msgid ""
@@ -9,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:34+0000\n"
-"PO-Revision-Date: 2023-03-04 18:20+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-14 00:48+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -269,8 +270,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
-"Vinkki: Jos matkustat usein, lisää kotiaikavyöhykkeesi luetteloon. Se "
-"näytetään vain, kun järjestelmän aikavyöhyke on jotakin muuta."
+"Vinkki: Jos matkustat usein, lisää luetteloon kotiaikavyöhyke. Se näytetään "
+"vain, kun järjestelmän aikavyöhyke on jotakin muuta."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format

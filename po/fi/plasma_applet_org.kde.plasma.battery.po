@@ -5,7 +5,8 @@
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2017, 2019, 2020, 2021, 2022, 2023.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2024 Lasse Liehu <lasse.liehu@gmail.com>
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -15,8 +16,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2023-03-04 18:19+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-14 00:40+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -240,7 +241,7 @@ msgstr "Näytä kuvakkeessa akun varaus, ellei varaus ole täysi"
 #: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
-msgstr "&Virransäästön asetukset…"
+msgstr "&Virransäästöasetukset…"
 
 #: package/contents/ui/PopupDialog.qml:117
 #, kde-format
