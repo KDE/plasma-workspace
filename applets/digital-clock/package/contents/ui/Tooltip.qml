@@ -57,7 +57,7 @@ Item {
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            text: clocks.visible ? Qt.formatDate(tzDate, Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
+            text: clocks.visible ? Qt.formatDate(tzDate, Qt.locale(), Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
             textFormat: Text.PlainText
         }
 
@@ -69,11 +69,11 @@ Item {
 
             text: {
                 if (Plasmoid.configuration.showSeconds === 0) {
-                    return Qt.formatDate(tzDate, dateFormatString);
+                    return Qt.formatDate(tzDate, Qt.locale(), dateFormatString);
                 } else {
                     return "%1\n%2"
-                        .arg(Qt.formatTime(tzDate, Qt.locale().timeFormat(Locale.LongFormat)))
-                        .arg(Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString)))
+                        .arg(Qt.formatTime(tzDate, Qt.locale(), Locale.LongFormat))
+                        .arg(Qt.formatDate(tzDate, Qt.locale(), dateFormatString))
                 }
             }
             opacity: 0.6

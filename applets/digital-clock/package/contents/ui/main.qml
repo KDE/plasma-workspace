@@ -64,7 +64,7 @@ PlasmoidItem {
         }
 
         if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
-            formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
+            formattedTime += " (" + compactRepresentationItem.dateFormatter(dateTime) + ")";
         }
 
         return formattedTime;
