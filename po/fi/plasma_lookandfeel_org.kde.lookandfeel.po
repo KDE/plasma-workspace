@@ -1,7 +1,8 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017, 2019.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 #
 #
@@ -10,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-02-02 13:10+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-07 20:08+0200\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -240,12 +241,12 @@ msgstr ""
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Siirry valmiustilaan heti"
+msgstr "Valmiustila"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
-msgstr "Siirry lepotilaan heti"
+msgstr "Lepotila"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -257,17 +258,17 @@ msgstr "Asenna päivitykset ja käynnistä uudelleen"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Asenna heti päivitykset ja käynnistä uudelleen"
+msgstr "Asenna päivitykset ja käynnistä uudelleen"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
-msgstr "Käynnistä uudelleen heti"
+msgstr "Käynnistä uudelleen"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
 msgid "Shut Down Now"
-msgstr "Sammuta heti"
+msgstr "Sammuta"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -277,7 +278,7 @@ msgstr "Kirjaudu ulos"
 #: contents/logout/Logout.qml:263
 #, kde-format
 msgid "Log Out Now"
-msgstr "Kirjaudu ulos heti"
+msgstr "Kirjaudu ulos"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

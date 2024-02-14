@@ -1,23 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2024 Lasse Liehu <lasse.liehu@gmail.com>
 # Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # Larso, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-08-26 18:50+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"PO-Revision-Date: 2024-02-14 00:48+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -187,72 +188,69 @@ msgstr "Päiväyksen muoto:"
 msgid "Long Date"
 msgstr "Pitkä päiväys"
 
-#: package/contents/ui/configAppearance.qml:160
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Lyhyt päiväys"
 
-#: package/contents/ui/configAppearance.qml:165
+#: package/contents/ui/configAppearance.qml:169
 #, kde-format
 msgid "ISO Date"
 msgstr "ISO-päiväys"
 
-#: package/contents/ui/configAppearance.qml:170
+#: package/contents/ui/configAppearance.qml:176
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: package/contents/ui/configAppearance.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#: package/contents/ui/configAppearance.qml:206
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Ohje ajan muodosta</a>"
 
-#: package/contents/ui/configAppearance.qml:229
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Tekstinäyttö:"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:232
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automaattinen"
 
-#: package/contents/ui/configAppearance.qml:235
+#: package/contents/ui/configAppearance.qml:236
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr "Teksti käyttää järjestelmäfonttia ja kasvaa käytettävän tilan mukaan."
 
-#: package/contents/ui/configAppearance.qml:245
+#: package/contents/ui/configAppearance.qml:246
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Aseta itse"
 
-#: package/contents/ui/configAppearance.qml:255
+#: package/contents/ui/configAppearance.qml:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Valitse tyyli…"
 
-#: package/contents/ui/configAppearance.qml:268
+#: package/contents/ui/configAppearance.qml:269
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 pt %2"
 
-#: package/contents/ui/configAppearance.qml:276
+#: package/contents/ui/configAppearance.qml:277
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -284,7 +282,7 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Vinkki: Jos matkustat usein, lisää  luetteloon kotiaikavyöhyke. Se näytetään "
+"Vinkki: Jos matkustat usein, lisää luetteloon kotiaikavyöhyke. Se näytetään "
 "vain, kun järjestelmän aikavyöhyke on jotakin muuta."
 
 #: package/contents/ui/configTimeZones.qml:79

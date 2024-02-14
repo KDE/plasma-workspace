@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Tommi Nieminen <translator@legisign.org>, 2023.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 00:39+0000\n"
-"PO-Revision-Date: 2023-12-11 18:31+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-07 23:00+0200\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -26,7 +27,7 @@ msgstr "FreeDesktop"
 #: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr "Varaääniteema freedesktop.orgista"
+msgstr "Varaääniteema osoitteesta freedesktop.org"
 
 #: ui/main.qml:29
 #, kde-format
@@ -68,7 +69,7 @@ msgstr "Kokeile teeman ”%1” demoääntä"
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "Teema %1 ei sisällä ääntä \"%2\""
 
 #: ui/main.qml:186
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022, 2023.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-11-19 17:40+0100\n"
+"PO-Revision-Date: 2024-02-13 16:59+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -205,10 +205,9 @@ msgstr ""
 "Monstra percentage de batteria sur Icone quando non completemente cargate"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Configura sparnio de energia…"
+msgstr "&Configurar le Gestion de Energia…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format

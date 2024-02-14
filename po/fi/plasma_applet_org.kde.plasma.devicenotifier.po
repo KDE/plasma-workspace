@@ -4,9 +4,10 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
-# Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2011.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2010, 2011, 2024 Lasse Liehu <lliehu@kolumbus.fi>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2016.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -15,8 +16,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-02-02 13:08+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-14 00:47+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -113,7 +114,7 @@ msgstr "Ei laitteita käytettävissä"
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "Irrotettavien laitteiden asetukset…"
+msgstr "Siirrettävien laitteiden asetukset…"
 
 #: package/contents/ui/main.qml:233
 #, kde-format
@@ -143,47 +144,48 @@ msgstr "Laitteen tila"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr "Laitteen voi nyt turvallisesti irrottaa"
+msgstr "Laite voidaan nyt poistaa turvallisesti"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr "Tämän laitteen voi nyt turvallisesti irrottaa."
+msgstr "Tämä laite voidaan nyt poistaa turvallisesti."
 
 #: plugin/ksolidnotify.cpp:198
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Sinulla ei ole käyttöoikeutta tämän laitteen liittämiseen."
+msgstr "Sinulla ei ole oikeutta liittää tätä laitetta."
 
 #: plugin/ksolidnotify.cpp:201
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Sinulla ei ole käyttöoikeutta tämän laitteen irrottamiseen."
+msgstr "Sinulla ei ole oikeutta poistaa tätä laitetta."
 
 #: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Sinulla ei ole käyttöoikeutta tämän levyn poistamiseen."
+msgstr "Sinulla ei ole oikeutta poistaa tätä levyä."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Laitetta ei voitu liittää, koska se on varattu."
+msgstr "Tätä laitetta ei voitu liittää, koska se on varattu."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Yksi tai useampi laitteen tiedosto on avoinna jossakin sovelluksessa."
+msgstr "Yksi tai useampia laitteen tiedostoista on auki jossain ohjelmassa."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "Yksi tai useampi laitteen tiedosto on avoinna sovelluksessa ”%2”."
+msgstr[0] "Yksi tai useampia laitteen tiedostoista on auki sovelluksessa ”2%”."
 msgstr[1] ""
-"Yksi tai useampi laitteen tiedosto on avoinna seuraavissa sovelluksissa: %2."
+"Yksi tai useampia laitteen tiedostoista on auki seuraavissa sovelluksissa: "
+"%2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
@@ -200,7 +202,7 @@ msgstr "Tätä laitetta ei voitu liittää."
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Tätä laitetta ei voitu irrottaa."
+msgstr "Tätä laitetta ei voitu poistaa."
 
 #: plugin/ksolidnotify.cpp:271
 #, kde-format
