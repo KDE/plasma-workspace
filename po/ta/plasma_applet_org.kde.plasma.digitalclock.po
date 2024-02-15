@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-05 02:57+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-10-22 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -185,23 +185,23 @@ msgstr "தேதி எவ்வாறு காட்டப்படும்:
 msgid "Long Date"
 msgstr "விவரமான தேதி"
 
-#: package/contents/ui/configAppearance.qml:160
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "சுருக்கமான தேதி"
 
-#: package/contents/ui/configAppearance.qml:165
+#: package/contents/ui/configAppearance.qml:169
 #, kde-format
 msgid "ISO Date"
 msgstr "ISO தேதி"
 
-#: package/contents/ui/configAppearance.qml:170
+#: package/contents/ui/configAppearance.qml:176
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "வேறு"
 
-#: package/contents/ui/configAppearance.qml:205
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -210,19 +210,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">தேதி/நேர வடிவத்திற்கான கையேடு</a>"
 
-#: package/contents/ui/configAppearance.qml:229
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "உரை காட்டப்படுவது:"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:232
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "தானியக்கம்"
 
-#: package/contents/ui/configAppearance.qml:235
+#: package/contents/ui/configAppearance.qml:236
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -231,25 +231,25 @@ msgstr ""
 "கணினி முழுவதற்குமான எழுத்துருவைப் பயன்படுத்தி, கிடைக்கும் இடத்தை நிரப்பும் அளவுக்கு உரை "
 "பெரிதாக்கப்படும்."
 
-#: package/contents/ui/configAppearance.qml:244
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "கைமுறை"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "தோற்றத்தை தேர்ந்தெடு…"
 
-#: package/contents/ui/configAppearance.qml:267
+#: package/contents/ui/configAppearance.qml:268
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

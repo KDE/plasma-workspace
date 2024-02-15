@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-05 02:57+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-11-02 13:56+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -188,23 +188,23 @@ msgstr "Formát data:"
 msgid "Long Date"
 msgstr "Dlouhé datum"
 
-#: package/contents/ui/configAppearance.qml:160
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Zkrácené datum"
 
-#: package/contents/ui/configAppearance.qml:165
+#: package/contents/ui/configAppearance.qml:169
 #, kde-format
 msgid "ISO Date"
 msgstr "Datum podle ISO"
 
-#: package/contents/ui/configAppearance.qml:170
+#: package/contents/ui/configAppearance.qml:176
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Vlastní"
 
-#: package/contents/ui/configAppearance.qml:205
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -213,19 +213,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Dokumentace formátu času</a>"
 
-#: package/contents/ui/configAppearance.qml:229
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Zobrazení textu:"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:232
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automaticky"
 
-#: package/contents/ui/configAppearance.qml:235
+#: package/contents/ui/configAppearance.qml:236
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -234,25 +234,25 @@ msgstr ""
 "Text bude používat systémové písmo a roztáhne se tak, aby využil veškeré "
 "dostupné místo."
 
-#: package/contents/ui/configAppearance.qml:244
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Ručně"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Zvolte styl..."
 
-#: package/contents/ui/configAppearance.qml:267
+#: package/contents/ui/configAppearance.qml:268
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

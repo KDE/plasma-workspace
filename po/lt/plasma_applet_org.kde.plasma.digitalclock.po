@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-05 02:57+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2024-02-03 02:00+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -190,23 +190,23 @@ msgstr "Datos formatas:"
 msgid "Long Date"
 msgstr "Ilga data"
 
-#: package/contents/ui/configAppearance.qml:160
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Trumpa data"
 
-#: package/contents/ui/configAppearance.qml:165
+#: package/contents/ui/configAppearance.qml:169
 #, kde-format
 msgid "ISO Date"
 msgstr "ISO data"
 
-#: package/contents/ui/configAppearance.qml:170
+#: package/contents/ui/configAppearance.qml:176
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Tinkinta"
 
-#: package/contents/ui/configAppearance.qml:205
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -215,19 +215,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Laiko formato dokumentacija</a>"
 
-#: package/contents/ui/configAppearance.qml:229
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Teksto atvaizdavimas:"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:232
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automatinis"
 
-#: package/contents/ui/configAppearance.qml:235
+#: package/contents/ui/configAppearance.qml:236
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -236,25 +236,25 @@ msgstr ""
 "Tekstas naudos sistemos šriftą ir bus išplėstas, kad užpildytų prieinamą "
 "vietą."
 
-#: package/contents/ui/configAppearance.qml:244
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Rankiniu būdu"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Pasirinkti stilių…"
 
-#: package/contents/ui/configAppearance.qml:267
+#: package/contents/ui/configAppearance.qml:268
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1tšk. %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

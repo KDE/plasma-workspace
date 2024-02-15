@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-05 02:57+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-10-20 08:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -188,23 +188,23 @@ msgstr "Формат дати:"
 msgid "Long Date"
 msgstr "Дата повністю"
 
-#: package/contents/ui/configAppearance.qml:160
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Скорочена дата"
 
-#: package/contents/ui/configAppearance.qml:165
+#: package/contents/ui/configAppearance.qml:169
 #, kde-format
 msgid "ISO Date"
 msgstr "Дата у форматі ISO"
 
-#: package/contents/ui/configAppearance.qml:170
+#: package/contents/ui/configAppearance.qml:176
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Нетиповий"
 
-#: package/contents/ui/configAppearance.qml:205
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -213,19 +213,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Документація із формату запису часу</a>"
 
-#: package/contents/ui/configAppearance.qml:229
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Показ тексту:"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:232
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: package/contents/ui/configAppearance.qml:235
+#: package/contents/ui/configAppearance.qml:236
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -234,25 +234,25 @@ msgstr ""
 "У тексті буде використано загальносистемний шрифт так, щоб заповнити усе "
 "доступне місце."
 
-#: package/contents/ui/configAppearance.qml:244
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Вручну"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Вибрати стиль…"
 
-#: package/contents/ui/configAppearance.qml:267
+#: package/contents/ui/configAppearance.qml:268
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1пт %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

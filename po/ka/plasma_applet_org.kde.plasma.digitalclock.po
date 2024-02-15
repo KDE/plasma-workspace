@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-05 02:57+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-10-21 07:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -186,23 +186,23 @@ msgstr "თარიღის ფორმატი:"
 msgid "Long Date"
 msgstr "გრძელი თარიღი"
 
-#: package/contents/ui/configAppearance.qml:160
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "მოკლე თარიღი"
 
-#: package/contents/ui/configAppearance.qml:165
+#: package/contents/ui/configAppearance.qml:169
 #, kde-format
 msgid "ISO Date"
 msgstr "ISO თარიღი"
 
-#: package/contents/ui/configAppearance.qml:170
+#: package/contents/ui/configAppearance.qml:176
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "ხელით მითითებული"
 
-#: package/contents/ui/configAppearance.qml:205
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -211,19 +211,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">დროის ფორმატის დოკუმენტაცია</a>"
 
-#: package/contents/ui/configAppearance.qml:229
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "ტექსტის ჩვენება:"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:232
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "ავტომატური"
 
-#: package/contents/ui/configAppearance.qml:235
+#: package/contents/ui/configAppearance.qml:236
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -232,25 +232,25 @@ msgstr ""
 "ტექსტი მიჰყვება სისტემურ ფონტს და გაფართოვდება მანამ, სანამ ხელმისაწვდომ "
 "სივრცეს არ შეავსებს."
 
-#: package/contents/ui/configAppearance.qml:244
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "ხელით"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "სტილის არჩევა…"
 
-#: package/contents/ui/configAppearance.qml:267
+#: package/contents/ui/configAppearance.qml:268
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1წრტ %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
