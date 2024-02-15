@@ -27,7 +27,7 @@ KCM.ScrollViewKCM {
 
         Connections {
             target: kcm.model
-            
+
             property var fixItAction: Kirigami.Action {
                 property string fileName
                 text: i18n("Make Executable")
@@ -37,7 +37,7 @@ KCM.ScrollViewKCM {
                     errorMessage.visible = false;
                 }
             }
-            
+
             function onError(message) {
                 errorMessage.type = Kirigami.MessageType.Error;
                 errorMessage.visible = true;
@@ -148,6 +148,9 @@ KCM.ScrollViewKCM {
                     display: Button.IconOnly
                     onClicked: kcm.model.editApplication(model.index, root)
                     visible: model.source === AutostartModel.XdgAutoStart || model.source === AutostartModel.XdgScripts
+                    ToolTip.delay: Kirigami.Units.toolTipDelay
+                    ToolTip.text: text
+                    ToolTip.visible: (Kirigami.Settings.tabletMode ? pressed : hovered) || activeFocus
                 }
 
                 ToolButton {
@@ -155,7 +158,10 @@ KCM.ScrollViewKCM {
                     icon.name: "edit-delete-remove"
                     display: Button.IconOnly
                     onClicked: kcm.model.removeEntry(model.index)
-                }
+                    ToolTip.delay: Kirigami.Units.toolTipDelay
+                    ToolTip.text: text
+                    ToolTip.visible: (Kirigami.Settings.tabletMode ? pressed : hovered) || activeFocus
+               }
             }
         }
 
