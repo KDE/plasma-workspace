@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"POT-Creation-Date: 2024-02-15 00:39+0000\n"
 "PO-Revision-Date: 2024-02-03 01:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -397,7 +397,7 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Šiandien yra %1"
 
-#: package/contents/ui/Tooltip.qml:136
+#: package/contents/ui/Tooltip.qml:135
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

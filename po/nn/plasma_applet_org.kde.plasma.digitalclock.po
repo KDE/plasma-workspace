@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"POT-Creation-Date: 2024-02-15 00:39+0000\n"
 "PO-Revision-Date: 2023-07-29 09:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -397,7 +397,7 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "I dag er %1"
 
-#: package/contents/ui/Tooltip.qml:136
+#: package/contents/ui/Tooltip.qml:135
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

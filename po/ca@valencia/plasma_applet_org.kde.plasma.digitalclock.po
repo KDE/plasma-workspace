@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"POT-Creation-Date: 2024-02-15 00:39+0000\n"
 "PO-Revision-Date: 2023-10-20 09:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -398,7 +398,7 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hui és %1"
 
-#: package/contents/ui/Tooltip.qml:136
+#: package/contents/ui/Tooltip.qml:135
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
