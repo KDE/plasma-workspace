@@ -38,13 +38,6 @@ PlasmaCore.ToolTipArea {
     signal wheel(var wheel)
     signal contextMenu(var mouse)
 
-    // Make sure the proper item manages the keyboard
-    onActiveFocusChanged: {
-        if (activeFocus) {
-            iconContainer.forceActiveFocus();
-        }
-    }
-
     /* subclasses need to assign to this tooltip properties
     mainText:
     subText:
@@ -118,6 +111,7 @@ PlasmaCore.ToolTipArea {
             scale: (abstractItem.effectivePressed || mouseArea.containsPress) ? 0.8 : 1
 
             activeFocusOnTab: true
+            focus: true // Required in HiddenItemsView so keyboard events can be forwarded to this item
             Accessible.name: abstractItem.text
             Accessible.description: abstractItem.subText
             Accessible.role: Accessible.Button

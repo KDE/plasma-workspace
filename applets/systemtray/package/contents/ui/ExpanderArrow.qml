@@ -21,7 +21,7 @@ PlasmaCore.ToolTipArea {
     implicitHeight: iconSize
     activeFocusOnTab: true
 
-    Accessible.name: i18n("Expand System Tray")
+    Accessible.name: subText
     Accessible.description: i18n("Show all the items in the system tray in a popup")
     Accessible.role: Accessible.Button
     Accessible.onPressAction: systemTrayState.expanded = !systemTrayState.expanded

@@ -13,11 +13,6 @@ Loader {
 
     z: x+1 // always be above what it's on top of, even for x==0
     property var itemModel: model
-    onActiveFocusChanged: {
-        if (activeFocus && item) {
-            item.forceActiveFocus();
-        }
-    }
 
     Binding {
         target: item
