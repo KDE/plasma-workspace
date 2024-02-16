@@ -20,7 +20,7 @@ KCM.GridViewKCM {
         settingName: "theme"
     }
 
-    view.implicitCellWidth: Kirigami.Units.gridUnit * 23
+    view.implicitCellWidth: Kirigami.Units.gridUnit * 22
     view.implicitCellHeight: Kirigami.Units.gridUnit * 11
 
     actions: Kirigami.Action {
@@ -60,7 +60,6 @@ KCM.GridViewKCM {
         id: delegate
 
         readonly property var theme : modelData
-        readonly property bool compactMode: width < (preview.implicitWidth + demoButton.width + 3 * Kirigami.Units.gridUnit)
 
         text: theme.name
 
@@ -97,8 +96,13 @@ KCM.GridViewKCM {
             }
             RowLayout {
                 id: preview
+                spacing: Kirigami.Units.smallSpacing
                 QQC2.Label {
                     text: i18nc("@label Precedes a list of buttons which can be clicked to preview the theme's sounds. Keep it short", "Preview sounds:")
+                    // Make the Label able to shrink and elide when needed
+                    elide: Text.ElideLeft
+                    Layout.fillWidth: true
+                    Layout.maximumWidth: implicitWidth + Kirigami.Units.smallSpacing
                 }
                 Repeater {
                     model: [
@@ -116,7 +120,7 @@ KCM.GridViewKCM {
                     }
                 }
                 Layout.row: 4
-                Layout.columnSpan: delegate.compactMode ? 2 : 1
+                Layout.columnSpan: 2
             }
 
             SoundButton {
@@ -137,7 +141,7 @@ KCM.GridViewKCM {
                 text: i18nc("@info:tooltip", "Preview the demo sound for the theme \"%1\"", theme.name)
 
                 Layout.column: 1
-                Layout.rowSpan: delegate.compactMode ? 4 : 5
+                Layout.rowSpan: 4
                 Layout.preferredWidth: Kirigami.Units.iconSizes.large
                 Layout.fillHeight: true
             }
