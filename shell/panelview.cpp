@@ -310,6 +310,22 @@ int PanelView::totalThickness() const
     }
 }
 
+int PanelView::spaceToReserve() const
+{
+    switch (containment()->location()) {
+    case Plasma::Types::TopEdge:
+        return thickness() + m_topFloatingPadding;
+    case Plasma::Types::LeftEdge:
+        return thickness() + m_leftFloatingPadding;
+    case Plasma::Types::RightEdge:
+        return thickness() + m_rightFloatingPadding;
+    case Plasma::Types::BottomEdge:
+        return thickness() + m_bottomFloatingPadding;
+    default:
+        return thickness();
+    }
+}
+
 void PanelView::setThickness(int value)
 {
     if (value < minThickness()) {
