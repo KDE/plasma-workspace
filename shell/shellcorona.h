@@ -54,8 +54,6 @@ namespace KWayland
 {
 namespace Client
 {
-class PlasmaShell;
-class PlasmaShellSurface;
 class PlasmaWindow;
 class PlasmaWindowManagement;
 }
@@ -107,8 +105,6 @@ public:
      * @returns a new containment associated with the specified @p activity and @p screen.
      */
     Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
-
-    KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
 
     ScreenPool *screenPool() const;
 
@@ -296,8 +292,6 @@ private:
     std::unique_ptr<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
 
-    // Used to restore the previous activated window after the panel loses focus
-    KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 #if HAVE_X11
     WId m_previousWId = 0;
 #endif
@@ -308,7 +302,6 @@ private:
 #ifndef NDEBUG
     QTimer m_invariantsTimer;
 #endif
-    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     // For getting the active window on Wayland
     KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
     QPointer<KWayland::Client::PlasmaWindow> m_previousPlasmaWindow;
