@@ -208,6 +208,11 @@ public:
      */
     Q_INVOKABLE QRect geometryByDistance(int distance) const;
 
+    /**
+     * @returns the dodge/defloat geometry of the panel given a distance
+     */
+    Q_INVOKABLE QRect dogdeGeometryByDistance(int distance) const;
+
     /* Both Shared with script/panel.cpp */
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
     static KConfigGroup panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
@@ -282,6 +287,7 @@ private:
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
     bool canSetStrut() const;
+    QRect geometryByDistance(int distance, float floatingness) const;
 
     int m_offset;
     int m_maxLength;

@@ -622,6 +622,20 @@ void PanelView::positionPanel()
 
 QRect PanelView::geometryByDistance(int distance) const
 {
+    return geometryByDistance(distance, m_floatingness);
+}
+
+QRect PanelView::dogdeGeometryByDistance(int distance) const
+{
+    if (!containment() || !m_screenToFollow) {
+        return QRect();
+    }
+    const QRect dodgeGeometry = geometryByDistance(distance, m_floating ? 1 : 0);
+    return dodgeGeometry & m_screenToFollow->geometry();
+}
+
+QRect PanelView::geometryByDistance(int distance, float floatingness) const
+{
     if (!containment() || !m_screenToFollow) {
         return QRect();
     }
@@ -663,20 +677,20 @@ QRect PanelView::geometryByDistance(int distance) const
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
-        r.moveTop(screenGeometry.top() + distance + (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+        r.moveTop(screenGeometry.top() + distance + (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - floatingness));
         break;
 
     case Plasma::Types::LeftEdge:
-        r.moveLeft(screenGeometry.left() + distance + (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
+        r.moveLeft(screenGeometry.left() + distance + (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - floatingness));
         break;
 
     case Plasma::Types::RightEdge:
-        r.moveRight(screenGeometry.right() - distance - (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
+        r.moveRight(screenGeometry.right() - distance - (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - floatingness));
         break;
 
     case Plasma::Types::BottomEdge:
     default:
-        r.moveBottom(screenGeometry.bottom() - distance - (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+        r.moveBottom(screenGeometry.bottom() - distance - (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - floatingness));
     }
     return r;
 }
