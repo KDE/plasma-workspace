@@ -286,6 +286,11 @@ ColumnLayout {
                                 text: model.sound
                                 onEditingFinished: model.sound = text
 
+                                // Make the TextField able to shrink, but keep its implicit width when is not needed
+                                Layout.fillWidth: true
+                                Layout.maximumWidth: implicitWidth
+                                Layout.minimumWidth: Kirigami.Units.gridUnit * 5
+
                                 KCM.SettingHighlighter {
                                     highlight: model.sound !== model.defaultSound
                                 }
