@@ -113,7 +113,6 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_activityController(new KActivities::Controller(this))
     , m_addPanelAction(nullptr)
     , m_addPanelsMenu(nullptr)
-    , m_waylandPlasmaShell(nullptr)
     , m_closingDown(false)
     , m_strutManager(new StrutManager(this))
     , m_shellContainmentConfig(nullptr)
@@ -2522,20 +2521,12 @@ void ShellCorona::setupWaylandIntegration()
     }
     Registry *registry = new Registry(this);
     registry->create(connection);
-    connect(registry, &Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
-        m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
-    });
     connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, this, [this, registry](quint32 name, quint32 version) {
         m_waylandWindowManagement = registry->createPlasmaWindowManagement(name, version, this);
     });
     registry->setup();
     connection->roundtrip();
     qApp->installEventFilter(new DismissPopupEventFilter(this));
-}
-
-KWayland::Client::PlasmaShell *ShellCorona::waylandPlasmaShellInterface() const
-{
-    return m_waylandPlasmaShell;
 }
 
 ScreenPool *ShellCorona::screenPool() const
