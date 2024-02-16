@@ -333,17 +333,22 @@ private:
     QMetaObject::Connection parentWindowDestroyedConnection;
 };
 
+class PlasmaStackingOrder;
+
 class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWindowManagement>, public QtWayland::org_kde_plasma_window_management
 {
     Q_OBJECT
 public:
-    static constexpr int version = 16;
+    static constexpr int s_version = 17;
     PlasmaWindowManagement()
-        : QWaylandClientExtensionTemplate(version)
+        : QWaylandClientExtensionTemplate(s_version)
     {
         connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
             if (!isActive()) {
                 wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+            } else {
+                // fetch the stacking order
+                org_kde_plasma_window_management_stacking_order_changed_2();
             }
         });
         initialize();
@@ -361,12 +366,47 @@ public:
     }
     void org_kde_plasma_window_management_stacking_order_uuid_changed(const QString &uuids) override
     {
-        Q_EMIT stackingOrderChanged(uuids);
+        Q_EMIT stackingOrderChanged(uuids.split(QLatin1Char(';')));
     }
+    void org_kde_plasma_window_management_stacking_order_changed_2() override;
 Q_SIGNALS:
     void windowCreated(PlasmaWindow *window);
-    void stackingOrderChanged(const QString &uuids);
+    void stackingOrderChanged(const QList<QString> &uuids);
 };
+
+class PlasmaStackingOrder : public QtWayland::org_kde_plasma_stacking_order
+{
+public:
+    explicit PlasmaStackingOrder(PlasmaWindowManagement *windowManagement, ::org_kde_plasma_stacking_order *id)
+        : QtWayland::org_kde_plasma_stacking_order(id)
+        , m_windowManagement(windowManagement)
+    {
+    }
+    ~PlasmaStackingOrder()
+    {
+        org_kde_plasma_stacking_order_destroy(object());
+    }
+
+    void org_kde_plasma_stacking_order_window(const QString &uuid) override
+    {
+        m_uuids.push_back(uuid);
+    }
+
+    void org_kde_plasma_stacking_order_done() override
+    {
+        Q_EMIT m_windowManagement->stackingOrderChanged(m_uuids);
+        delete this;
+    }
+
+    PlasmaWindowManagement *const m_windowManagement;
+    QList<QString> m_uuids;
+};
+
+void PlasmaWindowManagement::org_kde_plasma_window_management_stacking_order_changed_2()
+{
+    new PlasmaStackingOrder(this, org_kde_plasma_window_management_get_stacking_order(object()));
+}
+
 class Q_DECL_HIDDEN WaylandTasksModel::Private
 {
 public:
@@ -475,8 +515,8 @@ void WaylandTasksModel::Private::initWayland()
         });
     });
 
-    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::stackingOrderChanged, q, [this](const QString &order) {
-        stackingOrder = order.split(QLatin1Char(';'));
+    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::stackingOrderChanged, q, [this](const QList<QString> &order) {
+        stackingOrder = order;
         for (const auto &window : std::as_const(windows)) {
             this->dataChanged(window.get(), StackingOrder);
         }
