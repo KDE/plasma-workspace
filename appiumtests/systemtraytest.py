@@ -6,11 +6,12 @@
 
 import os
 import queue
+import subprocess
 import sys
 import threading
+import time
 import unittest
 from datetime import date
-from subprocess import PIPE, Popen
 from time import sleep
 from typing import IO, Final
 
@@ -22,6 +23,8 @@ from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -119,9 +122,10 @@ class SystemTrayTests(unittest.TestCase):
     """
 
     driver: webdriver.Remote
-    xembedsniproxy: Popen[bytes]
-    xembed_tray_icon: XEmbedTrayIcon | None
-    stream_reader_thread: StreamReaderThread | None
+    xembedsniproxy: subprocess.Popen[bytes] | None = None
+    kded: subprocess.Popen[bytes] | None = None
+    xembed_tray_icon: XEmbedTrayIcon | None = None
+    stream_reader_thread: StreamReaderThread | None = None
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -132,8 +136,7 @@ class SystemTrayTests(unittest.TestCase):
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
-    def setUp(self) -> None:
-        self.kded = Popen([f"kded{KDE_VERSION}"])
+        cls.kded = subprocess.Popen([f"kded{KDE_VERSION}"])
         # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         SERVICE_NAME: Final = "org.freedesktop.DBus"
@@ -150,29 +153,38 @@ class SystemTrayTests(unittest.TestCase):
             sleep(1)
 
         kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", [f"statusnotifierwatcher"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
-        self.assertTrue(kded_reply.get_child_value(0).get_boolean(), "Module is not loaded")
+        assert kded_reply.get_child_value(0).get_boolean(), "Module is not loaded"
+
+    def setUp(self) -> None:
+        pass
 
     def tearDown(self) -> None:
         """
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"failed_test_shot_systemtraytest_#{self.id()}.png")
-        self.kded.kill()
+            if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+                subprocess.check_call(["import", "-window", "root", f"failed_test_shot_systemtraytest_#{self.id()}.png"])
+            else:
+                self.driver.get_screenshot_as_file(f"failed_test_shot_systemtraytest_#{self.id()}.png")
 
     @classmethod
     def tearDownClass(cls) -> None:
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        if cls.kded is not None:
+            cls.kded.kill()
         cls.driver.quit()
 
     def cleanup_xembed_tray_icon(self) -> None:
         """
         Cleanup function for test_xembed_tray_icon
         """
-        self.xembedsniproxy.terminate()
-        self.xembedsniproxy = None
+        if self.xembedsniproxy is not None:
+            self.xembedsniproxy.terminate()
+            self.xembedsniproxy.wait()
+            self.xembedsniproxy = None
 
         if self.xembed_tray_icon is not None:
             self.xembed_tray_icon.quit()
@@ -182,7 +194,7 @@ class SystemTrayTests(unittest.TestCase):
             self.stream_reader_thread.stop()
             self.stream_reader_thread = None
 
-    def test_xembed_tray_icon(self) -> None:
+    def test_1_xembed_tray_icon(self) -> None:
         """
         Tests XEmbed tray icons can be listed and clicked in the tray.
 
@@ -194,7 +206,7 @@ class SystemTrayTests(unittest.TestCase):
 
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
-        self.xembedsniproxy = Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=PIPE)  # For debug output
+        self.xembedsniproxy = subprocess.Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=subprocess.PIPE)  # For debug output
         if not self.xembedsniproxy.stderr or self.xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
         print(f"xembedsniproxy PID: {self.xembedsniproxy.pid}", file=sys.stderr, flush=True)
@@ -228,6 +240,27 @@ class SystemTrayTests(unittest.TestCase):
             self.driver.find_element(AppiumBy.NAME, title).click()
 
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
+
+    def test_2_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
+        """
+        Make sure iconContainer in AbstractItem.qml has the default focus so it can receive key presses
+        """
+        if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+            self.skipTest("In openbox, the popup is not focused by default, so sending keys will not work.")
+
+        self.driver.find_element(AppiumBy.NAME, "Show hidden icons").click()
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Notifications")))
+        time.sleep(1)
+
+        # By default the focused item is "Notifications"
+        # Press Enter key directly to open the widget
+        if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+            subprocess.check_call(["xdotool", "key", "Return"])
+        else:
+            actions = ActionChains(self.driver)
+            actions.send_keys(Keys.ENTER).perform()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Do not disturb")))
 
 
 if __name__ == '__main__':
