@@ -16,6 +16,7 @@
 #include <qwayland-plasma-window-management.h>
 
 #include <QFuture>
+#include <QFutureWatcher>
 #include <QGuiApplication>
 #include <QMimeData>
 #include <QQuickItem>
@@ -25,7 +26,7 @@
 #include <QUuid>
 #include <QWaylandClientExtension>
 #include <QWindow>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 #include <qpa/qplatformwindow_p.h>
 
 #include <fcntl.h>

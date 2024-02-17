@@ -12,7 +12,6 @@
 #include <KLocalizedString>
 #include <KWallet>
 #include <QImage>
-#include <QtConcurrent>
 #include <config-workspace.h>
 #include <sys/types.h>
 #include <unistd.h>

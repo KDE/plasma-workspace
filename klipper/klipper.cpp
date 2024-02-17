@@ -23,7 +23,7 @@
 #include <QMessageBox>
 #include <QPushButton>
 #include <QSaveFile>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 
 #include <KAboutData>
 #include <KActionCollection>

@@ -11,7 +11,6 @@
 
 #include <QAbstractListModel>
 #include <QQmlEngine>
-#include <QtQml>
 
 void CalendarPlugin::registerTypes(const char *uri)
 {

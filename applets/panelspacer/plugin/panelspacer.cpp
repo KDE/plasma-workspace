@@ -8,7 +8,6 @@
 
 #include <QDebug>
 #include <QProcess>
-#include <QtQml>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
