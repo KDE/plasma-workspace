@@ -106,7 +106,7 @@ KCM.GridViewKCM {
                 id: preview
                 spacing: Kirigami.Units.smallSpacing
                 QQC2.Label {
-                    text: i18nc("@label Precedes a list of buttons which can be clicked to preview the theme's sounds. Keep it short", "Preview sounds:")
+                    text: i18nc("@label Precedes a list of buttons which can be clicked to preview the theme's sounds. Keep it very short", "Preview:")
                     textFormat: Text.PlainText
                     // Make the Label able to shrink and elide when needed
                     elide: Text.ElideLeft

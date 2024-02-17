@@ -74,7 +74,7 @@ class KCMSoundThemeTest(unittest.TestCase):
         """
         self.driver.find_element(AppiumBy.NAME, "FreeDesktop")
         self.driver.find_element(AppiumBy.NAME, "Fallback sound theme from freedesktop.org")
-        self.driver.find_element(AppiumBy.NAME, "Preview sounds:")
+        self.driver.find_element(AppiumBy.NAME, "Preview:")
 
 
 if __name__ == '__main__':
