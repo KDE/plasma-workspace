@@ -69,11 +69,9 @@ Kirigami.OverlaySheet {
 
     Item {
         id: rootPanel
+
         implicitWidth: Kirigami.Units.gridUnit * 20
-        Layout.maximumWidth: Kirigami.Units.gridUnit * 24
-        Layout.leftMargin: Kirigami.Units.smallSpacing
-        Layout.rightMargin: Kirigami.Units.smallSpacing
-        height: Kirigami.Units.gridUnit * 18
+        implicitHeight: Kirigami.Units.gridUnit * 16
 
         ColumnLayout {
             id: enrollFeedback
@@ -161,23 +159,26 @@ Kirigami.OverlaySheet {
             // progress circle
             FingerprintProgressCircle {
                 id: progressCircle
+
+                implicitWidth: 80
+                implicitHeight: 80
+
+                Layout.alignment: Qt.AlignHCenter
             }
 
             QQC2.Label {
                 text: fingerprintModel.enrollFeedback
                 textFormat: Text.PlainText
                 wrapMode: Text.Wrap
-                Layout.maximumWidth: parent.width
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                Layout.alignment: Qt.AlignHCenter
             }
         }
 
         ColumnLayout {
             id: pickFinger
             visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
-            anchors.centerIn: parent
             spacing: Kirigami.Units.largeSpacing
-            width: parent.width
+            anchors.fill: parent
 
             Kirigami.Heading {
                 level: 2
@@ -274,7 +275,6 @@ Kirigami.OverlaySheet {
                 model: kcm.fingerprintModel.deviceFound ? fingerprintModel.enrolledFingerprints : 0
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                QQC2.ScrollBar.vertical: QQC2.ScrollBar {}
 
                 delegate: Kirigami.SwipeListItem {
                     property Finger finger: modelData
