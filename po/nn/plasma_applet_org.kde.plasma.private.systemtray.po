@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 02:23+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2022-08-03 13:59+0200\n"
 "Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
 "com>\n"
@@ -174,11 +174,6 @@ msgstr "Fleire handlingar"
 msgid "Keep Open"
 msgstr "Hald open"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "Utvid systramtrauet"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -193,3 +188,6 @@ msgstr "Lukk sprettopp"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Vis gøymde ikon"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Utvid systramtrauet"

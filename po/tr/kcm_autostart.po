@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2023-11-11 23:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -153,50 +153,50 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "Özellikleri Gör"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Girdiyi Kaldır"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr "Oturum Açma Betikleri"
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Başlangıç Öncesi Betikleri"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Oturum Kapatma Betikleri"
 
-#: ui/main.qml:184
+#: ui/main.qml:190
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Kullanıcı tanımlı kendiliğinden başlat ögesi yok"
 
-#: ui/main.qml:185
+#: ui/main.qml:191
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 "Birkaç tane eklemek için <interface>Ekle…</interface> düğmesine tıklayın"
 
-#: ui/main.qml:200
+#: ui/main.qml:206
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Oturum Açma Betiği Seç"
 
-#: ui/main.qml:220
+#: ui/main.qml:226
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Oturum Kapatma Betiği Seç"

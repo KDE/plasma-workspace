@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 02:23+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2023-10-04 09:55+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -172,11 +172,6 @@ msgstr "פעולות נוספות"
 msgid "Keep Open"
 msgstr "להשאיר פתוח"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "הרחבת מגש המערכת"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -191,6 +186,9 @@ msgstr "סגירת חלונית קופצת"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "הצגת סמלים מוסתרים"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "הרחבת מגש המערכת"
 
 #, fuzzy
 #~| msgid " (Automatic load)"

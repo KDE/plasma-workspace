@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2024-01-14 12:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -33,7 +33,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "通知音を有効化"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, fuzzy, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -50,19 +50,19 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "試聴:"
 
-#: ui/main.qml:115
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "サウンド \"%1\" を試聴"
 
-#: ui/main.qml:137
+#: ui/main.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "テーマ \"%1\" のデモサウンドを試聴"
 
-#: ui/main.qml:162
+#: ui/main.qml:166
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "サウンドの試聴に失敗しました: %1"

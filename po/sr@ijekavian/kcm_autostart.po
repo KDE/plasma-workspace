@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -154,52 +154,52 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "&Својства..."
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "&Уклони"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr ""
 
 # >> @item:intable Run application on...
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgid "Logout"
 msgid "Logout Scripts"
 msgstr "на одјављивању"
 
-#: ui/main.qml:184
+#: ui/main.qml:190
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: ui/main.qml:185
+#: ui/main.qml:191
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 
-#: ui/main.qml:200
+#: ui/main.qml:206
 #, kde-format
 msgid "Choose Login Script"
 msgstr ""
 
-#: ui/main.qml:220
+#: ui/main.qml:226
 #, kde-format
 msgid "Choose Logout Script"
 msgstr ""

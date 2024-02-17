@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2022-08-14 16:54+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -152,39 +152,39 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "Proprietăți"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Elimină"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr "Aplicații"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripturi pentru autentificare"
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Alege script pentru pre-pornire"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripturi pentru ieșire"
 
-#: ui/main.qml:184
+#: ui/main.qml:190
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Niciun element de pornire automată specificat"
 
-#: ui/main.qml:185
+#: ui/main.qml:191
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Click the <interface>Add…</interface> button below to add some"
@@ -194,12 +194,12 @@ msgstr ""
 "Apăsați butonul <interface>Adaugă…</interface> de mai jos pentru a adăuga "
 "câteva"
 
-#: ui/main.qml:200
+#: ui/main.qml:206
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Alege script pentru autentificare"
 
-#: ui/main.qml:220
+#: ui/main.qml:226
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Alege script pentru ieșire"

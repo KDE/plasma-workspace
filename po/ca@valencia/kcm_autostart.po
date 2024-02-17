@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2023-10-27 11:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -149,49 +149,49 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "Veure les propietats"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Elimina l'entrada"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts d'inici de sessió"
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts previs a l'inici"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripts d'eixida de sessió"
 
-#: ui/main.qml:184
+#: ui/main.qml:190
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 
-#: ui/main.qml:185
+#: ui/main.qml:191
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "Feu clic en el botó <interface>Afig…</interface> per a afegir-ne"
 
-#: ui/main.qml:200
+#: ui/main.qml:206
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Seleccioneu un script d'inici de sessió"
 
-#: ui/main.qml:220
+#: ui/main.qml:226
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Seleccioneu un script d'eixida"

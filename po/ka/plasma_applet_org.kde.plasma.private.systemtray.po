@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 02:23+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2023-01-11 06:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr "მეტი ქმედება"
 msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "სისტემის კუთხის გადიდება"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -190,6 +185,9 @@ msgstr "მხტუნარას დახურვა"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "დამალული ხატულების ჩვენება"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "სისტემის კუთხის გადიდება"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 02:23+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2022-08-28 20:50-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr "その他のアクション"
 msgid "Keep Open"
 msgstr "開けたままにする"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "システムトレイを展開"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -190,3 +185,6 @@ msgstr "ポップアップを閉じる"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "非表示のアイコンを表示"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "システムトレイを展開"

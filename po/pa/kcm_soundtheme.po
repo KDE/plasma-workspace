@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2023-12-24 09:39-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਾਊਂਡ ਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -52,19 +52,19 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "ਸਾਊਂਡਾਂ ਦੀ ਝਲਕ:"
 
-#: ui/main.qml:115
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "\"%1\" ਸਾਊਂਡ ਦੀ ਝਲਕ"
 
-#: ui/main.qml:137
+#: ui/main.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr ""
 
-#: ui/main.qml:162
+#: ui/main.qml:166
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "ਸਾਊਂਡ ਝਸਕ ਲਈ ਫੇਲ੍ਹ ਹੈ: %1"

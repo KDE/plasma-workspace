@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 02:23+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2022-07-25 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -170,11 +170,6 @@ msgstr "Meer acties"
 msgid "Keep Open"
 msgstr "Open houden"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "Systeemvak uitklappen"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -189,6 +184,9 @@ msgstr "Pop-up sluiten"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Verborgen pictogrammen tonen"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Systeemvak uitklappen"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

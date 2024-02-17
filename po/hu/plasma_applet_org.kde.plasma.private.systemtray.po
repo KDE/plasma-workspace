@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 02:23+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2023-12-28 11:14+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -172,11 +172,6 @@ msgstr "További műveletek"
 msgid "Keep Open"
 msgstr "Tartsa nyitva"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "Paneltálca kiterjesztése"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -191,6 +186,9 @@ msgstr "Felugró bezárása"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Rejtett ikonok megjelenítése"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Paneltálca kiterjesztése"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

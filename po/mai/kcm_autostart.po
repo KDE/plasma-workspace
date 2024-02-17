@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:59+0000\n"
+"POT-Creation-Date: 2024-02-17 02:28+0000\n"
 "PO-Revision-Date: 2009-01-18 15:26+0530\n"
 "Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -151,52 +151,52 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "गुण (&P)"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "हटाबू (&R)"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Pre-KDE startup"
 msgid "Pre-startup Scripts"
 msgstr "केडीई प्रारंभ हए सँ पहिने"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:190
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: ui/main.qml:185
+#: ui/main.qml:191
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 
-#: ui/main.qml:200
+#: ui/main.qml:206
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Choose Login Script"
 msgstr "स्क्रिप्टकेँ जोड़ू"
 
-#: ui/main.qml:220
+#: ui/main.qml:226
 #, kde-format
 msgid "Choose Logout Script"
 msgstr ""
