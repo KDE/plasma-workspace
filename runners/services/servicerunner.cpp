@@ -42,17 +42,17 @@ int weightedLength(const QString &query)
     return KStringHandler::logicalLength(query);
 }
 
-inline bool contains(const QString &result, const QStringList &queryList)
+inline bool contains(const QString &result, const QList<QStringView> &queryList)
 {
-    return std::all_of(queryList.cbegin(), queryList.cend(), [&result](const QString &query) {
+    return std::all_of(queryList.cbegin(), queryList.cend(), [&result](QStringView query) {
         return result.contains(query, Qt::CaseInsensitive);
     });
 }
 
-inline bool contains(const QStringList &results, const QStringList &queryList)
+inline bool contains(const QStringList &results, const QList<QStringView> &queryList)
 {
-    return std::all_of(queryList.cbegin(), queryList.cend(), [&results](const QString &query) {
-        return std::any_of(results.cbegin(), results.cend(), [&query](const QString &result) {
+    return std::all_of(queryList.cbegin(), queryList.cend(), [&results](QStringView query) {
+        return std::any_of(results.cbegin(), results.cend(), [&query](QStringView result) {
             return result.contains(query, Qt::CaseInsensitive);
         });
     });
@@ -75,7 +75,7 @@ public:
     {
         query = context.query();
         // Splitting the query term to match using subsequences
-        queryList = query.split(QLatin1Char(' '));
+        queryList = QStringView(query).split(QLatin1Char(' '));
         weightedTermLength = weightedLength(query);
 
         matchNameKeywordAndGenericName();
@@ -115,7 +115,7 @@ private:
     }
 
     enum class Category { Name, GenericName, Comment };
-    qreal increaseMatchRelavance(const QString &serviceProperty, const QStringList &strList, Category category)
+    qreal increaseMatchRelavance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
     {
         // Increment the relevance based on all the words (other than the first) of the query list
         qreal relevanceIncrement = 0;
@@ -399,7 +399,7 @@ private:
 
     QList<KRunner::QueryMatch> matches;
     QString query;
-    QStringList queryList;
+    QList<QStringView> queryList;
     int weightedTermLength = -1;
 };
 
