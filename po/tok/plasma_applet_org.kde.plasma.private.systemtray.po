@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2024-01-11 14:47-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -170,11 +170,6 @@ msgstr "pali ante"
 msgid "Keep Open"
 msgstr "o awen"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "o suli e poki pi sitelen lili"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -189,3 +184,6 @@ msgstr "o lukin ala e lupa"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "o lukin e sitelen lili len"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "o suli e poki pi sitelen lili"

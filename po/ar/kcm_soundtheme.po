@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-06 00:39+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 17:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -35,7 +35,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "مكن الإشعارات الصوتية"
 
-#: ui/main.qml:97
+#: ui/main.qml:96
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -57,25 +57,25 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "عاين الصوت:"
 
-#: ui/main.qml:124
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "عاين صوت \"%1\""
 
-#: ui/main.qml:146
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "عاين الصوت التجريبي لسمة \"%1\""
 
-#: ui/main.qml:181
+#: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "سمة %1 لا تحوي صوت '%2'"
 
-#: ui/main.qml:186
+#: ui/main.qml:190
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "فشل في معاينة الصوت: %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-06 00:39+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2024-02-06 11:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -34,7 +34,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Meldingsgeluiden inschakelen"
 
-#: ui/main.qml:97
+#: ui/main.qml:96
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -52,25 +52,25 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "Geluiden afluisteren:"
 
-#: ui/main.qml:124
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Geluid \"%1\" afluisteren"
 
-#: ui/main.qml:146
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Demogeluid voor het thema \"%1\" afluisteren"
 
-#: ui/main.qml:181
+#: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "Het thema %1 omvat niet het geluid '%2'"
 
-#: ui/main.qml:186
+#: ui/main.qml:190
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Geluid beluisteren is mislukt: %1"

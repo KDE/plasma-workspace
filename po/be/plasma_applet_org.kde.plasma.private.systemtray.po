@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -175,11 +175,6 @@ msgstr "Яшчэ дзеянні"
 msgid "Keep Open"
 msgstr "Не закрываць"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "Пашырыць прастору апавяшчэнняў"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -194,6 +189,9 @@ msgstr "Закрыць выплыўное акно"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Паказваць схаваныя значкі"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Пашырыць прастору апавяшчэнняў"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

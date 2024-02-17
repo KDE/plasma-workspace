@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-06 00:39+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2023-08-05 23:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -36,7 +36,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr ""
 
-#: ui/main.qml:97
+#: ui/main.qml:96
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -54,25 +54,25 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "Førehandsvis lydar:"
 
-#: ui/main.qml:124
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Førehandsvis lyd «%1»"
 
-#: ui/main.qml:146
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Førehandsvis demolyd for temaet «%1»"
 
-#: ui/main.qml:181
+#: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr ""
 
-#: ui/main.qml:186
+#: ui/main.qml:190
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Preview sound \"%1\""

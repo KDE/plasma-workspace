@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2024-02-14 00:56+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -244,13 +244,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Näyttönäppäimistö pois"
 
-#: panelview.cpp:999
+#: panelview.cpp:1013
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Piilota paneelin asetukset"
 
-#: panelview.cpp:1001
+#: panelview.cpp:1015
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -272,57 +272,57 @@ msgstr "%1 %2 %3-liittimessä"
 msgid "Disconnected Screen %1"
 msgstr "Irrotettu näyttö %1"
 
-#: shellcorona.cpp:198 shellcorona.cpp:200
+#: shellcorona.cpp:197 shellcorona.cpp:199
 #, kde-format
 msgid "Show Desktop"
 msgstr "Näytä työpöytä"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Piilota työpöytä"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Näytä aktiviteettivaihto"
 
-#: shellcorona.cpp:227
+#: shellcorona.cpp:226
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Pysäytä nykyinen aktiviteetti"
 
-#: shellcorona.cpp:235
+#: shellcorona.cpp:234
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Vaihtaa edelliseen aktiviteettiin"
 
-#: shellcorona.cpp:243
+#: shellcorona.cpp:242
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Vaihtaa seuraavaan aktiviteettiin"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivoi tehtävienhallinnan kohta %1"
 
-#: shellcorona.cpp:285
+#: shellcorona.cpp:284
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Hallitse työpöytiä ja paneeleja…"
 
-#: shellcorona.cpp:307
+#: shellcorona.cpp:306
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Vaihda näppäimistökohdistusta paneelien välillä"
 
-#: shellcorona.cpp:2052
+#: shellcorona.cpp:2051
 #, kde-format
 msgid "Add Panel"
 msgstr "Lisää paneeli"
 
-#: shellcorona.cpp:2094
+#: shellcorona.cpp:2093
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

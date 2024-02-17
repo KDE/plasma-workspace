@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2022-08-19 15:31-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -173,11 +173,6 @@ msgstr "Mais ações"
 msgid "Keep Open"
 msgstr "Manter aberta"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "Expandir a área de notificação"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -192,6 +187,9 @@ msgstr "Fechar notificação"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Mostrar ícones ocultos"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Expandir a área de notificação"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

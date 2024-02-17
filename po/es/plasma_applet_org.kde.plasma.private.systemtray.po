@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2023-10-02 22:26+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -170,11 +170,6 @@ msgstr "Más acciones"
 msgid "Keep Open"
 msgstr "Mantener abierto"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "Expandir la bandeja del sistema"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -191,6 +186,9 @@ msgstr "Cerrar ventana emergente"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Mostrar los iconos ocultos"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Expandir la bandeja del sistema"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-06 00:39+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2024-02-06 11:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -36,7 +36,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Activar sonidos de notificación"
 
-#: ui/main.qml:97
+#: ui/main.qml:96
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -54,25 +54,25 @@ msgctxt ""
 msgid "Preview sounds:"
 msgstr "Prueba de sonidos:"
 
-#: ui/main.qml:124
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Prueba del sonido «%1»"
 
-#: ui/main.qml:146
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Probar el sonido de demostración para el tema «%1»"
 
-#: ui/main.qml:181
+#: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "El tema de sonido %1 no incluye el sonido «%2»"
 
-#: ui/main.qml:186
+#: ui/main.qml:190
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "No se ha podido probar el sonido: %1"

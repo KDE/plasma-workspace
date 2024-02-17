@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-02-17 00:39+0000\n"
 "PO-Revision-Date: 2022-08-08 21:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -172,11 +172,6 @@ msgstr "إجراءات أكثر"
 msgid "Keep Open"
 msgstr "أبقه مفتوحاً"
 
-#: package/contents/ui/ExpanderArrow.qml:24
-#, kde-format
-msgid "Expand System Tray"
-msgstr "وسع صينية النظام"
-
 #: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
@@ -191,6 +186,9 @@ msgstr "أغلق المنبثقة"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "أظهر الأيقونات المخفية"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "وسع صينية النظام"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "
