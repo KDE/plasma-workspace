@@ -6,6 +6,8 @@
 
 #include "utils_p.h"
 
+#include <ranges>
+
 #include "notifications.h"
 
 #include <QAbstractItemModel>
@@ -81,19 +83,19 @@ QString Utils::desktopEntryFromPid(uint pid)
 
     QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
     if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
+        constexpr QByteArrayView bamfDesktopFileHint("BAMF_DESKTOP_FILE_HINT");
 
-        const auto lines = environFile.readAll().split('\0');
-        for (const QByteArray &line : lines) {
+        const QByteArray lines = environFile.readAll();
+        for (const QByteArrayView line : std::views::split(lines, '\0')) {
             const int equalsIdx = line.indexOf('=');
             if (equalsIdx <= 0) {
                 continue;
             }
 
-            const QByteArray key = line.left(equalsIdx);
+            const QByteArrayView key = line.sliced(0, equalsIdx);
             if (key == bamfDesktopFileHint) {
-                const QByteArray value = line.mid(equalsIdx + 1);
-                return value;
+                const QByteArrayView value = line.sliced(equalsIdx + 1);
+                return QString::fromUtf8(value);
             }
         }
     }
