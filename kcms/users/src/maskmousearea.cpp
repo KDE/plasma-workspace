@@ -57,7 +57,7 @@ bool MaskMouseArea::contains(const QPointF &point) const
         return false;
     }
 
-    QPoint rounded = point.toPoint();
+    QPoint rounded = (point * d->maskImage.devicePixelRatioF()).toPoint();
     const int x = rounded.x(), y = rounded.y();
 
     if (x < 0 || x >= d->maskImage.width()) {
