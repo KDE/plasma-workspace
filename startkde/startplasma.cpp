@@ -147,7 +147,7 @@ void sourceFiles(const QStringList &files)
     const QByteArray fullEnv = p.readAllStandardOutput();
     for (const QByteArrayView env : std::views::split(fullEnv, '\0')) {
         const int idx = env.indexOf('=');
-        if (Q_UNLIKELY(idx <= 0)) {
+        if (idx <= 0) [[unlikely]] {
             continue;
         }
 
