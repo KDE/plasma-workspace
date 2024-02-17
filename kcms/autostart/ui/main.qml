@@ -185,6 +185,7 @@ KCM.ScrollViewKCM {
         }
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
+            icon.name: "system-run"
             width: parent.width - (Kirigami.Units.largeSpacing * 4)
             visible: parent.count === 0
             text: i18n("No user-specified autostart items")
