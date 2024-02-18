@@ -527,6 +527,15 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
         return KService::List();
     }
 
+    // For some Electron apps, the pid of the main window may not have enough information due to the multiprocess architecture.
+    // So find a desktop file with the same name in the same folder (or cwd)
+    const QList<QStringView> args = QStringView(cmdLine).split(QLatin1Char(' '));
+    const QFileInfo executableInfo(QString::fromRawData(args[0].constData(), args[0].size()));
+    const QFileInfo desktopInfo(executableInfo.absoluteDir().filePath(executableInfo.baseName() + u".desktop"_s));
+    if (desktopInfo.isReadable()) {
+        return {QExplicitlySharedDataPointer<KService>(new KService(desktopInfo.absoluteFilePath()))};
+    }
+
     return servicesFromCmdLine(cmdLine, proc.name(), rulesConfig);
 }
 
