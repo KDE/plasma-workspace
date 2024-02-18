@@ -223,7 +223,7 @@ bool MediaProxy::isDarkColorScheme(const QPalette &palette)
 QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
 {
     const QJsonObject metaData = package.metadata().rawData();
-    const auto jsonIt = metaData.constFind(QStringLiteral("X-KDE-PlasmaImageWallpaper-AccentColor"));
+    const auto jsonIt = metaData.constFind(QLatin1String("X-KDE-PlasmaImageWallpaper-AccentColor"));
     if (jsonIt == metaData.constEnd()) {
         return QColor();
     }
@@ -242,7 +242,7 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
     case QJsonValue::Object: {
         const QJsonObject accentColorDict = accentColorValue.toObject();
         if (isDarkColorScheme()) {
-            const auto darkIt = accentColorDict.constFind(QStringLiteral("Dark"));
+            const auto darkIt = accentColorDict.constFind(QLatin1String("Dark"));
             if (darkIt != accentColorDict.constEnd()) {
                 colorString = darkIt.value().toString();
                 if (!colorString.isEmpty()) {
@@ -252,7 +252,7 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
         }
 
         // Light color as fallback
-        const auto lightIt = accentColorDict.constFind(QStringLiteral("Light"));
+        const auto lightIt = accentColorDict.constFind(QLatin1String("Light"));
         if (lightIt != accentColorDict.constEnd()) {
             colorString = lightIt.value().toString();
             break;
