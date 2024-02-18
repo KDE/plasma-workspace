@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-10-28 13:08+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -154,38 +154,38 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "Afficher les propriétés"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Supprimer une entrée"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr "Applications"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts de connexion"
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts de pré démarrage"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripts de déconnexion"
 
-#: ui/main.qml:184
+#: ui/main.qml:191
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Aucun élément en démarrage automatique, spécifié par l'utilisateur"
 
-#: ui/main.qml:185
+#: ui/main.qml:192
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
@@ -193,12 +193,12 @@ msgstr ""
 "Cliquer sur le bouton <interface>Ajouter...</interface> pour en ajouter un "
 "peu"
 
-#: ui/main.qml:200
+#: ui/main.qml:207
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Sélectionner un script de connexion"
 
-#: ui/main.qml:220
+#: ui/main.qml:227
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Choisir un script de déconnexion"

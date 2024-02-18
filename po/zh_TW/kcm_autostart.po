@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-11-10 23:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -147,49 +147,49 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "檢視屬性"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "移除項目"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr "登入文稿"
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "啟動前文稿"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr "登出文稿"
 
-#: ui/main.qml:184
+#: ui/main.qml:191
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "沒有使用者指定的自動啟動項目"
 
-#: ui/main.qml:185
+#: ui/main.qml:192
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "點擊下方的<interface>新增…</interface>按鈕以新增一些"
 
-#: ui/main.qml:200
+#: ui/main.qml:207
 #, kde-format
 msgid "Choose Login Script"
 msgstr "選擇登入文稿"
 
-#: ui/main.qml:220
+#: ui/main.qml:227
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "選擇登出文稿"

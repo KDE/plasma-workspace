@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-12-04 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -142,49 +142,49 @@ msgctxt "@action:button"
 msgid "See properties"
 msgstr "பண்புகளை காட்டு"
 
-#: ui/main.qml:154
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "பதிவை நீக்கு"
 
-#: ui/main.qml:167
+#: ui/main.qml:173
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Login Scripts"
 msgstr "நுழைவு சிறுநிரல்கள்"
 
-#: ui/main.qml:173
+#: ui/main.qml:179
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "துவக்கத்திற்கு முன் இயக்க வேண்டிய சிறுநிரல்கள்"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Logout Scripts"
 msgstr "வெளியேற்ற சிறுநிரல்கள்"
 
-#: ui/main.qml:184
+#: ui/main.qml:191
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "பயனரால் அமைக்கப்பட்ட சுயதுவக்க நிரல்கள் எதுவும் இல்லை"
 
-#: ui/main.qml:185
+#: ui/main.qml:192
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "சிலவற்றை சேர்க்க <interface>சேர்…</interface> பட்டனை அழுத்தவும்"
 
-#: ui/main.qml:200
+#: ui/main.qml:207
 #, kde-format
 msgid "Choose Login Script"
 msgstr "நுழைவு சிறுநிரலைத் தேர்ந்தெடுத்தல்"
 
-#: ui/main.qml:220
+#: ui/main.qml:227
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "வெளியேற்ற சிறுநிரலைத் தேர்ந்தெடுத்தல்"
