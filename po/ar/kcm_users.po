@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-02-19 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 17:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,49 +18,49 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "لم يعثر على جهاز قراءة البصمة."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:317
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "أعد محاولة مسحة الإصبع."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "التمريرة سريعة جدا. حاول مرة أخرى."
 
-#: src/fingerprintmodel.cpp:335
+#: src/fingerprintmodel.cpp:321
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "الإصبع ليست في وسط القارئ. أعد المحاولة."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:323
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "أزل إصبعك من القارئ، و أعد المحاولة."
 
-#: src/fingerprintmodel.cpp:345
+#: src/fingerprintmodel.cpp:331
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "عملية تسجيل البصمة فشلت."
 
-#: src/fingerprintmodel.cpp:348
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr "لا يوجد مساحة باقية لهذا الجهاز، احذف أيا من البصمات الأخرى للمواصلة."
 
-#: src/fingerprintmodel.cpp:351
+#: src/fingerprintmodel.cpp:337
 #, kde-format
 msgid "The device was disconnected."
 msgstr "الجهاز مفصول."
 
-#: src/fingerprintmodel.cpp:356
+#: src/fingerprintmodel.cpp:342
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "حدث خطأ مجهول."
@@ -179,174 +179,174 @@ msgstr "أكد كلمة السر:"
 msgid "Create"
 msgstr "أنشئ"
 
-#: src/ui/FingerprintDialog.qml:43
+#: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "اضبط البصمات"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "امسح الكل"
 
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Add"
 msgstr "أضف"
 
-#: src/ui/FingerprintDialog.qml:68
+#: src/ui/FingerprintDialog.qml:54
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: src/ui/FingerprintDialog.qml:76
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Done"
 msgstr "تمّ"
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:86
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "تسجيل البصمة"
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:96
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالسبابة اليمنى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:98
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالوسطى اليمنى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:100
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالبنصر اليمين بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:102
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالخنصر اليمين بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "الرجاء اضغط  بالإبهام اليمين بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:106
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالسبابة اليسرى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:108
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالوسطى اليسرى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:110
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالبنصر الأيسر بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "الرجاء اضغط بالخنصر الأيسر بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "الرجاء اضغط بالإبهام الأيسر بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالسبابة اليمنى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالوسطى اليمنى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالبنصر اليمين بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالخنصر اليمين بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "الرجاء امسح بالإبهام اليمين بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالسبابة اليسرى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:144
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالوسطى اليسرى بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالبنصر الأيسر بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "الرجاء امسح بالخنصر الأيسر بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "الرجاء امسح بالإبهام الأيسر بشكل متكرر على متحسس البصمات."
 
-#: src/ui/FingerprintDialog.qml:166
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "الأصبع سُجّل"
 
-#: src/ui/FingerprintDialog.qml:198
+#: src/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "اختر اصبع لتسجيله"
 
-#: src/ui/FingerprintDialog.qml:318
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "أعد تسجيل الإصبع"
 
-#: src/ui/FingerprintDialog.qml:325
+#: src/ui/FingerprintDialog.qml:311
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "احذف بصمة"
 
-#: src/ui/FingerprintDialog.qml:334
+#: src/ui/FingerprintDialog.qml:320
 #, kde-format
 msgid "No fingerprints added"
 msgstr "لم يضف أي بصمة"
@@ -555,22 +555,22 @@ msgstr ""
 "أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
 "إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
 
-#: src/user.cpp:291
+#: src/user.cpp:290
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "تعذر الحصول على إذن لحفظ المستخدم %1"
 
-#: src/user.cpp:296
+#: src/user.cpp:295
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "حدث خطأ أثناء حفظ التغييرات"
 
-#: src/user.cpp:395
+#: src/user.cpp:394
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشل في فتح الملف المؤقت"
 
-#: src/user.cpp:403
+#: src/user.cpp:402
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"

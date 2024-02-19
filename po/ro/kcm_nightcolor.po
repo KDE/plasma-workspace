@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2022-08-14 16:59+0100\n"
+"PO-Revision-Date: 2023-06-18 17:51+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -19,22 +19,22 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: ui/DayNightView.qml:110
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr ""
-"Culoarea nocturnă începe să se schimbe la %1 și e schimbată complet la %2"
+"Temperatura culorilor începe să se schimbe spre cea nocturnă la %1 și e "
+"schimbată complet la %2"
 
 #: ui/DayNightView.qml:113
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr ""
-"Culoarea nocturnă începe să se schimbe la %1 și e schimbată complet la %2"
+"Temperatura culorilor începe să se schimbe spre cea de zi la %1 și e "
+"schimbată complet la %2"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
@@ -82,43 +82,34 @@ msgid "Longitude:"
 msgstr "Longitudine:"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Culoarea nocturnă face culorile de pe ecran să devină mai calde pentru a "
-"reduce încordarea ochilor la ora aleasă."
+msgstr "Filtrul de lumină albastră face culorile de pe ecran mai calde."
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Ora activării:"
+msgstr "Orele de schimbare:"
 
 #: ui/main.qml:157
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Mereu oprită"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "De la apus la răsărit la amplasarea actuală"
 
 #: ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "De la apus la răsărit la amplasare manuală"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Oră personalizată"
+msgstr "Ore personalizate"
 
 #: ui/main.qml:161
 #, fuzzy, kde-format

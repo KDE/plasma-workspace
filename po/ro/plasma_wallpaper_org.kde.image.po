@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2021, 2022, 2023.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2022-06-01 18:44+0100\n"
+"PO-Revision-Date: 2023-04-10 19:50+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -291,42 +291,43 @@ msgid "There are no wallpaper locations configured"
 msgstr "Nu sunt configurate amplasări cu tapete"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Obține fundaluri noi…"
+msgstr "Stabilește ca tapet"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Birou"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Ecran de blocare"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Ambele"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "A intervenit o eroare la încercarea de a stabili tapetul Plasma:\n"
+msgstr ""
+"A intervenit o eroare la încercarea de a stabili tapetul Plasma:\n"
+"%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr "A intervenit o eroare la încercarea de a stabili tapetul Plasma:\n"
+msgstr ""
+"A intervenit o eroare la încercarea de a deschide fișierul de configurare "
+"kscreenlockerrc."
 
 #~ msgid "Add Image…"
 #~ msgstr "Adaugă imagine…"

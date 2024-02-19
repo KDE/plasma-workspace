@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-02-19 00:39+0000\n"
 "PO-Revision-Date: 2022-12-20 11:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Nenhum dispositivo de impressão digital encontrado."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:317
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Tente digitalizar novamente seu dedo."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Deslize muito curto. Tente novamente."
 
-#: src/fingerprintmodel.cpp:335
+#: src/fingerprintmodel.cpp:321
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Dedo não centralizado no leitor. Tente novamente."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:323
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Remova seu dedo do leitor e tente novamente."
 
-#: src/fingerprintmodel.cpp:345
+#: src/fingerprintmodel.cpp:331
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Falha no registro das impressões digitais."
 
-#: src/fingerprintmodel.cpp:348
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -57,12 +57,12 @@ msgstr ""
 "Não há espaço disponível para este dispositivo, exclua outras impressões "
 "digitais para continuar."
 
-#: src/fingerprintmodel.cpp:351
+#: src/fingerprintmodel.cpp:337
 #, kde-format
 msgid "The device was disconnected."
 msgstr "O dispositivo foi desconectado."
 
-#: src/fingerprintmodel.cpp:356
+#: src/fingerprintmodel.cpp:342
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Ocorreu um erro desconhecido."
@@ -182,38 +182,38 @@ msgstr "Confirmar senha:"
 msgid "Create"
 msgstr "Criar"
 
-#: src/ui/FingerprintDialog.qml:43
+#: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Configurar impressões digitais"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Limpar tudo"
 
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/ui/FingerprintDialog.qml:68
+#: src/ui/FingerprintDialog.qml:54
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/ui/FingerprintDialog.qml:76
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Done"
 msgstr "Concluído"
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:86
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Registro das impressão digital"
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:96
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -222,7 +222,7 @@ msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:98
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -231,7 +231,7 @@ msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:100
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -240,7 +240,7 @@ msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:102
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -249,7 +249,7 @@ msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:104
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -257,7 +257,7 @@ msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:106
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -266,7 +266,7 @@ msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:108
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -275,7 +275,7 @@ msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:110
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -284,7 +284,7 @@ msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:112
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -293,7 +293,7 @@ msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:114
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -301,7 +301,7 @@ msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -310,7 +310,7 @@ msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:120
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -319,7 +319,7 @@ msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:122
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -328,7 +328,7 @@ msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:124
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -337,7 +337,7 @@ msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:126
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -345,7 +345,7 @@ msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:128
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -354,7 +354,7 @@ msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:144
+#: src/ui/FingerprintDialog.qml:130
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -363,7 +363,7 @@ msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:132
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -372,7 +372,7 @@ msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:134
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -381,7 +381,7 @@ msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:136
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -389,27 +389,27 @@ msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "%1 repetidamente seu %2 no sensor de impressões digitais."
 
-#: src/ui/FingerprintDialog.qml:166
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Dedo registrado"
 
-#: src/ui/FingerprintDialog.qml:198
+#: src/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Escolha um dedo para registrar"
 
-#: src/ui/FingerprintDialog.qml:318
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Registrar novamente o dedo"
 
-#: src/ui/FingerprintDialog.qml:325
+#: src/ui/FingerprintDialog.qml:311
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Excluir impressão digital"
 
-#: src/ui/FingerprintDialog.qml:334
+#: src/ui/FingerprintDialog.qml:320
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nenhuma impressão digital adicionada"
@@ -640,22 +640,22 @@ msgstr ""
 "de linha de comando que as solicitem.<nl/><nl/>O login no sistema com sua "
 "impressão digital ainda não é suportado."
 
-#: src/user.cpp:291
+#: src/user.cpp:290
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Não foi possível obter permissões para salvar o usuário %1"
 
-#: src/user.cpp:296
+#: src/user.cpp:295
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Um erro ocorreu ao salvar as alterações"
 
-#: src/user.cpp:395
+#: src/user.cpp:394
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Falha ao redimensionar imagem: falha ao abrir o arquivo temporário"
 
-#: src/user.cpp:403
+#: src/user.cpp:402
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Falha ao redimensionar imagem: falha ao gravar o arquivo temporário"

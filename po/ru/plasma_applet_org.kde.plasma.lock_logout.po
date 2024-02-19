@@ -4,13 +4,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2014, 2015, 2019.
 # Nick Shaforostoff <shafff@ukr.net>, 2010.
 # Yuri Efremov <yur.arh@gmail.com>, 2011, 2012.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-12-24 18:22+0300\n"
+"PO-Revision-Date: 2024-02-18 21:32+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -50,42 +50,42 @@ msgstr "Выключить"
 #: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Restart"
-msgstr "Перезагрузить"
+msgstr "Перезагрузка"
 
 # shutdown-method
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
-msgstr "Заблокировать"
+msgstr "Блокировка"
 
 #: contents/ui/ConfigGeneral.qml:59
 #, kde-format
 msgid "Switch User"
-msgstr "Переключить пользователя"
+msgstr "Смена пользователя"
 
 # shutdown-method
 #: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
-msgstr "Спящий режим"
+msgstr "Гибернация"
 
 # shutdown-method
 #: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Ждущий режим"
+msgstr "Сон"
 
 # shutdown-method
 #: contents/ui/data.js:6
 #, kde-format
 msgid "Lock the screen"
-msgstr "Заблокировать экран"
+msgstr "Блокировка экрана"
 
 #: contents/ui/data.js:12
 #, kde-format
 msgid "Switch user"
-msgstr "Переключить пользователя"
+msgstr "Смена пользователя"
 
 #: contents/ui/data.js:13
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "Начать параллельный сеанс от имени дру�
 #: contents/ui/data.js:18
 #, kde-format
 msgid "Shutdown…"
-msgstr "Выключить..."
+msgstr "Выключить…"
 
 # shutdown-method
 #: contents/ui/data.js:19
@@ -106,7 +106,7 @@ msgstr "Выключить компьютер"
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr "Перезагрузить..."
+msgstr "Перезагрузить…"
 
 #: contents/ui/data.js:26
 #, kde-format
@@ -116,7 +116,7 @@ msgstr "Перезагрузить компьютер"
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr "Завершить сеанс..."
+msgstr "Завершить сеанс…"
 
 #: contents/ui/data.js:33
 #, kde-format

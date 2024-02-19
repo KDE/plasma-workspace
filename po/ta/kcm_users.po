@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-02-19 00:39+0000\n"
 "PO-Revision-Date: 2023-10-15 12:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,49 +17,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "கைரேகைக்கான சாதனம் கண்டுபிடிக்கப்படவில்லை."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:317
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "விரலை மறுபடியும் வைக்கவும்."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "மிக சீக்கிரமாக விரலை எடுத்துவிட்டீர்கள். மீண்டும் முயற்சிக்கவும்."
 
-#: src/fingerprintmodel.cpp:335
+#: src/fingerprintmodel.cpp:321
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "வருடியின் நடுவில் விரல் இல்லை. மீண்டும் முயற்சிக்கவும்."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:323
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "வருடியிலிருந்து உங்கள் விரலை எடுத்து, மீண்டும் முயற்சிக்கவும்."
 
-#: src/fingerprintmodel.cpp:345
+#: src/fingerprintmodel.cpp:331
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "கைரேகை பதிவு தோல்வியடைந்தது."
 
-#: src/fingerprintmodel.cpp:348
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr "இச்சாதனத்தில் சேமிப்பக இடம் இல்லை. தொடர, வேறு கைரேகைகளை நீக்குங்கள்."
 
-#: src/fingerprintmodel.cpp:351
+#: src/fingerprintmodel.cpp:337
 #, kde-format
 msgid "The device was disconnected."
 msgstr "சாதனம் கழற்றப்பட்டது."
 
-#: src/fingerprintmodel.cpp:356
+#: src/fingerprintmodel.cpp:342
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "தெரியாத சிக்கல் நேர்ந்துள்ளது."
@@ -172,174 +172,174 @@ msgstr "கடவுச்சொல்லை உறுதிப்படுத�
 msgid "Create"
 msgstr "உருவாக்கு"
 
-#: src/ui/FingerprintDialog.qml:43
+#: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "கைரேகைகளை அமை"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "அனைத்தையும் நீக்கு"
 
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Add"
 msgstr "சேர்"
 
-#: src/ui/FingerprintDialog.qml:68
+#: src/ui/FingerprintDialog.qml:54
 #, kde-format
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: src/ui/FingerprintDialog.qml:76
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Done"
 msgstr "முடிந்தது"
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:86
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "கைரேகை பதிவிடப்படுகிறது"
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:96
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "உங்கள் வலது ஆள்காட்டிவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:98
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "உங்கள் வலது நடுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:100
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "உங்கள் வலது மோதிரவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:102
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "உங்கள் வலது சிறுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "உங்கள் வலது பெருவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:106
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "உங்கள் இடது ஆள்காட்டிவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:108
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "உங்கள் இடது நடுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:110
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "உங்கள் இடது மோதிரவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "உங்கள் இடது சிறுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "உங்கள் இடது பெருவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப அழுத்தவும்."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "உங்கள் வலது ஆள்காட்டிவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "உங்கள் வலது நடுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "உங்கள் வலது மோதிரவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "உங்கள் வலது சிறுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "உங்கள் வலது பெருவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "உங்கள் இடது ஆள்காட்டிவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:144
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "உங்கள் இடது நடுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "உங்கள் இடது மோதிரவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "உங்கள் இடது சிறுவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "உங்கள் இடது பெருவிரலை கைரேகை உணரியின்மீது திரும்பத்திரும்ப தேய்க்கவும்."
 
-#: src/ui/FingerprintDialog.qml:166
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "விரல் பதிவு செய்யப்பட்டது"
 
-#: src/ui/FingerprintDialog.qml:198
+#: src/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "பதிவிட வேண்டிய விரலை தேர்ந்தெடுங்கள்"
 
-#: src/ui/FingerprintDialog.qml:318
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "விரலை மறுபதிவு செய்"
 
-#: src/ui/FingerprintDialog.qml:325
+#: src/ui/FingerprintDialog.qml:311
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "கைரேகையை நீக்கு"
 
-#: src/ui/FingerprintDialog.qml:334
+#: src/ui/FingerprintDialog.qml:320
 #, kde-format
 msgid "No fingerprints added"
 msgstr "எந்த கைரேகையும் சேர்க்கப்படவில்லை"
@@ -548,22 +548,22 @@ msgstr ""
 "பதிலாக கைரேகையைப் பயன்படுத்தலாம்.<nl/><nl/> கைரேகையின் மூலம் புதிய அமர்வைத் "
 "துவக்குவது இப்போதைக்கு ஆதரிக்கப்படாது."
 
-#: src/user.cpp:291
+#: src/user.cpp:290
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "%1 என்ற பயனரின் விவரங்களை சேமிக்க அனுமதி இல்லை"
 
-#: src/user.cpp:296
+#: src/user.cpp:295
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "மாற்றங்களை சேமிக்கும்போது சிக்கல் ஏற்பட்டது"
 
-#: src/user.cpp:395
+#: src/user.cpp:394
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "படத்தின் அளவை மாற்ற முடியவில்லை: தற்காலிக கோப்பை திறத்தல் தோல்வியடைந்தது"
 
-#: src/user.cpp:403
+#: src/user.cpp:402
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "படத்தின் அளவை மாற்ற முடியவில்லை: தற்காலிக கோப்புக்கு எழுதுதல் தோல்வியடைந்தது"

@@ -1,23 +1,22 @@
-# Traducerea ksmserver.po în Română
 # translation of ksmserver.po to Romanian
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2020.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2020-09-06 16:42+0100\n"
+"PO-Revision-Date: 2023-06-18 17:57+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: logout.cpp:273
 #, kde-format
@@ -41,6 +40,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Nu se poate scrie în dosarul %HOME (%1). Dacă acest lucru e intenționat, "
+"stabiliți <envar>KDE_HOME_READONLY=1</envar> în mediul dumneavoastră."
 
 #: main.cpp:82
 #, kde-format
@@ -260,26 +261,6 @@ msgstr ""
 
 #~ msgid "Suspend to &Disk"
 #~ msgstr "Suspendă pe &disc"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Claudiu Costin,Sergiu Bivol"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ",sergiu@ase.md"
-
-#~ msgid "(C) 2000, The KDE Developers"
-#~ msgstr "(C) 2000, Dezvoltatorii KDE"
-
-#~ msgid "Matthias Ettrich"
-#~ msgstr "Matthias Ettrich"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Maintainer"
-#~ msgstr "Responsabil"
 
 #~ msgctxt "current option in boot loader"
 #~ msgid " (current)"

@@ -1,26 +1,26 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2020-12-19 17:43+0000\n"
+"PO-Revision-Date: 2023-04-10 19:43+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Fără titlu"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #: package/contents/ui/main.qml:54
@@ -81,15 +81,16 @@ msgid "Repeat"
 msgstr "Repetă"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "de %1 (întrerupt, %2)"
+msgstr ""
+"de %1 (%2)\n"
+"Clic mijlociu pentru a întrerupe\n"
+"Derulați pentru a ajusta volumul"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -99,28 +100,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Clic mijlociu pentru a întrerupe\n"
+"Derulați pentru a ajusta volumul"
 
 #: package/contents/ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "de %1 (întrerupt, %2)"
+msgstr ""
+"de %1 (întrerupt, %2)\n"
+"Clic mijlociu pentru a reda\n"
+"Derulați pentru a ajusta volumul"
 
 #: package/contents/ui/main.qml:61
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "de %1 (întrerupt, %2)"
+msgstr ""
+"Întrerupt (%1)\n"
+"Clic mijlociu pentru a reda\n"
+"Derulați pentru a ajusta volumul"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

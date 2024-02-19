@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-02-19 00:39+0000\n"
 "PO-Revision-Date: 2023-02-19 20:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,49 +20,49 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Fann inga eining for fingeravtrykk."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:317
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Prøv å skanna fingeren på nytt."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Sveipet var for kort. Prøv på nytt."
 
-#: src/fingerprintmodel.cpp:335
+#: src/fingerprintmodel.cpp:321
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Heile fingeren var ikkje lagd på lesaren. Prøv på nytt."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:323
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Ta fingeren frå lesaren og prøv på nytt."
 
-#: src/fingerprintmodel.cpp:345
+#: src/fingerprintmodel.cpp:331
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Klarte ikkje å registrera fingeravtrykk."
 
-#: src/fingerprintmodel.cpp:348
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr "For lite plass på eininga. Slett andre fingeravtrykk for å halda fram."
 
-#: src/fingerprintmodel.cpp:351
+#: src/fingerprintmodel.cpp:337
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Eininga vart kopla frå."
 
-#: src/fingerprintmodel.cpp:356
+#: src/fingerprintmodel.cpp:342
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Det oppstod ein ukjend feil."
@@ -182,174 +182,174 @@ msgstr "Stadfest passord:"
 msgid "Create"
 msgstr "Legg til"
 
-#: src/ui/FingerprintDialog.qml:43
+#: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Set opp fingeravtrykk"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Fjern alle"
 
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:45
 #, kde-format
 msgid "Add"
 msgstr "Legg til"
 
-#: src/ui/FingerprintDialog.qml:68
+#: src/ui/FingerprintDialog.qml:54
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/ui/FingerprintDialog.qml:76
+#: src/ui/FingerprintDialog.qml:62
 #, kde-format
 msgid "Done"
 msgstr "Fullført"
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:86
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Registrerer fingeravtrykk"
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:96
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "Trykk høgre peikefinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:98
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Trykk høgre midtfinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:100
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Trykk høgre ringfinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:102
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Trykk høgre litlefinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Trykk høgre tommel fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:106
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Trykk venstre peikefinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:108
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Trykk venstre midtfinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:110
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Trykk venstre ringfinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Trykk venstre litlefinger fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:114
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Trykk venstre tommel fleire gongar på fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Sveip høgre peikefinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "Sveip høgre midtfinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Sveip høgre ringfinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:138
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Sveip høgre litlefinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:140
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Sveip høgre tommel fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:142
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "Sveip venstre peikefinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:144
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "Sveip venstre midtfinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:146
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "Sveip venstre ringfinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:148
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "Sveip venstre litlefinger fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "Sveip venstre tommel fleire gongar over fingeravtrykk-sensoren."
 
-#: src/ui/FingerprintDialog.qml:166
+#: src/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Finger registrert"
 
-#: src/ui/FingerprintDialog.qml:198
+#: src/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Vel finger som skal registrerast"
 
-#: src/ui/FingerprintDialog.qml:318
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Registrer finger på nytt"
 
-#: src/ui/FingerprintDialog.qml:325
+#: src/ui/FingerprintDialog.qml:311
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Slett fingeravtrykk"
 
-#: src/ui/FingerprintDialog.qml:334
+#: src/ui/FingerprintDialog.qml:320
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Ingen fingeravtrykk lagde til"
@@ -560,23 +560,23 @@ msgstr ""
 "gje administrator­løyve til brukar­program og kommandolinje­program som spør om "
 "det.<nl/><nl/>Systempålogging med fingeravtrykk er førebels ikkje støtta."
 
-#: src/user.cpp:291
+#: src/user.cpp:290
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Fekk ikkje løyve til å lagra brukaren %1"
 
-#: src/user.cpp:296
+#: src/user.cpp:295
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Det oppstod ein feil ved lagring av endringane"
 
-#: src/user.cpp:395
+#: src/user.cpp:394
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Klarte ikkje endra storleik på bilete: Feil ved opning av mellombels fil."
 
-#: src/user.cpp:403
+#: src/user.cpp:402
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

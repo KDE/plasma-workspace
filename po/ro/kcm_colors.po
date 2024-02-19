@@ -1,12 +1,12 @@
 # Traducerea kcmcolors.po în Română
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2021, 2022, 2023.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-08-14 16:56+0100\n"
+"PO-Revision-Date: 2023-04-10 19:58+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -1247,24 +1247,22 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (schema de culori actuală)"
 
 #: ui/AccentColorUI.qml:37
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Restabilește schema de culori"
+msgstr "Culoare de accent din schema de culori"
 
 #: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Culoare de accent de pe tapet"
 
 #: ui/AccentColorUI.qml:39
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Alege culoare de accent personalizată"
+msgstr "Culoare de accent personalizată"
 
 #: ui/AccentColorUI.qml:164
 #, kde-format
