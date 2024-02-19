@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Sidlovsky Yaroslav <zawertun@gmail.com>, 2019.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2023-12-20 21:46+0300\n"
+"PO-Revision-Date: 2024-02-18 21:39+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -51,7 +51,7 @@ msgstr "Включён режим Caps Lock"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Ждущий режим"
+msgstr "Сон"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
 #: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
@@ -129,17 +129,17 @@ msgstr "Не удалось разблокировать"
 #: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Sleep"
-msgstr "Ждущий режим"
+msgstr "Сон"
 
 #: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
 #, kde-format
 msgid "Hibernate"
-msgstr "Спящий режим"
+msgstr "Гибернация"
 
 #: contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Switch User"
-msgstr "Переключить пользователя"
+msgstr "Смена пользователя"
 
 #: contents/lockscreen/LockScreenUi.qml:388
 #, kde-format
