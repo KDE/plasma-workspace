@@ -33,6 +33,22 @@ KCM.SimpleKCM {
         kcm.push("SourcesPage.qml");
     }
 
+    actions: Kirigami.Action {
+        text: i18nc("@action:button Application-specific notifications", "Configure Application Settings…")
+        icon.name: "settings-configure-symbolic"
+        enabled: root.notificationsAvailable
+        onTriggered: root.openSourcesSettings()
+    }
+
+    Connections {
+        target: kcm
+        function onFirstLoadDone() {
+            if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
+                    root.openSourcesSettings();
+            }
+        }
+    }
+
     Kirigami.FormLayout {
         Kirigami.InlineMessage {
             Kirigami.FormData.isSection: true
@@ -284,31 +300,6 @@ KCM.SimpleKCM {
             KCM.SettingStateBinding {
                 configObject: kcm.badgeSettings
                 settingName: "InTaskManager"
-            }
-        }
-
-        Item {
-            Kirigami.FormData.label: i18nc("@title:group", "Application-specific settings")
-            Kirigami.FormData.isSection: true
-        }
-
-        QtControls.Button {
-            text: i18n("Configure…")
-            icon.name: "configure"
-            enabled: root.notificationsAvailable
-            onClicked: root.openSourcesSettings()
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.isDefaultsBehaviorSettings
-            }
-        }
-
-        Connections {
-            target: kcm
-            function onFirstLoadDone() {
-                if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
-                        root.openSourcesSettings();
-                }
             }
         }
     }
