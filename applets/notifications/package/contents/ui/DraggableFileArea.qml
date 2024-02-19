@@ -22,7 +22,6 @@ Item {
 
     HoverHandler {
         id: hoverHandler
-        cursorShape: tapHandler.pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
     }
 
     TapHandler {
@@ -43,6 +42,7 @@ Item {
 
     MouseArea {
         acceptedButtons: Qt.RightButton
+        cursorShape: tapHandler.pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
         anchors.fill: parent
         onPressed: (mouse) => {
             area.contextMenuRequested(Qt.point(mouse.x, mouse.y))
