@@ -144,8 +144,8 @@ void sourceFiles(const QStringList &files)
     p.start(QStringLiteral("/bin/sh"), filteredFiles);
     p.waitForFinished(-1);
 
-    const QByteArray fullEnv = p.readAllStandardOutput();
-    for (const QByteArrayView env : std::views::split(fullEnv, '\0')) {
+    const QByteArrayList fullEnv = p.readAllStandardOutput().split('\0');
+    for (const QByteArrayView env : fullEnv) {
         const int idx = env.indexOf('=');
         if (idx <= 0) [[unlikely]] {
             continue;

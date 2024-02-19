@@ -488,8 +488,8 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
     if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         constexpr QByteArrayView bamfDesktopFileHint{"BAMF_DESKTOP_FILE_HINT"};
         constexpr QByteArrayView appDir{"APPDIR"};
-        const QByteArray lines = environFile.readAll();
-        for (const QByteArrayView line : std::views::split(lines, '\0')) {
+        const QByteArrayList lines = environFile.readAll().split('\0');
+        for (const QByteArrayView line : lines) {
             const int equalsIdx = line.indexOf('=');
             if (equalsIdx <= 0) {
                 continue;
