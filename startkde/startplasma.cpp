@@ -121,10 +121,10 @@ inline bool isSessionVariable(QStringView name)
         name.startsWith("XDG_"_L1);
 }
 
-void setEnvironmentVariable(QByteArrayView name, QByteArrayView value)
+void setEnvironmentVariable(const char *name, QByteArrayView value)
 {
-    if (qgetenv(name.constData()) != value) {
-        qputenv(name.constData(), value);
+    if (qgetenv(name) != value) {
+        qputenv(name, value);
     }
 }
 
@@ -145,17 +145,17 @@ void sourceFiles(const QStringList &files)
     p.waitForFinished(-1);
 
     const QByteArrayList fullEnv = p.readAllStandardOutput().split('\0');
-    for (const QByteArrayView env : fullEnv) {
+    for (const QByteArray &env : fullEnv) {
         const int idx = env.indexOf('=');
         if (idx <= 0) [[unlikely]] {
             continue;
         }
 
         const auto name = env.sliced(0, idx);
-        if (isShellVariable(name)) {
+        if (isShellVariable(QByteArrayView(name))) {
             continue;
         }
-        setEnvironmentVariable(name, env.sliced(idx + 1));
+        setEnvironmentVariable(name.constData(), QByteArrayView(env).sliced(idx + 1));
     }
 }
 
