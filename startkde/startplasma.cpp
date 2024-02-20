@@ -168,7 +168,22 @@ void runStartupConfig()
     KConfig config(QStringLiteral("plasma-localerc"));
     KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
 
-    const auto lcValues = {"LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"};
+    // Note: not all of these (e.g. LC_CTYPE) can currently be changed through system settings (but they can be changed by modifying
+    // plasma-localrc manually).
+    const auto lcValues = {"LANG",
+                           "LC_ADDRESS",
+                           "LC_COLLATE",
+                           "LC_CTYPE",
+                           "LC_IDENTIFICATION",
+                           "LC_MONETARY",
+                           "LC_MESSAGES",
+                           "LC_MEASUREMENT",
+                           "LC_NAME",
+                           "LC_NUMERIC",
+                           "LC_PAPER",
+                           "LC_TELEPHONE",
+                           "LC_TIME",
+                           "LC_ALL"};
     for (auto lc : lcValues) {
         const QString value = formatsConfig.readEntry(lc, QString());
         if (!value.isEmpty()) {
