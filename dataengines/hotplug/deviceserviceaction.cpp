@@ -101,6 +101,10 @@ int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &
     case 'I': // case insensitive
         ret << m_device.udi();
         break;
+    case 'j': // Last section of UDI
+    case 'J': // case insensitive
+        ret << m_device.udi().section(QLatin1Char('/'), -1);
+        break;
     case '%':
         ret = QStringList(QLatin1String("%"));
         break;
