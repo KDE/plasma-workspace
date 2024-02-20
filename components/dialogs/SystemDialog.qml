@@ -111,7 +111,7 @@ Kirigami.AbstractApplicationWindow {
         anchors.fill: parent
         Component.onCompleted: {
             var component = LookAndFeel.fileUrl("systemdialogscript")
-            setSource(component, {
+            var initialProperties = {
                 window: root,
                 mainText: root.mainText,
                 subtitle: root.subtitle,
@@ -119,7 +119,16 @@ Kirigami.AbstractApplicationWindow {
                 iconName: root.iconName,
                 mainItem: root.mainItem,
                 standardButtons: root.standardButtons
-            })
+            };
+            setSource(component, initialProperties)
+            if (status === Loader.Error) {
+                console.warn("Failed loading", component);
+                var fallbackComponent = LookAndFeel.fallbackFileUrl("systemdialogscript")
+                if (fallbackComponent !== component) {
+                    console.warn("Trying fallback file", fallbackComponent)
+                    setSource(fallbackComponent, initialProperties)
+                }
+            }
         }
 
         focus: true
