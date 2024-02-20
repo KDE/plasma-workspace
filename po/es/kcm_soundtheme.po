@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:39+0000\n"
+"POT-Creation-Date: 2024-02-20 00:39+0000\n"
 "PO-Revision-Date: 2024-02-06 11:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -47,11 +47,15 @@ msgstr[0] "Basado en: %2"
 msgstr[1] "Basado en: %2"
 
 #: ui/main.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label Precedes a list of buttons which can be clicked to preview the "
+#| "theme's sounds. Keep it short"
+#| msgid "Preview sounds:"
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
-"theme's sounds. Keep it short"
-msgid "Preview sounds:"
+"theme's sounds. Keep it very short"
+msgid "Preview:"
 msgstr "Prueba de sonidos:"
 
 #: ui/main.qml:128
