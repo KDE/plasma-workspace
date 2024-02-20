@@ -4,13 +4,11 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
-import org.kde.kirigami 2.18 as Kirigami
-import org.kde.plasma.lookandfeel 1.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.lookandfeel
 
 /**
  * Component to create CSD dialogs that come from the system.
@@ -45,9 +43,9 @@ Kirigami.AbstractApplicationWindow {
     default property Item mainItem
 
     /**
-     * This property holds the QQC2 DialogButtonBox used in the footer of the dialog.
+     * This property holds the QQC2.DialogButtonBox used in the footer of the dialog.
      */
-    readonly property DialogButtonBox dialogButtonBox: contentDialog.item.dialogButtonBox
+    readonly property QQC2.DialogButtonBox dialogButtonBox: contentDialog.item.dialogButtonBox
 
     /**
      * Provides dialogButtonBox.standardButtons
