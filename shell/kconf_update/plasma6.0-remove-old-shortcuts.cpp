@@ -59,6 +59,7 @@ int main(int argc, char **argv)
         qWarning() << actionName;
         action.setObjectName(actionName);
         action.setProperty("componentName", QStringLiteral("plasmashell"));
+        action.setProperty("componentDisplayName", QStringLiteral("Plasma"));
         KGlobalAccel::self()->setShortcut(&action, {QKeySequence()}, KGlobalAccel::NoAutoloading);
         KGlobalAccel::self()->removeAllShortcuts(&action);
     }
