@@ -119,16 +119,32 @@ void SplashWindow::setGeometry(const QRect &rect)
         const auto url = QUrl::fromLocalFile(package.filePath("splashmainscript"));
         qCDebug(KSPLASHQML_DEBUG) << "Loading" << url << "from" << package.path();
         if (!package.isValid() || !url.isValid() || url.isEmpty()) {
-            qCWarning(KSPLASHQML_DEBUG) << "Failed to resolve package url" << url //
-                                        << "package.valid" << package.isValid() //
-                                        << "package.path" << package.path() //
-                                        << "originalPackagePath" << originalPackagePath //
-                                        << "packageName" << packageName //
-                                        << "theme" << m_theme;
+            qCCritical(KSPLASHQML_DEBUG) << "Failed to resolve package url" << url //
+                                         << "package.valid" << package.isValid() //
+                                         << "package.path" << package.path() //
+                                         << "originalPackagePath" << originalPackagePath //
+                                         << "packageName" << packageName //
+                                         << "theme" << m_theme;
             Q_ASSERT(package.isValid());
             Q_ASSERT(url.isValid());
             Q_ASSERT(!url.isEmpty());
+            exit(1);
         }
         setSource(url);
+        if (status() == QQmlComponent::Error) {
+            qCWarning(KSPLASHQML_DEBUG) << "Failed loading" << source();
+            qCWarning(KSPLASHQML_DEBUG) << errors();
+            const auto fallbackUrl = package.fallbackPackage().fileUrl("splashmainscript");
+            if (!fallbackUrl.isEmpty() && source() != fallbackUrl) {
+                qCWarning(KSPLASHQML_DEBUG) << "Loading default theme" << fallbackUrl;
+                setSource(fallbackUrl);
+                if (status() == QQmlComponent::Error) {
+                    qCCritical(KSPLASHQML_DEBUG) << "Failed loading default theme";
+                    exit(1);
+                }
+            } else {
+                exit(1);
+            }
+        };
     }
 }
