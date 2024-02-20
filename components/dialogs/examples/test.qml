@@ -4,31 +4,29 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
-import org.kde.plasma.workspace.dialogs 1.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as KirigamiComponents
+import org.kde.plasma.workspace.dialogs as PWD
 
 Kirigami.AbstractApplicationWindow {
     id: root
-    
+
     width: 600
     height: 600
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: simple
         mainText: "Reset Data"
         subtitle: "This will reset all of your data."
         iconName: "documentinfo"
 
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: simpleList
         mainText: "Reset Data"
         subtitle: "This will reset all of your data."
@@ -52,17 +50,17 @@ Kirigami.AbstractApplicationWindow {
                     display: "banana3"
                 }
             }
-            delegate: ItemDelegate {
+            delegate: QQC2.ItemDelegate {
                 icon.name: "kate"
                 text: display
                 checkable: true
             }
         }
 
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: desktopPolkit
         mainText: "Authentication Required"
         subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
@@ -70,9 +68,9 @@ Kirigami.AbstractApplicationWindow {
 
         Kirigami.PasswordField {}
 
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
         actions: [
-            Kirigami.Action {
+            QQC2.Action {
                 text: "Details"
                 icon.name: "documentinfo"
                 onTriggered: desktopPolkit.close()
@@ -80,19 +78,19 @@ Kirigami.AbstractApplicationWindow {
         ]
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: xdgDialog
         mainText: "Wallet access"
         subtitle: "Share your wallet with 'Somebody'."
         iconName: "kwallet"
         acceptable: false
 
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
         Component.onCompleted: {
-            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Share"
+            dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok).text = "Share"
         }
         actions: [
-            Kirigami.Action {
+            QQC2.Action {
                 text: "Something Happens"
                 icon.name: "documentinfo"
                 onTriggered: xdgDialog.acceptable = true
@@ -100,7 +98,7 @@ Kirigami.AbstractApplicationWindow {
         ]
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: appchooser
         title: "Open with..."
         iconName: "applications-all"
@@ -109,7 +107,7 @@ Kirigami.AbstractApplicationWindow {
                 text: "height: " + parent.height + " / " + xdgDialog.height
             }
 
-            Label {
+            QQC2.Label {
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
                 elide: Text.ElideRight
@@ -123,7 +121,7 @@ Kirigami.AbstractApplicationWindow {
                 }
             }
 
-            Frame {
+            QQC2.Frame {
                 id: viewBackground
                 Layout.fillWidth: true
                 Layout.fillHeight: true
@@ -131,11 +129,10 @@ Kirigami.AbstractApplicationWindow {
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
                 background: Rectangle {
                     color: Kirigami.Theme.backgroundColor
-                    property color borderColor: Kirigami.Theme.textColor
-                    border.color: Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3)
+                    border.color: Qt.alpha(Kirigami.Theme.textColor, 0.3)
                 }
 
-                ScrollView {
+                QQC2.ScrollView {
                     anchors.fill: parent
                     implicitHeight: grid.cellHeight * 3
 
@@ -172,7 +169,7 @@ Kirigami.AbstractApplicationWindow {
                 }
             }
 
-            Button {
+            QQC2.Button {
                 id: showAllAppsButton
                 Layout.alignment: Qt.AlignHCenter
                 icon.name: "view-more-symbolic"
@@ -192,7 +189,7 @@ Kirigami.AbstractApplicationWindow {
         }
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: mobilePolkit
         mainText: "Authentication Required"
         subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
@@ -210,9 +207,9 @@ Kirigami.AbstractApplicationWindow {
             }
         }
 
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
         actions: [
-            Kirigami.Action {
+            QQC2.Action {
                 text: "Details"
                 icon.name: "documentinfo"
                 onTriggered: mobilePolkit.close()
@@ -220,20 +217,20 @@ Kirigami.AbstractApplicationWindow {
         ]
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: sim
         mainText: "SIM Locked"
         subtitle: "Please enter your SIM PIN in order to unlock it."
 
         width: Kirigami.Units.gridUnit * 20
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
 
         Kirigami.PasswordField {
             Layout.fillWidth: true
         }
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: device
         mainText: "Device Request"
         subtitle: "Allow <b>PureMaps</b> to access your location?"
@@ -241,48 +238,48 @@ Kirigami.AbstractApplicationWindow {
         layout: Qt.Vertical
 
         actions: [
-            Kirigami.Action {
+            QQC2.Action {
                 text: "Allow all the time"
                 onTriggered: device.accept()
             },
-            Kirigami.Action {
+            QQC2.Action {
                 text: "Allow only while the app is in use"
                 onTriggered: device.accept()
             },
-            Kirigami.Action {
+            QQC2.Action {
                 text: "Deny"
                 onTriggered: device.accept()
             }
         ]
     }
 
-    SystemDialog {
+    PWD.SystemDialog {
         id: wifi
         mainText: "eduroam"
 
         Kirigami.FormLayout {
-            ComboBox {
+            QQC2.ComboBox {
                 model: ["PEAP"]
                 Layout.fillWidth: true
                 Kirigami.FormData.label: "EAP method:"
                 currentIndex: 0
             }
-            ComboBox {
+            QQC2.ComboBox {
                 model: ["MSCHAPV2"]
                 Layout.fillWidth: true
                 Kirigami.FormData.label: "Phase 2 authentication:"
                 currentIndex: 0
             }
-            TextField {
+            QQC2.TextField {
                 Kirigami.FormData.label: "Domain:"
                 Layout.fillWidth: true
                 text: ""
             }
-            TextField {
+            QQC2.TextField {
                 Kirigami.FormData.label: "Identity:"
                 Layout.fillWidth: true
             }
-            TextField {
+            QQC2.TextField {
                 Kirigami.FormData.label: "Username:"
                 Layout.fillWidth: true
             }
@@ -292,68 +289,67 @@ Kirigami.AbstractApplicationWindow {
             }
         }
 
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Ok | QQC2.DialogButtonBox.Cancel
         Component.onCompleted: {
-            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Save"
+            dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok).text = "Save"
         }
     }
-    
+
     ColumnLayout {
         anchors.fill: parent
-        Button {
+        QQC2.Button {
             text: "Simple dialog (Desktop)"
             onClicked: {
                 simple.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "Simple List"
             onClicked: {
                 simpleList.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "Polkit dialog (Desktop)"
             onClicked: {
                 desktopPolkit.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "App Chooser(-ish)"
             onClicked: {
                 appchooser.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "XDG dialog (Desktop)"
             onClicked: {
                 xdgDialog.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "Polkit dialog (Mobile)"
             onClicked: {
                 mobilePolkit.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "SIM PIN dialog (Mobile)"
             onClicked: {
                 sim.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "Device request dialog (Mobile)"
             onClicked: {
                 device.present()
             }
         }
-        Button {
+        QQC2.Button {
             text: "Wifi Dialog (Mobile)"
             onClicked: {
                 wifi.present()
             }
         }
     }
-} 
-
+}

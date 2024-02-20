@@ -5,12 +5,11 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import org.kde.kirigami 2.18 as Kirigami
+import org.kde.kirigami as Kirigami
 
 /**
  * Dialog used on desktop. Uses SSDs (as opposed to CSDs).
@@ -78,7 +77,7 @@ Item {
                     elide: Text.ElideRight
                 }
 
-                Label {
+                QQC2.Label {
                     id: subtitleLabel
                     Layout.fillWidth: true
                     wrapMode: Text.Wrap
@@ -90,7 +89,7 @@ Item {
         }
 
         // Main content area, to be provided by the implementation
-        Control {
+        QQC2.Control {
             id: contentsControl
 
             Layout.fillWidth: true
@@ -102,7 +101,7 @@ Item {
         }
 
         // Footer area with buttons
-        DialogButtonBox {
+        QQC2.DialogButtonBox {
             id: footerButtonBox
 
             Layout.fillWidth: true
@@ -119,11 +118,10 @@ Item {
             Repeater {
                 model: root.actions
 
-                delegate: Button {
+                delegate: QQC2.Button {
                     action: modelData
                 }
             }
         }
     }
 }
-
