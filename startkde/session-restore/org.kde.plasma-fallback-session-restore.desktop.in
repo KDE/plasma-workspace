@@ -1,0 +1,9 @@
+[Desktop Entry]
+Exec=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-fallback-session-restore
+Name=Plasma Session Restore
+Icon=plasmashell
+OnlyShowIn=KDE;
+Type=Application
+X-KDE-StartupNotify=false
+NoDisplay=true
+

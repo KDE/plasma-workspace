@@ -2,6 +2,7 @@ set(plasma_shutdown_SRCS
     main.cpp
     shutdown.cpp
 )
+configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h)
 
 ecm_qt_declare_logging_category(plasma_shutdown_SRCS  HEADER debug.h IDENTIFIER PLASMA_SESSION CATEGORY_NAME org.kde.plasma.shutdown
     DESCRIPTION "plasma shutdown"

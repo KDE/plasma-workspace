@@ -341,6 +341,7 @@ public:
                 wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
             }
         });
+        initialize();
     }
     ~PlasmaWindowManagement()
     {

@@ -12,6 +12,8 @@
 #include "kwin_interface.h"
 #include "sessionmanagementbackend.h"
 
+#include "config.h"
+
 Shutdown::Shutdown(QObject *parent)
     : QObject(parent)
 {
@@ -62,6 +64,12 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
 
 void Shutdown::ksmServerComplete()
 {
+    // Now record windows that are not session managed
+    int ret = QProcess::execute(QStringLiteral(PLASMA_FALLBACK_SESSION_SAVE_BIN));
+    if (ret) {
+        qCWarning(PLASMA_SESSION) << "plasma-fallback-session-save failed with return code" << ret;
+    }
+
     OrgKdeKWinSessionInterface kwinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus());
     kwinInterface.setTimeout(INT32_MAX);
     auto reply = kwinInterface.closeWaylandWindows();
