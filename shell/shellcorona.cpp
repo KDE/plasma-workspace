@@ -1752,7 +1752,7 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
         return;
     }
 
-    KConfigPropertyMap *config;
+    KConfigPropertyMap *config = nullptr;
     if (wallpaperPlugin != containment->wallpaperPlugin()) {
         // we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
@@ -1764,26 +1764,31 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
     } else {
         // update current wallpaper to allow animations
         QObject *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
-        config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
-    }
-
-    const auto items = config->keys();
-    for (const auto &itemName : items) {
-        auto it = parameters.find(itemName);
-        if (it != parameters.end()) {
-            auto value = it.value();
-            // for some reason QColor is not properly unmarshalled despite my efforts
-            if (itemName == QStringLiteral("Color") && value.metaType() == QMetaType::fromType<QDBusArgument>()) {
-                QColor v;
-                value.value<QDBusArgument>() >> v;
-                value = v;
-            }
-
-            qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << value << screenNum;
-            config->insert(itemName, value);
+        // If the wallpaper plugin is broken, there is no wallpaperGraphicsObject
+        if (wallpaperGraphicsObject) {
+            config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
         }
     }
-    config->writeConfig();
+
+    if (config) {
+        const auto items = config->keys();
+        for (const auto &itemName : items) {
+            auto it = parameters.find(itemName);
+            if (it != parameters.end()) {
+                auto value = it.value();
+                // for some reason QColor is not properly unmarshalled despite my efforts
+                if (itemName == QStringLiteral("Color") && value.metaType() == QMetaType::fromType<QDBusArgument>()) {
+                    QColor v;
+                    value.value<QDBusArgument>() >> v;
+                    value = v;
+                }
+
+                qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << value << screenNum;
+                config->insert(itemName, value);
+            }
+        }
+        config->writeConfig();
+    }
     containment->setWallpaperPlugin(wallpaperPlugin);
     containment->config().sync();
 
