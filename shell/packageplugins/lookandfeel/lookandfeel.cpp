@@ -78,18 +78,12 @@ public:
 
     void pathChanged(KPackage::Package *package) override
     {
-        if (!package->metadata().isValid()) {
-            return;
-        }
-
-        const QString pluginName = package->metadata().pluginId();
-
-        if (!pluginName.isEmpty() && pluginName != DEFAULT_LOOKANDFEEL) {
+        if (!package->metadata().isValid() || package->metadata().pluginId() != DEFAULT_LOOKANDFEEL) {
             KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), DEFAULT_LOOKANDFEEL);
             package->setFallbackPackage(pkg);
-        } else if (package->fallbackPackage().isValid() && pluginName == DEFAULT_LOOKANDFEEL) {
-            package->setFallbackPackage(KPackage::Package());
+            return;
         }
+        package->setFallbackPackage(KPackage::Package());
     }
 };
 
