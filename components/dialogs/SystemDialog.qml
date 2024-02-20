@@ -7,6 +7,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.lookandfeel
 
@@ -38,7 +39,7 @@ Kirigami.AbstractApplicationWindow {
      * Each action will be rendered as a button that the user will be able
      * to click.
      */
-    property list<Kirigami.Action> actions
+    property list<T.Action> actions
 
     default property Item mainItem
 

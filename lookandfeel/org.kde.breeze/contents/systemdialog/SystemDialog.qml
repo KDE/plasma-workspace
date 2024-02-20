@@ -8,6 +8,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import QtQuick.Templates as T
 import Qt5Compat.GraphicalEffects
 import org.kde.kirigami as Kirigami
 
@@ -21,7 +22,7 @@ Item {
     property alias mainText: titleHeading.text
     property alias subtitle: subtitleLabel.text
     property alias iconName: icon.source
-    property list<Kirigami.Action> actions
+    property list<T.Action> actions
     readonly property alias dialogButtonBox: footerButtonBox
 
     property Window window
