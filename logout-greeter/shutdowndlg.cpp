@@ -167,6 +167,11 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
 
     if (!errors().isEmpty()) {
         qCWarning(LOGOUT_GREETER) << errors();
+        if (package.fallbackPackage().isValid()) {
+            qCWarning(LOGOUT_GREETER) << "Trying default theme";
+            init(package.fallbackPackage());
+        }
+        return;
     }
 
     connect(rootObject(), SIGNAL(logoutRequested()), SLOT(slotLogout()));
