@@ -16,3 +16,8 @@ QUrl KPackageInterface::fileUrl(const QByteArray &key) const
 {
     return m_package.fileUrl(key);
 }
+
+QUrl KPackageInterface::fallbackFileUrl(const QByteArray &key) const
+{
+    return m_package.fallbackPackage().fileUrl(key);
+}

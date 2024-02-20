@@ -16,6 +16,7 @@ public:
     KPackageInterface(const KPackage::Package &package);
 
     Q_INVOKABLE QUrl fileUrl(const QByteArray &key) const;
+    Q_INVOKABLE QUrl fallbackFileUrl(const QByteArray &key) const;
 
 private:
     const KPackage::Package m_package;
