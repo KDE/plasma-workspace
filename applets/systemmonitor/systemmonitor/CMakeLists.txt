@@ -12,7 +12,6 @@ target_link_libraries(org.kde.plasma.systemmonitor
                       KF6::ConfigGui
                       KF6::KIOGui
                       KF6::JobWidgets
-                      KSysGuard::SysGuard
                       KSysGuard::Sensors
                       KSysGuard::SensorFaces
                      )
