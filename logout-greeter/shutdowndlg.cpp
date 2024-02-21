@@ -91,6 +91,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         classHint.res_name = const_cast<char *>("ksmserver-logout-greeter");
         classHint.res_class = const_cast<char *>("ksmserver-logout-greeter");
         XSetClassHint(QX11Info::display(), winId(), &classHint);
+        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher);
     }
 
     // QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
@@ -199,10 +200,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
         setFlag(Qt::FramelessWindowHint);
     }
     requestActivate();
-
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
-    }
 
     setKeyboardGrabEnabled(true);
     KWindowEffects::enableBlurBehind(this, true);
