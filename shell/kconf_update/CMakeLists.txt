@@ -18,3 +18,6 @@ target_link_libraries(plasmashell-6.0-keep-custom-position-of-panels KF6::Config
 
 install(FILES plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
+
+install(FILES plasmashell-6.0-keep-custom-position-of-panels.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(TARGETS plasmashell-6.0-keep-custom-position-of-panels DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
