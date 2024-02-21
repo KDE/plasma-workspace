@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-02-06 11:13+0100\n"
+"PO-Revision-Date: 2024-02-20 10:23+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -45,16 +45,12 @@ msgstr[0] "Gebaseerd op: %2"
 msgstr[1] "Gebaseerd op: %2"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Precedes a list of buttons which can be clicked to preview the "
-#| "theme's sounds. Keep it short"
-#| msgid "Preview sounds:"
+#, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr "Geluiden afluisteren:"
+msgstr "Voorvertoning:"
 
 #: ui/main.qml:128
 #, kde-format

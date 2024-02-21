@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-03 00:39+0000\n"
+"POT-Creation-Date: 2024-02-21 00:39+0000\n"
 "PO-Revision-Date: 2023-02-19 15:05+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Sürüşüb çıxan pəncərələri göstərmək"
 msgid "Show in do not disturb mode"
 msgstr "\"Narahat etmə\" rejimində göstərmək"
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
 #, kde-format
 msgid "Show in history"
 msgstr "Tarixçədə göstərmək"
@@ -74,7 +74,14 @@ msgstr ""
 msgid "Play a sound"
 msgstr ""
 
-#: ui/main.qml:41
+#: ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@action:button Application-specific notifications"
+msgid "Configure Application Settings…"
+msgstr "Tətbiq Ayarları"
+
+#: ui/main.qml:57
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -85,30 +92,30 @@ msgstr ""
 "Onun, Sistem treyində və ya bir müstəqil vidjet kimi aktiv edildiyindən əmin "
 "olun."
 
-#: ui/main.qml:52
+#: ui/main.qml:68
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Bildirişlər hazırda Plasma ilə deyil, \"%1 %2\" ilə təqdim edilir."
 
-#: ui/main.qml:56
+#: ui/main.qml:72
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Bildirişlər hazırda Plasma ilə təqdim edilmir."
 
-#: ui/main.qml:63
+#: ui/main.qml:79
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "\"Narahat etmə\" rejimi"
 
-#: ui/main.qml:68
+#: ui/main.qml:84
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr ""
 
-#: ui/main.qml:69
+#: ui/main.qml:85
 #, fuzzy, kde-format
 #| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #| msgid "When screens are mirrored"
@@ -116,7 +123,7 @@ msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Ekranlar çevrildiyi zaman"
 
-#: ui/main.qml:81
+#: ui/main.qml:97
 #, fuzzy, kde-format
 #| msgctxt "Enable Do Not Disturb mode during screen sharing"
 #| msgid "During screen sharing"
@@ -124,127 +131,116 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Ekran paylaşıldığı zaman"
 
-#: ui/main.qml:96
+#: ui/main.qml:112
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr ""
 
-#: ui/main.qml:103
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Görüntü şərtləri"
 
-#: ui/main.qml:108
+#: ui/main.qml:124
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Kritik bildirişlər:"
 
-#: ui/main.qml:109
+#: ui/main.qml:125
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "\"Narahat etməyin\" rejimində göstərmək"
 
-#: ui/main.qml:121
+#: ui/main.qml:137
 #, kde-format
 msgid "Normal notifications:"
 msgstr "Normal bildirişlər:"
 
-#: ui/main.qml:122
+#: ui/main.qml:138
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "Tam ekran pəncərələrdə göstərmək"
 
-#: ui/main.qml:134
+#: ui/main.qml:150
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Az əhəmiyyətli bildirişlər:"
 
-#: ui/main.qml:135
+#: ui/main.qml:151
 #, kde-format
 msgid "Show popup"
 msgstr "Sürüşüb çıxan pəncərələri göstərmək"
 
-#: ui/main.qml:164
+#: ui/main.qml:180
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Sürüşüb çıxan pəncərələr"
 
-#: ui/main.qml:170
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Məkan:"
 
-#: ui/main.qml:171
+#: ui/main.qml:187
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Bildiriş nişanının yanında"
 
-#: ui/main.qml:208
+#: ui/main.qml:224
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Fərdi mövqe seçin..."
 
-#: ui/main.qml:217 ui/main.qml:233
+#: ui/main.qml:233 ui/main.qml:249
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1saniyə"
 msgstr[1] "%1saniyə"
 
-#: ui/main.qml:222
+#: ui/main.qml:238
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Bundan sonra gizlətmək:"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Əlavə rəy bildirişi"
 
-#: ui/main.qml:251
+#: ui/main.qml:267
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Bildirişlərdə göstərmək"
 
-#: ui/main.qml:252
+#: ui/main.qml:268
 #, kde-format
 msgid "Application progress:"
 msgstr "Tətbiqin gedişi:"
 
-#: ui/main.qml:266
+#: ui/main.qml:282
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Şürüşərək üzə çıxan pəncərələri işin gedişatı zamanı açıq tutmaq"
 
-#: ui/main.qml:279
+#: ui/main.qml:295
 #, kde-format
 msgid "Notification badges:"
 msgstr "Bildiriş nişanları:"
 
-#: ui/main.qml:280
+#: ui/main.qml:296
 #, kde-format
 msgid "Show in task manager"
 msgstr "Tapşırıq menecerində göstərmək"
-
-#: ui/main.qml:291
-#, kde-format
-msgctxt "@title:group"
-msgid "Application-specific settings"
-msgstr "Əlavə xüsusi ayarlar"
-
-#: ui/main.qml:296
-#, kde-format
-msgid "Configure…"
-msgstr "Tənzimləmək..."
 
 #: ui/PopupPositionPage.qml:14
 #, kde-format
@@ -282,6 +278,13 @@ msgid ""
 "and behavior"
 msgstr ""
 "Bildirişlərini və davranışlarını tənzimləmək üçün tətbiqi siyahıdan seçin."
+
+#~ msgctxt "@title:group"
+#~ msgid "Application-specific settings"
+#~ msgstr "Əlavə xüsusi ayarlar"
+
+#~ msgid "Configure…"
+#~ msgstr "Tənzimləmək..."
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

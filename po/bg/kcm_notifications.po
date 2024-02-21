@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-03 00:39+0000\n"
+"POT-Creation-Date: 2024-02-21 00:39+0000\n"
 "PO-Revision-Date: 2024-02-03 15:40+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Показване на изскачащи прозорци"
 msgid "Show in do not disturb mode"
 msgstr "Показване в режим \"не безпокойте\""
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
 #, kde-format
 msgid "Show in history"
 msgstr "Показване в историята"
@@ -71,7 +71,14 @@ msgstr "Показване на съобщение в изскачащ проз�
 msgid "Play a sound"
 msgstr "Изпълнение на звук"
 
-#: ui/main.qml:41
+#: ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@action:button Application-specific notifications"
+msgid "Configure Application Settings…"
+msgstr "Настройки на приложението"
+
+#: ui/main.qml:57
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -82,162 +89,151 @@ msgstr ""
 "известия. Уверете се, че е активиран в системната област или като "
 "самостоятелен уиджет."
 
-#: ui/main.qml:52
+#: ui/main.qml:68
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Понастоящем известията се предоставят от \"%1 %2\" вместо от Plasma."
 
-#: ui/main.qml:56
+#: ui/main.qml:72
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Понастоящем известията не се предоставят от Plasma."
 
-#: ui/main.qml:63
+#: ui/main.qml:79
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Режим \"Не безпокойте\":"
 
-#: ui/main.qml:68
+#: ui/main.qml:84
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "Автоматично активиране:"
 
-#: ui/main.qml:69
+#: ui/main.qml:85
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Когато екраните са дублирани"
 
-#: ui/main.qml:81
+#: ui/main.qml:97
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "По време на споделяне на екраните"
 
-#: ui/main.qml:96
+#: ui/main.qml:112
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Ръчно превключване с клавишна комбинация:"
 
-#: ui/main.qml:103
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Условия за видимост"
 
-#: ui/main.qml:108
+#: ui/main.qml:124
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Критични известия:"
 
-#: ui/main.qml:109
+#: ui/main.qml:125
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Показване в режим \"не безпокойте\""
 
-#: ui/main.qml:121
+#: ui/main.qml:137
 #, kde-format
 msgid "Normal notifications:"
 msgstr "Нормални известия:"
 
-#: ui/main.qml:122
+#: ui/main.qml:138
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "Показване над прозорци на цял екран"
 
-#: ui/main.qml:134
+#: ui/main.qml:150
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Известия с нисък приоритет:"
 
-#: ui/main.qml:135
+#: ui/main.qml:151
 #, kde-format
 msgid "Show popup"
 msgstr "Показване на изскачащ прозорец"
 
-#: ui/main.qml:164
+#: ui/main.qml:180
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Изскачащи прозорци"
 
-#: ui/main.qml:170
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Местоположение:"
 
-#: ui/main.qml:171
+#: ui/main.qml:187
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "В близост до иконата за известия"
 
-#: ui/main.qml:208
+#: ui/main.qml:224
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Изберете персонализирана позиция…"
 
-#: ui/main.qml:217 ui/main.qml:233
+#: ui/main.qml:233 ui/main.qml:249
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 секунда"
 msgstr[1] "%1 секунди"
 
-#: ui/main.qml:222
+#: ui/main.qml:238
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Скриване след:"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Допълнителна обратна връзка"
 
-#: ui/main.qml:251
+#: ui/main.qml:267
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Показване в известията"
 
-#: ui/main.qml:252
+#: ui/main.qml:268
 #, kde-format
 msgid "Application progress:"
 msgstr "Прогрес на приложението:"
 
-#: ui/main.qml:266
+#: ui/main.qml:282
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Задържане на изскачащото меню отворено по време на прогрес"
 
-#: ui/main.qml:279
+#: ui/main.qml:295
 #, kde-format
 msgid "Notification badges:"
 msgstr "Значки на известия:"
 
-#: ui/main.qml:280
+#: ui/main.qml:296
 #, kde-format
 msgid "Show in task manager"
 msgstr "Показване в диспечера на задачите"
-
-#: ui/main.qml:291
-#, kde-format
-msgctxt "@title:group"
-msgid "Application-specific settings"
-msgstr "Специфични за приложението настройки"
-
-#: ui/main.qml:296
-#, kde-format
-msgid "Configure…"
-msgstr "Конфигуриране…"
 
 #: ui/PopupPositionPage.qml:14
 #, kde-format
@@ -273,3 +269,10 @@ msgid ""
 msgstr ""
 "Изберете приложение от списъка, за да конфигурирате настройките му за "
 "известяване и поведение"
+
+#~ msgctxt "@title:group"
+#~ msgid "Application-specific settings"
+#~ msgstr "Специфични за приложението настройки"
+
+#~ msgid "Configure…"
+#~ msgstr "Конфигуриране…"

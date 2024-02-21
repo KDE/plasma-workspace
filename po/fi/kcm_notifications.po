@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-03 00:39+0000\n"
+"POT-Creation-Date: 2024-02-21 00:39+0000\n"
 "PO-Revision-Date: 2024-02-14 00:39+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -39,7 +39,7 @@ msgstr "Näytä ponnahdusviestit"
 msgid "Show in do not disturb mode"
 msgstr "Näytä Älä häiritse -tilassa"
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
 #, kde-format
 msgid "Show in history"
 msgstr "Näytä historiassa"
@@ -72,7 +72,14 @@ msgstr "Näytä viesti ponnahdusikkunassa"
 msgid "Play a sound"
 msgstr "Soita ääni"
 
-#: ui/main.qml:41
+#: ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@action:button Application-specific notifications"
+msgid "Configure Application Settings…"
+msgstr "Sovellusasetukset"
+
+#: ui/main.qml:57
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -82,162 +89,151 @@ msgstr ""
 "Ilmoitusten näyttämiseen tarvittua ilmoitussovelmaa ei löytynyt. Varmista, "
 "että se on otettu käyttöön joko ilmoitusalueella tai erillisenä sovelmana."
 
-#: ui/main.qml:52
+#: ui/main.qml:68
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Ilmoitukset tarjoaa tällä hetkellä Plasman sijaan ”%1 %2”."
 
-#: ui/main.qml:56
+#: ui/main.qml:72
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Plasma ei tällä hetkellä toimita ilmoituksia."
 
-#: ui/main.qml:63
+#: ui/main.qml:79
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Älä häiritse -tila"
 
-#: ui/main.qml:68
+#: ui/main.qml:84
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "Automaattisesti käyttöön:"
 
-#: ui/main.qml:69
+#: ui/main.qml:85
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Kun näytöt on peilattuna"
 
-#: ui/main.qml:81
+#: ui/main.qml:97
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Näytön jakamisen aikana"
 
-#: ui/main.qml:96
+#: ui/main.qml:112
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Vaihda manuaalisesti pikanäppäimellä:"
 
-#: ui/main.qml:103
+#: ui/main.qml:119
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Näkyvyysehdot"
 
-#: ui/main.qml:108
+#: ui/main.qml:124
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Elintärkeät ilmoitukset:"
 
-#: ui/main.qml:109
+#: ui/main.qml:125
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Näytä Älä häiritse -tilassa"
 
-#: ui/main.qml:121
+#: ui/main.qml:137
 #, kde-format
 msgid "Normal notifications:"
 msgstr "Tavalliset ilmoitukset:"
 
-#: ui/main.qml:122
+#: ui/main.qml:138
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "Näytä koko näytön ikkunoiden yllä"
 
-#: ui/main.qml:134
+#: ui/main.qml:150
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Vähäisen etusijaisuuden ilmoitukset:"
 
-#: ui/main.qml:135
+#: ui/main.qml:151
 #, kde-format
 msgid "Show popup"
 msgstr "Näytä ponnahdusikkuna"
 
-#: ui/main.qml:164
+#: ui/main.qml:180
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Ponnahdusviestit"
 
-#: ui/main.qml:170
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Sijainti:"
 
-#: ui/main.qml:171
+#: ui/main.qml:187
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Lähellä ilmoituskuvaketta"
 
-#: ui/main.qml:208
+#: ui/main.qml:224
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Mukauta sijaintia…"
 
-#: ui/main.qml:217 ui/main.qml:233
+#: ui/main.qml:233 ui/main.qml:249
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 sekunti"
 msgstr[1] "%1 sekuntia"
 
-#: ui/main.qml:222
+#: ui/main.qml:238
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Piilota ajassa:"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Lisäpalaute"
 
-#: ui/main.qml:251
+#: ui/main.qml:267
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Näytä ilmoituksissa"
 
-#: ui/main.qml:252
+#: ui/main.qml:268
 #, kde-format
 msgid "Application progress:"
 msgstr "Sovelluksen edistyminen:"
 
-#: ui/main.qml:266
+#: ui/main.qml:282
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Pidä ponnahdusviesti auki edistymisen ajan"
 
-#: ui/main.qml:279
+#: ui/main.qml:295
 #, kde-format
 msgid "Notification badges:"
 msgstr "Ilmoitusmerkit:"
 
-#: ui/main.qml:280
+#: ui/main.qml:296
 #, kde-format
 msgid "Show in task manager"
 msgstr "Näytä tehtävänhallinnassa"
-
-#: ui/main.qml:291
-#, kde-format
-msgctxt "@title:group"
-msgid "Application-specific settings"
-msgstr "Sovelluskohtaiset asetukset"
-
-#: ui/main.qml:296
-#, kde-format
-msgid "Configure…"
-msgstr "Asetukset…"
 
 #: ui/PopupPositionPage.qml:14
 #, kde-format
@@ -272,6 +268,13 @@ msgid ""
 msgstr ""
 "Mukauta sovelluksen ilmoitusasetuksia ja toimintaa valitsemalla ensin "
 "sovellus luettelosta"
+
+#~ msgctxt "@title:group"
+#~ msgid "Application-specific settings"
+#~ msgstr "Sovelluskohtaiset asetukset"
+
+#~ msgid "Configure…"
+#~ msgstr "Asetukset…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

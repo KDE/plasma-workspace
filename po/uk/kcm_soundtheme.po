@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-02-06 08:57+0200\n"
+"PO-Revision-Date: 2024-02-20 09:48+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -48,16 +48,12 @@ msgstr[2] "Засновано на: %2"
 msgstr[3] "Засновано на: %2"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Precedes a list of buttons which can be clicked to preview the "
-#| "theme's sounds. Keep it short"
-#| msgid "Preview sounds:"
+#, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr "Прослухати звуки:"
+msgstr "Прослухати:"
 
 #: ui/main.qml:128
 #, kde-format

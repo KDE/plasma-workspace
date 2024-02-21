@@ -50,7 +50,7 @@ msgstr "디스플레이 설정..."
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
-msgstr "콘텍스트 메뉴 플러그인 설정하기"
+msgstr "상황에 맞는 메뉴 플러그인 설정하기"
 
 #: menu.cpp:295
 #, kde-format

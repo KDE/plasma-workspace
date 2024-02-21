@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 19:54+0100\n"
+"PO-Revision-Date: 2024-02-20 16:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -45,16 +45,12 @@ msgstr[0] "Baseado en: %2"
 msgstr[1] "Baseado en: %2"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Precedes a list of buttons which can be clicked to preview the "
-#| "theme's sounds. Keep it short"
-#| msgid "Preview sounds:"
+#, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr "Sons de exemplo:"
+msgstr "Vista previa:"
 
 # skip-rule: trasno-11.0-en-sound
 #: ui/main.qml:128

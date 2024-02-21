@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-02-06 16:30+0300\n"
+"PO-Revision-Date: 2024-02-20 17:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -46,34 +46,30 @@ msgstr[0] "Şu temellidir: %2"
 msgstr[1] "Şunlar temellidir: %2"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Precedes a list of buttons which can be clicked to preview the "
-#| "theme's sounds. Keep it short"
-#| msgid "Preview sounds:"
+#, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr "Sesleri önizle:"
+msgstr "Önizleme:"
 
 #: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr "\"%1\" sesini önizle"
+msgstr "‘%1’ sesini önizle"
 
 #: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr "\"%1\" temasının tanıtım sesini önizle"
+msgstr "‘%1’ temasının tanıtım sesini önizle"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr "%1 teması, '%2' sesini içermiyor"
+msgstr "%1 teması, ‘%2’ sesini içermiyor"
 
 #: ui/main.qml:190
 #, kde-format
