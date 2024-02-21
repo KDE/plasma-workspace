@@ -187,6 +187,3 @@ msgstr "Zavřít vyskakovací okno"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Zobrazit skryté ikony"
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Rozšířit systémovou část panelu"

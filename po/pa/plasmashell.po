@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:28+0000\n"
+"POT-Creation-Date: 2024-02-21 02:25+0000\n"
 "PO-Revision-Date: 2023-12-26 07:04-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -296,12 +296,12 @@ msgstr "...ਡੈਸਕਟਾਪ ਅਤੇ ਪੈਨਲਾਂ ਦਾ ਇੰਤ�
 msgid "Move keyboard focus between panels"
 msgstr "ਪੈਨਲਾਂ ਵਿਚਾਲੇ ਕੀਬੋਰਡ ਫ਼ੋਕਸ ਨੂੰ ਬਦਲੋ"
 
-#: shellcorona.cpp:2051
+#: shellcorona.cpp:2056
 #, kde-format
 msgid "Add Panel"
 msgstr "ਪੈਨਲ ਜੋੜੋ"
 
-#: shellcorona.cpp:2093
+#: shellcorona.cpp:2098
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
