@@ -892,6 +892,8 @@ void EnvCanadaIon::parseWindInfo(WeatherData &data, QXmlStreamReader &xml)
 void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("currentConditions"));
+
+    // Reset all the condition properties
     data.temperature = qQNaN();
     data.dewpoint = qQNaN();
     data.condition = i18n("N/A");
@@ -902,6 +904,10 @@ void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
     data.pressure = qQNaN();
     data.visibility = qQNaN();
     data.humidity = qQNaN();
+    data.windSpeed = qQNaN();
+    data.windGust = qQNaN();
+    data.windDirection = QString();
+    data.windDegrees = QString();
 
     while (!xml.atEnd()) {
         xml.readNext();
