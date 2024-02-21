@@ -427,7 +427,11 @@ void DWDIon::searchInStationList(const QString searchText)
 
 void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
 {
-    QVariantMap weatherMap = doc.object().toVariantMap().first().toMap();
+    QVariantMap weatherMap = doc.object().toVariantMap();
+    if (weatherMap.isEmpty()) {
+        return;
+    }
+    weatherMap = weatherMap.first().toMap(); // Mind the .first(). It needs guarding against isEmpty.
     if (!weatherMap.isEmpty()) {
         // Forecast data
         QVariantList daysList = weatherMap[QStringLiteral("days")].toList();
