@@ -30,6 +30,7 @@ public:
     };
 
     std::unique_ptr<EventPluginsModel> model;
+    // These pointers are owned and managed by QPluginLoader internals and deleted once all consumers unload.
     QList<CalendarEvents::CalendarEventsPlugin *> plugins;
     QMap<QString, PluginData> availablePlugins;
     QStringList enabledPlugins;
@@ -145,7 +146,8 @@ EventPluginsManagerPrivate::EventPluginsManagerPrivate()
 
 EventPluginsManagerPrivate::~EventPluginsManagerPrivate()
 {
-    qDeleteAll(plugins);
+    // Don't try to delete the root component. - the Qt documentation
+    plugins.clear();
 }
 
 EventPluginsManager::EventPluginsManager(QObject *parent)
