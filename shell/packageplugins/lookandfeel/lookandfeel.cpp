@@ -33,16 +33,9 @@ public:
         package->addDirectoryDefinition("previews", QStringLiteral("previews"));
         package->addFileDefinition("preview", QStringLiteral("previews/preview.png"));
         package->addFileDefinition("fullscreenpreview", QStringLiteral("previews/fullscreenpreview.jpg"));
-        package->addFileDefinition("loginmanagerpreview", QStringLiteral("previews/loginmanager.png"));
         package->addFileDefinition("lockscreenpreview", QStringLiteral("previews/lockscreen.png"));
-        package->addFileDefinition("userswitcherpreview", QStringLiteral("previews/userswitcher.png"));
         package->addFileDefinition("splashpreview", QStringLiteral("previews/splash.png"));
-        package->addFileDefinition("runcommandpreview", QStringLiteral("previews/runcommand.png"));
-        package->addFileDefinition("windowdecorationpreview", QStringLiteral("previews/windowdecoration.png"));
         package->addFileDefinition("windowswitcherpreview", QStringLiteral("previews/windowswitcher.png"));
-
-        package->addDirectoryDefinition("loginmanager", QStringLiteral("loginmanager"));
-        package->addFileDefinition("loginmanagermainscript", QStringLiteral("loginmanager/LoginManager.qml"));
 
         package->addDirectoryDefinition("logout", QStringLiteral("logout"));
         package->addFileDefinition("logoutmainscript", QStringLiteral("logout/Logout.qml"));
@@ -50,20 +43,11 @@ public:
         package->addDirectoryDefinition("lockscreen", QStringLiteral("lockscreen"));
         package->addFileDefinition("lockscreenmainscript", QStringLiteral("lockscreen/LockScreen.qml"));
 
-        package->addDirectoryDefinition("userswitcher", QStringLiteral("userswitcher"));
-        package->addFileDefinition("userswitchermainscript", QStringLiteral("userswitcher/UserSwitcher.qml"));
-
         package->addDirectoryDefinition("osd", QStringLiteral("osd"));
         package->addFileDefinition("osdmainscript", QStringLiteral("osd/Osd.qml"));
 
         package->addDirectoryDefinition("splash", QStringLiteral("splash"));
         package->addFileDefinition("splashmainscript", QStringLiteral("splash/Splash.qml"));
-
-        package->addDirectoryDefinition("runcommand", QStringLiteral("runcommand"));
-        package->addFileDefinition("runcommandmainscript", QStringLiteral("runcommand/RunCommand.qml"));
-
-        package->addDirectoryDefinition("windowdecoration", QStringLiteral("windowdecoration"));
-        package->addFileDefinition("windowdecorationmainscript", QStringLiteral("windowdecoration/WindowDecoration.qml"));
 
         package->addDirectoryDefinition("windowswitcher", QStringLiteral("windowswitcher"));
         package->addFileDefinition("windowswitchermainscript", QStringLiteral("windowswitcher/WindowSwitcher.qml"));
