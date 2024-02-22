@@ -241,8 +241,9 @@ Kirigami.OverlaySheet {
 
                     onClicked: {
                         grabToImage(function(result) {
-                            const uri = kcm.plonkImageInTempfile(result.image)
-                            if (uri != "") {
+                            const path = kcm.plonkImageInTempfile(result.image)
+                            if (path != "") {
+                                const uri = "file://" + path
                                 usersDetailPage.oldImage = usersDetailPage.user.face
                                 usersDetailPage.user.face = uri
                                 usersDetailPage.overrideImage = true
@@ -270,8 +271,9 @@ Kirigami.OverlaySheet {
 
                     onClicked: {
                         grabToImage(function(result) {
-                            const uri = kcm.plonkImageInTempfile(result.image)
-                            if (uri != "") {
+                            const path = kcm.plonkImageInTempfile(result.image)
+                            if (path != "") {
+                                const uri = "file://" + path
                                 usersDetailPage.oldImage = usersDetailPage.user.face
                                 usersDetailPage.user.face = uri
                                 usersDetailPage.overrideImage = true
