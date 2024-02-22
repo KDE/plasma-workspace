@@ -3,14 +3,15 @@
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+# Jure Repinc <jlp@holodeck1.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2024-01-30 07:14+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"PO-Revision-Date: 2024-02-20 01:56+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"Language-Team: LUGOS\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andrej Mernik,Matjaž Jeran"
+msgstr "Andrej Mernik,Matjaž Jeran,Jure Repinc"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
+msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net,jlp@holodeck1.com"
 
 #: currentcontainmentactionsmodel.cpp:206
 #, kde-format
@@ -104,7 +105,7 @@ msgstr "Obiščite bugs.kde.org za poročanje o težavah"
 #: main.cpp:88
 #, kde-format
 msgid "Plasma Shell"
-msgstr "Lupina za Plasmo"
+msgstr "Lupina Plasma"
 
 #: main.cpp:100
 #, kde-format
@@ -247,13 +248,13 @@ msgstr "Zaslonska tipkovnica izklopljena"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr "Skrij ploščo konfiguracije"
+msgstr "Skrij nastavitve pulta"
 
 #: panelview.cpp:1015
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr "Prikaži ploščo konfiguracije"
+msgstr "Prikaži nastavitve pulta"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
@@ -309,12 +310,12 @@ msgstr "Omogoči vnos %1 upravljalnika opravil"
 #: shellcorona.cpp:284
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr "Upravljaj namizja in plošče..."
+msgstr "Upravljanje namizij in pultov …"
 
 #: shellcorona.cpp:306
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "Prenašaj osredotočenost tipkovnice med ploščami"
+msgstr "Prenašaj osredotočenost tipkovnice med pulti"
 
 #: shellcorona.cpp:2056
 #, kde-format
@@ -357,7 +358,7 @@ msgstr "Število pultov"
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr "Poštej pulte"
+msgstr "Prešteje pulte"
 
 #~ msgctxt "@label %1 version string"
 #~ msgid "Plasma %1 Development Build"

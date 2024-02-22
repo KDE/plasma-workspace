@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2024-02-03 09:23+0200\n"
+"PO-Revision-Date: 2024-02-21 10:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -76,11 +76,10 @@ msgid "Play a sound"
 msgstr "Відтворити звук"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "Параметри програм"
+msgstr "Налаштувати параметри програми…"
 
 #: ui/main.qml:57
 #, kde-format

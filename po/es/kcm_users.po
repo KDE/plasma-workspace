@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-19 00:39+0000\n"
+"POT-Creation-Date: 2024-02-22 00:39+0000\n"
 "PO-Revision-Date: 2023-10-05 11:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -210,150 +210,150 @@ msgstr "Cancelar"
 msgid "Done"
 msgstr "Terminado"
 
-#: src/ui/FingerprintDialog.qml:86
+#: src/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Registro de huella dactilar"
 
-#: src/ui/FingerprintDialog.qml:96
+#: src/ui/FingerprintDialog.qml:94
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo índice derecho en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:98
+#: src/ui/FingerprintDialog.qml:96
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo corazón derecho en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:98
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo anular derecho en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:102
+#: src/ui/FingerprintDialog.qml:100
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo meñique derecho en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:102
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo pulgar derecho en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:106
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo índice izquierdo en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:108
+#: src/ui/FingerprintDialog.qml:106
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo corazón izquierdo en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:108
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo anular izquierdo en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:110
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo meñique izquierdo en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Pulse repetidamente con su dedo pulgar izquierdo en el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Deslice repetidamente su dedo índice derecho por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo corazón derecho por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Deslice repetidamente su dedo anular derecho por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo meñique derecho por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Deslice repetidamente su dedo pulgar derecho por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo índice izquierdo por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo corazón izquierdo por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo anular izquierdo por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo meñique izquierdo por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Deslice repetidamente su dedo pulgar izquierdo por el sensor de huellas."
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Huella registrada"
 
-#: src/ui/FingerprintDialog.qml:184
+#: src/ui/FingerprintDialog.qml:185
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Escoja el dedo a registrar"

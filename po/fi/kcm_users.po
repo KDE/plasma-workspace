@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-19 00:39+0000\n"
+"POT-Creation-Date: 2024-02-22 00:39+0000\n"
 "PO-Revision-Date: 2023-11-22 21:35+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -207,153 +207,153 @@ msgstr "Peru"
 msgid "Done"
 msgstr "Valmis"
 
-#: src/ui/FingerprintDialog.qml:86
+#: src/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Kirjataan sormenjälkeä"
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:96
+#: src/ui/FingerprintDialog.qml:94
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "Paina toistuvasti oikeaa etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:98
+#: src/ui/FingerprintDialog.qml:96
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Paina toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:98
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Paina toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:102
+#: src/ui/FingerprintDialog.qml:100
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Paina toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:102
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Paina toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:106
+#: src/ui/FingerprintDialog.qml:104
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Paina toistuvasti vasenta etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:108
+#: src/ui/FingerprintDialog.qml:106
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Paina toistuvasti vasenta keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:108
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Paina toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:110
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Paina toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:114
+#: src/ui/FingerprintDialog.qml:112
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Paina toistuvasti vasenta peukaloa sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti oikeaa etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:118
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:120
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:122
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti vasenta etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti vasenta keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: src/ui/FingerprintDialog.qml:136
+#: src/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "Pyyhkäise toistuvasti vasenta peukaloa sormenjälkitunnistimella."
 
-#: src/ui/FingerprintDialog.qml:152
+#: src/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Sormi on muistissa"
 
-#: src/ui/FingerprintDialog.qml:184
+#: src/ui/FingerprintDialog.qml:185
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Valitse kirjattava sormi"

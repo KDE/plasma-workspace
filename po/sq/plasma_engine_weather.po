@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-03 00:39+0000\n"
+"POT-Creation-Date: 2024-02-22 00:39+0000\n"
 "PO-Revision-Date: 2010-03-07 01:45+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -2762,7 +2762,7 @@ msgstr "UK"
 msgid "USA"
 msgstr "SHBA"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/dwd/ion_dwd.cpp:619
+#: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/dwd/ion_dwd.cpp:623
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
@@ -2775,7 +2775,7 @@ msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "Natë"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:623
+#: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:627
 #: ions/envcan/ion_envcan.cpp:1515
 #, fuzzy, kde-format
 #| msgid "Sat"
@@ -2783,7 +2783,7 @@ msgctxt "Short for Saturday"
 msgid "Sat"
 msgstr "Sht"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:624
+#: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:628
 #: ions/envcan/ion_envcan.cpp:1516
 #, fuzzy, kde-format
 #| msgid "Sun"
@@ -2791,7 +2791,7 @@ msgctxt "Short for Sunday"
 msgid "Sun"
 msgstr "Die"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:625
+#: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:629
 #: ions/envcan/ion_envcan.cpp:1517
 #, fuzzy, kde-format
 #| msgid "Mon"
@@ -2799,7 +2799,7 @@ msgctxt "Short for Monday"
 msgid "Mon"
 msgstr "Hën"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:626
+#: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:630
 #: ions/envcan/ion_envcan.cpp:1518
 #, fuzzy, kde-format
 #| msgid "Tue"
@@ -2807,7 +2807,7 @@ msgctxt "Short for Tuesday"
 msgid "Tue"
 msgstr "Mar"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:627
+#: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:631
 #: ions/envcan/ion_envcan.cpp:1519
 #, fuzzy, kde-format
 #| msgid "Wed"
@@ -2815,7 +2815,7 @@ msgctxt "Short for Wednesday"
 msgid "Wed"
 msgstr "Mër"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:628
+#: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:632
 #: ions/envcan/ion_envcan.cpp:1520
 #, fuzzy, kde-format
 #| msgid "Thu"
@@ -2823,7 +2823,7 @@ msgctxt "Short for Thursday"
 msgid "Thu"
 msgstr "Enj"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:629
+#: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:633
 #: ions/envcan/ion_envcan.cpp:1521
 #, fuzzy, kde-format
 #| msgid "Fri"
@@ -2837,7 +2837,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
 msgstr ""
 
-#: ions/dwd/ion_dwd.cpp:655
+#: ions/dwd/ion_dwd.cpp:659
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
