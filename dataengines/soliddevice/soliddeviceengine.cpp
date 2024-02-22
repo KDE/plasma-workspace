@@ -387,7 +387,9 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
                     << kli18n("Primary Battery").untranslatedText() << kli18n("Mouse Battery").untranslatedText()
                     << kli18n("Keyboard Battery").untranslatedText() << kli18n("Keyboard Mouse Battery").untranslatedText()
                     << kli18n("Camera Battery").untranslatedText() << kli18n("Phone Battery").untranslatedText() << kli18n("Monitor Battery").untranslatedText()
-                    << kli18n("Gaming Input Battery").untranslatedText() << kli18n("Bluetooth Battery").untranslatedText();
+                    << kli18n("Gaming Input Battery").untranslatedText() << kli18n("Bluetooth Battery").untranslatedText()
+                    << kli18n("Tablet Battery").untranslatedText() << kli18n("Headphone Battery").untranslatedText()
+                    << kli18n("Headset Battery").untranslatedText() << kli18n("Touchpad Battery").untranslatedText();
 
         QStringList chargestate;
         chargestate << kli18n("Not Charging").untranslatedText() << kli18n("Charging").untranslatedText() << kli18n("Discharging").untranslatedText()

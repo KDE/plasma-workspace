@@ -422,6 +422,14 @@ QString PowermanagementEngine::batteryTypeToString(const Solid::Battery *battery
         return QStringLiteral("GamingInput");
     case Solid::Battery::BluetoothBattery:
         return QStringLiteral("Bluetooth");
+    case Solid::Battery::TabletBattery:
+        return QStringLiteral("Tablet");
+    case Solid::Battery::HeadphoneBattery:
+        return QStringLiteral("Headphone");
+    case Solid::Battery::HeadsetBattery:
+        return QStringLiteral("Headset");
+    case Solid::Battery::TouchpadBattery:
+        return QStringLiteral("Touchpad");
     default:
         return QStringLiteral("Unknown");
     }
