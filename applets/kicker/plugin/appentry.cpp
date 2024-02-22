@@ -312,7 +312,6 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
     if (actionId.isEmpty()) {
         auto *job = new KIO::ApplicationLauncherJob(m_service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-        job->setRunFlags(KIO::ApplicationLauncherJob::DeleteTemporaryFiles);
         job->start();
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
