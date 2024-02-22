@@ -76,6 +76,7 @@ Kirigami.OverlaySheet {
 
     component InitialsButton: PictureButton {
         text: i18nc("@action:button", "Initials")
+        property alias colorRectangle: colorRectangle
         property alias color: colorRectangle.color
         property alias headingColor: heading.color
 
@@ -101,6 +102,7 @@ Kirigami.OverlaySheet {
     }
 
     component IconButton: PictureButton {
+        property alias colorRectangle: colorRectangle
         property alias color: colorRectangle.color
         property alias iconColor: icon.color
 
@@ -240,7 +242,7 @@ Kirigami.OverlaySheet {
                     QQC2.ToolTip.visible: hovered || activeFocus
 
                     onClicked: {
-                        grabToImage(function(result) {
+                        colorRectangle.grabToImage(function(result) {
                             const path = kcm.plonkImageInTempfile(result.image)
                             if (path != "") {
                                 const uri = "file://" + path
@@ -270,7 +272,7 @@ Kirigami.OverlaySheet {
                     Accessible.description: i18nc("@info:whatsthis", "User avatar placeholder icon")
 
                     onClicked: {
-                        grabToImage(function(result) {
+                        colorRectangle.grabToImage(function(result) {
                             const path = kcm.plonkImageInTempfile(result.image)
                             if (path != "") {
                                 const uri = "file://" + path
