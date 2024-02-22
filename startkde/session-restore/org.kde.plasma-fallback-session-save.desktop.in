@@ -1,6 +1,15 @@
 [Desktop Entry]
 Exec=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-fallback-session-save
 Name=Plasma Session Save
+Name[ca]=Desa la sessió del Plasma
+Name[es]=Guardar sesión de Plasma
+Name[eu]=Plasmaren saioa gorde
+Name[ka]=Plasma-ის სესიის შენახვა
+Name[nl]=Opslaan van Plasmasessie
+Name[sl]=Shrani sejo Plasme
+Name[tr]=Plasma Oturumunu Kaydet
+Name[uk]=Збереження сеансу Плазми
+Name[x-test]=xxPlasma Session Savexx
 Icon=plasmashell
 Type=Application
 X-KDE-StartupNotify=false

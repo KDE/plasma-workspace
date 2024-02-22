@@ -1,6 +1,15 @@
 [Desktop Entry]
 Exec=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-fallback-session-restore
 Name=Plasma Session Restore
+Name[ca]=Restaura la sessió del Plasma
+Name[es]=Restaurar sesión de Plasma
+Name[eu]=Plasma saioa lehengoratu
+Name[ka]=Plasma-ის სესიის აღდგენა
+Name[nl]=Herstel van Plasmasessie
+Name[sl]=Obnova seje Plasma
+Name[tr]=Plasma Oturumunu Geri Yükle
+Name[uk]=Відновлення сеансу Плазми
+Name[x-test]=xxPlasma Session Restorexx
 Icon=plasmashell
 OnlyShowIn=KDE;
 Type=Application
