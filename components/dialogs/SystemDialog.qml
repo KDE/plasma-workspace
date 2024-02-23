@@ -100,9 +100,9 @@ Kirigami.AbstractApplicationWindow {
     }
 
     Binding {
-        target: dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok)
+        target: dialogButtonBox?.standardButton(QQC2.DialogButtonBox.Ok)
         property: "enabled"
-        when: dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok)
+        when: dialogButtonBox?.standardButtons & QQC2.DialogButtonBox.Ok
         value: root.acceptable
     }
 
