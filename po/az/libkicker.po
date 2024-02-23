@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-28 00:39+0000\n"
+"POT-Creation-Date: 2024-02-23 00:39+0000\n"
 "PO-Revision-Date: 2022-07-03 13:56+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -68,13 +68,13 @@ msgstr "Əlavələri silmək və ya idarə etmək..."
 msgid "Hide Application"
 msgstr "Tətbiqi gizlətmək"
 
-#: plugin/appentry.cpp:356
+#: plugin/appentry.cpp:355
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:358
+#: plugin/appentry.cpp:357
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

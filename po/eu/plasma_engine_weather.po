@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:39+0000\n"
+"POT-Creation-Date: 2024-02-23 00:39+0000\n"
 "PO-Revision-Date: 2023-02-15 07:03+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -2720,49 +2720,49 @@ msgid "Tonight"
 msgstr "Gaur gauean"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:627
-#: ions/envcan/ion_envcan.cpp:1515
+#: ions/envcan/ion_envcan.cpp:1521
 #, kde-format
 msgctxt "Short for Saturday"
 msgid "Sat"
 msgstr "lar"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:628
-#: ions/envcan/ion_envcan.cpp:1516
+#: ions/envcan/ion_envcan.cpp:1522
 #, kde-format
 msgctxt "Short for Sunday"
 msgid "Sun"
 msgstr "Iga"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:629
-#: ions/envcan/ion_envcan.cpp:1517
+#: ions/envcan/ion_envcan.cpp:1523
 #, kde-format
 msgctxt "Short for Monday"
 msgid "Mon"
 msgstr "Asl"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:630
-#: ions/envcan/ion_envcan.cpp:1518
+#: ions/envcan/ion_envcan.cpp:1524
 #, kde-format
 msgctxt "Short for Tuesday"
 msgid "Tue"
 msgstr "Asr"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:631
-#: ions/envcan/ion_envcan.cpp:1519
+#: ions/envcan/ion_envcan.cpp:1525
 #, kde-format
 msgctxt "Short for Wednesday"
 msgid "Wed"
 msgstr "Asz"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:632
-#: ions/envcan/ion_envcan.cpp:1520
+#: ions/envcan/ion_envcan.cpp:1526
 #, kde-format
 msgctxt "Short for Thursday"
 msgid "Thu"
 msgstr "Osg"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:633
-#: ions/envcan/ion_envcan.cpp:1521
+#: ions/envcan/ion_envcan.cpp:1527
 #, kde-format
 msgctxt "Short for Friday"
 msgid "Fri"
@@ -2780,38 +2780,38 @@ msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
 msgstr "Sorburua: Deutscher Wetterdienst"
 
-#: ions/envcan/ion_envcan.cpp:897 ions/envcan/ion_envcan.cpp:899
-#: ions/envcan/ion_envcan.cpp:1383 ions/envcan/ion_envcan.cpp:1508
-#: ions/envcan/ion_envcan.cpp:1524 ions/noaa/ion_noaa.cpp:365
+#: ions/envcan/ion_envcan.cpp:899 ions/envcan/ion_envcan.cpp:901
+#: ions/envcan/ion_envcan.cpp:1389 ions/envcan/ion_envcan.cpp:1514
+#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:365
 #: ions/noaa/ion_noaa.cpp:550
 #, kde-format
 msgid "N/A"
 msgstr "E/A"
 
-#: ions/envcan/ion_envcan.cpp:1512
+#: ions/envcan/ion_envcan.cpp:1518
 #, kde-format
 msgid "day"
 msgstr "egun"
 
-#: ions/envcan/ion_envcan.cpp:1513
+#: ions/envcan/ion_envcan.cpp:1519
 #, kde-format
 msgctxt "Short for tonight"
 msgid "nite"
 msgstr "gau"
 
-#: ions/envcan/ion_envcan.cpp:1514
+#: ions/envcan/ion_envcan.cpp:1520
 #, kde-format
 msgctxt "Short for night, appended to the end of the weekday"
 msgid "nt"
 msgstr "gau"
 
-#: ions/envcan/ion_envcan.cpp:1545
+#: ions/envcan/ion_envcan.cpp:1551
 #, kde-format
 msgctxt "precipitation total, very little"
 msgid "Trace"
 msgstr "Aztarna"
 
-#: ions/envcan/ion_envcan.cpp:1571
+#: ions/envcan/ion_envcan.cpp:1577
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"

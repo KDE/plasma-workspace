@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-28 00:39+0000\n"
+"POT-Creation-Date: 2024-02-23 00:39+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -70,13 +70,13 @@ msgstr ""
 msgid "Hide Application"
 msgstr ""
 
-#: plugin/appentry.cpp:356
+#: plugin/appentry.cpp:355
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr ""
 
-#: plugin/appentry.cpp:358
+#: plugin/appentry.cpp:357
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

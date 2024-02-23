@@ -71,11 +71,10 @@ msgid "Play a sound"
 msgstr "Přehrát zvuk"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "Nastavení aplikace"
+msgstr ""
 
 #: ui/main.qml:57
 #, kde-format
@@ -266,10 +265,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit"
-
-#~ msgctxt "@title:group"
-#~ msgid "Application-specific settings"
-#~ msgstr "Nastavení specifická pro aplikaci"
-
-#~ msgid "Configure…"
-#~ msgstr "Nastavit…"

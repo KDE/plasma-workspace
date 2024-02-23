@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2019, 2020, 2021, 2022, 2023.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2019, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2023-08-03 17:30+0200\n"
+"PO-Revision-Date: 2024-02-22 15:20+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -163,7 +163,7 @@ msgstr "Tu ha le sequente themas de cursor de mus sur tu systema:"
 #: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr "(Thema currente pro istesession de Plasma)"
+msgstr "(Thema currente pro iste session de Plasma)"
 
 #: ui/Delegate.qml:44
 #, kde-format

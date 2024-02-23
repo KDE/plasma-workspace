@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-28 00:39+0000\n"
+"POT-Creation-Date: 2024-02-23 00:39+0000\n"
 "PO-Revision-Date: 2023-01-10 11:44+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -69,13 +69,13 @@ msgstr "Odinštalovať alebo spravovať doplnky…"
 msgid "Hide Application"
 msgstr "Skryť aplikáciu"
 
-#: plugin/appentry.cpp:356
+#: plugin/appentry.cpp:355
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:358
+#: plugin/appentry.cpp:357
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

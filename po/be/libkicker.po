@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-28 00:39+0000\n"
+"POT-Creation-Date: 2024-02-23 00:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -72,13 +72,13 @@ msgstr "Выдаленне або кіраванне дапаўненнямі…
 msgid "Hide Application"
 msgstr "Схаваць праграму"
 
-#: plugin/appentry.cpp:356
+#: plugin/appentry.cpp:355
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:358
+#: plugin/appentry.cpp:357
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
