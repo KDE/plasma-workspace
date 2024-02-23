@@ -16,6 +16,8 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
+add_subdirectory(components_tests)
+
 add_test(
     NAME analogclocktest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/analogclocktest.py
