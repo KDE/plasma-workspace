@@ -1,22 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-09 02:34+0000\n"
-"PO-Revision-Date: 2022-09-10 09:54+0400\n"
+"PO-Revision-Date: 2024-02-22 13:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: ui/DayNightView.qml:110
 #, kde-format
@@ -108,16 +108,14 @@ msgid "Custom times"
 msgstr "وقت مخصص"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "دائما على اللون الليلي"
+msgstr "دائما على الإضاءة الليلية"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "حرارة اللون النهاري"
+msgstr "حرارة الإضاءة النهارية:"
 
 #: ui/main.qml:226 ui/main.qml:285
 #, kde-format
@@ -126,9 +124,7 @@ msgid "%1K"
 msgstr "%1 كلفن"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "بارد (بدون مرشح)"
@@ -140,17 +136,15 @@ msgid "Warm"
 msgstr "دافئ"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "حرارة اللون الليلي:"
+msgstr "حرارة الإضاءة الليلية:"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "تحسس الموقع"
+msgstr "الموقع الحالي:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -170,10 +164,9 @@ msgstr ""
 "\">خدمة موقع موزيلا</link>."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "يبدأ اللون الليلي عند:"
+msgstr "تبدأ الإضاءة الليلية عند:"
 
 #: ui/main.qml:362 ui/main.qml:385
 #, kde-format
@@ -181,10 +174,9 @@ msgid "Input format: HH:MM"
 msgstr "تنسيق الإدخال: س س : دد"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "يبدأ اللون النهاري عند:"
+msgstr "تبدأ الإضاءة النهارية عند:"
 
 #: ui/main.qml:394
 #, kde-format
