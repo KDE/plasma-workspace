@@ -46,14 +46,14 @@ Kirigami.AbstractApplicationWindow {
     /**
      * This property holds the QQC2.DialogButtonBox used in the footer of the dialog.
      */
-    readonly property QQC2.DialogButtonBox dialogButtonBox: contentDialog.item.dialogButtonBox
+    readonly property QQC2.DialogButtonBox dialogButtonBox: contentDialog.item?.dialogButtonBox ?? null
 
     /**
      * Provides dialogButtonBox.standardButtons
      *
      * Useful to be able to set it as dialogButtonBox will be null as the object gets built
      */
-    property var standardButtons: contentDialog.item?.dialogButtonBox.standardButtons
+    property int standardButtons: dialogButtonBox?.standardButtons ?? QQC2.DialogButtonBox.NoButton
 
     /**
      * Controls whether the accept button is enabled
@@ -100,9 +100,9 @@ Kirigami.AbstractApplicationWindow {
     }
 
     Binding {
-        target: dialogButtonBox.standardButton(DialogButtonBox.Ok)
+        target: dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok)
         property: "enabled"
-        when: dialogButtonBox.standardButton(DialogButtonBox.Ok)
+        when: dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok)
         value: root.acceptable
     }
 
@@ -134,8 +134,8 @@ Kirigami.AbstractApplicationWindow {
         focus: true
 
         function accept() {
-            const button = dialogButtonBox.standardButton(DialogButtonBox.Ok);
-            if (button && button.enabled) {
+            const button = dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok);
+            if (button?.enabled) {
                 root.accept()
             }
         }
