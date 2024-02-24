@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:39+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2023-10-08 21:51+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -531,25 +531,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr "Initiales"
 
-#: src/ui/PicturesSheet.qml:130
+#: src/ui/PicturesSheet.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Selige file..."
 
-#: src/ui/PicturesSheet.qml:135
+#: src/ui/PicturesSheet.qml:137
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Selige un pictura"
 
-#: src/ui/PicturesSheet.qml:183
+#: src/ui/PicturesSheet.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Icone de Substituto"
 
-#: src/ui/PicturesSheet.qml:271
+#: src/ui/PicturesSheet.qml:274
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

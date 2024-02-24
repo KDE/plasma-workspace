@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2014-06-22 13:30+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: powermanagementengine.cpp:518
+#: powermanagementengine.cpp:526
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Bateria %1"
 
-#: powermanagementengine.cpp:520
+#: powermanagementengine.cpp:528
 #, kde-format
 msgid "Battery"
 msgstr "Bateria"

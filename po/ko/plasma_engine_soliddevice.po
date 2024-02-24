@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-29 01:56+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2020-09-05 23:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,18 +37,18 @@ msgstr "설명"
 msgid "Icon"
 msgstr "아이콘"
 
-#: soliddeviceengine.cpp:117 soliddeviceengine.cpp:592
+#: soliddeviceengine.cpp:117 soliddeviceengine.cpp:594
 msgid "Emblems"
 msgstr "엠블렘"
 
-#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:474
-#: soliddeviceengine.cpp:480 soliddeviceengine.cpp:493
+#: soliddeviceengine.cpp:118 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
 msgid "State"
 msgstr "상태"
 
-#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:475
-#: soliddeviceengine.cpp:481 soliddeviceengine.cpp:489
-#: soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
 msgid "Operation result"
 msgstr "작업 결과"
 
@@ -92,12 +92,12 @@ msgstr "장치"
 msgid "Storage Access"
 msgstr "저장소 접근"
 
-#: soliddeviceengine.cpp:151 soliddeviceengine.cpp:505
-#: soliddeviceengine.cpp:606
+#: soliddeviceengine.cpp:151 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:608
 msgid "Accessible"
 msgstr "접근 가능 여부"
 
-#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:506
+#: soliddeviceengine.cpp:152 soliddeviceengine.cpp:508
 msgid "File Path"
 msgstr "파일 경로"
 
@@ -522,85 +522,109 @@ msgstr "게이밍 입력 배터리"
 msgid "Bluetooth Battery"
 msgstr "블루투스 배터리"
 
-#: soliddeviceengine.cpp:393
+#: soliddeviceengine.cpp:391
+#, fuzzy
+#| msgid "Camera Battery"
+msgid "Tablet Battery"
+msgstr "카메라 배터리"
+
+#: soliddeviceengine.cpp:391
+#, fuzzy
+#| msgid "Phone Battery"
+msgid "Headphone Battery"
+msgstr "휴대폰 배터리"
+
+#: soliddeviceengine.cpp:392
+#, fuzzy
+#| msgid "Mouse Battery"
+msgid "Headset Battery"
+msgstr "마우스 배터리"
+
+#: soliddeviceengine.cpp:392
+#, fuzzy
+#| msgid "Mouse Battery"
+msgid "Touchpad Battery"
+msgstr "마우스 배터리"
+
+#: soliddeviceengine.cpp:395
 msgid "Not Charging"
 msgstr "충전하지 않음"
 
-#: soliddeviceengine.cpp:393
+#: soliddeviceengine.cpp:395
 msgid "Charging"
 msgstr "충전 중"
 
-#: soliddeviceengine.cpp:393
+#: soliddeviceengine.cpp:395
 msgid "Discharging"
 msgstr "방전 중"
 
-#: soliddeviceengine.cpp:394
+#: soliddeviceengine.cpp:396
 msgid "Fully Charged"
 msgstr "충전 완료"
 
-#: soliddeviceengine.cpp:396
+#: soliddeviceengine.cpp:398
 msgid "Plugged In"
 msgstr "연결됨"
 
-#: soliddeviceengine.cpp:397
+#: soliddeviceengine.cpp:399
 msgid "Type"
 msgstr "종류"
 
-#: soliddeviceengine.cpp:398
+#: soliddeviceengine.cpp:400
 msgid "Charge Percent"
 msgstr "충전률"
 
-#: soliddeviceengine.cpp:399
+#: soliddeviceengine.cpp:401
 msgid "Rechargeable"
 msgstr "충전 가능"
 
-#: soliddeviceengine.cpp:400
+#: soliddeviceengine.cpp:402
 msgid "Charge State"
 msgstr "충전 상태"
 
-#: soliddeviceengine.cpp:425
+#: soliddeviceengine.cpp:427
 msgid "Type Description"
 msgstr "종류 설명"
 
-#: soliddeviceengine.cpp:430
+#: soliddeviceengine.cpp:432
 msgid "Device Types"
 msgstr "장치 종류"
 
-#: soliddeviceengine.cpp:454 soliddeviceengine.cpp:553
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
 msgstr "크기"
 
-#: soliddeviceengine.cpp:533
+#: soliddeviceengine.cpp:535
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr "파일 시스템이 응답하지 않음"
 
-#: soliddeviceengine.cpp:533
+#: soliddeviceengine.cpp:535
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "'%1'에 마운트된 파일 시스템이 응답하지 않음"
 
-#: soliddeviceengine.cpp:551
+#: soliddeviceengine.cpp:553
 msgid "Free Space"
 msgstr "남은 공간"
 
-#: soliddeviceengine.cpp:552
+#: soliddeviceengine.cpp:554
 msgid "Free Space Text"
 msgstr "남은 공간 텍스트"
 
-#: soliddeviceengine.cpp:554
+#: soliddeviceengine.cpp:556
 msgid "Size Text"
 msgstr "크기 텍스트"
 
-#: soliddeviceengine.cpp:580
+#: soliddeviceengine.cpp:582
 msgid "Temperature"
 msgstr "온도"
 
-#: soliddeviceengine.cpp:581
+#: soliddeviceengine.cpp:583
 msgid "Temperature Unit"
 msgstr "온도 단위"
 
-#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+#: soliddeviceengine.cpp:627 soliddeviceengine.cpp:631
 msgid "In Use"
 msgstr "사용 중"
 

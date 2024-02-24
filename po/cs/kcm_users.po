@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:39+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -493,25 +493,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr "Iniciály"
 
-#: src/ui/PicturesSheet.qml:130
+#: src/ui/PicturesSheet.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Vyberte soubor…"
 
-#: src/ui/PicturesSheet.qml:135
+#: src/ui/PicturesSheet.qml:137
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Vyberte obrázek"
 
-#: src/ui/PicturesSheet.qml:183
+#: src/ui/PicturesSheet.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:271
+#: src/ui/PicturesSheet.qml:274
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
