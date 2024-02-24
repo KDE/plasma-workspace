@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 02:25+0000\n"
+"POT-Creation-Date: 2024-02-24 02:21+0000\n"
 "PO-Revision-Date: 2023-12-26 08:57-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -487,25 +487,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr "ਸ਼ੁਰੂਆਤੀ"
 
-#: src/ui/PicturesSheet.qml:129
+#: src/ui/PicturesSheet.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "…ਫਾਇਲ ਚੁਣੋ"
 
-#: src/ui/PicturesSheet.qml:134
+#: src/ui/PicturesSheet.qml:136
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "ਤਸਵੀਰ ਚੁਣੋ"
 
-#: src/ui/PicturesSheet.qml:181
+#: src/ui/PicturesSheet.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:269
+#: src/ui/PicturesSheet.qml:272
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

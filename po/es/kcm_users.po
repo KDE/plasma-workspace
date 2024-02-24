@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 02:25+0000\n"
+"POT-Creation-Date: 2024-02-24 02:21+0000\n"
 "PO-Revision-Date: 2023-10-05 11:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -510,25 +510,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr "Iniciales"
 
-#: src/ui/PicturesSheet.qml:129
+#: src/ui/PicturesSheet.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Escoger archivo..."
 
-#: src/ui/PicturesSheet.qml:134
+#: src/ui/PicturesSheet.qml:136
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Escoger una imagen"
 
-#: src/ui/PicturesSheet.qml:181
+#: src/ui/PicturesSheet.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Icono provisional"
 
-#: src/ui/PicturesSheet.qml:269
+#: src/ui/PicturesSheet.qml:272
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

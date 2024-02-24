@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 02:25+0000\n"
+"POT-Creation-Date: 2024-02-24 02:21+0000\n"
 "PO-Revision-Date: 2023-10-17 15:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -489,25 +489,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr "ראשי תיבות"
 
-#: src/ui/PicturesSheet.qml:129
+#: src/ui/PicturesSheet.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "בחירת קובץ…"
 
-#: src/ui/PicturesSheet.qml:134
+#: src/ui/PicturesSheet.qml:136
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "בחירת תמונה"
 
-#: src/ui/PicturesSheet.qml:181
+#: src/ui/PicturesSheet.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "סמל ממלא מקום"
 
-#: src/ui/PicturesSheet.qml:269
+#: src/ui/PicturesSheet.qml:272
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

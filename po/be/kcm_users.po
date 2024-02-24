@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 02:25+0000\n"
+"POT-Creation-Date: 2024-02-24 02:21+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -519,25 +519,25 @@ msgctxt "@action:button"
 msgid "Initials"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:129
+#: src/ui/PicturesSheet.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Абраць файл…"
 
-#: src/ui/PicturesSheet.qml:134
+#: src/ui/PicturesSheet.qml:136
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Абраць выяву"
 
-#: src/ui/PicturesSheet.qml:181
+#: src/ui/PicturesSheet.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:269
+#: src/ui/PicturesSheet.qml:272
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
