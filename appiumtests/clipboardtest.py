@@ -90,16 +90,11 @@ class ClipboardTest(unittest.TestCase):
         actions.send_keys(Keys.DOWN).perform()
         # Wait until the first item is selected
         try:
-            self.driver.find_element(AppiumBy.NAME, "Show QR code")
+            self.driver.find_element(AppiumBy.NAME, "Show QR code").click()
         except NoSuchElementException:
             actions.send_keys(Keys.DOWN).perform()  # Try pressing down key again
-            self.driver.find_element(AppiumBy.NAME, "Show QR code")
+            self.driver.find_element(AppiumBy.NAME, "Show QR code").click()
 
-        actions.send_keys(Keys.RIGHT).perform()
-        time.sleep(1)
-        actions.send_keys(Keys.RIGHT).perform()
-        time.sleep(1)
-        actions.send_keys(Keys.SPACE).perform()
         self.driver.find_element(AppiumBy.NAME, "QR Code")
         self.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
         self.driver.find_element(AppiumBy.NAME, "Change the QR code type")
