@@ -2,6 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_nightcolor",
         "Description": "Adjust screen color temperature based on time",
+        "Description[ar]": "يضبط حرارة لون الشاشة بالاعتماد على الوقت",
         "Description[bg]": "Регулиране на цветната температура според часа",
         "Description[ca@valencia]": "Ajusta la temperatura del color de la pantalla en funció de l'hora",
         "Description[ca]": "Ajusta la temperatura del color de la pantalla en funció de l'hora",
@@ -41,6 +42,7 @@
         ],
         "Icon": "redshift-status-on",
         "Name": "Night Light",
+        "Name[ar]": "الإضاءة الليلية",
         "Name[bg]": "Вечерни цветове",
         "Name[ca@valencia]": "Llum de nit",
         "Name[ca]": "Llum de nit",

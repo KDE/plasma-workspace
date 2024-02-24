@@ -2,6 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_soundtheme",
         "Description": "Select a Sound Theme for Notifications",
+        "Description[ar]": "حدد سمة صوتية لإشعارات",
         "Description[bg]": "Изберете звукова тема за Известия",
         "Description[ca@valencia]": "Seleccioneu un tema de so per a les notificacions",
         "Description[ca]": "Selecció d'un tema de so per a les notificacions",
@@ -37,6 +38,7 @@
         "Description[zh_TW]": "選擇通知用的音效主題",
         "Icon": "emblem-music-symbolic",
         "Name": "System Sounds",
+        "Name[ar]": "أصوات النظام",
         "Name[ast]": "Soníos del sistema",
         "Name[bg]": "Системни звуци",
         "Name[ca@valencia]": "Sons del sistema",

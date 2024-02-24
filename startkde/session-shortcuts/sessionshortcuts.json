@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Provides shortcuts for common session actions",
+        "Description[ar]": "يوفر اختصارات لإجراءات الجلسة العامة",
         "Description[bg]": "Осигурява клавишни комбинации за общи действия в сесията",
         "Description[ca@valencia]": "Proporciona dreceres per a accions habituals de sessió",
         "Description[ca]": "Proporciona dreceres per a accions habituals de sessió",
@@ -32,6 +33,7 @@
         "Description[zh_CN]": "提供常见会话操作的快捷方式",
         "Description[zh_TW]": "提供快捷鍵給一般工作階段動作",
         "Name": "Session Shortcuts",
+        "Name[ar]": "اختصارات الجلسة",
         "Name[bg]": "Клавишни комбинации на сесията",
         "Name[ca@valencia]": "Dreceres de sessió",
         "Name[ca]": "Dreceres de sessió",

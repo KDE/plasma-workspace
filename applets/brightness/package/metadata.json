@@ -108,6 +108,7 @@
             {
                 "Email": "natalie.clarius@kde.org",
                 "Name": "Natalie Clarius",
+                "Name[ar]": "ناتالي كلاريوس",
                 "Name[bg]": "Natalie Clarius",
                 "Name[ca@valencia]": "Natalie Clarius",
                 "Name[ca]": "Natalie Clarius",
@@ -143,6 +144,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Brightness%20Control",
         "Category": "System Information",
         "Description": "Control brightness and color of your screens and keyboards",
+        "Description[ar]": "التحكم في سطوع ولون الشاشات ولوحات المفاتيح",
         "Description[bg]": "Управление на яркостта и цвета на екраните и клавиатурите",
         "Description[ca@valencia]": "Control de la brillantor i color de les pantalles i teclats",
         "Description[ca]": "Control de la lluminositat i color de les pantalles i teclats",
@@ -182,6 +184,7 @@
         "Id": "org.kde.plasma.brightness",
         "License": "GPL-2.0+",
         "Name": "Brightness and Color",
+        "Name[ar]": "السطوع والألوان",
         "Name[ast]": "Brillu ya color",
         "Name[bg]": "Яркост и цветове",
         "Name[ca@valencia]": "Brillantor i color",
