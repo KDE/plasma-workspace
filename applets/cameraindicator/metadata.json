@@ -41,6 +41,7 @@
                 "Name[zh_TW]": "Fushan Wen"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Camera%20Indicator",
         "Description": "Shows whether any camera is currently used by an app",
         "Description[ar]": "يوضح ما إذا كان التطبيق يستخدم أي كاميرا حاليًا",
         "Description[bg]": "Показва дали камерата се използва от някое приложение",
