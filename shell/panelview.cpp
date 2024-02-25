@@ -1209,17 +1209,6 @@ bool PanelView::event(QEvent *e)
         break;
     }
 
-    // PanelView does not take focus, but we want any users tracking focus
-    // to act like they've lost focus when the panel is clicked
-    if (e->type() == QEvent::MouseButtonPress) {
-        QWindow *focusWindow = qGuiApp->focusWindow();
-        if (focusWindow && focusWindow != this && focusWindow->flags().testFlag(Qt::FramelessWindowHint)) {
-            // postEvent takes ownership of the event
-            QFocusEvent *fe = new QFocusEvent(QEvent::FocusOut);
-            qGuiApp->postEvent(focusWindow, fe);
-        }
-    }
-
     return ContainmentView::event(e);
 }
 
