@@ -4,6 +4,7 @@
 # Tommi Nieminen <translator@legisign.org>, 2010, 2019, 2020, 2021.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2011.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015.
+# SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-29 01:56+0000\n"
-"PO-Revision-Date: 2021-08-28 11:10+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-24 13:25+0200\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:33+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -520,6 +521,7 @@ msgid "Monitor Battery"
 msgstr "Näytön akku"
 
 # *** TARKISTA: Edes guuglaamalla ei löydy mitään todellista tietoa, mitä ”gaming input battery” voisi olla!
+# *** Kimmo: Kyllä peliohjaimen ja nimenomaan akku.
 #: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
 msgstr "Peliohjaimen akku"

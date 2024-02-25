@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2023-12-11 18:32+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-24 13:13+0200\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -224,8 +224,8 @@ msgstr "Kirjaudu ulos"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] "1 sekunti sovellusten asentamiseen ja uudelleenkäynnistykseen"
-msgstr[1] "%1 sekuntia sovellusten asentamiseen ja uudelleenkäynnistykseen"
+msgstr[0] "1 sekunti sovellusten asentamiseen ja käynnistykseen"
+msgstr[1] "%1 sekuntia sovellusten asentamiseen ja käynnistykseen"
 
 #: contents/logout/Logout.qml:248
 #, kde-format
