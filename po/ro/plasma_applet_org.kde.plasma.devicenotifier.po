@@ -3,23 +3,23 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_devicenotifier package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2012, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2012, 2020, 2021, 2022, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-02-04 17:20+0000\n"
+"PO-Revision-Date: 2024-02-24 18:59+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -44,8 +44,7 @@ msgid "Removing…"
 msgstr "Se elimină…"
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Încă nu deconectați! Fișierele sunt în curs de transferare…"
 
@@ -134,98 +133,82 @@ msgstr "Arată meniul contextual la atașarea unui dispozitiv nou"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Stare dispozitiv"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Un dispozitiv poate fi eliminat în siguranță acum"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Dispozitivul poate fi eliminat în siguranță acum."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Apăsați pentru a monta acest dispozitiv."
+msgstr "Nu aveți autorizare să montați acest dispozitiv."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Puteți scoate acest dispozitiv în siguranță acum."
+msgstr "Nu aveți autorizare să eliminați acest dispozitiv."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Apăsați pentru a scoate acest disc."
+msgstr "Nu aveți autorizare să scoateți acest disc."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Ultimul dispozitiv atașat: %1"
+msgstr "Nu s-a putut monta dispozitivul întrucât este ocupat."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid ""
-#| "Cannot eject the disc.\n"
-#| "One or more files on this disc are open within an application."
+#, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
-"Nu s-a putut scoate discul.\n"
-"Unul sau mai multe fișiere de pe acest disc sunt deschise într-o aplicație."
+"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise într-o "
+"aplicație."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not unmount the device.\n"
-#| "One or more files on this device are open within an application."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
-"Nu s-a putut demonta dispozitivul.\n"
-"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise într-o "
-"aplicație."
+"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise în aplicația "
+"„%2”."
 msgstr[1] ""
-"Nu s-a putut demonta dispozitivul.\n"
-"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise într-o "
-"aplicație."
+"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise în "
+"următoarele aplicații: %2."
 msgstr[2] ""
-"Nu s-a putut demonta dispozitivul.\n"
-"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise într-o "
-"aplicație."
+"Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise în "
+"următoarele aplicații: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Ultimul dispozitiv atașat: %1"
+msgstr "Nu s-a putut monta acest dispozitiv."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Ultimul dispozitiv atașat: %1"
+msgstr "Nu s-a putut elimina acest dispozitiv."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Apăsați pentru a scoate acest disc."
+msgstr "Nu s-a putut scoate acest disc."
 
 #~ msgid "Show:"
 #~ msgstr "Arată:"

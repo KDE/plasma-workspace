@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-06-18 17:53+0100\n"
+"PO-Revision-Date: 2024-02-24 18:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -178,6 +178,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Acest control grafic a fost scris pentru o versiune Plasma necunoscută și nu "
+"e compatibil cu Plasma %1. Contactați autorul controlului grafic pentru o "
+"versiune mai nouă."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
@@ -185,6 +188,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Acest control grafic a fost scris pentru Plasma %1 și nu e compatibil cu "
+"Plasma %2. Contactați autorul controlului grafic pentru o versiune mai nouă."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
@@ -192,6 +197,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Acest control grafic a fost scris pentru Plasma %1 și nu e compatibil cu "
+"Plasma %2. Actualizați Plasma pentru a folosi controlul grafic."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
@@ -199,6 +206,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Acest control grafic a fost scris pentru Plasma %1 și nu e compatibil cu "
+"ultima versiune Plasma. Actualizați Plasma pentru a folosi controlul grafic."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"

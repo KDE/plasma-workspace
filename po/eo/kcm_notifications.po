@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2024-02-04 08:21+0100\n"
+"PO-Revision-Date: 2024-02-24 21:13+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -74,11 +74,10 @@ msgid "Play a sound"
 msgstr "Aŭdigi sonon"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "Aplikaj Agordoj"
+msgstr "Agordi Aplikajn Metojn…"
 
 #: ui/main.qml:57
 #, kde-format
@@ -269,10 +268,3 @@ msgid ""
 "and behavior"
 msgstr ""
 "Elektu aplikaĵon el la listo por agordi ĝiajn sciigajn agordojn kaj konduton"
-
-#~ msgctxt "@title:group"
-#~ msgid "Application-specific settings"
-#~ msgstr "Apliko-specifaj agordoj"
-
-#~ msgid "Configure…"
-#~ msgstr "Agordi…"

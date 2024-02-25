@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-06-18 17:56+0100\n"
+"PO-Revision-Date: 2024-02-24 18:27+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -33,14 +33,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Iese din sistem, părăsind sesiunea de birou curentă"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr "deconectare"
+msgstr "deconectare;deconectează;stinge;oprește"
 
 #: sessionrunner.cpp:29
 #, kde-format

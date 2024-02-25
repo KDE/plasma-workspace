@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2023-04-10 19:47+0100\n"
+"PO-Revision-Date: 2024-02-24 18:45+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -34,79 +34,70 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Configurare extensie acțiuni de maus"
 
 #: desktopview.cpp:211
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Dev"
 
 #: desktopview.cpp:214
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:217
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Beta 1"
 
 #: desktopview.cpp:220
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Beta 2"
 
 #: desktopview.cpp:223
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:226
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:252
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Plasma"
+msgstr "KDE Plasma %1 Dev"
 
 #: desktopview.cpp:256
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Plasma"
+msgstr "KDE Plasma %1 Beta"
 
 #: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Beta %2"
 
 #: desktopview.cpp:263
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Plasma"
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Vizitați bugs.kde.org pentru a raporta probleme"
 
 #: main.cpp:88
 #, kde-format
@@ -254,13 +245,13 @@ msgstr "Tastatură pe ecran dezactivată"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Ascunde configurările panoului"
 
 #: panelview.cpp:1015
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Arată configurările panoului"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

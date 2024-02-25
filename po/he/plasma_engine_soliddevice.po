@@ -4,21 +4,22 @@
 # Diego Iastrubni <elcuco@kde.org>, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2023-10-04 11:59+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-02-24 17:36+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -526,28 +527,20 @@ msgid "Bluetooth Battery"
 msgstr "סוללת בלוטות׳"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "סוללה של מצלמה"
+msgstr "סוללה של מחשב לוח"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "סוללת טלפון"
+msgstr "סוללה של אוזניות"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "סוללה של עכבר"
+msgstr "סוללה של אוזניות עם מיקרופון"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "סוללה של עכבר"
+msgstr "סוללה של משטח מגע"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

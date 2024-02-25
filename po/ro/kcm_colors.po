@@ -1,12 +1,12 @@
 # Traducerea kcmcolors.po în Română
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2021, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-04-10 19:58+0100\n"
+"PO-Revision-Date: 2024-02-24 18:21+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -1299,7 +1299,7 @@ msgstr "Instalează din fișier…"
 #: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Obține noi…"
 
 #: ui/main.qml:192
 #, kde-format

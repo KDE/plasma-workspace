@@ -1,6 +1,4 @@
 # Traducerea krunner_locationsrunner.po în Română
-# translation of krunner_locationsrunner to Romanian
-# Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the krunner_locationsrunner package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
 # Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013.
@@ -11,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2013-01-30 22:39+0200\n"
-"Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -48,6 +46,3 @@ msgstr "Mergi la %1"
 #, kde-format
 msgid "Send email to %1"
 msgstr "Trimite scrisoare către %1"
-
-#~ msgid "Locations"
-#~ msgstr "Locații"

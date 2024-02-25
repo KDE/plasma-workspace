@@ -3,14 +3,14 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_battery package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2013, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2013, 2020, 2021, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-04-10 19:53+0100\n"
+"PO-Revision-Date: 2024-02-24 18:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -102,10 +102,9 @@ msgid "Not present"
 msgstr "Absent"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Gestiunea alimentării"
+msgstr "Alimentare și acumulator"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -213,10 +212,9 @@ msgstr ""
 "Arată procentajul acumulatorului pe pictogramă când nu e încărcat complet"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Configurează economisirea energiei…"
+msgstr "&Configurează gestiunea alimentării…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
@@ -310,11 +308,10 @@ msgid "Power Profile"
 msgstr "Profil de alimentare"
 
 #: package/contents/ui/PowerProfileItem.qml:97
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Niciun acumulator disponibil"
+msgstr "Indisponibil"
 
 #: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
@@ -381,6 +378,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Profilurile de alimentare pot fi disponibile pentru acest dispozitiv.<nl/"
+">Încercați să instalați pachetul <command>power-profiles-daemon</command> "
+"folosind gestionarul de pachete al distribuției și să reporniți sistemul."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2021, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:35+0000\n"
-"PO-Revision-Date: 2023-04-10 19:50+0100\n"
+"PO-Revision-Date: 2024-02-24 19:13+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -30,15 +30,13 @@ msgid "Your emails"
 msgstr "sergiu@cip.md"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:57
-#, fuzzy, kde-format
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Deschide imagine"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:69
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Dosar cu tapete din care să fie arătate diapozitive"
@@ -96,7 +94,7 @@ msgstr "Alege culoarea de fundal"
 #: imagepackage/contents/ui/main.qml:34
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Deschide imagine de fundal"
+msgstr "Deschide imagine cu tapet"
 
 #: imagepackage/contents/ui/main.qml:40
 #, kde-format
@@ -104,23 +102,21 @@ msgid "Next Wallpaper Image"
 msgstr "Următoarea imagine de fundal"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Fișiere imagine"
+msgstr "Imagini"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:74
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Adaugă…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:80
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Obține fundaluri noi…"
+msgstr "Obține noi…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -272,7 +268,7 @@ msgstr "Dosare"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Adaugă…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:231
 #, kde-format
@@ -280,10 +276,9 @@ msgid "Remove Folder"
 msgstr "Elimină dosarul"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:242
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Deschide dosarul"
+msgstr "Deschide dosarul…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format

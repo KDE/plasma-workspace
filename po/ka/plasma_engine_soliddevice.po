@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2022-09-02 07:23+0200\n"
+"PO-Revision-Date: 2024-02-24 03:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -524,28 +524,20 @@ msgid "Bluetooth Battery"
 msgstr "Bluetooth ის ელემენტი"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "კამერის ლემენტი"
+msgstr "ტაბლეტის ელემენტი"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "ტელეფონის ელემენტი"
+msgstr "მიკროფონიანი ყურსაცვამის ელემენტი"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "თაგუნას ელემენტი"
+msgstr "ყურსაცვამის ელემენტი"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "თაგუნას ელემენტი"
+msgstr "თაჩპედის ელემენტი"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

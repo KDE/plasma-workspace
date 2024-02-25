@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-02-11 11:25+0100\n"
+"PO-Revision-Date: 2024-02-24 16:50+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -47,16 +47,12 @@ msgstr[1] "Oparty na: %2"
 msgstr[2] "Oparty na: %2"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Precedes a list of buttons which can be clicked to preview the "
-#| "theme's sounds. Keep it short"
-#| msgid "Preview sounds:"
+#, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr "Podgląd dźwięków:"
+msgstr "Podgląd:"
 
 #: ui/main.qml:128
 #, kde-format

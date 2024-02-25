@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2010, 2012, 2013, 2014, 2015, 2018, 2020.
+# SPDX-FileCopyrightText: 2010, 2012, 2013, 2014, 2015, 2018, 2020, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2020-08-01 20:48+0200\n"
+"PO-Revision-Date: 2024-02-24 20:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.07.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -526,28 +526,20 @@ msgid "Bluetooth Battery"
 msgstr "Batería Bluetooth"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Batería de la cámara"
+msgstr "Batería de la tableta"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Batería del teléfono"
+msgstr "Batería de los cascos"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Batería del ratón"
+msgstr "Batería de los auriculares"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Batería del ratón"
+msgstr "Batería del panel táctil"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

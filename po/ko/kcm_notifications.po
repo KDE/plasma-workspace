@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 19:39+0100\n"
+"PO-Revision-Date: 2024-02-24 22:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -71,11 +71,10 @@ msgid "Play a sound"
 msgstr "소리 재생"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "앱 설정"
+msgstr "앱 개별 설정…"
 
 #: ui/main.qml:57
 #, kde-format

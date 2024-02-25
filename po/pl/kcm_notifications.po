@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2024-02-04 09:36+0100\n"
+"PO-Revision-Date: 2024-02-24 16:49+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -69,14 +69,13 @@ msgstr "Pokaż wiadomość w oknie wysuwnym"
 #: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
-msgstr "Odtwórz &dźwięk"
+msgstr "Odtwórz dźwięk"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "Ustawienia programu"
+msgstr "Ustawienia aplikacji…"
 
 #: ui/main.qml:57
 #, kde-format

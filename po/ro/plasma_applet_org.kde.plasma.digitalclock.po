@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:39+0000\n"
-"PO-Revision-Date: 2023-04-10 19:53+0100\n"
+"PO-Revision-Date: 2024-02-24 18:28+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -202,15 +202,12 @@ msgid "Custom"
 msgstr "Personalizat"
 
 #: package/contents/ui/configAppearance.qml:206
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentația formatului orei</a>"
 
 #: package/contents/ui/configAppearance.qml:230
@@ -279,18 +276,13 @@ msgid "Available Plugins:"
 msgstr "Extensii disponibile:"
 
 #: package/contents/ui/configTimeZones.qml:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Sfat: dacă călătoriți des, adăugați încă o înregistrare în această listă "
-"pentru fusul orar de acasă. Aceasta va apărea doar când schimbați fusul orar "
-"al sistemului."
+"Sfat: dacă călătoriți des, adăugați încă în această listă fusul orar de "
+"acasă. Acesta va apărea doar când schimbați fusul orar al sistemului."
 
 #: package/contents/ui/configTimeZones.qml:79
 #, kde-format

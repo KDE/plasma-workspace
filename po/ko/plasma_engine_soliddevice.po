@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2009, 2012, 2013, 2015, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2009, 2012, 2013, 2015, 2018, 2019, 2020, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2020-09-05 23:47+0200\n"
+"PO-Revision-Date: 2024-02-24 22:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -523,28 +523,20 @@ msgid "Bluetooth Battery"
 msgstr "블루투스 배터리"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "카메라 배터리"
+msgstr "태블릿 배터리"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "휴대폰 배터리"
+msgstr "헤드폰 배터리"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "마우스 배터리"
+msgstr "헤드셋 배터리"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "마우스 배터리"
+msgstr "터치패드 배터리"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

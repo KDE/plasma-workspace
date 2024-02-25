@@ -3,20 +3,20 @@
 #
 # Maciej Wikło <maciej.wiklo@wp.pl>, 2009.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2010.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2013, 2014, 2015, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2018, 2019, 2020, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2020-10-04 07:36+0200\n"
+"PO-Revision-Date: 2024-02-24 16:50+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -526,28 +526,20 @@ msgid "Bluetooth Battery"
 msgstr "Bateria Bluetooth"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Bateria aparatu"
+msgstr "Bateria tabletu"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Bateria telefonu"
+msgstr "Bateria słuchawek"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Bateria myszy"
+msgstr "Bateria zestawu głośnomówiącego"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Bateria myszy"
+msgstr "Bateria gładzika"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"
