@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 02:22+0000\n"
-"PO-Revision-Date: 2022-12-29 19:50+0000\n"
+"PO-Revision-Date: 2024-02-24 18:28+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -97,22 +97,21 @@ msgid "Always below time"
 msgstr "Întotdeauna sub oră"
 
 #: package/contents/ui/configAppearance.qml:70
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Arată secundele"
+msgstr "Arată secundele:"
 
 #: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Niciodată"
 
 #: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Doar în indiciu"
 
 #: package/contents/ui/configAppearance.qml:74
 #: package/contents/ui/configAppearance.qml:94
@@ -203,15 +202,12 @@ msgid "Custom"
 msgstr "Personalizat"
 
 #: package/contents/ui/configAppearance.qml:206
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentația formatului orei</a>"
 
 #: package/contents/ui/configAppearance.qml:230
@@ -280,18 +276,13 @@ msgid "Available Plugins:"
 msgstr "Extensii disponibile:"
 
 #: package/contents/ui/configTimeZones.qml:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Sfat: dacă călătoriți des, adăugați încă o înregistrare în această listă "
-"pentru fusul orar de acasă. Aceasta va apărea doar când schimbați fusul orar "
-"al sistemului."
+"Sfat: dacă călătoriți des, adăugați încă în această listă fusul orar de "
+"acasă. Acesta va apărea doar când schimbați fusul orar al sistemului."
 
 #: package/contents/ui/configTimeZones.qml:78
 #, kde-format

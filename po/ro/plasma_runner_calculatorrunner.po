@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2009, 2010, 2020.
+# Sergiu Bivol <sergiu@cip.md>, 2009, 2010, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-03 01:39+0000\n"
-"PO-Revision-Date: 2020-12-19 17:45+0000\n"
+"PO-Revision-Date: 2023-06-18 17:53+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: calculatorrunner.cpp:28
 #, kde-format
@@ -35,7 +35,7 @@ msgstr ""
 #: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "Introduceți o funcție matematică obișnuită"
 
 #: calculatorrunner.cpp:140
 #, kde-format

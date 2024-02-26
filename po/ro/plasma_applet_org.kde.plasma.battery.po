@@ -3,14 +3,14 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_battery package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2013, 2020, 2021, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:39+0000\n"
-"PO-Revision-Date: 2022-12-29 17:37+0000\n"
+"PO-Revision-Date: 2024-02-24 18:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -102,10 +102,9 @@ msgid "Not present"
 msgstr "Absent"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Gestiunea alimentării"
+msgstr "Alimentare și acumulator"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -252,20 +251,17 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 blochează acum adormirea și blocarea ecranului (motiv necunoscut)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 aplicație blochează acum adormirea și blocarea ecranului:"
+msgstr "O aplicație blochează acum adormirea și blocarea ecranului (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1 blochează acum adormirea și blocarea ecranului (motiv necunoscut)"
+msgstr ""
+"O aplicație blochează acum adormirea și blocarea ecranului (motiv necunoscut)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -283,15 +279,13 @@ msgstr "%1: motiv necunoscut"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Aplicație necunoscută: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:122
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: motiv necunoscut"
+msgstr "Aplicație necunoscută: motiv necunoscut"
 
 #: package/contents/ui/PowerProfileItem.qml:37
 #, kde-format
@@ -314,11 +308,10 @@ msgid "Power Profile"
 msgstr "Profil de alimentare"
 
 #: package/contents/ui/PowerProfileItem.qml:96
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Niciun acumulator disponibil"
+msgstr "Indisponibil"
 
 #: package/contents/ui/PowerProfileItem.qml:190
 #, kde-format
@@ -385,6 +378,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Profilurile de alimentare pot fi disponibile pentru acest dispozitiv.<nl/"
+">Încercați să instalați pachetul <command>power-profiles-daemon</command> "
+"folosind gestionarul de pachete al distribuției și să reporniți sistemul."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

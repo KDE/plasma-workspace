@@ -3,13 +3,14 @@
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+# SPDX-FileCopyrightText: 2024 Jure Repinc <jlp@holodeck1.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2020-01-23 16:06+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-02-25 02:17+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -28,18 +29,18 @@ msgstr "Splošno"
 #: package/contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "Calendar version:"
-msgstr "Koledar verzija:"
+msgstr "Koledar:"
 
 #: package/contents/ui/configGeneral.qml:22
 #, kde-format
 msgid "Show week numbers"
-msgstr "Pokaži številke tednov"
+msgstr "Prikaži številke tednov"
 
 #: package/contents/ui/configGeneral.qml:31
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
-msgstr "Kompaktna verzija:"
+msgstr "Kompaktna različica:"
 
 #: package/contents/ui/configGeneral.qml:33
 #, kde-format

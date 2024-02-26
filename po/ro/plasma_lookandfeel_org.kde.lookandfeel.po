@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2022-04-04 10:12+0100\n"
+"PO-Revision-Date: 2024-02-24 18:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -95,30 +95,28 @@ msgid "Desktop Session: %1"
 msgstr "Sesiune de birou: %1"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "Ceas"
+msgstr "Ceas:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Păstrează vizibil când dispare dialogul de deblocare"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media Controls"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "Controale multimedia"
+msgstr "Controale multimedia:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Arată sub dialogul de deblocare"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 #, kde-format
@@ -155,17 +153,17 @@ msgstr "Deblochează"
 #: contents/lockscreen/MainBlock.qml:155
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(sau scanați amprenta pe cititor)"
 
 #: contents/lockscreen/MainBlock.qml:159
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(sau scanați smartcard-ul)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Fără titlu"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
@@ -215,20 +213,23 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Instalează actualizări și repornește"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgid "Log Out"
-msgstr "Ieșire din sistem"
+msgstr "Ieși din sistem"
 
 #: contents/logout/Logout.qml:247
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Se instalează actualizări de programe și se repornește în o secundă."
 msgstr[1] ""
+"Se instalează actualizări de programe și se repornește în %1 secunde."
 msgstr[2] ""
+"Se instalează actualizări de programe și se repornește în %1 de secunde."
 
 #: contents/logout/Logout.qml:248
 #, kde-format

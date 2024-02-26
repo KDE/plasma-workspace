@@ -2,22 +2,22 @@
 # translation of ksmserver.po to Romanian
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2020.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2020-09-06 16:42+0100\n"
+"PO-Revision-Date: 2023-06-18 17:57+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: logout.cpp:273
 #, kde-format
@@ -41,6 +41,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Nu se poate scrie în dosarul %HOME (%1). Dacă acest lucru e intenționat, "
+"stabiliți <envar>KDE_HOME_READONLY=1</envar> în mediul dumneavoastră."
 
 #: main.cpp:82
 #, kde-format
@@ -162,139 +164,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Session Management"
-#~ msgstr "Gestiune sesiuni"
-
-#~ msgid "Log Out"
-#~ msgstr "Ieșire din sistem"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Ieșire fără confirmare"
-
-#, fuzzy
-#~| msgid "Halt Without Confirmation"
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Deconectare fără confirmare"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Repornire fără confirmare"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "Lipsește accesul de scriere în dosarul $HOME (%1)."
-
-#, fuzzy
-#~| msgid ""
-#~| "Starts 'wm' in case no other window manager is \n"
-#~| "participating in the session. Default is 'kwin'"
-#~ msgid ""
-#~ "Starts <wm> in case no other window manager is \n"
-#~ "participating in the session. Default is 'kwin'"
-#~ msgstr ""
-#~ "pornește 'wm' în cazul în care nu există\n"
-#~ "alt manager de ferestre care să participe\n"
-#~ "la sesiune. Implicit este 'kwin'."
-
-#, fuzzy
-#~| msgid "&Logout"
-#~ msgid "Logout"
-#~ msgstr "&Ieșire din sistem"
-
-#~ msgid "Sleeping in 1 second"
-#~ msgid_plural "Sleeping in %1 seconds"
-#~ msgstr[0] "Adormire în 1 secundă"
-#~ msgstr[1] "Adormire în %1 secunde"
-#~ msgstr[2] "Adormire în %1 de secunde"
-
-#~ msgid "Lock"
-#~ msgstr "Blochează"
-
-#~ msgid "Turn off"
-#~ msgstr "Oprește"
-
-#~ msgid "Sleep"
-#~ msgstr "Dormi"
-
-#~ msgid "Logging out in 1 second."
-#~ msgid_plural "Logging out in %1 seconds."
-#~ msgstr[0] "Deautentificare în 1 secundă."
-#~ msgstr[1] "Deautentificare în %1 secunde."
-#~ msgstr[2] "Deautentificare în %1 de secunde."
-
-#~ msgid "Turning off computer in 1 second."
-#~ msgid_plural "Turning off computer in %1 seconds."
-#~ msgstr[0] "Oprire calculator în 1 secundă."
-#~ msgstr[1] "Oprire calculator în %1 secunde."
-#~ msgstr[2] "Oprire calculator în %1 de secunde."
-
-#~ msgid "Restarting computer in 1 second."
-#~ msgid_plural "Restarting computer in %1 seconds."
-#~ msgstr[0] "Repornire calculator în 1 secundă."
-#~ msgstr[1] "Repornire calculator în %1 secunde."
-#~ msgstr[2] "Repornire calculator în %1 de secunde."
-
-#, fuzzy
-#~| msgid "&Turn Off Computer"
-#~ msgid "Turn Off Computer"
-#~ msgstr "Opreș&te calculatorul"
-
-#, fuzzy
-#~| msgid "&Restart Computer"
-#~ msgid "Restart Computer"
-#~ msgstr "&Repornește calculatorul"
-
-#~ msgctxt "default option in boot loader"
-#~ msgid " (default)"
-#~ msgstr " (implicită)"
-
-#, fuzzy
-#~| msgid "&Cancel"
-#~ msgid "Cancel"
-#~ msgstr "&Renunță"
-
-#~ msgid "&Standby"
-#~ msgstr "&Stare de veghe"
-
-#~ msgid "Suspend to &RAM"
-#~ msgstr "Suspendă în &RAM"
-
-#~ msgid "Suspend to &Disk"
-#~ msgstr "Suspendă pe &disc"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Claudiu Costin,Sergiu Bivol"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ",sergiu@ase.md"
-
-#~ msgid "(C) 2000, The KDE Developers"
-#~ msgstr "(C) 2000, Dezvoltatorii KDE"
-
-#~ msgid "Matthias Ettrich"
-#~ msgstr "Matthias Ettrich"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Maintainer"
-#~ msgstr "Responsabil"
-
-#~ msgctxt "current option in boot loader"
-#~ msgid " (current)"
-#~ msgstr " (actual)"
-
-#~ msgctxt "@label In corner of the logout dialog"
-#~ msgid "KDE <numid>%1.%2.%3</numid>"
-#~ msgstr "KDE <numid>%1.%2.%3</numid>"
-
-#~ msgctxt "@label In corner of the logout dialog"
-#~ msgid "KDE <numid>%1.%2</numid>"
-#~ msgstr "KDE <numid>%1.%2</numid>"
-
-#~ msgid "End Session for %1"
-#~ msgstr "Termină sesiunea pentru „%1”"
-
-#~ msgid "End Session for %1 (%2)"
-#~ msgstr "Termină sesiunea pentru „%1” (%2)"

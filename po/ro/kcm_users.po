@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 02:21+0000\n"
-"PO-Revision-Date: 2022-12-29 17:30+0000\n"
+"PO-Revision-Date: 2023-06-18 17:47+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -214,180 +214,120 @@ msgid "Enrolling Fingerprint"
 msgstr "Se înrolează amprenta"
 
 #: src/ui/FingerprintDialog.qml:107
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul arătător drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul mijlociu drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:111
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul inelar drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:113
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul mic drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:115
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul mare drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:117
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul arătător stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:119
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul mijlociu stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:121
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul inelar stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:123
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul mic stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Apăsați repetat degetul mare stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul arătător drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul mijlociu drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul inelar drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:135
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul mic drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul mare drept pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:139
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul arătător stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:141
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul mijlociu stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul inelar stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:145
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul mic stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "%1 repetat %2 pe senzorul de amprente."
+msgstr "Glisați repetat degetul mare stâng pe senzorul de amprente."
 
 #: src/ui/FingerprintDialog.qml:162
 #, kde-format
@@ -433,36 +373,31 @@ msgid "Press Space to edit the user profile"
 msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Schimbă avatarul"
 
 #: src/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
+#, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Nu-i nimic"
 
 #: src/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Feisty Flamingo"
 
 #: src/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Fructul Dragonului"
 
 #: src/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Cartof Dulce"
@@ -510,8 +445,7 @@ msgid "Tepid Teal"
 msgstr "Tepid Teal"
 
 #: src/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma Albastră"
@@ -531,15 +465,13 @@ msgid "Bajo Purple"
 msgstr "Bajo Purple"
 
 #: src/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Cărbune Ars"
 
 #: src/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Perfecțiune de Hârtie"
@@ -571,15 +503,13 @@ msgid "Initials"
 msgstr ""
 
 #: src/ui/PicturesSheet.qml:131
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Alege fișier…"
 
 #: src/ui/PicturesSheet.qml:136
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Alege o poză"
