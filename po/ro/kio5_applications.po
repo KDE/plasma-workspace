@@ -1,22 +1,22 @@
-# Traducerea kio_settings.po în Română
-# translation of kio_settings.po to Romanian
-# Copyright (C) 2003, 2005, 2008 Free Software Foundation, Inc.
-# Claudiu Costin <claudiuc@kde.org>, 2003, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Sergiu Bivol <sergiu@cip.md>, 2024.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: kio_settings\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-08 00:48+0000\n"
-"PO-Revision-Date: 2008-12-03 16:35+0200\n"
-"Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
-"Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
+"PO-Revision-Date: 2024-02-25 16:35+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kio_applications.cpp:122
 #, kde-format
@@ -32,6 +32,3 @@ msgstr "Programe"
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Dosar cu aplicații necunoscut"
-
-#~ msgid "Settings"
-#~ msgstr "Configurări"

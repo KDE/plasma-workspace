@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2023-06-18 17:52+0100\n"
+"PO-Revision-Date: 2024-02-24 18:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -251,7 +251,7 @@ msgstr ""
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgid "Log Out"
-msgstr "Ieșire din sistem"
+msgstr "Ieși din sistem"
 
 #: contents/logout/Logout.qml:224
 #, kde-format
