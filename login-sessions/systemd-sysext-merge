@@ -6,5 +6,5 @@ set -ex
 $(dirname "$0")/systemd-sysext-unmerge
 
 mkdir -p /run/extensions/
-ln -s /var/lib/extensions-plasma-dev6 /run/extensions/plasma-dev6
+ln -s /var/local/extensions-plasma-dev6 /run/extensions/plasma-dev6
 systemd-sysext refresh

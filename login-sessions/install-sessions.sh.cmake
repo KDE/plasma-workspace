@@ -27,10 +27,9 @@ fi
 # - dbus exclusively looks in the system prefix for **system** services and offers no facilities to change that
 #   https://gitlab.freedesktop.org/dbus/dbus/-/blob/9722d621497b2e7324e696f4095f56e2a9307a7e/bus/activation-helper.c#
 if [ -x /usr/bin/systemd-sysext ]; then
-  mkdir -p @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/
   install --mode=644 -D /usr/lib/os-release @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/extension-release.plasma-dev6
 
-  prefix=/var/lib/extensions-plasma-dev6
+  prefix=/var/local/extensions-plasma-dev6
   rm -rf $prefix
   ln -sf @CMAKE_INSTALL_PREFIX@/../ $prefix
 
@@ -38,8 +37,8 @@ if [ -x /usr/bin/systemd-sysext ]; then
   install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/org.kde.plasma.systemd-sysext.policy --target-directory=/usr/share/polkit-1/actions
 
   # Make built-from-source sessions appear in login screen
-  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop --target-directory=/usr/share/xsessions
-  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop --target-directory=/usr/share/wayland-sessions
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop --target-directory=/usr/local/share/xsessions
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop --target-directory=/usr/local/share/wayland-sessions
 else # legacy compat
   echo 'Only systemd based systems are supported. You need systemd-sysext on your system or figure things out for yourself.'
 fi
