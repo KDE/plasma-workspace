@@ -12,6 +12,8 @@ if [ "$(id -u)" != "0" ]; then
   install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
   install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-merge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
   install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-unmerge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
+  install --mode=755 @CMAKE_CURRENT_BINARY_DIR@/run-unmerged @CMAKE_INSTALL_FULL_BINDIR@
+  install --mode=755 @CMAKE_CURRENT_SOURCE_DIR@/run-unmerged-script @CMAKE_INSTALL_FULL_LIBEXECDIR@
   exec pkexec ./$0
 fi
 
