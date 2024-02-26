@@ -3,13 +3,14 @@
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Jure Repinc <jlp@holodeck1.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:39+0000\n"
-"PO-Revision-Date: 2023-10-20 11:32+0200\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-02-25 02:33+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -45,7 +46,7 @@ msgstr "Dogodki"
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
-msgstr "Dodaj…"
+msgstr "Dodaj …"
 
 #: package/contents/ui/CalendarView.qml:157
 #, kde-format
@@ -66,7 +67,7 @@ msgstr "Za ta dan ni dogodkov"
 #: package/contents/ui/CalendarView.qml:443
 #, kde-format
 msgid "Switch…"
-msgstr "Preklop…"
+msgstr "Preklop …"
 
 #: package/contents/ui/CalendarView.qml:444
 #: package/contents/ui/CalendarView.qml:447
@@ -87,7 +88,7 @@ msgstr "Pokaži datum"
 #: package/contents/ui/configAppearance.qml:60
 #, kde-format
 msgid "Adaptive location"
-msgstr "Adaptivna lokacija"
+msgstr "Prilagodljiva lokacija"
 
 #: package/contents/ui/configAppearance.qml:61
 #, kde-format
@@ -130,7 +131,7 @@ msgstr "Pokaži časovni pas:"
 #: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Samo kadar je različno od krajevnega časovnega pasu"
+msgstr "Samo kadar je različen od krajevnega časovnega pasu"
 
 #: package/contents/ui/configAppearance.qml:103
 #, kde-format
@@ -150,7 +151,7 @@ msgstr "Mesto"
 #: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Offset from UTC time"
-msgstr "Odmik od UTC"
+msgstr "Odmik od časa UTC"
 
 #: package/contents/ui/configAppearance.qml:122
 #, kde-format
@@ -176,7 +177,7 @@ msgstr "24 urni"
 #: package/contents/ui/configAppearance.qml:136
 #, kde-format
 msgid "Change Regional Settings…"
-msgstr "Spremeni območne nastavitve…"
+msgstr "Spremeni območne nastavitve …"
 
 #: package/contents/ui/configAppearance.qml:147
 #, kde-format
@@ -211,7 +212,7 @@ msgid ""
 "\">Time Format Documentation</a>"
 msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
-"\">Dokumentacija formatov časa</a>"
+"\">Dokumentacija oblike časa</a>"
 
 #: package/contents/ui/configAppearance.qml:230
 #, kde-format
@@ -231,7 +232,7 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
-"Besedilo bo sledilo sistemskemu črkopisu in bo razširjeno, da zapolni "
+"Besedilo bo sledilo sistemski pisavi in bo razširjeno, da zapolni "
 "razpoložljivi prostor."
 
 #: package/contents/ui/configAppearance.qml:246
@@ -244,19 +245,19 @@ msgstr "Ročno"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr "Izberi slog…"
+msgstr "Izbor sloga …"
 
 #: package/contents/ui/configAppearance.qml:269
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr "%1pt %2"
+msgstr "%1 pik %2"
 
 #: package/contents/ui/configAppearance.qml:277
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr "Izberite črkopis"
+msgstr "Izberite pisavo"
 
 #: package/contents/ui/configCalendar.qml:38
 #, kde-format
@@ -299,12 +300,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr "Skrito, ko je to mesto lokalne časovne cone"
+msgstr "Skrito, ko je to mesto krajevnega časovnega pasu"
 
 #: package/contents/ui/configTimeZones.qml:106
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Preklopi sistemski časovni pas…"
+msgstr "Preklopi sistemski časovni pas …"
 
 #: package/contents/ui/configTimeZones.qml:118
 #, kde-format
@@ -333,13 +334,14 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:150
 #, kde-format
 msgid "Add Time Zones…"
-msgstr "Dodaj časovne pasove…"
+msgstr "Dodaj časovne pasove …"
 
 #: package/contents/ui/configTimeZones.qml:160
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
-"Prikazani časovni pas preklapljate tako, da se pomaknete nad apletom ure"
+"Prikazani časovni pas zamenjaj, ko zavrtim miškin kolešček nad programčkom "
+"ure"
 
 #: package/contents/ui/configTimeZones.qml:167
 #, kde-format
@@ -361,7 +363,7 @@ msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
 "automatically."
 msgstr ""
-"Omogočen mora biti vsaj en časovni pas. Vaš lokalni časovni pas je bil "
+"Omogočen mora biti vsaj en časovni pas. Vaš krajevni časovni pas je bil "
 "samodejno omogočen."
 
 #: package/contents/ui/configTimeZones.qml:238
@@ -382,12 +384,12 @@ msgstr "Kopiraj na odložišče"
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Adjust Date and Time…"
-msgstr "Prilagodi datum in čas…"
+msgstr "Prilagodi datum in čas …"
 
 #: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Set Time Format…"
-msgstr "Nastavi obliko časa…"
+msgstr "Nastavi obliko časa …"
 
 #: package/contents/ui/Tooltip.qml:31
 #, kde-format
@@ -427,7 +429,7 @@ msgstr "Krajevni"
 #: plugin/timezonemodel.cpp:149
 #, kde-format
 msgid "System's local time zone"
-msgstr "Sistemski lokalni časovni pas"
+msgstr "Sistemski krajevni časovni pas"
 
 #~ msgctxt "Format: month year"
 #~ msgid "%1 %2"

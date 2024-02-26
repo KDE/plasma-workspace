@@ -3,13 +3,14 @@
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Jure Repinc <jlp@holodeck1.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-11-23 09:39+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-02-25 02:44+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andrej Mernik,Matjaž Jeran"
+msgstr "Andrej Mernik,Matjaž Jeran,Jure Repinc"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
+msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net,jlp@holodeck1.com"
 
 #: calendar/eventdatadecorator.cpp:51
 #, kde-format
@@ -46,7 +47,7 @@ msgstr "Dogodki"
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr "Za narediti"
+msgstr "Opravila"
 
 #: calendar/eventdatadecorator.cpp:57
 #, kde-format
@@ -77,17 +78,17 @@ msgstr "%1 %2"
 #: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Days"
-msgstr "Dni"
+msgstr "Dnevi"
 
 #: calendar/qml/MonthViewHeader.qml:120
 #, kde-format
 msgid "Months"
-msgstr "Mesecev"
+msgstr "Meseci"
 
 #: calendar/qml/MonthViewHeader.qml:126
 #, kde-format
 msgid "Years"
-msgstr "Let"
+msgstr "Leta"
 
 #: calendar/qml/MonthViewHeader.qml:164
 #, kde-format
@@ -113,7 +114,7 @@ msgstr "Danes"
 #: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Reset calendar to today"
-msgstr "Ponovno nastavi koledar na danes"
+msgstr "Nastavi koledar na danes"
 
 #: calendar/qml/MonthViewHeader.qml:197
 #, kde-format
@@ -138,7 +139,7 @@ msgstr "Ohranjaj odprto"
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr "Konfiguriraj…"
+msgstr "Nastavi …"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -285,7 +286,7 @@ msgstr "Razno"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr "Večpredstavnost"
+msgstr "Predstavnost"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -330,7 +331,7 @@ msgstr "Vsi gradniki"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
-msgstr "Teče"
+msgstr "Dejavni"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
@@ -339,7 +340,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr "Neodstranljiv"
+msgstr "Neodstranljivi"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
@@ -354,7 +355,7 @@ msgstr "Prejmi nove gradnike Plasme"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:241
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Namesti gradnik iz krajevne datoteke…"
+msgstr "Namesti gradnik iz krajevne datoteke …"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:503
 #, kde-format

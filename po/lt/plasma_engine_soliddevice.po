@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2020-12-16 20:12+0200\n"
+"PO-Revision-Date: 2024-02-26 01:31+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -528,28 +528,20 @@ msgid "Bluetooth Battery"
 msgstr "Bluetooth akumuliatorius"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Fotoaparato akumuliatorius"
+msgstr "Planšetės akumuliatorius"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Telefono akumuliatorius"
+msgstr "Ausinių akumuliatorius"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Pelės akumuliatorius"
+msgstr "Ausinių su mikrofonu akumuliatorius"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Pelės akumuliatorius"
+msgstr "Jutiklinio kilimėlio akumuliatorius"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"
