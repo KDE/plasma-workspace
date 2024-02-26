@@ -26,12 +26,12 @@ ColumnLayout {
     // blocking sleep and screen locking).
     //
     // type: [{
-    //  Icon: string,
     //  Name: string,
+    //  PrettyName: string,
+    //  Icon: string,
     //  Reason: string,
     // }]
     property var inhibitions: []
-    property bool manuallyInhibited
     property bool inhibitsLidAction
 
     // UI to manually inhibit sleep and screen locking
@@ -39,7 +39,7 @@ ColumnLayout {
         id: pmCheckBox
         Layout.fillWidth: true
         text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
-        checked: root.manuallyInhibited
+        checked: false
         focus: true
 
         KeyNavigation.up: dialog.KeyNavigation.up
@@ -96,7 +96,7 @@ ColumnLayout {
             InhibitionHint {
                 property string icon: modelData.Icon
                     || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
-                property string name: modelData.Name
+                property string name: modelData.PrettyName
                 property string reason: modelData.Reason
 
                 Layout.fillWidth: true

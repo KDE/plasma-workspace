@@ -23,28 +23,36 @@ PlasmaComponents3.ItemDelegate {
     // workaround for (raw identifiers like r#try in Rust would've helped here).
     //
     // type: {
-    //  Capacity:           int,
-    //  Energy:             real,
-    //  "Is Power Supply":  bool,
-    //  Percent:            int,
-    //  "Plugged In":       bool,
-    //  "Pretty Name":      string,
-    //  Product:            string,
-    //  State:              "Discharging"|"Charging"|"FullyCharged"|etc.,
-    //  Type:               string,
-    //  Vendor:             string,
+    //  capacity:           int,
+    //  energy:             real,
+    //  isPowerSupply:      bool,
+    //  percent:            int,
+    //  pluggedIn:          bool,
+    //  prettyName:         string,
+    //  product:            string,
+    //  state:              "Discharging"|"Charging"|"FullyCharged"|etc.,
+    //  type:               string,
+    //  vendor:             string,
     // }?
     property var battery
 
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
-    readonly property bool isPresent: root.battery["Plugged in"]
+    readonly property bool isPresent: root.battery.pluggedIn
 
-    readonly property bool isPowerSupply: root.battery["Is Power Supply"]
+    readonly property bool isPowerSupply: root.battery.isPowerSupply
 
-    readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
+    readonly property bool isBroken: root.battery.capacity > 0 && root.battery.capacity < 50
+
+    property string state: ""
 
     property int remainingTime: 0
+
+    property int chargeStopThreshold: 0
+
+    property bool pluggedIn: false
+
+    property int percent: 0
 
     // Existing instance of a slider to use as a reference to calculate extra
     // margins for a progress bar, so that the row of labels on top of it
@@ -56,7 +64,7 @@ PlasmaComponents3.ItemDelegate {
     background.visible: highlighted
     highlighted: activeFocus
     hoverEnabled: false
-    text: battery["Pretty Name"]
+    text: battery.prettyName
 
     Accessible.description: `${isPowerSupplyLabel.text} ${percentLabel.text}; ${details.Accessible.description}`
 
@@ -70,10 +78,10 @@ PlasmaComponents3.ItemDelegate {
             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
 
-            batteryType: root.battery.Type
-            percent: root.battery.Percent
+            batteryType: root.battery.type
+            percent: root.battery.percent
             hasBattery: root.isPresent
-            pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
+            pluggedIn:  root.battery.state === "Charging" && root.battery.isPowerSupply
         }
 
         ColumnLayout {
@@ -93,10 +101,10 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Label {
                     id: isPowerSupplyLabel
-                    text: Logic.stringForBatteryState(root.battery, pmSource)
+                    text: Logic.stringForBatteryState(root.isPresent, root.chargeStopThreshold, root.percent, root.state, root.battery.state)
                     textFormat: Text.PlainText
                     // For non-power supply batteries only show label for known-good states
-                    visible: root.isPowerSupply || ["Discharging", "FullyCharged", "Charging"].includes(root.battery.State)
+                    visible: root.isPowerSupply || ["Discharging", "FullyCharged", "Charging"].includes(root.battery.state)
                     enabled: false
                 }
 
@@ -104,7 +112,7 @@ PlasmaComponents3.ItemDelegate {
                     id: percentLabel
                     horizontalAlignment: Text.AlignRight
                     visible: root.isPresent
-                    text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
+                    text: i18nc("Placeholder is battery percentage", "%1%", root.battery.percent)
                     textFormat: Text.PlainText
                 }
             }
@@ -119,7 +127,7 @@ PlasmaComponents3.ItemDelegate {
                 from: 0
                 to: 100
                 visible: root.isPresent
-                value: Number(root.battery.Percent)
+                value: root.battery.percent
             }
 
             // This gridLayout basically emulates an at-most-two-rows table with a
@@ -167,8 +175,8 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: true
                     Layout.columnSpan: 2
 
-                    text: root.isBroken && typeof root.battery.Capacity !== "undefined"
-                        ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
+                    text: root.isBroken
+                        ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.capacity)
                         : ""
                     textFormat: Text.PlainText
                     font: Kirigami.Theme.smallFont
@@ -179,17 +187,19 @@ PlasmaComponents3.ItemDelegate {
 
                 readonly property bool remainingTimeRowVisible: root.battery !== null
                     && root.remainingTime > 0
-                    && root.battery["Is Power Supply"]
-                    && ["Discharging", "Charging"].includes(root.battery.State)
+                    && root.battery.isPowerSupply
+                    && ["Discharging", "Charging"].includes(root.battery.state)
+
                 readonly property bool isEstimatingRemainingTime: root.battery !== null
                     && root.isPowerSupply
                     && root.remainingTime === 0
-                    && root.battery.State === "Discharging"
+                    && root.battery.state === "Discharging"
 
                 LeftLabel {
-                    text: root.battery.State === "Charging"
+                    text: root.battery.state === "Charging"
                         ? i18n("Time To Full:")
                         : i18n("Remaining Time:")
+
                     visible: details.remainingTimeRowVisible || details.isEstimatingRemainingTime
                 }
 
@@ -200,9 +210,8 @@ PlasmaComponents3.ItemDelegate {
                 }
 
                 readonly property bool healthRowVisible: root.battery !== null
-                    && root.battery["Is Power Supply"]
-                    && root.battery.Capacity !== ""
-                    && typeof root.battery.Capacity === "number"
+                    && root.battery.isPowerSupply
+                    && root.battery.capacity !== ""
                     && !root.isBroken
 
                 LeftLabel {
@@ -212,7 +221,7 @@ PlasmaComponents3.ItemDelegate {
 
                 RightLabel {
                     text: details.healthRowVisible
-                        ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
+                        ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.capacity)
                         : ""
                     visible: details.healthRowVisible
                 }
@@ -222,11 +231,9 @@ PlasmaComponents3.ItemDelegate {
                 Layout.fillWidth: true
                 Layout.topMargin: Kirigami.Units.smallSpacing
 
-                readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
-                readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
-                visible: pluggedIn && root.isPowerSupply && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
+                visible: root.pluggedIn && root.isPowerSupply && root.chargeStopThreshold > 0 && root.chargeStopThreshold < 100
                 iconSource: "kt-speed-limits" // FIXME good icon
-                text: i18n("Battery is configured to charge up to approximately %1%.", chargeStopThreshold || 0)
+                text: i18n("Battery is configured to charge up to approximately %1%.", root.chargeStopThreshold)
             }
         }
     }

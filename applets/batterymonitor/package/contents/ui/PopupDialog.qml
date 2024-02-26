@@ -17,6 +17,9 @@ PlasmaExtras.Representation {
 
     property alias model: batteryRepeater.model
     property bool pluggedIn
+    property int chargeStopThreshold
+    property int percent
+    property string state
 
     property int remainingTime
 
@@ -33,7 +36,6 @@ PlasmaExtras.Representation {
     //  Reason: string,
     // }]
     property var inhibitions: []
-    property bool manuallyInhibited
     property bool inhibitsLidAction
 
     property string inhibitionReason
@@ -41,7 +43,6 @@ PlasmaExtras.Representation {
     // type: [{ Name: string, Icon: string, Profile: string, Reason: string }]
     required property var profileHolds
 
-    signal powerManagementChanged(bool disabled)
     signal inhibitionChangeRequested(bool inhibit)
     signal activateProfileRequested(string profile)
 
@@ -57,15 +58,12 @@ PlasmaExtras.Representation {
             id: pmSwitch
 
             inhibitions: dialog.inhibitions
-            manuallyInhibited: dialog.manuallyInhibited
             inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
 
             onInhibitionChangeRequested: inhibit => {
                 dialog.inhibitionChangeRequested(inhibit);
             }
-
-            onDisabledChanged: dialog.powerManagementChanged(disabled)
         }
     }
 
@@ -133,8 +131,13 @@ PlasmaExtras.Representation {
                 delegate: BatteryItem {
                     width: scrollView.availableWidth
 
-                    battery: model
+                    battery: modelData
                     remainingTime: dialog.remainingTime
+
+                    pluggedIn: dialog.pluggedIn
+                    chargeStopThreshold: dialog.chargeStopThreshold
+                    percent: dialog.percent
+                    state: dialog.state
 
                     KeyNavigation.up: index === 0 ? batteryList.lastHeaderItem : batteryRepeater.itemAt(index - 1)
                     KeyNavigation.down: index + 1 < batteryRepeater.count ? batteryRepeater.itemAt(index + 1) : null

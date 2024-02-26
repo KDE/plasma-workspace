@@ -114,9 +114,8 @@ PlasmaComponents3.ItemDelegate {
                 onMoved: {
                     const { canBeInhibited, profile } = root.profileData[value];
                     if (!(canBeInhibited && root.inhibited)) {
-                        activateProfileRequested(profile);
-                    } else {
                         value = Qt.binding(() => root.activeProfileIndex);
+                        activateProfileRequested(profile);
                     }
                 }
 

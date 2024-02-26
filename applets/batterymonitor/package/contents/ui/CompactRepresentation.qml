@@ -20,8 +20,10 @@ MouseArea {
     property real itemSize: Math.min(root.height, root.width/view.count)
     readonly property bool isConstrained: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
-    property QtObject batteries
+    property int batteryPercent : 0
+    property bool batteryPluggedIn : false
     property bool hasBatteries: false
+    property var batteries : []
     required property bool isSetToPerformanceMode
     required property bool isSetToPowerSaveMode
     required property bool isSomehowFullyCharged
@@ -59,8 +61,8 @@ MouseArea {
             Item {
                 id: batteryContainer
 
-                property int percent: root.isConstrained ? pmSource.data["Battery"]["Percent"] : model["Percent"]
-                property bool pluggedIn: pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && (root.isConstrained || model["Is Power Supply"])
+                property int percent: root.isConstrained ? root.batteryPercent : modelData.percent
+                property bool pluggedIn: root.batteryPluggedIn  && (root.isConstrained || modelData.isPowerSupply)
 
                 height: root.itemSize
                 width: root.width/view.count
@@ -102,7 +104,7 @@ MouseArea {
 
                     visible: Plasmoid.configuration.showPercentage && !root.isSomehowFullyCharged
 
-                    text: i18nc("battery percentage below battery icon", "%1%", percent)
+                    text: i18nc("battery percentage below battery icon", "%1%", batteryContainer.percent)
                     icon: batteryIcon
                 }
             }

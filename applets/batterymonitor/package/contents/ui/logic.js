@@ -6,25 +6,24 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-function stringForBatteryState(batteryData, source) {
-    if (batteryData["Plugged in"]) {
+function stringForBatteryState(pluggedIn, chargeStopThreshold, percent, state, batteryState) {
+    if (pluggedIn) {
         // When we are using a charge threshold, the kernel
         // may stop charging within a percentage point of the actual threshold
         // and this is considered correct behavior, so we have to handle
         // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
-        if (typeof source.data["Battery"]["Charge Stop Threshold"] === "number"
-            && (source.data.Battery.Percent >= source.data["Battery"]["Charge Stop Threshold"] - 1
-            && source.data.Battery.Percent <= source.data["Battery"]["Charge Stop Threshold"] + 1)
+        if ( (percent >= chargeStopThreshold - 1
+            && percent <= chargeStopThreshold + 1)
             // Also, Upower may give us a status of "Not charging" rather than
             // "Fully charged", so we need to account for that as well. See
             // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
-            && (source.data["Battery"]["State"] === "NoCharge" || source.data["Battery"]["State"] === "FullyCharged")
+            && (state === "NoCharge" || state === "FullyCharged")
         ) {
             return i18n("Fully Charged");
         }
 
         // Otherwise, just look at the charge state
-        switch(batteryData["State"]) {
+        switch(batteryState) {
             case "Discharging": return i18n("Discharging");
             case "FullyCharged": return i18n("Fully Charged");
             case "Charging": return i18n("Charging");
@@ -34,22 +33,4 @@ function stringForBatteryState(batteryData, source) {
     } else {
         return i18nc("Battery is currently not present in the bay", "Not present");
     }
-}
-
-function updateInhibitions(rootItem, source) {
-    const inhibitions = [];
-    const manualInhibitions = [];
-
-    if (source.data["Inhibitions"]) {
-        for (let key in pmSource.data["Inhibitions"]) {
-            if (key === "plasmashell" || key === "plasmoidviewer") {
-                manualInhibitions.push(key);
-            } else {
-                inhibitions.push(pmSource.data["Inhibitions"][key]);
-            }
-        }
-    }
-
-    rootItem.manuallyInhibited = manualInhibitions.length > 0;
-    rootItem.inhibitions = inhibitions;
 }
