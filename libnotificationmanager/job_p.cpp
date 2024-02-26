@@ -66,6 +66,11 @@ QUrl JobPrivate::localFileOrUrl(const QString &urlString)
 {
     QUrl url(urlString);
     if (url.scheme().isEmpty()) {
+        // Likely not a path at all (e.g. just a device name).
+        if (!url.path().startsWith(QLatin1Char('/'))) {
+            return QUrl();
+        }
+
         url = QUrl::fromLocalFile(urlString);
     }
     return url;
