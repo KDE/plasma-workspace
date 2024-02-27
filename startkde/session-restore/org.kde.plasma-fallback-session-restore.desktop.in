@@ -2,6 +2,7 @@
 Exec=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-fallback-session-restore
 Name=Plasma Session Restore
 Name[ar]=استعادة جلسة بلازما
+Name[bg]=Възстановяване на сесия на Plasma
 Name[ca]=Restaura la sessió del Plasma
 Name[eo]=Plasma-Seancrestaŭro
 Name[es]=Restaurar sesión de Plasma

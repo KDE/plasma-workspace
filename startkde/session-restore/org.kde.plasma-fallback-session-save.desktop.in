@@ -2,6 +2,7 @@
 Exec=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-fallback-session-save
 Name=Plasma Session Save
 Name[ar]=حفظ جلسة بلازما
+Name[bg]=Запазване на сесия на Plasma
 Name[ca]=Desa la sessió del Plasma
 Name[eo]=Plasma-Seanckonservado
 Name[es]=Guardar sesión de Plasma
