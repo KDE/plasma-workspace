@@ -14,7 +14,7 @@ if [ "$(id -u)" != "0" ]; then
   install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-unmerge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
   install --mode=755 @CMAKE_CURRENT_BINARY_DIR@/run-unmerged @CMAKE_INSTALL_FULL_BINDIR@
   install --mode=755 @CMAKE_CURRENT_SOURCE_DIR@/run-unmerged-script @CMAKE_INSTALL_FULL_LIBEXECDIR@
-  exec pkexec ./$0
+  exec pkexec @CMAKE_INSTALL_FULL_BINDIR@/run-unmerged $(dirname "$0")/install-sessions.sh
 fi
 
 # Clean up legacy stuff. Previously this script would try to massage things into shape through configs
