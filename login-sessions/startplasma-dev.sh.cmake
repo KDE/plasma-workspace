@@ -2,9 +2,9 @@
 
 # On-demand merge the systemd-sysext until systemd grows a builtin facility for this
 # https://github.com/systemd/systemd/issues/25031
-pkexec $(dirname "$0")/systemd-sysext-merge
+pkexec $(dirname "$0")/plasma-systemd-sysext-merge
 function at_exit {
-  pkexec $(dirname "$0")/systemd-sysext-unmerge
+  pkexec $(dirname "$0")/plasma-systemd-sysext-unmerge
 }
 trap at_exit EXIT
 

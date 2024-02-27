@@ -10,8 +10,8 @@ set -ex
 if [ "$(id -u)" != "0" ]; then
   install @CMAKE_BINARY_DIR@/prefix.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dev-prefix.sh
   install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
-  install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-merge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
-  install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/systemd-sysext-unmerge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
+  install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/plasma-systemd-sysext-merge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
+  install --mode=755 -D @CMAKE_CURRENT_SOURCE_DIR@/plasma-systemd-sysext-unmerge --target-directory=@CMAKE_INSTALL_FULL_LIBEXECDIR@
   install --mode=755 @CMAKE_CURRENT_BINARY_DIR@/run-unmerged @CMAKE_INSTALL_FULL_BINDIR@
   install --mode=755 @CMAKE_CURRENT_SOURCE_DIR@/run-unmerged-script @CMAKE_INSTALL_FULL_LIBEXECDIR@
   exec pkexec @CMAKE_INSTALL_FULL_BINDIR@/run-unmerged $(dirname "$0")/install-sessions.sh

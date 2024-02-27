@@ -17,7 +17,7 @@
       <allow_inactive>no</allow_inactive>
       <allow_active>yes</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">@CMAKE_INSTALL_FULL_LIBEXECDIR@/systemd-sysext-merge</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-systemd-sysext-merge</annotate>
   </action>
 
   <action id="org.kde.plasma.systemd-sysext.pkexec.unmerge">
@@ -28,6 +28,6 @@
       <allow_inactive>no</allow_inactive>
       <allow_active>yes</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">@CMAKE_INSTALL_FULL_LIBEXECDIR@/systemd-sysext-unmerge</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-systemd-sysext-unmerge</annotate>
   </action>
 </policyconfig>

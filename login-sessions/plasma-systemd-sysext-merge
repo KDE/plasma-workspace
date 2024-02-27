@@ -3,7 +3,7 @@
 
 set -ex
 
-$(dirname "$0")/systemd-sysext-unmerge
+$(dirname "$0")/plasma-systemd-sysext-unmerge
 
 mkdir -p /run/extensions/
 ln -s /var/local/extensions-plasma-dev6 /run/extensions/plasma-dev6
