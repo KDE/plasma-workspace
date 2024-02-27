@@ -91,6 +91,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_unhideTimer.setInterval(500ms);
     connect(&m_unhideTimer, &QTimer::timeout, this, &PanelView::restoreAutoHide);
 
+    connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::restoreAutoHide);
+
     m_lastScreen = targetScreen;
     connect(this, &PanelView::locationChanged, this, &PanelView::restore);
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
@@ -888,7 +890,7 @@ void PanelView::restoreAutoHide()
         autoHide = false;
     } else if (m_containsMouse) {
         autoHide = false;
-    } else if (containment() && containment()->isUserConfiguring()) {
+    } else if (m_corona->isEditMode()) {
         autoHide = false;
     } else if (containment() && containment()->status() >= Plasma::Types::NeedsAttentionStatus && containment()->status() != Plasma::Types::HiddenStatus) {
         autoHide = false;

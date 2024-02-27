@@ -153,6 +153,13 @@ void ShellCorona::init()
 #endif
 
     connect(this, &Plasma::Corona::availableScreenRectChanged, this, &Plasma::Corona::availableScreenRegionChanged);
+    connect(this, &Plasma::Corona::editModeChanged, this, [this]() {
+        QMapIterator<const Plasma::Containment *, PanelView *> i(m_panelViews);
+        while (i.hasNext()) {
+            i.next();
+            Q_EMIT availableScreenRectChanged(i.key()->screen());
+        }
+    });
 
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
@@ -1173,7 +1180,7 @@ QRect ShellCorona::_availableScreenRect(int id) const
     int topThickness, leftThickness, rightThickness, bottomThickness;
     topThickness = leftThickness = rightThickness = bottomThickness = 0;
     for (PanelView *v : m_panelViews) {
-        if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && v->screen() == screen && (v->visibilityMode() != PanelView::AutoHide || isEditMode())) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
                 leftThickness = qMax(leftThickness, v->totalThickness());
@@ -1610,6 +1617,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 
 void ShellCorona::toggleWidgetExplorer()
 {
+    setEditMode(true);
     // FIXME: This does not work on wayland
     const QPoint cursorPos = QCursor::pos();
     for (DesktopView *view : std::as_const(m_desktopViewForScreen)) {
