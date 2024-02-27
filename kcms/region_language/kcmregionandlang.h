@@ -49,6 +49,7 @@ public:
     Q_INVOKABLE void reboot();
     Q_INVOKABLE void applyToLocal();
     Q_INVOKABLE void applyToSystem();
+    Q_INVOKABLE void saveCanceled();
 
 Q_SIGNALS:
     void saveClicked();

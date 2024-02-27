@@ -90,46 +90,38 @@ KCM.ScrollViewKCM {
         }
     }
     
-    Kirigami.PromptDialog {
+    Kirigami.Dialog {
         id: applyDialog
         title: i18nc("@title:window", "Apply locale settings")
-        subtitle: i18nc("@label", "Do you wish to apply locale settings to system?")
-        standardButtons: Kirigami.Dialog.NoButton
-        customFooterActions: [
-            Kirigami.Action {
-                text: i18nc("@action:button", "Apply to system and current user")
-                icon.name: "delete"
-                onTriggered: {
-                    applyDialog.accept();
-                    // return to first page
-                    while (kcm.depth > 1) {
-                        kcm.takeLast();
-                    }
-                }
-            },
-            Kirigami.Action {
-                text: i18nc("@action:button", "Only apply to current user")
-                icon.name: "dialog-cancel"
-                onTriggered: {
-                    applyDialog.reject();
-                    // return to first page
-                    while (kcm.depth > 1) {
-                        kcm.takeLast();
-                    }
-                }
-            },
-            Kirigami.Action {
-                text: i18nc("@action:button", "Cancel")
-                icon.name: "dialog-cancel"
-                onTriggered: {
-                    applyDialog.reject();
-                    // return to first page
-                    while (kcm.depth > 1) {
-                        kcm.takeLast();
-                    }
-                }
+        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+        ColumnLayout {
+            QQC2.Label {
+                text: i18nc("@label", "Do you wish to apply locale settings to system?")
             }
-        ]
+            QQC2.Switch {
+                id: applyToSystemSwitch
+                text: i18nc("@action:switch", "Also apply setting to system")
+            }
+        }
+ 
+        onAccepted: {
+            if (applyToSystemSwitch.checked) {
+                kcm.applyToSystem();
+            } else {
+                kcm.applyToLocal();
+            }
+            // return to first page
+            while (kcm.depth > 1) {
+                kcm.takeLast();
+            }
+        }
+        onRejected: {
+            kcm.saveCanceled();
+            // return to first page
+            while (kcm.depth > 1) {
+                kcm.takeLast();
+            }
+        }
     }
 
     Connections {
@@ -152,6 +144,9 @@ KCM.ScrollViewKCM {
         }
         function onSaveClicked() {
             // open apply dialog
+            if (kcm.depth === 1) {
+                applyDialog.parent = root;
+            }
             applyDialog.open();
         }
         function onDefaultsClicked() {
@@ -224,6 +219,7 @@ KCM.ScrollViewKCM {
                         if (model.page === SettingType.Lang) {
                             languageSelectPage.active = true;
                             kcm.push(languageSelectPage.item);
+                            applyDialog.parent = languageSelectPage.item;
                         } else if (model.page === SettingType.BinaryDialect) {
                             binaryDialectSelectPage.active = true;
                             kcm.push(binaryDialectSelectPage.item);
@@ -232,6 +228,7 @@ KCM.ScrollViewKCM {
                             localeListPage.item.setting = optionsDelegate.model.page;
                             localeListPage.item.filterText = '';
                             kcm.push(localeListPage.item);
+                            applyDialog.parent = localeListPage.item;
                         }
                     }
                 }

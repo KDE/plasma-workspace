@@ -270,6 +270,7 @@ void KCMRegionAndLang::applyToSystem()
         args.append(QStringLiteral("LC_TELEPHONE=%1").arg(settings()->phoneNumbers()));
     }
 
+    // SetLocale call will generate locales for us
     auto setLocaleCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.locale1"),
                                                         QStringLiteral("/org/freedesktop/locale1"),
                                                         QStringLiteral("org.freedesktop.locale1"),
@@ -277,6 +278,18 @@ void KCMRegionAndLang::applyToSystem()
     qDebug() << args;
     setLocaleCall.setArguments({args, true});
     QDBusConnection::systemBus().asyncCall(setLocaleCall);
+    auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
+                                                      QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
+                                                      QStringLiteral("org.freedesktop.Accounts.User"),
+                                                      QStringLiteral("SetLanguage"));
+    setLangCall.setArguments({settings()->lang()});
+    QDBusConnection::systemBus().asyncCall(setLangCall);
+    saveToConfigFile();
+}
+
+void KCMRegionAndLang::saveCanceled()
+{
+    settingsChanged();
 }
 
 void KCMRegionAndLang::saveToConfigFile()
