@@ -5,3 +5,6 @@ set -ex
 
 rm -f /run/extensions/plasma-dev6
 systemd-sysext refresh
+
+rm -f /run/confexts/plasma-dev6
+systemd-confext refresh

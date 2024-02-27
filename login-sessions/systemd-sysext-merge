@@ -8,3 +8,7 @@ $(dirname "$0")/systemd-sysext-unmerge
 mkdir -p /run/extensions/
 ln -s /var/local/extensions-plasma-dev6 /run/extensions/plasma-dev6
 systemd-sysext refresh
+
+mkdir -p /run/confexts/
+ln -s /var/local/extensions-plasma-dev6/usr /run/confexts/plasma-dev6
+systemd-confext refresh
