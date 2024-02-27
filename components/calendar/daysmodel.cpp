@@ -14,7 +14,7 @@
 #include <QDir>
 #include <QMetaObject>
 
-constexpr int maxEventDisplayed = 5;
+constexpr int maxEventDisplayed = 20;
 
 class DaysModelPrivate
 {
