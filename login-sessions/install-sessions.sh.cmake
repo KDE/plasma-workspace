@@ -29,7 +29,8 @@ fi
 # - dbus exclusively looks in the system prefix for **system** services and offers no facilities to change that
 #   https://gitlab.freedesktop.org/dbus/dbus/-/blob/9722d621497b2e7324e696f4095f56e2a9307a7e/bus/activation-helper.c#
 if [ -x /usr/bin/systemd-sysext ]; then
-  install --mode=644 -D /usr/lib/os-release @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/extension-release.plasma-dev6
+  install --mode=644 -D @CMAKE_CURRENT_SOURCE_DIR@/extension-release.plasma-dev6 --target-directory=@CMAKE_INSTALL_PREFIX@/lib/extension-release.d
+  install --mode=644 -D @CMAKE_CURRENT_SOURCE_DIR@/extension-release.plasma-dev6 --target-directory=@CMAKE_INSTALL_PREFIX@/etc/extension-release.d
 
   prefix=/var/local/extensions-plasma-dev6
   rm -rf $prefix
