@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 02:16+0000\n"
+"POT-Creation-Date: 2024-02-28 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 09:30+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -23,62 +23,62 @@ msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
 msgstr "%1 của %2"
 
-#: job_p.cpp:183
+#: job_p.cpp:188
 #, kde-format
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
 msgid_plural "%2 of %1 files to %3"
 msgstr[0] "%2 trong %1 tệp vào %3"
 
-#: job_p.cpp:186 job_p.cpp:216 job_p.cpp:232
+#: job_p.cpp:191 job_p.cpp:221 job_p.cpp:237
 #, kde-format
 msgctxt "Copying n files to location"
 msgid "%1 file to %2"
 msgid_plural "%1 files to %2"
 msgstr[0] "%1 tệp vào %2"
 
-#: job_p.cpp:193
+#: job_p.cpp:198
 #, kde-format
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "%2 trong %1 tệp"
 
-#: job_p.cpp:196 job_p.cpp:226 job_p.cpp:236
+#: job_p.cpp:201 job_p.cpp:231 job_p.cpp:241
 #, kde-format
 msgctxt "Copying n files"
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 tệp"
 
-#: job_p.cpp:201
+#: job_p.cpp:206
 #, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%2 trong %1 thứ"
 
-#: job_p.cpp:204 job_p.cpp:224
+#: job_p.cpp:209 job_p.cpp:229
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 thứ"
 
-#: job_p.cpp:211
+#: job_p.cpp:216
 #, kde-format
 msgctxt "Copying file to location"
 msgid "%1 to %2"
 msgstr "%1 vào %2"
 
-#: job_p.cpp:214
+#: job_p.cpp:219
 #, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
 msgstr[0] "%1 thứ vào %2"
 
-#: job_p.cpp:234
+#: job_p.cpp:239
 #, kde-format
 msgctxt "Copying unknown amount of files to location"
 msgid "to %1"

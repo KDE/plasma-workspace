@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2024-02-06 19:56+0900\n"
+"PO-Revision-Date: 2024-02-26 03:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language-Team: ja\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm.cpp:73
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "マナーモードを切り替え"
+msgstr "マナーモードをオン/オフ"
 
 #: sourcesmodel.cpp:393
 #, kde-format
@@ -72,11 +72,10 @@ msgid "Play a sound"
 msgstr "サウンドを再生"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "アプリケーションの設定"
+msgstr "アプリケーションの通知を設定..."
 
 #: ui/main.qml:57
 #, kde-format
@@ -116,19 +115,19 @@ msgstr "自動的に有効化:"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "画面がミラーリングされているとき"
+msgstr "画面ミラーリング中"
 
 #: ui/main.qml:97
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "スクリーン共有中"
+msgstr "画面共有中"
 
 #: ui/main.qml:112
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr "ショートカットを使用して手動で切り替え:"
+msgstr "ショートカットを使用して手動でオン/オフ:"
 
 #: ui/main.qml:119
 #, kde-format
@@ -265,10 +264,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "リストからアプリケーションを選択して通知設定と動作を設定できます"
-
-#~ msgctxt "@title:group"
-#~ msgid "Application-specific settings"
-#~ msgstr "アプリケーション固有の設定"
-
-#~ msgid "Configure…"
-#~ msgstr "設定…"
