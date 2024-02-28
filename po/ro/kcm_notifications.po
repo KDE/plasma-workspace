@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2023-04-10 19:54+0100\n"
+"PO-Revision-Date: 2024-02-25 18:54+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -49,31 +49,27 @@ msgid "Show notification badges"
 msgstr "Arată ecusoane de notificare"
 
 #: ui/ApplicationConfiguration.qml:164
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Configurează evenimente…"
+msgstr "Configurează evenimente"
 
 #: ui/ApplicationConfiguration.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Această aplicație nu susține configurarea notificărilor per eveniment."
+msgstr "Această aplicație nu susține configurarea notificărilor per eveniment"
 
 #: ui/ApplicationConfiguration.qml:261
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Arată un mesaj contextual"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Redă un sunet"
 
 #: ui/main.qml:41
 #, kde-format
@@ -265,22 +261,18 @@ msgid "System Services"
 msgstr "Servicii de sistem"
 
 #: ui/SourcesPage.qml:148
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Nicio aplicație sau eveniment nu se potrivește cu termenul căutat."
+msgstr "Nicio aplicație sau eveniment nu se potrivește cu termenul căutat"
 
 #: ui/SourcesPage.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Alegeți o aplicație din listă pentru a-i configura parametrii și "
-"comportamentul de notificare."
+"comportamentul de notificare"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Configurează notificările"

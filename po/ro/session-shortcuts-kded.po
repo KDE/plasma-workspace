@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-08 00:48+0000\n"
-"PO-Revision-Date: 2024-02-27 22:05+0000\n"
+"POT-Creation-Date: 2024-01-01 01:36+0000\n"
+"PO-Revision-Date: 2024-02-25 18:43+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -18,17 +18,37 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: kio_applications.cpp:122
+#: main.cpp:32
 #, kde-format
-msgid "Applications"
-msgstr "Aplicații"
+msgid "Session Management"
+msgstr "Gestiunea sesiunii"
 
-#: kio_applications.cpp:122
+#: main.cpp:38
 #, kde-format
-msgid "Programs"
-msgstr "Programe"
+msgid "Log Out"
+msgstr "Ieși din sistem"
 
-#: kio_applications.cpp:131
+#: main.cpp:44
 #, kde-format
-msgid "Unknown application folder"
-msgstr "Dosar cu aplicații necunoscut"
+msgid "Shut Down"
+msgstr "Oprește"
+
+#: main.cpp:50
+#, kde-format
+msgid "Reboot"
+msgstr "Repornește"
+
+#: main.cpp:58
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Ieși fără confirmare"
+
+#: main.cpp:64
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "Oprește fără confirmare"
+
+#: main.cpp:70
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Repornește fără confirmare"

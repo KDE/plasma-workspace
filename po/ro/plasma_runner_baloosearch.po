@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2022-04-30 12:26+0100\n"
+"PO-Revision-Date: 2023-04-10 19:50+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -24,63 +24,54 @@ msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
 #: baloosearchrunner.cpp:82
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
-msgstr "Audio"
+msgstr "Sunete"
 
 #: baloosearchrunner.cpp:83
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "Imagine"
+msgstr "Imagini"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "Video"
+msgstr "Videoclipuri"
 
 #: baloosearchrunner.cpp:85
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
-msgstr "Foaie de calcul"
+msgstr "Foi de calcul"
 
 #: baloosearchrunner.cpp:86
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
-msgstr "Prezentare"
+msgstr "Prezentări"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Dosar"
+msgstr "Dosare"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "Document"
+msgstr "Documente"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
-msgstr "Arhivă"
+msgstr "Arhive"
 
 #: baloosearchrunner.cpp:90
-#, fuzzy, kde-format
-#| msgid "Text"
+#, kde-format
 msgid "Texts"
-msgstr "Text"
+msgstr "Texte"
 
 #: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Fișiere"
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Caută printre fișiere, scrisori și contacte"

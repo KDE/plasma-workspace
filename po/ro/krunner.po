@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2022-12-29 17:32+0000\n"
+"PO-Revision-Date: 2024-02-25 18:47+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -55,12 +55,12 @@ msgstr "Înlocuiește o instanță existentă"
 #: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Arată numai rezultate de la extensia dată"
 
 #: main.cpp:67
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Enumeră extensiile disponibile"
 
 #: main.cpp:74
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Interogarea de rulat, folosită numai dacă -c nu e furnizat"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Extensiile KRunner disponibile, pluginId"
 
 #: qml/RunCommand.qml:100
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Configurează KRunner…"
 #: qml/RunCommand.qml:117
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Se arată numai rezultate de la %1"
 
 #: qml/RunCommand.qml:131
 #, kde-format
