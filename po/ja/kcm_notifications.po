@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2024-02-06 19:56+0900\n"
+"PO-Revision-Date: 2024-02-26 03:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language-Team: ja\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm.cpp:64
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "マナーモードを切り替え"
+msgstr "マナーモードをオン/オフ"
 
 #: kcm.cpp:192
 #, kde-format
@@ -104,13 +104,13 @@ msgstr "この場合に有効化:"
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "画面がミラーリングされているとき"
+msgstr "画面ミラーリング中"
 
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "スクリーン共有中"
+msgstr "画面共有中"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
