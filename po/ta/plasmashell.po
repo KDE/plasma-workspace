@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:25+0000\n"
+"POT-Creation-Date: 2024-02-29 02:28+0000\n"
 "PO-Revision-Date: 2023-12-04 21:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -253,57 +253,57 @@ msgstr "%3-இல் %1 %2"
 msgid "Disconnected Screen %1"
 msgstr "செருகப்படாத %1 திரை"
 
-#: shellcorona.cpp:197 shellcorona.cpp:199
+#: shellcorona.cpp:204 shellcorona.cpp:206
 #, kde-format
 msgid "Show Desktop"
 msgstr "பணிமேடையைக் காட்டு"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Hide Desktop"
 msgstr "பணிமேடையை மறை"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "செயல்பாடு மாற்றியைக் காட்டு"
 
-#: shellcorona.cpp:226
+#: shellcorona.cpp:233
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "தற்போதைய செயல்பாட்டை நிறுத்து"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "முந்தைய செயல்பாட்டிற்கு தாவு"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "அடுத்த செயல்பாட்டிற்கு தாவு"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "பணி மேலாளர் பதிவு %1 -ஐ செயல்படுத்து"
 
-#: shellcorona.cpp:284
+#: shellcorona.cpp:291
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "பணிமேடைகளையும் பலகைகளையும் நிர்வகி…"
 
-#: shellcorona.cpp:306
+#: shellcorona.cpp:313
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "விசைப்பலகை குவியத்தை வேறு பலகைக்கு மாற்று"
 
-#: shellcorona.cpp:2056
+#: shellcorona.cpp:2064
 #, kde-format
 msgid "Add Panel"
 msgstr "பலகையைச் சேர்"
 
-#: shellcorona.cpp:2098
+#: shellcorona.cpp:2106
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

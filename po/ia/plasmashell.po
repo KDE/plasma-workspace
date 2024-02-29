@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 02:25+0000\n"
+"POT-Creation-Date: 2024-02-29 02:28+0000\n"
 "PO-Revision-Date: 2023-11-02 12:25+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -256,57 +256,57 @@ msgstr "%1 %2 sur %3"
 msgid "Disconnected Screen %1"
 msgstr "Schermo Disconnectite %1"
 
-#: shellcorona.cpp:197 shellcorona.cpp:199
+#: shellcorona.cpp:204 shellcorona.cpp:206
 #, kde-format
 msgid "Show Desktop"
 msgstr "Monstra Scriptorio"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Cela Scriptorio"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Monstra commutator de activitate"
 
-#: shellcorona.cpp:226
+#: shellcorona.cpp:233
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Stoppa activitate currente"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Commuta a previe activitate"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Commuta a proxime activitate"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Entrata de gerente de carga activate %1"
 
-#: shellcorona.cpp:284
+#: shellcorona.cpp:291
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gere scriptorios e pannellos..."
 
-#: shellcorona.cpp:306
+#: shellcorona.cpp:313
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Move foco de claviero inter pannellos"
 
-#: shellcorona.cpp:2056
+#: shellcorona.cpp:2064
 #, kde-format
 msgid "Add Panel"
 msgstr "Adde Pannello"
 
-#: shellcorona.cpp:2098
+#: shellcorona.cpp:2106
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

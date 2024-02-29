@@ -188,6 +188,3 @@ msgstr "Lukk sprettopp"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Vis gøymde ikon"
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Utvid systramtrauet"
