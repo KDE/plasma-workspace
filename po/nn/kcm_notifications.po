@@ -271,10 +271,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Vel eit program frå lista for å velja varslingsinnstillingar"
-
-#~ msgctxt "@title:group"
-#~ msgid "Application-specific settings"
-#~ msgstr "Programspesifikke innstillingar"
-
-#~ msgid "Configure…"
-#~ msgstr "Set opp …"

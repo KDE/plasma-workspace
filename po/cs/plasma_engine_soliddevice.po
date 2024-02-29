@@ -526,28 +526,20 @@ msgid "Bluetooth Battery"
 msgstr "Baterie Bluetooth"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Baterie fotoaparátu"
+msgstr ""
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Baterie telefonu"
+msgstr ""
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Baterie myši"
+msgstr ""
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Baterie myši"
+msgstr ""
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

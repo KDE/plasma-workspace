@@ -4,20 +4,21 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2013, 2014, 2015, 2016, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2023-11-14 14:14-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-02-28 15:16-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -124,7 +125,7 @@ msgstr "Até ser desabilitado manualmente"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Terminar automaticamente: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
@@ -248,12 +249,10 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:182
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "Ocultar detalhes"
+msgstr "Detalhes"
 
 #: package/contents/ui/JobItem.qml:193
 #, kde-format
@@ -306,20 +305,19 @@ msgstr[0] "%1 notificação não lida"
 msgstr[1] "%1 notificações não lidas"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Não perturbe até %1"
+msgstr "Não perturbe até %1; clique com o botão do meio para sair agora"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Modo não perturbe ativo; clique com o botão do meio para sair"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Clique com o botão do meio para entrar no modo não perturbe"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
