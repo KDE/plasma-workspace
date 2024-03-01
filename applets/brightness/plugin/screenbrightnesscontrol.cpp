@@ -46,6 +46,17 @@ ScreenBrightnessControl::ScreenBrightnessControl(QObject *parent)
         return;
     }
 
+    QDBusMessage brightnessMax = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
+                                                                u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                                                u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
+                                                                u"brightnessMax"_s);
+    QDBusReply<int> brightnessMaxReply = QDBusConnection::sessionBus().call(brightnessMax);
+    if (!brightnessMaxReply.isValid()) {
+        qDebug() << "error getting max screen brightness via dbus";
+        return;
+    }
+    m_maxBrightness = brightnessMaxReply.value();
+
     QDBusMessage brightness = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
                                                              u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
                                                              u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
@@ -57,17 +68,6 @@ ScreenBrightnessControl::ScreenBrightnessControl(QObject *parent)
         return;
     }
     m_brightness = brightnessReply.value();
-
-    QDBusMessage brightnessMax = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
-                                                                u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
-                                                                u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
-                                                                u"brightnessMax"_s);
-    QDBusReply<int> brightnessMaxReply = QDBusConnection::sessionBus().call(brightnessMax);
-    if (!brightnessReply.isValid()) {
-        qDebug() << "error getting max screen brightness via dbus";
-        return;
-    }
-    m_maxBrightness = brightnessMaxReply.value();
 
     m_isBrightnessAvailable = true;
 }
