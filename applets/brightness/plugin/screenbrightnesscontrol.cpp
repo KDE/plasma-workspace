@@ -78,14 +78,30 @@ ScreenBrightnessControl::~ScreenBrightnessControl()
 
 void ScreenBrightnessControl::setBrightness(int value)
 {
-    m_brightness = value;
+    if (m_brightness == value) {
+        return;
+    }
 
     QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                       u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
                                                       u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
                                                       m_isSilent ? u"setBrightnessSilent"_s : u"setBrightness"_s);
     msg << value;
-    QDBusConnection::sessionBus().asyncCall(msg);
+    QDBusPendingCall async = QDBusConnection::sessionBus().asyncCall(msg);
+    m_brightnessChangeWatcher.reset(new QDBusPendingCallWatcher(async));
+    connect(m_brightnessChangeWatcher.get(),
+            &QDBusPendingCallWatcher::finished,
+            this,
+            [this, oldValue = m_brightness.value()](QDBusPendingCallWatcher *watcher) {
+                const QDBusPendingReply<void> reply = *watcher;
+                if (reply.isError()) {
+                    qDebug() << "error setting brightness via dbus" << reply.error();
+                    m_brightness = oldValue;
+                }
+                m_brightnessChangeWatcher.reset();
+            });
+
+    m_brightness = value;
 }
 
 void ScreenBrightnessControl::setIsSilent(bool status)
@@ -95,6 +111,9 @@ void ScreenBrightnessControl::setIsSilent(bool status)
 
 void ScreenBrightnessControl::onBrightnessChanged(int value)
 {
+    if (m_brightnessChangeWatcher) {
+        return;
+    }
     m_brightness = value;
 }
 

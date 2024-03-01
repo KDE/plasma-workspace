@@ -122,7 +122,7 @@ PlasmoidItem {
         return iconName;
     }
 
-        compactRepresentation: CompactRepresentation {
+    compactRepresentation: CompactRepresentation {
 
         onWheel: wheel => {
             if (!screenBrightnessControl.isBrightnessAvailable) {

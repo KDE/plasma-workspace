@@ -10,6 +10,8 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
+class QDBusPendingCallWatcher;
+
 class ScreenBrightnessControl : public QObject
 {
     Q_OBJECT
@@ -45,5 +47,6 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ScreenBrightnessControl, int, m_brightness, 0, &ScreenBrightnessControl::brightnessChanged);
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ScreenBrightnessControl, int, m_maxBrightness, 0, &ScreenBrightnessControl::brightnessMaxChanged);
 
-    bool m_isSilent;
+    std::unique_ptr<QDBusPendingCallWatcher> m_brightnessChangeWatcher;
+    bool m_isSilent = false;
 };
