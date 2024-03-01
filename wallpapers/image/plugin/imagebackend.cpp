@@ -354,12 +354,6 @@ void ImageBackend::setConfigMap(QQmlPropertyMap *configMap)
         Q_ASSERT(m_configMap->contains(QStringLiteral("Image")));
     }
 
-    connect(m_configMap, &QQmlPropertyMap::valueChanged, this, [this](const QString &key, const QVariant & /* value */) {
-        if (key == QStringLiteral("Image")) {
-            Q_EMIT configMapChanged();
-        }
-    });
-
     saveCurrentWallpaper();
 }
 
