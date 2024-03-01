@@ -302,7 +302,7 @@ ContainmentItem {
                     z: 999 /* Draw the line on top of the applet */
                     elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                     imagePath: "widgets/line"
-                    // Use states instead of bindings to work around https://bugreports.qt.io/browse/QTBUG-120464
+                    // QTBUG-120464: Use AnchorChanges instead of bindings as it's officially supported: https://doc.qt.io/qt-6/qtquick-positioning-anchors.html#changing-anchors
                     states: [
                         State {
                             when: Plasmoid.location === PlasmaCore.Types.TopEdge
