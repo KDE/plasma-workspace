@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2024-02-05 11:43\n"
+"PO-Revision-Date: 2024-02-29 13:00\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -130,7 +130,7 @@ msgstr "完全"
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you configure the system fonts."
-msgstr "此模块可以让您配置系统字体。"
+msgstr "此模块用于配置系统字体。"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
