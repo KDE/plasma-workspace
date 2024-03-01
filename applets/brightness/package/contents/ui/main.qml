@@ -67,7 +67,7 @@ PlasmoidItem {
     LayoutMirroring.childrenInherit: true
 
     Plasmoid.status: {
-        return screenBrightnessControl.isBrightnessAvailable || screenBrightnessControl.isBrightnessAvailable || isNightColorActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
+        return screenBrightnessControl.isBrightnessAvailable || keyboardBrightnessControl.isBrightnessAvailable || isNightColorActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
     }
 
     toolTipMainText: {
