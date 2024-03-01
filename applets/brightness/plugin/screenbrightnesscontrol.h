@@ -6,13 +6,14 @@
 
 #pragma once
 
-#include <QDBusPendingCall>
+#include <QBindable>
 #include <QObject>
-#include <qproperty.h>
+#include <qqmlregistration.h>
 
 class ScreenBrightnessControl : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(int brightness READ default WRITE setBrightness NOTIFY brightnessChanged BINDABLE bindableBrightness)
     Q_PROPERTY(int brightnessMax READ default NOTIFY brightnessMaxChanged BINDABLE bindableBrightnessMax)

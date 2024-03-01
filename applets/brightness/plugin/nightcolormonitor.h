@@ -7,8 +7,7 @@
 #pragma once
 
 #include <QObject>
-#include <qtmetamacros.h>
-#include <qtypes.h>
+#include <qqmlregistration.h>
 
 class NightColorMonitorPrivate;
 
@@ -18,6 +17,7 @@ class NightColorMonitorPrivate;
 class NightColorMonitor : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     /**
      * This property holds a value to indicate if Night Color is available.

@@ -11,9 +11,6 @@
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
-#include <qstringliteral.h>
-#include <qtypes.h>
-#include <qvariant.h>
 
 static const QString s_serviceName = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_nightColorPath = QStringLiteral("/org/kde/KWin/NightLight");

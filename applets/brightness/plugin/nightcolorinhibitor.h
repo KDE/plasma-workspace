@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 /**
  * The Inhibitor class provides a convenient way to temporarily disable Night Color.
@@ -14,6 +15,8 @@
 class NightColorInhibitor : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+
     /**
      * This property holds a value to indicate the current state of the inhibitor.
      */
