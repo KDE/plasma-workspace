@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QBindable>
+#include <QCoroTask>
 #include <QObject>
 #include <qqmlregistration.h>
 
@@ -43,6 +44,8 @@ private Q_SLOTS:
     void onBrightnessMaxChanged(int value);
 
 private:
+    QCoro::Task<void> init();
+
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ScreenBrightnessControl, bool, m_isBrightnessAvailable, false, &ScreenBrightnessControl::isBrightnessAvailableChanged);
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ScreenBrightnessControl, int, m_brightness, 0, &ScreenBrightnessControl::brightnessChanged);
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ScreenBrightnessControl, int, m_maxBrightness, 0, &ScreenBrightnessControl::brightnessMaxChanged);

@@ -67,6 +67,7 @@ Dependencies:
     'libraries/kirigami-addons': '@latest-kf6'
     'graphics/libkexiv2': '@latest-kf6'
     'third-party/appstream': '@latest'
+    'third-party/qcoro': '@latest'
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
 

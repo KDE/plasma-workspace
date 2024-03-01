@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QBindable>
+#include <QCoroTask>
 #include <QObject>
 #include <qqmlregistration.h>
 
@@ -41,6 +42,8 @@ private Q_SLOTS:
     void onBrightnessMaxChanged(int value);
 
 private:
+    QCoro::Task<void> init();
+
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(KeyboardBrightnessControl,
                                          bool,
                                          m_isBrightnessAvailable,

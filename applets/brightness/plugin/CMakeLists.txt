@@ -12,5 +12,7 @@ target_link_libraries(brightnesscontrolplugin PRIVATE
     Qt::Core
     Qt::DBus
     Qt::Qml
+    QCoro::Coro
+    QCoro::DBus
 )
 ecm_finalize_qml_module(brightnesscontrolplugin)
