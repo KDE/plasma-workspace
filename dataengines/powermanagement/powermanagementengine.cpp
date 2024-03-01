@@ -84,42 +84,6 @@ void PowermanagementEngine::init()
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                   QStringLiteral("brightnessChanged"),
-                                                   this,
-                                                   SLOT(screenBrightnessChanged(int)))) {
-            qDebug() << "error connecting to Brightness changes via dbus";
-        }
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                   QStringLiteral("brightnessMaxChanged"),
-                                                   this,
-                                                   SLOT(maximumScreenBrightnessChanged(int)))) {
-            qDebug() << "error connecting to max brightness changes via dbus";
-        }
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                   QStringLiteral("keyboardBrightnessChanged"),
-                                                   this,
-                                                   SLOT(keyboardBrightnessChanged(int)))) {
-            qDebug() << "error connecting to Keyboard Brightness changes via dbus";
-        }
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                   QStringLiteral("keyboardBrightnessMaxChanged"),
-                                                   this,
-                                                   SLOT(maximumKeyboardBrightnessChanged(int)))) {
-            qDebug() << "error connecting to max keyboard Brightness changes via dbus";
-        }
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/HandleButtonEvents"),
                                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.HandleButtonEvents"),
                                                    QStringLiteral("triggersLidActionChanged"),
@@ -316,34 +280,6 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         setData(QStringLiteral("Sleep States"), QStringLiteral("LockScreen"), m_session->canLock());
         setData(QStringLiteral("Sleep States"), QStringLiteral("Logout"), m_session->canLogout());
     } else if (name == QLatin1String("PowerDevil")) {
-        createAsyncDBusMethodCallAndCallback<int>(this,
-                                                  SOLID_POWERMANAGEMENT_SERVICE,
-                                                  QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                  QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                  QStringLiteral("brightness"),
-                                                  std::bind(&PowermanagementEngine::screenBrightnessChanged, this, std::placeholders::_1));
-
-        createAsyncDBusMethodCallAndCallback<int>(this,
-                                                  SOLID_POWERMANAGEMENT_SERVICE,
-                                                  QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                  QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                  QStringLiteral("brightnessMax"),
-                                                  std::bind(&PowermanagementEngine::maximumScreenBrightnessChanged, this, std::placeholders::_1));
-
-        createAsyncDBusMethodCallAndCallback<int>(this,
-                                                  SOLID_POWERMANAGEMENT_SERVICE,
-                                                  QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                  QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                  QStringLiteral("keyboardBrightness"),
-                                                  std::bind(&PowermanagementEngine::keyboardBrightnessChanged, this, std::placeholders::_1));
-
-        createAsyncDBusMethodCallAndCallback<int>(this,
-                                                  SOLID_POWERMANAGEMENT_SERVICE,
-                                                  QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                  QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                  QStringLiteral("keyboardBrightnessMax"),
-                                                  std::bind(&PowermanagementEngine::maximumKeyboardBrightnessChanged, this, std::placeholders::_1));
-
         createPowerManagementDBusMethodCallAndNotifyChanged<bool>(QStringLiteral("isLidPresent"), [this](bool replyValue) {
             setData(QStringLiteral("PowerDevil"), QStringLiteral("Is Lid Present"), replyValue);
         });
@@ -713,28 +649,6 @@ void PowermanagementEngine::batteryRemainingTimeChanged(qulonglong time)
 void PowermanagementEngine::smoothedBatteryRemainingTimeChanged(qulonglong time)
 {
     setData(QStringLiteral("Battery"), QStringLiteral("Smoothed Remaining msec"), time);
-}
-
-void PowermanagementEngine::screenBrightnessChanged(int brightness)
-{
-    setData(QStringLiteral("PowerDevil"), QStringLiteral("Screen Brightness"), brightness);
-}
-
-void PowermanagementEngine::maximumScreenBrightnessChanged(int maximumBrightness)
-{
-    setData(QStringLiteral("PowerDevil"), QStringLiteral("Maximum Screen Brightness"), maximumBrightness);
-    setData(QStringLiteral("PowerDevil"), QStringLiteral("Screen Brightness Available"), maximumBrightness > 0);
-}
-
-void PowermanagementEngine::keyboardBrightnessChanged(int brightness)
-{
-    setData(QStringLiteral("PowerDevil"), QStringLiteral("Keyboard Brightness"), brightness);
-}
-
-void PowermanagementEngine::maximumKeyboardBrightnessChanged(int maximumBrightness)
-{
-    setData(QStringLiteral("PowerDevil"), QStringLiteral("Maximum Keyboard Brightness"), maximumBrightness);
-    setData(QStringLiteral("PowerDevil"), QStringLiteral("Keyboard Brightness Available"), maximumBrightness > 0);
 }
 
 void PowermanagementEngine::triggersLidActionChanged(bool triggers)

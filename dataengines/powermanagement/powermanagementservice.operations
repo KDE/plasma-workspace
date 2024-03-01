@@ -26,23 +26,6 @@
     <group name="stopSuppressingScreenPowerManagement">
     </group>
 
-    <group name="setBrightness">
-        <entry name="brightness" type="Int">
-          <label>The value of the screen brightness</label>
-        </entry>
-        <entry name="silent" type="Bool">
-          <label>Whether the OSD should be suppressed</label>
-        </entry>
-    </group>
-    <group name="setKeyboardBrightness">
-        <entry name="brightness" type="Int">
-            <label>The value of the keyboard brightness</label>
-        </entry>
-        <entry name="silent" type="Bool">
-            <label>Whether the OSD should be suppressed</label>
-        </entry>
-    </group>
-
     <group name="setPowerProfile">
         <entry name="profile" type="String">
             <label>The name of the profile to change the active power profile to</label>

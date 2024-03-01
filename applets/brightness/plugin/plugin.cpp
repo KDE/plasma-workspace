@@ -4,8 +4,10 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+#include "keyboardbrightnesscontrol.h"
 #include "nightcolorinhibitor.h"
 #include "nightcolormonitor.h"
+#include "screenbrightnesscontrol.h"
 
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
@@ -20,6 +22,8 @@ public:
     {
         qmlRegisterType<NightColorInhibitor>(uri, 1, 0, "NightColorInhibitor");
         qmlRegisterType<NightColorMonitor>(uri, 1, 0, "NightColorMonitor");
+        qmlRegisterType<ScreenBrightnessControl>(uri, 1, 0, "ScreenBrightnessControl");
+        qmlRegisterType<KeyboardBrightnessControl>(uri, 1, 0, "KeyboardBrightnessControl");
     }
 };
 

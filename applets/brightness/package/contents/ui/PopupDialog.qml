@@ -16,10 +16,6 @@ import org.kde.kirigami as Kirigami
 PlasmaExtras.Representation {
     id: dialog
 
-    property bool isBrightnessAvailable
-    property bool isScreenBrightnessAvailable
-    property bool isKeyboardBrightnessAvailable
-
     KeyNavigation.down: screenBrightnessSlider.Visible ? screenBrightnessSlider : screenBrightnessSlider.KeyNavigation.down
 
     contentItem: PlasmaComponents3.ScrollView {
@@ -69,25 +65,25 @@ PlasmaExtras.Representation {
                 icon.name: "video-display-brightness"
                 text: i18n("Display Brightness")
                 type: BrightnessItem.Type.Screen
-                visible: dialog.isScreenBrightnessAvailable
-                value: brightnesscontrol.screenBrightness
-                maximumValue: brightnesscontrol.maximumScreenBrightness
+                visible: screenBrightnessControl.isBrightnessAvailable
+                value: screenBrightnessControl.brightness
+                maximumValue: screenBrightnessControl.brightnessMax
 
                 KeyNavigation.up: dialog.KeyNavigation.up
                 KeyNavigation.down: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.down
                 KeyNavigation.backtab: dialog.KeyNavigation.backtab
                 KeyNavigation.tab: KeyNavigation.down
 
-                stepSize: brightnesscontrol.maximumScreenBrightness/100
+                stepSize: screenBrightnessControl.brightnessMax/100
 
-                onMoved: brightnesscontrol.screenBrightness = value
+                onMoved: screenBrightnessControl.brightness = value
                 onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
-                    target: brightnesscontrol
-                    function onScreenBrightnessChanged() {
-                        screenBrightnessSlider.value = brightnesscontrol.screenBrightness;
+                    target: screenBrightnessControl
+                    function onBrightnessChanged() {
+                        screenBrightnessSlider.value = screenBrightnessControl.brightness;
                     }
                 }
             }
@@ -101,23 +97,23 @@ PlasmaExtras.Representation {
                 text: i18n("Keyboard Brightness")
                 type: BrightnessItem.Type.Keyboard
                 showPercentage: false
-                value: brightnesscontrol.keyboardBrightness
-                maximumValue: brightnesscontrol.maximumKeyboardBrightness
-                visible: dialog.isKeyboardBrightnessAvailable
+                value: keyboardBrightnessControl.brightness
+                maximumValue: keyboardBrightnessControl.brightnessMax
+                visible: keyboardBrightnessControl.isBrightnessAvailable
 
                 KeyNavigation.up: screenBrightnessSlider.visible ? screenBrightnessSlider : screenBrightnessSlider.KeyNavigation.up
                 KeyNavigation.down: nightColorItem
                 KeyNavigation.backtab: KeyNavigation.up
                 KeyNavigation.tab: KeyNavigation.down
 
-                onMoved: brightnesscontrol.keyboardBrightness = value
+                onMoved: keyboardBrightnessControl.brightness = value
                 onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
-                    target: brightnesscontrol
-                    function onKeyboardBrightnessChanged() {
-                        keyboardBrightnessSlider.value = brightnesscontrol.keyboardBrightness;
+                    target: keyboardBrightnessControl
+                    function onBrightnessChanged() {
+                        keyboardBrightnessSlider.value = keyboardBrightnessControl.brightness;
                     }
                 }
             }

@@ -138,24 +138,6 @@ void PowerManagementJob::start()
         m_lockInhibitionCookie = reply.isValid() ? -1 : m_lockInhibitionCookie; // reset cookie if the stop request was successful
         setResult(reply.isValid());
         return;
-    } else if (operation == QLatin1String("setBrightness")) {
-        auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
-        callWhenFinished(
-            pending,
-            [this](bool success) {
-                setResult(success);
-            },
-            this);
-        return;
-    } else if (operation == QLatin1String("setKeyboardBrightness")) {
-        auto pending = setKeyboardBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
-        callWhenFinished(
-            pending,
-            [this](bool success) {
-                setResult(success);
-            },
-            this);
-        return;
     } else if (operation == QLatin1String("setPowerProfile")) {
         auto pending = setPowerProfile(parameters().value(QStringLiteral("profile")).toString());
         callWhenFinished(
@@ -169,26 +151,6 @@ void PowerManagementJob::start()
 
     qDebug() << "don't know what to do with " << operation;
     setResult(false);
-}
-
-QDBusPendingCall PowerManagementJob::setScreenBrightness(int value, bool silent)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                      silent ? "setBrightnessSilent" : "setBrightness");
-    msg << value;
-    return QDBusConnection::sessionBus().asyncCall(msg);
-}
-
-QDBusPendingCall PowerManagementJob::setKeyboardBrightness(int value, bool silent)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                      silent ? "setKeyboardBrightnessSilent" : "setKeyboardBrightness");
-    msg << value;
-    return QDBusConnection::sessionBus().asyncCall(msg);
 }
 
 QDBusPendingCall PowerManagementJob::setPowerProfile(const QString &value)

@@ -16,52 +16,19 @@ import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 import org.kde.notification
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
 import org.kde.plasma.private.brightnesscontrolplugin
 
-import "logic.js" as Logic
-
 PlasmoidItem {
-    id: brightnesscontrol
-
-    property QtObject pmSource: P5Support.DataSource {
-        id: pmSource
-        engine: "powermanagement"
-        connectedSources: sources
-        onSourceAdded: source => {
-            disconnectSource(source);
-            connectSource(source);
-        }
-        onSourceRemoved: source => {
-            disconnectSource(source);
-        }
-        onDataChanged: {
-            Logic.updateBrightness(brightnesscontrol, pmSource);
-        }
-    }
-    property QtObject updateScreenBrightnessJob
-    property QtObject updateKeyboardBrightnessJob
-
-    readonly property bool isScreenBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
-    readonly property bool isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
-    readonly property bool isBrightnessAvailable: isScreenBrightnessAvailable || isKeyboardBrightnessAvailable
-    readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
-    readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
+    id: brightnessAndColorControl
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
         || Plasmoid.location === PlasmaCore.Types.RightEdge
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
-
-    property bool disableBrightnessUpdate: true
-    property int screenBrightness
-    property int keyboardBrightness
-    property int screenBrightnessPercent: maximumScreenBrightness ? Math.round(100 * screenBrightness / maximumScreenBrightness) : 0
-    property int keyboardBrightnessPercent: maximumKeyboardBrightness ? Math.round(100 * keyboardBrightness / maximumKeyboardBrightness) : 0
 
     NightColorMonitor {
         id: nightColorMonitor
@@ -69,7 +36,18 @@ PlasmoidItem {
     NightColorInhibitor {
         id: nightColorInhibitor
     }
+    ScreenBrightnessControl {
+        id: screenBrightnessControl
+        isSilent: brightnessAndColorControl.expanded
+    }
+    KeyboardBrightnessControl {
+        id: keyboardBrightnessControl
+        isSilent: brightnessAndColorControl.expanded
+    }
+
     property bool isNightColorActive: nightColorMonitor.running && nightColorMonitor.currentTemperature != 6500
+    property int screenBrightnessPercent: screenBrightnessControl.maximumScreenBrightness ? Math.round(100 * screenBrightnessControl.screenBrightness / screenBrightnessControl.maximumScreenBrightness) : 0
+    property int keyboardBrightnessPercent: keyboardBrightnessControl.maximumKeyboardBrightness ? Math.round(100 * keyboardBrightnessControl.keyboardBrightness / keyboardBrightnessControl.maximumKeyboardBrightness) : 0
 
     function symbolicizeIconName(iconName) {
         const symbolicSuffix = "-symbolic";
@@ -89,15 +67,15 @@ PlasmoidItem {
     LayoutMirroring.childrenInherit: true
 
     Plasmoid.status: {
-        return isScreenBrightnessAvailable || isKeyboardBrightnessAvailable || isNightColorActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
+        return screenBrightnessControl.isBrightnessAvailable || screenBrightnessControl.isBrightnessAvailable || isNightColorActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
     }
 
     toolTipMainText: {
         const parts = [];
-        if (isScreenBrightnessAvailable) {
+        if (screenBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Screen brightness at %1%", screenBrightnessPercent));
         }
-        if (isKeyboardBrightnessAvailable) {
+        if (keyboardBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Keyboard brightness at %1%", keyboardBrightnessPercent));
         }
         if (nightColorMonitor.enabled) {
@@ -113,7 +91,7 @@ PlasmoidItem {
 
     toolTipSubText: {
         const parts = [];
-        if (isScreenBrightnessAvailable) {
+        if (screenBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Scroll to adjust screen brightness"));
         }
         if (nightColorMonitor.enabled) {
@@ -144,50 +122,19 @@ PlasmoidItem {
         return iconName;
     }
 
-    onScreenBrightnessChanged: {
-        if (disableBrightnessUpdate) {
-            return;
-        }
-        const service = pmSource.serviceForSource("PowerDevil");
-        const operation = service.operationDescription("setBrightness");
-        operation.brightness = screenBrightness;
-        // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = brightnesscontrol.expanded;
-        updateScreenBrightnessJob = service.startOperationCall(operation);
-        updateScreenBrightnessJob.finished.connect(job => {
-            Logic.updateBrightness(brightnesscontrol, pmSource);
-        });
-    }
-
-    onKeyboardBrightnessChanged: {
-        if (disableBrightnessUpdate) {
-            return;
-        }
-        var service = pmSource.serviceForSource("PowerDevil");
-        var operation = service.operationDescription("setKeyboardBrightness");
-        operation.brightness = keyboardBrightness;
-        // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = brightnesscontrol.expanded;
-        updateKeyboardBrightnessJob = service.startOperationCall(operation);
-        updateKeyboardBrightnessJob.finished.connect(job => {
-            Logic.updateBrightness(brightnesscontrol, pmSource);
-        });
-    }
-
-    compactRepresentation: CompactRepresentation {
-        isBrightnessAvailable: brightnesscontrol.isScreenBrightnessAvailable
+        compactRepresentation: CompactRepresentation {
 
         onWheel: wheel => {
-            if (!brightnesscontrol.isScreenBrightnessAvailable) {
+            if (!screenBrightnessControl.isBrightnessAvailable) {
                 return;
             }
             const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x);
 
-            const maximumBrightness = brightnesscontrol.maximumScreenBrightness
+            const brightnessMax = screenBrightnessControl.brightnessMax
             // Don't allow the UI to turn off the screen
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-            const minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-            const stepSize = Math.max(1, maximumBrightness / 20)
+            const brightnessMin = (brightnessMax > 100 ? 1 : 0)
+            const stepSize = Math.max(1, brightnessMax / 20)
 
             let newBrightness;
             if (Math.abs(delta) < 120) {
@@ -195,24 +142,24 @@ PlasmoidItem {
                 brightnessError += delta * stepSize / 120;
                 const change = Math.round(brightnessError);
                 brightnessError -= change;
-                newBrightness = brightnesscontrol.screenBrightness + change;
+                newBrightness = screenBrightnessControl.brightness + change;
             } else if (wheel.modifiers & Qt.ShiftModifier) {
-                newBrightness = Math.round((Math.round(brightnesscontrol.screenBrightness * 100 / maximumBrightness) + delta/120) / 100 * maximumBrightness)
+                newBrightness = Math.round((Math.round(screenBrightnessControl.brightness * 100 / brightnessMax) + delta/120) / 100 * maximumBrightness)
             } else {
                 // Discrete/wheel scrolling
-                newBrightness = Math.round(brightnesscontrol.screenBrightness/stepSize + delta/120) * stepSize;
+                newBrightness = Math.round(screenBrightnessControl.brightness/stepSize + delta/120) * stepSize;
             }
-            brightnesscontrol.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
+            screenBrightnessControl.brightness = Math.max(brightnessMin, Math.min(brightnessMax, newBrightness));
         }
 
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton
         property bool wasExpanded: false
-        onPressed: wasExpanded = brightnesscontrol.expanded
+        onPressed: wasExpanded = brightnessAndColorControl.expanded
         onClicked: mouse => {
             if (mouse.button == Qt.MiddleButton) {
                 toggleNightColorInhibition();
             } else {
-                brightnesscontrol.expanded = !wasExpanded;
+                brightnessAndColorControl.expanded = !wasExpanded;
             }
         }
 
@@ -236,7 +183,7 @@ PlasmoidItem {
     fullRepresentation: PopupDialog {
         id: dialogItem
 
-        readonly property var appletInterface: brightnesscontrol
+        readonly property var appletInterface: brightnessAndColorControl
 
         Layout.minimumWidth: Kirigami.Units.gridUnit * 10
         Layout.maximumWidth: Kirigami.Units.gridUnit * 80
@@ -246,9 +193,6 @@ PlasmoidItem {
         Layout.maximumHeight: Kirigami.Units.gridUnit * 40
         Layout.preferredHeight: implicitHeight
 
-        isBrightnessAvailable: brightnesscontrol.isBrightnessAvailable
-        isScreenBrightnessAvailable: brightnesscontrol.isScreenBrightnessAvailable
-        isKeyboardBrightnessAvailable: brightnesscontrol.isKeyboardBrightnessAvailable
     } // todo
 
     Plasmoid.contextualActions: [
@@ -262,8 +206,4 @@ PlasmoidItem {
         }
     ]
 
-    Component.onCompleted: {
-        Logic.updateBrightness(brightnesscontrol, pmSource);
-        Plasmoid.removeInternalAction("configure");
-    }
 }
