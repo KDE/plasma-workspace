@@ -118,3 +118,5 @@ void KeyboardBrightnessControl::onBrightnessMaxChanged(int value)
 
     m_isBrightnessAvailable = value > 0;
 }
+
+#include "moc_keyboardbrightnesscontrol.cpp"

@@ -122,3 +122,5 @@ void NightColorInhibitor::uninhibit()
     d->state = Uninhibiting;
     Q_EMIT stateChanged();
 }
+
+#include "moc_nightcolorinhibitor.cpp"

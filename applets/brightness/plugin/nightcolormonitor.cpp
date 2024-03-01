@@ -304,3 +304,5 @@ quint64 NightColorMonitor::scheduledTransitionStartTime() const
 {
     return d->scheduledTransitionStartTime();
 }
+
+#include "moc_nightcolormonitor.cpp"

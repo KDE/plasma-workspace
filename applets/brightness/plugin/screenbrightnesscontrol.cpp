@@ -119,3 +119,5 @@ QBindable<int> ScreenBrightnessControl::bindableBrightnessMax()
 {
     return &m_maxBrightness;
 }
+
+#include "moc_screenbrightnesscontrol.cpp"
