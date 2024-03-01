@@ -12,59 +12,63 @@
 #include <QDBusPendingCall>
 #include <QDBusReply>
 
-static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
+using namespace Qt::StringLiterals;
+
+namespace
+{
+constexpr QLatin1String SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.PowerManagement");
+}
 
 KeyboardBrightnessControl::KeyboardBrightnessControl(QObject *parent)
     : QObject(parent)
-    , m_brightness(0)
-    , m_maxBrightness(0)
-    , m_isSilent(false)
 {
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
-        QDBusMessage brightness = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                                                 QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                                 QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                                 "keyboardBrightness");
-
-        QDBusReply<int> brightnessReply = QDBusConnection::sessionBus().call(brightness);
-        if (!brightnessReply.isValid()) {
-            qDebug() << "error getting keyboard brightness via dbus";
-            return;
-        }
-        m_brightness = brightnessReply.value();
-
-        QDBusMessage brightnessMax = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                                    "keyboardBrightnessMax");
-        QDBusReply<int> brightnessMaxReply = QDBusConnection::sessionBus().call(brightnessMax);
-        if (!brightnessReply.isValid()) {
-            qDebug() << "error getting max keyboard brightness via dbus";
-            return;
-        }
-        m_maxBrightness = brightnessMaxReply.value();
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                   QStringLiteral("keyboardBrightnessChanged"),
-                                                   this,
-                                                   SLOT(onBrightnessChanged(int)))) {
-            qDebug() << "error connecting to Keyboard Brightness changes via dbus";
-            return;
-        }
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                   QStringLiteral("keyboardBrightnessMaxChanged"),
-                                                   this,
-                                                   SLOT(onBrightnessMaxChanged(int)))) {
-            qDebug() << "error connecting to max keyboard Brightness changes via dbus";
-            return;
-        }
-        m_isBrightnessAvailable = true;
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
+        return;
     }
+
+    if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                               u"/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"_s,
+                                               u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
+                                               u"keyboardBrightnessChanged"_s,
+                                               this,
+                                               SLOT(onBrightnessChanged(int)))) {
+        qDebug() << "error connecting to Keyboard Brightness changes via dbus";
+        return;
+    }
+
+    if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                               u"/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"_s,
+                                               u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
+                                               u"keyboardBrightnessMaxChanged"_s,
+                                               this,
+                                               SLOT(onBrightnessMaxChanged(int)))) {
+        qDebug() << "error connecting to max keyboard Brightness changes via dbus";
+        return;
+    }
+
+    QDBusMessage brightness = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
+                                                             u"/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"_s,
+                                                             u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
+                                                             u"keyboardBrightness"_s);
+    QDBusReply<int> brightnessReply = QDBusConnection::sessionBus().call(brightness);
+    if (!brightnessReply.isValid()) {
+        qDebug() << "error getting keyboard brightness via dbus";
+        return;
+    }
+    m_brightness = brightnessReply.value();
+
+    QDBusMessage brightnessMax = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
+                                                                u"/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"_s,
+                                                                u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
+                                                                u"keyboardBrightnessMax"_s);
+    QDBusReply<int> brightnessMaxReply = QDBusConnection::sessionBus().call(brightnessMax);
+    if (!brightnessReply.isValid()) {
+        qDebug() << "error getting max keyboard brightness via dbus";
+        return;
+    }
+    m_maxBrightness = brightnessMaxReply.value();
+
+    m_isBrightnessAvailable = true;
 }
 
 KeyboardBrightnessControl::~KeyboardBrightnessControl()
@@ -76,9 +80,9 @@ void KeyboardBrightnessControl::setBrightness(int value)
     m_brightness = value;
 
     QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
-                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
-                                                      m_isSilent ? "setKeyboardBrightnessSilent" : "setKeyboardBrightness");
+                                                      u"/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"_s,
+                                                      u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
+                                                      m_isSilent ? u"setKeyboardBrightnessSilent"_s : u"setKeyboardBrightness"_s);
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
 }
