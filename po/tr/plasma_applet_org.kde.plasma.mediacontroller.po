@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-26 01:34+0000\n"
-"PO-Revision-Date: 2022-12-07 17:07+0300\n"
+"PO-Revision-Date: 2024-02-29 17:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -89,8 +89,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1 tarafından (%2)\n"
-"Duraklatmak için orta tıkla\n"
-"Ses düzeyini ayarlamak için sar"
+"Duraklatmak için orta tıklayın\n"
+"Ses düzeyini ayarlamak için sarın"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -101,8 +101,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Duraklatmak için orta tıkla\n"
-"Ses düzeyini ayarlamak için sar"
+"Duraklatmak için orta tıklayın\n"
+"Ses düzeyini ayarlamak için sarın"
 
 #: package/contents/ui/main.qml:60
 #, kde-format
@@ -113,8 +113,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1 tarafından (duraklatıldı, %2)\n"
-"Sürdürmek için orta tıkla\n"
-"Ses düzeyini ayarlamak için sar"
+"Sürdürmek için orta tıklayın\n"
+"Ses düzeyini ayarlamak için sarın"
 
 #: package/contents/ui/main.qml:61
 #, kde-format
@@ -125,8 +125,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Duraklatıldı (%1)\n"
-"Sürdürmek için orta tıkla\n"
-"Ses düzeyini ayarlamak için sar"
+"Sürdürmek için orta tıklayın\n"
+"Ses düzeyini ayarlamak için sarın"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
