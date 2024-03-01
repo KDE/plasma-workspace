@@ -12,57 +12,64 @@
 #include <QDBusPendingCall>
 #include <QDBusReply>
 
-static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
+using namespace Qt::StringLiterals;
+
+namespace
+{
+constexpr QLatin1String SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.PowerManagement");
+}
 
 ScreenBrightnessControl::ScreenBrightnessControl(QObject *parent)
     : QObject(parent)
-    , m_isSilent(false)
 {
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
-        QDBusMessage brightness = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                                                 QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                                 QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                                 "brightness");
-
-        QDBusReply<int> brightnessReply = QDBusConnection::sessionBus().call(brightness);
-        if (!brightnessReply.isValid()) {
-            qDebug() << "error getting screen brightness via dbus";
-            return;
-        }
-        m_brightness = brightnessReply.value();
-
-        QDBusMessage brightnessMax = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
-                                                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                                    "brightnessMax");
-        QDBusReply<int> brightnessMaxReply = QDBusConnection::sessionBus().call(brightnessMax);
-        if (!brightnessReply.isValid()) {
-            qDebug() << "error getting max screen brightness via dbus";
-            return;
-        }
-        m_maxBrightness = brightnessMaxReply.value();
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                   QStringLiteral("brightnessChanged"),
-                                                   this,
-                                                   SLOT(onBrightnessChanged(int)))) {
-            qDebug() << "error connecting to Brightness changes via dbus";
-            return;
-        }
-
-        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                   QStringLiteral("maxBrightnessChanged"),
-                                                   this,
-                                                   SLOT(onBrightnessMaxChanged(int)))) {
-            qDebug() << "error connecting to max brightness changes via dbus";
-            return;
-        }
-        m_isBrightnessAvailable = true;
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
+        return;
     }
+
+    if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                               u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                               u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
+                                               u"brightnessChanged"_s,
+                                               this,
+                                               SLOT(onBrightnessChanged(int)))) {
+        qDebug() << "error connecting to Brightness changes via dbus";
+        return;
+    }
+
+    if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                               u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                               u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
+                                               u"maxBrightnessChanged"_s,
+                                               this,
+                                               SLOT(onBrightnessMaxChanged(int)))) {
+        qDebug() << "error connecting to max brightness changes via dbus";
+        return;
+    }
+
+    QDBusMessage brightness = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
+                                                             u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                                             u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
+                                                             u"brightness"_s);
+
+    QDBusReply<int> brightnessReply = QDBusConnection::sessionBus().call(brightness);
+    if (!brightnessReply.isValid()) {
+        qDebug() << "error getting screen brightness via dbus";
+        return;
+    }
+    m_brightness = brightnessReply.value();
+
+    QDBusMessage brightnessMax = QDBusMessage::createMethodCall(u"org.kde.Solid.PowerManagement"_s,
+                                                                u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                                                u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
+                                                                u"brightnessMax"_s);
+    QDBusReply<int> brightnessMaxReply = QDBusConnection::sessionBus().call(brightnessMax);
+    if (!brightnessReply.isValid()) {
+        qDebug() << "error getting max screen brightness via dbus";
+        return;
+    }
+    m_maxBrightness = brightnessMaxReply.value();
+
+    m_isBrightnessAvailable = true;
 }
 
 ScreenBrightnessControl::~ScreenBrightnessControl()
@@ -74,9 +81,9 @@ void ScreenBrightnessControl::setBrightness(int value)
     m_brightness = value;
 
     QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
-                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
-                                                      m_isSilent ? "setBrightnessSilent" : "setBrightness");
+                                                      u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
+                                                      u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
+                                                      m_isSilent ? u"setBrightnessSilent"_s : u"setBrightness"_s);
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
 }
