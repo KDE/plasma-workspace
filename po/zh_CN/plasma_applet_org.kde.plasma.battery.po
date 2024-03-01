@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2024-02-05 11:37\n"
+"PO-Revision-Date: 2024-02-29 12:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -201,10 +201,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "电池未充满时在图标上显示电量百分比"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "配置省电功能(&C)…"
+msgstr "配置电源管理(&C)…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
