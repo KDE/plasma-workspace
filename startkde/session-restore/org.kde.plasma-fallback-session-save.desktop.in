@@ -25,6 +25,7 @@ Name[sl]=Shrani sejo Plasme
 Name[tr]=Plasma Oturumunu Kaydet
 Name[uk]=Збереження сеансу Плазми
 Name[x-test]=xxPlasma Session Savexx
+Name[zh_CN]=Plasma 会话保存
 Name[zh_TW]=Plasma 工作階段儲存
 Icon=plasmashell
 Type=Application

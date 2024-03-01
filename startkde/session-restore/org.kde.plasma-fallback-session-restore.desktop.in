@@ -25,6 +25,7 @@ Name[sl]=Obnova seje Plasma
 Name[tr]=Plasma Oturumunu Geri Yükle
 Name[uk]=Відновлення сеансу Плазми
 Name[x-test]=xxPlasma Session Restorexx
+Name[zh_CN]=Plasma 会话恢复
 Name[zh_TW]=Plasma 工作階段回復
 Icon=plasmashell
 OnlyShowIn=KDE;
