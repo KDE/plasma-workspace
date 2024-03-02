@@ -1722,23 +1722,19 @@ QVariantMap ShellCorona::wallpaper(uint screenNum)
         return QVariantMap();
     }
 
-    const auto wallpaperPlugin = containment->wallpaperPlugin();
-
-    // we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
-    KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
-    pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
-    pkg.setPath(wallpaperPlugin);
-    QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
-    KConfigGroup cfg = containment->config().group(u"Wallpaper"_s).group(wallpaperPlugin).group(u"General"_s);
-
-    const auto items = cfg.keyList();
     QVariantMap parameters;
-    for (const auto &itemName : items) {
-        parameters.insert(itemName, cfg.readEntry(itemName));
-    }
-
     // add wallpaperPlugin
-    parameters.insert(QStringLiteral("wallpaperPlugin"), wallpaperPlugin);
+    parameters.insert(QStringLiteral("wallpaperPlugin"), containment->wallpaperPlugin());
+
+    QObject *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
+    // If the wallpaper plugin is broken, there is no wallpaperGraphicsObject
+    if (!wallpaperGraphicsObject) {
+        return parameters;
+    }
+    auto config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
+    for (const auto items = config->keys(); const QString &itemName : items) {
+        parameters.insert(itemName, config->value(itemName));
+    }
 
     return parameters;
 }
