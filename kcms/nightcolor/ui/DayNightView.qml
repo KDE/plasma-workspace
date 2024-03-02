@@ -48,19 +48,25 @@ ColumnLayout {
             readonly property color nightColor: colorForTemp(root.nightTemperature)
             readonly property color edgeColor: (root.nightTransitionOn < root.dayTransitionOff) ? dayColor : nightColor
 
-            GradientStop { position: 0; color: grad.edgeColor }
             GradientStop { position: dayTransitionOn/1440; color: grad.nightColor }
             GradientStop { position: dayTransitionOff/1440; color: grad.dayColor }
             GradientStop { position: nightTransitionOn/1440; color: grad.dayColor }
             GradientStop { position: nightTransitionOff/1440; color: grad.nightColor }
+            // Keep the edge gradient stops at the end of the list, so the dynamic values cannot override them
+            GradientStop { position: 0; color: grad.edgeColor }
             GradientStop { position: 1; color: grad.edgeColor }
         }
 
         Repeater {
             model: (root.singleColor) ? [ { left: 0, right: 1440, isNight: true } ] : [
-                { left: 0, right: Math.min(root.dayTransitionOff, root.nightTransitionOn), isNight: root.dayTransitionOn < root.nightTransitionOn },
-                { left: root.dayTransitionOff, right: root.nightTransitionOn, isNight: root.dayTransitionOn > root.nightTransitionOn },
-                { left: Math.max(root.dayTransitionOff, root.nightTransitionOff), right: 1440, isNight: root.dayTransitionOff < root.nightTransitionOff },
+                { left: 0, right: Math.min(root.dayTransitionOff, root.nightTransitionOn),
+                    isNight: root.dayTransitionOn < root.nightTransitionOn,
+                    overflow: root.dayTransitionOff < root.dayTransitionOn },
+                { left: root.dayTransitionOff, right: root.nightTransitionOn,
+                    isNight: root.dayTransitionOff > root.nightTransitionOn },
+                { left: Math.max(root.dayTransitionOff, root.nightTransitionOff), right: 1440,
+                    isNight: root.dayTransitionOff < root.nightTransitionOff,
+                    overflow: root.nightTransitionOff < root.nightTransitionOn },
             ]
 
             Kirigami.Icon {
@@ -77,7 +83,7 @@ ColumnLayout {
                 height: width
                 x: (modelData.left + modelData.right)/2/1440 * parent.width - width/2
                 y: (parent.height - height) / 2
-                visible: Math.abs(modelData.right - modelData.left) > 2 * width
+                visible: Math.abs(modelData.right - modelData.left) > 2 * width && !modelData?.overflow
                 // The view background is always light except when disabled
                 color: root.enabled ? 'black'  : Kirigami.Theme.textColor
             }
