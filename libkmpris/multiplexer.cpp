@@ -32,10 +32,10 @@ Multiplexer::Multiplexer(QObject *parent)
         connect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
     }
 
-    connect(m_filterModel.get(), &QAbstractListModel::rowsInserted, this, &Multiplexer::onRowsInserted);
-    connect(m_filterModel.get(), &QAbstractListModel::rowsAboutToBeRemoved, this, &Multiplexer::onRowsAboutToBeRemoved);
+    connect(m_filterModel.get(), &QAbstractItemModel::rowsInserted, this, &Multiplexer::onRowsInserted);
+    connect(m_filterModel.get(), &QAbstractItemModel::rowsAboutToBeRemoved, this, &Multiplexer::onRowsAboutToBeRemoved);
     // rowsRemoved also triggers updates in MultiplexerModel, but we want to update MultiplexerModel after rowsRemoved
-    connect(m_filterModel.get(), &QAbstractListModel::rowsRemoved, this, &Multiplexer::onRowsRemoved);
+    connect(m_filterModel.get(), &QAbstractItemModel::rowsRemoved, this, &Multiplexer::onRowsRemoved);
 }
 
 Multiplexer::~Multiplexer()
