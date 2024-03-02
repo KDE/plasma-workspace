@@ -11,6 +11,8 @@
 #include "mpris2sourcemodel.h"
 #include "playercontainer.h"
 
+#include "libkmpris_debug.h"
+
 std::shared_ptr<Multiplexer> Multiplexer::self()
 {
     static std::weak_ptr<Multiplexer> s_multiplexer;
@@ -112,27 +114,34 @@ void Multiplexer::onPlaybackStatusChanged()
 
 void Multiplexer::updateIndex()
 {
-    const auto sourceModel = static_cast<Mpris2SourceModel *>(m_filterModel->sourceModel());
-    const auto beginIt = sourceModel->m_containers.cbegin();
-    const auto endIt = sourceModel->m_containers.cend();
-    const int sourceRow = std::distance(beginIt, std::find(beginIt, endIt, m_activePlayer.value()));
-    const QModelIndex idx = m_filterModel->mapFromSource(sourceModel->index(sourceRow, 0));
-    Q_ASSERT_X(idx.isValid(),
-               Q_FUNC_INFO,
-               qUtf8Printable(QStringLiteral("Current active player: \"%1\" Available players: \"%2\" Pending players: \"%3\"")
-                                  .arg(m_activePlayer->identity(),
-                                       std::accumulate(beginIt,
-                                                       endIt,
-                                                       QString(),
-                                                       [](QString left, PlayerContainer *right) {
-                                                           return std::move(left) + QLatin1Char(',') + right->identity();
-                                                       }),
-                                       std::accumulate(sourceModel->m_pendingContainers.cbegin(),
-                                                       sourceModel->m_pendingContainers.cend(),
-                                                       QString(),
-                                                       [](QString left, auto &right) {
-                                                           return std::move(left) + QLatin1Char(',') + right.first /* sourceName */;
-                                                       }))));
+    QModelIndex idx;
+    for (int i = 0, count = m_filterModel->rowCount(); i < count; ++i) {
+        QModelIndex _idx = m_filterModel->index(i, 0);
+        if (_idx.data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>() == m_activePlayer.value()) {
+            idx = _idx;
+            break;
+        }
+    }
+
+    if (!idx.isValid()) {
+        const auto sourceModel = static_cast<Mpris2SourceModel *>(m_filterModel->sourceModel());
+        const auto beginIt = sourceModel->m_containers.cbegin();
+        const auto endIt = sourceModel->m_containers.cend();
+        qCWarning(MPRIS2) << "Current active player:" << m_activePlayer->identity();
+        qCWarning(MPRIS2) << "Available players:" << std::accumulate(beginIt, endIt, QString(), [](QString left, PlayerContainer *right) {
+            return std::move(left) + QLatin1Char(',') + right->identity();
+        });
+        qCWarning(MPRIS2) << "Pending players:"
+                          << std::accumulate(sourceModel->m_pendingContainers.cbegin(),
+                                             sourceModel->m_pendingContainers.cend(),
+                                             QString(),
+                                             [](QString left, auto &right) {
+                                                 return std::move(left) + QLatin1Char(',') + right.first /* sourceName */;
+                                             });
+        Q_ASSERT_X(false, Q_FUNC_INFO, "Model index is invalid");
+        m_activePlayerIndex = 0;
+        return;
+    }
     m_activePlayerIndex = idx.row();
 }
 

@@ -235,10 +235,14 @@ class MediaControllerTests(unittest.TestCase):
         self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
 
     def _cleanup_multiplexer(self) -> None:
-        if self.player_b:
-            self.player_b.kill()
+        if self.player_b is not None:
+            self.player_b.terminate()
             self.player_b.wait()
             self.player_b = None
+        if self.player_browser is not None:
+            self.player_browser.terminate()
+            self.player_browser.wait()
+            self.player_browser = None
 
     def test_multiplexer(self) -> None:
         """
@@ -314,10 +318,35 @@ class MediaControllerTests(unittest.TestCase):
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
 
-        # Close B -> A
+        # BUG 481992: When the filter proxy model emits rowsRemoved, the player is still not erased from m_container, so we have to find the index in m_filterModel.
+        # Mpris2SourceModel::beginRemoveRows -> Mpris2SourceModel::rowsAboutToBeRemoved -> Mpris2FilterProxyModel::rowsAboutToBeRemoved -> QSortFilterProxyModelPrivate::remove_proxy_interval -> Mpris2FilterProxyModel::endRemoveRows -> Mpris2FilterProxyModel::rowsRemoved -> Multiplexer::onRowsRemoved (at this time m_container is still not updated)
+        # So when the active player is the **last** player in m_container, m_filterModel->mapFromSource(sourceModel->index(sourceRow, 0)) will return an invalid index because the source index becomes stale (source_index.row() >= m->proxy_rows.size()) in the filter model.
+        # Start Player C
+        player_browser_json_path: str = path.join(getcwd(), "resources/player_browser.json")
+        with open(player_browser_json_path, "r", encoding="utf-8") as f:
+            browser_json_data = json.load(f)
+        self.player_browser = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_browser_json_path))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["base_properties"]["Identity"])))
+
+        # A Paused, B Playing, C Playing -> Still B
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_browser.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        self.driver.find_element(by=AppiumBy.NAME, value=player_b_metadata[0]["xesam:title"].get_string())  # Title
+
+        # A Paused, B Paused, C Playing -> C
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["metadata"][0]["xesam:title"])))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["metadata"][0]["xesam:album"])))
+
+        # Close B -> Still C, and does not assert at invalid index (BUG 481992)
         self.player_b.terminate()
         self.player_b.wait(10)
         self.player_b = None
+        self.driver.find_element(by=AppiumBy.NAME, value=browser_json_data["metadata"][0]["xesam:title"])  # Title
+
+        # Close C -> A
+        self.player_browser.terminate()
+        self.player_browser.wait(10)
+        self.player_browser = None
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
