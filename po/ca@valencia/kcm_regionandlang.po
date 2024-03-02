@@ -1,16 +1,16 @@
 # Translation of kcm_regionandlang.po to Catalan (Valencian)
-# Copyright (C) 2022-2023 This_file_is_part_of_KDE
+# Copyright (C) 2022-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-07 01:42+0000\n"
-"PO-Revision-Date: 2023-09-14 18:24+0200\n"
+"PO-Revision-Date: 2024-02-29 18:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -396,7 +396,7 @@ msgstr "Predeterminada del sistema"
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr " (Format estàndard per a %1)"
+msgstr " (Format estàndard %1)"
 
 #: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
 #: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27

@@ -9,13 +9,13 @@
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-05 01:35+0000\n"
-"PO-Revision-Date: 2023-11-26 01:01+0300\n"
+"PO-Revision-Date: 2024-03-01 15:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -132,16 +132,16 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
-"Bir eylem kalıbıyla eşleşen metin seçildiğinde veya pano geçmişinden "
+"Bir eylem dizgisiyle eşleşen metin seçildiğinde veya pano geçmişinden "
 "seçildiğinde, uygun eylemlerle birlikte açılır menüyü kendiliğinden "
-"gösterin. Burada otomatik menü kapalıysa veya dışarıda tutulan bir pencere "
-"için gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
+"gösterin. Burada otomatik menü kapalıysa veya dışlanan bir pencere için "
+"gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
 "görüntülenebilir."
 
 #: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
-msgstr "Pencereleri Dışarıda Tut"
+msgstr "Pencereleri Dışla"
 
 #: configdialog.cpp:293
 #, kde-format
@@ -165,7 +165,7 @@ msgstr "Seçenekler:"
 #: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
-msgstr "Pencereleri Dışarıda Tut"
+msgstr "Pencereleri Dışla"
 
 #: configdialog.cpp:360
 #, kde-kuit-format
@@ -303,8 +303,8 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
-"Burada girilmesi gereken ad, dışarıda tutulacak pencerenin WM_CLASS adıdır. "
-"Bir pencerenin WM_CLASS adını bulmak için başka bir uçbirim penceresinde şu "
+"Burada girilmesi gereken ad, dışlanacak pencerenin WM_CLASS adıdır. Bir "
+"pencerenin WM_CLASS adını bulmak için başka bir uçbirim penceresinde şu "
 "komutu girin:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/"
 "><nl/>ve dışarıda tutmak istediğiniz pencereye tıklayın. Eşittir iminden "
 "sonra görüntülenen ilk ad, girmeniz gereken addır."
