@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:39+0000\n"
 "PO-Revision-Date: 2024-02-29 12:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,13 +18,13 @@ msgstr ""
 "plasma_engine_powermanagement.pot\n"
 "X-Crowdin-File-ID: 42587\n"
 
-#: powermanagementengine.cpp:526
+#: powermanagementengine.cpp:462
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "电池 %1"
 
-#: powermanagementengine.cpp:528
+#: powermanagementengine.cpp:464
 #, kde-format
 msgid "Battery"
 msgstr "电池"

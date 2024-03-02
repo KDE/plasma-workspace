@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-02 00:39+0000\n"
 "PO-Revision-Date: 2023-12-21 08:56+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -22,44 +22,44 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "Brightness and Color"
 msgstr "Luminosité et couleur"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "Luminosité de l'écran à %1 %"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "Luminosité du clavier à %1 %"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "Lumière de nuit désactivée"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "Lumière de nuit à %1 K"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Faites défiler pour ajuster la luminosité de l'écran"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Effectuer un clic central pour basculer vers la lumière de nuit"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -159,17 +159,17 @@ msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
 msgstr "Transition jusqu'au jour prévu à :"
 
-#: package/contents/ui/PopupDialog.qml:70
+#: package/contents/ui/PopupDialog.qml:66
 #, kde-format
 msgid "Display Brightness"
 msgstr "Afficher la luminosité"
 
-#: package/contents/ui/PopupDialog.qml:101
+#: package/contents/ui/PopupDialog.qml:97
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Luminosité du clavier"
 
-#: package/contents/ui/PopupDialog.qml:132
+#: package/contents/ui/PopupDialog.qml:128
 #, kde-format
 msgid "Night Light"
 msgstr "Lumière de nuit"

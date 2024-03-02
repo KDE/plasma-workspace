@@ -5,19 +5,20 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012, 2015, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2020-11-04 15:50+0100\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-03-01 11:47+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.11.70\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: soliddeviceengine.cpp:112
@@ -526,28 +527,20 @@ msgid "Bluetooth Battery"
 msgstr "Bluetooth akkumulátor"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Kamera akkumulátor"
+msgstr "Tablet akkumulátor"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Telefon akkumulátor"
+msgstr "Fejhallgató akkumulátor"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Egér akkumulátor"
+msgstr "Mikrofonos fejhallgató akkumulátor"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Egér akkumulátor"
+msgstr "Érintőtábla akkumulátor"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

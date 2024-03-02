@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-02 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 19:14+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -24,44 +24,44 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "Brightness and Color"
 msgstr "Яркость и цвет"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "Яркость экрана: %1%"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "Яркость клавиатуры: %1%"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "Ночная цветовая схема отключена"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "Цветовая температура ночной цветовой схемы: %1K"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Используйте колесо мыши для настройки яркости экрана"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Включить или отключить ночную цветовую схему: щелчок средней кнопкой"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -161,17 +161,17 @@ msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
 msgstr "Переход к дневной схеме запланирован в:"
 
-#: package/contents/ui/PopupDialog.qml:70
+#: package/contents/ui/PopupDialog.qml:66
 #, kde-format
 msgid "Display Brightness"
 msgstr "Яркость экрана"
 
-#: package/contents/ui/PopupDialog.qml:101
+#: package/contents/ui/PopupDialog.qml:97
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Яркость клавиатуры"
 
-#: package/contents/ui/PopupDialog.qml:132
+#: package/contents/ui/PopupDialog.qml:128
 #, kde-format
 msgid "Night Light"
 msgstr "Ночная цветовая схема"
