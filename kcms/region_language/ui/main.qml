@@ -90,26 +90,13 @@ KCM.ScrollViewKCM {
         }
     }
     
-    Kirigami.Dialog {
+    Kirigami.PromptDialog {
         id: applyDialog
         title: i18nc("@title:window", "Apply locale settings")
-        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
-        ColumnLayout {
-            QQC2.Label {
-                text: i18nc("@label", "Do you wish to apply locale settings to system?")
-            }
-            QQC2.Switch {
-                id: applyToSystemSwitch
-                text: i18nc("@action:switch", "Also apply setting to system")
-            }
-        }
- 
+        subtitle: i18nc("@title:dialog", "Apply these settings for only the current user, or also for all users on this system?")
+        standardButtons: Kirigami.Dialog.NoButton
+
         onAccepted: {
-            if (applyToSystemSwitch.checked) {
-                kcm.applyToSystem();
-            } else {
-                kcm.applyToLocal();
-            }
             // return to first page
             while (kcm.depth > 1) {
                 kcm.takeLast();
@@ -122,6 +109,34 @@ KCM.ScrollViewKCM {
                 kcm.takeLast();
             }
         }
+
+        customFooterActions: [
+            Kirigami.Action {
+                text: i18nc("@action:button", "Current user")
+                icon.name: "user-identity-symbolic"
+                onTriggered: {
+                    kcm.applyToLocal();
+                    applyDialog.accept();
+                }
+            },
+            Kirigami.Action {
+                text: i18nc("@action:button", "System and current user")
+                icon.name: "computer-symbolic"
+                enabled: kcm.localedAvailable
+                onTriggered: {
+                    kcm.applyToLocal();
+                    kcm.applyToSystem();
+                    applyDialog.accept();
+                }
+            },
+            Kirigami.Action {
+                text: i18nc("@action:button", "Cancel")
+                icon.name: "dialog-cancel"
+                onTriggered: {
+                    applyDialog.reject();
+                }
+            }
+        ]
     }
 
     Connections {
