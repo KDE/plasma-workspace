@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2023-06-18 17:47+0100\n"
+"PO-Revision-Date: 2024-02-25 18:59+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -357,20 +357,19 @@ msgstr "Nicio amprentă adăugată"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Utilizatori"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Adaugă utilizator nou"
+msgstr "Adaugă nou"
 
 #: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Apăsați spațiu pentru a modifica profilul utilizatorului"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -403,43 +402,37 @@ msgid "Sweet Potato"
 msgstr "Cartof Dulce"
 
 #: src/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Ambient Amber"
 
 #: src/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Sparkle Sunbeam"
 
 #: src/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Lemon-Lime"
 
 #: src/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Verdant Charm"
 
 #: src/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Mellow Meadow"
 
 #: src/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Tepid Teal"
@@ -451,15 +444,13 @@ msgid "Plasma Blue"
 msgstr "Plasma Albastră"
 
 #: src/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Pon Purple"
 
 #: src/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajo Purple"
@@ -477,15 +468,13 @@ msgid "Paper Perfection"
 msgstr "Perfecțiune de Hârtie"
 
 #: src/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Cafétera Brown"
 
 #: src/ui/PicturesSheet.qml:38
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
@@ -494,13 +483,13 @@ msgstr "Rich Hardwood"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Mergi înapoi"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Inițiale"
 
 #: src/ui/PicturesSheet.qml:132
 #, kde-format
@@ -518,13 +507,13 @@ msgstr "Alege o poză"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Pictogramă substituentă"
 
 #: src/ui/PicturesSheet.qml:274
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Folosește pictogramă substituentă pentru avatar"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

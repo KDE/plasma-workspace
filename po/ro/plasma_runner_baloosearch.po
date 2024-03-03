@@ -1,10 +1,10 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the plasma-workspace package.
 # Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-04-10 19:50+0100\n"

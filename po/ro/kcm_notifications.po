@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:39+0000\n"
-"PO-Revision-Date: 2023-04-10 19:54+0100\n"
+"PO-Revision-Date: 2024-02-25 18:54+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -49,38 +49,33 @@ msgid "Show notification badges"
 msgstr "Arată ecusoane de notificare"
 
 #: ui/ApplicationConfiguration.qml:164
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Configurează evenimente…"
+msgstr "Configurează evenimente"
 
 #: ui/ApplicationConfiguration.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "Această aplicație nu susține configurarea notificărilor per eveniment."
+msgstr "Această aplicație nu susține configurarea notificărilor per eveniment"
 
 #: ui/ApplicationConfiguration.qml:263
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Arată un mesaj contextual"
 
 #: ui/ApplicationConfiguration.qml:272
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Redă un sunet"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure Application Settings…"
-msgstr "Configurări aplicație"
+msgstr "Configurează parametrii aplicației…"
 
 #: ui/main.qml:57
 #, kde-format
@@ -111,36 +106,28 @@ msgid "Do Not Disturb mode"
 msgstr "Regimul „nu deranja”"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
-#| msgid "Enable automatically:"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr "Activează:"
+msgstr "Activează automat:"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Când ecranele sunt oglindite"
 
 #: ui/main.qml:97
-#, fuzzy, kde-format
-#| msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "În timpul partajării ecranului"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-#| msgid "Manually toggle with shortcut:"
+#, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr "Scurtătură de taste:"
+msgstr "Comută manual cu scurtătura:"
 
 #: ui/main.qml:119
 #, kde-format
@@ -269,22 +256,18 @@ msgid "System Services"
 msgstr "Servicii de sistem"
 
 #: ui/SourcesPage.qml:148
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Nicio aplicație sau eveniment nu se potrivește cu termenul căutat."
+msgstr "Nicio aplicație sau eveniment nu se potrivește cu termenul căutat"
 
 #: ui/SourcesPage.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Alegeți o aplicație din listă pentru a-i configura parametrii și "
-"comportamentul de notificare."
+"comportamentul de notificare"
 
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"

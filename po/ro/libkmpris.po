@@ -1,0 +1,79 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Sergiu Bivol <sergiu@cip.md>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-02-09 00:39+0000\n"
+"PO-Revision-Date: 2024-02-25 18:45+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: kded/mprisservice.cpp:105
+#, kde-format
+msgctxt "@title Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "Controlor multimedia"
+
+#: kded/mprisservice.cpp:114
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Play/Pause media playback"
+msgstr "Redă/întrerupe redarea multimedia"
+
+#: kded/mprisservice.cpp:115
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Media playback next"
+msgstr "Redare multimedia - următor"
+
+#: kded/mprisservice.cpp:116
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Media playback previous"
+msgstr "Redare multimedia - precedent"
+
+#: kded/mprisservice.cpp:117
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Stop media playback"
+msgstr "Oprește redarea"
+
+#: kded/mprisservice.cpp:118
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Pause media playback"
+msgstr "Întrerupe redarea multimedia"
+
+#: kded/mprisservice.cpp:119
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Play media playback"
+msgstr "Reia redarea multimedia"
+
+#: kded/mprisservice.cpp:120
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Media volume up"
+msgstr "Volum multimedia - în sus"
+
+#: kded/mprisservice.cpp:121
+#, kde-format
+msgctxt "@title shortcut"
+msgid "Media volume down"
+msgstr "Volum multimedia - în jos"
+
+#: multiplexermodel.cpp:71
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "Alege lectorul automat"

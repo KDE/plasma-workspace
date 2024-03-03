@@ -1,0 +1,78 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Sergiu Bivol <sergiu@cip.md>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-02-20 00:39+0000\n"
+"PO-Revision-Date: 2024-02-25 18:51+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: kcm_soundtheme.cpp:111
+#, kde-format
+msgctxt "Name of the fallback \"freedesktop\" sound theme"
+msgid "FreeDesktop"
+msgstr "FreeDesktop"
+
+#: kcm_soundtheme.cpp:112
+#, kde-format
+msgid "Fallback sound theme from freedesktop.org"
+msgstr "Tematică sonoră de rezervă de la freedesktop.org"
+
+#: ui/main.qml:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable notification sounds"
+msgstr "Activează sunetele de notificare"
+
+#: ui/main.qml:96
+#, kde-format
+msgctxt ""
+"%2 is a theme name or a list of theme names that the current theme inherits "
+"from"
+msgid "Based on: %2"
+msgid_plural "Based on: %2"
+msgstr[0] "Bazată pe: %2"
+msgstr[1] "Bazată pe: %2"
+msgstr[2] "Bazată pe: %2"
+
+#: ui/main.qml:109
+#, kde-format
+msgctxt ""
+"@label Precedes a list of buttons which can be clicked to preview the "
+"theme's sounds. Keep it very short"
+msgid "Preview:"
+msgstr "Ascultă:"
+
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound \"%1\""
+msgstr "Previzualizează sunetul „%1”"
+
+#: ui/main.qml:150
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview the demo sound for the theme \"%1\""
+msgstr "Previzualizează sunetul demonstrativ pentru tematica „%1”"
+
+#: ui/main.qml:185
+#, kde-format
+msgctxt "%1 is a sound theme name. %2 is a sound name"
+msgid "The %1 theme doesn't include the sound '%2'"
+msgstr "Tematica %1 nu include sunetul „%2”"
+
+#: ui/main.qml:190
+#, kde-format
+msgid "Failed to preview sound: %1"
+msgstr "Previzualizarea sunetului a eșuat: %1"

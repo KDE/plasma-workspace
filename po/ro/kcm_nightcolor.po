@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-06-18 17:51+0100\n"
+"PO-Revision-Date: 2024-02-25 18:55+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -112,16 +112,14 @@ msgid "Custom times"
 msgstr "Ore personalizate"
 
 #: ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night light"
-msgstr "Pornită mereu"
+msgstr "Mereu în lumină nocturnă"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Temperatura culorii nocturne:"
+msgstr "Temperatura luminii de zi:"
 
 #: ui/main.qml:227 ui/main.qml:289
 #, kde-format
@@ -133,7 +131,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Rece (fără filtru)"
 
 #: ui/main.qml:239 ui/main.qml:301
 #, kde-format
@@ -142,17 +140,15 @@ msgid "Warm"
 msgstr "Caldă"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Temperatura culorii nocturne:"
+msgstr "Temperatura luminii nocturne:"
 
 #: ui/main.qml:311
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Detectează amplasarea"
+msgstr "Amplasarea actuală:"
 
 #: ui/main.qml:317
 #, kde-format
@@ -174,7 +170,7 @@ msgstr ""
 #: ui/main.qml:357
 #, kde-format
 msgid "Begin night light at:"
-msgstr ""
+msgstr "Începe lumina nocturnă la:"
 
 #: ui/main.qml:370 ui/main.qml:393
 #, kde-format
@@ -184,7 +180,7 @@ msgstr "Format de intrare: HH:MM"
 #: ui/main.qml:380
 #, kde-format
 msgid "Begin day light at:"
-msgstr ""
+msgstr "Începe lumina de zi la:"
 
 #: ui/main.qml:402
 #, kde-format

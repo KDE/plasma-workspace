@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-19 00:39+0000\n"
-"PO-Revision-Date: 2023-06-18 17:49+0100\n"
+"PO-Revision-Date: 2024-02-25 18:52+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -37,7 +37,9 @@ msgid "Metric"
 msgstr "Metric"
 
 #: exampleutility.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "PaperSize combobox"
+#| msgid "Letter"
 msgctxt "PaperSize combobox"
 msgid "Letter"
 msgstr "Scrisoare"
@@ -76,31 +78,31 @@ msgstr ""
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr ""
+msgstr "Strada Principală"
 
 #: exampleutility.cpp:69
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr ""
+msgstr "Casa 1"
 
 #: exampleutility.cpp:71
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:72
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "Camera 2"
 
 #: exampleutility.cpp:73
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr ""
+msgstr "Etajul 3"
 
 #: exampleutility.cpp:75
 #, kde-format
@@ -112,7 +114,7 @@ msgstr ""
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123456"
 
 #: exampleutility.cpp:77
 #, kde-format

@@ -1,4 +1,6 @@
 # Traducerea krunner_locationsrunner.po în Română
+# translation of krunner_locationsrunner to Romanian
+# Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the krunner_locationsrunner package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
 # Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013.

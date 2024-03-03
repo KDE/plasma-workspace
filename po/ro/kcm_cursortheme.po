@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2023-04-10 19:59+0100\n"
+"PO-Revision-Date: 2024-02-25 18:55+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -245,10 +245,9 @@ msgstr[1] "%1 secunde"
 msgstr[2] "%1 de secunde"
 
 #: ui/main.qml:64 ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Dimensiune:"
+msgstr "Dimensiune: %1"
 
 #: ui/main.qml:117
 #, kde-format
@@ -262,10 +261,9 @@ msgid "&Install from File…"
 msgstr "&Instalează din fișier…"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "&Get New Cursors…"
+#, kde-format
 msgid "&Get New…"
-msgstr "&Obține cursori noi…"
+msgstr "&Obține noi…"
 
 #: ui/main.qml:181
 #, kde-format
