@@ -171,7 +171,8 @@
         "Name[vi]": "Bảng nháp",
         "Name[x-test]": "xxClipboardxx",
         "Name[zh_CN]": "剪贴板",
-        "Name[zh_TW]": "剪貼簿"
+        "Name[zh_TW]": "剪貼簿",
+        "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
     "X-Plasma-API-Minimum-Version": "6.0",

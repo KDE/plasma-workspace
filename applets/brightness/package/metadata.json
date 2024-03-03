@@ -219,7 +219,8 @@
         "Name[uk]": "Яскравість і колір",
         "Name[x-test]": "xxBrightness and Colorxx",
         "Name[zh_CN]": "亮度和颜色",
-        "Name[zh_TW]": "亮度與顏色"
+        "Name[zh_TW]": "亮度與顏色",
+        "Website": "https://kde.org/plasma-desktop/"
     },
     "Keywords": "Power Management;Brightness;Color;Light;Screen;Display;Monitor;Keyboard;Night;Temperature",
     "X-Plasma-API-Minimum-Version": "6.0",

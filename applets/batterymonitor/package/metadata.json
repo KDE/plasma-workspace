@@ -181,7 +181,8 @@
         "Name[uk]": "Живлення і акумулятор",
         "Name[x-test]": "xxPower and Batteryxx",
         "Name[zh_CN]": "电量和电池",
-        "Name[zh_TW]": "電源與電池"
+        "Name[zh_TW]": "電源與電池",
+        "Website": "https://kde.org/plasma-desktop/"
     },
     "Keywords": "Power Management;Battery;System;Energy;",
     "Keywords[ar]": "إدارة الطاقة;بطارية;نظام;طاقة;",
