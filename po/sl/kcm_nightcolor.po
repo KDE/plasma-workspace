@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 02:34+0000\n"
+"POT-Creation-Date: 2024-03-04 02:21+0000\n"
 "PO-Revision-Date: 2023-11-29 22:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: ui/DayNightView.qml:110
+#: ui/DayNightView.qml:116
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Začetek spreminjanja nočnih barv ob %1 in so popolnoma spremenjene ob %2"
 
-#: ui/DayNightView.qml:113
+#: ui/DayNightView.qml:119
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 02:34+0000\n"
+"POT-Creation-Date: 2024-03-04 02:21+0000\n"
 "PO-Revision-Date: 2023-12-03 09:51+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: ui/DayNightView.qml:110
+#: ui/DayNightView.qml:116
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -26,7 +26,7 @@ msgstr ""
 "A temperatura da cor comeza a cambiar á nocturna ás %1 e completa o cambio "
 "ás %2"
 
-#: ui/DayNightView.qml:113
+#: ui/DayNightView.qml:119
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

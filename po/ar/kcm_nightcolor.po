@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 02:34+0000\n"
+"POT-Creation-Date: 2024-03-04 02:21+0000\n"
 "PO-Revision-Date: 2024-02-22 13:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: ui/DayNightView.qml:110
+#: ui/DayNightView.qml:116
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr "تبدأ حرارة اللون بالتغير في وقت الليل عند %1 وتكتمل عند %2"
 
-#: ui/DayNightView.qml:113
+#: ui/DayNightView.qml:119
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

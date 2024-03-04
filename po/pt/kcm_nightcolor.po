@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 02:34+0000\n"
+"POT-Creation-Date: 2024-03-04 02:21+0000\n"
 "PO-Revision-Date: 2022-09-11 11:07+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: SA\n"
 
-#: ui/DayNightView.qml:110
+#: ui/DayNightView.qml:116
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -28,7 +28,7 @@ msgstr ""
 "A temperatura da cor começa a mudar para a versão nocturna às %1 e muda por "
 "completo às %2"
 
-#: ui/DayNightView.qml:113
+#: ui/DayNightView.qml:119
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
