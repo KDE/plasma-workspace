@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-03-04 00:39+0000\n"
 "PO-Revision-Date: 2020-03-05 18:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: ui/DayNightView.qml:110
+#: ui/DayNightView.qml:116
 #, fuzzy, kde-format
 #| msgid "Night Color begins changing back at %1"
 msgid ""
@@ -25,7 +25,7 @@ msgid ""
 "by %2"
 msgstr "Öörežiim hakkab lõppema kell %1"
 
-#: ui/DayNightView.qml:113
+#: ui/DayNightView.qml:119
 #, fuzzy, kde-format
 #| msgid "Night Color begins changing back at %1"
 msgid ""

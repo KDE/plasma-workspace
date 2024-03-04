@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-03-04 00:39+0000\n"
 "PO-Revision-Date: 2022-12-20 09:49-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: ui/DayNightView.qml:110
+#: ui/DayNightView.qml:116
 #, fuzzy, kde-format
 #| msgid "Night Color begins changing at %1 and is fully changed by %2"
 msgid ""
@@ -29,7 +29,7 @@ msgid ""
 "by %2"
 msgstr "A cor noturna começa a alterar às %1 e é alterada por completo às %2"
 
-#: ui/DayNightView.qml:113
+#: ui/DayNightView.qml:119
 #, fuzzy, kde-format
 #| msgid "Night Color begins changing at %1 and is fully changed by %2"
 msgid ""
