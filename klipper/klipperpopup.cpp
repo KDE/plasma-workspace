@@ -75,7 +75,7 @@ KlipperPopup::KlipperPopup(History *history)
         screen = QGuiApplication::screens()[0];
     }
     int menuHeight = (screen->geometry().height()) * 3 / 4;
-    int menuWidth = (screen->geometry().width()) * 1 / 3;
+    int menuWidth = std::min((screen->geometry().width()) * 1 / 3, 640);
 
     m_popupProxy = new PopupProxy(this, menuHeight, menuWidth);
 
