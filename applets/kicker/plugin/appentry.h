@@ -53,6 +53,8 @@ public:
 
     QString menuId() const;
 
+    void reload() override;
+
     static QString nameFromService(const KService::Ptr &service, NameFormat nameFormat);
     static KService::Ptr defaultAppByName(const QString &name);
 

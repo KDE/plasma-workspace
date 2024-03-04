@@ -85,6 +85,11 @@ bool AbstractEntry::run(const QString &actionId, const QVariant &argument)
     return false;
 }
 
+void AbstractEntry::reload()
+{
+    return;
+}
+
 AbstractGroupEntry::AbstractGroupEntry(AbstractModel *owner)
     : AbstractEntry(owner)
 {

@@ -27,6 +27,7 @@
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/ResultWatcher>
 #include <PlasmaActivities/Stats/Terms>
+#include <qnamespace.h>
 
 #include "config-KDECI_BUILD.h"
 
@@ -185,6 +186,7 @@ public:
         connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
             QStringList keys;
             for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend(); it++) {
+                it.value()->reload();
                 if (it.value() && !it.value()->isValid()) {
                     keys << it.key();
                 }
