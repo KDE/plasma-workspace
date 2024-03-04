@@ -104,8 +104,7 @@ void KlipperPopup::ensureClean()
 
 void KlipperPopup::buildFromScratch()
 {
-    addSection(QIcon::fromTheme(QStringLiteral("klipper")),
-               i18nc("%1 is application display name", "%1 - Clipboard Items", QGuiApplication::applicationDisplayName()));
+    addSection(QIcon::fromTheme(QStringLiteral("klipper")), i18n("Clipboard Items"));
 
     m_filterWidget = new KLineEdit(this);
     m_filterWidget->setFocusPolicy(Qt::NoFocus);
