@@ -32,7 +32,7 @@ AbstractItem {
                     return model.AttentionIconName
                 }
             }
-            return model.IconName.length > 0 ? model.IconName : model.Icon
+            return model.Icon || model.IconName
         }
         active: taskIcon.containsMouse
     }
