@@ -5,7 +5,6 @@ target_sources(kcm_notifications PRIVATE
     kcm.cpp
     sourcesmodel.cpp
     filterproxymodel.cpp
-    eventsproxymodel.cpp
     notificationsdata.cpp
     soundthemeconfig.cpp
 )

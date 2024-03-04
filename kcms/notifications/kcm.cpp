@@ -45,7 +45,6 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     : KQuickManagedConfigModule(parent, data)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
-    , m_eventsModel(new EventsProxyModel(this))
     , m_data(new NotificationsData(this))
     , m_toggleDoNotDisturbAction(new QAction(this))
     , m_soundThemeConfig(new SoundThemeConfig(this))
@@ -54,7 +53,6 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel", QStringLiteral("Cannot create instances of SourcesModel"));
 
     qmlRegisterAnonymousType<FilterProxyModel>("FilterProxyModel", 1);
-    qmlRegisterAnonymousType<EventsProxyModel>("EventsProxyModel", 1);
     qmlRegisterAnonymousType<QKeySequence>("QKeySequence", 1);
     qmlRegisterAnonymousType<NotificationManager::DoNotDisturbSettings>("DoNotDisturbSettings", 1);
     qmlRegisterAnonymousType<NotificationManager::NotificationSettings>("NotificationSettings", 1);
@@ -64,7 +62,6 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     qmlProtectModule(uri, 1);
 
     m_filteredModel->setSourceModel(m_sourcesModel);
-    m_eventsModel->setSourceModel(m_sourcesModel);
 
     // for KGlobalAccel...
     // keep in sync with globalshortcuts.cpp in notification plasmoid!
@@ -113,11 +110,6 @@ SourcesModel *KCMNotifications::sourcesModel() const
 FilterProxyModel *KCMNotifications::filteredModel() const
 {
     return m_filteredModel;
-}
-
-EventsProxyModel *KCMNotifications::eventsModel() const
-{
-    return m_eventsModel;
 }
 
 NotificationManager::DoNotDisturbSettings *KCMNotifications::dndSettings() const

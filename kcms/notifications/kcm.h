@@ -13,7 +13,6 @@
 
 #include "badgesettings.h"
 #include "donotdisturbsettings.h"
-#include "eventsproxymodel.h"
 #include "filterproxymodel.h"
 #include "jobsettings.h"
 #include "notificationsettings.h"
@@ -37,7 +36,6 @@ class KCMNotifications : public KQuickManagedConfigModule
 
     Q_PROPERTY(SourcesModel *sourcesModel READ sourcesModel CONSTANT)
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
-    Q_PROPERTY(EventsProxyModel *eventsModel READ eventsModel CONSTANT)
 
     Q_PROPERTY(NotificationManager::DoNotDisturbSettings *dndSettings READ dndSettings CONSTANT)
     Q_PROPERTY(NotificationManager::NotificationSettings *notificationSettings READ notificationSettings CONSTANT)
@@ -59,7 +57,6 @@ public:
 
     SourcesModel *sourcesModel() const;
     FilterProxyModel *filteredModel() const;
-    EventsProxyModel *eventsModel() const;
 
     NotificationManager::DoNotDisturbSettings *dndSettings() const;
     NotificationManager::NotificationSettings *notificationSettings() const;
@@ -109,7 +106,6 @@ private:
 
     SourcesModel *const m_sourcesModel;
     FilterProxyModel *const m_filteredModel;
-    EventsProxyModel *const m_eventsModel;
 
     NotificationsData *const m_data;
 

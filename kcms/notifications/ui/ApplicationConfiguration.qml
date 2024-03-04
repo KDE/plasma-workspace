@@ -19,7 +19,7 @@ import org.kde.private.kcms.notifications 1.0 as Private
 ColumnLayout {
     id: configColumn
 
-    property var rootIndex
+    property alias rootIndex: eventsModel.rootIndex
     property var behaviorSettings: rootIndex ? kcm.behaviorSettings(rootIndex) : null
 
     readonly property string otherAppsId: "@other"
@@ -27,10 +27,6 @@ ColumnLayout {
     readonly property string appDisplayName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DisplayRole) || "" : ""
     readonly property string appIconName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DecorationRole) || "" : ""
     readonly property string desktopEntry: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || "" : ""
-
-    onRootIndexChanged: {
-        kcm.eventsModel.rootIndex = rootIndex
-    }
 
     spacing: 0
 
@@ -173,175 +169,179 @@ ColumnLayout {
                 visible: eventsList.count === 0
             }
 
-            model: kcm.eventsModel
-            delegate: QQC2.ItemDelegate {
-                id: eventDelegate
+            model: DelegateModel {
+                id: eventsModel
+                model: kcm.sourcesModel
 
-                property bool expanded: false
+                delegate: QQC2.ItemDelegate {
+                    id: eventDelegate
 
-                width: eventsList.width
+                    property bool expanded: false
 
-                Keys.forwardTo: expandButton
-                down: false
-                Kirigami.Theme.useAlternateBackgroundColor: true
+                    width: eventsList.width
 
-                contentItem: ColumnLayout {
-                    RowLayout {
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignTop
+                    Keys.forwardTo: expandButton
+                    down: false
+                    Kirigami.Theme.useAlternateBackgroundColor: true
 
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
-
-                            visible: model.showIcons
-                            source: model.decoration
-                        }
-
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            text: model.display
-                            textFormat: Text.PlainText
-                            elide: Text.ElideRight
-                        }
-
-                        Rectangle {
-                            id: defaultIndicator
-                            radius: width * 0.5
-                            implicitWidth: Kirigami.Units.largeSpacing
-                            implicitHeight: Kirigami.Units.largeSpacing
-                            Layout.rightMargin: Kirigami.Units.smallSpacing
-                            visible: kcm.defaultsIndicatorsVisible
-                            opacity: !model.isDefault
-                            color: Kirigami.Theme.neutralTextColor
-                        }
-
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
-
-                            source: "dialog-information"
-                            opacity: model.actions.includes("Popup") ? 1 : 0.2
-                        }
-
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
-
-                            source: "audio-speakers-symbolic"
-                            opacity: model.actions.includes("Sound") ? 1 : 0.2
-                        }
-
-                        QQC2.ToolButton {
-                            id: expandButton
-                            Layout.alignment: Qt.AlignRight
-                            icon.name: eventDelegate.expanded ? "arrow-down" : "arrow-right"
-                            onClicked: eventDelegate.expanded = !eventDelegate.expanded
-                        }
-                    }
-
-                    ColumnLayout {
-                        visible: eventDelegate.expanded
-
-                        Layout.fillWidth: true
-                        Layout.leftMargin: Kirigami.Units.largeSpacing
-                        spacing: Kirigami.Units.smallSpacing
-
-                        Kirigami.Heading {
-                            Layout.fillWidth: true
-                            Layout.bottomMargin: Kirigami.Units.smallSpacing
-                            visible: model.comment
-                            level: 5
-                            opacity: 0.7
-                            text: model.comment
-                            textFormat: Text.PlainText
-                            wrapMode: Text.WordWrap
-                        }
-
-                        ActionCheckBox {
-                            actionName: "Popup"
-                            text: i18n("Show a message in a pop-up")
-                        }
-
+                    contentItem: ColumnLayout {
                         RowLayout {
-                            id: soundRow
+                            Layout.fillWidth: true
+                            Layout.alignment: Qt.AlignTop
+
+                            Kirigami.Icon {
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+
+                                visible: model.showIcons
+                                source: model.decoration
+                            }
+
+                            QQC2.Label {
+                                Layout.fillWidth: true
+                                text: model.display
+                                textFormat: Text.PlainText
+                                elide: Text.ElideRight
+                            }
+
+                            Rectangle {
+                                id: defaultIndicator
+                                radius: width * 0.5
+                                implicitWidth: Kirigami.Units.largeSpacing
+                                implicitHeight: Kirigami.Units.largeSpacing
+                                Layout.rightMargin: Kirigami.Units.smallSpacing
+                                visible: kcm.defaultsIndicatorsVisible
+                                opacity: !model.isDefault
+                                color: Kirigami.Theme.neutralTextColor
+                            }
+
+                            Kirigami.Icon {
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+
+                                source: "dialog-information"
+                                opacity: model.actions.includes("Popup") ? 1 : 0.2
+                            }
+
+                            Kirigami.Icon {
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+
+                                source: "audio-speakers-symbolic"
+                                opacity: model.actions.includes("Sound") ? 1 : 0.2
+                            }
+
+                            QQC2.ToolButton {
+                                id: expandButton
+                                Layout.alignment: Qt.AlignRight
+                                icon.name: eventDelegate.expanded ? "arrow-down" : "arrow-right"
+                                onClicked: eventDelegate.expanded = !eventDelegate.expanded
+                            }
+                        }
+
+                        ColumnLayout {
+                            visible: eventDelegate.expanded
+
+                            Layout.fillWidth: true
+                            Layout.leftMargin: Kirigami.Units.largeSpacing
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Kirigami.Heading {
+                                Layout.fillWidth: true
+                                Layout.bottomMargin: Kirigami.Units.smallSpacing
+                                visible: model.comment
+                                level: 5
+                                opacity: 0.7
+                                text: model.comment
+                                textFormat: Text.PlainText
+                                wrapMode: Text.WordWrap
+                            }
 
                             ActionCheckBox {
-                                id: soundCheckBox
-                                actionName: "Sound"
-                                text: i18n("Play a sound")
+                                actionName: "Popup"
+                                text: i18n("Show a message in a pop-up")
                             }
 
-                            Item {
-                                Layout.fillWidth: true
+                            RowLayout {
+                                id: soundRow
+
+                                ActionCheckBox {
+                                    id: soundCheckBox
+                                    actionName: "Sound"
+                                    text: i18n("Play a sound")
+                                }
+
+                                Item {
+                                    Layout.fillWidth: true
+                                }
+
+                                QQC2.Button {
+                                    enabled: soundCheckBox.checked && model.sound
+                                    icon.name: "media-playback-start"
+                                    onClicked: kcm.playSound(model.sound)
+                                }
+                                QQC2.TextField {
+                                    enabled: soundCheckBox.checked
+                                    text: model.sound
+                                    onEditingFinished: model.sound = text
+
+                                    // Make the TextField able to shrink, but keep its implicit width when is not needed
+                                    Layout.fillWidth: true
+                                    Layout.maximumWidth: implicitWidth
+                                    Layout.minimumWidth: Kirigami.Units.gridUnit * 5
+
+                                    KCM.SettingHighlighter {
+                                        highlight: model.sound !== model.defaultSound
+                                    }
+                                }
+                                QQC2.Button {
+                                    enabled: soundCheckBox.checked && model.sound !== model.defaultSound
+                                    icon.name: "edit-reset"
+                                    onClicked: model.sound = model.defaultSound
+                                }
+                                QQC2.Button {
+                                    enabled: soundCheckBox.checked
+                                    icon.name: "document-open-folder"
+                                    onClicked: {
+                                        soundSelector.eventIndex = model.index
+                                        soundSelector.open()
+                                    }
+                                }
                             }
 
-                            QQC2.Button {
-                                enabled: soundCheckBox.checked && model.sound
-                                icon.name: "media-playback-start"
-                                onClicked: kcm.playSound(model.sound)
-                            }
-                            QQC2.TextField {
-                                enabled: soundCheckBox.checked
-                                text: model.sound
-                                onEditingFinished: model.sound = text
+                            component ActionCheckBox : QQC2.CheckBox {
+                                required property string actionName
 
-                                // Make the TextField able to shrink, but keep its implicit width when is not needed
-                                Layout.fillWidth: true
-                                Layout.maximumWidth: implicitWidth
-                                Layout.minimumWidth: Kirigami.Units.gridUnit * 5
+                                checked: model.actions.includes(actionName)
+                                onToggled: {
+                                    const _actions = model.actions
+                                    const idx = model.actions.indexOf(actionName)
+                                    if (checked && idx === -1 ) {
+                                        _actions.push(actionName)
+                                    } else if (!checked && idx > -1) {
+                                        _actions.splice(idx, 1) // remove actionName
+                                    } else {
+                                        return // no changes needed
+                                    }
+                                    model.actions = _actions.sort() // Sort to make the list independent of the selection order
+                                }
 
                                 KCM.SettingHighlighter {
-                                    highlight: model.sound !== model.defaultSound
-                                }
-                            }
-                            QQC2.Button {
-                                enabled: soundCheckBox.checked && model.sound !== model.defaultSound
-                                icon.name: "edit-reset"
-                                onClicked: model.sound = model.defaultSound
-                            }
-                            QQC2.Button {
-                                enabled: soundCheckBox.checked
-                                icon.name: "document-open-folder"
-                                onClicked: {
-                                    soundSelector.eventIndex = model.index
-                                    soundSelector.open()
+                                    highlight: checked !== model.defaultActions.includes(actionName)
                                 }
                             }
                         }
 
-                        component ActionCheckBox : QQC2.CheckBox {
-                            required property string actionName
-
-                            checked: model.actions.includes(actionName)
-                            onToggled: {
-                                const _actions = model.actions
-                                const idx = model.actions.indexOf(actionName)
-                                if (checked && idx === -1 ) {
-                                    _actions.push(actionName)
-                                } else if (!checked && idx > -1) {
-                                    _actions.splice(idx, 1) // remove actionName
-                                } else {
-                                    return // no changes needed
-                                }
-                                model.actions = _actions.sort() // Sort to make the list independent of the selection order
-                            }
-
-                            KCM.SettingHighlighter {
-                                highlight: checked !== model.defaultActions.includes(actionName)
-                            }
+                        TapHandler {
+                            onTapped: eventDelegate.expanded = !eventDelegate.expanded
                         }
                     }
 
-                    TapHandler {
-                        onTapped: eventDelegate.expanded = !eventDelegate.expanded
-                    }
-                }
-
-                Behavior on height {
-                    NumberAnimation {
-                        properties: "height"
-                        duration: Kirigami.Units.shortDuration
+                    Behavior on height {
+                        NumberAnimation {
+                            properties: "height"
+                            duration: Kirigami.Units.shortDuration
+                        }
                     }
                 }
             }
