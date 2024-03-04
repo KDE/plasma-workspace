@@ -45,6 +45,8 @@ public:
 
     virtual bool run(const QString &actionId = QString(), const QVariant &argument = QVariant());
 
+    virtual void reload();
+
 protected:
     AbstractModel *m_owner;
 };
