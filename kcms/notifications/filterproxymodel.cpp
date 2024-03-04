@@ -6,6 +6,7 @@
 
 #include "filterproxymodel.h"
 
+#include "kcm.h"
 #include "sourcesmodel.h"
 
 FilterProxyModel::FilterProxyModel(QObject *parent)
@@ -37,6 +38,12 @@ bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &sourc
     }
 
     const QModelIndex idx = sourceModel()->index(source_row, 0, source_parent);
+
+    // We remove "Plasma Workspace" in the filter model, so it's not shown in the apps list
+    // but still addressable by model index in the root model ("System notificatons" settings).
+    if (idx.data(SourcesModel::NotifyRcNameRole).toString() == KCMNotifications::plasmaWorkspaceNotifyRcName()) {
+        return false;
+    }
 
     const QString display = idx.data(Qt::DisplayRole).toString();
     if (display.contains(m_query, Qt::CaseInsensitive)) {

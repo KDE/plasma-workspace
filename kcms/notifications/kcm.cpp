@@ -102,6 +102,11 @@ KCMNotifications::~KCMNotifications()
 {
 }
 
+QString KCMNotifications::plasmaWorkspaceNotifyRcName()
+{
+    return QStringLiteral("plasma_workspace");
+}
+
 SourcesModel *KCMNotifications::sourcesModel() const
 {
     return m_sourcesModel;

@@ -16,7 +16,11 @@ import org.kde.private.kcms.notifications as Private
 
 KCM.AbstractKCM {
     id: sourcesPage
-    title: i18n("Application Settings")
+    // Use app title when when only configuring events.
+    title: showOnlyEventsConfig ? rootIndex.model.data(rootIndex, Qt.DisplayRole) : i18n("Application Settings")
+
+    property alias rootIndex: appConfiguration.rootIndex
+    property bool showOnlyEventsConfig: false
 
     framedView: false
 
@@ -25,7 +29,9 @@ KCM.AbstractKCM {
         if (!idx.valid) {
             idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
         }
-        appConfiguration.rootIndex = idx;
+        if (idx.valid) {
+            appConfiguration.rootIndex = idx;
+        }
 
         // In Component.onCompleted we might not be assigned a window yet
         // which we need to make the events config dialog transient to it
@@ -48,6 +54,7 @@ KCM.AbstractKCM {
     }
 
     header: ColumnLayout {
+        visible: !sourcesPage.showOnlyEventsConfig
 
         Kirigami.SearchField {
             id: searchField
@@ -69,6 +76,7 @@ KCM.AbstractKCM {
             Layout.fillHeight: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 12
             Layout.preferredWidth: Math.round(rootRow.width / 3)
+            visible: !sourcesPage.showOnlyEventsConfig
 
             background: null
 
@@ -162,6 +170,7 @@ KCM.AbstractKCM {
             ApplicationConfiguration {
                 id: appConfiguration
                 anchors.fill: parent
+                showOnlyEventsConfig: sourcesPage.showOnlyEventsConfig
                 visible: appConfiguration.rootIndex.valid
             }
 

@@ -34,6 +34,8 @@ class KCMNotifications : public KQuickManagedConfigModule
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString plasmaWorkspaceNotifyRcName READ plasmaWorkspaceNotifyRcName CONSTANT)
+
     Q_PROPERTY(SourcesModel *sourcesModel READ sourcesModel CONSTANT)
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
 
@@ -54,6 +56,8 @@ class KCMNotifications : public KQuickManagedConfigModule
 public:
     KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMNotifications() override;
+
+    static QString plasmaWorkspaceNotifyRcName();
 
     SourcesModel *sourcesModel() const;
     FilterProxyModel *filteredModel() const;

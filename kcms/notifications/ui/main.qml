@@ -27,24 +27,44 @@ KCM.SimpleKCM {
     readonly property bool notificationsAvailable: currentOwnerInfo.status === NotificationManager.ServerInfo.Running
         && currentOwnerInfo.vendor === ourServerVendor && currentOwnerInfo.name === ourServerName
 
-    function openSourcesSettings() {
+    function openSourcesSettings(args) {
         // TODO would be nice to re-use the current SourcesPage instead of pushing a new one that lost all state
         // but there's no pageAt(index) method in KConfigModuleQml
-        kcm.push("SourcesPage.qml");
+        kcm.push("SourcesPage.qml", args);
     }
 
-    actions: Kirigami.Action {
-        text: i18nc("@action:button Application-specific notifications", "Configure Application Settings…")
-        icon.name: "settings-configure-symbolic"
-        enabled: root.notificationsAvailable
-        onTriggered: root.openSourcesSettings()
+    function openSystemNotificationSettings() {
+        const idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.plasmaWorkspaceNotifyRcName);
+        root.openSourcesSettings({
+            rootIndex: idx,
+            showOnlyEventsConfig: true
+        });
     }
+
+    actions: [
+        Kirigami.Action {
+            text: i18nc("@action:button Plasma-specific notifications", "System Notifications…")
+            icon.name: "notifications-symbolic"
+            enabled: root.notificationsAvailable
+            onTriggered: root.openSystemNotificationSettings()
+        },
+        Kirigami.Action {
+            text: i18nc("@action:button Application-specific notifications", "Application Settings…")
+            icon.name: "applications-all-symbolic"
+            enabled: root.notificationsAvailable
+            onTriggered: root.openSourcesSettings()
+        }
+    ]
 
     Connections {
         target: kcm
         function onFirstLoadDone() {
             if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
+                if (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName) {
+                    root.openSystemNotificationSettings();
+                } else {
                     root.openSourcesSettings();
+                }
             }
         }
     }

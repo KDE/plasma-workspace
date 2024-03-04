@@ -27,7 +27,6 @@
 
 using namespace Qt::StringLiterals;
 
-static const QString s_plasmaWorkspaceNotifyRcName = QStringLiteral("plasma_workspace");
 static const QRegularExpression s_eventGroupRegExp(QStringLiteral("^Event/([^/]*)$"));
 
 SourcesModel::SourcesModel(QObject *parent)
@@ -399,14 +398,7 @@ void SourcesModel::load()
         .events = {},
     };
 
-    // Sort and make sure plasma_workspace is at the beginning of the list
     std::sort(servicesData.begin(), servicesData.end(), [&collator](const SourceData &a, const SourceData &b) {
-        if (a.notifyRcName == s_plasmaWorkspaceNotifyRcName) {
-            return true;
-        }
-        if (b.notifyRcName == s_plasmaWorkspaceNotifyRcName) {
-            return false;
-        }
         return collator.compare(a.display(), b.display()) < 0;
     });
 

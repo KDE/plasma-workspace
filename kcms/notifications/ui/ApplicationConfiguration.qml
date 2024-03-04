@@ -21,6 +21,7 @@ ColumnLayout {
 
     property alias rootIndex: eventsModel.rootIndex
     property var behaviorSettings: rootIndex ? kcm.behaviorSettings(rootIndex) : null
+    property bool showOnlyEventsConfig: false
 
     readonly property string otherAppsId: "@other"
 
@@ -54,6 +55,7 @@ ColumnLayout {
 
                 Layout.fillWidth: true
                 Layout.margins: marginsAndSpacings
+                visible: !configColumn.showOnlyEventsConfig
 
                 spacing: marginsAndSpacings
 
