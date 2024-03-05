@@ -61,6 +61,7 @@ private Q_SLOTS:
     void syncStatus(const QString &);
     void refreshCallback(QDBusPendingCallWatcher *);
     void activateCallback(QDBusPendingCallWatcher *);
+    void reloadIcon();
 
 private:
     QPixmap KDbusImageStructToPixmap(const KDbusImageStruct &image) const;

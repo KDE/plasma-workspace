@@ -11,8 +11,11 @@
 
 #include "debug.h"
 
+#include <KIconColors>
 #include <KIconEngine>
 #include <KIconLoader>
+#include <Plasma/Theme>
+
 #include <QApplication>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
@@ -28,6 +31,8 @@
 #include <netinet/in.h>
 
 #include <dbusmenuimporter.h>
+
+Q_GLOBAL_STATIC(Plasma::Theme, s_theme)
 
 class PlasmaDBusMenuImporter : public DBusMenuImporter
 {
@@ -89,6 +94,8 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
         connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
         refresh();
     }
+
+    connect(s_theme, &Plasma::Theme::themeChanged, this, &StatusNotifierItemSource::reloadIcon);
 }
 
 StatusNotifierItemSource::~StatusNotifierItemSource()
@@ -280,7 +287,6 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         m_attentionMovieName = properties[QStringLiteral("AttentionMovieName")].toString();
 
         QIcon overlay;
-        QStringList overlayNames;
 
         // Overlay icon
         {
@@ -288,10 +294,9 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
             const QString iconName = properties[QStringLiteral("OverlayIconName")].toString();
             if (!iconName.isEmpty()) {
-                overlay = QIcon(new KIconEngine(iconName, iconLoader()));
+                overlay = QIcon(new KIconEngine(iconName, KIconColors(Plasma::Theme::globalPalette()), iconLoader()));
                 if (!overlay.isNull()) {
                     m_overlayIconName = iconName;
-                    overlayNames << iconName;
                 }
             }
             if (overlay.isNull()) {
@@ -303,12 +308,12 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             }
         }
 
-        auto loadIcon = [this, &properties, &overlay, &overlayNames](const QString &iconKey, const QString &pixmapKey) -> std::tuple<QIcon, QString> {
+        auto loadIcon = [this, &properties, &overlay](const QString &iconKey, const QString &pixmapKey) -> std::tuple<QIcon, QString> {
             const QString iconName = properties[iconKey].toString();
             if (!iconName.isEmpty()) {
-                QIcon icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
+                QIcon icon = QIcon(new KIconEngine(iconName, KIconColors(Plasma::Theme::globalPalette()), iconLoader(), {m_overlayIconName}));
                 if (!icon.isNull()) {
-                    if (!overlay.isNull() && overlayNames.isEmpty()) {
+                    if (!overlay.isNull() && m_overlayIconName.isEmpty()) {
                         overlayIcon(&icon, &overlay);
                     }
                     return {icon, iconName};
@@ -365,6 +370,19 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
     Q_EMIT dataUpdated();
     call->deleteLater();
+}
+
+void StatusNotifierItemSource::reloadIcon()
+{
+    if (!m_iconName.isEmpty()) {
+        m_icon = QIcon(new KIconEngine(m_iconName, KIconColors(Plasma::Theme::globalPalette()), iconLoader(), {m_overlayIconName}));
+    }
+
+    if (!m_attentionIconName.isEmpty()) {
+        m_attentionIcon = QIcon(new KIconEngine(m_attentionIconName, KIconColors(Plasma::Theme::globalPalette()), iconLoader(), {m_overlayIconName}));
+    }
+
+    Q_EMIT dataUpdated();
 }
 
 void StatusNotifierItemSource::contextMenuReady()
