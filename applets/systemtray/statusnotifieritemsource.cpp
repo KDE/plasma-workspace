@@ -161,11 +161,6 @@ QString StatusNotifierItemSource::title() const
     return m_title;
 }
 
-QVariant StatusNotifierItemSource::toolTipIcon() const
-{
-    return m_toolTipIcon;
-}
-
 QString StatusNotifierItemSource::toolTipSubTitle() const
 {
     return m_toolTipSubTitle;
@@ -341,21 +336,9 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             if (toolTip.title.isEmpty()) {
                 m_toolTipTitle = QString();
                 m_toolTipSubTitle = QString();
-                m_toolTipIcon = QString();
             } else {
-                QIcon toolTipIcon;
-                if (toolTip.image.size() == 0) {
-                    toolTipIcon = QIcon(new KIconEngine(toolTip.icon, iconLoader()));
-                } else {
-                    toolTipIcon = imageVectorToPixmap(toolTip.image);
-                }
                 m_toolTipTitle = toolTip.title;
                 m_toolTipSubTitle = toolTip.subTitle;
-                if (toolTipIcon.isNull() || toolTipIcon.availableSizes().isEmpty()) {
-                    m_toolTipIcon = QString();
-                } else {
-                    m_toolTipIcon = toolTipIcon;
-                }
             }
         }
 

@@ -44,7 +44,6 @@ public:
     QString overlayIconName() const;
     QString status() const;
     QString title() const;
-    QVariant toolTipIcon() const;
     QString toolTipSubTitle() const;
     QString toolTipTitle() const;
     QString windowId() const;
@@ -90,7 +89,6 @@ private:
     QString m_overlayIconName;
     QString m_status;
     QString m_title;
-    QVariant m_toolTipIcon;
     QString m_toolTipSubTitle;
     QString m_toolTipTitle;
     QString m_windowId;
