@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-03-05 00:39+0000\n"
 "PO-Revision-Date: 2024-01-17 21:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -822,28 +822,29 @@ msgstr ""
 "إذا حدد اسم ملف أو عنوان URL ، فقم بتضمين التطبيقات التي يمكنها التعامل مع "
 "نوع MIME الخاص به في نافذة الإجراءات المنبثقة."
 
-#: klipperpopup.cpp:108
-#, kde-format
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Items"
+#: klipperpopup.cpp:107
+#, fuzzy, kde-format
+#| msgctxt "%1 is application display name"
+#| msgid "%1 - Clipboard Items"
+msgid "Clipboard Items"
 msgstr "%1 - عناصر الحافظة"
 
-#: klipperpopup.cpp:112
+#: klipperpopup.cpp:111
 #, kde-format
 msgid "Search…"
 msgstr "ابحث..."
 
-#: klipperpopup.cpp:170
+#: klipperpopup.cpp:169
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "التّعبير النّمطيّ غير صالح، %1"
 
-#: klipperpopup.cpp:175
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "الحافظة فارغة"
 
-#: klipperpopup.cpp:177
+#: klipperpopup.cpp:176
 #, kde-format
 msgid "No matches"
 msgstr "لا يوجد تطابق"

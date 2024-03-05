@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-03-05 00:39+0000\n"
 "PO-Revision-Date: 2023-08-07 23:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -805,28 +805,29 @@ msgid ""
 msgstr ""
 "選取檔案名稱或網址時，在彈出選單中包含可以接受它的 MIME 類型的應用程式。"
 
-#: klipperpopup.cpp:108
-#, kde-format
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Items"
+#: klipperpopup.cpp:107
+#, fuzzy, kde-format
+#| msgctxt "%1 is application display name"
+#| msgid "%1 - Clipboard Items"
+msgid "Clipboard Items"
 msgstr "%1 - 剪貼簿項目"
 
-#: klipperpopup.cpp:112
+#: klipperpopup.cpp:111
 #, kde-format
 msgid "Search…"
 msgstr "搜尋…"
 
-#: klipperpopup.cpp:170
+#: klipperpopup.cpp:169
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "無效的正則表達式，%1"
 
-#: klipperpopup.cpp:175
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"
 
-#: klipperpopup.cpp:177
+#: klipperpopup.cpp:176
 #, kde-format
 msgid "No matches"
 msgstr "無相符"

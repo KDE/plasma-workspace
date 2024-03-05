@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-03-05 00:39+0000\n"
 "PO-Revision-Date: 2022-08-03 09:28+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -827,29 +827,28 @@ msgstr ""
 "Om ett filnamn eller en webbadress markeras, inkluderas program som kan "
 "hantera dess MIME-typ i åtgärdsrutan."
 
-#: klipperpopup.cpp:108
+#: klipperpopup.cpp:107
 #, fuzzy, kde-format
 #| msgid "Clipboard Contents"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Items"
+msgid "Clipboard Items"
 msgstr "Klippbordets innehåll"
 
-#: klipperpopup.cpp:112
+#: klipperpopup.cpp:111
 #, kde-format
 msgid "Search…"
 msgstr "Sök…"
 
-#: klipperpopup.cpp:170
+#: klipperpopup.cpp:169
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "Ogiltigt reguljärt uttryck, %1"
 
-#: klipperpopup.cpp:175
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klippbordet är tomt"
 
-#: klipperpopup.cpp:177
+#: klipperpopup.cpp:176
 #, kde-format
 msgid "No matches"
 msgstr "Inga träffar"

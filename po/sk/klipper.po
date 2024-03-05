@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-03-05 00:39+0000\n"
 "PO-Revision-Date: 2023-08-06 11:28+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -825,28 +825,29 @@ msgstr ""
 "Ak je vybraný názov súboru alebo adresa URL, zahrnúť aplikácie, ktoré môžu "
 "prijať jeho MIME typ vo vyskakovacej ponuke."
 
-#: klipperpopup.cpp:108
-#, kde-format
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Items"
+#: klipperpopup.cpp:107
+#, fuzzy, kde-format
+#| msgctxt "%1 is application display name"
+#| msgid "%1 - Clipboard Items"
+msgid "Clipboard Items"
 msgstr "%1 - Položky schránky"
 
-#: klipperpopup.cpp:112
+#: klipperpopup.cpp:111
 #, kde-format
 msgid "Search…"
 msgstr "Hľadať..."
 
-#: klipperpopup.cpp:170
+#: klipperpopup.cpp:169
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "Neplatný regulárny výraz, %1"
 
-#: klipperpopup.cpp:175
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"
 
-#: klipperpopup.cpp:177
+#: klipperpopup.cpp:176
 #, kde-format
 msgid "No matches"
 msgstr "Žiadne zhody"

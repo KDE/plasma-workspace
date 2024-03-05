@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-03-05 00:39+0000\n"
 "PO-Revision-Date: 2022-03-29 21:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -827,30 +827,29 @@ msgstr ""
 "यदि यह विकल्प नियत है, और एक फ़ाइल नाम या यूआरएल चुना गया है, तो ऐसे अनुप्रयोग शामिल "
 "करें जो इसके MIME प्रकार को क्रिया पॉपअप में संभाल सकें।"
 
-#: klipperpopup.cpp:108
+#: klipperpopup.cpp:107
 #, fuzzy, kde-format
 #| msgid "Clipboard Contents"
-msgctxt "%1 is application display name"
-msgid "%1 - Clipboard Items"
+msgid "Clipboard Items"
 msgstr "क्लिपबोर्ड की वस्तुएँ"
 
-#: klipperpopup.cpp:112
+#: klipperpopup.cpp:111
 #, kde-format
 msgid "Search…"
 msgstr "खोजें…"
 
-#: klipperpopup.cpp:170
+#: klipperpopup.cpp:169
 #, fuzzy, kde-format
 #| msgid "Regular expression:"
 msgid "Invalid regular expression, %1"
 msgstr "रेगुलर एक्सप्रेशन :"
 
-#: klipperpopup.cpp:175
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड खाली है"
 
-#: klipperpopup.cpp:177
+#: klipperpopup.cpp:176
 #, kde-format
 msgid "No matches"
 msgstr "कोई मेल नहीं"
