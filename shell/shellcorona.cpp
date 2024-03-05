@@ -172,6 +172,8 @@ void ShellCorona::init()
     m_waitingPanelsTimer.setInterval(250ms);
     connect(&m_waitingPanelsTimer, &QTimer::timeout, this, &ShellCorona::createWaitingPanels);
 
+    connect(this, &ShellCorona::editModeChanged, this, &ShellCorona::availableScreenRegionChanged);
+
 #ifndef NDEBUG
     m_invariantsTimer.setSingleShot(true);
     m_invariantsTimer.setInterval(qEnvironmentVariableIsSet("KDECI_BUILD") > 0 ? 30000ms : 250ms);
@@ -1155,7 +1157,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     return std::accumulate(m_panelViews.cbegin(), m_panelViews.cend(), QRegion(screen->geometry()), [screen](const QRegion &a, const PanelView *v) {
         if (v->isVisible() && screen == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             // if the panel is being moved around, we still want to calculate it from the edge
-            return a - v->geometryByDistance(0);
+            return a - v->geometryByDistance(0) - v->configRegion();
         }
         return a;
     });
@@ -1531,6 +1533,7 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &PanelView::locationChanged, this, rectNotify);
         connect(panel, &PanelView::visibilityModeChanged, this, rectNotify);
         connect(panel, &PanelView::thicknessChanged, this, rectNotify);
+        connect(panel, &PanelView::configRegionChanged, this, rectNotify);
     }
     m_waitingPanels = stillWaitingPanels;
 }

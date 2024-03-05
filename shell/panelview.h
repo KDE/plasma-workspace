@@ -188,6 +188,8 @@ public:
 
     int minThickness() const;
 
+    QRegion configRegion() const;
+
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
 
@@ -253,6 +255,7 @@ Q_SIGNALS:
     void opacityModeChanged();
     void lengthModeChanged();
     void adaptiveOpacityEnabledChanged();
+    void configRegionChanged();
 
 protected Q_SLOTS:
     /**

@@ -395,6 +395,20 @@ int PanelView::minThickness() const
     return 0;
 }
 
+QRegion PanelView::configRegion() const
+{
+    PanelConfigView *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);
+    if (m_panelConfigView && m_panelConfigView->isVisible()) {
+        QRect rulerViewRect;
+        if (panelConfigView && panelConfigView->panelRulerView() && panelConfigView->panelRulerView()->isVisible()) {
+            rulerViewRect = panelConfigView->panelRulerView()->geometry();
+            rulerViewRect.moveTopLeft(QPoint(0, totalThickness()));
+        }
+        return QRegion(m_panelConfigView->geometry()) | QRegion(rulerViewRect);
+    }
+    return QRect();
+}
+
 Plasma::Types::BackgroundHints PanelView::backgroundHints() const
 {
     return m_backgroundHints;
@@ -857,9 +871,11 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     if (isPanelConfig) {
         if (m_panelConfigView && m_panelConfigView->isVisible()) {
             m_panelConfigView->hide();
+            Q_EMIT configRegionChanged();
             cont->corona()->setEditMode(false);
         } else if (m_panelConfigView) {
             m_panelConfigView->show();
+            Q_EMIT configRegionChanged();
             m_panelConfigView->requestActivate();
         } else {
             PanelConfigView *configView = new PanelConfigView(cont, this);
@@ -867,6 +883,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             configView->setVisualParent(contentItem());
             configView->init();
             configView->show();
+            Q_EMIT configRegionChanged();
             configView->requestActivate();
             connect(m_panelConfigView, &PanelConfigView::visibleChanged, this, &PanelView::updateEditModeLabel);
             updateEditModeLabel();
