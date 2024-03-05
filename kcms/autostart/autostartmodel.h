@@ -73,6 +73,18 @@ private:
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
     void insertScriptEntry(int index, const QString &name, const QString &targetFileDirPath, const QString &path, AutostartModel::AutostartEntrySource kind);
     QString makeSuggestedName(const QString &oldName);
+    void sort(int column = 0, Qt::SortOrder order = Qt::AscendingOrder) override;
+
+    /**
+     * Sorts the entries.
+     *
+     * The entries are sorted first by source, then alphabetically by name.
+     *
+     * @param entries the entries to sort
+     * @return the sorted entries
+     */
+    static QList<AutostartEntry> sortedEntries(const QList<AutostartEntry> &entries);
+
     QString suggestName(const QUrl &baseUrl, const QString &oldName);
     static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
     QString systemdEscape(const QString &name) const;

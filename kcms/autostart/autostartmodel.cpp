@@ -11,6 +11,7 @@
 #include <KDesktopFile>
 #include <KSharedConfig>
 #include <KShell>
+#include <QCollator>
 #include <QDebug>
 #include <QQuickItem>
 #include <QQuickRenderControl>
@@ -160,6 +161,9 @@ void AutostartModel::load()
         unit->setId(serviceName);
         entry.systemdUnit = unit;
     }
+
+    sort();
+
     endResetModel();
 }
 
@@ -336,6 +340,8 @@ void AutostartModel::addApplication(const KService::Ptr &service)
     m_entries.insert(index, entry);
 
     endInsertRows();
+
+    sort();
 }
 
 void AutostartModel::showApplicationDialog(QQuickItem *context)
@@ -469,6 +475,8 @@ void AutostartModel::insertScriptEntry(int index, const QString &name, const QSt
     m_entries.insert(index, entry);
 
     endInsertRows();
+
+    sort();
 }
 
 void AutostartModel::removeEntry(int row)
@@ -596,4 +604,31 @@ QString AutostartModel::suggestName(const QUrl &baseURL, const QString &oldName)
     }
 
     return suggestedName;
+}
+
+void AutostartModel::sort(int column, Qt::SortOrder order)
+{
+    Q_UNUSED(column)
+    Q_UNUSED(order)
+    emit layoutAboutToBeChanged();
+    m_entries = sortedEntries(m_entries);
+    emit layoutChanged();
+}
+
+QList<AutostartEntry> AutostartModel::sortedEntries(const QList<AutostartEntry> &entries)
+{
+    QList<AutostartEntry> sortedEntries = entries;
+
+    QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
+
+    std::sort(sortedEntries.begin(), sortedEntries.end(), [&collator](const AutostartEntry &a, const AutostartEntry &b) {
+        if (a.source != b.source) {
+            return a.source < b.source;
+        }
+
+        return collator.compare(a.name, b.name) < 0;
+    });
+
+    return sortedEntries;
 }
