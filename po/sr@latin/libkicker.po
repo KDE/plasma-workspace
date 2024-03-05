@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-27 02:26+0000\n"
+"POT-Creation-Date: 2024-03-05 02:21+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -69,18 +69,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: plugin/appentry.cpp:297
+#: plugin/appentry.cpp:306
 #, kde-format
 msgid "Hide Application"
 msgstr "Sakrij program"
 
-#: plugin/appentry.cpp:356
+#: plugin/appentry.cpp:365
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:358
+#: plugin/appentry.cpp:367
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -119,7 +119,7 @@ msgid "Computer"
 msgstr "Računar"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:544 plugin/rootmodel.cpp:392
+#: plugin/kastatsfavoritesmodel.cpp:546 plugin/rootmodel.cpp:392
 #: plugin/simplefavoritesmodel.cpp:31
 #, kde-format
 msgid "Favorites"
