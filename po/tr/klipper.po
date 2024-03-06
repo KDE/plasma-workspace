@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-05 01:35+0000\n"
-"PO-Revision-Date: 2024-03-01 15:54+0300\n"
+"PO-Revision-Date: 2024-03-05 10:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -194,12 +194,12 @@ msgstr "Açıklama"
 #: configdialog.cpp:375
 #, kde-format
 msgid "Add Action..."
-msgstr "Eylem Ekle..."
+msgstr "Eylem Ekle…"
 
 #: configdialog.cpp:379
 #, kde-format
 msgid "Edit Action..."
-msgstr "Eylemi Düzenle..."
+msgstr "Eylemi Düzenle…"
 
 #: configdialog.cpp:384
 #, kde-format
@@ -286,9 +286,9 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
-"Etkinleştirilmiş olsa bile, bu pencereler için eylem açılır menüsü otomatik "
-"olarak gösterilmeyecektir. Bunun nedeni, örneğin bir web tarayıcının "
-"yazarken adres çubuğunda bir URL'yi vurgulayabilmesi ve böylece menünün her "
+"Etkinleştirilmiş olsa bile, bu pencereler için eylem açılır menüsü "
+"kendiliğinden gösterilmeyecektir. Bunun nedeni, örneğin bir web tarayıcının "
+"yazarken adres çubuğunda bir URL’yi vurgulayabilmesi ve böylece menünün her "
 "düğme vuruşunda gösterilmesidir.<nl/><nl/>Kullanırken eylem menüsü "
 "beklenmedik bir şekilde görünürse belirli bir uygulamayı seçin, ardından bu "
 "listeye ekleyin. <link>Girilecek ad nasıl bulunur</link>."
@@ -404,20 +404,20 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
-"Bu eşleşme için olan komutlar, <interface>Eylem Menüsü</interface>'nde "
-"etkinleştirilmişlerse otomatik açılır pencerede içerilecektir. Bu seçenek "
-"kapalıysa otomatik açılır pencerede içerilmez; ancak <shortcut>%1</shortcut> "
-"düğme kısayolu ile el ile etkinleştirilen menüde bulunurlar."
+"Bu eşleşme için olan komutlar, <interface>Eylem Menüsü</interface>’nde "
+"etkinleştirilmişlerse kendiliğinden açılır pencerede içerilecektir. Bu "
+"seçenek kapalıysa otomatik açılır pencerede içerilmez; ancak <shortcut>%1</"
+"shortcut> düğme kısayolu ile el ile etkinleştirilen menüde bulunurlar."
 
 #: editactiondialog.cpp:262
 #, kde-format
 msgid "Add Command..."
-msgstr "Komut Ekle..."
+msgstr "Komut Ekle…"
 
 #: editactiondialog.cpp:267
 #, kde-format
 msgid "Edit Command..."
-msgstr "Komutu Düzenle..."
+msgstr "Komutu Düzenle…"
 
 #: editactiondialog.cpp:273
 #, kde-format
@@ -460,7 +460,7 @@ msgid ""
 "captured texts from the match pattern."
 msgstr ""
 "Komuttaki yer tutucu <placeholder>&#37;s</placeholder>, tüm pano içeriği ile "
-"değiştirilecektir. <placeholder>&#37;0</placeholder>-<placeholder>&#37;9</"
+"değiştirilecektir. <placeholder>&#37;0</placeholder>–<placeholder>&#37;9</"
 "placeholder> arası komutlarsa eşleşme dizgisindeki karşılık gelen yakalanmış "
 "metinle değiştirilir."
 
@@ -793,7 +793,7 @@ msgid ""
 "affected."
 msgstr ""
 "Bir eylem gerçekleştirmeden önce pano metninin başından ve sonundan "
-"boşlukları kaldır. Örneğin, bu bir tarayıcıya kopyalanan URL'nin "
+"boşlukları kaldır. Örneğin, bu bir tarayıcıya kopyalanan URL’nin "
 "beklenildiği gibi davranmasını garanti eder. Panoya kopyalanan metin bundan "
 "etkilenmez."
 
