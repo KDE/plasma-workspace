@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-28 00:39+0000\n"
+"POT-Creation-Date: 2024-03-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 22:55+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -242,13 +242,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Képernyő-billentyűzet deaktiválva"
 
-#: panelview.cpp:1015
+#: panelview.cpp:1032
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Panelbeállító felület elrejtése"
 
-#: panelview.cpp:1017
+#: panelview.cpp:1034
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -270,57 +270,57 @@ msgstr "%1 %2 itt: %3"
 msgid "Disconnected Screen %1"
 msgstr "Leválasztott képernyő %1"
 
-#: shellcorona.cpp:204 shellcorona.cpp:206
+#: shellcorona.cpp:206 shellcorona.cpp:208
 #, kde-format
 msgid "Show Desktop"
 msgstr "Asztal megjelenítése"
 
-#: shellcorona.cpp:206
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Asztal elrejtése"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Aktivitásváltó megjelenítése"
 
-#: shellcorona.cpp:233
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Jelenlegi aktivitás leállítása"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Váltás az előző aktivitásra"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Váltás a következő aktivitásra"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "A(z) %1. bejegyzés aktiválása"
 
-#: shellcorona.cpp:291
+#: shellcorona.cpp:293
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Asztalok és panelek kezelése…"
 
-#: shellcorona.cpp:313
+#: shellcorona.cpp:315
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "A billentyűzet fókuszának váltogatása panelek között"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2067
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel hozzáadása"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2109
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

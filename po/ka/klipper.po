@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 00:39+0000\n"
-"PO-Revision-Date: 2023-11-17 09:33+0100\n"
+"PO-Revision-Date: 2024-03-05 05:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -824,11 +824,9 @@ msgstr ""
 "აპლიკაციებსაც შეიცავს."
 
 #: klipperpopup.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Clipboard Items"
-msgstr "%1 - ბუფერის ჩანაწერები"
+msgstr "ბუფერის ჩანაწერები"
 
 #: klipperpopup.cpp:111
 #, kde-format

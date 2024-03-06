@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2020, 2021, 2022, 2023.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 00:39+0000\n"
-"PO-Revision-Date: 2023-07-19 16:47+0200\n"
+"PO-Revision-Date: 2024-03-05 11:12+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -840,11 +840,9 @@ msgstr ""
 "acceptar sy typo MIME in le menu de popup."
 
 #: klipperpopup.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Clipboard Items"
-msgstr "%1 - Elementos de Area de transferentia"
+msgstr "Elementos de Area de transferentia"
 
 #: klipperpopup.cpp:111
 #, kde-format

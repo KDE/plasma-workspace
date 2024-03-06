@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-28 00:39+0000\n"
+"POT-Creation-Date: 2024-03-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 19:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -240,13 +240,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "عُطّلت لوحة المفاتيح على الشّاشة"
 
-#: panelview.cpp:1015
+#: panelview.cpp:1032
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "أخف ضبط اللوحة"
 
-#: panelview.cpp:1017
+#: panelview.cpp:1034
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -268,57 +268,57 @@ msgstr "‏%1 %2 على %3"
 msgid "Disconnected Screen %1"
 msgstr "الشاشة المفصولة %1"
 
-#: shellcorona.cpp:204 shellcorona.cpp:206
+#: shellcorona.cpp:206 shellcorona.cpp:208
 #, kde-format
 msgid "Show Desktop"
 msgstr "أظهر سطح المكتب"
 
-#: shellcorona.cpp:206
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Hide Desktop"
 msgstr "أخفِ سطح المكتب"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "أظهر مبدل الأنشطة"
 
-#: shellcorona.cpp:233
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "أوقف النّشاط الحاليّ"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "بدل إلى النّشاط السابق"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "بدل إلى النّشاط التالي"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "نشط مدخلة مدير المهام %1"
 
-#: shellcorona.cpp:291
+#: shellcorona.cpp:293
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "أدر الأسطح و اللوحات..."
 
-#: shellcorona.cpp:313
+#: shellcorona.cpp:315
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "حرّك تركيز لوحة المفاتيح بين اللوحات"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2067
 #, kde-format
 msgid "Add Panel"
 msgstr "أضف لوحة"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2109
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
