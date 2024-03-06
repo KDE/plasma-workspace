@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 {
 #if QT_CONFIG(qml_debug)
     if (qEnvironmentVariableIsSet("PLASMA_ENABLE_QML_DEBUG")) {
-        QQmlDebuggingEnabler debugger;
+        QQmlDebuggingEnabler::enableDebugging(true);
     }
 #endif
 
