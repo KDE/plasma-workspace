@@ -101,7 +101,8 @@ bool WaylandAutoHideScreenEdge::eventFilter(QObject *watched, QEvent *event)
 {
     Q_UNUSED(watched)
     if (event->type() == QEvent::Expose) {
-        if (!m_edge && m_active) {
+        const auto window = static_cast<QWindow *>(watched);
+        if (!m_edge && m_active && window->isExposed()) {
             if (create()) {
                 m_edge->activate();
             }
