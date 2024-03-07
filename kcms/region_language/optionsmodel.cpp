@@ -314,5 +314,9 @@ QString OptionsModel::implicitFormatExampleMsg() const
 
 QString OptionsModel::getNativeName(const QString &locale) const
 {
-    return QLocale(locale).nativeLanguageName();
+    const QString nativeName = QLocale(locale).nativeLanguageName();
+    if (nativeName.isEmpty()) {
+        return locale;
+    }
+    return nativeName;
 }
