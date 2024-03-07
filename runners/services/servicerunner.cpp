@@ -265,6 +265,7 @@ private:
                 relevance += increaseMatchRelavance(name, queryList, Category::Name);
                 if (idx == 0) {
                     relevance += 0.1;
+                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::High;
                 }
             } else if (const int idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.65;
