@@ -36,16 +36,12 @@ ColumnLayout {
         function onHistoryBehaviorChanged() {
             runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled
         }
-        function onFavoriteIdsChanged() {
-            results.model.favoriteIds = runnerWindow.favoriteIds
-        }
         function onActivityChanged(activity) {
             runnerManager.setHistoryEnvironmentIdentifier(activity)
         }
     }
     Component.onCompleted: {
         runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled
-        results.model.favoriteIds = runnerWindow.favoriteIds
     }
 
     onQueryChanged: {
