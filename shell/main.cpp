@@ -7,13 +7,21 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include <csignal>
+#include "coronatesthelper.h"
+#include "debug.h"
+#include "shellcorona.h"
+#include "softwarerendernotifier.h"
+#ifdef WITH_KUSERFEEDBACKCORE
+#include "userfeedback.h"
+#endif
 
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDBusConnection>
+#include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDebug>
+#include <QDir>
 #include <QLoggingCategory>
 #include <QMessageBox>
 #include <QProcess>
@@ -23,23 +31,12 @@
 #include <QSurfaceFormat>
 
 #include <KAboutData>
+#include <KCrash>
+#include <KDBusService>
+#include <KLocalizedString>
 #include <KSignalHandler>
 
-#ifdef WITH_KUSERFEEDBACKCORE
-#include "userfeedback.h"
-#endif
-
-#include <kcrash.h>
-#include <kdbusservice.h>
-#include <klocalizedstring.h>
-
-#include "coronatesthelper.h"
-#include "debug.h"
-#include "shellcorona.h"
-#include "softwarerendernotifier.h"
-
-#include <QDBusConnectionInterface>
-#include <QDir>
+#include <csignal>
 
 int main(int argc, char *argv[])
 {

@@ -77,34 +77,34 @@ qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 
 target_link_libraries(plasmashell
+ KF6::ConfigCore # Activate KRunner on the desktop
+ KF6::ConfigGui
+ KF6::CoreAddons
+ KF6::Crash
+ KF6::DBusAddons
+ KF6::GlobalAccel
+ KF6::GuiAddons
+ KF6::I18n
+ KF6::KIOCore
+ KF6::Package
+ KF6::Notifications
+ KF6::Service
+ KF6::Solid
+ KF6::StatusNotifierItem
+ KF6::Svg
+ KF6::WidgetsAddons
+ KF6::WindowSystem
+ KF6::XmlGui
+ LayerShellQt::Interface
+ Plasma::Activities
+ Plasma::KWaylandClient
+ Plasma::Plasma
+ Plasma::PlasmaQuick
+ PW::KWorkspace
  Qt::Quick
  Qt::DBus
  Qt::WaylandClient
- KF6::KIOCore
- KF6::WindowSystem
- KF6::ConfigCore # Activate KRunner on the desktop
- KF6::Crash
- Plasma::Plasma
- Plasma::PlasmaQuick
- KF6::Solid
- KF6::Svg
- KF6::I18n
- Plasma::Activities
- KF6::GlobalAccel
- KF6::CoreAddons
- KF6::DBusAddons
- KF6::XmlGui
- KF6::WidgetsAddons
- KF6::ConfigGui
- KF6::Package
- Plasma::KWaylandClient
- KF6::Notifications
- KF6::GuiAddons
- KF6::Service
- KF6::StatusNotifierItem
- PW::KWorkspace
  Wayland::Client
- LayerShellQt::Interface
 )
 target_link_libraries(plasmashell KF6::ConfigQml)
 if (TARGET KF6::UserFeedbackCore)
