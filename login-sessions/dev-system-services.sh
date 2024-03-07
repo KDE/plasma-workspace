@@ -21,18 +21,6 @@ function usage()
     echo "    and keep certain parts of a co-installed Plasma 5 desktop from working correctly."
 }
 
-function ensure_none_or_kde_symlinks()
-{
-    if [[ -e "${SYSTEM_DBUS_SERVICES}" && $(readlink -f "${SYSTEM_DBUS_SERVICES}") != "${KDE_DBUS_SERVICES}" ]]; then
-        echo "Error: ${SYSTEM_DBUS_SERVICES} exists but is not a link to ${KDE_DBUS_SERVICES} - aborting"
-        exit 1
-    fi
-    if [[ -e "${SYSTEM_DBUS_CONFIGS}" && $(readlink -f "${SYSTEM_DBUS_CONFIGS}") != "${KDE_DBUS_CONFIGS}" ]]; then
-        echo "Error: ${SYSTEM_DBUS_CONFIGS} exists but is not a link to ${KDE_DBUS_CONFIGS} - aborting"
-        exit 1
-    fi
-}
-
 if [[ $# -eq 1 && ( "$1" == "--help" || "$1" == "-h" ) ]]; then
 
     usage
@@ -44,41 +32,108 @@ elif [[ $# -eq 1 && "$1" == "enable" ]]; then
         echo "       Use install-sessions.sh at least once to set up the folder structure in /opt/kde-dbus-scripts"
         exit 1
     fi
-    ensure_none_or_kde_symlinks
 
+    # symlink services
     if [[ -L "${SYSTEM_DBUS_SERVICES}" && $(readlink -f "${SYSTEM_DBUS_SERVICES}") == "${KDE_DBUS_SERVICES}" ]]; then
-        echo "Skipping ${SYSTEM_DBUS_SERVICES} - already symlinked to ${KDE_DBUS_SERVICES}"
+        echo "Skipping services - already symlinked"
     else
-        sudo mkdir -p "${SYSTEM_DBUS_BASEDIR}"
-        sudo ln -s "${KDE_DBUS_SERVICES}" "${SYSTEM_DBUS_SERVICES}"
-        ls -ld "${SYSTEM_DBUS_SERVICES}"
+        echo "Symlinking services"
+        if [[ ! -d "${SYSTEM_DBUS_SERVICES}" ]]; then
+            sudo mkdir -p "${SYSTEM_DBUS_SERVICES}"
+        fi
+        for kde_service in "${KDE_DBUS_SERVICES}"/*; do
+            service=$(basename "$kde_service")
+            system_service="${SYSTEM_DBUS_SERVICES}"/"${service}"
+            if [[ -e "${system_service}" ]]; then
+                if [[ -L "${system_service}" && $(readlink -f "${system_service}") == "${kde_service}"  ]]; then
+                    echo "Skipping ${service} - already symlinked"
+                else
+                    echo "Warning: Skpping ${service} - exists but is not a symlink"
+                fi
+            else
+                sudo ln -s "${kde_service}" "${system_service}"
+                echo "Symlinked ${service}"
+            fi
+        done
     fi
 
+    # symlink configs
     if [[ -L "${SYSTEM_DBUS_CONFIGS}" && $(readlink -f "${SYSTEM_DBUS_CONFIGS}") == "${KDE_DBUS_CONFIGS}" ]]; then
-        echo "Skipping ${SYSTEM_DBUS_CONFIGS} - already symlinked to ${KDE_DBUS_CONFIGS}"
+        echo "Skipping configs - already symlinked"
     else
-        sudo mkdir -p "${SYSTEM_DBUS_BASEDIR}"
-        sudo ln -s "${KDE_DBUS_CONFIGS}" "${SYSTEM_DBUS_CONFIGS}"
-        ls -ld "${SYSTEM_DBUS_CONFIGS}"
+        echo "Symlinking configs"
+        if [[ ! -d "${SYSTEM_DBUS_CONFIGS}" ]]; then
+            sudo mkdir -p "${SYSTEM_DBUS_CONFIGS}"
+        fi
+        for kde_config in "${KDE_DBUS_CONFIGS}"/*; do
+            config=$(basename "$kde_config")
+            system_config="${SYSTEM_DBUS_CONFIGS}"/"${config}"
+            if [[ -e "${system_config}" ]]; then
+                if [[ -L "${system_config}" && $(readlink -f "${system_config}") == "${kde_config}"  ]]; then
+                    echo "Skipping ${config} - already symlinked"
+                else
+                    echo "Warning: Skpping ${config} - exists but is not a symlink"
+                fi
+            else
+                sudo ln -s "${kde_config}" "${system_config}"
+                echo "Symlinked ${config}"
+            fi
+        done
     fi
+
+    echo "Done"
 
 elif [[ $# -eq 1 && "$1" == "disable" ]]; then
 
-    ensure_none_or_kde_symlinks
-
-    if [[ ! -e "${SYSTEM_DBUS_SERVICES}" ]]; then
-        echo "Skipping ${SYSTEM_DBUS_SERVICES} - doesn't exist, can't remove"
+    # remove service symlinks
+    if [[ ! -d "${SYSTEM_DBUS_SERVICES}" ]]; then
+        echo "Skipping services - doesn't exist"
+    elif [[ -L "${SYSTEM_DBUS_SERVICES}" ]]; then
+        if [[ $(readlink -f "${SYSTEM_DBUS_SERVICES}") != "${KDE_DBUS_SERVICES}" ]]; then
+            echo "Skipping services - exists but is not a symlink"
+        else
+            sudo rm "${SYSTEM_DBUS_SERVICES}"
+            echo "Removed services symlink"
+        fi
     else
-        sudo rm "${SYSTEM_DBUS_SERVICES}"
-        echo "Removed ${SYSTEM_DBUS_SERVICES} symlink"
+        echo "Removing service symlinks"
+        for kde_service in "${KDE_DBUS_SERVICES}"/*; do
+            service=$(basename "$kde_service")
+            system_service="${SYSTEM_DBUS_SERVICES}"/"${service}"
+            if [[ ! -e "${system_service}" ]]; then
+                echo "Skipping ${service} - doesn't exist"
+            elif [[ -L "${system_service}" && $(readlink -f "${system_service}") == "${kde_service}" ]]; then
+                sudo rm "${system_service}"
+                echo "Removed ${service} symlink"
+            fi
+        done
     fi
 
-    if [[ ! -e "${SYSTEM_DBUS_CONFIGS}" ]]; then
-        echo "Skipping ${SYSTEM_DBUS_CONFIGS} - doesn't exist, can't remove"
+    # remove config symlinks
+    if [[ ! -d "${SYSTEM_DBUS_CONFIGS}" ]]; then
+        echo "Skipping configs - doesn't exist"
+    elif [[ -L "${SYSTEM_DBUS_CONFIGS}" ]]; then
+        if [[ $(readlink -f "${SYSTEM_DBUS_CONFIGS}") != "${KDE_DBUS_CONFIGS}" ]]; then
+            echo "Warning: Skipping configs - exists but is not a symlink"
+        else
+            sudo rm "${SYSTEM_DBUS_CONFIGS}"
+            echo "Removed configs symlink"
+        fi
     else
-        sudo rm "${SYSTEM_DBUS_CONFIGS}"
-        echo "Removed ${SYSTEM_DBUS_CONFIGS} symlink"
+        echo "Removing config symlinks"
+        for kde_config in "${KDE_DBUS_CONFIGS}"/*; do
+            config=$(basename "$kde_config")
+            system_config="${SYSTEM_DBUS_CONFIGS}"/"${config}"
+            if [[ ! -e "${system_config}" ]]; then
+                echo "Skipping ${config} - doesn't exist"
+            elif [[ -L "${system_config}" && $(readlink -f "${system_config}") == "${kde_config}" ]]; then
+                sudo rm "${system_config}"
+                echo "Removed ${config} symlink"
+            fi
+        done
     fi
+
+    echo "Done"
 
 else
     usage
