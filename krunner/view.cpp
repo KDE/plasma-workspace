@@ -60,8 +60,6 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
             loadConfig();
         } else if (group.name() == pluginsGrp) {
             Q_EMIT helpEnabledChanged();
-        } else if (group.name() == QLatin1String("Favorites") && group.parent().name() == pluginsGrp) {
-            assignFavoriteIds();
         }
     });
     connect(&m_consumer, &KActivities::Consumer::currentActivityChanged, this, &View::activityChanged);
@@ -142,7 +140,6 @@ void View::loadConfig()
     setRetainPriorSearch(m_config.readEntry("RetainPriorSearch", true));
     setPinned(m_stateData.readEntry("Pinned", false));
     setHistoryBehavior(m_config.readEntry("historyBehavior", m_historyBehavior));
-    assignFavoriteIds();
 }
 
 void View::showEvent(QShowEvent *event)

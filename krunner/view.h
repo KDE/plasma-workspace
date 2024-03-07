@@ -30,7 +30,6 @@ class View : public PlasmaQuick::PlasmaWindow
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
     Q_PROPERTY(HistoryBehavior historyBehavior READ historyBehavior NOTIFY historyBehaviorChanged)
-    Q_PROPERTY(QStringList favoriteIds MEMBER m_favoriteIds NOTIFY favoriteIdsChanged)
 
 public:
     explicit View(PlasmaQuick::SharedQmlEngine *engine, QWindow *parent = nullptr);
@@ -79,14 +78,6 @@ public:
         Q_EMIT retainPriorSearchChanged();
     }
 
-    Q_SIGNAL void favoriteIdsChanged();
-    void assignFavoriteIds()
-    {
-        const KConfigGroup grp = m_config.parent().group(u"Plugins"_s).group(u"Favorites"_s);
-        m_favoriteIds = grp.readEntry("plugins", QStringList(u"krunner_services"_s));
-        Q_EMIT favoriteIdsChanged();
-    }
-
 Q_SIGNALS:
     void pinnedChanged();
     void helpEnabledChanged();
@@ -120,7 +111,6 @@ private:
     bool m_retainPriorSearch = false;
     bool m_requestedClipboardSelection = false;
     QStringList m_history;
-    QStringList m_favoriteIds;
     X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
     HistoryBehavior m_historyBehavior = HistoryBehavior::CompletionSuggestion;
     KActivities::Consumer m_consumer;
