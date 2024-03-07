@@ -49,6 +49,7 @@ public:
         DesktopEntryRole,
         IsDefaultRole,
 
+        EventIdRole,
         CommentRole,
         ShowIconsRole,
         ActionsRole,
@@ -68,6 +69,8 @@ public:
 
     Q_INVOKABLE QPersistentModelIndex persistentIndexForDesktopEntry(const QString &desktopEntry) const;
     Q_INVOKABLE QPersistentModelIndex persistentIndexForNotifyRcName(const QString &notifyRcName) const;
+
+    Q_INVOKABLE QPersistentModelIndex indexOfEvent(const QModelIndex &parent, const QString &eventId) const;
 
     int columnCount(const QModelIndex &parent) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

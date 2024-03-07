@@ -32,6 +32,19 @@ ColumnLayout {
 
     spacing: 0
 
+    function configureEvents(eventId: string): void {
+        const idx = kcm.sourcesModel.indexOfEvent(eventsModel.rootIndex, eventId);
+        if (!idx.valid) {
+            return;
+        }
+        eventsList.currentIndex = idx.row;
+        eventsList.positionViewAtIndex(idx.row, ListView.Content);
+        eventsList.forceActiveFocus();
+        // This should be enough so that `currentItem` exists and it is updated to `currentIndex`
+        // TODO: But we could make it actually fail-safe by binding it on the component.
+        Qt.callLater(() => { eventsList.currentItem.expanded = true; });
+    }
+
     // Top content
     Rectangle {
         Layout.fillWidth: true

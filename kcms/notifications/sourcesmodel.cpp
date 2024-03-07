@@ -65,6 +65,16 @@ QPersistentModelIndex SourcesModel::persistentIndexForNotifyRcName(const QString
     return QPersistentModelIndex(matches.first());
 }
 
+QPersistentModelIndex SourcesModel::indexOfEvent(const QModelIndex &parent, const QString &eventId) const
+{
+    if (!checkIndex(parent, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid) || !hasChildren(parent)) {
+        return QPersistentModelIndex();
+    }
+
+    const auto matches = match(index(0, 0, parent), EventIdRole, eventId, 1, Qt::MatchFixedString);
+    return matches.isEmpty() ? QPersistentModelIndex() : QPersistentModelIndex(matches.first());
+}
+
 int SourcesModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
@@ -103,6 +113,8 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
             return event->name();
         case Qt::DecorationRole:
             return event->iconName();
+        case EventIdRole:
+            return s_eventGroupRegExp.match(event->currentGroup()).captured(1);
         case CommentRole:
             return event->comment();
         case ActionsRole:
@@ -260,6 +272,7 @@ QHash<int, QByteArray> SourcesModel::roleNames() const
         {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
         {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
         {IsDefaultRole, QByteArrayLiteral("isDefault")},
+        {EventIdRole, QByteArrayLiteral("eventId")},
         {CommentRole, QByteArrayLiteral("comment")},
         {ShowIconsRole, QByteArrayLiteral("showIcons")},
         {ActionsRole, QByteArrayLiteral("actions")},
