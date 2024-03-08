@@ -17,15 +17,18 @@ target_link_libraries(plasma-fallback-session-save
     Wayland::Client
 )
 
+
 add_executable( plasma-fallback-session-restore
     restore.cpp
     ${shared_debug_SRCS}
 )
+kconfig_add_kcfg_files(plasma-fallback-session-restore smserversettings.kcfgc)
 
 target_link_libraries( plasma-fallback-session-restore
     Qt6::Core
     KF6::KIOGui
     KF6::ConfigCore
+    KF6::ConfigGui
 )
 
 install(TARGETS plasma-fallback-session-restore DESTINATION ${KDE_INSTALL_FULL_LIBEXECDIR})
