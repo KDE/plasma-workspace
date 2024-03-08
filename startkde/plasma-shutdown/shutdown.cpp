@@ -62,12 +62,34 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
     });
 }
 
-void Shutdown::ksmServerComplete()
+void Shutdown::saveSession()
 {
-    // Now record windows that are not session managed
+    const KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc")), QStringLiteral("General"));
+
+    if (c.readEntry("loginMode", "restorePreviousLogout") != QLatin1String("restoreSavedSession")) {
+        qCWarning(PLASMA_SESSION) << "Manual save requested, but this does not match ksmserverrc settings. Ignoring";
+        return;
+    }
+
+    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    ksmserver.saveCurrentSession();
+
     int ret = QProcess::execute(QStringLiteral(PLASMA_FALLBACK_SESSION_SAVE_BIN));
     if (ret) {
         qCWarning(PLASMA_SESSION) << "plasma-fallback-session-save failed with return code" << ret;
+    }
+}
+
+void Shutdown::ksmServerComplete()
+{
+    const KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc")), QStringLiteral("General"));
+
+    if (c.readEntry("loginMode", "restorePreviousLogout") == QLatin1String("restoreSavedSession")) {
+        // Now record windows that are not session managed
+        int ret = QProcess::execute(QStringLiteral(PLASMA_FALLBACK_SESSION_SAVE_BIN));
+        if (ret) {
+            qCWarning(PLASMA_SESSION) << "plasma-fallback-session-save failed with return code" << ret;
+        }
     }
 
     OrgKdeKWinSessionInterface kwinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus());

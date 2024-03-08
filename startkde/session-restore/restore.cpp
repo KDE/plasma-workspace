@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     a.setApplicationName(u"plasmasessionrestore"_s);
 
     KSharedConfig::Ptr ksmserverConfig = KSharedConfig::openConfig(u"ksmserverrc"_s);
-    if (ksmserverConfig->group(u"General"_s).readEntry("loginMode", u"restorePreviousLogout"_s) != u"restorePreviousLogout"_s) {
+    if (ksmserverConfig->group(u"General"_s).readEntry("loginMode", u"restorePreviousLogout"_s) == u"emptySession"_s) {
         return 0;
     }
 

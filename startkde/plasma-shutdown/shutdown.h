@@ -19,6 +19,7 @@ public:
     void logout();
     void logoutAndShutdown();
     void logoutAndReboot();
+    void saveSession();
 private Q_SLOTS:
     void logoutCancelled();
     void logoutComplete();

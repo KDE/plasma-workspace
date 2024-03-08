@@ -4,5 +4,6 @@
     <method name="logout"/>
     <method name="logoutAndShutdown"/>
     <method name="logoutAndReboot"/>
+    <method name="saveSession"/>
 </interface>
 </node>

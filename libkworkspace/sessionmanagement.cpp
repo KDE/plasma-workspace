@@ -14,7 +14,6 @@
 
 #include <iostream>
 
-#include "ksmserver_interface.h"
 #include "logoutprompt_interface.h"
 #include "screenlocker_interface.h"
 #include "shutdown_interface.h"
@@ -277,8 +276,8 @@ void SessionManagement::saveSession()
     if (!canSaveSession()) {
         return;
     }
-    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    ksmserver.saveCurrentSession();
+    ShutdownIface iface;
+    iface.saveSession();
 }
 
 #include "sessionmanagement.moc"
