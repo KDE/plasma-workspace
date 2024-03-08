@@ -42,6 +42,14 @@ KCM.AbstractKCM {
         restoreMode: Binding.RestoreBinding
     }
 
+    onRootIndexChanged: {
+        // If we are only showing events and the source is not valid anymore
+        // (because the model reset), just go back to the main page
+        if (!sourcesPage.rootIndex.valid && showOnlyEventsConfig) {
+            kcm.pop()
+        }
+    }
+
     header: ColumnLayout {
         visible: !sourcesPage.showOnlyEventsConfig
 
