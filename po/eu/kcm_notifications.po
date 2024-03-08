@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2024-02-21 23:45+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,43 +20,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: kcm.cpp:73
+#: kcm.cpp:70
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Txandakatu «zaratarik ez»"
 
-#: sourcesmodel.cpp:393
+#: sourcesmodel.cpp:392
 #, kde-format
 msgid "Other Applications"
 msgstr "Beste aplikazio batzuk"
 
-#: ui/ApplicationConfiguration.qml:91
+#: ui/ApplicationConfiguration.qml:89
 #, kde-format
 msgid "Show popups"
 msgstr "Erakutsi mezu gainerakorrak"
 
-#: ui/ApplicationConfiguration.qml:105
+#: ui/ApplicationConfiguration.qml:103
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Erakutsi «zaratarik ez» modua"
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
+#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Erakutsi historian"
 
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:127
 #, kde-format
 msgid "Show notification badges"
 msgstr "Erakutsi jakinarazpen txartelak"
 
-#: ui/ApplicationConfiguration.qml:164
+#: ui/ApplicationConfiguration.qml:162
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Konfiguratu gertaerak"
 
-#: ui/ApplicationConfiguration.qml:172
+#: ui/ApplicationConfiguration.qml:170
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -65,23 +65,31 @@ msgstr ""
 "Aplikazio honek ez du onartzen gertaera bakoitzeko jakinarazpenak "
 "konfiguratzea"
 
-#: ui/ApplicationConfiguration.qml:263
+#: ui/ApplicationConfiguration.qml:264
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Erakutsi mezu bat leiho-gainerako batean"
 
-#: ui/ApplicationConfiguration.qml:272
+#: ui/ApplicationConfiguration.qml:273
 #, kde-format
 msgid "Play a sound"
 msgstr "Jo soinu bat"
 
-#: ui/main.qml:37
-#, kde-format
-msgctxt "@action:button Application-specific notifications"
-msgid "Configure Application Settings…"
-msgstr "Konfiguratu aplikazio-ezarpenak..."
+#: ui/main.qml:46
+#, fuzzy, kde-format
+#| msgid "Notifications"
+msgctxt "@action:button Plasma-specific notifications"
+msgid "System Notifications…"
+msgstr "Jakinarazpenak"
 
-#: ui/main.qml:57
+#: ui/main.qml:52
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@action:button Application-specific notifications"
+msgid "Application Settings…"
+msgstr "Aplikazio-ezarpenak"
+
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -92,7 +100,7 @@ msgstr ""
 "erakusteko beharrezkoa da. Ziurtatu ezazu zure Sistemako erretiluan edo "
 "trepeta autonomo gisa gaituta dagoela."
 
-#: ui/main.qml:68
+#: ui/main.qml:88
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
@@ -100,142 +108,142 @@ msgstr ""
 "Jakinarazpenak une honetan Plasmaren ordez beste honek hornitzen ditu, '%1 "
 "%2'."
 
-#: ui/main.qml:72
+#: ui/main.qml:92
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Jakinarazpenak une honetan ez ditu Plasmak hornitzen."
 
-#: ui/main.qml:79
+#: ui/main.qml:99
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "«Zaratarik ez» modua"
 
-#: ui/main.qml:84
+#: ui/main.qml:104
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "Gaitu automatikoki:"
 
-#: ui/main.qml:85
+#: ui/main.qml:105
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Pantailak ispilatuta daudenean"
 
-#: ui/main.qml:97
+#: ui/main.qml:117
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Pantaila partekatu bitartean"
 
-#: ui/main.qml:112
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Eskuz txandakatu lasterbidea erabiliz:"
 
-#: ui/main.qml:119
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Ikusgaitasun baldintzak"
 
-#: ui/main.qml:124
+#: ui/main.qml:144
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Jakinarazpen larriak:"
 
-#: ui/main.qml:125
+#: ui/main.qml:145
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Erakutsi «zaratarik ez» moduan"
 
-#: ui/main.qml:137
+#: ui/main.qml:157
 #, kde-format
 msgid "Normal notifications:"
 msgstr "Jakinarazpen arruntak:"
 
-#: ui/main.qml:138
+#: ui/main.qml:158
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "Pantaila osoko leihoen gainean erakutsi"
 
-#: ui/main.qml:150
+#: ui/main.qml:170
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Lehentasun txikiko jakinarazpenak:"
 
-#: ui/main.qml:151
+#: ui/main.qml:171
 #, kde-format
 msgid "Show popup"
 msgstr "Erakutsi mezu gainerakorra"
 
-#: ui/main.qml:180
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Gainerakorrak"
 
-#: ui/main.qml:186
+#: ui/main.qml:206
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Kokalekua:"
 
-#: ui/main.qml:187
+#: ui/main.qml:207
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Jakinarazpen ikonotik hurbil"
 
-#: ui/main.qml:224
+#: ui/main.qml:244
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Aukeratu zuk nahi duzun kokapena..."
 
-#: ui/main.qml:233 ui/main.qml:249
+#: ui/main.qml:253 ui/main.qml:269
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "segundo %1"
 msgstr[1] "%1 segundo"
 
-#: ui/main.qml:238
+#: ui/main.qml:258
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Ezkutatu ... ondoren:"
 
-#: ui/main.qml:261
+#: ui/main.qml:281
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Erreakzio osagarriak"
 
-#: ui/main.qml:267
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Erakutsi jakinarazpenetan"
 
-#: ui/main.qml:268
+#: ui/main.qml:288
 #, kde-format
 msgid "Application progress:"
 msgstr "Aplikazioaren aurrerapena:"
 
-#: ui/main.qml:282
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Eduki mezu gainerakorra irekita aurrera egin ahala"
 
-#: ui/main.qml:295
+#: ui/main.qml:315
 #, kde-format
 msgid "Notification badges:"
 msgstr "Jakinarazpen txartelak:"
 
-#: ui/main.qml:296
+#: ui/main.qml:316
 #, kde-format
 msgid "Show in task manager"
 msgstr "Erakutsi ataza kudeatzailean"
@@ -245,28 +253,28 @@ msgstr "Erakutsi ataza kudeatzailean"
 msgid "Popup Position"
 msgstr "Mezu gainerakorren kokapena"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:20
 #, kde-format
 msgid "Application Settings"
 msgstr "Aplikazio-ezarpenak"
 
-#: ui/SourcesPage.qml:99
+#: ui/SourcesPage.qml:107
 #, kde-format
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: ui/SourcesPage.qml:100
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "System Services"
 msgstr "Sistemaren zerbitzuak"
 
-#: ui/SourcesPage.qml:148
+#: ui/SourcesPage.qml:156
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr ""
 "Ez dago zuk bilatutako terminoarekin bat datorren aplikazio edo gertaerarik"
 
-#: ui/SourcesPage.qml:171
+#: ui/SourcesPage.qml:180
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
@@ -274,6 +282,10 @@ msgid ""
 msgstr ""
 "Hautatu aplikazio bat zerrendatik bere jakinarazpen ezarpenak eta jokabidea "
 "konfiguratzeko"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Configure Application Settings…"
+#~ msgstr "Konfiguratu aplikazio-ezarpenak..."
 
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
@@ -309,9 +321,6 @@ msgstr ""
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "xalba@ni.eus"
-
-#~ msgid "Notifications"
-#~ msgstr "Jakinarazpenak"
 
 #~ msgid "Kai Uwe Broulik"
 #~ msgstr "Kai Uwe Broulik"

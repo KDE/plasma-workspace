@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 18:23+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -100,33 +100,33 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Visite bugs.kde.org para informar de problemas"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Intérprete de Plasma"
 
-#: main.cpp:100
+#: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activar el depurador JavaScripit QML"
 
-#: main.cpp:103
+#: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "No reiniciar automáticamente el intérprete de órdenes de Plasma tras un fallo"
 
-#: main.cpp:106
+#: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forzar la carga del complemento del intérprete de órdenes indicado"
 
-#: main.cpp:110
+#: main.cpp:107
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Sustituir una instancia existente"
 
-#: main.cpp:113
+#: main.cpp:110
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -135,22 +135,22 @@ msgstr ""
 "Activa el modo de pruebas e indica el archivo javascripit para configurar el "
 "entorno de pruebas"
 
-#: main.cpp:114
+#: main.cpp:111
 #, kde-format
 msgid "file"
 msgstr "archivo"
 
-#: main.cpp:118
+#: main.cpp:115
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista todas las opciones disponibles para los comentarios del usuario"
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "El inicio de Plasma ha fallado"
 
-#: main.cpp:201
+#: main.cpp:198
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

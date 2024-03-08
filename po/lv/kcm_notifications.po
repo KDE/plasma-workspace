@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2024-01-18 21:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: kcm.cpp:73
+#: kcm.cpp:70
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Ieslēgt/izslēgt netraucēšanas režīmu"
 
-#: sourcesmodel.cpp:393
+#: sourcesmodel.cpp:392
 #, kde-format
 msgid "Other Applications"
 msgstr "Citas programmas"
 
-#: ui/ApplicationConfiguration.qml:91
+#: ui/ApplicationConfiguration.qml:89
 #, kde-format
 msgid "Show popups"
 msgstr "Rādīt uzlecošos paziņojumus"
 
-#: ui/ApplicationConfiguration.qml:105
+#: ui/ApplicationConfiguration.qml:103
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Rādīt netraucēšanas režīmā"
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
+#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Rādīt vēsturē"
 
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:127
 #, kde-format
 msgid "Show notification badges"
 msgstr "Rādīt paziņojumu nozīmītes"
 
-#: ui/ApplicationConfiguration.qml:164
+#: ui/ApplicationConfiguration.qml:162
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Konfigurēt notikumus"
 
-#: ui/ApplicationConfiguration.qml:172
+#: ui/ApplicationConfiguration.qml:170
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -62,24 +62,31 @@ msgid ""
 msgstr ""
 "Šī programma neatbalsta paziņojumu konfigurāciju katram gadījumam atsevišķi"
 
-#: ui/ApplicationConfiguration.qml:263
+#: ui/ApplicationConfiguration.qml:264
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Ziņojumu rādīt uzlecošā paziņojumā"
 
-#: ui/ApplicationConfiguration.qml:272
+#: ui/ApplicationConfiguration.qml:273
 #, kde-format
 msgid "Play a sound"
 msgstr "Atskaņot skaņu"
 
-#: ui/main.qml:37
+#: ui/main.qml:46
+#, fuzzy, kde-format
+#| msgid "Normal notifications:"
+msgctxt "@action:button Plasma-specific notifications"
+msgid "System Notifications…"
+msgstr "Normālie paziņojumi:"
+
+#: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Configure Application Settings…"
+msgid "Application Settings…"
 msgstr "Programmu iestatījumi"
 
-#: ui/main.qml:57
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -90,30 +97,30 @@ msgstr ""
 "rādīšanai. Pārliecinieties, ka tā ir pievienota ikonu joslai vai kā "
 "atsevišķa logdaļa."
 
-#: ui/main.qml:68
+#: ui/main.qml:88
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Šobrīd paziņojumus nenodrošina „Plasma“, bet gan „%1 %2“."
 
-#: ui/main.qml:72
+#: ui/main.qml:92
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Šobrīd paziņojumus nenodrošina „Plasma“."
 
-#: ui/main.qml:79
+#: ui/main.qml:99
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Netraucēšanas režīms"
 
-#: ui/main.qml:84
+#: ui/main.qml:104
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr ""
 
-#: ui/main.qml:85
+#: ui/main.qml:105
 #, fuzzy, kde-format
 #| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #| msgid "When screens are mirrored"
@@ -121,7 +128,7 @@ msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Kad ir spoguļoti ekrāni"
 
-#: ui/main.qml:97
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgctxt "Enable Do Not Disturb mode during screen sharing"
 #| msgid "During screen sharing"
@@ -129,72 +136,72 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Ekrāna kopīgošanas laikā"
 
-#: ui/main.qml:112
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr ""
 
-#: ui/main.qml:119
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Rādīšanas nosacījumi"
 
-#: ui/main.qml:124
+#: ui/main.qml:144
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Kritiskie paziņojumi:"
 
-#: ui/main.qml:125
+#: ui/main.qml:145
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Rādīt netraucēšanas režīmā"
 
-#: ui/main.qml:137
+#: ui/main.qml:157
 #, kde-format
 msgid "Normal notifications:"
 msgstr "Normālie paziņojumi:"
 
-#: ui/main.qml:138
+#: ui/main.qml:158
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "Rādīt virs pilnekrāna logiem"
 
-#: ui/main.qml:150
+#: ui/main.qml:170
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Zemas prioritātes paziņojumi:"
 
-#: ui/main.qml:151
+#: ui/main.qml:171
 #, kde-format
 msgid "Show popup"
 msgstr "Rādīt uzlecošo paziņojumu"
 
-#: ui/main.qml:180
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Uzlecošie paziņojumi"
 
-#: ui/main.qml:186
+#: ui/main.qml:206
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Atrašanās vieta:"
 
-#: ui/main.qml:187
+#: ui/main.qml:207
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Pie paziņojuma ikonas"
 
-#: ui/main.qml:224
+#: ui/main.qml:244
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Izvēlēties pielāgotu rādīšanās vietu..."
 
-#: ui/main.qml:233 ui/main.qml:249
+#: ui/main.qml:253 ui/main.qml:269
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -202,41 +209,41 @@ msgstr[0] "%1 sekundes"
 msgstr[1] "%1 sekundēm"
 msgstr[2] "%1 sekundēm"
 
-#: ui/main.qml:238
+#: ui/main.qml:258
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Paslēpt pēc:"
 
-#: ui/main.qml:261
+#: ui/main.qml:281
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Papildu informēšana"
 
-#: ui/main.qml:267
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Rādīt paziņojumos"
 
-#: ui/main.qml:268
+#: ui/main.qml:288
 #, kde-format
 msgid "Application progress:"
 msgstr "Programmas progress:"
 
-#: ui/main.qml:282
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Progresa laikā uzlecošo logu nepaslēpt"
 
-#: ui/main.qml:295
+#: ui/main.qml:315
 #, kde-format
 msgid "Notification badges:"
 msgstr "Paziņojumu nozīmītes:"
 
-#: ui/main.qml:296
+#: ui/main.qml:316
 #, kde-format
 msgid "Show in task manager"
 msgstr "Rādīt uzdevumu pārvaldniekā"
@@ -246,27 +253,27 @@ msgstr "Rādīt uzdevumu pārvaldniekā"
 msgid "Popup Position"
 msgstr "Uzlecošā paziņojuma vieta"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:20
 #, kde-format
 msgid "Application Settings"
 msgstr "Programmu iestatījumi"
 
-#: ui/SourcesPage.qml:99
+#: ui/SourcesPage.qml:107
 #, kde-format
 msgid "Applications"
 msgstr "Programmas"
 
-#: ui/SourcesPage.qml:100
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "System Services"
 msgstr "Sistēmas servisi"
 
-#: ui/SourcesPage.qml:148
+#: ui/SourcesPage.qml:156
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Meklēšanas vārdiem neatbilda neviena programma un notikums"
 
-#: ui/SourcesPage.qml:171
+#: ui/SourcesPage.qml:180
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
@@ -274,6 +281,12 @@ msgid ""
 msgstr ""
 "Sarakstā atlasiet programmu, lai konfigurētu tās paziņojumu iestatījumus un "
 "uzvedību"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Configure Application Settings…"
+#~ msgstr "Programmu iestatījumi"
 
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"

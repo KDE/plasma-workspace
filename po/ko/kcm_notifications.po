@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2024-02-24 22:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,66 +17,74 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: kcm.cpp:73
+#: kcm.cpp:70
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "방해 금지 모드 전환"
 
-#: sourcesmodel.cpp:393
+#: sourcesmodel.cpp:392
 #, kde-format
 msgid "Other Applications"
 msgstr "다른 앱"
 
-#: ui/ApplicationConfiguration.qml:91
+#: ui/ApplicationConfiguration.qml:89
 #, kde-format
 msgid "Show popups"
 msgstr "팝업 표시"
 
-#: ui/ApplicationConfiguration.qml:105
+#: ui/ApplicationConfiguration.qml:103
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "방해 금지 모드에서도 표시"
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
+#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "과거 기록에 표시"
 
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:127
 #, kde-format
 msgid "Show notification badges"
 msgstr "알림 배지 표시"
 
-#: ui/ApplicationConfiguration.qml:164
+#: ui/ApplicationConfiguration.qml:162
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "이벤트 설정"
 
-#: ui/ApplicationConfiguration.qml:172
+#: ui/ApplicationConfiguration.qml:170
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr "이 앱은 이벤트별 알림 설정을 지원하지 않습니다"
 
-#: ui/ApplicationConfiguration.qml:263
+#: ui/ApplicationConfiguration.qml:264
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "팝업에 메시지 표시"
 
-#: ui/ApplicationConfiguration.qml:272
+#: ui/ApplicationConfiguration.qml:273
 #, kde-format
 msgid "Play a sound"
 msgstr "소리 재생"
 
-#: ui/main.qml:37
-#, kde-format
-msgctxt "@action:button Application-specific notifications"
-msgid "Configure Application Settings…"
-msgstr "앱 개별 설정…"
+#: ui/main.qml:46
+#, fuzzy, kde-format
+#| msgid "Notifications"
+msgctxt "@action:button Plasma-specific notifications"
+msgid "System Notifications…"
+msgstr "알림"
 
-#: ui/main.qml:57
+#: ui/main.qml:52
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@action:button Application-specific notifications"
+msgid "Application Settings…"
+msgstr "앱 설정"
+
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -86,147 +94,147 @@ msgstr ""
 "알림을 표시할 때 사용하는 '알림' 위젯을 찾을 수 없습니다. 시스템 트레이에 활"
 "성화되어 있거나 단독 위젯을 추가했는지 확인하십시오."
 
-#: ui/main.qml:68
+#: ui/main.qml:88
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "현재 Plasma 대신 '%1 %2'에서 알림을 표시하고 있습니다."
 
-#: ui/main.qml:72
+#: ui/main.qml:92
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "현재 Plasma에서 알림을 표시하지 않고 있습니다."
 
-#: ui/main.qml:79
+#: ui/main.qml:99
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "방해 금지 모드"
 
-#: ui/main.qml:84
+#: ui/main.qml:104
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "다음에서 자동으로 활성화:"
 
-#: ui/main.qml:85
+#: ui/main.qml:105
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "화면을 미러링할 때"
 
-#: ui/main.qml:97
+#: ui/main.qml:117
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "화면 공유 중일 때"
 
-#: ui/main.qml:112
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "단축키로 수동으로 전환:"
 
-#: ui/main.qml:119
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "표시 조건"
 
-#: ui/main.qml:124
+#: ui/main.qml:144
 #, kde-format
 msgid "Critical notifications:"
 msgstr "중요한 알림:"
 
-#: ui/main.qml:125
+#: ui/main.qml:145
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "방해 금지 모드에서도 표시"
 
-#: ui/main.qml:137
+#: ui/main.qml:157
 #, kde-format
 msgid "Normal notifications:"
 msgstr "일반 알림:"
 
-#: ui/main.qml:138
+#: ui/main.qml:158
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "전체 화면 창 위에 표시"
 
-#: ui/main.qml:150
+#: ui/main.qml:170
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "낮은 우선 순위 알림:"
 
-#: ui/main.qml:151
+#: ui/main.qml:171
 #, kde-format
 msgid "Show popup"
 msgstr "팝업 창 보기"
 
-#: ui/main.qml:180
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "팝업"
 
-#: ui/main.qml:186
+#: ui/main.qml:206
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "위치:"
 
-#: ui/main.qml:187
+#: ui/main.qml:207
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "알림 아이콘 근처"
 
-#: ui/main.qml:224
+#: ui/main.qml:244
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "사용자 정의 위치 선택…"
 
-#: ui/main.qml:233 ui/main.qml:249
+#: ui/main.qml:253 ui/main.qml:269
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1초"
 
-#: ui/main.qml:238
+#: ui/main.qml:258
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "다음 시간 이후 숨기기:"
 
-#: ui/main.qml:261
+#: ui/main.qml:281
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "추가 피드백"
 
-#: ui/main.qml:267
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "알림에 표시"
 
-#: ui/main.qml:268
+#: ui/main.qml:288
 #, kde-format
 msgid "Application progress:"
 msgstr "앱 진행 상황:"
 
-#: ui/main.qml:282
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "진행 중에 알림 열어 두기"
 
-#: ui/main.qml:295
+#: ui/main.qml:315
 #, kde-format
 msgid "Notification badges:"
 msgstr "알림 배지:"
 
-#: ui/main.qml:296
+#: ui/main.qml:316
 #, kde-format
 msgid "Show in task manager"
 msgstr "작업 관리자에 표시"
@@ -236,32 +244,36 @@ msgstr "작업 관리자에 표시"
 msgid "Popup Position"
 msgstr "팝업 위치"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:20
 #, kde-format
 msgid "Application Settings"
 msgstr "앱 설정"
 
-#: ui/SourcesPage.qml:99
+#: ui/SourcesPage.qml:107
 #, kde-format
 msgid "Applications"
 msgstr "앱"
 
-#: ui/SourcesPage.qml:100
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "System Services"
 msgstr "시스템 서비스"
 
-#: ui/SourcesPage.qml:148
+#: ui/SourcesPage.qml:156
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "검색어와 일치하는 앱이나 이벤트가 없음"
 
-#: ui/SourcesPage.qml:171
+#: ui/SourcesPage.qml:180
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "알림 설정과 행동을 설정할 앱 선택"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Configure Application Settings…"
+#~ msgstr "앱 개별 설정…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
@@ -295,9 +307,6 @@ msgstr "알림 설정과 행동을 설정할 앱 선택"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "kde@peremen.name"
-
-#~ msgid "Notifications"
-#~ msgstr "알림"
 
 #~ msgid "Kai Uwe Broulik"
 #~ msgstr "Kai Uwe Broulik"

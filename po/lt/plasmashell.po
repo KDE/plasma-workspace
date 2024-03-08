@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-06 13:23+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -102,32 +102,32 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Norėdami pranešti apie klaidas, apsilankykite adresu bugs.kde.org"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma apvalkalas"
 
-#: main.cpp:100
+#: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Įjungti QML JavaScript derintuvę"
 
-#: main.cpp:103
+#: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Po strigties, nepaleisti automatiškai Plasma apvalkalo iš naujo"
 
-#: main.cpp:106
+#: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Priverstinai įkelti nurodytą apvalkalo įskiepį"
 
-#: main.cpp:110
+#: main.cpp:107
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Pakeisti esamą egzempliorių"
 
-#: main.cpp:113
+#: main.cpp:110
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -136,22 +136,22 @@ msgstr ""
 "Įjungia testavimo veikseną ir nurodo testavimo aplinkos nustatymui skirtą "
 "išdėstymo javascript failą"
 
-#: main.cpp:114
+#: main.cpp:111
 #, kde-format
 msgid "file"
 msgstr "failas"
 
-#: main.cpp:118
+#: main.cpp:115
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Išvardija prieinamas naudotojo grįžtamojo ryšio parinktis"
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Nepavyko paleisti Plasma darbalaukio"
 
-#: main.cpp:201
+#: main.cpp:198
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

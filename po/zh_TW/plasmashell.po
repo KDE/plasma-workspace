@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -101,54 +101,54 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "請造訪 bugs.kde.org 來回報問題"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:100
+#: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "開啟 QML Javascript 除錯器"
 
-#: main.cpp:103
+#: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "崩潰後不要自動啟動 plasma-shell"
 
-#: main.cpp:106
+#: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "強制載入指定的 shell 外掛程式"
 
-#: main.cpp:110
+#: main.cpp:107
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "取代一個存在的事例"
 
-#: main.cpp:113
+#: main.cpp:110
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr "啟用測試模式並指定 Javascript 檔案的佈局以設定測試環境"
 
-#: main.cpp:114
+#: main.cpp:111
 #, kde-format
 msgid "file"
 msgstr "檔案"
 
-#: main.cpp:118
+#: main.cpp:115
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "列出能用於使用者意見回應的選項"
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma 無法啟動"
 
-#: main.cpp:201
+#: main.cpp:198
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

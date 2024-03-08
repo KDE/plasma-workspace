@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-01-28 00:27+0900\n"
+"PO-Revision-Date: 2024-03-08 03:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
 #, kde-format
@@ -373,59 +373,60 @@ msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "沒什麼"
 
+# 我直接跟 https://zh.wikipedia.org/zh-tw/顏色列表 做比對了 -- Kisaragi
 #: src/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
-msgstr ""
+msgstr "玫瑰紅"
 
 #: src/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
-msgstr ""
+msgstr "櫻桃紅"
 
 #: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
-msgstr ""
+msgstr "甜橘子"
 
 #: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
-msgstr ""
+msgstr "琥珀黃"
 
 #: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
-msgstr ""
+msgstr "閃耀陽光"
 
 #: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
-msgstr ""
+msgstr "檸檬綠"
 
 #: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr ""
+msgstr "蒼翠綠"
 
 #: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
-msgstr ""
+msgstr "柔草綠"
 
 #: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
-msgstr ""
+msgstr "溫和藍綠"
 
 #: src/ui/PicturesSheet.qml:32
 #, kde-format
@@ -437,37 +438,37 @@ msgstr "Plasma 藍"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
-msgstr ""
+msgstr "薰衣草紫"
 
 #: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
-msgstr ""
+msgstr "淡紫色"
 
 #: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
-msgstr ""
+msgstr "煤炭黑"
 
 #: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr ""
+msgstr "完美紙張"
 
 #: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr ""
+msgstr "磚紅色"
 
 #: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
-msgstr ""
+msgstr "咖啡色"
 
 #: src/ui/PicturesSheet.qml:60
 #, kde-format

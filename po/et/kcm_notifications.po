@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:39+0000\n"
+"POT-Creation-Date: 2024-03-08 00:39+0000\n"
 "PO-Revision-Date: 2020-01-06 12:09+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: kcm.cpp:73
+#: kcm.cpp:70
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Mittehäirimise lülitamine"
 
-#: sourcesmodel.cpp:393
+#: sourcesmodel.cpp:392
 #, kde-format
 msgid "Other Applications"
 msgstr "Muud rakendused"
 
-#: ui/ApplicationConfiguration.qml:91
+#: ui/ApplicationConfiguration.qml:89
 #, kde-format
 msgid "Show popups"
 msgstr "Hüpikute näitamine"
 
-#: ui/ApplicationConfiguration.qml:105
+#: ui/ApplicationConfiguration.qml:103
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Näitamine häirevabas režiimis"
 
-#: ui/ApplicationConfiguration.qml:118 ui/main.qml:163
+#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Näitamine ajaloos"
 
-#: ui/ApplicationConfiguration.qml:129
+#: ui/ApplicationConfiguration.qml:127
 #, kde-format
 msgid "Show notification badges"
 msgstr "Märguannete numbrimullide näitamine"
 
-#: ui/ApplicationConfiguration.qml:164
+#: ui/ApplicationConfiguration.qml:162
 #, fuzzy, kde-format
 #| msgid "Configure Events..."
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Seadista sündmusi ..."
 
-#: ui/ApplicationConfiguration.qml:172
+#: ui/ApplicationConfiguration.qml:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not support configuring notifications on a per-"
@@ -64,24 +64,31 @@ msgid ""
 "basis"
 msgstr "See rakendus ei toeta märguannete seadistamist sündmuste alusel."
 
-#: ui/ApplicationConfiguration.qml:263
+#: ui/ApplicationConfiguration.qml:264
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:272
+#: ui/ApplicationConfiguration.qml:273
 #, kde-format
 msgid "Play a sound"
 msgstr ""
 
-#: ui/main.qml:37
+#: ui/main.qml:46
+#, fuzzy, kde-format
+#| msgid "Notifications"
+msgctxt "@action:button Plasma-specific notifications"
+msgid "System Notifications…"
+msgstr "Märguanded"
+
+#: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Configure Application Settings…"
+msgid "Application Settings…"
 msgstr "Rakenduste seadistused"
 
-#: ui/main.qml:57
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find a 'Notifications' widget which is required for displaying "
@@ -93,31 +100,31 @@ msgid ""
 msgstr ""
 "Märguannete vidinat, mida on tarvis märguannete näitamiseks, ei leitud."
 
-#: ui/main.qml:68
+#: ui/main.qml:88
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Märguandeid pakub praegu Plasma asemel '%1 %2'."
 
-#: ui/main.qml:72
+#: ui/main.qml:92
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Plasma ei paku praegu märguandeid."
 
-#: ui/main.qml:79
+#: ui/main.qml:99
 #, fuzzy, kde-format
 #| msgid "Do Not Disturb mode:"
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Ei häirita režiim:"
 
-#: ui/main.qml:84
+#: ui/main.qml:104
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr ""
 
-#: ui/main.qml:85
+#: ui/main.qml:105
 #, fuzzy, kde-format
 #| msgctxt "Do not disturb when screens are mirrored"
 #| msgid "Enable when screens are mirrored"
@@ -125,7 +132,7 @@ msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Lubatud ekraanide peegeldamisel"
 
-#: ui/main.qml:97
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgctxt "Do not disturb when screens are mirrored"
 #| msgid "Enable when screens are mirrored"
@@ -133,65 +140,65 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Lubatud ekraanide peegeldamisel"
 
-#: ui/main.qml:112
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr ""
 
-#: ui/main.qml:119
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr ""
 
-#: ui/main.qml:124
+#: ui/main.qml:144
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Kriitilised märguanded:"
 
-#: ui/main.qml:125
+#: ui/main.qml:145
 #, fuzzy, kde-format
 #| msgid "Show in do not disturb mode"
 msgid "Show in Do Not Disturb mode"
 msgstr "Näitamine häirevabas režiimis"
 
-#: ui/main.qml:137
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Critical notifications:"
 msgid "Normal notifications:"
 msgstr "Kriitilised märguanded:"
 
-#: ui/main.qml:138
+#: ui/main.qml:158
 #, kde-format
 msgid "Show over full screen windows"
 msgstr ""
 
-#: ui/main.qml:150
+#: ui/main.qml:170
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Madala prioriteediga märguanded:"
 
-#: ui/main.qml:151
+#: ui/main.qml:171
 #, kde-format
 msgid "Show popup"
 msgstr "Hüpiku näitamine"
 
-#: ui/main.qml:180
+#: ui/main.qml:200
 #, fuzzy, kde-format
 #| msgid "Popup:"
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Hüpik:"
 
-#: ui/main.qml:186
+#: ui/main.qml:206
 #, fuzzy, kde-format
 #| msgid "Applications:"
 msgctxt "@label"
 msgid "Location:"
 msgstr "Rakendused:"
 
-#: ui/main.qml:187
+#: ui/main.qml:207
 #, fuzzy, kde-format
 #| msgctxt "Popup position near notification plasmoid"
 #| msgid "Show near notification icon"
@@ -199,54 +206,54 @@ msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Näitamine märguandeikooni lähedal"
 
-#: ui/main.qml:224
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Choose Custom Position..."
 msgid "Choose Custom Position…"
 msgstr "Vali kohandatud asukoht ..."
 
-#: ui/main.qml:233 ui/main.qml:249
+#: ui/main.qml:253 ui/main.qml:269
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 sekundit"
 msgstr[1] "%1 sekundit"
 
-#: ui/main.qml:238
+#: ui/main.qml:258
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Peidetakse pärast:"
 
-#: ui/main.qml:261
+#: ui/main.qml:281
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr ""
 
-#: ui/main.qml:267
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Näidatakse märguannetes"
 
-#: ui/main.qml:268
+#: ui/main.qml:288
 #, kde-format
 msgid "Application progress:"
 msgstr "Rakenduste edenemine:"
 
-#: ui/main.qml:282
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Hüpik hoitakse edenemise ajal lahti"
 
-#: ui/main.qml:295
+#: ui/main.qml:315
 #, kde-format
 msgid "Notification badges:"
 msgstr "Märguannete numbrimullid:"
 
-#: ui/main.qml:296
+#: ui/main.qml:316
 #, kde-format
 msgid "Show in task manager"
 msgstr "Näidatakse tegumihalduris"
@@ -256,28 +263,28 @@ msgstr "Näidatakse tegumihalduris"
 msgid "Popup Position"
 msgstr "Hüpiku asukoht"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:20
 #, kde-format
 msgid "Application Settings"
 msgstr "Rakenduste seadistused"
 
-#: ui/SourcesPage.qml:99
+#: ui/SourcesPage.qml:107
 #, kde-format
 msgid "Applications"
 msgstr "Rakendused"
 
-#: ui/SourcesPage.qml:100
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "System Services"
 msgstr "Süsteemi teenused"
 
-#: ui/SourcesPage.qml:148
+#: ui/SourcesPage.qml:156
 #, fuzzy, kde-format
 #| msgid "No application or event matches your search term."
 msgid "No application or event matches your search term"
 msgstr "Otsingule ei vasta ükski rakendus ega sündmus."
 
-#: ui/SourcesPage.qml:171
+#: ui/SourcesPage.qml:180
 #, fuzzy, kde-format
 #| msgid ""
 #| "Select an application from the list to configure its notification "
@@ -287,6 +294,12 @@ msgid ""
 "and behavior"
 msgstr ""
 "Vali loendist rakendus, mille märguannete seadistusi ja käitumist muuta."
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Configure Application Settings…"
+#~ msgstr "Rakenduste seadistused"
 
 #, fuzzy
 #~| msgid "Application Settings"
@@ -316,9 +329,6 @@ msgstr ""
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "qiilaq69@gmail.com"
-
-#~ msgid "Notifications"
-#~ msgstr "Märguanded"
 
 #~ msgid "Kai Uwe Broulik"
 #~ msgstr "Kai Uwe Broulik"
