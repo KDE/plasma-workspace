@@ -117,6 +117,15 @@ PlasmaExtras.Representation {
                 }
             }
 
+            PlasmaExtras.PlaceholderMessage {
+                visible: !(screenBrightnessSlider.visible || keyboardBrightnessSlider.visible)
+
+                width: scrollView.availableWidth
+
+                iconName: "brightness-high"
+                text: i18n("No brightness controls available")
+            }
+
             NightColorItem {
                 id: nightColorItem
 
