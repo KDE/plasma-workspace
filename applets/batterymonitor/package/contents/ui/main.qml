@@ -316,6 +316,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18n("Show Battery Percentage on Icon When Not Fully Charged")
             icon.name: "format-number-percent"
+            visible: batterymonitor.hasBatteries
             checkable: true
             checked: Plasmoid.configuration.showPercentage
             onTriggered: checked => {
