@@ -288,6 +288,7 @@ KCM.SimpleKCM {
                     popup.height: popup.implicitHeight
                     delegate: QtControls.ItemDelegate {
                         id: subPixelDelegate
+                        width: Math.max(parent.width, implicitWidth)
                         onWidthChanged: {
                             subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
                         }
@@ -336,6 +337,7 @@ KCM.SimpleKCM {
                     popup.height: popup.implicitHeight
                     delegate: QtControls.ItemDelegate {
                         id: hintingDelegate
+                        width: Math.max(parent.width, implicitWidth)
                         onWidthChanged: {
                             hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
                         }
