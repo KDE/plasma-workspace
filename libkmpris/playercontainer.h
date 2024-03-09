@@ -255,7 +255,7 @@ protected:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, bool, m_hasTrackList, false, &AbstractPlayerContainer::hasTrackListChanged)
     QString m_identity;
 
-    QString m_iconName;
+    QString m_iconName = QStringLiteral("emblem-music-symbolic");
     unsigned m_instancePid = 0;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, unsigned, m_kdePid, 0, &AbstractPlayerContainer::kdePidChanged)
 };
