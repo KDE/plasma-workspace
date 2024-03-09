@@ -35,18 +35,13 @@ int main()
         }
 
         KConfigGroup panelConfigGroup(&views, name);
-        if (!panelConfigGroup.hasGroup(u"Defaults"_s)) {
-            continue;
-        }
-
-        KConfigGroup defaultConfigGroup(&panelConfigGroup, u"Defaults"_s);
-        if (defaultConfigGroup.hasKey("floating")) {
+        if (panelConfigGroup.hasKey("floating")) {
             // Respect the manual setting
             continue;
         }
 
         // Explicitly set the old default floating setting for panels from Plasma 5
-        defaultConfigGroup.writeEntry("floating", 0);
+        panelConfigGroup.writeEntry("floating", 0);
     }
 
     return configPtr->sync() ? EXIT_SUCCESS : EXIT_FAILURE;
