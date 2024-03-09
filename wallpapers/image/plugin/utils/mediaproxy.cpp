@@ -54,7 +54,11 @@ void MediaProxy::componentComplete()
     // Follow system color scheme
     connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
 
-    processSource();
+    if (m_isDefaultSource) {
+        useSingleImageDefaults();
+    } else {
+        processSource();
+    }
 }
 
 QString MediaProxy::source() const
@@ -156,6 +160,10 @@ void MediaProxy::openModelImage()
 
 void MediaProxy::useSingleImageDefaults()
 {
+    if (!m_ready) {
+        return;
+    }
+
     m_source.clear(); // BUG 460692
 
     auto package = DefaultWallpaper::defaultWallpaperPackage();
