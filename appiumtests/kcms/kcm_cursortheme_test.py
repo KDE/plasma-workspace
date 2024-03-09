@@ -44,8 +44,9 @@ class KCMCursorThemeTest(unittest.TestCase):
 
         icon_theme_folder: Final = os.path.join(user_data_dir, "icons", "testcursortheme")
         assert not os.path.exists(icon_theme_folder)
-        assert os.path.exists("../kcms/cursortheme/autotests/data/testcursortheme")
-        shutil.copytree("../kcms/cursortheme/autotests/data/testcursortheme", icon_theme_folder)
+        test_data_folder: Final = os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir, os.pardir, "kcms", "cursortheme", "autotests", "data", "testcursortheme")
+        assert os.path.exists(test_data_folder)
+        shutil.copytree(test_data_folder, icon_theme_folder)
         cls.addClassCleanup(lambda: shutil.rmtree(icon_theme_folder))
 
         options = AppiumOptions()
