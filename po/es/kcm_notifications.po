@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2024-02-21 02:56+0100\n"
+"PO-Revision-Date: 2024-03-08 20:46+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -75,18 +75,16 @@ msgid "Play a sound"
 msgstr "Reproducir un sonido"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Notificaciones"
+msgstr "Notificaciones del sistema..."
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Preferencias de las aplicaciones"
+msgstr "Preferencias de las aplicaciones..."
 
 #: ui/main.qml:77
 #, kde-format

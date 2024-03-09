@@ -71,18 +71,16 @@ msgid "Play a sound"
 msgstr "Přehrát zvuk"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Normal notifications:"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Normální upozornění:"
+msgstr ""
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Nastavení aplikace"
+msgstr ""
 
 #: ui/main.qml:77
 #, kde-format

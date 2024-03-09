@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2022-02-27 16:38+0530\n"
+"PO-Revision-Date: 2024-03-08 19:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -523,28 +523,22 @@ msgid "Bluetooth Battery"
 msgstr "ஊடலை மின்கலம்"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "படக்கருவியின் மின்கலம்"
+msgstr "பலகைக்கணினி மின்கலம்"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "திறன்பேசியின் மின்கலம்"
+msgstr "செவிபேசி மின்கலம்"
 
 #: soliddeviceengine.cpp:392
 #, fuzzy
 #| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "சுட்டியின் மின்கலம்"
+msgstr "செவிபேசி மின்கலம்"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "சுட்டியின் மின்கலம்"
+msgstr "தொடுபலகை மின்கலம்"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

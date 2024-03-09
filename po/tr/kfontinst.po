@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2024-01-07 00:07+0300\n"
+"PO-Revision-Date: 2024-03-08 19:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -408,7 +408,7 @@ msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
-"<p><b>%1</b>' ögesini kaldırmak istediğinizden emin misiniz?</p><p><i>Bu "
+"<p><b>%1</b>' ögesini kaldırmayı gerçekten istiyor musunuz?</p><p><i>Bu "
 "işlem asıl yazıtiplerini değil, yalnızca grubu kaldıracaktır.</i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
@@ -771,7 +771,8 @@ msgstr "Silinecek Öge Yok"
 #: kcmfontinst/KCmFontInst.cpp:619
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p></p><p>'<b>%1</b>' yazıtipini gerçekten silmek istiyor musunuz?</p>"
+msgstr ""
+"<p></p><p>'<b>%1</b>' yazıtipini silmeyi gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:622
 #, kde-format
@@ -782,8 +783,8 @@ msgstr "Yazıtipini Sil"
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "Gerçekten bu yazıtipini silmek istiyor musunuz?"
-msgstr[1] "Gerçekten bu %1 yazıtipini silmek istiyor musunuz?"
+msgstr[0] "Bu yazıtipini silmeyi gerçekten istiyor musunuz?"
+msgstr[1] "Bu %1 yazıtipini silmeyi gerçekten istiyor musunuz?"
 
 #: kcmfontinst/KCmFontInst.cpp:631
 #, kde-format
@@ -812,7 +813,7 @@ msgid ""
 "%3</i>?</p>"
 msgstr ""
 "<p></p><p>'<b>%1</b>'</p><p> yazıtipini <i>%2</i> konumundan <i>%3</i> "
-"konumuna taşımak istediğinizden emin misiniz?</p>"
+"konumuna taşımayı gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:666
 #, kde-format
@@ -831,11 +832,11 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] ""
-"<p>Bu %1 yazıtipini <i>%2</i> konumundan <i>%3</i> konumuna taşımak "
-"istediğinizden emin misiniz?</p>"
+"<p>Bu yazıtipini <i>%2</i> konumundan <i>%3</i> konumuna taşımayı gerçekten "
+"istiyor musunuz?</p>"
 msgstr[1] ""
-"<p>Bu %1 yazıtipini <i>%2</i> konumundan <i>%3</i> konumuna taşımak "
-"istediğinizden emin misiniz?</p>"
+"<p>Bu %1 yazıtipini <i>%2</i> konumundan <i>%3</i> konumuna taşımayı "
+"gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
@@ -977,14 +978,14 @@ msgstr "Devre Dışı Bırakılacak Bir Şey Yok"
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>' yazıtipini gerçekten etkinleştirmek istiyor musunuz?</"
+"<p></p><p>'<b>%1</b>' yazıtipini etkinleştirmeyi gerçekten istiyor musunuz?</"
 "p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>' yazıtipini gerçekten devre dışı bırakmak istiyor "
+"<p></p><p>'<b>%1</b>' yazıtipini devre dışı bırakmayı gerçekten istiyor "
 "musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1121
@@ -993,8 +994,8 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini etkinleştirmek "
-"istediğinizden emin misiniz?</p>"
+"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini etkinleştirmeyi "
+"gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1125
 #, kde-format
@@ -1002,8 +1003,8 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini devre dışı bırakmak "
-"istediğinizden emin misiniz?</p>"
+"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini devre dışı bırakmayı "
+"gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1130
 #, kde-format
@@ -1019,15 +1020,15 @@ msgstr "Yazıtipini Devre Dışı Bırak"
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "Gerçekten bu yazıtipini etkinleştirmek istiyor musunuz?"
-msgstr[1] "Gerçekten bu %1 yazıtipini etkinleştirmek istiyor musunuz?"
+msgstr[0] "Bu yazıtipini etkinleştirmeyi gerçekten istiyor musunuz?"
+msgstr[1] "Bu %1 yazıtipini etkinleştirmeyi gerçekten istiyor musunuz?"
 
 #: kcmfontinst/KCmFontInst.cpp:1139
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "Gerçekten bu yazıtipini devre dışı bırakmak istiyor musunuz?"
-msgstr[1] "Gerçekten bu %1 yazıtipini devre dışı bırakmak istiyor musunuz?"
+msgstr[0] "Bu yazıtipini devre dışı bırakmayı gerçekten istiyor musunuz?"
+msgstr[1] "Bu %1 yazıtipini devre dışı bırakmayı gerçekten istiyor musunuz?"
 
 #: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
@@ -1038,10 +1039,10 @@ msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>'<b>%2</b>' grubundaki bu yazıtipini gerçekten etkinleştirmek istiyor "
+"<p>'<b>%2</b>' grubundaki bu yazıtipini etkinleştirmeyi gerçekten istiyor "
 "musunuz?</p>"
 msgstr[1] ""
-"<p>'<b>%2</b>' grubundaki bu %1 yazıtipini gerçekten etkinleştirmek istiyor "
+"<p>'<b>%2</b>' grubundaki bu %1 yazıtipini etkinleştirmeyi gerçekten istiyor "
 "musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1147
@@ -1053,10 +1054,10 @@ msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>'<b>%2</b>' grubundaki bu yazıtipini gerçekten devre dışı bırakmak "
+"<p>'<b>%2</b>' grubundaki bu yazıtipini devre dışı bırakmayı gerçekten "
 "istiyor musunuz?</p>"
 msgstr[1] ""
-"<p>'<b>%2</b>' grubundaki bu %1 yazıtipini gerçekten devre dışı bırakmak "
+"<p>'<b>%2</b>' grubundaki bu %1 yazıtipini devre dışı bırakmayı gerçekten "
 "istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1154

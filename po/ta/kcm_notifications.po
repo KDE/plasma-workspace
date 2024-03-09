@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2024-02-18 14:53+0530\n"
+"PO-Revision-Date: 2024-03-08 21:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -71,18 +71,16 @@ msgid "Play a sound"
 msgstr "ஒலியெழுப்பு"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "அறிவிப்புகள்"
+msgstr "கணினி அறிவிப்புகள்…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "செயலி அமைப்புகள்"
+msgstr "செயலி அமைப்புகள்…"
 
 #: ui/main.qml:77
 #, kde-format

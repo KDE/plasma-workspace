@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2024-02-21 17:13+0300\n"
+"PO-Revision-Date: 2024-03-08 11:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -73,18 +73,16 @@ msgid "Play a sound"
 msgstr "Bir ses çal"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Normal notifications:"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Olağan bildirimler:"
+msgstr "Sistem Bildirimleri…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Uygulama Ayarları"
+msgstr "Uygulama Ayarları…"
 
 #: ui/main.qml:77
 #, kde-format
@@ -93,15 +91,15 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
-"Bildirimleri görüntülemek için gerekli olan bir 'Bildirim' araç takımı "
-"bulunamıyor. Sistem Tepsinizde veya tek başına bir uygulama olarak etkin "
+"Bildirimleri görüntülemek için gerekli olan bir ‘Bildirim’ araç takımı "
+"bulunamıyor. Sistem Tepsisi’nde veya tek başına bir uygulama olarak etkin "
 "olduğundan emin olun."
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
-msgstr "Bildirimler şu anda Plasma yerine '%1 %2' tarafından sağlanıyor."
+msgstr "Bildirimler şu anda Plasma yerine ‘%1 %2’ tarafından sağlanıyor."
 
 #: ui/main.qml:92
 #, kde-format

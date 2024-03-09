@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2024-02-21 05:04+0100\n"
+"PO-Revision-Date: 2024-03-08 03:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -73,18 +73,16 @@ msgid "Play a sound"
 msgstr "ხმის დაკვრა"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Configure Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "შეტყობინებების მორგება"
+msgstr "სისტემური გაფრთხილებები…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "აპლიკაციის მორგება"
+msgstr "აპლიკაციის მორგება…"
 
 #: ui/main.qml:77
 #, kde-format

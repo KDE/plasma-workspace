@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 gummi <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2023-12-10 21:47+0000\n"
+"PO-Revision-Date: 2024-02-19 18:34+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -244,13 +244,13 @@ msgstr "Skjályklaborð óvirkjað"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Fela grunnstillingar skjáborðsstiku"
 
 #: panelview.cpp:1034
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Sýna grunnstillingar skjáborðsstiku"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

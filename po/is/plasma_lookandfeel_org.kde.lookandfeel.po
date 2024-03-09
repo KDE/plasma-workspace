@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-12-10 21:40+0000\n"
+"PO-Revision-Date: 2024-02-19 18:34+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -236,18 +236,15 @@ msgstr ""
 "(firmware)."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Svæfa"
+msgstr "Svæfa núna"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Leggja í dvala"
+msgstr "Leggja í dvala núna"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -256,24 +253,20 @@ msgid "Install Updates & Restart"
 msgstr "Setja upp uppfærslur og endurræsa"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Setja upp uppfærslur og endurræsa"
+msgstr "Setja upp uppfærslur og endurræsa núna"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Endurræsa"
+msgstr "Endurræsa núna"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Slökkva á tölvunni"
+msgstr "Slökkva á tölvunni núna"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -281,10 +274,9 @@ msgid "Log Out"
 msgstr "Skrá út"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Skrá út"
+msgstr "Skrá út núna"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

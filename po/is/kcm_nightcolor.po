@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-04 00:39+0000\n"
-"PO-Revision-Date: 2022-10-17 16:01+0000\n"
+"PO-Revision-Date: 2024-02-19 18:30+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/DayNightView.qml:116
 #, kde-format
@@ -110,14 +110,12 @@ msgid "Custom times"
 msgstr "Sérstilltur tími"
 
 #: ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Alltaf kveikt á næturlitum"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Lithitastig dagslita:"
 
@@ -128,9 +126,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:232 ui/main.qml:294
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Svalt (engin sía)"
@@ -142,8 +138,7 @@ msgid "Warm"
 msgstr "Hlýtt"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Lithitastig næturlita:"
 
@@ -151,7 +146,7 @@ msgstr "Lithitastig næturlita:"
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr ""
+msgstr "Núverandi staðsetning:"
 
 #: ui/main.qml:317
 #, kde-format
@@ -171,8 +166,7 @@ msgstr ""
 "services.mozilla.com'>Mozilla-staðsetningarþjónustunnar</link>."
 
 #: ui/main.qml:357
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Byrja næturliti kl.:"
 
@@ -182,8 +176,7 @@ msgid "Input format: HH:MM"
 msgstr "Inntakssnið: HH:MM"
 
 #: ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Byrja dagsliti kl.:"
 

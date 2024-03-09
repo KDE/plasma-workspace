@@ -805,11 +805,9 @@ msgstr ""
 "aplikace, které přijímají tento typ MIME."
 
 #: klipperpopup.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Clipboard Items"
-msgstr "%1 - Položky ve schránce"
+msgstr ""
 
 #: klipperpopup.cpp:111
 #, kde-format
