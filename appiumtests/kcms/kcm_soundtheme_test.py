@@ -46,7 +46,7 @@ class KCMSoundThemeTest(unittest.TestCase):
 
             fdo_sound_theme_folder: Final = os.path.join(user_data_dir, "sounds", "freedesktop")
             if not os.path.exists(fdo_sound_theme_folder):
-                shutil.copytree("../kcms/soundtheme/autotests/data/freedesktop", fdo_sound_theme_folder)
+                shutil.copytree("../../kcms/soundtheme/autotests/data/freedesktop", fdo_sound_theme_folder)
                 cls.addClassCleanup(lambda: shutil.rmtree(fdo_sound_theme_folder))
 
         options = AppiumOptions()
