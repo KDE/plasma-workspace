@@ -79,6 +79,9 @@ void Multiplexer::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
     // Need to manually disconnect from the container because the source can be filtered out but not gone (e.g. a browser)
     disconnect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
     if (m_activePlayerIndex == first) {
+        Q_ASSERT_X(m_activePlayer.value() == container,
+                   Q_FUNC_INFO,
+                   qUtf8Printable(QStringLiteral("Active player %1 does not match active index %2").arg(m_activePlayer->identity(), container->identity())));
         m_activePlayer = nullptr;
         // Index is updated in evaluatePlayers() later
     }
