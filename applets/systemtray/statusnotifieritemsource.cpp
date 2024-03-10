@@ -25,9 +25,13 @@
 #include <QSysInfo>
 #include <QVariantMap>
 
+#include <Plasma/Theme>
+
 #include <netinet/in.h>
 
 #include <dbusmenuimporter.h>
+
+Q_GLOBAL_STATIC(Plasma::Theme, s_theme)
 
 class PlasmaDBusMenuImporter : public DBusMenuImporter
 {
@@ -51,6 +55,7 @@ private:
 StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId, QObject *parent)
     : QObject(parent)
     , m_customIconLoader(nullptr)
+    , m_menuIconLoader(nullptr)
     , m_menuImporter(nullptr)
     , m_refreshing(false)
     , m_needsReRefreshing(false)
@@ -89,6 +94,8 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
         connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
         refresh();
     }
+
+    connect(s_theme, &Plasma::Theme::themeChanged, this, &StatusNotifierItemSource::reloadIcon);
 }
 
 StatusNotifierItemSource::~StatusNotifierItemSource()
@@ -249,29 +256,38 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         QVariantMap properties = reply.argumentAt<0>();
         QString path = properties[QStringLiteral("IconThemePath")].toString();
 
-        if (!path.isEmpty() && path != m_iconThemePath) {
-            if (!m_customIconLoader) {
-                m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
-            }
-            // FIXME: If last part of path is not "icons", this won't work!
-            QString appName;
-            auto tokens = QStringView(path).split('/', Qt::SkipEmptyParts);
-            if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
-                appName = tokens.takeLast().toString();
+        if (!m_customIconLoader) {
+            m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
+            m_customIconLoader->setCustomPalette(Plasma::Theme::globalPalette());
 
-            // icons may be either in the root directory of the passed path or in a appdir format
-            // i.e hicolor/32x32/iconname.png
-
-            m_customIconLoader->reconfigure(appName, QStringList(path));
-
-            // add app dir requires an app name, though this is completely unused in this context
-            m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-
-            connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=, this] {
-                m_customIconLoader->reconfigure(appName, QStringList(path));
-                m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-            });
+            m_menuIconLoader = new KIconLoader(QString(), QStringList(), this);
         }
+        // FIXME: If last part of path is not "icons", this won't work!
+        QString appName;
+        auto tokens = QStringView(path).split('/', Qt::SkipEmptyParts);
+        if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
+            appName = tokens.takeLast().toString();
+
+        // icons may be either in the root directory of the passed path or in a
+        // appdir format i.e hicolor/32x32/iconname.png
+
+        m_customIconLoader->reconfigure(appName, QStringList(path));
+        m_menuIconLoader->reconfigure(appName, QStringList(path));
+
+        // add app dir requires an app name, though this is completely unused in
+        // this context
+        m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
+        m_menuIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
+
+        connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=, this] {
+            m_customIconLoader->reconfigure(appName, QStringList(path));
+            m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
+        });
+
+        connect(m_menuIconLoader, &KIconLoader::iconChanged, this, [=, this] {
+            m_menuIconLoader->reconfigure(appName, QStringList(path));
+            m_menuIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
+        });
         m_iconThemePath = path;
 
         m_category = properties[QStringLiteral("Category")].toString();
@@ -285,7 +301,6 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         m_attentionMovieName = properties[QStringLiteral("AttentionMovieName")].toString();
 
         QIcon overlay;
-        QStringList overlayNames;
 
         // Overlay icon
         {
@@ -296,7 +311,6 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 overlay = QIcon(new KIconEngine(iconName, iconLoader()));
                 if (!overlay.isNull()) {
                     m_overlayIconName = iconName;
-                    overlayNames << iconName;
                 }
             }
             if (overlay.isNull()) {
@@ -308,12 +322,12 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             }
         }
 
-        auto loadIcon = [this, &properties, &overlay, &overlayNames](const QString &iconKey, const QString &pixmapKey) -> std::tuple<QIcon, QString> {
+        auto loadIcon = [this, &properties, &overlay](const QString &iconKey, const QString &pixmapKey) -> std::tuple<QIcon, QString> {
             const QString iconName = properties[iconKey].toString();
             if (!iconName.isEmpty()) {
-                QIcon icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
+                QIcon icon = QIcon(new KIconEngine(iconName, iconLoader(), {m_overlayIconName}));
                 if (!icon.isNull()) {
-                    if (!overlay.isNull() && overlayNames.isEmpty()) {
+                    if (!overlay.isNull() && m_overlayIconName.isEmpty()) {
                         overlayIcon(&icon, &overlay);
                     }
                     return {icon, iconName};
@@ -369,7 +383,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     // KStatusNotifierItem::setContextMenu().
                     qCWarning(SYSTEM_TRAY) << "DBusMenu disabled for this application";
                 } else {
-                    m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
+                    m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, m_menuIconLoader, this);
                     connect(m_menuImporter, &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
                         if (menu == m_menuImporter->menu()) {
                             contextMenuReady();
@@ -382,6 +396,24 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
     Q_EMIT dataUpdated();
     call->deleteLater();
+}
+
+void StatusNotifierItemSource::reloadIcon()
+{
+    if (m_customIconLoader) {
+        m_customIconLoader->setCustomPalette(Plasma::Theme::globalPalette());
+        m_menuIconLoader->setCustomPalette(Plasma::Theme::globalPalette());
+    }
+
+    if (!m_iconName.isEmpty()) {
+        m_icon = QIcon(new KIconEngine(m_iconName, iconLoader(), {m_overlayIconName}));
+    }
+
+    if (!m_attentionIconName.isEmpty()) {
+        m_attentionIcon = QIcon(new KIconEngine(m_attentionIconName, iconLoader(), {m_overlayIconName}));
+    }
+
+    Q_EMIT dataUpdated();
 }
 
 void StatusNotifierItemSource::contextMenuReady()

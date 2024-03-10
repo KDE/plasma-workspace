@@ -62,6 +62,7 @@ private Q_SLOTS:
     void syncStatus(const QString &);
     void refreshCallback(QDBusPendingCallWatcher *);
     void activateCallback(QDBusPendingCallWatcher *);
+    void reloadIcon();
 
 private:
     QPixmap KDbusImageStructToPixmap(const KDbusImageStruct &image) const;
@@ -73,6 +74,7 @@ private:
     QString m_servicename;
     QTimer m_refreshTimer;
     KIconLoader *m_customIconLoader;
+    KIconLoader *m_menuIconLoader;
     DBusMenuImporter *m_menuImporter;
     org::kde::StatusNotifierItem *m_statusNotifierItemInterface;
     bool m_refreshing : 1;
