@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-29 02:28+0000\n"
+"POT-Creation-Date: 2024-03-10 03:04+0000\n"
 "PO-Revision-Date: 2024-02-22 13:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
@@ -301,12 +301,12 @@ msgstr "أدر الأسطح و اللوحات..."
 msgid "Move keyboard focus between panels"
 msgstr "حرّك تركيز لوحة المفاتيح بين اللوحات"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2060
 #, kde-format
 msgid "Add Panel"
 msgstr "أضف لوحة"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2102
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

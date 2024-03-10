@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-29 02:28+0000\n"
+"POT-Creation-Date: 2024-03-10 03:04+0000\n"
 "PO-Revision-Date: 2016-12-13 16:57+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -317,12 +317,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2060
 #, kde-format
 msgid "Add Panel"
 msgstr "Προσθήκη πίνακα"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2102
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

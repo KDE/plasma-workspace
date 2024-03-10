@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-29 02:28+0000\n"
+"POT-Creation-Date: 2024-03-10 03:04+0000\n"
 "PO-Revision-Date: 2023-11-11 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -300,12 +300,12 @@ msgstr "Spravovať plochy a panely..."
 msgid "Move keyboard focus between panels"
 msgstr "Presúvanie zameranie klávesnice medzi panelmi"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2060
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridať panel"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2102
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -1,0 +1,88 @@
+# Translation of plasma_applet_org.kde.plasma.cameraindicator to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2024 Karl Ove Hufthammer <karl@huftis.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"PO-Revision-Date: 2024-03-09 18:32+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.4\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: contents/ui/FullRepresentation.qml:40
+#, kde-format
+msgctxt "@title"
+msgid "Camera"
+msgstr "Kamera"
+
+#: contents/ui/FullRepresentation.qml:43
+#, kde-format
+msgctxt "@info:status"
+msgid "Active"
+msgstr "I bruk"
+
+#: contents/ui/FullRepresentation.qml:45
+#, kde-format
+msgctxt "@info:status"
+msgid "Idle"
+msgstr "Ikkje i bruk"
+
+#: contents/ui/FullRepresentation.qml:47
+#, kde-format
+msgctxt "@info:status"
+msgid "Error"
+msgstr "Feil"
+
+#: contents/ui/FullRepresentation.qml:49
+#, kde-format
+msgctxt "@info:status"
+msgid "Creating"
+msgstr "Opprettar"
+
+#: contents/ui/FullRepresentation.qml:51
+#, kde-format
+msgctxt "@info:status"
+msgid "Suspended"
+msgstr "På pause"
+
+#: contents/ui/FullRepresentation.qml:53
+#, kde-format
+msgctxt "@info:status"
+msgid "Unknown"
+msgstr "Ukjend"
+
+#: contents/ui/FullRepresentation.qml:69
+#, kde-format
+msgctxt "@info:status %1 camera name"
+msgid "%1 is in use"
+msgstr "%1 er i bruk"
+
+#: contents/ui/main.qml:21
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Camera indicator is unavailable"
+msgstr "Kameraindikator er ikkje tilgjengeleg"
+
+#: contents/ui/main.qml:23
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "A camera is in use"
+msgid_plural "%1 cameras are in use"
+msgstr[0] "Eit kamera er i bruk"
+msgstr[1] "%1 kamera er i bruk"
+
+#: contents/ui/main.qml:25
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "No camera is in use"
+msgstr "Ingen kamera er i bruk"

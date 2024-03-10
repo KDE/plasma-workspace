@@ -1,0 +1,178 @@
+# Translation of plasma_applet_org.kde.plasma.brightness to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2024 Karl Ove Hufthammer <karl@huftis.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-20 01:35+0000\n"
+"PO-Revision-Date: 2024-03-09 18:41+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.4\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/ui/BrightnessItem.qml:70
+#, kde-format
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%1 %"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Brightness and Color"
+msgstr "Lysstyrke og fargar"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Screen brightness at %1%"
+msgstr "Skjermlysstyrken er %1 %"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Keyboard brightness at %1%"
+msgstr "Tastaturlysstyrken %1 %"
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "Status"
+msgid "Night Light off"
+msgstr "Kveldsfargar av"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgctxt "Status; placeholder is a temperature"
+msgid "Night Light at %1K"
+msgstr "Kveldsfargane er på %1 K"
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr "Rull for å justera skjermlysstyrken"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Middle-click to toggle Night Light"
+msgstr "Midtklikk for å slå på/av kveldsfargar"
+
+#: package/contents/ui/main.qml:258
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Configure Night Light…"
+msgstr "Set opp kveldsfargar …"
+
+#: package/contents/ui/NightColorItem.qml:74
+#, kde-format
+msgctxt "Night light status"
+msgid "Off"
+msgstr "Av"
+
+#: package/contents/ui/NightColorItem.qml:77
+#, kde-format
+msgctxt "Night light status"
+msgid "Unavailable"
+msgstr "Ikkje tilgjengeleg"
+
+#: package/contents/ui/NightColorItem.qml:80
+#, kde-format
+msgctxt "Night light status"
+msgid "Not enabled"
+msgstr "Ikkje slått på"
+
+#: package/contents/ui/NightColorItem.qml:83
+#, kde-format
+msgctxt "Night light status"
+msgid "Not running"
+msgstr "Køyrer ikkje"
+
+#: package/contents/ui/NightColorItem.qml:86
+#, kde-format
+msgctxt "Night light status"
+msgid "On"
+msgstr "På"
+
+#: package/contents/ui/NightColorItem.qml:89
+#, kde-format
+msgctxt "Night light phase"
+msgid "Morning Transition"
+msgstr "Morgonovergang"
+
+#: package/contents/ui/NightColorItem.qml:91
+#, kde-format
+msgctxt "Night light phase"
+msgid "Day"
+msgstr "Dag"
+
+#: package/contents/ui/NightColorItem.qml:93
+#, kde-format
+msgctxt "Night light phase"
+msgid "Evening Transition"
+msgstr "Kveldsovergang"
+
+#: package/contents/ui/NightColorItem.qml:95
+#, kde-format
+msgctxt "Night light phase"
+msgid "Night"
+msgstr "Kveld"
+
+#: package/contents/ui/NightColorItem.qml:105
+#, kde-format
+msgctxt "Placeholder is screen color temperature"
+msgid "%1K"
+msgstr "%1 K"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Configure…"
+msgstr "Set opp …"
+
+#: package/contents/ui/NightColorItem.qml:139
+#, kde-format
+msgid "Enable and Configure…"
+msgstr "Slå på og set opp …"
+
+#: package/contents/ui/NightColorItem.qml:165
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day complete by:"
+msgstr "Overgang til dagfargar ferdig:"
+
+#: package/contents/ui/NightColorItem.qml:167
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night scheduled for:"
+msgstr "Overgang til kveldsfargar tek til:"
+
+#: package/contents/ui/NightColorItem.qml:169
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to night complete by:"
+msgstr "Overgang til kveldsfargar ferdig:"
+
+#: package/contents/ui/NightColorItem.qml:171
+#, kde-format
+msgctxt "Label for a time"
+msgid "Transition to day scheduled for:"
+msgstr "Overgang til dagfargar tek til:"
+
+#: package/contents/ui/PopupDialog.qml:70
+#, kde-format
+msgid "Display Brightness"
+msgstr "Lysstyrke skjerm"
+
+#: package/contents/ui/PopupDialog.qml:101
+#, kde-format
+msgid "Keyboard Brightness"
+msgstr "Lysstyrke tastatur"
+
+#: package/contents/ui/PopupDialog.qml:132
+#, kde-format
+msgid "Night Light"
+msgstr "Kveldsfargar"

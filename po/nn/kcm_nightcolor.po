@@ -1,13 +1,12 @@
 # Translation of kcm_nightcolor to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2019, 2020, 2021, 2022.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-04 02:21+0000\n"
-"PO-Revision-Date: 2022-10-15 12:46+0200\n"
+"PO-Revision-Date: 2024-03-09 19:07+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -110,14 +109,12 @@ msgid "Custom times"
 msgstr "Sjølvvalde klokkeslett"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
 msgstr "Alltid kveldsfargar"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
 msgstr "Dagfarge-temperatur:"
 
@@ -128,9 +125,7 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:230 ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Kjøleg (inkje filter)"
@@ -142,8 +137,7 @@ msgid "Warm"
 msgstr "Varm"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
 msgstr "Kveldsfarge-temperatur:"
 
@@ -151,7 +145,7 @@ msgstr "Kveldsfarge-temperatur:"
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr ""
+msgstr "Gjeldande stad:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -171,8 +165,7 @@ msgstr ""
 "url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
 
 #: ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
 msgstr "Kveldsfargar tek til:"
 
@@ -182,8 +175,7 @@ msgid "Input format: HH:MM"
 msgstr "Format: HH:MM"
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
 msgstr "Dagfargar tek til:"
 
