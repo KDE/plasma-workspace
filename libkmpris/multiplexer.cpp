@@ -114,35 +114,29 @@ void Multiplexer::onPlaybackStatusChanged()
 
 void Multiplexer::updateIndex()
 {
-    QModelIndex idx;
     for (int i = 0, count = m_filterModel->rowCount(); i < count; ++i) {
-        QModelIndex _idx = m_filterModel->index(i, 0);
-        if (_idx.data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>() == m_activePlayer.value()) {
-            idx = _idx;
-            break;
+        if (m_filterModel->index(i, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>() == m_activePlayer.value()) {
+            m_activePlayerIndex = i;
+            return;
         }
     }
 
-    if (!idx.isValid()) {
-        const auto sourceModel = static_cast<Mpris2SourceModel *>(m_filterModel->sourceModel());
-        const auto beginIt = sourceModel->m_containers.cbegin();
-        const auto endIt = sourceModel->m_containers.cend();
-        qCWarning(MPRIS2) << "Current active player:" << m_activePlayer->identity();
-        qCWarning(MPRIS2) << "Available players:" << std::accumulate(beginIt, endIt, QString(), [](QString left, PlayerContainer *right) {
-            return std::move(left) + QLatin1Char(',') + right->identity();
-        });
-        qCWarning(MPRIS2) << "Pending players:"
-                          << std::accumulate(sourceModel->m_pendingContainers.cbegin(),
-                                             sourceModel->m_pendingContainers.cend(),
-                                             QString(),
-                                             [](QString left, auto &right) {
-                                                 return std::move(left) + QLatin1Char(',') + right.first /* sourceName */;
-                                             });
-        Q_ASSERT_X(false, Q_FUNC_INFO, "Model index is invalid");
-        m_activePlayerIndex = 0;
-        return;
-    }
-    m_activePlayerIndex = idx.row();
+    const auto sourceModel = static_cast<Mpris2SourceModel *>(m_filterModel->sourceModel());
+    const auto beginIt = sourceModel->m_containers.cbegin();
+    const auto endIt = sourceModel->m_containers.cend();
+    qCWarning(MPRIS2) << "Current active player:" << m_activePlayer->identity();
+    qCWarning(MPRIS2) << "Available players:" << std::accumulate(beginIt, endIt, QString(), [](QString left, PlayerContainer *right) {
+        return std::move(left) + QLatin1Char(',') + right->identity();
+    });
+    qCWarning(MPRIS2) << "Pending players:"
+                      << std::accumulate(sourceModel->m_pendingContainers.cbegin(),
+                                         sourceModel->m_pendingContainers.cend(),
+                                         QString(),
+                                         [](QString left, auto &right) {
+                                             return std::move(left) + QLatin1Char(',') + right.first /* sourceName */;
+                                         });
+    Q_ASSERT_X(false, Q_FUNC_INFO, "Model index is invalid");
+    m_activePlayerIndex = -1;
 }
 
 void Multiplexer::evaluatePlayers()
