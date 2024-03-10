@@ -260,6 +260,7 @@ void Mpris2SourceModel::onInitialFetchFinished(PlayerContainer *container)
     // Check if the player follows the specification dutifully.
     if (container->identity().isEmpty()) {
         qCDebug(MPRIS2) << "MPRIS2 service" << container->objectName() << "isn't standard-compliant, ignoring";
+        delete container;
         return;
     }
 
