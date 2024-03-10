@@ -310,7 +310,7 @@ ColumnLayout {
                                     enabled: soundCheckBox.checked
                                     icon.name: "document-open-folder"
                                     onClicked: {
-                                        soundSelector.eventIndex = model.index
+                                        soundSelector.eventRow = model.index
                                         soundSelector.open()
                                     }
                                 }
@@ -358,13 +358,13 @@ ColumnLayout {
     FileDialog {
         id: soundSelector
 
-        property var eventIndex
+        property var eventRow
 
         currentFolder: kcm.soundsLocation()
         nameFilters: ["Sound files(*.ogg *.oga *.wav)"]
 
         onAccepted: {
-            kcm.eventsModel.setData(kcm.eventsModel.index(eventIndex, 0), selectedFile,  Private.SourcesModel.SoundRole)
+            kcm.sourcesModel.setData(kcm.sourcesModel.index(eventRow, 0, eventsModel.rootIndex), selectedFile, Private.SourcesModel.SoundRole)
         }
     }
 }
