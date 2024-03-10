@@ -359,9 +359,13 @@ ColumnLayout {
                                 }
                             }
                         }
+                    }
 
-                        TapHandler {
-                            onTapped: eventDelegate.expanded = !eventDelegate.expanded
+                    TapHandler {
+                        onTapped: {
+                            eventsList.currentIndex = model.index;
+                            forceActiveFocus();
+                            eventDelegate.expanded = true;
                         }
                     }
 
