@@ -1,6 +1,5 @@
 # Translation of plasma_applet_org.kde.plasma.battery to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2007, 2008, 2009, 2010, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010, 2011.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
@@ -8,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2023-02-22 21:36+0100\n"
+"PO-Revision-Date: 2024-03-09 18:24+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -102,10 +101,9 @@ msgid "Not present"
 msgstr "Ikkje sett i"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Straumstyring"
+msgstr "Straum og batteri"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -209,10 +207,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Vis batteriprosent på ikonet viss ikkje fullada"
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Set opp straumsparing …"
+msgstr "&Set opp straumstyring …"
 
 # Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:41
@@ -305,11 +302,10 @@ msgid "Power Profile"
 msgstr "Straumprofil"
 
 #: package/contents/ui/PowerProfileItem.qml:97
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Ingen batteri tilgjengelege"
+msgstr "Ikkje tilgjengeleg"
 
 #: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
@@ -372,3 +368,6 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Straumprofilar er kanskje støtta på eininga di.<nl/>Prøv å installera pakken "
+"<command>power-profiles-daemon</command> via pakke­handsamaren til distroen "
+"din, og start så maskina på nytt."

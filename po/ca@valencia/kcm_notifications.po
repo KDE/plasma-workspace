@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2024-02-21 16:22+0100\n"
+"PO-Revision-Date: 2024-03-08 09:36+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -78,18 +78,16 @@ msgid "Play a sound"
 msgstr "Reproduïx un so"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Normal notifications:"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Notificacions normals:"
+msgstr "Notificacions del sistema…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Configureu l'aplicació"
+msgstr "Configureu l'aplicació…"
 
 #: ui/main.qml:77
 #, kde-format
@@ -283,7 +281,3 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu configuració "
 "de notificacions i el comportament"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Configureu els paràmetres de l'aplicació…"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-08 00:39+0000\n"
+"POT-Creation-Date: 2024-03-10 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 22:55+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -315,12 +315,12 @@ msgstr "Asztalok és panelek kezelése…"
 msgid "Move keyboard focus between panels"
 msgstr "A billentyűzet fókuszának váltogatása panelek között"
 
-#: shellcorona.cpp:2067
+#: shellcorona.cpp:2063
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel hozzáadása"
 
-#: shellcorona.cpp:2109
+#: shellcorona.cpp:2105
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

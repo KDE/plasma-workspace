@@ -1,6 +1,5 @@
 # Translation of plasma_applet_org.kde.plasma.devicenotifier to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2009, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010, 2011.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2019.
 msgid ""
@@ -8,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-02-13 14:52+0100\n"
+"PO-Revision-Date: 2024-03-09 18:32+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -44,8 +43,7 @@ msgid "Removing…"
 msgstr "Fjernar …"
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Kopla ikkje frå enno! Filoverføring pågår framleis …"
 
@@ -134,71 +132,70 @@ msgstr "Vis sprettopp ved tilkopling av einingar"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Einingsstatus"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Ei eining kan no trygt fjernast"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Eininga kan no trygt fjernast."
 
 #: plugin/ksolidnotify.cpp:198
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "Du har ikkje løyve til å montera denne eininga."
 
 #: plugin/ksolidnotify.cpp:201
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "Du har ikkje løyve til fjerna denne eininga."
 
 #: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "Du har ikkje løyve til løysa ut denne disken."
 
 #: plugin/ksolidnotify.cpp:211
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "Klarte ikkje montera eininga, då ho er oppteken."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
+msgstr "Éi eller fleire filer på eininga er i bruk av eit program."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Éi eller fleire filer på eininga er i bruk av programmet «%2»."
+msgstr[1] "Éi eller fleire filer på eininga er i bruk av desse programma: %2"
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "Klarte ikkje montera eininga."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Trykk for å fjerna alle einingane trygt"
+msgstr "Klarte ikkje fjerna eininga."
 
 #: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "Klarte ikkje løysa ut plata."

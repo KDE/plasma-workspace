@@ -1,13 +1,12 @@
 # Translation of plasma_lookandfeel_org.kde.lookandfeel to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2023-02-23 19:21+0100\n"
+"PO-Revision-Date: 2024-03-09 18:30+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -156,12 +155,12 @@ msgstr "Lås opp"
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(eller les av fingeravtrykket ditt)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(eller les av smartkortet ditt)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -192,8 +191,8 @@ msgstr "Neste spor"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Installerer programoppdateringar og startar på nytt om 1 sekund"
+msgstr[1] "Installerer programoppdateringar og startar på nytt om %1 sekund"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -239,43 +238,37 @@ msgstr ""
 "oppsett av fastvara."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Kvilemodus"
+msgstr "Gå i kvilemodus no"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Dvalemodus"
+msgstr "Gå i dvalemodus no"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Installer oppdateringar og start på nytt"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "Installer oppdateringar og start på nytt"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Start på nytt"
+msgstr "Start på nytt no"
 
-# Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Slå av"
+msgstr "Slå av no"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -283,10 +276,9 @@ msgid "Log Out"
 msgstr "Logg ut"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Logg ut"
+msgstr "Logg ut no"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

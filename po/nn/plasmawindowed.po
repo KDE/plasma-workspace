@@ -1,55 +1,59 @@
+# Translation of plasmawindowed to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2024 Karl Ove Hufthammer <karl@huftis.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2024-03-09 04:45\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-09 18:26+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasmawindowed.pot\n"
-"X-Crowdin-File-ID: 46295\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.4\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
 
 #: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
-msgstr "窗口化 Plasma"
+msgstr "Plasma i vindauge"
 
 #: main.cpp:46
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "启用 QML Javascript 调试器"
+msgstr "Slå på QML JavaScript-feilsøkjar"
 
 #: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
-msgstr "保持 Plasma 小程序在通知区域中存在，即使它的窗口已被关闭。"
+msgstr ""
+"Gjer at skjermelementet vert verande i systemtrauet sjølv etter at vindauget "
+"er lukka."
 
 #: main.cpp:51
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "强制加载指定的外壳插件"
+msgstr "Tving innlasting av det valde skal-tillegget."
 
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr "要打开的小程序。"
+msgstr "Skjermelementet som skal opnast."
 
 #: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr "要传递到 Plasma 小程序的参数。"
+msgstr "Argument som skal sendast til skjermelementet."
 
 #: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
-msgstr "关闭 %1"
+msgstr "Lukk %1"
