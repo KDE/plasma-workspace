@@ -6,6 +6,8 @@
 
 #define QT_FORCE_ASSERTS 1
 
+#include <unistd.h>
+
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QProcess>
