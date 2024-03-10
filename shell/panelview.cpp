@@ -824,7 +824,7 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
-    setFloating((bool)config().parent().readEntry<int>("floating", configDefaults().parent().readEntry<int>("floating", true)));
+    setFloating((bool)config().parent().readEntry<int>("floating", true));
     setThickness(configDefaults().readEntry("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
@@ -845,11 +845,8 @@ void PanelView::restore()
     // the place for this config key is changed in Plasma 5.9
     // Do NOT use readConfigValueWithFallBack
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
-    setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity",
-                                                                 configDefaults().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive)));
-    setLengthMode(
-        (LengthMode)config().parent().readEntry<int>("panelLengthMode",
-                                                     configDefaults().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable)));
+    setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive));
+    setLengthMode((LengthMode)config().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
     resizePanel();
 
     Q_EMIT maximumLengthChanged();
