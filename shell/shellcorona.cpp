@@ -1744,7 +1744,6 @@ QVariantMap ShellCorona::wallpaper(uint screenNum)
 
 void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap &parameters, uint screenNum)
 {
-    qDBusRegisterMetaType<QColor>();
     if (wallpaperPlugin.isEmpty()) {
         qCWarning(PLASMASHELL) << "setWallpaper: Missing wallpaperPlugin parameter";
         return;
@@ -1782,16 +1781,18 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
         for (const auto &itemName : items) {
             auto it = parameters.find(itemName);
             if (it != parameters.end()) {
-                auto value = it.value();
                 // for some reason QColor is not properly unmarshalled despite my efforts
-                if (itemName == QStringLiteral("Color") && value.metaType() == QMetaType::fromType<QDBusArgument>()) {
-                    QColor v;
-                    value.value<QDBusArgument>() >> v;
-                    value = v;
+                qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << it.value() << screenNum;
+                if (it.value().metaType() == QMetaType::fromType<QDBusArgument>()) {
+                    const QDBusArgument &dbusArg = get<QDBusArgument>(it.value());
+                    if (dbusArg.currentSignature() == QLatin1String("(u)")) {
+                        QColor color;
+                        dbusArg >> color;
+                        config->insert(itemName, color);
+                    }
+                } else {
+                    config->insert(itemName, it.value());
                 }
-
-                qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << value << screenNum;
-                config->insert(itemName, value);
             }
         }
         config->writeConfig();
