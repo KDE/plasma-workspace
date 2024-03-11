@@ -621,7 +621,19 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
             QVariantMap map;
             arg >> map;
 
-            m_trackId = map[QStringLiteral("mpris:trackid")].value<QDBusObjectPath>().path();
+            if (auto metaDataIt = map.constFind(QStringLiteral("mpris:trackid")); metaDataIt != map.cend()) [[likely]] {
+                if (metaDataIt->metaType() == QMetaType::fromType<QDBusObjectPath>()) {
+                    m_trackId = get<QDBusObjectPath>(*metaDataIt).path();
+                } else {
+                    // BUG 482603: work around nonstandard players like Spotify
+                    qCCritical(MPRIS2) << "mpris:trackid from" << m_identity
+                                       << "does not conform to the MPRIS2 standard. Please report the "
+                                          "issue to the developer.";
+                    m_trackId = metaDataIt->toString();
+                }
+            } else {
+                m_trackId = QString();
+            }
             m_xesamTitle = map[QStringLiteral("xesam:title")].toString();
             m_xesamUrl = map[QStringLiteral("xesam:url")].toString();
             m_xesamArtist = map[QStringLiteral("xesam:artist")].toStringList();
