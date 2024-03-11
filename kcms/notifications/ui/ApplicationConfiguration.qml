@@ -200,13 +200,13 @@ ColumnLayout {
                                 Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
 
-                                visible: model.showIcons
-                                source: model.decoration
+                                visible: model?.showIcons ?? false
+                                source: model?.decoration ?? ""
                             }
 
                             QQC2.Label {
                                 Layout.fillWidth: true
-                                text: model.display
+                                text: model?.display ?? ""
                                 textFormat: Text.PlainText
                                 elide: Text.ElideRight
                             }
@@ -218,7 +218,7 @@ ColumnLayout {
                                 implicitHeight: Kirigami.Units.largeSpacing
                                 Layout.rightMargin: Kirigami.Units.smallSpacing
                                 visible: kcm.defaultsIndicatorsVisible
-                                opacity: !model.isDefault
+                                opacity: (model?.isDefault ?? true) ? 0 : 1
                                 color: Kirigami.Theme.neutralTextColor
                             }
 
@@ -227,7 +227,7 @@ ColumnLayout {
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
 
                                 source: "dialog-information"
-                                opacity: model.actions.includes("Popup") ? 1 : 0.2
+                                opacity: model?.actions?.includes("Popup") ? 1 : 0.2
                             }
 
                             Kirigami.Icon {
@@ -235,7 +235,7 @@ ColumnLayout {
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
 
                                 source: "audio-speakers-symbolic"
-                                opacity: model.actions.includes("Sound") ? 1 : 0.2
+                                opacity: model?.actions?.includes("Sound") ? 1 : 0.2
                             }
 
                             QQC2.ToolButton {
@@ -256,10 +256,10 @@ ColumnLayout {
                             Kirigami.Heading {
                                 Layout.fillWidth: true
                                 Layout.bottomMargin: Kirigami.Units.smallSpacing
-                                visible: model.comment
+                                visible: text.length > 0
                                 level: 5
                                 opacity: 0.7
-                                text: model.comment
+                                text: model?.comment ?? ""
                                 textFormat: Text.PlainText
                                 wrapMode: Text.WordWrap
                             }
@@ -283,13 +283,13 @@ ColumnLayout {
                                 }
 
                                 QQC2.Button {
-                                    enabled: soundCheckBox.checked && model.sound
+                                    enabled: soundCheckBox.checked && model && model.sound.length > 0
                                     icon.name: "media-playback-start"
                                     onClicked: kcm.playSound(model.sound)
                                 }
                                 QQC2.TextField {
                                     enabled: soundCheckBox.checked
-                                    text: model.sound
+                                    text: model?.sound ?? ""
                                     onEditingFinished: model.sound = text
 
                                     // Make the TextField able to shrink, but keep its implicit width when is not needed
@@ -298,11 +298,11 @@ ColumnLayout {
                                     Layout.minimumWidth: Kirigami.Units.gridUnit * 5
 
                                     KCM.SettingHighlighter {
-                                        highlight: model.sound !== model.defaultSound
+                                        highlight: model?.sound !== model?.defaultSound
                                     }
                                 }
                                 QQC2.Button {
-                                    enabled: soundCheckBox.checked && model.sound !== model.defaultSound
+                                    enabled: soundCheckBox.checked && model?.sound !== model?.defaultSound
                                     icon.name: "edit-reset"
                                     onClicked: model.sound = model.defaultSound
                                 }
@@ -319,10 +319,10 @@ ColumnLayout {
                             component ActionCheckBox : QQC2.CheckBox {
                                 required property string actionName
 
-                                checked: model.actions.includes(actionName)
+                                checked: model?.actions?.includes(actionName) ?? false
                                 onToggled: {
                                     const _actions = model.actions
-                                    const idx = model.actions.indexOf(actionName)
+                                    const idx = _actions.indexOf(actionName)
                                     if (checked && idx === -1 ) {
                                         _actions.push(actionName)
                                     } else if (!checked && idx > -1) {
@@ -334,7 +334,7 @@ ColumnLayout {
                                 }
 
                                 KCM.SettingHighlighter {
-                                    highlight: checked !== model.defaultActions.includes(actionName)
+                                    highlight: checked !== model?.defaultActions?.includes(actionName)
                                 }
                             }
                         }
