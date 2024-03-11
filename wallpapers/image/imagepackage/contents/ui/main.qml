@@ -44,6 +44,14 @@ WallpaperItem {
         }
     ]
 
+    Connections {
+        enabled: root.pluginName === "org.kde.slideshow"
+        target: Qt.application
+        function onAboutToQuit() {
+            root.configuration.writeConfig(); // Save the last position
+        }
+    }
+
     Component.onCompleted: {
         // In case plasmashell crashes when the config dialog is opened
         root.configuration.PreviewImage = "null";
@@ -88,6 +96,12 @@ WallpaperItem {
             function writeImageConfig(newImage: string) {
                 configMap.Image = newImage;
             }
+        }
+    }
+
+    Component.onDestruction: {
+        if (root.pluginName === "org.kde.slideshow") {
+            root.configuration.writeConfig(); // Save the last position
         }
     }
 }
