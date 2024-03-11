@@ -120,7 +120,11 @@ KCM.SimpleKCM {
                 function onSelectedScreenChanged () { main.onScreenChanged() }
 
                 function onConfigurationChanged() { main.onWallpaperConfigurationChanged() }
+            }
 
+            Connections {
+                enabled: main.currentItem.hasOwnProperty("saveConfig")
+                target: kcm
                 function onSettingsSaved() { main.currentItem.saveConfig(); }
             }
 
