@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-08 00:39+0000\n"
-"PO-Revision-Date: 2024-02-22 09:46+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: fr\n"
+"PO-Revision-Date: 2024-03-09 09:31+0100\n"
+"Last-Translator: xavier <xyz@yahoo.com>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -76,18 +76,16 @@ msgid "Play a sound"
 msgstr "Jouer un son"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Notifications"
+msgstr "Notifications dy système…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Configuration des applications"
+msgstr "Configuration des applications..."
 
 #: ui/main.qml:77
 #, kde-format

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-10 00:39+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 19:12+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -256,13 +256,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Экранная клавиатура выключена"
 
-#: panelview.cpp:1032
+#: panelview.cpp:1029
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скрыть окно настройки панели"
 
-#: panelview.cpp:1034
+#: panelview.cpp:1031
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-10 00:39+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2024-02-14 00:56+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -244,13 +244,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Näyttönäppäimistö pois"
 
-#: panelview.cpp:1032
+#: panelview.cpp:1029
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Piilota paneelin asetukset"
 
-#: panelview.cpp:1034
+#: panelview.cpp:1031
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

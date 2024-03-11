@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-10 00:39+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 19:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -244,13 +244,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Pantailako teklatua desaktibatuta"
 
-#: panelview.cpp:1032
+#: panelview.cpp:1029
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ezkutatu panelaren konfigurazioa"
 
-#: panelview.cpp:1034
+#: panelview.cpp:1031
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

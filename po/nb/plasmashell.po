@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-10 00:39+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2015-04-28 14:02+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -237,13 +237,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr ""
 
-#: panelview.cpp:1032
+#: panelview.cpp:1029
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr ""
 
-#: panelview.cpp:1034
+#: panelview.cpp:1031
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
