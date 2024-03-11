@@ -24,6 +24,7 @@ ColumnLayout {
     property bool showOnlyEventsConfig: false
 
     readonly property string otherAppsId: "@other"
+    readonly property bool eventsConfigVisible: desktopEntry !== otherAppsId
 
     readonly property string appDisplayName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DisplayRole) || "" : ""
     readonly property string appIconName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DecorationRole) || "" : ""
@@ -34,6 +35,8 @@ ColumnLayout {
     // Top content
     Rectangle {
         Layout.fillWidth: true
+        // Ensure background spans entire height when events config isn't shown.
+        Layout.fillHeight: !configColumn.eventsConfigVisible
         implicitHeight: childrenRect.height
 
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -141,12 +144,14 @@ ColumnLayout {
 
     Kirigami.Separator {
         Layout.fillWidth: true
+        visible: configColumn.eventsConfigVisible
     }
 
     // Per-events view
     QQC2.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
+        visible: configColumn.eventsConfigVisible
 
         Kirigami.Theme.colorSet: Kirigami.Theme.View
         Kirigami.Theme.inherit: false
