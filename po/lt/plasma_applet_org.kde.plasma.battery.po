@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-03-12 02:21+0000\n"
 "PO-Revision-Date: 2024-02-03 02:03+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -216,7 +216,7 @@ msgstr ""
 "Kai akumuliatorius nėra pilnai įkrautas, rodyti piktogramoje jo įkrovos "
 "procentinę dalį"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Konfigūruoti energijos taupymą…"

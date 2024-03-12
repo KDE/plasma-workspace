@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-03-12 02:21+0000\n"
 "PO-Revision-Date: 2023-12-12 00:57+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -201,7 +201,7 @@ msgstr "&Amosar la información d'enerxía…"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Amosar el porcentaxe de batería nel iconu cuando nun ta cargada"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Configurar l'aforru d'enerxía…"

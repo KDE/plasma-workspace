@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-03-12 02:21+0000\n"
 "PO-Revision-Date: 2023-11-19 08:44+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -215,7 +215,7 @@ msgstr "Prikaži informacije o energiji…"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Pokaži odstotek baterije na ikoni, kadar ni polno napolnjena"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "Nastavi varčevanje z energijo…"

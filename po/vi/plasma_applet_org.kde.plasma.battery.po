@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-03-12 02:21+0000\n"
 "PO-Revision-Date: 2023-01-08 09:43+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -203,7 +203,7 @@ msgstr "&Hiện thông tin năng lượng…"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Hiện phần trăm pin trên biểu tượng khi chưa sạc đầy"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Cấu hình việc tiết kiệm năng lượng…"

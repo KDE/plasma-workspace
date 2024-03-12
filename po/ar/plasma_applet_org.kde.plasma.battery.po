@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:39+0000\n"
+"POT-Creation-Date: 2024-03-12 02:21+0000\n"
 "PO-Revision-Date: 2024-02-22 13:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
@@ -211,7 +211,7 @@ msgstr "أ&ظهر معلومات الطاقة..."
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "إظهار نسبة البطارية على الأيقونة إن لم يكن مشحون بالكامل"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "ا&ضبط حفظ الطّاقة..."
