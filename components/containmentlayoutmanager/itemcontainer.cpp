@@ -87,6 +87,13 @@ bool ItemContainer::dragActive() const
 
 void ItemContainer::cancelEdit()
 {
+    // if something is grabbing the mouse, make sure to release it.
+    // canceling the edit can cause items to be deleted, and Qt doesn't like deleting the item that
+    // is currently grabbing the mouse
+    if (window() && window()->mouseGrabberItem()) {
+        window()->mouseGrabberItem()->ungrabMouse();
+    }
+
     m_editModeTimer->stop();
     m_mouseDown = false;
     setEditMode(false);
