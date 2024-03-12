@@ -357,14 +357,18 @@ class MediaControllerTests(unittest.TestCase):
         """
         A cleanup function to be called after the test is completed
         """
-        if self.player_browser:
+        if self.player_browser is not None:
             self.player_browser.terminate()
             self.player_browser.wait(10)
             self.player_browser = None
-        if self.player_plasma_browser_integration:
+        if self.player_plasma_browser_integration is not None:
             self.player_plasma_browser_integration.terminate()
             self.player_plasma_browser_integration.wait(10)
             self.player_plasma_browser_integration = None
+        if self.player_b is not None:
+            self.player_b.terminate()
+            self.player_b.wait(10)
+            self.player_b = None
 
     def test_filter_plasma_browser_integration(self) -> None:
         """
@@ -410,6 +414,30 @@ class MediaControllerTests(unittest.TestCase):
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_browser.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_plasma_browser_integration.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))  # Confirm the backend does not crash
+
+        # Pause the browser and start another player to test BUG 483027
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_browser.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_plasma_browser_integration.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        player_b_json_path: str = path.join(getcwd(), "resources/player_b.json")
+        self.player_b = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_b_json_path))
+        # Start playing B to make it become favorite player
+        self.driver.find_element(AppiumBy.NAME, "Choose player automatically").click()
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        with open(player_b_json_path, "r", encoding="utf-8") as f:
+            player_b_metadata = read_player_metadata(json.load(f))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
+        session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        # Pause B to prepare for BUG 483027
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
+        # Close the pbi and the browser to test the assertion in BUG 483027 (the order is required)
+        self.player_plasma_browser_integration.terminate()
+        self.player_plasma_browser_integration.wait(10)
+        self.player_plasma_browser_integration = None
+        self.player_browser.terminate()
+        self.player_browser.wait(10)
+        self.player_browser = None
+        self.driver.find_element(AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())
 
         self._cleanup_filter_plasma_browser_integration()
 
