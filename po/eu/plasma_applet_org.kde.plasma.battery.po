@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-07 21:12+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -209,7 +209,7 @@ msgstr "Erakut&si energiari buruzko informazioa..."
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Erakutsi bateriaren ehunekoa ikonoan, osorik kargatu gabe dagoenean"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&Konfiguratu energia-kudeaketa..."

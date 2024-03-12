@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-08 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-08 09:36+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,33 +32,33 @@ msgstr "Commuta a no destorbar"
 msgid "Other Applications"
 msgstr "Altres aplicacions"
 
-#: ui/ApplicationConfiguration.qml:89
+#: ui/ApplicationConfiguration.qml:92
 #, kde-format
 msgid "Show popups"
 msgstr "Mostra els missatges emergents"
 
-#: ui/ApplicationConfiguration.qml:103
+#: ui/ApplicationConfiguration.qml:106
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Mostra en el mode no destorbar"
 
-#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Mostra a l'historial"
 
-#: ui/ApplicationConfiguration.qml:127
+#: ui/ApplicationConfiguration.qml:130
 #, kde-format
 msgid "Show notification badges"
 msgstr "Mostra els distintius de notificació"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:167
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Configuració d'esdeveniments"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:175
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -67,12 +67,12 @@ msgstr ""
 "Aquesta aplicació no permet la configuració de notificacions en una base per "
 "esdeveniment"
 
-#: ui/ApplicationConfiguration.qml:264
+#: ui/ApplicationConfiguration.qml:269
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Mostra un missatge en una finestra emergent"
 
-#: ui/ApplicationConfiguration.qml:273
+#: ui/ApplicationConfiguration.qml:278
 #, kde-format
 msgid "Play a sound"
 msgstr "Reprodueix un so"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-08 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-08 11:04+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,33 +27,33 @@ msgstr "Commuta a non disturbar"
 msgid "Other Applications"
 msgstr "Altere applicationes"
 
-#: ui/ApplicationConfiguration.qml:89
+#: ui/ApplicationConfiguration.qml:92
 #, kde-format
 msgid "Show popups"
 msgstr "Monstra popups"
 
-#: ui/ApplicationConfiguration.qml:103
+#: ui/ApplicationConfiguration.qml:106
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Monstra in modo de non disturbar"
 
-#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Monstra in chronologia"
 
-#: ui/ApplicationConfiguration.qml:127
+#: ui/ApplicationConfiguration.qml:130
 #, kde-format
 msgid "Show notification badges"
 msgstr "Monstra placas (badges) de notification"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:167
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Configura eventos"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:175
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -62,12 +62,12 @@ msgstr ""
 "Iste application non supporta configurar notificationes sur un base per "
 "evento"
 
-#: ui/ApplicationConfiguration.qml:264
+#: ui/ApplicationConfiguration.qml:269
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Monstra un message in un popup"
 
-#: ui/ApplicationConfiguration.qml:273
+#: ui/ApplicationConfiguration.qml:278
 #, kde-format
 msgid "Play a sound"
 msgstr "Reproduce un sono"

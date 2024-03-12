@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
-"PO-Revision-Date: 2024-01-19 17:41-0600\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"PO-Revision-Date: 2024-03-11 07:42-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:107
@@ -204,11 +204,10 @@ msgstr "…ਊਰਜਾ ਜਾਣਕਾਰੀ ਵੇਖਾਓ(&S)"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "ਜਦੋਂ ਬੈਟਰੀ ਪੂਰੀ ਚਾਰਜ ਨਾ ਹੋਵੇ ਤਾਂ ਆਈਕਾਨ ਉੱਤੇ ਬੈਟਰੀ ਫ਼ੀਸਦੀ ਵੇਖਾਓ"
 
-#: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#: package/contents/ui/main.qml:330
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "…ਪਾਵਰ ਬੱਚਤ ਸੰਰਚਨਾ(&C)"
+msgstr "…ਪਾਵਰ ਬੱਚਤ ਦਾ ਇੰਤਜ਼ਾਮ(&C)"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format

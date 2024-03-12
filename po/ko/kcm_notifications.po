@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-08 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-24 22:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,45 +27,45 @@ msgstr "방해 금지 모드 전환"
 msgid "Other Applications"
 msgstr "다른 앱"
 
-#: ui/ApplicationConfiguration.qml:89
+#: ui/ApplicationConfiguration.qml:92
 #, kde-format
 msgid "Show popups"
 msgstr "팝업 표시"
 
-#: ui/ApplicationConfiguration.qml:103
+#: ui/ApplicationConfiguration.qml:106
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "방해 금지 모드에서도 표시"
 
-#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "과거 기록에 표시"
 
-#: ui/ApplicationConfiguration.qml:127
+#: ui/ApplicationConfiguration.qml:130
 #, kde-format
 msgid "Show notification badges"
 msgstr "알림 배지 표시"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:167
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "이벤트 설정"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:175
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr "이 앱은 이벤트별 알림 설정을 지원하지 않습니다"
 
-#: ui/ApplicationConfiguration.qml:264
+#: ui/ApplicationConfiguration.qml:269
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "팝업에 메시지 표시"
 
-#: ui/ApplicationConfiguration.qml:273
+#: ui/ApplicationConfiguration.qml:278
 #, kde-format
 msgid "Play a sound"
 msgstr "소리 재생"

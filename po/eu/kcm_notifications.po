@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-08 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-08 19:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,33 +30,33 @@ msgstr "Txandakatu «zaratarik ez»"
 msgid "Other Applications"
 msgstr "Beste aplikazio batzuk"
 
-#: ui/ApplicationConfiguration.qml:89
+#: ui/ApplicationConfiguration.qml:92
 #, kde-format
 msgid "Show popups"
 msgstr "Erakutsi mezu gainerakorrak"
 
-#: ui/ApplicationConfiguration.qml:103
+#: ui/ApplicationConfiguration.qml:106
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Erakutsi «zaratarik ez» modua"
 
-#: ui/ApplicationConfiguration.qml:116 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Erakutsi historian"
 
-#: ui/ApplicationConfiguration.qml:127
+#: ui/ApplicationConfiguration.qml:130
 #, kde-format
 msgid "Show notification badges"
 msgstr "Erakutsi jakinarazpen txartelak"
 
-#: ui/ApplicationConfiguration.qml:162
+#: ui/ApplicationConfiguration.qml:167
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Konfiguratu gertaerak"
 
-#: ui/ApplicationConfiguration.qml:170
+#: ui/ApplicationConfiguration.qml:175
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -65,12 +65,12 @@ msgstr ""
 "Aplikazio honek ez du onartzen gertaera bakoitzeko jakinarazpenak "
 "konfiguratzea"
 
-#: ui/ApplicationConfiguration.qml:264
+#: ui/ApplicationConfiguration.qml:269
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Erakutsi mezu bat leiho-gainerako batean"
 
-#: ui/ApplicationConfiguration.qml:273
+#: ui/ApplicationConfiguration.qml:278
 #, kde-format
 msgid "Play a sound"
 msgstr "Jo soinu bat"

@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-01-03 14:00-0600\n"
+"PO-Revision-Date: 2024-03-11 07:41-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: soliddeviceengine.cpp:112
@@ -523,28 +523,20 @@ msgid "Bluetooth Battery"
 msgstr "ਬਲੂਟੁੱਥ ਦੀ ਬੈਟਰੀ"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "ਕੈਮਰਾ ਬੈਟਰੀ"
+msgstr "ਟੈਬਲੇਟ ਦੀ ਬੈਟਰੀ"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "ਫ਼ੋਨ ਦੀ ਬੈਟਰੀ"
+msgstr "ਹੈੱਡਫ਼ੋਨ ਦੀ ਬੈਟਰੀ"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "ਮਾਊਸ ਬੈਟਰੀ"
+msgstr "ਹੈੱਡਸੈੱਟ ਦੀ ਬੈਟਰੀ"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "ਮਾਊਸ ਬੈਟਰੀ"
+msgstr "ਟੱਚਪੈਡ ਦੀ ਬੈਟਰੀ"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"

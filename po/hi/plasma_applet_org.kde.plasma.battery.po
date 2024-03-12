@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-07 00:38+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2021-08-13 02:10+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -218,7 +218,7 @@ msgstr "ऊर्जा की जानकारी दिखाएं…"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "प्रतीक पर बैटरी प्रतिशत दिखाएं"
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "&Configure Energy Saving…"
 msgid "&Configure Power Management…"

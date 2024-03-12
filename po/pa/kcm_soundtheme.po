@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 17:46-0600\n"
+"PO-Revision-Date: 2024-03-11 08:01-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm_soundtheme.cpp:111
 #, kde-format
@@ -45,16 +45,12 @@ msgstr[0] "%2 ਉੱਤੇ ਅਧਾਰਿਤ"
 msgstr[1] "%2 ਉੱਤੇ ਅਧਾਰਿਤ"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Precedes a list of buttons which can be clicked to preview the "
-#| "theme's sounds. Keep it short"
-#| msgid "Preview sounds:"
+#, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr "ਸਾਊਂਡਾਂ ਦੀ ਝਲਕ:"
+msgstr "ਝਲਕ:"
 
 #: ui/main.qml:128
 #, kde-format
@@ -72,7 +68,7 @@ msgstr "\"%1\" ਥੀਮ ਲਈ ਡੈਮੋ ਆਵਾਜ਼ ਦੀ ਝਲਕ"
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "%1 ਥੀਮ ਵਿੱਚ ਸਾਊਂਡ '%2' ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ"
 
 #: ui/main.qml:190
 #, kde-format
