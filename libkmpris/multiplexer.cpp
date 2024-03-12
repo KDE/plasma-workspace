@@ -59,16 +59,12 @@ void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
     PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     connect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
 
-    if (m_activePlayer && m_activePlayer->playbackStatus() == PlaybackStatus::Playing) {
-        // Keep the current player
-        // No need to update index as the new item is inserted at the end
-        return;
-    }
-
-    if (!m_activePlayer || container->playbackStatus() == PlaybackStatus::Playing) {
-        // Use the new player
+    if (!m_activePlayer || (m_activePlayer->playbackStatus() != PlaybackStatus::Playing && container->playbackStatus() == PlaybackStatus::Playing)) {
         m_activePlayer = container;
         m_activePlayerIndex = first;
+    } else {
+        // Keep the current player
+        updateIndex(); // BUG 483027: The index might have changed when the pbi filter is invalidated
     }
 }
 
@@ -81,7 +77,8 @@ void Multiplexer::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
     if (m_activePlayerIndex == first) {
         Q_ASSERT_X(m_activePlayer.value() == container,
                    Q_FUNC_INFO,
-                   qUtf8Printable(QStringLiteral("Active player %1 does not match active index %2").arg(m_activePlayer->identity(), container->identity())));
+                   qUtf8Printable(QStringLiteral("Active player %1 does not match active index %2 (%3)")
+                                      .arg(m_activePlayer->identity(), QString::number(m_activePlayerIndex.value()), container->identity())));
         m_activePlayer = nullptr;
         // Index is updated in evaluatePlayers() later
     }
