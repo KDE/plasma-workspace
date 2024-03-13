@@ -182,6 +182,17 @@ void KCMRegionAndLang::save()
     Q_EMIT saveClicked();
 }
 
+void KCMRegionAndLang::load()
+{
+    KQuickAddons::ManagedConfigModule::load();
+    Q_EMIT loadClicked();
+}
+void KCMRegionAndLang::defaults()
+{
+    KQuickAddons::ManagedConfigModule::defaults();
+    Q_EMIT defaultsClicked();
+}
+
 void KCMRegionAndLang::saveToConfigFile()
 {
     KQuickManagedConfigModule::save();

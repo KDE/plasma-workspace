@@ -107,6 +107,22 @@ KCM.ScrollViewKCM {
                 kcm.takeLast();
             }
         }
+        function onDefaultsClicked() {
+            while (kcm.depth > 1) {
+                kcm.takeLast();
+            }
+            if (languageSelectPage.active) {
+                languageSelectPage.active = false;
+            }
+        }
+        function onLoadClicked() {
+            while (kcm.depth > 1) {
+                kcm.takeLast();
+            }
+            if (languageSelectPage.active) {
+                languageSelectPage.active = false;
+            }
+        }
         function onTakeEffectNextTime() {
             takeEffectNextTimeMsg.visible = true;
         }

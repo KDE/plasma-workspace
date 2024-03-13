@@ -34,6 +34,8 @@ class KCMRegionAndLang : public KQuickManagedConfigModule
 public:
     explicit KCMRegionAndLang(QObject *parent, const KPluginMetaData &data);
     void save() override;
+    void load() override;
+    void defaults() override;
 
     RegionAndLangSettings *settings() const;
 
@@ -50,6 +52,8 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void saveClicked();
+    void loadClicked();
+    void defaultsClicked();
     void takeEffectNextTime();
     void startGenerateLocale();
     void generateFinished();
