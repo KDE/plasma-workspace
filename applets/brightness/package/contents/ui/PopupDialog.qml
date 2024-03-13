@@ -120,10 +120,11 @@ PlasmaExtras.Representation {
             PlasmaExtras.PlaceholderMessage {
                 visible: !(screenBrightnessSlider.visible || keyboardBrightnessSlider.visible)
 
-                width: scrollView.availableWidth
+                width: scrollView.availableWidth - (Kirigami.Units.gridUnit * 4)
+                anchors.horizontalCenter: parent.horizontalCenter
 
                 iconName: "brightness-high"
-                text: i18n("No brightness controls available")
+                text: i18nc("@info:placeholder", "No brightness controls available")
             }
 
             NightColorItem {
