@@ -15,8 +15,8 @@ QProcess *startPlayer(QObject *parent)
 {
     auto process = new QProcess(parent);
     process->setProgram(QStringLiteral("python3"));
-    process->setArguments({QFINDTESTDATA(QStringLiteral("../../appiumtests/utils/mediaplayer.py")), //
-                           QFINDTESTDATA(QStringLiteral("../../appiumtests/resources/player_b.json"))});
+    process->setArguments({QFINDTESTDATA(QStringLiteral("../../appiumtests/applets/mediacontrollertest/mediaplayer.py")), //
+                           QFINDTESTDATA(QStringLiteral("../../appiumtests/applets/mediacontrollertest/player_b.json"))});
     QSignalSpy startedSpy(process, &QProcess::started);
     QSignalSpy readyReadSpy(process, &QProcess::readyReadStandardOutput);
     process->setReadChannel(QProcess::StandardOutput);

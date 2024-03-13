@@ -11,13 +11,15 @@ from __future__ import annotations
 
 import logging
 import json
+import os
 import signal
 import sys
 import threading
-from os import getcwd, getpid, path
+from os import getpid
 from typing import Any, Final
 
-sys.path.append(path.dirname(path.abspath(__file__)))
+current_folder: Final = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(current_folder, os.pardir, os.pardir, "utils"))
 
 from gi.repository import Gio, GLib
 from GLibMainLoopThread import GLibMainLoopThread
@@ -30,7 +32,7 @@ def read_player_metadata(json_dict: dict[str, Any]) -> list[dict[str, GLib.Varia
     for song in song_list:
         song_dict: dict[str, GLib.Variant] = {
             "mpris:trackid": GLib.Variant('o', song["mpris:trackid"]),
-            "xesam:url": GLib.Variant('s', "file://" + path.join(getcwd(), song["xesam:url"])),
+            "xesam:url": GLib.Variant('s', "file://" + os.path.join(current_folder, song["xesam:url"])),
             "mpris:length": GLib.Variant('x', int(song["mpris:length"])),  # ms
             "xesam:title": GLib.Variant('s', song["xesam:title"]),
             "xesam:artist": GLib.Variant('as', song["xesam:artist"]),
@@ -39,7 +41,7 @@ def read_player_metadata(json_dict: dict[str, Any]) -> list[dict[str, GLib.Varia
         if "xesam:album" in song.keys():
             song_dict["xesam:album"] = GLib.Variant('s', song["xesam:album"])
         if "mpris:artUrl" in song.keys():
-            song_dict["mpris:artUrl"] = GLib.Variant('s', "file://" + path.join(getcwd(), song["mpris:artUrl"]))
+            song_dict["mpris:artUrl"] = GLib.Variant('s', "file://" + os.path.join(current_folder, song["mpris:artUrl"]))
         if "kde:pid" in song.keys():
             song_dict["kde:pid"] = GLib.Variant('u', song["kde:pid"])
         _metadata.append(song_dict)
@@ -135,19 +137,21 @@ class Mpris2:
         """
         self.connection = connection
 
-        with open("../libkmpris/dbus/org.freedesktop.DBus.Properties.xml", encoding="utf-8") as handler:
+        dbus_folder: str = os.path.join(current_folder, os.pardir, os.pardir, os.pardir, "libkmpris", "dbus")
+
+        with open(f"{dbus_folder}/org.freedesktop.DBus.Properties.xml", encoding="utf-8") as handler:
             properties_introspection_xml: str = '\n'.join(handler.readlines())
             introspection_data = Gio.DBusNodeInfo.new_for_xml(properties_introspection_xml)
             self.__prop_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.properties_handle_method_call, None, None)
         assert self.__prop_reg_id > 0
 
-        with open("../libkmpris/dbus/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8") as handler:
+        with open(f"{dbus_folder}/org.mpris.MediaPlayer2.Player.xml", encoding="utf-8") as handler:
             player_introspection_xml: str = '\n'.join(handler.readlines())
             introspection_data = Gio.DBusNodeInfo.new_for_xml(player_introspection_xml)
             self.__player_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.player_handle_method_call, self.player_handle_get_property, self.player_handle_set_property)
         assert self.__player_reg_id != 0
 
-        with open("../libkmpris/dbus/org.mpris.MediaPlayer2.xml", encoding="utf-8") as handler:
+        with open(f"{dbus_folder}/org.mpris.MediaPlayer2.xml", encoding="utf-8") as handler:
             interface_introspection_xml: str = '\n'.join(handler.readlines())
             introspection_data = Gio.DBusNodeInfo.new_for_xml(interface_introspection_xml)
             self.__base_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.interface_handle_method_call, self.interface_handle_get_property, self.interface_handle_set_property)

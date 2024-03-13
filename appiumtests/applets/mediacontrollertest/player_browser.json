@@ -5,8 +5,8 @@
         "CanSetFullscreen": false,
         "CanRaise": true,
         "HasTrackList": true,
-        "Identity": "Audacious",
-        "DesktopEntry": "audacious",
+        "Identity": "Firefox",
+        "DesktopEntry": "firefox",
         "SupportedUriSchemes": [
             "file"
         ],
@@ -28,20 +28,18 @@
         "CanGoPrevious": false,
         "CanPlay": true,
         "CanPause": true,
-        "CanSeek": true,
+        "CanSeek": false,
         "CanControl": true
     },
     "metadata": [
         {
-            "mpris:trackid": "/audacious/1",
-            "xesam:url": "resources/Clarinet Quintet.ogg",
+            "mpris:trackid": "/firefox/1",
+            "xesam:url": "Clarinet Quintet.ogg",
             "mpris:length": 900000000,
-            "xesam:title": "Clarinet Quintet",
-            "xesam:album": "Mozart",
-            "xesam:artist": [
-                "Mozart"
-            ],
-            "mpris:artUrl": "resources/mediacontrollertests_art0.png"
+            "xesam:title": "Browser without p-b-i",
+            "xesam:album": "Browser",
+            "xesam:artist": [],
+            "mpris:artUrl": "mediacontrollertests_art0.png"
         }
     ]
 }

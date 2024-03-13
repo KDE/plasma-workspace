@@ -7,7 +7,7 @@ Files: wallpapers/image/plugin/autotests/testdata/*
 Copyright: None
 License: CC0-1.0
 
-Files: appiumtests/resources/*
+Files: appiumtests/applets/mediacontrollertest/*
 Copyright: None
 License: CC0-1.0
 

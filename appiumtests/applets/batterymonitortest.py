@@ -17,8 +17,9 @@ from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
 from selenium.webdriver.support.ui import WebDriverWait
 
-from utils.GLibMainLoopThread import GLibMainLoopThread
-from utils.OrgFreedesktopUPower import OrgFreedesktopUPower
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "utils"))
+from GLibMainLoopThread import GLibMainLoopThread
+from OrgFreedesktopUPower import OrgFreedesktopUPower
 
 assert "ENABLE_DISPLAY_DEVICE" in os.environ, "Missing ENABLE_DISPLAY_DEVICE"
 

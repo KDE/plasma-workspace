@@ -9,8 +9,8 @@
 import json
 import os
 import subprocess
+import sys
 import unittest
-from os import getcwd, path
 from tempfile import NamedTemporaryFile
 from time import sleep
 from typing import Final
@@ -25,8 +25,11 @@ from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from utils.GLibMainLoopThread import GLibMainLoopThread
-from utils.mediaplayer import (InvalidMpris2, Mpris2, read_base_properties, read_player_metadata, read_player_properties)
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest"))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "utils"))
+from GLibMainLoopThread import GLibMainLoopThread
+from mediaplayer import (InvalidMpris2, Mpris2, read_base_properties, read_player_metadata, read_player_properties)
 
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, GLib, Gtk
@@ -58,13 +61,13 @@ class MediaControllerTests(unittest.TestCase):
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("environ", {
             "QT_FATAL_WARNINGS": "0" if "LANG" in os.environ else "1",
-            "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false",
+            "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false;qt.qml.typeresolution.cycle.warning=false",
         })
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def setUp(self) -> None:
-        json_path: str = path.join(getcwd(), "resources/player_a.json")
+        json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_a.json")
         with open(json_path, "r", encoding="utf-8") as f:
             json_dict: dict[str, list | dict] = json.load(f)
         metadata: list[dict[str, GLib.Variant]] = read_player_metadata(json_dict)
@@ -258,8 +261,8 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
 
         # Start Player B, Total 2 players
-        player_b_json_path: str = path.join(getcwd(), "resources/player_b.json")
-        self.player_b = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_b_json_path))
+        player_b_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_b.json")
+        self.player_b = subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), player_b_json_path))
         player_selector: WebElement = wait.until(EC.visibility_of_element_located((AppiumBy.ACCESSIBILITY_ID, "playerSelector")))
 
         # Find player tabs based on "Identity"
@@ -325,10 +328,10 @@ class MediaControllerTests(unittest.TestCase):
         # Mpris2SourceModel::beginRemoveRows -> Mpris2SourceModel::rowsAboutToBeRemoved -> Mpris2FilterProxyModel::rowsAboutToBeRemoved -> QSortFilterProxyModelPrivate::remove_proxy_interval -> Mpris2FilterProxyModel::endRemoveRows -> Mpris2FilterProxyModel::rowsRemoved -> Multiplexer::onRowsRemoved (at this time m_container is still not updated)
         # So when the active player is the **last** player in m_container, m_filterModel->mapFromSource(sourceModel->index(sourceRow, 0)) will return an invalid index because the source index becomes stale (source_index.row() >= m->proxy_rows.size()) in the filter model.
         # Start Player C
-        player_browser_json_path: str = path.join(getcwd(), "resources/player_browser.json")
+        player_browser_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_browser.json")
         with open(player_browser_json_path, "r", encoding="utf-8") as f:
             browser_json_data = json.load(f)
-        self.player_browser = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_browser_json_path))
+        self.player_browser = subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), player_browser_json_path))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["base_properties"]["Identity"])))
 
         # A Paused, B Playing, C Playing -> Still B
@@ -383,10 +386,10 @@ class MediaControllerTests(unittest.TestCase):
         wait = WebDriverWait(self.driver, 3)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
 
-        player_browser_json_path: str = path.join(getcwd(), "resources/player_browser.json")
+        player_browser_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_browser.json")
         with open(player_browser_json_path, "r", encoding="utf-8") as f:
             browser_json_data = json.load(f)
-        self.player_browser = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_browser_json_path))
+        self.player_browser = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), player_browser_json_path])
         wait.until(EC.visibility_of_element_located((AppiumBy.ACCESSIBILITY_ID, "playerSelector")))
         browser_tab: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["base_properties"]["Identity"])))
         browser_tab.click()
@@ -394,14 +397,14 @@ class MediaControllerTests(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, browser_json_data["metadata"][0]["xesam:album"])))
         self.assertFalse(self.driver.find_element(by=AppiumBy.NAME, value="Next Track").is_enabled())
 
-        with open(path.join(getcwd(), "resources/player_plasma_browser_integration.json"), "r", encoding="utf-8") as f:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_plasma_browser_integration.json"), "r", encoding="utf-8") as f:
             pbi_json_data = json.load(f)
         pbi_json_data["metadata"][0]["kde:pid"] = self.player_browser.pid  # Simulate Plasma Browser Integration
         with NamedTemporaryFile("w", encoding="utf-8", suffix=".json", delete=False) as temp_file:
             json.dump(pbi_json_data, temp_file)
             temp_file.flush()
 
-            self.player_plasma_browser_integration = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), temp_file.name))
+            self.player_plasma_browser_integration = subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), temp_file.name))
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["base_properties"]["Identity"]))).click()
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["metadata"][0]["xesam:title"])))
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, pbi_json_data["metadata"][0]["xesam:album"])))
@@ -421,8 +424,8 @@ class MediaControllerTests(unittest.TestCase):
         # Pause the browser and start another player to test BUG 483027
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_browser.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_plasma_browser_integration.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
-        player_b_json_path: str = path.join(getcwd(), "resources/player_b.json")
-        self.player_b = subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_b_json_path))
+        player_b_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_b.json")
+        self.player_b = subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), player_b_json_path))
         # Start playing B to make it become favorite player
         self.driver.find_element(AppiumBy.NAME, "Choose player automatically").click()
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
@@ -464,8 +467,8 @@ class MediaControllerTests(unittest.TestCase):
         if self.mpris_interface is not None:
             self.mpris_interface.quit()
 
-        player_with_encoded_url_json_path: str = path.join(getcwd(), "resources/player_with_encoded_url.json")
-        with subprocess.Popen(("python3", path.join(getcwd(), "utils/mediaplayer.py"), player_with_encoded_url_json_path)) as player_with_encoded_url:
+        player_with_encoded_url_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_with_encoded_url.json")
+        with subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), player_with_encoded_url_json_path)) as player_with_encoded_url:
             wait = WebDriverWait(self.driver, 3)
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Flash Funk")))
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "League of Legends")))  # Album name deduced from folder name

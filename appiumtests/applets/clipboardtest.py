@@ -50,7 +50,7 @@ class ClipboardTest(unittest.TestCase):
             os.mkdir(klipper_folder)
             cls.addClassCleanup(lambda: shutil.rmtree(klipper_folder))
 
-        shutil.copy("../klipper/autotests/data/onetextentry.lst", klipper_data_file)
+        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry.lst"), klipper_data_file)
 
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
