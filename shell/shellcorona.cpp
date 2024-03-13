@@ -1523,6 +1523,7 @@ void ShellCorona::createWaitingPanels()
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
         cont->reactToScreenChange();
+        Q_EMIT cont->screenGeometryChanged(cont->screenGeometry());
 
         rectNotify();
 
