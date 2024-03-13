@@ -514,6 +514,9 @@ PlasmaExtras.Representation {
                     highlighted: ListView.isCurrentItem
                     Accessible.name: root.nameForZone(modelData)
                     Accessible.description: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
+
+                    // Only highlight with keyboard
+                    down: false
                     hoverEnabled: false
 
                     contentItem: RowLayout {
