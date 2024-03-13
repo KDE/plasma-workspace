@@ -15,7 +15,8 @@ import time
 from io import TextIOWrapper
 from typing import Any, Final
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+current_folder: Final = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_folder)
 
 from gi.repository import Gio, GLib
 from GLibMainLoopThread import GLibMainLoopThread
@@ -237,7 +238,7 @@ class OrgFreedesktopUPower:
         assert object_path not in self.device_properties
         assert object_path not in self.__device_reg_id_map
         self.device_properties[object_path] = properties
-        with open("../applets/batterymonitor/dbus/org.freedesktop.UPower.Device.xml", encoding="utf-8") as file_handler:
+        with open(os.path.join(current_folder, os.pardir, os.pardir, "applets/batterymonitor/dbus/org.freedesktop.UPower.Device.xml"), encoding="utf-8") as file_handler:
             introspection_data = Gio.DBusNodeInfo.new_for_xml(skip_doc(file_handler))
             reg_id: int = self.__connection.register_object(object_path, introspection_data.interfaces[0], self.device_handle_method_call, self.device_handle_get_property, self.device_handle_set_property)
             assert reg_id > 0
@@ -427,13 +428,13 @@ class OrgFreedesktopUPower:
         """
         self.__connection = connection
 
-        with open("../applets/batterymonitor/dbus/org.freedesktop.UPower.xml", encoding="utf-8") as file_handler:
+        with open(os.path.join(current_folder, os.pardir, os.pardir, "applets/batterymonitor/dbus/org.freedesktop.UPower.xml"), encoding="utf-8") as file_handler:
             introspection_data = Gio.DBusNodeInfo.new_for_xml(skip_doc(file_handler))
             self.__upower_reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.upower_handle_method_call, self.upower_handle_get_property, self.upower_handle_set_property)
             assert self.__upower_reg_id > 0
 
         assert len(self.__device_reg_id_map) == 0
-        with open("../applets/batterymonitor/dbus/org.freedesktop.UPower.Device.xml", encoding="utf-8") as file_handler:
+        with open(os.path.join(current_folder, os.pardir, os.pardir, "applets/batterymonitor/dbus/org.freedesktop.UPower.Device.xml"), encoding="utf-8") as file_handler:
             introspection_data = Gio.DBusNodeInfo.new_for_xml(skip_doc(file_handler))
             for object_path in self.device_properties:
                 reg_id: int = connection.register_object(object_path, introspection_data.interfaces[0], self.device_handle_method_call, self.device_handle_get_property, self.device_handle_set_property)

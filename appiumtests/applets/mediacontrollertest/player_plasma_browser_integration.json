@@ -5,8 +5,8 @@
         "CanSetFullscreen": false,
         "CanRaise": true,
         "HasTrackList": true,
-        "Identity": "Firefox",
-        "DesktopEntry": "firefox",
+        "Identity": "Mozilla Firefox",
+        "DesktopEntry": "chromium-browser",
         "SupportedUriSchemes": [
             "file"
         ],
@@ -24,22 +24,36 @@
         "MinimumRate": 1.0,
         "MaximumRate": 1.0,
         "Volume": 1.0,
-        "CanGoNext": false,
+        "CanGoNext": true,
         "CanGoPrevious": false,
         "CanPlay": true,
         "CanPause": true,
-        "CanSeek": false,
+        "CanSeek": true,
         "CanControl": true
     },
     "metadata": [
         {
             "mpris:trackid": "/firefox/1",
-            "xesam:url": "resources/Clarinet Quintet.ogg",
+            "xesam:url": "Clarinet Quintet.ogg",
             "mpris:length": 900000000,
-            "xesam:title": "Browser without p-b-i",
-            "xesam:album": "Browser",
+            "xesam:title": "Browser with p-b-i",
+            "xesam:album": "浏览器",
+            "xesam:artist": [
+                "ABC",
+                "DEF"
+            ],
+            "mpris:artUrl": "mediacontrollertests_art0.png",
+            "kde:pid": 0
+        },
+        {
+            "mpris:trackid": "/firefox/2",
+            "xesam:url": "Clarinet Quintet.ogg",
+            "mpris:length": 900000000,
+            "xesam:title": "Browser with p-b-i 2",
+            "xesam:album": "浏览器",
             "xesam:artist": [],
-            "mpris:artUrl": "resources/mediacontrollertests_art0.png"
+            "mpris:artUrl": "mediacontrollertests_art1.png",
+            "kde:pid": 0
         }
     ]
 }
