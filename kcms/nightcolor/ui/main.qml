@@ -436,7 +436,8 @@ KCM.SimpleKCM {
                     var diffMorEve = eve > mor ? eve - mor : mor - eve;
                     var diffMin = Math.min(diffMorEve, day - diffMorEve);
 
-                    return diffMin <= trTime && kcm.nightColorSettings.active;
+                    return diffMin <= trTime && kcm.nightColorSettings.active
+                        && kcm.nightColorSettings.mode === NightColorMode.Timings;
                 }
                 font.italic: true
                 text: i18n("Error: Transition time overlaps.")
