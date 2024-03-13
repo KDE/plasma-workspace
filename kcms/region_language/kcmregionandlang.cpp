@@ -184,12 +184,13 @@ void KCMRegionAndLang::save()
 
 void KCMRegionAndLang::load()
 {
-    KQuickAddons::ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
+    engine()->addImageProvider("flags", new FlagImageProvider);
     Q_EMIT loadClicked();
 }
 void KCMRegionAndLang::defaults()
 {
-    KQuickAddons::ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
     Q_EMIT defaultsClicked();
 }
 
@@ -395,11 +396,6 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     return localeMap;
 }
 #endif
-
-void KCMRegionAndLang::load()
-{
-    engine()->addImageProvider("flags", new FlagImageProvider);
-}
 
 #include "kcmregionandlang.moc"
 #include "moc_kcmregionandlang.cpp"

@@ -47,9 +47,6 @@ public:
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting) const;
     Q_INVOKABLE void reboot();
 
-public Q_SLOTS:
-    void load() override;
-
 Q_SIGNALS:
     void saveClicked();
     void loadClicked();
