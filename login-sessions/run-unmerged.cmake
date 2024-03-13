@@ -3,6 +3,8 @@
 
 set -ex
 
+echo 2 > /proc/sys/vm/drop_caches
+
 unshare -m -- @CMAKE_INSTALL_FULL_LIBEXECDIR@/run-unmerged-script "$@"
 
 # Refresh the overlayfs
