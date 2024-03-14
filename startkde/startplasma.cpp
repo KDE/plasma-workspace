@@ -775,12 +775,20 @@ void playStartupSound()
         return;
     }
 
-    const QUrl soundURL = [soundFilename]() -> QUrl {
+    const auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    const KConfigGroup group = config->group(QStringLiteral("Sounds"));
+    const auto soundTheme = group.readEntry("Theme", u"ocean"_s);
+    if (!group.readEntry("Enable", true)) {
+        qCDebug(PLASMA_STARTUP) << "Notification sounds are globally disabled";
+        return;
+    }
+
+    const QUrl soundURL = [soundFilename, soundTheme]() -> QUrl {
         const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
         for (const QString &dataLocation : dataLocations) {
-            // Quick and dirty sound theme resolution for ocean
+            // Quick and dirty sound theme resolution
             // https://bugs.kde.org/show_bug.cgi?id=482716
-            for (const auto &subdir : {u"/sounds/"_s, u"/sounds/ocean/stereo/"_s}) {
+            for (const auto &subdir : {u"/sounds/"_s, u"/sounds/%1/stereo/"_s.arg(soundTheme)}) {
                 for (const auto &suffix : {QString(), u".oga"_s, u".ogg"_s, u".wav"_s}) {
                     const QUrl soundURL = QUrl::fromUserInput(soundFilename + suffix, dataLocation + subdir, QUrl::AssumeLocalFile);
                     if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
