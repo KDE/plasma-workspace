@@ -369,33 +369,6 @@ void PanelConfigView::focusInEvent(QFocusEvent *ev)
     PopupPlasmaWindow::focusInEvent(ev);
 }
 
-void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
-{
-    m_panelView->setVisibilityMode(mode);
-    Q_EMIT visibilityModeChanged();
-}
-
-PanelView::VisibilityMode PanelConfigView::visibilityMode() const
-{
-    return m_panelView->visibilityMode();
-}
-
-void PanelConfigView::setOpacityMode(PanelView::OpacityMode mode)
-{
-    m_panelView->setOpacityMode(mode);
-    Q_EMIT opacityModeChanged();
-}
-
-PanelView::OpacityMode PanelConfigView::opacityMode() const
-{
-    return m_panelView->opacityMode();
-}
-
-KSvg::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
-{
-    return m_enabledBorders;
-}
-
 PanelRulerView *PanelConfigView::panelRulerView()
 {
     if (!m_panelRulerView) {

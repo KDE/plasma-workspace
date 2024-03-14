@@ -51,9 +51,6 @@ private:
 class PanelConfigView : public PlasmaQuick::PopupPlasmaWindow
 {
     Q_OBJECT
-    Q_PROPERTY(PanelView::VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
-    Q_PROPERTY(PanelView::OpacityMode opacityMode READ opacityMode WRITE setOpacityMode NOTIFY opacityModeChanged)
-    Q_PROPERTY(KSvg::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
     Q_PROPERTY(PanelRulerView *panelRulerView READ panelRulerView CONSTANT)
 
 public:
@@ -61,14 +58,6 @@ public:
     ~PanelConfigView() override;
 
     void init();
-
-    PanelView::VisibilityMode visibilityMode() const;
-    void setVisibilityMode(PanelView::VisibilityMode mode);
-
-    PanelView::OpacityMode opacityMode() const;
-    void setOpacityMode(PanelView::OpacityMode mode);
-
-    KSvg::FrameSvg::EnabledBorders enabledBorders() const;
 
     PanelRulerView *panelRulerView();
 
@@ -88,12 +77,6 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void syncGeometry();
-
-Q_SIGNALS:
-    void visibilityModeChanged();
-    void opacityModeChanged();
-    void enabledBordersChanged();
-    void screenToFollowChanged();
 
 private:
     void focusVisibilityCheck(QWindow *focusWindow);
