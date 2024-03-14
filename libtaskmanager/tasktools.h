@@ -80,7 +80,7 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
  */
 TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId,
                                               quint32 pid = 0,
-                                              KSharedConfig::Ptr config = KSharedConfig::Ptr(),
+                                              const KSharedConfig::Ptr &config = KSharedConfig::Ptr(),
                                               const QString &xWindowsWMClassName = QString());
 
 /**
@@ -93,7 +93,7 @@ TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId,
  * behavior.
  * @returns A list of KService instances.
  */
-TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig = KSharedConfig::Ptr());
+TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfig = KSharedConfig::Ptr());
 
 /**
  * Returns a list of (usually application) KService instances for the
@@ -117,7 +117,7 @@ TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid, KSharedConfig::Pt
  * @returns A list of KService instances.
  */
 TASKMANAGER_EXPORT KService::List
-servicesFromCmdLine(const QString &cmdLine, const QString &processName, KSharedConfig::Ptr rulesConfig = KSharedConfig::Ptr());
+servicesFromCmdLine(const QString &cmdLine, const QString &processName, const KSharedConfig::Ptr &rulesConfig = KSharedConfig::Ptr());
 
 /**
  * Returns an application id for an URL using the preferred:// scheme.

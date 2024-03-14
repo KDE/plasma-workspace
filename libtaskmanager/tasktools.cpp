@@ -171,8 +171,9 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return data;
 }
 
-QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr rulesConfig, const QString &xWindowsWMClassName)
+QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfig::Ptr &rulesConfig, const QString &xWindowsWMClassName)
 {
+    static_assert(!std::is_trivially_copy_assignable_v<KSharedConfig::Ptr>);
     if (!rulesConfig) {
         return QUrl();
     }
@@ -473,7 +474,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
     return url;
 }
 
-KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
+KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfig)
 {
     if (pid == 0) {
         return KService::List();
@@ -530,7 +531,7 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
     return servicesFromCmdLine(cmdLine, proc.name(), rulesConfig);
 }
 
-KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &processName, KSharedConfig::Ptr rulesConfig)
+KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &processName, const KSharedConfig::Ptr &rulesConfig)
 {
     QString cmdLine = _cmdLine;
     KService::List services;
