@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 02:21+0000\n"
+"POT-Creation-Date: 2024-03-14 03:06+0000\n"
 "PO-Revision-Date: 2024-02-22 13:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
@@ -199,12 +199,12 @@ msgstr[5] "%1 دقيقة"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "الإدخال دقائق أقل شيء 1 و أكثر شيء 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:435
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "خطأ: يتداخل الوقت الانتقالي. "
 
-#: ui/main.qml:456
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

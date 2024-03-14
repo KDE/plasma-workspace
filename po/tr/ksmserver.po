@@ -5,13 +5,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2022.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-11-04 13:08+0300\n"
+"PO-Revision-Date: 2024-03-13 20:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "Oturumu kapatma, '%1' tarafından iptal edildi"
+msgstr "Oturumu kapatma '%1' tarafından iptal edildi"
 
 #: main.cpp:67
 #, kde-format
@@ -64,7 +64,7 @@ msgstr "$HOME dizinine (%2) yazarken '%1' hatası oluştu"
 #: main.cpp:104 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
-msgstr "'%1' üzerine yazma izni yok."
+msgstr "'%1' için yazma izni yok."
 
 #: main.cpp:106 main.cpp:145
 #, kde-format

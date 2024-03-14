@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 02:21+0000\n"
+"POT-Creation-Date: 2024-03-14 03:06+0000\n"
 "PO-Revision-Date: 2023-12-24 09:36-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -192,12 +192,12 @@ msgstr[1] "%1 ਮਿੰਟ"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "ਇਨਪੁੱਟ ਮਿੰਟ - ਘੱਟੋ-ਘੱਟ 1, ਵੱਧ ਤੋਂ ਵੱਧ 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:435
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "ਗ਼ਲਤੀ: ਬਦਲਾਅ ਸਮੇਂ ਇੱਕ ਦੂਜੇ ਉੱਤੇ ਹਨ।"
 
-#: ui/main.qml:456
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 02:21+0000\n"
+"POT-Creation-Date: 2024-03-14 03:06+0000\n"
 "PO-Revision-Date: 2023-11-30 18:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -201,12 +201,12 @@ msgstr[1] "%1 minutoj"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Enigo minutoj - min. 1, maks. 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:435
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Eraro: Transira tempo interkovras."
 
-#: ui/main.qml:456
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

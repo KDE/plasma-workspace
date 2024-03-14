@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 02:21+0000\n"
+"POT-Creation-Date: 2024-03-14 03:06+0000\n"
 "PO-Revision-Date: 2024-02-09 19:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -193,12 +193,12 @@ msgstr[0] "%1분"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "분 단위로 입력 - 최소 1, 최대 600"
 
-#: ui/main.qml:434
+#: ui/main.qml:435
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "오류: 전환 시간이 겹칩니다."
 
-#: ui/main.qml:456
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

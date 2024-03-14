@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 02:21+0000\n"
+"POT-Creation-Date: 2024-03-14 03:06+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -198,12 +198,12 @@ msgstr[3] ""
 msgid "Input minutes - min. 1, max. 600"
 msgstr "(у минутима, мин. 1, макс. 600)"
 
-#: ui/main.qml:434
+#: ui/main.qml:435
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Грешка: време прелаза се преклапа."
 
-#: ui/main.qml:456
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

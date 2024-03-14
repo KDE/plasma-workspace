@@ -4,7 +4,7 @@
 #
 #
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2007, 2011, 2012.
-# Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2009, 2010, 2011, 2012.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2012, 2024 Jure Repinc <jlp@holodeck1.com>
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015, 2016, 2017.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022, 2023.
 # Martin Srebotnjak <miles@filmsi.net>, 2022.
@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 02:21+0000\n"
-"PO-Revision-Date: 2023-11-19 08:44+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-03-13 16:29+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -23,13 +23,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:166
 #, kde-format
@@ -37,13 +37,13 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"Zmogljivost te baterije je samo %1% in jo je potrebno zamenjati. Obrnite se "
-"na proizvajalca računalnika."
+"Zmogljivost te baterije je samo %1 % bi jo bilo potrebno zamenjati. Obrnite "
+"se na proizvajalca računalnika."
 
 #: package/contents/ui/BatteryItem.qml:185
 #, kde-format
 msgid "Time To Full:"
-msgstr "Čas do napolnjenja:"
+msgstr "Čas do polnosti:"
 
 #: package/contents/ui/BatteryItem.qml:186
 #, kde-format
@@ -54,29 +54,29 @@ msgstr "Preostali čas:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr "Ocenjevanje…"
+msgstr "Ocenjevanje …"
 
 #: package/contents/ui/BatteryItem.qml:203
 #, kde-format
 msgid "Battery Health:"
-msgstr "Zdravje baterije:"
+msgstr "Zmogljivost baterije:"
 
 #: package/contents/ui/BatteryItem.qml:209
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:223
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr "Vaša baterija je nastavljena za polnjenje do približno %1%."
+msgstr "Vaša baterija je nastavljena za polnjenje do približno %1 %."
 
 #: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
 #: package/contents/ui/main.qml:142
@@ -108,32 +108,32 @@ msgstr "Ni prisotna"
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Power and Battery"
-msgstr "Moč in baterija"
+msgstr "Energija in baterija"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
 msgid "Power Management"
-msgstr "Upravljanje porabe"
+msgstr "Upravljanje z energijo"
 
 #: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Baterija na %1%, se ne polni"
+msgstr "Baterija na %1 %, se ne polni"
 
 #: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Baterija na %1%, je priključena, a se še vedno prazni"
+msgstr "Baterija na %1 %, je priključena, a se še vedno prazni"
 
 #: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Baterija na %1%, se polni"
+msgstr "Baterija na %1 %, se polni"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Baterija na %1%"
+msgstr "Baterija na %1 %"
 
 #: package/contents/ui/main.qml:164
 #, kde-format
@@ -171,44 +171,46 @@ msgstr "Samodejno spanje in zaklepanje zaslona sta onemogočena"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "%1 aplikacija je zahtevala aktiviranje učinkovitega načina"
-msgstr[1] "%1 aplikaciji sta zahtevali aktiviranje učinkovitega načina"
-msgstr[2] "%1 aplikacije so zahtevale aktiviranje učinkovitega načina"
-msgstr[3] "%1 aplikacij je zahtevalo aktiviranje učinkovitega načina"
+msgstr[0] "%1 programov je zahtevalo vklop načina zmogljivosti"
+msgstr[1] "%1 program je zahteval vklop načina zmogljivosti"
+msgstr[2] "%1 programa sta zahtevala vklop načina zmogljivosti"
+msgstr[3] "%1 programi so zahtevali vklop načina zmogljivosti"
 
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgid "System is in Performance mode"
-msgstr "Sistem je v učinkovitem načinu"
+msgstr "Sistem je v načinu zmogljivosti"
 
 #: package/contents/ui/main.qml:196
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "%1 aplikacija je zahtevala aktiviranje varčevalnega načina"
-msgstr[1] "%1 aplikaciji sta zahtevali aktiviranje varčevalnega načina"
-msgstr[2] "%1 aplikacije so zahtevale aktiviranje varčevalnega načina"
-msgstr[3] "%1 aplikacij je zahtevalo aktiviranje varčevalnega načina"
+msgstr[0] "%1 programov je zahtevalo vklop načina varčevanja z energijo"
+msgstr[1] "%1 program je zahteval vklop načina varčevanja z energijo"
+msgstr[2] "%1 programa sta zahtevala vklop načina varčevanja z energijo"
+msgstr[3] "%1 programi so zahtevali vklop načina varčevanja z energijo"
 
 #: package/contents/ui/main.qml:200
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr "Sistem je v načinu varčevanja"
+msgstr "Sistem je v načinu varčevanja z energijo"
 
 #: package/contents/ui/main.qml:260
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr "Aplet za baterijo je omogočil sistemsko inhibicijo"
+msgstr ""
+"Programček za baterijo je omogočil sistemsko preprečevanje varčevanja z "
+"energijo"
 
 #: package/contents/ui/main.qml:299
 #, kde-format
 msgid "Failed to activate %1 mode"
-msgstr "Aktiviranje načina %1 ni uspelo"
+msgstr "Vklop načina %1 ni uspel"
 
 #: package/contents/ui/main.qml:311
 #, kde-format
 msgid "&Show Energy Information…"
-msgstr "Prikaži informacije o energiji…"
+msgstr "&Pokaži podrobnosti o energiji …"
 
 #: package/contents/ui/main.qml:317
 #, kde-format
@@ -240,10 +242,10 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "%1 program trenutno preprečuje spanje in zaklepanje zaslona:"
-msgstr[1] "%1 programa trenutno preprečujeta spanje in zaklepanje zaslona:"
-msgstr[2] "%1 programi trenutno preprečujejo spanje in zaklepanje zaslona:"
-msgstr[3] "%1 programov trenutno preprečuje spanje in zaklepanje zaslona:"
+msgstr[0] "%1 programov trenutno preprečuje spanje in zaklepanje zaslona:"
+msgstr[1] "%1 program trenutno preprečuje spanje in zaklepanje zaslona:"
+msgstr[2] "%1 programa trenutno preprečujeta spanje in zaklepanje zaslona:"
+msgstr[3] "%1 programi trenutno preprečujejo spanje in zaklepanje zaslona:"
 
 #: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
@@ -258,7 +260,7 @@ msgstr "%1 trenutno preprečuje spanje in zaklepanje zaslona (neznan razlog)"
 #: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "Aplikacija trenutno preprečuje spanje in zaklepanje zaslona (%1)"
+msgstr "Program trenutno preprečuje spanje in zaklepanje zaslona (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
@@ -266,7 +268,7 @@ msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"Aplikacija trenutno preprečuje spanje in zaklepanje zaslona (neznan razlog)"
+"Program trenutno preprečuje spanje in zaklepanje zaslona (neznan razlog)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -278,24 +280,24 @@ msgstr "%1: %2"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
-msgstr "%1: neznan vzrok"
+msgstr "%1: neznan razlog"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr "Neznana aplikacija: %1"
+msgstr "Neznan program: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:122
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "Neznana aplikacija: neznan vzrok"
+msgstr "Neznan program: neznan razlog"
 
 #: package/contents/ui/PowerProfileItem.qml:37
 #, kde-format
 msgid "Power Save"
-msgstr "Ohranjanje energije"
+msgstr "Varčevanje z energijo"
 
 #: package/contents/ui/PowerProfileItem.qml:41
 #, kde-format
@@ -305,7 +307,7 @@ msgstr "Uravnoteženo"
 #: package/contents/ui/PowerProfileItem.qml:45
 #, kde-format
 msgid "Performance"
-msgstr "Učinkovitost"
+msgstr "Zmogljivost"
 
 #: package/contents/ui/PowerProfileItem.qml:62
 #, kde-format
@@ -324,19 +326,19 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
-"Učinkovitost je bila zmanjšana, da bi se zmanjšalo gretje, ker je računalnik "
-"ugotovil, da se nahaja v vašem naročju."
+"Način zmogljivosti je bil onemogočen, da bi se zmanjšalo gretje, ker je "
+"računalnik zaznal, da se morda nahaja v vašem naročju."
 
 #: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
-msgstr "Učinkovit način ni na voljo, ker je računalnik že preveč ogret."
+msgstr "Način zmogljivosti ni na voljo, ker je računalnik že preveč segret."
 
 #: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid "Performance mode is unavailable."
-msgstr "Učinkovit način ni na voljo."
+msgstr "Način zmogljivosti ni na voljo."
 
 #: package/contents/ui/PowerProfileItem.qml:207
 #, kde-format
@@ -344,27 +346,27 @@ msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
 "has detected that it may be sitting on your lap."
 msgstr ""
-"Učinkovitost je lahko zmanjšana, da bi se zmanjšalo gretje, ker je "
-"računalnik ugotovil, da se nahaja v vašem naročju."
+"Zmogljivost je lahko zmanjšana, da bi se zmanjšalo gretje, ker je računalnik "
+"zaznal, da se morda nahaja v vašem naročju."
 
 #: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
-msgstr "Učinkovitost je lahko zmanjšana, ker je računalnik preveč ogret."
+msgstr "Zmogljivost je lahko zmanjšana, ker je računalnik preveč segret."
 
 #: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced."
-msgstr "Učinkovitost je lahko zmanjšana."
+msgstr "Zmogljivost je lahko zmanjšana."
 
 #: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
-msgstr[0] "%1 aplikacija je zahtevala aktiviranje %2:"
-msgstr[1] "%1 aplikaciji sta zahtevali aktiviranje %2:"
-msgstr[2] "%1 aplikacije so zahtevale aktiviranje %2:"
-msgstr[3] "%1 aplikacij je zahtevalo aktiviranje %2:"
+msgstr[0] "%1 programov je zahtevalo vklop %2:"
+msgstr[1] "%1 program je zahteval vklop %2:"
+msgstr[2] "%1 programa sta zahtevala vklop %2:"
+msgstr[3] "%1 programi so zahtevali vklop %2:"
 
 #: package/contents/ui/PowerProfileItem.qml:240
 #, kde-format
@@ -381,9 +383,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-"Profili moči so morda podprti na vaši napravi.<nl/>Poskusite namestiti paket "
-"<command>power-profiles-daemon</command> z upravljalnikom paketov vaše "
-"distribucije in znova zaženite sistem."
+"Profili upravljanja z energijo so morda podprti na vaši napravi.<nl/"
+">Poskusite namestiti  paket <command>power-profiles-daemon</command> z "
+"upravljalnikom paketov vaše distribucije in znova zaženite sistem."
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

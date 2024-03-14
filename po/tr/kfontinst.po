@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2024-03-08 19:51+0300\n"
+"PO-Revision-Date: 2024-03-13 20:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -154,7 +154,7 @@ msgstr "Basit yazıtipi görüntüleyicisi"
 #: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004–2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:47
 #, kde-format
@@ -408,7 +408,7 @@ msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
-"<p><b>%1</b>' ögesini kaldırmayı gerçekten istiyor musunuz?</p><p><i>Bu "
+"<p>“<b>%1</b>” ögesini kaldırmayı gerçekten istiyor musunuz?</p><p><i>Bu "
 "işlem asıl yazıtiplerini değil, yalnızca grubu kaldıracaktır.</i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
@@ -467,7 +467,7 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Tüm Yazıtipleri</i> sisteminizde kurulu olan tüm yazıtiplerini içerir "
-"- hem \"Sistem\" hem de \"Kişisel\" yazıtipleri.</li><li><i>Sistem</i> "
+"— hem \"Sistem\" hem de \"Kişisel\" yazıtipleri.</li><li><i>Sistem</i> "
 "sistem geneli için kurulmuş yazıtiplerini içerir (tüm kullanıcılar "
 "tarafından kullanılabilirler).</li><li><i>Kişisel</i> kişisel "
 "yazıtiplerinizi içerir.</li><li><i>Sınıflandırılmamış</i> ise henüz bir "
@@ -1098,27 +1098,27 @@ msgstr "Şelale"
 #: kcmfontinst/PrintDialog.cpp:42
 #, kde-format
 msgid "12pt"
-msgstr "12pt"
+msgstr "12 pt"
 
 #: kcmfontinst/PrintDialog.cpp:43
 #, kde-format
 msgid "18pt"
-msgstr "18pt"
+msgstr "18 pt"
 
 #: kcmfontinst/PrintDialog.cpp:44
 #, kde-format
 msgid "24pt"
-msgstr "24pt"
+msgstr "24 pt"
 
 #: kcmfontinst/PrintDialog.cpp:45
 #, kde-format
 msgid "36pt"
-msgstr "36pt"
+msgstr "36 pt"
 
 #: kcmfontinst/PrintDialog.cpp:46
 #, kde-format
 msgid "48pt"
-msgstr "48pt"
+msgstr "48 pt"
 
 #: kio/KioFonts.cpp:206
 #, kde-format
@@ -1157,7 +1157,7 @@ msgstr "Üzgünüm \"%1\" ve \"%2\" dışındaki yazıtiplerini kaldıramazsın�
 #: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
-msgstr "Lütfen \"%1\" veya \"%2\"'yi belirtin."
+msgstr "Lütfen \"%1\" veya \"%2\"yi belirtin."
 
 #: kio/KioFonts.cpp:499
 #, kde-format
