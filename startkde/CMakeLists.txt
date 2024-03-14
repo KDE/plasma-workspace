@@ -24,7 +24,7 @@ target_link_libraries(startplasma PUBLIC
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package
-    ${PHONON_LIBRARIES}
+    Canberra::Canberra
     PW::KWorkspace
     lookandfeelmanager
 )

@@ -1,10 +1,16 @@
 /*
     SPDX-FileCopyrightText: 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
+    SPDX-FileCopyrightText: 2014-2015 Martin Klapetek <mklapetek@kde.org>
+    SPDX-FileCopyrightText: 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
+    SPDX-FileCopyrightText: 2024 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include <config-startplasma.h>
+
+#include <canberra.h>
 
 #include <ranges>
 
@@ -23,10 +29,6 @@
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 #include <KSharedConfig>
-
-#include <phonon/audiooutput.h>
-#include <phonon/mediaobject.h>
-#include <phonon/mediasource.h>
 
 #include <unistd.h>
 
@@ -761,53 +763,104 @@ void waitForKonqi()
     }
 }
 
+namespace
+{
+void canberraFinishCallback(ca_context *c, uint32_t /*id*/, int error_code, void *userdata)
+{
+    QMetaObject::invokeMethod(
+        qApp,
+        [c, error_code] {
+            if (error_code != CA_SUCCESS) {
+                qCWarning(PLASMA_STARTUP) << "Failed to cancel canberra context for audio notification:" << ca_strerror(error_code);
+            }
+            ca_context_destroy(c);
+        },
+        Qt::QueuedConnection);
+    // WARNING: do not do anything else here. If you need more logic then put it into a userdata object please.
+    // WARNING: best invokeMethod into a QObject to ensure things run on the gui thread, we must not destroy in the callback!
+}
+} // namespace
+
 void playStartupSound()
 {
+    // This features a bit of duplication from KNotifications. Why we need to do this stuff manually was never
+    // documented, I am left guessing that it is this way so we don't end up talking to plasmashell while it is initing.
+
     KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QStringLiteral("startkde"));
     const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
     if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
         // no startup sound configured
         return;
     }
-    Phonon::AudioOutput *audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory);
 
-    QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
-    if (soundFilename.isEmpty()) {
+    QString soundName = notifyConfig.readEntry(QStringLiteral("Sound"));
+    if (soundName.isEmpty()) {
         qCWarning(PLASMA_STARTUP) << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
-        audioOutput->deleteLater();
         return;
     }
 
-    const QUrl soundURL = [soundFilename]() -> QUrl {
-        const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-        for (const QString &dataLocation : dataLocations) {
-            // Quick and dirty sound theme resolution for ocean
-            // https://bugs.kde.org/show_bug.cgi?id=482716
-            for (const auto &subdir : {u"/sounds/"_s, u"/sounds/ocean/stereo/"_s}) {
-                for (const auto &suffix : {QString(), u".oga"_s, u".ogg"_s, u".wav"_s}) {
-                    const QUrl soundURL = QUrl::fromUserInput(soundFilename + suffix, dataLocation + subdir, QUrl::AssumeLocalFile);
-                    if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
-                        return soundURL;
-                    }
-                    if (!soundURL.isLocalFile() && soundURL.isValid()) {
-                        return soundURL;
-                    }
-                }
-            }
+    const auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    const KConfigGroup group = config->group(QStringLiteral("Sounds"));
+    const auto soundTheme = group.readEntry("Theme", u"ocean"_s);
+    if (!group.readEntry("Enable", true)) {
+        qCDebug(PLASMA_STARTUP) << "Notification sounds are globally disabled";
+        return;
+    }
+
+    // Legacy implementation. Fallback lookup for a full path within the `$XDG_DATA_LOCATION/sounds` dirs
+    QUrl fallbackUrl;
+    const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for (const QString &dataLocation : dataLocations) {
+        fallbackUrl = QUrl::fromUserInput(soundName, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
+        if (fallbackUrl.isLocalFile() && QFileInfo::exists(fallbackUrl.toLocalFile())) {
+            break;
         }
-        return {};
-    }();
-    if (soundURL.isEmpty()) {
-        qCWarning(PLASMA_STARTUP) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
-        audioOutput->deleteLater();
+        if (!fallbackUrl.isLocalFile() && fallbackUrl.isValid()) {
+            break;
+        }
+        fallbackUrl.clear();
+    }
+
+    ca_context *context = nullptr;
+    // context dangles a bit. Gets cleaned up in the finish callback!
+    if (int ret = ca_context_create(&context); ret != CA_SUCCESS) {
+        qCWarning(PLASMA_STARTUP) << "Failed to initialize canberra context for startup sound:" << ca_strerror(ret);
         return;
     }
 
-    Phonon::MediaObject *mediaObject = new Phonon::MediaObject();
-    Phonon::createPath(mediaObject, audioOutput);
-    QObject::connect(mediaObject, &Phonon::MediaObject::finished, audioOutput, &QObject::deleteLater);
-    QObject::connect(mediaObject, &Phonon::MediaObject::finished, mediaObject, &QObject::deleteLater);
+    // We aren't actually plasmashell, for all intents and purpose we are part of it though from the user perspective.
+    if (int ret = ca_context_change_props(context,
+                                          CA_PROP_APPLICATION_NAME,
+                                          "plasmashell",
+                                          CA_PROP_APPLICATION_ID,
+                                          "org.kde.plasmashell.desktop",
+                                          CA_PROP_APPLICATION_ICON_NAME,
+                                          "plasmashell",
+                                          nullptr);
+        ret != CA_SUCCESS) {
+        qCWarning(PLASMA_STARTUP) << "Failed to set application properties on canberra context for startup sound:" << ca_strerror(ret);
+    }
 
-    mediaObject->setCurrentSource(soundURL);
-    mediaObject->play();
+    ca_proplist *props = nullptr;
+    ca_proplist_create(&props);
+    const auto proplistDestroy = qScopeGuard([props] {
+        ca_proplist_destroy(props);
+    });
+
+    const QByteArray soundNameBytes = soundName.toUtf8();
+    const QByteArray soundThemeBytes = soundTheme.toUtf8();
+    const QByteArray fallbackUrlBytes = QFile::encodeName(fallbackUrl.toLocalFile());
+
+    ca_proplist_sets(props, CA_PROP_EVENT_ID, soundNameBytes.constData());
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, soundThemeBytes.constData());
+    // Fallback to filename
+    if (!fallbackUrl.isEmpty()) {
+        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, fallbackUrlBytes.constData());
+    }
+    // We only ever play this sound once, no need to cache it.
+    ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "never");
+
+    if (int ret = ca_context_play_full(context, 0 /* id */, props, canberraFinishCallback, nullptr); ret != CA_SUCCESS) {
+        qCWarning(PLASMA_STARTUP) << "Failed to play startup sound with canberra:" << ca_strerror(ret);
+    }
 }
