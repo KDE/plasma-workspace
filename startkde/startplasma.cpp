@@ -773,17 +773,25 @@ void playStartupSound()
         return;
     }
 
-    QUrl soundURL;
-    const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-    for (const QString &dataLocation : dataLocations) {
-        soundURL = QUrl::fromUserInput(soundFilename, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
-        if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
-            break;
-        } else if (!soundURL.isLocalFile() && soundURL.isValid()) {
-            break;
+    const QUrl soundURL = [soundFilename]() -> QUrl {
+        const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+        for (const QString &dataLocation : dataLocations) {
+            // Quick and dirty sound theme resolution for ocean
+            // https://bugs.kde.org/show_bug.cgi?id=482716
+            for (const auto &subdir : {u"/sounds/"_s, u"/sounds/ocean/stereo/"_s}) {
+                for (const auto &suffix : {QString(), u".oga"_s, u".ogg"_s, u".wav"_s}) {
+                    const QUrl soundURL = QUrl::fromUserInput(soundFilename + suffix, dataLocation + subdir, QUrl::AssumeLocalFile);
+                    if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
+                        return soundURL;
+                    }
+                    if (!soundURL.isLocalFile() && soundURL.isValid()) {
+                        return soundURL;
+                    }
+                }
+            }
         }
-        soundURL.clear();
-    }
+        return {};
+    }();
     if (soundURL.isEmpty()) {
         qCWarning(PLASMA_STARTUP) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
         audioOutput->deleteLater();
