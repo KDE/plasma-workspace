@@ -568,9 +568,8 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
         if (propName == QLatin1String("Identity")) {
             updateSingleProperty(m_identity, it.value(), QMetaType::QString, &PlayerContainer::identityChanged);
         } else if (propName == QLatin1String("DesktopEntry")) {
-            QString iconName = KDesktopFile(it.value().toString() + QLatin1String(".desktop")).readIcon();
-            if (!iconName.isEmpty()) {
-                m_iconName = iconName;
+            if (QString iconName = KDesktopFile(it.value().toString() + QLatin1String(".desktop")).readIcon(); !iconName.isEmpty()) {
+                m_iconName = std::move(iconName);
             }
             updateSingleProperty(m_desktopEntry, it.value(), QMetaType::QString, &PlayerContainer::desktopEntryChanged);
         } else if (propName == QLatin1String("SupportedUriSchemes")) {
