@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-02-27 13:55+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2024-03-13 20:37+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: ui/main.qml:35
 #, kde-format
@@ -41,7 +42,7 @@ msgid ""
 "identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
 "privacypolicy-apps.php'>our privacy policy here.</link>"
 msgstr ""
-"KDE'nin Plasma'yı nasıl kullandığınıza dair bilgileri paylaşarak Plasma'nın "
+"KDE Plasma’yı nasıl kullandığınıza dair bilgileri paylaşarak Plasma’nın "
 "geliştirmesine yardımcı olabilirsiniz, böylece sizin için önemli olan "
 "şeylere odaklanabiliriz. <nl/><nl/>Bu bilgilere katkıda bulunmak isteğe "
 "bağlıdır ve tamamen anonimdir. Kişisel verilerinizi, kullandığınız "

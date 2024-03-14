@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-19 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 07:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -296,7 +296,7 @@ msgstr "ਅਣਪਛਾਤਾ"
 msgid "Default for System"
 msgstr "ਸਿਸਟਮ ਲਈ ਮੂਲ"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:271
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:287
 #, kde-format
 msgid "Default"
 msgstr "ਮੂਲ"
@@ -509,50 +509,50 @@ msgstr ""
 "ਲੋੜੀਦੇ ਲੋਕੇਲ ਅਤੇ ਭਾਸ਼ਾ ਸਹਾਇਕ ਫ਼ਾਇਲਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਚੁੱਕਾ ਹੈ। ਹੁਣ ਕੰਪਿਊਟਰ ਨੂੰ ਬੰਦ ਕਰਨਾ ਠੀਕ "
 "ਹੈ।"
 
-#: ui/main.qml:153
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "…ਸੋਧੋ"
 
-#: ui/main.qml:193
+#: ui/main.qml:209
 #, kde-format
 msgid "Numbers"
 msgstr "ਅੰਕ"
 
-#: ui/main.qml:195
+#: ui/main.qml:211
 #, kde-format
 msgid "Time"
 msgstr "ਸਮਾਂ"
 
-#: ui/main.qml:197
+#: ui/main.qml:213
 #, kde-format
 msgid "Currency"
 msgstr "ਮੁਦਰਾ"
 
-#: ui/main.qml:199
+#: ui/main.qml:215
 #, kde-format
 msgid "Measurements"
 msgstr "ਮਾਪ"
 
-#: ui/main.qml:201
+#: ui/main.qml:217
 #, kde-format
 msgid "Paper Size"
 msgstr "ਸਫ਼ੇ ਦਾ ਆਕਾਰ"
 
-#: ui/main.qml:203
+#: ui/main.qml:219
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "ਐਡਰੈੱਸ"
 
-#: ui/main.qml:205
+#: ui/main.qml:221
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: ui/main.qml:207
+#: ui/main.qml:223
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

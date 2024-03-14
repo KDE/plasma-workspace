@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-03-01 15:38+0300\n"
+"PO-Revision-Date: 2024-03-13 20:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr ""
 #: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
-msgstr "X11'de yazıtipi DPI'sini zorla"
+msgstr "X11’de yazıtipi DPI’sini zorla"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -338,7 +338,7 @@ msgstr ""
 #: ui/main.qml:383
 #, kde-format
 msgid "Force font DPI:"
-msgstr "Yazıtipi DPI'sini zorla:"
+msgstr "Yazıtipi DPI’sini zorla:"
 
 #: ui/main.qml:411
 #, kde-kuit-format
@@ -352,7 +352,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 "<para>Ekrandaki yazıtiplerinin yazdırıldıklarında fiziksel boyutlarıyla "
-"eşleşmesini sağlamak için ekranınızın DPI'sını buraya girin. Bu seçeneği "
+"eşleşmesini sağlamak için ekranınızın DPI’sini buraya girin. Bu seçeneği "
 "öntanımlı değerinden değiştirmek birçok uygulamayla çakışacaktır; bazı "
 "simgeler ve görseller beklendiği gibi ölçeklenmeyebilir.</para><para>Metin "
 "boyutunu artırmak için yukarıdaki yazıtiplerinin boyutunu değiştirin. Her "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-19 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2023-02-19 17:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -299,7 +299,7 @@ msgstr "Неизвестно"
 msgid "Default for System"
 msgstr "По умолчанию для системы"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:271
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:287
 #, kde-format
 msgid "Default"
 msgstr "По умолчанию"
@@ -514,50 +514,50 @@ msgstr ""
 "Необходимые файлы локали и языковой поддержки установлены. Теперь можно "
 "безопасно выключить компьютер."
 
-#: ui/main.qml:153
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Изменить…"
 
-#: ui/main.qml:193
+#: ui/main.qml:209
 #, kde-format
 msgid "Numbers"
 msgstr "Числа"
 
-#: ui/main.qml:195
+#: ui/main.qml:211
 #, kde-format
 msgid "Time"
 msgstr "Время"
 
-#: ui/main.qml:197
+#: ui/main.qml:213
 #, kde-format
 msgid "Currency"
 msgstr "Валюта"
 
-#: ui/main.qml:199
+#: ui/main.qml:215
 #, kde-format
 msgid "Measurements"
 msgstr "Числовые значения"
 
-#: ui/main.qml:201
+#: ui/main.qml:217
 #, kde-format
 msgid "Paper Size"
 msgstr "Размер бумаги"
 
-#: ui/main.qml:203
+#: ui/main.qml:219
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Адрес"
 
-#: ui/main.qml:205
+#: ui/main.qml:221
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Имя"
 
-#: ui/main.qml:207
+#: ui/main.qml:223
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

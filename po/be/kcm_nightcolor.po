@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -211,12 +211,12 @@ msgstr[3] "%1 хвіліны"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Увод хвілін - мін. 1, макс. 600"
 
-#: ui/main.qml:442
+#: ui/main.qml:443
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Памылка: час пераходу перакрывае значэнне."
 
-#: ui/main.qml:465
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

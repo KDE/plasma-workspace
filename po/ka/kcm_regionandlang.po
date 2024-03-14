@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-19 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2023-03-17 05:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -297,7 +297,7 @@ msgstr "უცნობი"
 msgid "Default for System"
 msgstr "ნაგულისხმები სისტემისთვის"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:271
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:287
 #, kde-format
 msgid "Default"
 msgstr "სტანდარტული"
@@ -511,50 +511,50 @@ msgstr ""
 "საჭირო ენები და მათი მხარდაჭერის ფაილები წარმატებით იქნა დაყენებული. ახლა "
 "კომპიუტერის გამორთვა უსაფრთხოა."
 
-#: ui/main.qml:153
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "შეცვლა…"
 
-#: ui/main.qml:193
+#: ui/main.qml:209
 #, kde-format
 msgid "Numbers"
 msgstr "რიცხვები"
 
-#: ui/main.qml:195
+#: ui/main.qml:211
 #, kde-format
 msgid "Time"
 msgstr "დრო"
 
-#: ui/main.qml:197
+#: ui/main.qml:213
 #, kde-format
 msgid "Currency"
 msgstr "ფული"
 
-#: ui/main.qml:199
+#: ui/main.qml:215
 #, kde-format
 msgid "Measurements"
 msgstr "გაბარიტები"
 
-#: ui/main.qml:201
+#: ui/main.qml:217
 #, kde-format
 msgid "Paper Size"
 msgstr "ქაღალდის ზომა"
 
-#: ui/main.qml:203
+#: ui/main.qml:219
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "მისამართი"
 
-#: ui/main.qml:205
+#: ui/main.qml:221
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "სახელი"
 
-#: ui/main.qml:207
+#: ui/main.qml:223
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

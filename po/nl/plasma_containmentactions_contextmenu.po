@@ -2,20 +2,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2014, 2019, 2021, 2022.
+# SPDX-FileCopyrightText: 2009, 2014, 2019, 2021, 2022, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-13 00:39+0000\n"
-"PO-Revision-Date: 2022-09-11 14:48+0200\n"
+"PO-Revision-Date: 2024-03-13 11:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: menu.cpp:102
@@ -51,7 +51,7 @@ msgstr "Scherminstellingen configureren…"
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
-msgstr "De plugin voor het contextmenu instellen"
+msgstr "De plug-in voor het contextmenu configureren"
 
 #: menu.cpp:295
 #, kde-format

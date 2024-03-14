@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-09 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 16:53+0300\n"
+"PO-Revision-Date: 2024-03-13 20:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kded/mprisservice.cpp:105
 #, kde-format
@@ -27,7 +27,7 @@ msgstr "Ortam Denetleyicisi"
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr "Ortamı Çal/Oynat-Duraklat"
+msgstr "Ortamı Çal/Oynat–Duraklat"
 
 #: kded/mprisservice.cpp:115
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-02 00:39+0000\n"
-"PO-Revision-Date: 2024-03-08 23:17+0300\n"
+"PO-Revision-Date: 2024-03-13 20:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -116,7 +116,7 @@ msgstr "Yarın sabaha kadar"
 #: package/contents/ui/FullRepresentation.qml:147
 #, kde-format
 msgid "Until Monday"
-msgstr "Pazartesi'ye kadar"
+msgstr "Pazartesi’ye kadar"
 
 #: package/contents/ui/FullRepresentation.qml:154
 #, kde-format

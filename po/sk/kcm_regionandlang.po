@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-19 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2023-04-15 19:43+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -297,7 +297,7 @@ msgstr "Neznáme"
 msgid "Default for System"
 msgstr "Predvolené nastavenie pre systém"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:271
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:287
 #, kde-format
 msgid "Default"
 msgstr "Predvolené"
@@ -514,50 +514,50 @@ msgstr ""
 "Boli nainštalované potrebné súbory lokálnej a jazykovej podpory. Teraz je "
 "bezpečne vypnúť počítač."
 
-#: ui/main.qml:153
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Upraviť..."
 
-#: ui/main.qml:193
+#: ui/main.qml:209
 #, kde-format
 msgid "Numbers"
 msgstr "Čísla"
 
-#: ui/main.qml:195
+#: ui/main.qml:211
 #, kde-format
 msgid "Time"
 msgstr "Čas"
 
-#: ui/main.qml:197
+#: ui/main.qml:213
 #, kde-format
 msgid "Currency"
 msgstr "Mena"
 
-#: ui/main.qml:199
+#: ui/main.qml:215
 #, kde-format
 msgid "Measurements"
 msgstr "Rozmery"
 
-#: ui/main.qml:201
+#: ui/main.qml:217
 #, kde-format
 msgid "Paper Size"
 msgstr "Veľkosť papiera"
 
-#: ui/main.qml:203
+#: ui/main.qml:219
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresa"
 
-#: ui/main.qml:205
+#: ui/main.qml:221
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Meno"
 
-#: ui/main.qml:207
+#: ui/main.qml:223
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

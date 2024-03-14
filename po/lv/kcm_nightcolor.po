@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2024-01-18 20:54+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -200,12 +200,12 @@ msgstr[2] "%1 minūšu"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Ievades minūtes — min. 1, maks. 600"
 
-#: ui/main.qml:442
+#: ui/main.qml:443
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Kļūda: pārejas laiki pārklājas."
 
-#: ui/main.qml:465
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-04 00:39+0000\n"
+"POT-Creation-Date: 2024-03-14 00:39+0000\n"
 "PO-Revision-Date: 2024-02-25 18:55+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -200,12 +200,12 @@ msgstr[2] "%1 de minute"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Introduceți minutele - min. 1, max. 600"
 
-#: ui/main.qml:442
+#: ui/main.qml:443
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Eroare: ora tranziției se suprapune."
 
-#: ui/main.qml:465
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

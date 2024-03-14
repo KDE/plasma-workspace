@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 00:39+0000\n"
-"PO-Revision-Date: 2024-01-01 23:02+0300\n"
+"PO-Revision-Date: 2024-03-13 20:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.02.0\n"
 "X-POOTLE-MTIME: 1413102230.000000\n"
 
 #: plugin/actionlist.cpp:85
@@ -102,7 +102,7 @@ msgstr "'%1' Uygulamalarını Görünür Yap"
 #: plugin/computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
-msgstr "K Çalıştır'ı Göster"
+msgstr "K Çalıştır’ı Göster"
 
 #: plugin/computermodel.cpp:95
 #, kde-format
@@ -174,7 +174,7 @@ msgstr "Tüm Uygulamalar"
 #: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr "Bu görülmemeli! KICKER_FAVORITES_MODEL'i kullan"
+msgstr "Bu görülmemeli! KICKER_FAVORITES_MODEL’i kullan"
 
 #: plugin/rootmodel.cpp:399
 #, kde-format
