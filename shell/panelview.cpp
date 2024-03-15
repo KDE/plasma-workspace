@@ -650,14 +650,13 @@ QRect PanelView::dogdeGeometryByDistance(int distance) const
     return dodgeGeometry & m_screenToFollow->geometry();
 }
 
-QRect PanelView::geometryByDistance(int distance, float floatingness) const
+QRect PanelView::geometryByDistance(int distance, double floatingness) const
 {
     if (!containment() || !m_screenToFollow) {
         return QRect();
     }
 
-    QScreen *s = m_screenToFollow;
-    const QRect screenGeometry = s->geometry();
+    const QRect screenGeometry = m_screenToFollow->geometry();
     QRect r(QPoint(0, 0), formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), height()) : QSize(width(), totalThickness()));
 
     int currentOffset = 0;
@@ -1285,10 +1284,11 @@ void PanelView::updateMask()
 
         QQuickItem *rootObject = this->rootObject();
         if (rootObject) {
-            const QVariant maskProperty = rootObject->property("panelMask");
+            QVariant maskProperty = rootObject->property("panelMask");
             if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
-                mask = maskProperty.value<QRegion>();
-                mask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
+                mask = get<QRegion>(std::move(maskProperty));
+                const QPoint floatingTranslucentItemOffset = rootObject->property("floatingTranslucentItemOffset").toPoint();
+                mask.translate(floatingTranslucentItemOffset);
             }
         }
         // We use mask for graphical effect which tightly  covers the panel
@@ -1545,9 +1545,8 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
         disconnect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
 
         updatePadding();
-        updateFloating();
         const int paddingSignal = rootObject->metaObject()->indexOfSignal("bottomPaddingChanged()");
-        const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessChanged()");
+        const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessTargetChanged()");
         const int touchingWindowSignal = rootObject->metaObject()->indexOfSignal("touchingWindowChanged()");
 
         if (paddingSignal >= 0) {
@@ -1557,13 +1556,29 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(updatePadding()));
         }
         if (floatingSignal >= 0) {
+            // Floating animation
+            m_floatingnessAnimation.setDuration(rootObject->property("floatingnessAnimationDuration").toInt());
+            m_floatingnessAnimation.setTargetObject(rootObject);
+            m_floatingnessAnimation.setPropertyName(QByteArrayLiteral("floatingness"));
+            connect(&m_floatingnessAnimation, &QPropertyAnimation::valueChanged, rootObject, [this](const QVariant &value) {
+                if (m_floatingnessAnimation.state() != QAbstractAnimation::State::Running) {
+                    return;
+                }
+                m_floatingness = get<double>(value);
+                positionPanel();
+            });
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
-            connect(rootObject, SIGNAL(floatingnessChanged()), this, SLOT(updateFloating()));
             connect(rootObject, SIGNAL(hasShadowsChanged()), this, SLOT(updateShadows()));
-            connect(rootObject, SIGNAL(maskOffsetXChanged()), this, SLOT(updateMask()));
-            connect(rootObject, SIGNAL(maskOffsetYChanged()), this, SLOT(updateMask()));
+            connect(rootObject, SIGNAL(floatingnessAnimationDurationChanged()), this, SLOT(updateFloatingAnimationDuration()));
+            connect(rootObject, SIGNAL(floatingnessTargetChanged()), this, SLOT(updateFloating()));
         }
+
+        const int floatingTranslucentItemOffsetSignal = rootObject->metaObject()->indexOfSignal("floatingTranslucentItemOffsetChanged()");
+        if (floatingTranslucentItemOffsetSignal >= 0) {
+            connect(rootObject, SIGNAL(floatingTranslucentItemOffsetChanged), this, SLOT(updateMask()));
+        }
+        updateFloating();
 
         const QVariant maskProperty = rootObject->property("panelMask");
         if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
@@ -1737,17 +1752,32 @@ void PanelView::updateFloating()
     if (!rootObject()) {
         return;
     }
-    m_floatingness = rootObject()->property("floatingness").toFloat();
+
+    m_floatingnessAnimation.setStartValue(m_floatingness);
+    m_floatingnessAnimation.setEndValue(rootObject()->property("floatingnessTarget").toDouble());
+    if (m_floatingnessAnimation.startValue().toInt() > m_floatingnessAnimation.endValue().toInt()) {
+        m_floatingnessAnimation.setEasingCurve(QEasingCurve::InCubic);
+    } else {
+        m_floatingnessAnimation.setEasingCurve(QEasingCurve::OutCubic);
+    }
     m_leftFloatingPadding = rootObject()->property("fixedLeftFloatingPadding").toInt();
     m_rightFloatingPadding = rootObject()->property("fixedRightFloatingPadding").toInt();
     m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
     m_bottomFloatingPadding = rootObject()->property("fixedBottomFloatingPadding").toInt();
 
     resizePanel();
-    positionPanel();
     updateExclusiveZone();
-    updateMask();
     updateShadows();
+
+    // positionPanel and updateMask are called by m_floatingnessAnimation
+    if (m_floatingnessAnimation.targetObject()) {
+        m_floatingnessAnimation.start();
+    }
+}
+
+void PanelView::updateFloatingAnimationDuration()
+{
+    m_floatingnessAnimation.setDuration(rootObject()->property("floatingnessAnimationDuration").toInt());
 }
 
 #include "moc_panelview.cpp"

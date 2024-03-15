@@ -8,6 +8,7 @@
 
 #include <Plasma/Theme>
 #include <QPointer>
+#include <QPropertyAnimation>
 #include <QTimer>
 #ifdef HAVE_X11
 #include <QWindow> // For WId
@@ -264,7 +265,6 @@ protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet) override;
 
 private Q_SLOTS:
-    void positionPanel();
     void restore();
     void setAutoHideEnabled(bool autoHideEnabled);
     void showTemporarily();
@@ -278,11 +278,13 @@ private Q_SLOTS:
     void updateEnabledBorders();
     void updatePadding();
     void updateFloating();
+    void updateFloatingAnimationDuration();
     void updateShadows();
     void updateTouchingWindow();
 
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
+    void positionPanel();
     void resizePanel();
     void integrateScreen();
     void updateEditModeLabel();
@@ -290,7 +292,7 @@ private:
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
     bool canSetStrut() const;
-    QRect geometryByDistance(int distance, float floatingness) const;
+    QRect geometryByDistance(int distance, double floatingness) const;
 
     int m_offset;
     int m_maxLength;
@@ -302,7 +304,8 @@ private:
     int m_topPadding;
     int m_leftPadding;
     int m_rightPadding;
-    float m_floatingness;
+    double m_floatingness = 0.0;
+    QPropertyAnimation m_floatingnessAnimation;
     int m_bottomFloatingPadding;
     int m_topFloatingPadding;
     int m_leftFloatingPadding;
