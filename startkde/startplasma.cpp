@@ -38,6 +38,8 @@
 #include "../kcms/lookandfeel/lookandfeelmanager.h"
 #include "debug.h"
 
+using namespace Qt::StringLiterals;
+
 QTextStream out(stderr);
 
 void sigtermHandler(int signalNumber)
