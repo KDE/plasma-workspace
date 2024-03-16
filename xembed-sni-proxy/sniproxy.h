@@ -11,6 +11,7 @@
 #include <QDBusArgument>
 #include <QDBusConnection>
 #include <QDBusObjectPath>
+#include <QGuiApplication>
 #include <QObject>
 #include <QPixmap>
 #include <QPoint>
@@ -144,6 +145,7 @@ private:
     void stackContainerWindow(const uint32_t stackMode) const;
 
     QDBusConnection m_dbus;
+    QNativeInterface::QX11Application *m_x11Interface = nullptr;
     xcb_window_t m_windowId;
     xcb_window_t m_containerWid;
     static int s_serviceCount;
