@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 00:39+0000\n"
-"PO-Revision-Date: 2023-12-15 14:18+0100\n"
+"PO-Revision-Date: 2024-03-14 23:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Assamese <alministradores@softastur.org>\n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -72,18 +72,16 @@ msgid "Play a sound"
 msgstr ""
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Normal notifications:"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Avisos normales:"
+msgstr "Avisos del sistema…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Configuración de les aplicaciones"
+msgstr ""
 
 #: ui/main.qml:77
 #, kde-format

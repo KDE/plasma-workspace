@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-01 15:00+0100\n"
+"PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
-"Language-Team: \n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -571,7 +571,7 @@ msgstr ""
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
-msgstr "<i>%1</i> contién la fonte <b>%2</b> que xá ta instalada nel sistema."
+msgstr "<i>%1</i> contién la fonte <b>%2</b> que yá ta instalada nel sistema."
 
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
@@ -591,7 +591,7 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
-msgstr "<i>%1</i> xá esiste."
+msgstr "<i>%1</i> yá esiste."
 
 #: kcmfontinst/JobRunner.cpp:712
 #, kde-format
@@ -1147,7 +1147,7 @@ msgstr "Nun s'atopó nengún caráuter."
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr "La neña cuerre feliz xunto al ḷḷagu ya l'horru"
+msgstr "La neña cuerre feliz xunto al ḷḷagu y l'horru"
 
 #: lib/FcEngine.cpp:1076
 #, kde-format
@@ -1905,7 +1905,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:107
 msgid "CJK Symbols and Punctuation"
-msgstr "Símbolos ya puntuación de CJK"
+msgstr "Símbolos y puntuación de CJK"
 
 #: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
 msgid "Hiragana"
@@ -2109,7 +2109,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:158
 msgid "Cuneiform Numbers and Punctuation"
-msgstr "Númberos ya símbolos de puntuación cueniformes"
+msgstr "Númberos y símbolos de puntuación cueniformes"
 
 #: viewpart/UnicodeBlocks.h:159
 msgid "Byzantine Musical Symbols"

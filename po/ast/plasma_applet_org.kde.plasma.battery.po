@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 00:39+0000\n"
-"PO-Revision-Date: 2023-12-12 00:57+0100\n"
+"PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -98,7 +98,7 @@ msgstr ""
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Power and Battery"
-msgstr "Enerxía ya batería"
+msgstr "Enerxía y batería"
 
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
 #, kde-format
@@ -202,10 +202,9 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Amosar el porcentaxe de batería nel iconu cuando nun ta cargada"
 
 #: package/contents/ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Configurar l'aforru d'enerxía…"
+msgstr "&Configurar la xestión d'enerxía…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
@@ -244,7 +243,7 @@ msgstr ""
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
-"Una aplicación ta bloquiándo la dormición ya'l bloquéu de la pantalla (%1)"
+"Una aplicación ta bloquiándo la dormición y el bloquéu de la pantalla (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
@@ -252,7 +251,7 @@ msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"Una aplicación ta bloquiándo la dormición ya'l bloquéu de la pantalla "
+"Una aplicación ta bloquiándo la dormición y el bloquéu de la pantalla "
 "(motivu desconocíu)"
 
 #: package/contents/ui/PowerManagementItem.qml:117

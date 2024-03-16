@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2023-05-09 21:13+0200\n"
+"PO-Revision-Date: 2024-03-14 23:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
-"Language-Team: \n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: soliddeviceengine.cpp:114
 msgid "Product"
-msgstr ""
+msgstr "Productu"
 
 #: soliddeviceengine.cpp:115
 msgid "Description"
@@ -58,11 +58,11 @@ msgstr ""
 
 #: soliddeviceengine.cpp:128
 msgid "Processor"
-msgstr ""
+msgstr "Procesador"
 
 #: soliddeviceengine.cpp:129
 msgid "Number"
-msgstr ""
+msgstr "Númberu"
 
 #: soliddeviceengine.cpp:130
 msgid "Max Speed"
@@ -523,28 +523,20 @@ msgid "Bluetooth Battery"
 msgstr ""
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Batería de la cámara"
+msgstr "Batería de la tableta"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Batería del teléfonu"
+msgstr "Batería del auricular"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Batería del mur"
+msgstr "Batería de los cascos"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Batería del mur"
+msgstr "Batería del panel táctil"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"
