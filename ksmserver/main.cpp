@@ -26,7 +26,6 @@
 #include <kdbusservice.h>
 #include <ksmserver_debug.h>
 #include <kwindowsystem.h>
-#include <private/qtx11extras_p.h>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -186,7 +185,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setApplicationVersion(QString::fromLatin1(version));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
-    fcntl(ConnectionNumber(QX11Info::display()), F_SETFD, 1);
+    fcntl(ConnectionNumber(a->nativeInterface<QNativeInterface::QX11Application>()->display()), F_SETFD, 1);
 
     a->setQuitOnLastWindowClosed(false); // #169486
 

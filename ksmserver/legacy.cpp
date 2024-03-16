@@ -15,7 +15,7 @@
 
 #include <QDebug>
 #include <QElapsedTimer>
-#include <private/qtx11extras_p.h>
+#include <QGuiApplication>
 
 #include <config-workspace.h>
 
@@ -39,6 +39,7 @@
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#include <xcb/xcb.h>
 
 /*
  * Legacy session management
@@ -80,10 +81,11 @@ void KSMServer::performLegacySessionSave()
     XErrorHandler oldHandler = XSetErrorHandler(winsErrorHandler);
     // Compute set of leader windows that need legacy session management
     // and determine which style (WM_COMMAND or WM_SAVE_YOURSELF)
+    auto display = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
     if (wm_save_yourself == (Atom)XNone) {
         Atom atoms[4];
         const char *const names[] = {"WM_SAVE_YOURSELF", "WM_PROTOCOLS", "WM_CLIENT_LEADER", "SM_CLIENT_ID"};
-        XInternAtoms(QX11Info::display(), const_cast<char **>(names), 4, False, atoms);
+        XInternAtoms(display, const_cast<char **>(names), 4, False, atoms);
         wm_save_yourself = atoms[0];
         wm_protocols = atoms[1];
         wm_client_leader = atoms[2];
@@ -96,7 +98,7 @@ void KSMServer::performLegacySessionSave()
             SMType wtype = SM_WMCOMMAND;
             int nprotocols = 0;
             Atom *protocols = nullptr;
-            if (XGetWMProtocols(QX11Info::display(), leader, &protocols, &nprotocols)) {
+            if (XGetWMProtocols(display, leader, &protocols, &nprotocols)) {
                 for (int i = 0; i < nprotocols; i++)
                     if (protocols[i] == wm_save_yourself) {
                         wtype = SM_WMSAVEYOURSELF;
@@ -107,7 +109,7 @@ void KSMServer::performLegacySessionSave()
             SMData data;
             data.type = wtype;
             XClassHint classHint;
-            if (XGetClassHint(QX11Info::display(), leader, &classHint)) {
+            if (XGetClassHint(display, leader, &classHint)) {
                 data.wmclass1 = QString::fromLocal8Bit(classHint.res_name);
                 data.wmclass2 = QString::fromLocal8Bit(classHint.res_class);
                 XFree(classHint.res_name);
@@ -117,8 +119,8 @@ void KSMServer::performLegacySessionSave()
         }
     }
     // Open fresh display for sending WM_SAVE_YOURSELF
-    XSync(QX11Info::display(), False);
-    Display *newdisplay = XOpenDisplay(DisplayString(QX11Info::display()));
+    XSync(display, False);
+    Display *newdisplay = XOpenDisplay(DisplayString(display));
     if (!newdisplay) {
         windowMapPtr = nullptr;
         XSetErrorHandler(oldHandler);
@@ -140,7 +142,7 @@ void KSMServer::performLegacySessionSave()
             ev.xclient.message_type = wm_protocols;
             ev.xclient.format = 32;
             ev.xclient.data.l[0] = wm_save_yourself;
-            ev.xclient.data.l[1] = QX11Info::appTime();
+            ev.xclient.data.l[1] = XCB_CURRENT_TIME;
             XSelectInput(newdisplay, w, PropertyChangeMask | StructureNotifyMask);
             XSendEvent(newdisplay, w, False, 0, &ev);
             qCDebug(KSMSERVER) << "sent >save yourself< to legacy app " << (*it).wmclass1 << (*it).wmclass2;
@@ -185,7 +187,7 @@ void KSMServer::performLegacySessionSave()
     XSync(newdisplay, False);
     XCloseDisplay(newdisplay);
     // Restore old error handler
-    XSync(QX11Info::display(), False);
+    XSync(display, False);
     XSetErrorHandler(oldHandler);
     for (WindowMap::Iterator it = legacyWindows.begin(); it != legacyWindows.end(); ++it) {
         if ((*it).type != SM_ERROR) {
@@ -257,8 +259,9 @@ static QByteArray getQCStringProperty(WId w, Atom prop)
     unsigned long nitems = 0;
     unsigned long extra = 0;
     unsigned char *data = nullptr;
+    auto display = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
     QByteArray result = "";
-    status = XGetWindowProperty(QX11Info::display(), w, prop, 0, 10000, false, XA_STRING, &type, &format, &nitems, &extra, &data);
+    status = XGetWindowProperty(display, w, prop, 0, 10000, false, XA_STRING, &type, &format, &nitems, &extra, &data);
     if (status == Success) {
         if (data)
             result = (char *)data;
@@ -274,9 +277,10 @@ static QStringList getQStringListProperty(WId w, Atom prop)
     unsigned long nitems = 0;
     unsigned long extra = 0;
     unsigned char *data = nullptr;
+    auto display = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
     QStringList result;
 
-    status = XGetWindowProperty(QX11Info::display(), w, prop, 0, 10000, false, XA_STRING, &type, &format, &nitems, &extra, &data);
+    status = XGetWindowProperty(display, w, prop, 0, 10000, false, XA_STRING, &type, &format, &nitems, &extra, &data);
     if (status == Success) {
         if (!data)
             return result;
@@ -342,8 +346,9 @@ WId KSMServer::windowWmClientLeader(WId w)
     unsigned long nitems = 0;
     unsigned long extra = 0;
     unsigned char *data = nullptr;
+    auto display = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->display();
     Window result = w;
-    status = XGetWindowProperty(QX11Info::display(), w, wm_client_leader, 0, 10000, false, XA_WINDOW, &type, &format, &nitems, &extra, &data);
+    status = XGetWindowProperty(display, w, wm_client_leader, 0, 10000, false, XA_WINDOW, &type, &format, &nitems, &extra, &data);
     if (status == Success) {
         if (data && nitems > 0)
             result = *((Window *)data);

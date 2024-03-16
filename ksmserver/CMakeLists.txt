@@ -56,7 +56,6 @@ target_link_libraries(ksmserver
     X11::SM
     X11::ICE
 )
-target_link_libraries(ksmserver Qt::GuiPrivate)
 
 install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

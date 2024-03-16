@@ -72,8 +72,6 @@
 
 #include <KScreenLocker/KsldApp>
 
-#include <private/qtx11extras_p.h>
-
 #include <krandom.h>
 #include <qstandardpaths.h>
 #include <startup_interface.h>
