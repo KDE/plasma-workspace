@@ -34,7 +34,6 @@
 
 #if HAVE_X11
 #include <NETWM>
-#include <private/qtx11extras_p.h>
 #include <qpa/qplatformwindow_p.h>
 #endif
 #include <chrono>
@@ -1321,7 +1320,7 @@ bool PanelView::canSetStrut() const
     }
     // read the wm name, need to do this every time which means a roundtrip unfortunately
     // but WM might have changed
-    NETRootInfo rootInfo(QX11Info::connection(), NET::Supported | NET::SupportingWMCheck);
+    NETRootInfo rootInfo(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(), NET::Supported | NET::SupportingWMCheck);
     if (qstricmp(rootInfo.wmName(), "KWin") == 0) {
         // KWin since 5.7 can handle this fine, so only exclude for other window managers
         return true;

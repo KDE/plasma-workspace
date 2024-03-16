@@ -12,6 +12,7 @@
 
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QGuiApplication>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQuickItem>
@@ -30,8 +31,6 @@
 #include <KPackage/Package>
 
 #include <LayerShellQt/Window>
-
-#include <private/qtx11extras_p.h>
 
 using namespace Qt::StringLiterals;
 
@@ -361,8 +360,8 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
         } else {
             m_configView->show();
             auto window = qobject_cast<QWindow *>(m_configView);
-            if (window && QX11Info::isPlatformX11()) {
-                KStartupInfo::setNewStartupId(window, QX11Info::nextStartupId());
+            if (window && qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+                KStartupInfo::setNewStartupId(window, qgetenv("DESKTOP_STARTUP_ID"));
             }
             m_configView->requestActivate();
             return;
@@ -399,8 +398,8 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView->requestActivate();
 
     auto window = qobject_cast<QWindow *>(m_configView);
-    if (window && QX11Info::isPlatformX11()) {
-        KStartupInfo::setNewStartupId(window, QX11Info::nextStartupId());
+    if (window && qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+        KStartupInfo::setNewStartupId(window, qgetenv("DESKTOP_STARTUP_ID"));
     }
     m_configView->requestActivate();
 }

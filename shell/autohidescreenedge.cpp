@@ -21,7 +21,6 @@
 #include <qpa/qplatformwindow_p.h>
 
 #if HAVE_X11
-#include <private/qtx11extras_p.h>
 #include <xcb/xcb.h>
 #endif
 
@@ -196,7 +195,7 @@ private:
 X11AutoHideScreenEdge::X11AutoHideScreenEdge(PanelView *view)
     : AutoHideScreenEdge(view)
 {
-    xcb_connection_t *connection = QX11Info::connection();
+    xcb_connection_t *connection = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
 
     const QByteArray atomName = QByteArrayLiteral("_KDE_NET_WM_SCREEN_EDGE_SHOW");
     xcb_intern_atom_cookie_t cookie = xcb_intern_atom_unchecked(connection, false, atomName.length(), atomName.constData());
@@ -218,7 +217,7 @@ X11AutoHideScreenEdge::~X11AutoHideScreenEdge()
 void X11AutoHideScreenEdge::deactivate()
 {
     if (m_atom != XCB_ATOM_NONE) {
-        xcb_delete_property(QX11Info::connection(), m_view->winId(), m_atom);
+        xcb_delete_property(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(), m_view->winId(), m_atom);
     }
 }
 
@@ -249,7 +248,14 @@ void X11AutoHideScreenEdge::activate()
         break;
     }
 
-    xcb_change_property(QX11Info::connection(), XCB_PROP_MODE_REPLACE, m_view->winId(), m_atom, XCB_ATOM_CARDINAL, 32, 1, &value);
+    xcb_change_property(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(),
+                        XCB_PROP_MODE_REPLACE,
+                        m_view->winId(),
+                        m_atom,
+                        XCB_ATOM_CARDINAL,
+                        32,
+                        1,
+                        &value);
 }
 
 #endif

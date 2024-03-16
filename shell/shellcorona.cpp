@@ -76,7 +76,6 @@
 
 #if HAVE_X11
 #include <NETWM>
-#include <private/qtx11extras_p.h>
 #include <xcb/xcb.h>
 #endif
 #include <chrono>

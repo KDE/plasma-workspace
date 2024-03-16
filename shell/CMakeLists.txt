@@ -101,6 +101,7 @@ target_link_libraries(plasmashell
  Plasma::Plasma
  Plasma::PlasmaQuick
  PW::KWorkspace
+ Qt::GuiPrivate # qpa/qplatformwindow_p.h
  Qt::Quick
  Qt::DBus
  Qt::WaylandClient
@@ -117,7 +118,6 @@ target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERS
 
 if(HAVE_X11)
   target_link_libraries(plasmashell XCB::XCB XCB::RANDR)
-  target_link_libraries(plasmashell Qt::GuiPrivate)
 endif()
 
 configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)
