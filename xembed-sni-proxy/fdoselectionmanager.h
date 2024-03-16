@@ -8,6 +8,7 @@
 #pragma once
 
 #include <QAbstractNativeEventFilter>
+#include <QGuiApplication>
 #include <QHash>
 #include <QObject>
 
@@ -38,6 +39,8 @@ private:
     void dock(xcb_window_t embed_win);
     void undock(xcb_window_t client);
     void setSystemTrayVisual();
+
+    QNativeInterface::QX11Application *m_x11Interface = nullptr;
 
     uint8_t m_damageEventBase;
 
