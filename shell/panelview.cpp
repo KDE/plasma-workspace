@@ -1127,7 +1127,8 @@ bool PanelView::event(QEvent *e)
 
         // first, don't mess with position if the cursor is actually outside the view:
         // somebody is doing a click and drag that must not break when the cursor i outside
-        if (geometry().contains(QCursor::pos(screenToFollow()))) {
+        // BUG 482580: use QRectF for HiDPI
+        if (QRectF(geometry()).contains(mapToGlobal(me->scenePosition()))) {
             if (!containmentContainsPosition(me->scenePosition()) && !m_fakeEventPending) {
                 QMouseEvent me2(me->type(),
                                 positionAdjustedForContainment(me->scenePosition()),
