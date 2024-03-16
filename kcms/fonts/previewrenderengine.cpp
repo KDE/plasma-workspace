@@ -7,11 +7,9 @@
 #include "previewrenderengine.h"
 #include "Fc.h"
 
-#include <QApplication>
+#include <QGuiApplication>
 #include <QScreen>
-#include <private/qtx11extras_p.h>
-
-#include <X11/Xft/Xft.h>
+#include <QWindow>
 
 #ifdef HAVE_FONTCONFIG
 
@@ -104,13 +102,13 @@ QImage PreviewRenderEngine::drawAutoSize(const QFont &font, const QColor &txt, c
     const quint32 style = qtToFcStyle(font);
     int faceNo = 0;
 
-    double ratio = QGuiApplication::primaryScreen()->devicePixelRatio();
-    double dpi = QX11Info::appDpiY();
+    auto focusWindow = QGuiApplication::focusWindow();
+    double dpi = focusWindow->screen()->logicalDotsPerInch();
+    double ratio = focusWindow->devicePixelRatio();
 
     int fSize((int)(((font.pointSizeF() * dpi * ratio) / 72.0) + 0.5));
 
     QImage image(draw(name, style, faceNo, txt, bgnd, fSize, text));
-    image.setDevicePixelRatio(ratio);
     return image;
 }
 
