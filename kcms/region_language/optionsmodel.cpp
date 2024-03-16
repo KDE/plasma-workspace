@@ -16,6 +16,28 @@
 
 using namespace KCM_RegionAndLang;
 
+void OptionsModel::load()
+{
+    m_numberExample = Utility::numericExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Numeric)));
+    m_timeExample = Utility::timeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Time)));
+    m_measurementExample = Utility::measurementExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Measurement)));
+    m_currencyExample = Utility::monetaryExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Currency)));
+    m_paperSizeExample = Utility::paperSizeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PaperSize)));
+#ifdef LC_ADDRESS
+    m_addressExample = Utility::addressExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Address)));
+    m_nameStyleExample = Utility::nameStyleExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::NameStyle)));
+    m_phoneNumbersExample = Utility::phoneNumbersExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PhoneNumbers)));
+#endif
+
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    KConfigGroup localeGroup(globalConfig, QStringLiteral("Locale"));
+    int i = localeGroup.readEntry("BinaryUnitDialect", static_cast<int>(KFormat::IECBinaryDialect));
+    if (i < KFormat::DefaultBinaryDialect || i > KFormat::BinaryUnitDialect::LastBinaryDialect) {
+        i = KFormat::IECBinaryDialect;
+    }
+    setBinaryDialect(i);
+}
+
 OptionsModel::OptionsModel(KCMRegionAndLang *parent)
     : QAbstractListModel(parent)
     , m_settings(parent->settings())
@@ -31,62 +53,53 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
     m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Name Style"), SettingType::NameStyle));
     m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Phone Numbers"), SettingType::PhoneNumbers));
 #endif
+    m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Data and Storage Sizes"), SettingType::BinaryDialect));
 
     connect(m_settings, &RegionAndLangSettings::langChanged, this, &OptionsModel::handleLangChange);
     connect(m_settings, &RegionAndLangSettings::numericChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Numeric));
         m_numberExample = Utility::numericExample(locale);
-        Q_EMIT dataChanged(createIndex(1, 0), createIndex(1, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Numeric, 0), createIndex(SettingType::Numeric, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::timeChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Time));
         m_timeExample = Utility::timeExample(locale);
-        Q_EMIT dataChanged(createIndex(2, 0), createIndex(2, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Time, 0), createIndex(SettingType::Time, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::monetaryChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Currency));
         m_currencyExample = Utility::monetaryExample(locale);
-        Q_EMIT dataChanged(createIndex(3, 0), createIndex(3, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Currency, 0), createIndex(SettingType::Currency, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::measurementChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Measurement));
         m_measurementExample = Utility::measurementExample(locale);
-        Q_EMIT dataChanged(createIndex(4, 0), createIndex(4, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Measurement, 0), createIndex(SettingType::Measurement, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::paperSizeChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::PaperSize));
         m_paperSizeExample = Utility::paperSizeExample(locale);
-        Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::PaperSize, 0), createIndex(SettingType::PaperSize, 0), {Subtitle, Example});
     });
 #ifdef LC_ADDRESS
     connect(m_settings, &RegionAndLangSettings::addressChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Address));
         m_addressExample = Utility::addressExample(locale);
-        Q_EMIT dataChanged(createIndex(6, 0), createIndex(6, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Address, 0), createIndex(SettingType::Address, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::nameStyleChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::NameStyle));
         m_nameStyleExample = Utility::nameStyleExample(locale);
-        Q_EMIT dataChanged(createIndex(7, 0), createIndex(7, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::NameStyle, 0), createIndex(SettingType::NameStyle, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::phoneNumbersChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::PhoneNumbers));
         m_phoneNumbersExample = Utility::phoneNumbersExample(locale);
-        Q_EMIT dataChanged(createIndex(8, 0), createIndex(8, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::PhoneNumbers, 0), createIndex(SettingType::PhoneNumbers, 0), {Subtitle, Example});
     });
 #endif
 
-    // initialize examples
-    m_numberExample = Utility::numericExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Numeric)));
-    m_timeExample = Utility::timeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Time)));
-    m_measurementExample = Utility::measurementExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Measurement)));
-    m_currencyExample = Utility::monetaryExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Currency)));
-    m_paperSizeExample = Utility::paperSizeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PaperSize)));
-#ifdef LC_ADDRESS
-    m_addressExample = Utility::addressExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Address)));
-    m_nameStyleExample = Utility::nameStyleExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::NameStyle)));
-    m_phoneNumbersExample = Utility::phoneNumbersExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PhoneNumbers)));
-#endif
+    load();
 }
 
 int OptionsModel::rowCount(const QModelIndex &parent) const
@@ -173,6 +186,8 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
             }
             break;
 #endif
+        case BinaryDialect:
+            Q_UNREACHABLE();
         }
         return {}; // implicit locale
     }
@@ -241,6 +256,8 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
             return example;
         }
 #endif
+        case BinaryDialect:
+            return m_binaryDialectExample;
         }
         return {};
     }
@@ -258,42 +275,89 @@ QHash<int, QByteArray> OptionsModel::roleNames() const
             {Page, QByteArrayLiteral("page")}};
 }
 
+KFormat::BinaryUnitDialect OptionsModel::binaryDialect()
+{
+    return m_binaryDialect;
+}
+
+void OptionsModel::updateBinaryDialectExample()
+{
+    int defbase = 1024;
+    if (m_binaryDialect == KFormat::MetricBinaryDialect) {
+        defbase = 1000;
+    }
+    const KFormat f;
+    m_binaryDialectExample = f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitKiloByte) + " = "
+        + f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitByte);
+
+    switch (m_binaryDialect) {
+    case KFormat::DefaultBinaryDialect:
+    case KFormat::IECBinaryDialect:
+        m_binaryDialectExample = i18nc("the prefix for IECBinaryDialect, %1 is an example for 1 KiB", "KiB, MiB, GiB; %1", m_binaryDialectExample);
+        break;
+    case KFormat::JEDECBinaryDialect:
+        m_binaryDialectExample = i18nc("the prefix for JEDECBinaryDialect, %1 is an example for 1 KB", "KB, MB, GB; %1", m_binaryDialectExample);
+        break;
+    case KFormat::MetricBinaryDialect:
+        m_binaryDialectExample = i18nc("the prefix for MetricBinaryDialect, %1 is an example for 1 kB", "kB, MB, GB; %1", m_binaryDialectExample);
+        break;
+    }
+}
+
+void OptionsModel::setBinaryDialect(QVariant value)
+{
+    if (value.metaType().id() != QMetaType::Int) {
+        return;
+    }
+    int i = value.toInt();
+    if (i < KFormat::DefaultBinaryDialect || i > KFormat::LastBinaryDialect) {
+        i = KFormat::IECBinaryDialect;
+    }
+
+    m_binaryDialect = static_cast<KFormat::BinaryUnitDialect>(i);
+    updateBinaryDialectExample();
+
+    auto idx = createIndex(SettingType::BinaryDialect, 0);
+    Q_EMIT dataChanged(idx, idx, {Subtitle, Example});
+    Q_EMIT binaryDialectChanged();
+}
+
 void OptionsModel::handleLangChange()
 {
-    Q_EMIT dataChanged(createIndex(0, 0), createIndex(0, 0), {Subtitle, Example});
+    Q_EMIT dataChanged(createIndex(SettingType::Lang, 0), createIndex(SettingType::Lang, 0), {Subtitle, Example});
     QLocale lang = QLocale(m_settings->lang());
     if (m_settings->isDefaultSetting(SettingType::Numeric)) {
         m_numberExample = Utility::numericExample(lang);
-        Q_EMIT dataChanged(createIndex(1, 0), createIndex(1, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Numeric, 0), createIndex(SettingType::Numeric, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::Time)) {
         m_timeExample = Utility::timeExample(lang);
-        Q_EMIT dataChanged(createIndex(2, 0), createIndex(2, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Time, 0), createIndex(SettingType::Time, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::Currency)) {
         m_currencyExample = Utility::monetaryExample(lang);
-        Q_EMIT dataChanged(createIndex(3, 0), createIndex(3, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Currency, 0), createIndex(SettingType::Currency, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::Measurement)) {
         m_measurementExample = Utility::measurementExample(lang);
-        Q_EMIT dataChanged(createIndex(4, 0), createIndex(4, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Measurement, 0), createIndex(SettingType::Measurement, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::PaperSize)) {
         m_paperSizeExample = Utility::paperSizeExample(lang);
-        Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::PaperSize, 0), createIndex(SettingType::PaperSize, 0), {Subtitle, Example});
     }
 #ifdef LC_ADDRESS
     if (m_settings->isDefaultSetting(SettingType::Address)) {
         m_addressExample = Utility::addressExample(lang);
-        Q_EMIT dataChanged(createIndex(6, 0), createIndex(6, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::Address, 0), createIndex(SettingType::Address, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::NameStyle)) {
         m_nameStyleExample = Utility::nameStyleExample(lang);
-        Q_EMIT dataChanged(createIndex(7, 0), createIndex(7, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::NameStyle, 0), createIndex(SettingType::NameStyle, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::PhoneNumbers)) {
         m_phoneNumbersExample = Utility::phoneNumbersExample(lang);
-        Q_EMIT dataChanged(createIndex(8, 0), createIndex(8, 0), {Subtitle, Example});
+        Q_EMIT dataChanged(createIndex(SettingType::PhoneNumbers, 0), createIndex(SettingType::PhoneNumbers, 0), {Subtitle, Example});
     }
 #endif
 }
