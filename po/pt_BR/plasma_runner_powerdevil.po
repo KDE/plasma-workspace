@@ -4,13 +4,14 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2018, 2019, 2021, 2022.
 # André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2009.
+# SPDX-FileCopyrightText: 2024 Igor Moreira Padua <igorpadua@discente.ufg.br>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-01-04 12:38-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-03-14 12:20-0300\n"
+"Last-Translator: Igor Moreira Padua <igorpadua@discente.ufg.br>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +21,13 @@ msgstr ""
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "energia"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -62,13 +63,13 @@ msgstr "para o disco"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "suspender híbrido"
 
 #: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "híbrido"
 
 #: PowerDevilRunner.cpp:39 PowerDevilRunner.cpp:40 PowerDevilRunner.cpp:66
 #, kde-format
@@ -98,7 +99,7 @@ msgstr "Suspende o sistema para o disco"
 #: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Suspender agora e volta a hibernar"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -159,12 +160,12 @@ msgstr "Suspender para o disco"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Suspender híbrido"
 
 #: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Suspender agora e voltar a hibernar"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

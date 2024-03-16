@@ -4,20 +4,21 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2019, 2022.
+# SPDX-FileCopyrightText: 2024 Igor Moreira Padua <igorpadua@discente.ufg.br>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2022-10-19 15:31-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-03-14 11:57-0300\n"
+"Last-Translator: Igor Moreira Padua <igorpadua@discente.ufg.br>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -57,12 +58,12 @@ msgstr "Substituir uma instância existente"
 #: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Mostrar apenas resultados do plugin fornecido"
 
 #: main.cpp:67
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Listar plug-ins disponíveis"
 
 #: main.cpp:74
 #, kde-format
@@ -73,7 +74,7 @@ msgstr "A consulta a executar, usada apenas se -c não for fornecido"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Plug-ins disponíveis do KRunner, pluginId"
 
 #: qml/RunCommand.qml:100
 #, kde-format
@@ -93,7 +94,7 @@ msgstr "Configurar KRunner..."
 #: qml/RunCommand.qml:117
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "A mostrar apenas os resultados de %1"
 
 #: qml/RunCommand.qml:131
 #, kde-format
