@@ -7,7 +7,6 @@
 
 #include "outputorderwatcher.h"
 
-#include <QGuiApplication>
 #include <QScreen>
 #include <QTimer>
 
@@ -18,8 +17,7 @@
 #include <QtWaylandClient/QtWaylandClientVersion>
 
 #if HAVE_X11
-#include <private/qtx11extras_p.h>
-
+#include <X11/Xlib.h>
 #include <xcb/randr.h>
 #include <xcb/xcb_event.h>
 #endif // HAVE_X11
@@ -133,7 +131,12 @@ QStringList OutputOrderWatcher::outputOrder() const
 
 X11OutputOrderWatcher::X11OutputOrderWatcher(QObject *parent)
     : OutputOrderWatcher(parent)
+    , m_x11Interface(qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
 {
+    if (!m_x11Interface) [[unlikely]] {
+        Q_ASSERT(false);
+        return;
+    }
     // This timer is used to signal only when a qscreen for every output is already created, perhaps by monitoring
     // screenadded/screenremoved and tracking the outputs still missing
     m_delayTimer = new QTimer(this);
@@ -147,12 +150,12 @@ X11OutputOrderWatcher::X11OutputOrderWatcher(QObject *parent)
     m_orderProtocolPresent = true;
 
     qGuiApp->installNativeEventFilter(this);
-    const xcb_query_extension_reply_t *reply = xcb_get_extension_data(QX11Info::connection(), &xcb_randr_id);
+    const xcb_query_extension_reply_t *reply = xcb_get_extension_data(m_x11Interface->connection(), &xcb_randr_id);
     m_xrandrExtensionOffset = reply->first_event;
 
     const QByteArray effectName = QByteArrayLiteral("_KDE_SCREEN_INDEX");
-    xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom_unchecked(QX11Info::connection(), false, effectName.length(), effectName);
-    xcb_intern_atom_reply_t *atom(xcb_intern_atom_reply(QX11Info::connection(), atomCookie, nullptr));
+    xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom_unchecked(m_x11Interface->connection(), false, effectName.length(), effectName);
+    xcb_intern_atom_reply_t *atom(xcb_intern_atom_reply(m_x11Interface->connection(), atomCookie, nullptr));
     if (!atom) {
         useFallback(true);
         return;
@@ -170,10 +173,10 @@ void X11OutputOrderWatcher::refresh()
     }
     QMap<int, QString> orderMap;
 
-    ScopedPointer<xcb_randr_get_screen_resources_current_reply_t> reply(
-        xcb_randr_get_screen_resources_current_reply(QX11Info::connection(),
-                                                     xcb_randr_get_screen_resources_current(QX11Info::connection(), QX11Info::appRootWindow()),
-                                                     NULL));
+    ScopedPointer<xcb_randr_get_screen_resources_current_reply_t> reply(xcb_randr_get_screen_resources_current_reply(
+        m_x11Interface->connection(),
+        xcb_randr_get_screen_resources_current(m_x11Interface->connection(), DefaultRootWindow(m_x11Interface->display())),
+        NULL));
 
     xcb_timestamp_t timestamp = reply->config_timestamp;
     int len = xcb_randr_get_screen_resources_current_outputs_length(reply.data());
@@ -181,7 +184,9 @@ void X11OutputOrderWatcher::refresh()
 
     for (int i = 0; i < len; i++) {
         ScopedPointer<xcb_randr_get_output_info_reply_t> output(
-            xcb_randr_get_output_info_reply(QX11Info::connection(), xcb_randr_get_output_info(QX11Info::connection(), randr_outputs[i], timestamp), NULL));
+            xcb_randr_get_output_info_reply(m_x11Interface->connection(),
+                                            xcb_randr_get_output_info(m_x11Interface->connection(), randr_outputs[i], timestamp),
+                                            NULL));
 
         if (output == NULL || output->connection == XCB_RANDR_CONNECTION_DISCONNECTED || output->crtc == 0) {
             continue;
@@ -190,8 +195,9 @@ void X11OutputOrderWatcher::refresh()
         const auto screenName =
             QString::fromUtf8((const char *)xcb_randr_get_output_info_name(output.get()), xcb_randr_get_output_info_name_length(output.get()));
 
-        auto orderCookie = xcb_randr_get_output_property(QX11Info::connection(), randr_outputs[i], m_kdeScreenAtom, XCB_ATOM_ANY, 0, 100, false, false);
-        ScopedPointer<xcb_randr_get_output_property_reply_t> orderReply(xcb_randr_get_output_property_reply(QX11Info::connection(), orderCookie, nullptr));
+        auto orderCookie = xcb_randr_get_output_property(m_x11Interface->connection(), randr_outputs[i], m_kdeScreenAtom, XCB_ATOM_ANY, 0, 100, false, false);
+        ScopedPointer<xcb_randr_get_output_property_reply_t> orderReply(
+            xcb_randr_get_output_property_reply(m_x11Interface->connection(), orderCookie, nullptr));
         // If there is even a single screen without _KDE_SCREEN_INDEX info, fall back to alphabetical ordering
         if (!orderReply) {
             useFallback(true);
@@ -264,12 +270,22 @@ bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void 
                 // Force an X11 roundtrip to make sure we have all other
                 // screen events in the buffer when we process the deferred refresh
                 useFallback(false);
-                QX11Info::getTimestamp();
+                roundtrip();
                 m_delayTimer->start();
             }
         }
     }
     return false;
+}
+
+void X11OutputOrderWatcher::roundtrip() const
+{
+    const auto cookie = xcb_get_input_focus(m_x11Interface->connection());
+    xcb_generic_error_t *error = nullptr;
+    ScopedPointer<xcb_get_input_focus_reply_t> sync(xcb_get_input_focus_reply(m_x11Interface->connection(), cookie, &error));
+    if (error) {
+        free(error);
+    }
 }
 
 WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
