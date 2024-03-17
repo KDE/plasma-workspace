@@ -699,6 +699,13 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
     updateFromMap(propsReply.value());
 
     if (--m_fetchesPending == 0) {
+        // Check if the player follows the specification dutifully.
+        if (m_identity.isEmpty()) {
+            qCDebug(MPRIS2) << "MPRIS2 service" << objectName() << "isn't standard-compliant, ignoring";
+            Q_EMIT initialFetchFailed(this);
+            return;
+        }
+
         Q_EMIT initialFetchFinished(this);
 
         connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
