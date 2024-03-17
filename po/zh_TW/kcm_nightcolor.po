@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-11-29 18:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -32,26 +32,26 @@ msgid ""
 "%2"
 msgstr "在 %1 開始逐漸變更至日間色溫，到 %2 時完全變更"
 
-#: ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:38
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "輕點地圖選取您的所在地。"
 
-#: ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "點擊地圖選取您的所在地。"
 
-#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr "放大"
 
-#: ui/LocationsFixedView.qml:210
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -65,13 +65,13 @@ msgstr ""
 "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>World "
 "location map</link> 修改"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "緯度："
 
-#: ui/LocationsFixedView.qml:250
+#: ui/LocationsFixedView.qml:249
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

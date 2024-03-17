@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-04-07 23:36-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -86,64 +86,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr ""
 
-#: qml/RunCommand.qml:100
+#: qml/RunCommand.qml:96
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: qml/RunCommand.qml:101
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "KRunner の挙動を設定"
 
-#: qml/RunCommand.qml:104
+#: qml/RunCommand.qml:100
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner を設定..."
 
-#: qml/RunCommand.qml:117
+#: qml/RunCommand.qml:113
 #, kde-format
 msgid "Showing only results from %1"
 msgstr ""
 
-#: qml/RunCommand.qml:131
+#: qml/RunCommand.qml:127
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' を検索中..."
 
-#: qml/RunCommand.qml:132
+#: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "検索..."
 
-#: qml/RunCommand.qml:306 qml/RunCommand.qml:307 qml/RunCommand.qml:309
+#: qml/RunCommand.qml:302 qml/RunCommand.qml:303 qml/RunCommand.qml:305
 #, kde-format
 msgid "Show Usage Help"
 msgstr "使用方法のヘルプを表示"
 
-#: qml/RunCommand.qml:317
+#: qml/RunCommand.qml:313
 #, kde-format
 msgid "Pin"
 msgstr "ピン留め"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Pin Search"
 msgstr "検索をピン留め"
 
-#: qml/RunCommand.qml:320
+#: qml/RunCommand.qml:316
 #, kde-format
 msgid "Keep Open"
 msgstr "開けたままにする"
 
-#: qml/RunCommand.qml:398 qml/RunCommand.qml:403
+#: qml/RunCommand.qml:394 qml/RunCommand.qml:399
 #, kde-format
 msgid "Recent Queries"
 msgstr "最近のクエリ"
 
-#: qml/RunCommand.qml:401
+#: qml/RunCommand.qml:397
 #, kde-format
 msgid "Remove"
 msgstr "削除"

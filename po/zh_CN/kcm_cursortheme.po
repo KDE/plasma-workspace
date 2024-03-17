@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2024-03-15 21:00\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"PO-Revision-Date: 2024-03-16 20:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -151,12 +151,12 @@ msgstr "您的系统已安装以下鼠标光标主题："
 msgid "(Current theme for this Plasma session)"
 msgstr "(此 Plasma 会话的当前主题)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:43
 #, kde-format
 msgid "Remove Theme"
 msgstr "移除主题"
 
-#: ui/Delegate.qml:51
+#: ui/Delegate.qml:50
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "还原光标主题"

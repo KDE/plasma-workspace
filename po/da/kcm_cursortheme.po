@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2020-10-04 17:16+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -154,12 +154,12 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:43
 #, kde-format
 msgid "Remove Theme"
 msgstr "Fjern tema"
 
-#: ui/Delegate.qml:51
+#: ui/Delegate.qml:50
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Genskab markørtema"

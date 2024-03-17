@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-12-11 11:38+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,26 +32,26 @@ msgid ""
 "%2"
 msgstr "Промените към дневни цветове започват в %1 и са напълно завършени в %2"
 
-#: ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:38
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "Натиснете, за да изберете вашата позиция на картата."
 
-#: ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "Кликнете, за да изберете вашата позиция на картата."
 
-#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr "Увеличаване"
 
-#: ui/LocationsFixedView.qml:210
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -65,13 +65,13 @@ msgstr ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Географска ширина:"
 
-#: ui/LocationsFixedView.qml:250
+#: ui/LocationsFixedView.qml:249
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

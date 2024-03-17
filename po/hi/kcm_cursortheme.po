@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2022-03-29 20:38+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -160,12 +160,12 @@ msgstr "आपके तंत्र पर निम्न संकेतक �
 msgid "(Current theme for this Plasma session)"
 msgstr "(इस प्लाज्मा सत्र के लिए वर्तमान प्रसंग)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:43
 #, kde-format
 msgid "Remove Theme"
 msgstr "प्रसंग हटाएँ"
 
-#: ui/Delegate.qml:51
+#: ui/Delegate.qml:50
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "संकेतक प्रसंग पुरानी स्तिथी में लाऐं"

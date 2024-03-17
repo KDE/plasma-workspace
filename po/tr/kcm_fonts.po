@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2024-03-13 20:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -292,7 +292,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Alt piksel sunumu:"
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -315,13 +315,13 @@ msgstr ""
 "sıralamalar bu özellik tarafından desteklenmez.</para>Bu, CRT monitörler ile "
 "çalışmaz."
 
-#: ui/main.qml:328
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Gölgeleme:"
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -335,12 +335,12 @@ msgstr ""
 "gölgeler genellikle daha keskin kenarlara yol açar, ancak küçük harfler "
 "büyük boyutlarda şekillerine daha az benzeyecektir."
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Yazıtipi DPI’sini zorla:"
 
-#: ui/main.qml:411
+#: ui/main.qml:413
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -359,7 +359,7 @@ msgstr ""
 "şeyi ölçeklendirmek için <interface>Ekran ve Monitör</interface> "
 "sayfasındaki ölçeklendirme kaydırıcısını kullanın.</para>"
 
-#: ui/main.qml:417
+#: ui/main.qml:419
 #, kde-format
 msgid "Select Font"
 msgstr "Yazıtipi Seç"

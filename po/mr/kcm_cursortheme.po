@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2014-10-28 15:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -155,12 +155,12 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:43
 #, kde-format
 msgid "Remove Theme"
 msgstr "शैली काढून टाका"
 
-#: ui/Delegate.qml:51
+#: ui/Delegate.qml:50
 #, fuzzy, kde-format
 #| msgid "Cursor Theme"
 msgid "Restore Cursor Theme"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-09-17 12:58+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -162,12 +162,12 @@ msgstr "Masz następujące zestawy wskaźników na swoim systemie:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Bieżący wygląd dla tej sesji Plazmy)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:43
 #, kde-format
 msgid "Remove Theme"
 msgstr "Usuń zestaw"
 
-#: ui/Delegate.qml:51
+#: ui/Delegate.qml:50
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Przywróć zestaw wskaźników"

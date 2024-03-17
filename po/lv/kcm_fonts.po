@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2024-01-18 21:07+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -287,7 +287,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Apakšpikseļu atveidošana:"
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -309,13 +309,13 @@ msgstr ""
 "<emphasis>BGR</emphasis> vai vēl citi eksotiski izkārtojumi, kas šo iespēju "
 "neatbalsta.</para>Tāpat arī šī iespēja nedarbojas ar CRT monitoriem."
 
-#: ui/main.qml:328
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Norādīšana:"
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -329,12 +329,12 @@ msgstr ""
 "parasti noved pie asākām malām, tomēr mazi burti mazāk precīzi atbildīs "
 "savām formām lielā izmērā."
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Piespiedu fontu DPI:"
 
-#: ui/main.qml:411
+#: ui/main.qml:413
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -353,7 +353,7 @@ msgstr ""
 "mērogotu visu, izmantojiet mērogošanas slīdni <interface>Displeja un "
 "monitora</interface> lapā.</para>"
 
-#: ui/main.qml:417
+#: ui/main.qml:419
 #, kde-format
 msgid "Select Font"
 msgstr "Atlasiet fontu"

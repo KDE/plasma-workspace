@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2022-12-20 09:49-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -37,26 +37,26 @@ msgid ""
 "%2"
 msgstr "A cor noturna começa a alterar às %1 e é alterada por completo às %2"
 
-#: ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:38
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "Toque para escolher sua localização no mapa."
 
-#: ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "Clique para escolher sua localização no mapa."
 
-#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: ui/LocationsFixedView.qml:210
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -70,13 +70,13 @@ msgstr ""
 "link> por TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitude:"
 
-#: ui/LocationsFixedView.qml:250
+#: ui/LocationsFixedView.qml:249
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

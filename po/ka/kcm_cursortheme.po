@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-08-04 07:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -159,12 +159,12 @@ msgstr "თქვენ ამჟამად სისტემაში შე
 msgid "(Current theme for this Plasma session)"
 msgstr "(მიმდინარე თემა ამ Plasma-ის სესიისთვის)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:43
 #, kde-format
 msgid "Remove Theme"
 msgstr "თემის წაშლა"
 
-#: ui/Delegate.qml:51
+#: ui/Delegate.qml:50
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "კურსორის თემის აღდგენა"

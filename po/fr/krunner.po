@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-08-19 23:03+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -87,64 +87,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "Modules externes disponibles pour KRunner, pluginId"
 
-#: qml/RunCommand.qml:100
+#: qml/RunCommand.qml:96
 #, kde-format
 msgid "Configure"
 msgstr "Configurer"
 
-#: qml/RunCommand.qml:101
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Configurer le comportement de KRunner"
 
-#: qml/RunCommand.qml:104
+#: qml/RunCommand.qml:100
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Configurer KRunner..."
 
-#: qml/RunCommand.qml:117
+#: qml/RunCommand.qml:113
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "Affichage en cours uniquement des résultats pour %1"
 
-#: qml/RunCommand.qml:131
+#: qml/RunCommand.qml:127
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Rechercher « %1 »…"
 
-#: qml/RunCommand.qml:132
+#: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Rechercher"
 
-#: qml/RunCommand.qml:306 qml/RunCommand.qml:307 qml/RunCommand.qml:309
+#: qml/RunCommand.qml:302 qml/RunCommand.qml:303 qml/RunCommand.qml:305
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Afficher l'aide à l'utilisation"
 
-#: qml/RunCommand.qml:317
+#: qml/RunCommand.qml:313
 #, kde-format
 msgid "Pin"
 msgstr "Code"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:314
 #, kde-format
 msgid "Pin Search"
 msgstr "Recherche de code"
 
-#: qml/RunCommand.qml:320
+#: qml/RunCommand.qml:316
 #, kde-format
 msgid "Keep Open"
 msgstr "Maintenir ouvert"
 
-#: qml/RunCommand.qml:398 qml/RunCommand.qml:403
+#: qml/RunCommand.qml:394 qml/RunCommand.qml:399
 #, kde-format
 msgid "Recent Queries"
 msgstr "Demandes récentes"
 
-#: qml/RunCommand.qml:401
+#: qml/RunCommand.qml:397
 #, kde-format
 msgid "Remove"
 msgstr "Supprimer"

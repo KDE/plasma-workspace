@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2019-12-12 22:16+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -32,26 +32,26 @@ msgid ""
 "%2"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:38
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:210
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -61,13 +61,13 @@ msgid ""
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:222
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:250
+#: ui/LocationsFixedView.qml:249
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

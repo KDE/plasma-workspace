@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-03-15 21:00\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"PO-Revision-Date: 2024-03-16 20:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -276,7 +276,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "次像素渲染方式："
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -295,13 +295,13 @@ msgstr ""
 "少数是按 BGR 顺序排列。此功能不支持一些非主流的排列顺序。</para>此功能对 CRT "
 "显示器无效。"
 
-#: ui/main.qml:328
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "字体微调方式："
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -314,12 +314,12 @@ msgstr ""
 "字体的轮廓就越清晰，但形状的准确性也会变差，导致小字体和大字体的视觉效果存在"
 "差异。"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgid "Force font DPI:"
 msgstr "强制字体 DPI："
 
-#: ui/main.qml:411
+#: ui/main.qml:413
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -336,7 +336,7 @@ msgstr ""
 "小。如果需要缩放所有内容，请使用<interface>显卡与显示器</interface>页面的缩放"
 "滑动条。</para>"
 
-#: ui/main.qml:417
+#: ui/main.qml:419
 #, kde-format
 msgid "Select Font"
 msgstr "选择字体"

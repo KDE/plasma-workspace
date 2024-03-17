@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -35,26 +35,26 @@ msgid ""
 "%2"
 msgstr "Awal Warna Malam kembali berubah pada %1 dan selesai berubah pada %2"
 
-#: ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:38
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:79 ui/LocationsFixedView.qml:104
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:210
+#: ui/LocationsFixedView.qml:209
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -64,14 +64,14 @@ msgid ""
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:223
+#: ui/LocationsFixedView.qml:222
 #, fuzzy, kde-format
 #| msgid "Latitude:"
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Garis lintang:"
 
-#: ui/LocationsFixedView.qml:250
+#: ui/LocationsFixedView.qml:249
 #, fuzzy, kde-format
 #| msgid "Longitude:"
 msgctxt "@label: textbox"

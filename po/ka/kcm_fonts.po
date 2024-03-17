@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-17 00:39+0000\n"
 "PO-Revision-Date: 2023-04-12 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -282,7 +282,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "ქვეპიქსელის რენდერი:"
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -305,13 +305,13 @@ msgstr ""
 "ზოგიერთი ეგზოტიკური შეკვეთა არ არის მხარდაჭერილი ამ მახასიათებლით.</para> ეს "
 "არ მუშაობს CRT მონიტორებთან."
 
-#: ui/main.qml:328
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "მომრგვალება:"
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -325,12 +325,12 @@ msgstr ""
 "ჩაშენებული. უფრო ძლიერი ჰინტინგი ძირითადად წამახულ წიბოებს გამოხატავს, "
 "მაგრამ პატარა ასოები მათ უფრო დიდ ვარიანტებს ნაკლებად წააგვანან."
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgid "Force font DPI:"
 msgstr "ფონტის DPI-ის ძალით დაყენება:"
 
-#: ui/main.qml:411
+#: ui/main.qml:413
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -349,7 +349,7 @@ msgstr ""
 "ზემოთ. ყველაფრის მასშტაბირებისთვის გამოიყენეთ ჩოჩია<interface>ეკრანისა და "
 "ჩვენების </interface> გვერდზე.</para>"
 
-#: ui/main.qml:417
+#: ui/main.qml:419
 #, kde-format
 msgid "Select Font"
 msgstr "აირჩიეთ ფონტი"
