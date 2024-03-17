@@ -26,6 +26,8 @@ class KMPRIS_EXPORT Mpris2Model : public QConcatenateTablesProxyModel
     Q_OBJECT
     QML_ELEMENT
 
+    // The current index will always follow a player once set until the player is closed,
+    // which means the current index is updated automatically.
     Q_PROPERTY(unsigned currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(PlayerContainer *currentPlayer READ currentPlayer NOTIFY currentPlayerChanged)
 
