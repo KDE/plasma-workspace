@@ -257,13 +257,6 @@ void Mpris2SourceModel::onInitialFetchFinished(PlayerContainer *container)
     disconnect(container, &PlayerContainer::initialFetchFinished, this, &Mpris2SourceModel::onInitialFetchFinished);
     disconnect(container, &PlayerContainer::initialFetchFailed, this, &Mpris2SourceModel::onInitialFetchFailed);
 
-    // Check if the player follows the specification dutifully.
-    if (container->identity().isEmpty()) {
-        qCDebug(MPRIS2) << "MPRIS2 service" << container->objectName() << "isn't standard-compliant, ignoring";
-        delete container;
-        return;
-    }
-
     const int row = m_containers.size();
     beginInsertRows(QModelIndex(), row, row);
 
