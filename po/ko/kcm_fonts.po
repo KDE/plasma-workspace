@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-04-22 00:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -279,7 +279,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "서브픽셀 렌더링:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -301,13 +301,13 @@ msgstr ""
 "되어 있을 수도 있으며, 기타 비선형 서브픽셀 구조는 지원하지 않습니다.</para>"
 "이 기능은 CRT 모니터에서는 작동하지 않습니다."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "힌팅:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -321,12 +321,12 @@ msgstr ""
 "만 작은 글꼴 크기의 글자가 큰 글꼴 크기의 글자와 더 다르게 보일 수도 있습니"
 "다."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "글꼴 DPI 강제 지정:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -344,7 +344,7 @@ msgstr ""
 "든 것의 크기를 변경하려면 <interface>디스플레이와 모니터</interface> 페이지"
 "의 크기 조절 슬라이더를 사용하십시오.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "글꼴 선택"

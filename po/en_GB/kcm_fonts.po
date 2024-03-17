@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-04-22 10:49+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -284,7 +284,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Sub-pixel rendering:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -306,13 +306,13 @@ msgstr ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -326,12 +326,12 @@ msgstr ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Force font DPI:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -349,7 +349,7 @@ msgstr ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "Select Font"

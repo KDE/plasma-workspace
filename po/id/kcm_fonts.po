@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -290,7 +290,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Perenderan sub-pixel:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -312,13 +312,13 @@ msgstr ""
 "beberapa memiliki <emphasis>BGR</emphasis> dan beberapa urutan eksotis tidak "
 "didukung oleh fitur ini.</para>Ini tidak berfungsi dengan monitor CRT."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -332,12 +332,12 @@ msgstr ""
 "yang lebih kuat umumnya mengarah ke tepi yang lebih tajam tetapi huruf kecil "
 "akan kurang menyerupai bentuknya pada ukuran besar."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Paksa DPI font:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 "penggeser penskalaan di halaman <interface>Display & Monitor</interface>.</"
 "para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "Pilih Font"

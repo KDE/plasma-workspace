@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-10-22 06:42+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -291,7 +291,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Renderización subpíxel:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -314,13 +314,13 @@ msgstr ""
 "verde, vermello) e algunhas ordes exóticas son incompatíbeis con esta "
 "funcionalidade.</para>Isto non funciona con monitores CRT."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Indicacións:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -335,12 +335,12 @@ msgstr ""
 "definidos, pero as letras pequenas terán unha forma peor definida en tamaños "
 "grandes."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forzar os PPP da fonte:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -359,7 +359,7 @@ msgstr ""
 "enriba. Para escalar todo, use o control esvaradío de escala na páxina "
 "<interface>Pantalla e monitor</interface>.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccionar a fonte"

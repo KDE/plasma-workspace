@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1653345 2023-06-07 02:34:08Z scripty $
+# $Id: kcm_fonts.po 1675859 2024-03-17 03:28:39Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-04-09 08:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -294,7 +294,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Vrsta podtočkovnega upodabljanja:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +316,13 @@ msgstr ""
 "<emphasis>BGR</emphasis> in nekaterih eksotičnih naročil ne podpirajo te "
 "funkcije.</para>To ne deluje pri monitorjih s katodno cevjo."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Namigi:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -336,12 +336,12 @@ msgstr ""
 "splošno močnejše glajenje vodi do ostrejših robov, vendar bodo majhne črke "
 "manj podobne njihovi obliki pri velikih velikostih."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Vsili ločljivost pisav:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -360,7 +360,7 @@ msgstr ""
 "vsega, uporabite drsnik za merilo na strani <interface>Zasloni in "
 "prikazovalniki</interface>.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "Izberi pisavo"

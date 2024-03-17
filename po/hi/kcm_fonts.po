@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2022-03-29 20:42+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -284,7 +284,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "सब पिक्सल रेंडरिंग इस्तेमाल करें :"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -305,13 +305,13 @@ msgstr ""
 "रैखिक क्रम होता है, कुछ में <emphasis>बीजीआर</emphasis> होता है और कुछ विदेशी ऑर्डरिंग "
 "इस सुविधा द्वारा समर्थित नहीं होते हैं।</para>यह सीआरटी मॉनिटर के साथ काम नहीं करता है।"
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "हिंटिंग :"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -324,12 +324,12 @@ msgstr ""
 "प्रतिपादन गुणवत्ता को बढ़ाने के लिए किया जाता है। मजबूत हिंटिंग आम तौर पर तेज किनारों की "
 "ओर ले जाते हैं लेकिन छोटे अक्षरों की आकृती बड़े आकार में उनके आकृती से कम मिलते-जुलते होंगे।"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "फ़ॉन्ट डीपीआई बाध्य करें:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -347,7 +347,7 @@ msgstr ""
 "बदलने के लिए, <interface>प्रदर्शक और मॉनिटर </interface>पेज पर स्केलिंग स्लाइडर का "
 "उपयोग करें।</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "फ़ॉन्ट चुनें"

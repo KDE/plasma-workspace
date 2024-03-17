@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-05-02 18:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -291,7 +291,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Alipikselihahmonnus:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -313,13 +313,13 @@ msgstr ""
 "jotkin <emphasis>BGR</emphasis>-järjestystä tai jotakin oudompaa, mitä tämä "
 "ominaisuus ei tue.</para>Tämä ei toimi kuvaputkinäytöissä (CRT)."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Vihjeistys:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -333,12 +333,12 @@ msgstr ""
 "vihjeistys johtaa yleensä terävämpiin reunoihin, mutta pienet kirjaimet "
 "muistuttavat muodoltaan vähemmän suurikokoisia vastineitaan."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Pakota fontin DPI:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -354,7 +354,7 @@ msgstr ""
 "muuttaminen voi aiheuttaa ongelmia: kuvakkeet tai kuvat eivät esimerkiksi "
 "skaalaudu odotetusti.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "Valitse fontti"

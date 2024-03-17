@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-10-03 11:42+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -295,7 +295,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "סוג עיבוד תת‏־פיקסלים:"
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +316,13 @@ msgstr ""
 "יש <emphasis>BGR</emphasis> (כחול-ירוק-אדום) ומגוון סידורים אקזוטיים יותר לא "
 "נתמכים על ידי היכולת הזאת.</para>לא עובד עם צגי CRT (העבים הישנים)."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "רמיזה:"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -335,12 +335,12 @@ msgstr ""
 "בגדלים קטנים. רמיזה חזקה יותר בדרך כלל מחדדת את הקצוות אך האותיות הקטנות "
 "פחות דומות לצורת בגדלים גדולים יותר."
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "אכיפת נק׳ לאינטש של הגופן:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 "הטקסט, יש לשנות את גודל הגופנים להלן. כדי לשנות את הכול לפי קנה מידה, יש "
 "להשתמש במחוון הגלילה שבעמוד <interface>תצוגה וצג</interface>.</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "בחירת גופן"

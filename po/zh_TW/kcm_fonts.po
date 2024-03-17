@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2024-03-17 03:05+0000\n"
 "PO-Revision-Date: 2023-08-07 23:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -285,7 +285,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "子像素繪製："
 
-#: ui/main.qml:321
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -305,13 +305,13 @@ msgstr ""
 "會使用<emphasis>BGR</emphasis>，而其他更少見的排列方式本功能則不支援。</para>"
 "本功能不支援 CRT 螢幕。"
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "字型微調（Hinting）："
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -324,12 +324,12 @@ msgstr ""
 "字體時），較強的微調通常會讓字體筆畫邊緣更加鮮明，但小號字體的形狀將與大號字"
 "體明顯不同。"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid "Force font DPI:"
 msgstr "強制指定字型 DPI："
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -345,7 +345,7 @@ msgstr ""
 "para><para>若要使文字變大，請修改上方的字型大小。若要改變所有東西的大小，請在"
 "<interface>顯示與螢幕</interface>頁面中調整縮放比例。</para>"
 
-#: ui/main.qml:414
+#: ui/main.qml:416
 #, kde-format
 msgid "Select Font"
 msgstr "選擇字型"
