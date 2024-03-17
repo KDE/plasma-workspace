@@ -31,13 +31,11 @@ MouseArea {
 
     property bool inhibited: false
 
-    property bool wasExpanded: false
-    onPressed: wasExpanded = root.expanded
     onClicked: mouse => {
         if (mouse.button === Qt.MiddleButton) {
             Globals.toggleDoNotDisturbMode();
         } else {
-            root.expanded = !wasExpanded;
+            root.expanded = !root.expanded;
         }
     }
 
