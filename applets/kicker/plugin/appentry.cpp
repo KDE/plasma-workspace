@@ -113,7 +113,7 @@ QString groupName(const QString &name)
         if (transliterator) {
             icu::UnicodeString icuText(reinterpret_cast<const char16_t *>(name.data()), name.size());
             transliterator->transliterate(icuText);
-            return QString::fromUtf16(icuText.getBuffer(), static_cast<int>(icuText.length())).left(1);
+            return QStringView(icuText.getBuffer(), static_cast<int>(icuText.length())).sliced(0, 1).toString();
         }
     }
 #endif

@@ -55,7 +55,7 @@ QString TimezonesI18n::i18nCity(const QString &timezoneId)
     icu::UnicodeString result;
     const auto &cityName = m_tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(timezoneId.toStdString())), result);
 
-    return cityName.isBogus() ? timezoneId : QString::fromUtf16(cityName.getBuffer(), cityName.length());
+    return cityName.isBogus() ? timezoneId : QStringView(cityName.getBuffer(), cityName.length()).toString();
 }
 
 void TimezonesI18n::init()
