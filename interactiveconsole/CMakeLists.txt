@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_interactiveconsole\")
+
 set(interactiveconsole_SRCS
     interactiveconsole.cpp
     main.cpp
