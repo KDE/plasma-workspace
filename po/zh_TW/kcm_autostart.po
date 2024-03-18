@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"POT-Creation-Date: 2024-03-18 00:39+0000\n"
 "PO-Revision-Date: 2023-11-10 23:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: autostartmodel.cpp:376
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" 不是絕對 URL。"
 
-#: autostartmodel.cpp:379
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" 不存在。"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" 不是檔案"
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" 無法讀取。"

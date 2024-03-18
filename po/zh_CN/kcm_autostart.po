@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2024-03-16 20:45\n"
+"POT-Creation-Date: 2024-03-18 00:39+0000\n"
+"PO-Revision-Date: 2024-03-17 20:42\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -17,22 +17,22 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_autostart.pot\n"
 "X-Crowdin-File-ID: 43393\n"
 
-#: autostartmodel.cpp:376
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "“%1”不是绝对路径。"
 
-#: autostartmodel.cpp:379
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "“%1” 不存在。"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "“%1” 不是文件。"
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "“%1” 不可读。"

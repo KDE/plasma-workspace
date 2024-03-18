@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-03-09 19:06+0100\n"
+"PO-Revision-Date: 2024-03-17 10:56+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -368,7 +368,7 @@ msgstr "Legg til ny"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Trykk «Mellomrom» for å redigera brukarprofilen"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -507,13 +507,13 @@ msgstr "Vel bilete"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr "Plasshaldar-ikon"
+msgstr "Plasshaldarikon"
 
 #: src/ui/PicturesSheet.qml:274
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Bruk plasshaldarikon for avatar"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format
