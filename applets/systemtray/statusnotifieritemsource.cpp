@@ -256,38 +256,40 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         QVariantMap properties = reply.argumentAt<0>();
         QString path = properties[QStringLiteral("IconThemePath")].toString();
 
-        if (!m_customIconLoader) {
-            m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
-            m_customIconLoader->setCustomPalette(Plasma::Theme::globalPalette());
+        if (path != m_iconThemePath) {
+            if (!m_customIconLoader) {
+                m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
+                m_customIconLoader->setCustomPalette(Plasma::Theme::globalPalette());
 
-            m_menuIconLoader = new KIconLoader(QString(), QStringList(), this);
-        }
-        // FIXME: If last part of path is not "icons", this won't work!
-        QString appName;
-        auto tokens = QStringView(path).split('/', Qt::SkipEmptyParts);
-        if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
-            appName = tokens.takeLast().toString();
+                m_menuIconLoader = new KIconLoader(QString(), QStringList(), this);
+            }
+            // FIXME: If last part of path is not "icons", this won't work!
+            QString appName;
+            auto tokens = QStringView(path).split('/', Qt::SkipEmptyParts);
+            if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
+                appName = tokens.takeLast().toString();
 
-        // icons may be either in the root directory of the passed path or in a
-        // appdir format i.e hicolor/32x32/iconname.png
+            // icons may be either in the root directory of the passed path or in a
+            // appdir format i.e hicolor/32x32/iconname.png
 
-        m_customIconLoader->reconfigure(appName, QStringList(path));
-        m_menuIconLoader->reconfigure(appName, QStringList(path));
-
-        // add app dir requires an app name, though this is completely unused in
-        // this context
-        m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-        m_menuIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-
-        connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=, this] {
             m_customIconLoader->reconfigure(appName, QStringList(path));
-            m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-        });
-
-        connect(m_menuIconLoader, &KIconLoader::iconChanged, this, [=, this] {
             m_menuIconLoader->reconfigure(appName, QStringList(path));
+
+            // add app dir requires an app name, though this is completely unused in
+            // this context
+            m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
             m_menuIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-        });
+
+            connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=, this] {
+                m_customIconLoader->reconfigure(appName, QStringList(path));
+                m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
+            });
+
+            connect(m_menuIconLoader, &KIconLoader::iconChanged, this, [=, this] {
+                m_menuIconLoader->reconfigure(appName, QStringList(path));
+                m_menuIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
+            });
+        }
         m_iconThemePath = path;
 
         m_category = properties[QStringLiteral("Category")].toString();
