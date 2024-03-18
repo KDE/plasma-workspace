@@ -3,7 +3,7 @@
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013-2015 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2021-2022 ivan tkachenko <me@ratijas.tk>
-    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie.clarius@kde.org
+    SPDX-FileCopyrightText: 2024 Natalie Clarius <natalie.clarius@kde.org
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -43,6 +43,9 @@ PlasmoidItem {
     KeyboardBrightnessControl {
         id: keyboardBrightnessControl
         isSilent: brightnessAndColorControl.expanded
+    }
+    KeyboardColorControl {
+        id: keyboardColorControl
     }
 
     property bool isNightColorActive: nightColorMonitor.running && nightColorMonitor.currentTemperature != 6500

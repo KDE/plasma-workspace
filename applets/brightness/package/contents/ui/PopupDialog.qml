@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013-2016 Kai Uwe Broulik <kde@privat.broulik.de>
-    SPDX-FileCopyrightText: 2023 Natalie Clarius <natalie.clarius@kde.org>
+    SPDX-FileCopyrightText: 2023-2024 Natalie Clarius <natalie.clarius@kde.org>
     
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -101,7 +101,7 @@ PlasmaExtras.Representation {
                 visible: keyboardBrightnessControl.isBrightnessAvailable
 
                 KeyNavigation.up: screenBrightnessSlider.visible ? screenBrightnessSlider : screenBrightnessSlider.KeyNavigation.up
-                KeyNavigation.down: nightColorItem
+                KeyNavigation.down: keyboardColorItem.visible ? keyboardColorItem : keyboardColorItem.KeyNavigation.down
                 KeyNavigation.backtab: KeyNavigation.up
                 KeyNavigation.tab: KeyNavigation.down
 
@@ -117,12 +117,25 @@ PlasmaExtras.Representation {
                 }
             }
 
+            KeyboardColorItem {
+                id: keyboardColorItem
+
+                width: scrollView.availableWidth
+
+                KeyNavigation.up: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.up
+                KeyNavigation.down: nightColorItem
+                KeyNavigation.backtab: KeyNavigation.up
+                KeyNavigation.tab: KeyNavigation.down
+
+                text: i18n("Keyboard Color")
+            }
+
             NightColorItem {
                 id: nightColorItem
 
                 width: scrollView.availableWidth
 
-                KeyNavigation.up: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.up
+                KeyNavigation.up: keyboardColorItem.visible ? keyboardColorItem : keyboardColorItem.KeyNavigation.up
 
                 text: i18n("Night Light")
             }
