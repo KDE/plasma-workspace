@@ -23,10 +23,14 @@ PlasmaComponents3.ItemDelegate {
     property alias value: control.value
     property alias maximumValue: control.to
     property alias stepSize: control.stepSize
-    property alias showPercentage: percent.visible
     required property /*BrightnessItem.Type*/ int type
 
     readonly property real percentage: Math.round(100 * value / maximumValue)
+    readonly property string brightnessLevelOff: i18nc("Backlight on or off", "Off")
+    readonly property string brightnessLevelLow: i18nc("Brightness level", "Low")
+    readonly property string brightnessLevelMedium: i18nc("Brightness level", "Medium")
+    readonly property string brightnessLevelHigh: i18nc("Brightness level", "High")
+    readonly property string brightnessLevelOn: i18nc("Backlight on or off", "On")
 
     signal moved()
 
@@ -68,7 +72,20 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: percent
                     Layout.alignment: Qt.AlignRight
-                    text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
+                    text: {
+                        if (maximumValue == 1) {
+                            const levels = [brightnessLevelOff, brightnessLevelOn];
+                            return levels[value];
+                        } else if (maximumValue == 2) {
+                            const levels = [brightnessLevelOff, brightnessLevelLow, brightnessLevelHigh];
+                            return levels[value];
+                        } else if (maximumValue == 3) {
+                            const levels = [brightnessLevelOff, brightnessLevelLow, brightnessLevelMedium, brightnessLevelHigh];
+                            return levels[value];
+                        } else {
+                            return i18nc("Placeholder is brightness percentage", "%1%", percentage);
+                        }
+                    }
                     textFormat: Text.PlainText
                 }
             }

@@ -96,7 +96,6 @@ PlasmaExtras.Representation {
                 icon.name: "input-keyboard-brightness"
                 text: i18n("Keyboard Brightness")
                 type: BrightnessItem.Type.Keyboard
-                showPercentage: false
                 value: keyboardBrightnessControl.brightness
                 maximumValue: keyboardBrightnessControl.brightnessMax
                 visible: keyboardBrightnessControl.isBrightnessAvailable
