@@ -27,5 +27,6 @@ private Q_SLOTS:
 private:
     void startLogout(KWorkSpace::ShutdownType shutdownType);
     void runShutdownScripts();
+    bool usingSystemdManagedSession();
     KWorkSpace::ShutdownType m_shutdownType;
 };
