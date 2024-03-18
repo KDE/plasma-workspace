@@ -38,3 +38,20 @@ It is currently used by `plasmashell`, the notifications API, and `ksplash` for 
 ## plasma-sourceenv.sh
 
 This is for dev sessions only, and sets up environment variables to make a custom installation directory work.
+
+# Live Session setup
+
+To help with distro live session setup we have tools to help carry out common actions
+such as disabling a bunch of services or switching plasma-welcome into live mode.
+Merge requests welcome!
+
+All tools support the SYSROOT environment variable to switch to a different root. Implicit default is /.
+Please beware that for the user tool HOME does override SYSROOT when we write or read assets from the home.
+
+- plasma-setup-live-system: should be run as root and configures the system portion.
+  Requires USERNAME to be set to the target username for sddm setup.
+  Alternatively the kernel command line argument plasma.live.user=foobar may be set.
+- plasma-setup-live-user: should be run as the live session user and configures the user portion.
+  Requires HOME to be set implicitly.
+
+There are also supporting systemd units. They only activate if plasma.live.user is set on the cmdline.

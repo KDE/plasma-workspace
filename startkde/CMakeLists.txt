@@ -66,3 +66,15 @@ if (WITH_X11_SESSION)
 endif()
 install(PROGRAMS plasma-sourceenv.sh DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 install(PROGRAMS plasma-dbus-run-session-if-needed DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+
+add_executable(plasma-setup-live-system plasma-setup-live-system.cpp)
+target_link_libraries(plasma-setup-live-system PRIVATE KF6::ConfigCore)
+install(TARGETS plasma-setup-live-system DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+ecm_install_configured_files(INPUT plasma-setup-live-system.service.in DESTINATION ${KDE_INSTALL_SYSTEMDUNITDIR}/system)
+
+add_executable(plasma-setup-live-user plasma-setup-live-user.cpp)
+target_link_libraries(plasma-setup-live-user PRIVATE KF6::ConfigCore)
+install(TARGETS plasma-setup-live-user DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+ecm_install_configured_files(INPUT plasma-setup-live-user.service.in DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+
+add_subdirectory(autotests)

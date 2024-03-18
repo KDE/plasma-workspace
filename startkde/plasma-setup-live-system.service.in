@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+# SPDX-FileCopyrightText: 2024 Harald Sitter <sitter@kde.org>
+
+[Unit]
+Description=Plasma Live System Setup
+ConditionKernelCommandLine=plasma.live.user
+Before=display-manager.service
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-setup-live-system
+
+[Install]
+WantedBy=display-manager.service
