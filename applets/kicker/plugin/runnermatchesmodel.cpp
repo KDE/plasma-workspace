@@ -80,6 +80,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         }
 
         return match.icon();
+    } else if (role == Kicker::GroupRole) {
+        return KRunner::ResultsModel::data(index, CategoryRole);
     } else if (role == Kicker::DescriptionRole) {
         return match.subtext();
     } else if (role == Kicker::FavoriteIdRole) {
