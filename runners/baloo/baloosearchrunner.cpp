@@ -79,7 +79,10 @@ RemoteMatches SearchRunner::Match(const QString &searchTerm)
     QSet<QUrl> foundUrls;
 
     RemoteMatches matches;
-    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Audio")), i18n("Audios"), foundUrls);
+    matches << matchInternal(searchTerm,
+                             QStringList(QStringLiteral("Audio")),
+                             i18nc("Audio files; translate this as a plural noun in languages with a plural form of the word", "Audio"),
+                             foundUrls);
     matches << matchInternal(searchTerm, QStringList(QStringLiteral("Image")), i18n("Images"), foundUrls);
     matches << matchInternal(searchTerm, QStringList(QStringLiteral("Video")), i18n("Videos"), foundUrls);
     matches << matchInternal(searchTerm, QStringList(QStringLiteral("Spreadsheet")), i18n("Spreadsheets"), foundUrls);
