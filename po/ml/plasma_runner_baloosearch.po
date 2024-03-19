@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2024-03-19 00:40+0000\n"
 "PO-Revision-Date: 2020-11-25 19:53+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -24,60 +24,63 @@ msgstr ""
 msgid "Open Containing Folder"
 msgstr "അടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
 
-#: baloosearchrunner.cpp:82
+#: baloosearchrunner.cpp:84
 #, fuzzy, kde-format
 #| msgid "Audio"
-msgid "Audios"
+msgctxt ""
+"Audio files; translate this as a plural noun in languages with a plural form "
+"of the word"
+msgid "Audio"
 msgstr "ശബ്ദം"
 
-#: baloosearchrunner.cpp:83
+#: baloosearchrunner.cpp:86
 #, fuzzy, kde-format
 #| msgid "Image"
 msgid "Images"
 msgstr "ചിത്രം"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:87
 #, fuzzy, kde-format
 #| msgid "Video"
 msgid "Videos"
 msgstr "ചലച്ചിത്രം"
 
-#: baloosearchrunner.cpp:85
+#: baloosearchrunner.cpp:88
 #, fuzzy, kde-format
 #| msgid "Spreadsheet"
 msgid "Spreadsheets"
 msgstr "സ്പ്രെഡ്ഷീറ്റ്"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:89
 #, fuzzy, kde-format
 #| msgid "Presentation"
 msgid "Presentations"
 msgstr "അവതരണം"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:90
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "അറ"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:91
 #, fuzzy, kde-format
 #| msgid "Document"
 msgid "Documents"
 msgstr "ഡോക്യുമെന്റ്"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:92
 #, fuzzy, kde-format
 #| msgid "Archive"
 msgid "Archives"
 msgstr "ശേഖരം"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:93
 #, kde-format
 msgid "Texts"
 msgstr ""
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:94
 #, kde-format
 msgid "Files"
 msgstr ""

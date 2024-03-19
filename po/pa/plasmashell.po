@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-19 00:40+0000\n"
 "PO-Revision-Date: 2024-02-05 07:52-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -235,13 +235,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "ਆਨ-ਸਕਰੀਨ ਕੀਬੋਰਡ ਨੂੰ ਨਾ-ਸਰਗਰਮ ਕੀਤਾ ਗਿਆ"
 
-#: panelview.cpp:1029
+#: panelview.cpp:1028
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "ਪੈਨਲ ਸੰਰਚਨਾ ਨੂੰ ਓਹਲੇ ਕਰੋ"
 
-#: panelview.cpp:1031
+#: panelview.cpp:1030
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

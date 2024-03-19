@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2024-03-13 20:38+0300\n"
+"PO-Revision-Date: 2024-03-18 19:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -90,7 +90,7 @@ msgstr "İptal ediliyor…"
 #: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
-msgstr "Yazıtipi Yazıcı"
+msgstr "Yazıtipi Yazıcısı"
 
 #: apps/Printer.cpp:329
 #, kde-format
@@ -108,8 +108,8 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
-"Basılacak yazıtipi, \"Aile,Stil\" şeklinde tanımlanır, burada Stil 24-bit "
-"onluk sayı olarak şu şekilde tanımlanır: <kalınlık><enine uzunluk><eğim>"
+"Basılacak yazıtipi, “Aile, Biçem” şeklinde tanımlanır, burada Biçem, 24 bit "
+"onluk sayı olarak şöyle tanımlanmıştır: <kalınlık><genişlik><eğim>"
 
 #: apps/Printer.cpp:346
 #, kde-format
@@ -442,8 +442,8 @@ msgstr ""
 "yöneticisi tarafından kullanılan özel gruplardır.<ul>%1</ul></"
 "li><li><b>Özel</b> sizin tarafınızdan oluşturulmuş gruplardır. Bu gruplardan "
 "bir tanesine bir yazıtipi ailesi eklemek için yazıtipleri listesinden "
-"sürükleyin ve istenilen gruba bırakın. Gruptan çıkarmak için yazıtipini "
-"\"Tüm Yazıtipleri\" grubuna sürükleyin.</li></ul></p>"
+"sürükleyin ve istenilen gruba bırakın. Gruptan çıkarmak için yazıtipini ‘Tüm "
+"Yazıtipleri’ grubuna sürükleyin.</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:594
 #, kde-format
@@ -453,7 +453,7 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Tüm Yazıtipleri</i>, sisteminizde kurulu olan tüm yazıtiplerini "
-"içerir.</li><li><i>Sınıflandırılmamış</i>, henüz bir \"Özel\" grubu içine "
+"içerir.</li><li><i>Sınıflandırılmamış</i>, henüz bir ‘Özel’ grubu içine "
 "yerleştirilmemiş tüm yazıtiplerini içerir.</li>"
 
 #: kcmfontinst/GroupList.cpp:597
@@ -467,16 +467,16 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Tüm Yazıtipleri</i> sisteminizde kurulu olan tüm yazıtiplerini içerir "
-"— hem \"Sistem\" hem de \"Kişisel\" yazıtipleri.</li><li><i>Sistem</i> "
-"sistem geneli için kurulmuş yazıtiplerini içerir (tüm kullanıcılar "
-"tarafından kullanılabilirler).</li><li><i>Kişisel</i> kişisel "
-"yazıtiplerinizi içerir.</li><li><i>Sınıflandırılmamış</i> ise henüz bir "
-"\"Özel\" gruba yerleştirilmemiş yazıtiplerini içerir.</li>"
+"— hem ‘Sistem’ hem de ‘Kişisel’ yazıtipleri.</li><li><i>Sistem</i> sistem "
+"geneli için kurulmuş yazıtiplerini içerir (tüm kullanıcılar tarafından "
+"kullanılabilirler).</li><li><i>Kişisel</i> kişisel yazıtiplerinizi içerir.</"
+"li><li><i>Sınıflandırılmamış</i> ise henüz bir “özel” gruba yerleştirilmemiş "
+"yazıtiplerini içerir.</li>"
 
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt><b>'%1'</b> adlı bir grup zaten var.</qt>"
+msgstr "<qt>“<b>%1</b>” adlı bir grup halihazırda var.</qt>"
 
 #: kcmfontinst/GroupList.cpp:792
 #, kde-format
@@ -491,7 +491,7 @@ msgstr "Dışa Aktar…"
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr "\"%1\" konumuna ekleyin."
+msgstr "“%1” konumuna ekleyin."
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
@@ -772,7 +772,7 @@ msgstr "Silinecek Öge Yok"
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>' yazıtipini silmeyi gerçekten istiyor musunuz?</p>"
+"<p></p><p>“<b>%1</b>” yazıtipini silmeyi gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:622
 #, kde-format
@@ -812,7 +812,7 @@ msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>'</p><p> yazıtipini <i>%2</i> konumundan <i>%3</i> "
+"<p></p><p>“<b>%1</b>”</p><p> yazıtipini <i>%2</i> konumundan <i>%3</i> "
 "konumuna taşımayı gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:666
@@ -978,14 +978,14 @@ msgstr "Devre Dışı Bırakılacak Bir Şey Yok"
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>' yazıtipini etkinleştirmeyi gerçekten istiyor musunuz?</"
+"<p></p><p>“<b>%1</b>” yazıtipini etkinleştirmeyi gerçekten istiyor musunuz?</"
 "p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>' yazıtipini devre dışı bırakmayı gerçekten istiyor "
+"<p></p><p>“<b>%1</b>” yazıtipini devre dışı bırakmayı gerçekten istiyor "
 "musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1121
@@ -994,7 +994,7 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini etkinleştirmeyi "
+"<p>“<b>%2</b>” grubundaki</p><p>“<b>%1</b>” ögesini etkinleştirmeyi "
 "gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1125
@@ -1003,7 +1003,7 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini devre dışı bırakmayı "
+"<p>“<b>%2</b>” grubundaki</p><p>“<b>%1</b>” ögesini devre dışı bırakmayı "
 "gerçekten istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1130
@@ -1039,10 +1039,10 @@ msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>'<b>%2</b>' grubundaki bu yazıtipini etkinleştirmeyi gerçekten istiyor "
+"<p>“<b>%2</b>” grubundaki bu yazıtipini etkinleştirmeyi gerçekten istiyor "
 "musunuz?</p>"
 msgstr[1] ""
-"<p>'<b>%2</b>' grubundaki bu %1 yazıtipini etkinleştirmeyi gerçekten istiyor "
+"<p>“<b>%2</b>' grubundaki bu %1 yazıtipini etkinleştirmeyi gerçekten istiyor "
 "musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1147
@@ -1054,10 +1054,10 @@ msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>'<b>%2</b>' grubundaki bu yazıtipini devre dışı bırakmayı gerçekten "
+"<p>“<b>%2</b>” grubundaki bu yazıtipini devre dışı bırakmayı gerçekten "
 "istiyor musunuz?</p>"
 msgstr[1] ""
-"<p>'<b>%2</b>' grubundaki bu %1 yazıtipini devre dışı bırakmayı gerçekten "
+"<p>“<b>%2</b>' grubundaki bu %1 yazıtipini devre dışı bırakmayı gerçekten "
 "istiyor musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1154
@@ -1123,7 +1123,7 @@ msgstr "48 pt"
 #: kio/KioFonts.cpp:206
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr "Yazıtipleri yalnızca \"%1\" ve \"%2\" konumlarına kurulabilir."
+msgstr "Yazıtipleri yalnızca “%1” ve “%2” konumlarına kurulabilir."
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1152,12 +1152,12 @@ msgstr "Yalnızca yazıtipleri silinebilir."
 #: kio/KioFonts.cpp:452
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
-msgstr "Üzgünüm \"%1\" ve \"%2\" dışındaki yazıtiplerini kaldıramazsınız."
+msgstr "Üzgünüm “%1” ve “%2” dışındaki yazıtiplerini kaldıramazsınız."
 
 #: kio/KioFonts.cpp:481
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
-msgstr "Lütfen \"%1\" veya \"%2\"yi belirtin."
+msgstr "Lütfen “%1” veya “%2”yi belirtin."
 
 #: kio/KioFonts.cpp:499
 #, kde-format

@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Jure Repinc <jlp@holodeck1.com>, 2009, 2010, 2012.
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2024 Jure Repinc <jlp@holodeck1.com>
 # Andrej Vernekar <andrej.vernekar@gmail.com>, 2011.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-02-24 08:22+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-03-17 13:33+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -28,7 +28,7 @@ msgstr "UDI nadrejenega"
 
 #: soliddeviceengine.cpp:113
 msgid "Vendor"
-msgstr "Proizvajalec"
+msgstr "Prodajalec"
 
 #: soliddeviceengine.cpp:114
 msgid "Product"
@@ -44,7 +44,7 @@ msgstr "Ikona"
 
 #: soliddeviceengine.cpp:117 soliddeviceengine.cpp:594
 msgid "Emblems"
-msgstr "Simboli"
+msgstr "Značke"
 
 #: soliddeviceengine.cpp:118 soliddeviceengine.cpp:476
 #: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
@@ -95,7 +95,7 @@ msgstr "Naprava"
 
 #: soliddeviceengine.cpp:150
 msgid "Storage Access"
-msgstr "Dostop do shrambe"
+msgstr "Dostop do hrambe"
 
 #: soliddeviceengine.cpp:151 soliddeviceengine.cpp:507
 #: soliddeviceengine.cpp:608
@@ -164,11 +164,11 @@ msgstr "Smart Media"
 
 #: soliddeviceengine.cpp:175
 msgid "SdMmc"
-msgstr "SdMmc"
+msgstr "SD MMC"
 
 #: soliddeviceengine.cpp:175
 msgid "Xd"
-msgstr "Xd"
+msgstr "XD"
 
 #: soliddeviceengine.cpp:177
 msgid "Bus"
@@ -284,7 +284,7 @@ msgstr "Drugo"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Unused"
-msgstr "Neuporabljen"
+msgstr "Neuporabljeno"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -517,15 +517,15 @@ msgstr "Baterija telefona"
 
 #: soliddeviceengine.cpp:389
 msgid "Monitor Battery"
-msgstr "Nadziraj baterijo"
+msgstr "Baterija zaslona"
 
 #: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
-msgstr "Igralna vhodna baterija"
+msgstr "Baterija igralnega vhoda"
 
 #: soliddeviceengine.cpp:390
 msgid "Bluetooth Battery"
-msgstr "Baterija bluetootha"
+msgstr "Baterija Bluetooth"
 
 #: soliddeviceengine.cpp:391
 msgid "Tablet Battery"
@@ -533,15 +533,15 @@ msgstr "Baterija tablice"
 
 #: soliddeviceengine.cpp:391
 msgid "Headphone Battery"
-msgstr "Baterija naglavnega telefona"
-
-#: soliddeviceengine.cpp:392
-msgid "Headset Battery"
 msgstr "Baterija slušalk"
 
 #: soliddeviceengine.cpp:392
+msgid "Headset Battery"
+msgstr "Baterija slušalk z mikrofonom"
+
+#: soliddeviceengine.cpp:392
 msgid "Touchpad Battery"
-msgstr "Baterija drsne ploščice"
+msgstr "Baterija sledilne ploščice"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"
@@ -577,7 +577,7 @@ msgstr "Znova napolnljiva"
 
 #: soliddeviceengine.cpp:402
 msgid "Charge State"
-msgstr "Stanje napolnjenosti"
+msgstr "Stanje polnjenja"
 
 #: soliddeviceengine.cpp:427
 msgid "Type Description"
@@ -599,7 +599,7 @@ msgstr "Datotečni sistem se ne odziva"
 #: soliddeviceengine.cpp:535
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Datotečni sistem priklopljen na '%1' se ne odziva"
+msgstr "Datotečni sistem priklopljen na »%1« se ne odziva"
 
 #: soliddeviceengine.cpp:553
 msgid "Free Space"
@@ -611,7 +611,7 @@ msgstr "Besedilo neporabljenega prostora"
 
 #: soliddeviceengine.cpp:556
 msgid "Size Text"
-msgstr "Velikost besedila"
+msgstr "Besedilo velikosti"
 
 #: soliddeviceengine.cpp:582
 msgid "Temperature"

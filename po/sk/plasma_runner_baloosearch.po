@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_baloosearchrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2024-03-19 00:40+0000\n"
 "PO-Revision-Date: 2023-04-11 18:16+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -23,52 +23,56 @@ msgstr ""
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
 
-#: baloosearchrunner.cpp:82
-#, kde-format
-msgid "Audios"
+#: baloosearchrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Audios"
+msgctxt ""
+"Audio files; translate this as a plural noun in languages with a plural form "
+"of the word"
+msgid "Audio"
 msgstr "Zvuky"
 
-#: baloosearchrunner.cpp:83
+#: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Images"
 msgstr "Obrázky"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:87
 #, kde-format
 msgid "Videos"
 msgstr "Videá"
 
-#: baloosearchrunner.cpp:85
+#: baloosearchrunner.cpp:88
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Tabuľky"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Presentations"
 msgstr "Prezentácie"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Folders"
 msgstr "Priečinky"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Documents"
 msgstr "Dokumenty"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:92
 #, kde-format
 msgid "Archives"
 msgstr "Archívy"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:93
 #, kde-format
 msgid "Texts"
 msgstr "Texty"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:94
 #, kde-format
 msgid "Files"
 msgstr "Súbory"

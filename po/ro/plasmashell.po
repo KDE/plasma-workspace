@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-19 00:40+0000\n"
 "PO-Revision-Date: 2024-02-24 18:45+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -241,13 +241,13 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Tastatură pe ecran dezactivată"
 
-#: panelview.cpp:1029
+#: panelview.cpp:1028
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ascunde configurările panoului"
 
-#: panelview.cpp:1031
+#: panelview.cpp:1030
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

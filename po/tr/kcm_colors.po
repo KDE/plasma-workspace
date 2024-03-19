@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-03-08 19:52+0300\n"
+"PO-Revision-Date: 2024-03-18 19:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -887,7 +887,7 @@ msgstr "Renklendirme gücü:"
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Karelerin gölgelemesi ve aydınlatma (\"3B\") efektleri"
+msgstr "Karelerin gölgelemesi ve aydınlatma (“3B”) efektleri"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
@@ -1199,8 +1199,7 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
-"İstenen tema \"%1\", halihazırda geçerli Plasma oturumu için zaten "
-"ayarlanmış."
+"İstenen tema “%1”, halihazırda geçerli Plasma oturumu için zaten ayarlanmış."
 
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
@@ -1213,7 +1212,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
-"\"%1\" teması bulunamadı. Tema, aşağıdaki seçeneklerden biri olmalıdır: %2"
+"“%1” teması bulunamadı. Tema, aşağıdaki seçeneklerden biri olmalıdır: %2"
 
 #: plasma-apply-colorscheme.cpp:120
 #, kde-format
@@ -1279,7 +1278,7 @@ msgstr "Özel vurgu rengi seç"
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "'%1' renk şeması kurulu değil. Yerine öntanımlı tema seçiliyor."
+msgstr "“%1” renk şeması kurulu değil. Yerine öntanımlı tema seçiliyor."
 
 #: ui/main.qml:112
 #, kde-format

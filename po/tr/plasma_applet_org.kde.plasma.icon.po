@@ -2,30 +2,31 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
+# SPDX-FileCopyrightText: 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2017-04-24 17:11+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2024-03-18 18:51+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: iconapplet.cpp:95
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
-msgstr "Simge araç takımları klasörü '%1' oluşturulamadı"
+msgstr "Simge araç takımları klasörü “%1” oluşturulamadı"
 
 #: iconapplet.cpp:141
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
-msgstr "Simge araç takımı masaüstü dosyası '%1', '%2' konumuna kopyalanamadı"
+msgstr "Simge araç takımı masaüstü dosyası “%1”, “%2” konumuna kopyalanamadı"
 
 #: iconapplet.cpp:353
 #, kde-format

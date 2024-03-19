@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-02 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 15:59+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-03-14 10:42+0100\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: package/contents/ui/BrightnessItem.qml:71
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "Zapnuto"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr ""
+msgstr "Ranní přechod"
 
 #: package/contents/ui/NightColorItem.qml:92
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "Den"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr ""
+msgstr "Večerní přechod"
 
 #: package/contents/ui/NightColorItem.qml:96
 #, kde-format
@@ -134,7 +134,7 @@ msgstr "Nastavit…"
 #: package/contents/ui/NightColorItem.qml:142
 #, kde-format
 msgid "Enable and Configure…"
-msgstr ""
+msgstr "Povolit a nastavit..."
 
 #: package/contents/ui/NightColorItem.qml:168
 #, kde-format

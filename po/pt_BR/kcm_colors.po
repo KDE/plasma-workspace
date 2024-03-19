@@ -12,31 +12,35 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Aracele Torres <aracele@kde.org>, 2017.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-11-14 14:14-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-03-18 16:05-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
-"Lisiane Sztoltz Teixeira, Luiz Fernando Ranghetti, André Marcelo Alvarenga"
+"Lisiane Sztoltz Teixeira, Luiz Fernando Ranghetti, André Marcelo Alvarenga, "
+"Geraldo Simião"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "lisiane@kdemail.net, elchevive@opensuse.org, alvarenga@kde.org"
+msgstr ""
+"lisiane@kdemail.net, elchevive@opensuse.org, alvarenga@kde.org, "
+"geraldosimiao@fedoraproject.org"
 
 #: colors.cpp:272
 #, kde-format
@@ -1267,21 +1271,19 @@ msgid " * %1 (current color scheme)"
 msgstr "* %1 (esquema de cores atual)"
 
 #: ui/AccentColorUI.qml:37
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Restaurar esquema de cores"
+msgstr "Cor de destaque do esquema de cores"
 
 #: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Cor de destaque do papel de parede"
 
 #: ui/AccentColorUI.qml:39
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Escolher cor de destaque personalizada"

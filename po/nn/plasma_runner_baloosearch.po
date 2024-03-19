@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2024-03-19 00:40+0000\n"
 "PO-Revision-Date: 2023-02-22 21:32+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -24,52 +24,56 @@ msgstr ""
 msgid "Open Containing Folder"
 msgstr "Opna foreldermappa"
 
-#: baloosearchrunner.cpp:82
-#, kde-format
-msgid "Audios"
+#: baloosearchrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Audios"
+msgctxt ""
+"Audio files; translate this as a plural noun in languages with a plural form "
+"of the word"
+msgid "Audio"
 msgstr "Lyd"
 
-#: baloosearchrunner.cpp:83
+#: baloosearchrunner.cpp:86
 #, kde-format
 msgid "Images"
 msgstr "Bilete"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:87
 #, kde-format
 msgid "Videos"
 msgstr "Videoar"
 
-#: baloosearchrunner.cpp:85
+#: baloosearchrunner.cpp:88
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Rekneark"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Presentations"
 msgstr "Presentasjonar"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Folders"
 msgstr "Mapper"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Documents"
 msgstr "Dokument"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:92
 #, kde-format
 msgid "Archives"
 msgstr "Arkiv"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:93
 #, kde-format
 msgid "Texts"
 msgstr "Tekstar"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:94
 #, kde-format
 msgid "Files"
 msgstr "Filer"

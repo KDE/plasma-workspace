@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 # Serdar Soytetir, 2008.
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2010, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2021, 2022.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-18 00:39+0000\n"
-"PO-Revision-Date: 2023-11-11 23:26+0300\n"
+"PO-Revision-Date: 2024-03-18 19:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,27 +20,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "\"%1\" mutlak bir URL değil."
+msgstr "“%1” mutlak bir URL değil."
 
 #: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr "\"%1\" yok."
+msgstr "“%1” yok."
 
 #: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr "\"%1\" bir dosya değil."
+msgstr "“%1” bir dosya değil."
 
 #: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr "\"%1\" okunabilir değil."
+msgstr "“%1” okunabilir değil."
 
 #: ui/entry.qml:52
 #, kde-format
@@ -97,14 +97,14 @@ msgstr "Yürütülebilir Yap"
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
-"\"%1\" dosyası, oturum kapanışında çalıştırılabilmesi için yürütülebilir "
+"“%1” dosyası, oturum kapanışında çalıştırılabilmesi için yürütülebilir "
 "olmalıdır."
 
 #: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
-"\"%1\" dosyası, oturum açılışında çalıştırılabilmesi için yürütülebilir "
+"“%1” dosyası, oturum açılışında çalıştırılabilmesi için yürütülebilir "
 "olmalıdır."
 
 #: ui/main.qml:66

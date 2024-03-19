@@ -14,13 +14,13 @@
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010, 2011.
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2023-08-03 12:34+0300\n"
+"PO-Revision-Date: 2024-03-18 19:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -99,7 +99,7 @@ msgstr "Saniye türünden zaman aşımı"
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "İstenen '%1' boyutu kullanılabilir değil, yerine '%2' kullanılıyor."
+msgstr "İstenen “%1” boyutu kullanılabilir değil, yerine “%2” kullanılıyor."
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -108,9 +108,8 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
-"Bu araç, yanlışlıkla mevcut olmayan veya önceden ayarlanmış olana "
-"ayarlamadan, geçerli Plasma oturumu için fare imleci temasını ayarlamanıza "
-"olanak tanır."
+"Bu araç, yanlışlıkla var olmayan veya önceden ayarlanmış olana ayarlamadan, "
+"geçerli Plasma oturumu için fare imleci temasını ayarlamanıza olanak tanır."
 
 #: plasma-apply-cursortheme.cpp:67
 #, kde-format
@@ -118,14 +117,15 @@ msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"Mevcut Plasma oturumunuz için ayarlamak istediğiniz imleç temasının adı (tam "
-"bir yolu girmek, yolun yalnızca son kısmını kullanır)"
+"Geçerli Plasma oturumunuz için ayarlamak istediğiniz imleç temasının adı "
+"(tam bir yolu girmek, yolun yalnızca son kısmını kullanır)"
 
 #: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr "Sistemde mevcut olan tüm temaları göster (ve mevcut tema hangisi)"
+msgstr ""
+"Sistemde kullanılabilir olan tüm temaları göster (ve hangisi geçerli olan)"
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
@@ -138,7 +138,7 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
-"İstenen tema \"%1\" , zaten geçerli Plasma oturumu için tema olarak "
+"İstenen tema “%1”, halihazırda geçerli Plasma oturumu için tema olarak "
 "ayarlanmış."
 
 #: plasma-apply-cursortheme.cpp:101
@@ -162,7 +162,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
-"\"%1\" teması bulunamadı. Tema aşağıdaki seçeneklerden biri olmalıdır: %2"
+"“%1” teması bulunamadı. Tema aşağıdaki seçeneklerden biri olmalıdır: %2"
 
 #: plasma-apply-cursortheme.cpp:121
 #, kde-format
