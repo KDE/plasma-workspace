@@ -816,7 +816,6 @@ void PanelView::restore()
     setMaximumSize(screenSize);
 
     m_initCompleted = true;
-    positionPanel();
 
     const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
     const int maxSize = side - m_offset;
@@ -831,6 +830,7 @@ void PanelView::restore()
     setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive));
     setLengthMode((LengthMode)config().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
     resizePanel();
+    positionPanel();
 
     Q_EMIT maximumLengthChanged();
     Q_EMIT minimumLengthChanged();
