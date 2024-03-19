@@ -80,7 +80,7 @@
         "Name[zh_CN]": "系统声音",
         "Name[zh_TW]": "系統音效"
     },
+    "X-KDE-Keywords": "system sounds,sound theme,sound,sounds,alert,notification,bell",
     "X-KDE-System-Settings-Parent-Category": "themes",
-    "X-KDE-Weight": 90,
-    "X-KDE-Keywords": "system sounds,sound theme,sound,sounds,alert,notification,bell"
+    "X-KDE-Weight": 90
 }
