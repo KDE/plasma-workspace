@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+# SPDX-FileCopyrightText: 2024 Jure Repinc <jlp@holodeck1.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-29 02:28+0000\n"
-"PO-Revision-Date: 2023-03-11 09:03+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-03-17 02:48+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: abstractnotificationsmodel.cpp:315
 #, kde-format
@@ -29,82 +30,82 @@ msgstr "%1 iz %2"
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
 msgid_plural "%2 of %1 files to %3"
-msgstr[0] "%2 od %1 datoteke na %3"
-msgstr[1] "%2 od %1 datotek na %3"
-msgstr[2] "%2 od %1 datotek na %3"
-msgstr[3] "%2 od %1 datotek na %3"
+msgstr[0] "%2 od %1 datotek v %3"
+msgstr[1] "%2 od %1 datoteke v %3"
+msgstr[2] "%2 od %1 datotek v %3"
+msgstr[3] "%2 od %1 datotek v %3"
 
 #: job_p.cpp:191 job_p.cpp:221 job_p.cpp:237
 #, kde-format
 msgctxt "Copying n files to location"
 msgid "%1 file to %2"
 msgid_plural "%1 files to %2"
-msgstr[0] "%1 datoteka na %2"
-msgstr[1] "%1 datoteki na %2"
-msgstr[2] "%1 datoteke na %2"
-msgstr[3] "%1 datotek na %2"
+msgstr[0] "%1 datotek v %2"
+msgstr[1] "%1 datoteka v %2"
+msgstr[2] "%1 datoteki v %2"
+msgstr[3] "%1 datoteke v %2"
 
 #: job_p.cpp:198
 #, kde-format
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] "%2 of %1 datoteke"
-msgstr[1] "%2 of %1 datotek"
-msgstr[2] "%2 of %1 datotek"
-msgstr[3] "%2 of %1 datotek"
+msgstr[0] "%2 od %1 datotek"
+msgstr[1] "%2 od %1 datoteke"
+msgstr[2] "%2 od %1 datotek"
+msgstr[3] "%2 od %1 datotek"
 
 #: job_p.cpp:201 job_p.cpp:231 job_p.cpp:241
 #, kde-format
 msgctxt "Copying n files"
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] "%1 datoteka"
-msgstr[1] "%1 datoteki"
-msgstr[2] "%1 datoteke"
-msgstr[3] "%1 datotek"
+msgstr[0] "%1 datotek"
+msgstr[1] "%1 datoteka"
+msgstr[2] "%1 datoteki"
+msgstr[3] "%1 datoteke"
 
 #: job_p.cpp:206
 #, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 of %1 postavke"
-msgstr[1] "%2 of %1 postavk"
-msgstr[2] "%2 of %1 postavk"
-msgstr[3] "%2 of %1 postavk"
+msgstr[0] "%2 od %1 postavk"
+msgstr[1] "%2 od %1 postavke"
+msgstr[2] "%2 od %1 postavk"
+msgstr[3] "%2 od %1 postavk"
 
 #: job_p.cpp:209 job_p.cpp:229
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] "%1 postavka"
-msgstr[1] "%1 postavki"
-msgstr[2] "%1 postavke"
-msgstr[3] "%1 postavk"
+msgstr[0] "%1 postavk"
+msgstr[1] "%1 postavka"
+msgstr[2] "%1 postavki"
+msgstr[3] "%1 postavke"
 
 #: job_p.cpp:216
 #, kde-format
 msgctxt "Copying file to location"
 msgid "%1 to %2"
-msgstr "%1 na %2"
+msgstr "%1 v %2"
 
 #: job_p.cpp:219
 #, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
-msgstr[0] "%1 datoteka na %2"
-msgstr[1] "%1 datoteki na %2"
-msgstr[2] "%1 datoteke na %2"
-msgstr[3] "%1 datotek na %2"
+msgstr[0] "%1 datotek v %2"
+msgstr[1] "%1 datoteka v %2"
+msgstr[2] "%1 datoteki v %2"
+msgstr[3] "%1 datoteke v %2"
 
 #: job_p.cpp:239
 #, kde-format
 msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
-msgstr "na %1"
+msgstr "v %1"
 
 #: jobsmodel.cpp:105
 #, kde-format

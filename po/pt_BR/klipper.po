@@ -11,20 +11,22 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2017, 2019, 2021, 2022.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2024 Igor Moreira Padua <igorpadua@discente.ufg.br>
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-05 01:35+0000\n"
-"PO-Revision-Date: 2022-12-20 09:50-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2024-03-18 15:21-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -69,6 +71,17 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Quando um texto ou uma área da tela é destacada com o mouse outeclado, esta "
+"é a <emphasis>seleção</emphasis>. Pode ser colado usandoo botão do meio do "
+"mouse.<nl/><nl/>Se a seleção for copiada explicitamenteusando uma ação "
+"<interface>Copiar</interface> ou <interface>Cortar</interface>,é salvo na "
+"<emphasis>área de transferência</emphasis>. Pode ser colado usando umAção "
+"<interface>Colar</interface>. <nl/><nl/>Quando esta opção está ativadamantém "
+"a seleção e a área de transferência iguais, para que qualquer seleção "
+"sejaimediatamente disponível para colar por qualquer meio. Se estiver "
+"desligado, oseleção ainda pode ser salva no histórico da área de "
+"transferência (sujeito àopções abaixo), mas só pode ser colado usando o "
+"botão do meio do mouse."
 
 #: configdialog.cpp:132 configdialog.cpp:170
 #, kde-format
@@ -86,16 +99,15 @@ msgid "Only when explicitly copied"
 msgstr "Apenas quando copiado explicitamente"
 
 #: configdialog.cpp:143
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "Deseja realmente excluir o histórico da área de transferência?"
+msgstr ""
+"Se as seleções de texto são salvas no histórico da área de transferência."
 
 #: configdialog.cpp:174
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "Ignorar seleção"
+msgstr "Ignorar seleção:"
 
 #: configdialog.cpp:181
 #, kde-format
@@ -108,12 +120,13 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Se as seleções que não são de texto (como imagens) são salvas na área de "
+"transferênciahistória."
 
 #: configdialog.cpp:260
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Tempo máximo para ações de contexto:"
+msgstr "Mostrar menu pop-up de ação:"
 
 #: configdialog.cpp:270
 #, kde-kuit-format
@@ -125,11 +138,16 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Quando o texto que corresponde a um padrão de ação é selecionado ou "
+"escolhido no histórico da área de transferência, mostra automaticamente o "
+"menu pop-up com as ações aplicáveis. Se o menu automático estiver desativado "
+"aqui ou não for exibido para uma janela excluída, ele poderá ser exibido "
+"usando a tecla de atalho <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Excluir janelas..."
 
 #: configdialog.cpp:293
 #, kde-format
@@ -146,16 +164,14 @@ msgid "None"
 msgstr "Nenhum"
 
 #: configdialog.cpp:303
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Ações"
+msgstr "Ações:"
 
 #: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Excluir janelas"
 
 #: configdialog.cpp:360
 #, kde-kuit-format
@@ -165,16 +181,18 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Quando um <interface>padrão de correspondência</interface> corresponde ao "
+"conteúdo da área de transferência, os seus <interface>comandos</interface> "
+"aparecem no menu pop-up do Klipper e podem ser ser executados."
 
 #: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Padrão de correspondência e comandos"
 
 #: configdialog.cpp:369
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descrição"
@@ -201,6 +219,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Estas ações aparecem no menu pop-up que pode ser configurado na página "
+"<interface>Menu de ações</interface>."
 
 #: configdialog.cpp:575
 #, kde-kuit-format
@@ -209,12 +229,13 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Excluir a ação selecionada <resource>%1</resource><nl/>e todos os seus "
+"comandos?"
 
 #: configdialog.cpp:576
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Excluir ação"
+msgstr "Confirmar ação de exclusão"
 
 #: configdialog.cpp:605
 #, kde-format
@@ -228,23 +249,18 @@ msgid "General Configuration"
 msgstr "Configuração geral"
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Ações"
+msgstr "Ações do menu"
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Ações"
+msgstr "Ações do menu"
 
 #: configdialog.cpp:607
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuração das ações"
@@ -276,6 +292,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"O pop-up de ação não será mostrado automaticamente para essas janelas, mesmo "
+"seele está habilitado. Isso ocorre porque, por exemplo, um navegador da Web "
+"pode destacar umURL na barra de endereço enquanto digita, para que o menu "
+"seja exibido para cadapressionamento de tecla.<nl/><nl/>Se o menu de ação "
+"aparecer inesperadamente ao usar umaplicativo específico e adicione-o a esta "
+"lista. <link>Como encontrar o nomepara entrar</link>."
 
 #: configdialog.cpp:704
 #, kde-kuit-format
@@ -287,6 +309,11 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"O nome que precisa ser inserido aqui é o nome WM_CLASS da janela a serser "
+"excluído. Para encontrar o nome WM_CLASS de uma janela, em outro "
+"terminaldigite o comando:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>e clique na janela que deseja excluir. O primeiroO nome "
+"exibido após o sinal de igual é aquele que você precisa inserir."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -311,7 +338,7 @@ msgstr "Comando"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Saída"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -332,16 +359,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Uma ação entra em vigor quando seu <interface>padrão de correspondência</"
+"interface> corresponde ao conteúdo da área de transferência. Quando isso "
+"acontece, os <interface>comandos</interface> da ação  aparecem no menu pop-"
+"up do Klipper; se um deles for escolhido, o comando é executado."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Insira um padrão para corresponder à área de transferência"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Padrão de correspondência:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -351,11 +382,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"O padrão de correspondência é uma expressão regular. Para mais informações "
+"consulte o<link url=\"https://pt.wikipedia.org/wiki/Expressão_regular"
+"\">Wikipédiaentrada</link> para este tópico."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Insira uma descrição para a ação"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -365,7 +399,7 @@ msgstr "Descrição:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Incluir no pop-up automático"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -377,22 +411,24 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"Os comandos para esta partida serão incluídos no pop-up de ação automática,"
+"se estiver ativado na página <interface>Menu Ação</interface>. Se esteopção "
+"estiver desativada, os comandos para esta partida não serão incluídos emo "
+"pop-up automático, mas eles serão incluídos se o pop-up estiver "
+"ativadomanualmente com a tecla de atalho <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Adicionar comando"
+msgstr "Adicionar comando..."
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Adicionar comando"
+msgstr "Editar comando..."
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
 msgstr "Remover comando"
 
@@ -400,29 +436,27 @@ msgstr "Remover comando"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Excluir o comando selecionado <resource>%1</resource>?"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Confirmar comando de exclusão"
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Propriedades da ação"
+msgstr "Propriedades do Comando"
 
 #: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Insira o comando e os argumentos"
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Comando"
+msgstr "Comando:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -433,43 +467,45 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"Um <placeholder>&#37;s</placeholder> no comando será substituído "
+"peloconteúdo completo da área de transferência. <placeholder>&#37;0</"
+"placeholder> até <placeholder>&#37;9</placeholder> será substituído pelo "
+"texto correspondente capturado do padrão de correspondência."
 
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Insira uma descrição para o comando"
 
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "Saída do comando:"
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
 msgstr "Substituir área de transferência"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
 msgstr "Adicionar à área de transferência"
 
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "O que acontece com a saída padrão do comando executado."
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Redefina o ícone para o padrão do comando"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Ícone:"
 
 #: historyimageitem.cpp:36
 #, kde-format
@@ -477,57 +513,49 @@ msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
 #: klipper.cpp:133
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Tempo máximo para ações de contexto:"
+msgstr "Menu pop-up de ação automática"
 
 #: klipper.cpp:169
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Limpar histórico da área de transferência"
 
 #: klipper.cpp:176
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Configurar &Klipper..."
 
 #: klipper.cpp:180
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar ação manualmente sobre a área de transferência atual"
 
 #: klipper.cpp:187
-#, fuzzy, kde-format
-#| msgid "&Show Barcode…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&strar código de barras..."
 
 #: klipper.cpp:196
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Próximo item do histórico"
 
 #: klipper.cpp:201
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item anterior do histórico"
 
 #: klipper.cpp:208
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Abrir o Klipper na posição do mouse"
@@ -568,14 +596,12 @@ msgid "Mobile Barcode"
 msgstr "Código de barras móvel"
 
 #: klipper.cpp:956
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Deseja realmente excluir o histórico da área de transferência?"
 
 #: klipper.cpp:957
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Limpar histórico da área de transferência"
 
@@ -609,7 +635,7 @@ msgstr "Versão do Klipper"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Salve o histórico nas sessões de desktop"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -618,11 +644,12 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Retenha o histórico da área de transferência, para que esteja disponível na "
+"próxima vez que você fizer loginem."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Prevent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
 msgstr "Impedir que a área de transferência fique vazia"
 
@@ -633,11 +660,12 @@ msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
 msgstr ""
+"Não permita que a área de transferência seja apagada, por exemplo, quando um "
+"aplicativoé encerrado."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "Seleção e área de transferência"
 
@@ -649,6 +677,10 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"O conteúdo selecionado com o cursor é copiado automaticamente para a área de "
+"transferência para queque ele pode ser colado com uma ação Colar ou com um "
+"clique do meio.<br/><ahref=\"1\">Mais sobre seleção e área de transferência</"
+"a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -664,6 +696,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Conteúdo selecionado com o cursor, mas não copiado explicitamente para a "
+"área de transferêncianão é armazenado automaticamente no histórico da área "
+"de transferência e só pode ser coladousando um clique do meio."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -678,6 +713,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Armazene apenas seleções de texto no histórico da área de transferência, não "
+"imagens ou qualquer outrotipo de dados."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -691,6 +728,8 @@ msgstr "Sempre ignorar imagens"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Não armazene imagens no histórico da área de transferência, mesmo que sejam "
+"copiadas explicitamente."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -700,8 +739,7 @@ msgstr "Usar o editor gráfico de expressões regulares"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Immediately on selection"
 msgstr "Ignorar a seleção"
 
@@ -711,6 +749,7 @@ msgstr "Ignorar a seleção"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"Mostre o menu pop-up de ações aplicáveis assim que uma seleção for feita."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -720,30 +759,28 @@ msgstr "Sem ações para o WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
 msgstr "Tempo máximo para ações de contexto:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Tempo máximo para ações de contexto:"
+msgstr "Exiba o menu pop-up de ação automática neste momento."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Tamanho do histórico da área de transferência:"
+msgstr "Tamanho do histórico:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
+"O histórico da área de transferência armazenará até esse número de itens."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
@@ -754,10 +791,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Remover espaços em branco ao executar uma ação"
+msgstr "Cortar espaços em branco da seleção"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -768,29 +804,32 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Remova qualquer espaço em branco do início e do final do texto selecionado, "
+"antesde executar uma ação. Por exemplo, isso garante que um URL colado em "
+"umnavegador é interpretado conforme o esperado. O texto salvo na área de "
+"transferência não éafetado."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Repetir ações sobre um item selecionado do histórico"
+msgstr "Para um item escolhido da história"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "Deseja realmente excluir o histórico da área de transferência?"
+msgstr ""
+"Mostra o menu pop-up de ações aplicáveis se uma entrada for escolhida no "
+"histórico da área de transferência."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Habilitar ações baseadas no MIME"
+msgstr "Incluir ações MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -799,13 +838,14 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Se um nome de arquivo ou URL for selecionado, inclua aplicativos que possam "
+"aceitar seu tipo MIME no menu pop-up."
 
 #: klipperpopup.cpp:108
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Conteúdo da área de transferência"
+msgstr "%1 - Itens da área de transferência"
 
 #: klipperpopup.cpp:112
 #, kde-format
@@ -813,10 +853,9 @@ msgid "Search…"
 msgstr "Pesquisar..."
 
 #: klipperpopup.cpp:170
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "Expressão regular:"
+msgstr "Expressão regular inválida, %1"
 
 #: klipperpopup.cpp:175
 #, kde-format
