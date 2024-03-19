@@ -284,7 +284,14 @@ ColumnLayout {
 
                                 QQC2.Button {
                                     enabled: soundCheckBox.checked && model && model.sound.length > 0
+                                    display: QQC2.AbstractButton.IconOnly
                                     icon.name: "media-playback-start"
+                                    text: i18nc("@info:tooltip", "Preview sound")
+
+                                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                    QQC2.ToolTip.text: text
+                                    QQC2.ToolTip.visible: hovered || activeFocus
+
                                     onClicked: kcm.playSound(model.sound)
                                 }
                                 QQC2.TextField {
@@ -303,12 +310,26 @@ ColumnLayout {
                                 }
                                 QQC2.Button {
                                     enabled: soundCheckBox.checked && model?.sound !== model?.defaultSound
+                                    display: QQC2.AbstractButton.IconOnly
                                     icon.name: "edit-reset"
+                                    text: i18nc("Reset the notification sound to a default one", "Reset")
+
+                                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                    QQC2.ToolTip.text: text
+                                    QQC2.ToolTip.visible: hovered || activeFocus
+
                                     onClicked: model.sound = model.defaultSound
                                 }
                                 QQC2.Button {
                                     enabled: soundCheckBox.checked
+                                    display: QQC2.AbstractButton.IconOnly
                                     icon.name: "document-open-folder"
+                                    text: i18n("Choose sound file")
+
+                                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                    QQC2.ToolTip.text: text
+                                    QQC2.ToolTip.visible: hovered || activeFocus
+
                                     onClicked: {
                                         soundSelector.eventRow = model.index
                                         soundSelector.open()
