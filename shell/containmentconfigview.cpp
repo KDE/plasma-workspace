@@ -192,6 +192,10 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
 
 void ContainmentConfigView::applyWallpaper()
 {
+    if (!m_currentWallpaperConfig) {
+        return;
+    }
+
     QVariantMap params;
     for (const auto &key : m_currentWallpaperConfig->keys()) {
         if (key.endsWith(QLatin1String("Default"))) {
