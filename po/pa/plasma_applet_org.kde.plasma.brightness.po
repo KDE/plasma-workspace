@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2023-12-26 08:28-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: package/contents/ui/BrightnessItem.qml:71
+#: package/contents/ui/BrightnessItem.qml:29
+#, fuzzy, kde-format
+#| msgctxt "Night light status"
+#| msgid "Off"
+msgctxt "Backlight on or off"
+msgid "Off"
+msgstr "ਬੰਦ"
+
+#: package/contents/ui/BrightnessItem.qml:30
+#, kde-format
+msgctxt "Brightness level"
+msgid "Low"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:31
+#, kde-format
+msgctxt "Brightness level"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:32
+#, kde-format
+msgctxt "Brightness level"
+msgid "High"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:33
+#, fuzzy, kde-format
+#| msgctxt "Night light status"
+#| msgid "On"
+msgctxt "Backlight on or off"
+msgid "On"
+msgstr "ਚਾਲੂ"
+
+#: package/contents/ui/BrightnessItem.qml:86
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -170,7 +204,7 @@ msgstr "ਡਿਸਪਲੇਅ ਚਮਕ"
 msgid "Keyboard Brightness"
 msgstr "ਕੀਬੋਰਡ ਚਮਕ"
 
-#: package/contents/ui/PopupDialog.qml:128
+#: package/contents/ui/PopupDialog.qml:127
 #, kde-format
 msgid "Night Light"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ"

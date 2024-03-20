@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2024-01-26 14:35+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,7 +19,41 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: package/contents/ui/BrightnessItem.qml:71
+#: package/contents/ui/BrightnessItem.qml:29
+#, fuzzy, kde-format
+#| msgctxt "Night light status"
+#| msgid "Off"
+msgctxt "Backlight on or off"
+msgid "Off"
+msgstr "Išjungta"
+
+#: package/contents/ui/BrightnessItem.qml:30
+#, kde-format
+msgctxt "Brightness level"
+msgid "Low"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:31
+#, kde-format
+msgctxt "Brightness level"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:32
+#, kde-format
+msgctxt "Brightness level"
+msgid "High"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:33
+#, fuzzy, kde-format
+#| msgctxt "Night light status"
+#| msgid "On"
+msgctxt "Backlight on or off"
+msgid "On"
+msgstr "Įjungta"
+
+#: package/contents/ui/BrightnessItem.qml:86
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -173,7 +207,7 @@ msgstr "Ekrano ryškumas"
 msgid "Keyboard Brightness"
 msgstr "Klaviatūros ryškumas"
 
-#: package/contents/ui/PopupDialog.qml:128
+#: package/contents/ui/PopupDialog.qml:127
 #, kde-format
 msgid "Night Light"
 msgstr "Naktinė šviesa"

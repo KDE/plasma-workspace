@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2020-09-28 20:55+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -24,17 +24,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Việc đăng xuất bị huỷ bởi '%1'"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME chưa được đặt!"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Thư mục $HOME (%1) không tồn tại."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -42,37 +42,37 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Không có quyền đọc với thư mục $HOME (%1)."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Thư mục $HOME (%1) bị hết chỗ."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Việc ghi vào thư mục $HOME (%2) thất bại với lỗi '%1'"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Không có quyền ghi với '%1'."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Không có quyền đọc với '%1'."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Thư mục tạm (%1) bị hết chỗ."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -81,7 +81,7 @@ msgstr ""
 "Việc ghi vào thư mục tạm (%2) thất bại với\n"
 "    lỗi '%1'"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -90,7 +90,7 @@ msgstr ""
 "Vấn đề cài đặt sau được phát hiện trong quá trình\n"
 "khởi động Plasma:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -101,12 +101,12 @@ msgstr ""
 "\n"
 "Plasma không thể khởi động.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Vấn đề cài đặt Không gian làm việc Plasma!"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -116,22 +116,22 @@ msgstr ""
 "lí \n"
 "phiên X11R6 tiêu chuẩn (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Khôi phục phiên người dùng đã lưu nếu có sẵn"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Cũng cho phép kết nối từ xa"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Khởi động phiên trong chế độ bị khoá"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -140,13 +140,13 @@ msgstr ""
 "Chạy mà không có hỗ trợ màn hình khoá. Chỉ cần đến nếu có thành phần khác đã "
 "cung cấp màn hình khoá."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -155,7 +155,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

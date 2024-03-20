@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2013-02-23 17:39+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -24,17 +24,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "'%1' द्वारे बाहेर पडणे रद्द झाले"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr ""
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr ""
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -42,51 +42,51 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr ""
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr ""
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr ""
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr ""
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr ""
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -94,12 +94,12 @@ msgid ""
 "Plasma is unable to start.\n"
 msgstr ""
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr ""
 
-#: main.cpp:194
+#: main.cpp:193
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -111,35 +111,35 @@ msgstr ""
 "विश्वासार्ह केडीई सत्र व्यवस्थापक जे प्रमाणित X11R6 \n"
 "सत्र व्यवस्थापन शिष्टाचार (XSMP) शी संलग्न आहे."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "उपलब्ध असल्यास वापकर्त्याचे साठवलेले सत्र पुन्हस्थापित करतो"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "व अधिक दूरस्थ जुळवणी करिता परवानगी द्या"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "कुलूपबंद सत्र सुरु करा"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -148,7 +148,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

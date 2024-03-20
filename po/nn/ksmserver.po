@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2023-03-19 14:35+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -26,17 +26,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Utlogging avbroten av «%1»."
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME er ikke definert"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME-mappa (%1) finst ikkje."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -46,37 +46,37 @@ msgstr ""
 "Har ikkje skrivetilgang til $HOME-mappa (%1). Viss dette er meininga, "
 "registrer miljø­variabelen <envar>KDE_HOME_READONLY=1</envar>."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Har ikkje lesetilgang til $HOME-mappa (%1)."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME-mappa (%1) har ikkje meir ledig plass."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Klarte ikkje skriva til $HOME-mappa (%2): %1"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Har ikkje skrivetilgang til «%1»."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Har ikkje lesetilgang til «%1»."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Mappa for mellombelse filer (%1) har ikkje meir ledig plass."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -86,7 +86,7 @@ msgstr ""
 "\n"
 "Feilmelding: %1"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -95,7 +95,7 @@ msgstr ""
 "Oppdaga følgjande installasjonsproblem ved\n"
 "forsøk på å starta Plasma:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -106,12 +106,12 @@ msgstr ""
 "\n"
 "Kan ikkje starta Plasma.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Feil ved installasjon av Plasma-arbeidsområde"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -120,22 +120,22 @@ msgstr ""
 "Den pålitelege økthandsamaren til Plasma som snakkar med den \n"
 "normale økthandsamingsprotokollen til X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Gjenopprettar tilstanden frå den førre økta, om det går"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Tillat nettverkstilkoplingar"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Startar økta i låst modus"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -144,13 +144,13 @@ msgstr ""
 "Startar utan støtte for skjermlåsing. Berre nødvendig viss andre komponentar "
 "står for skjermlåsinga."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -159,7 +159,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

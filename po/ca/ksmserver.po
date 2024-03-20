@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2023-11-04 10:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,17 +30,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "«%1» ha cancel·lat la sortida"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "No s'ha establert el «$HOME»!"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "El directori «$HOME» (%1) no existeix."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -50,37 +50,37 @@ msgstr ""
 "Sense permís d'escriptura al directori «$HOME» (%1). Si això és intencionat, "
 "definiu <envar>KDE_HOME_READONLY=1</envar> a l'entorn."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Sense permís de lectura al directori «$HOME» (%1)."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "El directori «$HOME» (%1) està sense espai al disc."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Ha fallat en escriure al directori «$HOME» (%2) amb l'error «%1»"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Sense permís d'escriptura a «%1»."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Sense permís de lectura a «%1»."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "El directori temporal (%1) està sense espai al disc."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -89,7 +89,7 @@ msgstr ""
 "Ha fallat en escriure al directori temporal (%2) amb\n"
 "    l'error «%1»"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -98,7 +98,7 @@ msgstr ""
 "S'ha detectat el següent problema d'instal·lació\n"
 "en intentar iniciar el Plasma:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -109,12 +109,12 @@ msgstr ""
 "\n"
 "No s'ha pogut iniciar el Plasma.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problema d'instal·lació a l'espai de treball Plasma!"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -123,22 +123,22 @@ msgstr ""
 "El gestor confiable de la sessió del Plasma que parla amb el protocol\n"
 "de gestió de la sessió estàndard d'X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restaura la sessió d'usuari desada si està disponible"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Admet també les connexions remotes"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Inicia la sessió en el mode bloquejat"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -147,13 +147,13 @@ msgstr ""
 "Inicia sense el suport del bloqueig de pantalla. Només cal si altres "
 "components proporcionen el bloqueig de pantalla."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[desconegut]"
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -166,7 +166,7 @@ msgstr ""
 "consumidors de recursos de sessió:\n"
 "%1"
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

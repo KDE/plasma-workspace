@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 00:40+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 09:38+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -314,12 +314,12 @@ msgstr "Zarządzaj pulpitami i paskami..."
 msgid "Move keyboard focus between panels"
 msgstr "Przełączaj klawiaturę na paski"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2065
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj pasek"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2107
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

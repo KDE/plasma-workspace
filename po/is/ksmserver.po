@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2024-02-19 18:33+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -31,17 +31,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Hætt við útskráningu af '%1'"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME ekki stillt!"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME-mappan (%1) er ekki til."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -51,37 +51,37 @@ msgstr ""
 "Enginn skrifaðgangur að $HOME-möppunni (%1). Ef þetta vísvitandi skaltu "
 "stilla <envar>KDE_HOME_READONLY=1</envar> í in your environment."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Enginn lesaðgangur að $HOME-möppunni (%1)."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "HOME-möppu (%1) vantar diskpláss."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Mistókst að skrifa í $HOME-möppuna (%2) með villunni '%1'"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Enginn skrifaðgangur að '%1'."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Enginn lesaðgangur að '%1'."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Bráðabigðamöppu (%1) vantar diskpláss."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -90,7 +90,7 @@ msgstr ""
 "Mistókst að skrifa í bráðabirðgamöppuna (%2) með\n"
 "    villunni'%1'"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -99,7 +99,7 @@ msgstr ""
 "Eftirfarandi uppsetningarvandamál fundust\n"
 "þegar reynt var að keyra Plasma:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -110,12 +110,12 @@ msgstr ""
 "\n"
 "Tekst ekki að ræsa Plasma.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Vandamál við uppsetningu Plasma-vinnusvæðis!"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -124,22 +124,22 @@ msgstr ""
 "Áreiðanlegi Plasma setustjórinn sem skilur almenna X11R6 \n"
 "setustjórnunarstaðalinn (e. session management protocol, XSMP)."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Endurheimtir síðustu setu notanda, ef hægt er"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Leyfa einnig utanaðkomandi tengingar"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Byrja setuna í læstri stillingu"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -148,13 +148,13 @@ msgstr ""
 "Byrjar án stuðnings við lásskjá. Einungis er þörf á þessu ef aðrir hlutar "
 "útvega lásskjáinn."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[óþekkt]"
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -167,7 +167,7 @@ msgstr ""
 "setutilfanga:\n"
 "%1"
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

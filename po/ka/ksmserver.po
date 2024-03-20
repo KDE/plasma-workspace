@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2023-11-05 06:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -23,17 +23,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "გასვლა გაუქმდა %1-ის მიერ"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME დაყენებული არაა!"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME საქაღალდე (%1) არ არსებობს."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -43,37 +43,37 @@ msgstr ""
 "$HOME საქაღალდეში (%1) ჩაწერის უფლებების გარეშე. თუ ეს ძალით ქენით, თქვენს "
 "გარემოში დააყენეთ ცვლადი <envar>kDE_HOME_READONLY=1</envar>."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME საქაღალდიდან (%1) წაკითხვის უფლების გარეშე."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME საქაღალდეში (%1) თავისუფალი ადგილი აღარაა."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME საქაღალდეში (%2) ჩაწერა %1 შეცდომით დასრულდა"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "ჩაწერის წვდომის გარეშე: '%1'."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "წაკითხვის წვდომის გარეშე: '%1'."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "დროებით საქაღალდეში (%1) თავისუფალი ადგილი აღარაა."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -82,7 +82,7 @@ msgstr ""
 "დროებით საქაღალდეში (%2) ჩაწერა შემდეგი\n"
 "   შეცდომით დასრულდა: %1"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -91,7 +91,7 @@ msgstr ""
 "Plasma-ის გაშვებისას ნაპოვნია\n"
 "დაყენების შემდეგი პრობლემა:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -102,12 +102,12 @@ msgstr ""
 "\n"
 "Plasma-ის გაშვების შეცდომა.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma -ის დაყენების პრობლემა გაქვთ!"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -116,22 +116,22 @@ msgstr ""
 "საიმედო Plasma-ის სესიების მმართველი, რომელიც სტანდარტულ X11R6-ის\n"
 "სესიის მართვის პროტოკოლით (XSMP) ლაპარაკობს."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "შენახული მომხმარებლის სესიის აღდგენა, თუ ის ხელმისაწვდომია"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "დაშორებული მიერთებების დაშვება"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "სესიის დაბლოკილ რეჟიმში გაშვება"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -140,13 +140,13 @@ msgstr ""
 "ეკრანის დაბლოკვის მხარდაჭერის გარეშე გაშვება. საჭიროა მხოლოდ აშინ, თუ ეკრანს "
 "სხვა კომპონენტი ბლოკავს."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[უცნობი]"
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -158,7 +158,7 @@ msgstr ""
 "ამოიწურა. იხილეთ ჩამონათვალი 3 ყველაზე მეტი რესურსის მხარჯველის:\n"
 "%1"
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

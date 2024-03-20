@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2024-03-17 20:42\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,7 +18,41 @@ msgstr ""
 "plasma.brightness.pot\n"
 "X-Crowdin-File-ID: 48624\n"
 
-#: package/contents/ui/BrightnessItem.qml:71
+#: package/contents/ui/BrightnessItem.qml:29
+#, fuzzy, kde-format
+#| msgctxt "Night light status"
+#| msgid "Off"
+msgctxt "Backlight on or off"
+msgid "Off"
+msgstr "关"
+
+#: package/contents/ui/BrightnessItem.qml:30
+#, kde-format
+msgctxt "Brightness level"
+msgid "Low"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:31
+#, kde-format
+msgctxt "Brightness level"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:32
+#, kde-format
+msgctxt "Brightness level"
+msgid "High"
+msgstr ""
+
+#: package/contents/ui/BrightnessItem.qml:33
+#, fuzzy, kde-format
+#| msgctxt "Night light status"
+#| msgid "On"
+msgctxt "Backlight on or off"
+msgid "On"
+msgstr "开"
+
+#: package/contents/ui/BrightnessItem.qml:86
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
@@ -171,7 +205,7 @@ msgstr "显示器亮度"
 msgid "Keyboard Brightness"
 msgstr "键盘亮度"
 
-#: package/contents/ui/PopupDialog.qml:128
+#: package/contents/ui/PopupDialog.qml:127
 #, kde-format
 msgid "Night Light"
 msgstr "夜间颜色"

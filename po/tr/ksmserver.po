@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2024-03-18 18:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -26,17 +26,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Oturumu kapatma “%1” tarafından iptal edildi"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME ayarlanmamış!"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME dizini (%1) yok."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -46,37 +46,37 @@ msgstr ""
 "$HOME dizinine yazma izni yok (%1). Bu bilginiz dahilindeyse ortamınızda "
 "<envar>KDE_HOME_READONLY=1</envar> çevre değişkenini ayarlayın."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME dizinini (%1) okuma izni yok."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME dizini (%1) dolu."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME dizinine (%2) yazarken “%1” hatası oluştu"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "“%1” için yazma izni yok."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "“%1” için okuma izni yok."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Geçici dosya dizini (%1) dolu."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -85,7 +85,7 @@ msgstr ""
 "Geçici dosya dizinine (%2) yazma\n"
 "    “%1” hatası ile başarısız oldu"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -94,7 +94,7 @@ msgstr ""
 "Plasma başlatılırken aşağıdaki kurulum\n"
 "sorunu algılandı:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -105,12 +105,12 @@ msgstr ""
 "\n"
 "Plasma başlatılamıyor.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma Çalışma Alanı kurulum sorunu!"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -119,22 +119,22 @@ msgstr ""
 "Standart X11R6 oturum yönetim protokolünü (XSMP) kullanan \n"
 "güvenilir Plasma oturum yöneticisi."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Olanaklıysa kaydedilen oturumu geri yükler"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Uzaktan bağlantılara izin ver"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Oturumu kilitli kipte başlatır"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -143,13 +143,13 @@ msgstr ""
 "Kilit ekranı desteği olmadan başlatılır. Yalnızca diğer bileşen kilit "
 "ekranını sağlarsa gereklidir."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[bilinmeyen]"
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -161,7 +161,7 @@ msgstr ""
 "yönetilemiyor. Oturum kaynaklarının ilk üç tüketicisi şunlardır:\n"
 "%1"
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

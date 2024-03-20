@@ -1,60 +1,59 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-03-18 09:28+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
-"Language: he\n"
+"PO-Revision-Date: 2024-03-19 00:34-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: main.cpp:32
 #, kde-format
 msgid "Session Management"
-msgstr "ניהול הפעלות"
+msgstr "Gerenciamento de sessões"
 
 #: main.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr "הצגת בקשת יציאה"
+msgstr "Mostrar tela para encerrar sessão"
 
 #: main.cpp:48
 #, kde-format
 msgid "Log Out"
-msgstr "יציאה"
+msgstr "Encerrar sessão"
 
 #: main.cpp:54
 #, kde-format
 msgid "Shut Down"
-msgstr "כיבוי"
+msgstr "Desligar"
 
 #: main.cpp:60
 #, kde-format
 msgid "Reboot"
-msgstr "הפעלה מחדש"
+msgstr "Reiniciar"
 
 #: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "יציאה ללא בקשת אישור"
+msgstr "Encerrar sessão sem confirmação"
 
 #: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "כיבוי ללא בקשת אישור"
+msgstr "Desligar sem confirmação"
 
 #: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "הפעלה מחדש ללא בקשת אישור"
+msgstr "Reiniciar sem confirmação"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
 "PO-Revision-Date: 2024-03-02 15:38+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -24,17 +24,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Ieșire anulată de „%1”"
 
-#: main.cpp:67
+#: main.cpp:66
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME nu e definit!"
 
-#: main.cpp:71 main.cpp:80
+#: main.cpp:70 main.cpp:79
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Dosarul $HOME (%1) nu există."
 
-#: main.cpp:74
+#: main.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -44,37 +44,37 @@ msgstr ""
 "Nu se poate scrie în dosarul %HOME (%1). Dacă acest lucru e intenționat, "
 "stabiliți <envar>KDE_HOME_READONLY=1</envar> în mediul dumneavoastră."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Lipsește accesul de citire în dosarul $HOME (%1)."
 
-#: main.cpp:87
+#: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Dosarul $HOME (%1) a rămas fără spațiu pe disc."
 
-#: main.cpp:90
+#: main.cpp:89
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Scrierea în dosarul $HOME (%2) a eșuat cu eroarea „%1”"
 
-#: main.cpp:104 main.cpp:143
+#: main.cpp:103 main.cpp:142
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Lipsește accesul de scriere în „%1”."
 
-#: main.cpp:106 main.cpp:145
+#: main.cpp:105 main.cpp:144
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Lipsește accesul de citire în „%1”."
 
-#: main.cpp:116 main.cpp:130
+#: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Dosarul temporar (%1) a rămas fără spațiu pe disc."
 
-#: main.cpp:119 main.cpp:133
+#: main.cpp:118 main.cpp:132
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -83,7 +83,7 @@ msgstr ""
 "Scrierea în dosarul temporar (%2) a eșuat cu\n"
 "    eroarea „%1”"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -92,7 +92,7 @@ msgstr ""
 "La pornirea Plasma a fost depistată următoarea\n"
 "problemă cu instalarea:"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -103,12 +103,12 @@ msgstr ""
 "\n"
 "Plasma nu poate porni.\n"
 
-#: main.cpp:160
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problemă cu instalarea spațiului de lucru Plasma!"
 
-#: main.cpp:194
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -117,22 +117,22 @@ msgstr ""
 "Un gestionar de sesiune Plasma care comunică prin\n"
 "protocolul standard de gestiune a sesiunii X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "reface sesiunea precedentă dacă este disponibilă"
 
-#: main.cpp:201
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permite și conexiuni distante"
 
-#: main.cpp:204
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Pornește sesiunea în regim blocat"
 
-#: main.cpp:208
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -141,13 +141,13 @@ msgstr ""
 "Pornește cu suport pentru ecranul de blocare. Necesar doar dacă altă "
 "componentă furnizează ecranul de blocare."
 
-#: server.cpp:813
+#: server.cpp:811
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[necunoscut]"
 
-#: server.cpp:836
+#: server.cpp:834
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -160,7 +160,7 @@ msgstr ""
 "resurselor de sesiune:\n"
 "%1"
 
-#: server.cpp:1108
+#: server.cpp:1106
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
