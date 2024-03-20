@@ -90,7 +90,7 @@
         "Description[sl]": "Prikaži informacije za pomoč o zagonih kadar vtipkate \"?\" ali \"help\"",
         "Description[sv]": "Visar hjälpinformation om körprogram när \"?\" eller \"hjälp\" skrivs in",
         "Description[ta]": "\"?\" அல்லது \"help\" என்று உள்ளிடும்போது ரன்னர்களை பயன்படுத்த உதவும் விவரங்களை காட்டும்",
-        "Description[tr]": "\"?\" ve \"help\" yazıldığında çalıştırıcılar hakkında yardım bilgisi gösterir",
+        "Description[tr]": "“?” ve “help” yazıldığında çalıştırıcılar hakkında yardım bilgisi gösterir",
         "Description[uk]": "Показує довідкові відомості щодо засобів запуску при введенні «?» або «help»",
         "Description[vi]": "Hiện thông tin trợ giúp về các trình chạy khi gõ \"?\" hoặc \"help\"",
         "Description[x-test]": "xxShows help information about runners when typing \"?\" or \"help\"xx",
