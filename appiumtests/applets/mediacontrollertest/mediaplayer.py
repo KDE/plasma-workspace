@@ -159,6 +159,7 @@ class Mpris2:
 
         print("MPRIS registered", file=sys.stderr, flush=True)
         self.registered_event.set()
+        print("MPRIS registered event set", file=sys.stderr, flush=True)
 
     def properties_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
         """
