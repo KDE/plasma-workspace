@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 00:39+0000\n"
-"PO-Revision-Date: 2023-12-20 08:59+0200\n"
+"PO-Revision-Date: 2024-03-20 08:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,9 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 23.04.1\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "Off"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
 msgstr "Вимкнено"
@@ -30,24 +28,22 @@ msgstr "Вимкнено"
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr ""
+msgstr "Низька"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr ""
+msgstr "Середня"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr ""
+msgstr "Висока"
 
 #: package/contents/ui/BrightnessItem.qml:33
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "On"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
 msgstr "Увімкнено"

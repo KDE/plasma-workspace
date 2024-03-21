@@ -1,15 +1,15 @@
 # Translation of plasma_applet_org.kde.plasma.brightness.po to Catalan
-# Copyright (C) 2023 This_file_is_part_of_KDE
+# Copyright (C) 2023-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2023
+# Josep M. Ferrer <txemaq@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 00:39+0000\n"
-"PO-Revision-Date: 2023-12-20 09:10+0100\n"
+"PO-Revision-Date: 2024-03-20 09:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,38 +17,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "Off"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
-msgstr "Inactiva"
+msgstr "Apagada"
 
 #: package/contents/ui/BrightnessItem.qml:30
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr ""
+msgstr "Baixa"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr ""
+msgstr "Mitjana"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr ""
+msgstr "Alta"
 
 #: package/contents/ui/BrightnessItem.qml:33
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "On"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
 msgstr "Activa"

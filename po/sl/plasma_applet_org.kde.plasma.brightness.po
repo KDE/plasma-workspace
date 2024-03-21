@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 00:39+0000\n"
-"PO-Revision-Date: 2023-12-20 07:23+0100\n"
+"PO-Revision-Date: 2024-03-20 05:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -13,12 +13,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "Off"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
 msgstr "Izklopljeno"
@@ -27,24 +25,22 @@ msgstr "Izklopljeno"
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr ""
+msgstr "Temno"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr ""
+msgstr "Srednje"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr ""
+msgstr "Svetlo"
 
 #: package/contents/ui/BrightnessItem.qml:33
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "On"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
 msgstr "Vklopljeno"

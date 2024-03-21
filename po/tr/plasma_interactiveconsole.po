@@ -1,0 +1,90 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Emir SARI <emir_sari@icloud.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"PO-Revision-Date: 2024-03-20 14:59+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.02.0\n"
+
+#: interactiveconsole.cpp:63
+#, kde-format
+msgid "&Execute"
+msgstr "&Yürüt"
+
+#: interactiveconsole.cpp:64
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "Plasma"
+
+#: interactiveconsole.cpp:65
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "KWin"
+
+#: interactiveconsole.cpp:66
+#, kde-format
+msgid "Templates"
+msgstr "Şablonlar"
+
+#: interactiveconsole.cpp:75
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr "Masaüstü Kabuk Betiği Yazımı Konsolu"
+
+#: interactiveconsole.cpp:82
+#, kde-format
+msgid "Editor"
+msgstr "Düzenleyici"
+
+#: interactiveconsole.cpp:93
+#, kde-format
+msgid "Load"
+msgstr "Yükle"
+
+#: interactiveconsole.cpp:99
+#, kde-format
+msgid "Use"
+msgstr "Kullan"
+
+#: interactiveconsole.cpp:159
+#, kde-format
+msgid "Output"
+msgstr "Çıktı"
+
+#: interactiveconsole.cpp:266
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr "Betik dosyası <b>%1</b> yüklenemiyor"
+
+#: interactiveconsole.cpp:316
+#, kde-format
+msgid "Open Script File"
+msgstr "Betik Dosyası Aç"
+
+#: interactiveconsole.cpp:431
+#, kde-format
+msgid "Save Script File"
+msgstr "Betik Dosyasını Kaydet"
+
+#: interactiveconsole.cpp:520
+#, kde-format
+msgid "Executing script at %1"
+msgstr "%1 konumunda betik yürütülüyor"
+
+#: interactiveconsole.cpp:572
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr "Çalışma zamanı: %1 ms"
