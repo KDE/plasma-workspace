@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2023.
 #
-# SPDX-FileCopyrightText: 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:35+0000\n"
-"PO-Revision-Date: 2023-12-21 01:35+0100\n"
+"PO-Revision-Date: 2024-03-20 12:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
@@ -33,12 +33,12 @@ msgstr "Brillo y color"
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Screen brightness at %1%"
-msgstr "Brillo de la pantalla al %1%"
+msgstr "Brillo de la pantalla al %1 %"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Keyboard brightness at %1%"
-msgstr "Brillo del teclado al %1%"
+msgstr "Brillo del teclado al %1 %"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
