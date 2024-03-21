@@ -101,7 +101,7 @@ Item {
                         active: parent.hovered
                         implicitWidth: Kirigami.Units.iconSizes.smallMedium
                         implicitHeight: implicitWidth
-                        source: parent.qAction ? parent.qAction.icon : ""
+                        source: parent.qAction ? parent.qAction.icon.name : ""
                     }
 
                     checkable: qAction && qAction.checkable
@@ -118,8 +118,11 @@ Item {
                         text: parent.text
                     }
 
-                    onClicked: qAction.trigger();
-                    onToggled: qAction.toggle();
+                    onClicked: {
+                        if (qAction) {
+                            qAction.trigger();
+                        }
+                    }
                 }
             }
 
