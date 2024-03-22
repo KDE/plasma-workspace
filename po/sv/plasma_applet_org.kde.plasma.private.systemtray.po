@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:28+0000\n"
+"POT-Creation-Date: 2024-03-22 02:22+0000\n"
 "PO-Revision-Date: 2022-08-03 09:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -160,12 +160,12 @@ msgstr "Gå tillbaka"
 msgid "Status and Notifications"
 msgstr "Status och underrättelser"
 
-#: package/contents/ui/ExpandedRepresentation.qml:139
+#: package/contents/ui/ExpandedRepresentation.qml:142
 #, kde-format
 msgid "More actions"
 msgstr "Fler åtgärder"
 
-#: package/contents/ui/ExpandedRepresentation.qml:233
+#: package/contents/ui/ExpandedRepresentation.qml:236
 #, kde-format
 msgid "Keep Open"
 msgstr "Behåll öppen"

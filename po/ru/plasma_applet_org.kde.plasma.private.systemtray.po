@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:28+0000\n"
+"POT-Creation-Date: 2024-03-22 02:22+0000\n"
 "PO-Revision-Date: 2022-08-13 15:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -171,12 +171,12 @@ msgstr "Назад"
 msgid "Status and Notifications"
 msgstr "Состояние и уведомления"
 
-#: package/contents/ui/ExpandedRepresentation.qml:139
+#: package/contents/ui/ExpandedRepresentation.qml:142
 #, kde-format
 msgid "More actions"
 msgstr "Больше действий"
 
-#: package/contents/ui/ExpandedRepresentation.qml:233
+#: package/contents/ui/ExpandedRepresentation.qml:236
 #, kde-format
 msgid "Keep Open"
 msgstr "Держать окно открытым"

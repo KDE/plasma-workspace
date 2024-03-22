@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 02:28+0000\n"
+"POT-Creation-Date: 2024-03-22 02:22+0000\n"
 "PO-Revision-Date: 2022-08-08 12:26+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -161,12 +161,12 @@ msgstr "Palaa"
 msgid "Status and Notifications"
 msgstr "Tila ja ilmoitukset"
 
-#: package/contents/ui/ExpandedRepresentation.qml:139
+#: package/contents/ui/ExpandedRepresentation.qml:142
 #, kde-format
 msgid "More actions"
 msgstr "Lisää toimintoja"
 
-#: package/contents/ui/ExpandedRepresentation.qml:233
+#: package/contents/ui/ExpandedRepresentation.qml:236
 #, kde-format
 msgid "Keep Open"
 msgstr "Pidä avoinna"

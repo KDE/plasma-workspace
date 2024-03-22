@@ -1,29 +1,26 @@
-# Translation for plasma_interactiveconsole.po to Euskara/Basque (eu).
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
-# Translators:
-# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 02:28+0000\n"
-"PO-Revision-Date: 2024-03-20 21:40+0100\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2024-03-20 17:04-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.02.0\n"
 
 #: interactiveconsole.cpp:63
 #, kde-format
 msgid "&Execute"
-msgstr "&Exekutatu"
+msgstr "&Executar"
 
 #: interactiveconsole.cpp:64
 #, kde-format
@@ -40,54 +37,54 @@ msgstr "KWin"
 #: interactiveconsole.cpp:66
 #, kde-format
 msgid "Templates"
-msgstr "Txantiloiak"
+msgstr "Modelos"
 
 #: interactiveconsole.cpp:75
 #, kde-format
 msgid "Desktop Shell Scripting Console"
-msgstr "Mahaigaineko oskol-gidoietarako kontsola"
+msgstr "Console da área de trabalho para shell scripts"
 
 #: interactiveconsole.cpp:82
 #, kde-format
 msgid "Editor"
-msgstr "Editorea"
+msgstr "Editor"
 
 #: interactiveconsole.cpp:93
 #, kde-format
 msgid "Load"
-msgstr "Zamatu"
+msgstr "Carregar"
 
 #: interactiveconsole.cpp:99
 #, kde-format
 msgid "Use"
-msgstr "Erabili"
+msgstr "Usar"
 
 #: interactiveconsole.cpp:159
 #, kde-format
 msgid "Output"
-msgstr "Irteera"
+msgstr "Saída"
 
 #: interactiveconsole.cpp:266
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
-msgstr "Ez da <b>%1</b> gidoi-fitxategia zamatzeko gai"
+msgstr "Não foi possível abrir o script <b>%1</b>"
 
 #: interactiveconsole.cpp:316
 #, kde-format
 msgid "Open Script File"
-msgstr "Ireki gidoi-fitxategia"
+msgstr "Abrir um script"
 
 #: interactiveconsole.cpp:431
 #, kde-format
 msgid "Save Script File"
-msgstr "Gorde gidoi-fitxategia"
+msgstr "Salvar  o script"
 
 #: interactiveconsole.cpp:520
 #, kde-format
 msgid "Executing script at %1"
-msgstr "Gidoia %1(e)tan exekutatzen"
+msgstr "Executando o script em %1"
 
 #: interactiveconsole.cpp:572
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
-msgstr "Exekuzio-denbora: %1 ms"
+msgstr "Runtime: %1ms"

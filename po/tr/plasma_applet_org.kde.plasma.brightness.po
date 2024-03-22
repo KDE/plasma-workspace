@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-20 01:35+0000\n"
-"PO-Revision-Date: 2024-03-13 20:29+0300\n"
+"PO-Revision-Date: 2024-03-22 00:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/BrightnessItem.qml:70
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Gece Işığı %1 K"
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Ekran parlaklığını ayarlamak için sar"
+msgstr "Ekran parlaklığını ayarlamak için sarın"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
