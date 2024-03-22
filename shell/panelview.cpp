@@ -742,7 +742,7 @@ void PanelView::resizePanel()
             s = QSize(std::max(totalThickness(), std::min(m_screenToFollow->size().width(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
                       totalThickness());
         }
-        setMinimumSize(QSize(10, 10));
+        setMinimumSize(s);
         setMaximumSize(s);
         resize(s);
         return;
