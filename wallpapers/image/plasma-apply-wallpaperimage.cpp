@@ -31,7 +31,7 @@ int main(int argc, char **argv)
                                   i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
     parser.process(app);
 
-    int errorCode{0};
+    int errorCode{EXIT_SUCCESS};
     QTextStream ts(stdout);
     if (!parser.positionalArguments().isEmpty()) {
         QString wallpaperFile{parser.positionalArguments().first()};
@@ -46,7 +46,7 @@ int main(int argc, char **argv)
                 "file yourself: %1",
                 wallpaperFile)
                << Qt::endl;
-            errorCode = -1;
+            errorCode = EXIT_FAILURE;
         } else {
             if (wallpaperInfo.exists()) {
                 if (wallpaperInfo.isFile()) {
@@ -83,7 +83,7 @@ int main(int argc, char **argv)
 
             if (reply.type() == QDBusMessage::ErrorMessage) {
                 ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << Qt::endl;
-                errorCode = -1;
+                errorCode = EXIT_FAILURE;
             } else {
                 if (isKPackage) {
                     ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << Qt::endl;
@@ -92,10 +92,10 @@ int main(int argc, char **argv)
                 }
             }
 
-        } else if (errorCode == 0) {
+        } else if (errorCode == EXIT_SUCCESS) {
             // Just to avoid spitting out multiple errors
             ts << i18n("The file passed to be set as wallpaper does not exist, or we cannot identify it as a wallpaper: %1", wallpaperFile) << Qt::endl;
-            errorCode = -1;
+            errorCode = EXIT_FAILURE;
         }
     } else {
         parser.showHelp();
