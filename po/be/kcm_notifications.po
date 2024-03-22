@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"POT-Creation-Date: 2024-03-22 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -77,6 +77,23 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:278
 #, kde-format
 msgid "Play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:289
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:315
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:327
+#, kde-format
+msgid "Choose sound file"
 msgstr ""
 
 #: ui/main.qml:46

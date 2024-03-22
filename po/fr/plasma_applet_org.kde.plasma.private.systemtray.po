@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-17 00:39+0000\n"
+"POT-Creation-Date: 2024-03-22 00:39+0000\n"
 "PO-Revision-Date: 2023-11-01 14:50+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -168,12 +168,12 @@ msgstr "Revenir en arrière"
 msgid "Status and Notifications"
 msgstr "État et notifications"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: package/contents/ui/ExpandedRepresentation.qml:143
 #, kde-format
 msgid "More actions"
 msgstr "Plus d'actions"
 
-#: package/contents/ui/ExpandedRepresentation.qml:234
+#: package/contents/ui/ExpandedRepresentation.qml:237
 #, kde-format
 msgid "Keep Open"
 msgstr "Laisser ouvert"

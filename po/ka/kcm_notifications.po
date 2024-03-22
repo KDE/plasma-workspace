@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"POT-Creation-Date: 2024-03-22 00:39+0000\n"
 "PO-Revision-Date: 2024-03-08 03:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -71,6 +71,23 @@ msgstr "შეტყობინების ჩვენება მხტუ�
 #, kde-format
 msgid "Play a sound"
 msgstr "ხმის დაკვრა"
+
+#: ui/ApplicationConfiguration.qml:289
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:315
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:327
+#, kde-format
+msgid "Choose sound file"
+msgstr ""
 
 #: ui/main.qml:46
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"POT-Creation-Date: 2024-03-22 00:39+0000\n"
 "PO-Revision-Date: 2024-03-10 10:31+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -72,6 +72,23 @@ msgstr "Montri mesaĝon en ŝprucfenestro"
 #, kde-format
 msgid "Play a sound"
 msgstr "Aŭdigi sonon"
+
+#: ui/ApplicationConfiguration.qml:289
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:315
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:327
+#, kde-format
+msgid "Choose sound file"
+msgstr ""
 
 #: ui/main.qml:46
 #, kde-format

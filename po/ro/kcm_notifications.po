@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"POT-Creation-Date: 2024-03-22 00:39+0000\n"
 "PO-Revision-Date: 2024-02-25 18:54+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -70,6 +70,23 @@ msgstr "Arată un mesaj contextual"
 #, kde-format
 msgid "Play a sound"
 msgstr "Redă un sunet"
+
+#: ui/ApplicationConfiguration.qml:289
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:315
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:327
+#, kde-format
+msgid "Choose sound file"
+msgstr ""
 
 #: ui/main.qml:46
 #, fuzzy, kde-format

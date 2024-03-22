@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"PO-Revision-Date: 2024-03-21 05:32+0100\n"
+"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
+"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: interactiveconsole.cpp:63
+#, kde-format
+msgid "&Execute"
+msgstr ""
+
+#: interactiveconsole.cpp:64
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr ""
+
+#: interactiveconsole.cpp:65
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr ""
+
+#: interactiveconsole.cpp:66
+#, kde-format
+msgid "Templates"
+msgstr ""
+
+#: interactiveconsole.cpp:75
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr ""
+
+#: interactiveconsole.cpp:82
+#, kde-format
+msgid "Editor"
+msgstr ""
+
+#: interactiveconsole.cpp:93
+#, kde-format
+msgid "Load"
+msgstr ""
+
+#: interactiveconsole.cpp:99
+#, kde-format
+msgid "Use"
+msgstr ""
+
+#: interactiveconsole.cpp:159
+#, kde-format
+msgid "Output"
+msgstr ""
+
+#: interactiveconsole.cpp:266
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr ""
+
+#: interactiveconsole.cpp:316
+#, kde-format
+msgid "Open Script File"
+msgstr ""
+
+#: interactiveconsole.cpp:431
+#, kde-format
+msgid "Save Script File"
+msgstr ""
+
+#: interactiveconsole.cpp:520
+#, kde-format
+msgid "Executing script at %1"
+msgstr ""
+
+#: interactiveconsole.cpp:572
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr ""
