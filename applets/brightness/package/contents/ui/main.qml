@@ -135,9 +135,7 @@ PlasmoidItem {
             const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x);
 
             const brightnessMax = screenBrightnessControl.brightnessMax
-            // Don't allow the UI to turn off the screen
-            // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-            const brightnessMin = (brightnessMax > 100 ? 1 : 0)
+            const brightnessMin = Plasmoid.configuration.allowMinScreenBrightness ? 0 : 1
             const stepSize = Math.max(1, brightnessMax / 20)
 
             let newBrightness;
@@ -188,6 +186,7 @@ PlasmoidItem {
         id: dialogItem
 
         readonly property var appletInterface: brightnessAndColorControl
+        readonly property var configuration: Plasmoid.configuration
 
         Layout.minimumWidth: Kirigami.Units.gridUnit * 10
         Layout.maximumWidth: Kirigami.Units.gridUnit * 80
@@ -200,12 +199,24 @@ PlasmoidItem {
     } // todo
 
     Plasmoid.contextualActions: [
+        // By default don't allow the UI to turn off the screen
+        // Please see https://git.reviewboard.kde.org/r/122505/ for more information
+        PlasmaCore.Action {
+            text: i18n("Allow setting display brightness to minimum")
+            icon.name: "video-display-brightness"
+            visible: screenBrightnessControl.isBrightnessAvailable
+            checkable: true
+            checked: Plasmoid.configuration.allowMinScreenBrightness 
+            onTriggered: checked => {
+                Plasmoid.configuration.allowMinScreenBrightness = checked
+            }
+        },
+
         PlasmaCore.Action {
             id: configureNightLight
             icon.name: "configure"
             text: i18nc("@action:inmenu", "Configure Night Light…")
             visible: KAuthorized.authorize("kcm_nightlight")
-            priority: PlasmaCore.Action.LowPriority
             onTriggered: KCMLauncher.openSystemSettings("kcm_nightlight")
         }
     ]
