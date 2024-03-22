@@ -31,6 +31,20 @@ PlasmaComponents3.ItemDelegate {
     readonly property string brightnessLevelMedium: i18nc("Brightness level", "Medium")
     readonly property string brightnessLevelHigh: i18nc("Brightness level", "High")
     readonly property string brightnessLevelOn: i18nc("Backlight on or off", "On")
+    readonly property string labelText: {
+        if (maximumValue == 1) {
+            const levels = [brightnessLevelOff, brightnessLevelOn];
+            return levels[value];
+        } else if (maximumValue == 2) {
+            const levels = [brightnessLevelOff, brightnessLevelLow, brightnessLevelHigh];
+            return levels[value];
+        } else if (maximumValue == 3) {
+            const levels = [brightnessLevelOff, brightnessLevelLow, brightnessLevelMedium, brightnessLevelHigh];
+            return levels[value];
+        } else {
+            return i18nc("Placeholder is brightness percentage", "%1%", percentage);
+        }
+    }
 
     signal moved()
 
@@ -72,20 +86,7 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: percent
                     Layout.alignment: Qt.AlignRight
-                    text: {
-                        if (maximumValue == 1) {
-                            const levels = [brightnessLevelOff, brightnessLevelOn];
-                            return levels[value];
-                        } else if (maximumValue == 2) {
-                            const levels = [brightnessLevelOff, brightnessLevelLow, brightnessLevelHigh];
-                            return levels[value];
-                        } else if (maximumValue == 3) {
-                            const levels = [brightnessLevelOff, brightnessLevelLow, brightnessLevelMedium, brightnessLevelHigh];
-                            return levels[value];
-                        } else {
-                            return i18nc("Placeholder is brightness percentage", "%1%", percentage);
-                        }
-                    }
+                    text: root.labelText
                     textFormat: Text.PlainText
                 }
             }
