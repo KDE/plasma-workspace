@@ -11,6 +11,7 @@
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QDBusReply>
+#include <QPointer>
 
 using namespace Qt::StringLiterals;
 
@@ -83,8 +84,9 @@ QCoro::Task<void> ScreenBrightnessControl::init()
                                                                 u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
                                                                 u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
                                                                 u"brightnessMax"_s);
+    QPointer<ScreenBrightnessControl> alive{this};
     const QDBusReply<int> brightnessMaxReply = co_await QDBusConnection::sessionBus().asyncCall(brightnessMax);
-    if (!brightnessMaxReply.isValid()) {
+    if (!alive || !brightnessMaxReply.isValid()) {
         qDebug() << "error getting max screen brightness via dbus:" << brightnessMaxReply.error();
         co_return;
     }
@@ -95,7 +97,7 @@ QCoro::Task<void> ScreenBrightnessControl::init()
                                                              u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
                                                              u"brightness"_s);
     const QDBusReply<int> brightnessReply = co_await QDBusConnection::sessionBus().asyncCall(brightness);
-    if (!brightnessReply.isValid()) {
+    if (!alive || !brightnessReply.isValid()) {
         qDebug() << "error getting screen brightness via dbus:" << brightnessReply.error();
         co_return;
     }

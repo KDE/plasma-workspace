@@ -12,6 +12,7 @@
 #include <QDBusMetaType>
 #include <QDBusPendingCall>
 #include <QDBusReply>
+#include <QPointer>
 
 using namespace Qt::StringLiterals;
 
@@ -80,8 +81,9 @@ QCoro::Task<void> KeyboardBrightnessControl::init()
                                                                 u"/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"_s,
                                                                 u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
                                                                 u"keyboardBrightnessMax"_s);
+    QPointer<KeyboardBrightnessControl> alive{this};
     const QDBusReply<int> brightnessMaxReply = co_await QDBusConnection::sessionBus().asyncCall(brightnessMax);
-    if (!brightnessMaxReply.isValid()) {
+    if (!alive || !brightnessMaxReply.isValid()) {
         qDebug() << "error getting max keyboard brightness via dbus" << brightnessMaxReply.error();
         co_return;
     }
@@ -92,7 +94,7 @@ QCoro::Task<void> KeyboardBrightnessControl::init()
                                                              u"org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"_s,
                                                              u"keyboardBrightness"_s);
     const QDBusReply<int> brightnessReply = co_await QDBusConnection::sessionBus().asyncCall(brightness);
-    if (!brightnessReply.isValid()) {
+    if (!alive || !brightnessReply.isValid()) {
         qDebug() << "error getting keyboard brightness via dbus" << brightnessReply.error();
         co_return;
     }
