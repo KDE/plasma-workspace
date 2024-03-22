@@ -68,11 +68,11 @@ int main(int argc, char **argv)
         if (isWallpaper) {
             QString script;
             QTextStream out(&script);
-            out << "for (var key in desktops()) {"
-                << "var d = desktops()[key];"
-                << "d.wallpaperPlugin = 'org.kde.image';"
-                << "d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];"
-                << "d.writeConfig('Image', 'file://" + wallpaperFile + "');"
+            out << "for (var key in desktops()) {" //
+                << "var d = desktops()[key];" //
+                << "d.wallpaperPlugin = 'org.kde.image';" //
+                << "d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];" //
+                << "d.writeConfig('Image', 'file://" + wallpaperFile + "');" //
                 << "}";
             auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                           QStringLiteral("/PlasmaShell"),
