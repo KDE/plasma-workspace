@@ -24,17 +24,17 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasma-apply-wallpaperimage"));
 
-    QCommandLineParser *parser = new QCommandLineParser;
-    parser->addHelpOption();
-    parser->setApplicationDescription(i18n("This tool allows you to set an image as the wallpaper for the Plasma session."));
-    parser->addPositionalArgument(QStringLiteral("imagefile"),
+    QCommandLineParser parser;
+    parser.addHelpOption();
+    parser.setApplicationDescription(i18n("This tool allows you to set an image as the wallpaper for the Plasma session."));
+    parser.addPositionalArgument(QStringLiteral("imagefile"),
                                   i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
-    parser->process(app);
+    parser.process(app);
 
     int errorCode{0};
     QTextStream ts(stdout);
-    if (!parser->positionalArguments().isEmpty()) {
-        QString wallpaperFile{parser->positionalArguments().first()};
+    if (!parser.positionalArguments().isEmpty()) {
+        QString wallpaperFile{parser.positionalArguments().first()};
         QFileInfo wallpaperInfo{wallpaperFile};
         bool isWallpaper{false};
         bool isKPackage{false};
@@ -98,7 +98,7 @@ int main(int argc, char **argv)
             errorCode = -1;
         }
     } else {
-        parser->showHelp();
+        parser.showHelp();
     }
     QTimer::singleShot(0, &app, [&app, &errorCode]() {
         app.exit(errorCode);
