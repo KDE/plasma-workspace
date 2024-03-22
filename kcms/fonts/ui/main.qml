@@ -10,7 +10,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 6.3 as QtDialogs
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config // KAuthorized
 
@@ -196,7 +196,7 @@ KCM.SimpleKCM {
                     text: i18n("Enable")
                     Layout.fillWidth: true
                 }
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Anti-Aliasing", "Pixels on displays are generally aligned in a grid. Therefore shapes of fonts that do not align with this grid will look blocky and wrong unless <emphasis>anti-aliasing</emphasis> techniques are used to reduce this effect. You generally want to keep this option enabled unless it causes problems.")
                 }
 
@@ -320,7 +320,7 @@ KCM.SimpleKCM {
                         extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
                     }
                 }
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Sub-pixel rendering", "<para>On TFT or LCD screens every single pixel is actually composed of three or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can be changed independently to further improve the quality of displayed fonts.</para> <para>The rendering quality is only improved if the selection matches the manner in which the sub-pixels of your display are aligned. Most displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some have <emphasis>BGR</emphasis> and some exotic orderings are not supported by this feature.</para>This does not work with CRT monitors.")
                 }
             }
@@ -368,7 +368,7 @@ KCM.SimpleKCM {
                         extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
                     }
                 }
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Hinting", "Hinting is a technique in which hints embedded in a font are used to enhance the rendering quality especially at small sizes. Stronger hinting generally leads to sharper edges but the small letters will less closely resemble their shape at big sizes.")
                 }
             }
@@ -409,7 +409,7 @@ KCM.SimpleKCM {
                         extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
                     }
                 }
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>Enter your screen's DPI here to make on-screen fonts match their physical sizes when printed. Changing this option from its default value will conflict with many apps; some icons and images may not scale as expected.</para><para>To increase text size, change the size of the fonts above. To scale everything, use the scaling slider on the <interface>Display & Monitor</interface> page.</para>")
                 }
             }
