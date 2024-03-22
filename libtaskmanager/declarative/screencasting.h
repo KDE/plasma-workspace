@@ -6,54 +6,40 @@
 
 #pragma once
 
+#include "qwayland-zkde-screencast-unstable-v1.h"
+
 #include <QObject>
+#include <QWaylandClientExtensionTemplate>
+
 #include <memory>
 
-class ScreencastingPrivate;
-class ScreencastingStreamPrivate;
-class ScreencastingStream : public QObject
+class ScreencastingStream : public QObject, public QtWayland::zkde_screencast_stream_unstable_v1
 {
     Q_OBJECT
-public:
-    ScreencastingStream(QObject *parent);
-    ~ScreencastingStream() override;
 
-    quint32 nodeId() const;
+public:
+    ScreencastingStream();
+    ~ScreencastingStream() override;
 
 Q_SIGNALS:
     void created(quint32 nodeid);
     void failed(const QString &error);
     void closed();
 
-private:
-    friend class Screencasting;
-    std::unique_ptr<ScreencastingStreamPrivate> d;
+protected:
+    void zkde_screencast_stream_unstable_v1_created(uint32_t node) override;
+    void zkde_screencast_stream_unstable_v1_closed() override;
+    void zkde_screencast_stream_unstable_v1_failed(const QString &error) override;
 };
 
-class Screencasting : public QObject
+class Screencasting : public QWaylandClientExtensionTemplate<Screencasting>, public QtWayland::zkde_screencast_unstable_v1
 {
     Q_OBJECT
+
 public:
-    explicit Screencasting(QObject *parent = nullptr);
+    explicit Screencasting();
     ~Screencasting() override;
 
-    enum CursorMode {
-        Hidden = 1,
-        Embedded = 2,
-        Metadata = 4,
-    };
-    Q_ENUM(CursorMode)
-
-    ScreencastingStream *createOutputStream(const QString &outputName, CursorMode mode);
-    ScreencastingStream *createWindowStream(const QString &uuid, CursorMode mode);
-
-    void destroy();
-
-Q_SIGNALS:
-    void initialized();
-    void removed();
-    void sourcesChanged();
-
-private:
-    std::unique_ptr<ScreencastingPrivate> d;
+    std::unique_ptr<ScreencastingStream> createOutputStream(const QString &outputName, pointer mode);
+    std::unique_ptr<ScreencastingStream> createWindowStream(const QString &uuid, pointer mode);
 };

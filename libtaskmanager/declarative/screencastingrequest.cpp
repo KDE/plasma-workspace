@@ -9,20 +9,9 @@
 
 #include <QCoreApplication>
 #include <QDebug>
-#include <QPointer>
-#include <functional>
-
-struct ScreencastingRequestPrivate {
-    Screencasting *m_screenCasting = nullptr;
-    QPointer<ScreencastingStream> m_stream;
-    QString m_uuid;
-    QString m_outputName;
-    quint32 m_nodeId = 0;
-};
 
 ScreencastingRequest::ScreencastingRequest(QObject *parent)
     : QObject(parent)
-    , d(new ScreencastingRequestPrivate)
 {
 }
 
@@ -30,7 +19,7 @@ ScreencastingRequest::~ScreencastingRequest() = default;
 
 quint32 ScreencastingRequest::nodeId() const
 {
-    return d->m_nodeId;
+    return m_nodeId;
 }
 
 void ScreencastingRequest::resetUuid()
@@ -40,23 +29,19 @@ void ScreencastingRequest::resetUuid()
 
 void ScreencastingRequest::setUuid(const QString &uuid)
 {
-    if (d->m_uuid == uuid) {
+    if (m_uuid == uuid) {
         return;
     }
 
-    setNodeid(0);
-    d->m_uuid = uuid;
+    setStream(nullptr);
+    m_uuid = uuid;
     Q_EMIT uuidChanged(uuid);
 
-    if (!d->m_uuid.isEmpty()) {
-        if (!d->m_screenCasting) {
-            d->m_screenCasting = new Screencasting(this);
+    if (!m_uuid.isEmpty()) {
+        if (!m_screenCasting) {
+            m_screenCasting = std::make_unique<Screencasting>();
         }
-        auto stream = d->m_screenCasting->createWindowStream(d->m_uuid, Screencasting::CursorMode::Hidden);
-        if (!stream) {
-            return;
-        }
-        adopt(stream);
+        setStream(m_screenCasting->createWindowStream(m_uuid, Screencasting::pointer_hidden));
     }
 }
 
@@ -67,60 +52,54 @@ void ScreencastingRequest::resetOutputName()
 
 void ScreencastingRequest::setOutputName(const QString &outputName)
 {
-    if (d->m_outputName == outputName) {
+    if (m_outputName == outputName) {
         return;
     }
 
-    setNodeid(0);
-    d->m_outputName = outputName;
+    setStream(nullptr);
+    m_outputName = outputName;
     Q_EMIT outputNameChanged(outputName);
 
-    if (!d->m_outputName.isEmpty()) {
-        if (!d->m_screenCasting) {
-            d->m_screenCasting = new Screencasting(this);
+    if (!m_outputName.isEmpty()) {
+        if (!m_screenCasting) {
+            m_screenCasting = std::make_unique<Screencasting>();
         }
-        auto stream = d->m_screenCasting->createOutputStream(d->m_outputName, Screencasting::CursorMode::Hidden);
-        if (!stream) {
-            return;
-        }
-        adopt(stream);
-        stream->setObjectName(d->m_outputName);
+        setStream(m_screenCasting->createOutputStream(m_outputName, Screencasting::pointer_hidden));
     }
 }
 
-void ScreencastingRequest::adopt(ScreencastingStream *stream)
+void ScreencastingRequest::setStream(std::unique_ptr<ScreencastingStream> stream)
 {
-    d->m_stream = stream;
+    if (stream) {
+        m_stream = std::move(stream);
 
-    connect(stream, &ScreencastingStream::created, this, &ScreencastingRequest::setNodeid);
-    connect(stream, &ScreencastingStream::failed, this, [](const QString &error) {
-        qWarning() << "error creating screencast" << error;
-    });
-    connect(stream, &ScreencastingStream::closed, this, [this, stream] {
-        if (stream->nodeId() == d->m_nodeId) {
+        connect(m_stream.get(), &ScreencastingStream::created, this, &ScreencastingRequest::setNodeid);
+        connect(m_stream.get(), &ScreencastingStream::closed, this, [this]() {
             setNodeid(0);
-        }
-    });
+        });
+        connect(m_stream.get(), &ScreencastingStream::failed, this, [](const QString &error) {
+            qWarning() << "error creating screencast" << error;
+        });
+    } else {
+        m_stream.reset();
+        setNodeid(0);
+    }
 }
 
 void ScreencastingRequest::setNodeid(uint nodeId)
 {
-    if (nodeId != d->m_nodeId) {
-        d->m_nodeId = nodeId;
+    if (nodeId != m_nodeId) {
+        m_nodeId = nodeId;
         Q_EMIT nodeIdChanged(nodeId);
-    }
-
-    if (nodeId == 0 && d->m_stream) {
-        delete d->m_stream;
     }
 }
 
 QString ScreencastingRequest::uuid() const
 {
-    return d->m_uuid;
+    return m_uuid;
 }
 
 QString ScreencastingRequest::outputName() const
 {
-    return d->m_outputName;
+    return m_outputName;
 }
