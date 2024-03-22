@@ -67,6 +67,7 @@ PlasmaExtras.Representation {
                 type: BrightnessItem.Type.Screen
                 visible: screenBrightnessControl.isBrightnessAvailable
                 value: screenBrightnessControl.brightness
+                minimumValue: dialog.configuration.allowMinScreenBrightness ? 0 : 1
                 maximumValue: screenBrightnessControl.brightnessMax
 
                 KeyNavigation.up: dialog.KeyNavigation.up

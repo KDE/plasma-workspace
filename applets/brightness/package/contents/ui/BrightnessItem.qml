@@ -21,6 +21,7 @@ PlasmaComponents3.ItemDelegate {
 
     property alias slider: control
     property alias value: control.value
+    property alias minimumValue: control.from
     property alias maximumValue: control.to
     property alias stepSize: control.stepSize
     required property /*BrightnessItem.Type*/ int type
@@ -95,9 +96,6 @@ PlasmaComponents3.ItemDelegate {
                 Layout.fillWidth: true
 
                 activeFocusOnTab: false
-                // Don't allow the slider to turn off the screen
-                // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-                from: root.type == BrightnessItem.Type.Screen ? 1 : 0
                 stepSize: 1
 
                 Accessible.name: root.text
