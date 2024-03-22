@@ -9,9 +9,6 @@
 #include "screencasting.h"
 #include <QObject>
 
-class ScreencastingStream;
-struct ScreencastingRequestPrivate;
-
 /**
  * Allows us to request a stream for a window identified by its universally
  * unique identifier.
@@ -59,8 +56,12 @@ Q_SIGNALS:
     void outputNameChanged(const QString &outputNames);
 
 private:
-    void adopt(ScreencastingStream *stream);
     void setNodeid(uint nodeId);
+    void setStream(std::unique_ptr<ScreencastingStream> stream);
 
-    std::unique_ptr<ScreencastingRequestPrivate> d;
+    std::unique_ptr<Screencasting> m_screenCasting;
+    std::unique_ptr<ScreencastingStream> m_stream;
+    QString m_uuid;
+    QString m_outputName;
+    quint32 m_nodeId = 0;
 };

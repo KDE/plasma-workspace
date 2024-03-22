@@ -5,97 +5,57 @@
 */
 
 #include "screencasting.h"
-#include "qwayland-zkde-screencast-unstable-v1.h"
 #include <QDebug>
 #include <QGuiApplication>
 #include <QPointer>
 #include <QScreen>
-#include <QWaylandClientExtensionTemplate>
 #include <qpa/qplatformnativeinterface.h>
-#include <qtwaylandclientversion.h>
 
-class ScreencastingStreamPrivate : public QtWayland::zkde_screencast_stream_unstable_v1
-{
-public:
-    ScreencastingStreamPrivate(ScreencastingStream *q)
-        : q(q)
-    {
-    }
-    ~ScreencastingStreamPrivate()
-    {
-        close();
-        q->deleteLater();
-    }
-
-    void zkde_screencast_stream_unstable_v1_created(uint32_t node) override
-    {
-        m_nodeId = node;
-        Q_EMIT q->created(node);
-    }
-
-    void zkde_screencast_stream_unstable_v1_closed() override
-    {
-        Q_EMIT q->closed();
-    }
-
-    void zkde_screencast_stream_unstable_v1_failed(const QString &error) override
-    {
-        Q_EMIT q->failed(error);
-    }
-
-    uint m_nodeId = 0;
-    QPointer<ScreencastingStream> q;
-};
-
-ScreencastingStream::ScreencastingStream(QObject *parent)
-    : QObject(parent)
-    , d(new ScreencastingStreamPrivate(this))
+ScreencastingStream::ScreencastingStream()
 {
 }
 
-ScreencastingStream::~ScreencastingStream() = default;
-
-quint32 ScreencastingStream::nodeId() const
+ScreencastingStream::~ScreencastingStream()
 {
-    return d->m_nodeId;
+    close();
 }
 
-class ScreencastingPrivate : public QWaylandClientExtensionTemplate<ScreencastingPrivate>, public QtWayland::zkde_screencast_unstable_v1
+void ScreencastingStream::zkde_screencast_stream_unstable_v1_created(uint32_t node)
 {
-public:
-    ScreencastingPrivate(Screencasting *q)
-        : QWaylandClientExtensionTemplate<ScreencastingPrivate>(ZKDE_SCREENCAST_UNSTABLE_V1_STREAM_REGION_SINCE_VERSION)
-        , q(q)
-    {
-        initialize();
-
-        if (!isInitialized()) {
-            qWarning() << "Remember requesting the interface on your desktop file: X-KDE-Wayland-Interfaces=zkde_screencast_unstable_v1";
-        }
-        Q_ASSERT(isInitialized());
-    }
-
-    ~ScreencastingPrivate()
-    {
-        if (isActive()) {
-            destroy();
-        }
-    }
-
-    Screencasting *const q;
-};
-
-Screencasting::Screencasting(QObject *parent)
-    : QObject(parent)
-    , d(new ScreencastingPrivate(this))
-{
+    Q_EMIT created(node);
 }
 
-Screencasting::~Screencasting() = default;
-
-ScreencastingStream *Screencasting::createOutputStream(const QString &outputName, Screencasting::CursorMode mode)
+void ScreencastingStream::zkde_screencast_stream_unstable_v1_closed()
 {
-    if (!d->isActive()) {
+    Q_EMIT closed();
+}
+
+void ScreencastingStream::zkde_screencast_stream_unstable_v1_failed(const QString &error)
+{
+    Q_EMIT failed(error);
+}
+
+Screencasting::Screencasting()
+    : QWaylandClientExtensionTemplate<Screencasting>(ZKDE_SCREENCAST_UNSTABLE_V1_STREAM_REGION_SINCE_VERSION)
+{
+    initialize();
+
+    if (!isInitialized()) {
+        qWarning() << "Remember requesting the interface on your desktop file: X-KDE-Wayland-Interfaces=zkde_screencast_unstable_v1";
+    }
+    Q_ASSERT(isInitialized());
+}
+
+Screencasting::~Screencasting()
+{
+    if (isActive()) {
+        destroy();
+    }
+}
+
+std::unique_ptr<ScreencastingStream> Screencasting::createOutputStream(const QString &outputName, pointer mode)
+{
+    if (!isActive()) {
         return nullptr;
     }
 
@@ -110,23 +70,18 @@ ScreencastingStream *Screencasting::createOutputStream(const QString &outputName
         return nullptr;
     }
 
-    auto stream = new ScreencastingStream(this);
+    auto stream = std::make_unique<ScreencastingStream>();
     stream->setObjectName(outputName);
-    stream->d->init(d->stream_output(output, mode));
+    stream->init(stream_output(output, mode));
     return stream;
 }
 
-ScreencastingStream *Screencasting::createWindowStream(const QString &uuid, CursorMode mode)
+std::unique_ptr<ScreencastingStream> Screencasting::createWindowStream(const QString &uuid, pointer mode)
 {
-    if (!d->isActive()) {
+    if (!isActive()) {
         return nullptr;
     }
-    auto stream = new ScreencastingStream(this);
-    stream->d->init(d->stream_window(uuid, mode));
+    auto stream = std::make_unique<ScreencastingStream>();
+    stream->init(stream_window(uuid, mode));
     return stream;
-}
-
-void Screencasting::destroy()
-{
-    d.reset(nullptr);
 }
