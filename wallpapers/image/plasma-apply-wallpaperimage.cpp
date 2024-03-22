@@ -14,7 +14,6 @@
 #include <QDBusMessage>
 #include <QDebug>
 #include <QFileInfo>
-#include <QTimer>
 
 int main(int argc, char **argv)
 {
@@ -28,7 +27,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.setApplicationDescription(i18n("This tool allows you to set an image as the wallpaper for the Plasma session."));
     parser.addPositionalArgument(QStringLiteral("imagefile"),
-                                  i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
+                                 i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
     parser.process(app);
 
     int errorCode{EXIT_SUCCESS};
@@ -100,9 +99,6 @@ int main(int argc, char **argv)
     } else {
         parser.showHelp();
     }
-    QTimer::singleShot(0, &app, [&app, &errorCode]() {
-        app.exit(errorCode);
-    });
 
-    return app.exec();
+    return errorCode;
 }
