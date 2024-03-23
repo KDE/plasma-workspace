@@ -148,7 +148,7 @@
         "Name[zh_TW]": "通知"
     },
     "X-DocPath": "kcontrol/notifications/index.html",
+    "X-KDE-Keywords": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute",
     "X-KDE-System-Settings-Parent-Category": "applications",
-    "X-KDE-Weight": 20,
-    "X-KDE-Keywords": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute"
+    "X-KDE-Weight": 20
 }
