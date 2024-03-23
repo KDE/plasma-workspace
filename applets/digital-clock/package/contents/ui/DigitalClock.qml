@@ -12,7 +12,7 @@ import QtQuick.Layouts
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components as Components
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
 
@@ -513,7 +513,7 @@ MouseArea {
             flow: Grid.TopToBottom
             columnSpacing: Kirigami.Units.smallSpacing
 
-            Components.Label  {
+            PlasmaComponents.Label  {
                 id: timeLabel
 
                 font {
@@ -533,7 +533,7 @@ MouseArea {
                 horizontalAlignment: Text.AlignHCenter
             }
 
-            Components.Label {
+            PlasmaComponents.Label {
                 id: timezoneLabel
 
                 font.weight: timeLabel.font.weight
@@ -550,7 +550,7 @@ MouseArea {
             }
         }
 
-        Components.Label {
+        PlasmaComponents.Label {
             id: dateLabel
 
             visible: main.showDate
@@ -573,7 +573,7 @@ MouseArea {
      *
      */
 
-    Components.Label {
+    PlasmaComponents.Label {
         id: sizehelper
 
         font.family: timeLabel.font.family
@@ -586,7 +586,7 @@ MouseArea {
     }
 
     // To measure Label.height for maximum-sized font in VerticalFit mode
-    Components.Label {
+    PlasmaComponents.Label {
         id: fontHelper
 
         height: 1024

@@ -7,7 +7,7 @@
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 
@@ -61,7 +61,7 @@ Item {
             textFormat: Text.PlainText
         }
 
-        PlasmaComponents3.Label {
+        PlasmaComponents.Label {
             id: tooltipSubtext
 
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
@@ -80,7 +80,7 @@ Item {
             visible: !clocks.visible
         }
 
-        PlasmaComponents3.Label {
+        PlasmaComponents.Label {
             id: tooltipSubLabelText
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
@@ -127,7 +127,7 @@ Item {
                     return timezones;
                 }
 
-                PlasmaComponents3.Label {
+                PlasmaComponents.Label {
                     // Layout.fillWidth is buggy here
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
                     text: {

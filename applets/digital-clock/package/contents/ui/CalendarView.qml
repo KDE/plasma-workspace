@@ -12,7 +12,7 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.ksvg as KSvg
 import org.kde.plasma.workspace.calendar as PlasmaCalendar
-import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.private.digitalclock
 import org.kde.config // KAuthorized
@@ -111,7 +111,7 @@ PlasmaExtras.Representation {
                     textFormat: Text.PlainText
                 }
 
-                PlasmaComponents3.Label {
+                PlasmaComponents.Label {
                     visible: monthView.currentDateAuxilliaryText.length > 0
 
                     Layout.leftMargin: calendar.paddings
@@ -144,7 +144,7 @@ PlasmaExtras.Representation {
                         maximumLineCount: 1
                         elide: Text.ElideRight
                     }
-                    PlasmaComponents3.ToolButton {
+                    PlasmaComponents.ToolButton {
                         id: addEventButton
 
                         visible: agenda.visible && ApplicationIntegration.calendarInstalled
@@ -238,7 +238,7 @@ PlasmaExtras.Representation {
                 text: timeString.length > dateString.length ? timeString : dateString
             }
 
-            PlasmaComponents3.ScrollView {
+            PlasmaComponents.ScrollView {
                 id: holidaysView
                 anchors.fill: parent
 
@@ -263,7 +263,7 @@ PlasmaExtras.Representation {
                         currentIndex = -1;
                     }
 
-                    delegate: PlasmaComponents3.ItemDelegate {
+                    delegate: PlasmaComponents.ItemDelegate {
                         id: eventItem
                         width: holidaysList.width
 
@@ -298,7 +298,7 @@ PlasmaExtras.Representation {
                             return !(startIsMidnight && endIsMidnight && sameDay);
                         }
 
-                        PlasmaComponents3.ToolTip {
+                        PlasmaComponents.ToolTip {
                             text: modelData.description
                             visible: text !== "" && eventItem.hovered
                         }
@@ -323,7 +323,7 @@ PlasmaExtras.Representation {
                                 visible: modelData.eventColor !== ""
                             }
 
-                            PlasmaComponents3.Label {
+                            PlasmaComponents.Label {
                                 id: startTimeLabel
 
                                 readonly property bool startsToday: modelData.startDateTime - monthView.currentDate >= 0
@@ -341,7 +341,7 @@ PlasmaExtras.Representation {
                                 visible: eventItem.hasTime
                             }
 
-                            PlasmaComponents3.Label {
+                            PlasmaComponents.Label {
                                 id: endTimeLabel
 
                                 readonly property bool endsToday: modelData.endDateTime - monthView.currentDate <= 86400000 // 24hrs in ms
@@ -361,7 +361,7 @@ PlasmaExtras.Representation {
                                 visible: eventItem.hasTime
                             }
 
-                            PlasmaComponents3.Label {
+                            PlasmaComponents.Label {
                                 id: eventTitle
 
                                 Layout.row: 0
@@ -434,7 +434,7 @@ PlasmaExtras.Representation {
                     Accessible.ignored: true
                 }
 
-                PlasmaComponents3.ToolButton {
+                PlasmaComponents.ToolButton {
                     id: switchTimeZoneButton
 
                     visible: KAuthorized.authorizeControlModule("kcm_clock.desktop")
@@ -448,7 +448,7 @@ PlasmaExtras.Representation {
 
                     onClicked: KCMLauncher.openSystemSettings("kcm_clock")
 
-                    PlasmaComponents3.ToolTip {
+                    PlasmaComponents.ToolTip {
                         text: parent.Accessible.description
                     }
                 }
@@ -456,7 +456,7 @@ PlasmaExtras.Representation {
         }
 
         // Clocks view itself
-        PlasmaComponents3.ScrollView {
+        PlasmaComponents.ScrollView {
             id: worldClocks
             visible: calendar.showClocks
 
@@ -508,7 +508,7 @@ PlasmaExtras.Representation {
                     return timezones;
                 }
 
-                delegate: PlasmaComponents3.ItemDelegate {
+                delegate: PlasmaComponents.ItemDelegate {
                     id: listItem
                     readonly property bool isCurrentTimeZone: modelData === Plasmoid.configuration.lastSelectedTimezone
                     width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
@@ -525,7 +525,7 @@ PlasmaExtras.Representation {
                     hoverEnabled: false
 
                     contentItem: RowLayout {
-                        PlasmaComponents3.Label {
+                        PlasmaComponents.Label {
                             Layout.fillWidth: true
                             text: root.nameForZone(modelData)
                             textFormat: Text.PlainText
@@ -534,7 +534,7 @@ PlasmaExtras.Representation {
                             elide: Text.ElideRight
                         }
 
-                        PlasmaComponents3.Label {
+                        PlasmaComponents.Label {
                             horizontalAlignment: Qt.AlignRight
                             text: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
                             textFormat: Text.PlainText
