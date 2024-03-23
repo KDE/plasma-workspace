@@ -4,8 +4,8 @@
 */
 
 import QtQuick
-import org.kde.plasma.workspace.calendar 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.workspace.calendar
+import org.kde.kirigami as Kirigami
 
 ListView {
     id: infiniteList
