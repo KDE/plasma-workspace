@@ -3,7 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
-import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
+import QtQuick
+import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
 PlasmaCalendar.MonthMenu { }

@@ -5,12 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.0
-import QtQml 2.2
+import QtQuick
+import QtQml
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.configuration 2.0
-import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
+import org.kde.plasma.plasmoid
+import org.kde.plasma.configuration
+import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
 ConfigModel {
     id: configModel
