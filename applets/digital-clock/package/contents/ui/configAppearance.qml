@@ -14,11 +14,11 @@ import QtQuick.Dialogs as QtDialogs
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kcmutils // For KCMLauncher
-import org.kde.config // For KAuthorized
+import org.kde.config as KConfig
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 
-SimpleKCM {
+KCMUtils.SimpleKCM {
     id: appearancePage
     property alias cfg_autoFontAndSize: autoFontAndSizeRadioButton.checked
 
@@ -133,10 +133,10 @@ SimpleKCM {
             }
 
             QQC2.Button {
-                visible: KAuthorized.authorizeControlModule("kcm_regionandlang")
+                visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
                 text: i18n("Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
-                onClicked: KCMLauncher.openSystemSettings("kcm_regionandlang")
+                onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
             }
         }
 
@@ -228,8 +228,8 @@ SimpleKCM {
         }
 
         QQC2.RadioButton {
-            Kirigami.FormData.label: i18nc("@label:group", "Text display:")
             id: autoFontAndSizeRadioButton
+            Kirigami.FormData.label: i18nc("@label:group", "Text display:")
             text: i18nc("@option:radio", "Automatic")
         }
 

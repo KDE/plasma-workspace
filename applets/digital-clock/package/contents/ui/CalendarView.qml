@@ -15,8 +15,8 @@ import org.kde.plasma.workspace.calendar as PlasmaCalendar
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.private.digitalclock
-import org.kde.config // KAuthorized
-import org.kde.kcmutils // KCMUtils
+import org.kde.config as KConfig
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 
 // Top-level layout containing:
@@ -437,7 +437,7 @@ PlasmaExtras.Representation {
                 PlasmaComponents.ToolButton {
                     id: switchTimeZoneButton
 
-                    visible: KAuthorized.authorizeControlModule("kcm_clock.desktop")
+                    visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock.desktop")
                     text: i18n("Switch…")
                     Accessible.name: i18n("Switch to another timezone")
                     icon.name: "preferences-system-time"
@@ -446,7 +446,7 @@ PlasmaExtras.Representation {
                     KeyNavigation.down: clocksList
                     Keys.onRightPressed: monthView.Keys.downPressed(event)
 
-                    onClicked: KCMLauncher.openSystemSettings("kcm_clock")
+                    onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
 
                     PlasmaComponents.ToolTip {
                         text: parent.Accessible.description

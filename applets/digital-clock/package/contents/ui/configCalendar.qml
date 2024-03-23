@@ -12,9 +12,9 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.workspace.calendar as PlasmaCalendar
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils as KCM
+import org.kde.kcmutils as KCMUtils
 
-KCM.SimpleKCM {
+KCMUtils.SimpleKCM {
     id: calendarPage
 
     signal configurationChanged()

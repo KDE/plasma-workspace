@@ -11,8 +11,8 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
+import org.kde.config as KConfig
 import org.kde.kcmutils as KCMUtils
-import org.kde.config // KAuthorized
 
 KCMUtils.ScrollViewKCM {
     id: timeZonesPage
@@ -100,7 +100,7 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 QQC2.Button {
-                    visible: model.isLocalTimeZone && KAuthorized.authorizeControlModule("kcm_clock.desktop")
+                    visible: model.isLocalTimeZone && KConfig.KAuthorized.authorizeControlModule("kcm_clock.desktop")
                     text: i18n("Switch Systemwide Time Zone…")
                     icon.name: "preferences-system-time"
                     font.bold: false

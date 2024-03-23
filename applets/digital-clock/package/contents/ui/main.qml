@@ -12,8 +12,8 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils // KCMLauncher
-import org.kde.config // KAuthorized
+import org.kde.config as KConfig
+import org.kde.kcmutils as KCMUtils
 
 PlasmoidItem {
     id: root
@@ -150,14 +150,14 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18n("Adjust Date and Time…")
             icon.name: "clock"
-            visible: KAuthorized.authorize("kcm_clock")
-            onTriggered: KCMLauncher.openSystemSettings("kcm_clock")
+            visible: KConfig.KAuthorized.authorize("kcm_clock")
+            onTriggered: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
         },
         PlasmaCore.Action {
             text: i18n("Set Time Format…")
             icon.name: "gnumeric-format-thousand-separator"
-            visible: KAuthorized.authorizeControlModule("kcm_regionandlang")
-            onTriggered: KCMLauncher.openSystemSettings("kcm_regionandlang")
+            visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
+            onTriggered: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
         }
     ]
 
