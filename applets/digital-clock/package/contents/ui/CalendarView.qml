@@ -8,9 +8,7 @@
 */
 import QtQuick
 import QtQuick.Layouts
-import QtQml
 
-import org.kde.kquickcontrolsaddons // For kcmshell
 import org.kde.plasma.plasmoid
 import org.kde.ksvg as KSvg
 import org.kde.plasma.workspace.calendar as PlasmaCalendar

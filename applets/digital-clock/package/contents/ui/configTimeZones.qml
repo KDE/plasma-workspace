@@ -8,11 +8,9 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
-import org.kde.kquickcontrolsaddons // For kcmshell
 import org.kde.plasma.plasmoid
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
-
 import org.kde.kcmutils as KCMUtils
 import org.kde.config // KAuthorized
 

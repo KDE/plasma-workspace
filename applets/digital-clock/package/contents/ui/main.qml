@@ -6,13 +6,12 @@
 */
 import QtQuick
 import QtQuick.Layouts
+
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.private.digitalclock
-import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
-
 import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 

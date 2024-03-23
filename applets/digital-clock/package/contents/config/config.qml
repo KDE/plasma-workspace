@@ -6,7 +6,6 @@
 */
 
 import QtQuick
-import QtQml
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.configuration
