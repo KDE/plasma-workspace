@@ -1,24 +1,26 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 02:28+0000\n"
-"PO-Revision-Date: 2024-03-21 09:29+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2024-03-22 11:55+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: interactiveconsole.cpp:63
 #, kde-format
 msgid "&Execute"
-msgstr "&Exécuter"
+msgstr "&Изпълняване"
 
 #: interactiveconsole.cpp:64
 #, kde-format
@@ -35,54 +37,54 @@ msgstr "KWin"
 #: interactiveconsole.cpp:66
 #, kde-format
 msgid "Templates"
-msgstr "Modèles"
+msgstr "Шаблони"
 
 #: interactiveconsole.cpp:75
 #, kde-format
 msgid "Desktop Shell Scripting Console"
-msgstr "Console pour le langage de scripts du bureau"
+msgstr "Конзола на работната среда за изпълнение на скриптове"
 
 #: interactiveconsole.cpp:82
 #, kde-format
 msgid "Editor"
-msgstr "Éditeur"
+msgstr "Редактор"
 
 #: interactiveconsole.cpp:93
 #, kde-format
 msgid "Load"
-msgstr "Charger"
+msgstr "Зареждане"
 
 #: interactiveconsole.cpp:99
 #, kde-format
 msgid "Use"
-msgstr "Utiliser"
+msgstr "Използване"
 
 #: interactiveconsole.cpp:159
 #, kde-format
 msgid "Output"
-msgstr "Sortie"
+msgstr "Изходни данни"
 
 #: interactiveconsole.cpp:266
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
-msgstr "Impossible de charger le fichier de script <b>%1</b>"
+msgstr "Неуспешно зареждане на скриптов файл <b>%1</b>"
 
 #: interactiveconsole.cpp:316
 #, kde-format
 msgid "Open Script File"
-msgstr "Ouvrir le fichier de script"
+msgstr "Отваряне на скриптов файл"
 
 #: interactiveconsole.cpp:431
 #, kde-format
 msgid "Save Script File"
-msgstr "Enregistrer le fichier de script"
+msgstr "Запазване на скриптов файл"
 
 #: interactiveconsole.cpp:520
 #, kde-format
 msgid "Executing script at %1"
-msgstr "Exécution du script à %1"
+msgstr "Изпълняне на скрипт на %1"
 
 #: interactiveconsole.cpp:572
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
-msgstr "Temps d'exécution : %1 ms"
+msgstr "Време на изпълнение: %1ms"
