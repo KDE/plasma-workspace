@@ -119,7 +119,7 @@ static void addIcon(QGridLayout *layout, QFrame *page, const char *iconName, int
     layout->addWidget(icon, 0, 0);
 }
 
-CJobRunner::CJobRunner(QWidget *parent, int xid)
+CJobRunner::CJobRunner(QWidget *parent)
     : QDialog(parent)
     , m_it(m_urls.end())
     , m_end(m_it)
@@ -129,10 +129,6 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     , m_tempDir(nullptr)
 {
     setModal(true);
-
-    if (nullptr == parent && 0 != xid) {
-        XSetTransientForHint(QX11Info::display(), winId(), xid);
-    }
 
     m_buttonBox = new QDialogButtonBox;
     connect(m_buttonBox, &QDialogButtonBox::clicked, this, &CJobRunner::slotButtonClicked);
@@ -228,7 +224,7 @@ CJobRunner::~CJobRunner()
     delete m_tempDir;
 }
 
-void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm, QWidget *widget)
+void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm)
 {
     QString ext(url.path());
     int dotPos(ext.lastIndexOf('.'));
@@ -256,7 +252,6 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
                 urlExists = Misc::fExists(statUrl.toLocalFile());
             } else {
                 auto job = KIO::stat(statUrl);
-                KJobWidgets::setWindow(job, widget);
                 job->exec();
                 urlExists = !job->error();
             }
@@ -278,7 +273,6 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
                     urlExists = Misc::fExists(statUrl.toLocalFile());
                 } else {
                     auto job = KIO::stat(statUrl);
-                    KJobWidgets::setWindow(job, widget);
                     job->exec();
                     urlExists = !job->error();
                 }

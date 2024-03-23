@@ -33,6 +33,8 @@
 #include "config-fontinst.h"
 #include <KPluginFactory>
 #include <KStandardAction>
+#include <KWaylandExtras>
+#include <KWindowSystem>
 #include <KZip>
 #include <QTemporaryDir>
 
@@ -341,25 +343,40 @@ void CFontViewPart::previewStatus(bool st)
 void CFontViewPart::install()
 {
     if (!m_proc || QProcess::NotRunning == m_proc->state()) {
-        QStringList args;
-
         if (!m_proc) {
             m_proc = new QProcess(this);
         } else {
             m_proc->kill();
         }
 
-        QString title = QGuiApplication::applicationDisplayName();
-        if (title.isEmpty()) {
-            title = QCoreApplication::applicationName();
+        auto runFontInst = [this](const QString &windowHandle) {
+            QString title = QGuiApplication::applicationDisplayName();
+            if (title.isEmpty()) {
+                title = QCoreApplication::applicationName();
+            }
+
+            QStringList args;
+            args << "--embed" << windowHandle << "--qwindowtitle" << title << "--qwindowicon"
+                 << "kfontview" << url().toDisplayString();
+
+            connect(m_proc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(installlStatus()));
+            m_proc->start(Misc::app(KFI_INSTALLER), args);
+            m_installButton->setEnabled(false);
+        };
+
+        if (KWindowSystem::isPlatformWayland()) {
+            connect(
+                KWaylandExtras::self(),
+                &KWaylandExtras::windowExported,
+                this,
+                [runFontInst](QWindow * /*window*/, const QString &handle) {
+                    runFontInst(handle);
+                },
+                Qt::SingleShotConnection);
+            KWaylandExtras::exportWindow(m_frame->window()->windowHandle());
+        } else {
+            runFontInst(QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16));
         }
-
-        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
-             << "kfontview" << url().toDisplayString();
-
-        connect(m_proc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(installlStatus()));
-        m_proc->start(Misc::app(KFI_INSTALLER), args);
-        m_installButton->setEnabled(false);
     }
 }
 

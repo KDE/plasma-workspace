@@ -18,6 +18,7 @@ target_link_libraries(kfontinst_bin
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::XmlGui
+    KF6::WindowSystem
     X11::X11
     kfontinst
     Qt::GuiPrivate

@@ -1013,7 +1013,7 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
                 }
             }
 
-            CJobRunner::getAssociatedUrls(*it, associatedUrls, false, widget());
+            CJobRunner::getAssociatedUrls(*it, associatedUrls, false);
             copy.insert(*it);
 
             QList<QUrl>::Iterator aIt(associatedUrls.begin()), aEnd(associatedUrls.end());

@@ -61,7 +61,7 @@ public:
         CMD_REMOVE_FILE,
     };
 
-    explicit CJobRunner(QWidget *parent, int xid = 0);
+    explicit CJobRunner(QWidget *parent = nullptr);
     ~CJobRunner() override;
 
     static FontInstInterface *dbus();
@@ -70,7 +70,7 @@ public:
 
     static QUrl encode(const QString &family, quint32 style, bool system);
 
-    static void getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm, QWidget *widget);
+    static void getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm);
     int exec(ECommand cmd, const ItemList &urls, bool destIsSystem);
 
 Q_SIGNALS:

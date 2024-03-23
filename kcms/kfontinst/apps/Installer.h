@@ -16,8 +16,8 @@ namespace KFI
 class CInstaller
 {
 public:
-    CInstaller(QWidget *p)
-        : m_parent(p)
+    CInstaller(const QString &parentWindow)
+        : m_parentWindow(parentWindow)
         , m_tempDir(nullptr)
     {
     }
@@ -26,7 +26,7 @@ public:
     int install(const QSet<QUrl> &urls);
 
 private:
-    QWidget *m_parent;
+    QString m_parentWindow;
     QTemporaryDir *m_tempDir;
 };
 
