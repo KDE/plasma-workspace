@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-08 09:00+0200\n"
+"PO-Revision-Date: 2024-03-22 19:14+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -79,18 +79,18 @@ msgstr "Відтворити звук"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Прослухати звук"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Скинути"
 
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Виберіть звуковий файл"
 
 #: ui/main.qml:46
 #, kde-format

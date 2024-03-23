@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 00:39+0000\n"
-"PO-Revision-Date: 2024-03-05 10:11+0300\n"
+"PO-Revision-Date: 2024-03-22 16:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -224,7 +224,7 @@ msgid ""
 "commands?"
 msgstr ""
 "Seçili <resource>%1</resource> eylemini ve onun<nl/>tüm komutlarını silmek "
-"istediğinize emin misiniz?"
+"istediğinizden emin misiniz?"
 
 #: configdialog.cpp:576
 #, kde-format

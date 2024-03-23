@@ -1,33 +1,34 @@
-# Copyright (C) YEAR This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
+# Translation of plasma_interactiveconsole.po to Catalan (Valencian)
+# Copyright (C) 2024 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2024.
+# Josep M. Ferrer <txemaq@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 00:39+0000\n"
-"PO-Revision-Date: 2024-03-20 08:15+0200\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
-"Language: uk\n"
+"PO-Revision-Date: 2024-03-20 09:35+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: interactiveconsole.cpp:63
 #, kde-format
 msgid "&Execute"
-msgstr "&Виконати"
+msgstr "&Executa"
 
 #: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
-msgstr "Плазма"
+msgstr "Plasma"
 
 #: interactiveconsole.cpp:65
 #, kde-format
@@ -38,54 +39,54 @@ msgstr "KWin"
 #: interactiveconsole.cpp:66
 #, kde-format
 msgid "Templates"
-msgstr "Шаблони"
+msgstr "Plantilles"
 
 #: interactiveconsole.cpp:75
 #, kde-format
 msgid "Desktop Shell Scripting Console"
-msgstr "Консоль скриптів оболонки стільниці"
+msgstr "Consola de creació de scripts de l'intèrpret d'ordres d'escriptori"
 
 #: interactiveconsole.cpp:82
 #, kde-format
 msgid "Editor"
-msgstr "Редактор"
+msgstr "Editor"
 
 #: interactiveconsole.cpp:93
 #, kde-format
 msgid "Load"
-msgstr "Завантажити"
+msgstr "Carrega"
 
 #: interactiveconsole.cpp:99
 #, kde-format
 msgid "Use"
-msgstr "Використати"
+msgstr "Utilitza"
 
 #: interactiveconsole.cpp:159
 #, kde-format
 msgid "Output"
-msgstr "Виведення"
+msgstr "Eixida"
 
 #: interactiveconsole.cpp:266
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
-msgstr "Не вдалося завантажити файл скрипту <b>%1</b>"
+msgstr "No s'ha pogut carregar el fitxer de script <b>%1</b>"
 
 #: interactiveconsole.cpp:316
 #, kde-format
 msgid "Open Script File"
-msgstr "Відкрити файл скрипту"
+msgstr "Obri un fitxer de script"
 
 #: interactiveconsole.cpp:431
 #, kde-format
 msgid "Save Script File"
-msgstr "Зберегти файл скрипту"
+msgstr "Guarda el fitxer de script"
 
 #: interactiveconsole.cpp:520
 #, kde-format
 msgid "Executing script at %1"
-msgstr "Скрипт виконується на %1"
+msgstr "S'està executant l'script a les %1"
 
 #: interactiveconsole.cpp:572
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
-msgstr "Час виконання: %1 мс"
+msgstr "Temps d'execució: %1 ms"

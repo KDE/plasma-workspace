@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2024-03-23 00:39+0000\n"
 "PO-Revision-Date: 2024-03-19 00:39-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -51,7 +51,7 @@ msgctxt "Backlight on or off"
 msgid "On"
 msgstr "Ligado"
 
-#: package/contents/ui/BrightnessItem.qml:86
+#: package/contents/ui/BrightnessItem.qml:45
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
