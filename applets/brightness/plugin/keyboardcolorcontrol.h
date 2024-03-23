@@ -16,19 +16,31 @@ class KeyboardColorControl : public QObject
     QML_ELEMENT
 
     Q_PROPERTY(bool supported READ isSupported)
-    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
+    Q_PROPERTY(bool accent READ isAccent WRITE setAccent NOTIFY accentChanged)
+    Q_PROPERTY(QString color READ color WRITE setColor NOTIFY colorChanged)
 
 public:
     explicit KeyboardColorControl(QObject *parent = nullptr);
     ~KeyboardColorControl() override;
 
     bool isSupported();
-    bool isEnabled();
+    bool isAccent();
+    QString color();
+
+Q_SIGNALS:
+    void accentChanged();
+    void colorChanged();
 
 public Q_SLOTS:
-    void setEnabled(bool enabled);
+    void setAccent(bool enabled);
+    void setColor(const QString &color);
 
 private:
     bool m_supported = false;
-    bool m_enabled = false;
+    bool m_accent = false;
+    QString m_color = "white";
+
+private Q_SLOTS:
+    void slotAccentChanged(bool accent);
+    void slotColorChanged(QString color);
 };

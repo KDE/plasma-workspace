@@ -6,6 +6,8 @@
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as QtDialogs
 
 import org.kde.kcmutils // KCMLauncher
 import org.kde.config as KConfig  // KAuthorized.authorizeControlModule
@@ -61,27 +63,40 @@ PlasmaComponents3.ItemDelegate {
                     height: Math.round(Kirigami.Units.gridUnit * 1.25)
                     radius: 180
 
-                    color: keyboardColorControl.enabled ? Kirigami.Theme.highlightColor : "transparent"
+                    color: keyboardColorControl.color
                     border.color: Qt.rgba(0, 0, 0, 0.15)
 
                     Connections {
-                        target: Kirigami.Theme
-                        onColorsChanged: colorIndicator.color = keyboardColorControl.enabled ? Kirigami.Theme.highlightColor : "transparent"
+                        target: keyboardColorControl
+                        onColorChanged: colorIndicator.color = keyboardColorControl.color
                     }
+
+                QQC2.BusyIndicator {
+                    id: busyIndicator
+                    visible: false
+
+                    implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.75)
+                    anchors.centerIn: colorIndicator
+
+                    Connections {
+                        target: keyboardColorControl
+                        onColorChanged: busyIndicator.visible = false
+                    }
+                }
                 }
             }
 
             RowLayout {
                 PlasmaComponents3.Switch {
                     id: syncAccentSwitch
-                    checked: keyboardColorControl.enabled
+                    checked: keyboardColorControl.accent
                     text: i18n("Follow accent color")
 
                     Layout.fillWidth: true
 
                     KeyNavigation.up: root.KeyNavigation.up
-                    KeyNavigation.tab: root.KeyNavigation.tab
-                    KeyNavigation.right: root.KeyNavigation.right
+                    KeyNavigation.tab: colorPicker.enabled ? colorPicker : root.KeyNavigation.tab
+                    KeyNavigation.right: colorPicker.enabled ? colorPicker : root.KeyNavigation.right
                     KeyNavigation.backtab: root.KeyNavigation.backtab
 
                     Keys.onPressed: (event) => {
@@ -90,14 +105,45 @@ PlasmaComponents3.ItemDelegate {
                         }
                     }
                     onToggled: {
-                        keyboardColorControl.setEnabled(checked);
-                        colorIndicator.color = checked ? Kirigami.Theme.highlightColor : "transparent";
+                        keyboardColorControl.setAccent(checked);
+                        busyIndicator.visible = true;
+                        colorIndicator.color = "transparent"
+                        colorPicker.opacity = checked ? 0 : 1;
+                        colorPicker.enabled = !checked;
+                    }
+                }
+
+                PlasmaComponents3.Button {
+                    id: colorPicker
+                    opacity: syncAccentSwitch.checked ? 0 : 1
+                    enabled: !syncAccentSwitch.checked
+
+                    icon.name: "color-picker"
+                    text: i18n("Select color…")
+
+                    KeyNavigation.up: root.KeyNavigation.up
+                    KeyNavigation.left: syncAccentSwitch
+                    KeyNavigation.right: root.KeyNavigation.right
+                    KeyNavigation.tab: root.KeyNavigation.tab
+                    KeyNavigation.backtab: syncAccentSwitch
+
+                    onClicked: colorDialog.open()
+                }
+
+                QtDialogs.ColorDialog {
+                    id: colorDialog
+                    title: i18n("Choose custom keyboard color")
+                    // User must either choose a colour or cancel the operation before doing something else
+                    modality: Qt.ApplicationModal
+                    parentWindow: root.Window.window
+                    selectedColor: keyboardColorControl.color
+                    onAccepted: {
+                        busyIndicator.visible = true;
+                        keyboardColorControl.setColor(colorDialog.selectedColor);
                     }
                 }
             }
-
         }
-
     }
 
     KeyboardColorControl {

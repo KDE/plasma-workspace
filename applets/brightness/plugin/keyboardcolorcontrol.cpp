@@ -8,10 +8,10 @@
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
+#include <QDBusMessage>
 #include <QDBusMetaType>
 #include <QDBusPendingCall>
 #include <QDBusReply>
-#include <qdbusmessage.h>
 
 using namespace Qt::StringLiterals;
 
@@ -33,21 +33,46 @@ KeyboardColorControl::KeyboardColorControl(QObject *parent)
     QDBusReply<bool> supported =
         QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "isSupported"));
     if (!supported.isValid()) {
-        qWarning() << "error connecting to kameleon via dbus:" << supported.error().message();
+        qWarning() << "error connecting to kameleon isSupported via dbus:" << supported.error().message();
         return;
     } else {
         m_supported = supported.value();
         qDebug() << "kameleon supported" << m_supported;
     }
 
-    QDBusReply<bool> enabled =
-        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "isEnabled"));
-    if (!enabled.isValid()) {
-        qWarning() << "error connecting to kameleon via dbus:" << enabled.error().message();
+    QDBusReply<bool> accent =
+        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "isAccent"));
+    if (!accent.isValid()) {
+        qWarning() << "error connecting to kameleon isAccent via dbus:" << accent.error().message();
+        m_supported = false;
         return;
     } else {
-        m_enabled = enabled.value();
-        qDebug() << "kameleon enabled" << m_enabled;
+        m_accent = accent.value();
+        qDebug() << "kameleon accent" << m_accent;
+    }
+
+    QDBusReply<QString> activeColor =
+        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "activeColor"));
+    if (!activeColor.isValid()) {
+        qWarning() << "error connecting to kameleon activeColor via dbus:" << activeColor.error().message();
+        m_supported = false;
+        return;
+    } else {
+        m_color = activeColor.value();
+        qDebug() << "kameleon active color" << m_color;
+    }
+
+    if (!QDBusConnection::sessionBus().connect(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "accentChanged", this, SLOT(slotAccentChanged(bool)))) {
+        qWarning() << "error connecting to kameleon accentChanged via dbus";
+        m_supported = false;
+        return;
+    }
+
+    if (!QDBusConnection::sessionBus()
+             .connect(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "activeColorChanged", this, SLOT(slotColorChanged(QString)))) {
+        qWarning() << "error connecting to kameleon activeColorChanged via dbus";
+        m_supported = false;
+        return;
     }
 }
 
@@ -60,21 +85,52 @@ bool KeyboardColorControl::isSupported()
     return m_supported;
 }
 
-bool KeyboardColorControl::isEnabled()
+bool KeyboardColorControl::isAccent()
 {
-    return m_enabled;
+    return m_accent;
 }
 
-void KeyboardColorControl::setEnabled(bool enabled)
+QString KeyboardColorControl::color()
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "setEnabled");
-    msg << enabled;
+    return m_color;
+}
+
+void KeyboardColorControl::setAccent(bool accent)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "setAccent");
+    msg << accent;
     QDBusMessage reply = QDBusConnection::sessionBus().call(msg);
     if (reply.type() == QDBusMessage::ErrorMessage) {
-        qWarning() << "error connecting to kameleon via dbus:" << reply.errorMessage();
+        qWarning() << "error connecting to kameleon setaAccent via dbus:" << reply.errorMessage();
         return;
     }
-    m_enabled = enabled;
+    m_accent = accent;
+}
+
+void KeyboardColorControl::setColor(const QString &color)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "setColor");
+    msg << color;
+    QDBusMessage reply = QDBusConnection::sessionBus().call(msg);
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        qWarning() << "error connecting to kameleon setColor via dbus:" << reply.errorMessage();
+        return;
+    }
+    m_color = color;
+}
+
+void KeyboardColorControl::slotAccentChanged(bool accent)
+{
+    qDebug() << "kameleon accent changed" << accent;
+    m_accent = accent;
+    Q_EMIT accentChanged();
+}
+
+void KeyboardColorControl::slotColorChanged(QString color)
+{
+    qDebug() << "kameleon active color changed" << color;
+    m_color = color;
+    Q_EMIT colorChanged();
 }
 
 #include "moc_keyboardcolorcontrol.cpp"
