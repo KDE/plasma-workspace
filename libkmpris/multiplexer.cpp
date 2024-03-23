@@ -1,4 +1,4 @@
-#/*
+/*
     SPDX-FileCopyrightText: 2007-2012 Alex Merry <alex.merry@kdemail.net>
     SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 
@@ -13,18 +13,6 @@
 
 #include "libkmpris_debug.h"
 
-std::shared_ptr<Multiplexer> Multiplexer::self()
-{
-    static std::weak_ptr<Multiplexer> s_multiplexer;
-    if (s_multiplexer.expired()) {
-        auto ptr = std::make_shared<Multiplexer>();
-        s_multiplexer = ptr;
-        return ptr;
-    }
-
-    return s_multiplexer.lock();
-}
-
 Multiplexer::Multiplexer(QObject *parent)
     : QObject(parent)
     , m_filterModel(Mpris2FilterProxyModel::self())
@@ -38,6 +26,17 @@ Multiplexer::Multiplexer(QObject *parent)
     connect(m_filterModel.get(), &QAbstractItemModel::rowsAboutToBeRemoved, this, &Multiplexer::onRowsAboutToBeRemoved);
     // rowsRemoved also triggers updates in MultiplexerModel, but we want to update MultiplexerModel after rowsRemoved
     connect(m_filterModel.get(), &QAbstractItemModel::rowsRemoved, this, &Multiplexer::onRowsRemoved);
+
+    m_isPreferredPlayerAvailable.setBinding([this] {
+        if (!m_activePlayer.value()) {
+            return false;
+        }
+        return QString::compare(m_activePlayer.value()->desktopEntry().value(), m_preferredPlayer.value(), Qt::CaseInsensitive) == 0;
+    });
+    m_preferredPlayerChangedNotifier = m_preferredPlayer.addNotifier([this] {
+        evaluatePlayers();
+    });
+    evaluatePlayers();
 }
 
 Multiplexer::~Multiplexer()
@@ -54,12 +53,21 @@ QBindable<PlayerContainer *> Multiplexer::activePlayer() const
     return &m_activePlayer;
 }
 
+QBindable<QString> Multiplexer::preferredPlayer()
+{
+    return &m_preferredPlayer;
+}
+
 void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 {
     PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     connect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
 
-    if (!m_activePlayer || (m_activePlayer->playbackStatus() != PlaybackStatus::Playing && container->playbackStatus() == PlaybackStatus::Playing)) {
+    if (!m_activePlayer.value() // no active player
+        || (!m_preferredPlayer.value().isEmpty()
+            && QString::compare(container->desktopEntry().value(), m_preferredPlayer.value(), Qt::CaseInsensitive) == 0) // is preferred player
+        || (!m_isPreferredPlayerAvailable.value() && m_activePlayer->playbackStatus() != PlaybackStatus::Playing
+            && container->playbackStatus() == PlaybackStatus::Playing)) {
         m_activePlayer = container;
         m_activePlayerIndex = first;
     } else {
@@ -97,7 +105,7 @@ void Multiplexer::onRowsRemoved(const QModelIndex &, int, int)
 void Multiplexer::onPlaybackStatusChanged()
 {
     // m_activePlayer can't be nullptr here, otherwise something is wrong
-    if (m_activePlayer->playbackStatus() == PlaybackStatus::Playing) {
+    if (m_activePlayer->playbackStatus() == PlaybackStatus::Playing || m_isPreferredPlayerAvailable.value()) {
         // Keep the current player
         return;
     }
@@ -141,16 +149,24 @@ void Multiplexer::updateIndex()
 
 void Multiplexer::evaluatePlayers()
 {
+    PlayerContainer *preferredContainer = nullptr;
     PlayerContainer *container = nullptr;
+    const bool shouldFindPreferredPlayer = !m_preferredPlayer.value().isEmpty();
     for (int i = 0, size = m_filterModel->rowCount(); i < size; ++i) {
         PlayerContainer *c = m_filterModel->index(i, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
-        if (c->playbackStatus() == PlaybackStatus::Playing) {
-            container = c;
+        if (shouldFindPreferredPlayer && QString::compare(c->desktopEntry().value(), m_preferredPlayer.value(), Qt::CaseInsensitive) == 0) {
+            preferredContainer = c;
             break;
+        } else if (!container && c->playbackStatus() == PlaybackStatus::Playing) {
+            container = c;
         }
     }
 
-    if (container) {
+    if (preferredContainer) {
+        // Has a preferred player
+        m_activePlayer = preferredContainer;
+        updateIndex();
+    } else if (container) {
         // Has an active player
         m_activePlayer = container;
         updateIndex();

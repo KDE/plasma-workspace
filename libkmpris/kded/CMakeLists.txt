@@ -4,6 +4,7 @@
 kcoreaddons_add_plugin(mprisservice SOURCES mprisservice.cpp INSTALL_NAMESPACE "kf6/kded")
 target_link_libraries(mprisservice
     Qt::Core
+    KF6::ConfigCore
     KF6::CoreAddons
     KF6::DBusAddons
     KF6::GlobalAccel

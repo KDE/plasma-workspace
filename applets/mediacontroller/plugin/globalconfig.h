@@ -6,30 +6,33 @@
 
 #pragma once
 
+#include <QObject>
+
 #include <KConfigWatcher>
 #include <KSharedConfig>
-#include <QObject>
 
 class GlobalConfig : public QObject
 {
     Q_OBJECT
 
     Q_PROPERTY(int volumeStep READ volumeStep NOTIFY volumeStepChanged)
+    Q_PROPERTY(QString preferredPlayer READ preferredPlayer NOTIFY preferredPlayerChanged)
 
 public:
     explicit GlobalConfig(QObject *parent = nullptr);
     ~GlobalConfig() override;
 
-public Q_SLOTS:
-    Q_INVOKABLE int volumeStep();
+    int volumeStep() const;
+    QString preferredPlayer() const;
 
 Q_SIGNALS:
     void volumeStepChanged() const;
+    void preferredPlayerChanged();
 
 private:
+    void onConfigChanged();
+
     KConfigWatcher::Ptr m_configWatcher;
     int m_volumeStep;
-
-private Q_SLOTS:
-    void configChanged();
+    QString m_preferredPlayer;
 };

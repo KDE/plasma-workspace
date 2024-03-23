@@ -6,14 +6,19 @@
 
 #define QT_FORCE_ASSERTS 1
 
+#include <QConcatenateTablesProxyModel>
 #include <QProcess>
+#include <QQmlEngine>
 #include <QQmlExpression>
 #include <QQuickItem>
 #include <QQuickView>
 #include <QSignalSpy>
 #include <QTest>
 
+#include "mpris2sourcemodel.h"
 #include "mprisinterface.h"
+
+using namespace Qt::StringLiterals;
 
 namespace
 {
@@ -65,6 +70,16 @@ private Q_SLOTS:
      * Loads MultiplexerModel in QML
      */
     void test_MultiplexerModel();
+
+    /**
+     * Disables the multiplexer
+     */
+    void test_disableMultiplexer();
+
+    /**
+     * Sets the preferred player
+     */
+    void test_preferredPlayer();
 
 private:
     QProcess *m_playerProcess = MprisInterface::startPlayer(this);
@@ -134,6 +149,78 @@ void MprisDeclarativeTest::test_MultiplexerModel()
     QCOMPARE(evaluate<unsigned>(rootObject, QStringLiteral("count")), 1);
 
     QCOMPARE(evaluate<QString>(rootObject, QStringLiteral("modelData.identity")), QStringLiteral("Choose player automatically"));
+}
+
+void MprisDeclarativeTest::test_disableMultiplexer()
+{
+    QQuickView view;
+    QByteArray errorMessage;
+    QVERIFY(initView(&view, QFINDTESTDATA(QStringLiteral("data/tst_DisableMultiplexer.qml"))));
+    QQuickItem *rootObject = view.rootObject();
+    auto model = static_cast<QConcatenateTablesProxyModel *>(rootObject->property("model").value<QObject *>());
+    QSignalSpy rowsInsertedSpy(model, &QConcatenateTablesProxyModel::rowsInserted);
+    if (model->rowCount() != 1) {
+        QVERIFY(rowsInsertedSpy.wait());
+    }
+    QCOMPARE(model->rowCount(), 1);
+    QString first = get<QString>(model->index(0, 0).data(Mpris2SourceModel::IdentityRole));
+    QCOMPARE(first, u"Audacious"_s);
+
+    // Enable on the fly
+    rowsInsertedSpy.clear();
+    model->setProperty("multiplexerEnabled", true);
+    QCOMPARE(model->rowCount(), 2);
+    QCOMPARE(get<QString>(model->index(0, 0).data(Mpris2SourceModel::IdentityRole)), u"Choose player automatically"_s);
+
+    // Disable on the fly
+    rowsInsertedSpy.clear();
+    model->setProperty("multiplexerEnabled", false);
+    QCOMPARE(model->rowCount(), 1);
+    QCOMPARE(get<QString>(model->index(0, 0).data(Mpris2SourceModel::IdentityRole)), u"Audacious"_s);
+}
+
+void MprisDeclarativeTest::test_preferredPlayer()
+{
+    QQuickView view;
+    QByteArray errorMessage;
+    QVERIFY(initView(&view, QFINDTESTDATA(QStringLiteral("data/tst_PreferredPlayer.qml"))));
+    QQuickItem *rootObject = view.rootObject();
+    auto model = static_cast<QConcatenateTablesProxyModel *>(rootObject->property("model").value<QObject *>());
+    QSignalSpy rowsInsertedSpy(model, &QConcatenateTablesProxyModel::rowsInserted);
+    if (model->rowCount() != 2) {
+        QVERIFY(rowsInsertedSpy.wait());
+        if (model->rowCount() != 2) {
+            QVERIFY(rowsInsertedSpy.wait());
+        }
+    }
+    QCOMPARE(model->rowCount(), 2);
+
+    QString first = get<QString>(model->index(0, 0).data(Qt::DisplayRole));
+    const QString second = get<QString>(model->index(1, 0).data(Qt::DisplayRole));
+    QCOMPARE(first, second);
+    QDBusMessage msg = QDBusMessage::createMethodCall(u"org.mpris.MediaPlayer2.appiumtest.instance%1"_s.arg(QString::number(m_playerProcess->processId())),
+                                                      u"/org/mpris/MediaPlayer2"_s,
+                                                      u"org.mpris.MediaPlayer2.Player"_s,
+                                                      u"Play"_s);
+    QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
+    QVERIFY(reply.isValid());
+
+    rowsInsertedSpy.clear();
+    QProcess *playerA = MprisInterface::startPlayer(this, u"player_a.json"_s); // desktopentry: appiumtests
+    QScopeGuard stopPlayer([playerA] {
+        MprisInterface::stopPlayer(playerA);
+    });
+    if (rowsInsertedSpy.empty()) {
+        QVERIFY(rowsInsertedSpy.wait());
+    }
+    QCOMPARE(model->rowCount(), 3);
+
+    const QString third = get<QString>(model->index(2, 0).data(Qt::DisplayRole));
+    QTRY_COMPARE(get<QString>(model->index(0, 0).data(Qt::DisplayRole)), third); // Prefer "appiumtests" even if it is not playing
+
+    // Update the preferred player
+    model->setProperty("preferredPlayer", QString());
+    QTRY_COMPARE(get<QString>(model->index(0, 0).data(Qt::DisplayRole)), second);
 }
 
 QTEST_MAIN(MprisDeclarativeTest)

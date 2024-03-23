@@ -6,6 +6,7 @@
 
 #include "mediacontrollerplugin.h"
 #include "globalconfig.h"
+#include "playerhistorymodel.h"
 
 #include <QQmlEngine>
 
@@ -14,4 +15,5 @@ void MediaControllerPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.mediacontroller"));
 
     qmlRegisterType<GlobalConfig>(uri, 1, 0, "GlobalConfig");
+    qmlRegisterType<PlayerHistoryModel>(uri, 1, 0, "PlayerHistoryModel");
 }

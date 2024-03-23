@@ -650,7 +650,7 @@ PlasmaExtras.Representation {
     header: PlasmaExtras.PlasmoidHeading {
         id: headerItem
         position: PlasmaComponents3.ToolBar.Header
-        visible: playerList.count > 2
+        visible: playerSelector.count > (Plasmoid.configuration.multiplexerEnabled ? 2 : 1)
         //this removes top padding to allow tabbar to touch the edge
         topPadding: topInset
         bottomPadding: -bottomInset

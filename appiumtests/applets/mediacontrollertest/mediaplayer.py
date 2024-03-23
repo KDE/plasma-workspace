@@ -307,18 +307,23 @@ class Mpris2:
             })
             Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
             self.metadata_updated_event.set()
+            invocation.return_value(None)
 
         elif method_name == "Pause":
             self.set_playing(False, connection, object_path)
+            invocation.return_value(None)
 
         elif method_name == "PlayPause":
             self.set_playing(self.player_properties["PlaybackStatus"].get_string() != "Playing", connection, object_path)
+            invocation.return_value(None)
 
         elif method_name == "Stop":
             self.stop(connection, object_path)
+            invocation.return_value(None)
 
         elif method_name == "Play":
             self.set_playing(True, connection, object_path)
+            invocation.return_value(None)
 
         elif method_name == "Seek":
             offset: int = parameters[0]
@@ -331,6 +336,7 @@ class Mpris2:
             })
             Gio.DBusConnection.emit_signal(connection, None, object_path, self.PLAYER_IFACE.get_string(), "Seeked", GLib.Variant.new_tuple(self.player_properties["Position"]))
             Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            invocation.return_value(None)
 
         elif method_name == "SetPosition":
             assert parameters[0] == self.metadata[self.current_index]["mpris:trackid"].get_string(), f"expected trackid: {parameters[0]}, actual trackid: {self.metadata[self.current_index]['mpris:trackid'].get_string()}"
@@ -339,9 +345,11 @@ class Mpris2:
                 'Position': self.player_properties["Position"],
             })
             Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(self.PLAYER_IFACE, changed_properties, GLib.Variant('as', ())))
+            invocation.return_value(None)
 
         elif method_name == "OpenUri":
             print("OpenUri", file=sys.stderr, flush=True)
+            invocation.return_value(None)
 
         else:
             # In case the interface adds new methods, fail here for easier discovery

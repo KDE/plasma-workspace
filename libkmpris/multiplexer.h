@@ -21,7 +21,6 @@ class KMPRIS_EXPORT Multiplexer : public QObject
     Q_OBJECT
 
 public:
-    static std::shared_ptr<Multiplexer> self();
     explicit Multiplexer(QObject *parent = nullptr);
     ~Multiplexer() override;
 
@@ -31,6 +30,13 @@ public:
      */
     QBindable<int> activePlayerIndex() const;
     QBindable<PlayerContainer *> activePlayer() const;
+
+    /*
+     * When a preferred player is set, the multiplexer will set the player as the active player
+     * regardless of the playback status
+     * @since 6.1
+     */
+    QBindable<QString> preferredPlayer();
 
 Q_SIGNALS:
     void activePlayerIndexChanged(int newIndex);
@@ -48,4 +54,8 @@ private:
     std::shared_ptr<Mpris2FilterProxyModel> m_filterModel;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(Multiplexer, PlayerContainer *, m_activePlayer, nullptr)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(Multiplexer, int, m_activePlayerIndex, -1, &Multiplexer::activePlayerIndexChanged)
+
+    Q_OBJECT_BINDABLE_PROPERTY(Multiplexer, QString, m_preferredPlayer)
+    QPropertyNotifier m_preferredPlayerChangedNotifier;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(Multiplexer, bool, m_isPreferredPlayerAvailable, false)
 };

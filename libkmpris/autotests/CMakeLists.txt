@@ -4,7 +4,7 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
 ecm_add_test(fetchinitialplayertest.cpp LINK_LIBRARIES kmpris Qt::Test)
-ecm_add_test(mprisdeclarativetest.cpp LINK_LIBRARIES kmpris Qt::Test Qt::Quick Qt::Qml)
+ecm_add_test(mprisdeclarativetest.cpp LINK_LIBRARIES kmpris Qt::Test Qt::DBus Qt::Quick Qt::Qml)
 set_tests_properties(
     fetchinitialplayertest
     mprisdeclarativetest

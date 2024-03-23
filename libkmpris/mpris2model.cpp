@@ -15,21 +15,8 @@
 
 Mpris2Model::Mpris2Model(QObject *parent)
     : QConcatenateTablesProxyModel(parent)
-    , m_multiplexerModel(MultiplexerModel::self())
     , m_mprisModel(Mpris2FilterProxyModel::self())
 {
-    addSourceModel(m_multiplexerModel.get());
-    addSourceModel(m_mprisModel.get());
-
-    connect(this, &QConcatenateTablesProxyModel::dataChanged, this, &Mpris2Model::onDataChanged);
-    connect(this, &QConcatenateTablesProxyModel::rowsAboutToBeRemoved, this, &Mpris2Model::onRowsAboutToBeRemoved);
-    connect(this, &QConcatenateTablesProxyModel::rowsRemoved, this, &Mpris2Model::onRowsRemoved);
-    connect(this, &QConcatenateTablesProxyModel::rowsInserted, this, &Mpris2Model::onRowsInserted);
-
-    if (rowCount() > 0) {
-        m_currentPlayer = index(m_currentIndex, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
-        Q_EMIT currentPlayerChanged();
-    }
 }
 
 Mpris2Model::~Mpris2Model()
@@ -66,6 +53,44 @@ void Mpris2Model::setCurrentIndex(unsigned _index)
 PlayerContainer *Mpris2Model::currentPlayer() const
 {
     return m_currentPlayer;
+}
+
+QBindable<QString> Mpris2Model::bindablePreferredPlayer()
+{
+    return &m_preferredPlayer;
+}
+
+bool Mpris2Model::multiplexerEnabled() const
+{
+    return m_multiplexerEnabled;
+}
+
+void Mpris2Model::setMultiplexerEnabled(bool enabled)
+{
+    if (m_multiplexerEnabled == enabled) {
+        return;
+    }
+
+    m_multiplexerEnabled = enabled;
+    Q_EMIT multiplexerEnabledChanged();
+
+    if (!m_componentReady) {
+        return;
+    }
+
+    for (const QMetaObject::Connection &conn : m_connectedSignals) {
+        disconnect(conn);
+    }
+    m_connectedSignals.clear();
+    removeSourceModel(m_mprisModel.get());
+    if (!enabled) {
+        Q_ASSERT(m_multiplexerModel);
+        removeSourceModel(m_multiplexerModel);
+        delete m_multiplexerModel;
+        m_multiplexerModel = nullptr;
+    }
+
+    init();
 }
 
 PlayerContainer *Mpris2Model::playerForLauncherUrl(const QUrl &launcherUrl, unsigned pid) const
@@ -114,6 +139,16 @@ PlayerContainer *Mpris2Model::playerForLauncherUrl(const QUrl &launcherUrl, unsi
     } else {
         return nullptr;
     }
+}
+
+void Mpris2Model::classBegin()
+{
+}
+
+void Mpris2Model::componentComplete()
+{
+    m_componentReady = true;
+    init();
 }
 
 void Mpris2Model::onRowsInserted(const QModelIndex &, int first, int)
@@ -168,6 +203,34 @@ void Mpris2Model::onDataChanged(const QModelIndex &topLeft, const QModelIndex &,
     }
     m_currentPlayer = topLeft.data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     Q_EMIT currentPlayerChanged();
+}
+
+void Mpris2Model::init()
+{
+    if (!m_componentReady) {
+        return;
+    }
+
+    Q_ASSERT(!m_multiplexerModel);
+    Q_ASSERT(sourceModels().empty());
+    if (m_multiplexerEnabled) {
+        m_multiplexerModel = new MultiplexerModel(this);
+        m_multiplexerModel->preferredPlayer().setBinding([this] {
+            return m_preferredPlayer.value();
+        });
+        addSourceModel(m_multiplexerModel);
+    }
+    addSourceModel(m_mprisModel.get());
+
+    m_connectedSignals.emplace_back(connect(this, &QConcatenateTablesProxyModel::dataChanged, this, &Mpris2Model::onDataChanged));
+    m_connectedSignals.emplace_back(connect(this, &QConcatenateTablesProxyModel::rowsAboutToBeRemoved, this, &Mpris2Model::onRowsAboutToBeRemoved));
+    m_connectedSignals.emplace_back(connect(this, &QConcatenateTablesProxyModel::rowsRemoved, this, &Mpris2Model::onRowsRemoved));
+    m_connectedSignals.emplace_back(connect(this, &QConcatenateTablesProxyModel::rowsInserted, this, &Mpris2Model::onRowsInserted));
+
+    if (rowCount() > 0) {
+        m_currentPlayer = index(m_currentIndex, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+        Q_EMIT currentPlayerChanged();
+    }
 }
 
 #include "moc_mpris2model.cpp"

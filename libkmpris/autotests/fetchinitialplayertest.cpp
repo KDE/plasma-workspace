@@ -44,6 +44,7 @@ void FetchInitialPlayerTest::test_playerBeforeModel()
     m_playerProcess = MprisInterface::startPlayer(this);
 
     std::unique_ptr<Mpris2Model> model1 = std::make_unique<Mpris2Model>();
+    model1->componentComplete();
     QSignalSpy rowsInsertedSpy1(model1.get(), &QAbstractItemModel::rowsInserted);
     if (model1->rowCount() == 0) {
         QVERIFY(rowsInsertedSpy1.wait());
@@ -51,6 +52,7 @@ void FetchInitialPlayerTest::test_playerBeforeModel()
 
     // Because the filter model is shared in the same process, the bug is only testable when a second Mpris2Model is created.
     std::unique_ptr<Mpris2Model> model2 = std::make_unique<Mpris2Model>();
+    model2->componentComplete();
     QVERIFY(model2->rowCount() > 0);
     QVERIFY(model2->currentPlayer());
 }

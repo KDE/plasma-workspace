@@ -8,6 +8,7 @@
 
 #include <QBindable>
 
+#include <KConfigWatcher>
 #include <KDEDModule>
 
 class PlayerContainer;
@@ -36,9 +37,13 @@ private Q_SLOTS:
     void onVolumeDown();
 
 private:
+    void readPreferredPlayer();
     void enableGlobalShortcuts();
 
-    std::shared_ptr<Multiplexer> m_multiplexer;
+    Multiplexer *m_multiplexer = nullptr;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(MprisService, PlayerContainer *, m_activePlayer, nullptr)
     KActionCollection *m_actionCollection = nullptr;
+
+    Q_OBJECT_BINDABLE_PROPERTY(MprisService, QString, m_preferredPlayer)
+    KConfigWatcher::Ptr m_configWatcher;
 };

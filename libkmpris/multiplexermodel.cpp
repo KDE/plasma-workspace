@@ -13,22 +13,14 @@
 #include "multiplexermodel.h"
 #include "playercontainer.h"
 
-std::shared_ptr<MultiplexerModel> MultiplexerModel::self()
-{
-    static std::weak_ptr<MultiplexerModel> s_model;
-    if (s_model.expired()) {
-        auto ptr = std::make_shared<MultiplexerModel>();
-        s_model = ptr;
-        return ptr;
-    }
-
-    return s_model.lock();
-}
-
 MultiplexerModel::MultiplexerModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_multiplexer(Multiplexer::self())
+    , m_multiplexer(new Multiplexer(this))
 {
+    m_multiplexer->preferredPlayer().setBinding([this] {
+        return m_preferredPlayer.value();
+    });
+
     updateActivePlayer();
     /*
         # Why is Qt::QueuedConnection used?
@@ -53,7 +45,7 @@ MultiplexerModel::MultiplexerModel(QObject *parent)
         3. The queued connection now calls MultiplexerModel::updateActivePlayer(), and (m_multiplexer->activePlayer().value() != m_activePlayer) is satisfied,
            so a new player becomes the starred player.
      */
-    connect(m_multiplexer.get(), &Multiplexer::activePlayerIndexChanged, this, &MultiplexerModel::updateActivePlayer, Qt::QueuedConnection);
+    connect(m_multiplexer, &Multiplexer::activePlayerIndexChanged, this, &MultiplexerModel::updateActivePlayer, Qt::QueuedConnection);
 }
 
 MultiplexerModel::~MultiplexerModel()
@@ -87,6 +79,11 @@ int MultiplexerModel::rowCount(const QModelIndex &parent) const
 QHash<int, QByteArray> MultiplexerModel::roleNames() const
 {
     return Mpris2SourceModel::self()->roleNames();
+}
+
+QBindable<QString> MultiplexerModel::preferredPlayer()
+{
+    return &m_preferredPlayer;
 }
 
 void MultiplexerModel::updateActivePlayer()

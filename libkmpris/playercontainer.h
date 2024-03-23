@@ -101,7 +101,7 @@ class KMPRIS_EXPORT AbstractPlayerContainer : public QObject
     Q_PROPERTY(bool canSetFullscreen READ canSetFullscreen NOTIFY canSetFullscreenChanged)
     Q_PROPERTY(QStringList supportedMimeTypes READ supportedMimeTypes NOTIFY supportedMimeTypesChanged)
     Q_PROPERTY(QStringList supportedUriSchemes READ supportedUriSchemes NOTIFY supportedUriSchemesChanged)
-    Q_PROPERTY(QString desktopEntry READ desktopEntry NOTIFY desktopEntryChanged)
+    Q_PROPERTY(QString desktopEntry READ default NOTIFY desktopEntryChanged BINDABLE desktopEntry)
     Q_PROPERTY(QString iconName READ iconName NOTIFY desktopEntryChanged)
     Q_PROPERTY(bool fullscreen READ fullscreen NOTIFY fullscreenChanged)
     Q_PROPERTY(bool hasTrackList READ hasTrackList NOTIFY hasTrackListChanged)
@@ -146,7 +146,7 @@ public:
     bool canQuit() const;
     bool canRaise() const;
     bool canSetFullscreen() const;
-    QString desktopEntry() const;
+    QBindable<QString> desktopEntry() const;
     bool fullscreen() const;
     bool hasTrackList() const;
     QString identity() const;
@@ -250,7 +250,7 @@ protected:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, bool, m_canSetFullscreen, false, &AbstractPlayerContainer::canSetFullscreenChanged)
     QStringList m_supportedMimeTypes;
     QStringList m_supportedUriSchemes;
-    QString m_desktopEntry;
+    Q_OBJECT_BINDABLE_PROPERTY(AbstractPlayerContainer, QString, m_desktopEntry, &AbstractPlayerContainer::desktopEntryChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, bool, m_fullscreen, false, &AbstractPlayerContainer::fullscreenChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, bool, m_hasTrackList, false, &AbstractPlayerContainer::hasTrackListChanged)
     QString m_identity;

@@ -15,13 +15,22 @@
 #include "multiplexer.h"
 #include "playercontainer.h"
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_CLASS_WITH_JSON(MprisService, "mprisservice.json")
 
 MprisService::MprisService(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
-    , m_multiplexer(Multiplexer::self())
+    , m_multiplexer(new Multiplexer(this))
     , m_actionCollection(new KActionCollection(this, QStringLiteral("mediacontrol")))
+    , m_configWatcher(KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("plasmaparc"), KSharedConfig::NoGlobals)))
 {
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, &MprisService::readPreferredPlayer);
+    readPreferredPlayer();
+
+    m_multiplexer->preferredPlayer().setBinding([this] {
+        return m_preferredPlayer.value();
+    });
     m_activePlayer.setBinding([this] {
         return m_multiplexer->activePlayer().value();
     });
@@ -98,6 +107,11 @@ void MprisService::onVolumeDown()
     if (m_activePlayer && m_activePlayer->canControl()) {
         m_activePlayer->changeVolume(-0.05, true);
     }
+}
+
+void MprisService::readPreferredPlayer()
+{
+    m_preferredPlayer = m_configWatcher->config()->group(u"General"_s).readEntry(u"MultiplexerPreferredPlayer"_s, QString());
 }
 
 void MprisService::enableGlobalShortcuts()

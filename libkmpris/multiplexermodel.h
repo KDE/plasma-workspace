@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <QBindable>
 #include <QSortFilterProxyModel>
 
 #include <qqmlregistration.h>
@@ -28,7 +29,6 @@ class KMPRIS_EXPORT MultiplexerModel : public QAbstractListModel
     QML_ELEMENT
 
 public:
-    static std::shared_ptr<MultiplexerModel> self();
     explicit MultiplexerModel(QObject *parent = nullptr);
     ~MultiplexerModel() override;
 
@@ -39,10 +39,13 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    QBindable<QString> preferredPlayer();
+
 private Q_SLOTS:
     void updateActivePlayer();
 
 private:
-    std::shared_ptr<Multiplexer> m_multiplexer;
+    Multiplexer *m_multiplexer = nullptr;
     PlayerContainer *m_activePlayer = nullptr;
+    Q_OBJECT_BINDABLE_PROPERTY(MultiplexerModel, QString, m_preferredPlayer)
 };

@@ -8,26 +8,38 @@
 
 GlobalConfig::GlobalConfig(QObject *parent)
     : QObject(parent)
-    , m_configWatcher(KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("plasmaparc"))))
+    , m_configWatcher(KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("plasmaparc"), KSharedConfig::NoGlobals)))
 {
-    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, &GlobalConfig::configChanged);
-    configChanged();
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, &GlobalConfig::onConfigChanged);
+    onConfigChanged();
 }
 
 GlobalConfig::~GlobalConfig()
 {
 }
 
-void GlobalConfig::configChanged()
+void GlobalConfig::onConfigChanged()
 {
-    int step = m_configWatcher->config()->group(QStringLiteral("General")).readEntry(QStringLiteral("VolumeStep"), 5);
+    KConfigGroup group = m_configWatcher->config()->group(QStringLiteral("General"));
+    int step = group.readEntry(QStringLiteral("VolumeStep"), 5);
     if (step != m_volumeStep) {
         m_volumeStep = step;
         Q_EMIT volumeStepChanged();
     }
+
+    QString preferredPlayer = group.readEntry(QStringLiteral("MultiplexerPreferredPlayer"), QString());
+    if (preferredPlayer != m_preferredPlayer) {
+        m_preferredPlayer = std::move(preferredPlayer);
+        Q_EMIT preferredPlayerChanged();
+    }
 }
 
-int GlobalConfig::volumeStep()
+int GlobalConfig::volumeStep() const
 {
     return m_volumeStep;
+}
+
+QString GlobalConfig::preferredPlayer() const
+{
+    return m_preferredPlayer;
 }

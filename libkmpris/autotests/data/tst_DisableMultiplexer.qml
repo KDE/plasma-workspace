@@ -9,13 +9,9 @@ import org.kde.plasma.private.mpris as MPRIS
 
 Item {
     id: root
-    readonly property alias count: repeater.count
+    readonly property alias model: mpris
     MPRIS.Mpris2Model {
         id: mpris
-    }
-    Repeater {
-        id: repeater
-        model: mpris
-        Item { }
+        multiplexerEnabled: false
     }
 }

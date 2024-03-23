@@ -153,9 +153,9 @@ bool AbstractPlayerContainer::canSetFullscreen() const
     return m_canSetFullscreen.value();
 }
 
-QString AbstractPlayerContainer::desktopEntry() const
+QBindable<QString> AbstractPlayerContainer::desktopEntry() const
 {
-    return m_desktopEntry;
+    return &m_desktopEntry;
 }
 
 bool AbstractPlayerContainer::fullscreen() const
@@ -571,7 +571,7 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
             if (QString iconName = KDesktopFile(it.value().toString() + QLatin1String(".desktop")).readIcon(); !iconName.isEmpty()) {
                 m_iconName = std::move(iconName);
             }
-            updateSingleProperty(m_desktopEntry, it.value(), QMetaType::QString, &PlayerContainer::desktopEntryChanged);
+            m_desktopEntry = it->toString();
         } else if (propName == QLatin1String("SupportedUriSchemes")) {
             updateSingleProperty(m_supportedUriSchemes, it.value(), QMetaType::QStringList, &PlayerContainer::supportedUriSchemesChanged);
         } else if (propName == QLatin1String("SupportedMimeTypes")) {

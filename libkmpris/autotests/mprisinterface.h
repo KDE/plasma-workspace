@@ -9,14 +9,22 @@
 #include <QProcess>
 #include <QSignalSpy>
 
+#include "mprisplayer.h"
+
+using namespace Qt::StringLiterals;
+
 namespace MprisInterface
 {
-QProcess *startPlayer(QObject *parent)
+QProcess *startPlayer(QObject *parent, QString infoPath = {})
 {
+    if (infoPath.isEmpty()) {
+        infoPath = u"player_b.json"_s;
+    }
+
     auto process = new QProcess(parent);
     process->setProgram(QStringLiteral("python3"));
     process->setArguments({QFINDTESTDATA(QStringLiteral("../../appiumtests/applets/mediacontrollertest/mediaplayer.py")), //
-                           QFINDTESTDATA(QStringLiteral("../../appiumtests/applets/mediacontrollertest/player_b.json"))});
+                           QFINDTESTDATA(QStringLiteral("../../appiumtests/applets/mediacontrollertest/%1").arg(infoPath))});
     QSignalSpy startedSpy(process, &QProcess::started);
     QSignalSpy readyReadSpy(process, &QProcess::readyReadStandardOutput);
     process->setReadChannel(QProcess::StandardOutput);

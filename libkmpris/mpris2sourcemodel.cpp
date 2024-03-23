@@ -89,7 +89,7 @@ QVariant Mpris2SourceModel::dataFromPlayer(PlayerContainer *container, int role)
     case CanSetFullscreenRole:
         return container->canSetFullscreen();
     case DesktopEntryRole:
-        return container->desktopEntry();
+        return container->desktopEntry().value();
     case IdentityRole:
         return container->identity();
     case IconNameRole:
