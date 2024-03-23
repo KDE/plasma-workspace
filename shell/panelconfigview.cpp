@@ -398,7 +398,16 @@ PanelRulerView *PanelConfigView::panelRulerView()
 
 QScreen *PanelConfigView::screenFromWindow(QWindow *window) const
 {
-    return window ? window->screen() : nullptr;
+    if (!window) {
+        return nullptr;
+    }
+
+    QScreen *screen = window->screen();
+    // BUG 483762: If ownership semantics were not previously explicitly set; e.g. ' if the QObject returned from a Q_INVOKABLE function to JS does not
+    // have CppOwnership explicitly set, it will become JavaScriptOwnership owned. To avoid that, you can explicitly set the ownership semantic prior to
+    // returning it.
+    QQmlEngine::setObjectOwnership(screen, QQmlEngine::CppOwnership);
+    return screen;
 }
 
 #include "moc_panelconfigview.cpp"
