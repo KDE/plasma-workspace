@@ -64,7 +64,10 @@ Item {
                 // Needed for Appium testing
                 objectName: "monthHeader"
 
-                text: root.swipeView.currentIndex > 0 || monthViewRoot.selectedYear !== today.getFullYear() ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2", monthViewRoot.selectedMonth, monthViewRoot.selectedYear.toString()) : monthViewRoot.selectedMonth
+                text: root.swipeView.currentIndex > 0 || monthViewRoot.selectedYear !== today.getFullYear()
+                    ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2",
+                        monthViewRoot.selectedMonth, monthViewRoot.selectedYear.toString())
+                    : monthViewRoot.selectedMonth
                 textFormat: Text.PlainText
                 level: root.isDigitalClock ? 1 : 2
                 elide: Text.ElideRight
@@ -105,9 +108,9 @@ Item {
 
                 KeyNavigation.up: root.isDigitalClock ? root.configureButton : root.previousButton
                 KeyNavigation.right: dateManipulationButtonsForDigitalClock.previousButton
-                KeyNavigation.left:  root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.visible ?
-                                                                               root.monthViewRoot.eventButton :
-                                                                               root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
+                KeyNavigation.left: root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.visible
+                    ? root.monthViewRoot.eventButton
+                    : root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
 
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
@@ -159,15 +162,15 @@ Item {
             PlasmaComponents.ToolButton {
                 id: previousButton
                 text: {
-                    switch(monthViewRoot.calendarViewDisplayed) {
-                        case MonthView.CalendarView.DayView:
-                            return i18nd("plasmashellprivateplugin", "Previous Month")
-                        case MonthView.CalendarView.MonthView:
-                            return i18nd("plasmashellprivateplugin", "Previous Year")
-                        case MonthView.CalendarView.YearView:
-                            return i18nd("plasmashellprivateplugin", "Previous Decade")
-                        default:
-                            return "";
+                    switch (monthViewRoot.calendarViewDisplayed) {
+                    case MonthView.CalendarView.DayView:
+                        return i18nd("plasmashellprivateplugin", "Previous Month")
+                    case MonthView.CalendarView.MonthView:
+                        return i18nd("plasmashellprivateplugin", "Previous Year")
+                    case MonthView.CalendarView.YearView:
+                        return i18nd("plasmashellprivateplugin", "Previous Decade")
+                    default:
+                        return "";
                     }
                 }
 
@@ -192,15 +195,15 @@ Item {
             PlasmaComponents.ToolButton {
                 id: nextButton
                 text: {
-                    switch(monthViewRoot.calendarViewDisplayed) {
-                        case MonthView.CalendarView.DayView:
-                            return i18nd("plasmashellprivateplugin", "Next Month")
-                        case MonthView.CalendarView.MonthView:
-                            return i18nd("plasmashellprivateplugin", "Next Year")
-                        case MonthView.CalendarView.YearView:
-                            return i18nd("plasmashellprivateplugin", "Next Decade")
-                        default:
-                            return "";
+                    switch (monthViewRoot.calendarViewDisplayed) {
+                    case MonthView.CalendarView.DayView:
+                        return i18nd("plasmashellprivateplugin", "Next Month")
+                    case MonthView.CalendarView.MonthView:
+                        return i18nd("plasmashellprivateplugin", "Next Year")
+                    case MonthView.CalendarView.YearView:
+                        return i18nd("plasmashellprivateplugin", "Next Decade")
+                    default:
+                        return "";
                     }
                 }
 

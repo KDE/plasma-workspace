@@ -16,7 +16,7 @@ ListView {
     // date here means what the respective views should show(e.g. MonthView date -> month)
     // this prevents them from showing the current date when they are being animated out of/into view
     // since different years don't have different names for months, we don't need to set up alternative models for YearView
-    readonly property QtObject previousModel: switch(infiniteList.viewType) {
+    readonly property QtObject previousModel: switch (infiniteList.viewType) {
     case InfiniteList.ViewType.DayView:
         return previousAlternativeBackend.item?.daysModel ?? null;
     case InfiniteList.ViewType.DecadeView:
@@ -24,7 +24,7 @@ ListView {
     default:
         return null;
     }
-    readonly property QtObject nextModel: switch(infiniteList.viewType) {
+    readonly property QtObject nextModel: switch (infiniteList.viewType) {
     case InfiniteList.ViewType.DayView:
         return nextAlternativeBackend.item?.daysModel ?? null;
     case InfiniteList.ViewType.DecadeView:
@@ -81,31 +81,50 @@ ListView {
     // These signal handlers animate the view. They are the only ones through which date (and should as well) changes.
     onAtYEndChanged: {
         if (atYEnd) {
-            if (handleDrag()) return;
-            changeDate ? nextView() : changeDate = true;
+            if (handleDrag()) {
+                return;
+            }
+            if (changeDate) {
+                nextView();
+            } else {
+                changeDate = true;
+            }
             resetViewPosition();
         }
     }
 
     onAtYBeginningChanged: {
         if (atYBeginning) {
-            if (handleDrag()) return;
-            changeDate ? previousView() : changeDate = true;
+            if (handleDrag()) {
+                return;
+            }
+            if (changeDate) {
+                previousView();
+            } else {
+                changeDate = true;
+            }
             resetViewPosition();
         }
     }
 
-    onDraggingVerticallyChanged: if (draggingVertically === false) dragHandled = false; //reset the value when drag ends
+    onDraggingVerticallyChanged: {
+        if (draggingVertically === false) {
+            // reset the value when drag ends
+            dragHandled = false;
+        }
+    }
 
     /* ------------------------------- UI ENDS ----------------- MODEL MANIPULATING FUNCTIONS ----------------------------------- */
 
 
     // used to update the alternative decadeview models when year changes
     function updateDecadeOverview(offset) {
-        if (Math.abs(offset) !== 1) return;
+        if (Math.abs(offset) !== 1) {
+            return;
+        }
 
-        const model = offset == 1 ? nextYearModel.item: previousYearModel.item;
-        const year = backend.year + (10 * offset) // Increase or decrease year by a decade
+        const model = offset === 1 ? nextYearModel.item : previousYearModel.item;
+        const year = backend.year + (10 * offset); // Increase or decrease year by a decade
         const decade = year - year % 10;
 
         for (let i = 0, j = model.count; i < j; ++i) { // aware
@@ -117,53 +136,55 @@ ListView {
     }
 
     function initYearModel(offset) {
-        if (Math.abs(offset) !== 1) return;
+        if (Math.abs(offset) !== 1) {
+            return;
+        }
 
-        const model = offset == 1 ? nextYearModel.item: previousYearModel.item;
+        const model = offset === 1 ? nextYearModel.item : previousYearModel.item;
         for (let i = 0; i < 12; ++i) {
             model.append({
                 label: 2050, // this value will be overwritten, but it set the type of the property to int
                 yearNumber: 2050,
-                isCurrent: (i > 0 && i < 11) // first and last year are outside the decade
-            })
+                isCurrent: (i > 0 && i < 11), // first and last year are outside the decade
+            });
         }
 
         infiniteList.updateDecadeOverview(offset);
     }
 
-    function modulo(a:int, n: int): int { // always keep the 'a' between [1, n]
+    function modulo(a: int, n: int): int { // always keep the 'a' between [1, n]
         return ((((a - 1) % n) + n) % n) + 1;
     }
 
     function previousView() {
-        switch(infiniteList.viewType) {
-            case InfiniteList.ViewType.DayView:
-                backend.previousMonth();
-                break;
+        switch (infiniteList.viewType) {
+        case InfiniteList.ViewType.DayView:
+            backend.previousMonth();
+            break;
 
-            case InfiniteList.ViewType.YearView:
-                backend.previousYear();
-                break;
+        case InfiniteList.ViewType.YearView:
+            backend.previousYear();
+            break;
 
-            case InfiniteList.ViewType.DecadeView:
-                backend.previousDecade();
-                break;
+        case InfiniteList.ViewType.DecadeView:
+            backend.previousDecade();
+            break;
         }
     }
 
     function nextView() {
-        switch(infiniteList.viewType) {
-            case InfiniteList.ViewType.DayView:
-                backend.nextMonth();
-                break;
+        switch (infiniteList.viewType) {
+        case InfiniteList.ViewType.DayView:
+            backend.nextMonth();
+            break;
 
-            case InfiniteList.ViewType.YearView:
-                backend.nextYear();
-                break;
+        case InfiniteList.ViewType.YearView:
+            backend.nextYear();
+            break;
 
-            case InfiniteList.ViewType.DecadeView:
-                backend.nextDecade();
-                break;
+        case InfiniteList.ViewType.DecadeView:
+            backend.nextDecade();
+            break;
         }
     }
 
@@ -182,13 +203,17 @@ ListView {
             today: backend.today
 
             function goToPreviousView() {
-               const month = modulo(backend.month - 1, 12)
-               const year = month === 12 ? backend.year - 1 : backend.year
+               const month = modulo(backend.month - 1, 12);
+               const year = month === 12 ? backend.year - 1 : backend.year;
                goToYear(year);
                goToMonth(month);
-           }
-       }
-       onStatusChanged: if (status === Loader.Ready) item.goToPreviousView();
+            }
+        }
+        onStatusChanged: {
+            if (status === Loader.Ready) {
+                item.goToPreviousView();
+            }
+        }
     }
 
     Loader {
@@ -204,13 +229,18 @@ ListView {
             today: backend.today
 
             function goToNextView() {
-                const month = modulo(backend.month + 1, 12)
-                const year = month === 1 ? backend.year + 1 : backend.year
+                const month = modulo(backend.month + 1, 12);
+                const year = month === 1 ? backend.year + 1 : backend.year;
                 goToYear(year);
                 goToMonth(month);
             }
         }
-        onStatusChanged: if (status === Loader.Ready) item.goToNextView(); //clear other model names
+        onStatusChanged: {
+            if (status === Loader.Ready) {
+                // clear other model names
+                item.goToNextView();
+            }
+        }
     }
 
     Loader {
@@ -219,10 +249,16 @@ ListView {
         active: infiniteList.viewType === InfiniteList.ViewType.DecadeView
         asynchronous: true
 
-        function update() { infiniteList.updateDecadeOverview(1) }
+        function update() {
+            infiniteList.updateDecadeOverview(1);
+        }
 
         sourceComponent: ListModel {}
-        onStatusChanged: if (nextYearModel.status === Loader.Ready) infiniteList.initYearModel(1);
+        onStatusChanged: {
+            if (nextYearModel.status === Loader.Ready) {
+                infiniteList.initYearModel(1);
+            }
+        }
     }
 
     Loader {
@@ -231,10 +267,16 @@ ListView {
         active: infiniteList.viewType === InfiniteList.ViewType.DecadeView
         asynchronous: true
 
-        function update() { infiniteList.updateDecadeOverview(-1) }
+        function update() {
+            infiniteList.updateDecadeOverview(-1);
+        }
 
         sourceComponent: ListModel {}
-        onStatusChanged: if (previousYearModel.status === Loader.Ready) infiniteList.initYearModel(-1);
+        onStatusChanged: {
+            if (previousYearModel.status === Loader.Ready) {
+                infiniteList.initYearModel(-1);
+            }
+        }
     }
 
     Connections {

@@ -79,8 +79,8 @@ Item {
         return date.toDateString() === new Date().toDateString();
     }
 
-    function eventDate(yearNumber,monthNumber,dayNumber) {
-        const d = new Date(yearNumber, monthNumber-1, dayNumber);
+    function eventDate(yearNumber, monthNumber, dayNumber) {
+        const d = new Date(yearNumber, monthNumber - 1, dayNumber);
         return Qt.formatDate(d, "dddd dd MMM yyyy");
     }
 
@@ -148,12 +148,14 @@ Item {
     /**
      * \return CalendarView
      */
-    readonly property var calendarViewDisplayed: {
-        if (swipeView.currentIndex === 0) {
+    readonly property /*MonthView.CalendarView*/int calendarViewDisplayed: {
+        switch (swipeView.currentIndex) {
+        case 0:
             return MonthView.CalendarView.DayView;
-        } else if (swipeView.currentIndex === 1) {
+        case 1:
             return MonthView.CalendarView.MonthView;
-        } else if (swipeView.currentIndex === 2) {
+        case 2:
+        default:
             return MonthView.CalendarView.YearView;
         }
     }
@@ -213,7 +215,7 @@ Item {
                     label: Qt.locale(Qt.locale().uiLanguages[0]).standaloneMonthName(i, Locale.LongFormat),
                     monthNumber: i + 1,
                     yearNumber: 2050,
-                    isCurrent: true
+                    isCurrent: true,
                 })
             }
             updateYearOverview()
@@ -228,7 +230,7 @@ Item {
                 append({
                     label: 2050, // this value will be overwritten, but it set the type of the property to int
                     yearNumber: 2050,
-                    isCurrent: (i > 0 && i < 11) // first and last year are outside the decade
+                    isCurrent: (i > 0 && i < 11), // first and last year are outside the decade
                 })
             }
             updateDecadeOverview()
@@ -260,7 +262,7 @@ Item {
 
         KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
         KeyNavigation.tab: viewHeader.tabButton
-        Keys.onLeftPressed: event => { Keys.upPressed(event) }
+        Keys.onLeftPressed: event => Keys.upPressed(event)
         Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
 
         onCurrentIndexChanged: if (currentIndex > 1) {
@@ -274,11 +276,11 @@ Item {
             onWheel: wheel => {
                 // magic number 15 for common "one scroll"
                 // See https://doc.qt.io/qt-6/qml-qtquick-wheelhandler.html#rotation-prop
-                while(rotation >= 15) {
+                while (rotation >= 15) {
                     rotation -= 15;
                     root.previousView();
                 }
-                while(rotation <= -15) {
+                while (rotation <= -15) {
                     rotation += 15;
                     root.nextView();
                 }
@@ -287,20 +289,20 @@ Item {
 
         // MonthView
         InfiniteList {
-           id: mainDaysCalendar
+            id: mainDaysCalendar
 
-           function handleUpPress(event) {
-                if(root.showDigitalClockHeader) {
+            function handleUpPress(event) {
+                if (root.showDigitalClockHeader) {
                     root.Keys.upPressed(event);
                     return;
                 }
                 swipeView.Keys.upPressed(event);
             }
 
-           backend: calendarBackend
-           viewType: InfiniteList.ViewType.DayView
+            backend: calendarBackend
+            viewType: InfiniteList.ViewType.DayView
 
-           delegate: DaysCalendar {
+            delegate: DaysCalendar {
                 columns: calendarBackend.days
                 rows: calendarBackend.weeks
                 width: mainDaysCalendar.width
@@ -337,11 +339,11 @@ Item {
 
         // YearView
         InfiniteList {
-           id: yearView
+            id: yearView
 
-           backend: calendarBackend
-           viewType: InfiniteList.ViewType.YearView
-           delegate: DaysCalendar {
+            backend: calendarBackend
+            viewType: InfiniteList.ViewType.YearView
+            delegate: DaysCalendar {
                 columns: 3
                 rows: 4
 
@@ -396,12 +398,11 @@ Item {
                     calendarBackend.goToYear(date.yearNumber);
                     swipeView.currentIndex = 1;
                 }
-
             }
         }
     }
 
     Component.onCompleted: {
-        root.currentDate = calendarBackend.today
+        root.currentDate = calendarBackend.today;
     }
 }

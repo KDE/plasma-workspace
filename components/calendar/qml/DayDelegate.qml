@@ -39,7 +39,9 @@ PlasmaComponents.AbstractButton {
 
     Accessible.name: thisDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
     Accessible.description: {
-        const eventDescription = (model.eventCount !== undefined && model.eventCount > 0) ? i18ndp("plasmashellprivateplugin", "%1 event", "%1 events", model.eventCount) : i18nd("plasmashellprivateplugin", "No events");
+        const eventDescription = (model.eventCount !== undefined && model.eventCount > 0)
+            ? i18ndp("plasmashellprivateplugin", "%1 event", "%1 events", model.eventCount)
+            : i18nd("plasmashellprivateplugin", "No events");
         const subLabelDescription = model.subLabel || model.subDayLabel || "";
         return `${eventDescription} ${subLabelDescription ? `; ${subLabelDescription}` : ""}`;
     }
@@ -48,29 +50,29 @@ PlasmaComponents.AbstractButton {
         const today = root.today;
         let result = true;
         if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYear) {
-            result = result && today.getFullYear() === thisDate.getFullYear()
+            result &= today.getFullYear() === thisDate.getFullYear();
         }
         if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearAndMonth) {
-            result = result && today.getMonth() === thisDate.getMonth()
+            result &= today.getMonth() === thisDate.getMonth();
         }
         if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearMonthAndDay) {
-            result = result && today.getDate() === thisDate.getDate()
+            result &= today.getDate() === thisDate.getDate();
         }
-        return result
+        return result;
     }
     readonly property bool selected: {
         const current = root.currentDate;
         let result = true;
         if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYear) {
-            result = result && current.getFullYear() === thisDate.getFullYear()
+            result &= current.getFullYear() === thisDate.getFullYear();
         }
         if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearAndMonth) {
-            result = result && current.getMonth() === thisDate.getMonth()
+            result &= current.getMonth() === thisDate.getMonth();
         }
         if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearMonthAndDay) {
-            result = result && current.getDate() === thisDate.getDate()
+            result &= current.getDate() === thisDate.getDate();
         }
-        return result
+        return result;
     }
 
     Loader {
@@ -140,7 +142,9 @@ PlasmaComponents.AbstractButton {
             }
         }
 
-        onLoaded: item.hasSubDayLabel = Qt.binding(() => subDayLabel.active)
+        onLoaded: {
+            item.hasSubDayLabel = Qt.binding(() => subDayLabel.active);
+        }
     }
 
     contentItem: Item {
