@@ -125,7 +125,7 @@ void PowerManagementJob::start()
                                                           QStringLiteral("org.freedesktop.ScreenSaver"),
                                                           QStringLiteral("UnInhibit"));
         msg << m_lockInhibitionCookie;
-        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
         setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("setBrightness")) {
