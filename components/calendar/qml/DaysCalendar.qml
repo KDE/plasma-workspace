@@ -10,9 +10,8 @@
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.workspace.calendar
-import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents
 
 Item {
     id: daysCalendar
@@ -55,7 +54,7 @@ Item {
         Repeater {
             model: showWeekNumbers ? calendarBackend.weeksModel : []
 
-            PlasmaComponents3.Label {
+            PlasmaComponents.Label {
                 height: daysCalendar.cellHeight
                 width: daysCalendar.cellWidth
                 horizontalAlignment: Text.AlignHCenter
@@ -88,7 +87,7 @@ Item {
         Repeater {
             id: days
 
-            PlasmaComponents3.Label {
+            PlasmaComponents.Label {
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
                 text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((calendarBackend.firstDayOfWeek + index) % days.count), Locale.ShortFormat)
@@ -112,7 +111,7 @@ Item {
                 dayModel: repeater.model
 
                 Keys.onPressed: event => {
-                    if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
+                    if (!daysCalendar.PlasmaComponents.SwipeView.isCurrentItem) {
                         event.accepted = false;
                         return;
                     }
@@ -153,4 +152,3 @@ Item {
         }
     }
 }
-

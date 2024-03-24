@@ -6,11 +6,12 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.workspace.calendar
-import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
 Item {
     id: root
@@ -185,7 +186,7 @@ Item {
         }
     }
 
-    Calendar {
+    PlasmaCalendar.Calendar {
         id: calendarBackend
 
         days: 7
@@ -245,7 +246,7 @@ Item {
         monthViewRoot: root
     }
 
-    PlasmaComponents3.SwipeView {
+    PlasmaComponents.SwipeView {
         id: swipeView
         anchors {
             top: viewHeader.bottom
@@ -316,7 +317,7 @@ Item {
                     return mainDaysCalendar.nextModel;
                 }
 
-                dateMatchingPrecision: Calendar.MatchYearMonthAndDay
+                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
@@ -344,7 +345,7 @@ Item {
                 columns: 3
                 rows: 4
 
-                dateMatchingPrecision: Calendar.MatchYearAndMonth
+                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearAndMonth
                 width: yearView.width
                 height: yearView.height
                 gridModel: monthModel
@@ -376,7 +377,7 @@ Item {
                 rows: 4
                 width: decadeView.width
                 height: decadeView.height
-                dateMatchingPrecision: Calendar.MatchYear
+                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYear
 
                 gridModel: switch (index) {
                 case 1:

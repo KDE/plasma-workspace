@@ -4,8 +4,9 @@
 */
 
 import QtQuick
-import org.kde.plasma.workspace.calendar
+
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
 ListView {
     id: infiniteList
@@ -174,7 +175,7 @@ ListView {
         active: infiniteList.viewType === InfiniteList.ViewType.DayView
         asynchronous: true
 
-        sourceComponent: Calendar {
+        sourceComponent: PlasmaCalendar.Calendar {
             days: backend.days
             weeks: backend.weeks
             firstDayOfWeek: backend.firstDayOfWeek
@@ -196,7 +197,7 @@ ListView {
         active: infiniteList.viewType === InfiniteList.ViewType.DayView
         asynchronous: true
 
-        sourceComponent: Calendar {
+        sourceComponent: PlasmaCalendar.Calendar {
             days: backend.days
             weeks: backend.weeks
             firstDayOfWeek: backend.firstDayOfWeek

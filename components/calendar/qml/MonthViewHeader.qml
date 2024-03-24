@@ -6,9 +6,9 @@
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.components as PlasmaComponents3
-import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
 
 // NOTE : This header is designed to be usable by both the generic calendar component and the digital clock applet
 // which requires a little different layout to accomodate for configure and pin buttons because it may be in panel
@@ -96,7 +96,7 @@ Item {
 
         RowLayout {
             spacing: 0
-            PlasmaComponents3.TabBar {
+            PlasmaComponents.TabBar {
                 id: tabBar
 
                 currentIndex: root.swipeView.currentIndex
@@ -109,23 +109,23 @@ Item {
                                                                                root.monthViewRoot.eventButton :
                                                                                root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
 
-                PlasmaComponents3.TabButton {
+                PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
                     onClicked: monthViewRoot.showMonthView();
-                    display: PlasmaComponents3.AbstractButton.TextOnly
+                    display: PlasmaComponents.AbstractButton.TextOnly
                 }
-                PlasmaComponents3.TabButton {
+                PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Months");
                     onClicked: monthViewRoot.showYearView();
-                    display: PlasmaComponents3.AbstractButton.TextOnly
+                    display: PlasmaComponents.AbstractButton.TextOnly
                 }
-                PlasmaComponents3.TabButton {
+                PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
                     onClicked: monthViewRoot.showDecadeView();
-                    display: PlasmaComponents3.AbstractButton.TextOnly
+                    display: PlasmaComponents.AbstractButton.TextOnly
                 }
             }
 
@@ -156,7 +156,7 @@ Item {
 
             KeyNavigation.up: root.configureButton
 
-            PlasmaComponents3.ToolButton {
+            PlasmaComponents.ToolButton {
                 id: previousButton
                 text: {
                     switch(monthViewRoot.calendarViewDisplayed) {
@@ -172,15 +172,15 @@ Item {
                 }
 
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
-                display: PlasmaComponents3.AbstractButton.IconOnly
+                display: PlasmaComponents.AbstractButton.IconOnly
                 KeyNavigation.right: todayButton
 
                 onClicked: monthViewRoot.previousView()
 
-                PlasmaComponents3.ToolTip { text: parent.text }
+                PlasmaComponents.ToolTip { text: parent.text }
             }
 
-            PlasmaComponents3.ToolButton {
+            PlasmaComponents.ToolButton {
                 id: todayButton
                 text: i18ndc("plasmashellprivateplugin", "Reset calendar to today", "Today")
                 Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
@@ -189,7 +189,7 @@ Item {
                 onClicked: monthViewRoot.resetToToday()
             }
 
-            PlasmaComponents3.ToolButton {
+            PlasmaComponents.ToolButton {
                 id: nextButton
                 text: {
                     switch(monthViewRoot.calendarViewDisplayed) {
@@ -205,12 +205,12 @@ Item {
                 }
 
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
-                display: PlasmaComponents3.AbstractButton.IconOnly
+                display: PlasmaComponents.AbstractButton.IconOnly
                 KeyNavigation.tab: root.swipeView
 
                 onClicked: monthViewRoot.nextView();
 
-                PlasmaComponents3.ToolTip { text: parent.text }
+                PlasmaComponents.ToolTip { text: parent.text }
             }
         }
     }
@@ -226,12 +226,12 @@ Item {
 
             KeyNavigation.up: pinButton
 
-            PlasmaComponents3.ToolButton {
+            PlasmaComponents.ToolButton {
                 id: configureButton
 
                 visible: root.monthViewRoot.digitalClock.internalAction("configure").enabled
 
-                display: PlasmaComponents3.AbstractButton.IconOnly
+                display: PlasmaComponents.AbstractButton.IconOnly
                 icon.name: "configure"
                 text: root.monthViewRoot.digitalClock.internalAction("configure").text
 
@@ -240,19 +240,19 @@ Item {
                 KeyNavigation.down: root.todayButton
 
                 onClicked: root.monthViewRoot.digitalClock.internalAction("configure").trigger()
-                PlasmaComponents3.ToolTip {
+                PlasmaComponents.ToolTip {
                     text: parent.text
                 }
             }
 
             // Allows the user to keep the calendar open for reference
-            PlasmaComponents3.ToolButton {
+            PlasmaComponents.ToolButton {
                 id: pinButton
 
                 checkable: true
                 checked: root.monthViewRoot.digitalClock.configuration.pin
 
-                display: PlasmaComponents3.AbstractButton.IconOnly
+                display: PlasmaComponents.AbstractButton.IconOnly
                 icon.name: "window-pin"
                 text: i18n("Keep Open")
 
@@ -260,7 +260,7 @@ Item {
 
                 onToggled: root.monthViewRoot.digitalClock.configuration.pin = checked
 
-                PlasmaComponents3.ToolTip {
+                PlasmaComponents.ToolTip {
                     text: parent.text
                 }
             }

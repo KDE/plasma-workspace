@@ -7,24 +7,25 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
 import QtQuick
 
-import org.kde.ksvg as KSvg
-import org.kde.plasma.components as PlasmaComponents3
-import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.workspace.calendar
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
-PlasmaComponents3.AbstractButton {
+PlasmaComponents.AbstractButton {
     id: dayStyle
 
     objectName: {
         switch (dateMatchingPrecision) {
-        case Calendar.MatchYear:
+        case PlasmaCalendar.Calendar.MatchYear:
             return "calendarCell-" + yearNumber;
-        case Calendar.MatchYearAndMonth:
+        case PlasmaCalendar.Calendar.MatchYearAndMonth:
             return "calendarCell-" + yearNumber + "-" + monthNumber;
-        case Calendar.MatchYearMonthAndDay:
+        case PlasmaCalendar.Calendar.MatchYearMonthAndDay:
         default:
             return "calendarCell-" + yearNumber + "-" + monthNumber + "-" + dayNumber;
         }
@@ -46,13 +47,13 @@ PlasmaComponents3.AbstractButton {
     readonly property bool today: {
         const today = root.today;
         let result = true;
-        if (dateMatchingPrecision >= Calendar.MatchYear) {
+        if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYear) {
             result = result && today.getFullYear() === thisDate.getFullYear()
         }
-        if (dateMatchingPrecision >= Calendar.MatchYearAndMonth) {
+        if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearAndMonth) {
             result = result && today.getMonth() === thisDate.getMonth()
         }
-        if (dateMatchingPrecision >= Calendar.MatchYearMonthAndDay) {
+        if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearMonthAndDay) {
             result = result && today.getDate() === thisDate.getDate()
         }
         return result
@@ -60,13 +61,13 @@ PlasmaComponents3.AbstractButton {
     readonly property bool selected: {
         const current = root.currentDate;
         let result = true;
-        if (dateMatchingPrecision >= Calendar.MatchYear) {
+        if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYear) {
             result = result && current.getFullYear() === thisDate.getFullYear()
         }
-        if (dateMatchingPrecision >= Calendar.MatchYearAndMonth) {
+        if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearAndMonth) {
             result = result && current.getMonth() === thisDate.getMonth()
         }
-        if (dateMatchingPrecision >= Calendar.MatchYearMonthAndDay) {
+        if (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearMonthAndDay) {
             result = result && current.getDate() === thisDate.getDate()
         }
         return result
@@ -145,9 +146,9 @@ PlasmaComponents3.AbstractButton {
     contentItem: Item {
         // ColumnLayout makes scrolling too slow, so use anchors to position labels
 
-        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
-        PlasmaComponents3.ToolTip.text: model.subLabel || ""
-        PlasmaComponents3.ToolTip.visible: !!model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
+        PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
+        PlasmaComponents.ToolTip.text: model.subLabel || ""
+        PlasmaComponents.ToolTip.visible: !!model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
 
         Kirigami.Heading {
             id: label
@@ -159,7 +160,7 @@ PlasmaComponents3.AbstractButton {
             }
             font.pixelSize: Math.max(
                 Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
-                daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+                daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
             font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -182,11 +183,11 @@ PlasmaComponents3.AbstractButton {
             asynchronous: true
             opacity: 0
 
-            sourceComponent: PlasmaComponents3.Label {
+            sourceComponent: PlasmaComponents.Label {
                 elide: Text.ElideRight
                 font.pixelSize: Math.max(
                     Kirigami.Theme.smallFont.pixelSize,
-                    daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 6 : 12))
+                    daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
                 font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
