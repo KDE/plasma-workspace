@@ -122,7 +122,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Show Logout Prompt")).value(0));
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
-        m_configureDisplaysAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Configure Display Settings…"), this);
+        m_configureDisplaysAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Display Configuration"), this);
         m_configureDisplaysAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-display")));
         connect(m_configureDisplaysAction, &QAction::triggered, this, &ContextMenu::configureDisplays);
 

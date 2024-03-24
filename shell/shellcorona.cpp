@@ -289,7 +289,7 @@ void ShellCorona::init()
     QAction *manageContainmentsAction = new QAction(this);
     setAction(QStringLiteral("manage-containments"), manageContainmentsAction);
     manageContainmentsAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-windows-effect-fadedesktop")));
-    manageContainmentsAction->setText(i18n("Manage Desktops And Panels..."));
+    manageContainmentsAction->setText(i18n("Panel and Desktop Management"));
     connect(manageContainmentsAction, &QAction::triggered, this, [this]() {
         if (m_shellContainmentConfig == nullptr) {
             m_shellContainmentConfig = new ShellContainmentConfig(this);
