@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=KFontInst
+Exec=kfontinst %U
+Icon=preferences-desktop-font-installer
+StartupNotify=true
+Type=Application
+MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;application/vnd.kde.fontspackage;font/otf;font/ttf;font/collection;
+GenericName=Font Installer
+NoDisplay=true
+Categories=Qt;KDE;Utility;
