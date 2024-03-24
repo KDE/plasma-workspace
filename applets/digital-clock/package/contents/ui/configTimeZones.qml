@@ -49,6 +49,17 @@ KCMUtils.ScrollViewKCM {
         focus: true // keyboard navigation
         activeFocusOnTab: true // keyboard navigation
 
+        headerPositioning: ListView.OverlayHeader
+        header: Kirigami.InlineViewHeader {
+            width: ListView.view.width
+            actions: [
+                Kirigami.Action {
+                    text: i18n("Add Time Zones…")
+                    icon.name: "list-add-symbolic"
+                    onTriggered: timezoneSheet.open()
+                }
+            ]
+        }
         model: TimeZoneFilterProxy {
             sourceModel: timeZones
             onlyShowChecked: true
@@ -142,13 +153,6 @@ KCMUtils.ScrollViewKCM {
 
     footer: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
-
-        QQC2.Button {
-            Layout.alignment: Qt.AlignLeft // Explicitly set so it gets reversed for LTR mode
-            text: i18n("Add Time Zones…")
-            icon.name: "list-add"
-            onClicked: timezoneSheet.open()
-        }
 
         QQC2.CheckBox {
             id: enableWheelCheckBox
