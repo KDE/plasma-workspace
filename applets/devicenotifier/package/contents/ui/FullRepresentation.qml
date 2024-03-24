@@ -137,9 +137,9 @@ PlasmaExtras.Representation {
             delegate: DeviceItem {
                 udi: DataEngineSource
             }
-            highlight: PlasmaExtras.Highlight { }
-            highlightMoveDuration: 0
-            highlightResizeDuration: 0
+            highlight: PlasmaExtras.Highlight {}
+            highlightMoveDuration: Kirigami.Units.shortDuration
+            highlightResizeDuration: Kirigami.Units.shortDuration
 
             topMargin: Kirigami.Units.largeSpacing
             bottomMargin: Kirigami.Units.largeSpacing
