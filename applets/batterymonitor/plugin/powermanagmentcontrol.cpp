@@ -189,7 +189,8 @@ void PowerManagmentControl::onInhibitionsChanged(const QList<InhibitionInfo> &ad
 
     for (auto removedIt = removed.constBegin(); removedIt != removed.constEnd(); ++removedIt) {
         for (int index = 0; index < out.size(); ++index) {
-            if (out[index][QStringLiteral("Name")] == *removedIt) {
+            if (out[index][QStringLiteral("Name")] == *removedIt && *removedIt != QStringLiteral("plasmashell")
+                && *removedIt != QStringLiteral("plasmoidviewer")) {
                 out.removeAt(index);
                 break;
             }
@@ -198,6 +199,9 @@ void PowerManagmentControl::onInhibitionsChanged(const QList<InhibitionInfo> &ad
 
     for (auto it = added.constBegin(); it != added.constEnd(); ++it) {
         const QString &name = (*it).first;
+        if (name == QStringLiteral("plasmashell") || name == QStringLiteral("plasmoidviewer")) {
+            continue;
+        }
         QString prettyName;
         QString icon;
         const QString &reason = (*it).second;
