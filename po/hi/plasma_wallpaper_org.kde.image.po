@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -139,14 +139,14 @@ msgstr "वॉलपेपर पुनर्स्थापित करें"
 msgid "Remove Wallpaper"
 msgstr "वालपेपर हटाएँ"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
 "यह साधन आपको प्लाज़्मा सत्र के लिए वॉलपेपर के रूप में एक छवि नियत करने के काम आता है।"
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
@@ -155,7 +155,7 @@ msgstr ""
 "एक छवि फ़ाइल या एक स्थापित वॉलपेपर के-पैेकेज जिसे आप अपने प्लाज्मा सत्र के लिए वॉलपेपर के "
 "रूप में सेट करना चाहते हैं"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -165,23 +165,23 @@ msgstr ""
 "इस वॉलपेपर के फ़ाइल नाम में एक अलग एकल उद्धरण है (') - कृपया इसे ठीक करने के लिए वॉलपेपर "
 "के लेखक से संपर्क करें, या स्वयं फ़ाइल का नाम बदलें: %1"
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "प्लाज्मा वॉलपेपर नियत करने का प्रयास करते समय एक त्रुटि हुई:\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "सभी डेस्कटॉप के लिए वॉलपेपर को के-पैकेज आधारित %1 पर सफलतापूर्वक नियत करें"
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "सभी डेस्कटॉप के लिए वॉलपेपर को छवि %1 पर सफलतापूर्वक नियत करें"
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

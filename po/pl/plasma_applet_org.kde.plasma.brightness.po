@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>
+# SPDX-FileCopyrightText: 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-23 00:39+0000\n"
-"PO-Revision-Date: 2023-12-23 11:30+0100\n"
-"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
+"PO-Revision-Date: 2024-03-23 11:17+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "Off"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
 msgstr "Wył."
@@ -30,24 +28,22 @@ msgstr "Wył."
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr ""
+msgstr "Niska"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr ""
+msgstr "Średnia"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr ""
+msgstr "Wysoka"
 
 #: package/contents/ui/BrightnessItem.qml:33
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "On"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
 msgstr "Wł."

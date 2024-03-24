@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-17 11:45+0100\n"
+"PO-Revision-Date: 2024-03-23 11:16+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -75,18 +75,18 @@ msgstr "Odtwórz dźwięk"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Odsłuchaj dźwięku"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Wyzeruj"
 
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Wybierz plik dźwiękowy"
 
 #: ui/main.qml:46
 #, kde-format

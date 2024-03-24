@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2024-03-17 20:42\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -132,20 +132,20 @@ msgstr "恢复壁纸"
 msgid "Remove Wallpaper"
 msgstr "移除壁纸"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr "此工具用于为当前 Plasma 会话设置壁纸。"
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr "您想要为当前 Plasma 会话设置的壁纸的图像文件或已安装的 kpackage 壁纸包"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -155,23 +155,23 @@ msgstr ""
 "此壁纸的文件名包含一个未封闭的单引号 (') - 请联系壁纸的作者来解决这个问题，或"
 "者自行重命名该文件：%1"
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "尝试设置 Plasma 壁纸时出错：\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "已将所有桌面壁纸设置为基于 KPackage 的 %1"
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "已将所有桌面的壁纸设置为图像 %1"
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

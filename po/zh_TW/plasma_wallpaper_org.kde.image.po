@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2023-10-20 03:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -136,13 +136,13 @@ msgstr "回復桌布"
 msgid "Remove Wallpaper"
 msgstr "移除桌布"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr "這個工具讓您將影像設定為 Plasma 工作階段的桌布。"
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
@@ -150,7 +150,7 @@ msgid ""
 msgstr ""
 "希望設定為您的 Plasma 工作階段的桌布用的，一個影像檔或是已安裝的桌布 kpackage"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -160,23 +160,23 @@ msgstr ""
 "這個桌布的檔案名稱中有一個獨自存在的單引號 (') —— 請聯繫桌布作者修正它，或是"
 "自己重新命名檔案：%1"
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "嘗試設定 Plasma 桌布時出錯：\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "成功設定所有桌面的桌布為基於 KPackage 的 %1"
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "成功設定所有桌面的桌布為影像 %1"
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

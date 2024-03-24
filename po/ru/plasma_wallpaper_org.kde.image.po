@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2023-12-17 09:15+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -140,7 +140,7 @@ msgstr "Вернуть обои в этот список"
 msgid "Remove Wallpaper"
 msgstr "Удалить обои"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
@@ -148,7 +148,7 @@ msgstr ""
 "Этот инструмент позволяет использовать изображения в качестве обоев рабочего "
 "стола."
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
@@ -157,7 +157,7 @@ msgstr ""
 "Файл изображения или пакет фона рабочего стола в формате kpackage для "
 "использования в качестве фона рабочего стола Plasma"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -167,12 +167,12 @@ msgstr ""
 "Имя файла этих обоев содержит лишний символ одинарной кавычки ('). Попросите "
 "автора исправить эту ошибку или самостоятельно переименуйте файл «%1»."
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Не удалось задать обои рабочего стола Plasma:\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -180,13 +180,13 @@ msgstr ""
 "Пакет в формате KPackage «%1» успешно использовано в качестве обоев всех "
 "рабочих столов"
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "Изображение «%1» успешно использовано в качестве обоев всех рабочих столов"
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

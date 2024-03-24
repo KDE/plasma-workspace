@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2021-08-31 16:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -135,14 +135,14 @@ msgstr "പശ്ചാത്തലചിത്രം പുനഃസ്ഥാ�
 msgid "Remove Wallpaper"
 msgstr "പശ്ചാത്തലചിത്രം കളയുക"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
 "പ്ലാസ്മ സെഷനുള്ള പശ്ചാത്തലചിത്രമായി ഒരു ചിത്രം സജ്ജമാക്കാൻ ഈ ഉപകരണം നിങ്ങളെ അനുവദിക്കുന്നു."
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
@@ -151,7 +151,7 @@ msgstr ""
 "നിങ്ങളുടെ പ്ലാസ്മ സെഷനുള്ള പശ്ചാത്തലചിത്രമായി സജ്ജീകരിക്കാൻ ആഗ്രഹിക്കുന്ന ഒരു ചിത്ര ഫയൽ "
 "അല്ലെങ്കിൽ ഇൻസ്റ്റാൾ ചെയ്ത വാൾപേപ്പർ kpackage"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -161,12 +161,12 @@ msgstr ""
 "ഈ പശ്ചാത്തലചിത്രത്തിന്റെ ഫയൽ നാമത്തിൽ ഒരു ഒറ്റപ്പെട്ട ഉദ്ധരണി ഉണ്ട് (') - ഇത് പരിഹരിക്കാൻ "
 "പശ്ചാത്തലചിത്രത്തിന്റെ രചയിതാവിനെ ബന്ധപ്പെടുക, അല്ലെങ്കിൽ ഫയലിന്റെ പേര് സ്വയം മാറ്റുക: %1"
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "പ്ലാസ്മ പശ്ചാത്തലചിത്രം സജ്ജീകരിക്കാൻ ശ്രമിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു:\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -174,13 +174,13 @@ msgstr ""
 "എല്ലാ ഡെസ്ക്ടോപ്പുകളുടെയും പശ്ചാത്തലചിത്രം KPackage അടിസ്ഥാനമാക്കിയുള്ള %1 ലേക്ക് വിജയകരമായി "
 "സജ്ജമാക്കി"
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "%1 എന്ന ചിത്രത്തിലേക്ക് എല്ലാ ഡെസ്ക്ടോപ്പുകളുടെയും പശ്ചാത്തലചിത്രം വിജയകരമായി സജ്ജമാക്കി"
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

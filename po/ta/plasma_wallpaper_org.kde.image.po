@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2023-10-15 13:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -131,13 +131,13 @@ msgstr "பின்புல படத்தை மீட்டெடு"
 msgid "Remove Wallpaper"
 msgstr "பின்புல படத்தை நீக்கு"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr "பிளாஸ்மா பணிமேடையில் ஓர் படத்தை பின்புலமாக அமைக்க இந்நிரல் உதவும்."
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
@@ -146,7 +146,7 @@ msgstr ""
 "உங்கள் பிளாஸ்மா அமர்வுக்கான பின்புல படமாக நீங்கள் அமைக்க விரும்பும் படக்கோப்பு அல்லது "
 "பின்புலப்பட தொகுப்பு (wallpaper kpackage)"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -156,23 +156,23 @@ msgstr ""
 "இப்பின்புல படத்தின் பெயரில் கூடுதலாக ஒரு ஒற்றைமேற்கோள்குறி (') உள்ளது -  இதை சரிசெய்ய "
 "இயற்றியவரை தொடர்பு கொள்ளுங்கள், அல்லது கோப்பின் பெயரை நீங்களே மாற்றுங்கள்: %1"
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "பிளாஸ்மாவுக்கான பின்புல படத்தை அமைக்கும்போது சிக்கல் ஏற்பட்டது:\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "அனைத்து பணிமேடைகளுக்கான பின்புலம், %1 என்ற KPackage-ஆக அமைக்கப்பட்டுள்ளது"
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "அனைத்து பணிமேடைகளுக்கான பின்புலம், %1 என்ற படமாக அமைக்கப்பட்டுள்ளது"
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

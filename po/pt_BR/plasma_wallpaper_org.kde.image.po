@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:35+0000\n"
+"POT-Creation-Date: 2024-03-24 00:39+0000\n"
 "PO-Revision-Date: 2022-06-22 16:27-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -138,7 +138,7 @@ msgstr "Restaurar papel de parede"
 msgid "Remove Wallpaper"
 msgstr "Remover papel de parede"
 
-#: plasma-apply-wallpaperimage.cpp:29
+#: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
@@ -146,7 +146,7 @@ msgstr ""
 "Esta ferramenta permite que você defina uma imagem como o papel de parede da "
 "sessão do Plasma."
 
-#: plasma-apply-wallpaperimage.cpp:31
+#: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
 msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
@@ -155,7 +155,7 @@ msgstr ""
 "Um arquivo de imagem ou um kpackage de papel de parede instalado que você "
 "deseja definir como o papel de parede da sua sessão do Plasma"
 
-#: plasma-apply-wallpaperimage.cpp:45
+#: plasma-apply-wallpaperimage.cpp:44
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -166,12 +166,12 @@ msgstr ""
 "('), contate o autor do papel de parede para consertar isso ou renomeie o "
 "arquivo você mesmo: %1"
 
-#: plasma-apply-wallpaperimage.cpp:85
+#: plasma-apply-wallpaperimage.cpp:84
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Um erro ocorreu ao tentar definir o papel de parede do Plasma:\n"
 
-#: plasma-apply-wallpaperimage.cpp:89
+#: plasma-apply-wallpaperimage.cpp:88
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -179,14 +179,14 @@ msgstr ""
 "A definição de um papel de parede para todas as áreas de trabalho do %1 "
 "baseado no KPackage foi realizada com sucesso."
 
-#: plasma-apply-wallpaperimage.cpp:91
+#: plasma-apply-wallpaperimage.cpp:90
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "A definição de um papel de parede para todas as áreas de trabalho da imagem "
 "%1 foi realizada com sucesso."
 
-#: plasma-apply-wallpaperimage.cpp:97
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

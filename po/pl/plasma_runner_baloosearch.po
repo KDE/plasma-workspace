@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2016, 2018, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2016, 2018, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-19 00:40+0000\n"
-"PO-Revision-Date: 2023-02-11 07:49+0100\n"
+"PO-Revision-Date: 2024-03-23 11:17+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: baloosearchrunner.cpp:60
 #, kde-format
@@ -24,13 +24,12 @@ msgid "Open Containing Folder"
 msgstr "Otwórz zawierający katalog"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Audios"
+#, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
 "of the word"
 msgid "Audio"
-msgstr "Dźwięku"
+msgstr "Dźwięk"
 
 #: baloosearchrunner.cpp:86
 #, kde-format
