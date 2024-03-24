@@ -17,7 +17,7 @@ ecm_qt_declare_logging_category(kcm_wallpaper
     EXPORT PLASMAWORKSPACE
 )
 
-target_link_libraries(kcm_wallpaper
+target_link_libraries(kcm_wallpaper PRIVATE
     Qt6::Quick
     Qt6::DBus
     KF6::I18n
