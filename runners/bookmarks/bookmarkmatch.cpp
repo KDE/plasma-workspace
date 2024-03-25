@@ -25,6 +25,8 @@ KRunner::QueryMatch BookmarkMatch::asQueryMatch(KRunner::AbstractRunner *runner)
     KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Low;
     qreal relevance = 0;
     QStringList searchTerms = m_searchTerm.split(QLatin1Char(' '));
+    qDebug() << "bookmarksrunner:"
+             << "match" << m_bookmarkTitle << m_bookmarkURL << m_description << "searchTerm" << m_searchTerm << "searchTerms" << searchTerms;
 
     if (m_bookmarkTitle.compare(m_searchTerm, Qt::CaseInsensitive) == 0
         || (!m_description.isEmpty() && m_description.compare(m_searchTerm, Qt::CaseInsensitive) == 0)) {
