@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-25 00:39+0000\n"
 "PO-Revision-Date: 2022-06-03 10:46+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -52,14 +52,14 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Lainnya"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:41
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] ""
 msgstr[1] ""
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:41
 #, fuzzy, kde-format
 #| msgctxt "Agenda listview section title"
 #| msgid "Events"

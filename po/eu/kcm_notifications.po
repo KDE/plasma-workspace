@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-08 19:34+0100\n"
+"PO-Revision-Date: 2024-03-24 11:20+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -79,18 +79,18 @@ msgstr "Jo soinu bat"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Aurrez entzun soinua"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Berrezarri"
 
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Hautatu soinu-fitxategia"
 
 #: ui/main.qml:46
 #, kde-format
