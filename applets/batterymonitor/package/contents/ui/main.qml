@@ -155,7 +155,7 @@ PlasmoidItem {
         id: inhibitionError
         componentName: "plasma_workspace"
         eventId: "warning"
-        iconName: "speedometer"
+        iconName: "system-suspend-uninhibited"
         title: i18n("Power Management")
     }
 

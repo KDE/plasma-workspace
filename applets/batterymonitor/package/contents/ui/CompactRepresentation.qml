@@ -43,7 +43,7 @@ MouseArea {
     Accessible.role: Accessible.Button
 
     property string powerModeIcon: root.isManuallyInhibited
-            ? "speedometer" 
+            ? "system-suspend-inhibited-symbolic" 
             : root.isSomehowInPerformanceMode
             ? "battery-profile-performance-symbolic" 
             : root.isSomehowInPowerSaveMode
