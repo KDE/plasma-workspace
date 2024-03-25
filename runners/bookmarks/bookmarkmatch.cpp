@@ -7,6 +7,7 @@
 
 #include "bookmarkmatch.h"
 #include <QVariant>
+#include <algorithm>
 
 // TODO: test
 
@@ -23,12 +24,15 @@ KRunner::QueryMatch BookmarkMatch::asQueryMatch(KRunner::AbstractRunner *runner)
 {
     KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Low;
     qreal relevance = 0;
+    QStringList searchTerms = m_searchTerm.split(QLatin1Char(' '));
 
     if (m_bookmarkTitle.compare(m_searchTerm, Qt::CaseInsensitive) == 0
         || (!m_description.isEmpty() && m_description.compare(m_searchTerm, Qt::CaseInsensitive) == 0)) {
         categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
         relevance = 1.0;
-    } else if (m_bookmarkTitle.contains(m_searchTerm, Qt::CaseInsensitive)) {
+    } else if (std::all_of(searchTerms.begin(), searchTerms.end(), [this](const QString &term) {
+                   return m_bookmarkTitle.contains(term, Qt::CaseInsensitive);
+               })) {
         relevance = 0.45;
     } else if (!m_description.isEmpty() && m_description.contains(m_searchTerm, Qt::CaseInsensitive)) {
         relevance = 0.3;
