@@ -46,6 +46,7 @@ PlasmoidItem {
     }
 
     property bool isNightColorActive: nightColorMonitor.running && nightColorMonitor.currentTemperature != 6500
+    property bool isNightColorInhibited: nightColorInhibitor.state == NightColorInhibitor.Inhibiting || nightColorInhibitor.state == NightColorInhibitor.Inhibited && nightColorMonitor.targetTemperature != 6500
     property int screenBrightnessPercent: screenBrightnessControl.brightnessMax ? Math.round(100 * screenBrightnessControl.screenBrightness / screenBrightnessControl.brightnessMax) : 0
     property int keyboardBrightnessPercent: keyboardBrightnessControl.brightnessMax ? Math.round(100 * keyboardBrightnessControl.brightness / keyboardBrightnessControl.brightnessMax) : 0
 
@@ -67,7 +68,7 @@ PlasmoidItem {
     LayoutMirroring.childrenInherit: true
 
     Plasmoid.status: {
-        return screenBrightnessControl.isBrightnessAvailable || keyboardBrightnessControl.isBrightnessAvailable || isNightColorActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
+        return screenBrightnessControl.isBrightnessAvailable || keyboardBrightnessControl.isBrightnessAvailable || isNightColorActive || isNightColorInhibited ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus;
     }
 
     toolTipMainText: {
