@@ -46,7 +46,7 @@ PlasmoidItem {
     }
 
     property bool isNightColorActive: nightColorMonitor.running && nightColorMonitor.currentTemperature != 6500
-    property int screenBrightnessPercent: screenBrightnessControl.brightnessMax ? Math.round(100 * screenBrightnessControl.screenBrightness / screenBrightnessControl.brightnessMax) : 0
+    property int screenBrightnessPercent: screenBrightnessControl.brightnessMax ? Math.round(100 * screenBrightnessControl.brightness / screenBrightnessControl.brightnessMax) : 0
     property int keyboardBrightnessPercent: keyboardBrightnessControl.brightnessMax ? Math.round(100 * keyboardBrightnessControl.brightness / keyboardBrightnessControl.brightnessMax) : 0
 
     function symbolicizeIconName(iconName) {
