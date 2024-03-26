@@ -19,6 +19,10 @@
 #define CHECK_SCREEN_INVARIANTS
 #endif
 
+#if HAVE_X11
+#include <X11/Xlib.h>
+#endif
+
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -109,7 +113,22 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
     Q_ASSERT(screen);
     // On X11 the output named :0.0 is fake (the geometry is usually valid and whatever the geometry
     // of the last connected screen was), on wayland the fake output has no name and no geometry
-    const bool fake = screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
+    bool screenHasDefaultName = false;
+#if HAVE_X11
+    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+        static QString defaultName; // QXcbScreen::defaultName
+        if (defaultName.isEmpty()) {
+            QByteArray displayName = DisplayString(interface->display());
+            int dotPos = displayName.lastIndexOf('.');
+            if (dotPos != -1) {
+                displayName.truncate(dotPos);
+            }
+            defaultName = QString::fromLocal8Bit(displayName) + QLatin1String(".0");
+        }
+        screenHasDefaultName = screen->name() == defaultName;
+    }
+#endif
+    const bool fake = screenHasDefaultName || screen->geometry().isEmpty() || screen->name().isEmpty();
     // If there is a fake output we can only have one screen left (the fake one)
     //    Q_ASSERT(!fake || fake == (qGuiApp->screens().count() == 1));
     return fake;
@@ -239,8 +258,14 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         // Fake but not in m_fakeScreens can only happen on X11, where the last output quietly renames itself to ":0.0" without signals
 #if HAVE_X11
         Q_ASSERT(KWindowSystem::isPlatformX11());
+#else
+        qCCritical(SCREENPOOL, "Something wrong happened on Wayland.");
+        Q_UNREACHABLE();
 #endif
-        Q_ASSERT(m_availableScreens.contains(screen));
+        Q_ASSERT_X(m_availableScreens.contains(screen),
+                   Q_FUNC_INFO,
+                   qUtf8Printable(QStringLiteral("Screen name: %1 Geometry: %2 x %3")
+                                      .arg(screen->name(), QString::number(screen->geometry().width()), QString::number(screen->geometry().height()))));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
         m_availableScreens.removeAll(screen);
