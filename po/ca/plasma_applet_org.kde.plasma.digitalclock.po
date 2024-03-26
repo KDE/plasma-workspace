@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-25 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-10-20 09:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -289,12 +289,17 @@ msgstr ""
 "residència a aquesta llista. Només apareixerà quan canvieu la zona horària "
 "global del sistema a una altra cosa."
 
-#: package/contents/ui/configTimeZones.qml:77
+#: package/contents/ui/configTimeZones.qml:57
+#, kde-format
+msgid "Add Time Zones…"
+msgstr "Afegeix zones horàries…"
+
+#: package/contents/ui/configTimeZones.qml:88
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "El rellotge actualment està usant aquesta zona horària"
 
-#: package/contents/ui/configTimeZones.qml:79
+#: package/contents/ui/configTimeZones.qml:90
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -303,27 +308,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Oculta mentre aquesta sigui la ciutat de la zona horària local"
 
-#: package/contents/ui/configTimeZones.qml:104
+#: package/contents/ui/configTimeZones.qml:115
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Canvia la zona horària global del sistema…"
 
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Elimina aquesta zona horària"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:137
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Zona horària global del sistema"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:137
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Zones horàries addicionals"
 
-#: package/contents/ui/configTimeZones.qml:139
+#: package/contents/ui/configTimeZones.qml:150
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -332,19 +337,14 @@ msgstr ""
 "Afegeix més zones horàries per a mostrar-les totes a la finestra emergent de "
 "la miniaplicació, o usar-ne una per al rellotge mateix"
 
-#: package/contents/ui/configTimeZones.qml:148
-#, kde-format
-msgid "Add Time Zones…"
-msgstr "Afegeix zones horàries…"
-
-#: package/contents/ui/configTimeZones.qml:158
+#: package/contents/ui/configTimeZones.qml:162
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Canvia la zona horària mostrada en desplaçar-se sobre la miniaplicació del "
 "rellotge"
 
-#: package/contents/ui/configTimeZones.qml:165
+#: package/contents/ui/configTimeZones.qml:169
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -353,12 +353,12 @@ msgstr ""
 "L'ús d'aquesta característica no canvia la zona horària global del sistema. "
 "En lloc d'això, quan viatgeu canvieu la zona horària global del sistema."
 
-#: package/contents/ui/configTimeZones.qml:188
+#: package/contents/ui/configTimeZones.qml:192
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Afegeix més zones horàries"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:204
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -367,12 +367,12 @@ msgstr ""
 "Cal activar una zona horària com a mínim. Automàticament s'ha activat la "
 "vostra zona horària local."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:242
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

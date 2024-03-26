@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-01-15 12:56+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -46,8 +46,8 @@ msgstr "Avslutt …"
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
-msgstr "Set opp skjerm …"
+msgid "Display Configuration"
+msgstr ""
 
 #: menu.cpp:285
 #, kde-format
@@ -72,3 +72,7 @@ msgstr "Handlingar for bakgrunnsbilete"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Skilje]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Set opp skjerm …"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -250,6 +250,36 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Bàn phím trên màn hình: Tắt"
 
+#: osd.cpp:160
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr ""
+
+#: osd.cpp:162
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr ""
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr ""
+
+#: osd.cpp:175
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr ""
+
+#: osd.cpp:178
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr ""
+
 #: panelview.cpp:1027
 #, kde-format
 msgctxt "@action:inmenu"
@@ -315,8 +345,8 @@ msgstr "Mở mục %1 của trình quản lí tác vụ"
 
 #: shellcorona.cpp:292
 #, kde-format
-msgid "Manage Desktops And Panels..."
-msgstr "Quản lí các bảng và bàn làm việc..."
+msgid "Panel and Desktop Management"
+msgstr ""
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -365,6 +395,9 @@ msgstr "Số lượng bảng"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Đếm số bảng"
+
+#~ msgid "Manage Desktops And Panels..."
+#~ msgstr "Quản lí các bảng và bàn làm việc..."
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "

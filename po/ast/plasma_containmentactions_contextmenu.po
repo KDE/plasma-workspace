@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-05-03 22:36+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -43,7 +43,7 @@ msgstr ""
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
+msgid "Display Configuration"
 msgstr ""
 
 #: menu.cpp:285

@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Tema kazalke</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Andrej</firstname
+><surname
+>Vernekar</surname
+><affiliation
+><address
+><email
+>andrej.vernekar@moj.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>29.01.2023</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<abstract>
+<para
+>To je dokumentacija za &systemsettings; modul za prilagajanje videza kazalke miške. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>miška</keyword>
+<keyword
+>kazalka</keyword>
+<keyword
+>kazalec</keyword>
+<keyword
+>odbijanje</keyword>
+<keyword
+>utripanje</keyword>
+<keyword
+>animacija</keyword>
+<keyword
+>zaženi</keyword>
+<keyword
+>povratne informacije</keyword>
+<keyword
+>teme</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="cursorthemes">
+<title
+>Tema kazalke</title>
+
+<para
+>Ta modul vam omogoča <itemizedlist>
+<listitem
+><para
+>izberite temo kazalke</para
+></listitem>
+<listitem
+><para
+>konfigurirajte animacijo kazalke za zagon aplikacij</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Funkcije, ki jih ponuja ta modul, morda niso na voljo v nekaterih sistemih.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>Upravljanje teme kazalke</title>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona upravljalnika tem kazalke</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Če želite uporabiti temo kazalke, jo preprosto izberite in kliknite gumb <guilabel
+>Uporabi</guilabel
+>.</para>
+
+<para
+>Teme kazalke lahko odstranite z gumbom za smeti, ki se prikaže, ko miškin kazalec premaknete nad temo na seznamu. Upoštevajte, da vnaprej nameščenih tem ne morete odstraniti.</para>
+
+<para
+>Uporabite gumb <guilabel
+>Pridobi nove kazalke ...</guilabel
+>, da zaženete pogovorno okno <guilabel
+>Prenos novih kazalk</guilabel
+> in prenesete dodatne teme iz interneta.</para>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona nove teme kazalk</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Prav tako lahko namestite datoteke tem kazalk, ki ste jih prenesli ali kako drugače pridobili z gumbom <guilabel
+>Namesti iz datoteke...</guilabel
+>.</para>
+
+<para
+>Če vas zanima ustvarjanje lastne teme kazalk, lahko najdete informacije <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>tukaj</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>Velikost kazalke</title>
+
+<para
+>Nekatere teme omogočajo izbiro velikosti kazalke. Uporabite polje <guilabel
+>Velikost</guilabel
+>, da izberete ustrezno velikost.</para>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona velikosti kazalke</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Povratne informacije o zagonu</title>
+
+<para
+>Včasih je pomirjujoče vedeti, da vaš računalnik ni samo prezrl vašega ukaza in da se nekaj dogaja v ozadju. V tem pogovornem oknu <guilabel
+>Konfiguriraj povratne informacije o zagonu ...</guilabel
+> lahko konfigurirate vidne povratne informacije, ki vam bodo pomagale vedeti, ali ste res zadeli to ikono ali ne.</para>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona povratnih informacij o zagonu</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>Tradicionalni način za prikaz, da je vaš računalnik zaseden, je spreminjanje kazalke, ki ga lahko vklopite tako, da izberete <guilabel
+>Kazalka</guilabel
+>.</para>
+
+<para
+>Ko je ta možnost omogočena, bo vaša kazalka ob zagonu nove aplikacije za kratek čas imela pritrjeno ikono. Konfigurirate lahko, kako dolgo je ta ikona prikazana poleg vašege kazalke z vrtilnim poljem <guilabel
+>Ustavi animacijo po:</guilabel
+>. Privzeto je 5 sekund.</para>
+
+<para
+>Na voljo je več različic zasedene kazalke, vključno z <guilabel
+>Brez povratnih informacij</guilabel
+>, <guilabel
+>Utripajočim</guilabel
+>, <guilabel
+>Poskakujočim</guilabel
+> ali <guilabel
+>Statičnim</guilabel
+> ikona kazalca brez animacije.</para>
+
+<para
+>Tradicionalni &plasma; obvestilo o zagonu ima drugo obliko, ki jo lahko tudi omogočite in onemogočite tukaj. Običajno, ko zaženete aplikacijo, ta takoj dobi vnos v opravilni vrstici, pri čemer ikono nadomesti vrteča se peščena ura, ki vas obvešča, da se nekaj dogaja. To vedenje lahko vklopite in izklopite s potrditvenim poljem <guilabel
+>Omogoči animacijo</guilabel
+>.</para>
+
+<para
+>Vse aplikacije, ki jih zaženete, na koncu ne prikažejo okna ali vnosa v opravilni vrstici. Nekateri od njih so na primer zasidrani v &plasma; sistemski pladenj. Druga možnost je, da ste ga poslali na drugo navidezno namizje in v razdelek <guilabel
+>Vedenje</guilabel
+> <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+> Nastavitve upravljalnka opravil</guilabel
+></ulink
+> možnost <guilabel
+>S trenutnega namizja</guilabel
+> je označena za preklopnik <guilabel
+>Prikaži samo opravila</guilabel
+>. Nastavitev časovne omejitve zagotavlja, da lahko tudi v teh primerih še vedno dobite povratne informacije o zagonu, vendar tudi, da bodo izginile, ko bo delo opravljeno.</para>
+
+</sect2>
+
+</sect1>
+
+</article>

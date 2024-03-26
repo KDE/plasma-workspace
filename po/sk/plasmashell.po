@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-11-11 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -239,6 +239,36 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Klávesnica na obrazovke deaktivovaná"
 
+#: osd.cpp:160
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr ""
+
+#: osd.cpp:162
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr ""
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr ""
+
+#: osd.cpp:175
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr ""
+
+#: osd.cpp:178
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr ""
+
 #: panelview.cpp:1027
 #, kde-format
 msgctxt "@action:inmenu"
@@ -304,8 +334,8 @@ msgstr "Aktivovať položku správcu úloh %1"
 
 #: shellcorona.cpp:292
 #, kde-format
-msgid "Manage Desktops And Panels..."
-msgstr "Spravovať plochy a panely..."
+msgid "Panel and Desktop Management"
+msgstr ""
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -354,6 +384,9 @@ msgstr "Počet panelov"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Spočítať panely"
+
+#~ msgid "Manage Desktops And Panels..."
+#~ msgstr "Spravovať plochy a panely..."
 
 #~ msgctxt "@label %1 version string"
 #~ msgid "Plasma %1 Development Build"

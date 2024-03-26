@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2022-09-11 07:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -49,8 +49,8 @@ msgstr "Irten..."
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
-msgstr "Konfiguratu bistaratze-ezarpenak..."
+msgid "Display Configuration"
+msgstr ""
 
 #: menu.cpp:285
 #, kde-format
@@ -75,6 +75,10 @@ msgstr "Horma-paperaren ekintzak"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Bereizlea]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Konfiguratu bistaratze-ezarpenak..."
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Run Command..."

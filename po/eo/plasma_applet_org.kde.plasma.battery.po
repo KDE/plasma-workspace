@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 22:05+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
@@ -68,14 +68,14 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Baterio estas agordita por ŝargi ĝis proksimume %1%."
 
-#: package/contents/ui/CompactRepresentation.qml:105
+#: package/contents/ui/CompactRepresentation.qml:115
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:142
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Fully Charged"
 msgstr "Plene Ŝargita"
@@ -101,113 +101,144 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Ne ĉeestas"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:121
 #, kde-format
-msgid "Power and Battery"
-msgstr "Energio kaj Baterio"
+msgid "The battery applet has enabled system-wide inhibition"
+msgstr "La bateri-apleto enŝaltis tutsisteman malebligon"
 
-#: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
+#: package/contents/ui/main.qml:133
+#, fuzzy, kde-format
+#| msgctxt "Minimize the length of this string as much as possible"
+#| msgid "Manually block sleep and screen locking"
+msgid "Failed to block automatic sleep and screen locking"
+msgstr "Mane bloki dormon kaj ekranŝlosadon"
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgctxt "Minimize the length of this string as much as possible"
+#| msgid "Manually block sleep and screen locking"
+msgid "Failed to unblock automatic sleep and screen locking"
+msgstr "Mane bloki dormon kaj ekranŝlosadon"
+
+#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
 #, kde-format
 msgid "Power Management"
 msgstr "Energiadministrado"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:176 package/contents/ui/main.qml:400
+#, kde-format
+msgid "Failed to activate %1 mode"
+msgstr "Malsukcesis aktivigi %1 reĝimon"
+
+#: package/contents/ui/main.qml:201
+#, kde-format
+msgid "Power and Battery"
+msgstr "Energio kaj Baterio"
+
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Baterio ĉe %1%, ne Ŝarganta"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Baterio ĉe %1%, enŝtopita sed plue malŝarganta"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Baterio ĉe %1%, Ŝarganta"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Baterio ĉe %1%"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "La nutrado ne estas sufiĉe potenca por ŝargi la baterion"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Neniuj Baterioj Disponeblaj"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 ĝis plenŝargita"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 restanta"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "Not charging"
 msgstr "Ne ŝarganta"
 
-#: package/contents/ui/main.qml:183
-#, kde-format
-msgid "Automatic sleep and screen locking are disabled"
+#: package/contents/ui/main.qml:267
+#, fuzzy, kde-format
+#| msgid "Automatic sleep and screen locking are disabled"
+msgid ""
+"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgstr "Aŭtomata dormo kaj ekranŝlosado estas malŝaltitaj"
 
-#: package/contents/ui/main.qml:188
+#: package/contents/ui/main.qml:269
+#, fuzzy, kde-format
+#| msgctxt "Minimize the length of this string as much as possible"
+#| msgid "Manually block sleep and screen locking"
+msgid "Middle-click to disable automatic sleep and screen locking"
+msgstr "Mane bloki dormon kaj ekranŝlosadon"
+
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Unu aplikaĵo petis aktivigon de Rendimenta reĝimo"
 msgstr[1] "%1 aplikaĵoj petis aktivigon de Rendimenta reĝimo"
 
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "System is in Performance mode"
+#: package/contents/ui/main.qml:278
+#, fuzzy, kde-format
+#| msgid "System is in Performance mode"
+msgid "System is in Performance mode; scroll to change"
 msgstr "Sistemo estas en Efikeca reĝimo"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:282
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Unu aplikaĵo petis aktivigon de Potencoŝpara reĝimo"
 msgstr[1] "%1 aplikaĵoj petis aktivigon de Potencoŝpara reĝimo"
 
-#: package/contents/ui/main.qml:200
-#, kde-format
-msgid "System is in Power Save mode"
+#: package/contents/ui/main.qml:286
+#, fuzzy, kde-format
+#| msgid "System is in Power Save mode"
+msgid "System is in Power Save mode; scroll to change"
 msgstr "Sistemo estas en Power-Save reĝimo"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:289
 #, kde-format
-msgid "The battery applet has enabled system-wide inhibition"
-msgstr "La bateri-apleto enŝaltis tutsisteman malebligon"
+msgid "System is in Balanced Power mode; scroll to change"
+msgstr ""
 
-#: package/contents/ui/main.qml:299
-#, kde-format
-msgid "Failed to activate %1 mode"
-msgstr "Malsukcesis aktivigi %1 reĝimon"
-
-#: package/contents/ui/main.qml:311
+#: package/contents/ui/main.qml:412
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Montri Energiinformon…"
 
-#: package/contents/ui/main.qml:317
+#: package/contents/ui/main.qml:418
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Montri Baterian Procenton sur Piktogramo Kiam Ne Plene Ŝarĝita"
 
-#: package/contents/ui/main.qml:330
+#: package/contents/ui/main.qml:431
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&Agordi Energimastrumadon…"

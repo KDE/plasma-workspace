@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2009-11-04 10:25+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -49,7 +49,7 @@ msgstr "Napusti …"
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
+msgid "Display Configuration"
 msgstr ""
 
 #: menu.cpp:285

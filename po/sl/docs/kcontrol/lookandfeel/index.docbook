@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Globalna tema</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+> <surname
+>Clarius</surname
+> <email
+>natalie_clarius@yahoo.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Matjaž</firstname
+><surname
+>Jeran</surname
+><affiliation
+><address
+><email
+>matjaz.jeran@amis.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>26.01.2023</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>videz</keyword>
+<keyword
+>Globalna tema</keyword>
+<keyword
+>slog</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>poglej</keyword>
+<keyword
+>občutek</keyword>
+<keyword
+>globalno</keyword>
+<keyword
+>namizje</keyword>
+<keyword
+>koža</keyword>
+<keyword
+>oblikovanje</keyword>
+<keyword
+>UI</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Globalne teme</title>
+
+<para
+>Globalne teme zagotavljajo skupen videz in občutek za več komponent hkrati: </para>
+<itemizedlist>
+  <listitem
+><para
+>Postavitev namizja: Razporeditev plošč in gradnikov - na primer spodnja plošča z upraviljalnikom opravil in zaganjalnikom aplikacij ali zgornja plošča z globalnim menijem in sistemsko vrstico</para
+></listitem>
+  <listitem
+><para
+>Barvna shema: Barvna paleta, uporabljena povsod</para
+></listitem>
+  <listitem
+><para
+>Slog aplikacije: Videz elementov uporabniškega vmesnika, kot so gumbi, meniji in drsni trakovi</para
+></listitem>
+  <listitem
+><para
+>Slog plazme: Videz plošč in gradnikov</para
+></listitem>
+  <listitem
+><para
+>Dekoracija oken: obrobe oken in gumbi naslovne vrstice</para
+></listitem>
+  <listitem
+><para
+>Ikone: Ikone, ki se uporabljajo povsod</para
+></listitem>
+  <listitem
+><para
+>Kazalke: Kazalci miške</para
+></listitem>
+  <listitem
+><para
+>Preklopnik opravil: prekrivni element za preklapljanje med odprtimi okni, običajno priklican z bližnjico na tipkovnici Alt+Tab</para
+></listitem>
+  <listitem
+><para
+>Zaslon dobrodošlice: zaslon za nalaganje, prikazan med &plasma; začeti</para
+></listitem>
+  <listitem
+><para
+>Zaslon za prijavo: zaslon z izbirnikom uporabnika in pozivom za geslo, prikazan ob zagonu računalnika</para
+></listitem>
+  <listitem
+><para
+>Zaklenjeni zaslon: Zaslon s pozivom za uporabniško geslo, prikazan, ko je računalnik zaklenjen</para
+></listitem>
+  <listitem
+><para
+>Ozadje: slika ozadja namizja</para
+></listitem>
+</itemizedlist>
+
+<para
+>Z uporabo Globalne Teme lahko spremenite vse zgoraj navedeno skupaj. Uporabite lahko tudi samo nekatere komponente Globalne Teme, na primer barvno shemo ali dekoracijo oken. Izberete lahko, katere komponente želite spremeniti, ko uporabljate Globalno Temo, ali uporabite posamezne komponente z uporabo drugih podrazdelkov sistemskih nastavitev. </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Upravljanje Globalne Teme</title>
+
+<para
+>V tem modulu lahko: <itemizedlist>
+    <listitem
+><para
+>uporabite Globalne Teme</para
+></listitem>
+    <listitem
+><para
+>namestite nove Globalne Teme in odstranite nameščene Globalne Teme</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Posnetek zaslona upravljalnika Globalne Teme</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Uporabite Globalne Teme</title>
+
+<para
+>Predogled vsake teme si lahko ogledate tako, da kliknete ikono slike, ki se prikaže, ko miškin kazalec premaknete nad sličico teme. </para>
+
+<para
+>Ko kliknete Globalne Teme, se prikaže pogovorno okno z vprašanjem, katere komponente teme želite uporabiti. Izbirate lahko med različnimi nastavitvami videza in postavitvijo namizja. <screenshot>
+    <screeninfo
+>Posnetek zaslona izbirnika komponente Globalne Teme</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Posnetek zaslona izbirnika komponente Globalne Teme</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Ko izberete, kliknite gumb <guibutton
+>Uporabi</guibutton
+>, da potrdite svojo izbiro. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Namestite Globalne Teme</title>
+
+<para
+>Z gumbom <guilabel
+>Pridobi nove Globalne Teme ...</guilabel
+> lahko namestite nove lobalne teme tretjih ponudnikov. Za dostop do teh tem morate biti povezani v internet. Če kliknete <guibutton
+>Namesti</guibutton
+> v eni od tem v pogovornem oknu, boste namestili izbrano globalno temo in ko zaprete pogovorno okno, bo vaša nova tema takoj na voljo. <screenshot>
+  <screeninfo
+>Pridobite nove Globalne Teme ...</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Pridobite nove Globalne Teme ...</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Če želite odstraniti nameščeno globalno temo, kliknite gumb z ikono koša, ki se prikaže, ko premaknete miškin kazalec nad sličico teme. Upoštevajte, da lahko odstranite le globalne teme, ki ste jih prenesli sami. </para>
+
+<para
+>Če vas zanima ustvarjanje lastne teme, lahko izveste več o različnih komponentah <ulink url="https://develop.kde.org/docs/plasma/"
+>tukaj</ulink
+>. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

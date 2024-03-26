@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2024-03-09 18:28+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -243,6 +243,36 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Skjermtastatur av"
 
+#: osd.cpp:160
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr ""
+
+#: osd.cpp:162
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr ""
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr ""
+
+#: osd.cpp:175
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr ""
+
+#: osd.cpp:178
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr ""
+
 #: panelview.cpp:1027
 #, kde-format
 msgctxt "@action:inmenu"
@@ -308,8 +338,8 @@ msgstr "Gå til oppføring %1 på oppgåvelinja"
 
 #: shellcorona.cpp:292
 #, kde-format
-msgid "Manage Desktops And Panels..."
-msgstr "Handsam skrivebord og panel …"
+msgid "Panel and Desktop Management"
+msgstr ""
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -359,3 +389,6 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Tel panela"
+
+#~ msgid "Manage Desktops And Panels..."
+#~ msgstr "Handsam skrivebord og panel …"

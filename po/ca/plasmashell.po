@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 09:07+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -247,6 +247,36 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "S'ha desactivat el teclat a la pantalla"
 
+#: osd.cpp:160
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr ""
+
+#: osd.cpp:162
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr ""
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr ""
+
+#: osd.cpp:175
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr ""
+
+#: osd.cpp:178
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr ""
+
 #: panelview.cpp:1027
 #, kde-format
 msgctxt "@action:inmenu"
@@ -312,8 +342,8 @@ msgstr "Activa l'entrada %1 del gestor de tasques"
 
 #: shellcorona.cpp:292
 #, kde-format
-msgid "Manage Desktops And Panels..."
-msgstr "Gestiona escriptoris i plafons..."
+msgid "Panel and Desktop Management"
+msgstr ""
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -362,3 +392,6 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
+
+#~ msgid "Manage Desktops And Panels..."
+#~ msgstr "Gestiona escriptoris i plafons..."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2022-03-13 22:09+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -45,8 +45,8 @@ msgstr "Tinggalkan..."
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
-msgstr "Konfigurasi Pengaturan Display…"
+msgid "Display Configuration"
+msgstr ""
 
 #: menu.cpp:285
 #, kde-format
@@ -71,6 +71,10 @@ msgstr "Aksi Wallpaper"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Pemisah]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Konfigurasi Pengaturan Display…"
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Run Command..."

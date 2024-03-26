@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 22:55+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -242,6 +242,36 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Képernyő-billentyűzet deaktiválva"
 
+#: osd.cpp:160
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr ""
+
+#: osd.cpp:162
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr ""
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr ""
+
+#: osd.cpp:175
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr ""
+
+#: osd.cpp:178
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr ""
+
 #: panelview.cpp:1027
 #, kde-format
 msgctxt "@action:inmenu"
@@ -307,8 +337,8 @@ msgstr "A(z) %1. bejegyzés aktiválása"
 
 #: shellcorona.cpp:292
 #, kde-format
-msgid "Manage Desktops And Panels..."
-msgstr "Asztalok és panelek kezelése…"
+msgid "Panel and Desktop Management"
+msgstr ""
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -357,6 +387,9 @@ msgstr "Panelszám"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Megszámolja a paneleket"
+
+#~ msgid "Manage Desktops And Panels..."
+#~ msgstr "Asztalok és panelek kezelése…"
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "

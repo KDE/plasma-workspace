@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Slog Plasme</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Matjaž</firstname
+><surname
+>Jeran</surname
+><affiliation
+><address
+><email
+>matjaz.jeran@amis.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09.04.2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>namizje</keyword>
+<keyword
+>slog</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; prihaja z več slogi. &plasma; slog določa, kako so različne komponente &plasma; prikazane (&eg;; plazmoidi, plošče, gradniki). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Tukaj je posnetek zaslona &plasma; upravljalnik sloga</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Prilagajanje &plasma; stil</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>V tem modulu lahko:</para>
+<itemizedlist>
+  <listitem
+><para
+>namestite in izberite &plasma; stile</para
+></listitem>
+  <listitem
+><para
+>uredi &plasma; stile</para
+></listitem>
+  <listitem
+><para
+>odstranite &plasma; stile</para
+></listitem>
+</itemizedlist>
+
+<para
+>Seznam slogov je mogoče filtrirati z uporabo polja <guilabel
+>Išči...</guilabel
+> nad mrežo. Poleg tega lahko uporabite kombinirano polje poleg tega polja, da prikažete samo teme <guimenuitem
+>Svetle teme</guimenuitem
+>, <guimenuitem
+>Temne teme</guimenuitem
+> ali teme <guimenuitem
+>Združljive z barvno shemo</guimenuitem
+>. </para>
+
+<para
+>Če želite odstraniti slog, uporabite prekrivno ikono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> v spodnjem desnem kotu ikona sloga. Če želite razveljaviti to dejanje, kliknite ikono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Če pritisnete gumb <guibutton
+>Uporabi</guibutton
+>, se slogi, izbrani za odstranitev, dejansko izbrišejo, tako da ne morete razveljaviti posameznih ali vseh izbrisov. </para>
+
+<para
+>Če je v vašem sistemu nameščen paket plasma-sdk, se pojavi gumb, ki lebdi nad predogledom sloga in vam omogoča zagon <application
+>Raziskovalec tem Plasme</application
+>. </para>
+<para
+>Za več tehničnih informacij obiščite <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>to stran</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Pridobite nove sloge plazme ...</guilabel
+></term>
+    <listitem>
+    <para
+>Za uporabo morate biti povezani z internetom. S klikom na ta gumb se prikaže pogovorno okno, kjer lahko izberete nov slog plazme. Če v pogovornem oknu kliknete <guibutton
+>Namesti</guibutton
+>, boste namestili izbrano &plasma; slog in ko <guibutton
+>Zaprete</guibutton
+> namestitveni program, je vaš novi slog takoj na voljo. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Pridobite nove sloge Plasma ...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Pridobite nove sloge Plasma ...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Namesti iz datoteke ...</guilabel
+></term>
+    <listitem>
+      <para
+>Če ste nove sloge prenesli iz interneta, lahko s to možnostjo brskate po lokaciji novo prenesenih slogov. S klikom na ta gumb boste v pogovornem oknu za datoteke pokazali na paket tarball v slogu &plasma;, ki ga imate na disku.</para>
+
+      <para
+>Če kliknete <guibutton
+>Odpri</guibutton
+> v tem pogovornem oknu, boste namestili slog, na katerega ste pokazali, in ga dali na voljo na seznamu slogov. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

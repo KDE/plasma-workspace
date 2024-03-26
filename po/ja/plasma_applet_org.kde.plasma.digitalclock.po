@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-25 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-02-23 12:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -291,12 +291,17 @@ msgstr ""
 "てください。システム全体のタイムゾーンがその他のものに変更されたときのみ表示"
 "されます。"
 
-#: package/contents/ui/configTimeZones.qml:77
+#: package/contents/ui/configTimeZones.qml:57
+#, kde-format
+msgid "Add Time Zones…"
+msgstr "タイムゾーン追加…"
+
+#: package/contents/ui/configTimeZones.qml:88
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "「デジタル時計」は現在このタイムゾーンを使用中"
 
-#: package/contents/ui/configTimeZones.qml:79
+#: package/contents/ui/configTimeZones.qml:90
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -305,27 +310,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "ローカルタイムゾーンの都市と同じであるとき隠す"
 
-#: package/contents/ui/configTimeZones.qml:104
+#: package/contents/ui/configTimeZones.qml:115
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "システム全体のタイムゾーンを切り替え…"
 
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Remove this time zone"
 msgstr "このタイムゾーンを削除"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:137
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "システム全体のタイムゾーン"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:137
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "追加のタイムゾーン"
 
-#: package/contents/ui/configTimeZones.qml:139
+#: package/contents/ui/configTimeZones.qml:150
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -334,17 +339,12 @@ msgstr ""
 "タイムゾーンを一つまたは複数追加すると、すべてがアプレットのポップアップに表"
 "示され、そのうち一つを「デジタル時計」アプレット自体の表示として使用できます"
 
-#: package/contents/ui/configTimeZones.qml:148
-#, kde-format
-msgid "Add Time Zones…"
-msgstr "タイムゾーン追加…"
-
-#: package/contents/ui/configTimeZones.qml:158
+#: package/contents/ui/configTimeZones.qml:162
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "アプレット上でのスクロール操作により、タイムゾーン表示を切り替える"
 
-#: package/contents/ui/configTimeZones.qml:165
+#: package/contents/ui/configTimeZones.qml:169
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -354,12 +354,12 @@ msgstr ""
 "は変わりません。旅行の際は、代わりにシステム全体のタイムゾーンを切り替えてく"
 "ださい。"
 
-#: package/contents/ui/configTimeZones.qml:188
+#: package/contents/ui/configTimeZones.qml:192
 #, kde-format
 msgid "Add More Timezones"
 msgstr "タイムゾーンを追加"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:204
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -368,12 +368,12 @@ msgstr ""
 "少なくとも一つのタイムゾーンを有効にする必要があります。ローカルタイムゾーン"
 "が自動的に有効にされました。"
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:238
+#: package/contents/ui/configTimeZones.qml:242
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

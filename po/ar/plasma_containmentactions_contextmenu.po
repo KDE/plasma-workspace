@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2022-09-11 17:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -44,8 +44,8 @@ msgstr "اترك..."
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
-msgstr "اضبط إعدادات العرض..."
+msgid "Display Configuration"
+msgstr ""
 
 #: menu.cpp:285
 #, kde-format
@@ -70,6 +70,10 @@ msgstr "إجراءات الخلفية"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[فاصل]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Configure Display Settings…"
+#~ msgstr "اضبط إعدادات العرض..."
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Run Command..."

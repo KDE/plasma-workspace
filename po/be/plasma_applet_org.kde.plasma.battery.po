@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -69,14 +69,14 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Батарэя наладжаная на зараджэнне прыблізна да %1%."
 
-#: package/contents/ui/CompactRepresentation.qml:105
+#: package/contents/ui/CompactRepresentation.qml:115
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:142
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Fully Charged"
 msgstr "Поўнасцю зараджана"
@@ -102,70 +102,104 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Няма"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgid "The battery applet has enabled system-wide inhibition"
+msgstr "Аплет батарэі ўключыў агульнасістэмнае стрымліванне"
+
+#: package/contents/ui/main.qml:133
+#, fuzzy, kde-format
+#| msgctxt "Minimize the length of this string as much as possible"
+#| msgid "Manually block sleep and screen locking"
+msgid "Failed to block automatic sleep and screen locking"
+msgstr "Уласнаручнае блакаванне пераходу ў рэжым сну і блакавання экрана"
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgctxt "Minimize the length of this string as much as possible"
+#| msgid "Manually block sleep and screen locking"
+msgid "Failed to unblock automatic sleep and screen locking"
+msgstr "Уласнаручнае блакаванне пераходу ў рэжым сну і блакавання экрана"
+
+#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
+#, kde-format
+msgid "Power Management"
+msgstr "Кіраванне сілкаваннем"
+
+#: package/contents/ui/main.qml:176 package/contents/ui/main.qml:400
+#, kde-format
+msgid "Failed to activate %1 mode"
+msgstr "Не ўдалося актываваць %1 рэжым"
+
+#: package/contents/ui/main.qml:201
 #, fuzzy, kde-format
 #| msgid "has Battery"
 msgid "Power and Battery"
 msgstr "мае батарэю"
 
-#: package/contents/ui/main.qml:117 package/contents/ui/main.qml:286
-#, kde-format
-msgid "Power Management"
-msgstr "Кіраванне сілкаваннем"
-
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Узровень зараду %1%, не зараджаецца"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Узровень зараду %1%, падлучана да крыніцы, але не зараджаецца"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Узровень зараду %1%, зараджаецца"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Узровень зараду %1%"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Блок сілкавання недастаткова магутны, каб зарадзіць батарэю"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Няма даступных батарэй"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 да поўнага зараджэння"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Засталося %1"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "Not charging"
 msgstr "Не зараджаецца"
 
-#: package/contents/ui/main.qml:183
-#, kde-format
-msgid "Automatic sleep and screen locking are disabled"
+#: package/contents/ui/main.qml:267
+#, fuzzy, kde-format
+#| msgid "Automatic sleep and screen locking are disabled"
+msgid ""
+"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgstr "Аўтаматычны пераход у рэжым сну і блакаванне экрана адключаныя"
 
-#: package/contents/ui/main.qml:188
+#: package/contents/ui/main.qml:269
+#, fuzzy, kde-format
+#| msgctxt "Minimize the length of this string as much as possible"
+#| msgid "Manually block sleep and screen locking"
+msgid "Middle-click to disable automatic sleep and screen locking"
+msgstr "Уласнаручнае блакаванне пераходу ў рэжым сну і блакавання экрана"
+
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
@@ -174,12 +208,13 @@ msgstr[1] "%1 праграмы запыталі актывацыю прадук�
 msgstr[2] "%1 праграм запыталі актывацыю прадукцыйнага рэжыму"
 msgstr[3] "%1 праграмы запыталі актывацыю прадукцыйнага рэжыму"
 
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "System is in Performance mode"
+#: package/contents/ui/main.qml:278
+#, fuzzy, kde-format
+#| msgid "System is in Performance mode"
+msgid "System is in Performance mode; scroll to change"
 msgstr "Сістэма працуе ў прадукцыйным рэжыме"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:282
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -188,33 +223,29 @@ msgstr[1] "%1 праграмы запыталі актывацыю энерга�
 msgstr[2] "%1 праграм запыталі актывацыю энергазберагальнага рэжыму"
 msgstr[3] "%1 праграмы запыталі актывацыю энергазберагальнага рэжыму"
 
-#: package/contents/ui/main.qml:200
-#, kde-format
-msgid "System is in Power Save mode"
+#: package/contents/ui/main.qml:286
+#, fuzzy, kde-format
+#| msgid "System is in Power Save mode"
+msgid "System is in Power Save mode; scroll to change"
 msgstr "Сістэма працуе ў энергазберагальным рэжыме"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:289
 #, kde-format
-msgid "The battery applet has enabled system-wide inhibition"
-msgstr "Аплет батарэі ўключыў агульнасістэмнае стрымліванне"
+msgid "System is in Balanced Power mode; scroll to change"
+msgstr ""
 
-#: package/contents/ui/main.qml:299
-#, kde-format
-msgid "Failed to activate %1 mode"
-msgstr "Не ўдалося актываваць %1 рэжым"
-
-#: package/contents/ui/main.qml:311
+#: package/contents/ui/main.qml:412
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Паказаць інфармацыю пра сілкаванне…"
 
-#: package/contents/ui/main.qml:317
+#: package/contents/ui/main.qml:418
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "Паказваць на значку ўзровень зараду батарэі, калі яна зараджаная не поўнасцю"
 
-#: package/contents/ui/main.qml:330
+#: package/contents/ui/main.qml:431
 #, fuzzy, kde-format
 #| msgid "&Configure Energy Saving…"
 msgid "&Configure Power Management…"

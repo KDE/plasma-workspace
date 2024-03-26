@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Samodejni zagon</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Napast</surname
+><affiliation
+><address
+><email
+>jan.napast153@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>05.04.2021</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>samodejni zagon</keyword>
+<keyword
+>namizna datoteka</keyword>
+<keyword
+>skriptna datoteka</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Upravljalnik samodejnega zagona</title>
+
+<para
+>Ta modul je konfiguracijsko orodje za upravljanje programov, ki se zaženejo z vašo osebno &plasma;. Omogoča dodajanje programov ali skriptov, tako da se samodejno zaženejo med zagonom ali zaustavitvijo vašega &plasma; sejo in jih upravljati.</para>
+
+<note
+><para
+>Upoštevajte, da so v tem modulu vse spremembe uporabljene takoj.</para
+></note>
+
+<para
+>Program pregleda <filename
+>$HOME/.config/autostart/</filename
+> za aplikacije in skripte za prijavo, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> za pred- zagonske skripte in <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> za skripte za odjavo, da preverite, kateri programi in skripti so že tam, in jih prikaže. Omogoča vam enostavno upravljanje z njimi. </para>
+
+<para
+>Prijavni skripti so datoteke <filename class="extension"
+>.desktop</filename
+> s ključem <literal
+>X-KDE-AutostartScript=true</literal
+>. Skripti pred zagonom se zaženejo prej in jih je mogoče uporabiti za nastavitev spremenljivk okolja. </para>
+
+<note
+><para
+>Upoštevajte, da lahko spremenite lokacijo svoje mape <filename class="directory"
+>Autostart</filename
+> v <menuchoice
+><guimenu
+>Aplikacije</guimenu
+> <guimenuitem
+>Lokacije</guimenuitem
+></menuchoice
+> v <guilabel
+>Personalizacija</guilabel
+> kategorija &systemsettings; in nastavite drugo mapo kot <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Preberite tudi <ulink url="help:/kcontrol/kcmsmserver"
+>Sejo namizja</ulink
+> in <ulink url="help:/kcontrol/kded"
+>Storitve v ozadju</ulink
+> za informacije, kako konfigurirati zagonsko vedenje vaše &plasma; sejo.</para>
+
+<para
+>Nekateri &kde; aplikacije same obravnavajo vedenje samodejnega zagona, &npr; samodejni zagon aplikacije lahko omogočite ali onemogočite v pogovornem oknu z nastavitvami (&kalarm;) ali pa morate uporabiti <menuchoice
+><guimenu
+>Datoteka</guimenu
+><guimenuitem
+>Zapri</guimenuitem
+></menuchoice
+> (&konversation;, &kopete;), drugače se aplikacija še vedno izvaja v sistemski vrstici in se bo znova zagnala ob naslednji prijavi. </para>
+
+<sect2 id="migration">
+<title
+>Selitev iz &kde; Delovni prostori 4</title>
+<para
+>Za selitev vaše osebne nastavitve samodejnega zagona iz &kde; Delovni prostori 4:</para>
+<simplelist>
+<member
+>Kopirajte datoteke namizja iz <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> v <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Kopirajte datoteke predzagonskega skripta iz <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> v <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Kopirajte datoteke s skripti za zaustavitev iz <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> v <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>Onemogočanje datotek za samodejni zagon, ki jih ponuja vaša distribucija</title>
+<para
+>Pravilen način za onemogočanje elementa samodejnega zagona, na primer programčka tiskalnika, če tiskalnik uporabljate občasno, je kopiranje njegove datoteke <filename class="extension"
+>.desktop</filename
+> v osebno mapo za samodejni zagon. Karkoli z istim imenom v <filename class="directory"
+>$HOME/.config/autostart</filename
+> preglasi datoteko <filename class="extension"
+>.desktop</filename
+> v privzetem paketu. Kopirani datoteki <filename class="extension"
+>.desktop</filename
+> dodajte naslednjo vrstico:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>Prikaz datotek</title>
+<para
+>Glavni del modula prikazuje programe, ki se naložijo ob zagonu programa &plasma;, in skripte, ki se zaženejo ob zagonu ali izklopu programa &plasma;.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Ikona</guilabel
+></term>
+<listitem>
+<para
+>V tem stolpcu je prikazana ikona programa ali skripte, ki jo želite zagnati z &plasma;. Ikona se iz datoteke namizja pridobi iz ključa Ikona za program in je privzeta ikona za skripto. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ime</guilabel
+></term>
+<listitem>
+<para
+>Ta stolpec prikazuje ime programa ali skripte, ki ga želite zagnati s &plasma;. Ime se iz datoteke <filename class="extension"
+>.desktop</filename
+> iz ključa <literal
+>Ime</literal
+> za program in je ime datoteke za skripto. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Lastnosti</guilabel
+></term>
+<listitem>
+<para
+>Ta gumb je prikazan le, ko na predmet premaknete miškin kazalec. Gumb (omogočen le za programe in skripte za prijavo &ie; datoteke <filename class="extension"
+>.desktop</filename
+>) omogoča spreminjanje lastnosti programa ali skripta. Imate splošne lastnosti, lastnosti dovoljenj, predogled, kadar je na voljo, in lastnosti, povezane z aplikacijo ali prijavnim skriptom. Privzeti ukaz je ekstrahiran iz datoteke <filename class="extension"
+>.desktop</filename
+> iz ključa <literal
+>Exec</literal
+>. </para>
+<para
+>Pri skripti za odjavo je ukaz pot do skripta in ga ni mogoče spreminjati. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Odstrani</guilabel
+></term>
+<listitem>
+<para
+>Ta gumb je prikazan le, ko na predmet premaknete miškin kazalec. Če pritisnete gumb <guibutton
+>&minus;</guibutton
+>, boste takoj odstranili datoteko namizja za program ali skript ali simbolično povezavo v mapi <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Dejanja</title>
+<para
+>Na dnu imate kombiniran gumb <guibutton
+>Dodaj...</guibutton
+> za izbiro vrste predmeta, ki ga želite dodati. Dodate lahko programe in skripte za prijavo ali odjavo. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>Dodaj program</guimenuitem
+></term>
+<listitem>
+<para
+>S klikom na ta element se prikaže standardni &plasma; Pogovorno okno <guilabel
+>Izberi aplikacijo</guilabel
+> in omogoča izbiro programa, ki ga želite zagnati. Ko izberete program, kliknete <guibutton
+>V redu</guibutton
+> in prikažete lastnosti tega programa. </para>
+<para
+>S tem boste datoteko programa <filename class="extension"
+>.desktop</filename
+> kopirali v mapo <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>Dodaj prijavni skript ...</guimenuitem
+></term>
+<listitem>
+<para
+>Ta element odpre pogovorno okno, ki vas vpraša za lokacijo skripta, ki ga želite dodati. Skripti, nastavljeni za izvajanje ob prijavi, bodo imeli ustrezno datoteko <filename class="extension"
+>.desktop</filename
+>, ustvarjeno v vaši mapi <filename class="directory"
+>Autostart</filename
+> in se bodo izvajali med zagonom Plasma. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>Dodaj odjavni skript ...</guimenuitem
+></term>
+<listitem>
+<para
+>Ta element odpre pogovorno okno, ki vas vpraša za lokacijo skripta, ki ga želite dodati. Skripti, nastavljeni za zagon ob odjavi, so kopirani ali povezani s simboli v imeniku <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> in se bodo samodejno izvajali med &plasma; zaustavitev, ko se uporabnik odjavi. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-04-10 19:51+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -44,8 +44,8 @@ msgstr "Pleacă…"
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Configure Display Settings…"
-msgstr "Configurare parametri ecran…"
+msgid "Display Configuration"
+msgstr ""
 
 #: menu.cpp:285
 #, kde-format
@@ -70,6 +70,10 @@ msgstr "Acțiuni fundal"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Separator]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Configurare parametri ecran…"
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Run Command..."
