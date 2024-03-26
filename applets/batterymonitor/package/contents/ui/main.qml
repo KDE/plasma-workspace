@@ -264,7 +264,7 @@ PlasmoidItem {
         } // otherwise, don't add anything
 
         if (powermanagementDisabled) {
-            parts.push(i18n("Automatic sleep and screen locking are disabled; middle-clik to re-enable"));
+            parts.push(i18n("Automatic sleep and screen locking are disabled; middle-click to re-enable"));
         } else {
             parts.push(i18n("Middle-click to disable automatic sleep and screen locking"));
         }
