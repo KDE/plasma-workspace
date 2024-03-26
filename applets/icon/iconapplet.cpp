@@ -346,6 +346,9 @@ QList<QAction *> IconApplet::extraActions()
                 m_fileItemActions->insertOpenWithActionsTo(nullptr, m_openWithMenu.get(), QStringList());
 
                 m_openWithActions = m_openWithMenu->actions();
+                for (QAction *action : std::as_const(m_openWithActions)) {
+                    action->setParent(this);
+                }
             }
 
             if (!m_openContainingFolderAction) {
