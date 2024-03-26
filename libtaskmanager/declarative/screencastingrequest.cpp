@@ -33,6 +33,11 @@ quint32 ScreencastingRequest::nodeId() const
     return d->m_nodeId;
 }
 
+void ScreencastingRequest::resetUuid()
+{
+    setUuid(QString());
+}
+
 void ScreencastingRequest::setUuid(const QString &uuid)
 {
     if (d->m_uuid == uuid) {
@@ -53,6 +58,11 @@ void ScreencastingRequest::setUuid(const QString &uuid)
         }
         adopt(stream);
     }
+}
+
+void ScreencastingRequest::resetOutputName()
+{
+    setOutputName(QString());
 }
 
 void ScreencastingRequest::setOutputName(const QString &outputName)

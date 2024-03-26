@@ -30,12 +30,12 @@ class ScreencastingRequest : public QObject
      * @see PlasmaWindowModel::Uuid
      * @see TasksModel::WinIdList
      */
-    Q_PROPERTY(QString uuid READ uuid WRITE setUuid NOTIFY uuidChanged)
+    Q_PROPERTY(QString uuid READ uuid WRITE setUuid RESET resetUuid NOTIFY uuidChanged)
 
     /**
      * The output name as define in Screen.name
      */
-    Q_PROPERTY(QString outputName READ outputName WRITE setOutputName NOTIFY outputNameChanged)
+    Q_PROPERTY(QString outputName READ outputName WRITE setOutputName RESET resetOutputName NOTIFY outputNameChanged)
 
     /** The offered nodeId to give to a source */
     Q_PROPERTY(quint32 nodeId READ nodeId NOTIFY nodeIdChanged)
@@ -43,10 +43,14 @@ public:
     ScreencastingRequest(QObject *parent = nullptr);
     ~ScreencastingRequest();
 
+    void resetUuid();
     void setUuid(const QString &uuid);
     QString uuid() const;
+
+    void resetOutputName();
     void setOutputName(const QString &outputName);
     QString outputName() const;
+
     quint32 nodeId() const;
 
 Q_SIGNALS:
