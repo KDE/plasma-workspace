@@ -228,7 +228,11 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
         m_fakeScreens.remove(screen);
     }
 
-    Q_ASSERT(!m_availableScreens.contains(screen));
+    Q_ASSERT_X(!m_availableScreens.contains(screen), Q_FUNC_INFO, qUtf8Printable(std::invoke([this, screen]() {
+        QString message;
+        QDebug(&message) << this << "Current screen:" << screen;
+        return message;
+    })));
 }
 
 void ScreenPool::handleScreenRemoved(QScreen *screen)
@@ -262,10 +266,11 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         qCCritical(SCREENPOOL, "Something wrong happened on Wayland.");
         Q_UNREACHABLE();
 #endif
-        Q_ASSERT_X(m_availableScreens.contains(screen),
-                   Q_FUNC_INFO,
-                   qUtf8Printable(QStringLiteral("Screen name: %1 Geometry: %2 x %3")
-                                      .arg(screen->name(), QString::number(screen->geometry().width()), QString::number(screen->geometry().height()))));
+        Q_ASSERT_X(m_availableScreens.contains(screen), Q_FUNC_INFO, qUtf8Printable(std::invoke([this, screen]() {
+                       QString message;
+                       QDebug(&message) << this << "Current screen:" << screen;
+                       return message;
+                   })));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
         m_availableScreens.removeAll(screen);
@@ -347,22 +352,33 @@ void ScreenPool::screenInvariants()
     if (m_outputOrderWatcher->outputOrder().isEmpty()) {
         return;
     }
+
+    [[maybe_unused]] auto debugMessage = [this] {
+        QString message;
+        QDebug(&message) << this;
+        return message;
+    };
+
     // Is the primary connector in sync with the actual primaryScreen? The only way it can get out of sync with primaryConnector() is the single fake screen/no
     // real outputs scenario
-    Q_ASSERT(noRealOutputsConnected() || !m_availableScreens.isEmpty());
+    Q_ASSERT_X(noRealOutputsConnected() || !m_availableScreens.isEmpty(),
+               Q_FUNC_INFO,
+               qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/6007/
     // Is the primary screen available? TODO: it can be redundant
     // Q_ASSERT(m_availableScreens.contains(primaryScreen()));
 
     // QScreen bookeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
-    qCDebug(SCREENPOOL) << "Checking screens: available:" << m_availableScreens << "redundant:" << m_redundantScreens << "fake:" << m_fakeScreens
-                        << "all:" << allScreens;
-    Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count()) == m_outputOrderWatcher->outputOrder().count());
-    Q_ASSERT(allScreens.count() == m_sizeSortedScreens.count());
+    Q_ASSERT_X((m_availableScreens.count() + m_redundantScreens.count()) == m_outputOrderWatcher->outputOrder().count(),
+               Q_FUNC_INFO,
+               qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/5249/
+    Q_ASSERT_X(allScreens.count() == m_sizeSortedScreens.count(),
+               Q_FUNC_INFO,
+               qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/6337/
 
     // At most one fake output
-    Q_ASSERT(m_fakeScreens.count() <= 1);
+    Q_ASSERT_X(m_fakeScreens.count() <= 1, Q_FUNC_INFO, qUtf8Printable(debugMessage()));
     for (QScreen *screen : allScreens) {
         // ignore screens filtered out by the output order
         if (!m_outputOrderWatcher->outputOrder().contains(screen->name())) {
