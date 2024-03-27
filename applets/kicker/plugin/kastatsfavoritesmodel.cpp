@@ -35,6 +35,7 @@ namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
 using namespace KAStats::Terms;
+using namespace Qt::StringLiterals;
 
 #define AGENT_APPLICATIONS QStringLiteral("org.kde.plasma.favorites.applications")
 #define AGENT_DOCUMENTS QStringLiteral("org.kde.plasma.favorites.documents")
@@ -591,22 +592,30 @@ bool KAStatsFavoritesModel::isFavorite(const QString &id) const
     return d && d->m_itemEntries.contains(id);
 }
 
-#if BUILD_TESTING
 void KAStatsFavoritesModel::portOldFavorites(const QStringList &_ids)
-#else
-void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
-#endif
 {
     if (!d)
         return;
 
+    KConfig config(u"kicker-extra-favoritesrc"_s);
+    auto group = config.group(u"General"_s);
+    auto prepend = group.readXdgListEntry("Prepend", QStringList());
+    auto append = group.readXdgListEntry("Append", QStringList());
+    auto ignoreDefaults = group.readEntry("IgnoreDefaults", false);
+
 #if BUILD_TESTING
-    const QStringList ids = qEnvironmentVariableIsSet("KDECI_BUILD") ? QStringList{
-        QLatin1String("org.kde.plasma.emojier.desktop"),
-        QLatin1String("linguist5.desktop"),
-        QLatin1String("org.qt.linguist6.desktop"),
-    } : _ids;
+    if (qEnvironmentVariableIsSet("KDECI_BUILD")) {
+        prepend = QStringList{
+            QLatin1String("org.kde.plasma.emojier.desktop"),
+            QLatin1String("linguist5.desktop"),
+            QLatin1String("org.qt.linguist6.desktop"),
+        };
+        ignoreDefaults = true;
+        append.clear();
+    }
 #endif
+
+    const auto ids = prepend + (ignoreDefaults ? QStringList() : _ids) + append;
 
     qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
 
