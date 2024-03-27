@@ -288,7 +288,10 @@ DBusMenuImporter::~DBusMenuImporter()
     // Do not use "delete d->m_menu": even if we are being deleted we should
     // leave enough time for the menu to finish what it was doing, for example
     // if it was being displayed.
-    d->m_menu->deleteLater();
+    if (d->m_menu) {
+        // If StatusNotifierItemSource is gone before PlasmaDBusMenuImporter::menuUpdated, there is no menu
+        d->m_menu->deleteLater();
+    }
     delete d;
 }
 
