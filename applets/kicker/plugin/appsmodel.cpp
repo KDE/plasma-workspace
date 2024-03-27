@@ -497,7 +497,7 @@ void AppsModel::refreshInternal()
         return;
     }
 
-    if (m_entryList.count()) {
+    if (!m_entryList.empty()) {
         qDeleteAll(m_entryList);
         m_entryList.clear();
         Q_EMIT cleared();
