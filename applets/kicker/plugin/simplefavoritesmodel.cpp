@@ -12,6 +12,7 @@
 
 #include <KLocalizedString>
 #include <KStringHandler>
+#include <KSycoca>
 
 SimpleFavoritesModel::SimpleFavoritesModel(QObject *parent)
     : AbstractModel(parent)
@@ -19,6 +20,7 @@ SimpleFavoritesModel::SimpleFavoritesModel(QObject *parent)
     , m_maxFavorites(-1)
     , m_dropPlaceholderIndex(-1)
 {
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &SimpleFavoritesModel::refresh, Qt::QueuedConnection);
 }
 
 SimpleFavoritesModel::~SimpleFavoritesModel()

@@ -24,7 +24,6 @@
 #include <KNotificationJobUiDelegate>
 #include <KSharedConfig>
 #include <KShell>
-#include <KSycoca>
 #include <KWindowSystem>
 #include <PlasmaActivities/ResourceInstance>
 
@@ -142,10 +141,6 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
     if (!m_service) {
         m_service = new KService(QString());
     }
-
-    m_con = QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, owner, [this]() {
-        reload();
-    });
 
     if (m_service->isValid()) {
         init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
@@ -376,9 +371,6 @@ KService::Ptr AppEntry::defaultAppByName(const QString &name)
 
 AppEntry::~AppEntry()
 {
-    if (m_con) {
-        QObject::disconnect(m_con);
-    }
 }
 
 AppGroupEntry::AppGroupEntry(AppsModel *parentModel,
