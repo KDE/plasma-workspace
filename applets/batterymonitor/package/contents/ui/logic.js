@@ -13,12 +13,13 @@ function stringForBatteryState(batteryData, source) {
         // and this is considered correct behavior, so we have to handle
         // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
         if (typeof source.data["Battery"]["Charge Stop Threshold"] === "number"
-            && (source.data.Battery.Percent >= source.data["Battery"]["Charge Stop Threshold"] - 1
-            && source.data.Battery.Percent <= source.data["Battery"]["Charge Stop Threshold"] + 1)
+            && (batteryData.Percent >= source.data["Battery"]["Charge Stop Threshold"] - 1
+            && batteryData.Percent <= source.data["Battery"]["Charge Stop Threshold"] + 1)
             // Also, Upower may give us a status of "Not charging" rather than
             // "Fully charged", so we need to account for that as well. See
             // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
-            && (source.data["Battery"]["State"] === "NoCharge" || source.data["Battery"]["State"] === "FullyCharged")
+            && (batteryData.State === "NoCharge" || batteryData.State === "FullyCharged")
+            && batteryData["Is Power Supply"]
         ) {
             return i18n("Fully Charged");
         }
