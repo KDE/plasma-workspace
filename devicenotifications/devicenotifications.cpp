@@ -268,10 +268,13 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
 
     // By the time we receive the "removed" signal, the device's properties
     // are already discarded, so we need to remember whether it is removable
-    // here, so we know that when the device is removed.
+    // here, so we know that when the device is removed, likewise remember its name.
     m_removableDevices.append(device.sysfsPath());
 
     const QString displayName = device.displayName();
+    if (!displayName.isEmpty()) {
+        m_displayNames.insert(device.sysfsPath(), displayName);
+    }
     const QString text = !displayName.isEmpty() ? i18n("%1 has been plugged in.", displayName.toHtmlEscaped()) : i18n("A USB device has been plugged in.");
 
     KNotification::event(QStringLiteral("deviceAdded"),
@@ -287,11 +290,12 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
         return;
     }
 
+    const QString displayName = m_displayNames.take(device.sysfsPath());
+
     if (!m_removableDevices.removeOne(device.sysfsPath()) && !device.isRemovable()) {
         return;
     }
 
-    const QString displayName = m_displayNames.take(device.sysfsPath());
     const QString text = !displayName.isEmpty() ? i18n("%1 has been unplugged.", displayName.toHtmlEscaped()) : i18n("A USB device has been unplugged.");
 
     KNotification::event(QStringLiteral("deviceRemoved"),
