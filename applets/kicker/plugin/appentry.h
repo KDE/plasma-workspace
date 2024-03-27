@@ -69,7 +69,6 @@ private:
     mutable QString m_icon;
     KService::Ptr m_service;
     static MenuEntryEditor *m_menuEntryEditor;
-    QMetaObject::Connection m_con;
 };
 
 class AppGroupEntry : public AbstractGroupEntry
