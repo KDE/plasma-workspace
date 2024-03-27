@@ -143,9 +143,16 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
         m_service = new KService(QString());
     }
 
-    m_con = QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, owner, [this]() {
-        reload();
-    });
+    // This connection is queued because it may itself again trigger an implicit refresh of the database and crash
+    // in an undefined state.
+    m_con = QObject::connect(
+        KSycoca::self(),
+        &KSycoca::databaseChanged,
+        owner,
+        [this]() {
+            reload();
+        },
+        Qt::QueuedConnection);
 
     if (m_service->isValid()) {
         init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());

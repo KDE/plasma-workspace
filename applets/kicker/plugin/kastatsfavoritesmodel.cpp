@@ -183,20 +183,27 @@ public:
         connect(&m_watcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
             removeResult(resource);
         });
-        connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
-            QStringList keys;
-            for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend(); it++) {
-                it.value()->reload();
-                if (it.value() && !it.value()->isValid()) {
-                    keys << it.key();
+        // This connection is queued because it may itself again trigger an implicit refresh of the database and crash
+        // in an undefined state.
+        connect(
+            KSycoca::self(),
+            &KSycoca::databaseChanged,
+            this,
+            [this]() {
+                QStringList keys;
+                for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend(); it++) {
+                    it.value()->reload();
+                    if (it.value() && !it.value()->isValid()) {
+                        keys << it.key();
+                    }
                 }
-            }
-            if (!keys.isEmpty()) {
-                for (const QString &key : keys) {
-                    removeResult(key);
+                if (!keys.isEmpty()) {
+                    for (const QString &key : keys) {
+                        removeResult(key);
+                    }
                 }
-            }
-        });
+            },
+            Qt::QueuedConnection);
 
         // Loading the items order
         const auto cfg = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-statsrc"));
