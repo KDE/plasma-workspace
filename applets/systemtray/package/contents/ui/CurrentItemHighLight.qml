@@ -137,7 +137,7 @@ KSvg.FrameSvgItem {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: Kirigami.Units.longDuration
+            duration: Kirigami.Units.shortDuration
             easing.type: systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
         }
     }
