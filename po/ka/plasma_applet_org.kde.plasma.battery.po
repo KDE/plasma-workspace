@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-03-26 05:58+0100\n"
+"PO-Revision-Date: 2024-03-27 05:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -177,13 +177,12 @@ msgid "Not charging"
 msgstr "არ იტენება"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid ""
-#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""
-"ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია. შუა წკაპი ჩასართავად"
+"ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია. შუა წკაპი თავიდან "
+"ჩასართავად"
 
 #: package/contents/ui/main.qml:269
 #, kde-format

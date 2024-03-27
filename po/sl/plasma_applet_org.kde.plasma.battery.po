@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-03-26 07:15+0100\n"
+"PO-Revision-Date: 2024-03-27 06:43+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -186,9 +186,7 @@ msgid "Not charging"
 msgstr "Se ne polni"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid ""
-#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""

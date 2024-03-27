@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-02 22:38+0100\n"
+"PO-Revision-Date: 2024-03-27 09:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -247,31 +247,31 @@ msgstr "Surekrana klavaro malaktivigita"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Dormo kaj Ekranŝlosado Blokitaj"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Dormo kaj Ekranŝlosado Malblokitaj"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Energi-Ŝpara Reĝimo"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Energi-Ekvilibra Reĝimo"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Komput-Efikeca Reĝimo"
 
 #: panelview.cpp:1027
 #, kde-format
@@ -339,7 +339,7 @@ msgstr "Aktivigi Task-Administran Eniron %1"
 #: shellcorona.cpp:292
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Panela kaj Labortabla Administrado"
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -388,6 +388,3 @@ msgstr "Panelo-kalkulo"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Nombras la panelojn"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "Administri labortablojn kaj panelojn..."
