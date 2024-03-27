@@ -4,7 +4,7 @@
 #
 # Santiago Fernández Sancho <santi@kde-es.org>, 2007.
 # Jaime Robles <jaime@kde.org>, 2007, 2008.
-# SPDX-FileCopyrightText: 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 02:21+0000\n"
-"PO-Revision-Date: 2023-11-22 03:00+0100\n"
+"PO-Revision-Date: 2024-03-26 19:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -20,14 +20,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:166
 #, kde-format
@@ -35,8 +35,8 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"El estado de salud de esta batería es de solo un %1% y necesita sustitución. "
-"Póngase en contacto con el fabricante."
+"El estado de salud de esta batería es de solo un %1 % y necesita "
+"sustitución. Póngase en contacto con el fabricante."
 
 #: package/contents/ui/BatteryItem.qml:185
 #, kde-format
@@ -63,18 +63,18 @@ msgstr "Estado de salud de la batería:"
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:223
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr "La batería está configurada para cargar hasta aproximadamente el %1%."
+msgstr "La batería está configurada para cargar hasta aproximadamente el %1 %."
 
 #: package/contents/ui/CompactRepresentation.qml:105
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
 #: package/contents/ui/main.qml:142
@@ -116,22 +116,22 @@ msgstr "Gestión de energía"
 #: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Batería al %1%, no está cargando"
+msgstr "Batería al %1 %, no está cargando"
 
 #: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Batería al %1%, conectada, aunque sigue descargándose"
+msgstr "Batería al %1 %, conectada, aunque sigue descargándose"
 
 #: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Batería al %1%, cargando"
+msgstr "Batería al %1 %, cargando"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Batería al %1%"
+msgstr "Batería al %1 %"
 
 #: package/contents/ui/main.qml:164
 #, kde-format

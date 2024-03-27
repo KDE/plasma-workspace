@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 02:28+0000\n"
-"PO-Revision-Date: 2024-03-13 20:25+0300\n"
+"PO-Revision-Date: 2024-03-26 14:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -245,7 +245,7 @@ msgstr "Ekran Klavyesi Kapalı"
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr "%1 Üzerindeki Dahili Ekran"
+msgstr "%1 Üzerindeki İç Ekran"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "%3 Üzerindeki %1 %2"
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr "%1 Ekranı Bağlantısı Kesildi"
+msgstr "%1. Ekran Bağlantısı Kesildi"
 
 #: shellcorona.cpp:204 shellcorona.cpp:206
 #, kde-format
