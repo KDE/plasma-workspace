@@ -175,7 +175,7 @@ void ShellCorona::init()
 
 #ifndef NDEBUG
     m_invariantsTimer.setSingleShot(true);
-    m_invariantsTimer.setInterval(qEnvironmentVariableIsSet("KDECI_BUILD") > 0 ? 30000ms : 250ms);
+    m_invariantsTimer.setInterval(qEnvironmentVariableIsSet("KDECI_BUILD") > 0 ? 30000ms : 1s);
     connect(&m_invariantsTimer, &QTimer::timeout, this, &ShellCorona::screenInvariants);
 #endif
 
