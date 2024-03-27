@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2012-07-04 09:13+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -196,7 +196,7 @@ msgstr "%1% (កំពុង​បញ្ចូល)"
 #: package/contents/ui/main.qml:267
 #, kde-format
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""
 
 #: package/contents/ui/main.qml:269

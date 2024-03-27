@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2024-02-13 16:59+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -183,7 +183,7 @@ msgstr "Non cargante"
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "Somno automatic e bloco de schermo es dishabilitate"
 
 #: package/contents/ui/main.qml:269

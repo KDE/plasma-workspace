@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-03-13 16:36+0100\n"
-"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 07:15+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -113,18 +113,14 @@ msgstr ""
 "energijo"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Ročno preprečuj spanje in zaklepanje zaslona"
+msgstr "Blokiranje samodejnega spanja in zaklepanja zaslona ni uspelo"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Ročno preprečuj spanje in zaklepanje zaslona"
+msgstr "Odblokiranje samodejnega spanja in zaklepanja zaslona ni uspelo"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -191,17 +187,18 @@ msgstr "Se ne polni"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "Samodejno spanje in zaklepanje zaslona sta onemogočena"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"Samodejno spanje in zaklepanje zaslona sta onemogočena; srednji klik za "
+"ponovno omogočenje"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Ročno preprečuj spanje in zaklepanje zaslona"
+msgstr "Srednji klik onemogoči samodejno spanje in zaklepanje zaslona"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -213,10 +210,9 @@ msgstr[2] "%1 programa sta zahtevala vklop načina zmogljivosti"
 msgstr[3] "%1 programi so zahtevali vklop načina zmogljivosti"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Sistem je v načinu zmogljivosti"
+msgstr "Sistem je v načinu zmogljivosti; pomaknite za spremembo"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -228,15 +224,14 @@ msgstr[2] "%1 programa sta zahtevala vklop načina varčevanja z energijo"
 msgstr[3] "%1 programi so zahtevali vklop načina varčevanja z energijo"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Sistem je v načinu varčevanja z energijo"
+msgstr "Sistem je v načinu varčevanja z energijo; pomaknite za spremembo"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Sistem je v načinu uravnotežene moči; pomaknite za spremembo"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2023-02-17 12:33+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -182,7 +182,7 @@ msgstr "Não está em carga"
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "A suspensão automática e o bloqueio do ecrã estão desactivados"
 
 #: package/contents/ui/main.qml:269

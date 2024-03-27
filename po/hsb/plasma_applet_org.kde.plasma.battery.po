@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2008-11-13 00:41+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -191,7 +191,7 @@ msgstr "<b>Aku:</b> %1% (so wužiwa)<br />"
 #: package/contents/ui/main.qml:267
 #, kde-format
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""
 
 #: package/contents/ui/main.qml:269

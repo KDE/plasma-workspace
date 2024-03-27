@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2009-01-28 15:25+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -200,7 +200,7 @@ msgstr "<b>बैटरी:</b> %1% (डिस्चार्ज होवत �
 #: package/contents/ui/main.qml:267
 #, kde-format
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""
 
 #: package/contents/ui/main.qml:269

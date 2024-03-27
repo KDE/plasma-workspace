@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 09:28+0200\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 17:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -106,18 +106,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Аплетом акумулятора було увімкнено загальносистемний стан блокування"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Блокування вручну присипляння і блокування екрана"
+msgstr "Не вдалося заблокувати автоматичне присипляння і блокування екрана"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Блокування вручну присипляння і блокування екрана"
+msgstr "Не вдалося розблокувати автоматичне присипляння і блокування екрана"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -185,17 +181,20 @@ msgstr "Не заряджається"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "Автоматичне присипляння та блокування екрана вимкнено"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"Автоматичне присипляння та блокування екрана вимкнено; клацніть середньою "
+"кнопкою миші, щоб увімкнути знову"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Блокування вручну присипляння і блокування екрана"
+msgstr ""
+"Клацніть середньою кнопкою миші, щоб вимкнути автоматичне присипляння і "
+"блокування екрана"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -211,10 +210,9 @@ msgstr[3] ""
 "Програмою надіслано запит щодо активації режиму підвищеної швидкодії"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Система перебуває у режимі швидкодії"
+msgstr "Система перебуває у режимі швидкодії; гортайте далі, щоб змінити режим"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -229,15 +227,18 @@ msgstr[2] ""
 msgstr[3] "Програмою надіслано запит щодо активації режиму енергозаощадження"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Система перебуває у режимі енергозаощадження"
+msgstr ""
+"Система перебуває у режимі заощадження енергії; гортайте далі, щоб змінити "
+"режим"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"Система перебуває у режимі збалансованого споживання енергії; гортайте далі, "
+"щоб змінити режим"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

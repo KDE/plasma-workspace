@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2024-03-21 09:47+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -54,44 +54,44 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Brightness and Color"
 msgstr "Brileco kaj Koloro"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "Ekranbrileco ĉe %1%"
 
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "Klavara brileco ĉe %1%"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "Noktolumo for"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "Noktolumo ĉe %1K"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Rulumu por alĝustigi ekranbrilecon"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Mezklaku por baskuligi Noktolumon"
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"

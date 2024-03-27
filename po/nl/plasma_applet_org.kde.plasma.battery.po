@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 14:52+0100\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 11:22+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -103,18 +103,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "De batterij-applet heeft systeembreed slapen ingeschakeld"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Blokkeer handmatig slapen en scherm vergrendelen"
+msgstr "Automatisch slapen en scherm vergrendelen blokkeren is mislukt"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Blokkeer handmatig slapen en scherm vergrendelen"
+msgstr "Automatisch slapen en scherm vergrendelen deblokkeren is mislukt"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -181,17 +177,19 @@ msgstr "Niet bezig met laden"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "Automatisch slapen en vergrendelen van scherm zijn uitgeschakeld"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"Automatisch slapen en vergrendelen van scherm zijn uitgeschakeld; opnieuw "
+"inschakelen met midden-klik"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Blokkeer handmatig slapen en scherm vergrendelen"
+msgstr ""
+"Midden-klik om automatisch slapen en vergrendelen van scherm uit te schakelen"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -201,10 +199,9 @@ msgstr[0] "Een toepassing heeft activering gevraagd van modus Prestatie"
 msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Prestatie"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Systeem is in modus prestatie"
+msgstr "Systeem is in modus prestatie; schuif om te wijzigen"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -214,15 +211,14 @@ msgstr[0] "Een toepassing heeft activering gevraagd van modus Energie sparen"
 msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Energie sparen"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Systeem is in modus energie besparen"
+msgstr "Systeem is in modus energie besparen; schuif om te wijzigen"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Systeem is in modus gebalanceerde energie; schuif om te wijzigen"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

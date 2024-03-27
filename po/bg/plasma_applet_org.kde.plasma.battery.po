@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-10 20:47+0100\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 23:15+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -106,18 +106,14 @@ msgstr ""
 "Аплетът на батерията е активирал системно намаление на производителността"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Ръчно блокиране на приспиване и заключване на екрана"
+msgstr "Неуспешно блокиране на приспиване и заключване на екрана"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Ръчно блокиране на приспиване и заключване на екрана"
+msgstr "Неуспешно отблокиране на приспиване и заключване на екрана"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -184,17 +180,20 @@ msgstr "Не се зарежда"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "Автоматичното приспиване и заключване на екрана са деактивирани"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"Автоматичното приспиване и заключване на екрана са деактивирани, натиснете "
+"среден бутон на мишката за активиране"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Ръчно блокиране на приспиване и заключване на екрана"
+msgstr ""
+"Среден бутон на мишката за деактивиране на автоматичното приспиване и "
+"заключване на екрана"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -206,10 +205,11 @@ msgstr[1] ""
 "%1 приложения дадоха заявка за активиране на режим на висока производителност"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Системата е в режим на висока производителност"
+msgstr ""
+"Системата е в режим на повишена производителност, превъртете списъка за "
+"промяна"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -221,15 +221,17 @@ msgstr[1] ""
 "%1 приложения дадоха заявка за активиране на режим пестене на енергия"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Системата е в режим на пестене на енергия"
+msgstr ""
+"Системата е в режим на пестене на енергия, превъртете списъка за промяна"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"Системата е в балансиран режим за пестене на енергия, превъртете списъка за "
+"промяна"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

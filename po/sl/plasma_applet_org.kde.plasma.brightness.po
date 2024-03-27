@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2024-03-20 05:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -51,44 +51,44 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Brightness and Color"
 msgstr "Svetlost in barva"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "Svetlost zaslona ob %1%"
 
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "Svetlost tipkovnice ob %1%"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "Nočna svetloba izklopljena"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "Nočna svetloba pri %1K"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Pomaknite, da prilagodite svetlost zaslona"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "S srednjim klikom preklopite nočno svetlobo"
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"

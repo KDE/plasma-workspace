@@ -72,7 +72,3 @@ msgstr "Handlingar for bakgrunnsbilete"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Skilje]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Configure Display Settings…"
-#~ msgstr "Set opp skjerm …"

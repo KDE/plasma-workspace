@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 12:20+0100\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 10:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -109,18 +109,17 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "La miniaplicació de bateria ha activat la inhibició global del sistema"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Bloca manualment la suspensió i el bloqueig de pantalla"
+msgstr ""
+"No s'ha pogut bloquejar automàticament la suspensió i el bloqueig de pantalla"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Bloca manualment la suspensió i el bloqueig de pantalla"
+msgstr ""
+"No s'ha pogut desbloquejar automàticament la suspensió i el bloqueig de "
+"pantalla"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -188,17 +187,20 @@ msgstr "No està carregant"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "La suspensió automàtica i el bloqueig de pantalla estan desactivats"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"La suspensió automàtica i el bloqueig de pantalla estan desactivats. Clic "
+"del mig per a tornar-ho a activar"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Bloca manualment la suspensió i el bloqueig de pantalla"
+msgstr ""
+"Clic del mig per a desactivar automàticament la suspensió i el bloqueig de "
+"pantalla"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -208,10 +210,9 @@ msgstr[0] "Una aplicació ha sol·licitat l'activació del mode rendiment"
 msgstr[1] "%1 aplicacions han sol·licitat l'activació del mode rendiment"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "El sistema està en mode de rendiment"
+msgstr "El sistema està en mode de rendiment. Desplaceu per a canviar-ho"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -223,15 +224,16 @@ msgstr[1] ""
 "%1 aplicacions han sol·licitat l'activació del mode d'estalvi d'energia"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "El sistema està en mode d'estalvi d'energia"
+msgstr ""
+"El sistema està en mode d'estalvi d'energia. Desplaceu per a canviar-ho"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"El sistema està en mode d'energia equilibrat. Desplaceu per a canviar-ho"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

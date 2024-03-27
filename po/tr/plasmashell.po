@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-03-13 20:25+0300\n"
+"PO-Revision-Date: 2024-03-26 14:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -246,31 +246,31 @@ msgstr "Ekran Klavyesi Kapalı"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Uyku ve Ekran Kilidi Engelli"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Uyku ve Ekran Kilidi Engeli Açık"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Güç Tasarrufu Kipi"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Dengeli Güç Kipi"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Başarım Kipi"
 
 #: panelview.cpp:1027
 #, kde-format
@@ -287,7 +287,7 @@ msgstr "Panel Yapılandırmasını Göster"
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr "%1 Üzerindeki Dahili Ekran"
+msgstr "%1 Üzerindeki İç Ekran"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
@@ -298,7 +298,7 @@ msgstr "%3 Üzerindeki %1 %2"
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr "%1 Ekranı Bağlantısı Kesildi"
+msgstr "%1. Ekran Bağlantısı Kesildi"
 
 #: shellcorona.cpp:205 shellcorona.cpp:207
 #, kde-format
@@ -338,7 +338,7 @@ msgstr "Etkin Görev Yöneticisi Girdisi %1"
 #: shellcorona.cpp:292
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Panel ve Masaüstü Yönetimi"
 
 #: shellcorona.cpp:314
 #, kde-format

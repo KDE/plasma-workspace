@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-23 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2024-02-06 18:39+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -56,44 +56,44 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Brightness and Color"
 msgstr "明るさと色"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "スクリーンの明るさ %1%"
 
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "キーボードの明るさ %1%"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "Night Light オフ"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "Night Light: %1K"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "スクロールしてスクリーンの明るさを調整"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "中クリックして Night Light をオン/オフ"
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"

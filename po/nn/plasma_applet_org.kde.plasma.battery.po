@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
 "PO-Revision-Date: 2024-03-09 18:24+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -188,7 +188,7 @@ msgstr "Ladar ikkje"
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "Automatisk kvilemodus og skjermlåsing er slått av"
 
 # Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).

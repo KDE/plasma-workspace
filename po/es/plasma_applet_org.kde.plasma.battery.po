@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-08 01:17+0100\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 19:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -20,14 +20,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:171
 #, kde-format
@@ -35,8 +35,8 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"El estado de salud de esta batería es de solo un %1% y necesita sustitución. "
-"Póngase en contacto con el fabricante."
+"El estado de salud de esta batería es de solo un %1 % y necesita "
+"sustitución. Póngase en contacto con el fabricante."
 
 #: package/contents/ui/BatteryItem.qml:191
 #, kde-format
@@ -63,18 +63,18 @@ msgstr "Estado de salud de la batería:"
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:229
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr "La batería está configurada para cargar hasta aproximadamente el %1%."
+msgstr "La batería está configurada para cargar hasta aproximadamente el %1 %."
 
 #: package/contents/ui/CompactRepresentation.qml:115
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
 #: package/contents/ui/main.qml:226
@@ -110,18 +110,18 @@ msgstr ""
 "La miniaplicación de batería ha activado la inhibición completa del sistema"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Bloquear manualmente la suspensión y el bloqueo de pantalla"
+msgstr ""
+"No se ha podido bloquear el modo de repodo automático ni el bloqueo de "
+"pantalla"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Bloquear manualmente la suspensión y el bloqueo de pantalla"
+msgstr ""
+"No se ha podido desbloquear el modo de repodo automático ni el bloqueo de "
+"pantalla"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -142,22 +142,22 @@ msgstr "Energía y batería"
 #: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Batería al %1%, no está cargando"
+msgstr "Batería al %1 %, no está cargando"
 
 #: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Batería al %1%, conectada, aunque sigue descargándose"
+msgstr "Batería al %1 %, conectada, aunque sigue descargándose"
 
 #: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Batería al %1%, cargando"
+msgstr "Batería al %1 %, cargando"
 
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Batería al %1%"
+msgstr "Batería al %1 %"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
@@ -189,17 +189,19 @@ msgstr "No está cargando"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "La suspensión automática y el bloqueo de pantalla están desactivados"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"La suspensión automática y el bloqueo de pantalla están desactivados. Clic "
+"central para volver a activarlos."
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Bloquear manualmente la suspensión y el bloqueo de pantalla"
+msgstr ""
+"Clic central para desactivar el reposo automático y el bloqueo de pantalla"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -210,10 +212,9 @@ msgstr[1] ""
 "%1 aplicaciones han solicitado la activación del modo de rendimiento"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "El sistema está en modo de rendimiento"
+msgstr "El sistema está en modo de rendimiento. Desplace para cambiarlo."
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -225,15 +226,16 @@ msgstr[1] ""
 "%1 aplicaciones han solicitado la activación del modo de ahorro de energía"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "El sistema está en modo de ahorro de energía"
+msgstr "El sistema está en modo de ahorro de energía. Desplace para cambiarlo."
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"El sistema está en modo equilibrado de uso de energía. Desplace para "
+"cambiarlo."
 
 #: package/contents/ui/main.qml:412
 #, kde-format

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 04:36+0100\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 05:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -104,18 +104,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "ელემენტის აპლეტს აქვს სისტემის სრული კონტროლი"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "ძილისა და ეკრანის ჩაკეტვის ხელით დაბლოკვა"
+msgstr "ავტომატური ძილისა და ეკრანის დაბლოკვა ჩავარდა"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "ძილისა და ეკრანის ჩაკეტვის ხელით დაბლოკვა"
+msgstr "ავტომატური ძილისა და ეკრანის განბლოკვა ჩავარდა"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -182,17 +178,17 @@ msgstr "არ იტენება"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია. შუა წკაპი ჩასართავად"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "ძილისა და ეკრანის ჩაკეტვის ხელით დაბლოკვა"
+msgstr "შუა წკაპი ავტომატური ძილისა და ეკრანის დაბლოკვის გასათიშად"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -202,10 +198,9 @@ msgstr[0] "აპლიკაცია წარმადობის რეჟ�
 msgstr[1] "%1 აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "სისტემა წარმადობის რეჟიმშია"
+msgstr "სისტემა წარმადობის რეჟიმშია. შესაცვლელად გადაახვიეთ"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -215,15 +210,14 @@ msgstr[0] "აპლიკაცია ელემენტის შენა�
 msgstr[1] "%1 აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "სისტემა ენერგიის დაზოგვის რეჟიმშია"
+msgstr "სისტემა ენერგიის დაზოგვის რეჟიმშია. შესაცვლელად გადაახვიეთ"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "სისტემა დაბალანსებული კვების რეჟიმშია. შესაცვლელად გადაახვიეთ"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

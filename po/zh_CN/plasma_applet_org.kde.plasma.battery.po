@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-03-25 19:39\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -102,18 +102,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "电池小程序已启用阻止系统全局休眠"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "阻止自动锁屏和睡眠"
+msgstr ""
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "阻止自动锁屏和睡眠"
+msgstr ""
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -179,18 +175,15 @@ msgid "Not charging"
 msgstr "不在充电"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "自动睡眠和锁屏已禁用"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "阻止自动锁屏和睡眠"
+msgstr ""
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -199,10 +192,9 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "%1 个应用程序已请求激活性能模式"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "系统处于性能模式"
+msgstr ""
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -211,10 +203,9 @@ msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "%1 个应用程序已请求激活省电模式"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "系统处于省电模式"
+msgstr ""
 
 #: package/contents/ui/main.qml:289
 #, kde-format

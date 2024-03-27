@@ -10,15 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 21:12+0100\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 12:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: package/contents/ui/BatteryItem.qml:107
@@ -109,18 +109,16 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Bateriaren applet-ak sistema osorako inhibizioa gaitu du"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Eskuz oztopatu lokartzea eta pantaila giltzatzea"
+msgstr "Automatikoki lokartzea eta pantaila-giltzatzea oztopatzea huts egin du"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Eskuz oztopatu lokartzea eta pantaila giltzatzea"
+msgstr ""
+"Automatikoki lokartzeko eta pantaila-giltzatzeko oztopatzea kentzea huts "
+"egin du"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -187,17 +185,18 @@ msgstr "Ez da zamatzen ari"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "Lokartze eta pantaila giltzatze automatikoak ezgaituta daude"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"Automatikoki lokartzea eta pantaila-giltzatea ezgaituta dago; erdiko klik "
+"berriz gaitzeko"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Eskuz oztopatu lokartzea eta pantaila giltzatzea"
+msgstr "Erdiko klik lokartze eta pantaila-giltzatze automatikoa ezgaitzeko"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -207,10 +206,9 @@ msgstr[0] "Aplikazio batek Errendimendu modua aktibatzea eskatu du"
 msgstr[1] "%1 aplikaziok Errendimendu modua aktibatzea eskatu dute"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Sistema Errendimendu moduan dago"
+msgstr "Sistema Errendimendu moduan dago; kiribildu aldatzeko"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -220,15 +218,14 @@ msgstr[0] "Aplikazio batek Energia aurrezteko modua aktibatzea eskatu du"
 msgstr[1] "%1 aplikaziok Energia aurrezteko modua aktibatzea eskatu dute"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Sistema Energia aurrezteko moduan dago"
+msgstr "Sistema Energia aurrezteko moduan dago; kiribildu aldatzeko"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Sistema Energia oreketauko moduan dago; kiribildu aldatzeko"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

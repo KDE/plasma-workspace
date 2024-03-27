@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-01-30 06:19+0100\n"
+"PO-Revision-Date: 2024-03-26 06:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -243,31 +243,31 @@ msgstr "კლავიატურა ეკრანზე გამორთ�
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "ძილი და ეკრანის ჩაკეტვა დაბლოკილია"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "ძილი და ეკრანის ჩაკეტვა განბლოკილია"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "ენერგიის დაზოგვის რეჟიმი"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "დაბალანსებული კვების რეჟიმი"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "წარმადობის რეჟიმი"
 
 #: panelview.cpp:1027
 #, kde-format
@@ -335,7 +335,7 @@ msgstr "ამოცანების მენეჯერის ჩანა�
 #: shellcorona.cpp:292
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "პანელისა და სამუშაო მაგიდის მართვა"
 
 #: shellcorona.cpp:314
 #, kde-format

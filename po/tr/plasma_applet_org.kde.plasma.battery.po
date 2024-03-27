@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-03-21 20:37+0300\n"
+"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"PO-Revision-Date: 2024-03-26 13:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 "X-POOTLE-MTIME: 1413102233.000000\n"
 
 #: package/contents/ui/BatteryItem.qml:107
@@ -112,18 +112,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Pil uygulamacığı, sistem geneli kısıtlamayı etkinleştirdi"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Uyku ve ekran kilitlemeyi elle blokla"
+msgstr "Kendiliğinden uyku ve ekran kilitlemesi engellenemedi"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Uyku ve ekran kilitlemeyi elle blokla"
+msgstr "Kendiliğinden uyku ve ekran kilitlemesi engeli kaldırılamadı"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -190,17 +186,20 @@ msgstr "Şarj olmuyor"
 
 #: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#| msgid ""
+#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
 msgid ""
-"Automatic sleep and screen locking are disabled; middle-clik to re-enable"
-msgstr "Otomatik uyku ve ekran kilitleme devre dışı bırakıldı"
+"Automatic sleep and screen locking are disabled; middle-click to re-enable"
+msgstr ""
+"Kendiliğinden uyku ve ekran kilitlemesi devre dışı, yeniden etkinleştirmek "
+"için orta tıklayın"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Uyku ve ekran kilitlemeyi elle blokla"
+msgstr ""
+"Kendiliğinden uykuyu ve ekran kilitlemesini devre dışı bırakmak için orta "
+"tıklayın"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -210,10 +209,9 @@ msgstr[0] "1 uygulama, başarım kipinin etkinleştirilmesini istedi"
 msgstr[1] "%1 uygulama, başarım kipinin etkinleştirilmesini istedi"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Sistem, Başarım kipinde"
+msgstr "Sistem “Başarım” kipinde, değiştirmek için sarın"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -223,15 +221,14 @@ msgstr[0] "1 uygulama, Güç Tasarrufu kipinin etkinleştirilmesini istedi"
 msgstr[1] "%1 uygulama, Güç Tasarrufu kipinin etkinleştirilmesini istedi"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Sistem, Güç Tasarrufu kipinde"
+msgstr "Sistem “Güç Tasarrufu” kipinde, değiştirmek için sarın"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Sistem “Dengeli Güç” kipinde, değiştirmek için sarın"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
