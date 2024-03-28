@@ -5,6 +5,7 @@
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Templates as T
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents
@@ -26,15 +27,16 @@ import org.kde.plasma.extras as PlasmaExtras
 Item {
     id: root
 
-    required property var swipeView
-    required property var monthViewRoot
+    required property T.SwipeView swipeView
+    // Can't use the real type due to a "Cyclic dependency"
+    required property QtObject /*MonthView*/ monthViewRoot
 
     readonly property bool isDigitalClock: monthViewRoot.showDigitalClockHeader
     readonly property var buttons: isDigitalClock ? dateManipulationButtonsForDigitalClock : dateManipulationButtons
-    readonly property var tabButton: isDigitalClock ? configureButton : todayButton
-    readonly property var previousButton: buttons.previousButton
-    readonly property var todayButton: buttons.todayButton
-    readonly property var nextButton: buttons.nextButton
+    readonly property T.AbstractButton tabButton: isDigitalClock ? configureButton : todayButton
+    readonly property T.AbstractButton previousButton: buttons.previousButton
+    readonly property T.AbstractButton todayButton: buttons.todayButton
+    readonly property T.AbstractButton nextButton: buttons.nextButton
     readonly property alias tabBar: tabBar
     readonly property alias heading: heading
     readonly property alias configureButton: dateAndPinButtons.configureButton
@@ -78,9 +80,9 @@ Item {
             Loader {
                 id: dateManipulationButtons
 
-                property var previousButton: item && item.previousButton
-                property var todayButton: item && item.todayButton
-                property var nextButton: item && item.nextButton
+                readonly property T.AbstractButton previousButton: item?.previousButton ?? null
+                readonly property T.AbstractButton todayButton: item?.todayButton ?? null
+                readonly property T.AbstractButton nextButton: item?.nextButton ?? null
 
                 sourceComponent: buttonsGroup
                 active: !root.isDigitalClock
@@ -89,8 +91,8 @@ Item {
             Loader {
                 id: dateAndPinButtons
 
-                readonly property var configureButton: item && item.configureButton
-                readonly property var pinButton: item && item.pinButton
+                readonly property T.AbstractButton configureButton: item?.configureButton ?? null
+                readonly property T.AbstractButton pinButton: item?.pinButton ?? null
 
                 sourceComponent: dateAndPin
                 active: root.isDigitalClock
@@ -116,28 +118,28 @@ Item {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
                     onClicked: monthViewRoot.showMonthView();
-                    display: PlasmaComponents.AbstractButton.TextOnly
+                    display: T.AbstractButton.TextOnly
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Months");
                     onClicked: monthViewRoot.showYearView();
-                    display: PlasmaComponents.AbstractButton.TextOnly
+                    display: T.AbstractButton.TextOnly
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
                     onClicked: monthViewRoot.showDecadeView();
-                    display: PlasmaComponents.AbstractButton.TextOnly
+                    display: T.AbstractButton.TextOnly
                 }
             }
 
             Loader {
                 id: dateManipulationButtonsForDigitalClock
 
-                property var previousButton: item && item.previousButton
-                property var todayButton: item && item.todayButton
-                property var nextButton: item && item.nextButton
+                readonly property T.AbstractButton previousButton: item?.previousButton ?? null
+                readonly property T.AbstractButton todayButton: item?.todayButton ?? null
+                readonly property T.AbstractButton nextButton: item?.nextButton ?? null
 
                 sourceComponent: buttonsGroup
                 active: root.isDigitalClock
@@ -175,7 +177,7 @@ Item {
                 }
 
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
-                display: PlasmaComponents.AbstractButton.IconOnly
+                display: T.AbstractButton.IconOnly
                 KeyNavigation.right: todayButton
 
                 onClicked: monthViewRoot.previousView()
@@ -208,7 +210,7 @@ Item {
                 }
 
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
-                display: PlasmaComponents.AbstractButton.IconOnly
+                display: T.AbstractButton.IconOnly
                 KeyNavigation.tab: root.swipeView
 
                 onClicked: monthViewRoot.nextView();
@@ -234,7 +236,7 @@ Item {
 
                 visible: root.monthViewRoot.digitalClock.internalAction("configure").enabled
 
-                display: PlasmaComponents.AbstractButton.IconOnly
+                display: T.AbstractButton.IconOnly
                 icon.name: "configure"
                 text: root.monthViewRoot.digitalClock.internalAction("configure").text
 
@@ -255,7 +257,7 @@ Item {
                 checkable: true
                 checked: root.monthViewRoot.digitalClock.configuration.pin
 
-                display: PlasmaComponents.AbstractButton.IconOnly
+                display: T.AbstractButton.IconOnly
                 icon.name: "window-pin"
                 text: i18n("Keep Open")
 
