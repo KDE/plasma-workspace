@@ -163,6 +163,16 @@ void PowerManagmentControl::stopSuppressingScreenPowerManagement()
     m_lockInhibitionCookie = reply.isValid() ? -1 : m_lockInhibitionCookie; // reset cookie if the stop request was successful
 }
 
+void PowerManagmentControl::releaseInhibition(uint cookie)
+{
+    QDBusMessage inhibitionsCall = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                  QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
+                                                                  QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                                  QStringLiteral("ReleaseInhibition"));
+    msg << cookie;
+    QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
+}
+
 QBindable<QList<QVariantMap>> PowerManagmentControl::bindableInhibitions()
 {
     return &m_inhibitions;

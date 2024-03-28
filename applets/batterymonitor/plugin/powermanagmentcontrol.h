@@ -34,6 +34,7 @@ public:
     Q_INVOKABLE void stopSuppressingSleep();
     Q_INVOKABLE void beginSuppressingScreenPowerManagement(QString reason);
     Q_INVOKABLE void stopSuppressingScreenPowerManagement();
+    Q_INVOKABLE void releaseInhibition(uint cookie);
 
 Q_SIGNALS:
     void inhibitionsChanged(QList<QVariantMap> inhibitions);
