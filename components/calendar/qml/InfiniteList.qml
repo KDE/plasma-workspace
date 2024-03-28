@@ -37,7 +37,7 @@ ListView {
     readonly property double cellHeight: currentItem ? currentItem.cellHeight : 0
     readonly property double cellWidth: currentItem ? currentItem.cellWidth : 0
 
-    required property var backend
+    required property PlasmaCalendar.Calendar backend
     required property int viewType
 
     enum ViewType {
