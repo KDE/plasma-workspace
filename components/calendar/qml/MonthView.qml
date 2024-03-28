@@ -51,7 +51,6 @@ Item {
     property int rows: calendarBackend.weeks
 
     property Item selectedItem
-    property int week;
     property int firstDay: new Date(showDate.getFullYear(), showDate.getMonth(), 1).getDay()
     property alias today: calendarBackend.today
     property bool showWeekNumbers: false
@@ -326,7 +325,6 @@ Item {
 
                 onActivated: (index, date, item) => {
                     const rowNumber = Math.floor(index / columns);
-                    week = 1 + calendarBackend.weeksModel[rowNumber];
                     root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
 
                     if (date.subLabel) {
