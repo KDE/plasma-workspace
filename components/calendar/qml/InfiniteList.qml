@@ -9,14 +9,14 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
 ListView {
-    id: infiniteList
+    id: root
 
     // Set up alternative model for delegates at edges
     // so that they can be set up to always show the right date (top: previous date; bottom: next date)
     // date here means what the respective views should show(e.g. MonthView date -> month)
     // this prevents them from showing the current date when they are being animated out of/into view
     // since different years don't have different names for months, we don't need to set up alternative models for YearView
-    readonly property QtObject previousModel: switch (infiniteList.viewType) {
+    readonly property QtObject previousModel: switch (viewType) {
     case InfiniteList.ViewType.DayView:
         return previousAlternativeBackend.item?.daysModel ?? null;
     case InfiniteList.ViewType.DecadeView:
@@ -24,7 +24,8 @@ ListView {
     default:
         return null;
     }
-    readonly property QtObject nextModel: switch (infiniteList.viewType) {
+
+    readonly property QtObject nextModel: switch (viewType) {
     case InfiniteList.ViewType.DayView:
         return nextAlternativeBackend.item?.daysModel ?? null;
     case InfiniteList.ViewType.DecadeView:
@@ -66,7 +67,7 @@ ListView {
     }
 
     // prevents keep changing the date by dragging and holding; returns true if date should not change else returns false
-    function handleDrag() {
+    function handleDrag(): bool {
         if (dragHandled) { // if already date changed for dragging once (drag still going on like streams) then
             resetViewPosition(); //reset so that further dragging is not broken when this dragging session is over
             return true;        // return true so that still ongoing drags do not change date
@@ -118,12 +119,12 @@ ListView {
 
 
     // used to update the alternative decadeview models when year changes
-    function updateDecadeOverview(offset) {
+    function updateDecadeOverview(offset: int) {
         if (Math.abs(offset) !== 1) {
             return;
         }
 
-        const model = offset === 1 ? nextYearModel.item : previousYearModel.item;
+        const model = (offset === 1 ? nextYearModel.item : previousYearModel.item) as ListModel;
         const year = backend.year + (10 * offset); // Increase or decrease year by a decade
         const decade = year - year % 10;
 
@@ -135,12 +136,12 @@ ListView {
         }
     }
 
-    function initYearModel(offset) {
+    function initYearModel(offset: int) {
         if (Math.abs(offset) !== 1) {
             return;
         }
 
-        const model = offset === 1 ? nextYearModel.item : previousYearModel.item;
+        const model = (offset === 1 ? nextYearModel.item : previousYearModel.item) as ListModel;
         for (let i = 0; i < 12; ++i) {
             model.append({
                 label: 2050, // this value will be overwritten, but it set the type of the property to int
@@ -149,7 +150,7 @@ ListView {
             });
         }
 
-        infiniteList.updateDecadeOverview(offset);
+        updateDecadeOverview(offset);
     }
 
     function modulo(a: int, n: int): int { // always keep the 'a' between [1, n]
@@ -157,7 +158,7 @@ ListView {
     }
 
     function previousView() {
-        switch (infiniteList.viewType) {
+        switch (viewType) {
         case InfiniteList.ViewType.DayView:
             backend.previousMonth();
             break;
@@ -173,7 +174,7 @@ ListView {
     }
 
     function nextView() {
-        switch (infiniteList.viewType) {
+        switch (viewType) {
         case InfiniteList.ViewType.DayView:
             backend.nextMonth();
             break;
@@ -193,18 +194,18 @@ ListView {
     Loader {
         id: previousAlternativeBackend
 
-        active: infiniteList.viewType === InfiniteList.ViewType.DayView
+        active: root.viewType === InfiniteList.ViewType.DayView
         asynchronous: true
 
         sourceComponent: PlasmaCalendar.Calendar {
-            days: backend.days
-            weeks: backend.weeks
-            firstDayOfWeek: backend.firstDayOfWeek
-            today: backend.today
+            days: root.backend.days
+            weeks: root.backend.weeks
+            firstDayOfWeek: root.backend.firstDayOfWeek
+            today: root.backend.today
 
             function goToPreviousView() {
-               const month = modulo(backend.month - 1, 12);
-               const year = month === 12 ? backend.year - 1 : backend.year;
+               const month = root.modulo(root.backend.month - 1, 12);
+               const year = month === 12 ? root.backend.year - 1 : root.backend.year;
                goToYear(year);
                goToMonth(month);
             }
@@ -219,18 +220,18 @@ ListView {
     Loader {
         id: nextAlternativeBackend
 
-        active: infiniteList.viewType === InfiniteList.ViewType.DayView
+        active: root.viewType === InfiniteList.ViewType.DayView
         asynchronous: true
 
         sourceComponent: PlasmaCalendar.Calendar {
-            days: backend.days
-            weeks: backend.weeks
-            firstDayOfWeek: backend.firstDayOfWeek
-            today: backend.today
+            days: root.backend.days
+            weeks: root.backend.weeks
+            firstDayOfWeek: root.backend.firstDayOfWeek
+            today: root.backend.today
 
             function goToNextView() {
-                const month = modulo(backend.month + 1, 12);
-                const year = month === 1 ? backend.year + 1 : backend.year;
+                const month = root.modulo(root.backend.month + 1, 12);
+                const year = month === 1 ? root.backend.year + 1 : root.backend.year;
                 goToYear(year);
                 goToMonth(month);
             }
@@ -246,17 +247,17 @@ ListView {
     Loader {
         id: nextYearModel
 
-        active: infiniteList.viewType === InfiniteList.ViewType.DecadeView
+        active: root.viewType === InfiniteList.ViewType.DecadeView
         asynchronous: true
 
         function update() {
-            infiniteList.updateDecadeOverview(1);
+            root.updateDecadeOverview(1);
         }
 
         sourceComponent: ListModel {}
         onStatusChanged: {
-            if (nextYearModel.status === Loader.Ready) {
-                infiniteList.initYearModel(1);
+            if (status === Loader.Ready) {
+                root.initYearModel(1);
             }
         }
     }
@@ -264,24 +265,24 @@ ListView {
     Loader {
         id: previousYearModel
 
-        active: infiniteList.viewType === InfiniteList.ViewType.DecadeView
+        active: root.viewType === InfiniteList.ViewType.DecadeView
         asynchronous: true
 
         function update() {
-            infiniteList.updateDecadeOverview(-1);
+            root.updateDecadeOverview(-1);
         }
 
         sourceComponent: ListModel {}
         onStatusChanged: {
-            if (previousYearModel.status === Loader.Ready) {
-                infiniteList.initYearModel(-1);
+            if (status === Loader.Ready) {
+                root.initYearModel(-1);
             }
         }
     }
 
     Connections {
-        target: backend
-        enabled: infiniteList.viewType === InfiniteList.ViewType.DayView
+        target: root.backend
+        enabled: root.viewType === InfiniteList.ViewType.DayView
 
         function onMonthChanged() {
             previousAlternativeBackend.item.goToPreviousView();
@@ -290,8 +291,8 @@ ListView {
     }
 
     Connections {
-        target: backend
-        enabled: infiniteList.viewType === InfiniteList.ViewType.DecadeView
+        target: root.backend
+        enabled: root.viewType === InfiniteList.ViewType.DecadeView
 
         function onYearChanged() {
             nextYearModel.update();

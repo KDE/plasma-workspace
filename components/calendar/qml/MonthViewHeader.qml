@@ -50,7 +50,7 @@ Item {
     Loader {
         anchors.fill: parent
         sourceComponent: PlasmaExtras.PlasmoidHeading {}
-        active: isDigitalClock
+        active: root.isDigitalClock
     }
 
     ColumnLayout {
@@ -66,10 +66,10 @@ Item {
                 // Needed for Appium testing
                 objectName: "monthHeader"
 
-                text: root.swipeView.currentIndex > 0 || monthViewRoot.selectedYear !== today.getFullYear()
+                text: root.swipeView.currentIndex > 0 || root.monthViewRoot.selectedYear !== today.getFullYear()
                     ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2",
-                        monthViewRoot.selectedMonth, monthViewRoot.selectedYear.toString())
-                    : monthViewRoot.selectedMonth
+                        root.monthViewRoot.selectedMonth, root.monthViewRoot.selectedYear.toString())
+                    : root.monthViewRoot.selectedMonth
                 textFormat: Text.PlainText
                 level: root.isDigitalClock ? 1 : 2
                 elide: Text.ElideRight
@@ -117,19 +117,19 @@ Item {
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
-                    onClicked: monthViewRoot.showMonthView();
+                    onClicked: root.monthViewRoot.showMonthView();
                     display: T.AbstractButton.TextOnly
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Months");
-                    onClicked: monthViewRoot.showYearView();
+                    onClicked: root.monthViewRoot.showYearView();
                     display: T.AbstractButton.TextOnly
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
-                    onClicked: monthViewRoot.showDecadeView();
+                    onClicked: root.monthViewRoot.showDecadeView();
                     display: T.AbstractButton.TextOnly
                 }
             }
@@ -164,7 +164,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: previousButton
                 text: {
-                    switch (monthViewRoot.calendarViewDisplayed) {
+                    switch (root.monthViewRoot.calendarViewDisplayed) {
                     case MonthView.CalendarView.DayView:
                         return i18nd("plasmashellprivateplugin", "Previous Month")
                     case MonthView.CalendarView.MonthView:
@@ -180,7 +180,7 @@ Item {
                 display: T.AbstractButton.IconOnly
                 KeyNavigation.right: todayButton
 
-                onClicked: monthViewRoot.previousView()
+                onClicked: root.monthViewRoot.previousView()
 
                 PlasmaComponents.ToolTip { text: parent.text }
             }
@@ -191,13 +191,13 @@ Item {
                 Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
                 KeyNavigation.right: nextButton
 
-                onClicked: monthViewRoot.resetToToday()
+                onClicked: root.monthViewRoot.resetToToday()
             }
 
             PlasmaComponents.ToolButton {
                 id: nextButton
                 text: {
-                    switch (monthViewRoot.calendarViewDisplayed) {
+                    switch (root.monthViewRoot.calendarViewDisplayed) {
                     case MonthView.CalendarView.DayView:
                         return i18nd("plasmashellprivateplugin", "Next Month")
                     case MonthView.CalendarView.MonthView:
@@ -213,7 +213,7 @@ Item {
                 display: T.AbstractButton.IconOnly
                 KeyNavigation.tab: root.swipeView
 
-                onClicked: monthViewRoot.nextView();
+                onClicked: root.monthViewRoot.nextView();
 
                 PlasmaComponents.ToolTip { text: parent.text }
             }
