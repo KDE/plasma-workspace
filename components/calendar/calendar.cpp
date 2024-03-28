@@ -8,6 +8,7 @@
 #include <QDebug>
 
 #include "calendar.h"
+#include "daydata.h"
 
 class CalendarPrivate
 {

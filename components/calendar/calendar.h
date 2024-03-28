@@ -11,7 +11,6 @@
 #include <QJsonArray>
 #include <QObject>
 
-#include "daydata.h"
 #include "daysmodel.h"
 
 class QAbstractItemModel;
