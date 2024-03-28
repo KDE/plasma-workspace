@@ -35,8 +35,6 @@ PlasmaComponents.AbstractButton {
     // type: either PlasmaCalendar.DaysModel or an equivalent ListModel
     property QtObject dayModel
 
-    signal activated
-
     readonly property date thisDate: new Date(yearNumber, typeof monthNumber !== "undefined" ? monthNumber - 1 : 0, typeof dayNumber !== "undefined" ? dayNumber : 1)
 
     Accessible.name: thisDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
