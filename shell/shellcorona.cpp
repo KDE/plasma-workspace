@@ -216,6 +216,13 @@ void ShellCorona::init()
     checkAddPanelAction();
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ShellCorona::checkAddPanelAction);
 
+    QAction *activateLauncherAction = new QAction(this);
+    setAction(QStringLiteral("activate application launcher"), activateLauncherAction);
+    connect(activateLauncherAction, &QAction::triggered, this, qOverload<>(&ShellCorona::activateLauncherMenu));
+    activateLauncherAction->setText(i18n("Activate Application Launcher"));
+    KGlobalAccel::self()->setGlobalShortcut(activateLauncherAction,
+                                            QList<QKeySequence>() << QKeySequence(Qt::Key_Meta) << QKeySequence(Qt::AltModifier | Qt::Key_F1));
+
     // Activity stuff
     QAction *activityAction = new QAction(this);
     setAction(QStringLiteral("manage activities"), activityAction);
