@@ -53,6 +53,8 @@ IconApplet::~IconApplet()
     if (destroyed()) {
         QFile::remove(m_localPath);
     }
+
+    m_openWithMenu->deleteLater();
 }
 
 void IconApplet::init()
@@ -340,10 +342,10 @@ QList<QAction *> IconApplet::extraActions()
                 m_fileItemActions->setItemListProperties(itemProperties);
 
                 if (!m_openWithMenu) {
-                    m_openWithMenu.reset(new QMenu());
+                    m_openWithMenu = new QMenu;
                 }
                 m_openWithMenu->clear();
-                m_fileItemActions->insertOpenWithActionsTo(nullptr, m_openWithMenu.get(), QStringList());
+                m_fileItemActions->insertOpenWithActionsTo(nullptr, m_openWithMenu, QStringList());
 
                 m_openWithActions = m_openWithMenu->actions();
             }

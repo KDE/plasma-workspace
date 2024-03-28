@@ -91,7 +91,7 @@ private:
     QAction *m_openContainingFolderAction = nullptr;
 
     KFileItemActions *m_fileItemActions = nullptr;
-    std::unique_ptr<QMenu> m_openWithMenu;
+    QMenu *m_openWithMenu = nullptr;
 
     QPointer<KPropertiesDialog> m_configDialog;
 
