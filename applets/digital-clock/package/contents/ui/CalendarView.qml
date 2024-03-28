@@ -186,21 +186,10 @@ PlasmaExtras.Representation {
             }
 
             function dateEquals(date1, date2) {
-                const values1 = [
-                    date1.getFullYear(),
-                    date1.getMonth(),
-                    date1.getDate()
-                ];
-
-                const values2 = [
-                    date2.getFullYear(),
-                    date2.getMonth(),
-                    date2.getDate()
-                ];
-
-                return values1.every((value, index) => {
-                    return (value === values2[index]);
-                }, false)
+                // Compare two dates without taking time into account
+                return date1.getFullYear() === date2.getFullYear()
+                    && date1.getMonth() === date2.getMonth()
+                    && date1.getDate() === date2.getDate();
             }
 
             Connections {
