@@ -25,12 +25,12 @@ KCMUtils.SimpleKCM {
     // boldText and fontStyleName are not used in DigitalClock.qml
     // However, they are necessary to remember the exact font style chosen.
     // Otherwise, when the user open the font dialog again, the style will be lost.
-    property alias cfg_fontFamily : fontDialog.fontChosen.family
-    property alias cfg_boldText : fontDialog.fontChosen.bold
-    property alias cfg_italicText : fontDialog.fontChosen.italic
-    property alias cfg_fontWeight : fontDialog.fontChosen.weight
-    property alias cfg_fontStyleName : fontDialog.fontChosen.styleName
-    property alias cfg_fontSize : fontDialog.fontChosen.pointSize
+    property alias cfg_fontFamily: fontDialog.fontChosen.family
+    property alias cfg_boldText: fontDialog.fontChosen.bold
+    property alias cfg_italicText: fontDialog.fontChosen.italic
+    property alias cfg_fontWeight: fontDialog.fontChosen.weight
+    property alias cfg_fontStyleName: fontDialog.fontChosen.styleName
+    property alias cfg_fontSize: fontDialog.fontChosen.pointSize
 
     property string cfg_timeFormat: ""
     property alias cfg_showLocalTimezone: showLocalTimezone.checked
@@ -155,31 +155,31 @@ KCMUtils.SimpleKCM {
                     {
                         label: i18n("Long Date"),
                         name: "longDate",
-                        formatter: (d) => {
+                        formatter(d) {
                             return Qt.formatDate(d, Qt.locale(), Locale.LongFormat);
-                        }
+                        },
                     },
                     {
                         label: i18n("Short Date"),
                         name: "shortDate",
-                        formatter: (d) => {
+                        formatter(d) {
                             return Qt.formatDate(d, Qt.locale(), Locale.ShortFormat);
-                        }
+                        },
                     },
                     {
                         label: i18n("ISO Date"),
                         name: "isoDate",
-                        formatter: (d) => {
+                        formatter(d) {
                             return Qt.formatDate(d, Qt.ISODate);
-                        }
+                        },
                     },
                     {
                         label: i18nc("custom date format", "Custom"),
                         name: "custom",
-                        formatter: (d) => {
+                        formatter(d) {
                             return Qt.locale().toString(d, customDateFormat.text);
-                        }
-                    }
+                        },
+                    },
                 ]
                 onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"];
 

@@ -287,13 +287,13 @@ PlasmaExtras.Representation {
 
                             // Non-explicit all-day event
                             const startIsMidnight = modelData.startDateTime.getHours() === 0
-                                            && modelData.startDateTime.getMinutes() === 0;
+                                && modelData.startDateTime.getMinutes() === 0;
 
                             const endIsMidnight = modelData.endDateTime.getHours() === 0
-                                            && modelData.endDateTime.getMinutes() === 0;
+                                && modelData.endDateTime.getMinutes() === 0;
 
                             const sameDay = modelData.startDateTime.getDate() === modelData.endDateTime.getDate()
-                                    && modelData.startDateTime.getDay() === modelData.endDateTime.getDay()
+                                && modelData.startDateTime.getDay() === modelData.endDateTime.getDay()
 
                             return !(startIsMidnight && endIsMidnight && sameDay);
                         }
@@ -334,8 +334,8 @@ PlasmaExtras.Representation {
                                 Layout.minimumWidth: dateLabelMetrics.width
 
                                 text: startsToday || startedYesterdayLessThan12HoursAgo
-                                        ? Qt.formatTime(modelData.startDateTime)
-                                        : agenda.formatDateWithoutYear(modelData.startDateTime)
+                                    ? Qt.formatTime(modelData.startDateTime)
+                                    : agenda.formatDateWithoutYear(modelData.startDateTime)
                                 textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
                                 visible: eventItem.hasTime
@@ -352,8 +352,8 @@ PlasmaExtras.Representation {
                                 Layout.minimumWidth: dateLabelMetrics.width
 
                                 text: endsToday || endsTomorrowInLessThan12Hours
-                                        ? Qt.formatTime(modelData.endDateTime)
-                                        : agenda.formatDateWithoutYear(modelData.endDateTime)
+                                    ? Qt.formatTime(modelData.endDateTime)
+                                    : agenda.formatDateWithoutYear(modelData.endDateTime)
                                 textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
                                 opacity: 0.7
@@ -387,8 +387,9 @@ PlasmaExtras.Representation {
                 visible: holidaysList.count == 0
 
                 iconName: "checkmark"
-                text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
-                                                               : i18n("No events for this day");
+                text: monthView.isToday(monthView.currentDate)
+                    ? i18n("No events for today")
+                    : i18n("No events for this day");
             }
         }
 
