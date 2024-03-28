@@ -5,6 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 import org.kde.plasma.plasmoid
@@ -31,20 +33,25 @@ ConfigModel {
         includeMargins: false
     }
 
-    property QtObject eventPluginsManager: PlasmaCalendar.EventPluginsManager {
+    readonly property PlasmaCalendar.EventPluginsManager eventPluginsManager: PlasmaCalendar.EventPluginsManager {
         Component.onCompleted: {
             populateEnabledPluginsList(Plasmoid.configuration.enabledCalendarPlugins);
         }
     }
 
-    property Instantiator __eventPlugins: Instantiator {
-        model: eventPluginsManager.model
+    readonly property Instantiator __eventPlugins: Instantiator {
+        model: configModel.eventPluginsManager.model
         delegate: ConfigCategory {
-            name: model.display
-            icon: model.decoration
-            source: model.configUi
+            required property string display
+            required property string decoration
+            required property string configUi
+            required property string pluginId
+
+            name: display
+            icon: decoration
+            source: configUi
             includeMargins: false
-            visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(model.pluginId) > -1
+            visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(pluginId) > -1
         }
 
         onObjectAdded: (index, object) => configModel.appendCategory(object)
