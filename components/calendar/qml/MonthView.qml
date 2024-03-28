@@ -67,7 +67,7 @@ Item {
     property alias currentIndex: swipeView.currentIndex
 
     property alias cellHeight: mainDaysCalendar.cellHeight
-    property QtObject daysModel: calendarBackend.daysModel
+    readonly property alias daysModel: calendarBackend.daysModel
 
     KeyNavigation.up: viewHeader.previousButton
     // The view can have no highlighted item, so always highlight the first item

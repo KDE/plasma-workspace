@@ -112,7 +112,7 @@ class Calendar : public QObject
      * metadata about the current day. The exact metadata can be found in "daysmodel.cpp"
      * where the exact names usable in QML are being set.
      */
-    Q_PROPERTY(QAbstractItemModel *daysModel READ daysModel CONSTANT)
+    Q_PROPERTY(DaysModel *daysModel READ daysModel CONSTANT)
 
 public:
     enum Type {
@@ -168,7 +168,7 @@ public:
     int year() const;
 
     // Models
-    QAbstractItemModel *daysModel() const;
+    DaysModel *daysModel() const;
     QJsonArray weeksModel() const;
 
     // QML invokables

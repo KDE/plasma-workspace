@@ -230,7 +230,7 @@ int Calendar::month() const
     return d->displayedDate.month();
 }
 
-QAbstractItemModel *Calendar::daysModel() const
+DaysModel *Calendar::daysModel() const
 {
     return d->daysModel;
 }
