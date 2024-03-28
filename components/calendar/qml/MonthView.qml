@@ -35,7 +35,7 @@ Item {
     /**
      * The event plugins manager used in the view
      */
-    property QtObject eventPluginsManager
+    property PlasmaCalendar.EventPluginsManager eventPluginsManager
 
     property QtObject date
     property date currentDate
