@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-26 01:32+0200\n"
+"PO-Revision-Date: 2024-03-27 23:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -110,18 +110,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Akumuliatoriaus programėlė įjungė sulaikymą sistemos mastu"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Rankiniu būdu blokuoti pristabdymą ir ekrano užrakinimą"
+msgstr "Nepavyko blokuoti automatinio pristabdymo ir ekrano užrakinimo"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Rankiniu būdu blokuoti pristabdymą ir ekrano užrakinimą"
+msgstr "Nepavyko atblokuoti automatinio pristabdymo ir ekrano užrakinimo"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -187,18 +183,19 @@ msgid "Not charging"
 msgstr "Nekraunamas"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "Automatinis pristabdymas ir ekrano užrakinimas yra išjungti"
+msgstr ""
+"Automatinis pristabdymas ir ekrano užrakinimas yra išjungti; spustelėkite "
+"viduriniuoju pelės mygtuku norėdami įjungti iš naujo"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Rankiniu būdu blokuoti pristabdymą ir ekrano užrakinimą"
+msgstr ""
+"Spustelėkite viduriniuoju pelės mygtuku norėdami išjungti automatinį "
+"pristabdymą ir ekrano užrakinimą"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -210,10 +207,9 @@ msgstr[2] "%1 programų paprašė aktyvuoti našumo veikseną"
 msgstr[3] "%1 programa paprašė aktyvuoti našumo veikseną"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Sistema yra našumo veiksenoje"
+msgstr "Sistema yra našumo veiksenoje; slinkite norėdami pakeisti"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -225,15 +221,15 @@ msgstr[2] "%1 programų paprašė aktyvuoti energijos taupymo veikseną"
 msgstr[3] "%1 programa paprašė aktyvuoti energijos taupymo veikseną"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Sistema yra energijos taupymo veiksenoje"
+msgstr "Sistema yra energijos taupymo veiksenoje; slinkite norėdami pakeisti"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"Sistema yra subalansuotoje energijos veiksenoje; slinkite norėdami pakeisti"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-03-15 01:17+0100\n"
+"PO-Revision-Date: 2024-03-27 14:08+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
@@ -101,18 +101,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr ""
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "An application is currently blocking sleep and screen locking (%1)"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
 msgstr ""
-"Una aplicación ta bloquiándo la dormición y el bloquéu de la pantalla (%1)"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "An application is currently blocking sleep and screen locking (%1)"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
 msgstr ""
-"Una aplicación ta bloquiándo la dormición y el bloquéu de la pantalla (%1)"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -184,11 +180,9 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid "An application is currently blocking sleep and screen locking (%1)"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr ""
-"Una aplicación ta bloquiándo la dormición y el bloquéu de la pantalla (%1)"
 
 #: package/contents/ui/main.qml:274
 #, kde-format

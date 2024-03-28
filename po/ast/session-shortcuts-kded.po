@@ -1,60 +1,59 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 19:44\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-27 23:52+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/session-shortcuts-kded."
-"pot\n"
-"X-Crowdin-File-ID: 49142\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: main.cpp:32
 #, kde-format
 msgid "Session Management"
-msgstr "会话管理"
+msgstr ""
 
 #: main.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr "显示注销屏幕"
+msgstr ""
 
 #: main.cpp:48
 #, kde-format
 msgid "Log Out"
-msgstr "注销"
+msgstr ""
 
 #: main.cpp:54
 #, kde-format
 msgid "Shut Down"
-msgstr "关机"
+msgstr ""
 
 #: main.cpp:60
 #, kde-format
 msgid "Reboot"
-msgstr "重启"
+msgstr ""
 
 #: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "注销 (无需确认)"
+msgstr ""
 
 #: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "关机 (无需确认)"
+msgstr ""
 
 #: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "重启 (无需确认)"
+msgstr ""

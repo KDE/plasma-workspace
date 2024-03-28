@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-03-15 01:23+0100\n"
+"PO-Revision-Date: 2024-03-16 22:34+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
@@ -94,7 +94,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr ""
+msgstr "Configurar la lluz nocherniega…"
 
 #: package/contents/ui/NightColorItem.qml:75
 #, kde-format
@@ -106,19 +106,19 @@ msgstr ""
 #, kde-format
 msgctxt "Night light status"
 msgid "Unavailable"
-msgstr ""
+msgstr "Nun ta disponible"
 
 #: package/contents/ui/NightColorItem.qml:81
 #, kde-format
 msgctxt "Night light status"
 msgid "Not enabled"
-msgstr ""
+msgstr "Nun s'activó"
 
 #: package/contents/ui/NightColorItem.qml:84
 #, kde-format
 msgctxt "Night light status"
 msgid "Not running"
-msgstr ""
+msgstr "Nun ta n'execución"
 
 #: package/contents/ui/NightColorItem.qml:87
 #, kde-format
