@@ -34,8 +34,8 @@ ListView {
         return null;
     }
 
-    readonly property double cellHeight: currentItem?.cellHeight ?? 0
-    readonly property double cellWidth: currentItem?.cellWidth ?? 0
+    readonly property double cellHeight: (currentItem as DaysCalendar)?.cellHeight ?? 0
+    readonly property double cellWidth: (currentItem as DaysCalendar)?.cellWidth ?? 0
 
     required property PlasmaCalendar.Calendar backend
     required property int viewType
@@ -58,7 +58,7 @@ ListView {
     keyNavigationEnabled: false // It's actually enabled. The default behaviour is not desirable
 
     function focusFirstCellOfView() {
-        currentItem.repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
+        (currentItem as DaysCalendar).repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
     }
 
     function resetViewPosition() {
