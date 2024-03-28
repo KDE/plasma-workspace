@@ -102,6 +102,7 @@ PlasmaExtras.Representation {
 
                     battery: model
                     remainingTime: dialog.remainingTime
+                    pluggedIn: dialog.pluggedIn
 
                     KeyNavigation.up: index === 0 ? (powerProfileItem.visible ? powerProfileItem : powerProfileItem.KeyNavigation.up) : batteryRepeater.itemAt(index - 1)
                     KeyNavigation.down: index + 1 < batteryRepeater.count ? batteryRepeater.itemAt(index + 1) : powerManagementItem

@@ -44,6 +44,8 @@ PlasmaComponents3.ItemDelegate {
 
     readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
 
+    property bool pluggedIn: false
+
     property int remainingTime: 0
 
     // Existing instance of a slider to use as a reference to calculate extra
@@ -73,7 +75,7 @@ PlasmaComponents3.ItemDelegate {
             batteryType: root.battery.Type
             percent: root.battery.Percent
             hasBattery: root.isPresent
-            pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
+            pluggedIn: root.pluggedIn && root.battery["Is Power Supply"]
         }
 
         ColumnLayout {
