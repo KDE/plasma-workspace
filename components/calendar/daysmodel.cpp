@@ -410,21 +410,24 @@ bool DaysModel::hasMinorEventAtDate(const QDate &date) const
 void DaysModel::setPluginsManager(EventPluginsManager *manager)
 {
     if (d->pluginsManager) {
-        disconnect(d->pluginsManager, nullptr, this, nullptr);
-    }
-
-    if (!manager) {
-        return;
+        disconnect(d->pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
+        disconnect(d->pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
+        disconnect(d->pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
+        disconnect(d->pluginsManager, &EventPluginsManager::alternateCalendarDateReady, this, &DaysModel::onAlternateCalendarDateReady);
+        disconnect(d->pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
+        disconnect(d->pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
     }
 
     d->pluginsManager = manager;
 
-    connect(d->pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
-    connect(d->pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
-    connect(d->pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
-    connect(d->pluginsManager, &EventPluginsManager::alternateCalendarDateReady, this, &DaysModel::onAlternateCalendarDateReady);
-    connect(d->pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
-    connect(d->pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
+    if (d->pluginsManager) {
+        connect(d->pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
+        connect(d->pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
+        connect(d->pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
+        connect(d->pluginsManager, &EventPluginsManager::alternateCalendarDateReady, this, &DaysModel::onAlternateCalendarDateReady);
+        connect(d->pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
+        connect(d->pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
+    }
 
     QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
 }
