@@ -23,11 +23,7 @@ MouseArea {
     property real brightnessError: 0
     property QtObject batteries
     property bool hasBatteries: false
-    required property bool isSomehowInPerformanceMode
-    required property bool isSetToPerformanceMode
     required property bool isManuallyInPerformanceMode
-    required property bool isSomehowInPowerSaveMode
-    required property bool isSetToPowerSaveMode
     required property bool isManuallyInPowerSaveMode
     required property bool isManuallyInhibited
     required property bool isSomehowFullyCharged
@@ -44,9 +40,9 @@ MouseArea {
 
     property string powerModeIcon: root.isManuallyInhibited
             ? "system-suspend-inhibited-symbolic" 
-            : root.isSomehowInPerformanceMode
+            : root.isManuallyInPerformanceMode
             ? "battery-profile-performance-symbolic" 
-            : root.isSomehowInPowerSaveMode
+            : root.isManuallyInPowerSaveMode
             ? "battery-profile-powersave-symbolic" 
             : Plasmoid.icon
 
@@ -86,7 +82,7 @@ MouseArea {
 
                     anchors.fill: parent
 
-                    visible: !root.isDischarging && (root.isManuallyInhibited || root.isManuallyInPerformanceMode || root.isHeldOnPerformanceMode || root.isManuallyInPowerSaveMode || root.isHeldOnPowerSaveMode)
+                    visible: !root.isDischarging && (root.isManuallyInhibited || root.isManuallyInPerformanceMode || root.isManuallyInPowerSaveMode)
                     source: root.powerModeIcon
                     active: root.containsMouse
                 }
