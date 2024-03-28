@@ -55,6 +55,7 @@
         ],
         "Description": "Stop applications that are currently running",
         "Description[ar]": "أوقف التطبيقات التي تعمل حاليًا",
+        "Description[ast]": "Para les aplicaciones que tean n'execución",
         "Description[az]": "Hal-hazırda işləyən tətbiqləri dayandırmaq",
         "Description[be]": "Спыненне запушчаных праграм",
         "Description[bg]": "Спира приложения, които се изпълняват в момента",
