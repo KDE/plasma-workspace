@@ -235,14 +235,6 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
 {
     qCDebug(SCREENPOOL) << "handleScreenRemoved" << screen;
 
-    auto it = std::find_if(m_redundantScreens.begin(), m_redundantScreens.end(), [screen](QScreen *value) {
-        return (value == screen);
-    });
-
-    if (it != m_redundantScreens.end()) {
-        m_redundantScreens.erase(it);
-    }
-
     m_sizeSortedScreens.removeAll(screen);
     if (m_redundantScreens.contains(screen)) {
         Q_ASSERT(!m_fakeScreens.contains(screen));
