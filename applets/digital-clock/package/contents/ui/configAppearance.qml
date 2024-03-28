@@ -129,7 +129,7 @@ KCMUtils.SimpleKCM {
                     i18n("Use Region Defaults"),
                     i18n("24-Hour")
                 ]
-                onCurrentIndexChanged: cfg_use24hFormat = currentIndex
+                onActivated: cfg_use24hFormat = currentIndex
             }
 
             QQC2.Button {
@@ -181,7 +181,7 @@ KCMUtils.SimpleKCM {
                         },
                     },
                 ]
-                onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"];
+                onActivated: cfg_dateFormat = model[currentIndex]["name"];
 
                 Component.onCompleted: {
                     const isConfiguredDateFormat = item => item["name"] === Plasmoid.configuration.dateFormat;
