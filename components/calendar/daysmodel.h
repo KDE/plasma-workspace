@@ -55,7 +55,7 @@ public:
 
     QVariant data(const QModelIndex &index, int role) const override;
 
-    Q_INVOKABLE void setPluginsManager(QObject *manager);
+    Q_INVOKABLE void setPluginsManager(EventPluginsManager *manager);
 
     Q_INVOKABLE QList<QObject *> eventsForDate(const QDate &date);
 

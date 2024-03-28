@@ -407,19 +407,17 @@ bool DaysModel::hasMinorEventAtDate(const QDate &date) const
     return false;
 }
 
-void DaysModel::setPluginsManager(QObject *manager)
+void DaysModel::setPluginsManager(EventPluginsManager *manager)
 {
     if (d->pluginsManager) {
         disconnect(d->pluginsManager, nullptr, this, nullptr);
     }
 
-    EventPluginsManager *m = qobject_cast<EventPluginsManager *>(manager);
-
-    if (!m) {
+    if (!manager) {
         return;
     }
 
-    d->pluginsManager = m;
+    d->pluginsManager = manager;
 
     connect(d->pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
     connect(d->pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
