@@ -37,7 +37,6 @@ Item {
      */
     property PlasmaCalendar.EventPluginsManager eventPluginsManager
 
-    property QtObject date
     property date currentDate
     property string todayAuxilliaryText: ""
     // Bind to todayAuxilliaryText so sublabel can be visible on debut
