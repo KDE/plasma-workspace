@@ -635,7 +635,7 @@ MouseArea {
         let result_sec = result + delimiter + seconds;
 
         // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
-        if ((main.use24hFormat == Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat == Qt.Unchecked) {
+        if ((main.use24hFormat === Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat === Qt.Unchecked) {
             result += " " + amPm;
             result_sec += " " + amPm;
         }

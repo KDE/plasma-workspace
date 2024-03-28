@@ -386,7 +386,7 @@ PlasmaExtras.Representation {
                 anchors.centerIn: holidaysView
                 width: holidaysView.width - (Kirigami.Units.gridUnit * 8)
 
-                visible: holidaysList.count == 0
+                visible: holidaysList.count === 0
 
                 iconName: "checkmark"
                 text: monthView.isToday(monthView.currentDate)
