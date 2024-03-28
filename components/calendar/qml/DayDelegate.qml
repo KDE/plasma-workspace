@@ -31,7 +31,9 @@ PlasmaComponents.AbstractButton {
         }
     }
     hoverEnabled: true
-    property var dayModel: null
+
+    // type: either PlasmaCalendar.DaysModel or an equivalent ListModel
+    property QtObject dayModel
 
     signal activated
 
