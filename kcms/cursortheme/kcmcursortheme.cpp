@@ -79,7 +79,16 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
         const QModelIndex currentThemeIndex = m_themeModel->findIndex(cursorThemeSettings()->cursorTheme());
         if (roles.contains(CursorTheme::PendingDeletionRole) && currentThemeIndex.data(CursorTheme::PendingDeletionRole) == true
             && start.row() <= currentThemeIndex.row() && currentThemeIndex.row() <= end.row()) {
-            cursorThemeSettings()->setCursorTheme(m_themeModel->theme(m_themeModel->defaultIndex())->name());
+            QModelIndex defaultIndex = m_themeModel->defaultIndex();
+            if (!defaultIndex.isValid()) [[unlikely]] { // SENTRY: SYSTEMSETTINGS-8D
+                if (m_themeModel->rowCount() > 0) {
+                    defaultIndex = m_themeModel->index(0, 0);
+                } else [[unlikely]] {
+                    Q_ASSERT(false);
+                    return;
+                }
+            }
+            cursorThemeSettings()->setCursorTheme(m_themeModel->theme(defaultIndex)->name());
         }
     });
 }
