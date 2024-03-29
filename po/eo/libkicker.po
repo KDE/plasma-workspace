@@ -1,0 +1,321 @@
+# translation of libkicker.pot to Esperanto
+# Copyright (C) 2019 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+# Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-02-11 02:38+0000\n"
+"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Malfermi kun:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Propraĵoj"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Aldoni al Labortablo"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Aldoni al Panelo (Fenestaĵo)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Alpingli al Task Manager"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Lastatempaj Dosieroj"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Forgesi Lastajn Dosierojn"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Redakti Aplikon…"
+
+#: plugin/actionlist.cpp:429
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Malinstali aŭ Administri Aldonaĵojn…"
+
+#: plugin/appentry.cpp:308
+#, kde-format
+msgid "Hide Application"
+msgstr "Kaŝi Aplikon"
+
+#: plugin/appentry.cpp:367
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:369
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
+#: plugin/recentusagemodel.cpp:216
+#, kde-format
+msgid "Applications"
+msgstr "Aplikoj"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Malkaŝi Aplikojn en ĉi tiu Submenuo"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Malkaŝi Aplikojn en '%1'"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "Montri KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Serĉi, kalkuli aŭ lanĉi komandon"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Komputilo"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr ""
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Plej ŝatataj"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Kontaktoj"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr ""
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:151
+#, kde-format
+msgid "Recently Used"
+msgstr "Lastatempe Uzita"
+
+#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#, kde-format
+msgid "Files"
+msgstr "Dosieroj"
+
+#: plugin/recentusagemodel.cpp:238
+#, kde-format
+msgid "Forget Application"
+msgstr "Forgesi Aplikaĵon"
+
+#: plugin/recentusagemodel.cpp:332
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Malfermi Enhavan Dosierujon"
+
+#: plugin/recentusagemodel.cpp:335
+#, kde-format
+msgid "Forget File"
+msgstr "Forgesi Dosieron"
+
+#: plugin/recentusagemodel.cpp:472
+#, kde-format
+msgid "Forget All"
+msgstr "Forgesi Ĉion"
+
+#: plugin/recentusagemodel.cpp:474
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Forgesi Ĉiujn Aplikaĵojn"
+
+#: plugin/recentusagemodel.cpp:477
+#, kde-format
+msgid "Forget All Files"
+msgstr "Forgesi ĉiujn dosierojn"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Kaŝi %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Ĉiuj Aplikoj"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Ĉi tio ne devus esti videbla! Uzu KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr ""
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Ofte Uzataj Dosieroj"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Lastatempaj Aplikoj"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Ofte Uzataj Aplikoj"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Potenco / Seanco"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Serĉrezultoj"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Ŝlosi"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Elsaluti"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Konservi Seancon"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Ŝanĝi Uzanton"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormi"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Pasivumigi"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Rekomenci"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Fermi sistemon"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Seanco"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Sistemo"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Ŝlosi ekranon"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Fini la seancon"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Komenci paralelan seancon kiel malsama uzanto"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Suspendi al RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Suspendi al disko"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Rekomenci komputilon"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Malŝalti komputilon"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Sistemaj agoj"

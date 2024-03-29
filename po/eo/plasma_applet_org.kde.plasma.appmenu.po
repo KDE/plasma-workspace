@@ -1,0 +1,50 @@
+# translation of plasma_applet_org.kde.plasma.appmenu.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2024-03-28 09:21+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aspekto"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Uzi unusolan butonon por aplikaĵa menuo"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "Montri plenan aplikaĵan menuon"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr "Malfermi menuon"
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "Serĉi"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "Serĉi…"

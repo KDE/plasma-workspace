@@ -1,0 +1,134 @@
+# translation of plasma_applet_org.kde.plasma.clipboard.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"PO-Revision-Date: 2024-03-28 09:21+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/ui/BarcodePage.qml:36
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Reiri al Tondujo"
+
+#: contents/ui/BarcodePage.qml:57
+#, kde-format
+msgid "QR Code"
+msgstr "QR-kodo"
+
+#: contents/ui/BarcodePage.qml:58
+#, kde-format
+msgid "Data Matrix"
+msgstr "Data Matrix"
+
+#: contents/ui/BarcodePage.qml:59
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr "Aztec"
+
+#: contents/ui/BarcodePage.qml:60
+#, kde-format
+msgid "Code 39"
+msgstr "Kodo 39"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "Code 93"
+msgstr "Kodo 93"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Code 128"
+msgstr "Kodo 128"
+
+#: contents/ui/BarcodePage.qml:85
+#, kde-format
+msgid "Change the QR code type"
+msgstr "Ŝanĝi la tipon de QR-kodo"
+
+#: contents/ui/BarcodePage.qml:114
+#, kde-format
+msgid "Creating QR code failed"
+msgstr "Kreado de QR-kodo malsukcesis"
+
+#: contents/ui/BarcodePage.qml:123
+#, kde-format
+msgid "The QR code is too large to be displayed"
+msgstr "La QR-kodo estas tro granda por montri"
+
+#: contents/ui/clipboard.qml:27
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Tonduja Enhavo"
+
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Tondujo estas malplena"
+
+#: contents/ui/clipboard.qml:56
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Agordi tondujon…"
+
+#: contents/ui/clipboard.qml:58
+#, kde-format
+msgid "Clear History"
+msgstr "Forviŝi Historion"
+
+#: contents/ui/DelegateToolButtons.qml:23
+#, kde-format
+msgid "Invoke action"
+msgstr "Alvoki agon"
+
+#: contents/ui/DelegateToolButtons.qml:38
+#, kde-format
+msgid "Show QR code"
+msgstr "Montri QR-kodon"
+
+#: contents/ui/DelegateToolButtons.qml:54
+#, kde-format
+msgid "Edit contents"
+msgstr "Redakti enhavojn"
+
+#: contents/ui/DelegateToolButtons.qml:68
+#, kde-format
+msgid "Remove from history"
+msgstr "Forigi el historio"
+
+#: contents/ui/EditPage.qml:86
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Konservi"
+
+#: contents/ui/EditPage.qml:94
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: contents/ui/Menu.qml:126
+#, kde-format
+msgid "No matches"
+msgstr "Neniuj kongruoj"
+
+#: contents/ui/UrlItemDelegate.qml:99
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"

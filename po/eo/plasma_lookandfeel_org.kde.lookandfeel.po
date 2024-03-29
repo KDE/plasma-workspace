@@ -1,0 +1,298 @@
+# translation of plasma_lookandfeel_org.kde.lookandfeel.pot to esperanto
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+# Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-10-12 02:31+0000\n"
+"PO-Revision-Date: 2024-02-02 22:38+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../sddm-theme/KeyboardButton.qml:19
+#, kde-format
+msgid "Keyboard Layout: %1"
+msgstr "Klavara aranĝo: %1"
+
+#: ../sddm-theme/Login.qml:85
+#, kde-format
+msgid "Username"
+msgstr "Uzantnomo"
+
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
+#, kde-format
+msgid "Password"
+msgstr "Pasvorto"
+
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
+#, kde-format
+msgid "Log In"
+msgstr "Ensaluti"
+
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
+#, kde-format
+msgid "Caps Lock is on"
+msgstr "Majskulo estas aktiva"
+
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
+#: contents/logout/Logout.qml:163
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormi"
+
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
+#: contents/logout/Logout.qml:181
+#, kde-format
+msgid "Restart"
+msgstr "Rekomenci"
+
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
+#: contents/logout/Logout.qml:191
+#, kde-format
+msgid "Shut Down"
+msgstr "Fermi sistemon"
+
+#: ../sddm-theme/Main.qml:234
+#, kde-format
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Alia…"
+
+#: ../sddm-theme/Main.qml:449
+#, kde-format
+msgid "Type in Username and Password"
+msgstr "Tajpu Uzantnomon kaj Pasvorton"
+
+#: ../sddm-theme/Main.qml:483
+#, kde-format
+msgid "List Users"
+msgstr "Listo de Uzantoj"
+
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtuala Klavaro"
+
+#: ../sddm-theme/Main.qml:596
+#, kde-format
+msgid "Login Failed"
+msgstr "Ensaluto malsukcesis"
+
+#: ../sddm-theme/SessionButton.qml:18
+#, kde-format
+msgid "Desktop Session: %1"
+msgstr "Labortabla Sesio: %1"
+
+#: contents/components/Battery.qml:53
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:54
+#, kde-format
+msgid "Battery at %1%"
+msgstr "Baterio ĉe %1%"
+
+#: contents/components/UserList.qml:71
+#, kde-format
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "Neuzata"
+
+#: contents/components/UserList.qml:77
+#, kde-format
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "TTY %1"
+
+#: contents/components/UserList.qml:79
+#, kde-format
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr ""
+
+#: contents/components/UserList.qml:83
+#, kde-format
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:19
+#, kde-format
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr "Horloĝo:"
+
+#: contents/lockscreen/config.qml:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr "Konservi videbla kiam malŝlosa prompto malaperas"
+
+#: contents/lockscreen/config.qml:33
+#, kde-format
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr "Plurmediaj regiloj:"
+
+#: contents/lockscreen/config.qml:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr "Montri sub malŝlosa prompto"
+
+#: contents/lockscreen/LockScreenUi.qml:55
+#, kde-format
+msgid "Unlocking failed"
+msgstr "Malŝloso malsukcesis"
+
+#: contents/lockscreen/LockScreenUi.qml:332
+#, kde-format
+msgid "Sleep"
+msgstr "Dormi"
+
+#: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
+#, kde-format
+msgid "Hibernate"
+msgstr "Pasivumigi"
+
+#: contents/lockscreen/LockScreenUi.qml:344
+#, kde-format
+msgid "Switch User"
+msgstr "Ŝanĝi Uzanton"
+
+#: contents/lockscreen/LockScreenUi.qml:523
+#, kde-format
+msgid "Switch to This Session"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:531
+#, kde-format
+msgid "Start New Session"
+msgstr "Komenci Novan Seancon"
+
+#: contents/lockscreen/LockScreenUi.qml:544
+#, kde-format
+msgid "Back"
+msgstr "Malantaŭen/Reen"
+
+#: contents/lockscreen/LockScreenUi.qml:590
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Ŝanĝi aranĝon"
+
+#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgid "Unlock"
+msgstr "Malŝlosi"
+
+#: contents/lockscreen/MediaControls.qml:109
+#, kde-format
+msgid "No title"
+msgstr "Neniu titolo"
+
+#: contents/lockscreen/MediaControls.qml:110
+#, kde-format
+msgid "No media playing"
+msgstr "Neniu aŭdvidaĵo ludanta"
+
+#: contents/lockscreen/MediaControls.qml:139
+#, kde-format
+msgid "Previous track"
+msgstr "Antaŭa trako"
+
+#: contents/lockscreen/MediaControls.qml:151
+#, kde-format
+msgid "Play or Pause media"
+msgstr "Ludi aŭ Paŭzi aŭdvidaĵon"
+
+#: contents/lockscreen/MediaControls.qml:165
+#, kde-format
+msgid "Next track"
+msgstr "Sekva aŭtoveturejo"
+
+#: contents/logout/Logout.qml:139
+#, kde-format
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"Unu alia uzanto estas aktuale ensalutita. Se la komputilo estas malŝaltita "
+"aŭ restartigita, tiu uzanto eble perdos laboron."
+msgstr[1] ""
+"%1 aliaj uzantoj estas aktuale ensalutitaj. Se la komputilo estas malŝaltita "
+"aŭ restartigita, tiuj uzantoj eble perdos laboron."
+
+#: contents/logout/Logout.qml:153
+#, kde-format
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "Rekomencinte, la komputilo eniros la ekranon de agordo de firmware."
+
+#: contents/logout/Logout.qml:201
+#, kde-format
+msgid "Log Out"
+msgstr "Elsaluti"
+
+#: contents/logout/Logout.qml:224
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Restartigante post 1 sekundo"
+msgstr[1] "Restartigante post %1 sekundoj"
+
+#: contents/logout/Logout.qml:226
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Malŝaltante post 1 sekundo"
+msgstr[1] "Malŝaltante post %1 sekundoj"
+
+#: contents/logout/Logout.qml:228
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Elsalutante post 1 sekundo"
+msgstr[1] "Elsalutante post %1 sekundoj"
+
+#: contents/logout/Logout.qml:239
+#, kde-format
+msgid "OK"
+msgstr "Bone"
+
+#: contents/logout/Logout.qml:245
+#, kde-format
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: contents/osd/OsdItem.qml:30
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/splash/Splash.qml:79
+#, kde-format
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "Plasma farita de KDE"
