@@ -40,22 +40,22 @@ KCMUtils.SimpleKCM {
             text: i18n("Show week numbers")
         }
 
-        RowLayout {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("First day of week:")
 
-            QQC2.ComboBox {
-                id: firstDayOfWeekCombo
-                textRole: "text"
-                model: [-1, 0, 1, 5, 6].map(day => ({
-                    day,
-                    text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day),
-                }))
-                onActivated: index => {
-                    cfg_firstDayOfWeek = model[index].day;
-                }
-                currentIndex: model.findIndex(item => item.day === cfg_firstDayOfWeek)
+        QQC2.ComboBox {
+            id: firstDayOfWeekCombo
+
+            Kirigami.FormData.label: i18n("First day of week:")
+            Layout.fillWidth: true
+
+            textRole: "text"
+            model: [-1, 0, 1, 5, 6].map(day => ({
+                day,
+                text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day),
+            }))
+            onActivated: index => {
+                cfg_firstDayOfWeek = model[index].day;
             }
+            currentIndex: model.findIndex(item => item.day === cfg_firstDayOfWeek)
         }
 
         Item {

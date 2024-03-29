@@ -100,18 +100,17 @@ KCMUtils.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        RowLayout {
+        QQC2.ComboBox {
+            id: displayTimezoneFormat
+
             Kirigami.FormData.label: i18n("Display time zone as:")
 
-            QQC2.ComboBox {
-                id: displayTimezoneFormat
-                model: [
-                    i18n("Code"),
-                    i18n("City"),
-                    i18n("Offset from UTC time"),
-                ]
-                onActivated: cfg_displayTimezoneFormat = currentIndex
-            }
+            model: [
+                i18n("Code"),
+                i18n("City"),
+                i18n("Offset from UTC time"),
+            ]
+            onActivated: cfg_displayTimezoneFormat = currentIndex
         }
 
         Item {
