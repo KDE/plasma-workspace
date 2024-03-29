@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-05 02:21+0000\n"
+"POT-Creation-Date: 2024-03-29 02:46+0000\n"
 "PO-Revision-Date: 2021-05-26 07:11+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -62,18 +62,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Erweiterungen deinstallieren oder verwalten ..."
 
-#: plugin/appentry.cpp:306
+#: plugin/appentry.cpp:301
 #, kde-format
 msgid "Hide Application"
 msgstr "Anwendung ausblenden"
 
-#: plugin/appentry.cpp:365
+#: plugin/appentry.cpp:360
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:367
+#: plugin/appentry.cpp:362
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -112,8 +112,8 @@ msgid "Computer"
 msgstr "Rechner"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:546 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:551 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoriten"
