@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-23 00:39+0000\n"
-"PO-Revision-Date: 2023-04-06 22:30+0100\n"
+"PO-Revision-Date: 2024-03-28 10:37+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: ESPERANTO <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -659,7 +659,7 @@ msgstr "Malbonega"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow"
-msgstr "Plovanta Neĝo"
+msgstr "Blovanta Neĝo"
 
 #: envcan_i18n.dat:3 noaa_i18n.dat:10
 #, kde-format

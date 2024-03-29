@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-05 00:39+0000\n"
+"POT-Creation-Date: 2024-03-29 00:39+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -66,18 +66,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Malinstali aŭ Administri Aldonaĵojn…"
 
-#: plugin/appentry.cpp:306
+#: plugin/appentry.cpp:301
 #, kde-format
 msgid "Hide Application"
 msgstr "Kaŝi Aplikon"
 
-#: plugin/appentry.cpp:364
+#: plugin/appentry.cpp:359
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:366
+#: plugin/appentry.cpp:361
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -116,8 +116,8 @@ msgid "Computer"
 msgstr "Komputilo"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:546 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:551 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Plej ŝatataj"
