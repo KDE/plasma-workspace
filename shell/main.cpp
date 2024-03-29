@@ -166,11 +166,11 @@ int main(int argc, char *argv[])
 
             QStandardPaths::setTestModeEnabled(true);
             QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)).removeRecursively();
-            corona->setTestModeLayout(layoutUrl.toLocalFile());
+            // corona->setTestModeLayout(layoutUrl.toLocalFile());
 
             qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
 
-            new CoronaTestHelper(corona);
+            // new CoronaTestHelper(corona);
         }
 
         // Tells libnotificationmanager that we're the only true application that may own notification and job progress services
