@@ -46,7 +46,6 @@ set (plasma_shell_SRCS
     panelshadows.cpp
     shellcorona.cpp
     osd.cpp
-    coronatesthelper.cpp
     strutmanager.cpp
     debug.cpp
     screenpool-debug.cpp

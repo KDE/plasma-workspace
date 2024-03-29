@@ -7,7 +7,6 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "coronatesthelper.h"
 #include "debug.h"
 #include "shellcorona.h"
 #include "softwarerendernotifier.h"
@@ -106,18 +105,12 @@ int main(int argc, char *argv[])
 
         QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
 
-        QCommandLineOption testOption(QStringList() << QStringLiteral("test"),
-                                      i18n("Enables test mode and specifies the layout javascript file to set up the testing environment"),
-                                      i18n("file"),
-                                      QStringLiteral("layout.js"));
-
 #ifdef WITH_KUSERFEEDBACKCORE
         QCommandLineOption feedbackOption(QStringList() << QStringLiteral("feedback"), i18n("Lists the available options for user feedback"));
 #endif
         cliOptions.addOption(dbgOption);
         cliOptions.addOption(noRespawnOption);
         cliOptions.addOption(shellPluginOption);
-        cliOptions.addOption(testOption);
         cliOptions.addOption(replaceOption);
 #ifdef WITH_KUSERFEEDBACKCORE
         cliOptions.addOption(feedbackOption);
@@ -153,24 +146,8 @@ int main(int argc, char *argv[])
 
         QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, corona, &QObject::deleteLater);
 
-        if (!cliOptions.isSet(noRespawnOption) && !cliOptions.isSet(testOption)) {
+        if (!cliOptions.isSet(noRespawnOption)) {
             KCrash::setFlags(KCrash::AutoRestart);
-        }
-
-        if (cliOptions.isSet(testOption)) {
-            const QUrl layoutUrl = QUrl::fromUserInput(cliOptions.value(testOption), {}, QUrl::AssumeLocalFile);
-            if (!layoutUrl.isLocalFile()) {
-                qCWarning(PLASMASHELL) << "ensure the layout file is local" << layoutUrl;
-                cliOptions.showHelp(1);
-            }
-
-            QStandardPaths::setTestModeEnabled(true);
-            QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)).removeRecursively();
-            corona->setTestModeLayout(layoutUrl.toLocalFile());
-
-            qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
-
-            new CoronaTestHelper(corona);
         }
 
         // Tells libnotificationmanager that we're the only true application that may own notification and job progress services
