@@ -1574,10 +1574,6 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(floatingnessTargetChanged()), this, SLOT(updateFloating()));
         }
 
-        const int floatingTranslucentItemOffsetSignal = rootObject->metaObject()->indexOfSignal("floatingTranslucentItemOffsetChanged()");
-        if (floatingTranslucentItemOffsetSignal >= 0) {
-            connect(rootObject, SIGNAL(floatingTranslucentItemOffsetChanged), this, SLOT(updateMask()));
-        }
         updateFloating();
 
         const QVariant maskProperty = rootObject->property("panelMask");
