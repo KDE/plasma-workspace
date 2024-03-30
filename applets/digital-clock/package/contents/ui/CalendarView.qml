@@ -50,8 +50,6 @@ PlasmaExtras.Representation {
     property alias borderWidth: monthView.borderWidth
     property alias monthView: monthView
 
-    property bool debug: false
-
     Keys.onDownPressed: event => {
         monthView.Keys.downPressed(event);
     }
