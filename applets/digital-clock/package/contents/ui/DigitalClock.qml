@@ -90,10 +90,10 @@ MouseArea {
     onDisplayTimezoneFormatChanged: { setupLabels(); }
     onStateChanged: { setupLabels(); }
 
-    onLastSelectedTimezoneChanged: { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowLocalTimezoneChanged:    { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
+    onLastSelectedTimezoneChanged: { timeFormatCorrection() }
+    onShowLocalTimezoneChanged:    { timeFormatCorrection() }
+    onShowDateChanged:             { timeFormatCorrection() }
+    onUse24hFormatChanged:         { timeFormatCorrection() }
 
     Connections {
         target: Plasmoid
@@ -617,7 +617,7 @@ MouseArea {
     //
     // What happens here is that it looks for the delimiter between "h" and "m", takes it
     // and appends it after "mm" and then appends "ss" for the seconds.
-    function timeFormatCorrection(timeFormatString) {
+    function timeFormatCorrection(timeFormatString = Qt.locale().timeFormat(Locale.ShortFormat)) {
         const regexp = /(hh*)(.+)(mm)/i
         const match = regexp.exec(timeFormatString);
 
@@ -728,7 +728,7 @@ MouseArea {
         }
 
         if (doCorrections) {
-            timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+            timeFormatCorrection();
         }
     }
 
@@ -748,7 +748,7 @@ MouseArea {
         setTimezoneIndex();
         tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
-        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+        timeFormatCorrection();
         dataSource.onDataChanged.connect(dateTimeChanged);
     }
 }
