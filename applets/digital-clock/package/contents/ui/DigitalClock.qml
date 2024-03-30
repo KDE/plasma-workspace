@@ -749,6 +749,6 @@ MouseArea {
         tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection();
-        dataSource.onDataChanged.connect(dateTimeChanged);
+        dataSource.dataChanged.connect(dateTimeChanged);
     }
 }
