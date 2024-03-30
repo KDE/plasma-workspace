@@ -223,19 +223,15 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
     if (isOutputFake(screen)) {
         m_fakeScreens.insert(screen);
         return;
-    } else {
-        m_fakeScreens.remove(screen);
+    } else if (auto it = m_fakeScreens.constFind(screen); it != m_fakeScreens.cend()) {
+        qCDebug(SCREENPOOL) << "not fake anymore" << screen;
+        m_fakeScreens.erase(it);
     }
 
     // TODO: remove?
     if (QScreen *toScreen = outputRedundantTo(screen)) {
         m_redundantScreens.insert(screen, toScreen);
         return;
-    }
-
-    if (m_fakeScreens.contains(screen)) {
-        qCDebug(SCREENPOOL) << "not fake anymore" << screen;
-        m_fakeScreens.remove(screen);
     }
 }
 
