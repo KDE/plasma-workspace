@@ -172,18 +172,18 @@ PlasmaExtras.Representation {
             Layout.fillHeight: true
             Layout.minimumHeight: Kirigami.Units.gridUnit * 4
 
-            function formatDateWithoutYear(date) {
+            function formatDateWithoutYear(date: date): string {
                 // Unfortunatelly Qt overrides ECMA's Date.toLocaleDateString(),
                 // which is able to return locale-specific date-and-month-only date
                 // formats, with its dumb version that only supports Qt::DateFormat
                 // enum subset. So to get a day-and-month-only date format string we
                 // must resort to this magic and hope there are no locales that use
                 // other separators...
-                var format = Qt.locale().dateFormat(Locale.ShortFormat).replace(/[./ ]*Y{2,4}[./ ]*/i, '');
+                const format = Qt.locale().dateFormat(Locale.ShortFormat).replace(/[./ ]*Y{2,4}[./ ]*/i, '');
                 return Qt.formatDate(date, format);
             }
 
-            function dateEquals(date1, date2) {
+            function dateEquals(date1: date, date2: date): bool {
                 // Compare two dates without taking time into account
                 return date1.getFullYear() === date2.getFullYear()
                     && date1.getMonth() === date2.getMonth()
@@ -208,7 +208,7 @@ PlasmaExtras.Representation {
             Connections {
                 target: monthView.daysModel
 
-                function onAgendaUpdated(updatedDate) {
+                function onAgendaUpdated(updatedDate: date) {
                     if (agenda.dateEquals(updatedDate, monthView.currentDate)) {
                         holidaysList.model = null;
                         holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
@@ -262,7 +262,7 @@ PlasmaExtras.Representation {
                         hoverEnabled: true
                         highlighted: ListView.isCurrentItem
                         Accessible.description: modelData.description
-                        property bool hasTime: {
+                        readonly property bool hasTime: {
                             // Explicitly all-day event
                             if (modelData.isAllDay) {
                                 return false;
@@ -282,7 +282,7 @@ PlasmaExtras.Representation {
                                 && modelData.endDateTime.getMinutes() === 0;
 
                             const sameDay = modelData.startDateTime.getDate() === modelData.endDateTime.getDate()
-                                && modelData.startDateTime.getDay() === modelData.endDateTime.getDay()
+                                && modelData.startDateTime.getDay() === modelData.endDateTime.getDay();
 
                             return !(startIsMidnight && endIsMidnight && sameDay);
                         }
@@ -481,10 +481,8 @@ PlasmaExtras.Representation {
                 }
 
                 model: {
-                    let timezones = [];
-                    for (let i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
-                        let thisTzData = Plasmoid.configuration.selectedTimeZones[i];
-
+                    const timeZones = [];
+                    for (const timeZone of Plasmoid.configuration.selectedTimeZones) {
                         /* Don't add this item if it's the same as the local time zone, which
                          * would indicate that the user has deliberately added a dedicated entry
                          * for the city of their normal time zone. This is not an error condition
@@ -495,11 +493,11 @@ PlasmaExtras.Representation {
                          * the clocks list would show two entries for the same city. To avoid
                          * this, let's suppress the duplicate.
                          */
-                        if (!(thisTzData !== "Local" && root.nameForZone(thisTzData) === root.nameForZone("Local"))) {
-                            timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
+                        if (!(timeZone !== "Local" && root.nameForZone(timeZone) === root.nameForZone("Local"))) {
+                            timeZones.push(timeZone);
                         }
                     }
-                    return timezones;
+                    return timeZones;
                 }
 
                 delegate: PlasmaComponents.ItemDelegate {

@@ -30,7 +30,7 @@ Item {
      */
     Accessible.name: i18nc("@info:tooltip %1 is a localized long date", "Today is %1", tooltipSubtext.text)
     Accessible.description: {
-        let description = tooltipSubLabelText.visible ? [tooltipSubLabelText.text] : [];
+        const description = tooltipSubLabelText.visible ? [tooltipSubLabelText.text] : [];
         for (let i = 0; i < timezoneRepeater.count; i += 2) {
             description.push(`${timezoneRepeater.itemAt(i).text}: ${timezoneRepeater.itemAt(i + 1).text}`);
         }
@@ -104,10 +104,8 @@ Item {
                 id: timezoneRepeater
 
                 model: {
-                    let timezones = [];
-                    for (let i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
-                        let thisTzData = Plasmoid.configuration.selectedTimeZones[i];
-
+                    const timeZones = [];
+                    for (const timeZone of Plasmoid.configuration.selectedTimeZones) {
                         /* Don't add this item if it's the same as the local time zone, which
                          * would indicate that the user has deliberately added a dedicated entry
                          * for the city of their normal time zone. This is not an error condition
@@ -118,13 +116,13 @@ Item {
                          * the clocks list would show two entries for the same city. To avoid
                          * this, let's suppress the duplicate.
                          */
-                        if (!(thisTzData !== "Local" && nameForZone(thisTzData) === nameForZone("Local"))) {
-                            timezones.push(thisTzData);
-                            timezones.push(thisTzData);
+                        if (!(timeZone !== "Local" && root.nameForZone(timeZone) === root.nameForZone("Local"))) {
+                            timeZones.push(timeZone);
+                            timeZones.push(timeZone);
                         }
                     }
 
-                    return timezones;
+                    return timeZones;
                 }
 
                 PlasmaComponents.Label {
@@ -132,7 +130,7 @@ Item {
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
                     text: {
                         if (index % 2 === 0) {
-                            return i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData));
+                            return i18nc("@label %1 is a city or time zone name", "%1:", root.nameForZone(modelData));
                         } else {
                             return timeForZone(modelData, Plasmoid.configuration.showSeconds > 0);
                         }

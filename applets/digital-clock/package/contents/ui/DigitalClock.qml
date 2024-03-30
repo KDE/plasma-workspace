@@ -119,18 +119,18 @@ MouseArea {
         }
     }
 
-    function getCurrentTime() {
+    function getCurrentTime(): date {
         // get the time for the given timezone from the dataengine
-        var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
+        const now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
         // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
         // add the dataengine TZ offset to it
-        var currentTime = new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+        const currentTime = new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
         return currentTime;
     }
 
-    function pointToPixel(pointSize) {
-        var pixelsPerInch = Screen.pixelDensity * 25.4
+    function pointToPixel(pointSize: int): int {
+        const pixelsPerInch = Screen.pixelDensity * 25.4
         return Math.round(pointSize / 72 * pixelsPerInch)
     }
 
