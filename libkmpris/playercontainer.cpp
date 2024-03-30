@@ -548,8 +548,25 @@ void PlayerContainer::initBindings()
     m_playbackStatusNotifier = m_playbackStatus.addNotifier(callback);
 }
 
-void PlayerContainer::updateFromMap(const QVariantMap &map)
+void PlayerContainer::updateFromMap(const QVariantMap &map, const QStringList &invalidatedProperties)
 {
+    if (!invalidatedProperties.empty()) {
+        for (const QString &prop : invalidatedProperties) {
+            // VLC invalidates "Tracks" but the property is not used currently
+            if (prop == QLatin1String("Metadata")) {
+                m_trackId = QString();
+                m_xesamTitle = QString();
+                m_xesamUrl = QString();
+                m_xesamArtist = QStringList();
+                m_xesamAlbumArtist = QStringList();
+                m_xesamAlbum = QString();
+                m_artUrl = QString();
+                m_length = 0.0;
+                m_kdePid = 0U;
+            }
+        }
+    }
+
     auto updateSingleProperty = [this]<typename T>(T &property, const QVariant &value, QMetaType::Type expectedType, void (PlayerContainer::*signal)()) {
         if (value.metaType().id() != expectedType) {
             qCWarning(MPRIS2) << m_dbusAddress << "exports" << value.metaType() << "but it should be" << QMetaType(expectedType);
@@ -695,7 +712,7 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
         return;
     }
 
-    updateFromMap(propsReply.value());
+    updateFromMap(propsReply.value(), {});
 
     if (--m_fetchesPending == 0) {
         // Check if the player follows the specification dutifully.
@@ -712,15 +729,13 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
     }
 }
 
-void PlayerContainer::onPropertiesChanged(const QString &, const QVariantMap &changedProperties, const QStringList &invalidatedProperties)
+void PlayerContainer::onPropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties)
 {
-    if (!invalidatedProperties.empty()) {
-        disconnect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
-        disconnect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
-        refresh();
-    } else {
-        updateFromMap(changedProperties);
+    if (interfaceName != QLatin1String("org.mpris.MediaPlayer2.Player") && interfaceName != QLatin1String("org.mpris.MediaPlayer2")) {
+        // org.mpris.MediaPlayer2.TrackList is ignored for now
+        return;
     }
+    updateFromMap(changedProperties, invalidatedProperties);
 }
 
 void PlayerContainer::onSeeked(qlonglong position)

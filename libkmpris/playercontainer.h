@@ -320,7 +320,7 @@ private Q_SLOTS:
 
 private:
     void initBindings();
-    void updateFromMap(const QVariantMap &map);
+    void updateFromMap(const QVariantMap &map, const QStringList &invalidatedProperties);
 
     int m_fetchesPending = 0;
     QString m_dbusAddress;
