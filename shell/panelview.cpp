@@ -97,14 +97,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(this, &PanelView::locationChanged, this, &PanelView::restore);
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
 
-    // FEATURE 352476: cancel focus on the panel when clicking outside
-    connect(this, &PanelView::activeFocusItemChanged, this, [this] {
-        if (containment()->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
-            // BUG 454729: avoid switching to PassiveStatus in keyboard navigation
-            containment()->setStatus(Plasma::Types::ActiveStatus);
-        }
-    });
-
     if (!m_corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Invalid home screen package";
     }
@@ -1480,6 +1472,14 @@ void PanelView::refreshContainment()
         }
     });
     connect(containment(), &Plasma::Applet::userConfiguringChanged, this, &PanelView::updateExclusiveZone);
+
+    // FEATURE 352476: cancel focus on the panel when clicking outside
+    connect(this, &PanelView::activeFocusItemChanged, containment(), [this] {
+        if (containment()->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
+            // BUG 454729: avoid switching to PassiveStatus in keyboard navigation
+            containment()->setStatus(Plasma::Types::ActiveStatus);
+        }
+    });
 }
 
 void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
