@@ -78,6 +78,26 @@ PlasmoidItem {
         }
     }
 
+    function selectedTimeZonesDeduplicatingExplicitLocalTimeZone()/*: [string] */ {
+        const displayStringForLocalTimeZone = displayStringForTimeZone("Local");
+        /*
+         * Don't add this item if it's the same as the local time zone, which
+         * would indicate that the user has deliberately added a dedicated entry
+         * for the city of their normal time zone. This is not an error condition
+         * because the user may have done this on purpose so that their normal
+         * local time zone shows up automatically while they're traveling and
+         * they've switched the current local time zone to something else. But
+         * with this use case, when they're back in their normal local time zone,
+         * the clocks list would show two entries for the same city. To avoid
+         * this, let's suppress the duplicate.
+         */
+        const isLiterallyLocalOrResolvesToSomethingOtherThanLocal = timeZone =>
+            timeZone === "Local" || displayStringForTimeZone(timeZone) !== displayStringForLocalTimeZone;
+
+        return Plasmoid.configuration.selectedTimeZones
+            .filter(isLiterallyLocalOrResolvesToSomethingOtherThanLocal);
+    }
+
     preferredRepresentation: compactRepresentation
     compactRepresentation: DigitalClock {
         activeFocusOnTab: true
