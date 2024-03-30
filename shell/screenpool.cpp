@@ -38,7 +38,7 @@ ScreenPool::ScreenPool(QObject *parent)
         handleScreenAdded(screen);
     });
 
-    for (auto screen : qApp->screens()) {
+    for (const auto screens = qGuiApp->screens(); auto screen : screens) {
         connect(screen, &QScreen::geometryChanged, this, [this, screen]() {
             handleScreenGeometryChanged(screen);
         });
@@ -207,6 +207,16 @@ void ScreenPool::handleScreenGeometryChanged(QScreen *screen)
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
     qCDebug(SCREENPOOL) << "handleScreenAdded" << screen << screen->geometry();
+    // handleScreenAdded can be called twice from handleOutputOrderChanged and QGuiApplication::screenAdded when a new screen is added,
+    // so there is a chance the screen is already added to m_availableScreens.
+    Q_ASSERT_X(m_availableScreens.contains(screen) || m_fakeScreens.contains(screen) || m_redundantScreens.contains(screen)
+                   || !m_sizeSortedScreens.contains(screen),
+               Q_FUNC_INFO,
+               qUtf8Printable(std::invoke([this, screen]() {
+                   QString message;
+                   QDebug(&message) << this << "Current screen:" << screen;
+                   return message;
+               })));
 
     insertSortedScreen(screen);
 
@@ -227,12 +237,6 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
         qCDebug(SCREENPOOL) << "not fake anymore" << screen;
         m_fakeScreens.remove(screen);
     }
-
-    Q_ASSERT_X(!m_availableScreens.contains(screen), Q_FUNC_INFO, qUtf8Printable(std::invoke([this, screen]() {
-        QString message;
-        QDebug(&message) << this << "Current screen:" << screen;
-        return message;
-    })));
 }
 
 void ScreenPool::handleScreenRemoved(QScreen *screen)
@@ -281,6 +285,7 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
 
 void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 {
+    qCDebug(SCREENPOOL) << "handleOutputOrderChanged" << newOrder;
     QHash<QString, QScreen *> connMap;
     for (auto s : qApp->screens()) {
         connMap[s->name()] = s;
@@ -297,6 +302,11 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
         }
         auto *s = connMap[c];
         if (!m_sizeSortedScreens.contains(s)) {
+            // BUG 483432: This can happen when an external monitor is connected, but the internal monitor emits QScreen::geometryChanged
+            // before qGuiApp emits QGuiApplication::screenAdded, so the screen is not added to the list yet.
+            // Backtrace:
+            // QWindowSystemInterface::handleScreenAdded -> 1. QHighDpiScaling::updateHighDpiScaling -> QScreen::geometryChanged(this=internal screen)
+            //                                           -> 2. QGuiApplication::screenAdded (screen=new screen)
             handleScreenAdded(s);
         }
         if (isOutputFake(s)) {
