@@ -23,8 +23,6 @@ MouseArea {
     property string timeFormat
     property string timeFormatWithSeconds
 
-    property bool showLocalTimezone: Plasmoid.configuration.showLocalTimezone
-    property bool showDate: Plasmoid.configuration.showDate
     // This is quite convoluted in Qt 6:
     // Qt.formatDate with locale only accepts Locale.FormatType as format type,
     // no Qt.DateFormat (ISODate) and no format string.
@@ -50,10 +48,6 @@ MouseArea {
         }
     }
 
-    property string lastSelectedTimezone: Plasmoid.configuration.lastSelectedTimezone
-    property int displayTimezoneFormat: Plasmoid.configuration.displayTimezoneFormat
-    property int use24hFormat: Plasmoid.configuration.use24hFormat
-
     property string lastDate: ""
     property int tzOffset
 
@@ -72,8 +66,8 @@ MouseArea {
         } else {
             // Adaptive
             return Plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
-                main.height <= 2 * Kirigami.Theme.smallFont.pixelSize &&
-                (main.showDate || timezoneLabel.visible);
+                height <= 2 * Kirigami.Theme.smallFont.pixelSize &&
+                (Plasmoid.configuration.showDate || timezoneLabel.visible);
         }
     }
 
@@ -81,19 +75,7 @@ MouseArea {
     property int wheelDelta: 0
 
     Accessible.role: Accessible.Button
-    Accessible.onPressAction: main.clicked(null)
-
-    onDateFormatterChanged: {
-        setupLabels();
-    }
-
-    onDisplayTimezoneFormatChanged: { setupLabels(); }
-    onStateChanged: { setupLabels(); }
-
-    onLastSelectedTimezoneChanged: { timeFormatCorrection() }
-    onShowLocalTimezoneChanged:    { timeFormatCorrection() }
-    onShowDateChanged:             { timeFormatCorrection() }
-    onUse24hFormatChanged:         { timeFormatCorrection() }
+    Accessible.onPressAction: clicked(null)
 
     Connections {
         target: Plasmoid
@@ -108,13 +90,32 @@ MouseArea {
         function onSelectedTimeZonesChanged() {
             // If the currently selected timezone was removed,
             // default to the first one in the list
-            const lastSelectedTimezone = Plasmoid.configuration.lastSelectedTimezone;
-            if (Plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) === -1) {
+            if (Plasmoid.configuration.selectedTimeZones.indexOf(Plasmoid.configuration.lastSelectedTimezone) === -1) {
                 Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[0];
             }
 
-            setupLabels();
-            setTimezoneIndex();
+            main.setupLabels();
+            main.setTimezoneIndex();
+        }
+
+        function onDisplayTimezoneFormatChanged() {
+            main.setupLabels();
+        }
+
+        function onLastSelectedTimezoneChanged() {
+            main.timeFormatCorrection();
+        }
+
+        function onShowLocalTimezoneChanged() {
+            main.timeFormatCorrection();
+        }
+
+        function onShowDateChanged() {
+            main.timeFormatCorrection();
+        }
+
+        function onUse24hFormatChanged() {
+            main.timeFormatCorrection();
         }
     }
 
@@ -149,15 +150,15 @@ MouseArea {
             PropertyChanges {
                 target: contentItem
 
-                height: timeLabel.height + (main.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
-                width: Math.max(timeLabel.width + (main.showDate ? timezoneLabel.paintedWidth : 0),
+                height: timeLabel.height + (Plasmoid.configuration.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
+                width: Math.max(timeLabel.width + (Plasmoid.configuration.showDate ? timezoneLabel.paintedWidth : 0),
                                 timezoneLabel.paintedWidth, dateLabel.paintedWidth) + Kirigami.Units.largeSpacing
             }
 
             PropertyChanges {
                 target: labelsGrid
 
-                rows: main.showDate ? 1 : 2
+                rows: Plasmoid.configuration.showDate ? 1 : 2
             }
 
             AnchorChanges {
@@ -178,8 +179,8 @@ MouseArea {
             PropertyChanges {
                 target: timezoneLabel
 
-                height: main.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
-                width: main.showDate ? timezoneLabel.paintedWidth : timeLabel.width
+                height: Plasmoid.configuration.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
+                width: Plasmoid.configuration.showDate ? timezoneLabel.paintedWidth : timeLabel.width
 
                 font.pixelSize: timezoneLabel.height
             }
@@ -211,7 +212,7 @@ MouseArea {
                  * the time label is slightly larger than the date or timezone label
                  * and still fits well into the panel with all the applied margins.
                  */
-                height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
+                height: Math.min(Plasmoid.configuration.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
                                  fontHelper.font.pixelSize)
 
                 font.pixelSize: sizehelper.height
@@ -309,7 +310,7 @@ MouseArea {
             PropertyChanges {
                 target: contentItem
 
-                height: main.showDate ? labelsGrid.height + dateLabel.contentHeight : labelsGrid.height
+                height: Plasmoid.configuration.showDate ? labelsGrid.height + dateLabel.contentHeight : labelsGrid.height
                 width: main.width
             }
 
@@ -441,7 +442,7 @@ MouseArea {
                 target: sizehelper
 
                 height: {
-                    if (main.showDate) {
+                    if (Plasmoid.configuration.showDate) {
                         if (timezoneLabel.visible) {
                             return 0.4 * main.height
                         }
@@ -467,7 +468,7 @@ MouseArea {
         }
 
         var delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : wheel.angleDelta.x);
-        var newIndex = main.tzIndex;
+        var newIndex = tzIndex;
         wheelDelta += delta;
         // magic number 120 for common "one click"
         // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
@@ -486,9 +487,9 @@ MouseArea {
             newIndex = Plasmoid.configuration.selectedTimeZones.length - 1;
         }
 
-        if (newIndex !== main.tzIndex) {
+        if (newIndex !== tzIndex) {
             Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[newIndex];
-            main.tzIndex = newIndex;
+            tzIndex = newIndex;
 
             dataSource.dataChanged();
             setupLabels();
@@ -553,7 +554,7 @@ MouseArea {
         PlasmaComponents.Label {
             id: dateLabel
 
-            visible: main.showDate
+            visible: Plasmoid.configuration.showDate
 
             font.family: timeLabel.font.family
             font.weight: timeLabel.font.weight
@@ -635,45 +636,48 @@ MouseArea {
         let result_sec = result + delimiter + seconds;
 
         // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
-        if ((main.use24hFormat === Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat === Qt.Unchecked) {
+        if ((Plasmoid.configuration.use24hFormat === Qt.PartiallyChecked && !uses24hFormatByDefault) || Plasmoid.configuration.use24hFormat === Qt.Unchecked) {
             result += " " + amPm;
             result_sec += " " + amPm;
         }
 
-        main.timeFormat = result;
-        main.timeFormatWithSeconds = result_sec;
+        timeFormat = result;
+        timeFormatWithSeconds = result_sec;
         setupLabels();
     }
 
     function setupLabels() {
-        const showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
+        const showTimezone = Plasmoid.configuration.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
                                                         && dataSource.data["Local"]["Timezone City"] !== dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
 
         let timezoneString = "";
 
         if (showTimezone) {
             // format timezone as tz code, city or UTC offset
-            if (displayTimezoneFormat === 0) {
-                timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"]
-            } else if (displayTimezoneFormat === 1) {
-                timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone"]);
-            } else if (displayTimezoneFormat === 2) {
-                const lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
+            switch (Plasmoid.configuration.displayTimezoneFormat) {
+            case 0: // Code
+                timezoneString = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone Abbreviation"]
+                break;
+            case 1: // City
+                timezoneString = TimezonesI18n.i18nCity(dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone"]);
+                break;
+            case 2: // Offset from UTC time
+                const lastOffset = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"];
                 const symbol = lastOffset > 0 ? '+' : '';
                 const hours = Math.floor(lastOffset / 3600);
                 const minutes = Math.floor(lastOffset % 3600 / 60);
 
                 timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
+                break;
             }
-
-            timezoneLabel.text = (main.showDate || main.oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
+            timezoneLabel.text = (Plasmoid.configuration.showDate || oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
         } else {
             // this clears the label and that makes it hidden
             timezoneLabel.text = timezoneString;
         }
 
-        if (main.showDate) {
-            dateLabel.text = main.dateFormatter(main.getCurrentTime());
+        if (Plasmoid.configuration.showDate) {
+            dateLabel.text = dateFormatter(getCurrentTime());
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";
@@ -690,7 +694,7 @@ MouseArea {
             }
         }
         // replace all placeholders with the widest number (two digits)
-        const format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
+        const format = timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
         // build the time string twice, once with an AM time and once with a PM time
         const date = new Date(2000, 0, 1, 1, 0, 0);
         const timeAm = Qt.formatTime(date, format);
@@ -710,13 +714,13 @@ MouseArea {
     function dateTimeChanged() {
         let doCorrections = false;
 
-        if (main.showDate) {
+        if (Plasmoid.configuration.showDate) {
             // If the date has changed, force size recalculation, because the day name
             // or the month name can now be longer/shorter, so we need to adjust applet size
-            const currentDate = Qt.formatDateTime(main.getCurrentTime(), "yyyy-MM-dd");
-            if (main.lastDate !== currentDate) {
+            const currentDate = Qt.formatDateTime(getCurrentTime(), "yyyy-MM-dd");
+            if (lastDate !== currentDate) {
                 doCorrections = true;
-                main.lastDate = currentDate
+                lastDate = currentDate
             }
         }
 
@@ -733,7 +737,7 @@ MouseArea {
     }
 
     function setTimezoneIndex() {
-        main.tzIndex = Plasmoid.configuration.selectedTimeZones.indexOf(Plasmoid.configuration.lastSelectedTimezone);
+        tzIndex = Plasmoid.configuration.selectedTimeZones.indexOf(Plasmoid.configuration.lastSelectedTimezone);
     }
 
     Component.onCompleted: {
@@ -749,6 +753,14 @@ MouseArea {
         tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection();
-        dataSource.dataChanged.connect(dateTimeChanged);
+
+        dataSource.dataChanged
+            .connect(dateTimeChanged);
+
+        dateFormatterChanged
+            .connect(setupLabels);
+
+        stateChanged
+            .connect(setupLabels);
     }
 }
