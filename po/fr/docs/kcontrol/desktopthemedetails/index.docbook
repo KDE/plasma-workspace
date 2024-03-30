@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Thème de Plasma</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+&traducteurStanislasZeller; &traducteurPierreBuard; &traducteurXavierBesnard; 
+</authorgroup>
+
+<date
+>09-04-2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>bureau</keyword>
+<keyword
+>style</keyword>
+<keyword
+>thème</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; est livré avec plusieurs thèmes. Le thème de &plasma; définit la façon dont les différents composants de &plasma; sont affichés (&eg; les plasmoïdes, les panneaux, les composants graphiques). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Ceci est une copie d'écran du gestionnaire de thèmes de &plasma;</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Personnaliser d'un thème de &plasma;</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Dans ce module, vous pouvez :</para>
+<itemizedlist>
+  <listitem
+><para
+>Installer et sélectionner des thèmes de &plasma;</para
+></listitem>
+  <listitem
+><para
+>Modifier les thèmes de &plasma;</para
+></listitem>
+  <listitem
+><para
+>Supprimer des thèmes de &plasma;</para
+></listitem>
+</itemizedlist>
+
+<para
+>Il est possible de filtrer la liste des thèmes à l'aide du champ <guilabel
+>Rechercher...</guilabel
+> au-dessus de la grille. De plus, vous pouvez utiliser la boîte de dialogue avec liste déroulante à côté de ce champ pour afficher uniquement les <guimenuitem
+>thèmes clairs</guimenuitem
+>, les <guimenuitem
+>thèmes sombres</guimenuitem
+> ou les thèmes <guimenuitem
+>compatibles avec le jeu de couleurs</guimenuitem
+>. </para>
+
+<para
+>Si vous souhaitez supprimer un style, veuillez utiliser <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> l’icône d'écrasement dans le coin inférieur droit de l’icône de style. Pour annuler cette action, veuillez cliquer sur <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> l’icône. Si vous appuyez sur le bouton <guibutton
+>Appliquer</guibutton
+>, les styles sélectionnés pour la suppression sont effectivement supprimés, de sorte que vous ne pourrez pas annuler une suppression ou toutes les suppressions. </para>
+
+<para
+>Si le paquet « plasma-sdk » est installé sur votre système, un bouton apparaît lors du survol d'un aperçu de thème et vous permet de démarrer <application
+>l'explorateur de thèmes de Plasma</application
+>. </para>
+<para
+>Pour plus d'informations techniques, veuillez consulter <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>cette page</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Obtenir de nouveaux thèmes de Plasma...</guilabel
+></term>
+    <listitem>
+    <para
+>Vous devez être connecté à Internet pour l'utiliser. Un clic sur ce bouton fera afficher une boîte de dialogue dans laquelle vous pouvez sélectionner un nouveau thème de Plasma. Un clic sur le bouton <guibutton
+>Installer</guibutton
+> dans la boîte de dialogue installera le thème de &plasma; sélectionné et après avoir <guibutton
+>fermé</guibutton
+> l'installateur, votre nouveau thème est immédiatement disponible. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Obtenir de nouveaux thèmes de Plasma...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Obtenir de nouveaux thèmes de Plasma</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Installer à partir d'un fichier...</guilabel
+></term>
+    <listitem>
+      <para
+>Si vous avez téléchargé de nouveaux thèmes à partir d'Internet, vous pouvez les utiliser pour rechercher l'emplacement de ces nouveaux thèmes téléchargés. Un clic sur ce bouton fera apparaître la boîte de dialogue de fichier  de sélection d'un fichier d'archives pour le thème de &plasma; que vous avez téléchargé sur votre disque.</para>
+
+      <para
+>Un clic sur le bouton sur <guibutton
+>Ouvrir</guibutton
+> dans cette boîte de dialogue installera le thème que vous avez sélectionné et le rendre disponible dans la liste des thèmes. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
