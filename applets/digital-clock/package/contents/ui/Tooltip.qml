@@ -122,7 +122,7 @@ Item {
                         }
                     }
                     textFormat: Text.PlainText
-                    font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
+                    font.weight: root.timeZoneResolvesToLastSelectedTimeZone(modelData) ? Font.Bold : Font.Normal
                     wrapMode: Text.NoWrap
                     elide: Text.ElideNone
                 }

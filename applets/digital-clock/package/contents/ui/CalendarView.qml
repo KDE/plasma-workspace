@@ -484,7 +484,7 @@ PlasmaExtras.Representation {
 
                 delegate: PlasmaComponents.ItemDelegate {
                     id: listItem
-                    readonly property bool isCurrentTimeZone: modelData === Plasmoid.configuration.lastSelectedTimezone
+                    readonly property bool isCurrentTimeZone: root.timeZoneResolvesToLastSelectedTimeZone(modelData)
                     width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
 
                     leftPadding: calendar.paddings

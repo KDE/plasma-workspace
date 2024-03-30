@@ -98,6 +98,11 @@ PlasmoidItem {
             .filter(isLiterallyLocalOrResolvesToSomethingOtherThanLocal);
     }
 
+    function timeZoneResolvesToLastSelectedTimeZone(timeZone: string): bool {
+        return timeZone === Plasmoid.configuration.lastSelectedTimezone
+            || displayStringForTimeZone(timeZone) === displayStringForTimeZone(Plasmoid.configuration.lastSelectedTimezone);
+    }
+
     preferredRepresentation: compactRepresentation
     compactRepresentation: DigitalClock {
         activeFocusOnTab: true
