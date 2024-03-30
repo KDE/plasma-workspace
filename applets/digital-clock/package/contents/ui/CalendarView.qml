@@ -493,7 +493,7 @@ PlasmaExtras.Representation {
                          * the clocks list would show two entries for the same city. To avoid
                          * this, let's suppress the duplicate.
                          */
-                        if (!(timeZone !== "Local" && root.nameForZone(timeZone) === root.nameForZone("Local"))) {
+                        if (!(timeZone !== "Local" && root.displayStringForTimeZone(timeZone) === root.displayStringForTimeZone("Local"))) {
                             timeZones.push(timeZone);
                         }
                     }
@@ -509,7 +509,7 @@ PlasmaExtras.Representation {
                     rightPadding: calendar.paddings
 
                     highlighted: ListView.isCurrentItem
-                    Accessible.name: root.nameForZone(modelData)
+                    Accessible.name: root.displayStringForTimeZone(modelData)
                     Accessible.description: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
 
                     // Only highlight with keyboard
@@ -521,7 +521,7 @@ PlasmaExtras.Representation {
 
                         PlasmaComponents.Label {
                             Layout.fillWidth: true
-                            text: root.nameForZone(modelData)
+                            text: root.displayStringForTimeZone(modelData)
                             textFormat: Text.PlainText
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             maximumLineCount: 1

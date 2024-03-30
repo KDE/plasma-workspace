@@ -116,7 +116,7 @@ Item {
                          * the clocks list would show two entries for the same city. To avoid
                          * this, let's suppress the duplicate.
                          */
-                        if (!(timeZone !== "Local" && root.nameForZone(timeZone) === root.nameForZone("Local"))) {
+                        if (!(timeZone !== "Local" && root.displayStringForTimeZone(timeZone) === root.displayStringForTimeZone("Local"))) {
                             timeZones.push(timeZone);
                             timeZones.push(timeZone);
                         }
@@ -130,7 +130,7 @@ Item {
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
                     text: {
                         if (index % 2 === 0) {
-                            return i18nc("@label %1 is a city or time zone name", "%1:", root.nameForZone(modelData));
+                            return i18nc("@label %1 is a city or time zone name", "%1:", root.displayStringForTimeZone(modelData));
                         } else {
                             return timeForZone(modelData, Plasmoid.configuration.showSeconds > 0);
                         }

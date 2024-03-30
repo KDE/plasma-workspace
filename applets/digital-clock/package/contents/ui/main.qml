@@ -69,12 +69,12 @@ PlasmoidItem {
         return formattedTime;
     }
 
-    function nameForZone(zone: string): string {
+    function displayStringForTimeZone(timeZone: string): string {
         // add the timezone string to the clock
         if (Plasmoid.configuration.displayTimezoneAsCode) {
-            return dataSource.data[zone]["Timezone Abbreviation"];
+            return dataSource.data[timeZone]["Timezone Abbreviation"];
         } else {
-            return TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone"]);
+            return TimezonesI18n.i18nCity(dataSource.data[timeZone]["Timezone"]);
         }
     }
 
