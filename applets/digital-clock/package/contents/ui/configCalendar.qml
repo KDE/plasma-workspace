@@ -65,6 +65,8 @@ KCMUtils.SimpleKCM {
         ColumnLayout {
             id: calendarPluginsLayout
 
+            spacing: Kirigami.Units.smallSpacing
+
             Kirigami.FormData.label: i18n("Available Plugins:")
 
             Repeater {

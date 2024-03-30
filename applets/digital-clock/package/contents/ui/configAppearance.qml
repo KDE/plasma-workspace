@@ -47,6 +47,7 @@ KCMUtils.SimpleKCM {
 
         RowLayout {
             Kirigami.FormData.label: i18n("Information:")
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.CheckBox {
                 id: showDate
@@ -84,6 +85,7 @@ KCMUtils.SimpleKCM {
         ColumnLayout {
             Kirigami.FormData.label: i18n("Show time zone:")
             Kirigami.FormData.buddyFor: showLocalTimeZoneWhenDifferent
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.RadioButton {
                 id: showLocalTimeZoneWhenDifferent
@@ -120,6 +122,7 @@ KCMUtils.SimpleKCM {
         RowLayout {
             Layout.fillWidth: true
             Kirigami.FormData.label: i18n("Time display:")
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.ComboBox {
                 id: use24hFormat
@@ -146,6 +149,7 @@ KCMUtils.SimpleKCM {
         RowLayout {
             Kirigami.FormData.label: i18n("Date format:")
             enabled: showDate.checked
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.ComboBox {
                 id: dateFormat
@@ -241,6 +245,8 @@ KCMUtils.SimpleKCM {
         }
 
         RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+
             QQC2.RadioButton {
                 id: manualFontAndSizeRadioButton
                 text: i18nc("@option:radio setting for manually configuring the font settings", "Manual")

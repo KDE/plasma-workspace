@@ -521,6 +521,8 @@ PlasmaExtras.Representation {
                     hoverEnabled: false
 
                     contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+
                         PlasmaComponents.Label {
                             Layout.fillWidth: true
                             text: root.nameForZone(modelData)

@@ -187,6 +187,8 @@ KCMUtils.ScrollViewKCM {
         }
 
         header: ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+
             Kirigami.Heading {
                 Layout.fillWidth: true
                 text: i18n("Add More Timezones")

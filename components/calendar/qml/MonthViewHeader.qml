@@ -56,6 +56,7 @@ Item {
     ColumnLayout {
         id: viewHeader
         width: parent.width
+        spacing: Kirigami.Units.smallSpacing
 
         RowLayout {
             spacing: 0
