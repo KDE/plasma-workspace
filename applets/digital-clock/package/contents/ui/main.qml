@@ -107,12 +107,7 @@ PlasmoidItem {
         function onSelectedTimeZonesChanged() { root.initTimezones(); }
     }
 
-    Binding {
-        target: root
-        property: "hideOnWindowDeactivate"
-        value: !Plasmoid.configuration.pin
-        restoreMode: Binding.RestoreBinding
-    }
+    hideOnWindowDeactivate: !Plasmoid.configuration.pin
 
     P5Support.DataSource {
         id: dataSource
