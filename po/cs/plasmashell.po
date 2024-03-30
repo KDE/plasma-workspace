@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2023-11-06 10:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -101,56 +101,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Pro hlášení chyb použijte http://bugs.kde.org"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Shell Plasma"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Povolit ladicí nástroj QML JavaScript"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Nerestartovat plasma-shell po pádu automaticky"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Vynutit načítání daného moduly shellu"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Nahradit existující instanci"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Povoluje testovací režim a určuje soubor javascript pro rozložení "
-"testovacího prostředí"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "soubor"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Seznam dostupných voleb pro uživatelskou zpětnou vazbu"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Start Plasma selhal"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -388,6 +374,16 @@ msgstr "Počet panelů"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Počítá panely"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Povoluje testovací režim a určuje soubor javascript pro rozložení "
+#~ "testovacího prostředí"
+
+#~ msgid "file"
+#~ msgstr "soubor"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "Spravovat plochy a panely..."

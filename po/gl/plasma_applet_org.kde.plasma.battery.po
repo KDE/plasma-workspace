@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-07 19:54+0100\n"
+"PO-Revision-Date: 2024-03-29 11:01+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -109,18 +109,16 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "O trebello de batería activou a inhibición para todo o sistema"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Bloquear manualmente a suspensión e o bloqueo de pantalla"
+msgstr ""
+"Non foi posíbel bloquear a suspensión e o bloqueo de pantalla automáticos."
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Bloquear manualmente a suspensión e o bloqueo de pantalla"
+msgstr ""
+"Non foi posíbel desbloquear a suspensión e o bloqueo de pantalla automáticos."
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -186,18 +184,19 @@ msgid "Not charging"
 msgstr "Sen cargar"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "A suspensión e o bloqueo de pantalla automáticos están desactivados"
+msgstr ""
+"A suspensión e o bloqueo de pantalla automáticos están desactivados. Faga un "
+"clic central para activalos."
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Bloquear manualmente a suspensión e o bloqueo de pantalla"
+msgstr ""
+"Faga un clic central para desactivar a suspensión e o bloqueo de pantalla "
+"automáticos."
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -207,10 +206,10 @@ msgstr[0] "Unha aplicación solicitou activar o modo de rendemento"
 msgstr[1] "%1 aplicacións solicitaron activar o modo de rendemento"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "O sistema está en modo de rendemento"
+msgstr ""
+"O sistema está en modo de rendemento. Use o desprazamento para cambialo."
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -220,15 +219,14 @@ msgstr[0] "Unha aplicación solicitou activar o modo de aforro de enerxía"
 msgstr[1] "%1 aplicacións solicitaron activar o modo de aforro de enerxía"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "O sistema está en modo de aforro de enerxía"
+msgstr "O sistema está en modo de aforro. Use o desprazamento para cambialo."
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "O sistema está en modo equilibrado. Use o desprazamento para cambialo."
 
 #: package/contents/ui/main.qml:412
 #, kde-format

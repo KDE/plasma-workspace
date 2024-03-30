@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2024-02-24 18:45+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -99,56 +99,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Vizitați bugs.kde.org pentru a raporta probleme"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Învelișul Plasma"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activează depanatorul Javascript QML"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Nu reporni învelișul Plasma automat după prăbușire"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forțează încărcarea extensiei de înveliș date"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Înlocuiește o instanță existentă"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Activează regimul de testare și specifică fișierul Javascript de aranjament "
-"pentru configurat mediul de testare"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "fișier"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Enumeră opțiunile disponibile pentru reacții din partea utilizatorului"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Pornirea Plasma a eșuat"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -386,6 +372,16 @@ msgstr "Contor panouri"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Numără panourile"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Activează regimul de testare și specifică fișierul Javascript de "
+#~ "aranjament pentru configurat mediul de testare"
+
+#~ msgid "file"
+#~ msgstr "fișier"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "Gestionează birouri și panouri…"

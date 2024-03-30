@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-12 02:04+0900\n"
+"PO-Revision-Date: 2024-03-29 21:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -77,18 +77,18 @@ msgstr "播放音效"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "預覽聲音"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "重設"
 
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "選擇音效檔"
 
 #: ui/main.qml:46
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2024-03-26 10:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -102,58 +102,44 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Visiteu bugs.kde.org per a informar de problemes"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Intèrpret d'ordres del Plasma"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Habilita el depurador de JavaScript del QML"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "No reiniciar automàticament l'intèrpret d'ordres del Plasma després d'una "
 "fallada"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Força la càrrega del connector d'intèrpret d'ordres indicat"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substitueix una instància existent"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Activa el mode prova i especifica el fitxer en JavaScript de disposició per "
-"a definir l'entorn de prova"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "fitxer"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Ha fallat en iniciar el Plasma"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -392,6 +378,16 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Activa el mode prova i especifica el fitxer en JavaScript de disposició "
+#~ "per a definir l'entorn de prova"
+
+#~ msgid "file"
+#~ msgstr "fitxer"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "Gestiona escriptoris i plafons..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2024-03-27 09:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -101,56 +101,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Vizitu bugs.kde.org por raporti atentindaĵojn"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-Ŝelo"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Ebligi QML-Javascript-erarsermilon"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ne rekomenci plasma-shell aŭtomate post paneo"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Devigi ŝargadon de la donita ŝela kromaĵo"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Anstataŭigi ekzistantan instancon"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Ebligas testan reĝimon kaj specifas la aranĝan Javaskripto-dosieron por "
-"agordi la testan medion"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "dosiero"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Listigas la disponeblajn opciojn por uzant-sugestoj"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma Malsukcesis Starti"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -388,3 +374,13 @@ msgstr "Panelo-kalkulo"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Nombras la panelojn"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Ebligas testan reĝimon kaj specifas la aranĝan Javaskripto-dosieron por "
+#~ "agordi la testan medion"
+
+#~ msgid "file"
+#~ msgstr "dosiero"

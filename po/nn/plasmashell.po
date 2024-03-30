@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2024-03-09 18:28+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -100,57 +100,44 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Bruk bugs.kde.org for å melda frå om feil"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-skal"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Slå på QML JavaScript-feilsøkjar"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ikkje start plasma-shell automatisk på nytt etter ein krasj"
 
 # Fjerna «oppgjeve». Men bør eg bruke bunden eller ubunden form av «velje»? :S
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Tving innlasting av det valde skal-tillegget"
 
 # Erstatt eller byt ut?
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Erstatt ein instans som finst frå før"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Slår på testmodus og vel JavaScript-fil for utforming av testomgjevnaden"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "fil"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Vis tilgjengelege val for tilbakemeldingar"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Klarte ikkje starta Plasma"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -389,3 +376,12 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Tel panela"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Slår på testmodus og vel JavaScript-fil for utforming av testomgjevnaden"
+
+#~ msgid "file"
+#~ msgstr "fil"

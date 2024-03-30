@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2022-12-18 12:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -108,56 +108,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Consola do Plasma"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activar o Depurador de Javascript do QML"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Não reiniciar automaticamente o 'plasma-shell' após um estoiro"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forçar o carregamento do 'plugin' indicado"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substituir uma instância existente"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Activa o modo de testes e indica o ficheiro JavaScript de formato para "
-"configurar o ambiente de testes"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "ficheiro"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Apresenta as opções disponíveis para as reacções dos utilizadores"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Não Foi Possível Iniciar o Plasma"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -396,6 +382,16 @@ msgstr "Número de Painéis"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Conta os painéis"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Activa o modo de testes e indica o ficheiro JavaScript de formato para "
+#~ "configurar o ambiente de testes"
+
+#~ msgid "file"
+#~ msgstr "ficheiro"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "Gerir os Ecrãs e Painéis..."

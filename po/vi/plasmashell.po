@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -107,56 +107,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Hệ vỏ Plasma"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Bật trình gỡ lỗi QML Javascript"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Đừng tự động khởi động lại hệ vỏ plasma sau một sự cố"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Ép tải phần cài cắm của hệ vỏ đã cho"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Thay thế một hiện thể đã có"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Bật chế độ kiểm thử và chỉ định tệp javascript bố cục để cài đặt môi trường "
-"kiểm thử"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "tệp"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Liệt kê các lựa chọn khả dụng cho phản hồi của người dùng"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma khởi động thất bại"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -395,6 +381,16 @@ msgstr "Số lượng bảng"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Đếm số bảng"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Bật chế độ kiểm thử và chỉ định tệp javascript bố cục để cài đặt môi "
+#~ "trường kiểm thử"
+
+#~ msgid "file"
+#~ msgstr "tệp"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "Quản lí các bảng và bàn làm việc..."

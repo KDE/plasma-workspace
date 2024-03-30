@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2023-09-25 13:50+0530\n"
 "Last-Translator: Shreekant Kalwar\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -111,56 +111,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "कृपया दोषाणां सूचनां दातुं https://bugs.kde.org इत्यस्य उपयोगं कुर्वन्तु"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "प्लाज्मा-शैलम्"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "क्यू-एम-एल जावास्क्रिप्ट डिबगर सक्षमम्"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "क्रैश अनन्तरं प्लाज्मा-शैलं पुनः न आरभत"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "दत्तं शेल् प्लगिन् बलात् आरोपण कुर्वन्तु"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"परीक्षणविधिं सक्षमं करोति तथा परीक्षणवातावरणं स्थापयितुं विन्यासजावास्क्रिप्टसञ्चिकां "
-"निर्दिशति"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "सञ्चिका"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "उपयोक्तृप्रतिक्रियायाः उपलब्धविकल्पान् सूचीबद्धं करोति"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "प्लाज्मा आरम्भं कर्तुं असफलम् अभवत्"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -398,6 +384,16 @@ msgstr "पैनलसंख्या"
 #, kde-format
 msgid "Counts the panels"
 msgstr "पैनलानि गणयतु"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "परीक्षणविधिं सक्षमं करोति तथा परीक्षणवातावरणं स्थापयितुं विन्यासजावास्क्रिप्टसञ्चिकां "
+#~ "निर्दिशति"
+
+#~ msgid "file"
+#~ msgstr "सञ्चिका"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "कार्यमुखाः तथा पैनल्स् प्रबन्धयन्तु..."

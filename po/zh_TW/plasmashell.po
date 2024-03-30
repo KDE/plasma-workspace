@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-05 17:22+0900\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
+"PO-Revision-Date: 2024-03-29 21:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -101,54 +101,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "請造訪 bugs.kde.org 來回報問題"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "開啟 QML Javascript 除錯器"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "崩潰後不要自動啟動 plasma-shell"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "強制載入指定的 shell 外掛程式"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "取代一個存在的事例"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr "啟用測試模式並指定 Javascript 檔案的佈局以設定測試環境"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "檔案"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "列出能用於使用者意見回應的選項"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma 無法啟動"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -244,31 +232,31 @@ msgstr "螢幕上的虛擬鍵盤關閉"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "已阻擋睡眠與螢幕鎖定"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "已解除阻擋睡眠與螢幕鎖定"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "省電模式"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "均衡電力模式"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "效能模式"
 
 #: panelview.cpp:1027
 #, kde-format
@@ -336,7 +324,7 @@ msgstr "啟用工作管理員項目 %1"
 #: shellcorona.cpp:292
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "面板與桌面管理"
 
 #: shellcorona.cpp:314
 #, kde-format
@@ -385,6 +373,14 @@ msgstr "面板數"
 #, kde-format
 msgid "Counts the panels"
 msgstr "計算面板數"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr "啟用測試模式並指定 Javascript 檔案的佈局以設定測試環境"
+
+#~ msgid "file"
+#~ msgstr "檔案"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "管理桌面與面板…"

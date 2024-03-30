@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 19:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -98,55 +98,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "문제점을 보고하려면 bugs.kde.org 사이트를 방문하십시오"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma 셸"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML 자바스크립트 디버거 사용"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "충돌 이후 plasma-shell 자동 재시작 안 함"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "지정한 셸 플러그인 강제로 불러오기"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "존재하는 인스턴스를 대체"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"테스트 모드를 활성화하고 레이아웃 JavaScript 파일을 테스트 환경으로 설정"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "파일"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "사용자 피드백 옵션을 표시합니다"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma를 시작할 수 없음"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -384,6 +371,15 @@ msgstr "패널 개수"
 #, kde-format
 msgid "Counts the panels"
 msgstr "패널 개수를 셉니다"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "테스트 모드를 활성화하고 레이아웃 JavaScript 파일을 테스트 환경으로 설정"
+
+#~ msgid "file"
+#~ msgstr "파일"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "바탕 화면과 패널 관리..."

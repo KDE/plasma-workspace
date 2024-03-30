@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2024-03-26 06:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -99,54 +99,42 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "შეცდომების შესახებ მოსაწერად ეწვიეთ bugs.kde.org"
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-ის სამუშაო მაგიდის გარსი"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML-ის Javascript-ის გამმართველს ჩართვა"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "სიკვტილის შემდეგ plasma-shell ავტომატურად არ გაეშვება"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "გარსის მითითებული დამატების ძალით ჩატვირთვა"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "გაშვებული ასლის ჩანაცვლება"
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr "სატესტო რეჟიმის ჩართვა და განლაგების JavaScript ფაილის მითითება"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "ფაილი"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "მომხმარებლის უკუკავშირის ხელმისაწვდომი ვარიანტები"
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma-ის გაშვების შეცდომა"
 
-#: main.cpp:198
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -384,6 +372,14 @@ msgstr "პანელების რაოდენობა"
 #, kde-format
 msgid "Counts the panels"
 msgstr "პანელების რაოდენობა"
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr "სატესტო რეჟიმის ჩართვა და განლაგების JavaScript ფაილის მითითება"
+
+#~ msgid "file"
+#~ msgstr "ფაილი"
 
 #~ msgid "Manage Desktops And Panels..."
 #~ msgstr "სამუშაო მაგიდებისა და პანელების მართვა..."

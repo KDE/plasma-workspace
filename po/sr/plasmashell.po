@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-03-30 00:39+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -109,57 +109,43 @@ msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: main.cpp:85
+#: main.cpp:84
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Плазма шкољка"
 
-#: main.cpp:97
+#: main.cpp:96
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Активирај исправљач КуМЛ јаваскрипта"
 
 # literal-segment: plasma-shell
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не покрећи plasma-shell аутоматски по паду"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Наметни учитавање датог прикључка шкољке"
 
-#: main.cpp:107
+#: main.cpp:106
 #, kde-format
 msgid "Replace an existing instance"
 msgstr ""
 
-#: main.cpp:110
-#, kde-format
-msgid ""
-"Enables test mode and specifies the layout javascript file to set up the "
-"testing environment"
-msgstr ""
-"Активирај пробни режим, са задатим јаваскриптним фајлом распореда за "
-"намештање пробног окружења"
-
-#: main.cpp:111
-#, kde-format
-msgid "file"
-msgstr "фајл"
-
-#: main.cpp:115
+#: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:197
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Плазма не може да се покрене"
 
-#: main.cpp:198
+#: main.cpp:175
 #, fuzzy, kde-format
 #| msgid ""
 #| "Plasma is unable to start as it could not correctly use OpenGL 2.\n"
@@ -405,6 +391,16 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
+
+#~ msgid ""
+#~ "Enables test mode and specifies the layout javascript file to set up the "
+#~ "testing environment"
+#~ msgstr ""
+#~ "Активирај пробни режим, са задатим јаваскриптним фајлом распореда за "
+#~ "намештање пробног окружења"
+
+#~ msgid "file"
+#~ msgstr "фајл"
 
 # literal-segment: plasmashell
 # literal-segment: shell-plugin
