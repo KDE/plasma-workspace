@@ -47,7 +47,6 @@ PlasmaExtras.Representation {
     readonly property bool showAgenda: eventPluginsManager.enabledPlugins.length > 0
     readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
 
-    property alias borderWidth: monthView.borderWidth
     readonly property alias monthView: monthView
 
     Keys.onDownPressed: event => {
