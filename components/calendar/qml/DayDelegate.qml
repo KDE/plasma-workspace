@@ -8,6 +8,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 import org.kde.kirigami as Kirigami
@@ -19,25 +21,52 @@ import org.kde.plasma.workspace.calendar as PlasmaCalendar
 PlasmaComponents.AbstractButton {
     id: dayStyle
 
-    property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
+    required property int index
+    /*
+     * Possible row types:
+     *
+     * - year: ListModel
+     *   * label: string
+     *   * yearNumber: int
+     *   * isCurrent: bool
+     * - month: ListModel
+     *   * label: string
+     *   * monthNumber: int
+     *   * yearNumber: int
+     *   * isCurrent: bool
+     * - day: PlasmaCalendar.DaysModel
+     *   * no "label" role
+     */
+    required property var model
+
+    // These two roles are defined for all row types. Other roles would have
+    // to be fetched through the `model` row object.
+    required property bool isCurrent
+    required property int yearNumber
+
+    required property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision
 
     objectName: {
         switch (dateMatchingPrecision) {
         case PlasmaCalendar.Calendar.MatchYear:
             return "calendarCell-" + yearNumber;
         case PlasmaCalendar.Calendar.MatchYearAndMonth:
-            return "calendarCell-" + yearNumber + "-" + monthNumber;
+            return "calendarCell-" + yearNumber + "-" + model.monthNumber;
         case PlasmaCalendar.Calendar.MatchYearMonthAndDay:
         default:
-            return "calendarCell-" + yearNumber + "-" + monthNumber + "-" + dayNumber;
+            return "calendarCell-" + yearNumber + "-" + model.monthNumber + "-" + model.dayNumber;
         }
     }
     hoverEnabled: true
 
     // type: either PlasmaCalendar.DaysModel or an equivalent ListModel
-    property QtObject dayModel
+    required property QtObject dayModel
 
-    readonly property date thisDate: new Date(yearNumber, typeof monthNumber !== "undefined" ? monthNumber - 1 : 0, typeof dayNumber !== "undefined" ? dayNumber : 1)
+    readonly property date thisDate: {
+        const monthNumber = (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearAndMonth) ? model.monthNumber - 1 : 0;
+        const dayNumber = (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearMonthAndDay) ? model.dayNumber : 1;
+        return new Date(yearNumber, monthNumber, dayNumber);
+    }
 
     Accessible.name: thisDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
     Accessible.description: {
@@ -120,11 +149,15 @@ PlasmaComponents.AbstractButton {
     }
 
     Loader {
-        active: model.eventCount !== undefined && model.eventCount > 0
+        // Basically, only active when dayStyle.dayModel is PlasmaCalendar.DaysModel
+        // and thus dateMatchingPrecision is PlasmaCalendar.Calendar.MatchYearMonthAndDay
+        active: dayStyle.model.eventCount !== undefined && dayStyle.model.eventCount > 0
         anchors.bottom: parent.bottom
         anchors.bottomMargin: subDayLabel.item?.implicitHeight ?? Kirigami.Units.smallSpacing
         anchors.horizontalCenter: parent.horizontalCenter
         sourceComponent: Row {
+            id: eventIndicatorsRow
+
             spacing: Kirigami.Units.smallSpacing
 
             property bool hasSubDayLabel: false
@@ -133,13 +166,19 @@ PlasmaComponents.AbstractButton {
                 model: DelegateModel {
                     model: dayStyle.dayModel
                     delegate: Rectangle {
-                        width: hasSubDayLabel ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
+                        required property string eventColor
+
+                        width: eventIndicatorsRow.hasSubDayLabel ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
                         height: width
                         radius: width / 2
-                        color: model.eventColor ? Kirigami.ColorUtils.linearInterpolation(model.eventColor, Kirigami.Theme.textColor, 0.2) : Kirigami.Theme.highlightColor
+                        color: eventColor
+                            ? Kirigami.ColorUtils.linearInterpolation(eventColor, Kirigami.Theme.textColor, 0.2)
+                            : Kirigami.Theme.highlightColor
                     }
 
-                    Component.onCompleted: rootIndex = modelIndex(index)
+                    Component.onCompleted: {
+                        rootIndex = modelIndex(dayStyle.index);
+                    }
                 }
             }
         }
@@ -153,8 +192,8 @@ PlasmaComponents.AbstractButton {
         // ColumnLayout makes scrolling too slow, so use anchors to position labels
 
         PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-        PlasmaComponents.ToolTip.text: model.subLabel || ""
-        PlasmaComponents.ToolTip.visible: !!model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
+        PlasmaComponents.ToolTip.text: dayStyle.model.subLabel || ""
+        PlasmaComponents.ToolTip.visible: !!dayStyle.model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
 
         Kirigami.Heading {
             id: label
@@ -166,21 +205,21 @@ PlasmaComponents.AbstractButton {
             }
             font.pixelSize: Math.max(
                 Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
-                daysCalendar.cellHeight / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+                dayStyle.height / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
             font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: model.label || dayNumber
+            text: dayStyle.model.label || dayStyle.model.dayNumber.toString()
             textFormat: Text.PlainText
-            opacity: isCurrent ? 1.0 : 0.5
+            opacity: dayStyle.isCurrent ? 1.0 : 0.5
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
         }
 
         Loader {
             id: subDayLabel
-            active: (!!model.subDayLabel && model.subDayLabel.length > 0)
-                 || typeof(model.alternateDayNumber) === "number"
+            active: (typeof dayStyle.model.subDayLabel !== "undefined" && dayStyle.model.subDayLabel.length > 0)
+                 || typeof dayStyle.model.alternateDayNumber === "number"
             anchors {
                 left: parent.left
                 right: parent.right
@@ -193,14 +232,14 @@ PlasmaComponents.AbstractButton {
                 elide: Text.ElideRight
                 font.pixelSize: Math.max(
                     Kirigami.Theme.smallFont.pixelSize,
-                    daysCalendar.cellHeight / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
+                    dayStyle.height / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
                 font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 1
                 opacity: label.opacity
                 // Prefer sublabel over day number
-                text: model.subDayLabel || model.alternateDayNumber.toString()
+                text: dayStyle.model.subDayLabel || dayStyle.model.alternateDayNumber.toString()
                 textFormat: Text.PlainText
                 wrapMode: Text.NoWrap
             }
@@ -210,7 +249,7 @@ PlasmaComponents.AbstractButton {
                 AnchorChanges {
                     target: subDayLabel
                     anchors.top: undefined
-                    anchors.bottom: parent.bottom
+                    anchors.bottom: subDayLabel.parent.bottom
                 }
                 PropertyChanges {
                     target: subDayLabel
@@ -233,7 +272,7 @@ PlasmaComponents.AbstractButton {
 
         Component.onCompleted: {
             if (dayStyle.today) {
-                root.todayAuxilliaryText = Qt.binding(() => model.subLabel || "");
+                root.todayAuxilliaryText = Qt.binding(() => dayStyle.model.subLabel || "");
             }
         }
     }

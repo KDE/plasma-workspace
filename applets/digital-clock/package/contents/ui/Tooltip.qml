@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -113,6 +115,9 @@ Item {
                     }, [])
 
                 PlasmaComponents.Label {
+                    required property int index
+                    required property string modelData
+
                     // Layout.fillWidth is buggy here
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
                     text: {

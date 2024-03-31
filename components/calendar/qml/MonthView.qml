@@ -7,6 +7,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -301,23 +303,27 @@ Item {
             viewType: InfiniteList.ViewType.DayView
 
             delegate: DaysCalendar {
+                required property int index
+
+                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
                 columns: calendarBackend.days
                 rows: calendarBackend.weeks
                 width: mainDaysCalendar.width
                 height: mainDaysCalendar.height
+                borderWidth: root.borderWidth
                 showWeekNumbers: root.showWeekNumbers
+                dayOfWeekHeaderModel: calendarBackend.days
 
-                headerModel: calendarBackend.days
-                gridModel: switch (index) {
-                case 1:
-                    return calendarBackend.daysModel;
-                case 0:
-                    return mainDaysCalendar.previousModel;
-                case 2:
-                    return mainDaysCalendar.nextModel;
+                gridModel: {
+                    switch (index) {
+                    case 0:
+                        return mainDaysCalendar.previousModel;
+                    case 1:
+                        return calendarBackend.daysModel;
+                    case 2:
+                        return mainDaysCalendar.nextModel;
+                    }
                 }
-
-                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
@@ -326,7 +332,7 @@ Item {
                 }
 
                 onActivated: (index, date, item) => {
-                    const rowNumber = Math.floor(index / columns);
+                    const rowNumber = Math.floor(index / root.columns);
                     root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
 
                     if (date.subLabel) {
@@ -343,12 +349,12 @@ Item {
             backend: calendarBackend
             viewType: InfiniteList.ViewType.YearView
             delegate: DaysCalendar {
+                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearAndMonth
                 columns: 3
                 rows: 4
-
-                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearAndMonth
                 width: yearView.width
                 height: yearView.height
+                borderWidth: root.borderWidth
                 gridModel: monthModel
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
@@ -371,24 +377,29 @@ Item {
             backend: calendarBackend
             viewType: InfiniteList.ViewType.DecadeView
             delegate: DaysCalendar {
+                required property int index
+
                 readonly property int decade: {
-                    const year = calendarBackend.displayedDate.getFullYear()
-                    return year - year % 10
+                    const year = calendarBackend.displayedDate.getFullYear();
+                    return year - year % 10;
                 }
 
+                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYear
                 columns: 3
                 rows: 4
                 width: decadeView.width
                 height: decadeView.height
-                dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYear
+                borderWidth: root.borderWidth
 
-                gridModel: switch (index) {
-                case 1:
-                    return yearModel;
-                case 0:
-                    return decadeView.previousModel;
-                case 2:
-                    return decadeView.nextModel;
+                gridModel: {
+                    switch (index) {
+                    case 0:
+                        return decadeView.previousModel;
+                    case 1:
+                        return yearModel;
+                    case 2:
+                        return decadeView.nextModel;
+                    }
                 }
 
                 KeyNavigation.left: swipeView.KeyNavigation.left

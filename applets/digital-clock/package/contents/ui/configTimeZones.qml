@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -71,6 +73,9 @@ KCMUtils.ScrollViewKCM {
         delegate: Kirigami.RadioSubtitleDelegate {
             id: timeZoneListItem
 
+            required property int index // indirectly required by useAlternateBackgroundColor
+            required property var model
+
             readonly property bool isCurrent: timeZonesPage.cfg_lastSelectedTimezone === model.timeZoneId
             readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
 
@@ -116,7 +121,7 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 QQC2.Button {
-                    visible: model.isLocalTimeZone && KConfig.KAuthorized.authorizeControlModule("kcm_clock.desktop")
+                    visible: timeZoneListItem.model.isLocalTimeZone && KConfig.KAuthorized.authorizeControlModule("kcm_clock.desktop")
                     text: i18n("Switch Systemwide Time Zone…")
                     icon.name: "preferences-system-time"
                     font.bold: false
@@ -124,10 +129,10 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 QQC2.Button {
-                    visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1
+                    visible: !timeZoneListItem.model.isLocalTimeZone && configuredTimezoneList.count > 1
                     icon.name: "edit-delete"
                     font.bold: false
-                    onClicked: model.checked = false;
+                    onClicked: timeZoneListItem.model.checked = false;
                     QQC2.ToolTip {
                         text: i18n("Remove this time zone")
                     }
@@ -138,6 +143,8 @@ KCMUtils.ScrollViewKCM {
         section {
             property: "isLocalTimeZone"
             delegate: Kirigami.ListSectionHeader {
+                required property string section
+
                 width: configuredTimezoneList.width
                 label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
             }

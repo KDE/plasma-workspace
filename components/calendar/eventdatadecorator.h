@@ -12,20 +12,20 @@
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
-class EventDataDecorator : public QObject
+class EventDataDecorator
 {
-    Q_OBJECT
-    Q_PROPERTY(QDateTime startDateTime READ startDateTime NOTIFY eventDataChanged)
-    Q_PROPERTY(QDateTime endDateTime READ endDateTime NOTIFY eventDataChanged)
-    Q_PROPERTY(bool isAllDay READ isAllDay NOTIFY eventDataChanged)
-    Q_PROPERTY(bool isMinor READ isMinor NOTIFY eventDataChanged)
-    Q_PROPERTY(QString title READ title NOTIFY eventDataChanged)
-    Q_PROPERTY(QString description READ description NOTIFY eventDataChanged)
-    Q_PROPERTY(QString eventColor READ eventColor NOTIFY eventDataChanged)
-    Q_PROPERTY(QString eventType READ eventType NOTIFY eventDataChanged)
+    Q_GADGET
+    Q_PROPERTY(QDateTime startDateTime READ startDateTime CONSTANT FINAL)
+    Q_PROPERTY(QDateTime endDateTime READ endDateTime CONSTANT FINAL)
+    Q_PROPERTY(bool isAllDay READ isAllDay CONSTANT FINAL)
+    Q_PROPERTY(bool isMinor READ isMinor CONSTANT FINAL)
+    Q_PROPERTY(QString title READ title CONSTANT FINAL)
+    Q_PROPERTY(QString description READ description CONSTANT FINAL)
+    Q_PROPERTY(QString eventColor READ eventColor CONSTANT FINAL)
+    Q_PROPERTY(QString eventType READ eventType CONSTANT FINAL)
 
 public:
-    EventDataDecorator(const CalendarEvents::EventData &data, QObject *parent = nullptr);
+    explicit EventDataDecorator(const CalendarEvents::EventData &data);
 
     QDateTime startDateTime() const;
     QDateTime endDateTime() const;
@@ -35,9 +35,6 @@ public:
     QString description() const;
     QString eventType() const;
     QString eventColor() const;
-
-Q_SIGNALS:
-    void eventDataChanged();
 
 private:
     CalendarEvents::EventData m_data;

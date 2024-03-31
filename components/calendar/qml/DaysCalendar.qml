@@ -7,6 +7,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -23,20 +25,25 @@ Item {
 
     property bool showWeekNumbers
 
-    property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
+    required property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision
 
-    property alias repeater: repeater
-    property alias headerModel: days.model
-    property alias gridModel: repeater.model
+    required property int borderWidth
+
+    readonly property alias repeater: gridRepeater
+
+    // 7 for days view, null for other views
+    property alias /*int?*/ dayOfWeekHeaderModel: dayOfWeekHeaderRepeater.model
+
+    // type: either PlasmaCalendar.DaysModel or an equivalent ListModel
+    property alias gridModel: gridRepeater.model
 
     // Take the calendar width, subtract the inner and outer spacings and divide by number of columns (==days in week)
-    readonly property int cellWidth: Math.floor((swipeView.width - (daysCalendar.columns + 1) * root.borderWidth) / (daysCalendar.columns + (showWeekNumbers ? 1 : 0)))
+    readonly property int cellWidth: Math.floor((swipeView.width - (columns + 1) * borderWidth) / (columns + (showWeekNumbers ? 1 : 0)))
     // Take the calendar height, subtract the inner spacings and divide by number of rows (root.weeks + one row for day names)
-    readonly property int cellHeight:  Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * root.borderWidth) / calendarGrid.rows)
+    readonly property int cellHeight: Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * borderWidth) / calendarGrid.rows)
 
     Column {
-        id: weeksColumn
-        visible: showWeekNumbers
+        visible: daysCalendar.showWeekNumbers
         anchors {
             top: parent.top
             left: parent.left
@@ -44,14 +51,16 @@ Item {
             // The borderWidth needs to be counted twice here because it goes
             // in fact through two lines - the topmost one (the outer edge)
             // and then the one below weekday strings
-            topMargin: daysCalendar.cellHeight + root.borderWidth + root.borderWidth
+            topMargin: daysCalendar.cellHeight + daysCalendar.borderWidth + daysCalendar.borderWidth
         }
-        spacing: root.borderWidth
+        spacing: daysCalendar.borderWidth
 
         Repeater {
-            model: showWeekNumbers ? calendarBackend.weeksModel : []
+            model: daysCalendar.showWeekNumbers ? calendarBackend.weeksModel : null
 
             PlasmaComponents.Label {
+                required property int modelData
+
                 height: daysCalendar.cellHeight
                 width: daysCalendar.cellWidth
                 horizontalAlignment: Text.AlignHCenter
@@ -70,24 +79,26 @@ Item {
         anchors {
             top: parent.top
             right: parent.right
-            rightMargin: root.borderWidth
+            rightMargin: daysCalendar.borderWidth
             bottom: parent.bottom
-            bottomMargin: root.borderWidth
+            bottomMargin: daysCalendar.borderWidth
         }
 
         columns: daysCalendar.columns
-        rows: daysCalendar.rows + (daysCalendar.headerModel ? 1 : 0)
+        rows: daysCalendar.rows + (daysCalendar.dayOfWeekHeaderModel !== undefined ? 1 : 0)
 
-        spacing: root.borderWidth
-        columnSpacing: root.borderWidth
+        spacing: daysCalendar.borderWidth
+        columnSpacing: daysCalendar.borderWidth
 
         Repeater {
-            id: days
+            id: dayOfWeekHeaderRepeater
 
             PlasmaComponents.Label {
+                required property int index
+
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
-                text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((calendarBackend.firstDayOfWeek + index) % days.count), Locale.ShortFormat)
+                text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((calendarBackend.firstDayOfWeek + index) % dayOfWeekHeaderRepeater.count), Locale.ShortFormat)
                 textFormat: Text.PlainText
                 font.pixelSize: Math.max(Kirigami.Theme.smallFont.pixelSize, daysCalendar.cellHeight / 3)
                 opacity: 0.4
@@ -99,13 +110,14 @@ Item {
         }
 
         Repeater {
-            id: repeater
+            id: gridRepeater
 
             DayDelegate {
-                id: delegate
+                // required properties are declared in the base component
+
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
-                dayModel: repeater.model
+                dayModel: gridRepeater.model
                 dateMatchingPrecision: daysCalendar.dateMatchingPrecision
 
                 Keys.onPressed: event => {
@@ -118,13 +130,13 @@ Item {
                     case Qt.Key_Enter:
                     case Qt.Key_Return:
                     case Qt.Key_Select:
-                        daysCalendar.activated(index, model, delegate);
+                        daysCalendar.activated(index, model, this);
                         break;
                     }
                 }
 
                 KeyNavigation.left: if (index !== 0) {
-                    return repeater.itemAt(index - 1);
+                    return gridRepeater.itemAt(index - 1);
                 } else {
                     return daysCalendar.KeyNavigation.left;
                 }
@@ -132,19 +144,19 @@ Item {
 
                 Keys.onUpPressed: event => {
                     if (index >= daysCalendar.columns) {
-                        repeater.itemAt(index - daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
+                        gridRepeater.itemAt(index - daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     } else {
                         event.accepted = false;
                     }
                 }
                 Keys.onDownPressed: event => {
                     if (index < (daysCalendar.rows - 1) * daysCalendar.columns) {
-                        repeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
+                        gridRepeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     }
                 }
 
                 onClicked: {
-                    daysCalendar.activated(index, model, delegate)
+                    daysCalendar.activated(index, model, this)
                 }
             }
         }

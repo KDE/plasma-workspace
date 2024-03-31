@@ -5,6 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -75,6 +77,8 @@ KCMUtils.SimpleKCM {
                 model: eventPluginsManager.model
 
                 delegate: QQC2.CheckBox {
+                    required property var model
+
                     text: model.display
                     checked: model.checked
 

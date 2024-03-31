@@ -6,6 +6,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -189,18 +192,15 @@ PlasmaExtras.Representation {
                     && date1.getDate() === date2.getDate();
             }
 
+            function updateEventsForCurrentDate() {
+                eventsList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
+            }
+
             Connections {
                 target: monthView
 
                 function onCurrentDateChanged() {
-                    // Apparently this is needed because this is a simple QList being
-                    // returned and if the list for the current day has 1 event and the
-                    // user clicks some other date which also has 1 event, QML sees the
-                    // sizes match and does not update the labels with the content.
-                    // Resetting the model to null first clears it and then correct data
-                    // are displayed.
-                    eventsList.model = null;
-                    eventsList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
+                    agenda.updateEventsForCurrentDate();
                 }
             }
 
@@ -209,8 +209,7 @@ PlasmaExtras.Representation {
 
                 function onAgendaUpdated(updatedDate: date) {
                     if (agenda.dateEquals(updatedDate, monthView.currentDate)) {
-                        eventsList.model = null;
-                        eventsList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
+                        agenda.updateEventsForCurrentDate();
                     }
                 }
             }
@@ -253,7 +252,11 @@ PlasmaExtras.Representation {
 
                     delegate: PlasmaComponents.ItemDelegate {
                         id: eventItem
-                        width: eventsList.width
+
+                        // Crashes if the type is declared as eventData (which is Q_GADGET)
+                        required property /*PlasmaCalendar.eventData*/var modelData
+
+                        width: ListView.view.width
 
                         leftPadding: calendar.paddings
 
@@ -287,7 +290,7 @@ PlasmaExtras.Representation {
                         }
 
                         PlasmaComponents.ToolTip {
-                            text: modelData.description
+                            text: eventItem.modelData.description
                             visible: text !== "" && eventItem.hovered
                         }
 
@@ -306,24 +309,24 @@ PlasmaExtras.Representation {
                                 Layout.rowSpan: 2
                                 Layout.fillHeight: true
 
-                                color: modelData.eventColor
+                                color: eventItem.modelData.eventColor
                                 width: 5
-                                visible: modelData.eventColor !== ""
+                                visible: eventItem.modelData.eventColor !== ""
                             }
 
                             PlasmaComponents.Label {
                                 id: startTimeLabel
 
-                                readonly property bool startsToday: modelData.startDateTime - monthView.currentDate >= 0
-                                readonly property bool startedYesterdayLessThan12HoursAgo: modelData.startDateTime - monthView.currentDate >= -43200000 //12hrs in ms
+                                readonly property bool startsToday: eventItem.modelData.startDateTime - monthView.currentDate >= 0
+                                readonly property bool startedYesterdayLessThan12HoursAgo: eventItem.modelData.startDateTime - monthView.currentDate >= -43200000 //12hrs in ms
 
                                 Layout.row: 0
                                 Layout.column: 1
                                 Layout.minimumWidth: dateLabelMetrics.width
 
                                 text: startsToday || startedYesterdayLessThan12HoursAgo
-                                    ? Qt.formatTime(modelData.startDateTime)
-                                    : agenda.formatDateWithoutYear(modelData.startDateTime)
+                                    ? Qt.formatTime(eventItem.modelData.startDateTime)
+                                    : agenda.formatDateWithoutYear(eventItem.modelData.startDateTime)
                                 textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
                                 visible: eventItem.hasTime
@@ -332,16 +335,16 @@ PlasmaExtras.Representation {
                             PlasmaComponents.Label {
                                 id: endTimeLabel
 
-                                readonly property bool endsToday: modelData.endDateTime - monthView.currentDate <= 86400000 // 24hrs in ms
-                                readonly property bool endsTomorrowInLessThan12Hours: modelData.endDateTime - monthView.currentDate <= 86400000 + 43200000 // 36hrs in ms
+                                readonly property bool endsToday: eventItem.modelData.endDateTime - monthView.currentDate <= 86400000 // 24hrs in ms
+                                readonly property bool endsTomorrowInLessThan12Hours: eventItem.modelData.endDateTime - monthView.currentDate <= 86400000 + 43200000 // 36hrs in ms
 
                                 Layout.row: 1
                                 Layout.column: 1
                                 Layout.minimumWidth: dateLabelMetrics.width
 
                                 text: endsToday || endsTomorrowInLessThan12Hours
-                                    ? Qt.formatTime(modelData.endDateTime)
-                                    : agenda.formatDateWithoutYear(modelData.endDateTime)
+                                    ? Qt.formatTime(eventItem.modelData.endDateTime)
+                                    : agenda.formatDateWithoutYear(eventItem.modelData.endDateTime)
                                 textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
                                 opacity: 0.7
@@ -357,7 +360,7 @@ PlasmaExtras.Representation {
                                 Layout.fillWidth: true
 
                                 elide: Text.ElideRight
-                                text: modelData.title
+                                text: eventItem.modelData.title
                                 textFormat: Text.PlainText
                                 verticalAlignment: Text.AlignVCenter
                                 maximumLineCount: 2
@@ -483,7 +486,11 @@ PlasmaExtras.Representation {
 
                 delegate: PlasmaComponents.ItemDelegate {
                     id: listItem
+
+                    required property string modelData
+
                     readonly property bool isCurrentTimeZone: root.timeZoneResolvesToLastSelectedTimeZone(modelData)
+
                     width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
 
                     leftPadding: calendar.paddings
@@ -502,7 +509,7 @@ PlasmaExtras.Representation {
 
                         PlasmaComponents.Label {
                             Layout.fillWidth: true
-                            text: root.displayStringForTimeZone(modelData)
+                            text: root.displayStringForTimeZone(listItem.modelData)
                             textFormat: Text.PlainText
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             maximumLineCount: 1
@@ -511,7 +518,7 @@ PlasmaExtras.Representation {
 
                         PlasmaComponents.Label {
                             horizontalAlignment: Qt.AlignRight
-                            text: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
+                            text: root.timeForZone(listItem.modelData, Plasmoid.configuration.showSeconds === 2)
                             textFormat: Text.PlainText
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             elide: Text.ElideRight

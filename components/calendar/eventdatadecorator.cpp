@@ -8,9 +8,8 @@
 
 #include <KLocalizedString>
 
-EventDataDecorator::EventDataDecorator(const CalendarEvents::EventData &data, QObject *parent)
-    : QObject(parent)
-    , m_data(data)
+EventDataDecorator::EventDataDecorator(const CalendarEvents::EventData &data)
+    : m_data(data)
 {
 }
 
