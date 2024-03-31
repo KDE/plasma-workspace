@@ -269,6 +269,18 @@ Item {
             updateDecadeOverview();
         }
 
+        // Reduce visual glitches when resizing the view.
+        onWidthChanged: resetCurrentIndexSkippingAnimation()
+        onHeightChanged: resetCurrentIndexSkippingAnimation()
+
+        function resetCurrentIndexSkippingAnimation() {
+            // Resetting currentIndex to -1 for a moment causes SwipeView to
+            // forget about its scheduled animation.
+            const index = currentIndex;
+            currentIndex = -1;
+            currentIndex = index;
+        }
+
         WheelHandler {
             acceptedDevices: PointerDevice.Mouse
             orientation: Qt.Vertical
