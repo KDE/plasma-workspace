@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-30 00:39+0000\n"
-"PO-Revision-Date: 2024-02-18 14:46+0530\n"
+"PO-Revision-Date: 2024-03-30 21:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -229,31 +229,31 @@ msgstr "திரை விசைப்பலகை முடக்கப்ப�
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "தூக்கமும் பூட்டலும் தடுக்கப்பட்டுள்ளன"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "தூக்கத்திற்கும் பூட்டலுக்குமான தடை நீக்கப்பட்டது"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "ஆற்றல் சேமிப்பு பயன்முறை"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "நடுநிலை ஆற்றல் பயன்முறை"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "அதிவேக பயன்முறை"
 
 #: panelview.cpp:1027
 #, kde-format
@@ -321,7 +321,7 @@ msgstr "பணி மேலாளர் பதிவு %1 -ஐ செயல்�
 #: shellcorona.cpp:292
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "பலகை மற்றும் பணிமேடை மேலாண்மை"
 
 #: shellcorona.cpp:314
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-30 00:39+0000\n"
-"PO-Revision-Date: 2024-02-10 19:30+0400\n"
+"PO-Revision-Date: 2024-03-30 11:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -232,31 +232,31 @@ msgstr "عُطّلت لوحة المفاتيح على الشّاشة"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "مُنع السكون وقفل الشاشة"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "رفع حظر السكون وقفل الشاشة"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "وضع توفير الطاقة"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "وضع الطاقة المتوازن"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "وضع الأداء"
 
 #: panelview.cpp:1027
 #, kde-format
@@ -324,7 +324,7 @@ msgstr "نشط مدخلة مدير المهام %1"
 #: shellcorona.cpp:292
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "إدارة سطح المكتب واللوحة"
 
 #: shellcorona.cpp:314
 #, kde-format

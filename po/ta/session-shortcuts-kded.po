@@ -1,0 +1,59 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"PO-Revision-Date: 2024-03-30 20:52+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "அமர்வு மேலாண்மை"
+
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Prompt"
+msgstr "வெளியேற்ற சாளரத்தைக் காட்டு"
+
+#: main.cpp:48
+#, kde-format
+msgid "Log Out"
+msgstr "அமர்விலிருந்து வெளியேறு"
+
+#: main.cpp:54
+#, kde-format
+msgid "Shut Down"
+msgstr "கணினியை நிறுத்து"
+
+#: main.cpp:60
+#, kde-format
+msgid "Reboot"
+msgstr "மீள்துவக்கு"
+
+#: main.cpp:68
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "உறுதிப்படுத்தாமல் அமர்விலிருந்து வெளியேறு"
+
+#: main.cpp:74
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "உறுதிப்படுத்தாமல் கணினியை நிறுத்து"
+
+#: main.cpp:80
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "உறுதிப்படுத்தாமல் மீள்துவக்கு"

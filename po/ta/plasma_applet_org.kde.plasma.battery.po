@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-18 14:52+0530\n"
+"PO-Revision-Date: 2024-03-30 21:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/BatteryItem.qml:107
 #, kde-format
@@ -103,18 +103,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "கணினி முழுவதற்குமான ஆற்றல் சேமிப்பு, மின்கல பிளாஸ்மாய்டால் தடுக்கப்பட்டுள்ளது"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "தானாக தூங்காதே மற்றும் திரைபூட்டாதே"
+msgstr "தானாக தூங்குவதையும் திரைபூட்டுவதையும் தடுக்க முடியவில்லை"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "தானாக தூங்காதே மற்றும் திரைபூட்டாதே"
+msgstr "தானாக தூங்குவதற்கும் திரைபூட்டுவதற்குமான தடையை நீக்க முடியவில்லை"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -180,18 +176,15 @@ msgid "Not charging"
 msgstr "ஆற்றல் ஏறவில்லை"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "தானியங்கி தூக்கம் மற்றும் திரை பூட்டுதல் முடங்கியுள்ளன"
+msgstr "தானியங்கி தூக்கம் மற்றும் திரை பூட்டுதல் முடங்கியுள்ளன; இயக்க நடு-கிளிக் செய்யவும்"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "தானாக தூங்காதே மற்றும் திரைபூட்டாதே"
+msgstr "தானியக்க தூக்கத்தையும் திரைபூட்டலையும் தடுக்க நடு-கிளிக் செய்யவும்"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -201,10 +194,9 @@ msgstr[0] "ஒரு செயலி அதிவேக பயன்முறை
 msgstr[1] "%1 செயலிகள் அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "கணினி அதிவேக பயன்முறையில் உள்ளது"
+msgstr "கணினி அதிவேக பயன்முறையில் உள்ளது; மாற்ற உருளவும்"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -214,15 +206,14 @@ msgstr[0] "ஒரு செயலி ஆற்றல் சேமிப்பு
 msgstr[1] "%1 செயலிகள் ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "கணினி ஆற்றல் சேமிப்பு பயன்முறையில் உள்ளது"
+msgstr "கணினி ஆற்றல் சேமிப்பு பயன்முறையில் உள்ளது; மாற்ற உருளவும்"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "கணினி நடுநிலையான ஆற்றல் பயன்முறையில் உள்ளது; மாற்ற உருளவும்"
 
 #: package/contents/ui/main.qml:412
 #, kde-format

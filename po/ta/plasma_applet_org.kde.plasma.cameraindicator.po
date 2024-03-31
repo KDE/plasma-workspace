@@ -1,86 +1,86 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-30 20:54+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_applet_org.kde."
-"plasma.cameraindicator.pot\n"
-"X-Crowdin-File-ID: 46293\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: contents/ui/FullRepresentation.qml:40
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
-msgstr "相机"
+msgstr "படக்கருவி"
 
 #: contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
-msgstr "活动"
+msgstr "செயலிலுள்ளது"
 
 #: contents/ui/FullRepresentation.qml:45
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
-msgstr "空闲"
+msgstr "ஒன்றும் செய்யவில்லை"
 
 #: contents/ui/FullRepresentation.qml:47
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
-msgstr "错误"
+msgstr "சிக்கல்"
 
 #: contents/ui/FullRepresentation.qml:49
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
-msgstr "正在创建"
+msgstr "உருவாக்குகிறது"
 
 #: contents/ui/FullRepresentation.qml:51
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
-msgstr "已挂起"
+msgstr "முடக்கப்பட்டுள்ளது"
 
 #: contents/ui/FullRepresentation.qml:53
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
-msgstr "未知"
+msgstr "தெரியாதது"
 
 #: contents/ui/FullRepresentation.qml:69
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
-msgstr "%1 正被使用"
+msgstr "%1 பயனில் உள்ளது"
 
 #: contents/ui/main.qml:21
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
-msgstr "相机指示器不可用"
+msgstr "படக்கருவி நிலைகாட்டி கிடைக்கவில்லை"
 
 #: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
-msgstr[0] "%1 个相机正被使用"
+msgstr[0] "படக்கருவி பயனில் உள்ளது"
+msgstr[1] "%1 படக்கருவிகள் பயனில் உள்ளன"
 
 #: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"
-msgstr "没有相机正被使用"
+msgstr "எந்த படக்கருவியும் பயனில் இல்லை"

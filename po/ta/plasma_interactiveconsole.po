@@ -1,91 +1,90 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 00:39+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-30 22:13+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/"
-"plasma_interactiveconsole.pot\n"
-"X-Crowdin-File-ID: 49548\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: interactiveconsole.cpp:63
 #, kde-format
 msgid "&Execute"
-msgstr "执行(&E)"
+msgstr "&இயக்கு"
 
 #: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
-msgstr "Plasma"
+msgstr "பிளாஸ்மா"
 
 #: interactiveconsole.cpp:65
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
-msgstr "KWin"
+msgstr "கேவின்"
 
 #: interactiveconsole.cpp:66
 #, kde-format
 msgid "Templates"
-msgstr "模板"
+msgstr "வார்ப்புருகள்"
 
 #: interactiveconsole.cpp:75
 #, kde-format
 msgid "Desktop Shell Scripting Console"
-msgstr "桌面外壳脚本控制台"
+msgstr ""
 
 #: interactiveconsole.cpp:82
 #, kde-format
 msgid "Editor"
-msgstr "编辑器"
+msgstr "திருத்தி"
 
 #: interactiveconsole.cpp:93
 #, kde-format
 msgid "Load"
-msgstr "加载"
+msgstr "ஏற்று"
 
 #: interactiveconsole.cpp:99
 #, kde-format
 msgid "Use"
-msgstr "使用"
+msgstr "பயன்படுத்து"
 
 #: interactiveconsole.cpp:159
 #, kde-format
 msgid "Output"
-msgstr "输出"
+msgstr "வெளியீடு"
 
 #: interactiveconsole.cpp:266
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
-msgstr "无法加载脚本文件<b>%1</b>"
+msgstr "<b>%1</b> எனும் சிறுநிரல் கோப்பை ஏற்ற முடியவில்லை"
 
 #: interactiveconsole.cpp:316
 #, kde-format
 msgid "Open Script File"
-msgstr "打开脚本文件"
+msgstr "சிறுநிரல் கோப்பை திற"
 
 #: interactiveconsole.cpp:431
 #, kde-format
 msgid "Save Script File"
-msgstr "保存脚本文件"
+msgstr "சிறுநிரல் கோப்பாக சேமி"
 
 #: interactiveconsole.cpp:520
 #, kde-format
 msgid "Executing script at %1"
-msgstr "正在执行位于 %1 的脚本"
+msgstr "%1 அன்று சிறுநிரல் இயக்கப்பட்டது"
 
 #: interactiveconsole.cpp:572
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
-msgstr "运行时间：%1 毫秒"
+msgstr "இயக்கநேரம்: %1மி.நொ."

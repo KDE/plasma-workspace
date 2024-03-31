@@ -1,207 +1,206 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-03-30 11:05+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2024-03-30 20:51+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
-msgstr "معطلة"
+msgstr "முடக்கத்தில்"
 
 #: package/contents/ui/BrightnessItem.qml:30
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr "منخفض"
+msgstr "குறைவானது"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr "متوسط"
+msgstr "நடுத்தரமானது"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr "عالي"
+msgstr "அதிகமானது"
 
 #: package/contents/ui/BrightnessItem.qml:33
 #, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
-msgstr "يعمل"
+msgstr "இயக்கத்தில்"
 
 #: package/contents/ui/BrightnessItem.qml:45
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
-msgstr "%1٪"
+msgstr "%1%"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Brightness and Color"
-msgstr "السطوع والألوان"
+msgstr "நிறமும் பிரகாசமும்"
 
 #: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
-msgstr "سطوع الشاشة %1٪"
+msgstr "தரையின் பிரகாசம் %1%-ஆக உள்ளது"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
-msgstr "سطوع لوحة المفاتيح %1٪"
+msgstr "விசைப்பலகையின் பிரகாசம் %1%-ஆக உள்ளது"
 
 #: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
-msgstr "الإضاءة الليلية معطلة"
+msgstr "இரவு நிறமாற்றம் முடங்கியுள்ளது"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
-msgstr "إضاءة الليل عند %1ك"
+msgstr "இரவு நிறமாற்றம் %1K-ஆக உள்ளது"
 
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "مرر لتضبط سطوع الشاشة"
+msgstr "திரையின் பிரகாசத்தை மாற்ற உருளவும்"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Middle-click to toggle Night Light"
-msgstr "انقر بالزر الأوسط لتبديل وضع الإضاءة الليلية"
+msgstr "இரவு நிறமாற்றத்தை நிலைமாற்ற நடு-கிளிக் செய்யவும்"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr "اضبط إضاءة الليل…"
+msgstr "இரவு நிறமாற்றத்தை அமை…"
 
 #: package/contents/ui/NightColorItem.qml:75
 #, kde-format
 msgctxt "Night light status"
 msgid "Off"
-msgstr "معطلة"
+msgstr "முடக்கத்தில்"
 
 #: package/contents/ui/NightColorItem.qml:78
 #, kde-format
 msgctxt "Night light status"
 msgid "Unavailable"
-msgstr "غير متوفّر"
+msgstr "பயன்படுத்த முடியாது"
 
 #: package/contents/ui/NightColorItem.qml:81
 #, kde-format
 msgctxt "Night light status"
 msgid "Not enabled"
-msgstr "غير ممكنة"
+msgstr "இயக்கப்படவில்லை"
 
 #: package/contents/ui/NightColorItem.qml:84
 #, kde-format
 msgctxt "Night light status"
 msgid "Not running"
-msgstr "لا تعمل"
+msgstr "இயங்கவில்லை"
 
 #: package/contents/ui/NightColorItem.qml:87
 #, kde-format
 msgctxt "Night light status"
 msgid "On"
-msgstr "يعمل"
+msgstr "இயக்கத்தில்"
 
 #: package/contents/ui/NightColorItem.qml:90
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr "انتقال الصباح"
+msgstr "காலை நிறமாற்றப் பருவம்"
 
 #: package/contents/ui/NightColorItem.qml:92
 #, kde-format
 msgctxt "Night light phase"
 msgid "Day"
-msgstr "النهار"
+msgstr "பகல்"
 
 #: package/contents/ui/NightColorItem.qml:94
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr "انتقال المساء"
+msgstr "மாலை நிறமாற்றப் பருவம்"
 
 #: package/contents/ui/NightColorItem.qml:96
 #, kde-format
 msgctxt "Night light phase"
 msgid "Night"
-msgstr "الليل"
+msgstr "இரவு"
 
 #: package/contents/ui/NightColorItem.qml:107
 #, kde-format
 msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
-msgstr "%1ك"
+msgstr "%1K"
 
 #: package/contents/ui/NightColorItem.qml:142
 #, kde-format
 msgid "Configure…"
-msgstr "اضبط…"
+msgstr "அமை..."
 
 #: package/contents/ui/NightColorItem.qml:142
 #, kde-format
 msgid "Enable and Configure…"
-msgstr "التمكين والضبط…"
+msgstr "இயக்கி அமை…"
 
 #: package/contents/ui/NightColorItem.qml:168
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
-msgstr "يكتمل الانتقال إلى النهار في:"
+msgstr "பகல் நிறத்திற்கு மாறுவது இதற்குள் நிறைவடையும்:"
 
 #: package/contents/ui/NightColorItem.qml:170
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
-msgstr "الانتقال إلى الليل مجدول عند:"
+msgstr "இரவுக்கான நிறத்திற்கு மாறவேண்டிய நேரம்:"
 
 #: package/contents/ui/NightColorItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
-msgstr "يكتمل الانتقال إلى الليل في:"
+msgstr "இரவு நிறத்திற்கு மாறுவது இதற்குள் நிறைவடையும்:"
 
 #: package/contents/ui/NightColorItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
-msgstr "الانتقال إلى النهار مجدول عند:"
+msgstr "பகலுக்கான நிறத்திற்கு மாறவேண்டிய நேரம்:"
 
 #: package/contents/ui/PopupDialog.qml:66
 #, kde-format
 msgid "Display Brightness"
-msgstr "سطوع العرض"
+msgstr "திரையின் பிரகாசம்"
 
 #: package/contents/ui/PopupDialog.qml:97
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr "سطوع لوحة المفاتيح"
+msgstr "விசைப்பலகையின் பிரகாசம்"
 
 #: package/contents/ui/PopupDialog.qml:127
 #, kde-format
 msgid "Night Light"
-msgstr "الإضاءة الليلية"
+msgstr "இரவு நிறமாற்றம்"
