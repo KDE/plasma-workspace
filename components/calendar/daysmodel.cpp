@@ -102,7 +102,7 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
         case Events:
             return QVariant::fromValue(d->eventsData.values(currentDate));
         case EventCount:
-            return d->eventsData.values(currentDate).count();
+            return d->eventsData.count(currentDate);
         case containsMajorEventItems:
             return hasMajorEventAtDate(currentDate);
         case containsMinorEventItems:
@@ -117,7 +117,7 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
             break;
         }
 
-        if (d->alternateDatesData.count(currentDate)) {
+        if (d->alternateDatesData.contains(currentDate)) {
             switch (role) {
             case AlternateYearNumber:
                 return d->alternateDatesData.value(currentDate).year;
@@ -130,7 +130,7 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
             }
         }
 
-        if (d->subLabelsData.count(currentDate)) {
+        if (d->subLabelsData.contains(currentDate)) {
             switch (role) {
             case SubLabel:
                 return d->subLabelsData.value(currentDate).label;
