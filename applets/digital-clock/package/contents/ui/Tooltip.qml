@@ -21,6 +21,7 @@ Item {
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
+
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
 
@@ -51,29 +52,29 @@ Item {
         Kirigami.Heading {
             id: tooltipMaintext
 
-            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-            Layout.maximumWidth: preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
+            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
 
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            text: clocks.visible ? Qt.formatDate(tzDate, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(tzDate,"dddd")
+            text: clocks.visible ? Qt.formatDate(root.tzDate, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(root.tzDate, "dddd")
             textFormat: Text.PlainText
         }
 
         PlasmaComponents.Label {
             id: tooltipSubtext
 
-            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-            Layout.maximumWidth: preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
+            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
 
             text: {
                 if (Plasmoid.configuration.showSeconds === 0) {
-                    return Qt.formatDate(tzDate, Qt.locale(), dateFormatString);
+                    return Qt.formatDate(root.tzDate, Qt.locale(), root.dateFormatString);
                 } else {
                     return "%1\n%2"
-                        .arg(Qt.formatTime(tzDate, Qt.locale(), Locale.LongFormat))
-                        .arg(Qt.formatDate(tzDate, Qt.locale(), dateFormatString))
+                        .arg(Qt.formatTime(root.tzDate, Qt.locale(), Locale.LongFormat))
+                        .arg(Qt.formatDate(root.tzDate, Qt.locale(), root.dateFormatString))
                 }
             }
             opacity: 0.6
@@ -82,9 +83,9 @@ Item {
 
         PlasmaComponents.Label {
             id: tooltipSubLabelText
-            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-            Layout.maximumWidth: preferredTextWidth
-            text: root.fullRepresentationItem ? root.fullRepresentationItem.monthView.todayAuxilliaryText : ""
+            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
+            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
+            text: (root.fullRepresentationItem as CalendarView)?.monthView.todayAuxilliaryText ?? ""
             textFormat: Text.PlainText
             opacity: 0.6
             visible: !clocks.visible && text.length > 0
@@ -93,8 +94,8 @@ Item {
         GridLayout {
             id: clocks
 
-            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-            Layout.maximumWidth: preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
+            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
             Layout.minimumHeight: childrenRect.height
             visible: timezoneRepeater.count > 2
             columns: 2
