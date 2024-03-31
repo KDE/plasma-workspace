@@ -206,8 +206,7 @@ ListView {
             function goToPreviousView() {
                const month = root.modulo(root.backend.month - 1, 12);
                const year = month === 12 ? root.backend.year - 1 : root.backend.year;
-               goToYear(year);
-               goToMonth(month);
+               goToYearAndMonth(year, month);
             }
         }
         onStatusChanged: {
@@ -232,8 +231,7 @@ ListView {
             function goToNextView() {
                 const month = root.modulo(root.backend.month + 1, 12);
                 const year = month === 1 ? root.backend.year + 1 : root.backend.year;
-                goToYear(year);
-                goToMonth(month);
+                goToYearAndMonth(year, month);
             }
         }
         onStatusChanged: {

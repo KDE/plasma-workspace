@@ -382,3 +382,8 @@ void Calendar::goToYear(int year)
 {
     setDisplayedDate(QDate(year, d->displayedDate.month(), 1));
 }
+
+void Calendar::goToYearAndMonth(int year, int month)
+{
+    setDisplayedDate(QDate(year, month, 1));
+}

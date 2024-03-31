@@ -182,6 +182,7 @@ public:
     Q_INVOKABLE void resetToToday();
     Q_INVOKABLE void goToMonth(int month);
     Q_INVOKABLE void goToYear(int year);
+    Q_INVOKABLE void goToYearAndMonth(int year, int month);
 
 Q_SIGNALS:
     void displayedDateChanged();
