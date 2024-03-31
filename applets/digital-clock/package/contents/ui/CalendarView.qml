@@ -157,7 +157,7 @@ PlasmaExtras.Representation {
                         KeyNavigation.right: monthView.viewHeader.tabBar
 
                         onClicked: ApplicationIntegration.launchCalendar()
-                        KeyNavigation.tab: calendar.showAgenda && holidaysList.count ? holidaysList : holidaysList.KeyNavigation.down
+                        KeyNavigation.tab: calendar.showAgenda && eventsList.count ? eventsList : eventsList.KeyNavigation.down
                     }
                 }
             }
@@ -200,8 +200,8 @@ PlasmaExtras.Representation {
                     // sizes match and does not update the labels with the content.
                     // Resetting the model to null first clears it and then correct data
                     // are displayed.
-                    holidaysList.model = null;
-                    holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
+                    eventsList.model = null;
+                    eventsList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
                 }
             }
 
@@ -210,8 +210,8 @@ PlasmaExtras.Representation {
 
                 function onAgendaUpdated(updatedDate: date) {
                     if (agenda.dateEquals(updatedDate, monthView.currentDate)) {
-                        holidaysList.model = null;
-                        holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
+                        eventsList.model = null;
+                        eventsList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
                     }
                 }
             }
@@ -228,11 +228,11 @@ PlasmaExtras.Representation {
             }
 
             PlasmaComponents.ScrollView {
-                id: holidaysView
+                id: eventsView
                 anchors.fill: parent
 
                 ListView {
-                    id: holidaysList
+                    id: eventsList
 
                     focus: false
                     activeFocusOnTab: true
@@ -254,7 +254,7 @@ PlasmaExtras.Representation {
 
                     delegate: PlasmaComponents.ItemDelegate {
                         id: eventItem
-                        width: holidaysList.width
+                        width: eventsList.width
 
                         leftPadding: calendar.paddings
 
@@ -370,10 +370,10 @@ PlasmaExtras.Representation {
             }
 
             PlasmaExtras.PlaceholderMessage {
-                anchors.centerIn: holidaysView
-                width: holidaysView.width - (Kirigami.Units.gridUnit * 8)
+                anchors.centerIn: eventsView
+                width: eventsView.width - (Kirigami.Units.gridUnit * 8)
 
-                visible: holidaysList.count === 0
+                visible: eventsList.count === 0
 
                 iconName: "checkmark"
                 text: monthView.isToday(monthView.currentDate)
