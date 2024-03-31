@@ -18,8 +18,6 @@ Item {
 
     signal activated(int index, var date, var item)
 
-    readonly property int gridColumns: showWeekNumbers ? calendarGrid.columns + 1 : calendarGrid.columns
-
     property int rows
     property int columns
 
