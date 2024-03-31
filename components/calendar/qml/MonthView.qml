@@ -314,6 +314,16 @@ Item {
                 showWeekNumbers: root.showWeekNumbers
                 dayOfWeekHeaderModel: calendarBackend.days
 
+                backend: {
+                    switch (index) {
+                    case 0:
+                        return mainDaysCalendar.previousCalendar;
+                    case 1:
+                        return calendarBackend;
+                    case 2:
+                        return mainDaysCalendar.nextCalendar;
+                    }
+                }
                 gridModel: {
                     switch (index) {
                     case 0:

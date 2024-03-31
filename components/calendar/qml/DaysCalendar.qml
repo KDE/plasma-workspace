@@ -14,6 +14,7 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.workspace.calendar as PlasmaCalendar
 
 Item {
     id: daysCalendar
@@ -24,6 +25,9 @@ Item {
     property int columns
 
     property bool showWeekNumbers
+
+    // Only relevand for days in a MonthView
+    property PlasmaCalendar.Calendar backend
 
     required property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision
 
@@ -56,7 +60,14 @@ Item {
         spacing: daysCalendar.borderWidth
 
         Repeater {
-            model: daysCalendar.showWeekNumbers ? calendarBackend.weeksModel : null
+            model: {
+                if (daysCalendar.showWeekNumbers) {
+                    if (daysCalendar.backend) {
+                        return daysCalendar.backend.weeksModel;
+                    }
+                }
+                return null;
+            }
 
             PlasmaComponents.Label {
                 required property int modelData
@@ -98,7 +109,7 @@ Item {
 
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
-                text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((calendarBackend.firstDayOfWeek + index) % dayOfWeekHeaderRepeater.count), Locale.ShortFormat)
+                text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((daysCalendar.backend.firstDayOfWeek + index) % dayOfWeekHeaderRepeater.count), Locale.ShortFormat)
                 textFormat: Text.PlainText
                 font.pixelSize: Math.max(Kirigami.Theme.smallFont.pixelSize, daysCalendar.cellHeight / 3)
                 opacity: 0.4

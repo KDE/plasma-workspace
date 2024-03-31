@@ -36,6 +36,9 @@ ListView {
         return null;
     }
 
+    readonly property PlasmaCalendar.Calendar previousCalendar: previousAlternativeBackend.item
+    readonly property PlasmaCalendar.Calendar nextCalendar: nextAlternativeBackend.item
+
     readonly property int cellHeight: (currentItem as DaysCalendar)?.cellHeight ?? 0
     readonly property int cellWidth: (currentItem as DaysCalendar)?.cellWidth ?? 0
 
