@@ -27,7 +27,7 @@ MouseArea {
     // Qt.formatDate with locale only accepts Locale.FormatType as format type,
     // no Qt.DateFormat (ISODate) and no format string.
     // Locale.toString on the other hand only formats a date *with* time...
-    property var dateFormatter: {
+    readonly property var dateFormatter: {
         if (Plasmoid.configuration.dateFormat === "custom") {
             Plasmoid.configuration.customDateFormat; // create a binding dependency on this property.
             return (d) => {
@@ -56,7 +56,7 @@ MouseArea {
 
     // if showing the date and the time in one line or
     // if the date/timezone cannot be fit with the smallest font to its designated space
-    property bool oneLineMode: {
+    readonly property bool oneLineMode: {
         if (Plasmoid.configuration.dateDisplayFormat === 1) {
             // BesideTime
             return true;

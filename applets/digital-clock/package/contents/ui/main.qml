@@ -20,8 +20,10 @@ PlasmoidItem {
 
     width: Kirigami.Units.gridUnit * 10
     height: Kirigami.Units.gridUnit * 4
-    property string dateFormatString: setDateFormatString()
+
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
+
+    readonly property string dateFormatString: setDateFormatString()
 
     readonly property date tzDate: {
         const data = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
