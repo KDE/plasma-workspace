@@ -50,7 +50,6 @@ Item {
     property int columns: calendarBackend.days
     property int rows: calendarBackend.weeks
 
-    property Item selectedItem
     property int firstDay: new Date(showDate.getFullYear(), showDate.getMonth(), 1).getDay()
     property alias today: calendarBackend.today
     property bool showWeekNumbers: false
