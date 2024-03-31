@@ -115,6 +115,13 @@ Item {
                     ? root.monthViewRoot.eventButton
                     : root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
 
+                onFocusChanged: {
+                    if (!focus) {
+                        // Rebind after potential key navigation
+                        currentIndex = Qt.binding(() => root.swipeView.currentIndex);
+                    }
+                }
+
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
