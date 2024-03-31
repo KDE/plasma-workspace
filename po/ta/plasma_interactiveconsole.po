@@ -1,0 +1,90 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-20 02:28+0000\n"
+"PO-Revision-Date: 2024-03-30 22:12+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
+
+#: interactiveconsole.cpp:63
+#, kde-format
+msgid "&Execute"
+msgstr "&இயக்கு"
+
+#: interactiveconsole.cpp:64
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "பிளாஸ்மா"
+
+#: interactiveconsole.cpp:65
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "கேவின்"
+
+#: interactiveconsole.cpp:66
+#, kde-format
+msgid "Templates"
+msgstr "வார்ப்புருகள்"
+
+#: interactiveconsole.cpp:75
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr ""
+
+#: interactiveconsole.cpp:82
+#, kde-format
+msgid "Editor"
+msgstr "திருத்தி"
+
+#: interactiveconsole.cpp:93
+#, kde-format
+msgid "Load"
+msgstr "ஏற்று"
+
+#: interactiveconsole.cpp:99
+#, kde-format
+msgid "Use"
+msgstr "பயன்படுத்து"
+
+#: interactiveconsole.cpp:159
+#, kde-format
+msgid "Output"
+msgstr "வெளியீடு"
+
+#: interactiveconsole.cpp:266
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr "<b>%1</b> எனும் சிறுநிரல் கோப்பை ஏற்ற முடியவில்லை"
+
+#: interactiveconsole.cpp:316
+#, kde-format
+msgid "Open Script File"
+msgstr "சிறுநிரல் கோப்பை திற"
+
+#: interactiveconsole.cpp:431
+#, kde-format
+msgid "Save Script File"
+msgstr "சிறுநிரல் கோப்பாக சேமி"
+
+#: interactiveconsole.cpp:520
+#, kde-format
+msgid "Executing script at %1"
+msgstr "%1 அன்று சிறுநிரல் இயக்கப்பட்டது"
+
+#: interactiveconsole.cpp:572
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr "இயக்கநேரம்: %1மி.நொ."

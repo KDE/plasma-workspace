@@ -1,78 +1,78 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-09 02:34+0000\n"
-"PO-Revision-Date: 2024-03-30 19:38\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-30 20:55+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/libkmpris.pot\n"
-"X-Crowdin-File-ID: 50416\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: kded/mprisservice.cpp:105
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
-msgstr "媒体控制器"
+msgstr "ஊடக கட்டுப்படுத்தி"
 
 #: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr "播放/暂停媒体播放"
+msgstr "ஊடகத்தை இயக்கு/இடைநிறுத்து"
 
 #: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr "播放下一首媒体"
+msgstr "ஊடக இயக்கத்தில் அடுத்தது"
 
 #: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr "播放上一首媒体"
+msgstr "ஊடக இயக்கத்தில் முந்தையது"
 
 #: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr "停止媒体播放"
+msgstr "ஊடக இயக்கத்தை நிறுத்து"
 
 #: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr "暂停媒体播放"
+msgstr "ஊடக இயக்கத்தை இடைநிறுத்து"
 
 #: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr "播放媒体"
+msgstr "ஊடக இயக்கத்தை இயக்கு"
 
 #: kded/mprisservice.cpp:120
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr "媒体音量提高"
+msgstr "ஊடக ஒலியளவை கூட்டு"
 
 #: kded/mprisservice.cpp:121
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr "媒体音量降低"
+msgstr "ஊடக ஒலியளவை குறை"
 
 #: multiplexermodel.cpp:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr "自动选择播放器"
+msgstr "இயக்கியை தானாக தேர்ந்தெடு"

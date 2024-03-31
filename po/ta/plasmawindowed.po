@@ -1,55 +1,55 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2024-03-30 19:38\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-30 20:52+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasmawindowed.pot\n"
-"X-Crowdin-File-ID: 51586\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: main.cpp:44 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
-msgstr "窗口化 Plasma"
+msgstr "சாளர பிளாஸ்மாய்டுகள்"
 
 #: main.cpp:46
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "启用 QML Javascript 调试器"
+msgstr ""
 
 #: main.cpp:49 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
-msgstr "保持 Plasma 小程序在通知区域中存在，即使它的窗口已被关闭。"
+msgstr ""
 
 #: main.cpp:51
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "强制加载指定的外壳插件"
+msgstr ""
 
 #: main.cpp:55 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr "要打开的小程序。"
+msgstr "திறக்க வேண்டிய பிளாஸ்மாய்ட்"
 
 #: main.cpp:56 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr "要传递到 Plasma 小程序的参数。"
+msgstr "பிளாஸ்மாய்ட்க்கான தருமதிப்புகள்"
 
 #: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
-msgstr "关闭 %1"
+msgstr "%1 தனை மூடு"
