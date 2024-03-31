@@ -8,7 +8,6 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
@@ -17,6 +16,7 @@ import org.kde.kcmutils as KCMUtils
 KCMUtils.ScrollViewKCM {
     id: timeZonesPage
 
+    property string cfg_lastSelectedTimezone
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
 
@@ -71,7 +71,7 @@ KCMUtils.ScrollViewKCM {
         delegate: Kirigami.RadioSubtitleDelegate {
             id: timeZoneListItem
 
-            readonly property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+            readonly property bool isCurrent: timeZonesPage.cfg_lastSelectedTimezone === model.timeZoneId
             readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
 
             width: ListView.view.width
@@ -94,7 +94,12 @@ KCMUtils.ScrollViewKCM {
             }
 
             checked: isCurrent
-            onToggled: Plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
+
+            onToggled: {
+                if (checked) {
+                    timeZonesPage.cfg_lastSelectedTimezone = model.timeZoneId;
+                }
+            }
 
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
