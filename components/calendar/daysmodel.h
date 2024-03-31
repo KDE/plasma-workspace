@@ -11,6 +11,7 @@
 #include <QPointer>
 
 #include "daydata.h"
+#include "eventdatadecorator.h"
 #include "eventpluginsmanager.h"
 #include <CalendarEvents/CalendarEventsPlugin>
 
@@ -57,7 +58,7 @@ public:
 
     Q_INVOKABLE void setPluginsManager(EventPluginsManager *manager);
 
-    Q_INVOKABLE QList<QObject *> eventsForDate(const QDate &date);
+    Q_INVOKABLE QList<EventDataDecorator *> eventsForDate(const QDate &date);
 
     QHash<int, QByteArray> roleNames() const override;
 

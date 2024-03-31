@@ -22,7 +22,7 @@ public:
     explicit DaysModelPrivate();
 
     QList<DayData> *data = nullptr;
-    QList<QObject *> qmlData;
+    QList<EventDataDecorator *> qmlData;
     QMultiHash<QDate, CalendarEvents::EventData> eventsData;
     QHash<QDate /* Gregorian */, QCalendar::YearMonthDay> alternateDatesData;
     QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> subLabelsData;
@@ -343,7 +343,7 @@ void DaysModel::onSubLabelReady(const QHash<QDate, CalendarEvents::CalendarEvent
     Q_EMIT dataChanged(index(0, 0), index(d->data->count() - 1, 0), {SubLabel, SubYearLabel, SubMonthLabel, SubDayLabel});
 }
 
-QList<QObject *> DaysModel::eventsForDate(const QDate &date)
+QList<EventDataDecorator *> DaysModel::eventsForDate(const QDate &date)
 {
     if (d->lastRequestedAgendaDate == date && !d->agendaNeedsUpdate) {
         return d->qmlData;
@@ -362,7 +362,7 @@ QList<QObject *> DaysModel::eventsForDate(const QDate &date)
     });
 
     for (const CalendarEvents::EventData &event : std::as_const(events)) {
-        d->qmlData << new EventDataDecorator(event, this);
+        d->qmlData.append(new EventDataDecorator(event, this));
     }
 
     d->agendaNeedsUpdate = false;
