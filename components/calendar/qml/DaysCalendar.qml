@@ -25,8 +25,7 @@ Item {
 
     property bool showWeekNumbers
 
-    // how precise date matching should be, 3 = day+month+year, 2 = month+year, 1 = just year
-    property int dateMatchingPrecision
+    property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
 
     property alias repeater: repeater
     property alias headerModel: days.model
@@ -109,6 +108,7 @@ Item {
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
+                dateMatchingPrecision: daysCalendar.dateMatchingPrecision
 
                 Keys.onPressed: event => {
                     if (!daysCalendar.PlasmaComponents.SwipeView.isCurrentItem) {

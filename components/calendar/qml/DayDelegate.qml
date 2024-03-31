@@ -19,6 +19,8 @@ import org.kde.plasma.workspace.calendar as PlasmaCalendar
 PlasmaComponents.AbstractButton {
     id: dayStyle
 
+    property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision: PlasmaCalendar.Calendar.MatchYearMonthAndDay
+
     objectName: {
         switch (dateMatchingPrecision) {
         case PlasmaCalendar.Calendar.MatchYear:
@@ -164,7 +166,7 @@ PlasmaComponents.AbstractButton {
             }
             font.pixelSize: Math.max(
                 Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
-                daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+                daysCalendar.cellHeight / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
             font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -191,7 +193,7 @@ PlasmaComponents.AbstractButton {
                 elide: Text.ElideRight
                 font.pixelSize: Math.max(
                     Kirigami.Theme.smallFont.pixelSize,
-                    daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
+                    daysCalendar.cellHeight / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
                 font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
