@@ -34,8 +34,8 @@ ListView {
         return null;
     }
 
-    readonly property double cellHeight: (currentItem as DaysCalendar)?.cellHeight ?? 0
-    readonly property double cellWidth: (currentItem as DaysCalendar)?.cellWidth ?? 0
+    readonly property int cellHeight: (currentItem as DaysCalendar)?.cellHeight ?? 0
+    readonly property int cellWidth: (currentItem as DaysCalendar)?.cellWidth ?? 0
 
     required property PlasmaCalendar.Calendar backend
     required property int viewType
