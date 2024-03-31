@@ -79,7 +79,7 @@ Item {
         rows: daysCalendar.rows + (daysCalendar.headerModel ? 1 : 0)
 
         spacing: root.borderWidth
-        columnSpacing: parent.squareCell ? (daysCalendar.width - daysCalendar.columns * (daysCalendar.cellWidth - root.borderWidth)) / daysCalendar.columns : root.borderWidth
+        columnSpacing: root.borderWidth
 
         Repeater {
             id: days
