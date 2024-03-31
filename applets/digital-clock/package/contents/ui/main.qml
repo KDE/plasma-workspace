@@ -22,8 +22,14 @@ PlasmoidItem {
     height: Kirigami.Units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
-    property date tzDate: {
+
+    readonly property date tzDate: {
         const data = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
+        // The order of signal propagation is unspecified, so we might get
+        // here before the dataSource has updated. Alternatively, a buggy
+        // configuration view might set lastSelectedTimezone to a new time
+        // zone before applying the new list, or it may just be set to
+        // something invalid in the config file.
         if (data === undefined) {
             return new Date();
         }
@@ -43,20 +49,25 @@ PlasmoidItem {
         root.allTimezones = tz.concat(Plasmoid.configuration.selectedTimeZones);
     }
 
-    function timeForZone(zone, showSecondsForZone) {
+    function timeForZone(timeZone: string, showSeconds: bool): string {
         if (!compactRepresentationItem) {
             return "";
         }
 
+        const data = dataSource.data[timeZone];
+        if (data === undefined) {
+            return "";
+        }
+
         // get the time for the given timezone from the dataengine
-        const now = dataSource.data[zone]["DateTime"];
+        const now = data["DateTime"];
         // get current UTC time
         const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
         // add the dataengine TZ offset to it
-        const dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
+        const dateTime = new Date(msUTC + (data["Offset"] * 1000));
 
         let formattedTime;
-        if (showSecondsForZone) {
+        if (showSeconds) {
             formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormatWithSeconds);
         } else {
             formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
@@ -70,11 +81,16 @@ PlasmoidItem {
     }
 
     function displayStringForTimeZone(timeZone: string): string {
+        const data = dataSource.data[timeZone];
+        if (data === undefined) {
+            return timeZone;
+        }
+
         // add the timezone string to the clock
         if (Plasmoid.configuration.displayTimezoneAsCode) {
-            return dataSource.data[timeZone]["Timezone Abbreviation"];
+            return data["Timezone Abbreviation"];
         } else {
-            return TimezonesI18n.i18nCity(dataSource.data[timeZone]["Timezone"]);
+            return TimezonesI18n.i18nCity(data["Timezone"]);
         }
     }
 
