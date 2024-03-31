@@ -5,15 +5,22 @@
 */
 #pragma once
 
-#include <QAbstractListModel>
-#include <QRecursiveMutex>
 #include <memory>
+#include <mutex>
 
+#include <QAbstractListModel>
+#include <QClipboard>
+
+#include "historyitem.h"
+
+class Klipper;
+class KSystemClipboard;
 class HistoryItem;
 
 class HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
+
 public:
     enum RoleType {
         HistoryItemConstPtrRole = Qt::UserRole,
@@ -24,6 +31,7 @@ public:
     };
     Q_ENUM(RoleType)
 
+    [[nodiscard]] static std::shared_ptr<HistoryModel> self();
     explicit HistoryModel(QObject *parent = nullptr);
     ~HistoryModel() override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -49,17 +57,36 @@ public:
     void insert(const std::shared_ptr<HistoryItem> &item);
     void clearAndBatchInsert(const QList<std::shared_ptr<HistoryItem>> &items);
 
-    QRecursiveMutex *mutex()
-    {
-        return &m_mutex;
-    }
+    const HistoryItemConstPtr &first() const;
 
 private:
+    /**
+     * The selection modes
+     *
+     * Don't use 1, as I use that as a guard against passing
+     * a boolean true as a mode.
+     */
+    enum SelectionMode {
+        Clipboard = 2,
+        Selection = 4,
+    };
+
+    enum class ClipboardUpdateReason {
+        UpdateClipboard,
+        PreventEmptyClipboard,
+    };
+
+    void onNewClipData(QClipboard::Mode);
+
+    void setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     void moveToTop(int row);
+
+    KSystemClipboard *m_clip = nullptr;
+
     QList<std::shared_ptr<HistoryItem>> m_items;
     int m_maxSize;
     bool m_displayImages;
-    QRecursiveMutex m_mutex;
+    std::recursive_mutex m_mutex;
 };
 
 inline int HistoryModel::maxSize() const

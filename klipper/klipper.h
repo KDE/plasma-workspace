@@ -16,6 +16,7 @@
 
 #include <KTextEdit>
 
+#include "klipper_common_export.h"
 #include "urlgrabber.h"
 
 class KToggleAction;
@@ -39,7 +40,7 @@ class PlasmaShell;
 }
 }
 
-class Klipper : public QObject
+class KLIPPER_COMMON_EXPORT Klipper : public QObject
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.klipper.klipper")
@@ -56,7 +57,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
 public:
-    Klipper(QObject *parent, const KSharedConfigPtr &config);
+    [[nodiscard]] static std::shared_ptr<Klipper> self();
     ~Klipper() override;
 
     bool eventFilter(QObject *object, QEvent *event) override;
@@ -172,6 +173,7 @@ private Q_SLOTS:
     void loadSettings();
 
 private:
+    explicit Klipper(const KSharedConfigPtr &config);
     static void updateTimestamp();
 
     KSystemClipboard *m_clip;

@@ -45,7 +45,6 @@ bool CycleBlocker::isBlocked()
 History::History(QObject *parent)
     : QObject(parent)
     , m_topIsUserSelected(false)
-    , m_model(new HistoryModel(this))
 {
     connect(m_model, &HistoryModel::rowsInserted, this, [this](const QModelIndex &parent, int start) {
         Q_UNUSED(parent)

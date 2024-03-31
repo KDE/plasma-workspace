@@ -60,6 +60,7 @@
 
 using namespace std::chrono_literals;
 #endif
+using namespace Qt::StringLiterals;
 
 namespace
 {
@@ -90,9 +91,20 @@ private:
 };
 }
 
+std::shared_ptr<Klipper> Klipper::self()
+{
+    static std::weak_ptr<Klipper> s_backend;
+    if (s_backend.expired()) {
+        std::shared_ptr<Klipper> ptr{new Klipper(KSharedConfig::openConfig(u"klipperrc"_s, KConfig::NoGlobals))};
+        s_backend = ptr;
+        return ptr;
+    }
+    return s_backend.lock();
+}
+
 // config == KGlobal::config for process, otherwise applet
-Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
-    : QObject(parent)
+Klipper::Klipper(const KSharedConfigPtr &config)
+    : QObject()
     , m_overflowCounter(0)
     , m_quitAction(nullptr)
     , m_selectionLocklevel(0)
