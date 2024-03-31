@@ -78,11 +78,6 @@ Item {
         return date.toDateString() === new Date().toDateString();
     }
 
-    function eventDate(yearNumber, monthNumber, dayNumber) {
-        const d = new Date(yearNumber, monthNumber - 1, dayNumber);
-        return Qt.formatDate(d, "dddd dd MMM yyyy");
-    }
-
     function updateYearOverview() {
         const date = calendarBackend.displayedDate;
         const day = date.getDate();
