@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-10 19:17+0400\n"
+"PO-Revision-Date: 2024-03-31 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -103,18 +103,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "فعّل بريمج البطّاريّة الكبت على مستوى النّظام"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "منع السكون يدوي وقفل الشاشة"
+msgstr "فشل في منع النوم التلقائي وقفل الشاشة"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "منع السكون يدوي وقفل الشاشة"
+msgstr "فشل في إلغاء حظر النوم التلقائي وقفل الشاشة"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -180,18 +176,16 @@ msgid "Not charging"
 msgstr "لا تشحن"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "عُطل السكون التلقائي وقفل الشاشة"
+msgstr ""
+"عُطل السكون التلقائي وقفل الشاشة، انقر بالزر الفأرة الأوسط لإعادة التفعيل"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "منع السكون يدوي وقفل الشاشة"
+msgstr "انقر بزر الفأرة الأوسط لتعطيل وضع السكون التلقائي وقفل الشاشة"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -205,10 +199,9 @@ msgstr[4] "%1 تطبيقا طلب تنشيط وضع الأداء"
 msgstr[5] "%1 تطبيق طلب تنشيط وضع الأداء"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "النظام في وضع الأداء"
+msgstr "النظام في وضع الأداء، مرر لتغير الوضع"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -222,15 +215,14 @@ msgstr[4] "%1 تطبيقا طلب تنشيط وضع حفظ الطاقة"
 msgstr[5] "%1 تطبيق طلب تنشيط وضع حفظ الطاقة"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "النطام في وضع توفير الطاقة"
+msgstr "النظام في وضع توفير الطاقة، مرر لتغير الوضع"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "النظام في وضع التوازن، مرر لتغير الوضع"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
