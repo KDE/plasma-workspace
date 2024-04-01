@@ -57,6 +57,7 @@ Name[zh_CN]=Plasma 挂件
 Name[zh_TW]=Plasma 元件
 
 Categories=Plasma 6 Extensions
+ContentWarning=Executables
 StandardResource=tmp
 Uncompress=kpackage
 KPackageStructure=Plasma/Applet
