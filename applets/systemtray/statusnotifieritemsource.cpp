@@ -256,7 +256,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         QVariantMap properties = reply.argumentAt<0>();
         QString path = properties[QStringLiteral("IconThemePath")].toString();
 
-        if (path != m_iconThemePath) {
+        if (!m_customIconLoader || path != m_iconThemePath) {
             if (!m_customIconLoader) {
                 m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
                 m_customIconLoader->setCustomPalette(Plasma::Theme::globalPalette());
