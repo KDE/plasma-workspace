@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-11 11:28+0100\n"
+"PO-Revision-Date: 2024-04-01 08:10+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -107,18 +107,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Aplet baterii ma włączone usypianie ogólnosystemowe"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Ręcznie zablokuj usypianie blokowanie ekranu"
+msgstr "Nie udało się powstrzymać uśpienia i zablokowania ekranu"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Ręcznie zablokuj usypianie blokowanie ekranu"
+msgstr "Nie udało się odblokować usypiania i blokowania ekranu"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -184,18 +180,17 @@ msgid "Not charging"
 msgstr "Nie jest ładowana"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "Samoczynne usypianie i blokowanie ekranu są wyłączone"
+msgstr ""
+"Usypianie i blokowanie ekranu są wyłączone; kliknij środkowym, aby je "
+"włączyć ponownie"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Ręcznie zablokuj usypianie blokowanie ekranu"
+msgstr "Kliknij środkowym, aby wyłączyć usypianie i blokowanie ekranu"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -206,10 +201,9 @@ msgstr[1] "%1 aplikacje zażądały włączenia trybu wydajności"
 msgstr[2] "%1 aplikacji zażądały włączenia trybu wydajności"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "System działa w trybie wydajności"
+msgstr "System działa w trybie wydajności; przewiń rolką, aby to zmienić"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -220,15 +214,16 @@ msgstr[1] "%1 aplikacje zażądały włączenia trybu oszczędzania energii"
 msgstr[2] "%1 aplikacji zażądały włączenia trybu oszczędzania energii"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "System działa w trybie oszczędzania energii"
+msgstr ""
+"System działa w trybie oszczędzania energii; przewiń rolką, aby to zmienić"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"System działa w trybie zrównoważonej mocy; przewiń rolką, aby to zmienić"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
