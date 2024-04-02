@@ -53,6 +53,7 @@ Loader {
             visible: dialogLoader.status === Loader.Ready
             currentFolder: dialogLoader.defaultFolder
             nameFilters: imageWallpaper.nameFilters()
+            fileMode: QtDialogs.FileDialog.OpenFiles
             options: QtDialogs.FileDialog.ReadOnly
             title: i18nc("@title:window", "Open Image")
         }
