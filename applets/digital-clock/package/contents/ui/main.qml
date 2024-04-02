@@ -36,7 +36,7 @@ PlasmoidItem {
     }
 
     function initTimezones() {
-        const tz = []
+        const tz = [];
         if (Plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
             tz.push("Local");
         }
@@ -101,10 +101,13 @@ PlasmoidItem {
 
     //We need Local to be *always* present, even if not disaplayed as
     //it's used for formatting in ToolTip.dateTimeChanged()
-    property var allTimezones
+    property list<string> allTimezones
+
     Connections {
         target: Plasmoid.configuration
-        function onSelectedTimeZonesChanged() { root.initTimezones(); }
+        function onSelectedTimeZonesChanged() {
+            root.initTimezones();
+        }
     }
 
     hideOnWindowDeactivate: !Plasmoid.configuration.pin
@@ -159,6 +162,6 @@ PlasmoidItem {
     Component.onCompleted: {
         ClipboardMenu.setupMenu(clipboardAction);
 
-        root.initTimezones();
+        initTimezones();
     }
 }
