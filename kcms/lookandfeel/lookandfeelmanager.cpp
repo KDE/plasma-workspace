@@ -79,7 +79,6 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
     Contents contents = Empty;
 
     contents.setFlag(SplashScreen, !pkg.filePath("splashmainscript").isEmpty());
-    contents.setFlag(LockScreen, !pkg.filePath("lockscreenmainscript").isEmpty());
 
     contents.setFlag(DesktopLayout, !pkg.filePath("layouts").isEmpty());
 
@@ -135,15 +134,6 @@ void LookAndFeelManager::setSplashScreen(const QString &theme)
     writeNewDefaults(group, defaultGroup, QStringLiteral("Theme"), theme);
     // TODO: a way to set none as spash in the l&f
     writeNewDefaults(group, defaultGroup, QStringLiteral("Engine"), QStringLiteral("KSplashQML"));
-}
-
-void LookAndFeelManager::setLockScreen(const QString &theme)
-{
-    if (theme.isEmpty()) {
-        return;
-    }
-
-    writeNewDefaults(QStringLiteral("kscreenlockerrc"), QStringLiteral("Greeter"), QStringLiteral("Theme"), theme);
 }
 
 void LookAndFeelManager::setWindowSwitcher(const QString &theme)
@@ -587,9 +577,6 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             } else {
                 setSplashScreen(m_data->settings()->lookAndFeelPackage());
             }
-        }
-        if (itemsToApply.testFlag(LockScreen)) {
-            setLockScreen(m_data->settings()->lookAndFeelPackage());
         }
 
         QFile packageFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/package"));

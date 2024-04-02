@@ -36,7 +36,6 @@ private Q_SLOTS:
     void testPlasmaTheme();
     void testCursorTheme();
     void testSplashScreen();
-    void testLockScreen();
     void testWindowSwitcher();
     void testKCMSave();
 
@@ -177,19 +176,6 @@ void KcmTest::testSplashScreen()
     QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 }
 
-void KcmTest::testLockScreen()
-{
-    m_KCMLookandFeel->lookAndFeel()->setLockScreen(QStringLiteral("customTestValue"));
-
-    KConfig config(QStringLiteral("kscreenlockerrc"));
-    KConfigGroup cg(&config, u"Greeter"_s);
-    QCOMPARE(cg.readEntry("Theme", QString()), QString());
-
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kscreenlockerrc", KConfig::SimpleConfig);
-    KConfigGroup cgd(&configDefault, u"Greeter"_s);
-    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
-}
-
 void KcmTest::testWindowSwitcher()
 {
     m_KCMLookandFeel->lookAndFeel()->setWindowSwitcher(QStringLiteral("customTestValue"));
@@ -257,14 +243,6 @@ void KcmTest::testKCMSave()
     QCOMPARE(cg.readEntry("Engine", QString()), QString());
     QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
     QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
-
-    KConfig lockerConfig(QStringLiteral("kscreenlockerrc"));
-    KConfig lockerConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kscreenlockerrc",
-                                KConfig::SimpleConfig);
-    cg = KConfigGroup(&lockerConfig, u"Greeter"_s);
-    cgd = KConfigGroup(&lockerConfigDefault, u"Greeter"_s);
-    QCOMPARE(cg.readEntry("Theme", QString()), QString());
-    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 
     KConfig kwinConfig(QStringLiteral("kwinrc"));
     KConfig kwinConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc", KConfig::SimpleConfig);

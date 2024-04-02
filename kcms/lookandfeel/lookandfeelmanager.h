@@ -42,7 +42,6 @@ public:
         Fonts = 1 << 6,
         WindowSwitcher = 1 << 7,
         SplashScreen = 1 << 8,
-        LockScreen = 1 << 9,
         Wallpaper = 1 << 10,
         BorderSize = 1 << 11,
         AppearanceSettings = (1 << 12) - 1, // All the contents within Appearance
@@ -85,7 +84,6 @@ public:
     void setCursorTheme(const QString theme);
     void setSplashScreen(const QString &theme);
     void setLatteLayout(const QString &filepath, const QString &name);
-    void setLockScreen(const QString &theme);
     void setWindowSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme, bool noPlugin);
     void setTitlebarLayout(const QString &leftbtns, const QString &rightbtns);

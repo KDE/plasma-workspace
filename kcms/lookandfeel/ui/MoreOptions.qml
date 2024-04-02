@@ -66,7 +66,6 @@ ColumnLayout {
                     { text: i18n("Fonts"), flag: Private.LookandFeelManager.Fonts },
                     { text: i18n("Task Switcher"), flag: Private.LookandFeelManager.WindowSwitcher },
                     { text: i18n("Splash Screen"), flag: Private.LookandFeelManager.SplashScreen },
-                    { text: i18n("Lock Screen"), flag: Private.LookandFeelManager.LockScreen },
                 ]
                 delegate: QtControls.CheckBox {
                     required property var modelData

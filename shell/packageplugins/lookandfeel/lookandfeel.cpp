@@ -40,9 +40,6 @@ public:
         package->addDirectoryDefinition("logout", QStringLiteral("logout"));
         package->addFileDefinition("logoutmainscript", QStringLiteral("logout/Logout.qml"));
 
-        package->addDirectoryDefinition("lockscreen", QStringLiteral("lockscreen"));
-        package->addFileDefinition("lockscreenmainscript", QStringLiteral("lockscreen/LockScreen.qml"));
-
         package->addDirectoryDefinition("osd", QStringLiteral("osd"));
         package->addFileDefinition("osdmainscript", QStringLiteral("osd/Osd.qml"));
 
