@@ -670,11 +670,12 @@ MouseArea {
                 timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
                 break;
             }
-            timezoneLabel.text = (Plasmoid.configuration.showDate || oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
-        } else {
-            // this clears the label and that makes it hidden
-            timezoneLabel.text = timezoneString;
+            if ((Plasmoid.configuration.showDate || oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+                timezoneString = `(${timezoneString})`;
+            }
         }
+        // an empty string clears the label and that makes it hidden
+        timezoneLabel.text = timezoneString;
 
         if (Plasmoid.configuration.showDate) {
             dateLabel.text = dateFormatter(getCurrentTime());
