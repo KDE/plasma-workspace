@@ -623,13 +623,13 @@ void PanelView::positionPanel()
         m_layerWindow->setExclusiveEdge(edge);
         m_layerWindow->setMargins(margins);
 
-        updateMask();
         requestUpdate();
     }
 
     // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
+    updateMask();
     Q_EMIT geometryChanged();
 
     KWindowEffects::slideWindow(this, slideLocation, -1);
