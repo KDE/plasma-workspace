@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-04-02 02:20+0000\n"
 "PO-Revision-Date: 2021-04-18 01:28+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -16,22 +16,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: iconapplet.cpp:95
+#: iconapplet.cpp:97
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Gagal menciptakan folder ikon widget '%1'"
 
-#: iconapplet.cpp:141
+#: iconapplet.cpp:143
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Gagal menyalin file desktop ikon widget dari '%1' ke '%2'"
 
-#: iconapplet.cpp:353
+#: iconapplet.cpp:355
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Buka Folder Yang Mengandungnya"
 
-#: iconapplet.cpp:568
+#: iconapplet.cpp:570
 #, kde-format
 msgid "Properties for %1"
 msgstr "Properti untuk %1"

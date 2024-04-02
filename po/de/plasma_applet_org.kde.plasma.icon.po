@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-04-02 02:20+0000\n"
 "PO-Revision-Date: 2017-12-06 15:32+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,25 +16,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: iconapplet.cpp:95
+#: iconapplet.cpp:97
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr ""
 "Der Ordner „%1“ für Miniprogramm-Symbole kann sich nicht erstellt werden"
 
-#: iconapplet.cpp:141
+#: iconapplet.cpp:143
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Die Desktop-Datei für das Miniprogramm-Symbol kann nicht von „%1“ zu „%2“ "
 "kopiert werden"
 
-#: iconapplet.cpp:353
+#: iconapplet.cpp:355
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
-#: iconapplet.cpp:568
+#: iconapplet.cpp:570
 #, kde-format
 msgid "Properties for %1"
 msgstr "Eigenschaften von %1"

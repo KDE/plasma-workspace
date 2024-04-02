@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-04-02 02:20+0000\n"
 "PO-Revision-Date: 2020-12-08 22:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: iconapplet.cpp:95
+#: iconapplet.cpp:97
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "No s'ha pogut crear la carpeta de ginys d'icona «%1»"
 
-#: iconapplet.cpp:141
+#: iconapplet.cpp:143
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "No s'ha pogut copiar el fitxer «desktop» de ginys d'icona des de «%1» a «%2»"
 
-#: iconapplet.cpp:353
+#: iconapplet.cpp:355
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Obri la carpeta contenidora"
 
-#: iconapplet.cpp:568
+#: iconapplet.cpp:570
 #, kde-format
 msgid "Properties for %1"
 msgstr "Propietats per a %1"
