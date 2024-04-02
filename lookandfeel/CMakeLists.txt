@@ -32,21 +32,3 @@ qt_add_shaders(components LNFSHADERS
         UserDelegate.frag.qsb
         WallpaperFader.frag.qsb
 )
-
-if (INSTALL_SDDM_THEME)
-    configure_file(sddm-theme/theme.conf.cmake ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf)
-
-# Install the login theme into the SDDM directory
-    #NOTE this trailing slash is important to rename the directory
-    install(DIRECTORY sddm-theme/
-        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
-        PATTERN "README.txt" EXCLUDE
-        PATTERN "components" EXCLUDE
-        PATTERN "dummydata" EXCLUDE
-        PATTERN "theme.conf.cmake" EXCLUDE
-    )
-
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf
-        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
-    )
-endif()
