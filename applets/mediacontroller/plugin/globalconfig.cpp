@@ -27,7 +27,7 @@ void GlobalConfig::configChanged()
     }
 }
 
-int GlobalConfig::volumeStep()
+int GlobalConfig::volumeStep() const
 {
     return m_volumeStep;
 }
