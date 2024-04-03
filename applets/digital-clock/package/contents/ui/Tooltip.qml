@@ -57,7 +57,7 @@ Item {
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            text: clocks.visible ? Qt.formatDate(tzDate, Qt.locale(), Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
+            text: clocks.visible ? Qt.formatDate(tzDate, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(tzDate,"dddd")
             textFormat: Text.PlainText
         }
 
