@@ -479,6 +479,4 @@ class MediaControllerTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    if subprocess.getoutput("rpm -q --queryformat \"%{VERSION}-%{RELEASE}\" libLLVM18") == "18.1.1-1.2":
-        sys.exit(0)  # https://github.com/llvm/llvm-project/issues/65107
     unittest.main()
