@@ -24,8 +24,8 @@ PlasmoidItem {
     width: Kirigami.Units.gridUnit * 15
     height: Kirigami.Units.gridUnit * 15
 
-    readonly property string currentTime: Qt.formatTime(dataSource.data["Local"]["DateTime"],  Qt.locale().timeFormat(Locale.LongFormat))
-    readonly property string currentDate: Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
+    readonly property string currentTime: Qt.locale().toString(dataSource.data["Local"]["DateTime"], Qt.locale().timeFormat(Locale.LongFormat))
+    readonly property string currentDate: Qt.locale().toString(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
 
     property int hours
     property int minutes
@@ -37,7 +37,7 @@ PlasmoidItem {
     Plasmoid.backgroundHints: "NoBackground";
     preferredRepresentation: compactRepresentation
 
-    toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
+    toolTipMainText: Qt.locale().toString(dataSource.data["Local"]["DateTime"],"dddd")
     toolTipSubText: `${currentTime}\n${currentDate}`
 
 
