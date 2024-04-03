@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-22 03:08+0000\n"
-"PO-Revision-Date: 2024-03-30 19:38\n"
+"PO-Revision-Date: 2024-04-01 14:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr "%1 并非有效的 GTK 应用程序风格包。"
+msgstr "%1 不是有效的 GTK 主题归档。"
 
 #: kcmstyle.cpp:163 kcmstyle.cpp:170
 #, kde-format
@@ -189,12 +189,12 @@ msgstr "获取新 GNOME/GTK 应用程序风格…"
 #: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr "选择 GTK 应用程序风格包"
+msgstr "选择 GTK 主题存档"
 
 #: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK 应用程序风格包 (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK 主题存档 (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:57
 #, kde-format
