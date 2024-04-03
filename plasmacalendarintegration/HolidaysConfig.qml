@@ -11,11 +11,11 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kholidays as KHolidays
-import org.kde.holidayeventshelperplugin
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KD
 import org.kde.kcmutils as KCMUtils
+import org.kde.plasma.private.holidayevents as Private
 
 KCMUtils.ScrollViewKCM {
     id: root
@@ -26,7 +26,7 @@ KCMUtils.ScrollViewKCM {
         configHelper.saveConfig();
     }
 
-    QmlConfigHelper {
+    Private.HolidayRegionsConfig {
         id: configHelper
     }
 
