@@ -347,6 +347,22 @@ KCM.SimpleKCM {
                 }
             }
 
+            TimeComponentLabel {
+                id: openDialogLabel
+                width: parent.width - 80
+                anchors.centerIn: parent
+                interactive: !timePickerDialog.opened
+
+                text: Qt.formatTime(new Date(1970, 1, 1, timePickerDialog.hours, timePickerDialog.minutes), "hh:mm")
+
+                onTapped: timePickerDialog.openWithMode(TimePicker.Mode.Hours)
+            }
+
+            TimePickerDialog {
+                id: timePickerDialog
+                anchors.centerIn: parent
+            }
+
             // Show time entry fields in manual timings mode
             TimeField {
                 id: evenBeginManField
