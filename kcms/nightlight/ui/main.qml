@@ -343,55 +343,38 @@ KCM.SimpleKCM {
             // Show time entry fields in manual timings mode
             TimeField {
                 id: evenBeginManField
-                // Match combobox width
-                Layout.minimumWidth: modeSwitcher.width
-                Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightLightSettings.mode === NightLightMode.Timings && kcm.nightLightSettings.active
                 Kirigami.FormData.label: i18n("Begin night light at:")
+
                 backend: kcm.nightLightSettings.eveningBeginFixed
                 onBackendChanged: {
                     kcm.nightLightSettings.eveningBeginFixed = backend;
                 }
-
                 KCM.SettingStateBinding {
                     configObject: kcm.nightLightSettings
                     settingName: "EveningBeginFixed"
                     extraEnabledConditions: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === NightLightMode.Timings
                 }
-
-                QQC2.ToolTip {
-                    text: i18n("Input format: HH:MM")
-                }
             }
-
+            
             TimeField {
                 id: mornBeginManField
-                // Match combobox width
-                Layout.minimumWidth: modeSwitcher.width
-                Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightLightSettings.mode === NightLightMode.Timings && kcm.nightLightSettings.active
                 Kirigami.FormData.label: i18n("Begin day light at:")
                 backend: kcm.nightLightSettings.morningBeginFixed
                 onBackendChanged: {
                     kcm.nightLightSettings.morningBeginFixed = backend;
                 }
-
                 KCM.SettingStateBinding {
                     configObject: kcm.nightLightSettings
                     settingName: "MorningBeginFixed"
                     extraEnabledConditions: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === NightLightMode.Timings
-                }
-
-                QQC2.ToolTip {
-                    text: i18n("Input format: HH:MM")
                 }
             }
 
             QQC2.SpinBox {
                 id: transTimeField
                 visible: kcm.nightLightSettings.mode === NightLightMode.Timings && kcm.nightLightSettings.active
-                // Match width of combobox and input fields
-                Layout.minimumWidth: modeSwitcher.width
                 Kirigami.FormData.label: i18n("Transition duration:")
                 from: 1
                 to: 600 // less than 12 hours (in minutes: 720)
