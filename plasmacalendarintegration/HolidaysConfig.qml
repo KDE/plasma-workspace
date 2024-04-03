@@ -32,11 +32,14 @@ KCMUtils.ScrollViewKCM {
 
     header: Kirigami.SearchField {
         id: filter
+
+        KeyNavigation.down: holidaysView
     }
 
     view: ListView {
         id: holidaysView
 
+        activeFocusOnTab: true
         clip: true
         reuseItems: true
 
