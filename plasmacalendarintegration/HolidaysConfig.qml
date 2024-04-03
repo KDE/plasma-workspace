@@ -37,6 +37,7 @@ KCMUtils.ScrollViewKCM {
         id: holidaysView
 
         clip: true
+        reuseItems: true
 
         model: KItemModels.KSortFilterProxyModel {
             sourceModel: KHolidays.HolidayRegionsModel {}
