@@ -52,11 +52,18 @@ QQC2.TextField {
         backend = hours + minutes;
     }
 
-    onTextChanged: updateBackendFromText()
-    inputMask: "00:00"
-    selectByMouse: false
     inputMethodHints: Qt.ImhTime
-    validator: RegularExpressionValidator { regularExpression: /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/ }
+    validator: RegularExpressionValidator { regularExpression: /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/ }
+    overwriteMode: true
 
-    onEditingFinished: submit()
+    onEditingFinished: {
+        updateBackendFromText();
+    }
+
+    // If the validator is not happy, reset the text to the last good value
+    onFocusChanged: {
+        if (!focus && !acceptableInput) {
+            updateTextFromBackend();
+        }
+    }
 }
