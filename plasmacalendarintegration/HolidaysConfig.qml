@@ -55,6 +55,7 @@ KCMUtils.ScrollViewKCM {
 
             checked: configHelper.selectedRegions.includes(region)
             width: ListView.view.width
+            icon.width: 0
             onClicked: {
                 //needed for model's setData to be called
                 if (checked) {
