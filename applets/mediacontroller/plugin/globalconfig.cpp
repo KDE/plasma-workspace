@@ -8,7 +8,7 @@
 
 GlobalConfig::GlobalConfig(QObject *parent)
     : QObject(parent)
-    , m_configWatcher(KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("plasmaparc"))))
+    , m_configWatcher(KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("plasmaparc"), KSharedConfig::NoGlobals)))
 {
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, &GlobalConfig::configChanged);
     configChanged();
