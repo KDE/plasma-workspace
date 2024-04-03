@@ -51,7 +51,9 @@ KCMUtils.SimpleKCM {
                     day,
                     text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day),
                 }))
-                onActivated: cfg_firstDayOfWeek = model[index].day
+                onActivated: index => {
+                    cfg_firstDayOfWeek = model[index].day;
+                }
                 currentIndex: model.findIndex(item => item.day === cfg_firstDayOfWeek)
             }
         }

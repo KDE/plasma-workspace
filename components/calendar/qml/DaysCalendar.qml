@@ -139,7 +139,7 @@ Item {
                         event.accepted = false;
                     }
                 }
-                Keys.onDownPressed: {
+                Keys.onDownPressed: event => {
                     if (index < (daysCalendar.rows - 1) * daysCalendar.columns) {
                         repeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     }

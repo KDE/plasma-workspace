@@ -71,7 +71,9 @@ Item {
 
     KeyNavigation.up: viewHeader.previousButton
     // The view can have no highlighted item, so always highlight the first item
-    Keys.onDownPressed: swipeView.currentItem.focusFirstCellOfView()
+    Keys.onDownPressed: event => {
+        swipeView.currentItem.focusFirstCellOfView();
+    }
 
     function isToday(date) {
         return date.toDateString() === new Date().toDateString();
@@ -260,8 +262,12 @@ Item {
 
         KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
         KeyNavigation.tab: viewHeader.tabButton
-        Keys.onLeftPressed: event => Keys.upPressed(event)
-        Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+        Keys.onLeftPressed: event => {
+            Keys.upPressed(event);
+        }
+        Keys.onUpPressed: event => {
+            viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+        }
 
         onCurrentIndexChanged: if (currentIndex > 1) {
             updateDecadeOverview();
@@ -321,7 +327,9 @@ Item {
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
-                Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
+                Keys.onUpPressed: event => {
+                    mainDaysCalendar.handleUpPress(event);
+                }
 
                 onActivated: (index, date, item) => {
                     const rowNumber = Math.floor(index / columns);
@@ -351,7 +359,9 @@ Item {
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
-                Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
+                Keys.onUpPressed: event => {
+                    mainDaysCalendar.handleUpPress(event);
+                }
 
                 onActivated: (index, date, item) => {
                     calendarBackend.goToMonth(date.monthNumber);
@@ -389,7 +399,9 @@ Item {
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
-                Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
+                Keys.onUpPressed: event => {
+                    mainDaysCalendar.handleUpPress(event);
+                }
 
                 onActivated: (index, date, item) => {
                     calendarBackend.goToYear(date.yearNumber);
