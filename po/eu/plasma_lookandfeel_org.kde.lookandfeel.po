@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 19:23+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Teklatu-antolaera: %1"
 msgid "Username"
 msgstr "Erabiltzaile-izena"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Pasahitza"
@@ -40,7 +40,7 @@ msgstr "Pasahitza"
 msgid "Log In"
 msgstr "Hasi saioa"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Blok Maius aktibatua dago"
@@ -80,7 +80,7 @@ msgstr "Tekleatu erabiltzaile-izena eta pasahitza"
 msgid "List Users"
 msgstr "Zerrendatu erabiltzaileak"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -95,97 +95,6 @@ msgstr "Saio-hastea huts egin du"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Mahaigain saioa: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Ordularia:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Mantendu ikusgai giltzatzea askatzeko gonbita desagertzean"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Euskarrien kontrolak:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Erakutsi giltzapetik askatzeko gonbitaren azpian"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Giltzapetik askatzeak huts egin du"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Egin lo"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernatu"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Aldatu erabiltzailea"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Aldatu antolaera"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Giltzapetik askatu"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(edo eskaneatu zure hatz-marka irakurgailuan)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(edo eskaneatu zure txartel-adimenduna)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Titulurik gabe"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Ez da euskarririk jotzen ari"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Aurreko aztarna"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Jo edo eten euskarria"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Hurrengo aztarna"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -240,6 +149,11 @@ msgstr "Berrabiatzean, ordenagailua firmwarea ezartzeko pantailan sartuko da."
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Egin lo orain"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernatu"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -297,6 +211,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma KDEk egin du"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Ordularia:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Mantendu ikusgai giltzatzea askatzeko gonbita desagertzean"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Euskarrien kontrolak:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Erakutsi giltzapetik askatzeko gonbitaren azpian"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Giltzapetik askatzeak huts egin du"
+
+#~ msgid "Sleep"
+#~ msgstr "Egin lo"
+
+#~ msgid "Switch User"
+#~ msgstr "Aldatu erabiltzailea"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Aldatu antolaera"
+
+#~ msgid "Unlock"
+#~ msgstr "Giltzapetik askatu"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(edo eskaneatu zure hatz-marka irakurgailuan)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(edo eskaneatu zure txartel-adimenduna)"
+
+#~ msgid "No title"
+#~ msgstr "Titulurik gabe"
+
+#~ msgid "No media playing"
+#~ msgstr "Ez da euskarririk jotzen ari"
+
+#~ msgid "Previous track"
+#~ msgstr "Aurreko aztarna"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Jo edo eten euskarria"
+
+#~ msgid "Next track"
+#~ msgstr "Hurrengo aztarna"
 
 #~ msgid "OK"
 #~ msgstr "Ados"

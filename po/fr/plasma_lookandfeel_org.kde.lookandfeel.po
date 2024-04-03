@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-31 21:23+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "Disposition du clavier : %1"
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Mot de passe"
@@ -44,7 +44,7 @@ msgstr "Mot de passe"
 msgid "Log In"
 msgstr "Connexion"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Verrouillage des majuscules activé"
@@ -84,7 +84,7 @@ msgstr "Saisissez votre nom d'utilisateur et votre mot de passe"
 msgid "List Users"
 msgstr "Lister les utilisateurs"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -99,97 +99,6 @@ msgstr "Échec de la connexion"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Session de bureau : %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Horloge :"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Conserver visible lorsque l'invite de déverrouillage disparaît"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Contrôles multimédia :"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Afficher sous l'invite de déverrouillage"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Échec du déverrouillage"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Veille"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Mettre en hibernation"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Changer d'utilisateur"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Changer de disposition"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Déverrouiller"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(ou effectuer une lecture votre empreinte digitale sur le lecteur)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(ou effectuer une lecture de votre carte mémoire)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Aucun titre"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Aucun média en lecture"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Piste précédente"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Lecture / pause du média"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Piste suivante"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -250,6 +159,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Mettre en veille maintenant"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Mettre en hibernation"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -306,6 +220,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, par KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Horloge :"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Conserver visible lorsque l'invite de déverrouillage disparaît"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Contrôles multimédia :"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Afficher sous l'invite de déverrouillage"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Échec du déverrouillage"
+
+#~ msgid "Sleep"
+#~ msgstr "Veille"
+
+#~ msgid "Switch User"
+#~ msgstr "Changer d'utilisateur"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Changer de disposition"
+
+#~ msgid "Unlock"
+#~ msgstr "Déverrouiller"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(ou effectuer une lecture votre empreinte digitale sur le lecteur)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(ou effectuer une lecture de votre carte mémoire)"
+
+#~ msgid "No title"
+#~ msgstr "Aucun titre"
+
+#~ msgid "No media playing"
+#~ msgstr "Aucun média en lecture"
+
+#~ msgid "Previous track"
+#~ msgstr "Piste précédente"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Lecture / pause du média"
+
+#~ msgid "Next track"
+#~ msgstr "Piste suivante"
 
 #~ msgid "OK"
 #~ msgstr "Ok"

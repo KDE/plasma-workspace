@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-06-11 17:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -250,11 +250,6 @@ msgstr "பணி மாற்றி"
 msgid "Splash Screen"
 msgstr "துவக்கத் திரை"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "பூட்டு திரை"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -290,6 +285,9 @@ msgid ""
 msgstr ""
 "உரிய அமைப்புகளை இப்பொது தோற்றத்திட்டம் வழங்கவில்லை. இத்திட்டம் முறையற்றதாக இருக்கலாம்; இதன் "
 "பராமரிப்பாளரைத் தொடர்புகொள்ளுங்கள்."
+
+#~ msgid "Lock Screen"
+#~ msgstr "பூட்டு திரை"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "புதிய பொது தோற்றத்திட்டங்களை பெறு…"

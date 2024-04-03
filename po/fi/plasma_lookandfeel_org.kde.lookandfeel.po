@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-24 13:13+0200\n"
 "Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Näppäimistöasettelu: %1"
 msgid "Username"
 msgstr "Käyttäjätunnus"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Salasana"
@@ -41,7 +41,7 @@ msgstr "Salasana"
 msgid "Log In"
 msgstr "Kirjaudu"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Vaihtolukko on käytössä"
@@ -81,7 +81,7 @@ msgstr "Syötä käyttäjätunnus ja salasana"
 msgid "List Users"
 msgstr "Luettele käyttäjät"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -96,97 +96,6 @@ msgstr "Kirjautuminen epäonnistui"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Työpöytäistunto: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Kello:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Pidä näkyvissä avauskehotteen häivyttyä"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Mediasäätimet:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Näytä avauskehotteen alla"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Lukituksen avaaminen epäonnistui"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Valmiustila"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Lepotila"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Vaihda käyttäjää"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Vaihda asettelua"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Avaa"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(tai lue sormenjälki)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(tai lue älykortti)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Ei otsikkoa"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Mitään ei toisteta"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Edellinen kappale"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Toista tai keskeytä media"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Seuraava kappale"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -242,6 +151,11 @@ msgstr ""
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Valmiustila"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Lepotila"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -299,6 +213,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma KDE:ltä"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Kello:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Pidä näkyvissä avauskehotteen häivyttyä"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Mediasäätimet:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Näytä avauskehotteen alla"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Lukituksen avaaminen epäonnistui"
+
+#~ msgid "Sleep"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Switch User"
+#~ msgstr "Vaihda käyttäjää"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Vaihda asettelua"
+
+#~ msgid "Unlock"
+#~ msgstr "Avaa"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(tai lue sormenjälki)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(tai lue älykortti)"
+
+#~ msgid "No title"
+#~ msgstr "Ei otsikkoa"
+
+#~ msgid "No media playing"
+#~ msgstr "Mitään ei toisteta"
+
+#~ msgid "Previous track"
+#~ msgstr "Edellinen kappale"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Toista tai keskeytä media"
+
+#~ msgid "Next track"
+#~ msgstr "Seuraava kappale"
 
 #~ msgid "OK"
 #~ msgstr "OK"

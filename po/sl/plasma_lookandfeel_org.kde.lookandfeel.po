@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-03-02 00:14+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -33,7 +33,7 @@ msgstr "Razporeditev tipk: %1"
 msgid "Username"
 msgstr "Uporabniško ime"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Geslo"
@@ -43,7 +43,7 @@ msgstr "Geslo"
 msgid "Log In"
 msgstr "Prijavi se"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je vključen"
@@ -83,7 +83,7 @@ msgstr "Vnesite uporabniško ime in geslo"
 msgid "List Users"
 msgstr "Seznam uporabnikov"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -98,97 +98,6 @@ msgstr "Neuspešna prijava"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Seja namizja: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Ura:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Ohrani vidno, ko poziv za odklepanje izgine"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Upravljanje predvajanja:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Kaži pod pozivom za odklepanje"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Odklepanje ni uspelo"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Zaspi"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "V mirovanje"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Preklopi uporabnika"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Preklopi razporeditev"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Odkleni"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(ali skenirajte svoj prstni odtis na bralniku)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(ali skenirajte svojo pametno kartico)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Brez naslova"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Nič se ne predvaja"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Predhodna sled"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Predvajaj ali prekini predvajanje vsebine"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Naslednja sled"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -264,6 +173,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Zaspi zdaj"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "V mirovanje"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -320,6 +234,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma izdelana v skupnosti KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Ura:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Ohrani vidno, ko poziv za odklepanje izgine"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Upravljanje predvajanja:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Kaži pod pozivom za odklepanje"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Odklepanje ni uspelo"
+
+#~ msgid "Sleep"
+#~ msgstr "Zaspi"
+
+#~ msgid "Switch User"
+#~ msgstr "Preklopi uporabnika"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Preklopi razporeditev"
+
+#~ msgid "Unlock"
+#~ msgstr "Odkleni"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(ali skenirajte svoj prstni odtis na bralniku)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(ali skenirajte svojo pametno kartico)"
+
+#~ msgid "No title"
+#~ msgstr "Brez naslova"
+
+#~ msgid "No media playing"
+#~ msgstr "Nič se ne predvaja"
+
+#~ msgid "Previous track"
+#~ msgstr "Predhodna sled"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Predvajaj ali prekini predvajanje vsebine"
+
+#~ msgid "Next track"
+#~ msgstr "Naslednja sled"
 
 #~ msgid "OK"
 #~ msgstr "OK"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-02 22:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Klavara aranĝo: %1"
 msgid "Username"
 msgstr "Uzantnomo"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Pasvorto"
@@ -40,7 +40,7 @@ msgstr "Pasvorto"
 msgid "Log In"
 msgstr "Ensaluti"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Majskulo estas aktiva"
@@ -80,7 +80,7 @@ msgstr "Tajpu Uzantnomon kaj Pasvorton"
 msgid "List Users"
 msgstr "Listo de Uzantoj"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -95,97 +95,6 @@ msgstr "Ensaluto malsukcesis"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Labortabla Sesio: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Horloĝo:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Konservi videbla kiam malŝlosa prompto malaperas"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Plurmediaj regiloj:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Montri sub malŝlosa prompto"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Malŝloso malsukcesis"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Dormi"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Pasivumigi"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Ŝanĝi Uzanton"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Ŝanĝi aranĝon"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Malŝlosi"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(aŭ skanu vian fingrospuron sur la legilo)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(aŭ skanu vian inteligentan memorkarton)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Neniu titolo"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Neniu aŭdvidaĵo ludanta"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Antaŭa trako"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Ludi aŭ Paŭzi aŭdvidaĵon"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Sekva aŭtoveturejo"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -243,6 +152,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Dormi Nun"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Pasivumigi"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -299,3 +213,56 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma farita de KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Horloĝo:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Konservi videbla kiam malŝlosa prompto malaperas"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Plurmediaj regiloj:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Montri sub malŝlosa prompto"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Malŝloso malsukcesis"
+
+#~ msgid "Sleep"
+#~ msgstr "Dormi"
+
+#~ msgid "Switch User"
+#~ msgstr "Ŝanĝi Uzanton"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Ŝanĝi aranĝon"
+
+#~ msgid "Unlock"
+#~ msgstr "Malŝlosi"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(aŭ skanu vian fingrospuron sur la legilo)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(aŭ skanu vian inteligentan memorkarton)"
+
+#~ msgid "No title"
+#~ msgstr "Neniu titolo"
+
+#~ msgid "No media playing"
+#~ msgstr "Neniu aŭdvidaĵo ludanta"
+
+#~ msgid "Previous track"
+#~ msgstr "Antaŭa trako"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Ludi aŭ Paŭzi aŭdvidaĵon"
+
+#~ msgid "Next track"
+#~ msgstr "Sekva aŭtoveturejo"

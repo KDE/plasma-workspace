@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2022-08-09 21:46+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -255,11 +255,6 @@ msgstr "Trình chuyển tác vụ"
 msgid "Splash Screen"
 msgstr "Màn hình khởi động"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Màn hình khoá"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -295,6 +290,9 @@ msgid ""
 msgstr ""
 "Không có thiết lập nào dùng được trong chủ đề toàn cục này. Vui lòng liên hệ "
 "bảo trì viên của chủ đề toàn cục này, có thể nó đã bị hỏng."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Màn hình khoá"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Lấy các chủ đề toàn cục mới…"

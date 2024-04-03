@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-31 12:03+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Klaviatūros išdėstymas: %1"
 msgid "Username"
 msgstr "Naudotojo vardas"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Slaptažodis"
@@ -40,7 +40,7 @@ msgstr "Slaptažodis"
 msgid "Log In"
 msgstr "Prisijungti"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Įjungtos didžiosios raidės"
@@ -80,7 +80,7 @@ msgstr "Įrašykite naudotojo vardą ir slaptažodį"
 msgid "List Users"
 msgstr "Išvardyti naudotojus"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -95,97 +95,6 @@ msgstr "Prisijungti nepavyko"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Darbalaukio seansas: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Laikrodis:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Palikti matomą, kai atrakinimo užklausa išnyksta"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Medijos valdikliai:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Rodyti po atrakinimo užklausa"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Atrakinti nepavyko"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Pristabdyti"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Užmigdyti"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Perjungti naudotoją"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Perjungti išdėstymą"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Atrakinti"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(arba nuskenuokite skaitytuvu piršto atspaudą)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(arba nuskenuokite lustinę kortelę)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Nėra pavadinimo"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Nieko neatkuriama"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Ankstesnis takelis"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Atkurti ar Pristabdyti mediją"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Kitas takelis"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -265,6 +174,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Pristabdyti dabar"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Užmigdyti"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -321,6 +235,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Laikrodis:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Palikti matomą, kai atrakinimo užklausa išnyksta"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Medijos valdikliai:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Rodyti po atrakinimo užklausa"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Atrakinti nepavyko"
+
+#~ msgid "Sleep"
+#~ msgstr "Pristabdyti"
+
+#~ msgid "Switch User"
+#~ msgstr "Perjungti naudotoją"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Perjungti išdėstymą"
+
+#~ msgid "Unlock"
+#~ msgstr "Atrakinti"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(arba nuskenuokite skaitytuvu piršto atspaudą)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(arba nuskenuokite lustinę kortelę)"
+
+#~ msgid "No title"
+#~ msgstr "Nėra pavadinimo"
+
+#~ msgid "No media playing"
+#~ msgstr "Nieko neatkuriama"
+
+#~ msgid "Previous track"
+#~ msgstr "Ankstesnis takelis"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Atkurti ar Pristabdyti mediją"
+
+#~ msgid "Next track"
+#~ msgstr "Kitas takelis"
 
 #~ msgid "OK"
 #~ msgstr "Gerai"

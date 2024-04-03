@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-03-30 19:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,7 +28,7 @@ msgstr "键盘布局：%1"
 msgid "Username"
 msgstr "用户名"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "密码"
@@ -38,7 +38,7 @@ msgstr "密码"
 msgid "Log In"
 msgstr "登录"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "大写锁定已开启"
@@ -78,7 +78,7 @@ msgstr "输入用户名和密码"
 msgid "List Users"
 msgstr "列出用户"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "登录失败"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "桌面会话：%1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "时钟："
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "解锁提示消失后继续显示"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "媒体控制："
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "显示在解锁提示下方"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "解锁失败"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "睡眠"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "休眠"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "切换用户"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "切换布局"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "解锁"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(或者在读取器上扫描您的指纹)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(或者扫描您的智能卡)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "无标题"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "没有正在播放的媒体"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "上一首"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "播放或暂停媒体"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "下一首"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -230,6 +139,11 @@ msgstr "重新启动时，电脑将进入固件设置界面。"
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "立即睡眠"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "休眠"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -287,3 +201,56 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma 桌面环境"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "时钟："
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "解锁提示消失后继续显示"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "媒体控制："
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "显示在解锁提示下方"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "解锁失败"
+
+#~ msgid "Sleep"
+#~ msgstr "睡眠"
+
+#~ msgid "Switch User"
+#~ msgstr "切换用户"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "切换布局"
+
+#~ msgid "Unlock"
+#~ msgstr "解锁"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(或者在读取器上扫描您的指纹)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(或者扫描您的智能卡)"
+
+#~ msgid "No title"
+#~ msgstr "无标题"
+
+#~ msgid "No media playing"
+#~ msgstr "没有正在播放的媒体"
+
+#~ msgid "Previous track"
+#~ msgstr "上一首"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "播放或暂停媒体"
+
+#~ msgid "Next track"
+#~ msgstr "下一首"

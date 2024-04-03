@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-sdk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2021-08-20 15:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -246,11 +246,6 @@ msgstr ""
 #: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
-
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
 msgstr ""
 
 #: ui/SimpleOptions.qml:19

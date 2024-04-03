@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -27,7 +27,7 @@ msgstr "Distribución del tecláu: %1"
 msgid "Username"
 msgstr ""
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Contraseña"
@@ -37,7 +37,7 @@ msgstr "Contraseña"
 msgid "Log In"
 msgstr "Aniciar la sesión"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "El Bloq Mayús ta activáu"
@@ -77,7 +77,7 @@ msgstr "Escribi'l nome d'usuariu y la contraseña"
 msgid "List Users"
 msgstr "Llistar los usuarios"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -92,97 +92,6 @@ msgstr "L'aniciu de la sesión falló"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sesión del escritoriu: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Reló:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Controles multimedia:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "El desbloquéu falló"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Dormir"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Ivernar"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Cambiar d'usuariu"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Cambiar la distribución"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Desbloquiar"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(o escania la buelga nel llector)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(o escania la tarxeta intelixente)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Pista anterior"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Pista siguiente"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -237,6 +146,11 @@ msgstr ""
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Dormir"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Ivernar"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -294,6 +208,42 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, creáu por KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Reló:"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Controles multimedia:"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "El desbloquéu falló"
+
+#~ msgid "Sleep"
+#~ msgstr "Dormir"
+
+#~ msgid "Switch User"
+#~ msgstr "Cambiar d'usuariu"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Cambiar la distribución"
+
+#~ msgid "Unlock"
+#~ msgstr "Desbloquiar"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(o escania la buelga nel llector)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(o escania la tarxeta intelixente)"
+
+#~ msgid "Previous track"
+#~ msgstr "Pista anterior"
+
+#~ msgid "Next track"
+#~ msgstr "Pista siguiente"
 
 #~ msgid "OK"
 #~ msgstr "D'acuerdu"

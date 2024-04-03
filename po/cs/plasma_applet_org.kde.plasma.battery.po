@@ -107,18 +107,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Aplet baterie povolil pozastavení systému"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Manuálně zabránit spánku a zamčení obrazovky"
+msgstr ""
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Manuálně zabránit spánku a zamčení obrazovky"
+msgstr ""
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
@@ -184,18 +180,15 @@ msgid "Not charging"
 msgstr "Nenabíjí se"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "Automatický spánek a zamčení obrazovky jsou vypnuty"
+msgstr ""
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Manuálně zabránit spánku a zamčení obrazovky"
+msgstr ""
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -206,10 +199,9 @@ msgstr[1] "%1 aplikace vyžádaly aktivaci režimu Performance"
 msgstr[2] "%1 aplikací vyžádalo aktivaci režimu Performance"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Systém je v režimu Performance"
+msgstr ""
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -220,10 +212,9 @@ msgstr[1] "%1 aplikace vyžádaly aktivaci úsporného režimu"
 msgstr[2] "%1 aplikací vyžádalo aktivaci úsporného režimu"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Systém je v úsporném režimu"
+msgstr ""
 
 #: package/contents/ui/main.qml:289
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-03-14 20:55+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Lyklaborðsuppsetning: %1"
 msgid "Username"
 msgstr "Notandanafn"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Lykilorð"
@@ -38,7 +38,7 @@ msgstr "Lykilorð"
 msgid "Log In"
 msgstr "Skrá inn"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Kveikt er á hástafalás (CapsLock)"
@@ -78,7 +78,7 @@ msgstr "Sláðu inn notandanafn og lykilorð"
 msgid "List Users"
 msgstr "Telja upp notendur"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "Innskráning mistókst"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Skjáborðsseta: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Klukka:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Halda sýnilegu þegar aflæsingarkvaðning hverfur"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Margmiðlunarstýringar:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Sýna undir aflæsingarkvaðningu"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Aflæsing tókst ekki"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Svæfa"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Leggja í dvala"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Skipta um notanda"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Skipta um framsetningu"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Aflæsa"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(eða skannaðu fingrafarið þitt á lesaranum)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(eða skannaðu snjallkortið þitt)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Enginn titill"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Ekkert efni í spilun"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Fyrra lag"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Spila eða setja á pásu"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Næsta lag"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -241,6 +150,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Svæfa núna"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Leggja í dvala"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -297,6 +211,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma gert af KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Klukka:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Halda sýnilegu þegar aflæsingarkvaðning hverfur"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Margmiðlunarstýringar:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Sýna undir aflæsingarkvaðningu"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Aflæsing tókst ekki"
+
+#~ msgid "Sleep"
+#~ msgstr "Svæfa"
+
+#~ msgid "Switch User"
+#~ msgstr "Skipta um notanda"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Skipta um framsetningu"
+
+#~ msgid "Unlock"
+#~ msgstr "Aflæsa"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(eða skannaðu fingrafarið þitt á lesaranum)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(eða skannaðu snjallkortið þitt)"
+
+#~ msgid "No title"
+#~ msgstr "Enginn titill"
+
+#~ msgid "No media playing"
+#~ msgstr "Ekkert efni í spilun"
+
+#~ msgid "Previous track"
+#~ msgstr "Fyrra lag"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Spila eða setja á pásu"
+
+#~ msgid "Next track"
+#~ msgstr "Næsta lag"
 
 #~ msgid "OK"
 #~ msgstr "Í lagi"

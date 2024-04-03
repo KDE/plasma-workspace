@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 00:22+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "キーボード配列: %1"
 msgid "Username"
 msgstr "ユーザ名"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "パスワード"
@@ -39,7 +39,7 @@ msgstr "パスワード"
 msgid "Log In"
 msgstr "ログイン"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock が有効です"
@@ -79,7 +79,7 @@ msgstr "ユーザ名とパスワードを入力"
 msgid "List Users"
 msgstr "ユーザをリスト表示"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -94,97 +94,6 @@ msgstr "ログイン失敗"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "デスクトップセッション: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "時計:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "アンロック画面が消えても表示し続ける"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "メディア操作:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "アンロック画面で表示する"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "ロック解除に失敗"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "スリープ"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "ハイバネート"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "ユーザを切り替え"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "配列を切り替え"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "ロック解除"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(もしくは指紋をリーダにスキャンしてください)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(もしくはスマートカードをスキャンしてください)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "タイトルなし"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "再生中のメディアはありません"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "前のトラック"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "メディアを再生/一時停止"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "次のトラック"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -232,6 +141,11 @@ msgstr "再起動すると、コンピュータはファームウェア設定画
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "今すぐスリープ"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "ハイバネート"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -289,3 +203,56 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma made by KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "時計:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "アンロック画面が消えても表示し続ける"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "メディア操作:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "アンロック画面で表示する"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "ロック解除に失敗"
+
+#~ msgid "Sleep"
+#~ msgstr "スリープ"
+
+#~ msgid "Switch User"
+#~ msgstr "ユーザを切り替え"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "配列を切り替え"
+
+#~ msgid "Unlock"
+#~ msgstr "ロック解除"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(もしくは指紋をリーダにスキャンしてください)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(もしくはスマートカードをスキャンしてください)"
+
+#~ msgid "No title"
+#~ msgstr "タイトルなし"
+
+#~ msgid "No media playing"
+#~ msgstr "再生中のメディアはありません"
+
+#~ msgid "Previous track"
+#~ msgstr "前のトラック"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "メディアを再生/一時停止"
+
+#~ msgid "Next track"
+#~ msgstr "次のトラック"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2009-12-13 00:11+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -29,14 +29,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:57
+#: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Nôslédny òbrôzk tapétë"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:69
+#: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"

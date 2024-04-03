@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-11-06 10:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -343,24 +343,24 @@ msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Prázdný %1"
 
-#: softwarerendernotifier.cpp:27
+#: softwarerendernotifier.cpp:33
 #, kde-format
 msgid "Software Renderer In Use"
 msgstr "Je použito softwarové vykreslování"
 
-#: softwarerendernotifier.cpp:28
+#: softwarerendernotifier.cpp:34
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Je použito softwarové vykreslování"
 
-#: softwarerendernotifier.cpp:29
+#: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Vykreslování může být zhoršeno"
 
-#: softwarerendernotifier.cpp:39
+#: softwarerendernotifier.cpp:45
 #, kde-format
 msgid "Never show again"
 msgstr "Nikdy nezobrazovat"
@@ -374,16 +374,3 @@ msgstr "Počet panelů"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Počítá panely"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Povoluje testovací režim a určuje soubor javascript pro rozložení "
-#~ "testovacího prostředí"
-
-#~ msgid "file"
-#~ msgstr "soubor"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "Spravovat plochy a panely..."

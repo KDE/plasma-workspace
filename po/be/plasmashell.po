@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -353,24 +353,24 @@ msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Пусты %1"
 
-#: softwarerendernotifier.cpp:27
+#: softwarerendernotifier.cpp:33
 #, kde-format
 msgid "Software Renderer In Use"
 msgstr "Праграмны рэндэрынг"
 
-#: softwarerendernotifier.cpp:28
+#: softwarerendernotifier.cpp:34
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Праграмны рэндэрынг"
 
-#: softwarerendernotifier.cpp:29
+#: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Рэндэрынг можа пагоршыцца"
 
-#: softwarerendernotifier.cpp:39
+#: softwarerendernotifier.cpp:45
 #, kde-format
 msgid "Never show again"
 msgstr "Больш не паказваць"

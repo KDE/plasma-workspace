@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-17 21:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -29,13 +29,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:57
+#: imagepackage/contents/ui/AddFileDialog.qml:58
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "افتح صورة"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:69
+#: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"

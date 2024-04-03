@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 22:54+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Billentyűzetkiosztás: %1"
 msgid "Username"
 msgstr "Felhasználónév"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Jelszó"
@@ -39,7 +39,7 @@ msgstr "Jelszó"
 msgid "Log In"
 msgstr "Bejelentkezés"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "A Caps Lock be van kapcsolva"
@@ -79,7 +79,7 @@ msgstr "Adja meg a felhasználónevet és a jelszót"
 msgid "List Users"
 msgstr "Felhasználólista"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -94,97 +94,6 @@ msgstr "Sikertelen bejelentkezés"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Asztali munkamenet: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Óra:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Maradjon látható a feloldóképernyő eltűnésekor"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Médiavezérlők:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Megjelenítés a feloldóképernyőn"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Sikertelen feloldás"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Alvó állapot"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernálás"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Felhasználóváltás"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Kiosztásváltás"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Feloldás"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(vagy használja az ujjlenyomatolvasót)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(vagy használja intelligens kártyáját)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Nincs cím"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Nincs médialejátszás"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Előző szám"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Média indítása/szüneteltetése"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Következő szám"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -239,6 +148,11 @@ msgstr "Újraindításkor a számítógép a firmware-telepítő képernyőre fo
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Alvó állapot most"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernálás"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -296,6 +210,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, a KDE-től"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Óra:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Maradjon látható a feloldóképernyő eltűnésekor"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Médiavezérlők:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Megjelenítés a feloldóképernyőn"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Sikertelen feloldás"
+
+#~ msgid "Sleep"
+#~ msgstr "Alvó állapot"
+
+#~ msgid "Switch User"
+#~ msgstr "Felhasználóváltás"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Kiosztásváltás"
+
+#~ msgid "Unlock"
+#~ msgstr "Feloldás"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(vagy használja az ujjlenyomatolvasót)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(vagy használja intelligens kártyáját)"
+
+#~ msgid "No title"
+#~ msgstr "Nincs cím"
+
+#~ msgid "No media playing"
+#~ msgstr "Nincs médialejátszás"
+
+#~ msgid "Previous track"
+#~ msgstr "Előző szám"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Média indítása/szüneteltetése"
+
+#~ msgid "Next track"
+#~ msgstr "Következő szám"
 
 #~ msgid "OK"
 #~ msgstr "OK"

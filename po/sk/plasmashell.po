@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-11-11 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -339,24 +339,24 @@ msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Prázdne %1"
 
-#: softwarerendernotifier.cpp:27
+#: softwarerendernotifier.cpp:33
 #, kde-format
 msgid "Software Renderer In Use"
 msgstr "Používa sa softvérový Renderer"
 
-#: softwarerendernotifier.cpp:28
+#: softwarerendernotifier.cpp:34
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Používa sa softvérový Renderer"
 
-#: softwarerendernotifier.cpp:29
+#: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Vykresľovanie môže byť obmedzené"
 
-#: softwarerendernotifier.cpp:39
+#: softwarerendernotifier.cpp:45
 #, kde-format
 msgid "Never show again"
 msgstr "Viac nezobrazovať"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-09-09 09:53+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -252,11 +252,6 @@ msgstr "Verkefnaskiptir"
 msgid "Splash Screen"
 msgstr "Upphafsskjár"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Lásskjár"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -292,6 +287,9 @@ msgid ""
 msgstr ""
 "Þetta almenna þema er ekki með neinar nothæfar stillingar. Hafðu samband við "
 "umsjónaraðila þemans þar sem það er mögulega bilað."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Lásskjár"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Sækja ný almenn þemu…"

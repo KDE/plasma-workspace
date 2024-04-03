@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2017-01-19 19:37+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -250,11 +250,6 @@ msgstr ""
 #| msgid "Test Splashscreen"
 msgid "Splash Screen"
 msgstr "Δοκιμή οθόνης εκκίνησης"
-
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr ""
 
 #: ui/SimpleOptions.qml:19
 #, kde-format

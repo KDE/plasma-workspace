@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-02-19 19:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,14 +27,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:57
+#: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
 #| msgid "Open Image"
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Şəkili açmaq"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:69
+#: imagepackage/contents/ui/AddFileDialog.qml:70
 #, fuzzy, kde-format
 #| msgid "Directory with the wallpaper to show slides from"
 msgctxt "@title:window"

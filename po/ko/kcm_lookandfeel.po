@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -248,11 +248,6 @@ msgstr "작업 전환기"
 msgid "Splash Screen"
 msgstr "시작 화면"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "잠금 화면"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -288,6 +283,9 @@ msgid ""
 msgstr ""
 "이 전역 테마에 변경할 수 있는 설정이 없습니다. 전역 테마에 문제가 있는 것일 "
 "수도 있으므로 테마 관리자에게 연락하십시오."
+
+#~ msgid "Lock Screen"
+#~ msgstr "잠금 화면"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "새 전역 테마 가져오기…"

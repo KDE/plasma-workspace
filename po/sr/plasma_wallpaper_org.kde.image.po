@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Your emails"
 msgstr ""
 
 # >> @title:window
-#: imagepackage/contents/ui/AddFileDialog.qml:57
+#: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
 #| msgid "Open Image"
 msgctxt "@title:window"
@@ -38,7 +38,7 @@ msgid "Open Image"
 msgstr "Отварање слике"
 
 # rewrite-msgid: /slides//
-#: imagepackage/contents/ui/AddFileDialog.qml:69
+#: imagepackage/contents/ui/AddFileDialog.qml:70
 #, fuzzy, kde-format
 #| msgid "Directory with the wallpaper to show slides from"
 msgctxt "@title:window"

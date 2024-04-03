@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-24 18:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Aranjament de tastatură: %1"
 msgid "Username"
 msgstr "Nume de utilizator"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Parolă"
@@ -38,7 +38,7 @@ msgstr "Parolă"
 msgid "Log In"
 msgstr "Autentificare"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
@@ -78,7 +78,7 @@ msgstr "Tastați numele de utilizator și parola"
 msgid "List Users"
 msgstr "Enumeră utilizatorii"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "Autentificare eșuată"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sesiune de birou: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Ceas:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Păstrează vizibil când dispare dialogul de deblocare"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Controale multimedia:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Arată sub dialogul de deblocare"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Deblocare eșuată"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Adormire"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernează"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Schimbă utilizatorul"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Schimbă aranjamentul"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Deblochează"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(sau scanați amprenta pe cititor)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(sau scanați smartcard-ul)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Fără titlu"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Nimic în redare"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Pista precedentă"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Redă sau întrerupe multimedia"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Pista următoare"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -250,6 +159,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Dormi acum"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernează"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -306,6 +220,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, de către KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Ceas:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Păstrează vizibil când dispare dialogul de deblocare"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Controale multimedia:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Arată sub dialogul de deblocare"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Deblocare eșuată"
+
+#~ msgid "Sleep"
+#~ msgstr "Adormire"
+
+#~ msgid "Switch User"
+#~ msgstr "Schimbă utilizatorul"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Schimbă aranjamentul"
+
+#~ msgid "Unlock"
+#~ msgstr "Deblochează"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(sau scanați amprenta pe cititor)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(sau scanați smartcard-ul)"
+
+#~ msgid "No title"
+#~ msgstr "Fără titlu"
+
+#~ msgid "No media playing"
+#~ msgstr "Nimic în redare"
+
+#~ msgid "Previous track"
+#~ msgstr "Pista precedentă"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Redă sau întrerupe multimedia"
+
+#~ msgid "Next track"
+#~ msgstr "Pista următoare"
 
 #~ msgid "OK"
 #~ msgstr "Bine"

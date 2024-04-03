@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-10-11 11:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -254,11 +254,6 @@ msgstr "Selector de tarefa"
 msgid "Splash Screen"
 msgstr "Pantalla de inicio"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Pantalla de bloqueo"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -294,6 +289,9 @@ msgid ""
 msgstr ""
 "O tema global non fornece opcións aplicábeis. Contacte con quen o mantén, "
 "pode que estea roto."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Pantalla de bloqueo"
 
 #, fuzzy
 #~| msgid "Get New Global Themes..."

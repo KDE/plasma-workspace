@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 09:07+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Disposició del teclat: %1"
 msgid "Username"
 msgstr "Nom d'usuari"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Contrasenya"
@@ -41,7 +41,7 @@ msgstr "Contrasenya"
 msgid "Log In"
 msgstr "Inici de sessió"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "El bloqueig de majúscules està activat"
@@ -81,7 +81,7 @@ msgstr "Introduïu el nom d'usuari i la contrasenya"
 msgid "List Users"
 msgstr "Llista els usuaris"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -96,97 +96,6 @@ msgstr "Ha fallat l'inici de la sessió"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sessió d'escriptori: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Rellotge:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Mantén visible quan desaparegui l'indicatiu de desbloqueig"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Controls multimèdia:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Mostra sota l'indicatiu de desbloqueig"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Ha fallat el desbloqueig"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Suspèn"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hiberna"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Commuta d'usuari"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Commuta la disposició"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Desbloqueja"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(o escanegeu l'empremta digital al lector)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(o escanegeu la targeta intel·ligent)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Sense títol"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "No s'està reproduint cap suport"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Peça anterior"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Reprodueix o fa pausa del suport"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Peça següent"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -245,6 +154,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Suspèn ara"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hiberna"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -301,3 +215,56 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, del KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Rellotge:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Mantén visible quan desaparegui l'indicatiu de desbloqueig"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Controls multimèdia:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Mostra sota l'indicatiu de desbloqueig"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Ha fallat el desbloqueig"
+
+#~ msgid "Sleep"
+#~ msgstr "Suspèn"
+
+#~ msgid "Switch User"
+#~ msgstr "Commuta d'usuari"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Commuta la disposició"
+
+#~ msgid "Unlock"
+#~ msgstr "Desbloqueja"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(o escanegeu l'empremta digital al lector)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(o escanegeu la targeta intel·ligent)"
+
+#~ msgid "No title"
+#~ msgstr "Sense títol"
+
+#~ msgid "No media playing"
+#~ msgstr "No s'està reproduint cap suport"
+
+#~ msgid "Previous track"
+#~ msgstr "Peça anterior"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Reprodueix o fa pausa del suport"
+
+#~ msgid "Next track"
+#~ msgstr "Peça següent"

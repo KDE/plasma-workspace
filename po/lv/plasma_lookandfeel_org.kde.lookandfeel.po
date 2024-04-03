@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-18 20:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Tastatūras izkārtojums: %1"
 msgid "Username"
 msgstr "Lietotājvārds"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Parole"
@@ -38,7 +38,7 @@ msgstr "Parole"
 msgid "Log In"
 msgstr "Ierakstīties"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Ir ieslēgts „Caps Lock“"
@@ -78,7 +78,7 @@ msgstr "Ievadiet lietotājvārdu un paroli"
 msgid "List Users"
 msgstr "Uzskaitīt lietotājus"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "Ierakstīšanās neizdevās"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Darbvirsmas sesija: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Pulkstenis:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Paturēt redzamu pēc atbloķēšanas uzvednes pazušanas"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Multimediju vadība:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Parādīt zem atslēgšanas uzvednes"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Atslēgšana neizdevās"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Iesnaudināt"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernēt"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Pārslēgt lietotāju"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Pārslēgt izkārtojumu"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Atslēgt"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(vai lasītājā skenējiet pirkstu nospiedumu)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(vai noskenējiet savu viedkarti)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Bez nosaukuma"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Multimediji nav atskaņoti"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Iepriekšējais celiņš"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Atskaņot vai pauzēt multimediju"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Nākamais celiņš"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -253,6 +162,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Iesnaudināt"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernēt"
+
 #: contents/logout/Logout.qml:211
 #, fuzzy, kde-format
 #| msgid "Hibernate"
@@ -315,6 +229,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE veidotā „Plasma“"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Pulkstenis:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Paturēt redzamu pēc atbloķēšanas uzvednes pazušanas"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Multimediju vadība:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Parādīt zem atslēgšanas uzvednes"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Atslēgšana neizdevās"
+
+#~ msgid "Sleep"
+#~ msgstr "Iesnaudināt"
+
+#~ msgid "Switch User"
+#~ msgstr "Pārslēgt lietotāju"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Pārslēgt izkārtojumu"
+
+#~ msgid "Unlock"
+#~ msgstr "Atslēgt"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(vai lasītājā skenējiet pirkstu nospiedumu)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(vai noskenējiet savu viedkarti)"
+
+#~ msgid "No title"
+#~ msgstr "Bez nosaukuma"
+
+#~ msgid "No media playing"
+#~ msgstr "Multimediji nav atskaņoti"
+
+#~ msgid "Previous track"
+#~ msgstr "Iepriekšējais celiņš"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Atskaņot vai pauzēt multimediju"
+
+#~ msgid "Next track"
+#~ msgstr "Nākamais celiņš"
 
 #~ msgid "OK"
 #~ msgstr "Labi"

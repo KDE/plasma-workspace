@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -28,7 +28,7 @@ msgstr "تخطيط لوحة المفاتيح: %1"
 msgid "Username"
 msgstr "اسم المستخدم"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "كلمة السّرّ"
@@ -38,7 +38,7 @@ msgstr "كلمة السّرّ"
 msgid "Log In"
 msgstr "لِج"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "مفتاح Caps Lock مفعّل"
@@ -78,7 +78,7 @@ msgstr "اكتب اسم المستخدم و كلمة السر"
 msgid "List Users"
 msgstr "اسرد المستخدمين"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "فشل الولوج"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "جلسة سطح المكتب: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "الساعة:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "أبقها مرئية عندما تختفي محث فك القفل"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "متحكمات الوسائط:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "اعرضها تحت محث فك القفل"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "فشل فكّ القفل"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "نَم"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "أسبِت"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "بدّل المستخدم"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "بدّل التّخطيط"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "فكّ القفل"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(أو امسح بصمة إصبعك على القارئ)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(أو امسح بطاقتك الذكية)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "بدون عنوان"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "لا وسائط تعمل"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "المقطوعة السابقة"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "شغّل أو أوقف الوسيط"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "المقطوعة التالية"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -267,6 +176,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "نَم الآن"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "أسبِت"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -323,6 +237,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "بلازما من كِيدِي"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "الساعة:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "أبقها مرئية عندما تختفي محث فك القفل"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "متحكمات الوسائط:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "اعرضها تحت محث فك القفل"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "فشل فكّ القفل"
+
+#~ msgid "Sleep"
+#~ msgstr "نَم"
+
+#~ msgid "Switch User"
+#~ msgstr "بدّل المستخدم"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "بدّل التّخطيط"
+
+#~ msgid "Unlock"
+#~ msgstr "فكّ القفل"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(أو امسح بصمة إصبعك على القارئ)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(أو امسح بطاقتك الذكية)"
+
+#~ msgid "No title"
+#~ msgstr "بدون عنوان"
+
+#~ msgid "No media playing"
+#~ msgstr "لا وسائط تعمل"
+
+#~ msgid "Previous track"
+#~ msgstr "المقطوعة السابقة"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "شغّل أو أوقف الوسيط"
+
+#~ msgid "Next track"
+#~ msgstr "المقطوعة التالية"
 
 #~ msgid "OK"
 #~ msgstr "حسنًا"

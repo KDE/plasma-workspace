@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 14:15-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -261,11 +261,6 @@ msgstr "Seletor de tarefas"
 msgid "Splash Screen"
 msgstr "Tela de apresentação"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Bloquear tela"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -301,6 +296,9 @@ msgid ""
 msgstr ""
 "Este tema global não fornece qualquer configuração aplicável. Contate o "
 "mantenedor deste tema global pois ele pode estar quebrado."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Bloquear tela"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Baixar novos temas globais..."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-19 23:00+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -262,11 +262,6 @@ msgstr "Commutateur de tâches"
 msgid "Splash Screen"
 msgstr "Écran de démarrage"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Écran de verrouillage"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -302,6 +297,9 @@ msgid ""
 msgstr ""
 "Ce thème global ne fournit aucun paramètre applicable. Veuillez contacter le "
 "responsable de ce thème global car il est peut-être défectueux."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Écran de verrouillage"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Télécharger de nouveaux thèmes globaux..."

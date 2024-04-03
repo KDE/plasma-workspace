@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-07 23:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -250,11 +250,6 @@ msgstr "工作切換器"
 msgid "Splash Screen"
 msgstr "啟動畫面"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "鎖定畫面"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -288,6 +283,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr "這個全域主題沒有提供任何適用的設定。它可能是損毀的，請聯絡它的維護者。"
+
+#~ msgid "Lock Screen"
+#~ msgstr "鎖定畫面"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "取得新全域主題…"

@@ -85,7 +85,7 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Vybrat zvukový soubor"
 
 #: ui/main.qml:46
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-01-02 07:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -351,24 +351,24 @@ msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Kosong %1"
 
-#: softwarerendernotifier.cpp:27
+#: softwarerendernotifier.cpp:33
 #, kde-format
 msgid "Software Renderer In Use"
 msgstr "Software Perender Sedang Digunakan"
 
-#: softwarerendernotifier.cpp:28
+#: softwarerendernotifier.cpp:34
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Software Perender Sedang Digunakan"
 
-#: softwarerendernotifier.cpp:29
+#: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Perenderan mungkin direndahkan"
 
-#: softwarerendernotifier.cpp:39
+#: softwarerendernotifier.cpp:45
 #, kde-format
 msgid "Never show again"
 msgstr "Jangan tampilkan lagi"

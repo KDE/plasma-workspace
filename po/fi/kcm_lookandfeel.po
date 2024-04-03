@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-26 18:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -254,11 +254,6 @@ msgstr "Tehtävävaihto"
 msgid "Splash Screen"
 msgstr "Tervetulonäyttö"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Lukitusnäyttö"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -294,6 +289,9 @@ msgid ""
 msgstr ""
 "Tämä yleisteema ei tarjoa käyttöön otettavia asetuksia. Ota yhteyttä sen "
 "ylläpitäjään, koska se on todennäköisesti rikki."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Lukitusnäyttö"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Hae uusia yleisteemoja…"

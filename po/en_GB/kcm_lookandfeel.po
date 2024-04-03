@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-06-17 12:07+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -252,11 +252,6 @@ msgstr "Task Switcher"
 msgid "Splash Screen"
 msgstr "Splash Screen"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Lock Screen"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -292,6 +287,9 @@ msgid ""
 msgstr ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Lock Screen"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Get New Global Themes…"

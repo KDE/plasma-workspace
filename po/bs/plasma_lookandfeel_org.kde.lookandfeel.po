@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2014-12-28 11:33+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Šifra"
@@ -41,7 +41,7 @@ msgstr "Šifra"
 msgid "Log In"
 msgstr "Odjavi se"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je uključen"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "List Users"
 msgstr "Zamijeni raspored"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -100,100 +100,6 @@ msgstr "Neuspjela prijava"
 #| msgid "Create Session"
 msgid "Desktop Session: %1"
 msgstr "Kreiraj sesiju"
-
-#: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Unlock"
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Otključaj"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr ""
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Otključavanje nije uspjelo"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy, kde-format
-#| msgctxt "Button to change keyboard layout"
-#| msgid "Switch layout"
-msgid "Switch User"
-msgstr "Zamijeni raspored"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Zamijeni raspored"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Otključaj"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr ""
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr ""
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -247,6 +153,11 @@ msgstr ""
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
+msgstr ""
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
 msgstr ""
 
 #: contents/logout/Logout.qml:211
@@ -310,6 +221,28 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Unlock"
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Otključaj"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Otključavanje nije uspjelo"
+
+#, fuzzy
+#~| msgctxt "Button to change keyboard layout"
+#~| msgid "Switch layout"
+#~ msgid "Switch User"
+#~ msgstr "Zamijeni raspored"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Zamijeni raspored"
+
+#~ msgid "Unlock"
+#~ msgstr "Otključaj"
 
 #, fuzzy
 #~| msgid "New Session"

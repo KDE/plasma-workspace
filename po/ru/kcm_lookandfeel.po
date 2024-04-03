@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-12-24 17:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -253,11 +253,6 @@ msgstr "Переключение окон"
 msgid "Splash Screen"
 msgstr "Заставка"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Экран блокировки"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -293,6 +288,9 @@ msgid ""
 msgstr ""
 "Это оформление не сдержит ни одного параметра, который может быть "
 "использован. Сообщите об этой ситуации разработчику."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Экран блокировки"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Загрузить оформления..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-09 08:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -251,11 +251,6 @@ msgstr "Превключване на задачи"
 msgid "Splash Screen"
 msgstr "Начален екран"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Заключване на екрана"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -291,3 +286,6 @@ msgid ""
 msgstr ""
 "Тази глобална тема не предоставя никакви приложими настройки. Моля, свържете "
 "се с поддръжника на тази глобална тема, тъй като тя може да е повредена."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Заключване на екрана"

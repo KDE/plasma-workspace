@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-11-17 09:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -251,11 +251,6 @@ msgstr "ამოცანების გადამრთველი"
 msgid "Splash Screen"
 msgstr "მისასალმებელი ფანჯარა"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "ეკრანის დაბლოკვა"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -291,6 +286,9 @@ msgid ""
 msgstr ""
 "გლობალურ თემას პარამეტრები არ გააჩნია. დაუკავშირდით გლობალური თემის ავტორს. "
 "ვფიქრობთ, ის გაფუჭებულია."
+
+#~ msgid "Lock Screen"
+#~ msgstr "ეკრანის დაბლოკვა"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "გლობალური თემების მიღება…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 09:32+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Układ klawiatury: %1"
 msgid "Username"
 msgstr "Nazwa użytkownika"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Hasło"
@@ -38,7 +38,7 @@ msgstr "Hasło"
 msgid "Log In"
 msgstr "Zaloguj"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock jest włączony"
@@ -78,7 +78,7 @@ msgstr "Wpisz nazwę użytkownika i hasło"
 msgid "List Users"
 msgstr "Pokaż dostępnych użytkowników"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "Nie udało się zalogować"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Posiedzenia pulpitu: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Zegar:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Zachowaj widocznym, gdy zniknie zapytanie o odblokowanie"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Sterowanie odtwarzaczem:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Pokaż w zapytaniu o odblokowanie"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Nie udało się odblokować"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Uśpij"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Zahibernuj"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Przełącz użytkownika"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Przełącz układ"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Odblokuj"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(lub pobierz swój odcisk palca na czytniku)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(lub zeskanuj swoją kartę inteligentną)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Nienazwane"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Nic nie jest odtwarzane"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Poprzedni utwór"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Odtwarzaj lub wstrzymaj media"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Następny utwór"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -251,6 +160,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Uśpij teraz"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Zahibernuj"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -307,6 +221,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plazma od KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Zegar:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Zachowaj widocznym, gdy zniknie zapytanie o odblokowanie"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Sterowanie odtwarzaczem:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Pokaż w zapytaniu o odblokowanie"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Nie udało się odblokować"
+
+#~ msgid "Sleep"
+#~ msgstr "Uśpij"
+
+#~ msgid "Switch User"
+#~ msgstr "Przełącz użytkownika"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Przełącz układ"
+
+#~ msgid "Unlock"
+#~ msgstr "Odblokuj"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(lub pobierz swój odcisk palca na czytniku)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(lub zeskanuj swoją kartę inteligentną)"
+
+#~ msgid "No title"
+#~ msgstr "Nienazwane"
+
+#~ msgid "No media playing"
+#~ msgstr "Nic nie jest odtwarzane"
+
+#~ msgid "Previous track"
+#~ msgstr "Poprzedni utwór"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Odtwarzaj lub wstrzymaj media"
+
+#~ msgid "Next track"
+#~ msgstr "Następny utwór"
 
 #~ msgid "OK"
 #~ msgstr "OK"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-12-02 19:49+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Rozloženie klávesnice: %1"
 msgid "Username"
 msgstr "Používateľské meno"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Heslo"
@@ -38,7 +38,7 @@ msgstr "Heslo"
 msgid "Log In"
 msgstr "Prihlásiť sa"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Funkcia Caps Lock je zapnutá"
@@ -78,7 +78,7 @@ msgstr "Zadajte používateľské meno a heslo"
 msgid "List Users"
 msgstr "Zoznam používateľov"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -93,97 +93,6 @@ msgstr "Prihlásenie zlyhalo"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sedenie plochy: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Hodiny:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Ponechať viditeľné, keď zmizne výzva na odomknutie"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Ovládanie médií:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Zobraziť pod výzvou na odomknutie"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Odomknutie zlyhalo"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Uspať"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernovať"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Prepnúť používateľa"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Prepnúť rozloženie"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Odomknúť"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr ""
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Žiadny názov"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Neprehrávajú sa žiadne médiá"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Predchádzajúca skladba"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Prehrať alebo pozastaviť médium"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Nasledujúca skladba"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -248,6 +157,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Uspať"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernovať"
+
 #: contents/logout/Logout.qml:211
 #, fuzzy, kde-format
 #| msgid "Hibernate"
@@ -310,6 +224,53 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma vytvorená komunitou KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Hodiny:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Ponechať viditeľné, keď zmizne výzva na odomknutie"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Ovládanie médií:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Zobraziť pod výzvou na odomknutie"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Odomknutie zlyhalo"
+
+#~ msgid "Sleep"
+#~ msgstr "Uspať"
+
+#~ msgid "Switch User"
+#~ msgstr "Prepnúť používateľa"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Prepnúť rozloženie"
+
+#~ msgid "Unlock"
+#~ msgstr "Odomknúť"
+
+#~ msgid "No title"
+#~ msgstr "Žiadny názov"
+
+#~ msgid "No media playing"
+#~ msgstr "Neprehrávajú sa žiadne médiá"
+
+#~ msgid "Previous track"
+#~ msgstr "Predchádzajúca skladba"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Prehrať alebo pozastaviť médium"
+
+#~ msgid "Next track"
+#~ msgstr "Nasledujúca skladba"
 
 #~ msgid "OK"
 #~ msgstr "OK"

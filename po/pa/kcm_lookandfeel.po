@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 17:50-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -246,11 +246,6 @@ msgstr "ਟਾਸਕ ਸਵਿੱਚਰ"
 msgid "Splash Screen"
 msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "ਲਾਕ ਸਕਰੀਨ"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -284,6 +279,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+
+#~ msgid "Lock Screen"
+#~ msgstr "ਲਾਕ ਸਕਰੀਨ"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "…ਨਵੇਂ ਗਲੋਬਲ ਥੀਮ ਲਵੋ"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-03-09 18:28+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -345,24 +345,24 @@ msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "%1 (tomt)|/|Tomt $[litenfor %1]"
 
-#: softwarerendernotifier.cpp:27
+#: softwarerendernotifier.cpp:33
 #, kde-format
 msgid "Software Renderer In Use"
 msgstr "Brukar programvarebasert oppteiknar"
 
-#: softwarerendernotifier.cpp:28
+#: softwarerendernotifier.cpp:34
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Brukar programvarebasert oppteiknar"
 
-#: softwarerendernotifier.cpp:29
+#: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Grafikkvaliteten kan verta forringa"
 
-#: softwarerendernotifier.cpp:39
+#: softwarerendernotifier.cpp:45
 #, kde-format
 msgid "Never show again"
 msgstr "Ikkje vis denne meldinga igjen"
@@ -376,12 +376,3 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Tel panela"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Slår på testmodus og vel JavaScript-fil for utforming av testomgjevnaden"
-
-#~ msgid "file"
-#~ msgstr "fil"

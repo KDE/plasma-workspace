@@ -23,13 +23,12 @@ msgid "Open Containing Folder"
 msgstr "Otevřít odpovídající složku"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Audios"
+#, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
 "of the word"
 msgid "Audio"
-msgstr "Audio"
+msgstr ""
 
 #: baloosearchrunner.cpp:86
 #, kde-format

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Распоред тастатуре: %1"
 msgid "Username"
 msgstr "Корисничко име"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Лозинка"
@@ -38,7 +38,7 @@ msgstr "Лозинка"
 msgid "Log In"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "CapsLock укључен"
@@ -81,7 +81,7 @@ msgstr ""
 msgid "List Users"
 msgstr "Промени корисника"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -96,98 +96,6 @@ msgstr "Пријављивање пропало"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Сесија површи: %1"
-
-#: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Unlock"
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Откључај"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr ""
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Откључавање пропало"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr ""
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Промени корисника"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Пребаци распоред"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Откључај"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr ""
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Ништа се не пушта"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Претходна нумера"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Пусти или паузирај медијум"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Следећа нумера"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -252,6 +160,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr ""
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -312,6 +225,37 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Плазма из КДЕ‑а"
+
+#, fuzzy
+#~| msgid "Unlock"
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Откључај"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Откључавање пропало"
+
+#~ msgid "Switch User"
+#~ msgstr "Промени корисника"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Пребаци распоред"
+
+#~ msgid "Unlock"
+#~ msgstr "Откључај"
+
+#~ msgid "No media playing"
+#~ msgstr "Ништа се не пушта"
+
+#~ msgid "Previous track"
+#~ msgstr "Претходна нумера"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Пусти или паузирај медијум"
+
+#~ msgid "Next track"
+#~ msgstr "Следећа нумера"
 
 #~ msgid "OK"
 #~ msgstr "У реду"

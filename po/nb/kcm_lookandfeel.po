@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2015-04-30 21:55+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -244,11 +244,6 @@ msgstr ""
 #: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
-
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
 msgstr ""
 
 #: ui/SimpleOptions.qml:19

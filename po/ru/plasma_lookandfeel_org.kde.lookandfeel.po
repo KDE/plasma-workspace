@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-18 21:39+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,7 +32,7 @@ msgstr "Раскладка клавиатуры: %1"
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Пароль"
@@ -42,7 +42,7 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Войти"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Включён режим Caps Lock"
@@ -82,7 +82,7 @@ msgstr "Введите имя пользователя и пароль"
 msgid "List Users"
 msgstr "Список пользователей"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -97,97 +97,6 @@ msgstr "Не удалось войти в систему"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Графический сеанс: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Часы:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Показывать при скрытии строки ввода пароля"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Элементы управления проигрывателем:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Показывать под строкой ввода пароля"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Не удалось разблокировать"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Сон"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Гибернация"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Смена пользователя"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Сменить раскладку клавиатуры"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Разблокировать"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(или приложите палец к считывателю отпечатков)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(или используйте смарт-карту)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Без названия"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Ничего не воспроизводится"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Предыдущая дорожка"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Начать или приостановить воспроизведение"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Следующая дорожка"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -257,6 +166,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Ждущий режим"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Гибернация"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -313,6 +227,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Часы:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Показывать при скрытии строки ввода пароля"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Элементы управления проигрывателем:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Показывать под строкой ввода пароля"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Не удалось разблокировать"
+
+#~ msgid "Sleep"
+#~ msgstr "Сон"
+
+#~ msgid "Switch User"
+#~ msgstr "Смена пользователя"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Сменить раскладку клавиатуры"
+
+#~ msgid "Unlock"
+#~ msgstr "Разблокировать"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(или приложите палец к считывателю отпечатков)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(или используйте смарт-карту)"
+
+#~ msgid "No title"
+#~ msgstr "Без названия"
+
+#~ msgid "No media playing"
+#~ msgstr "Ничего не воспроизводится"
+
+#~ msgid "Previous track"
+#~ msgstr "Предыдущая дорожка"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Начать или приостановить воспроизведение"
+
+#~ msgid "Next track"
+#~ msgstr "Следующая дорожка"
 
 #~ msgid "OK"
 #~ msgstr "ОК"

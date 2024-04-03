@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"PO-Revision-Date: 2024-04-01 14:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
+msgstr "KDE 中国"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
+msgstr "kde-china@kde.org"
 
 #: kcm.cpp:467
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "您必须重新启动 Plasma 会话才能使这些更改生效。"
 #: kcm.cpp:468
 #, kde-format
 msgid "Cursor Settings Changed"
-msgstr "光标设置已更改"
+msgstr "鼠标指针设置已更改"
 
 #: lnftool.cpp:33
 #, kde-format
@@ -246,11 +246,6 @@ msgstr "任务切换器"
 msgid "Splash Screen"
 msgstr "欢迎屏幕"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "锁屏"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -286,3 +281,6 @@ msgid ""
 msgstr ""
 "此全局主题并未提供任何可用设置。请联系此全局主题的维护人员，因为它的代码可能"
 "存在问题。"
+
+#~ msgid "Lock Screen"
+#~ msgstr "锁屏"

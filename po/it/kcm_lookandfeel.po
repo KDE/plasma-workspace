@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-03 20:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -253,11 +253,6 @@ msgstr "Selettore delle attività"
 msgid "Splash Screen"
 msgstr "Schermata iniziale"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Blocca schermo"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -294,6 +289,9 @@ msgstr ""
 "Questo tema globale non fornisce impostazioni applicabili. Contatta il "
 "responsabile di questo tema globale poiché potrebbe non funzionare "
 "correttamente."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Blocca schermo"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Scarica nuovi temi globali..."

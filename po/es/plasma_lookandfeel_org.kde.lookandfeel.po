@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 18:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Disposición de teclado: %1"
 msgid "Username"
 msgstr "Nombre de usuario"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "Contraseña"
@@ -39,7 +39,7 @@ msgstr "Contraseña"
 msgid "Log In"
 msgstr "Iniciar sesión"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "El bloqueo de mayúsculas está activado"
@@ -79,7 +79,7 @@ msgstr "Escriba el nombre de usuario y la contraseña"
 msgid "List Users"
 msgstr "Listar usuarios"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -94,98 +94,6 @@ msgstr "Inicio de sesión fallido"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sesión de escritorio: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Reloj:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
-"Mantener visible cuando desaparece la solicitud de contraseña de desbloqueo"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "Controles multimedia:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "Mostrar debajo de la solicitud de contraseña de desbloqueo"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "Desbloqueo fallido"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "Reposo"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "Cambiar usuario"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Cambiar distribución"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "Desbloquear"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(o escanee su huella digital en el lector)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(o escanee su tarjeta inteligente)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Sin título"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "No se está reproduciendo multimedia"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "Pista anterior"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "Reproducir o pausar multimedia"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "Pista siguiente"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -244,6 +152,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "En reposo ahora"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernar"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -300,6 +213,61 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, creado por KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Reloj:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr ""
+#~ "Mantener visible cuando desaparece la solicitud de contraseña de "
+#~ "desbloqueo"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "Controles multimedia:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "Mostrar debajo de la solicitud de contraseña de desbloqueo"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "Desbloqueo fallido"
+
+#~ msgid "Sleep"
+#~ msgstr "Reposo"
+
+#~ msgid "Switch User"
+#~ msgstr "Cambiar usuario"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Cambiar distribución"
+
+#~ msgid "Unlock"
+#~ msgstr "Desbloquear"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(o escanee su huella digital en el lector)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(o escanee su tarjeta inteligente)"
+
+#~ msgid "No title"
+#~ msgstr "Sin título"
+
+#~ msgid "No media playing"
+#~ msgstr "No se está reproduciendo multimedia"
+
+#~ msgid "Previous track"
+#~ msgstr "Pista anterior"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "Reproducir o pausar multimedia"
+
+#~ msgid "Next track"
+#~ msgstr "Pista siguiente"
 
 #~ msgid "OK"
 #~ msgstr "Aceptar"

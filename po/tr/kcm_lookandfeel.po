@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-11-25 20:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -254,11 +254,6 @@ msgstr "Görev Değiştiricisi"
 msgid "Splash Screen"
 msgstr "Açılış Ekranı"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Kilit Ekranı"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -294,3 +289,6 @@ msgid ""
 msgstr ""
 "Bu Global Tema, uygulanabilir bir ayar sunmuyor. Bozulmuş olabileceğinden, "
 "lütfen geliştiricisini durumdan haberdar edin."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Kilit Ekranı"

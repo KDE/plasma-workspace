@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-08-03 17:31+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -253,11 +253,6 @@ msgstr "Commutator de carga"
 msgid "Splash Screen"
 msgstr "Schermo Splash"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Bloca schermo"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -293,6 +288,9 @@ msgid ""
 msgstr ""
 "Iste Thema Global non forni ulle preferentias applicabile. Pro favor tu "
 "continge le mantenitorde iste Thema Global proque il poterea esser rupte."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Bloca schermo"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Obtene nove themas global..."

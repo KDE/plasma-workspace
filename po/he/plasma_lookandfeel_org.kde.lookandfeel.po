@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 21:10+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -30,7 +30,7 @@ msgstr "פריסת מקלדת: %1"
 msgid "Username"
 msgstr "שם משתמש"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "סיסמה"
@@ -40,7 +40,7 @@ msgstr "סיסמה"
 msgid "Log In"
 msgstr "כניסה"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock דולק"
@@ -80,7 +80,7 @@ msgstr "נא להקליד שם משתמש וסיסמה"
 msgid "List Users"
 msgstr "הצגת משתמשים"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -95,97 +95,6 @@ msgstr "הכניסה נכשלה"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "הפעלת שולחן עבודה: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "שעון:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "להשאיר גלוי כשבקשת השחרור נעלמת"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "פקדי מדיה:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "הצגה תחת בקשת השחרור"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "השחרור נכשל"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "שינה"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "תרדמת"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "החלפת משתמש"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "החלפת פריסת מקלדת"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "פתיחה"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(או לסרוק את האצבע שלך על הקורא)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(או לסרוק את הכרטיס החכם שלך)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "אין כותרת"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "לא מתנגנת מדיה"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "הרצועה הקודמת"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "נגינה או השהיה של מדיה"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "הרצועה הבאה"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -255,6 +164,11 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "שינה עכשיו"
 
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "תרדמת"
+
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
@@ -311,6 +225,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "פלזמה פותחה על ידי KDE"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "שעון:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "להשאיר גלוי כשבקשת השחרור נעלמת"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "פקדי מדיה:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "הצגה תחת בקשת השחרור"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "השחרור נכשל"
+
+#~ msgid "Sleep"
+#~ msgstr "שינה"
+
+#~ msgid "Switch User"
+#~ msgstr "החלפת משתמש"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "החלפת פריסת מקלדת"
+
+#~ msgid "Unlock"
+#~ msgstr "פתיחה"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(או לסרוק את האצבע שלך על הקורא)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(או לסרוק את הכרטיס החכם שלך)"
+
+#~ msgid "No title"
+#~ msgstr "אין כותרת"
+
+#~ msgid "No media playing"
+#~ msgstr "לא מתנגנת מדיה"
+
+#~ msgid "Previous track"
+#~ msgstr "הרצועה הקודמת"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "נגינה או השהיה של מדיה"
+
+#~ msgid "Next track"
+#~ msgstr "הרצועה הבאה"
 
 #~ msgid "OK"
 #~ msgstr "אישור"

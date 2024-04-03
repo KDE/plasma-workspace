@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -255,11 +255,6 @@ msgstr "Сродак пераключэння задач"
 msgid "Splash Screen"
 msgstr "Застаўка"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Экран блакавання"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -295,6 +290,9 @@ msgid ""
 msgstr ""
 "У гэтай глабальнай тэмы няма прыдатных налад. Калі ласка, звяжыцеся з "
 "распрацоўнікам гэтай глабальнай тэмы, бо яна можа быць пашкоджанай."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Экран блакавання"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Атрымаць новыя глабальныя тэмы…"

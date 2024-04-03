@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-12-26 17:31+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -253,11 +253,6 @@ msgstr "Feladatváltó"
 msgid "Splash Screen"
 msgstr "Nyitóképernyő"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Zárképernyő"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -294,6 +289,9 @@ msgstr ""
 "Ez a globális téma nem biztosít semmilyen alkalmazható beállítást. Kérjük, "
 "lépjen kapcsolatba a globális téma karbantartójával, mivel lehet, hogy a "
 "téma sérült."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Zárképernyő"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Új globális témák letöltése…"

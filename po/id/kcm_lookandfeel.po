@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2022-09-27 17:14+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -261,11 +261,6 @@ msgstr "Pengalih Tugas"
 msgid "Splash Screen"
 msgstr "Layar Splash"
 
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
-msgstr "Layar Penguncian"
-
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
@@ -304,6 +299,9 @@ msgid ""
 msgstr ""
 "Tema Global ini tidak menyediakan pengaturan yang berlaku. Silakan hubungi "
 "pengelola Tema Global ini karena ini mungkin rusak."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Layar Penguncian"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Dapatkan Tema Global Baru..."

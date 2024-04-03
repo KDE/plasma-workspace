@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -32,14 +32,14 @@ msgstr ""
 "k.meetme@gmail.com \n"
 " infyquest@gmail.com"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:57
+#: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
 #| msgid "Images"
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "చిత్రాలు"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:69
+#: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"

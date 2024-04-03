@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2017-12-24 21:47+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -250,11 +250,6 @@ msgstr ""
 #: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
-
-#: ui/MoreOptions.qml:69
-#, kde-format
-msgid "Lock Screen"
 msgstr ""
 
 #: ui/SimpleOptions.qml:19

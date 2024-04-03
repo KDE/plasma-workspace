@@ -69,7 +69,3 @@ msgstr "Činnosti tapet"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Oddělovač]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Configure Display Settings…"
-#~ msgstr "Nastavit možnosti obrazovky..."

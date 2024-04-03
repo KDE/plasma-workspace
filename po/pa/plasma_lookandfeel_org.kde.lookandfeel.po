@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 07:44-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "ਕੀਬੋਰਡ ਲੇਆਉਟ: %1"
 msgid "Username"
 msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ"
 
-#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#: ../sddm-theme/Login.qml:102
 #, kde-format
 msgid "Password"
 msgstr "ਪਾਸਵਰਡ"
@@ -37,7 +37,7 @@ msgstr "ਪਾਸਵਰਡ"
 msgid "Log In"
 msgstr "ਲਾਗ ਇਨ"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:276
+#: ../sddm-theme/Main.qml:200
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "ਕੈਪਸ ਲਾਕ ਚਾਲੂ ਹੈ"
@@ -77,7 +77,7 @@ msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਵਿ�
 msgid "List Users"
 msgstr "ਵਰਤੋਂਕਾਰ ਦੀ ਸੂਚੀ"
 
-#: ../sddm-theme/Main.qml:452 contents/lockscreen/LockScreenUi.qml:363
+#: ../sddm-theme/Main.qml:452
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -92,97 +92,6 @@ msgstr "ਲਾਗਇਨ ਫੇਲ੍ਹ ਹੈ"
 #, kde-format
 msgid "Desktop Session: %1"
 msgstr "ਡੈਸਕਟਾਪ ਸ਼ੈਸ਼ਨ: %1"
-
-#: contents/lockscreen/config.qml:19
-#, kde-format
-msgctxt "@title: group"
-msgid "Clock:"
-msgstr "ਘੜੀ:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "ਜਦੋਂ ਅਣ-ਲਾਕ ਕਰਨ ਵੀ ਪਰਾਊਂਟ ਅਲੋਪ ਹੋ ਜਾਵੇ ਤਾਂ ਦਿਖਾਈ ਦਿੰਦਾ ਰੱਖੋ"
-
-#: contents/lockscreen/config.qml:33
-#, kde-format
-msgctxt "@title: group"
-msgid "Media controls:"
-msgstr "ਮੀਡਿਆ ਕੰਟਰੋਲ:"
-
-#: contents/lockscreen/config.qml:36
-#, kde-format
-msgctxt "@option:check"
-msgid "Show under unlocking prompt"
-msgstr "ਅਣ-ਲਾਕ ਪਰਾਊਂਟ ਦੇ ਹੇਠਾਂ ਵੇਖਾਓ"
-
-#: contents/lockscreen/LockScreenUi.qml:50
-#, kde-format
-msgid "Unlocking failed"
-msgstr "ਅਣਲਾਕ ਕਰਨਾ ਫੇਲ੍ਹ ਹੈ"
-
-#: contents/lockscreen/LockScreenUi.qml:290
-#, kde-format
-msgid "Sleep"
-msgstr "ਸਲੀਪ"
-
-#: contents/lockscreen/LockScreenUi.qml:296 contents/logout/Logout.qml:210
-#, kde-format
-msgid "Hibernate"
-msgstr "ਹਾਈਬਰਨੇਟ"
-
-#: contents/lockscreen/LockScreenUi.qml:302
-#, kde-format
-msgid "Switch User"
-msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ"
-
-#: contents/lockscreen/LockScreenUi.qml:387
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "ਲੇਆਉਟ ਨੂੰ ਬਦਲੋ"
-
-#: contents/lockscreen/MainBlock.qml:107
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
-msgid "Unlock"
-msgstr "ਅਣ-ਲਾਕ"
-
-#: contents/lockscreen/MainBlock.qml:156
-#, kde-format
-msgid "(or scan your fingerprint on the reader)"
-msgstr "(ਜਾਂ ਰੀਡਰ ਉੱਤੇ ਆਪਣੇ ਫਿੰਗਰਪਰਿੰਟ ਸਕੈਨ ਕਰੋ)"
-
-#: contents/lockscreen/MainBlock.qml:160
-#, kde-format
-msgid "(or scan your smartcard)"
-msgstr "(ਜਾਂ ਆਪਣਾ ਸਮਾਰਟ ਕਾਰਡ ਸਕੈਨ ਕਰੋ)"
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "ਕੋਈ ਟਾਈਟਲ ਨਹੀਂ"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
-
-#: contents/lockscreen/MediaControls.qml:88
-#, kde-format
-msgid "Previous track"
-msgstr "ਪਿਛਲਾ ਟਰੈਕ"
-
-#: contents/lockscreen/MediaControls.qml:100
-#, kde-format
-msgid "Play or Pause media"
-msgstr "ਮੀਡਿਆ ਚਲਾਓ ਜਾਂ ਰੋਕੋ"
-
-#: contents/lockscreen/MediaControls.qml:110
-#, kde-format
-msgid "Next track"
-msgstr "ਅਗਲਾ ਟਰੈਕ"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -237,6 +146,11 @@ msgstr "ਜਦੋਂ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਤਾਂ ਕੰਪਿ�
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "ਹੁਣੇ ਸਲੀਪ ਕਰੋ"
+
+#: contents/logout/Logout.qml:210
+#, kde-format
+msgid "Hibernate"
+msgstr "ਹਾਈਬਰਨੇਟ"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
@@ -294,6 +208,59 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "ਪਲਾਜ਼ਮਾ ਨੂੰ KDE ਨੇ ਬਣਾਇਆ"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "ਘੜੀ:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "ਜਦੋਂ ਅਣ-ਲਾਕ ਕਰਨ ਵੀ ਪਰਾਊਂਟ ਅਲੋਪ ਹੋ ਜਾਵੇ ਤਾਂ ਦਿਖਾਈ ਦਿੰਦਾ ਰੱਖੋ"
+
+#~ msgctxt "@title: group"
+#~ msgid "Media controls:"
+#~ msgstr "ਮੀਡਿਆ ਕੰਟਰੋਲ:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show under unlocking prompt"
+#~ msgstr "ਅਣ-ਲਾਕ ਪਰਾਊਂਟ ਦੇ ਹੇਠਾਂ ਵੇਖਾਓ"
+
+#~ msgid "Unlocking failed"
+#~ msgstr "ਅਣਲਾਕ ਕਰਨਾ ਫੇਲ੍ਹ ਹੈ"
+
+#~ msgid "Sleep"
+#~ msgstr "ਸਲੀਪ"
+
+#~ msgid "Switch User"
+#~ msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "ਲੇਆਉਟ ਨੂੰ ਬਦਲੋ"
+
+#~ msgid "Unlock"
+#~ msgstr "ਅਣ-ਲਾਕ"
+
+#~ msgid "(or scan your fingerprint on the reader)"
+#~ msgstr "(ਜਾਂ ਰੀਡਰ ਉੱਤੇ ਆਪਣੇ ਫਿੰਗਰਪਰਿੰਟ ਸਕੈਨ ਕਰੋ)"
+
+#~ msgid "(or scan your smartcard)"
+#~ msgstr "(ਜਾਂ ਆਪਣਾ ਸਮਾਰਟ ਕਾਰਡ ਸਕੈਨ ਕਰੋ)"
+
+#~ msgid "No title"
+#~ msgstr "ਕੋਈ ਟਾਈਟਲ ਨਹੀਂ"
+
+#~ msgid "No media playing"
+#~ msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
+
+#~ msgid "Previous track"
+#~ msgstr "ਪਿਛਲਾ ਟਰੈਕ"
+
+#~ msgid "Play or Pause media"
+#~ msgstr "ਮੀਡਿਆ ਚਲਾਓ ਜਾਂ ਰੋਕੋ"
+
+#~ msgid "Next track"
+#~ msgstr "ਅਗਲਾ ਟਰੈਕ"
 
 #~ msgid "OK"
 #~ msgstr "ਠੀਕ ਹੈ"
