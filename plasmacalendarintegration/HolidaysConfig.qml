@@ -1,14 +1,14 @@
 /*
     SPDX-FileCopyrightText: 2013 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
+    SPDX-FileCopyrightText: 2024 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as QQC2
-import Qt.labs.qmlmodels
 import org.kde.kholidays as KHolidays
 import org.kde.holidayeventshelperplugin
 import org.kde.kitemmodels as KItemModels
@@ -17,9 +17,9 @@ import org.kde.kirigami.delegates as KirigamiDelegates
 import org.kde.kcmutils as KCMUtils
 
 KCMUtils.ScrollViewKCM {
-    id: holidaysConfig
+    id: root
 
-    signal configurationChanged
+    signal configurationChanged()
 
     function saveConfig() {
         configHelper.saveConfig();
@@ -33,39 +33,36 @@ KCMUtils.ScrollViewKCM {
         id: filter
     }
 
-
     view: ListView {
         id: holidaysView
-
-        signal toggleCurrent
-
-        Keys.onSpacePressed: toggleCurrent()
 
         clip: true
 
         model: KItemModels.KSortFilterProxyModel {
-            sourceModel: KHolidays.HolidayRegionsModel {
-                id: holidaysModel
-            }
+            sourceModel: KHolidays.HolidayRegionsModel {}
             filterCaseSensitivity: Qt.CaseInsensitive
             filterString: filter.text
             filterRoleName: "name"
         }
 
         delegate: KirigamiDelegates.CheckSubtitleDelegate {
-            text: model.name
-            subtitle: model.description
+            required property string region
+            required property string name
+            required property string description
 
-            checked: model ? configHelper.selectedRegions.indexOf(model.region) !== -1 : false
+            text: name
+            subtitle: description
+
+            checked: configHelper.selectedRegions.includes(region)
             width: ListView.view.width
             onClicked: {
                 //needed for model's setData to be called
                 if (checked) {
-                    configHelper.addRegion(model.region);
+                    configHelper.addRegion(region);
                 } else {
-                    configHelper.removeRegion(model.region);
+                    configHelper.removeRegion(region);
                 }
-                holidaysConfig.configurationChanged();
+                root.configurationChanged();
             }
         }
     }
