@@ -176,6 +176,8 @@ PlasmoidItem {
                 powerProfileError.text = i18n("Failed to activate %1 mode", profile);
                 powerProfileError.sendEvent();
             }
+            batterymonitor.isManuallyInPerformanceMode = profile == "performance";
+            batterymonitor.isManuallyInPowerSaveMode = profile == "power-saver";
         });
     }
     function showPowerProfileOsd(profile) {
@@ -377,33 +379,6 @@ PlasmoidItem {
 
         onPowerManagementChanged: disabled => {
             batterymonitor.powermanagementDisabled = disabled
-        }
-
-        Notification {
-            id: powerProfileError
-            componentName: "plasma_workspace"
-            eventId: "warning"
-            iconName: "speedometer"
-            title: i18n("Power Management")
-        }
-
-        onActivateProfileRequested: profile => {
-            dialogItem.activeProfile = profile;
-            const service = pmSource.serviceForSource("PowerDevil");
-            const op = service.operationDescription("setPowerProfile");
-            op.profile = profile;
-
-            const job = service.startOperationCall(op);
-            job.finished.connect(job => {
-                dialogItem.activeProfile = Qt.binding(() => actuallyActiveProfile);
-                if (!job.result) {
-                    powerProfileError.text = i18n("Failed to activate %1 mode", profile);
-                    powerProfileError.sendEvent();
-                    return;
-                }
-                batterymonitor.isManuallyInPerformanceMode = profile == "performance";
-                batterymonitor.isManuallyInPowerSaveMode = profile == "power-saver";
-            });
         }
     }
 
