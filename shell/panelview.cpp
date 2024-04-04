@@ -714,51 +714,43 @@ void PanelView::resizePanel()
         return;
     }
 
-    QSize s;
     if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
         if (formFactor() == Plasma::Types::Vertical) {
-            s = QSize(totalThickness(), m_screenToFollow->size().height());
+            m_targetSize = QSize(totalThickness(), m_screenToFollow->size().height());
         } else {
-            s = QSize(m_screenToFollow->size().width(), totalThickness());
+            m_targetSize = QSize(m_screenToFollow->size().width(), totalThickness());
         }
-        resize(s);
+        resize(m_targetSize);
         return;
     } else if (m_lengthMode == PanelView::LengthMode::FitContent) {
         if (formFactor() == Plasma::Types::Vertical) {
-            s = QSize(
+            m_targetSize = QSize(
                 totalThickness(),
                 std::max(totalThickness(), std::min(m_screenToFollow->size().height(), m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding)));
         } else {
-            s = QSize(std::max(totalThickness(), std::min(m_screenToFollow->size().width(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
+            m_targetSize =
+                QSize(std::max(totalThickness(), std::min(m_screenToFollow->size().width(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
                       totalThickness());
         }
-        resize(s);
+        resize(m_targetSize);
         return;
     }
-
-    QSize targetSize;
-    QSize targetMinSize;
-    QSize targetMaxSize;
 
     if (formFactor() == Plasma::Types::Vertical) {
         const int minSize = qMax(MINSIZE, m_minLength);
         int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
         maxSize = qMax(minSize, maxSize);
-        targetMinSize = QSize(totalThickness(), minSize);
-        targetMaxSize = QSize(totalThickness(), maxSize);
-        targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
+        m_targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
         int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
         maxSize = qMax(minSize, maxSize);
-        targetMinSize = QSize(minSize, totalThickness());
-        targetMaxSize = QSize(maxSize, totalThickness());
-        targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
+        m_targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
     }
 
-    if (size() != targetSize) {
+    if (size() != m_targetSize) {
         Q_EMIT geometryChanged();
-        resize(targetSize);
+        resize(m_targetSize);
     }
 
     // position will be updated implicitly from resizeEvent
@@ -914,7 +906,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     if (m_screenToFollow && containment()) {
         // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
         const QPoint pos = geometryByDistance(m_distance).topLeft();
-        setPosition(pos);
+        setGeometry(QRect(pos, m_targetSize));
 
         m_strutsTimer.start(STRUTSTIMERDELAY);
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());

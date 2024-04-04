@@ -306,6 +306,7 @@ private:
     int m_rightPadding;
     double m_floatingness = 0.0;
     QPropertyAnimation m_floatingnessAnimation;
+    QSize m_targetSize;
     int m_bottomFloatingPadding;
     int m_topFloatingPadding;
     int m_leftFloatingPadding;
