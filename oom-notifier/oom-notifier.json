@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Description": "Informs when applications get terminated to prevent out of memory conditions",
+        "Name": "Out of Memory Notifier"
+    },
+    "X-KDE-Kded-autoload": true
+}
