@@ -127,7 +127,7 @@ PlasmoidItem {
     }
 
     Plasmoid.icon: {
-        let iconName = "brightness-high";
+        let iconName = "light";
 
         if (nightLightMonitor.enabled) {
             if (!nightLightMonitor.running) {
