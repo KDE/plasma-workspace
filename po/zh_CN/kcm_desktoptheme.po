@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-03 02:38+0000\n"
-"PO-Revision-Date: 2024-04-01 14:46\n"
+"PO-Revision-Date: 2024-04-03 19:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -140,7 +140,7 @@ msgstr "编辑主题…"
 #: ui/main.qml:140
 #, kde-format
 msgid "Remove Theme"
-msgstr "删除主题"
+msgstr "移除主题"
 
 #: ui/main.qml:147
 #, kde-format
