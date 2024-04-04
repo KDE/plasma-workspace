@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 import org.kde.plasma.plasmoid
@@ -18,7 +20,7 @@ PlasmaComponents.Page {
 
     PlasmaComponents.ScrollView {
         anchors.fill: parent
-        contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
+        contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
         focus: true
 
         contentItem: ListView {
@@ -28,8 +30,13 @@ PlasmaComponents.Page {
             model: !root.expanded || monitor.count <= 1 ? null : monitor
 
             delegate: PlasmaExtras.ExpandableListItem {
+                id: item
+
+                required property string display
+                required property int state
+
                 // TODO: switch to PlasmaExtras.ListItem once it has subtitle
-                icon: switch (model.state) {
+                icon: switch (item.state) {
                 case Monitor.NodeState.Running:
                     return "camera-on-symbolic";
                 case Monitor.NodeState.Idle:
@@ -37,8 +44,8 @@ PlasmaComponents.Page {
                 default:
                     return "camera-off-symbolic";
                 }
-                title: model.display || i18nc("@title", "Camera")
-                subtitle: switch (model.state) {
+                title: item.display || i18nc("@title", "Camera")
+                subtitle: switch (item.state) {
                 case Monitor.NodeState.Running:
                     return i18nc("@info:status", "Active");
                 case Monitor.NodeState.Idle:
@@ -60,13 +67,16 @@ PlasmaComponents.Page {
                 model: monitor.count === 1 ? monitor : 1
 
                 delegate: PlasmaExtras.PlaceholderMessage {
+                    id: item
+                    property string display
+                    property int state
                     parent: cameraList
                     anchors.centerIn: parent
                     width: parent.width - (Kirigami.Units.gridUnit * 4)
                     iconName: Plasmoid.icon
                     text: {
-                        if (monitor.count === 1 && model.state === Monitor.NodeState.Running && model.display) {
-                            return i18nc("@info:status %1 camera name", "%1 is in use", model.display);
+                        if (monitor.count === 1 && item.state === Monitor.NodeState.Running && item.display) {
+                            return i18nc("@info:status %1 camera name", "%1 is in use", item.display);
                         }
                         return root.toolTipSubText;
                     }
