@@ -91,18 +91,18 @@ AppMenuModel::AppMenuModel(QObject *parent)
         searchBar->setPlaceholderText(i18n("Search…"));
         searchBar->setMinimumWidth(200);
         searchBar->setContentsMargins(4, 4, 4, 4);
-        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, [searchBar]() {
+        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, searchBar, [searchBar]() {
             searchBar->setText(QString());
         });
-        connect(searchBar, &QLineEdit::textChanged, [searchBar, this]() mutable {
+        connect(searchBar, &QLineEdit::textChanged, this, [searchBar, this]() mutable {
             insertSearchActionsIntoMenu(searchBar->text());
         });
-        connect(searchBar, &QLineEdit::returnPressed, [this]() mutable {
+        connect(searchBar, &QLineEdit::returnPressed, this, [this]() mutable {
             if (!m_currentSearchActions.empty()) {
                 m_currentSearchActions.constFirst()->trigger();
             }
         });
-        connect(this, &AppMenuModel::modelNeedsUpdate, this, [this, searchBar]() mutable {
+        connect(this, &AppMenuModel::modelNeedsUpdate, searchBar, [this, searchBar]() mutable {
             insertSearchActionsIntoMenu(searchBar->text());
         });
         searchAction->setDefaultWidget(searchBar);
