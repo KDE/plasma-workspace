@@ -90,8 +90,7 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    property bool powermanagementDisabled: false
-
+    property bool manuallyInhibited: false
     // List of active power management inhibitions (applications that are
     // blocking sleep and screen locking).
     //
@@ -101,7 +100,6 @@ PlasmoidItem {
     //  Reason: string,
     // }]
     property var inhibitions: []
-    property bool manuallyInhibited: false
     readonly property var activeProfileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
     readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
 
@@ -206,7 +204,7 @@ PlasmoidItem {
     LayoutMirroring.childrenInherit: true
 
     Plasmoid.status: {
-        if (powermanagementDisabled) {
+        if (manuallyInhibited) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -265,7 +263,7 @@ PlasmoidItem {
             parts.push(i18n("Not charging"));
         } // otherwise, don't add anything
 
-        if (powermanagementDisabled) {
+        if (manuallyInhibited) {
             parts.push(i18n("Automatic sleep and screen locking are disabled; middle-click to re-enable"));
         } else {
             parts.push(i18n("Middle-click to disable automatic sleep and screen locking"));
@@ -314,7 +312,7 @@ PlasmoidItem {
         batteries: batterymonitor.batteries
         isManuallyInPerformanceMode: batterymonitor.isHeldOnPerformanceMode || batterymonitor.isManuallyInPerformanceMode
         isManuallyInPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || batterymonitor.isManuallyInPowerSaveMode
-        isManuallyInhibited: batterymonitor.powermanagementDisabled
+        isManuallyInhibited: batterymonitor.manuallyInhibited
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
         isDischarging: batterymonitor.isDischarging
 
@@ -323,7 +321,7 @@ PlasmoidItem {
         onPressed: wasExpanded = batterymonitor.expanded
         onClicked: mouse => {
             if (mouse.button == Qt.MiddleButton) {
-                batterymonitor.inhibitionChangeRequested(!batterymonitor.powermanagementDisabled);
+                batterymonitor.inhibitionChangeRequested(!batterymonitor.manuallyInhibited);
             } else {
                 batterymonitor.expanded = !wasExpanded;
             }
@@ -373,9 +371,6 @@ PlasmoidItem {
         degradationReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Degraded Reason"] || "") : ""
         profileHolds: batterymonitor.activeProfileHolds
 
-        onPowerManagementChanged: disabled => {
-            batterymonitor.powermanagementDisabled = disabled
-        }
     }
 
     Plasmoid.contextualActions: [
