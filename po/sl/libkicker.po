@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+# SPDX-FileCopyrightText: 2020, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-29 00:39+0000\n"
-"PO-Revision-Date: 2021-05-27 09:49+0200\n"
+"PO-Revision-Date: 2024-04-03 09:45+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -271,12 +271,12 @@ msgstr "Zaženi vzporedno sejo kot drug uporabnik"
 #: plugin/systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Preklopi v pripravljenost v hitrem pomnilniku"
+msgstr "Začasno zaustavi v RAM"
 
 #: plugin/systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
-msgstr "Preklopi v mirovanje na disku"
+msgstr "Začasno zaustavi na disk"
 
 #: plugin/systementry.cpp:266
 #, kde-format

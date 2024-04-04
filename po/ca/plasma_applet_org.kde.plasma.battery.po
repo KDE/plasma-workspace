@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:40+0000\n"
 "PO-Revision-Date: 2024-03-27 20:08+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -70,14 +70,14 @@ msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 "La bateria està configurada per a carregar només fins al %1% aproximadament."
 
-#: package/contents/ui/CompactRepresentation.qml:115
+#: package/contents/ui/CompactRepresentation.qml:111
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:228
 #, kde-format
 msgid "Fully Charged"
 msgstr "Totalment carregada"
@@ -121,71 +121,71 @@ msgstr ""
 "Ha fallat en desbloquejar automàticament la suspensió i el bloqueig de "
 "pantalla"
 
-#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
-#: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Power Management"
 msgstr "Gestió d'energia"
 
-#: package/contents/ui/main.qml:176 package/contents/ui/main.qml:400
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Ha fallat en activar el mode %1"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Power and Battery"
 msgstr "Energia i bateria"
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Bateria al %1%, no està carregant"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Bateria al %1%, endollada però encara està descarregant"
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Bateria al %1%, s'està carregant"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Bateria al %1%"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr ""
 "El subministrament elèctric no és prou potent per a carregar la bateria"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "No Batteries Available"
 msgstr "No hi ha cap bateria disponible"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 fins a completar la càrrega"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:262
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Resta %1"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:265
 #, kde-format
 msgid "Not charging"
 msgstr "No està carregant"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:269
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
@@ -193,26 +193,26 @@ msgstr ""
 "La suspensió automàtica i el bloqueig de pantalla estan desactivats; clic "
 "del mig per a tornar-ho a activar"
 
-#: package/contents/ui/main.qml:269
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr ""
 "Clic del mig per a desactivar automàticament la suspensió i el bloqueig de "
 "pantalla"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Una aplicació ha sol·licitat l'activació del mode rendiment"
 msgstr[1] "%1 aplicacions han sol·licitat l'activació del mode rendiment"
 
-#: package/contents/ui/main.qml:278
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr "El sistema està en mode de rendiment; desplaceu per a canviar-ho"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -221,31 +221,31 @@ msgstr[0] ""
 msgstr[1] ""
 "%1 aplicacions han sol·licitat l'activació del mode d'estalvi d'energia"
 
-#: package/contents/ui/main.qml:286
+#: package/contents/ui/main.qml:288
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr ""
 "El sistema està en mode d'estalvi d'energia; desplaceu per a canviar-ho"
 
-#: package/contents/ui/main.qml:289
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 "El sistema està en mode d'energia equilibrat; desplaceu per a canviar-ho"
 
-#: package/contents/ui/main.qml:412
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Mo&stra la informació de l'energia…"
 
-#: package/contents/ui/main.qml:418
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "Mostra el percentatge de la bateria a la icona quan no estigui completament "
 "carregada"
 
-#: package/contents/ui/main.qml:431
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&Configura la gestió d'energia…"

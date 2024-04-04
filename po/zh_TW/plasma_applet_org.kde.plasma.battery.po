@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:40+0000\n"
 "PO-Revision-Date: 2024-03-29 21:25+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -68,14 +68,14 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "電池已配置為最多充到大約 %1%。"
 
-#: package/contents/ui/CompactRepresentation.qml:115
+#: package/contents/ui/CompactRepresentation.qml:111
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:228
 #, kde-format
 msgid "Fully Charged"
 msgstr "已充飽"
@@ -116,118 +116,118 @@ msgstr "無法阻擋自動睡眠與螢幕鎖定"
 msgid "Failed to unblock automatic sleep and screen locking"
 msgstr "無法解除阻擋自動睡眠與螢幕鎖定"
 
-#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
-#: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Power Management"
 msgstr "電源管理"
 
-#: package/contents/ui/main.qml:176 package/contents/ui/main.qml:400
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "使用%1模式失敗"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Power and Battery"
 msgstr "電源與電池"
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "電量 %1%，未充電"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "電量 %1%，已接上電源但仍在放電中"
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "電量 %1%，充電中"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgid "Battery at %1%"
 msgstr "電量 %1%"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "電力供應不足以對電池進行充電"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "No Batteries Available"
 msgstr "沒有可用的電池"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "距離充飽還有 %1"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:262
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "剩餘 %1"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:265
 #, kde-format
 msgid "Not charging"
 msgstr "未充電"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:269
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "自動睡眠與螢幕鎖定已停用；中鍵點擊來重新啟用"
 
-#: package/contents/ui/main.qml:269
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "中鍵點擊來停用自動睡眠與螢幕鎖定"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "%1 個應用程式已要求使用效能模式"
 
-#: package/contents/ui/main.qml:278
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr "系統目前使用效能模式；捲動來變更"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "%1 個應用程式已要求使用省電模式"
 
-#: package/contents/ui/main.qml:286
+#: package/contents/ui/main.qml:288
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr "系統目前使用省電模式；捲動來變更"
 
-#: package/contents/ui/main.qml:289
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr "系統目前使用均衡電力模式；捲動來變更"
 
-#: package/contents/ui/main.qml:412
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "顯示能源資訊(&S)…"
 
-#: package/contents/ui/main.qml:418
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "尚未充飽時在圖示上顯示電池百分比"
 
-#: package/contents/ui/main.qml:431
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "設定電源管理(&C)…"

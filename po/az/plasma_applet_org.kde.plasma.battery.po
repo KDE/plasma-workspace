@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:40+0000\n"
 "PO-Revision-Date: 2023-02-19 14:52+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -64,14 +64,14 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batareya təqribən %1%-ə qədər doldurmaq üçün ayarlanmışdır."
 
-#: package/contents/ui/CompactRepresentation.qml:115
+#: package/contents/ui/CompactRepresentation.qml:111
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:228
 #, kde-format
 msgid "Fully Charged"
 msgstr "Tam Dolmuş"
@@ -116,126 +116,126 @@ msgstr "Avtomatik yuxu və ekran kilidinə keçidi əl ilə əngəlləmək"
 msgid "Failed to unblock automatic sleep and screen locking"
 msgstr "Avtomatik yuxu və ekran kilidinə keçidi əl ilə əngəlləmək"
 
-#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:195
-#: package/contents/ui/main.qml:201 package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Power Management"
 msgstr "Enerjiyə nəzarət"
 
-#: package/contents/ui/main.qml:176 package/contents/ui/main.qml:400
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 rejimi aktiv eddilə bilmədi"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Power Management"
 msgid "Power and Battery"
 msgstr "Enerjiyə nəzarət"
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Batareya %1%-dir, Qidalanma getmir"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Batareya %1%-dir, qoşuludur, lakin hələ də boşalma gedir"
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Batareya %1%-dir, Doldurulur"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Batareya %1%-dir"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Qida bloku batareyanı doldutacaq qədər güclü deyil"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Əlçatan batareyalar yoxdur"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "Tam dolana qədər %1"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:262
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 qaldı"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:265
 #, kde-format
 msgid "Not charging"
 msgstr "Qidalanmır"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:269
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "Avtomatik yuxu və ekran kilidlənməsi qeyri-aktivdir"
 
-#: package/contents/ui/main.qml:269
+#: package/contents/ui/main.qml:271
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid "Manually block sleep and screen locking"
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "Avtomatik yuxu və ekran kilidinə keçidi əl ilə əngəlləmək"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Tətbiq məhduldar rejimin aktiv edilməsini tələb edir"
 msgstr[1] "%1 tətbiq məhsuldar rejimin aktiv edilməsini tələb edir"
 
-#: package/contents/ui/main.qml:278
+#: package/contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgid "System is in Performance mode"
 msgid "System is in Performance mode; scroll to change"
 msgstr "Sistem məhsuldar rejimdədir"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Tətbiq enerjiyə nəzarət rejiminin ktiv edilməsini tələb edir"
 msgstr[1] "%1 tətbiq enerjiyə nəzarət rejiminin aktiv edilməsini tələb edir"
 
-#: package/contents/ui/main.qml:286
+#: package/contents/ui/main.qml:288
 #, fuzzy, kde-format
 #| msgid "System is in Power Save mode"
 msgid "System is in Power Save mode; scroll to change"
 msgstr "Sistem enerjiyə qənaət rejimindədir"
 
-#: package/contents/ui/main.qml:289
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:412
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Enerji məlumatlarını göstərmək..."
 
-#: package/contents/ui/main.qml:418
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Tam dolmadıqda batareyanın faizi nişanda göstərilsin"
 
-#: package/contents/ui/main.qml:431
+#: package/contents/ui/main.qml:402
 #, fuzzy, kde-format
 #| msgid "&Configure Energy Saving…"
 msgid "&Configure Power Management…"

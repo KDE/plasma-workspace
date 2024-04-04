@@ -286,6 +286,3 @@ msgid ""
 msgstr ""
 "tento globální motiv neposkytuje jakékoliv použitelné nastavení. Prosím "
 "kontaktujte správce tohoto globálního motivu, jelikož může být poškozen."
-
-#~ msgid "Lock Screen"
-#~ msgstr "Uzamknout obrazovku"

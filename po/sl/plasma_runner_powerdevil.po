@@ -3,13 +3,13 @@
 #
 # Jure Repinc <jlp@holodeck1.com>, 2009, 2010, 2012.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-09-07 06:13+0200\n"
+"PO-Revision-Date: 2024-04-03 09:50+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: PowerDevilRunner.cpp:31
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "napajanje"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
-msgstr "zaustavi"
+msgstr "začasno zaustavi"
 
 #: PowerDevilRunner.cpp:33
 #, kde-format
@@ -80,17 +80,19 @@ msgstr "zatemni zaslon"
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
-msgstr "Izpiše seznam možnosti za zaustavitev sistema, ki jih lahko vklopite"
+msgstr ""
+"Navede možnosti za začasno zaustavitev sistema (npr. spanje, mirovanje) in "
+"jim dovoli, da soaktivirani"
 
 #: PowerDevilRunner.cpp:54
 #, kde-format
 msgid "Suspends the system to RAM"
-msgstr "Zaustavi sistem v pomnilnik"
+msgstr "Začasno zaustavi sistem v pomnilnik"
 
 #: PowerDevilRunner.cpp:58
 #, kde-format
 msgid "Suspends the system to disk"
-msgstr "Zaustavi sistem na disk"
+msgstr "Začasno zaustavi sistem na disk"
 
 #: PowerDevilRunner.cpp:62
 #, kde-format
@@ -134,12 +136,12 @@ msgstr "Zatemni zaslon na polovico"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "V pripravljenost"
+msgstr "Spanje"
 
 #: PowerDevilRunner.cpp:132
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Zaustavi v pomnilnik"
+msgstr "Začasno zaustavi v pomnilnik"
 
 #: PowerDevilRunner.cpp:137
 #, kde-format
@@ -150,7 +152,7 @@ msgstr "V mirovanje"
 #: PowerDevilRunner.cpp:138
 #, kde-format
 msgid "Suspend to disk"
-msgstr "Zaustavi na disk"
+msgstr "Začasno zaustavi na disk"
 
 #: PowerDevilRunner.cpp:143
 #, kde-format
